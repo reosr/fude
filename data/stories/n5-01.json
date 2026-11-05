@@ -1,0 +1,11 @@
+{
+  "id": "n5-01",
+  "level": "N5",
+  "title": "Perkenalan Pertamaku",
+  "sentences": [
+    { "jp": "はじめまして。", "id": "Senang berkenalan denganmu.", "audioUrl": "/audio/n5-01-1.wav" },
+    { "jp": "わたしはアグスです。", "id": "Saya Agus.", "audioUrl": "/audio/n5-01-2.wav" },
+    { "jp": "インドネシアからきました。", "id": "Saya datang dari Indonesia.", "audioUrl": "/audio/n5-01-3.wav" },
+    { "jp": "どうぞよろしくおねがいします。", "id": "Mohon bantuannya.", "audioUrl": "/audio/n5-01-4.wav" }
+  ]
+}

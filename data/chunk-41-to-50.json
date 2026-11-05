@@ -1,0 +1,1512 @@
+[
+  {
+    "bab": 41,
+    "level": "N3",
+    "title": "Ungkapan Sopan Saat Menerima dan Meminta",
+    "tips": "Ungkapan hormat digunakan untuk meninggikan tindakan lawan bicara atau orang yang dihormati, sedangkan bentuk rendah hati merendahkan tindakan pembicara. Awalan お／ご tidak ditempelkan sembarangan pada semua kata; ikuti pasangan ungkapan yang lazim.",
+    "grammar": [
+      {
+        "pattern": "お／ご + Vます-stem + します",
+        "meaning": "Saya akan melakukan ... (rendah hati)",
+        "explanation": "Pola ini merendahkan tindakan pembicara untuk menunjukkan hormat kepada lawan bicara atau orang yang terkait. Pemakaian お atau ご bergantung pada asal kata kerja dan ada pengecualian yang perlu dihafalkan.",
+        "example_jp": "わたしが おにもつを おもちします。",
+        "example_id": "Biar saya yang membawakan barang Anda."
+      },
+      {
+        "pattern": "お／ご + Vます-stem + ください",
+        "meaning": "Silakan lakukan ... (hormat)",
+        "explanation": "Pola ini digunakan untuk mempersilakan orang lain melakukan sesuatu dengan sopan. Untuk beberapa kata kerja, bentuk khusus seperti お越しください lebih alami daripada membuat bentuk secara mekanis.",
+        "example_jp": "こちらに おすわりください。",
+        "example_id": "Silakan duduk di sini."
+      },
+      {
+        "pattern": "N を ご覧ください／お使いください",
+        "meaning": "Silakan melihat/menggunakan N",
+        "explanation": "Ungkapan hormat khusus sering menggantikan bentuk biasa agar terdengar santun dalam layanan dan situasi resmi. ご覧ください adalah bentuk hormat dari 見てください, sedangkan お使いください berasal dari 使ってください.",
+        "example_jp": "こちらの しりょうを ごらんください。",
+        "example_id": "Silakan lihat dokumen ini."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "お客様",
+        "kana": "おきゃくさま",
+        "romaji": "okyakusama",
+        "meaning": "pelanggan/tamu",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration okyakusama",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "案内",
+        "kana": "あんない",
+        "romaji": "annai",
+        "meaning": "panduan",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration annai",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "resepsionis",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration uketsuke",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "資料",
+        "kana": "しりょう",
+        "romaji": "shiryou",
+        "meaning": "materi/dokumen",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration shiryou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "荷物",
+        "kana": "にもつ",
+        "romaji": "nimotsu",
+        "meaning": "barang bawaan",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration nimotsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "席",
+        "kana": "せき",
+        "romaji": "seki",
+        "meaning": "tempat duduk",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration seki",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "利用",
+        "kana": "りよう",
+        "romaji": "riyou",
+        "meaning": "penggunaan",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration riyou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "確認",
+        "kana": "かくにん",
+        "romaji": "kakunin",
+        "meaning": "konfirmasi",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration kakunin",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "説明",
+        "kana": "せつめい",
+        "romaji": "setsumei",
+        "meaning": "penjelasan",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration setsumei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "担当者",
+        "kana": "たんとうしゃ",
+        "romaji": "tantousha",
+        "meaning": "petugas penanggung jawab",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration tantousha",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "係",
+        "kana": "かかり",
+        "romaji": "kakari",
+        "meaning": "petugas",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration kakari",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "お名前",
+        "kana": "おなまえ",
+        "romaji": "onamae",
+        "meaning": "nama (sopan)",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration onamae",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "ご住所",
+        "kana": "ごじゅうしょ",
+        "romaji": "gojuusho",
+        "meaning": "alamat (sopan)",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration gojuusho",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "ご覧",
+        "kana": "ごらん",
+        "romaji": "goran",
+        "meaning": "melihat (hormat)",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration goran",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "お使い",
+        "kana": "おつかい",
+        "romaji": "otsukai",
+        "meaning": "menggunakan (hormat)",
+        "imageQuery": "Japanese polite service expressions vocabulary illustration otsukai",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 42,
+    "level": "N3",
+    "title": "Ungkapan Tujuan, Waktu, dan Kegunaan",
+    "tips": "ために menyatakan tujuan atau kepentingan, sedangkan のに pada pola bab ini dapat menyatakan kegunaan atau kebutuhan untuk melakukan sesuatu. Perhatikan apakah bagian sebelum pola berupa kata benda atau kata kerja.",
+    "grammar": [
+      {
+        "pattern": "N のために／Vるために",
+        "meaning": "Untuk/demi N atau melakukan V",
+        "explanation": "ために menyatakan tujuan yang ingin dicapai melalui tindakan utama. Kata benda dihubungkan dengan の, sedangkan kata kerja memakai bentuk kamus.",
+        "example_jp": "けんこうのために、やさいを たべます。",
+        "example_id": "Saya makan sayur demi kesehatan."
+      },
+      {
+        "pattern": "Vるのに 使います",
+        "meaning": "Digunakan untuk V",
+        "explanation": "のに menominalkan tindakan dan menunjukkan kegunaan alat atau benda. Pola ini sering dipakai untuk menjelaskan fungsi benda, bahan, atau waktu yang diperlukan.",
+        "example_jp": "この はさみは かみを きるのに つかいます。",
+        "example_id": "Gunting ini digunakan untuk memotong kertas."
+      },
+      {
+        "pattern": "Vるのに 時間／お金が かかります",
+        "meaning": "Membutuhkan waktu/biaya untuk V",
+        "explanation": "のに mengubah tindakan menjadi hal yang memerlukan sumber daya, sedangkan かかります menyatakan kebutuhan atau biaya. Durasi atau jumlah biaya ditempatkan sebelum かかります.",
+        "example_jp": "えきまで あるくのに じゅっぷん かかります。",
+        "example_id": "Perlu sepuluh menit berjalan kaki sampai stasiun."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "目的",
+        "kana": "もくてき",
+        "romaji": "mokuteki",
+        "meaning": "tujuan",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration mokuteki",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "健康",
+        "kana": "けんこう",
+        "romaji": "kenkou",
+        "meaning": "kesehatan",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration kenkou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "道具",
+        "kana": "どうぐ",
+        "romaji": "dougu",
+        "meaning": "alat",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration dougu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "鋏",
+        "kana": "はさみ",
+        "romaji": "hasami",
+        "meaning": "gunting",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration hasami",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "紙",
+        "kana": "かみ",
+        "romaji": "kami",
+        "meaning": "kertas",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration kami",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "切る",
+        "kana": "きる",
+        "romaji": "kiru",
+        "meaning": "memotong",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration kiru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "材料",
+        "kana": "ざいりょう",
+        "romaji": "zairyou",
+        "meaning": "bahan",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration zairyou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "機能",
+        "kana": "きのう",
+        "romaji": "kinou",
+        "meaning": "fungsi",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration kinou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "費用",
+        "kana": "ひよう",
+        "romaji": "hiyou",
+        "meaning": "biaya",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration hiyou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "時間",
+        "kana": "じかん",
+        "romaji": "jikan",
+        "meaning": "waktu",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration jikan",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "かかる",
+        "kana": "かかる",
+        "romaji": "kakaru",
+        "meaning": "memerlukan/berbiaya",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration kakaru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "節約",
+        "kana": "せつやく",
+        "romaji": "setsuyaku",
+        "meaning": "penghematan",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration setsuyaku",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "meaning": "praktis",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration benri",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "役に立つ",
+        "kana": "やくにたつ",
+        "romaji": "yakunitatsu",
+        "meaning": "berguna",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration yakunitatsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "使い方",
+        "kana": "つかいかた",
+        "romaji": "tsukaikata",
+        "meaning": "cara penggunaan",
+        "imageQuery": "Japanese purpose and utility vocabulary illustration tsukaikata",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 43,
+    "level": "N3",
+    "title": "Dugaan Berdasarkan Pengamatan",
+    "tips": "そうです memiliki dua pola berbeda: bentuk berdasarkan pengamatan memakai bentuk dasar adjektiva atau pangkal ます, sedangkan kabar memakai kalimat bentuk biasa + そうです. Perhatikan bentuk sebelum そうです agar tidak tertukar antara 'kelihatannya' dan 'katanya'.",
+    "grammar": [
+      {
+        "pattern": "ます-stem／Adj + そうです",
+        "meaning": "Kelihatannya/sepertinya ...",
+        "explanation": "そうです yang melekat pada bentuk kata sifat atau pangkal ます menyatakan kesan berdasarkan pengamatan langsung. Untuk adjektiva-i, hilangkan い; untuk adjektiva-na, hilangkan な.",
+        "example_jp": "この ケーキは おいしそうです。",
+        "example_id": "Kue ini kelihatannya enak."
+      },
+      {
+        "pattern": "Vます-stem + そうです",
+        "meaning": "Sepertinya akan segera V",
+        "explanation": "Ketika dipakai dengan kata kerja, そうです menunjukkan tanda bahwa suatu tindakan akan terjadi atau keadaan akan segera berubah. Bentuk negatif tertentu memiliki aturan khusus, seperti 降りそうにありません.",
+        "example_jp": "あめが ふりそうです。",
+        "example_id": "Sepertinya akan turun hujan."
+      },
+      {
+        "pattern": "普通形 + そうです",
+        "meaning": "Katanya/bahwa ...",
+        "explanation": "そうです setelah bentuk biasa merupakan ungkapan kabar atau informasi yang didengar dari sumber lain, bukan dugaan dari pengamatan. Klausa yang dikutip mempertahankan bentuk dan waktu aslinya.",
+        "example_jp": "ニュースによると、あしたは ゆきが ふるそうです。",
+        "example_id": "Menurut berita, katanya besok akan turun salju."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "様子",
+        "kana": "ようす",
+        "romaji": "yousu",
+        "meaning": "keadaan/penampilan",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration yousu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "表情",
+        "kana": "ひょうじょう",
+        "romaji": "hyoujou",
+        "meaning": "ekspresi wajah",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration hyoujou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "顔色",
+        "kana": "かおいろ",
+        "romaji": "kaoiro",
+        "meaning": "warna wajah",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration kaoiro",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "眠い",
+        "kana": "ねむい",
+        "romaji": "nemui",
+        "meaning": "mengantuk",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration nemui",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "おいしそう",
+        "kana": "おいしそう",
+        "romaji": "oishisou",
+        "meaning": "terlihat enak",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration oishisou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "楽しそう",
+        "kana": "たのしそう",
+        "romaji": "tanoshisou",
+        "meaning": "terlihat menyenangkan",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration tanoshisou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "降る",
+        "kana": "ふる",
+        "romaji": "furu",
+        "meaning": "turun (hujan/salju)",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration furu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "晴れる",
+        "kana": "はれる",
+        "romaji": "hareru",
+        "meaning": "menjadi cerah",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration hareru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "曇る",
+        "kana": "くもる",
+        "romaji": "kumoru",
+        "meaning": "menjadi berawan",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration kumoru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "ニュース",
+        "kana": "ニュース",
+        "romaji": "nyuusu",
+        "meaning": "berita",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration nyuusu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "情報",
+        "kana": "じょうほう",
+        "romaji": "jouhou",
+        "meaning": "informasi",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration jouhou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "予想",
+        "kana": "よそう",
+        "romaji": "yosou",
+        "meaning": "perkiraan",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration yosou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "観察",
+        "kana": "かんさつ",
+        "romaji": "kansatsu",
+        "meaning": "pengamatan",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration kansatsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "様々",
+        "kana": "さまざま",
+        "romaji": "samazama",
+        "meaning": "bermacam-macam",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration samazama",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "本当",
+        "kana": "ほんとう",
+        "romaji": "hontou",
+        "meaning": "benar/sungguh",
+        "imageQuery": "Japanese appearance and hearsay vocabulary illustration hontou",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 44,
+    "level": "N3",
+    "title": "Terlalu, Mudah, dan Sulit Dilakukan",
+    "tips": "すぎます berarti 'terlalu'; pada い-adjektiva, hilangkan い sebelum menambahkan すぎます. やすい dan にくい ditempelkan pada pangkal ます untuk menyatakan mudah atau sulit dilakukan.",
+    "grammar": [
+      {
+        "pattern": "Vます-stem／Adj + すぎます",
+        "meaning": "Terlalu ...",
+        "explanation": "すぎます menyatakan bahwa tingkat atau jumlah melewati batas yang dianggap wajar. Untuk adjektiva-i, hilangkan い; untuk adjektiva-na, hilangkan な; untuk kata kerja gunakan pangkal ます.",
+        "example_jp": "きのう たべすぎました。",
+        "example_id": "Kemarin saya makan terlalu banyak."
+      },
+      {
+        "pattern": "Vます-stem + やすい／にくい",
+        "meaning": "Mudah/sulit untuk V",
+        "explanation": "やすい dan にくい melekat pada pangkal ます untuk menyatakan kemudahan atau kesulitan melakukan tindakan. Hasil gabungannya berperilaku seperti adjektiva-i.",
+        "example_jp": "この ペンは かきやすいです。",
+        "example_id": "Pena ini mudah digunakan untuk menulis."
+      },
+      {
+        "pattern": "Adjく／Adjに します",
+        "meaning": "Membuat menjadi ...",
+        "explanation": "します menyatakan tindakan mengubah keadaan; adjektiva-i berubah menjadi ～く dan adjektiva-na menjadi ～に. Pola ini berbeda dari なります yang menyatakan perubahan tanpa menonjolkan pelaku.",
+        "example_jp": "へやを きれいに します。",
+        "example_id": "Saya membuat kamar menjadi bersih."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "食べすぎる",
+        "kana": "たべすぎる",
+        "romaji": "tabesugiru",
+        "meaning": "makan terlalu banyak",
+        "imageQuery": "Japanese degree and ease vocabulary illustration tabesugiru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "飲みすぎる",
+        "kana": "のみすぎる",
+        "romaji": "nomisugiru",
+        "meaning": "minum terlalu banyak",
+        "imageQuery": "Japanese degree and ease vocabulary illustration nomisugiru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "働きすぎる",
+        "kana": "はたらきすぎる",
+        "romaji": "hatarakisugiru",
+        "meaning": "bekerja terlalu banyak",
+        "imageQuery": "Japanese degree and ease vocabulary illustration hatarakisugiru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "使いやすい",
+        "kana": "つかいやすい",
+        "romaji": "tsukaiyasui",
+        "meaning": "mudah digunakan",
+        "imageQuery": "Japanese degree and ease vocabulary illustration tsukaiyasui",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "読みにくい",
+        "kana": "よみにくい",
+        "romaji": "yominikui",
+        "meaning": "sulit dibaca",
+        "imageQuery": "Japanese degree and ease vocabulary illustration yominikui",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "書きやすい",
+        "kana": "かきやすい",
+        "romaji": "kakiyasui",
+        "meaning": "mudah ditulis",
+        "imageQuery": "Japanese degree and ease vocabulary illustration kakiyasui",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "複雑",
+        "kana": "ふくざつ",
+        "romaji": "fukuzatsu",
+        "meaning": "rumit",
+        "imageQuery": "Japanese degree and ease vocabulary illustration fukuzatsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "簡単",
+        "kana": "かんたん",
+        "romaji": "kantan",
+        "meaning": "mudah",
+        "imageQuery": "Japanese degree and ease vocabulary illustration kantan",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "汚い",
+        "kana": "きたない",
+        "romaji": "kitanai",
+        "meaning": "kotor",
+        "imageQuery": "Japanese degree and ease vocabulary illustration kitanai",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "きれい",
+        "kana": "きれい",
+        "romaji": "kirei",
+        "meaning": "bersih/cantik",
+        "imageQuery": "Japanese degree and ease vocabulary illustration kirei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "meaning": "praktis",
+        "imageQuery": "Japanese degree and ease vocabulary illustration benri",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "不便",
+        "kana": "ふべん",
+        "romaji": "fuben",
+        "meaning": "tidak praktis",
+        "imageQuery": "Japanese degree and ease vocabulary illustration fuben",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "重い",
+        "kana": "おもい",
+        "romaji": "omoi",
+        "meaning": "berat",
+        "imageQuery": "Japanese degree and ease vocabulary illustration omoi",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "軽い",
+        "kana": "かるい",
+        "romaji": "karui",
+        "meaning": "ringan",
+        "imageQuery": "Japanese degree and ease vocabulary illustration karui",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "調整",
+        "kana": "ちょうせい",
+        "romaji": "chousei",
+        "meaning": "penyesuaian",
+        "imageQuery": "Japanese degree and ease vocabulary illustration chousei",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 45,
+    "level": "N3",
+    "title": "Keadaan Khusus dan Hasil yang Tak Diinginkan",
+    "tips": "ところ menunjukkan tahap waktu tindakan: tepat sebelum, sedang berlangsung, atau baru saja selesai, tergantung bentuk yang mendahuluinya. 場合は berarti 'dalam keadaan/jika', sedangkan てしまう dapat menyatakan ketuntasan atau penyesalan.",
+    "grammar": [
+      {
+        "pattern": "Vる／Vた／Nの + 場合は",
+        "meaning": "Dalam keadaan/jika ...",
+        "explanation": "場合は digunakan untuk menyebut situasi atau skenario tertentu, sering dalam aturan, petunjuk, dan pengumuman. Bentuk yang mendahuluinya disesuaikan dengan apakah kondisi itu berupa tindakan, kejadian lampau, atau kata benda.",
+        "example_jp": "じしんの ばあいは、エレベーターを つかわないでください。",
+        "example_id": "Jika terjadi gempa, jangan gunakan lift."
+      },
+      {
+        "pattern": "Vて しまう",
+        "meaning": "Terlanjur/tuntas melakukan V",
+        "explanation": "Pola ini menekankan penyelesaian penuh atau kejadian yang tidak diharapkan. Konteks dan kata tambahan menentukan apakah nuansanya netral, menyesal, atau menunjukkan ketidaksengajaan.",
+        "example_jp": "たいせつな メールを けしてしまいました。",
+        "example_id": "Saya tidak sengaja menghapus email penting."
+      },
+      {
+        "pattern": "～ところです",
+        "meaning": "Tepat sebelum/sedang/baru selesai V",
+        "explanation": "ところです menunjukkan tahap suatu tindakan: Vるところ tepat akan mulai, Vているところ sedang berlangsung, dan Vたところ baru saja selesai. Pilih bentuk kata kerja untuk menunjukkan tahap waktu yang tepat.",
+        "example_jp": "いまから でかけるところです。",
+        "example_id": "Saya baru akan berangkat sekarang."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "場合",
+        "kana": "ばあい",
+        "romaji": "baai",
+        "meaning": "keadaan/kasus",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration baai",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "地震",
+        "kana": "じしん",
+        "romaji": "jishin",
+        "meaning": "gempa bumi",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration jishin",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "火事",
+        "kana": "かじ",
+        "romaji": "kaji",
+        "meaning": "kebakaran",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration kaji",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "避難",
+        "kana": "ひなん",
+        "romaji": "hinan",
+        "meaning": "evakuasi",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration hinan",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "非常口",
+        "kana": "ひじょうぐち",
+        "romaji": "hijouguchi",
+        "meaning": "pintu darurat",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration hijouguchi",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "消火器",
+        "kana": "しょうかき",
+        "romaji": "shoukaki",
+        "meaning": "alat pemadam api",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration shoukaki",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "警報",
+        "kana": "けいほう",
+        "romaji": "keihou",
+        "meaning": "peringatan bahaya",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration keihou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "故障",
+        "kana": "こしょう",
+        "romaji": "koshou",
+        "meaning": "kerusakan",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration koshou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "削除",
+        "kana": "さくじょ",
+        "romaji": "sakujo",
+        "meaning": "penghapusan",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration sakujo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "保存",
+        "kana": "ほぞん",
+        "romaji": "hozon",
+        "meaning": "penyimpanan",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration hozon",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "大切",
+        "kana": "たいせつ",
+        "romaji": "taisetsu",
+        "meaning": "penting",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration taisetsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "直前",
+        "kana": "ちょくぜん",
+        "romaji": "chokuzen",
+        "meaning": "tepat sebelumnya",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration chokuzen",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "最中",
+        "kana": "さいちゅう",
+        "romaji": "saichuu",
+        "meaning": "sedang di tengah",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration saichuu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "直後",
+        "kana": "ちょくご",
+        "romaji": "chokugo",
+        "meaning": "tepat sesudahnya",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration chokugo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "避ける",
+        "kana": "さける",
+        "romaji": "sakeru",
+        "meaning": "menghindari",
+        "imageQuery": "Japanese emergencies and situations vocabulary illustration sakeru",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 46,
+    "level": "N3",
+    "title": "Kepastian, Kewajaran, dan Seharusnya",
+    "tips": "はずです menyatakan kesimpulan yang dianggap masuk akal berdasarkan informasi yang ada. わけではありません menyangkal kesimpulan secara sebagian ('bukan berarti ...'), bukan selalu menyangkal semuanya.",
+    "grammar": [
+      {
+        "pattern": "普通形 + はずです",
+        "meaning": "Seharusnya/pasti ...",
+        "explanation": "はずです menyatakan kesimpulan yang dianggap logis berdasarkan informasi atau alasan yang dimiliki. Bentuk ini bukan jaminan mutlak, melainkan keyakinan pembicara bahwa sesuatu semestinya benar.",
+        "example_jp": "かれは もう ついた はずです。",
+        "example_id": "Dia seharusnya sudah tiba."
+      },
+      {
+        "pattern": "普通形 + はずが ありません",
+        "meaning": "Tidak mungkin ...",
+        "explanation": "Pola ini menyangkal kemungkinan dengan kuat berdasarkan pengetahuan atau bukti pembicara. Nuansanya lebih tegas daripada sekadar ないでしょう.",
+        "example_jp": "そんな ことが あるはずが ありません。",
+        "example_id": "Hal seperti itu tidak mungkin terjadi."
+      },
+      {
+        "pattern": "～わけです／～わけではありません",
+        "meaning": "Pantaslah ... / bukan berarti ...",
+        "explanation": "わけです menyimpulkan alasan atau menjelaskan bahwa sesuatu masuk akal setelah informasi baru diketahui. わけではありません menyangkal kesimpulan secara sebagian, bukan selalu menyangkal seluruh kalimat.",
+        "example_jp": "まいにち れんしゅうしているんですね。じょうずなわけです。",
+        "example_id": "Kamu berlatih setiap hari, ya. Pantas saja kamu mahir."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "当然",
+        "kana": "とうぜん",
+        "romaji": "touzen",
+        "meaning": "wajar/tentu",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration touzen",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "理由",
+        "kana": "りゆう",
+        "romaji": "riyuu",
+        "meaning": "alasan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration riyuu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "証拠",
+        "kana": "しょうこ",
+        "romaji": "shouko",
+        "meaning": "bukti",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration shouko",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "事実",
+        "kana": "じじつ",
+        "romaji": "jijitsu",
+        "meaning": "fakta",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration jijitsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "可能性",
+        "kana": "かのうせい",
+        "romaji": "kanousei",
+        "meaning": "kemungkinan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration kanousei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "確実",
+        "kana": "かくじつ",
+        "romaji": "kakujitsu",
+        "meaning": "pasti/andal",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration kakujitsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "納得",
+        "kana": "なっとく",
+        "romaji": "nattoku",
+        "meaning": "memahami/menerima alasan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration nattoku",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "説明",
+        "kana": "せつめい",
+        "romaji": "setsumei",
+        "meaning": "penjelasan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration setsumei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "結論",
+        "kana": "けつろん",
+        "romaji": "ketsuron",
+        "meaning": "kesimpulan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration ketsuron",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "判断",
+        "kana": "はんだん",
+        "romaji": "handan",
+        "meaning": "penilaian",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration handan",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "予想",
+        "kana": "よそう",
+        "romaji": "yosou",
+        "meaning": "dugaan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration yosou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "間違い",
+        "kana": "まちがい",
+        "romaji": "machigai",
+        "meaning": "kesalahan",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration machigai",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "正しい",
+        "kana": "ただしい",
+        "romaji": "tadashii",
+        "meaning": "benar",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration tadashii",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "確か",
+        "kana": "たしか",
+        "romaji": "tashika",
+        "meaning": "pasti/kalau tidak salah",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration tashika",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "きっと",
+        "kana": "きっと",
+        "romaji": "kitto",
+        "meaning": "pasti",
+        "imageQuery": "Japanese certainty and reasoning vocabulary illustration kitto",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 47,
+    "level": "N3",
+    "title": "Kabar, Dugaan, dan Kemiripan",
+    "tips": "らしいです dapat menyampaikan kabar atau dugaan berdasarkan informasi, ようです memberi kesan kesimpulan dari keadaan, dan みたいです lebih kasual. Pilih bentuk sesuai sumber informasi dan tingkat kesopanan.",
+    "grammar": [
+      {
+        "pattern": "普通形 + らしいです",
+        "meaning": "Katanya/sepertinya ...",
+        "explanation": "らしい dapat menyampaikan informasi yang didengar atau dugaan berdasarkan beberapa petunjuk. Nuansanya sering lebih tidak langsung daripada pernyataan langsung dan bergantung pada konteks.",
+        "example_jp": "あの みせは おいしいらしいです。",
+        "example_id": "Katanya restoran itu enak."
+      },
+      {
+        "pattern": "N／普通形 + ようです",
+        "meaning": "Tampaknya/sepertinya ...",
+        "explanation": "ようです menyatakan dugaan berdasarkan pengamatan atau informasi yang tersedia. Bentuk kata benda dan adjektiva-na biasanya dihubungkan dengan の atau な sebelum ようです.",
+        "example_jp": "そとは しずかなようです。",
+        "example_id": "Di luar tampaknya tenang."
+      },
+      {
+        "pattern": "N みたいです",
+        "meaning": "Seperti/tampaknya ... (percakapan)",
+        "explanation": "みたいです adalah bentuk percakapan yang mirip dengan ようです dan dapat menyatakan kemiripan atau dugaan. Bentuknya lebih kasual, sehingga ようです lebih aman dalam situasi resmi.",
+        "example_jp": "この くもは ひつじみたいです。",
+        "example_id": "Awan ini seperti domba."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "噂",
+        "kana": "うわさ",
+        "romaji": "uwasa",
+        "meaning": "rumor",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration uwasa",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "情報",
+        "kana": "じょうほう",
+        "romaji": "jouhou",
+        "meaning": "informasi",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration jouhou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "証言",
+        "kana": "しょうげん",
+        "romaji": "shougen",
+        "meaning": "kesaksian",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration shougen",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "様子",
+        "kana": "ようす",
+        "romaji": "yousu",
+        "meaning": "keadaan",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration yousu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "雲",
+        "kana": "くも",
+        "romaji": "kumo",
+        "meaning": "awan",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration kumo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "羊",
+        "kana": "ひつじ",
+        "romaji": "hitsuji",
+        "meaning": "domba",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration hitsuji",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "似る",
+        "kana": "にる",
+        "romaji": "niru",
+        "meaning": "mirip",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration niru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "そっくり",
+        "kana": "そっくり",
+        "romaji": "sokkuri",
+        "meaning": "sangat mirip",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration sokkuri",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "本物",
+        "kana": "ほんもの",
+        "romaji": "honmono",
+        "meaning": "barang asli",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration honmono",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "偽物",
+        "kana": "にせもの",
+        "romaji": "nisemono",
+        "meaning": "barang palsu",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration nisemono",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "情報源",
+        "kana": "じょうほうげん",
+        "romaji": "jouhougen",
+        "meaning": "sumber informasi",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration jouhougen",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "報道",
+        "kana": "ほうどう",
+        "romaji": "houdou",
+        "meaning": "peliputan berita",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration houdou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "信じる",
+        "kana": "しんじる",
+        "romaji": "shinjiru",
+        "meaning": "percaya",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration shinjiru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "疑う",
+        "kana": "うたがう",
+        "romaji": "utagau",
+        "meaning": "meragukan",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration utagau",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "確かめる",
+        "kana": "たしかめる",
+        "romaji": "tashikameru",
+        "meaning": "memastikan",
+        "imageQuery": "Japanese hearsay and resemblance vocabulary illustration tashikameru",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 48,
+    "level": "N3",
+    "title": "Bentuk Kausatif",
+    "tips": "Bentuk kausatif menyatakan membuat atau mengizinkan orang lain melakukan tindakan. Partikel yang menandai orang yang melakukan tindakan dapat berbeda menurut jenis kata kerja dan susunan kalimat.",
+    "grammar": [
+      {
+        "pattern": "V kausatif",
+        "meaning": "Menyuruh/membiarkan seseorang V",
+        "explanation": "Bentuk kausatif menyatakan bahwa seseorang membuat atau mengizinkan orang lain melakukan tindakan. Partikel untuk orang yang disuruh dapat berupa に atau を, bergantung pada jenis kata kerja dan struktur kalimat.",
+        "example_jp": "せんせいは がくせいに ほんを よませました。",
+        "example_id": "Guru menyuruh murid membaca buku."
+      },
+      {
+        "pattern": "N に V kausatif",
+        "meaning": "Membiarkan/menyuruh N melakukan V",
+        "explanation": "に menandai orang yang diberi izin atau diperintah ketika tindakan memiliki objek langsung lain. Nuansa 'membiarkan' atau 'menyuruh' ditentukan oleh konteks hubungan dan situasi.",
+        "example_jp": "ははは こどもに すきな えを かかせました。",
+        "example_id": "Ibu membiarkan anak menggambar apa yang disukainya."
+      },
+      {
+        "pattern": "V kausatif + てください",
+        "meaning": "Tolong izinkan/suruh saya V",
+        "explanation": "Bentuk kausatif + てください dapat dipakai untuk meminta izin melakukan suatu tindakan, terutama dalam ungkapan seperti 休ませてください. Gunakan dengan sopan karena permintaan tersebut menyangkut keputusan pihak lain.",
+        "example_jp": "きょうは はやく かえらせてください。",
+        "example_id": "Tolong izinkan saya pulang lebih awal hari ini."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "命令する",
+        "kana": "めいれいする",
+        "romaji": "meireisuru",
+        "meaning": "memerintah",
+        "imageQuery": "Japanese causative actions vocabulary illustration meireisuru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "許可する",
+        "kana": "きょかする",
+        "romaji": "kyokasuru",
+        "meaning": "mengizinkan",
+        "imageQuery": "Japanese causative actions vocabulary illustration kyokasuru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "自由",
+        "kana": "じゆう",
+        "romaji": "jiyuu",
+        "meaning": "kebebasan",
+        "imageQuery": "Japanese causative actions vocabulary illustration jiyuu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "選択",
+        "kana": "せんたく",
+        "romaji": "sentaku",
+        "meaning": "pilihan",
+        "imageQuery": "Japanese causative actions vocabulary illustration sentaku",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "保護者",
+        "kana": "ほごしゃ",
+        "romaji": "hogosha",
+        "meaning": "wali/pengasuh",
+        "imageQuery": "Japanese causative actions vocabulary illustration hogosha",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "子ども",
+        "kana": "こども",
+        "romaji": "kodomo",
+        "meaning": "anak",
+        "imageQuery": "Japanese causative actions vocabulary illustration kodomo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "先生",
+        "kana": "せんせい",
+        "romaji": "sensei",
+        "meaning": "guru",
+        "imageQuery": "Japanese causative actions vocabulary illustration sensei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "生徒",
+        "kana": "せいと",
+        "romaji": "seito",
+        "meaning": "murid",
+        "imageQuery": "Japanese causative actions vocabulary illustration seito",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "休ませる",
+        "kana": "やすませる",
+        "romaji": "yasumaseru",
+        "meaning": "mengizinkan istirahat",
+        "imageQuery": "Japanese causative actions vocabulary illustration yasumaseru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "読ませる",
+        "kana": "よませる",
+        "romaji": "yomaseru",
+        "meaning": "menyuruh membaca",
+        "imageQuery": "Japanese causative actions vocabulary illustration yomaseru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "待たせる",
+        "kana": "またせる",
+        "romaji": "mataseru",
+        "meaning": "membuat menunggu",
+        "imageQuery": "Japanese causative actions vocabulary illustration mataseru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "働かせる",
+        "kana": "はたらかせる",
+        "romaji": "hatarakaseru",
+        "meaning": "menyuruh bekerja",
+        "imageQuery": "Japanese causative actions vocabulary illustration hatarakaseru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "参加させる",
+        "kana": "さんかさせる",
+        "romaji": "sankasaseru",
+        "meaning": "mengikutsertakan",
+        "imageQuery": "Japanese causative actions vocabulary illustration sankasaseru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "説明させる",
+        "kana": "せつめいさせる",
+        "romaji": "setsumeisaseru",
+        "meaning": "menyuruh menjelaskan",
+        "imageQuery": "Japanese causative actions vocabulary illustration setsumeisaseru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "責任",
+        "kana": "せきにん",
+        "romaji": "sekinin",
+        "meaning": "tanggung jawab",
+        "imageQuery": "Japanese causative actions vocabulary illustration sekinin",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 49,
+    "level": "N3",
+    "title": "Kausatif-Pasif dan Ungkapan Kesantunan",
+    "tips": "Kausatif-pasif menekankan bahwa seseorang terpaksa atau diminta melakukan tindakan. ていただけませんか dan させていただきます adalah ungkapan sopan; gunakan sesuai situasi, bukan sekadar untuk membuat semua kalimat terdengar formal.",
+    "grammar": [
+      {
+        "pattern": "V kausatif-pasif",
+        "meaning": "Terpaksa disuruh melakukan V",
+        "explanation": "Bentuk kausatif-pasif menyatakan bahwa subjek dipaksa atau harus melakukan tindakan atas perintah orang lain. Nuansanya sering menunjukkan ketidaksukaan atau beban, tetapi konteks dapat membuatnya netral.",
+        "example_jp": "わたしは きのう おそくまで はたらかされました。",
+        "example_id": "Kemarin saya dipaksa bekerja sampai larut."
+      },
+      {
+        "pattern": "Vて いただけませんか",
+        "meaning": "Bisakah saya meminta Anda untuk V?",
+        "explanation": "Ungkapan ini meminta bantuan dengan sangat sopan dan merendahkan tindakan penerima permintaan. Cocok digunakan dalam layanan atau komunikasi formal ketika meminta tindakan dari orang yang dihormati.",
+        "example_jp": "この しょるいを みて いただけませんか。",
+        "example_id": "Bisakah Anda memeriksa dokumen ini?"
+      },
+      {
+        "pattern": "Vさせて いただきます",
+        "meaning": "Dengan izin, saya akan V",
+        "explanation": "Pola ini menyatakan bahwa pembicara melakukan tindakan dengan menerima izin atau kesempatan dari pihak lain, sambil merendahkan diri. Gunakan secara wajar; terlalu sering dapat terdengar berlebihan.",
+        "example_jp": "わたしから せつめいさせて いただきます。",
+        "example_id": "Izinkan saya yang menjelaskan."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "強制",
+        "kana": "きょうせい",
+        "romaji": "kyousei",
+        "meaning": "paksaan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration kyousei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "残業",
+        "kana": "ざんぎょう",
+        "romaji": "zangyou",
+        "meaning": "lembur",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration zangyou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "上司",
+        "kana": "じょうし",
+        "romaji": "joushi",
+        "meaning": "atasan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration joushi",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "部下",
+        "kana": "ぶか",
+        "romaji": "buka",
+        "meaning": "bawahan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration buka",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "依頼",
+        "kana": "いらい",
+        "romaji": "irai",
+        "meaning": "permintaan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration irai",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "許可",
+        "kana": "きょか",
+        "romaji": "kyoka",
+        "meaning": "izin",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration kyoka",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "機会",
+        "kana": "きかい",
+        "romaji": "kikai",
+        "meaning": "kesempatan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration kikai",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "説明",
+        "kana": "せつめい",
+        "romaji": "setsumei",
+        "meaning": "penjelasan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration setsumei",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "書類",
+        "kana": "しょるい",
+        "romaji": "shorui",
+        "meaning": "dokumen",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration shorui",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "確認",
+        "kana": "かくにん",
+        "romaji": "kakunin",
+        "meaning": "konfirmasi",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration kakunin",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "参加",
+        "kana": "さんか",
+        "romaji": "sanka",
+        "meaning": "partisipasi",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration sanka",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "担当",
+        "kana": "たんとう",
+        "romaji": "tantou",
+        "meaning": "penanggung jawab",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration tantou",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "提出",
+        "kana": "ていしゅつ",
+        "romaji": "teishutsu",
+        "meaning": "penyerahan",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration teishutsu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "期限",
+        "kana": "きげん",
+        "romaji": "kigen",
+        "meaning": "batas waktu",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration kigen",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "失礼",
+        "kana": "しつれい",
+        "romaji": "shitsurei",
+        "meaning": "tidak sopan/permisi",
+        "imageQuery": "Japanese formal requests and obligations vocabulary illustration shitsurei",
+        "imageUrl": ""
+      }
+    ]
+  },
+  {
+    "bab": 50,
+    "level": "N3",
+    "title": "Bahasa Hormat dan Rendah Hati",
+    "tips": "Bahasa hormat meninggikan tindakan orang lain, sedangkan bahasa rendah hati merendahkan tindakan pembicara atau kelompoknya. Beberapa kata kerja memiliki bentuk khusus, jadi tidak semuanya dibentuk hanya dengan menambahkan お／ご.",
+    "grammar": [
+      {
+        "pattern": "お／ご + Vます-stem + になります",
+        "meaning": "Orang yang dihormati melakukan V",
+        "explanation": "Pola ini merupakan bentuk hormat untuk meninggikan tindakan orang yang dihormati. Pemakaian お atau ご mengikuti asal kata, dan beberapa kata kerja memiliki bentuk hormat khusus yang lebih alami.",
+        "example_jp": "しゃちょうは もう おかえりに なりました。",
+        "example_id": "Direktur sudah pulang."
+      },
+      {
+        "pattern": "特別な尊敬語",
+        "meaning": "Kata kerja khusus bentuk hormat",
+        "explanation": "Sebagian kata kerja umum mempunyai padanan hormat khusus, misalnya いらっしゃいます untuk 行く・来る・いる dan おっしゃいます untuk 言う. Pilih bentuk berdasarkan orang yang tindakannya dihormati, bukan untuk tindakan diri sendiri.",
+        "example_jp": "せんせいは なんじに いらっしゃいますか。",
+        "example_id": "Pukul berapa guru akan datang?"
+      },
+      {
+        "pattern": "特別な謙譲語",
+        "meaning": "Kata kerja khusus bentuk rendah hati",
+        "explanation": "Bentuk rendah hati merendahkan tindakan pembicara untuk menghormati lawan bicara atau orang yang terkait. Contohnya 参ります untuk 行く・来る, 申します untuk 言う, dan いたします untuk する.",
+        "example_jp": "わたしは たなかと もうします。",
+        "example_id": "Nama saya Tanaka."
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "尊敬語",
+        "kana": "そんけいご",
+        "romaji": "sonkeigo",
+        "meaning": "bahasa hormat",
+        "imageQuery": "Japanese honorific language vocabulary illustration sonkeigo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "謙譲語",
+        "kana": "けんじょうご",
+        "romaji": "kenjougo",
+        "meaning": "bahasa rendah hati",
+        "imageQuery": "Japanese honorific language vocabulary illustration kenjougo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "丁寧語",
+        "kana": "ていねいご",
+        "romaji": "teineigo",
+        "meaning": "bahasa sopan",
+        "imageQuery": "Japanese honorific language vocabulary illustration teineigo",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "いらっしゃる",
+        "kana": "いらっしゃる",
+        "romaji": "irassharu",
+        "meaning": "pergi/datang/ada (hormat)",
+        "imageQuery": "Japanese honorific language vocabulary illustration irassharu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "おっしゃる",
+        "kana": "おっしゃる",
+        "romaji": "ossharu",
+        "meaning": "mengatakan (hormat)",
+        "imageQuery": "Japanese honorific language vocabulary illustration ossharu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "召し上がる",
+        "kana": "めしあがる",
+        "romaji": "meshiagaru",
+        "meaning": "makan/minum (hormat)",
+        "imageQuery": "Japanese honorific language vocabulary illustration meshiagaru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "ご覧になる",
+        "kana": "ごらんになる",
+        "romaji": "goranninaru",
+        "meaning": "melihat (hormat)",
+        "imageQuery": "Japanese honorific language vocabulary illustration goranninaru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "なさる",
+        "kana": "なさる",
+        "romaji": "nasaru",
+        "meaning": "melakukan (hormat)",
+        "imageQuery": "Japanese honorific language vocabulary illustration nasaru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "参る",
+        "kana": "まいる",
+        "romaji": "mairu",
+        "meaning": "pergi/datang (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration mairu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "申す",
+        "kana": "もうす",
+        "romaji": "mousu",
+        "meaning": "mengatakan/bernama (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration mousu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "いたす",
+        "kana": "いたす",
+        "romaji": "itasu",
+        "meaning": "melakukan (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration itasu",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "拝見する",
+        "kana": "はいけんする",
+        "romaji": "haikensuru",
+        "meaning": "melihat (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration haikensuru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "伺う",
+        "kana": "うかがう",
+        "romaji": "ukagau",
+        "meaning": "berkunjung/bertanya (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration ukagau",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "存じる",
+        "kana": "ぞんじる",
+        "romaji": "zonjiru",
+        "meaning": "mengetahui (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration zonjiru",
+        "imageUrl": ""
+      },
+      {
+        "kanji": "お目にかかる",
+        "kana": "おめにかかる",
+        "romaji": "omenikakaru",
+        "meaning": "bertemu (rendah hati)",
+        "imageQuery": "Japanese honorific language vocabulary illustration omenikakaru",
+        "imageUrl": ""
+      }
+    ]
+  }
+]

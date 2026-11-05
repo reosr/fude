@@ -1,0 +1,62 @@
+[
+  {
+    "kanji": "書く", "kana": "かく", "meaning": "menulis",
+    "dict": "書く", "masu": "書きます", "te": "書いて", "ta": "書いた", "nai": "書かない"
+  },
+  {
+    "kanji": "読む", "kana": "よむ", "meaning": "membaca",
+    "dict": "読む", "masu": "読みます", "te": "読んで", "ta": "読んだ", "nai": "読まない"
+  },
+  {
+    "kanji": "食べる", "kana": "たべる", "meaning": "makan",
+    "dict": "食べる", "masu": "食べます", "te": "食べて", "ta": "食べた", "nai": "食べない"
+  },
+  {
+    "kanji": "行く", "kana": "いく", "meaning": "pergi",
+    "dict": "行く", "masu": "行きます", "te": "行って", "ta": "行った", "nai": "行かない"
+  },
+  {
+    "kanji": "する", "kana": "する", "meaning": "melakukan",
+    "dict": "する", "masu": "します", "te": "して", "ta": "した", "nai": "しない"
+  },
+  {
+    "kanji": "来る", "kana": "くる", "meaning": "datang",
+    "dict": "来る", "masu": "来ます", "te": "来て", "ta": "来た", "nai": "来ない"
+  },
+  {
+    "kanji": "飲む", "kana": "のむ", "meaning": "minum",
+    "dict": "飲む", "masu": "飲みます", "te": "飲んで", "ta": "飲んだ", "nai": "飲まない"
+  },
+  {
+    "kanji": "見る", "kana": "みる", "meaning": "melihat",
+    "dict": "見る", "masu": "見ます", "te": "見て", "ta": "見た", "nai": "見ない"
+  },
+  {
+    "kanji": "買う", "kana": "かう", "meaning": "membeli",
+    "dict": "買う", "masu": "買います", "te": "買って", "ta": "買った", "nai": "買わない"
+  },
+  {
+    "kanji": "待つ", "kana": "まつ", "meaning": "menunggu",
+    "dict": "待つ", "masu": "待ちます", "te": "待って", "ta": "待った", "nai": "待たない"
+  },
+  {
+    "kanji": "話す", "kana": "はなす", "meaning": "berbicara",
+    "dict": "話す", "masu": "話します", "te": "話して", "ta": "話した", "nai": "話さない"
+  },
+  {
+    "kanji": "起きる", "kana": "おきる", "meaning": "bangun",
+    "dict": "起きる", "masu": "起きます", "te": "起きて", "ta": "起きた", "nai": "起きない"
+  },
+  {
+    "kanji": "寝る", "kana": "ねる", "meaning": "tidur",
+    "dict": "寝る", "masu": "寝ます", "te": "寝て", "ta": "寝た", "nai": "寝ない"
+  },
+  {
+    "kanji": "泳ぐ", "kana": "およぐ", "meaning": "berenang",
+    "dict": "泳ぐ", "masu": "泳ぎます", "te": "泳いで", "ta": "泳いだ", "nai": "泳がない"
+  },
+  {
+    "kanji": "遊ぶ", "kana": "あそぶ", "meaning": "bermain",
+    "dict": "遊ぶ", "masu": "遊びます", "te": "遊んで", "ta": "遊んだ", "nai": "遊ばない"
+  }
+]
