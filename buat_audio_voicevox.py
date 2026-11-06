@@ -32,7 +32,7 @@ VOICES_JSON = os.path.join(ROOT, "data", "voices.json")
 # Parameter suara
 VOCAB_SPEED = 0.95
 STORY_SPEED = 1.0
-INTONATION = 1.0
+INTONATION = 1.4
 PRE_SILENCE = 0.1
 POST_SILENCE = 0.2
 

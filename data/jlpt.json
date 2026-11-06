@@ -4,298 +4,818 @@
     "sets": [
       {
         "id": "n5-set-1",
-        "title": "Simulasi JLPT N5 - Set 1",
+        "title": "Latihan JLPT N5 – Practice Set 1",
         "sections": {
           "vocab": [
             {
-              "question": "わたしは<ruby>毎日<rt>まいにち</rt></ruby>（　）に<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。",
-              "options": ["三時間", "三時", "三月", "三日"],
+              "question": "「<ruby>友達<rt>ともだち</rt></ruby>」の読み方はどれですか。",
+              "options": [
+                "ともだち",
+                "ともたち",
+                "ゆうだち",
+                "ゆうたち"
+              ],
               "answer": 0,
-              "explanation": "三時間（さんじかん）berarti tiga jam."
+              "explanation": "友達 dibaca ともだち (tomodachi), artinya teman. Dalam kata ini, 友 dibaca とも."
             },
             {
-              "question": "きのう、（　）へ<ruby>行<rt>い</rt></ruby>きました。",
-              "options": ["先生", "学生", "友達", "学校"],
-              "answer": 3,
-              "explanation": "学校（がっこう）berarti sekolah."
-            },
-            {
-              "question": "わたしの（　）はインドネシア<ruby>人<rt>じん</rt></ruby>です。",
-              "options": ["名前", "家族", "国", "電話"],
+              "question": "「<ruby>毎朝<rt>まいあさ</rt></ruby>」の読み方はどれですか。",
+              "options": [
+                "まいばん",
+                "まいあさ",
+                "まいにち",
+                "まいとき"
+              ],
               "answer": 1,
-              "explanation": "家族（かぞく）berarti keluarga."
+              "explanation": "毎朝 dibaca まいあさ (maiasa), artinya setiap pagi. 毎 berarti setiap dan 朝 berarti pagi."
             },
             {
-              "question": "この（　）はだれのですか。",
-              "options": ["食べます", "高い", "本", "きれい"],
-              "answer": 2,
-              "explanation": "本（ほん）berarti buku."
-            },
-            {
-              "question": "<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>六時<rt>ろくじ</rt></ruby>に（　）。",
-              "options": ["寝ます", "起きます", "帰ります", "休みます"],
-              "answer": 1,
-              "explanation": "起きます（おきます）berarti bangun tidur."
-            },
-            {
-            "question": "わたしの<ruby>父<rt>ちち</rt></ruby>は<ruby>病院<rt>びょういん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いています。<ruby>父<rt>ちち</rt></ruby>は（　）です。",
-            "options": ["会社員", "先生", "学生", "医者"],
-            "answer": 3,
-            "explanation": "Karena ayahnya bekerja di rumah sakit (病院), profesi yang tepat adalah 医者 (dokter)."
-            },
-            {
-              "question": "<ruby>日本語<rt>にほんご</rt></ruby>の（　）はむずかしいです。",
-              "options": ["時計", "車", "駅", "勉強"],
-              "answer": 3,
-              "explanation": "勉強（べんきょう）berarti belajar."
-            },
-            {
-              "question": "スーパーでりんごを（　）<ruby>買<rt>か</rt></ruby>いました。",
-              "options": ["三人", "三枚", "三つ", "三台"],
-              "answer": 2,
-              "explanation": "三つ（みっつ）adalah kata penghitung umum."
-            },
-            {
-              "question": "あの<ruby>人<rt>ひと</rt></ruby>はわたしの（　）です。",
-              "options": ["机", "友達", "辞書", "電車"],
-              "answer": 1,
-              "explanation": "友達（ともだち）berarti teman."
-            },
-            {
-              "question": "この<ruby>町<rt>まち</rt></ruby>はとても（　）です。",
-              "options": ["にぎやか", "食べます", "行きます", "飲みます"],
+              "question": "「<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>」の読み方はどれですか。",
+              "options": [
+                "ぎゅうにゅう",
+                "ぎゅうゆ",
+                "うしにゅう",
+                "ぎゅにゅう"
+              ],
               "answer": 0,
-              "explanation": "にぎやか berarti ramai."
+              "explanation": "牛乳 dibaca ぎゅうにゅう (gyuunyuu), artinya susu. Ini merupakan bacaan gabungan yang perlu diingat."
+            },
+            {
+              "question": "「<ruby>時計<rt>とけい</rt></ruby>」の読み方はどれですか。",
+              "options": [
+                "ときけい",
+                "じけい",
+                "とけい",
+                "とっけい"
+              ],
+              "answer": 2,
+              "explanation": "時計 dibaca とけい (tokei), artinya jam atau arloji."
+            },
+            {
+              "question": "「きょうは としょかんへ いきます。」の「としょかん」は、どれですか。",
+              "options": [
+                "図書館",
+                "学校",
+                "病院",
+                "会社"
+              ],
+              "answer": 0,
+              "explanation": "としょかん ditulis 図書館, artinya perpustakaan. 図書 berarti buku dan 館 berarti gedung atau tempat."
+            },
+            {
+              "question": "「あした、せんせいに あいます。」の「せんせい」は、どれですか。",
+              "options": [
+                "先生",
+                "学生",
+                "先週",
+                "生徒"
+              ],
+              "answer": 0,
+              "explanation": "せんせい ditulis 先生, artinya guru. Jangan tertukar dengan 学生 (がくせい), yang berarti pelajar atau mahasiswa."
+            },
+            {
+              "question": "「でんしゃで 会社へ いきます。」の「でんしゃ」は、どれですか。",
+              "options": [
+                "電気",
+                "電車",
+                "自転車",
+                "車"
+              ],
+              "answer": 1,
+              "explanation": "でんしゃ ditulis 電車, artinya kereta. 電気 (でんき) berarti listrik, sedangkan 自転車 (じてんしゃ) berarti sepeda."
+            },
+            {
+              "question": "「わたしの かぞくは 四人です。」の「かぞく」は、どれですか。",
+              "options": [
+                "家",
+                "家族",
+                "家族だち",
+                "家具"
+              ],
+              "answer": 1,
+              "explanation": "かぞく ditulis 家族, artinya keluarga."
+            },
+            {
+              "question": "外は とても さむいです。まどを（　）。",
+              "options": [
+                "あけます",
+                "しめます",
+                "つけます",
+                "あらいます"
+              ],
+              "answer": 1,
+              "explanation": "Jawabannya しめます (menutup). Karena di luar sangat dingin, jendela sebaiknya ditutup. あけます berarti membuka."
+            },
+            {
+              "question": "たくさん あるいて、のどが かわきました。水を（　）。",
+              "options": [
+                "のみます",
+                "たべます",
+                "ききます",
+                "かいます"
+              ],
+              "answer": 0,
+              "explanation": "のどがかわきました berarti haus. Hal yang dilakukan adalah minum air: 水を飲みます."
+            },
+            {
+              "question": "おなかが すきました。もう 十二時ですから、（　）を 食べましょう。",
+              "options": [
+                "あさごはん",
+                "ひるごはん",
+                "ばんごはん",
+                "おやつ"
+              ],
+              "answer": 1,
+              "explanation": "Karena sekarang pukul dua belas dan perut lapar, pilihan yang sesuai adalah ひるごはん (makan siang)."
+            },
+            {
+              "question": "日曜日は 学校が 休みです。友達と 公園で（　）。",
+              "options": [
+                "べんきょうします",
+                "あそびます",
+                "はたらきます",
+                "ねます"
+              ],
+              "answer": 1,
+              "explanation": "公園であそびます berarti bermain di taman. Dalam konteks hari libur dan pergi bersama teman, あそびます paling sesuai."
+            },
+            {
+              "question": "「すぐ 行きます」と だいたい 同じ 意味のものは どれですか。",
+              "options": [
+                "あとで 行きます",
+                "いまから 行きます",
+                "いつも 行きます",
+                "ときどき 行きます"
+              ],
+              "answer": 1,
+              "explanation": "すぐ行きます berarti segera pergi. いまから行きます (pergi mulai sekarang) paling dekat maknanya. あとで berarti nanti."
+            },
+            {
+              "question": "「たくさん 本が あります」と だいたい 同じ 意味のものは どれですか。",
+              "options": [
+                "本が 少しです",
+                "本が 多いです",
+                "本が 新しいです",
+                "本が 古いです"
+              ],
+              "answer": 1,
+              "explanation": "たくさん berarti banyak. 本が多いです memiliki makna yang hampir sama, yaitu jumlah buku banyak."
+            },
+            {
+              "question": "「この はなは きれいです」と だいたい 同じ 意味のものは どれですか。",
+              "options": [
+                "この はなは しずかです",
+                "この はなは あたらしいです",
+                "この はなは うつくしいです",
+                "この はなは ひろいです"
+              ],
+              "answer": 2,
+              "explanation": "きれい berarti indah atau cantik ketika membicarakan bunga. うつくしい (indah) adalah makna yang paling dekat."
+            },
+            {
+              "question": "「ちょっと 待ってください」と だいたい 同じ 意味のものは どれですか。",
+              "options": [
+                "少し 待ってください",
+                "長く 待ってください",
+                "早く 来てください",
+                "すぐ 帰ってください"
+              ],
+              "answer": 0,
+              "explanation": "ちょっと berarti sebentar atau sedikit. 少し待ってください berarti tunggu sebentar, sehingga maknanya paling dekat."
             }
           ],
           "grammar": [
             {
-              "question": "わたし（　）インドネシア<ruby>人<rt>じん</rt></ruby>です。",
-              "options": ["を", "に", "は", "で"],
-              "answer": 2,
-              "explanation": "Partikel は menandai topik."
-            },
-            {
-              "question": "<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>日本語<rt>にほんご</rt></ruby>（　）<ruby>勉強<rt>べんきょう</rt></ruby>します。",
-              "options": ["を", "は", "に", "で"],
-              "answer": 0,
-              "explanation": "Partikel を menandai objek langsung."
-            },
-            {
-              "question": "<ruby>学校<rt>がっこう</rt></ruby>（　）<ruby>行<rt>い</rt></ruby>きます。",
-              "options": ["を", "へ", "で", "が"],
+              "question": "わたし（　）インドネシア人です。",
+              "options": [
+                "を",
+                "は",
+                "に",
+                "で"
+              ],
               "answer": 1,
-              "explanation": "Partikel へ menunjukkan arah."
+              "explanation": "Partikel は menandai topik kalimat. Polanya N1 は N2 です, yaitu 'N1 adalah N2'."
             },
             {
-              "question": "<ruby>七時<rt>しちじ</rt></ruby>（　）<ruby>起<rt>お</rt></ruby>きます。",
-              "options": ["に", "を", "で", "へ"],
-              "answer": 0,
-              "explanation": "Partikel に menunjukkan waktu."
-            },
-            {
-              "question": "<ruby>図書館<rt>としょかん</rt></ruby>（　）<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。",
-              "options": ["に", "へ", "で", "を"],
+              "question": "これは わたし（　）本です。",
+              "options": [
+                "を",
+                "が",
+                "の",
+                "へ"
+              ],
               "answer": 2,
-              "explanation": "Partikel で menunjukkan tempat aktivitas."
+              "explanation": "Partikel の menghubungkan dua kata benda dan menunjukkan kepemilikan atau hubungan. わたしの本 berarti buku saya."
             },
             {
-              "question": "これは（　）<ruby>本<rt>ほん</rt></ruby>ですか。",
-              "options": ["どこ", "だれ", "どんな", "いつ"],
-              "answer": 2,
-              "explanation": "どんな menanyakan jenis/karakteristik."
-            },
-            {
-              "question": "わたしはコーヒー（　）<ruby>飲<rt>の</rt></ruby>みません。",
-              "options": ["を", "は", "に", "で"],
-              "answer": 0,
-              "explanation": "Partikel を menandai objek."
-            },
-            {
-              "question": "きのう、<ruby>映画<rt>えいが</rt></ruby>を（　）。",
-              "options": ["見ます", "見ました", "見ません", "見ませんでした"],
+              "question": "毎朝 七時（　）起きます。",
+              "options": [
+                "を",
+                "に",
+                "で",
+                "へ"
+              ],
               "answer": 1,
-              "explanation": "見ました adalah bentuk lampau positif."
+              "explanation": "Partikel に dipakai untuk menunjukkan waktu yang spesifik. 七時に起きます berarti bangun pada pukul tujuh."
             },
             {
-              "question": "<ruby>日本語<rt>にほんご</rt></ruby>は<ruby>英語<rt>えいご</rt></ruby>（　）むずかしいです。",
-              "options": ["より", "から", "まで", "だけ"],
-              "answer": 0,
-              "explanation": "より digunakan untuk perbandingan."
-            },
-            {
-              "question": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っていますから、（　）。",
-              "options": ["出かけます", "出かけたいです", "出かけません", "出かけました"],
+              "question": "図書館（　）日本語を 勉強します。",
+              "options": [
+                "に",
+                "へ",
+                "で",
+                "を"
+              ],
               "answer": 2,
-              "explanation": "出かけません berarti tidak pergi keluar."
+              "explanation": "Partikel で menunjukkan tempat berlangsungnya aktivitas. Kegiatan belajar dilakukan di perpustakaan, jadi gunakan 図書館で."
+            },
+            {
+              "question": "日曜日に 友達（　）映画を 見ました。",
+              "options": [
+                "と",
+                "を",
+                "に",
+                "で"
+              ],
+              "answer": 0,
+              "explanation": "Partikel と berarti 'bersama' ketika menghubungkan orang yang melakukan kegiatan bersama. 友達と映画を見ました berarti menonton film bersama teman."
+            },
+            {
+              "question": "りんごを 三つ（　）。",
+              "options": [
+                "あります",
+                "います",
+                "ください",
+                "します"
+              ],
+              "answer": 2,
+              "explanation": "ください dipakai saat meminta sesuatu dengan sopan. りんごを三つください berarti 'Tolong beri saya tiga buah apel'."
+            },
+            {
+              "question": "きのう、デパートへ（　）。",
+              "options": [
+                "行きます",
+                "行きました",
+                "行きません",
+                "行きませんでしたか"
+              ],
+              "answer": 1,
+              "explanation": "きのう menunjukkan waktu lampau. Bentuk lampau positif dari 行きます adalah 行きました."
+            },
+            {
+              "question": "ここで 写真を（　）も いいですか。",
+              "options": [
+                "撮る",
+                "撮って",
+                "撮った",
+                "撮り"
+              ],
+              "answer": 1,
+              "explanation": "Pola izin adalah kata kerja bentuk て + もいいですか. 撮ります berubah menjadi 撮って, sehingga menjadi 写真を撮ってもいいですか."
+            },
+            {
+              "question": "ことばを ただしい じゅんばんに ならべたものは どれですか。\n「わたしは　＿＿＿＿　★　＿＿＿＿　。」",
+              "options": [
+                "毎朝 → 六時に → 起きます",
+                "六時に → 毎朝 → 起きます",
+                "起きます → 毎朝 → 六時に",
+                "毎朝 → 起きます → 六時に"
+              ],
+              "answer": 0,
+              "explanation": "Urutan yang benar adalah 毎朝 → 六時に → 起きます. Keterangan frekuensi 毎朝 diletakkan sebelum waktu spesifik 六時に, lalu kata kerja di akhir: わたしは毎朝六時に起きます."
+            },
+            {
+              "question": "ことばを ただしい じゅんばんに ならべたものは どれですか。\n「きのう　＿＿＿＿　★　＿＿＿＿　。」",
+              "options": [
+                "友達と → 公園で → あそびました",
+                "公園で → 友達と → あそびました",
+                "あそびました → 友達と → 公園で",
+                "友達と → あそびました → 公園で"
+              ],
+              "answer": 0,
+              "explanation": "Urutan yang tepat adalah 友達と → 公園で → あそびました. Keterangan teman dan tempat aktivitas diletakkan sebelum kata kerja: きのう友達と公園であそびました."
+            },
+            {
+              "question": "文の ながれに 合う ことばを えらんでください。\nわたしは 毎朝 六時に 起きます。（　）、朝ごはんを 食べて、学校へ 行きます。",
+              "options": [
+                "でも",
+                "それから",
+                "しかし",
+                "だから"
+              ],
+              "answer": 1,
+              "explanation": "それから berarti 'setelah itu/kemudian' dan menghubungkan kegiatan berurutan. Setelah bangun, tokoh sarapan lalu pergi ke sekolah."
+            },
+            {
+              "question": "文の ながれに 合う ことばを えらんでください。\nきょうは 日曜日です。学校は 休みです。（　）、友達と 公園へ 行きます。",
+              "options": [
+                "そして",
+                "でも",
+                "しかし",
+                "まだ"
+              ],
+              "answer": 0,
+              "explanation": "そして berarti 'dan/kemudian', cocok untuk melanjutkan informasi atau kegiatan. Hari ini libur sekolah, lalu tokoh pergi ke taman bersama teman."
             }
           ],
-          "reading":[
+          "reading": [
             {
-                "passage": "わたしは <ruby>リサ<rt>りさ</rt></ruby>です。<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>六時半<rt>ろくじはん</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます。<ruby>朝<rt>あさ</rt></ruby>ごはんはパンとミルクです。それから、<ruby>七時半<rt>しちじはん</rt></ruby>にバスで<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。わたしの<ruby>学校<rt>がっこう</rt></ruby>は<ruby>東京<rt>とうきょう</rt></ruby>にあります。<ruby>学校<rt>がっこう</rt></ruby>で<ruby>日本語<rt>にほんご</rt></ruby>と<ruby>数学<rt>すうがく</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>十二時<rt>じゅうにじ</rt></ruby>に<ruby>友達<rt>ともだち</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>昼<rt>ひる</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べます。<ruby>放課後<rt>ほうかご</rt></ruby>、<ruby>公園<rt>こうえん</rt></ruby>でテニスをします。<ruby>五時<rt>ごじ</rt></ruby>に<ruby>家<rt>いえ</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>ります。<ruby>夜<rt>よる</rt></ruby>は<ruby>宿題<rt>しゅくだい</rt></ruby>をして、<ruby>十時<rt>じゅうじ</rt></ruby>に<ruby>寝<rt>ね</rt></ruby>ます。",
-                "question": "リサさんは<ruby>放課後<rt>ほうかご</rt></ruby>、どこでテニスをしますか？",
-                "options": [
-                "がっこう",
-                "いえ",
-                "こうえん",
-                "とうきょう"
-                ],
-                "answer": 2,
-                "explanation": "Teks menyebutkan 'kouen de tenisu o shimasu' yang berarti bermain tenis di taman (park)."
+              "question": "リサさんは 何時に 学校へ 行きますか。",
+              "options": [
+                "六時半",
+                "七時",
+                "七時半",
+                "八時"
+              ],
+              "answer": 2,
+              "explanation": "Dalam bacaan tertulis 七時半にバスで学校へ行きます. 七時半 berarti pukul 07.30.",
+              "passage": "リサさんは 毎朝 六時半に 起きます。朝ごはんを 食べて、七時半に バスで 学校へ 行きます。学校は 八時に 始まります。"
             },
             {
-                "passage": "わたしの<ruby>名前<rt>なまえ</rt></ruby>はケンです。<ruby>日曜日<rt>にちようび</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby><ruby>好<rt>す</rt></ruby>きです。<ruby>朝<rt>あさ</rt></ruby>、わたしは<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>します。それから、<ruby>母<rt>はは</rt></ruby>とスーパーへ<ruby>行<rt>い</rt></ruby>きます。<ruby>肉<rt>にく</rt></ruby>と<ruby>野菜<rt>やさい</rt></ruby>と<ruby>果物<rt>くだもの</rt></ruby>を<ruby>買<rt>か</rt></ruby>います。わたしはりんごが<ruby>好<rt>す</rt></ruby>きです。<ruby>午後<rt>ごご</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>ます。<ruby>妹<rt>いもうと</rt></ruby>は<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。<ruby>父<rt>ちち</rt></ruby>は<ruby>晩<rt>ばん</rt></ruby>ごはんを<ruby>作<rt>つく</rt></ruby>ります。<ruby>七時<rt>しちじ</rt></ruby>に<ruby>家族<rt>かぞく</rt></ruby>でごはんを<ruby>食<rt>た</rt></ruby>べます。ごはんはとてもおいしいです。<ruby>食事<rt>しょくじ</rt></ruby>のあとで、みんなで<ruby>話<rt>はな</rt></ruby>します。<ruby>十一時<rt>じゅういちじ</rt></ruby>に<ruby>寝<rt>ね</rt></ruby>ます。",
-                "question": "ケンさんは<ruby>日曜日<rt>にちようび</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>、<ruby>何<rt>なに</rt></ruby>をしますか？",
-                "options": [
-                "ほんをよみます",
-                "えいがをみます",
-                "ばんごはんをつくります",
-                "へやをそうじします"
-                ],
-                "answer": 1,
-                "explanation": "Teks menyebutkan 'gogo, ie de eiga o mimasu' yang berarti pada sore hari dia menonton film di rumah."
+              "question": "田中さんは どうして きょう 学校へ 来ませんか。",
+              "options": [
+                "病気だからです",
+                "旅行へ 行くからです",
+                "休みだからです",
+                "仕事が あるからです"
+              ],
+              "answer": 0,
+              "explanation": "Pesan menyebutkan かぜをひきました, yaitu terkena flu. Karena sakit, Tanaka tidak datang ke sekolah hari ini.",
+              "passage": "山田さんへ\n田中です。きょうは かぜを ひきました。あたまも いたいです。ですから、学校へ 行きません。あしたは 行きたいです。\n田中"
             },
             {
-                "passage": "<ruby>先週<rt>せんしゅう</rt></ruby>、わたしは<ruby>友達<rt>ともだち</rt></ruby>と<ruby>京都<rt>きょうと</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。<ruby>新幹線<rt>しんかんせん</rt></ruby>で<ruby>行<rt>い</rt></ruby>きました。<ruby>京都<rt>きょうと</rt></ruby>はとてもきれいでした。<ruby>古<rt>ふる</rt></ruby>いお<ruby>寺<rt>てら</rt></ruby>をたくさん<ruby>見<rt>み</rt></ruby>ました。<ruby>写真<rt>しゃしん</rt></ruby>をたくさん<ruby>撮<rt>と</rt></ruby>りました。<ruby>午後<rt>ごご</rt></ruby>、<ruby>伝統的<rt>でんとうてき</rt></ruby>な<ruby>日本食<rt>にほんしょく</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました。<ruby>料理<rt>りょうり</rt></ruby>はとてもおいしかったです。わたしは<ruby>母<rt>はは</rt></ruby>に<ruby>お土産<rt>おみやげ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>扇子<rt>せんす</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>次<rt>つぎ</rt></ruby>は<ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きたいです。<ruby>飛行機<rt>ひこうき</rt></ruby>で<ruby>東京<rt>とうきょう</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>りました。とても<ruby>楽<rt>たの</rt></ruby>しい<ruby>旅行<rt>りょこう</rt></ruby>でした。",
-                "question": "この<ruby>人<rt>ひと</rt></ruby>は<ruby>京都<rt>きょうと</rt></ruby>で<ruby>母<rt>はは</rt></ruby>に<ruby>何<rt>なに</rt></ruby>を<ruby>買<rt>か</rt></ruby>いましたか？",
-                "options": [
-                "おかし",
-                "せんす",
-                "しゃしん",
-                "きもの"
-                ],
-                "answer": 1,
-                "explanation": "Teks menyebutkan 'Sensu o kaimashita' yang berarti dia membeli kipas lipat (sensu) untuk ibunya."
+              "question": "けんさんは 朝ごはんの あとで、まず 何を しますか。",
+              "options": [
+                "スーパーへ 行きます",
+                "へやを そうじします",
+                "日本語を 勉強します",
+                "サッカーを します"
+              ],
+              "answer": 1,
+              "explanation": "Bacaan menyatakan 朝ごはんを食べます。それから、へやをそうじします. Jadi, setelah sarapan, kegiatan pertama Ken adalah membersihkan kamar. Ia baru pergi ke supermarket pada pukul sembilan.",
+              "passage": "けんさんは 日曜日が 好きです。朝 七時に 起きて、朝ごはんを 食べます。それから、へやを そうじします。九時に 母と スーパーへ 行きます。スーパーで パンと 牛乳と りんごを 買います。昼ごはんの あとで、家で 一時間 日本語を 勉強します。午後 三時に 友達が 来ます。二人で 公園へ 行って、サッカーを します。午後 六時に 家へ 帰ります。"
+            },
+            {
+              "question": "さくらさんは 何曜日に 日本語の クラスが ありますか。",
+              "options": [
+                "月曜日と 水曜日",
+                "火曜日と 木曜日",
+                "金曜日と 土曜日",
+                "土曜日と 日曜日"
+              ],
+              "answer": 1,
+              "explanation": "Dalam bacaan tertulis 火曜日と木曜日は日本語のクラスがあります, artinya kelas bahasa Jepang berlangsung pada hari Selasa dan Kamis.",
+              "passage": "さくらさんは 今、東京に 住んでいます。月曜日から 金曜日まで 学校へ 行きます。学校は 九時に 始まって、午後 三時に 終わります。学校の あとで、図書館で 宿題を します。火曜日と 木曜日は 日本語の クラスが あります。土曜日は 朝から 店で アルバイトを します。日曜日は 休みです。日曜日の 午後、友達と テニスを します。"
+            },
+            {
+              "question": "この プールは 日曜日の 午後、何時まで 使えますか。",
+              "options": [
+                "十二時まで",
+                "三時まで",
+                "五時まで",
+                "六時まで"
+              ],
+              "answer": 2,
+              "explanation": "Jadwal menunjukkan hari Minggu buka dari 9:00 sampai 17:00. Jadi, kolam renang dapat digunakan sampai pukul lima sore.",
+              "passage": "【市民プール】\n月曜日：休み\n火曜日～土曜日：午前 9:00 ～ 午後 6:00\n日曜日：午前 9:00 ～ 午後 5:00\n料金：大人 300円、子ども 150円\n水を 持って 来てください。"
+            },
+            {
+              "question": "この お知らせに 書いてある、テストに 持って行くものは どれですか。",
+              "options": [
+                "学生証、えんぴつ、けしゴム",
+                "本、ノート、かばん",
+                "お金、水、タオル",
+                "学生証、かさ、時計"
+              ],
+              "answer": 0,
+              "explanation": "Pemberitahuan mencantumkan tiga benda yang harus dibawa: 学生証 (kartu pelajar/mahasiswa), えんぴつ (pensil), dan けしゴム (penghapus).",
+              "passage": "【日本語テストの お知らせ】\n日時：6月10日（火）午前 9時\n場所：3階の 教室\n持って来るもの：学生証、えんぴつ、けしゴム\n午前 8時50分までに 来てください。"
             }
-            ],
+          ],
           "listening": [
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q1.mp3",
-                "dialogue": [
-                { "speaker": "Pria", "jp": "すみません、りんごはいくらですか。" },
-                { "speaker": "Wanita", "jp": "りんごは一つ百円です。" },
-                { "speaker": "Pria", "jp": "じゃあ、りんごを三つください。" }
-                ],
-                "question": "<ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>はりんごをいくつ<ruby>買<rt>か</rt></ruby>いますか？",
-                "options": ["一つ", "二つ", "三つ", "四つ"],
-                "answer": 2,
-                "explanation": "Pria tersebut membeli tiga apel karena mengatakan 'mittsu kudasai'."
+              "audioUrl": "/audio/jlpt/n5/set1-q01.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "田中さん、これからどこへ行きますか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "図書館へ行きます。本を返します。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "あれ、本は家にありますよね。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "そうでした。忘れていました。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "じゃ、先に家へ帰って、本を持って来てください。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "はい。家から図書館は近いですから、すぐ行きます。"
+                }
+              ],
+              "question": "男の人は、このあとまず何をしますか。",
+              "options": [
+                "図書館へ行きます。",
+                "家へ帰ります。",
+                "本を買います。",
+                "友達に会います。"
+              ],
+              "answer": 1,
+              "explanation": "Pria itu awalnya ingin pergi ke perpustakaan untuk mengembalikan buku. Namun, bukunya tertinggal di rumah. Wanita menyuruhnya pulang dahulu untuk mengambil buku. Jadi, tindakan pertama yang akan dilakukan pria adalah 家へ帰ります (pulang ke rumah)."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q2.mp3",
-                "dialogue": [
-                { "speaker": "Wanita", "jp": "すみません、コーヒーをください。" },
-                { "speaker": "Pria", "jp": "はい、ホットですか。アイスですか。" },
-                { "speaker": "Wanita", "jp": "アイスでお願いします。" }
-                ],
-                "question": "<ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は<ruby>何<rt>なに</rt></ruby>を<ruby>頼<rt>たの</rt></ruby>みましたか？",
-                "options": ["ホットコーヒー", "アイスコーヒー", "お<ruby>茶<rt>ちゃ</rt></ruby>", "<ruby>水<rt>みず</rt></ruby>"],
-                "answer": 1,
-                "explanation": "Wanita tersebut memesan 'aisu kōhī' (kopi dingin)."
+              "audioUrl": "/audio/jlpt/n5/set1-q02.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Pria",
+                  "jp": "あしたの旅行ですが、何時に出ますか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "バスは八時に出ます。七時半に駅へ来てください。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "わかりました。朝ごはんは家で食べます。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "駅で切符を買いましょうか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "はい。じゃ、朝ごはんを食べてから、駅へ行きます。"
+                }
+              ],
+              "question": "男の人は、朝まず何をしますか。",
+              "options": [
+                "駅で切符を買います。",
+                "バスに乗ります。",
+                "家で朝ごはんを食べます。",
+                "旅行のかばんを買います。"
+              ],
+              "answer": 2,
+              "explanation": "Pria mengatakan 朝ごはんは家で食べます dan 朝ごはんを食べてから、駅へ行きます. Artinya, ia akan sarapan di rumah terlebih dahulu, baru pergi ke stasiun. Jawaban yang benar adalah 家で朝ごはんを食べます."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q3.mp3",
-                "dialogue": [
-                { "speaker": "Pria", "jp": "すみません、<ruby>駅<rt>えき</rt></ruby>はどこですか。" },
-                { "speaker": "Wanita", "jp": "この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>行<rt>い</rt></ruby>って、<ruby>右<rt>みぎ</rt></ruby>に<ruby>曲<rt>ま</rt></ruby>がってください。" },
-                { "speaker": "Pria", "jp": "ありがとうございます。" }
-                ],
-                "question": "<ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>はどこへ<ruby>行<rt>い</rt></ruby>きますか？",
-                "options": ["<ruby>学校<rt>がっこう</rt></ruby>", "<ruby>病院<rt>びょういん</rt></ruby>", "<ruby>駅<rt>えき</rt></ruby>", "<ruby>家<rt>いえ</rt></ruby>"],
-                "answer": 2,
-                "explanation": "Pria tersebut bertanya arah ke stasiun (eki)."
+              "audioUrl": "/audio/jlpt/n5/set1-q03.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "すみません。コピーをしたいです。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "コピー機はあそこです。でも、紙がありません。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "そうですか。じゃ、どうしたらいいですか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "受付で紙をもらってください。それからコピーしてください。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "わかりました。先に受付へ行きます。ありがとうございます。"
+                }
+              ],
+              "question": "女の人は、コピーをする前に何をしますか。",
+              "options": [
+                "受付へ行きます。",
+                "家へ帰ります。",
+                "コピー機を買います。",
+                "紙を捨てます。"
+              ],
+              "answer": 0,
+              "explanation": "Pria menjelaskan bahwa kertas di mesin fotokopi habis. Wanita harus mengambil kertas di 受付 (resepsionis/meja penerimaan) sebelum menggunakan mesin. Jadi, ia pergi ke 受付 terlebih dahulu."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q4.mp3",
-                "dialogue": [
-                { "speaker": "Wanita", "jp": "<ruby>明日<rt>あした</rt></ruby>の<ruby>会議<rt>かいぎ</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか。" },
-                { "speaker": "Pria", "jp": "<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>からです。" },
-                { "speaker": "Wanita", "jp": "わかりました。" }
-                ],
-                "question": "<ruby>会議<rt>かいぎ</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか？",
-                "options": ["<ruby>一時<rt>いちじ</rt></ruby>", "<ruby>二時<rt>にじ</rt></ruby>", "<ruby>三時<rt>さんじ</rt></ruby>", "<ruby>四時<rt>よじ</rt></ruby>"],
-                "answer": 2,
-                "explanation": "Rapat dimulai jam 3 sore (gogo sanji)."
+              "audioUrl": "/audio/jlpt/n5/set1-q04.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Pria",
+                  "jp": "土曜日の映画は何時からですか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "午後三時からです。二時半に映画館の前で会いましょう。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "二時半ですね。駅で会いませんか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "映画館は駅の近くですから、映画館の前がいいです。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "わかりました。じゃ、土曜日の二時半に映画館の前ですね。"
+                }
+              ],
+              "question": "二人は何時に会いますか。",
+              "options": [
+                "午後二時",
+                "午後二時半",
+                "午後三時",
+                "午後三時半"
+              ],
+              "answer": 1,
+              "explanation": "Film mulai pukul tiga sore, tetapi mereka sepakat bertemu pukul 二時半 (jam 2.30), sebelum film dimulai. Perhatikan perbedaan waktu mulai film dan waktu mereka bertemu."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q5.mp3",
-                "dialogue": [
-                { "speaker": "Pria", "jp": "<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>何時<rt>なんじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きますか。" },
-                { "speaker": "Wanita", "jp": "<ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます。" },
-                { "speaker": "Pria", "jp": "<ruby>早<rt>はや</rt></ruby>いですね。" }
-                ],
-                "question": "<ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>何時<rt>なんじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きますか？",
-                "options": ["<ruby>五時<rt>ごじ</rt></ruby>", "<ruby>六時<rt>ろくじ</rt></ruby>", "<ruby>七時<rt>しちじ</rt></ruby>", "<ruby>八時<rt>はちじ</rt></ruby>"],
-                "answer": 1,
-                "explanation": "Wanita tersebut bangun jam 6 pagi (rokuji)."
+              "audioUrl": "/audio/jlpt/n5/set1-q05.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Pria",
+                  "jp": "妹さんは何曜日にピアノを習いますか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "いつも火曜日と木曜日です。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "今週の木曜日も行きますか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "いいえ。木曜日は学校のテストがあります。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "じゃ、今週はどうしますか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "今週だけ、水曜日に行きます。"
+                }
+              ],
+              "question": "妹さんは今週、何曜日にピアノを習いますか。",
+              "options": [
+                "火曜日",
+                "水曜日",
+                "木曜日",
+                "金曜日"
+              ],
+              "answer": 1,
+              "explanation": "Jadwal biasanya adalah Selasa dan Kamis. Namun, khusus minggu ini hari Kamis ada ujian sekolah, sehingga pelajaran piano dipindahkan ke 水曜日 (Rabu). Pertanyaan menanyakan jadwal minggu ini, bukan jadwal biasanya."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q6.mp3",
-                "dialogue": [
-                { "speaker": "Wanita", "jp": "すみません、このかさはいくらですか。" },
-                { "speaker": "Pria", "jp": "<ruby>千円<rt>せんえん</rt></ruby>です。" },
-                { "speaker": "Wanita", "jp": "じゃあ、これをください。" }
-                ],
-                "question": "<ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は<ruby>何<rt>なに</rt></ruby>を<ruby>買<rt>か</rt></ruby>いますか？",
-                "options": ["かさ", "かばん", "くつ", "ぼうし"],
-                "answer": 0,
-                "explanation": "Wanita tersebut membeli payung (kasa)."
+              "audioUrl": "/audio/jlpt/n5/set1-q06.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "きのう、デパートで何を買いましたか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "シャツを買いました。ズボンも見ましたが、高かったです。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "そのシャツはいくらでしたか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "三千円です。セールでしたから、安かったです。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "そうですか。いい買い物でしたね。"
+                }
+              ],
+              "question": "男の人が買ったシャツはいくらでしたか。",
+              "options": [
+                "千円",
+                "二千円",
+                "三千円",
+                "四千円"
+              ],
+              "answer": 2,
+              "explanation": "Wanita menanyakan harga kemeja dengan いくらでしたか. Pria menjawab 三千円です, berarti harganya 3.000 yen. Harga celana tidak disebutkan sebagai barang yang dibeli."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q7.mp3",
-                "dialogue": [
-                { "speaker": "Pria", "jp": "<ruby>兄弟<rt>きょうだい</rt></ruby>がいますか。" },
-                { "speaker": "Wanita", "jp": "はい。<ruby>兄<rt>あに</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby>と<ruby>妹<rt>いもうと</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby>います。" },
-                { "speaker": "Pria", "jp": "そうですか。" }
-                ],
-                "question": "<ruby>女<rt>おんな</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>の<ruby>家族<rt>かぞく</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>がいますか？",
-                "options": ["<ruby>兄<rt>あに</rt></ruby>だけ", "<ruby>妹<rt>いもうと</rt></ruby>だけ", "<ruby>兄<rt>あに</rt></ruby>と<ruby>妹<rt>いもうと</rt></ruby>", "<ruby>誰<rt>だれ</rt></ruby>もいない"],
-                "answer": 2,
-                "explanation": "Wanita tersebut punya kakak laki-laki dan adik perempuan."
+              "audioUrl": "/audio/jlpt/n5/set1-q07.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "田中さん、土曜日は何をしますか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "午前中、友達とテニスをします。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "午後は暇ですか。一緒に買い物に行きませんか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "いいですね。でも、その前に図書館へ行きたいです。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "図書館で何をしますか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "借りた本を返します。月曜日は図書館が休みですから、土曜日に返します。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "そうですか。じゃあ、図書館のあとで買い物に行きましょう。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "はい。図書館の前で待っていてください。終わったら電話します。"
+                }
+              ],
+              "question": "男の人は土曜日の午後、まず何をしますか。",
+              "options": [
+                "友達とテニスをします。",
+                "図書館へ本を返しに行きます。",
+                "買い物をします。",
+                "家で勉強します。"
+              ],
+              "answer": 1,
+              "explanation": "Pria tersebut mengatakan bahwa pada pagi hari ia bermain tenis. Untuk sore hari, ia ingin pergi ke perpustakaan terlebih dahulu untuk mengembalikan buku pinjaman. Setelah itu, barulah ia akan pergi berbelanja bersama wanita tersebut. Jadi, kegiatan pertama pada Sabtu sore adalah 図書館へ本を返しに行きます (pergi ke perpustakaan untuk mengembalikan buku)."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q8.mp3",
-                "dialogue": [
-                { "speaker": "Pria", "jp": "すみません、<ruby>東京<rt>とうきょう</rt></ruby><ruby>行<rt>い</rt></ruby>きの<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>何番線<rt>なんばんせん</rt></ruby>ですか。" },
-                { "speaker": "Wanita", "jp": "<ruby>三番線<rt>さんばんせん</rt></ruby>です。" },
-                { "speaker": "Pria", "jp": "ありがとうございます。" }
-                ],
-                "question": "<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>何番線<rt>なんばんせん</rt></ruby>ですか？",
-                "options": ["<ruby>一番線<rt>いちばんせん</rt></ruby>", "<ruby>二番線<rt>にばんせん</rt></ruby>", "<ruby>三番線<rt>さんばんせん</rt></ruby>", "<ruby>四番線<rt>よんばんせん</rt></ruby>"],
-                "answer": 2,
-                "explanation": "Kereta berangkat dari jalur nomor 3 (sanbansen)."
+              "audioUrl": "/audio/jlpt/n5/set1-q08.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Pria",
+                  "jp": "お母さん、今からスーパーへ行きますか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "ええ、晩ごはんのものを買いに行きます。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "今日は何を作りますか。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "カレーです。じゃがいもとにんじんを買います。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "肉はありますか。冷蔵庫にありませんでしたよ。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "肉は昨日買いましたから、あります。でも、牛乳がありません。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "そうですか。じゃあ、牛乳も買ってください。ぼくはパンを買います。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "わかりました。スーパーで四時に会いましょう。"
+                }
+              ],
+              "question": "女の人はスーパーで何を買いますか。",
+              "options": [
+                "肉とパン",
+                "じゃがいもとにんじんと牛乳",
+                "牛乳とパン",
+                "肉とじゃがいも"
+              ],
+              "answer": 1,
+              "explanation": "Wanita itu akan memasak kari. Ia mengatakan akan membeli じゃがいも (kentang) dan にんじん (wortel). Daging sudah dibeli kemarin, jadi tidak perlu membeli daging lagi. Pria meminta wanita membeli 牛乳 (susu) juga, sedangkan roti akan dibeli oleh pria. Jadi, wanita membeli kentang, wortel, dan susu."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q9.mp3",
-                "dialogue": [
-                { "speaker": "Wanita", "jp": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りますか。" },
-                { "speaker": "Pria", "jp": "いいえ、<ruby>晴<rt>は</rt></ruby>れですよ。" },
-                { "speaker": "Wanita", "jp": "よかった。" }
-                ],
-                "question": "<ruby>明日<rt>あした</rt></ruby>の<ruby>天気<rt>てんき</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
-                "options": ["<ruby>雨<rt>あめ</rt></ruby>", "<ruby>雪<rt>ゆき</rt></ruby>", "<ruby>晴<rt>は</rt></ruby>れ", "<ruby>曇<rt>くも</rt></ruby>り"],
-                "answer": 2,
-                "explanation": "Besok cuacanya cerah (hare)."
+              "audioUrl": "/audio/jlpt/n5/set1-q09.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "あした、学校のあとで図書館へ行きますか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "はい、三時に友達と図書館で会います。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "その前に、先生に本を返しますか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "そうです。先生は四時に帰りますから、早く行きます。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "先生の部屋はどこですか。教室から遠いですか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "いいえ、近いです。教室のとなりにあります。"
+                },
+                {
+                  "speaker": "Wanita",
+                  "jp": "じゃあ、何時に教室を出ますか。"
+                },
+                {
+                  "speaker": "Pria",
+                  "jp": "二時半に出ます。先に先生に本を返してから、図書館へ行きます。"
+                }
+              ],
+              "question": "男の人は図書館へ行く前に何をしますか。",
+              "options": [
+                "友達と昼ごはんを食べます。",
+                "先生に本を返します。",
+                "教室で日本語を勉強します。",
+                "家へ帰ります。"
+              ],
+              "answer": 1,
+              "explanation": "Pria itu akan bertemu temannya di perpustakaan pukul tiga. Namun, sebelum ke perpustakaan, ia harus mengembalikan buku kepada guru. Ia bahkan menjelaskan bahwa ia akan meninggalkan kelas pukul setengah tiga, mengembalikan buku, lalu pergi ke perpustakaan. Jadi, kegiatan yang dilakukan terlebih dahulu adalah 先生に本を返します (mengembalikan buku kepada guru)."
             },
             {
-                "audioUrl": "/audio/jlpt/n5/set1-q10.mp3",
-                "dialogue": [
-                { "speaker": "Pria", "jp": "<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。" },
-                { "speaker": "Wanita", "jp": "<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby>です。" },
-                { "speaker": "Pria", "jp": "わかりました。" }
-                ],
-                "question": "<ruby>宿題<rt>しゅくだい</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？",
-                "options": ["<ruby>作文<rt>さくぶん</rt></ruby>", "<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby>", "<ruby>読書<rt>どくしょ</rt></ruby>", "リスニング"],
-                "answer": 1,
-                "explanation": "PR-nya adalah latihan kanji (kanji no renshuu)."
+              "audioUrl": "/audio/jlpt/n5/set1-q10.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "毎晩、何時に寝ますか。"
+                }
+              ],
+              "question": "いちばんいい答えを選んでください。",
+              "options": [
+                "十一時に寝ます。",
+                "学校で寝ます。",
+                "きのう寝ました。",
+                "友達と寝ます。"
+              ],
+              "answer": 0,
+              "explanation": "Pertanyaan 毎晩、何時に寝ますか berarti “Setiap malam, pukul berapa kamu tidur?” Respons yang tepat harus menyebutkan waktu, yaitu 十一時に寝ます (saya tidur pukul sebelas)."
+            },
+            {
+              "audioUrl": "/audio/jlpt/n5/set1-q11.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Pria",
+                  "jp": "すみません。この漢字は何と読みますか。"
+                }
+              ],
+              "question": "「山」の読み方はどれですか。",
+              "options": [
+                "やまです。",
+                "あしたです。",
+                "三つです。",
+                "大きいです。"
+              ],
+              "answer": 0,
+              "explanation": "Audio menanyakan cara membaca kanji yang ditampilkan pada soal, yaitu 山. Bacaan yang benar adalah やま. Pilihan lainnya tidak sesuai: あした berarti besok, 三つ berarti tiga benda, dan 大きい berarti besar."
+            },
+            {
+              "audioUrl": "/audio/jlpt/n5/set1-q12.mp3",
+              "dialogue": [
+                {
+                  "speaker": "Wanita",
+                  "jp": "いっしょに昼ごはんを食べませんか。"
+                }
+              ],
+              "question": "いちばんいい答えを選んでください。",
+              "options": [
+                "ええ、食べましょう。",
+                "いいえ、もう食べましたか。",
+                "十二時に食べました。",
+                "食堂はあそこです。"
+              ],
+              "answer": 0,
+              "explanation": "いっしょに昼ごはんを食べませんか adalah ajakan untuk makan siang bersama. Respons positif yang alami adalah ええ、食べましょう (ya, ayo makan)."
             }
-            ]
+          ]
         }
       }
     ]
   },
-  { "level": "N4", "sets": [] },
-  { "level": "N3", "sets": [] },
-  { "level": "N2", "sets": [] },
-  { "level": "N1", "sets": [] }
+  {
+    "level": "N4",
+    "sets": []
+  },
+  {
+    "level": "N3",
+    "sets": []
+  },
+  {
+    "level": "N2",
+    "sets": []
+  },
+  {
+    "level": "N1",
+    "sets": []
+  }
 ]

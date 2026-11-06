@@ -23,7 +23,7 @@ export default function Home() {
   }, []);
 
   const handleOpenBab = (babNumber: number) => {
-    if (babNumber <= currentBab) {
+    if (babNumber <= currentBab) { 
       setSelectedBab(babNumber);
       setViewMode("detail");
       window.scrollTo(0, 0);
@@ -74,7 +74,7 @@ export default function Home() {
       "ひらがな", "カタカナ", "となり", "うえ", "した", "まえ", "うしろ",
       "なか", "そと", "そば", "ちかく", "パン", "コーヒー", "クラス",
       "みんな", "だれか", "なにか", "どこか", "いくつ", "ちょっと",
-      "はさみ", "パソコン", "テレビ", "ケーキ", "ボタン", "ニュース",
+      "はさみ", "パソコン", "テレビ", "ケーキ", "ボタン", "ニュース",  "はなしている", "はなす", "はし", "はな", "はやい", "はじまる", "はい",　"おてあらい", "お兄さん",
     ];
 
     const dictionary = new Set<string>([
@@ -143,7 +143,8 @@ export default function Home() {
     );
 
     // Ambil bacaan dari <rt>, lalu buang tag HTML lainnya.
-    const cleanText = jpText
+// Tambahkan (jpText || "") agar kalau kosong, dianggap string kosong
+    const cleanText = (jpText || "")
       .replace(/<ruby>[\s\S]*?<rt>([\s\S]*?)<\/rt><\/ruby>/g, "$1")
       .replace(/<[^>]+>/g, "")
       .normalize("NFC");
@@ -441,14 +442,31 @@ export default function Home() {
 
     return (
     <div className="max-w-5xl mx-auto space-y-8 pb-10">
-      {/* Tombol Kembali ke Grid */}
-      <button 
-        onClick={() => setViewMode("grid")}
-        className="flex items-center gap-2 text-sm font-bold text-[#A3A099] hover:text-[#EAE6DD] transition-colors mb-4"
-      >
-        <ArrowLeft size={16} />
-        Kembali ke Daftar Materi
-      </button>
+      {/* Navigasi detail: berlatar di HP, transparan dan digeser ke tepi konten pada desktop */}
+      <div className="sticky top-0 z-50 -mx-4 mb-2 px-4 py-2 lg:mx-0 lg:px-0 lg:py-3 pointer-events-none">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-[#49302D]/90 bg-[#171312]/95 px-3 py-2 shadow-[0_10px_28px_rgba(0,0,0,0.32)] backdrop-blur-xl lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none lg:backdrop-blur-none xl:-ml-[clamp(0px,calc((100vw-77rem)/2-1rem),16rem)] xl:w-[calc(100%+clamp(0px,calc((100vw-77rem)/2-1rem),16rem))]">
+          <button
+            type="button"
+            onClick={() => setViewMode("grid")}
+            aria-label="Kembali ke daftar materi"
+            className="group inline-flex min-h-11 items-center gap-2.5 rounded-xl px-1.5 py-1 text-left text-sm font-semibold text-[#EAE6DD] transition-all duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C93438] focus-visible:ring-offset-2 focus-visible:ring-offset-[#121110] active:scale-[0.98] pointer-events-auto"
+          >
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#C93438]/40 bg-[#C93438]/15 text-[#F06A6E] transition-all duration-200 group-hover:border-[#E05256]/80 group-hover:bg-[#C93438] group-hover:text-white group-hover:shadow-[0_0_22px_rgba(201,52,56,0.28)]">
+              <ArrowLeft size={17} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
+            </span>
+            <span className="flex flex-col leading-tight">
+              <span className="sm:hidden">Daftar Materi</span>
+              <span className="hidden sm:inline group-hover:text-[#F06A6E]">Kembali ke Daftar Materi</span>
+              <span className="hidden pt-0.5 text-[10px] font-medium tracking-[0.12em] text-[#817A73] sm:block">PETA BELAJAR</span>
+            </span>
+          </button>
+
+          <div className="pointer-events-auto inline-flex shrink-0 items-center gap-2 rounded-full border border-white/[0.08] bg-black/25 px-3 py-2 text-[11px] font-semibold text-[#A3A099] backdrop-blur-md sm:px-3.5 sm:text-xs">
+            <BookOpen size={13} className="text-[#B8860B]" />
+            <span>Bab {selectedBab}<span className="px-1 text-[#625E58]">/</span>50</span>
+          </div>
+        </div>
+      </div>
 
       {babData ? (
         <div className="space-y-8">
@@ -465,9 +483,10 @@ export default function Home() {
                 <span className="text-lg">💡</span>
                 <span className="text-sm font-bold text-[#B8860B]">Tips & Nuansa Penting</span>
               </div>
-              <p className="text-sm text-[#EAE6DD] leading-relaxed whitespace-pre-wrap">
-                {babData.tips}
-              </p>
+              <div 
+                className="text-sm text-[#EAE6DD] leading-relaxed whitespace-pre-wrap"
+                dangerouslySetInnerHTML={{ __html: babData.tips }}
+              />
             </div>
           )}
 
@@ -494,23 +513,30 @@ export default function Home() {
                   )}
 
                   {g.explanation && (
-                    <p className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3">
-                      {g.explanation}
-                    </p>
+                    <div 
+                      className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3"
+                      dangerouslySetInnerHTML={{ __html: g.explanation }}
+                    />
                   )}
 
-                  <div className="bg-[#121110]/50 rounded-lg p-4 text-sm border border-[#33312E]/50 mt-4">
-                    <div 
-                      className="text-[#EAE6DD] text-lg md:text-2xl font-mincho leading-[2.8] pt-2 tracking-wide mb-1 [&_rt]:text-[0.5em]"
-                      dangerouslySetInnerHTML={{ __html: g.example_kanji || g.example_jp }} 
-                    />
-              {/* Romaji Otomatis (Pakai Kamus Kosakata) */}
-                    <p className="text-sm text-[#B8860B] mb-3 italic tracking-wide">
-                      {getRomaji(g.example_kanji || g.example_jp, babData.bab)} 
-                    </p>
-                    <p className="text-[#A3A099] border-t border-[#333132]/50 pt-3">
-                      {g.example_id}
-                    </p>
+                                    {/* Render Contoh Kalimat (Array) */}
+                  <div className="space-y-3 mt-4">
+                    {g.examples && g.examples.map((ex: any, index: number) => (
+                      <div key={index} className="bg-[#121110]/50 rounded-lg p-4 text-sm border border-[#33312E]/50">
+                        <div 
+                          className="text-[#EAE6DD] text-lg md:text-2xl font-mincho leading-[2.8] pt-2 tracking-wide mb-1 [&_rt]:text-[0.5em]"
+                          dangerouslySetInnerHTML={{ __html: ex.kanji }} 
+                        />
+                        {/* Romaji Otomatis */}
+                        <p className="text-sm text-[#B8860B] mb-3 italic tracking-wide">
+                          {getRomaji(ex.kanji, babData.bab)} 
+                        </p>
+                        {/* Terjemahan */}
+                        <p className="text-[#A3A099] border-t border-[#333132]/50 pt-3">
+                          {ex.id}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
