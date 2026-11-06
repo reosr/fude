@@ -1,0 +1,33 @@
+{
+  "roles": {
+    "teen_male": ["剣崎雌雄", "玄野武宏", "白上虎太郎"],
+    "adult_male": ["青山龍星", "離途", "黒沢冴白", "玄野武宏"],
+    "elderly_male": ["ちび式じい", "麒ヶ島宗麟"],
+    "teen_female": ["四国めたん", "春日部つむぎ", "冥鳴ひまり", "波音リツ"],
+    "adult_female": ["九州そら", "後鬼", "No.7", "中部つるぎ", "雨晴はう"],
+    "elderly_female": ["もち子さん", "九州そら"]
+  },
+  "name_bank": {
+    "Kenji": "teen_male",
+    "Daiki": "teen_male",
+    "Riku": "teen_male",
+    "Kaito": "teen_male",
+    "Yuto": "teen_male",
+    "Sakura": "teen_female",
+    "Mei": "teen_female",
+    "Yui": "teen_female",
+    "Hana": "teen_female",
+    "Aoi": "teen_female",
+    "Akira": "adult_male",
+    "Satoshi": "adult_male",
+    "Takumi": "adult_male",
+    "Yumi": "adult_female",
+    "Keiko": "adult_female",
+    "Naoko": "adult_female",
+    "Emi": "adult_female",
+    "Haruto": "elderly_male",
+    "Genzo": "elderly_male",
+    "Fumiko": "elderly_female",
+    "Sachiko": "elderly_female"
+  }
+}

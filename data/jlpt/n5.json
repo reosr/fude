@@ -1,0 +1,45 @@
+{
+  "level": "N5",
+  "sets": [
+    {
+      "id": "n5-set-1",
+      "title": "Simulasi JLPT N5 - Set 1",
+      "sections": {
+        "vocab": [
+          {
+            "question": "「学生」の読み方は何ですか？",
+            "options": ["がくせい", "がくこう", "がくし", "がっこう"],
+            "answer": 0,
+            "explanation": "学生 dibaca 'gakusei' (pelajar)."
+          }
+        ],
+        "grammar": [
+          {
+            "question": "わたし ___ がくせいです。",
+            "options": ["は", "が", "を", "に"],
+            "answer": 0,
+            "explanation": "Partikel は (wa) menandakan topik kalimat."
+          }
+        ],
+        "reading": [
+          {
+            "passage": "わたしは まいにち にほんごを べんきょうします。",
+            "question": "この人は まいにち 何を しますか？",
+            "options": ["べんきょうします", "あそびます", "ねます", "たべます"],
+            "answer": 0,
+            "explanation": "Teks menyebutkan 'mainichi nihongo o benkyou shimasu'."
+          }
+        ],
+        "listening": [
+          {
+            "audioUrl": "/audio/jlpt/n5/set1-q1.mp3",
+            "question": "男の人は何を買いますか？",
+            "options": ["りんご", "みかん", "バナナ", "ぶどう"],
+            "answer": 0,
+            "explanation": "Berdasarkan audio, ia membeli apel."
+          }
+        ]
+      }
+    }
+  ]
+}

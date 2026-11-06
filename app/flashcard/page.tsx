@@ -3,137 +3,423 @@
 import { useState, useEffect } from "react";
 import allBabs from "../../data/all-bab.json";
 import { getProgress } from "../../lib/progress";
-import { ArrowLeft, ArrowRight, RotateCcw } from "lucide-react";
+import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
 import dynamic from "next/dynamic";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
 
-// URL Gambar Statis Tema Jepang
-const BG_IMAGE = "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=2070&auto=format&fit=crop";
+const bgImages = [
+  "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1522383225653-ed111181a951?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1554797589-7241bb691973?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1480796927426-f609979314bd?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1533050487297-09b450131914?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1492571350019-22de08371fd3?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1512418490979-92798cec1380?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1528164344705-47542687000d?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1493857671505-72967e2e2760?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1532236204992-f5e85c024202?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1522383225653-ed111181a951?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1554797589-7241bb691973?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1480796927426-f609979314bd?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1578632767115-351597cf2477?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=75&w=400&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?q=75&w=400&auto=format&fit=crop"
+];
 
 export default function Flashcard() {
   const [deck, setDeck] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  
+  const [memorized, setMemorized] = useState<string[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isWindowFocused, setIsWindowFocused] = useState(true);
+  
+  const [isAdvancing, setIsAdvancing] = useState(false);
+  const [isRewinding, setIsRewinding] = useState(false); 
+  const [swipeDir, setSwipeDir] = useState<"left" | "right">("left"); 
+  
+  // State buat nampung Map Gambar biar konsisten
+  const [imageMap, setImageMap] = useState<Record<string, string>>({});
+
+  const TIMER_FRONT = 5;
+  const TIMER_BACK = 7;
+  const [timeLeft, setTimeLeft] = useState(TIMER_FRONT * 20); 
 
   useEffect(() => {
+    const savedMemorized = JSON.parse(localStorage.getItem("fude_memorized") || "[]");
+    setMemorized(savedMemorized);
+
     const currentBab = getProgress();
     let allVocab: any[] = [];
-    
-    // Ambil vocab dari bab 1 sampai bab yang lagi dibuka
     allBabs.filter((b: any) => b.bab <= currentBab).forEach((b: any) => {
       allVocab = [...allVocab, ...b.vocab];
     });
 
-    // Acak deck
-    const shuffled = allVocab.sort(() => Math.random() - 0.5);
+    // 1. Bikin Map Gambar (di-sort dulu biar urutannya sama kayak di Kosakata)
+    let stableOrder = [...allVocab].sort((a, b) => a.kanji.localeCompare(b.kanji));
+    let currentPool = [...bgImages].sort(() => Math.random() - 0.5);
+    let poolIndex = 0;
+    const newMap: Record<string, string> = {};
+
+    stableOrder.forEach((v) => {
+      if (poolIndex >= currentPool.length) {
+        currentPool = [...bgImages].sort(() => Math.random() - 0.5);
+        poolIndex = 0;
+      }
+      newMap[`${v.kanji}-${v.kana}`] = currentPool[poolIndex];
+      poolIndex++;
+    });
+    setImageMap(newMap);
+
+    // 2. Bikin Deck Flashcard (Acak, kasih UID unik buat animasi)
+    const shuffled = allVocab.sort(() => Math.random() - 0.5).map((v, i) => ({ ...v, uid: `vocab-${i}` }));
     setDeck(shuffled);
     setIsLoaded(true);
   }, []);
 
+  useEffect(() => {
+    const handleFocus = () => setIsWindowFocused(true);
+    const handleBlur = () => setIsWindowFocused(false);
+    window.addEventListener("focus", handleFocus);
+    window.addEventListener("blur", handleBlur);
+    return () => {
+      window.removeEventListener("focus", handleFocus);
+      window.removeEventListener("blur", handleBlur);
+    };
+  }, []);
+
+  const filteredDeck = deck.filter(c => !memorized.includes(c.kanji));
+
+  useEffect(() => {
+    setTimeLeft((isFlipped ? TIMER_BACK : TIMER_FRONT) * 20);
+  }, [currentIndex, isFlipped]);
+
+  useEffect(() => {
+    if (!isAutoPlay || isHovered || !isWindowFocused || filteredDeck.length === 0 || isModalOpen || isAdvancing) return;
+    if (timeLeft <= 0) return; 
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) return 0;
+        return prev - 1;
+      });
+    }, 50); 
+
+    return () => clearInterval(timer);
+  }, [isAutoPlay, isHovered, isWindowFocused, filteredDeck.length, timeLeft === 0, isModalOpen, isAdvancing]);
+
+  useEffect(() => {
+    if (timeLeft === 0 && isAutoPlay && !isHovered && isWindowFocused && !isModalOpen && !isAdvancing) {
+      if (isFlipped) {
+        handleNext();
+      } else {
+        setIsFlipped(true);
+      }
+    }
+  }, [timeLeft, isAutoPlay, isHovered, isWindowFocused, isModalOpen, isAdvancing]);
+
   if (!isLoaded) return null;
-  if (deck.length === 0) return <div className="text-center mt-10 text-[#A3A099]">Belum ada kosakata untuk di-flashcard.</div>;
+  if (filteredDeck.length === 0) return (
+    <div className="text-center mt-10 text-[#A3A099]">
+      {deck.length === 0 ? "Belum ada kosakata." : "Semua kartu sudah kamu hafal! Hebat! 🎉"}
+      <br/>
+      <button onClick={() => setIsModalOpen(true)} className="mt-4 text-[#C93438] underline">Lihat Daftar Hafalan</button>
+    </div>
+  );
 
-  const currentCard = deck[currentIndex];
-
-  const nextCard = () => {
+  const handleNext = () => {
+    if (isAdvancing || isRewinding || filteredDeck.length <= 1) return;
     setIsFlipped(false);
+    setSwipeDir("left");
+    setIsAdvancing(true);
+
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % deck.length);
-    }, 150);
+      setCurrentIndex((prev) => (prev + 1) % filteredDeck.length);
+      setIsAdvancing(false);
+    }, 400);
   };
 
-  const prevCard = () => {
+  const handlePrev = () => {
+    if (isAdvancing || isRewinding || filteredDeck.length <= 1) return;
     setIsFlipped(false);
+    setSwipeDir("right");
+    setIsAdvancing(true);
+
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + deck.length) % deck.length);
-    }, 150);
+      setCurrentIndex((prev) => (prev - 1 + filteredDeck.length) % filteredDeck.length);
+      setIsAdvancing(false);
+      
+      setIsRewinding(true);
+      setTimeout(() => setIsRewinding(false), 50);
+    }, 400);
   };
+
+  const toggleMemorized = () => {
+    const currentCard = filteredDeck[currentIndex];
+    let newMemorized;
+    if (memorized.includes(currentCard.kanji)) {
+      newMemorized = memorized.filter(k => k !== currentCard.kanji);
+      setMemorized(newMemorized);
+      localStorage.setItem("fude_memorized", JSON.stringify(newMemorized));
+    } else {
+      newMemorized = Array.from(new Set([...memorized, currentCard.kanji]));
+      setMemorized(newMemorized);
+      localStorage.setItem("fude_memorized", JSON.stringify(newMemorized));
+      handleNext(); 
+    }
+  };
+
+  const removeFromMemorized = (kanji: string) => {
+    const newMemorized = memorized.filter(k => k !== kanji);
+    setMemorized(newMemorized);
+    localStorage.setItem("fude_memorized", JSON.stringify(newMemorized));
+  };
+
+  const currentCard = filteredDeck[currentIndex];
+  const isMemorized = memorized.includes(currentCard?.kanji);
+  const maxTime = (isFlipped ? TIMER_BACK : TIMER_FRONT) * 20;
+  const progressWidth = Math.max(0, (timeLeft / maxTime) * 100);
+
+  const stackCards = [];
+  for (let i = 0; i < 3; i++) {
+    if (filteredDeck.length > i) {
+      stackCards.push(filteredDeck[(currentIndex + i) % filteredDeck.length]);
+    }
+  }
+
+  const kanjiLength = currentCard?.kanji.length || 0;
+  let kanjiSize = "text-6xl md:text-7xl"; 
+  if (kanjiLength === 3) kanjiSize = "text-5xl md:text-6xl";
+  else if (kanjiLength >= 4) kanjiSize = "text-4xl md:text-5xl";
 
   return (
-    <div className="space-y-6 pb-10 flex flex-col items-center">
-      <div className="w-full text-center md:text-left">
-        <h2 className="text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
-        <p className="text-[#A3A099] text-sm mt-1">
-          Latihan mengingat kosakata. Klik kartu untuk melihat arti dan cara bacanya.
-        </p>
+    <div className="space-y-6 pb-10 flex flex-col items-center relative overflow-hidden">
+      <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative z-20">
+        <div>
+          <h2 className="text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
+          <p className="text-[#A3A099] text-sm mt-1">
+            Latihan mengingat kosakata. Klik kartu untuk melihat arti.
+          </p>
+        </div>
+        
+        {memorized.length > 0 && (
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-colors bg-[#1E1D1B] text-[#A3A099] border border-[#33312E] hover:text-[#EAE6DD] hover:border-[#C93438]"
+          >
+            <BookOpen size={16} />
+            Daftar Hafalan ({memorized.length})
+          </button>
+        )}
       </div>
 
-      <div className="w-full max-w-md flex justify-between items-center text-xs font-bold text-[#A3A099] mt-4">
-        <span>KARTU {currentIndex + 1} DARI {deck.length}</span>
-        <span className="text-[#C93438]">{Math.round(((currentIndex + 1) / deck.length) * 100)}%</span>
+      <div className="w-full max-w-md flex justify-between items-center text-xs font-bold text-[#A3A099] mt-4 relative z-20">
+        <span>KARTU {currentIndex + 1} DARI {filteredDeck.length}</span>
+        <span className="text-[#C93438]">{Math.round(((currentIndex + 1) / filteredDeck.length) * 100)}%</span>
       </div>
 
-      {/* FLASHCARD 3D */}
-      <div className="relative w-full max-w-md h-[550px] [perspective:1000px]">
-        <div className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}>
+      {/* WADAH TUMPUKAN KARTU */}
+      <div 
+        className="relative w-full max-w-md h-[500px] [perspective:1200px] mt-4"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {stackCards.map((card, i) => {
+          const isTop = i === 0;
+          // Ambil gambar dari imageMap yang udah di-shuffle
+          const cardImg = imageMap[`${card.kanji}-${card.kana}`] || bgImages[0];
           
-          {/* SISI DEPAN */}
-          <div 
-            className={`absolute inset-0 w-full h-full [backface-visibility:hidden] bg-[#1E1D1B] border-2 border-[#33312E] rounded-3xl flex flex-col items-center justify-center shadow-2xl hover:border-[#C93438]/50 transition-colors overflow-hidden cursor-pointer ${isFlipped ? "pointer-events-none" : ""}`}
-            onClick={() => setIsFlipped(true)}
-          >
-            {/* Background Statis */}
-            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-              <img src={BG_IMAGE} alt="" className="w-full h-full object-cover opacity-20" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1918] via-[#1E1D1B]/80 to-transparent"></div>
-            </div>
+          let wrapperStyle = "";
+          if (i === 0) {
+            if (isRewinding) {
+              wrapperStyle = "translate-x-[-120%] rotate-[-10deg] opacity-0 scale-100 !transition-none";
+            } else if (isAdvancing) {
+              if (swipeDir === "left") {
+                wrapperStyle = "translate-x-[-120%] rotate-[-10deg] opacity-0 scale-100"; 
+              } else {
+                wrapperStyle = "translate-y-4 scale-[0.95] brightness-[0.6]"; 
+              }
+            } else {
+              wrapperStyle = "translate-x-0 rotate-0 opacity-100 scale-100";
+            }
+          } else if (i === 1) {
+            wrapperStyle = "translate-y-4 scale-[0.95] brightness-[0.6]";
+          } else {
+            wrapperStyle = "translate-y-8 scale-[0.90] brightness-[0.3]";
+          }
 
-            <span className="text-[10px] font-bold text-[#A3A099] absolute top-6 bg-[#33312E]/80 px-3 py-1 rounded-full z-10 border border-[#33312E]">TEKAN UNTUK BALIK</span>
-            <h3 className="relative z-10 font-mincho text-7xl md:text-8xl text-[#EAE6DD] font-bold text-center px-4 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-              {currentCard.kanji}
-            </h3>
-          </div>
+          return (
+            <div 
+              key={card.uid}
+              className={`absolute inset-0 w-full h-full transition-all duration-400 ease-in-out origin-bottom ${wrapperStyle}`}
+              style={{ zIndex: 10 - i }}
+            >
+              <div className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${(isTop && isFlipped) ? '[transform:rotateY(180deg)]' : ''}`}>
+                
+                {/* SISI DEPAN */}
+                <div 
+                  className={`absolute inset-0 w-full h-full [backface-visibility:hidden] bg-[#1E1D1B] border-2 border-[#33312E] rounded-3xl flex flex-col items-center justify-center shadow-2xl overflow-hidden ${isTop ? "cursor-pointer hover:border-[#C93438]/50" : "pointer-events-none"} ${(isTop && isFlipped) ? "pointer-events-none" : ""}`}
+                  onClick={() => { if (isTop) setIsFlipped(true); }}
+                >
+                  <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                    <img src={cardImg} alt="Background" className="w-full h-full object-cover opacity-40" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1E1D1B] via-[#1E1D1B]/80 to-transparent"></div>
+                  </div>
 
-          {/* SISI BELAKANG */}
-          <div 
-            className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#1A1918] border-2 border-[#C93438] rounded-3xl flex flex-col items-center justify-center p-6 shadow-2xl overflow-hidden cursor-pointer ${isFlipped ? "" : "pointer-events-none"}`}
-            onClick={(e) => {
-              // Klik yang berasal dari area KanjiStroke tidak boleh membalik kartu
-              if ((e.target as HTMLElement).closest("[data-no-flip]")) return;
-              setIsFlipped(false);
-            }}
-          >
-            {/* Background Statis */}
-            <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
-              <img src={BG_IMAGE} alt="" className="w-full h-full object-cover opacity-20" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1918] via-[#1A1918]/90 to-transparent"></div>
-            </div>
+                  <span className="text-[10px] font-bold text-[#A3A099] absolute top-6 bg-[#33312E]/80 px-3 py-1 rounded-full z-10 border border-[#33312E]">TEKAN UNTUK BALIK</span>
+                  <h3 className={`relative z-10 font-mincho ${kanjiSize} text-[#EAE6DD] font-bold text-center px-4 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] whitespace-nowrap`}>
+                    {card.kanji}
+                  </h3>
+                </div>
 
-            {/* Konten Belakang */}
-            <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-              <div className="text-center w-full mb-4">
-                <p className="text-sm text-[#A3A099] mb-1">{currentCard.kana} <span className="opacity-60">({currentCard.romaji})</span></p>
-                <p className="text-3xl font-bold text-[#EAE6DD] mt-2 drop-shadow-md">{currentCard.meaning}</p>
+                {/* SISI BELAKANG */}
+                <div 
+                  className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#1A1918] border-2 border-[#C93438] rounded-3xl flex flex-col items-center justify-center p-6 shadow-2xl overflow-hidden ${isTop ? "cursor-pointer" : "pointer-events-none"} ${(isTop && isFlipped) ? "" : "pointer-events-none"}`}
+                  onClick={(e) => {
+                    if (isTop && !(e.target as HTMLElement).closest("[data-no-flip]")) setIsFlipped(false);
+                  }}
+                >
+                  <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
+                    <img src={cardImg} alt="Background" className="w-full h-full object-cover opacity-30" loading="lazy" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1918] via-[#1A1918]/90 to-transparent"></div>
+                  </div>
+
+                  <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+                    <div className="text-center w-full mb-4">
+                      <p className="text-xl text-[#EAE6DD] mb-1 font-mincho whitespace-nowrap">{card.kana}</p>
+                      <p className="text-sm text-[#A3A099] mb-2">({card.romaji})</p>
+                      <p className="text-3xl font-bold text-[#C93438] mt-2 drop-shadow-md">{card.meaning}</p>
+                    </div>
+
+                    <div className="w-full flex justify-center mb-4">
+                      {isTop && isWindowFocused ? <KanjiStroke kanji={card.kanji} /> : <div className="h-[120px]"></div>}
+                    </div>
+
+                    <p className="text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-3 py-1 rounded-full mt-2 border border-[#33312E]">
+                      TEKAN DI LUAR KANJI UNTUK KEMBALI
+                    </p>
+                  </div>
+                </div>
+
               </div>
-
-              {/* Animasi Stroke Order */}
-              <div className="w-full flex justify-center mb-4">
-                <KanjiStroke kanji={currentCard.kanji} />
-              </div>
-
-              <p className="text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-3 py-1 rounded-full mt-2 border border-[#33312E]">
-                TEKAN DI LUAR KANJI UNTUK KEMBALI
-              </p>
             </div>
-          </div>
+          );
+        })}
 
+        {/* TIMER BAR */}
+        <div className="absolute -bottom-6 left-0 right-0 px-4 z-30">
+          <div className="h-1.5 bg-[#33312E] rounded-full overflow-hidden w-full">
+            <div 
+              className="h-full bg-[#C93438]"
+              style={{ width: `${progressWidth}%` }}
+            />
+          </div>
         </div>
       </div>
 
-      <div className="flex items-center gap-6 mt-6">
-        <button onClick={prevCard} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors">
+      {/* KONTROL BAWAH */}
+      <div className="flex items-center justify-between w-full max-w-md mt-12 relative z-20">
+        <button onClick={handlePrev} disabled={isAdvancing} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowLeft size={24} />
         </button>
-        <button onClick={() => setIsFlipped(!isFlipped)} className="px-8 py-4 rounded-full bg-[#C93438] text-white font-bold flex items-center gap-2 hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20">
-          <RotateCcw size={20} />
-          Balik Kartu
-        </button>
-        <button onClick={nextCard} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors">
+
+        <div className="flex items-center gap-3">
+          <button 
+            onClick={() => setIsAutoPlay(!isAutoPlay)} 
+            className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isAutoPlay ? "bg-[#B8860B] text-white shadow-[#B8860B]/20" : "bg-[#262523] text-[#A3A099] border border-[#33312E]"}`}
+          >
+            {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
+          </button>
+
+          <button onClick={() => setIsFlipped(!isFlipped)} className="w-12 h-12 rounded-full bg-[#C93438] text-white flex items-center justify-center hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20">
+            <RotateCcw size={20} />
+          </button>
+
+          <button 
+            onClick={toggleMemorized}
+            className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isMemorized ? "bg-green-600 text-white shadow-green-600/20" : "bg-[#1E1D1B] border border-[#33312E] text-[#A3A099] hover:text-green-500 hover:border-green-500"}`}
+          >
+            <CheckCircle2 size={20} />
+          </button>
+        </div>
+
+        <button onClick={handleNext} disabled={isAdvancing} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowRight size={24} />
         </button>
       </div>
+
+      {/* =========================================
+          MODAL DAFTAR HAFALAN
+          ========================================= */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div 
+            className="bg-[#1A1918] border border-[#33312E] rounded-2xl w-full max-w-2xl max-h-[85vh] flex flex-col shadow-2xl animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center p-5 border-b border-[#33312E]">
+              <div>
+                <h3 className="text-xl font-bold text-[#EAE6DD]">Daftar Hafalan</h3>
+                <p className="text-xs text-[#A3A099] mt-1">Klik ikon silang jika kamu lupa dan ingin menghafalnya lagi.</p>
+              </div>
+              <button 
+                onClick={() => setIsModalOpen(false)}
+                className="text-[#A3A099] hover:text-[#EAE6DD] transition-colors p-2 bg-[#262523] rounded-full"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            <div className="p-5 overflow-y-auto grid grid-cols-2 md:grid-cols-3 gap-3">
+              {deck
+                .filter((v, i, self) => memorized.includes(v.kanji) && self.findIndex(t => t.kanji === v.kanji) === i)
+                .map((v: any, i: number) => {
+                  // Ambil gambar yang sama persis dari Map
+                  const modalImage = imageMap[`${v.kanji}-${v.kana}`] || bgImages[0];
+                  return (
+                    <div key={i} className="relative bg-[#1E1D1B] border border-[#33312E] rounded-xl overflow-hidden p-4 flex flex-col items-center justify-center text-center shadow-lg group min-h-[120px]">
+                      <img src={modalImage} alt="Background" className="absolute inset-0 w-full h-full object-cover opacity-20" loading="lazy" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#1E1D1B] via-[#1E1D1B]/80 to-transparent"></div>
+                      <button 
+                        onClick={() => removeFromMemorized(v.kanji)}
+                        className="absolute top-2 right-2 z-20 text-white bg-black/50 hover:bg-red-500 p-1.5 rounded-full transition-colors border border-white/20"
+                      >
+                        <X size={14} />
+                      </button>
+                      <div className="relative z-10 w-full mt-2">
+                        <p className="font-bold text-2xl text-[#EAE6DD] mb-1 font-mincho">{v.kanji}</p>
+                        <p className="text-[10px] text-[#A3A099] mb-2">{v.kana} ({v.romaji})</p>
+                        <p className="text-xs font-semibold text-[#C93438]">{v.meaning}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

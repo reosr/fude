@@ -49,28 +49,7 @@ export default function BentukKata() {
               </span>
             </div>
             
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between border-b border-[#33312E]/50 pb-1">
-                <span className="text-[#A3A099]">Kamus (Dictionary)</span>
-                <span className="text-[#EAE6DD] font-semibold font-mincho">{v.dict}</span>
-              </div>
-              <div className="flex justify-between border-b border-[#333312E]/50 pb-1">
-                <span className="text-[#A3A099]">Sopan (〜ます)</span>
-                <span className="text-[#EAE6DD] font-semibold font-mincho">{v.masu}</span>
-              </div>
-              <div className="flex justify-between border-b border-[#333312E]/50 pb-1">
-                <span className="text-[#A3A099]">Bentuk 〜て</span>
-                <span className="text-[#EAE6DD] font-semibold font-mincho">{v.te}</span>
-              </div>
-              <div className="flex justify-between border-b border-[#333312E]/50 pb-1">
-                <span className="text-[#A3A099]">Lampau (〜た)</span>
-                <span className="text-[#EAE6DD] font-semibold font-mincho">{v.ta}</span>
-              </div>
-              <div className="flex justify-between pb-1">
-                <span className="text-[#A3A099]">Negatif (〜ない)</span>
-                <span className="text-[#EAE6DD] font-semibold font-mincho">{v.nai}</span>
-              </div>
-            </div>
+          
           </div>
         ))}
         {filtered.length === 0 && (

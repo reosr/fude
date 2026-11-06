@@ -1,0 +1,1334 @@
+[
+  {
+    "id": "n5-konbini",
+    "level": "N5",
+    "title": "Belanja di Konbini",
+    "speakers": {
+      "Narator": "default",
+      "Kenji": "teen_male",
+      "Akira": "adult_male"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>今日<rt>きょう</rt></ruby>、ケンジは<ruby>学校<rt>がっこう</rt></ruby>の<ruby>帰<rt>かえ</rt></ruby>りにコンビニへ<ruby>行<rt>い</rt></ruby>きました。",
+        "romaji": "Kyou, Kenji wa gakkou no kaeri ni konbini e ikimashita.",
+        "id": "Hari ini, Kenji pergi ke konbini dalam perjalanan pulang dari sekolah."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "すみません、おにぎりはいくらですか。",
+        "romaji": "Sumimasen, onigiri wa ikura desu ka.",
+        "id": "Permisi, berapa harga onigiri?"
+      },
+      {
+        "speaker": "Akira",
+        "jp": "こちらは<ruby>百五十円<rt>ひゃくごじゅうえん</rt></ruby>です。",
+        "romaji": "Kochira wa hyaku gojuu en desu.",
+        "id": "Yang ini harganya 150 yen."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "じゃあ、これを<ruby>一<rt>ひと</rt></ruby>つください。",
+        "romaji": "Jaa, kore o hitotsu kudasai.",
+        "id": "Kalau begitu, tolong satu ini."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "ほかに<ruby>何<rt>なに</rt></ruby>かいりますか。",
+        "romaji": "Hoka ni nani ka irimasu ka.",
+        "id": "Apakah ada yang lainnya?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "はい、お<ruby>茶<rt>ちゃ</rt></ruby>もください。",
+        "romaji": "Hai, ocha mo kudasai.",
+        "id": "Ya, teh juga, tolong."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "お<ruby>茶<rt>ちゃ</rt></ruby>は<ruby>百二十円<rt>ひゃくにじゅうえん</rt></ruby>です。",
+        "romaji": "Ocha wa hyaku nijuu en desu.",
+        "id": "Tehnya 120 yen."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "おにぎりを<ruby>温<rt>あたた</rt></ruby>めてください。",
+        "romaji": "Onigiri o atatamete kudasai.",
+        "id": "Tolong hangatkan onigirinya."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "はい。<ruby>袋<rt>ふくろ</rt></ruby>はどうしますか。",
+        "romaji": "Hai. Fukuro wa dou shimasu ka.",
+        "id": "Baik. Bagaimana dengan kantong plastiknya?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "<ruby>袋<rt>ふくろ</rt></ruby>はいりません。ありがとうございます。",
+        "romaji": "Fukuro wa irimasen. Arigatou gozaimasu.",
+        "id": "Saya tidak perlu kantong plastik. Terima kasih."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "ありがとうございます。<ruby>全部<rt>ぜんぶ</rt></ruby>で<ruby>二百七十円<rt>にひゃくななじゅうえん</rt></ruby>です。",
+        "romaji": "Arigatou gozaimasu. Zenbu de nihyaku nanajuu en desu.",
+        "id": "Terima kasih. Semuanya 270 yen."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "ケンジはお<ruby>金<rt>かね</rt></ruby>を<ruby>払<rt>はら</rt></ruby>って、コンビニを<ruby>出<rt>で</rt></ruby>ました。",
+        "romaji": "Kenji wa okane o haratte, konbini o demashita.",
+        "id": "Kenji membayar, kemudian keluar dari konbini."
+      }
+    ]
+  },
+  {
+    "id": "n5-ichiba",
+    "level": "N5",
+    "title": "Belanja di Pasar Tradisional",
+    "speakers": {
+      "Narator": "default",
+      "Daiki": "teen_male",
+      "Haruto": "elderly_male"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>日曜日<rt>にちようび</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>、ダイキは<ruby>近<rt>ちか</rt></ruby>くの<ruby>市場<rt>いちば</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。",
+        "romaji": "Nichiyoubi no asa, Daiki wa chikaku no ichiba e ikimashita.",
+        "id": "Pada Minggu pagi, Daiki pergi ke pasar yang dekat rumahnya."
+      },
+      {
+        "speaker": "Daiki",
+        "jp": "おはようございます。<ruby>野菜<rt>やさい</rt></ruby>を<ruby>買<rt>か</rt></ruby>いたいです。",
+        "romaji": "Ohayou gozaimasu. Yasai o kaitai desu.",
+        "id": "Selamat pagi. Saya ingin membeli sayuran."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "おはようございます。どんな<ruby>野菜<rt>やさい</rt></ruby>がいりますか。",
+        "romaji": "Ohayou gozaimasu. Donna yasai ga irimasu ka.",
+        "id": "Selamat pagi. Sayuran apa yang Anda butuhkan?"
+      },
+      {
+        "speaker": "Daiki",
+        "jp": "トマトを<ruby>三<rt>みっ</rt></ruby>つください。",
+        "romaji": "Tomato o mittsu kudasai.",
+        "id": "Tolong beri saya tiga buah tomat."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "はい。トマトは<ruby>一<rt>ひと</rt></ruby>つ<ruby>百円<rt>ひゃくえん</rt></ruby>です。",
+        "romaji": "Hai. Tomato wa hitotsu hyaku en desu.",
+        "id": "Baik. Satu buah tomat harganya 100 yen."
+      },
+      {
+        "speaker": "Daiki",
+        "jp": "ちょっと<ruby>高<rt>たか</rt></ruby>いですね。",
+        "romaji": "Chotto takai desu ne.",
+        "id": "Agak mahal, ya."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "じゃあ、<ruby>三<rt>みっ</rt></ruby>つで<ruby>二百五十円<rt>にひゃくごじゅうえん</rt></ruby>でいいですよ。",
+        "romaji": "Jaa, mittsu de nihyaku gojuu en de ii desu yo.",
+        "id": "Kalau begitu, tiga buah 250 yen saja."
+      },
+      {
+        "speaker": "Daiki",
+        "jp": "ありがとうございます。じゃあ、それをください。",
+        "romaji": "Arigatou gozaimasu. Jaa, sore o kudasai.",
+        "id": "Terima kasih. Kalau begitu, saya beli itu."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "ほかに<ruby>何<rt>なに</rt></ruby>か<ruby>買<rt>か</rt></ruby>いますか。",
+        "romaji": "Hoka ni nani ka kaimasu ka.",
+        "id": "Apakah Anda ingin membeli sesuatu yang lain?"
+      },
+      {
+        "speaker": "Daiki",
+        "jp": "にんじんも<ruby>二本<rt>にほん</rt></ruby>ください。",
+        "romaji": "Ninjin mo nihon kudasai.",
+        "id": "Tolong beri saya dua batang wortel juga."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "はい。<ruby>全部<rt>ぜんぶ</rt></ruby>で<ruby>四百円<rt>よんひゃくえん</rt></ruby>です。",
+        "romaji": "Hai. Zenbu de yonhyaku en desu.",
+        "id": "Baik. Semuanya 400 yen."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "ダイキはお<ruby>金<rt>かね</rt></ruby>を<ruby>払<rt>はら</rt></ruby>って、<ruby>野菜<rt>やさい</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>りました。",
+        "romaji": "Daiki wa okane o haratte, yasai o motte ie ni kaerimashita.",
+        "id": "Daiki membayar, membawa sayuran, lalu pulang ke rumah."
+      }
+    ]
+  },
+  {
+    "id": "n4-vending-machine",
+    "level": "N4",
+    "title": "Membeli Minuman di Vending Machine",
+    "speakers": {
+      "Narator": "default",
+      "Riku": "teen_male",
+      "Sakura": "adult_female"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>今日<rt>きょう</rt></ruby>、リクは<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くにある<ruby>自動販売機<rt>じどうはんばいき</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>で<ruby>立<rt>た</rt></ruby>ち<ruby>止<rt>ど</rt></ruby>まりました。",
+        "romaji": "Kyou, Riku wa kaisha no chikaku ni aru jidouhanbaiki no mae de tachidomarimashita.",
+        "id": "Hari ini, Riku berhenti di depan mesin penjual otomatis yang ada di dekat kantor."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "ああ、<ruby>今日<rt>きょう</rt></ruby>はとても<ruby>暑<rt>あつ</rt></ruby>いですね。",
+        "romaji": "Aa, kyou wa totemo atsui desu ne.",
+        "id": "Ah, hari ini panas sekali, ya."
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "そうですね。<ruby>何<rt>なに</rt></ruby>か<ruby>冷<rt>つめ</rt></ruby>たい<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>買<rt>か</rt></ruby>いませんか。",
+        "romaji": "Sou desu ne. Nani ka tsumetai nomimono o kaimasen ka.",
+        "id": "Benar. Bagaimana kalau membeli minuman dingin?"
+      },
+      {
+        "speaker": "Riku",
+        "jp": "いいですね。ここで<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>買<rt>か</rt></ruby>うのは<ruby>初<rt>はじ</rt></ruby>めてです。",
+        "romaji": "Ii desu ne. Koko de nomimono o kau no wa hajimete desu.",
+        "id": "Ide bagus. Ini pertama kalinya saya membeli minuman di sini."
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "この<ruby>自動販売機<rt>じどうはんばいき</rt></ruby>はとても<ruby>便利<rt>べんり</rt></ruby>ですよ。",
+        "romaji": "Kono jidouhanbaiki wa totemo benri desu yo.",
+        "id": "Mesin penjual otomatis ini sangat praktis."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "どうやって<ruby>買<rt>か</rt></ruby>うんですか。",
+        "romaji": "Douyatte kau n desu ka.",
+        "id": "Bagaimana cara membelinya?"
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "まず、お<ruby>金<rt>かね</rt></ruby>を<ruby>入<rt>い</rt></ruby>れてください。",
+        "romaji": "Mazu, okane o irete kudasai.",
+        "id": "Pertama, masukkan uang."
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "それから、<ruby>飲<rt>の</rt></ruby>みたい<ruby>物<rt>もの</rt></ruby>のボタンを<ruby>押<rt>お</rt></ruby>します。",
+        "romaji": "Sorekara, nomitai mono no botan o oshimasu.",
+        "id": "Setelah itu, tekan tombol minuman yang ingin dibeli."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "このお<ruby>茶<rt>ちゃ</rt></ruby>は<ruby>温<rt>あたた</rt></ruby>かいですか。",
+        "romaji": "Kono ocha wa atatakai desu ka.",
+        "id": "Apakah teh ini hangat?"
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "はい。<ruby>赤<rt>あか</rt></ruby>いラベルは<ruby>温<rt>あたた</rt></ruby>かい<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>で、<ruby>青<rt>あお</rt></ruby>いラベルは<ruby>冷<rt>つめ</rt></ruby>たい<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>です。",
+        "romaji": "Hai. Akai raberu wa atatakai nomimono de, aoi raberu wa tsumetai nomimono desu.",
+        "id": "Ya. Label merah menandakan minuman hangat, sedangkan label biru menandakan minuman dingin."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "なるほど。じゃあ、<ruby>冷<rt>つめ</rt></ruby>たいお<ruby>茶<rt>ちゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>います。",
+        "romaji": "Naruhodo. Jaa, tsumetai ocha o kaimasu.",
+        "id": "Begitu rupanya. Kalau begitu, saya akan membeli teh dingin."
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "いくらですか。<ruby>値段<rt>ねだん</rt></ruby>をよく<ruby>見<rt>み</rt></ruby>てください。",
+        "romaji": "Ikura desu ka. Nedan o yoku mite kudasai.",
+        "id": "Berapa harganya? Perhatikan harganya baik-baik."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "<ruby>百三十円<rt>ひゃくさんじゅうえん</rt></ruby>ですね。<ruby>百円玉<rt>ひゃくえんだま</rt></ruby>と<ruby>十円玉<rt>じゅうえんだま</rt></ruby>を<ruby>三枚<rt>さんまい</rt></ruby><ruby>入<rt>い</rt></ruby>れます。",
+        "romaji": "Hyaku sanjuu en desu ne. Hyaku en dama to juu en dama o sanmai iremasu.",
+        "id": "Harganya 130 yen. Saya akan memasukkan satu koin 100 yen dan tiga koin 10 yen."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "リクはお<ruby>金<rt>かね</rt></ruby>を<ruby>入<rt>い</rt></ruby>れて、ボタンを<ruby>押<rt>お</rt></ruby>しました。",
+        "romaji": "Riku wa okane o irete, botan o oshimashita.",
+        "id": "Riku memasukkan uang lalu menekan tombol."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "あれ、<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>が<ruby>出<rt>で</rt></ruby>てきません。",
+        "romaji": "Are, nomimono ga detekimasen.",
+        "id": "Lho, minumannya tidak keluar."
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "ボタンをもう<ruby>一度<rt>いちど</rt></ruby><ruby>押<rt>お</rt></ruby>してみてください。",
+        "romaji": "Botan o mou ichido oshite mite kudasai.",
+        "id": "Coba tekan tombolnya sekali lagi."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "リクがもう<ruby>一度<rt>いちど</rt></ruby><ruby>押<rt>お</rt></ruby>すと、<ruby>下<rt>した</rt></ruby>の<ruby>取<rt>と</rt></ruby>り<ruby>出<rt>だ</rt></ruby>し<ruby>口<rt>ぐち</rt></ruby>にお<ruby>茶<rt>ちゃ</rt></ruby>が<ruby>出<rt>で</rt></ruby>てきました。",
+        "romaji": "Riku ga mou ichido osu to, shita no toridashiguchi ni ocha ga detekimashita.",
+        "id": "Ketika Riku menekannya sekali lagi, teh keluar di tempat pengambilan bagian bawah."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "よかったです。ちゃんと<ruby>買<rt>か</rt></ruby>えました。",
+        "romaji": "Yokatta desu. Chanto kaemashita.",
+        "id": "Syukurlah. Saya berhasil membelinya."
+      },
+      {
+        "speaker": "Sakura",
+        "jp": "<ruby>日本<rt>にほん</rt></ruby>にはいろいろな<ruby>自動販売機<rt>じどうはんばいき</rt></ruby>がありますよ。",
+        "romaji": "Nihon ni wa iroiro na jidouhanbaiki ga arimasu yo.",
+        "id": "Di Jepang ada berbagai macam mesin penjual otomatis."
+      },
+      {
+        "speaker": "Riku",
+        "jp": "そうですか。<ruby>今度<rt>こんど</rt></ruby>、ほかの<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>も<ruby>買<rt>か</rt></ruby>ってみたいです。",
+        "romaji": "Sou desu ka. Kondo, hoka no nomimono mo katte mitai desu.",
+        "id": "Begitu, ya. Lain kali saya ingin mencoba membeli minuman yang lain juga."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>二人<rt>ふたり</rt></ruby>は<ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みながら、<ruby>会社<rt>かいしゃ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>りました。",
+        "romaji": "Futari wa nomimono o nominagara, kaisha e modorimashita.",
+        "id": "Mereka berdua kembali ke kantor sambil meminum minuman mereka."
+      }
+    ]
+  },
+  {
+    "id": "n4-densha",
+    "level": "N4",
+    "title": "Naik Kereta dan Bertanya Arah",
+    "speakers": {
+      "Narator": "default",
+      "Kaito": "teen_male",
+      "Petugas": "adult_male",
+      "Mei": "adult_female"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>土曜日<rt>どようび</rt></ruby>、カイトは<ruby>友達<rt>ともだち</rt></ruby>と<ruby>東京駅<rt>とうきょうえき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>くことにしました。",
+        "romaji": "Doyoubi, Kaito wa tomodachi to Toukyou eki e iku koto ni shimashita.",
+        "id": "Pada hari Sabtu, Kaito memutuskan pergi ke Stasiun Tokyo bersama temannya."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "すみません。<ruby>東京駅<rt>とうきょうえき</rt></ruby>までどうやって<ruby>行<rt>い</rt></ruby>きますか。",
+        "romaji": "Sumimasen. Toukyou eki made douyatte ikimasu ka.",
+        "id": "Permisi. Bagaimana cara pergi ke Stasiun Tokyo?"
+      },
+      {
+        "speaker": "Petugas",
+        "jp": "<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>行<rt>い</rt></ruby>けますよ。",
+        "romaji": "Densha de ikemasu yo.",
+        "id": "Anda bisa pergi dengan kereta."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "どの<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ればいいですか。",
+        "romaji": "Dono densha ni noreba ii desu ka.",
+        "id": "Kereta yang mana yang harus saya naiki?"
+      },
+      {
+        "speaker": "Petugas",
+        "jp": "まず、<ruby>二番線<rt>にばんせん</rt></ruby>の<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ってください。",
+        "romaji": "Mazu, nibansen no densha ni notte kudasai.",
+        "id": "Pertama, silakan naik kereta di jalur peron nomor dua."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>切符<rt>きっぷ</rt></ruby>はどこで<ruby>買<rt>か</rt></ruby>えますか。",
+        "romaji": "Kippu wa doko de kaemasu ka.",
+        "id": "Di mana saya bisa membeli tiket?"
+      },
+      {
+        "speaker": "Petugas",
+        "jp": "あそこの<ruby>券売機<rt>けんばいき</rt></ruby>で<ruby>買<rt>か</rt></ruby>えます。",
+        "romaji": "Asoko no kenbaiki de kaemasu.",
+        "id": "Anda bisa membelinya di mesin tiket yang ada di sana."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "カイトは<ruby>券売機<rt>けんばいき</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。",
+        "romaji": "Kaito wa kenbaiki no mae e itte, kippu o kaimashita.",
+        "id": "Kaito pergi ke depan mesin tiket dan membeli tiket."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。これから<ruby>改札<rt>かいさつ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>ります。",
+        "romaji": "Kippu o kaimashita. Korekara kaisatsu o toorimasu.",
+        "id": "Saya sudah membeli tiket. Sekarang saya akan melewati gerbang tiket."
+      },
+      {
+        "speaker": "Mei",
+        "jp": "はい。<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>入<rt>い</rt></ruby>れてから、まっすぐ<ruby>進<rt>すす</rt></ruby>んでください。",
+        "romaji": "Hai. Kippu o irete kara, massugu susunde kudasai.",
+        "id": "Ya. Setelah memasukkan tiket, silakan terus berjalan lurus."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>東京駅<rt>とうきょうえき</rt></ruby>に<ruby>止<rt>と</rt></ruby>まりますか。",
+        "romaji": "Kono densha wa Toukyou eki ni tomarimasu ka.",
+        "id": "Apakah kereta ini berhenti di Stasiun Tokyo?"
+      },
+      {
+        "speaker": "Mei",
+        "jp": "いいえ、これは<ruby>急行<rt>きゅうこう</rt></ruby>ですから、<ruby>東京駅<rt>とうきょうえき</rt></ruby>には<ruby>止<rt>と</rt></ruby>まりません。",
+        "romaji": "Iie, kore wa kyuukou desu kara, Toukyou eki ni wa tomarimasen.",
+        "id": "Tidak, karena ini kereta ekspres, kereta ini tidak berhenti di Stasiun Tokyo."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "それなら、どの<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ったほうがいいですか。",
+        "romaji": "Sore nara, dono densha ni notta hou ga ii desu ka.",
+        "id": "Kalau begitu, sebaiknya saya naik kereta yang mana?"
+      },
+      {
+        "speaker": "Mei",
+        "jp": "<ruby>各駅停車<rt>かくえきていしゃ</rt></ruby>に<ruby>乗<rt>の</rt></ruby>ったほうがいいですよ。",
+        "romaji": "Kakueki teisha ni notta hou ga ii desu yo.",
+        "id": "Sebaiknya Anda naik kereta yang berhenti di setiap stasiun."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "わかりました。<ruby>何駅<rt>なんえき</rt></ruby><ruby>目<rt>め</rt></ruby>で<ruby>降<rt>お</rt></ruby>りますか。",
+        "romaji": "Wakarimashita. Nan'eki me de orimasu ka.",
+        "id": "Baik, saya mengerti. Saya harus turun di stasiun ke berapa?"
+      },
+      {
+        "speaker": "Mei",
+        "jp": "<ruby>三駅<rt>さんえき</rt></ruby><ruby>目<rt>め</rt></ruby>で<ruby>降<rt>お</rt></ruby>りてください。",
+        "romaji": "San'eki me de orite kudasai.",
+        "id": "Silakan turun di stasiun ketiga."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>来<rt>き</rt></ruby>たので、カイトとメイは<ruby>乗<rt>の</rt></ruby>りました。",
+        "romaji": "Densha ga kita node, Kaito to Mei wa norimashita.",
+        "id": "Karena kereta sudah datang, Kaito dan Mei naik."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>少<rt>すこ</rt></ruby>し<ruby>混<rt>こ</rt></ruby>んでいますね。",
+        "romaji": "Kono densha wa sukoshi konde imasu ne.",
+        "id": "Kereta ini agak penuh, ya."
+      },
+      {
+        "speaker": "Mei",
+        "jp": "そうですね。ドアの<ruby>近<rt>ちか</rt></ruby>くに<ruby>立<rt>た</rt></ruby>たないで、<ruby>中<rt>なか</rt></ruby>へ<ruby>進<rt>すす</rt></ruby>みましょう。",
+        "romaji": "Sou desu ne. Doa no chikaku ni tatanai de, naka e susumimashou.",
+        "id": "Benar. Jangan berdiri dekat pintu, mari masuk ke bagian dalam."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>次<rt>つぎ</rt></ruby>の<ruby>駅<rt>えき</rt></ruby>で<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えますか。",
+        "romaji": "Tsugi no eki de norikaemasu ka.",
+        "id": "Apakah kita akan berpindah kereta di stasiun berikutnya?"
+      },
+      {
+        "speaker": "Mei",
+        "jp": "いいえ、<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えなくてもいいです。そのまま<ruby>乗<rt>の</rt></ruby>っていてください。",
+        "romaji": "Iie, norikaenakute mo ii desu. Sono mama notte ite kudasai.",
+        "id": "Tidak, kita tidak perlu berpindah kereta. Tetaplah naik kereta ini."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>三駅<rt>さんえき</rt></ruby><ruby>目<rt>め</rt></ruby>に<ruby>着<rt>つ</rt></ruby>くと、カイトたちは<ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>降<rt>お</rt></ruby>りました。",
+        "romaji": "San'eki me ni tsuku to, Kaito tachi wa densha o orimashita.",
+        "id": "Ketika tiba di stasiun ketiga, Kaito dan teman-temannya turun dari kereta."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "ありがとう。おかげで<ruby>東京駅<rt>とうきょうえき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>けそうです。",
+        "romaji": "Arigatou. Okage de Toukyou eki made ikesou desu.",
+        "id": "Terima kasih. Berkat bantuanmu, sepertinya saya bisa sampai ke Stasiun Tokyo."
+      },
+      {
+        "speaker": "Mei",
+        "jp": "よかったですね。<ruby>駅<rt>えき</rt></ruby>の<ruby>外<rt>そと</rt></ruby>へ<ruby>出<rt>で</rt></ruby>たら、<ruby>案内板<rt>あんないばん</rt></ruby>も<ruby>見<rt>み</rt></ruby>てください。",
+        "romaji": "Yokatta desu ne. Eki no soto e detara, annaiban mo mite kudasai.",
+        "id": "Syukurlah. Setelah keluar stasiun, perhatikan juga papan petunjuk."
+      }
+    ]
+  },
+  {
+    "id": "n4-gomi",
+    "level": "N4",
+    "title": "Memilah dan Membuang Sampah di Jepang",
+    "speakers": {
+      "Narator": "default",
+      "Yuto": "teen_male",
+      "Yui": "adult_female"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>月曜日<rt>げつようび</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>、ユウトは<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>していました。",
+        "romaji": "Getsuyoubi no asa, Yuuto wa heya o souji shite imashita.",
+        "id": "Pada Senin pagi, Yuto sedang membersihkan kamarnya."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "ごみがたくさんあります。そろそろ<ruby>捨<rt>す</rt></ruby>てなければなりません。",
+        "romaji": "Gomi ga takusan arimasu. Sorosoro sutenakereba narimasen.",
+        "id": "Sampahnya banyak sekali. Sepertinya saya harus segera membuangnya."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>日本<rt>にほん</rt></ruby>では、ごみを<ruby>種類<rt>しゅるい</rt></ruby>ごとに<ruby>分<rt>わ</rt></ruby>けることになっていますよ。",
+        "romaji": "Nihon dewa, gomi o shurui goto ni wakeru koto ni natte imasu yo.",
+        "id": "Di Jepang, sampah harus dipilah berdasarkan jenisnya."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "そうですか。どんな<ruby>種類<rt>しゅるい</rt></ruby>がありますか。",
+        "romaji": "Sou desu ka. Donna shurui ga arimasu ka.",
+        "id": "Begitu, ya. Ada jenis apa saja?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>燃<rt>も</rt></ruby>えるごみ、<ruby>燃<rt>も</rt></ruby>えないごみ、そして<ruby>資源<rt>しげん</rt></ruby>ごみがあります。",
+        "romaji": "Moeru gomi, moenai gomi, soshite shigen gomi ga arimasu.",
+        "id": "Ada sampah yang dapat dibakar, sampah yang tidak dapat dibakar, dan sampah daur ulang."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "このペットボトルはどこに<ruby>捨<rt>す</rt></ruby>てればいいですか。",
+        "romaji": "Kono pettobotoru wa doko ni sutereba ii desu ka.",
+        "id": "Botol plastik ini harus dibuang ke mana?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "ペットボトルは<ruby>資源<rt>しげん</rt></ruby>ごみです。ラベルとキャップを<ruby>取<rt>と</rt></ruby>ってください。",
+        "romaji": "Pettobotoru wa shigen gomi desu. Raberu to kyappu o totte kudasai.",
+        "id": "Botol plastik termasuk sampah daur ulang. Lepaskan label dan tutupnya."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "わかりました。<ruby>中<rt>なか</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>ってから、<ruby>出<rt>だ</rt></ruby>したほうがいいですか。",
+        "romaji": "Wakarimashita. Naka o aratte kara, dashita hou ga ii desu ka.",
+        "id": "Saya mengerti. Sebaiknya saya mencucinya bagian dalam terlebih dahulu sebelum membuangnya?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "はい。きれいに<ruby>洗<rt>あら</rt></ruby>って、<ruby>乾<rt>かわ</rt></ruby>かしておいてください。",
+        "romaji": "Hai. Kirei ni aratte, kawakashite oite kudasai.",
+        "id": "Ya. Cuci sampai bersih dan biarkan kering terlebih dahulu."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "この<ruby>紙<rt>かみ</rt></ruby>と<ruby>新聞<rt>しんぶん</rt></ruby>はどうしますか。",
+        "romaji": "Kono kami to shinbun wa dou shimasu ka.",
+        "id": "Bagaimana dengan kertas dan koran ini?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>紙<rt>かみ</rt></ruby>と<ruby>新聞<rt>しんぶん</rt></ruby>も<ruby>資源<rt>しげん</rt></ruby>ごみです。ひもでまとめてください。",
+        "romaji": "Kami to shinbun mo shigen gomi desu. Himo de matomete kudasai.",
+        "id": "Kertas dan koran juga termasuk sampah daur ulang. Ikat menjadi satu dengan tali."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "ごみはいつ<ruby>出<rt>だ</rt></ruby>せばいいですか。",
+        "romaji": "Gomi wa itsu daseba ii desu ka.",
+        "id": "Kapan saya boleh membuang sampah?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>燃<rt>も</rt></ruby>えるごみは<ruby>月曜日<rt>げつようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>に<ruby>出<rt>だ</rt></ruby>すことになっています。",
+        "romaji": "Moeru gomi wa getsuyoubi to mokuyoubi ni dasu koto ni natte imasu.",
+        "id": "Sampah yang dapat dibakar dijadwalkan untuk dibuang pada hari Senin dan Kamis."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "では、<ruby>今日<rt>きょう</rt></ruby>は<ruby>燃<rt>も</rt></ruby>えるごみを<ruby>出<rt>だ</rt></ruby>してもいいですね。",
+        "romaji": "Dewa, kyou wa moeru gomi o dashite mo ii desu ne.",
+        "id": "Kalau begitu, hari ini saya boleh membuang sampah yang dapat dibakar, ya?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "はい。でも、<ruby>朝<rt>あさ</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>なければなりません。",
+        "romaji": "Hai. Demo, asa hachiji made ni dasanakereba narimasen.",
+        "id": "Ya. Namun, sampah harus dikeluarkan sebelum pukul delapan pagi."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "ごみを<ruby>出<rt>だ</rt></ruby>す<ruby>場所<rt>ばしょ</rt></ruby>はどこですか。",
+        "romaji": "Gomi o dasu basho wa doko desu ka.",
+        "id": "Di mana tempat untuk membuang sampah?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>建物<rt>たてもの</rt></ruby>の<ruby>後<rt>うし</rt></ruby>ろにあるごみ<ruby>置<rt>お</rt></ruby>き<ruby>場<rt>ば</rt></ruby>ですよ。",
+        "romaji": "Tatemono no ushiro ni aru gomi okiba desu yo.",
+        "id": "Tempat sampah ada di belakang gedung."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "カラスにごみを<ruby>荒<rt>あ</rt></ruby>らされないように、ネットをかけたほうがいいですか。",
+        "romaji": "Karasu ni gomi o arasarenai you ni, netto o kaketa hou ga ii desu ka.",
+        "id": "Apakah sebaiknya saya menutupnya dengan jaring agar sampah tidak diacak-acak burung gagak?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "そうですね。ネットをきちんとかけておいてください。",
+        "romaji": "Sou desu ne. Netto o kichinto kakete oite kudasai.",
+        "id": "Betul. Pastikan jaringnya terpasang dengan benar."
+      },
+      {
+        "speaker": "Yuto",
+        "jp": "わかりました。<ruby>町<rt>まち</rt></ruby>のルールを<ruby>守<rt>まも</rt></ruby>るようにします。",
+        "romaji": "Wakarimashita. Machi no ruuru o mamoru you ni shimasu.",
+        "id": "Saya mengerti. Saya akan berusaha menaati aturan lingkungan."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "ユウトはごみを<ruby>分<rt>わ</rt></ruby>けて、<ruby>決<rt>き</rt></ruby>められた<ruby>時間<rt>じかん</rt></ruby>までにごみ<ruby>置<rt>お</rt></ruby>き<ruby>場<rt>ば</rt></ruby>へ<ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>きました。",
+        "romaji": "Yuuto wa gomi o wakete, kimerareta jikan made ni gomi okiba e motte ikimashita.",
+        "id": "Yuto memilah sampah lalu membawanya ke tempat sampah sebelum batas waktu yang ditentukan."
+      }
+    ]
+  },
+  {
+    "id": "n4-pekerjaan",
+    "level": "N4",
+    "title": "Wawancara Kerja Part-time",
+    "speakers": {
+      "Narator": "default",
+      "Kenji": "teen_male",
+      "Akira": "adult_male"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>今日<rt>きょう</rt></ruby>、ケンジはアルバイトの<ruby>面接<rt>めんせつ</rt></ruby>を<ruby>受<rt>う</rt></ruby>けに<ruby>店<rt>みせ</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ました。",
+        "romaji": "Kyou, Kenji wa arubaito no mensetsu o uke ni mise e kimashita.",
+        "id": "Hari ini, Kenji datang ke toko untuk mengikuti wawancara kerja part-time."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "こんにちは。<ruby>面接<rt>めんせつ</rt></ruby>に<ruby>来<rt>き</rt></ruby>たケンジです。",
+        "romaji": "Konnichiwa. Mensetsu ni kita Kenji desu.",
+        "id": "Selamat siang. Saya Kenji, yang datang untuk wawancara."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "こんにちは。<ruby>私<rt>わたし</rt></ruby>は<ruby>店長<rt>てんちょう</rt></ruby>のアキラです。こちらへどうぞ。",
+        "romaji": "Konnichiwa. Watashi wa tenchou no Akira desu. Kochira e douzo.",
+        "id": "Selamat siang. Saya Akira, manajer toko. Silakan ke sini."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "ありがとうございます。",
+        "romaji": "Arigatou gozaimasu.",
+        "id": "Terima kasih."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "<ruby>今日<rt>きょう</rt></ruby>はどうしてこの<ruby>仕事<rt>しごと</rt></ruby>に<ruby>応募<rt>おうぼ</rt></ruby>しましたか。",
+        "romaji": "Kyou wa doushite kono shigoto ni oubo shimashita ka.",
+        "id": "Mengapa kamu melamar pekerjaan ini?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "<ruby>人<rt>ひと</rt></ruby>と<ruby>話<rt>はな</rt></ruby>すことが<ruby>好<rt>す</rt></ruby>きです。それに、<ruby>学校<rt>がっこう</rt></ruby>の<ruby>帰<rt>かえ</rt></ruby>りに<ruby>働<rt>はたら</rt></ruby>きたいです。",
+        "romaji": "Hito to hanasu koto ga suki desu. Sore ni, gakkou no kaeri ni hatarakitai desu.",
+        "id": "Saya suka berbicara dengan orang. Selain itu, saya ingin bekerja sepulang sekolah."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "<ruby>週<rt>しゅう</rt></ruby>に<ruby>何日<rt>なんにち</rt></ruby><ruby>働<rt>はたら</rt></ruby>けますか。",
+        "romaji": "Shuu ni nannichi hatarakemasu ka.",
+        "id": "Berapa hari dalam seminggu kamu bisa bekerja?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>金曜日<rt>きんようび</rt></ruby>まで、<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>から<ruby>九時<rt>くじ</rt></ruby>まで<ruby>働<rt>はたら</rt></ruby>けます。",
+        "romaji": "Getsuyoubi kara kinyoubi made, gogo goji kara kuji made hatarakemasu.",
+        "id": "Saya bisa bekerja dari Senin sampai Jumat, pukul lima sampai sembilan malam."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "<ruby>土曜日<rt>どようび</rt></ruby>はどうですか。",
+        "romaji": "Doyoubi wa dou desu ka.",
+        "id": "Bagaimana dengan hari Sabtu?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "<ruby>土曜日<rt>どようび</rt></ruby>も<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですが、<ruby>午前中<rt>ごぜんちゅう</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>があります。",
+        "romaji": "Doyoubi mo daijoubu desu ga, gozenchuu wa gakkou ga arimasu.",
+        "id": "Hari Sabtu juga bisa, tetapi pada pagi hari saya ada sekolah."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "<ruby>今<rt>いま</rt></ruby>までアルバイトをしたことがありますか。",
+        "romaji": "Ima made arubaito o shita koto ga arimasu ka.",
+        "id": "Apakah sebelumnya kamu pernah bekerja part-time?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "いいえ、<ruby>初<rt>はじ</rt></ruby>めてです。でも、<ruby>仕事<rt>しごと</rt></ruby>を<ruby>早<rt>はや</rt></ruby>く<ruby>覚<rt>おぼ</rt></ruby>えるように<ruby>努力<rt>どりょく</rt></ruby>します。",
+        "romaji": "Iie, hajimete desu. Demo, shigoto o hayaku oboeru you ni doryoku shimasu.",
+        "id": "Belum, ini pertama kalinya. Namun, saya akan berusaha cepat mempelajari pekerjaannya."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "<ruby>忙<rt>いそが</rt></ruby>しい<ruby>時<rt>とき</rt></ruby>もありますが、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですか。",
+        "romaji": "Isogashii toki mo arimasu ga, daijoubu desu ka.",
+        "id": "Kadang-kadang toko ini sibuk. Apakah kamu sanggup?"
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "はい。<ruby>落<rt>お</rt></ruby>ち<ruby>着<rt>つ</rt></ruby>いて、<ruby>周<rt>まわ</rt></ruby>りの<ruby>人<rt>ひと</rt></ruby>と<ruby>協力<rt>きょうりょく</rt></ruby>します。",
+        "romaji": "Hai. Ochitsuite, mawari no hito to kyouryoku shimasu.",
+        "id": "Ya. Saya akan tetap tenang dan bekerja sama dengan orang-orang di sekitar saya."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "では、レジの<ruby>仕事<rt>しごと</rt></ruby>を<ruby>簡単<rt>かんたん</rt></ruby>に<ruby>説明<rt>せつめい</rt></ruby>しますね。",
+        "romaji": "Dewa, reji no shigoto o kantan ni setsumei shimasu ne.",
+        "id": "Kalau begitu, saya akan menjelaskan pekerjaan di kasir secara singkat."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "はい、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。",
+        "romaji": "Hai, yoroshiku onegai shimasu.",
+        "id": "Baik, mohon bimbingannya."
+      },
+      {
+        "speaker": "Akira",
+        "jp": "<ruby>結果<rt>けっか</rt></ruby>は<ruby>三日以内<rt>みっかいない</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>で<ruby>連絡<rt>れんらく</rt></ruby>します。",
+        "romaji": "Kekka wa mikka inai ni denwa de renraku shimasu.",
+        "id": "Kami akan menghubungi kamu melalui telepon dalam tiga hari."
+      },
+      {
+        "speaker": "Kenji",
+        "jp": "<ruby>分<rt>わ</rt></ruby>かりました。<ruby>今日<rt>きょう</rt></ruby>はありがとうございました。",
+        "romaji": "Wakarimashita. Kyou wa arigatou gozaimashita.",
+        "id": "Baik, saya mengerti. Terima kasih banyak untuk hari ini."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "ケンジは<ruby>少<rt>すこ</rt></ruby>し<ruby>緊張<rt>きんちょう</rt></ruby>しましたが、<ruby>笑顔<rt>えがお</rt></ruby>で<ruby>店<rt>みせ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ました。",
+        "romaji": "Kenji wa sukoshi kinchou shimashita ga, egao de mise o demashita.",
+        "id": "Kenji sedikit gugup, tetapi dia meninggalkan toko sambil tersenyum."
+      }
+    ]
+  },
+  {
+    "id": "n4-apotek",
+    "level": "N4",
+    "title": "Membeli Obat di Apotek",
+    "speakers": {
+      "Narator": "default",
+      "Yui": "adult_female",
+      "Satoshi": "adult_male"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "ユイは<ruby>朝<rt>あさ</rt></ruby>から<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>かったので、<ruby>薬局<rt>やっきょく</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。",
+        "romaji": "Yui wa asa kara atama ga itakatta node, yakkyoku e ikimashita.",
+        "id": "Sejak pagi Yui sakit kepala, jadi dia pergi ke apotek."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "すみません。<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いので、<ruby>薬<rt>くすり</rt></ruby>を<ruby>買<rt>か</rt></ruby>いたいです。",
+        "romaji": "Sumimasen. Atama ga itai node, kusuri o kaitai desu.",
+        "id": "Permisi. Kepala saya sakit, jadi saya ingin membeli obat."
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "それは<ruby>大変<rt>たいへん</rt></ruby>ですね。いつから<ruby>痛<rt>いた</rt></ruby>いですか。",
+        "romaji": "Sore wa taihen desu ne. Itsu kara itai desu ka.",
+        "id": "Wah, pasti tidak nyaman. Sejak kapan kepala Anda sakit?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>今朝<rt>けさ</rt></ruby>からです。<ruby>少<rt>すこ</rt></ruby>し<ruby>熱<rt>ねつ</rt></ruby>もあります。",
+        "romaji": "Kesa kara desu. Sukoshi netsu mo arimasu.",
+        "id": "Sejak pagi tadi. Saya juga sedikit demam."
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "せきや<ruby>鼻水<rt>はなみず</rt></ruby>はありますか。",
+        "romaji": "Seki ya hanamizu wa arimasu ka.",
+        "id": "Apakah Anda juga batuk atau pilek?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "いいえ、ありません。<ruby>頭痛<rt>ずつう</rt></ruby>と<ruby>熱<rt>ねつ</rt></ruby>だけです。",
+        "romaji": "Iie, arimasen. Zutsuu to netsu dake desu.",
+        "id": "Tidak. Hanya sakit kepala dan demam."
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "<ruby>何<rt>なに</rt></ruby>か<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んでいますか。",
+        "romaji": "Nani ka kusuri o nonde imasu ka.",
+        "id": "Apakah Anda sedang mengonsumsi obat tertentu?"
+      },
+      {
+        "speaker": "Yui",
+        "jp": "いいえ。<ruby>今日<rt>きょう</rt></ruby>はまだ<ruby>何<rt>なに</rt></ruby>も<ruby>飲<rt>の</rt></ruby>んでいません。",
+        "romaji": "Iie. Kyou wa mada nani mo nonde imasen.",
+        "id": "Belum. Hari ini saya belum minum obat apa pun."
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "こちらは<ruby>頭痛<rt>ずつう</rt></ruby>や<ruby>熱<rt>ねつ</rt></ruby>に<ruby>使<rt>つか</rt></ruby>う<ruby>薬<rt>くすり</rt></ruby>です。",
+        "romaji": "Kochira wa zutsuu ya netsu ni tsukau kusuri desu.",
+        "id": "Obat ini digunakan untuk sakit kepala dan demam."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "この<ruby>薬<rt>くすり</rt></ruby>は<ruby>一日<rt>いちにち</rt></ruby>に<ruby>何回<rt>なんかい</rt></ruby><ruby>飲<rt>の</rt></ruby>めばいいですか。",
+        "romaji": "Kono kusuri wa ichinichi ni nankai nomeba ii desu ka.",
+        "id": "Berapa kali sehari saya harus minum obat ini?"
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "<ruby>説明書<rt>せつめいしょ</rt></ruby>をよく<ruby>読<rt>よ</rt></ruby>んでください。<ruby>一日<rt>いちにち</rt></ruby>に<ruby>三回<rt>さんかい</rt></ruby>までです。",
+        "romaji": "Setsumeisho o yoku yonde kudasai. Ichinichi ni sankai made desu.",
+        "id": "Bacalah petunjuknya dengan saksama. Maksimal tiga kali sehari."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>食事<rt>しょくじ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に<ruby>飲<rt>の</rt></ruby>みますか。",
+        "romaji": "Shokuji no mae ni nomimasu ka.",
+        "id": "Apakah obat ini diminum sebelum makan?"
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "いいえ、<ruby>食事<rt>しょくじ</rt></ruby>の<ruby>後<rt>あと</rt></ruby>に<ruby>水<rt>みず</rt></ruby>で<ruby>飲<rt>の</rt></ruby>んでください。",
+        "romaji": "Iie, shokuji no ato ni mizu de nonde kudasai.",
+        "id": "Tidak, minumlah dengan air setelah makan."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "<ruby>分<rt>わ</rt></ruby>かりました。<ruby>眠<rt>ねむ</rt></ruby>くなることはありますか。",
+        "romaji": "Wakarimashita. Nemuku naru koto wa arimasu ka.",
+        "id": "Saya mengerti. Apakah obat ini bisa membuat mengantuk?"
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "<ruby>人<rt>ひと</rt></ruby>によっては<ruby>眠<rt>ねむ</rt></ruby>くなることがあります。<ruby>車<rt>くるま</rt></ruby>の<ruby>運転<rt>うんてん</rt></ruby>は<ruby>避<rt>さ</rt></ruby>けてください。",
+        "romaji": "Hito ni yotte wa nemuku naru koto ga arimasu. Kuruma no unten wa sakete kudasai.",
+        "id": "Pada sebagian orang, obat ini dapat menyebabkan kantuk. Hindari mengemudi."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "ありがとうございます。もし<ruby>熱<rt>ねつ</rt></ruby>が<ruby>下<rt>さ</rt></ruby>がらなかったら、どうすればいいですか。",
+        "romaji": "Arigatou gozaimasu. Moshi netsu ga sagaranakattara, dou sureba ii desu ka.",
+        "id": "Terima kasih. Apa yang harus saya lakukan jika demam tidak turun?"
+      },
+      {
+        "speaker": "Satoshi",
+        "jp": "<ruby>症状<rt>しょうじょう</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>く<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>病院<rt>びょういん</rt></ruby>で<ruby>診<rt>み</rt></ruby>てもらってください。",
+        "romaji": "Shoujou ga tsuzuku baai wa, byouin de mite moratte kudasai.",
+        "id": "Jika gejalanya berlanjut, silakan periksa ke rumah sakit."
+      },
+      {
+        "speaker": "Yui",
+        "jp": "はい。では、この<ruby>薬<rt>くすり</rt></ruby>をください。",
+        "romaji": "Hai. Dewa, kono kusuri o kudasai.",
+        "id": "Baik. Kalau begitu, saya beli obat ini."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "ユイは<ruby>薬<rt>くすり</rt></ruby>を<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>り、<ruby>家<rt>いえ</rt></ruby>で<ruby>休<rt>やす</rt></ruby>むことにしました。",
+        "romaji": "Yui wa kusuri o uketori, ie de yasumu koto ni shimashita.",
+        "id": "Yui menerima obatnya dan memutuskan untuk beristirahat di rumah."
+      }
+    ]
+  },
+  {
+    "id": "n3-ke-polisi",
+    "level": "N3",
+    "title": "Bertanya Arah ke Polisi",
+    "speakers": {
+      "Narator": "default",
+      "Kaito": "teen_male",
+      "Genzo": "elderly"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "カイトは<ruby>初<rt>はじ</rt></ruby>めて<ruby>来<rt>き</rt></ruby>た<ruby>町<rt>まち</rt></ruby>で、<ruby>古<rt>ふる</rt></ruby>いお<ruby>寺<rt>てら</rt></ruby>を<ruby>探<rt>さが</rt></ruby>していました。",
+        "romaji": "Kaito wa hajimete kita machi de, furui otera o sagashite imashita.",
+        "id": "Kaito sedang mencari kuil tua di kota yang baru pertama kali dia kunjungi."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "あのう、すみません。ちょっとお<ruby>尋<rt>たず</rt></ruby>ねしてもよろしいでしょうか。",
+        "romaji": "Anou, sumimasen. Chotto otazune shite mo yoroshii deshou ka.",
+        "id": "Permisi. Bolehkah saya bertanya sebentar?"
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "はい、どうしましたか。<ruby>道<rt>みち</rt></ruby>に<ruby>迷<rt>まよ</rt></ruby>ったんですか。",
+        "romaji": "Hai, doushimashita ka. Michi ni mayotta n desu ka.",
+        "id": "Tentu, ada apa? Apakah Anda tersesat?"
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "そうなんです。<ruby>駅<rt>えき</rt></ruby>からここまで<ruby>歩<rt>ある</rt></ruby>いてきたんですが、<ruby>地図<rt>ちず</rt></ruby>を<ruby>見<rt>み</rt></ruby>ても<ruby>分<rt>わ</rt></ruby>からなくなってしまって。",
+        "romaji": "Sou nan desu. Eki kara koko made aruite kita n desu ga, chizu o mite mo wakaranaku natte shimatte.",
+        "id": "Benar. Saya berjalan dari stasiun sampai sini, tetapi jadi bingung meskipun sudah melihat peta."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "なるほど。どちらへ<ruby>行<rt>い</rt></ruby>きたいんですか。",
+        "romaji": "Naruhodo. Dochira e ikitai n desu ka.",
+        "id": "Begitu rupanya. Anda ingin pergi ke mana?"
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "この<ruby>近<rt>ちか</rt></ruby>くにある<ruby>東山寺<rt>ひがしやまでら</rt></ruby>というお<ruby>寺<rt>てら</rt></ruby>です。",
+        "romaji": "Kono chikaku ni aru Higashiyamadera to iu otera desu.",
+        "id": "Saya ingin ke kuil bernama Higashiyama-dera yang ada di sekitar sini."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "<ruby>東山寺<rt>ひがしやまでら</rt></ruby>なら、この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>進<rt>すす</rt></ruby>めばいいですよ。",
+        "romaji": "Higashiyamadera nara, kono michi o massugu susumeba ii desu yo.",
+        "id": "Kalau Higashiyama-dera, Anda cukup berjalan lurus di jalan ini."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "どのくらい<ruby>歩<rt>ある</rt></ruby>けば<ruby>着<rt>つ</rt></ruby>きますか。",
+        "romaji": "Dono kurai arukeba tsukimasu ka.",
+        "id": "Berapa lama saya harus berjalan sampai tiba di sana?"
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "ゆっくり<ruby>歩<rt>ある</rt></ruby>いても、<ruby>十分<rt>じゅっぷん</rt></ruby>ぐらいで<ruby>着<rt>つ</rt></ruby>くはずです。",
+        "romaji": "Yukkuri aruite mo, juppun gurai de tsuku hazu desu.",
+        "id": "Meskipun berjalan santai, seharusnya Anda tiba dalam sekitar sepuluh menit."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>途中<rt>とちゅう</rt></ruby>に<ruby>目印<rt>めじるし</rt></ruby>になる<ruby>建物<rt>たてもの</rt></ruby>はありますか。",
+        "romaji": "Tochuu ni mejirushi ni naru tatemono wa arimasu ka.",
+        "id": "Apakah ada bangunan yang bisa dijadikan patokan di sepanjang jalan?"
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "<ruby>右側<rt>みぎがわ</rt></ruby>に<ruby>大<rt>おお</rt></ruby>きな<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>が<ruby>見<rt>み</rt></ruby>えてきます。その<ruby>角<rt>かど</rt></ruby>を<ruby>左<rt>ひだり</rt></ruby>に<ruby>曲<rt>ま</rt></ruby>がってください。",
+        "romaji": "Migigawa ni ookina yuubinkyoku ga miete kimasu. Sono kado o hidari ni magatte kudasai.",
+        "id": "Nanti Anda akan melihat kantor pos besar di sebelah kanan. Belok kiri di sudut itu."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>の<ruby>角<rt>かど</rt></ruby>を<ruby>左<rt>ひだり</rt></ruby>ですね。",
+        "romaji": "Yuubinkyoku no kado o hidari desu ne.",
+        "id": "Belok kiri di sudut kantor pos, ya."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "ええ。そうすると、<ruby>小<rt>ちい</rt></ruby>さな<ruby>川<rt>かわ</rt></ruby>にかかっている<ruby>橋<rt>はし</rt></ruby>があるので、それを<ruby>渡<rt>わた</rt></ruby>ってください。",
+        "romaji": "Ee. Sou suru to, chiisana kawa ni kakatte iru hashi ga aru node, sore o watatte kudasai.",
+        "id": "Betul. Setelah itu, ada jembatan kecil di atas sungai. Silakan menyeberanginya."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>橋<rt>はし</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>った<ruby>後<rt>あと</rt></ruby>は、どちらへ<ruby>行<rt>い</rt></ruby>けばいいでしょうか。",
+        "romaji": "Hashi o watatta ato wa, dochira e ikeba ii deshou ka.",
+        "id": "Setelah menyeberangi jembatan, ke arah mana saya harus pergi?"
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "<ruby>渡<rt>わた</rt></ruby>ってすぐのところに<ruby>案内板<rt>あんないばん</rt></ruby>があります。そこにお<ruby>寺<rt>てら</rt></ruby>までの<ruby>道<rt>みち</rt></ruby>が<ruby>書<rt>か</rt></ruby>いてありますよ。",
+        "romaji": "Watatte sugu no tokoro ni annaiban ga arimasu. Soko ni otera made no michi ga kaite arimasu yo.",
+        "id": "Tepat setelah menyeberang ada papan petunjuk. Di sana tertulis jalan menuju kuil."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "それなら<ruby>安心<rt>あんしん</rt></ruby>です。ところで、この<ruby>辺<rt>あた</rt></ruby>りは<ruby>車<rt>くるま</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いですね。",
+        "romaji": "Sore nara anshin desu. Tokoro de, kono atari wa kuruma ga ooi desu ne.",
+        "id": "Kalau begitu, saya lega. Ngomong-ngomong, di sekitar sini banyak mobil, ya."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "そうですね。<ruby>特<rt>とく</rt></ruby>に<ruby>夕方<rt>ゆうがた</rt></ruby>は<ruby>交通量<rt>こうつうりょう</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えるので、<ruby>気<rt>き</rt></ruby>をつけたほうがいいですよ。",
+        "romaji": "Sou desu ne. Tokuni yuugata wa koutsuuryou ga fueru node, ki o tsuketa hou ga ii desu yo.",
+        "id": "Benar. Terutama sore hari, jumlah kendaraan meningkat, jadi sebaiknya Anda berhati-hati."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>歩道<rt>ほどう</rt></ruby>がないところでは、どこを<ruby>歩<rt>ある</rt></ruby>けばいいですか。",
+        "romaji": "Hodou ga nai tokoro de wa, doko o arukeba ii desu ka.",
+        "id": "Kalau tidak ada trotoar, di mana saya sebaiknya berjalan?"
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "その<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>車<rt>くるま</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>しながら、<ruby>道路<rt>どうろ</rt></ruby>の<ruby>右側<rt>みぎがわ</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>いてください。",
+        "romaji": "Sono baai wa, kuruma ni chuui shinagara, douro no migigawa o aruite kudasai.",
+        "id": "Dalam keadaan seperti itu, berjalanlah di sisi kanan jalan sambil memperhatikan kendaraan."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>分<rt>わ</rt></ruby>かりました。<ruby>教<rt>おし</rt></ruby>えてくださってありがとうございます。",
+        "romaji": "Wakarimashita. Oshiete kudasatte arigatou gozaimasu.",
+        "id": "Saya mengerti. Terima kasih sudah memberi tahu saya."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "どういたしまして。<ruby>旅行<rt>りょこう</rt></ruby>でこの<ruby>町<rt>まち</rt></ruby>に<ruby>来<rt>き</rt></ruby>たんですか。",
+        "romaji": "Dou itashimashite. Ryokou de kono machi ni kita n desu ka.",
+        "id": "Sama-sama. Apakah Anda datang ke kota ini untuk berwisata?"
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "はい。<ruby>歴史<rt>れきし</rt></ruby>のある<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>見<rt>み</rt></ruby>て<ruby>回<rt>まわ</rt></ruby>りたいと<ruby>思<rt>おも</rt></ruby>っています。",
+        "romaji": "Hai. Rekishi no aru basho o mite mawaritai to omotte imasu.",
+        "id": "Ya. Saya ingin berkeliling melihat tempat-tempat bersejarah."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "それなら、お<ruby>寺<rt>てら</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くにある<ruby>資料館<rt>しりょうかん</rt></ruby>にも<ruby>寄<rt>よ</rt></ruby>ってみるといいでしょう。",
+        "romaji": "Sore nara, otera no chikaku ni aru shiryoukan ni mo yotte miru to ii deshou.",
+        "id": "Kalau begitu, sebaiknya Anda juga mampir ke museum kecil di dekat kuil."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "<ruby>資料館<rt>しりょうかん</rt></ruby>では、この<ruby>町<rt>まち</rt></ruby>の<ruby>歴史<rt>れきし</rt></ruby>について<ruby>学<rt>まな</rt></ruby>べるんですか。",
+        "romaji": "Shiryoukan de wa, kono machi no rekishi ni tsuite manaberu n desu ka.",
+        "id": "Apakah saya bisa mempelajari sejarah kota ini di museum tersebut?"
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "もちろんです。<ruby>昔<rt>むかし</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>や<ruby>道具<rt>どうぐ</rt></ruby>も<ruby>展示<rt>てんじ</rt></ruby>されています。",
+        "romaji": "Mochiron desu. Mukashi no shashin ya dougu mo tenji sarete imasu.",
+        "id": "Tentu. Foto-foto dan benda-benda dari zaman dahulu juga dipamerkan di sana."
+      },
+      {
+        "speaker": "Kaito",
+        "jp": "ぜひ<ruby>行<rt>い</rt></ruby>ってみます。お<ruby>話<rt>はなし</rt></ruby>を<ruby>聞<rt>き</rt></ruby>けてよかったです。",
+        "romaji": "Zehi itte mimasu. Ohanashi o kikete yokatta desu.",
+        "id": "Saya pasti akan mengunjunginya. Senang bisa mendengar penjelasan Anda."
+      },
+      {
+        "speaker": "Genzo",
+        "jp": "<ruby>気<rt>き</rt></ruby>をつけて<ruby>行<rt>い</rt></ruby>ってらっしゃい。<ruby>楽<rt>たの</rt></ruby>しい<ruby>一日<rt>いちにち</rt></ruby>になるといいですね。",
+        "romaji": "Ki o tsukete itterasshai. Tanoshii ichinichi ni naru to ii desu ne.",
+        "id": "Hati-hati di jalan. Semoga hari Anda menyenangkan."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "カイトは<ruby>教<rt>おし</rt></ruby>えてもらった<ruby>道<rt>みち</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>し、<ruby>元気<rt>げんき</rt></ruby>に<ruby>歩<rt>ある</rt></ruby>き<ruby>始<rt>はじ</rt></ruby>めました。",
+        "romaji": "Kaito wa oshiete moratta michi o kakunin shi, genki ni arukihajimemashita.",
+        "id": "Kaito memastikan kembali jalan yang diberitahukan, lalu mulai berjalan dengan semangat."
+      }
+    ]
+  },
+  {
+    "id": "n4-perpustakaan",
+    "level": "N4",
+    "title": "Meminjam Buku di Perpustakaan",
+    "speakers": {
+      "Narator": "default",
+      "Haruto": "teen_male",
+      "Fumiko": "adult_female"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "ハルトは<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>のために、<ruby>町<rt>まち</rt></ruby>の<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。",
+        "romaji": "Haruto wa nihongo no benkyou no tame ni, machi no toshokan e ikimashita.",
+        "id": "Haruto pergi ke perpustakaan kota untuk belajar bahasa Jepang."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "すみません。<ruby>本<rt>ほん</rt></ruby>を<ruby>借<rt>か</rt></ruby>りたいんですが、どうすればいいですか。",
+        "romaji": "Sumimasen. Hon o karitai n desu ga, dou sureba ii desu ka.",
+        "id": "Permisi. Saya ingin meminjam buku. Bagaimana caranya?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "まず、こちらで<ruby>利用者<rt>りようしゃ</rt></ruby>カードを<ruby>作<rt>つく</rt></ruby>ってください。",
+        "romaji": "Mazu, kochira de riyousha kaado o tsukutte kudasai.",
+        "id": "Pertama, silakan buat kartu anggota di sini."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "カードを<ruby>作<rt>つく</rt></ruby>るには、<ruby>何<rt>なに</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>ですか。",
+        "romaji": "Kaado o tsukuru ni wa, nani ga hitsuyou desu ka.",
+        "id": "Apa yang diperlukan untuk membuat kartu?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "<ruby>住所<rt>じゅうしょ</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かるものを<ruby>見<rt>み</rt></ruby>せてください。",
+        "romaji": "Juusho ga wakaru mono o misete kudasai.",
+        "id": "Tolong tunjukkan dokumen yang mencantumkan alamat Anda."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "はい。これでいいですか。",
+        "romaji": "Hai. Kore de ii desu ka.",
+        "id": "Baik. Apakah dokumen ini bisa?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "はい、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>です。ここに<ruby>名前<rt>なまえ</rt></ruby>と<ruby>電話番号<rt>でんわばんごう</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。",
+        "romaji": "Hai, daijoubu desu. Koko ni namae to denwa bangou o kaite kudasai.",
+        "id": "Ya, bisa. Silakan tulis nama dan nomor telepon di sini."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "<ruby>書<rt>か</rt></ruby>きました。これで<ruby>終<rt>お</rt></ruby>わりですか。",
+        "romaji": "Kakimashita. Kore de owari desu ka.",
+        "id": "Sudah saya isi. Apakah sudah selesai?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "はい。カードができるまで、<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。",
+        "romaji": "Hai. Kaado ga dekiru made, shoushou omachi kudasai.",
+        "id": "Ya. Mohon tunggu sebentar sampai kartunya selesai dibuat."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "ありがとうございます。<ruby>一度<rt>いちど</rt></ruby>に<ruby>何冊<rt>なんさつ</rt></ruby>まで<ruby>借<rt>か</rt></ruby>りられますか。",
+        "romaji": "Arigatou gozaimasu. Ichido ni nansatsu made kariraremasu ka.",
+        "id": "Terima kasih. Berapa buku yang boleh dipinjam sekaligus?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "<ruby>五冊<rt>ごさつ</rt></ruby>までです。<ruby>期間<rt>きかん</rt></ruby>は<ruby>二週間<rt>にしゅうかん</rt></ruby>ですよ。",
+        "romaji": "Gosatsu made desu. Kikan wa nishuukan desu yo.",
+        "id": "Maksimal lima buku. Lama peminjamannya dua minggu."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "<ruby>返<rt>かえ</rt></ruby>す<ruby>日<rt>ひ</rt></ruby>に<ruby>来<rt>こ</rt></ruby>られないときは、どうすればいいですか。",
+        "romaji": "Kaesu hi ni korarenai toki wa, dou sureba ii desu ka.",
+        "id": "Apa yang harus saya lakukan jika tidak bisa datang pada tanggal pengembalian?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "<ruby>次<rt>つぎ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>が<ruby>予約<rt>よやく</rt></ruby>していなければ、<ruby>延長<rt>えんちょう</rt></ruby>できます。",
+        "romaji": "Tsugi no hito ga yoyaku shite inakereba, enchou dekimasu.",
+        "id": "Jika tidak ada orang berikutnya yang memesan buku itu, masa pinjam bisa diperpanjang."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "それは<ruby>便利<rt>べんり</rt></ruby>ですね。<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>小説<rt>しょうせつ</rt></ruby>はどこにありますか。",
+        "romaji": "Sore wa benri desu ne. Nihongo no shousetsu wa doko ni arimasu ka.",
+        "id": "Wah, praktis sekali. Di mana novel berbahasa Jepang?"
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "<ruby>二階<rt>にかい</rt></ruby>の<ruby>右側<rt>みぎがわ</rt></ruby>にあります。<ruby>初<rt>はじ</rt></ruby>めてなら、<ruby>簡単<rt>かんたん</rt></ruby>な<ruby>本<rt>ほん</rt></ruby>がおすすめです。",
+        "romaji": "Nikai no migigawa ni arimasu. Hajimete nara, kantan na hon ga osusume desu.",
+        "id": "Ada di lantai dua, sebelah kanan. Jika baru mulai, saya sarankan buku yang mudah."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "では、そこへ<ruby>行<rt>い</rt></ruby>ってみます。",
+        "romaji": "Dewa, soko e itte mimasu.",
+        "id": "Kalau begitu, saya akan melihat ke sana."
+      },
+      {
+        "speaker": "Fumiko",
+        "jp": "このカードを<ruby>使<rt>つか</rt></ruby>って、<ruby>機械<rt>きかい</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借<rt>か</rt></ruby>りてください。",
+        "romaji": "Kono kaado o tsukatte, kikai de hon o karite kudasai.",
+        "id": "Gunakan kartu ini untuk meminjam buku melalui mesin."
+      },
+      {
+        "speaker": "Haruto",
+        "jp": "<ruby>分<rt>わ</rt></ruby>かりました。いろいろ<ruby>教<rt>おし</rt></ruby>えてくださって、ありがとうございます。",
+        "romaji": "Wakarimashita. Iroiro oshiete kudasatte, arigatou gozaimasu.",
+        "id": "Saya mengerti. Terima kasih sudah menjelaskan banyak hal."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "ハルトはカードを<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>り、<ruby>二階<rt>にかい</rt></ruby>へ<ruby>向<rt>む</rt></ruby>かいました。",
+        "romaji": "Haruto wa kaado o uketori, nikai e mukaimashita.",
+        "id": "Haruto menerima kartunya lalu menuju lantai dua."
+      }
+    ]
+  },
+  {
+    "id": "n3-pindah-rumah",
+    "level": "N3",
+    "title": "Persiapan Pindah Rumah",
+    "speakers": {
+      "Narator": "default",
+      "Takumi": "adult_male",
+      "Yumi": "adult_female",
+      "Emi": "child"
+    },
+    "isNatural": false,
+    "sentences": [
+      {
+        "speaker": "Narator",
+        "jp": "タクミとユミの<ruby>家族<rt>かぞく</rt></ruby>は、<ruby>来週<rt>らいしゅう</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>家<rt>いえ</rt></ruby>へ<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>すことになりました。",
+        "romaji": "Takumi to Yumi no kazoku wa, raishuu, atarashii ie e hikkosu koto ni narimashita.",
+        "id": "Keluarga Takumi dan Yumi akan pindah ke rumah baru minggu depan."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "<ruby>荷物<rt>にもつ</rt></ruby>が<ruby>思<rt>おも</rt></ruby>ったより<ruby>多<rt>おお</rt></ruby>いわね。<ruby>今週末<rt>こんしゅうまつ</rt></ruby>までに<ruby>準備<rt>じゅんび</rt></ruby>が<ruby>終<rt>お</rt></ruby>わるかしら。",
+        "romaji": "Nimotsu ga omotta yori ooi wa ne. Konshuumatsu made ni junbi ga owaru kashira.",
+        "id": "Barang-barangnya lebih banyak daripada yang kukira. Apa persiapannya bisa selesai sebelum akhir pekan ini?"
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "<ruby>少<rt>すこ</rt></ruby>しずつ<ruby>片付<rt>かたづ</rt></ruby>ければ<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>だよ。まず、<ruby>使<rt>つか</rt></ruby>わない<ruby>物<rt>もの</rt></ruby>を<ruby>分<rt>わ</rt></ruby>けよう。",
+        "romaji": "Sukoshi zutsu katazukereba daijoubu da yo. Mazu, tsukawanai mono o wakeyou.",
+        "id": "Kalau kita merapikannya sedikit demi sedikit, pasti bisa. Pertama, pisahkan barang yang tidak digunakan."
+      },
+      {
+        "speaker": "Emi",
+        "jp": "この<ruby>古<rt>ふる</rt></ruby>いぬいぐるみはどうするの。まだ<ruby>使<rt>つか</rt></ruby>えるよ。",
+        "romaji": "Kono furui nuigurumi wa dou suru no. Mada tsukaeru yo.",
+        "id": "Bagaimana dengan boneka lama ini? Masih bisa dipakai, lho."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "それはエミが<ruby>小<rt>ちい</rt></ruby>さいころから<ruby>持<rt>も</rt></ruby>っているものね。<ruby>新<rt>あたら</rt></ruby>しい<ruby>家<rt>いえ</rt></ruby>にも<ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>きましょう。",
+        "romaji": "Sore wa Emi ga chiisai koro kara motte iru mono ne. Atarashii ie ni mo motte ikimashou.",
+        "id": "Itu barang yang kamu miliki sejak kecil, Emi. Mari kita bawa juga ke rumah baru."
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "<ruby>箱<rt>はこ</rt></ruby>には<ruby>部屋<rt>へや</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いておくと、<ruby>後<rt>あと</rt></ruby>で<ruby>運<rt>はこ</rt></ruby>びやすくなるよ。",
+        "romaji": "Hako ni wa heya no namae o kaite oku to, ato de hakobiyasuku naru yo.",
+        "id": "Kalau kita menuliskan nama ruangan pada kotak, nanti akan lebih mudah memindahkannya."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "そうね。<ruby>台所<rt>だいどころ</rt></ruby>の<ruby>物<rt>もの</rt></ruby>と<ruby>寝室<rt>しんしつ</rt></ruby>の<ruby>物<rt>もの</rt></ruby>を<ruby>別々<rt>べつべつ</rt></ruby>にしておくわ。",
+        "romaji": "Sou ne. Daidokoro no mono to shinshitsu no mono o betsubetsu ni shite oku wa.",
+        "id": "Benar juga. Aku akan memisahkan barang dapur dan barang kamar tidur."
+      },
+      {
+        "speaker": "Emi",
+        "jp": "わたしのおもちゃは、どの<ruby>箱<rt>はこ</rt></ruby>に<ruby>入<rt>い</rt></ruby>れたらいい。",
+        "romaji": "Watashi no omocha wa, dono hako ni iretara ii.",
+        "id": "Mainanku harus dimasukkan ke kotak yang mana?"
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "この<ruby>小<rt>ちい</rt></ruby>さい<ruby>箱<rt>はこ</rt></ruby>に<ruby>入<rt>い</rt></ruby>れて、<ruby>自分<rt>じぶん</rt></ruby>で<ruby>運<rt>はこ</rt></ruby>べるようにしよう。",
+        "romaji": "Kono chiisai hako ni irete, jibun de hakoberu you ni shiyou.",
+        "id": "Masukkan ke kotak kecil ini supaya kamu bisa membawanya sendiri."
+      },
+      {
+        "speaker": "Emi",
+        "jp": "うん。<ruby>大切<rt>たいせつ</rt></ruby>なものだから、なくさないようにするね。",
+        "romaji": "Un. Taisetsu na mono dakara, nakusanai you ni suru ne.",
+        "id": "Iya. Karena ini barang penting, aku akan menjaganya agar tidak hilang."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "ところで、<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しの<ruby>会社<rt>かいしゃ</rt></ruby>には、<ruby>時間<rt>じかん</rt></ruby>をもう<ruby>一度<rt>いちど</rt></ruby><ruby>確認<rt>かくにん</rt></ruby>したほうがいいわね。",
+        "romaji": "Tokoro de, hikkoshi no kaisha ni wa, jikan o mou ichido kakunin shita hou ga ii wa ne.",
+        "id": "Ngomong-ngomong, sebaiknya kita memastikan sekali lagi jadwal dengan perusahaan pindahan."
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "<ruby>昨日<rt>きのう</rt></ruby><ruby>電話<rt>でんわ</rt></ruby>したとき、<ruby>土曜日<rt>どようび</rt></ruby>の<ruby>午前九時<rt>ごぜんくじ</rt></ruby>に<ruby>来<rt>く</rt></ruby>ると<ruby>言<rt>い</rt></ruby>っていたよ。",
+        "romaji": "Kinou denwa shita toki, doyoubi no gozen kuji ni kuru to itte ita yo.",
+        "id": "Saat menelepon kemarin, mereka mengatakan akan datang hari Sabtu pukul sembilan pagi."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "<ruby>道<rt>みち</rt></ruby>が<ruby>混<rt>こ</rt></ruby>んでいたら、<ruby>到着<rt>とうちゃく</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れるかもしれないわ。",
+        "romaji": "Michi ga konde itara, touchaku ga okureru kamoshirenai wa.",
+        "id": "Kalau jalanan macet, mungkin kedatangan mereka akan terlambat."
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "そのときは<ruby>会社<rt>かいしゃ</rt></ruby>から<ruby>連絡<rt>れんらく</rt></ruby>があるはずだから、<ruby>電話<rt>でんわ</rt></ruby>に<ruby>出<rt>で</rt></ruby>られるようにしておくよ。",
+        "romaji": "Sono toki wa kaisha kara renraku ga aru hazu dakara, denwa ni dereru you ni shite oku yo.",
+        "id": "Kalau begitu, seharusnya perusahaan akan menghubungi kita, jadi aku akan memastikan bisa menerima telepon."
+      },
+      {
+        "speaker": "Emi",
+        "jp": "<ruby>新<rt>あたら</rt></ruby>しい<ruby>家<rt>いえ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>公園<rt>こうえん</rt></ruby>があるんでしょう。",
+        "romaji": "Atarashii ie no chikaku ni wa kouen ga aru n deshou.",
+        "id": "Di dekat rumah baru ada taman, kan?"
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "ええ。<ruby>学校<rt>がっこう</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>ったら、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きましょう。",
+        "romaji": "Ee. Gakkou kara kaettara, issho ni mi ni ikimashou.",
+        "id": "Iya. Setelah pulang sekolah, mari kita pergi melihatnya bersama-sama."
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "<ruby>近所<rt>きんじょ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>にも、<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>したら<ruby>挨拶<rt>あいさつ</rt></ruby>をしよう。",
+        "romaji": "Kinjo no hito ni mo, hikkoshitara aisatsu o shiyou.",
+        "id": "Setelah pindah, kita juga harus menyapa para tetangga."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "そうしましょう。<ruby>長<rt>なが</rt></ruby>く<ruby>住<rt>す</rt></ruby>む<ruby>場所<rt>ばしょ</rt></ruby>だから、いい<ruby>関係<rt>かんけい</rt></ruby>を<ruby>作<rt>つく</rt></ruby>りたいわ。",
+        "romaji": "Sou shimashou. Nagaku sumu basho dakara, ii kankei o tsukuritai wa.",
+        "id": "Mari. Karena kita akan tinggal lama di sana, aku ingin membangun hubungan yang baik."
+      },
+      {
+        "speaker": "Emi",
+        "jp": "わたしも<ruby>隣<rt>となり</rt></ruby>の<ruby>子<rt>こ</rt></ruby>と<ruby>友達<rt>ともだち</rt></ruby>になりたいな。",
+        "romaji": "Watashi mo tonari no ko to tomodachi ni naritai na.",
+        "id": "Aku juga ingin berteman dengan anak yang tinggal di sebelah."
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "きっとすぐに<ruby>友達<rt>ともだち</rt></ruby>ができるよ。<ruby>自分<rt>じぶん</rt></ruby>から<ruby>笑顔<rt>えがお</rt></ruby>で<ruby>話<rt>はな</rt></ruby>しかけてみよう。",
+        "romaji": "Kitto sugu ni tomodachi ga dekiru yo. Jibun kara egao de hanashikakete miyou.",
+        "id": "Kamu pasti akan segera mendapat teman. Cobalah menyapa mereka lebih dulu sambil tersenyum."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>家族<rt>かぞく</rt></ruby>は<ruby>役割<rt>やくわり</rt></ruby>を<ruby>分担<rt>ぶんたん</rt></ruby>しながら、<ruby>少<rt>すこ</rt></ruby>しずつ<ruby>準備<rt>じゅんび</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めました。",
+        "romaji": "Kazoku wa yakuwari o buntan shinagara, sukoshi zutsu junbi o susumemashita.",
+        "id": "Keluarga itu membagi tugas dan sedikit demi sedikit melanjutkan persiapan."
+      },
+      {
+        "speaker": "Yumi",
+        "jp": "<ruby>大変<rt>たいへん</rt></ruby>だけど、みんなで<ruby>協力<rt>きょうりょく</rt></ruby>すれば<ruby>早<rt>はや</rt></ruby>く<ruby>終<rt>お</rt></ruby>わりそうね。",
+        "romaji": "Taihen dakedo, minna de kyouryoku sureba hayaku owarisou ne.",
+        "id": "Memang melelahkan, tetapi kalau kita bekerja sama, sepertinya semuanya akan cepat selesai."
+      },
+      {
+        "speaker": "Takumi",
+        "jp": "<ruby>新<rt>あたら</rt></ruby>しい<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>楽<rt>たの</rt></ruby>しみだね。みんなで<ruby>気持<rt>きも</rt></ruby>ちよく<ruby>始<rt>はじ</rt></ruby>めよう。",
+        "romaji": "Atarashii seikatsu ga tanoshimi da ne. Minna de kimochi yoku hajimeyou.",
+        "id": "Aku tidak sabar memulai kehidupan baru. Mari kita memulainya dengan suasana hati yang baik."
+      },
+      {
+        "speaker": "Emi",
+        "jp": "わたし、<ruby>新<rt>あたら</rt></ruby>しい<ruby>部屋<rt>へや</rt></ruby>をかわいく<ruby>飾<rt>かざ</rt></ruby>りたい。",
+        "romaji": "Watashi, atarashii heya o kawaiku kazaritai.",
+        "id": "Aku ingin menghias kamar baruku supaya terlihat lucu."
+      },
+      {
+        "speaker": "Narator",
+        "jp": "<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しの<ruby>準備<rt>じゅんび</rt></ruby>はまだ<ruby>続<rt>つづ</rt></ruby>きますが、<ruby>家族<rt>かぞく</rt></ruby>の<ruby>顔<rt>かお</rt></ruby>には<ruby>笑顔<rt>えがお</rt></ruby>が<ruby>戻<rt>もど</rt></ruby>っていました。",
+        "romaji": "Hikkoshi no junbi wa mada tsuzukimasu ga, kazoku no kao ni wa egao ga modotte imashita.",
+        "id": "Persiapan pindahan masih berlanjut, tetapi senyum telah kembali terlihat di wajah seluruh keluarga."
+      }
+    ]
+  }
+]

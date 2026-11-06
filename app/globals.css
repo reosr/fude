@@ -76,3 +76,35 @@ rt {
   font-weight: 600;
   letter-spacing: 0.05em;
 }
+
+/* Animasi Melayang untuk Logo Loading */
+@keyframes floatBreath {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+    filter: drop-shadow(0 0 20px rgba(201,52,56,0.4));
+  }
+  50% { 
+    transform: translateY(-15px) scale(1.05); 
+    filter: drop-shadow(0 0 40px rgba(201,52,56,0.8));
+  }
+}
+
+.animate-float-breath {
+  animation: floatBreath 3s ease-in-out infinite;
+}
+
+/* Matikan seleksi teks secara global */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Kecuali di input, textarea, dan teks yang emang mau bisa di-copy */
+input, textarea, .selectable-text {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

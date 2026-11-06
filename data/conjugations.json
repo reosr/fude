@@ -1,62 +1,812 @@
 [
   {
-    "kanji": "書く", "kana": "かく", "meaning": "menulis",
-    "dict": "書く", "masu": "書きます", "te": "書いて", "ta": "書いた", "nai": "書かない"
+    "kanji": "書く",
+    "kana": "かく",
+    "romaji": "kaku",
+    "meaning": "menulis",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>く",
+        "romaji": "kaku",
+        "desc": "Bentuk dasar. Dipakai untuk percakapan kasual.",
+        "example": "手紙を書く (Menulis surat)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>きます",
+        "romaji": "kakimasu",
+        "desc": "Bentuk sopan. Digunakan saat berbicara dengan orang yang lebih tua atau atasan.",
+        "example": "手紙を書きます (Menulis surat)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>いて",
+        "romaji": "kaite",
+        "desc": "Untuk meminta tolong (～てください) atau menyambung dua kegiatan.",
+        "example": "名前を書いてください (Tolong tulis namanya)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>いた",
+        "romaji": "kaita",
+        "desc": "Menyatakan kegiatan yang sudah selesai dilakukan di masa lampau.",
+        "example": "昨日、日記を書いた (Kemarin saya menulis buku harian)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>かない",
+        "romaji": "kakanai",
+        "desc": "Bentuk kasual untuk menyatakan 'tidak melakukan' sesuatu.",
+        "example": "今日は宿題を書かない (Hari ini tidak mengerjakan PR)"
+      }
+    ]
   },
   {
-    "kanji": "読む", "kana": "よむ", "meaning": "membaca",
-    "dict": "読む", "masu": "読みます", "te": "読んで", "ta": "読んだ", "nai": "読まない"
+    "kanji": "読む",
+    "kana": "よむ",
+    "romaji": "yomu",
+    "meaning": "membaca",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>む",
+        "romaji": "yomu",
+        "desc": "Bentuk dasar.",
+        "example": "本を読む (Membaca buku)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>みます",
+        "romaji": "yomimasu",
+        "desc": "Bentuk sopan.",
+        "example": "本を読みます (Membaca buku)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>んで",
+        "romaji": "yonde",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "本を読んでください (Tolong baca bukunya)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>んだ",
+        "romaji": "yonda",
+        "desc": "Menyatakan sudah membaca.",
+        "example": "昨日、本を読んだ (Kemarin membaca buku)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>まない",
+        "romaji": "yomanai",
+        "desc": "Bentuk kasual negatif.",
+        "example": "今日は本を読まない (Hari ini tidak membaca buku)"
+      }
+    ]
   },
   {
-    "kanji": "食べる", "kana": "たべる", "meaning": "makan",
-    "dict": "食べる", "masu": "食べます", "te": "食べて", "ta": "食べた", "nai": "食べない"
+    "kanji": "食べる",
+    "kana": "たべる",
+    "romaji": "taberu",
+    "meaning": "makan",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>食<rt>た</rt></ruby>べる",
+        "romaji": "taberu",
+        "desc": "Bentuk dasar.",
+        "example": "ケーキを食べる (Makan kue)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>食<rt>た</rt></ruby>べます",
+        "romaji": "tabemasu",
+        "desc": "Bentuk sopan.",
+        "example": "朝ごはんを食べます (Makan sarapan)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>食<rt>た</rt></ruby>べて",
+        "romaji": "tabete",
+        "desc": "Untuk menyambung kalimat atau meminta tolong.",
+        "example": "野菜を食べてください (Tolong makan sayurnya)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>食<rt>た</rt></ruby>べた",
+        "romaji": "tabeta",
+        "desc": "Menyatakan sudah makan.",
+        "example": "もう食べた (Sudah makan)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>食<rt>た</rt></ruby>べない",
+        "romaji": "tabenai",
+        "desc": "Bentuk kasual untuk menyatakan tidak makan.",
+        "example": "肉は食べない (Tidak makan daging)"
+      }
+    ]
   },
   {
-    "kanji": "行く", "kana": "いく", "meaning": "pergi",
-    "dict": "行く", "masu": "行きます", "te": "行って", "ta": "行った", "nai": "行かない"
+    "kanji": "行く",
+    "kana": "いく",
+    "romaji": "iku",
+    "meaning": "pergi",
+    "type": "Godan (Pengecualian)",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>く",
+        "romaji": "iku",
+        "desc": "Bentuk dasar.",
+        "example": "学校へ行く (Pergi ke sekolah)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>きます",
+        "romaji": "ikimasu",
+        "desc": "Bentuk sopan.",
+        "example": "会社へ行きます (Pergi ke kantor)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>って",
+        "romaji": "itte",
+        "desc": "Pengecualian! Harusnya '行いて', tapi berubah jadi '行って'.",
+        "example": "ちょっと行ってきます (Saya pergi sebentar)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>った",
+        "romaji": "itta",
+        "desc": "Pengecualian! Berubah jadi '行った'.",
+        "example": "昨日、映画館へ行った (Kemarin pergi ke bioskop)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>かない",
+        "romaji": "ikanai",
+        "desc": "Bentuk kasual negatif.",
+        "example": "明日は行かない (Besok tidak pergi)"
+      }
+    ]
   },
   {
-    "kanji": "する", "kana": "する", "meaning": "melakukan",
-    "dict": "する", "masu": "します", "te": "して", "ta": "した", "nai": "しない"
+    "kanji": "する",
+    "kana": "する",
+    "romaji": "suru",
+    "meaning": "melakukan",
+    "type": "Irregular",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "する",
+        "romaji": "suru",
+        "desc": "Bentuk dasar kata kerja tidak beraturan.",
+        "example": "宿題をする (Mengerjakan PR)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "します",
+        "romaji": "shimasu",
+        "desc": "Bentuk sopan.",
+        "example": "掃除をします (Membersihkan)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "して",
+        "romaji": "shite",
+        "desc": "Bentuk te tidak beraturan.",
+        "example": "コピーをしてください (Tolong fotokopi)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "した",
+        "romaji": "shita",
+        "desc": "Bentuk lampau tidak beraturan.",
+        "example": "もう宿題をした (Sudah mengerjakan PR)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "しない",
+        "romaji": "shinai",
+        "desc": "Bentuk negatif tidak beraturan.",
+        "example": "タバコはしない (Tidak merokok)"
+      }
+    ]
   },
   {
-    "kanji": "来る", "kana": "くる", "meaning": "datang",
-    "dict": "来る", "masu": "来ます", "te": "来て", "ta": "来た", "nai": "来ない"
+    "kanji": "来る",
+    "kana": "くる",
+    "romaji": "kuru",
+    "meaning": "datang",
+    "type": "Irregular",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>来<rt>く</rt></ruby>る",
+        "romaji": "kuru",
+        "desc": "Bentuk dasar.",
+        "example": "友達が来る (Teman datang)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>来<rt>き</rt></ruby>ます",
+        "romaji": "kimasu",
+        "desc": "Bentuk sopan.",
+        "example": "先生が来ます (Guru datang)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>来<rt>き</rt></ruby>て",
+        "romaji": "kite",
+        "desc": "Bentuk te.",
+        "example": "ここに来てください (Tolong datang ke sini)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>来<rt>き</rt></ruby>た",
+        "romaji": "kita",
+        "desc": "Bentuk lampau.",
+        "example": "昨日、来た (Kemarin datang)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>来<rt>こ</rt></ruby>ない",
+        "romaji": "konai",
+        "desc": "Bentuk negatif. Perhatikan perubahan bacaan kanjinya.",
+        "example": "明日は来ない (Besok tidak datang)"
+      }
+    ]
   },
   {
-    "kanji": "飲む", "kana": "のむ", "meaning": "minum",
-    "dict": "飲む", "masu": "飲みます", "te": "飲んで", "ta": "飲んだ", "nai": "飲まない"
+    "kanji": "飲む",
+    "kana": "のむ",
+    "romaji": "nomu",
+    "meaning": "minum",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>む",
+        "romaji": "nomu",
+        "desc": "Bentuk dasar.",
+        "example": "水を飲む (Minum air)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>みます",
+        "romaji": "nomimasu",
+        "desc": "Bentuk sopan.",
+        "example": "お茶を飲みます (Minum teh)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>んで",
+        "romaji": "nonde",
+        "desc": "Bentuk te.",
+        "example": "薬を飲んでください (Tolong minum obatnya)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>んだ",
+        "romaji": "nonda",
+        "desc": "Bentuk lampau.",
+        "example": "もう飲んだ (Sudah minum)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>まない",
+        "romaji": "nomanai",
+        "desc": "Bentuk negatif.",
+        "example": "お酒は飲まない (Tidak minum alkohol)"
+      }
+    ]
   },
   {
-    "kanji": "見る", "kana": "みる", "meaning": "melihat",
-    "dict": "見る", "masu": "見ます", "te": "見て", "ta": "見た", "nai": "見ない"
+    "kanji": "見る",
+    "kana": "みる",
+    "romaji": "miru",
+    "meaning": "melihat",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>る",
+        "romaji": "miru",
+        "desc": "Bentuk dasar.",
+        "example": "テレビを見る (Menonton TV)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>ます",
+        "romaji": "mimasu",
+        "desc": "Bentuk sopan.",
+        "example": "映画を見ます (Menonton film)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>て",
+        "romaji": "mite",
+        "desc": "Bentuk te.",
+        "example": "これを見てください (Tolong lihat ini)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>た",
+        "romaji": "mita",
+        "desc": "Bentuk lampau.",
+        "example": "昨日、映画を見た (Kemarin menonton film)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>ない",
+        "romaji": "minai",
+        "desc": "Bentuk negatif.",
+        "example": "テレビは見ない (Tidak menonton TV)"
+      }
+    ]
   },
   {
-    "kanji": "買う", "kana": "かう", "meaning": "membeli",
-    "dict": "買う", "masu": "買います", "te": "買って", "ta": "買った", "nai": "買わない"
+    "kanji": "買う",
+    "kana": "かう",
+    "romaji": "kau",
+    "meaning": "membeli",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>う",
+        "romaji": "kau",
+        "desc": "Bentuk dasar.",
+        "example": "パンを買う (Membeli roti)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>います",
+        "romaji": "kaimasu",
+        "desc": "Bentuk sopan.",
+        "example": "果物を買います (Membeli buah)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>って",
+        "romaji": "katte",
+        "desc": "Bentuk te.",
+        "example": "これを買ってください (Tolong beli ini)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>った",
+        "romaji": "katta",
+        "desc": "Bentuk lampau.",
+        "example": "昨日、本を買った (Kemarin membeli buku)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>わない",
+        "romaji": "kawanai",
+        "desc": "Bentuk negatif.",
+        "example": "今日は買わない (Hari ini tidak membeli)"
+      }
+    ]
   },
   {
-    "kanji": "待つ", "kana": "まつ", "meaning": "menunggu",
-    "dict": "待つ", "masu": "待ちます", "te": "待って", "ta": "待った", "nai": "待たない"
+    "kanji": "待つ",
+    "kana": "まつ",
+    "romaji": "matsu",
+    "meaning": "menunggu",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>つ",
+        "romaji": "matsu",
+        "desc": "Bentuk dasar.",
+        "example": "友達を待つ (Menunggu teman)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>ちます",
+        "romaji": "machimasu",
+        "desc": "Bentuk sopan.",
+        "example": "駅で待ちます (Menunggu di stasiun)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>って",
+        "romaji": "matte",
+        "desc": "Bentuk te.",
+        "example": "ここで待ってください (Tolong tunggu di sini)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>った",
+        "romaji": "matta",
+        "desc": "Bentuk lampau.",
+        "example": "一時間待った (Menunggu satu jam)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>たない",
+        "romaji": "matanai",
+        "desc": "Bentuk negatif.",
+        "example": "もう待たない (Tidak menunggu lagi)"
+      }
+    ]
   },
   {
-    "kanji": "話す", "kana": "はなす", "meaning": "berbicara",
-    "dict": "話す", "masu": "話します", "te": "話して", "ta": "話した", "nai": "話さない"
+    "kanji": "話す",
+    "kana": "はなす",
+    "romaji": "hanasu",
+    "meaning": "berbicara",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>す",
+        "romaji": "hanasu",
+        "desc": "Bentuk dasar.",
+        "example": "日本語で話す (Berbicara dalam bahasa Jepang)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>します",
+        "romaji": "hanashimasu",
+        "desc": "Bentuk sopan.",
+        "example": "先生と話します (Berbicara dengan guru)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>して",
+        "romaji": "hanashite",
+        "desc": "Bentuk te.",
+        "example": "ゆっくり話してください (Tolong bicara pelan-pelan)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>した",
+        "romaji": "hanashita",
+        "desc": "Bentuk lampau.",
+        "example": "昨日、友達と話した (Kemarin berbicara dengan teman)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>さない",
+        "romaji": "hanasanai",
+        "desc": "Bentuk negatif.",
+        "example": "彼とは話さない (Tidak berbicara dengannya)"
+      }
+    ]
   },
   {
-    "kanji": "起きる", "kana": "おきる", "meaning": "bangun",
-    "dict": "起きる", "masu": "起きます", "te": "起きて", "ta": "起きた", "nai": "起きない"
+    "kanji": "起きる",
+    "kana": "おきる",
+    "romaji": "okiru",
+    "meaning": "bangun",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>起<rt>お</rt></ruby>きる",
+        "romaji": "okiru",
+        "desc": "Bentuk dasar.",
+        "example": "朝六時に起きる (Bangun jam 6 pagi)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>起<rt>お</rt></ruby>きます",
+        "romaji": "okimasu",
+        "desc": "Bentuk sopan.",
+        "example": "毎朝七時に起きます (Bangun jam 7 setiap pagi)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>起<rt>お</rt></ruby>きて",
+        "romaji": "okite",
+        "desc": "Bentuk te.",
+        "example": "早く起きてください (Tolong bangun cepat)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>起<rt>お</rt></ruby>きた",
+        "romaji": "okita",
+        "desc": "Bentuk lampau.",
+        "example": "今日は早く起きた (Hari ini bangun cepat)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>起<rt>お</rt></ruby>きない",
+        "romaji": "okinai",
+        "desc": "Bentuk negatif.",
+        "example": "休みの日は早く起きない (Hari libur tidak bangun cepat)"
+      }
+    ]
   },
   {
-    "kanji": "寝る", "kana": "ねる", "meaning": "tidur",
-    "dict": "寝る", "masu": "寝ます", "te": "寝て", "ta": "寝た", "nai": "寝ない"
+    "kanji": "寝る",
+    "kana": "ねる",
+    "romaji": "neru",
+    "meaning": "tidur",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>る",
+        "romaji": "neru",
+        "desc": "Bentuk dasar.",
+        "example": "早く寝る (Tidur cepat)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>ます",
+        "romaji": "nemasu",
+        "desc": "Bentuk sopan.",
+        "example": "十一時に寝ます (Tidur jam 11)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>て",
+        "romaji": "nete",
+        "desc": "Bentuk te.",
+        "example": "もう寝てください (Tolong tidur sekarang)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>た",
+        "romaji": "neta",
+        "desc": "Bentuk lampau.",
+        "example": "昨日はよく寝た (Kemarin tidur nyenyak)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>ない",
+        "romaji": "nenai",
+        "desc": "Bentuk negatif.",
+        "example": "今夜は寝ない (Malam ini tidak tidur)"
+      }
+    ]
   },
   {
-    "kanji": "泳ぐ", "kana": "およぐ", "meaning": "berenang",
-    "dict": "泳ぐ", "masu": "泳ぎます", "te": "泳いで", "ta": "泳いだ", "nai": "泳がない"
+    "kanji": "泳ぐ",
+    "kana": "およぐ",
+    "romaji": "oyogu",
+    "meaning": "berenang",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>ぐ",
+        "romaji": "oyogu",
+        "desc": "Bentuk dasar.",
+        "example": "海で泳ぐ (Berenang di laut)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>ぎます",
+        "romaji": "oyogimasu",
+        "desc": "Bentuk sopan.",
+        "example": "プールで泳ぎます (Berenang di kolam)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>いで",
+        "romaji": "oyoide",
+        "desc": "Bentuk te.",
+        "example": "川で泳いでください (Tolong berenang di sungai)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>いだ",
+        "romaji": "oyoida",
+        "desc": "Bentuk lampau.",
+        "example": "昨日、泳いだ (Kemarin berenang)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>がない",
+        "romaji": "oyoganai",
+        "desc": "Bentuk negatif.",
+        "example": "今日は泳がない (Hari ini tidak berenang)"
+      }
+    ]
   },
   {
-    "kanji": "遊ぶ", "kana": "あそぶ", "meaning": "bermain",
-    "dict": "遊ぶ", "masu": "遊びます", "te": "遊んで", "ta": "遊んだ", "nai": "遊ばない"
+    "kanji": "遊ぶ",
+    "kana": "あそぶ",
+    "romaji": "asobu",
+    "meaning": "bermain",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>ぶ",
+        "romaji": "asobu",
+        "desc": "Bentuk dasar.",
+        "example": "公園で遊ぶ (Bermain di taman)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>びます",
+        "romaji": "asobimasu",
+        "desc": "Bentuk sopan.",
+        "example": "友達と遊びます (Bermain dengan teman)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>んで",
+        "romaji": "asonde",
+        "desc": "Bentuk te.",
+        "example": "外で遊んでください (Tolong bermain di luar)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>んだ",
+        "romaji": "asonda",
+        "desc": "Bentuk lampau.",
+        "example": "昨日、ゲームで遊んだ (Kemarin bermain game)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>ばない",
+        "romaji": "asobanai",
+        "desc": "Bentuk negatif.",
+        "example": "今日は遊ばない (Hari ini tidak bermain)"
+      }
+    ]
   }
 ]
