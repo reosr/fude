@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import type { GachaBadgeDefinition, GachaEvolutionLevel } from "@/lib/gacha";
 
 const PALETTES: Record<
@@ -52,12 +53,13 @@ export default function GachaBadgeArtwork({
   level?: GachaEvolutionLevel;
   size?: number;
 }) {
+  const uniqueId = useId().replace(/:/g, "");
   const palette = PALETTES[badge.rarity];
   const match = badge.id.match(/-(\d{2})$/);
   const badgeNumber = match ? Number(match[1]) : 1;
   const motifIndex = (badgeNumber - 1) % CRESTS.length;
   const archetypeIndex = Math.floor((badgeNumber - 1) / 10) % ARCHETYPE_MARKS.length;
-  const gradientId = `gacha-gradient-${badge.id}`;
+  const gradientId = `gacha-gradient-${uniqueId}`;
   const ornamentPoints = ORNAMENTS[archetypeIndex];
 
   return (
