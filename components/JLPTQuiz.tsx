@@ -28,10 +28,21 @@ interface Question {
   explanation: string;
   passage?: string;
   audioUrl?: string;
+  dialogue?: string;
+}
+
+type SectionId = "vocab" | "grammar" | "reading" | "listening";
+type JLPTSections = Partial<Record<SectionId, Question[]>>;
+
+interface JLPTTestSet {
+  id: string;
+  title: string;
+  level?: string;
+  sections?: JLPTSections;
 }
 
 interface JLPTQuizProps {
-  testSet: any;
+  testSet: JLPTTestSet;
   onBack: () => void;
   level: string;
   levelSetIds: string[];
@@ -51,7 +62,7 @@ const SECTIONS = [
   { id: "grammar", label: "Grammar (文法)" },
   { id: "reading", label: "Membaca (読解)" },
   { id: "listening", label: "Mendengar (聴解)" },
-];
+] as const;
 
 const createEmptyAnswers = () => ({
   vocab: {},
@@ -62,7 +73,7 @@ const createEmptyAnswers = () => ({
 
 function hasAllQuestionsAnswered(
   answers: Record<string, Record<number, number>>,
-  sections: any
+  sections?: JLPTSections
 ): boolean {
   let totalQuestions = 0;
   let answeredQuestions = 0;
@@ -73,7 +84,7 @@ function hasAllQuestionsAnswered(
 
     totalQuestions += questions.length;
 
-    questions.forEach((question: any, index: number) => {
+    questions.forEach((question, index) => {
       const selectedAnswer = sectionAnswers[index];
 
       if (
@@ -91,7 +102,7 @@ function hasAllQuestionsAnswered(
 
 function calculateQuizScore(
   answers: Record<string, Record<number, number>>,
-  sections: any
+  sections?: JLPTSections
 ) {
   let totalCorrect = 0;
   let totalQuestions = 0;
@@ -121,7 +132,7 @@ function calculateQuizScore(
   };
 }
 
-function getJlptLevel(testSet: any): string {
+function getJlptLevel(testSet: JLPTTestSet): string {
   if (testSet?.level) {
     return String(testSet.level).toUpperCase();
   }
@@ -182,10 +193,11 @@ export default function JLPTQuiz({
   const [completedOnce, setCompletedOnce] = useState(false);
 
   const [showReview, setShowReview] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
   const [showConfirm, setShowConfirm] = useState(false);
 
   const storageKey = `jlpt_result_${testSet.id}`;
+  const isLoaded = loadedStorageKey === storageKey;
   const currentLevel = level || getJlptLevel(testSet);
 
   // Simpan progress langsung saat navigasi, tidak hanya mengandalkan useEffect.
@@ -219,8 +231,6 @@ export default function JLPTQuiz({
   // LOAD HASIL SEBELUMNYA
   // ==========================================
   useEffect(() => {
-    setIsLoaded(false);
-
     const saved = localStorage.getItem(storageKey);
 
     if (saved) {
@@ -343,7 +353,7 @@ export default function JLPTQuiz({
       setCurrentIndex(0);
     }
 
-    setIsLoaded(true);
+    setLoadedStorageKey(storageKey);
 
     // Sinkronkan koleksi setelah hasil lama selesai dimigrasikan.
     syncNewCollectionUnlocks();
@@ -489,7 +499,7 @@ export default function JLPTQuiz({
   SECTIONS.forEach((section) => {
     const questions = testSet.sections?.[section.id] || [];
 
-    questions.forEach((_: any, index: number) => {
+    questions.forEach((_, index) => {
       if (userAnswers[section.id]?.[index] === undefined) {
         totalUnanswered++;
       }
@@ -602,7 +612,7 @@ export default function JLPTQuiz({
 
             let correct = 0;
 
-            questions.forEach((question: any, index: number) => {
+            questions.forEach((question, index) => {
               if (
                 userAnswers[section.id]?.[index] ===
                 question.answer
@@ -726,7 +736,7 @@ export default function JLPTQuiz({
                   {section.label}
                 </h4>
 
-                {questions.map((question: any, index: number) => {
+                {questions.map((question, index) => {
                   const userAnswer =
                     userAnswers[section.id]?.[index];
 
