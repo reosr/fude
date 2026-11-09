@@ -40,3 +40,7 @@
 - Gacha inventory and token balances currently use browser localStorage, so they are local to the browser/device and are not server-authoritative.
 - The 300 badge names and SVG artwork are a structured visual scaffold, not the final individually art-directed asset set.
 - The next visual collection phase should refine all 300 badges and the planned frames, frame ornaments, auras, profile themes, nameplates, companions, and EXP Scrolls into a cohesive, high-quality set.
+
+### Folklore collection content review
+- Replace visible deity-based wording and religious symbols in chapter badges with non-religious folklore, nature, and everyday Japanese motifs.
+- Keep legacy collection IDs unchanged so existing local profile data remains compatible.
