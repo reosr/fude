@@ -27,6 +27,7 @@ import {
   getTotalGachaBadgeCopies,
   summonGacha,
   type GachaBadgeCopies,
+  type GachaCompensation,
   type GachaHistoryEntry,
   type GachaInventory,
   type GachaRarity,
@@ -87,6 +88,7 @@ export default function GachaPage() {
   const [tokens, setTokens] = useState(0);
   const [equippedBadgeId, setEquippedBadgeId] = useState<string | null>(null);
   const [latestResults, setLatestResults] = useState<GachaHistoryEntry[]>([]);
+  const [latestCompensations, setLatestCompensations] = useState<GachaCompensation[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [activeRarity, setActiveRarity] = useState<GachaRarity | "all">("all");
@@ -144,6 +146,7 @@ export default function GachaPage() {
     setBusy(true);
     setError("");
     setLatestResults([]);
+    setLatestCompensations([]);
 
     try {
       const result = summonGacha(count, GACHA_BADGES);
@@ -163,6 +166,7 @@ export default function GachaPage() {
       }
 
       setLatestResults(result.summon?.results ?? []);
+      setLatestCompensations(result.summon?.compensations ?? []);
       refresh();
     } finally {
       setBusy(false);
@@ -337,7 +341,7 @@ export default function GachaPage() {
         </div>
       </section>
 
-      {latestResults.length > 0 && (
+      {(latestResults.length > 0 || latestCompensations.length > 0) && (
         <section className="rounded-3xl border border-[#B8860B]/40 bg-[#211E19] p-5 md:p-6">
           <div className="mb-4 flex items-center justify-between gap-3">
             <div>
@@ -355,7 +359,18 @@ export default function GachaPage() {
               Tutup
             </button>
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+          {latestCompensations.length > 0 && (
+            <div className="mb-4 rounded-xl border border-[#D6AD4F]/30 bg-[#B8860B]/10 p-3">
+              <p className="text-xs font-bold text-[#F1D58A]">
+                Kompensasi rarity maksimal: +{latestCompensations.reduce((sum, item) => sum + item.tokens, 0)} token
+              </p>
+              <p className="mt-1 text-[10px] text-[#A99C89]">
+                Semua badge pada rarity {latestCompensations.map((item) => RARITY_LABELS[item.rarity]).join(", ")} sudah mencapai Level 3 dan dikeluarkan dari pool summon.
+              </p>
+            </div>
+          )}
+          {latestResults.length > 0 && (
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
             {latestResults.map((result) => {
               const badge = GACHA_BADGES.find((item) => item.id === result.badgeId);
               return (
@@ -371,7 +386,8 @@ export default function GachaPage() {
                 </div>
               );
             })}
-          </div>
+            </div>
+          )}
         </section>
       )}
 
