@@ -49,9 +49,26 @@ export default function GachaAuraPreview({
             </div>
           )}
           {badge.rarity === "legendary" && (
-            <div className="fude-legendary-lightning" aria-hidden="true">
-              <span /><span /><span /><span />
-            </div>
+            <svg className="fude-legendary-lightning" viewBox="0 0 160 120" preserveAspectRatio="none" aria-hidden="true">
+              <g className="lightning-glow">
+                <path className="bolt bolt-top" d="M24 34 L32 26 L38 30 L45 19 L53 25 L62 15 L68 23 L79 17 L86 24 L98 18 L105 26 L116 22 L124 31 L137 29" />
+                <path className="bolt bolt-right" d="M132 31 L139 40 L131 47 L142 54 L133 61 L141 69 L130 76 L136 85 L123 92" />
+                <path className="bolt bolt-bottom" d="M126 88 L116 96 L108 91 L99 104 L91 97 L81 107 L73 99 L61 105 L54 96 L43 100 L36 91 L24 88" />
+                <path className="bolt bolt-left" d="M28 88 L20 79 L28 72 L17 64 L26 57 L18 49 L29 43 L23 34" />
+              </g>
+              <g className="lightning-core">
+                <path className="bolt bolt-top" d="M24 34 L32 26 L38 30 L45 19 L53 25 L62 15 L68 23 L79 17 L86 24 L98 18 L105 26 L116 22 L124 31 L137 29" />
+                <path className="bolt bolt-right" d="M132 31 L139 40 L131 47 L142 54 L133 61 L141 69 L130 76 L136 85 L123 92" />
+                <path className="bolt bolt-bottom" d="M126 88 L116 96 L108 91 L99 104 L91 97 L81 107 L73 99 L61 105 L54 96 L43 100 L36 91 L24 88" />
+                <path className="bolt bolt-left" d="M28 88 L20 79 L28 72 L17 64 L26 57 L18 49 L29 43 L23 34" />
+              </g>
+              <g className="lightning-branches">
+                <path d="M52 25 L47 34 L54 32 L49 42" />
+                <path d="M131 61 L121 65 L126 70 L116 75" />
+                <path d="M91 97 L96 87 L89 90 L94 80" />
+                <path d="M26 57 L37 54 L32 49 L43 46" />
+              </g>
+            </svg>
           )}
           <div className="fude-aura-flare fude-aura-flare-one" />
           <div className="fude-aura-flare fude-aura-flare-two" />
@@ -154,24 +171,50 @@ export default function GachaAuraPreview({
         .fude-legendary-lightning {
           position: absolute;
           z-index: 4;
-          inset: -13% -7%;
+          inset: -8% -5%;
+          width: 110%;
+          height: 116%;
+          overflow: visible;
           pointer-events: none;
-          animation: legendary-orbit 4.8s linear infinite;
-          filter: drop-shadow(0 0 5px #FF263F) drop-shadow(0 0 12px rgba(255,38,63,.85));
         }
-        .fude-legendary-lightning span {
-          position: absolute;
-          width: 15%;
-          height: 37%;
-          background: linear-gradient(135deg, #FFF2F3 0%, #FFB0B9 20%, #FF334F 55%, rgba(255,38,63,.12) 100%);
-          clip-path: polygon(48% 0, 100% 0, 65% 38%, 91% 38%, 19% 100%, 38% 54%, 5% 54%);
-          opacity: 0;
-          animation: legendary-bolt 1.25s ease-in-out infinite;
+        .fude-legendary-lightning .bolt {
+          fill: none;
+          stroke-linecap: round;
+          stroke-linejoin: bevel;
+          stroke-dasharray: 4 7 1 11;
+          animation: lightning-travel 1.05s linear infinite;
         }
-        .fude-legendary-lightning span:nth-child(1) { top: 1%; left: 34%; }
-        .fude-legendary-lightning span:nth-child(2) { top: 30%; right: 0; transform: rotate(90deg); animation-delay: -.32s; }
-        .fude-legendary-lightning span:nth-child(3) { bottom: 0; left: 48%; transform: rotate(180deg); animation-delay: -.64s; }
-        .fude-legendary-lightning span:nth-child(4) { top: 35%; left: 0; transform: rotate(-90deg); animation-delay: -.96s; }
+        .fude-legendary-lightning .lightning-glow .bolt {
+          stroke: #FF263F;
+          stroke-width: 5;
+          opacity: .78;
+          filter: drop-shadow(0 0 4px #FF263F) drop-shadow(0 0 9px #FF263F);
+        }
+        .fude-legendary-lightning .lightning-core .bolt {
+          stroke: #FFF0F2;
+          stroke-width: 1.35;
+          opacity: .95;
+          animation-duration: .72s;
+        }
+        .fude-legendary-lightning .bolt-right { animation-delay: -.2s; }
+        .fude-legendary-lightning .bolt-bottom { animation-delay: -.48s; }
+        .fude-legendary-lightning .bolt-left { animation-delay: -.72s; }
+        .fude-legendary-lightning .lightning-core .bolt-right { animation-delay: -.08s; }
+        .fude-legendary-lightning .lightning-core .bolt-bottom { animation-delay: -.35s; }
+        .fude-legendary-lightning .lightning-core .bolt-left { animation-delay: -.58s; }
+        .fude-legendary-lightning .lightning-branches path {
+          fill: none;
+          stroke: #FF6478;
+          stroke-width: 1.8;
+          stroke-linecap: square;
+          stroke-linejoin: miter;
+          stroke-dasharray: 2 16;
+          filter: drop-shadow(0 0 4px #FF263F);
+          animation: lightning-branch 1.4s steps(2, end) infinite;
+        }
+        .fude-legendary-lightning .lightning-branches path:nth-child(2) { animation-delay: -.35s; }
+        .fude-legendary-lightning .lightning-branches path:nth-child(3) { animation-delay: -.7s; }
+        .fude-legendary-lightning .lightning-branches path:nth-child(4) { animation-delay: -1.05s; }
         .fude-aura-legendary .fude-aura-flare { opacity: .9; filter: blur(6px); }
         .fude-aura-legendary .fude-aura-surge { opacity: .88; filter: blur(3px); }
         .fude-aura-legendary .fude-aura-particle { box-shadow: 0 0 12px 4px #FF263F; }
@@ -180,13 +223,14 @@ export default function GachaAuraPreview({
           0%, 100% { opacity: .42; transform: scale(.9) rotate(-5deg); }
           50% { opacity: 1; transform: scale(1.08) rotate(5deg); }
         }
-        @keyframes legendary-orbit {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
+        @keyframes lightning-travel {
+          from { stroke-dashoffset: 0; opacity: .35; }
+          45% { opacity: 1; }
+          to { stroke-dashoffset: -46; opacity: .55; }
         }
-        @keyframes legendary-bolt {
-          0%, 100% { opacity: .12; filter: brightness(.8); }
-          38%, 62% { opacity: 1; filter: brightness(1.55); }
+        @keyframes lightning-branch {
+          0%, 72%, 100% { opacity: 0; }
+          76%, 86% { opacity: 1; }
         }
         .fude-aura-level-2.fude-aura-epic .fude-aura-cloud { opacity: .28; }
         .fude-aura-level-2.fude-aura-mythic .fude-aura-cloud { opacity: .3; }
