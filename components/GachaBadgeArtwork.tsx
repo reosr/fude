@@ -90,9 +90,10 @@ export default function GachaBadgeArtwork({
           <linearGradient id={`mochi2-silver-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFFFFF"/><stop offset=".34" stopColor="#D9E0DF"/><stop offset=".72" stopColor="#879493"/><stop offset="1" stopColor="#F2F3EC"/></linearGradient>
           <linearGradient id={`mochi2-jade-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#75B99A"/><stop offset=".5" stopColor="#286B58"/><stop offset="1" stopColor="#123C35"/></linearGradient>
           <linearGradient id={`mochi2-body-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFFDF1"/><stop offset="1" stopColor="#D9C7A6"/></linearGradient>
-          <radialGradient id={`mochi2-aura-${uniqueId}`}><stop offset="0%" stopColor="#EAF5F1" stopOpacity=".34"/><stop offset="68%" stopColor="#C8D9D4" stopOpacity=".16"/><stop offset="100%" stopColor="#C8D9D4" stopOpacity="0"/></radialGradient>
+          <radialGradient id={`mochi2-aura-${uniqueId}`}><stop offset="0%" stopColor="#EAF5F1" stopOpacity=".5"/><stop offset="48%" stopColor="#C8D9D4" stopOpacity=".25"/><stop offset="100%" stopColor="#C8D9D4" stopOpacity="0"/></radialGradient>
+          <filter id={`mochi2-aura-blur-${uniqueId}`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
         </defs>
-        <circle cx="64" cy="64" r="63" fill={`url(#mochi2-aura-${uniqueId})`}/>
+        <ellipse cx="64" cy="64" rx="58" ry="55" fill={`url(#mochi2-aura-${uniqueId})`} filter={`url(#mochi2-aura-blur-${uniqueId})`}/>
         <path d="M64 4 C74 15 84 13 91 22 C103 21 108 32 106 43 C119 52 119 67 108 76 C111 91 101 102 87 101 C80 116 68 119 58 108 C45 118 31 111 31 98 C16 96 11 82 20 70 C8 58 15 43 27 39 C25 24 39 15 50 21 Z" fill={`url(#mochi2-silver-${uniqueId})`} stroke="#566361" strokeWidth="2.5"/>
         <path d="M64 12 C73 23 82 20 87 29 C99 28 101 39 98 47 C110 56 109 66 99 74 C103 86 94 94 82 92 C76 105 66 108 58 98 C47 107 36 101 37 89 C24 88 21 77 29 68 C19 58 25 47 36 43 C34 31 44 24 53 29 Z" fill={`url(#mochi2-jade-${uniqueId})`} stroke="#F4F5EE" strokeWidth="1.8"/>
         <g fill="#F5C8CF" stroke="#FFF0D7" strokeWidth="1"><path d="M25 45 C17 34 29 29 33 39 C42 30 48 42 37 48 C47 55 36 64 31 54 C21 63 13 51 25 45Z"/><path d="M91 39 C83 28 95 23 99 33 C108 24 114 36 103 42 C113 49 102 58 97 48 C87 57 79 45 91 39Z"/></g>
@@ -118,11 +119,10 @@ export default function GachaBadgeArtwork({
           <linearGradient id={`mochi3-silver-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFFFFF"/><stop offset=".22" stopColor="#E9F0EF"/><stop offset=".48" stopColor="#AEBDBB"/><stop offset=".72" stopColor="#71817F"/><stop offset="1" stopColor="#F9F7EF"/></linearGradient>
           <linearGradient id={`mochi3-enamel-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#6A9F91"/><stop offset=".5" stopColor="#24594F"/><stop offset="1" stopColor="#102D32"/></linearGradient>
           <linearGradient id={`mochi3-body-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFFFFF"/><stop offset=".65" stopColor="#F4EBD8"/><stop offset="1" stopColor="#D5C09C"/></linearGradient>
-          <radialGradient id={`mochi3-aura-${uniqueId}`}><stop offset="0%" stopColor="#FFFFFF" stopOpacity=".52"/><stop offset="56%" stopColor="#E5F0EC" stopOpacity=".3"/><stop offset="82%" stopColor="#C8DAD5" stopOpacity=".13"/><stop offset="100%" stopColor="#C8DAD5" stopOpacity="0"/></radialGradient>
+          <radialGradient id={`mochi3-aura-${uniqueId}`}><stop offset="0%" stopColor="#FFFFFF" stopOpacity=".68"/><stop offset="46%" stopColor="#E5F0EC" stopOpacity=".42"/><stop offset="78%" stopColor="#C8DAD5" stopOpacity=".2"/><stop offset="100%" stopColor="#C8DAD5" stopOpacity="0"/></radialGradient>
+          <filter id={`mochi3-aura-blur-${uniqueId}`} x="-55%" y="-55%" width="210%" height="210%"><feGaussianBlur stdDeviation="10"/></filter>
         </defs>
-        <circle cx="64" cy="64" r="66" fill={`url(#mochi3-aura-${uniqueId})`}/>
-        <circle cx="64" cy="64" r="61" fill="none" stroke="#F5FAF7" strokeWidth="2.2" opacity=".9"/>
-        <circle cx="64" cy="64" r="55" fill="none" stroke="#DCE9E4" strokeWidth="1.2" strokeDasharray="1.5 4" opacity=".95"/>
+        <ellipse cx="64" cy="64" rx="63" ry="60" fill={`url(#mochi3-aura-${uniqueId})`} filter={`url(#mochi3-aura-blur-${uniqueId})`}/>
         <circle cx="64" cy="64" r="57" fill="none" stroke="#DCE5E2" strokeWidth="1.5" strokeDasharray="2 4"/>
         <circle cx="64" cy="64" r="50" fill="none" stroke="#F8FAF5" strokeWidth="2" opacity=".95"/>
         <path d="M64 3 L75 17 L93 12 L96 31 L115 40 L106 58 L121 73 L103 86 L105 106 L84 105 L64 124 L46 106 L25 111 L24 91 L7 79 L18 62 L7 44 L27 34 L30 14 L49 19Z" fill={`url(#mochi3-silver-${uniqueId})`} stroke="#52615F" strokeWidth="2.4" strokeLinejoin="round"/>
