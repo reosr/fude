@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import type { ChangeEvent } from "react";
 import {
   Camera,
@@ -19,12 +20,18 @@ import {
   Trash2,
   Check,
   Coins,
+  Dices,
 } from "lucide-react";
 
 import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfileAvatar from "../../components/ProfileAvatar";
 import { GACHA_BADGES } from "../../data/gacha-badges";
+import {
+  GACHA_UPDATED_EVENT,
+  getGachaInventory,
+  getTotalGachaBadgeCopies,
+} from "../../lib/gacha";
 
 import {
   DEFAULT_PROFILE,
@@ -104,6 +111,8 @@ export default function Profil() {
   const [unlockedBadgeIds, setUnlockedBadgeIds] = useState<string[]>([]);
   const [unlockedFrameIds, setUnlockedFrameIds] = useState<string[]>([]);
   const [pendingIds, setPendingIds] = useState<string[]>([]);
+  const [gachaUniqueCount, setGachaUniqueCount] = useState(0);
+  const [gachaNewCount, setGachaNewCount] = useState(0);
 
   const [activeTab, setActiveTab] = useState<CollectionTab>("badges");
   const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null);
@@ -146,6 +155,22 @@ export default function Profil() {
     );
 
     setPendingIds(getPendingCollectionIds());
+
+    const gachaInventory = getGachaInventory();
+    setGachaUniqueCount(
+      GACHA_BADGES.filter(
+        (badge) =>
+          getTotalGachaBadgeCopies(
+            gachaInventory.badges[badge.id] ?? {
+              level0: 0,
+              level1: 0,
+              level2: 0,
+              level3: 0,
+            }
+          ) > 0
+      ).length
+    );
+    setGachaNewCount(gachaInventory.newBadgeIds.length);
   };
 
   const refreshPhoto = async () => {
@@ -191,6 +216,7 @@ export default function Profil() {
     window.addEventListener(XP_UPDATED_EVENT, refresh);
     window.addEventListener(TOKEN_UPDATED_EVENT, refresh);
     window.addEventListener(COLLECTION_UPDATED_EVENT, refresh);
+    window.addEventListener(GACHA_UPDATED_EVENT, refresh);
     window.addEventListener("storage", refresh);
 
     setIsLoaded(true);
@@ -201,6 +227,7 @@ export default function Profil() {
       window.removeEventListener(XP_UPDATED_EVENT, refresh);
       window.removeEventListener(TOKEN_UPDATED_EVENT, refresh);
       window.removeEventListener(COLLECTION_UPDATED_EVENT, refresh);
+      window.removeEventListener(GACHA_UPDATED_EVENT, refresh);
       window.removeEventListener("storage", refresh);
     };
   }, []);
@@ -572,7 +599,7 @@ export default function Profil() {
             </div>
           )}
 
-          <div className="grid grid-cols-2 gap-3 mt-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-5">
             <div className="bg-[#262523] rounded-xl p-3">
               <p className="text-2xl font-black text-[#EAE6DD]">
                 {unlockedBadgeCount}/{ALL_BADGES.length}
@@ -596,6 +623,25 @@ export default function Profil() {
                 </span>
               )}
             </div>
+
+            <Link
+              href="/gacha"
+              className="rounded-xl border border-[#B8860B]/30 bg-[#262523] p-3 transition hover:border-[#E7C46A]/60 hover:bg-[#302B20]"
+            >
+              <div className="flex items-center gap-2">
+                <Dices size={15} className="text-[#E7C46A]" />
+                <span className="text-[10px] font-bold text-[#D8D1C5]">GACHA BADGES</span>
+              </div>
+              <p className="mt-2 text-2xl font-black text-[#EAE6DD]">
+                {gachaUniqueCount}/300
+              </p>
+              <p className="text-xs text-[#A3A099]">Badge unik</p>
+              {gachaNewCount > 0 && (
+                <span className="mt-1 inline-block text-[10px] font-black text-[#F0C75E]">
+                  {gachaNewCount} NEW
+                </span>
+              )}
+            </Link>
           </div>
         </div>
 
