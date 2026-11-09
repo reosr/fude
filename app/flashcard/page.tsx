@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useLayoutEffect, type ReactNode } from "react";
 import { getUnlockedVocab } from "../../lib/vocab";
 import { getProgress } from "../../lib/progress";
+import { getMemorizedKanji, saveMemorizedKanji } from "../../lib/memorized";
 import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
@@ -118,9 +119,7 @@ useEffect(() => {
 
   const loadData = async () => {
     try {
-      const savedMemorized = JSON.parse(
-        localStorage.getItem("fude_memorized") || "[]"
-      );
+      const savedMemorized = getMemorizedKanji();
 
       if (active) {
         setMemorized(savedMemorized);
@@ -263,11 +262,11 @@ useEffect(() => {
     if (memorized.includes(currentCard.kanji)) {
       newMemorized = memorized.filter(k => k !== currentCard.kanji);
       setMemorized(newMemorized);
-      localStorage.setItem("fude_memorized", JSON.stringify(newMemorized));
+      saveMemorizedKanji(newMemorized);
     } else {
       newMemorized = Array.from(new Set([...memorized, currentCard.kanji]));
       setMemorized(newMemorized);
-      localStorage.setItem("fude_memorized", JSON.stringify(newMemorized));
+      saveMemorizedKanji(newMemorized);
       handleNext(); 
     }
   };
@@ -275,7 +274,7 @@ useEffect(() => {
   const removeFromMemorized = (kanji: string) => {
     const newMemorized = memorized.filter(k => k !== kanji);
     setMemorized(newMemorized);
-    localStorage.setItem("fude_memorized", JSON.stringify(newMemorized));
+    saveMemorizedKanji(newMemorized);
   };
 
   const currentCard = filteredDeck[currentIndex];
