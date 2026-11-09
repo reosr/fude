@@ -1,5 +1,5 @@
 import type { GachaBadgeDefinition, GachaRarity } from "../lib/gacha";
-import { ALL_BADGES as PROFILE_BADGES } from "../lib/profile-collections";
+import { LEGACY_BADGE_SEEDS as PROFILE_BADGES } from "../lib/profile-collections";
 
 const ARCHETYPES = [
   { name: "Kitsune", icon: "🦊", detail: "rubah penjaga hutan dan penjelajah malam" },
