@@ -341,85 +341,83 @@ export default function GachaBadgeArtwork({
   }
 
 
-  // Kasa Obake Level 2: the umbrella has awakened; lacquered crimson panels,
-  // a richer brass frame and a small protective knot mark its growth.
+  // Kasa Obake Level 2: the yokai unfolds into a roaming lantern spirit.
+  // The canopy becomes a tall, swept-back mantle; the body, streamers and twin
+  // geta create a new vertical silhouette instead of merely decorating Level 1.
   if (badge.id === "kasa-obake-01" && level === 2) {
     return (
-      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Kasa Obake, Common, Level 2 — Lantern Keeper" className="shrink-0 overflow-visible drop-shadow-[0_8px_12px_rgba(0,0,0,0.5)]">
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Kasa Obake, Common, Level 2 — Lantern Warden" className="shrink-0 overflow-visible drop-shadow-[0_8px_12px_rgba(0,0,0,0.52)]">
         <defs>
-          <linearGradient id={`kasa2-silver-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFF9E8"/><stop offset=".3" stopColor="#C9B88D"/><stop offset=".7" stopColor="#76563E"/><stop offset="1" stopColor="#F6E4B8"/></linearGradient>
-          <linearGradient id={`kasa2-red-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#F0B47D"/><stop offset=".36" stopColor="#C65D4D"/><stop offset=".72" stopColor="#7D303D"/><stop offset="1" stopColor="#442B3A"/></linearGradient>
-          <linearGradient id={`kasa2-gold-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFF0B6"/><stop offset=".5" stopColor="#D8A84F"/><stop offset="1" stopColor="#80552E"/></linearGradient>
-          <radialGradient id={`kasa2-eye-${uniqueId}`} cx=".35" cy=".25"><stop stopColor="#FFFFFF"/><stop offset=".42" stopColor="#FFF4D8"/><stop offset="1" stopColor="#B7A17D"/></radialGradient>
+          <linearGradient id={`kasa2-paper-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#F5C98B"/><stop offset=".38" stopColor="#C96B55"/><stop offset=".76" stopColor="#71394B"/><stop offset="1" stopColor="#302C43"/></linearGradient>
+          <linearGradient id={`kasa2-rim-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFF7D9"/><stop offset=".45" stopColor="#D7A95D"/><stop offset="1" stopColor="#76502F"/></linearGradient>
+          <linearGradient id={`kasa2-body-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#F5E8C9"/><stop offset=".55" stopColor="#BCA889"/><stop offset="1" stopColor="#65576A"/></linearGradient>
+          <radialGradient id={`kasa2-eye-${uniqueId}`} cx=".34" cy=".24"><stop stopColor="#FFFFFF"/><stop offset=".45" stopColor="#FFF3D6"/><stop offset="1" stopColor="#A99A83"/></radialGradient>
+          <radialGradient id={`kasa2-glow-${uniqueId}`}><stop stopColor="#F4C98D" stopOpacity=".45"/><stop offset="1" stopColor="#F4C98D" stopOpacity="0"/></radialGradient>
         </defs>
-        <path d="M64 5 C37 5 13 23 7 51 C5 62 15 68 25 59 C31 74 43 76 51 64 C59 79 70 79 77 64 C87 77 99 71 103 60 C115 69 124 61 120 49 C113 22 89 5 64 5Z" fill={`url(#kasa2-silver-${uniqueId})`} stroke="#4C4037" strokeWidth="2.6" strokeLinejoin="round"/>
-        <path d="M64 11 C40 11 20 27 14 50 C13 56 18 60 26 53 C33 67 42 68 51 57 C58 70 69 70 77 57 C87 69 96 64 102 53 C110 59 116 56 113 49 C106 27 86 11 64 11Z" fill={`url(#kasa2-red-${uniqueId})`} stroke="#FFE8B7" strokeWidth="1.7"/>
-        <g fill="none" stroke={`url(#kasa2-gold-${uniqueId})`} strokeWidth="2.2" strokeLinecap="round">
-          <path d="M64 15 L26 52 M64 15 L51 57 M64 15 L64 59 M64 15 L77 57 M64 15 L102 52"/>
-          <path d="M32 31 Q43 20 54 18 M74 18 Q87 22 96 32" strokeWidth="1.4"/>
-        </g>
-        <path d="M64 8 L64 19" stroke="#FFF5D6" strokeWidth="3.5" strokeLinecap="round"/>
-        <path d="M57 17 Q64 10 71 17 L68 25 L60 25Z" fill={`url(#kasa2-gold-${uniqueId})`} stroke="#78502E" strokeWidth="1.2"/>
-        <path d="M42 33 Q64 21 86 33 Q85 59 64 64 Q43 59 42 33Z" fill="#50313A" stroke="#F4D59A" strokeWidth="2"/>
-        <ellipse cx="64" cy="43" rx="13.5" ry="15.5" fill={`url(#kasa2-eye-${uniqueId})`} stroke="#6B4939" strokeWidth="1.5"/>
-        <ellipse cx="67" cy="44" rx="4.9" ry="7.6" fill="#252B31"/>
-        <ellipse cx="68.5" cy="40.5" rx="1.8" ry="2.4" fill="#FFFFFF"/>
-        <path d="M59 58 Q64 64 69 58 L68 74 Q64 80 60 74Z" fill="#D97873" stroke="#753D45" strokeWidth="1.5"/>
-        <path d="M64 74 L64 91" stroke={`url(#kasa2-gold-${uniqueId})`} strokeWidth="6" strokeLinecap="round"/>
-        <path d="M49 91 Q64 85 79 91 L77 101 Q64 106 51 100Z" fill="#A56D45" stroke="#50392E" strokeWidth="2"/>
-        <path d="M53 94 Q64 91 75 94" fill="none" stroke="#F8DFA5" strokeWidth="2"/>
-        <path d="M64 87 L64 96" stroke="#F9E7B9" strokeWidth="1.5"/>
-        {/* A braided warding knot, the new evolution detail */}
-        <path d="M31 73 C22 65 17 76 26 81 C35 86 39 75 31 73 C23 82 34 91 40 82" fill="none" stroke="#E9C77D" strokeWidth="2.8" strokeLinecap="round"/>
-        <path d="M97 73 C106 65 111 76 102 81 C93 86 89 75 97 73 C105 82 94 91 88 82" fill="none" stroke="#E9C77D" strokeWidth="2.8" strokeLinecap="round"/>
-        <g fill="#E8D9B2" stroke="#8B6846" strokeWidth=".8"><circle cx="18" cy="91" r="3"/><circle cx="110" cy="91" r="3"/><circle cx="31" cy="21" r="2"/><circle cx="97" cy="21" r="2"/></g>
-        <path d="M10 103 L14 109 L21 111 L14 114 L10 121 L7 114 L1 111 L7 109Z M117 101 L120 107 L126 109 L120 112 L117 118 L114 112 L108 109 L114 107Z" fill="#F0D79D" stroke="#8D6944" strokeWidth=".8"/>
+        <ellipse cx="65" cy="67" rx="59" ry="58" fill={`url(#kasa2-glow-${uniqueId})`}/>
+        {/* Swept-back canopy mantle: a taller, wing-like silhouette */}
+        <path d="M67 8 C47 1 23 13 13 34 C7 47 12 57 24 53 C30 70 44 72 54 57 C61 68 73 67 80 53 C91 62 105 55 103 42 C101 25 85 12 67 8Z" fill={`url(#kasa2-rim-${uniqueId})`} stroke="#493C3A" strokeWidth="2.5" strokeLinejoin="round"/>
+        <path d="M67 14 C48 8 29 19 20 36 C17 43 21 49 28 45 C36 60 45 60 55 48 C63 59 72 57 80 45 C90 52 99 47 96 39 C91 26 80 17 67 14Z" fill={`url(#kasa2-paper-${uniqueId})`} stroke="#FFE9BE" strokeWidth="1.5"/>
+        <g fill="none" stroke={`url(#kasa2-rim-${uniqueId})`} strokeWidth="2" strokeLinecap="round"><path d="M66 15 L28 44 M66 15 L55 48 M66 15 L80 45 M66 15 L95 39"/></g>
+        <path d="M67 11 Q74 2 82 9 L78 20 L68 22Z" fill="#E9C47C" stroke="#76502F" strokeWidth="1.4"/>
+        {/* Face has moved into a hanging lantern-like body */}
+        <path d="M42 48 Q64 35 86 48 L83 82 Q64 96 45 82Z" fill={`url(#kasa2-body-${uniqueId})`} stroke="#51434A" strokeWidth="2.4"/>
+        <path d="M48 53 Q64 44 80 53 L78 76 Q64 86 50 76Z" fill="#49343F" stroke="#D8B978" strokeWidth="1.5"/>
+        <ellipse cx="64" cy="64" rx="12.5" ry="14.5" fill={`url(#kasa2-eye-${uniqueId})`} stroke="#6B5147" strokeWidth="1.4"/>
+        <ellipse cx="67" cy="65" rx="4.5" ry="7" fill="#252B31"/><ellipse cx="68.5" cy="61.5" rx="1.7" ry="2.2" fill="#FFFFFF"/>
+        <path d="M58 78 Q64 83 70 78 L68 91 Q64 96 60 91Z" fill="#D97978" stroke="#713E49" strokeWidth="1.4"/>
+        {/* Long paper streamers and two feet make the transformation readable */}
+        <path d="M46 79 C34 88 30 99 23 108 C38 106 47 98 53 88Z" fill={`url(#kasa2-paper-${uniqueId})`} stroke="#E9C47C" strokeWidth="1.4"/>
+        <path d="M82 79 C94 88 98 99 105 108 C90 106 81 98 75 88Z" fill={`url(#kasa2-paper-${uniqueId})`} stroke="#E9C47C" strokeWidth="1.4"/>
+        <path d="M58 92 L52 108 M70 92 L76 108" stroke="#9A7048" strokeWidth="4" strokeLinecap="round"/>
+        <path d="M40 107 Q51 101 61 107 L59 115 Q49 119 40 114Z M67 107 Q77 101 88 107 L88 114 Q77 119 68 115Z" fill="#B77B4C" stroke="#513A34" strokeWidth="1.8"/>
+        <path d="M44 109 Q51 106 57 109 M71 109 Q78 106 84 109" fill="none" stroke="#FFE5AD" strokeWidth="1.5" strokeLinecap="round"/>
+        {/* Protective paper charms */}
+        <path d="M17 64 L28 68 L25 83 L14 78Z M101 65 L113 61 L116 76 L105 82Z" fill="#F2E5C4" stroke="#A47A4B" strokeWidth="1.3"/>
+        <path d="M19 69l6 3-3 6 M104 70l6-3 2 7" fill="none" stroke="#B64F50" strokeWidth="1.8"/>
+        <g fill="#FFF1C9"><path d="M12 22l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/><path d="M111 28l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></g>
       </svg>
     );
   }
 
-
-  // Kasa Obake Level 3: a fully awakened storm-spirit with a midnight-indigo
-  // canopy, ornate gold ribs and floating water pearls; the yokai stays central.
+  // Kasa Obake Level 3: a storm sovereign. The umbrella is no longer a single
+  // canopy: its great paper segments orbit a broad spectral mantle, while the
+  // yokai's eye floats in a mask-like core above a long storm-tail silhouette.
   if (badge.id === "kasa-obake-01" && level === 3) {
     return (
-      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Kasa Obake, Common, Level 3 — Moonlit Storm Spirit" className="shrink-0 overflow-visible drop-shadow-[0_9px_14px_rgba(0,0,0,0.55)]">
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Kasa Obake, Common, Level 3 — Storm Sovereign" className="shrink-0 overflow-visible drop-shadow-[0_9px_15px_rgba(0,0,0,0.58)]">
         <defs>
-          <linearGradient id={`kasa3-frame-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFFCE9"/><stop offset=".26" stopColor="#E4C77D"/><stop offset=".62" stopColor="#86643D"/><stop offset="1" stopColor="#FFF0B6"/></linearGradient>
-          <linearGradient id={`kasa3-night-${uniqueId}`} x1="0" y1="0" x2=".8" y2="1"><stop stopColor="#A8C6D5"/><stop offset=".28" stopColor="#4F718C"/><stop offset=".65" stopColor="#293C60"/><stop offset="1" stopColor="#171F3B"/></linearGradient>
-          <linearGradient id={`kasa3-gold-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFF5C8"/><stop offset=".48" stopColor="#E6C16D"/><stop offset="1" stopColor="#89602F"/></linearGradient>
-          <radialGradient id={`kasa3-eye-${uniqueId}`} cx=".34" cy=".24"><stop stopColor="#FFFFFF"/><stop offset=".4" stopColor="#FFF8E6"/><stop offset="1" stopColor="#B7B6B0"/></radialGradient>
-          <radialGradient id={`kasa3-halo-${uniqueId}`}><stop stopColor="#D8F0F4" stopOpacity=".55"/><stop offset=".7" stopColor="#91B9D2" stopOpacity=".15"/><stop offset="1" stopColor="#91B9D2" stopOpacity="0"/></radialGradient>
+          <linearGradient id={`kasa3-night-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#D5E9E7"/><stop offset=".28" stopColor="#6D9BA9"/><stop offset=".66" stopColor="#35466D"/><stop offset="1" stopColor="#171D3B"/></linearGradient>
+          <linearGradient id={`kasa3-silver-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFFFFF"/><stop offset=".38" stopColor="#C7D8D9"/><stop offset=".72" stopColor="#718B9A"/><stop offset="1" stopColor="#F4E7C4"/></linearGradient>
+          <linearGradient id={`kasa3-gold-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFF8D7"/><stop offset=".5" stopColor="#E5BF70"/><stop offset="1" stopColor="#876039"/></linearGradient>
+          <radialGradient id={`kasa3-eye-${uniqueId}`} cx=".32" cy=".2"><stop stopColor="#FFFFFF"/><stop offset=".42" stopColor="#F9F5E7"/><stop offset="1" stopColor="#A8B7B9"/></radialGradient>
+          <radialGradient id={`kasa3-aura-${uniqueId}`}><stop stopColor="#DDFBFF" stopOpacity=".52"/><stop offset=".65" stopColor="#8ABED2" stopOpacity=".19"/><stop offset="1" stopColor="#8ABED2" stopOpacity="0"/></radialGradient>
         </defs>
-        <circle cx="64" cy="58" r="61" fill={`url(#kasa3-halo-${uniqueId})`}/>
-        <path d="M64 3 C35 3 11 23 5 52 C3 64 14 70 25 59 C32 76 44 78 52 64 C59 81 70 81 77 64 C88 78 101 72 104 59 C117 70 126 61 122 49 C115 20 91 3 64 3Z" fill={`url(#kasa3-frame-${uniqueId})`} stroke="#4D4A43" strokeWidth="2.8" strokeLinejoin="round"/>
-        <path d="M64 9 C39 9 18 27 12 51 C11 57 17 61 26 53 C33 69 44 70 52 58 C59 73 70 73 77 58 C88 70 97 65 103 53 C111 60 118 56 115 49 C108 26 87 9 64 9Z" fill={`url(#kasa3-night-${uniqueId})`} stroke="#FFF0BD" strokeWidth="1.8"/>
-        <g fill="none" stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2.1" strokeLinecap="round">
-          <path d="M64 12 L26 52 M64 12 L52 58 M64 12 L64 60 M64 12 L77 58 M64 12 L103 52"/>
-          <path d="M23 43 Q31 23 49 17 M79 17 Q97 23 105 43" strokeWidth="1.4"/>
-        </g>
-        <path d="M64 5 L64 17" stroke="#FFFBE9" strokeWidth="3.4" strokeLinecap="round"/>
-        <path d="M57 13 Q64 5 71 13 L68 22 L60 22Z" fill={`url(#kasa3-gold-${uniqueId})`} stroke="#70532F" strokeWidth="1.2"/>
-        {/* Moon crest above the eye */}
-        <path d="M64 24 C54 12 40 20 44 31 C48 42 63 39 68 30 C61 34 54 31 53 25 C57 22 61 22 64 24Z" fill="#E9E2BD" stroke="#FFF8D9" strokeWidth="1.2"/>
-        <path d="M40 39 Q64 25 88 39 Q86 64 64 69 Q42 64 40 39Z" fill="#343044" stroke="#E8D49C" strokeWidth="2"/>
-        <ellipse cx="64" cy="49" rx="14" ry="16" fill={`url(#kasa3-eye-${uniqueId})`} stroke="#756A59" strokeWidth="1.5"/>
-        <ellipse cx="67" cy="50" rx="5" ry="8" fill="#202A38"/>
-        <ellipse cx="68.5" cy="46.5" rx="1.9" ry="2.5" fill="#FFFFFF"/>
-        <path d="M59 64 Q64 70 69 64 L68 79 Q64 85 60 79Z" fill="#DC8581" stroke="#70404D" strokeWidth="1.5"/>
-        <path d="M64 80 L64 95" stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="6.5" strokeLinecap="round"/>
-        <path d="M48 94 Q64 88 80 94 L78 104 Q64 110 50 103Z" fill="#4D5264" stroke={`url(#kasa3-frame-${uniqueId})`} strokeWidth="2.2"/>
-        <path d="M52 97 Q64 93 76 97" fill="none" stroke="#FFF0BD" strokeWidth="2"/>
-        <path d="M64 91 L64 100" stroke="#D9C27E" strokeWidth="1.6"/>
-        {/* Three suspended water pearls and small constellation marks */}
-        <g fill="#D7F3F4" stroke="#FFFBE9" strokeWidth="1">
-          <circle cx="16" cy="76" r="4.2"/><circle cx="112" cy="76" r="4.2"/><circle cx="64" cy="112" r="3.5"/>
-        </g>
-        <g fill="#FFF2C4" stroke="#8A7047" strokeWidth=".7">
-          <path d="M29 78 L32 85 L39 88 L32 91 L29 98 L26 91 L19 88 L26 85Z"/>
-          <path d="M99 78 L102 85 L109 88 L102 91 L99 98 L96 91 L89 88 L96 85Z"/>
-        </g>
-        <path d="M15 30 Q22 23 29 30 M99 30 Q106 23 113 30" fill="none" stroke="#E8F5F3" strokeWidth="1.7" strokeLinecap="round"/>
+        <ellipse cx="64" cy="63" rx="63" ry="64" fill={`url(#kasa3-aura-${uniqueId})`}/>
+        {/* Four detached canopy shards create a crown-like storm silhouette */}
+        <path d="M48 35 C26 31 9 17 9 5 C29 6 47 14 59 29 L56 43Z" fill={`url(#kasa3-night-${uniqueId})`} stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2"/>
+        <path d="M80 35 C102 31 119 17 119 5 C99 6 81 14 69 29 L72 43Z" fill={`url(#kasa3-night-${uniqueId})`} stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2"/>
+        <path d="M39 76 C20 82 13 99 18 116 C34 110 47 97 52 82Z" fill={`url(#kasa3-night-${uniqueId})`} stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2"/>
+        <path d="M89 76 C108 82 115 99 110 116 C94 110 81 97 76 82Z" fill={`url(#kasa3-night-${uniqueId})`} stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2"/>
+        <g fill="none" stroke="#EAF8F5" strokeWidth="1.3" opacity=".9"><path d="M17 12 Q35 14 52 34 M111 12 Q93 14 76 34 M22 107 Q39 99 49 81 M106 107 Q89 99 79 81"/></g>
+        {/* A broad spectral mantle replaces the old umbrella dome */}
+        <path d="M64 13 C47 18 38 32 38 48 C23 51 20 68 31 78 C30 94 45 104 58 96 C64 108 77 108 83 96 C98 104 113 94 112 78 C123 68 120 51 105 48 C105 32 81 18 64 13Z" fill={`url(#kasa3-silver-${uniqueId})`} stroke="#3C4B61" strokeWidth="2.6"/>
+        <path d="M64 21 C49 25 44 38 45 51 C33 56 32 68 41 76 C39 88 51 96 61 88 C65 98 75 98 79 88 C89 96 101 88 99 76 C108 68 107 56 95 51 C96 38 79 25 64 21Z" fill={`url(#kasa3-night-${uniqueId})`} stroke="#F5E7BC" strokeWidth="1.5"/>
+        {/* Face becomes a large ceremonial storm mask */}
+        <path d="M39 43 Q64 26 89 43 L84 76 Q64 94 44 76Z" fill="#272C48" stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2.3"/>
+        <path d="M46 46 Q64 36 82 46" fill="none" stroke="#E8F5EF" strokeWidth="2" strokeLinecap="round"/>
+        <ellipse cx="64" cy="57" rx="15" ry="17" fill={`url(#kasa3-eye-${uniqueId})`} stroke="#65727A" strokeWidth="1.5"/>
+        <ellipse cx="68" cy="58" rx="5.1" ry="8.5" fill="#1B273A"/><ellipse cx="69.5" cy="53.5" rx="2" ry="2.7" fill="#FFFFFF"/>
+        <path d="M57 72 Q64 79 71 72 L69 87 Q64 94 59 87Z" fill="#D98083" stroke="#603B53" strokeWidth="1.6"/>
+        {/* Long spectral tassel-tail and suspended geta */}
+        <path d="M64 88 C49 98 49 108 37 119 C53 120 62 112 66 103 C71 114 83 120 98 117 C88 107 79 98 64 88Z" fill={`url(#kasa3-night-${uniqueId})`} stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2"/>
+        <path d="M64 94 Q64 107 64 116" stroke="#EAF8F5" strokeWidth="1.7" strokeLinecap="round"/>
+        <path d="M52 111 L47 120 M76 111 L81 120" stroke="#C8A66B" strokeWidth="4" strokeLinecap="round"/>
+        <path d="M34 118 Q47 111 58 117 L56 124 Q44 128 34 124Z M70 117 Q81 111 94 118 L94 124 Q82 128 70 124Z" fill="#39415A" stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="1.7"/>
+        {/* A small crescent crest and rain-orb satellites */}
+        <path d="M64 7 C53 -1 43 7 47 17 C51 27 64 24 70 16 C62 20 55 17 55 12 C58 9 61 8 64 7Z" fill="#F8F1D5" stroke="#D5B66E" strokeWidth="1.3"/>
+        <g fill="#DFFBFF" stroke="#FFFFFF" strokeWidth="1"><circle cx="13" cy="57" r="4.2"/><circle cx="115" cy="57" r="4.2"/><circle cx="64" cy="2" r="2.4"/></g>
+        <g fill="#FFF4CD"><path d="M18 34l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z"/><path d="M110 34l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z"/></g>
       </svg>
     );
   }
