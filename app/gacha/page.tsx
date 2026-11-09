@@ -506,9 +506,14 @@ export default function GachaPage() {
                     <p className="mt-1 text-[9px] text-[#A3A099]">
                       Lv0 {copies.level0} · Lv1 {copies.level1} · Lv2 {copies.level2} · Lv3 {copies.level3}
                     </p>
-                    {progress.canEvolve && (
+                    {progress.currentLevel === 3 ? (
                       <p className="mt-2 text-[9px] font-bold text-[#E7C46A]">
-                        Siap evolusi · {progress.copiesOwned}/{progress.copiesRequired}
+                        Evolusi maksimal · Level 3
+                      </p>
+                    ) : (
+                      <p className="mt-2 text-[9px] text-[#A99C89]">
+                        Progres evolusi Lv{progress.currentLevel}: {progress.copiesOwned}/{progress.copiesRequired}
+                        {progress.canEvolve && " · Siap"}
                       </p>
                     )}
                   </div>
