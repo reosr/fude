@@ -248,7 +248,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="space-y-3 md:space-y-6 pb-10 flex flex-col items-center relative overflow-hidden">
+    <div className="space-y-2 md:space-y-6 pb-10 flex flex-col items-center relative overflow-hidden">
       <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative z-20">
         <div>
           <h2 className="text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
@@ -274,7 +274,7 @@ useEffect(() => {
       </div>
 
       <div 
-        className="relative w-full max-w-md h-[min(440px,52vh)] min-h-[340px] md:h-[500px] [perspective:1200px] mt-1 md:mt-4"
+        className="relative w-full max-w-md h-[min(390px,48vh)] min-h-[300px] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -390,33 +390,33 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between w-full max-w-md mt-8 md:mt-12 relative z-20">
-        <button onClick={handlePrev} disabled={isAdvancing} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
-          <ArrowLeft size={24} />
+      <div className="flex items-center justify-between w-full max-w-md mt-4 md:mt-12 relative z-20">
+        <button onClick={handlePrev} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
+          <ArrowLeft size={19} className="md:!h-6 md:!w-6" />
         </button>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
           <button 
             onClick={() => setIsAutoPlay(!isAutoPlay)} 
-            className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isAutoPlay ? "bg-[#B8860B] text-white shadow-[#B8860B]/20" : "bg-[#262523] text-[#A3A099] border border-[#33312E]"}`}
+            className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isAutoPlay ? "bg-[#B8860B] text-white shadow-[#B8860B]/20" : "bg-[#262523] text-[#A3A099] border border-[#33312E]"}`}
           >
-            {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
+            {isAutoPlay ? <Pause size={17} /> : <Play size={17} />}
           </button>
 
-          <button onClick={() => setIsFlipped(!isFlipped)} className="w-12 h-12 rounded-full bg-[#C93438] text-white flex items-center justify-center hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20">
-            <RotateCcw size={20} />
+          <button onClick={() => setIsFlipped(!isFlipped)} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#C93438] text-white flex items-center justify-center hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20">
+            <RotateCcw size={17} />
           </button>
 
           <button 
             onClick={toggleMemorized}
-            className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isMemorized ? "bg-green-600 text-white shadow-green-600/20" : "bg-[#1E1D1B] border border-[#33312E] text-[#A3A099] hover:text-green-500 hover:border-green-500"}`}
+            className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isMemorized ? "bg-green-600 text-white shadow-green-600/20" : "bg-[#1E1D1B] border border-[#33312E] text-[#A3A099] hover:text-green-500 hover:border-green-500"}`}
           >
-            <CheckCircle2 size={20} />
+            <CheckCircle2 size={17} />
           </button>
         </div>
 
-        <button onClick={handleNext} disabled={isAdvancing} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
-          <ArrowRight size={24} />
+        <button onClick={handleNext} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
+          <ArrowRight size={19} className="md:!h-6 md:!w-6" />
         </button>
       </div>
 
