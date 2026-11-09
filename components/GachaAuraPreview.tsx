@@ -1,6 +1,6 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import type { GachaBadgeDefinition } from "@/lib/gacha";
 import GachaBadgeArtwork from "@/components/GachaBadgeArtwork";
 
@@ -13,6 +13,24 @@ const AURA_COLORS: Record<GachaBadgeDefinition["rarity"], string> = {
   legendary: "#FF596B",
 };
 
+const LEGENDARY_LIGHTNING_PATHS = [
+  "M8 58 L17 52 L13 45 L25 39 L21 31 L34 36 L40 27",
+  "M172 49 L160 56 L165 64 L151 71 L155 80",
+  "M15 91 L26 84 L22 77 L35 70 L31 63 L43 59",
+  "M166 91 L154 84 L159 76 L146 68 L151 59 L139 54",
+  "M49 15 L56 23 L63 19 L69 30 L77 26",
+  "M124 119 L117 109 L123 102 L112 94 L117 86",
+  "M31 119 L39 109 L35 103 L47 95",
+  "M151 18 L143 27 L148 34 L137 42",
+] as const;
+
+type LightningBolt = {
+  id: number;
+  path: string;
+  layer: "back" | "front";
+  duration: number;
+};
+
 export default function GachaAuraPreview({
   badge,
   level,
@@ -22,6 +40,62 @@ export default function GachaAuraPreview({
   level: 2 | 3;
   size?: number;
 }) {
+  const [lightningBolts, setLightningBolts] = useState<LightningBolt[]>([]);
+
+  useEffect(() => {
+    if (level !== 3 || badge.rarity !== "legendary") {
+      setLightningBolts([]);
+      return;
+    }
+
+    let active = true;
+    let nextTimer: ReturnType<typeof setTimeout>;
+    let clearTimer: ReturnType<typeof setTimeout>;
+    let sequence = 0;
+    let previousPaths: number[] = [];
+
+    const scheduleDischarge = () => {
+      nextTimer = setTimeout(() => {
+        if (!active) return;
+
+        const count = Math.random() < 0.2 ? 2 : 1;
+        const available = LEGENDARY_LIGHTNING_PATHS
+          .map((_, index) => index)
+          .filter((index) => !previousPaths.includes(index));
+        const chosen: number[] = [];
+
+        for (let i = 0; i < count; i += 1) {
+          const pool = available.filter((index) => !chosen.includes(index));
+          if (!pool.length) break;
+          chosen.push(pool[Math.floor(Math.random() * pool.length)]);
+        }
+
+        previousPaths = chosen;
+        const duration = 180 + Math.floor(Math.random() * 260);
+        const bolts = chosen.map((index, i) => ({
+          id: ++sequence,
+          path: LEGENDARY_LIGHTNING_PATHS[index],
+          layer: (Math.random() < 0.58 ? "back" : "front") as "back" | "front",
+          duration: duration + i * 35,
+        }));
+
+        setLightningBolts(bolts);
+        clearTimer = setTimeout(() => {
+          if (!active) return;
+          setLightningBolts([]);
+          scheduleDischarge();
+        }, duration + 45);
+      }, 420 + Math.floor(Math.random() * 1580));
+    };
+
+    scheduleDischarge();
+    return () => {
+      active = false;
+      clearTimeout(nextTimer);
+      clearTimeout(clearTimer);
+    };
+  }, [level, badge.rarity]);
+
   const color = AURA_COLORS[badge.rarity];
   const style = {
     "--aura-color": color,
@@ -48,20 +122,12 @@ export default function GachaAuraPreview({
               <span /><span /><span /><span /><span /><span /><span /><span />
             </div>
           )}
-          {badge.rarity === "legendary" && (
-            <svg className="fude-legendary-lightning fude-legendary-lightning-back" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
-              <g className="lightning-glow">
-                <path d="M9 65 L21 58 L16 49 L31 43 L27 33 L42 38" />
-                <path d="M171 76 L157 69 L163 58 L148 50 L153 40 L139 35" />
-                <path d="M37 119 L45 108 L40 101 L52 92" />
-              </g>
-              <g className="lightning-core">
-                <path d="M9 65 L21 58 L16 49 L31 43 L27 33 L42 38" />
-                <path d="M171 76 L157 69 L163 58 L148 50 L153 40 L139 35" />
-                <path d="M37 119 L45 108 L40 101 L52 92" />
-              </g>
+{badge.rarity === "legendary" && lightningBolts.filter((bolt) => bolt.layer === "back").map((bolt) => (
+            <svg key={bolt.id} className="fude-legendary-lightning fude-legendary-lightning-back" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
+              <path className="lightning-bolt lightning-bolt-glow" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
+              <path className="lightning-bolt lightning-bolt-core" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
             </svg>
-          )}
+          ))}
           <div className="fude-aura-flare fude-aura-flare-one" />
           <div className="fude-aura-flare fude-aura-flare-two" />
           <div className="fude-aura-surge fude-aura-surge-one" />
@@ -85,20 +151,12 @@ export default function GachaAuraPreview({
       <div className="relative z-10">
         <GachaBadgeArtwork badge={badge} level={1} size={size} />
       </div>
-      {level === 3 && badge.rarity === "legendary" && (
-        <svg className="fude-legendary-lightning fude-legendary-lightning-front" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
-          <g className="front-bolts">
-            <path d="M4 83 L16 76 L12 68 L25 61" />
-            <path d="M176 45 L164 52 L168 61 L155 69" />
-            <path d="M151 112 L143 103 L149 95" />
-          </g>
-          <g className="front-cores">
-            <path d="M4 83 L16 76 L12 68 L25 61" />
-            <path d="M176 45 L164 52 L168 61 L155 69" />
-            <path d="M151 112 L143 103 L149 95" />
-          </g>
+{level === 3 && badge.rarity === "legendary" && lightningBolts.filter((bolt) => bolt.layer === "front").map((bolt) => (
+        <svg key={bolt.id} className="fude-legendary-lightning fude-legendary-lightning-front" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
+          <path className="lightning-bolt lightning-bolt-glow" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
+          <path className="lightning-bolt lightning-bolt-core" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
         </svg>
-      )}
+      ))}
       <style jsx>{`
         .fude-aura-preview {
           width: 100%;
@@ -184,35 +242,25 @@ export default function GachaAuraPreview({
         }
         .fude-legendary-lightning-back { z-index: 4; }
         .fude-legendary-lightning-front { z-index: 20; }
-        .fude-legendary-lightning .lightning-glow path,
-        .fude-legendary-lightning .front-bolts path {
+        .lightning-bolt {
           fill: none;
-          stroke: #FF173F;
-          stroke-width: 2.8;
           stroke-linecap: square;
           stroke-linejoin: bevel;
-          filter: drop-shadow(0 0 2px #FF173F) drop-shadow(0 0 5px rgba(255,23,63,.72));
           stroke-dasharray: none;
-          animation: lightning-flash 1.25s steps(2, end) infinite;
+          animation-name: lightning-discharge;
+          animation-timing-function: ease-out;
+          animation-fill-mode: both;
         }
-        .fude-legendary-lightning .lightning-glow path:nth-child(2),
-        .fude-legendary-lightning .front-bolts path:nth-child(2) { animation-delay: -.42s; }
-        .fude-legendary-lightning .lightning-glow path:nth-child(3),
-        .fude-legendary-lightning .front-bolts path:nth-child(3) { animation-delay: -.83s; }
-        .fude-legendary-lightning .lightning-core path,
-        .fude-legendary-lightning .front-cores path {
-          fill: none;
+        .lightning-bolt-glow {
+          stroke: #FF244B;
+          stroke-width: 2.8;
+          filter: drop-shadow(0 0 2px #FF173F) drop-shadow(0 0 5px rgba(255,23,63,.72));
+        }
+        .lightning-bolt-core {
           stroke: #FFFDFE;
           stroke-width: .9;
-          stroke-linecap: square;
-          stroke-linejoin: bevel;
           filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 2px #FFD9E0);
-          animation: lightning-core-flash .95s steps(2, end) infinite;
         }
-        .fude-legendary-lightning .lightning-core path:nth-child(2),
-        .fude-legendary-lightning .front-cores path:nth-child(2) { animation-delay: -.31s; }
-        .fude-legendary-lightning .lightning-core path:nth-child(3),
-        .fude-legendary-lightning .front-cores path:nth-child(3) { animation-delay: -.63s; }
         .fude-aura-legendary .fude-aura-flare { opacity: .38; filter: blur(8px); }
         .fude-aura-legendary .fude-aura-surge { opacity: .28; filter: blur(5px); }
         .fude-aura-legendary .fude-aura-particle { box-shadow: 0 0 6px 2px #FF263F; }
@@ -221,17 +269,12 @@ export default function GachaAuraPreview({
           0%, 100% { opacity: .42; transform: scale(.9) rotate(-5deg); }
           50% { opacity: 1; transform: scale(1.08) rotate(5deg); }
         }
-        @keyframes lightning-flash {
-          0%, 100% { opacity: .28; }
-          12%, 18% { opacity: 1; }
-          22%, 58% { opacity: .42; }
-          62%, 70% { opacity: .95; }
-        }
-        @keyframes lightning-core-flash {
-          0%, 100% { opacity: .12; }
-          12%, 20% { opacity: 1; }
-          26%, 58% { opacity: .28; }
-          64%, 72% { opacity: 1; }
+        @keyframes lightning-discharge {
+          0% { opacity: 0; }
+          12% { opacity: 1; }
+          24% { opacity: .58; }
+          34% { opacity: .95; }
+          100% { opacity: 0; }
         }
         .fude-aura-level-2.fude-aura-epic .fude-aura-cloud { opacity: .28; }
         .fude-aura-level-2.fude-aura-mythic .fude-aura-cloud { opacity: .3; }
