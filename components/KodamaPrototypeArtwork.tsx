@@ -91,47 +91,32 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
       <path d="M34 84 Q40 77 48 82 M126 84 Q120 77 112 82" fill="none" stroke="#F1F2B9" strokeWidth="2" strokeLinecap="round"/>
       <g fill="#D9E9A0"><circle cx="42" cy="91" r="1.5"/><circle cx="51" cy="87" r="1.2"/><circle cx="118" cy="91" r="1.5"/><circle cx="109" cy="87" r="1.2"/></g>
 
-      {/* Forked sapling branches give the spirit a tree-born silhouette. */}
-      <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#kodama-proto-shadow-${uid})`}>
-        <path d="M66 49 Q57 38 51 29 Q46 22 40 22 M51 29 Q53 21 50 16 M94 49 Q103 38 109 29 Q114 22 120 22 M109 29 Q107 21 110 16" stroke="#302A22" strokeWidth="7"/>
-        <path d="M66 49 Q57 38 51 29 Q46 22 40 22 M51 29 Q53 21 50 16 M94 49 Q103 38 109 29 Q114 22 120 22 M109 29 Q107 21 110 16" stroke={`url(#${bark})`} strokeWidth="4.2"/>
-        <path d="M51 29 L43 25 M109 29 L117 25" stroke="#D9B17A" strokeWidth="1.1"/>
-      </g>
-      <g fill={`url(#${leaf})`} stroke="#344E35" strokeWidth="1.1">
-        <path d="M39 23 Q28 12 33 7 Q44 8 47 20 Q43 25 39 23Z"/>
-        <path d="M50 17 Q43 5 50 3 Q59 8 54 18Z"/>
-        <path d="M121 23 Q132 12 127 7 Q116 8 113 20 Q117 25 121 23Z"/>
-        <path d="M110 17 Q117 5 110 3 Q101 8 106 18Z"/>
-      </g>
-      <path d="M35 11 Q40 15 43 21 M124 11 Q120 15 117 21" fill="none" stroke="#F4F1BD" strokeWidth="1.2" strokeLinecap="round"/>
-      {/* Three living leaves form the Kodama's unmistakable crown. */}
-      <path d="M79 39 C59 32 51 17 58 12 C72 10 81 22 82 37 C90 20 105 17 110 26 C108 40 94 46 80 43Z"
-        fill="#263A2B" stroke="#28382A" strokeWidth="3" strokeLinejoin="round" filter={`url(#kodama-proto-shadow-${uid})`}/>
-      <path d="M79 37 C59 30 53 17 60 14 C72 13 80 24 82 37 C90 22 103 20 107 27 C105 39 93 43 80 41Z"
-        fill={`url(#${leaf})`} stroke="#3E5D37" strokeWidth="1.8" strokeLinejoin="round"/>
-      <path d="M80 36 Q71 23 62 17 M82 36 Q93 25 103 26" fill="none" stroke="#F6F2C4" strokeWidth="1.7" strokeLinecap="round"/>
-      <path d="M80 37 Q73 29 68 25 M82 37 Q91 29 97 28" fill="none" stroke="#5F8146" strokeWidth="1.2" strokeLinecap="round"/>
-
+      {/* A small living sprout grows from the crown, not antler-like branches. */}
+      <path d="M78 45 Q73 29 63 22 Q57 17 51 19 M78 40 Q83 27 94 20" fill="none" stroke="#4B3928" strokeWidth="4.5" strokeLinecap="round"/>
+      <path d="M78 45 Q73 29 63 22 Q57 17 51 19 M78 40 Q83 27 94 20" fill="none" stroke="#B88A59" strokeWidth="2.2" strokeLinecap="round"/>
+      <path d="M52 20 Q43 8 48 5 Q60 7 63 19 Q59 24 52 20Z" fill={`url(#${leaf})`} stroke="#405D39" strokeWidth="1.4"/>
+      <path d="M94 21 Q98 7 106 10 Q109 20 96 25Z" fill={`url(#${leaf})`} stroke="#405D39" strokeWidth="1.4"/>
+      <path d="M50 9 Q56 14 59 19 M104 13 Q100 18 97 22" fill="none" stroke="#F7F3C7" strokeWidth="1.2" strokeLinecap="round"/>
       {/* The Kodama itself: pale wood-spirit porcelain, round head and small root body. */}
       <g filter={`url(#kodama-proto-shadow-${uid})`}>
         <path d="M58 91 Q49 95 48 106 Q50 116 62 117 L98 117 Q110 115 111 106 Q108 95 99 91Z" fill={`url(#${bark})`} stroke="#302A22" strokeWidth="2.4"/>
         <path d="M62 94 Q80 101 98 94 L96 113 Q80 119 64 113Z" fill="#6C8750" stroke="#344A34" strokeWidth="1.4"/>
         <path d="M67 98 Q80 103 93 98 M69 106 Q80 110 91 106" fill="none" stroke="#D7B17B" strokeWidth="1.4" strokeLinecap="round"/>
         <path d="M62 105 Q57 113 53 119 M98 105 Q103 113 107 119" fill="none" stroke="#647453" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M58 91 Q47 83 43 91 Q42 99 55 102 M100 91 Q113 83 117 91 Q118 99 105 102"
-          fill="none" stroke="#75865B" strokeWidth="6" strokeLinecap="round"/>
+        <path d="M58 94 Q48 91 45 82 Q43 77 48 75 Q54 77 59 87 M99 94 Q110 91 116 97 Q119 101 115 105 Q108 105 101 101"
+          fill="none" stroke="#75865B" strokeWidth="6.5" strokeLinecap="round"/>
         <path d="M53 53 C53 42 64 36 80 36 C96 36 107 43 107 57 C107 74 97 88 80 89 C63 88 53 74 53 53Z"
-          fill={`url(#${porcelain})`} stroke="#59664F" strokeWidth="2.4"/>
-        <path d="M58 51 Q62 41 76 40" fill="none" stroke="#FFFFFF" strokeWidth="3.1" strokeLinecap="round" opacity=".9"/>
-        <path d="M60 48 Q65 43 72 43" fill="none" stroke="#D5DCC0" strokeWidth="1.2" strokeLinecap="round"/>
+          fill={`url(#${porcelain})`} stroke="#59664F" strokeWidth="2.4" transform="rotate(-8 80 63)"/>
+        <path d="M58 51 Q62 41 76 40" fill="none" stroke="#FFFFFF" strokeWidth="3.1" strokeLinecap="round" opacity=".9" transform="rotate(-8 80 63)"/>
+        <path d="M60 48 Q65 43 72 43" fill="none" stroke="#D5DCC0" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-8 80 63)"/>
         {/* Hollow, deep-set eyes: a defining quiet Kodama expression. */}
-        <ellipse cx="70" cy="63" rx="4.2" ry="6.2" fill="#26362E"/>
-        <ellipse cx="91" cy="63" rx="4.2" ry="6.2" fill="#26362E"/>
-        <ellipse cx="69" cy="61" rx="1.25" ry="1.8" fill="#F7F5DF" opacity=".9"/>
-        <ellipse cx="90" cy="61" rx="1.25" ry="1.8" fill="#F7F5DF" opacity=".9"/>
-        <path d="M77 76 Q80 78 83 76" fill="none" stroke="#8D8C70" strokeWidth="1.7" strokeLinecap="round"/>
+        <ellipse cx="70" cy="63" rx="4.2" ry="6.2" fill="#26362E" transform="rotate(-8 80 63)"/>
+        <ellipse cx="91" cy="63" rx="3.7" ry="5.8" fill="#26362E" transform="rotate(-8 80 63)"/>
+        <ellipse cx="69" cy="61" rx="1.25" ry="1.8" fill="#F7F5DF" opacity=".9" transform="rotate(-8 80 63)"/>
+        <ellipse cx="90" cy="61" rx="1.1" ry="1.6" fill="#F7F5DF" opacity=".9" transform="rotate(-8 80 63)"/>
+        <path d="M77 76 Q80 78 83 76" fill="none" stroke="#8D8C70" strokeWidth="1.7" strokeLinecap="round" transform="rotate(-8 80 63)"/>
         {/* Soft natural shading under the head and along the body. */}
-        <path d="M58 79 Q80 92 102 79" fill="none" stroke="#8A9A7A" strokeWidth="2.4" opacity=".55"/>
+        <path d="M58 79 Q80 92 102 79" fill="none" stroke="#8A9A7A" strokeWidth="2.4" opacity=".55" transform="rotate(-8 80 63)"/>
         <path d="M62 98 Q80 105 98 98" fill="none" stroke="#FFFFFF" strokeWidth="1.7" opacity=".75"/>
       </g>
 
