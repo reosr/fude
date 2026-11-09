@@ -172,139 +172,114 @@ function Character({ id, level, p }: { id: FolkloreId; level: 1 | 2 | 3; p: type
 function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
   const uid = useId().replace(/:/g, "");
   const metal = "kodama-metal-" + uid;
-  const bark = "kodama-bark-" + uid;
-  const spirit = "kodama-spirit-" + uid;
-  const foliage = "kodama-foliage-" + uid;
-  const glow = "kodama-glow-" + uid;
-
-  // The badge silhouette grows from a seedling to a full ancient forest tree.
-  // It is deliberately not a generic circular medallion.
-  const silhouette = level === 1
-    ? "M64 5 C75 12 83 18 82 29 C96 22 107 33 103 46 C117 52 112 68 101 73 C108 87 97 98 84 94 C79 108 67 113 58 103 C46 112 33 105 34 93 C19 98 10 86 20 74 C7 66 12 51 25 47 C20 34 32 23 45 29 C44 17 53 8 64 5Z"
-    : level === 2
-    ? "M64 3 C77 13 86 20 83 33 C98 22 113 34 106 49 C121 58 113 75 100 79 C109 95 94 108 79 99 C75 116 59 122 49 108 C34 119 18 105 25 89 C8 84 9 66 24 57 C14 42 27 27 43 34 C43 17 54 8 64 3Z"
-    : "M64 2 C77 13 91 18 84 36 C101 20 118 34 108 52 C126 63 115 82 99 83 C111 102 92 116 76 103 C72 123 53 128 43 110 C23 122 8 103 24 87 C4 78 10 57 28 53 C15 35 33 20 49 34 C46 16 54 7 64 2Z";
-
-  const inner = level === 1
-    ? "M64 13 C73 20 78 25 76 37 C91 29 99 39 95 50 C106 57 101 68 91 72 C97 83 87 91 77 87 C72 99 63 103 56 94 C46 101 37 94 39 84 C27 89 19 80 27 70 C17 63 22 53 33 50 C29 40 38 33 49 38 C48 25 56 17 64 13Z"
-    : level === 2
-    ? "M64 11 C76 20 80 27 77 41 C92 30 104 41 98 54 C111 63 103 75 91 78 C99 91 87 100 75 92 C70 106 57 110 49 96 C37 106 27 94 34 81 C20 77 21 63 35 56 C26 44 38 34 51 42 C50 27 57 17 64 11Z"
-    : "M64 10 C77 21 84 28 76 45 C94 29 108 43 98 59 C113 69 102 84 87 82 C98 99 82 108 69 95 C65 113 51 116 43 98 C27 109 17 92 34 76 C17 69 26 51 42 56 C30 39 44 29 57 44 C54 28 58 17 64 10Z";
+  const enamel = "kodama-enamel-" + uid;
+  const skin = "kodama-skin-" + uid;
+  const leaf = "kodama-leaf-" + uid;
+  const wood = "kodama-wood-" + uid;
 
   return (
     <svg viewBox="0 0 128 128" width={size} height={size} role="img"
       aria-label={"Kodama, Common, Level " + level}
-      className="shrink-0 overflow-visible drop-shadow-[0_7px_11px_rgba(0,0,0,0.5)]">
+      className="shrink-0 overflow-visible drop-shadow-[0_6px_9px_rgba(0,0,0,0.42)]">
       <defs>
         <linearGradient id={metal} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#FFF9E8"/><stop offset=".3" stopColor="#D8E1C9"/><stop offset=".62" stopColor="#71866A"/><stop offset=".84" stopColor="#F2EBD2"/><stop offset="1" stopColor="#405B43"/>
+          <stop stopColor="#FFFBEA"/><stop offset=".35" stopColor="#D9E4C8"/><stop offset=".7" stopColor="#829A75"/><stop offset="1" stopColor="#405B43"/>
         </linearGradient>
-        <linearGradient id={bark} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#A77B50"/><stop offset=".48" stopColor="#6E513B"/><stop offset="1" stopColor="#3D392D"/>
+        <linearGradient id={enamel} x1="0" y1="0" x2=".2" y2="1">
+          <stop stopColor="#A9C982"/><stop offset=".5" stopColor="#527C4D"/><stop offset="1" stopColor="#294C39"/>
         </linearGradient>
-        <linearGradient id={spirit} x1=".2" y1="0" x2=".8" y2="1">
-          <stop stopColor="#FFFDF0"/><stop offset=".58" stopColor="#E9E7C9"/><stop offset="1" stopColor="#B9C99A"/>
+        <linearGradient id={skin} x1=".15" y1="0" x2=".8" y2="1">
+          <stop stopColor="#FFFDF0"/><stop offset=".65" stopColor="#E9E8CD"/><stop offset="1" stopColor="#C9D3A9"/>
         </linearGradient>
-        <linearGradient id={foliage} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#E5F2B7"/><stop offset=".45" stopColor="#91B96D"/><stop offset="1" stopColor="#315D3E"/>
+        <linearGradient id={leaf} x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#E8F4B8"/><stop offset=".48" stopColor="#A6CA76"/><stop offset="1" stopColor="#54834D"/>
         </linearGradient>
-        <radialGradient id={glow}>
-          <stop stopColor="#D8F4A8" stopOpacity=".55"/><stop offset="1" stopColor="#D8F4A8" stopOpacity="0"/>
-        </radialGradient>
+        <linearGradient id={wood} x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#A77A4F"/><stop offset=".55" stopColor="#76543A"/><stop offset="1" stopColor="#493C2D"/>
+        </linearGradient>
       </defs>
 
-      {/* A living-tree outline: leaf canopy above, trunk and roots below. */}
-      <ellipse cx="64" cy="61" rx={level === 1 ? 43 : level === 2 ? 52 : 59} ry={level === 1 ? 48 : 57} fill={"url(#" + glow + ")"}/>
-      <path d={silhouette} fill={"url(#" + metal + ")"} stroke="#344D37" strokeWidth="2.5" strokeLinejoin="round"/>
-      <path d={inner} fill="#244B37" stroke="#F0F0D9" strokeWidth="1.7" strokeLinejoin="round"/>
+      {/* One compact leaf-crest badge. The character, not the frame, carries the evolution. */}
+      <path d="M64 5 C75 15 91 13 101 25 C113 39 110 57 105 70 C101 88 84 107 64 121 C44 107 27 88 23 70 C18 57 15 39 27 25 C37 13 53 15 64 5Z"
+        fill={"url(#" + metal + ")"} stroke="#38553D" strokeWidth="2.5" strokeLinejoin="round"/>
+      <path d="M64 12 C75 21 88 20 96 30 C106 42 103 57 99 69 C94 85 79 101 64 112 C49 101 34 85 29 69 C25 57 22 42 32 30 C40 20 53 21 64 12Z"
+        fill={"url(#" + enamel + ")"} stroke="#F2F0D9" strokeWidth="1.8" strokeLinejoin="round"/>
+      <path d="M35 36 Q43 26 54 27 M74 27 Q86 26 94 36" fill="none" stroke="#FFFFFF" strokeWidth="1.8" opacity=".65" strokeLinecap="round"/>
 
-      {/* Enamel leaf clusters are part of the tree silhouette, not a detached frame. */}
-      <g fill={"url(#" + foliage + ")"} stroke="#345D3D" strokeWidth="1.8" strokeLinejoin="round">
-        {level === 1 ? (
-          <>
-            <path d="M39 42 C22 40 20 27 28 22 C41 22 46 31 43 42Z"/>
-            <path d="M83 39 C86 23 101 20 106 29 C104 42 94 47 83 39Z"/>
-          </>
-        ) : level === 2 ? (
-          <>
-            <path d="M35 48 C13 47 12 30 23 24 C39 25 45 36 35 48Z"/>
-            <path d="M88 45 C91 25 108 22 115 33 C112 49 101 54 88 45Z"/>
-            <path d="M64 23 C48 15 51 5 64 5 C77 7 79 17 64 23Z"/>
-          </>
-        ) : (
-          <>
-            <path d="M29 48 C8 45 7 26 20 20 C37 24 41 38 29 48Z"/>
-            <path d="M98 46 C101 24 119 19 124 33 C121 49 110 55 98 46Z"/>
-            <path d="M64 25 C43 17 45 3 63 3 C82 5 84 18 64 25Z"/>
-            <path d="M45 31 C34 15 42 5 54 10 C61 22 55 30 45 31Z"/>
-            <path d="M82 31 C93 15 85 5 73 10 C66 22 72 30 82 31Z"/>
-          </>
-        )}
+      {/* Subtle forest floor and firefly details leave the face unobstructed. */}
+      <path d="M35 94 Q64 105 93 94" fill="none" stroke="#B6CF8A" strokeWidth="1.5" opacity=".5"/>
+      <g fill="#F5DEA0">
+        <circle cx="35" cy="67" r="1.7"/><circle cx="93" cy="61" r="1.7"/>
+        {level === 3 && <><circle cx="43" cy="86" r="1.4"/><circle cx="85" cy="82" r="1.4"/></>}
       </g>
-
-      {/* Branch and root details make the lower silhouette read as a tree. */}
-      <path d={level === 1 ? "M64 89 Q64 98 57 105 M64 96 Q70 101 75 105" : level === 2 ? "M64 83 Q64 99 48 112 M64 96 Q78 108 84 114 M64 102 L64 117" : "M64 77 Q64 101 39 119 M64 94 Q87 111 94 121 M64 103 L64 124 M47 111 Q31 111 24 121 M82 111 Q99 109 106 120"}
-        fill="none" stroke={"url(#" + bark + ")"} strokeWidth={level === 1 ? 3.5 : level === 2 ? 4.5 : 5.2} strokeLinecap="round"/>
-      <path d={level === 1 ? "M64 91 Q59 97 54 98 M64 98 Q69 101 73 101" : level === 2 ? "M48 111 Q42 112 38 118 M84 113 Q90 114 94 119" : "M39 119 Q30 119 25 125 M94 121 Q103 121 108 126 M64 116 Q57 121 55 126"}
-        fill="none" stroke="#C59A65" strokeWidth="1.5" strokeLinecap="round"/>
 
       {level === 1 ? (
         <g>
-          {/* A shy forest wisp emerging from a tiny seed pod. */}
-          <path d="M64 39 C51 31 38 39 39 53 C29 62 36 79 49 82 C52 92 75 94 80 82 C94 77 97 61 87 53 C89 39 76 32 64 39Z"
-            fill={"url(#" + spirit + ")"} stroke="#657B55" strokeWidth="2.3"/>
-          <path d="M63 43 C49 31 49 18 57 14 C69 17 72 29 66 43 C76 29 88 29 93 38 C90 49 77 53 66 49Z"
-            fill={"url(#" + foliage + ")"} stroke="#456B43" strokeWidth="2"/>
-          <path d="M61 40 Q58 26 59 19" fill="none" stroke="#F8F8D9" strokeWidth="1.8" strokeLinecap="round"/>
-          <ellipse cx="54" cy="62" rx="2.8" ry="4" fill="#303B32"/><ellipse cx="74" cy="62" rx="2.8" ry="4" fill="#303B32"/>
-          <circle cx="55" cy="61" r="1" fill="#FFFFFF"/><circle cx="75" cy="61" r="1" fill="#FFFFFF"/>
-          <ellipse cx="46" cy="71" rx="4.5" ry="2.5" fill="#E9A29A" opacity=".45"/><ellipse cx="82" cy="71" rx="4.5" ry="2.5" fill="#E9A29A" opacity=".45"/>
-          <path d="M59 74 Q64 79 69 74" fill="none" stroke="#94765D" strokeWidth="1.8" strokeLinecap="round"/>
-          <path d="M49 83 Q43 91 37 88 M79 83 Q85 91 91 88" fill="none" stroke="#D0DEA5" strokeWidth="3.6" strokeLinecap="round"/>
-          <path d="M53 86 Q64 92 75 86" fill="none" stroke="#C5A77A" strokeWidth="2" strokeLinecap="round"/>
+          {/* BABY: oversized soft head, tiny body, short limbs, and one new sprout. */}
+          <path d="M51 78 Q43 80 41 87 Q42 93 51 94 M77 78 Q85 80 87 87 Q86 93 77 94"
+            fill="none" stroke="#A4C77A" strokeWidth="5.5" strokeLinecap="round"/>
+          <ellipse cx="64" cy="91" rx="13" ry="10" fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="1.8"/>
+          <path d="M56 97 Q53 102 49 102 M72 97 Q75 102 79 102" fill="none" stroke="#8B6848" strokeWidth="4.2" strokeLinecap="round"/>
+          <path d="M64 70 C48 70 38 58 41 44 C43 31 54 26 64 27 C76 25 87 34 88 47 C90 61 79 71 64 70Z"
+            fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="2.2"/>
+          <path d="M63 30 C53 23 53 13 61 11 C69 15 70 22 66 30 C74 21 83 22 85 29 C81 37 73 39 65 35Z"
+            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M63 28 Q60 20 61 15" fill="none" stroke="#F7F8DC" strokeWidth="1.4" strokeLinecap="round"/>
+          <ellipse cx="55" cy="51" rx="2.5" ry="3.5" fill="#344036"/><ellipse cx="73" cy="51" rx="2.5" ry="3.5" fill="#344036"/>
+          <circle cx="55.8" cy="50" r=".9" fill="#FFFFFF"/><circle cx="73.8" cy="50" r=".9" fill="#FFFFFF"/>
+          <ellipse cx="48" cy="59" rx="4" ry="2.2" fill="#E9A29A" opacity=".55"/><ellipse cx="80" cy="59" rx="4" ry="2.2" fill="#E9A29A" opacity=".55"/>
+          <path d="M60 62 Q64 66 68 62" fill="none" stroke="#98765D" strokeWidth="1.6" strokeLinecap="round"/>
+          <path d="M53 81 Q64 86 75 81" fill="none" stroke="#D5C99F" strokeWidth="1.4" strokeLinecap="round"/>
         </g>
       ) : level === 2 ? (
         <g>
-          {/* The wisp has become a young tree guardian with a trunk-like body. */}
-          <path d="M64 42 C50 31 36 39 38 53 C25 62 33 81 49 83 C51 95 77 96 80 83 C96 78 101 60 88 52 C90 39 76 31 64 42Z"
-            fill={"url(#" + spirit + ")"} stroke="#657B55" strokeWidth="2.4"/>
-          <path d="M64 48 C51 55 50 70 54 91 L74 91 C78 69 76 55 64 48Z"
-            fill={"url(#" + bark + ")"} stroke="#E6D5AD" strokeWidth="1.8"/>
-          <path d="M44 58 Q31 53 27 67 Q29 77 45 78 M84 58 Q97 53 101 67 Q99 77 83 78"
-            fill="none" stroke="#8FB76D" strokeWidth="6" strokeLinecap="round"/>
-          <path d="M64 49 Q50 35 48 27 M64 49 Q79 34 82 27" fill="none" stroke="#765B3D" strokeWidth="4.2" strokeLinecap="round"/>
-          <ellipse cx="54" cy="63" rx="2.8" ry="4" fill="#303B32"/><ellipse cx="74" cy="63" rx="2.8" ry="4" fill="#303B32"/>
-          <circle cx="55" cy="62" r="1" fill="#FFFFFF"/><circle cx="75" cy="62" r="1" fill="#FFFFFF"/>
-          <path d="M59 74 Q64 79 69 74" fill="none" stroke="#94765D" strokeWidth="1.8" strokeLinecap="round"/>
-          <path d="M64 82 L64 91" stroke="#E5D5B2" strokeWidth="1.8"/>
-          <path d="M64 82l5 5-5 5-5-5Z" fill="#D8B96D" stroke="#8B7043" strokeWidth="1.1"/>
+          {/* CHILD: longer limbs, a small tunic-like trunk body, and a pair of leaf locks. */}
+          <path d="M48 69 Q38 69 34 80 Q35 87 46 85 M80 69 Q90 69 94 80 Q93 87 82 85"
+            fill="none" stroke="#8EB76D" strokeWidth="6" strokeLinecap="round"/>
+          <path d="M52 66 Q64 60 76 66 L81 91 Q78 101 64 102 Q50 101 47 91Z"
+            fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="2"/>
+          <path d="M54 96 Q49 103 46 107 M74 96 Q79 103 82 107" fill="none" stroke="#76563B" strokeWidth="5" strokeLinecap="round"/>
+          <path d="M43 107 Q49 103 55 107 L54 111 Q48 114 42 111Z M73 107 Q79 103 85 107 L86 111 Q80 114 74 111Z"
+            fill="#8A6747" stroke="#E6D5B0" strokeWidth="1"/>
+          <path d="M64 29 C51 29 44 39 45 51 C46 63 54 69 64 69 C75 69 83 61 83 50 C84 38 76 29 64 29Z"
+            fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="2.2"/>
+          <path d="M52 35 C42 28 43 18 52 17 C60 19 62 27 57 36 M75 34 C80 23 90 23 92 31 C89 40 82 42 75 39"
+            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M64 31 Q56 18 62 12 Q73 14 69 31Z" fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="1.7"/>
+          <ellipse cx="56" cy="49" rx="2.5" ry="3.5" fill="#344036"/><ellipse cx="72" cy="49" rx="2.5" ry="3.5" fill="#344036"/>
+          <circle cx="56.8" cy="48" r=".9" fill="#FFFFFF"/><circle cx="72.8" cy="48" r=".9" fill="#FFFFFF"/>
+          <path d="M60 59 Q64 63 68 59" fill="none" stroke="#98765D" strokeWidth="1.7" strokeLinecap="round"/>
+          <path d="M57 76 Q64 81 71 76" fill="none" stroke="#B4C98C" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M64 79 L64 93" stroke={"url(#" + wood + ")"} strokeWidth="2.2" strokeLinecap="round"/>
+          <path d="M64 82l4 4-4 4-4-4Z" fill="#D9BD79" stroke="#8B7043" strokeWidth="1"/>
         </g>
       ) : (
         <g>
-          {/* An elder Kodama: broad canopy, expressive face, and a mature trunk. */}
-          <path d="M64 38 C49 25 32 35 36 51 C20 62 29 82 47 83 C50 98 78 99 81 83 C100 78 106 59 90 50 C94 34 77 25 64 38Z"
-            fill={"url(#" + spirit + ")"} stroke="#657B55" strokeWidth="2.5"/>
-          <path d="M64 47 C51 55 49 74 53 96 L75 96 C79 73 76 55 64 47Z"
-            fill={"url(#" + bark + ")"} stroke="#E9D8B3" strokeWidth="2"/>
-          <path d="M49 57 Q56 51 60 57 M68 57 Q75 51 81 57" fill="none" stroke="#F7F0D8" strokeWidth="2.3" strokeLinecap="round"/>
-          <ellipse cx="55" cy="65" rx="3" ry="4.1" fill="#FFF9E9"/><ellipse cx="73" cy="65" rx="3" ry="4.1" fill="#FFF9E9"/>
-          <circle cx="56" cy="65" r="1.6" fill="#344336"/><circle cx="74" cy="65" r="1.6" fill="#344336"/>
-          <path d="M59 77 Q64 82 69 77" fill="none" stroke="#F0DDB5" strokeWidth="2" strokeLinecap="round"/>
-          <path d="M64 43 Q51 26 42 25 M64 43 Q77 26 87 25" fill="none" stroke="#765B3D" strokeWidth="5" strokeLinecap="round"/>
-          <path d="M42 25 Q28 12 22 22 Q27 37 48 39 M87 25 Q101 12 106 22 Q101 37 81 39"
-            fill={"url(#" + foliage + ")"} stroke="#456B43" strokeWidth="2"/>
-          <path d="M42 88 Q31 99 24 108 M86 88 Q97 99 104 108" fill="none" stroke="#987452" strokeWidth="5" strokeLinecap="round"/>
-          <g fill="#F4D995"><circle cx="30" cy="63" r="2.8"/><circle cx="98" cy="63" r="2.8"/></g>
-          <path d="M64 31l3 6 6 2-6 3-3 6-3-6-6-3 6-2Z" fill="#F4D995" stroke="#FFF2CB" strokeWidth=".8"/>
+          {/* ADULT: upright guardian proportions, mature bark torso, broad branch-crown. */}
+          <path d="M48 62 Q36 59 30 73 Q29 84 44 86 M80 62 Q92 59 98 73 Q99 84 84 86"
+            fill="none" stroke="#8BAF68" strokeWidth="7" strokeLinecap="round"/>
+          <path d="M49 60 Q64 53 79 60 L83 91 Q80 102 64 104 Q48 102 45 91Z"
+            fill={"url(#" + wood + ")"} stroke="#E8D7B1" strokeWidth="2"/>
+          <path d="M55 66 Q64 72 73 66 M54 81 Q64 87 74 81" fill="none" stroke="#C89A67" strokeWidth="1.7" opacity=".8" strokeLinecap="round"/>
+          <path d="M53 99 Q48 108 43 113 M75 99 Q80 108 85 113" fill="none" stroke="#76563B" strokeWidth="6" strokeLinecap="round"/>
+          <path d="M39 113 Q47 107 55 112 L54 117 Q45 120 38 117Z M73 112 Q81 107 89 113 L90 117 Q83 120 74 117Z"
+            fill="#806044" stroke="#E6D5B0" strokeWidth="1.2"/>
+          <path d="M64 28 C51 28 44 38 45 50 C46 62 54 68 64 68 C75 68 83 60 83 49 C84 37 76 28 64 28Z"
+            fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="2.2"/>
+          <path d="M47 39 Q34 22 24 28 Q24 43 43 49 M81 39 Q94 22 104 28 Q104 43 85 49"
+            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M64 34 Q48 20 51 10 Q64 6 67 30 Q76 12 88 16 Q89 30 67 39Z"
+            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M49 34 Q40 19 34 14 M79 34 Q88 19 94 14" fill="none" stroke={"url(#" + wood + ")"} strokeWidth="4" strokeLinecap="round"/>
+          <ellipse cx="56" cy="48" rx="2.7" ry="3.8" fill="#344036"/><ellipse cx="72" cy="48" rx="2.7" ry="3.8" fill="#344036"/>
+          <circle cx="56.8" cy="47" r="1" fill="#FFFFFF"/><circle cx="72.8" cy="47" r="1" fill="#FFFFFF"/>
+          <path d="M59 59 Q64 63 69 59" fill="none" stroke="#98765D" strokeWidth="1.8" strokeLinecap="round"/>
+          <path d="M64 68 L64 99" stroke="#C99A65" strokeWidth="2.3" strokeLinecap="round"/>
+          <path d="M58 75 Q64 79 70 75 M57 88 Q64 92 71 88" fill="none" stroke="#D8B27D" strokeWidth="1.4" opacity=".9"/>
         </g>
       )}
 
-      {/* Small firefly glints; the face and tree-spirit silhouette stay unobstructed. */}
-      <g fill="#F8E7A7">
-        <circle cx="24" cy="57" r="1.8"/><circle cx="104" cy="59" r="1.8"/>
-        {level === 3 && <><circle cx="34" cy="88" r="1.6"/><circle cx="94" cy="88" r="1.6"/></>}
-      </g>
-      <path d="M64 13 Q69 17 68 23" fill="none" stroke="#FFFFFF" strokeWidth="1.4" opacity=".7" strokeLinecap="round"/>
+      <path d="M64 15 Q68 18 68 23" fill="none" stroke="#FFFFFF" strokeWidth="1.3" opacity=".75" strokeLinecap="round"/>
     </svg>
   );
 }
