@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
@@ -178,10 +179,12 @@ export default function Sidebar() {
 
         {/* LOGO */}
         <div className="p-6 border-b border-[#33312E]/50 flex items-center gap-3">
-          <img
+          <Image
             src="/logo.webp"
             alt="Fude Logo"
-            className="w-8 h-8 object-contain"
+            width={32}
+            height={32}
+            className="h-8 w-8 object-contain"
           />
 
           <div>
