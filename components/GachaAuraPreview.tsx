@@ -35,15 +35,17 @@ export default function GachaAuraPreview({
   badge,
   level,
   size = 88,
+  compact = false,
 }: {
   badge: GachaBadgeDefinition;
   level: 2 | 3;
   size?: number;
+  compact?: boolean;
 }) {
   const [lightningBolts, setLightningBolts] = useState<LightningBolt[]>([]);
 
   useEffect(() => {
-    if (level !== 3 || badge.rarity !== "legendary") {
+    if (compact || level !== 3 || badge.rarity !== "legendary") {
       setLightningBolts([]);
       return;
     }
@@ -94,7 +96,7 @@ export default function GachaAuraPreview({
       clearTimeout(nextTimer);
       clearTimeout(clearTimer);
     };
-  }, [level, badge.rarity]);
+  }, [level, badge.rarity, compact]);
 
   const color = AURA_COLORS[badge.rarity];
   const style = {
@@ -104,10 +106,10 @@ export default function GachaAuraPreview({
   } as CSSProperties;
 
   return (
-    <div className={`fude-aura-preview relative flex items-center justify-center fude-aura-${badge.rarity} ${level === 3 ? "fude-aura-level-3" : "fude-aura-level-2"}`} style={style}>
+    <div className={`fude-aura-preview relative flex items-center justify-center fude-aura-${badge.rarity} ${level === 3 ? "fude-aura-level-3" : "fude-aura-level-2"} ${compact ? "fude-aura-compact" : ""}`} style={style}>
       <div className="fude-aura-cloud pointer-events-none absolute rounded-full" />
       <div className="fude-aura-cloud fude-aura-cloud-secondary pointer-events-none absolute rounded-full" />
-      {level === 3 && (
+      {!compact && level === 3 && (
         <>
           {badge.rarity === "epic" && (
             <>
@@ -151,7 +153,7 @@ export default function GachaAuraPreview({
       <div className="relative z-10">
         <GachaBadgeArtwork badge={badge} level={level} size={size} />
       </div>
-{level === 3 && badge.rarity === "legendary" && lightningBolts.filter((bolt) => bolt.layer === "front").map((bolt) => (
+{!compact && level === 3 && badge.rarity === "legendary" && lightningBolts.filter((bolt) => bolt.layer === "front").map((bolt) => (
         <svg key={bolt.id} className="fude-legendary-lightning fude-legendary-lightning-front" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
           <path className="lightning-bolt lightning-bolt-glow" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
           <path className="lightning-bolt lightning-bolt-core" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
@@ -160,8 +162,44 @@ export default function GachaAuraPreview({
       <style jsx>{`
         .fude-aura-preview {
           width: 100%;
-          min-height: ${Math.max(size + 24, 80)}px;
+          min-height: ${compact ? Math.max(size + 12, 34) : Math.max(size + 24, 80)}px;
           isolation: isolate;
+        }
+        .fude-aura-compact .fude-aura-cloud {
+          width: 112%;
+          left: -6%;
+          opacity: .16;
+          filter: blur(6px);
+          animation: none;
+        }
+        .fude-aura-compact .fude-aura-cloud-secondary,
+        .fude-aura-compact .fude-aura-flare,
+        .fude-aura-compact .fude-aura-surge,
+        .fude-aura-compact .fude-aura-shard,
+        .fude-aura-compact .fude-mythic-rays,
+        .fude-aura-compact .fude-aura-particle-three,
+        .fude-aura-compact .fude-aura-particle-four,
+        .fude-aura-compact .fude-aura-particle-five,
+        .fude-aura-compact .fude-aura-particle-six,
+        .fude-aura-compact .fude-aura-particle-seven,
+        .fude-aura-compact .fude-aura-glint,
+        .fude-aura-compact .fude-legendary-lightning {
+          display: none;
+        }
+        .fude-aura-compact .fude-aura-particle {
+          width: 1.5px;
+          height: 1.5px;
+          box-shadow: 0 0 3px 1px var(--aura-color);
+          animation: none;
+          opacity: .45;
+        }
+        .fude-aura-compact .fude-aura-particle-one {
+          left: 9%;
+          top: 48%;
+        }
+        .fude-aura-compact .fude-aura-particle-two {
+          right: 9%;
+          top: 34%;
         }
         .fude-aura-cloud {
           width: 88%;
