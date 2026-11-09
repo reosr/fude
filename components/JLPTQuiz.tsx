@@ -1,3 +1,4 @@
+
 "use client";
 
 import {
@@ -20,9 +21,6 @@ import {
   AlertTriangle,
 } from "lucide-react";
 
-import { syncNewCollectionUnlocks } from "../lib/profile-collections";
-import jlptData from "../data/jlpt.json";
-
 interface Question {
   question: string;
   options: string[];
@@ -35,6 +33,8 @@ interface Question {
 interface JLPTQuizProps {
   testSet: any;
   onBack: () => void;
+  level: string;
+  levelSetIds: string[];
 }
 
 interface SavedQuizResult {
@@ -118,40 +118,26 @@ function isSavedSetCompleted(setId: string): boolean {
   }
 }
 
-function awardLevelCompletionIfReady(level: string) {
-  if (!level) return;
+function awardLevelCompletionIfReady(
+  level: string,
+  levelSetIds: string[]
+) {
+  if (!level || levelSetIds.length === 0) return;
 
-  try {
-    const levelData = (jlptData as any[]).find(
-      (item) => String(item.level).toUpperCase() === level
-    );
+  const allCompleted = levelSetIds.every((id) =>
+    isSavedSetCompleted(id)
+  );
 
-    const sets = Array.isArray(levelData?.sets)
-      ? levelData.sets
-      : [];
-
-    // Level yang belum punya set tidak boleh dianggap selesai.
-    if (sets.length === 0) return;
-
-    const allCompleted = sets.every(
-      (set: any) =>
-        set?.id && isSavedSetCompleted(String(set.id))
-    );
-
-    if (allCompleted) {
-      awardJlptLevelCompletionOnce(level);
-    }
-  } catch (error) {
-    console.error(
-      "Gagal memeriksa penyelesaian level JLPT:",
-      error
-    );
+  if (allCompleted) {
+    awardJlptLevelCompletionOnce(level);
   }
 }
 
 export default function JLPTQuiz({
   testSet,
   onBack,
+  level,
+  levelSetIds,
 }: JLPTQuizProps) {
   const [activeSection, setActiveSection] =
     useState<string>("vocab");
@@ -164,9 +150,6 @@ export default function JLPTQuiz({
 
   const [isFinished, setIsFinished] = useState(false);
   const [isPerfect, setIsPerfect] = useState(false);
-
-  // Menandakan set ini pernah diselesaikan, meskipun nilainya
-  // belum sempurna dan pengguna masih boleh mengulang.
   const [completedOnce, setCompletedOnce] = useState(false);
 
   const [showReview, setShowReview] = useState(false);
@@ -174,7 +157,7 @@ export default function JLPTQuiz({
   const [showConfirm, setShowConfirm] = useState(false);
 
   const storageKey = `jlpt_result_${testSet.id}`;
-  const currentLevel = getJlptLevel(testSet);
+  const currentLevel = level || getJlptLevel(testSet);
 
   // ==========================================
   // LOAD HASIL SEBELUMNYA
@@ -204,9 +187,6 @@ export default function JLPTQuiz({
           testSet.sections
         );
 
-        // Status sempurna juga diperiksa dari jawaban.
-        // Jadi hasil lama yang belum memiliki properti isPerfect
-        // tetap terkunci bila memang mendapat nilai 100%.
         const wasPerfect =
           parsed.isPerfect === true ||
           (wasFinished && score.isPerfect);
@@ -220,14 +200,16 @@ export default function JLPTQuiz({
 
         setCompletedOnce(wasCompleted);
 
-        // Migrasi reward untuk hasil sempurna yang diperoleh
-        // sebelum sistem token JLPT ini dipasang.
+        // Migrasi reward untuk hasil sempurna dari sistem lama.
         if (wasPerfect) {
           awardJlptPerfectRewardOnce(testSet.id);
         }
 
         if (wasCompleted) {
-          awardLevelCompletionIfReady(currentLevel);
+          awardLevelCompletionIfReady(
+            currentLevel,
+            levelSetIds
+          );
         }
       } catch (error) {
         console.error("Gagal load data ujian JLPT:", error);
@@ -245,32 +227,7 @@ export default function JLPTQuiz({
     setCurrentIndex(0);
 
     setIsLoaded(true);
-  }, [storageKey, testSet, currentLevel]);
-
-  // ==========================================
-  // SIMPAN HASIL UJIAN
-  // ==========================================
-  useEffect(() => {
-    if (!isFinished || !isLoaded) return;
-
-    localStorage.setItem(
-      storageKey,
-      JSON.stringify({
-        answers: userAnswers,
-        isFinished: true,
-        isPerfect,
-        completedOnce: true,
-      })
-    );
-
-    syncNewCollectionUnlocks();
-  }, [
-    isFinished,
-    userAnswers,
-    isPerfect,
-    storageKey,
-    isLoaded,
-  ]);
+  }, [storageKey, testSet, currentLevel, levelSetIds]);
 
   // ==========================================
   // RESET / ULANGI UJIAN
@@ -279,24 +236,41 @@ export default function JLPTQuiz({
     // Set sempurna tidak boleh diulang.
     if (isPerfect) return;
 
+    let previouslyCompleted = completedOnce;
+
+    try {
+      const saved = localStorage.getItem(storageKey);
+
+      if (saved) {
+        const parsed: SavedQuizResult = JSON.parse(saved);
+
+        previouslyCompleted =
+          previouslyCompleted ||
+          parsed.completedOnce === true ||
+          parsed.isFinished === true ||
+          parsed.isPerfect === true;
+      }
+    } catch {
+      // Abaikan data lama yang tidak valid.
+    }
+
     const emptyAnswers = createEmptyAnswers();
 
-    // Jangan hapus seluruh data.
-    // completedOnce tetap disimpan agar riwayat penyelesaian
-    // tidak hilang ketika pengguna mengulang ujian.
+    // Riwayat penyelesaian tetap dipertahankan.
     localStorage.setItem(
       storageKey,
       JSON.stringify({
         answers: emptyAnswers,
         isFinished: false,
         isPerfect: false,
-        completedOnce,
+        completedOnce: previouslyCompleted,
       })
     );
 
     setUserAnswers(emptyAnswers);
     setIsFinished(false);
     setIsPerfect(false);
+    setCompletedOnce(previouslyCompleted);
     setShowReview(false);
     setActiveSection("vocab");
     setCurrentIndex(0);
@@ -375,7 +349,6 @@ export default function JLPTQuiz({
     totalCorrect,
     totalQuestions,
     totalScorePercent,
-    isPerfect: currentAttemptIsPerfect,
   } = calculateQuizScore(userAnswers, testSet.sections);
 
   if (!isLoaded) return null;
@@ -853,9 +826,7 @@ export default function JLPTQuiz({
         )}
       </div>
 
-      {/* ========================================== */}
-      {/* MODAL KONFIRMASI SELESAI UJIAN             */}
-      {/* ========================================== */}
+      {/* MODAL KONFIRMASI SELESAI UJIAN */}
       {showConfirm && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
           <div
@@ -910,18 +881,15 @@ export default function JLPTQuiz({
                       ? JLPT_HIGH_SCORE_BONUS_XP
                       : 0);
 
-                  // EXP tetap diberikan sesuai sistem lama,
-                  // tetapi hanya satu kali untuk ID set ini.
+                  // EXP diberikan satu kali untuk ID set ini.
                   awardXpOnce(`jlpt:${testSet.id}`, earnedXp);
 
-                  // Setiap set hanya memberikan reward sempurna
-                  // satu kali, dan hanya jika semua soal benar.
+                  // Token hanya diberikan jika semua jawaban benar.
                   if (perfect) {
                     awardJlptPerfectRewardOnce(testSet.id);
                   }
 
-                  // Simpan hasil langsung sebelum memeriksa
-                  // apakah semua set di level ini sudah selesai.
+                  // Simpan hasil sebelum memeriksa bonus level.
                   const savedResult = {
                     answers: userAnswers,
                     isFinished: true,
@@ -939,9 +907,11 @@ export default function JLPTQuiz({
                   setShowConfirm(false);
                   setIsFinished(true);
 
-                  // Bonus level hanya diberikan jika seluruh
-                  // set yang terdaftar di level tersebut selesai.
-                  awardLevelCompletionIfReady(currentLevel);
+                  // Bonus level jika seluruh set pernah selesai.
+                  awardLevelCompletionIfReady(
+                    currentLevel,
+                    levelSetIds
+                  );
                 }}
                 className="flex-1 bg-[#C93438] text-white font-bold py-3 rounded-xl hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20"
               >

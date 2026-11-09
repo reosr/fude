@@ -91,7 +91,6 @@ export default function Sidebar() {
       setLevelInfo(getLevelInfo(xp));
     };
 
-    const levelInfo = getLevelInfo(totalXp);
 
     const refreshTokens = () => {
       setTokens(getFudeTokens());
