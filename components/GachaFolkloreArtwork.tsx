@@ -199,14 +199,62 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
         </linearGradient>
       </defs>
 
-      {/* One compact leaf-crest badge. The character, not the frame, carries the evolution. */}
-      <path d="M64 5 C75 15 91 13 101 25 C113 39 110 57 105 70 C101 88 84 107 64 121 C44 107 27 88 23 70 C18 57 15 39 27 25 C37 13 53 15 64 5Z"
-        fill={"url(#" + metal + ")"} stroke="#38553D" strokeWidth="2.5" strokeLinejoin="round"/>
-      <path d="M64 12 C75 21 88 20 96 30 C106 42 103 57 99 69 C94 85 79 101 64 112 C49 101 34 85 29 69 C25 57 22 42 32 30 C40 20 53 21 64 12Z"
-        fill={"url(#" + enamel + ")"} stroke="#F2F0D9" strokeWidth="1.8" strokeLinejoin="round"/>
-      <path d="M35 36 Q43 26 54 27 M74 27 Q86 26 94 36" fill="none" stroke="#FFFFFF" strokeWidth="1.8" opacity=".65" strokeLinecap="round"/>
-
-      {/* Each age has its own material story: seed husk, mossy sapling, ancient bark. */}
+      {/* The badge silhouette evolves with the spirit: split seed, young tree, ancient grove. */}
+      {level === 1 ? (
+        <g>
+          {/* Split seed shell: compact, tapered, and visibly open at the crown. */}
+          <path d="M64 5 C53 13 39 12 29 25 C17 41 22 58 29 73 C34 87 46 101 58 113 L64 105 L70 113 C82 101 94 87 99 73 C106 58 111 41 99 25 C89 12 75 13 64 5Z"
+            fill={"url(#" + metal + ")"} stroke="#38553D" strokeWidth="3" strokeLinejoin="round"/>
+          <path d="M64 13 C53 22 42 20 34 31 C25 43 30 59 36 72 C42 86 52 97 61 105 L64 96 L67 105 C76 97 86 86 92 72 C98 59 103 43 94 31 C86 20 75 22 64 13Z"
+            fill={"url(#" + enamel + ")"} stroke="#F2F0D9" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M63 14 Q50 24 47 40 Q43 56 54 72 M65 14 Q78 24 81 40 Q85 56 74 72"
+            fill="none" stroke="#E8C987" strokeWidth="2.2" strokeLinecap="round"/>
+          <path d="M34 77 Q43 88 56 98 M94 77 Q85 88 72 98" fill="none" stroke="#765638" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M42 33 Q31 25 25 31 M86 33 Q97 25 103 31" fill="none" stroke="#FFF4D4" strokeWidth="2" opacity=".8" strokeLinecap="round"/>
+          <path d="M64 12 Q57 4 58 0 M64 12 Q72 1 79 4" fill="none" stroke="#527A49" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M57 6 Q47 -1 43 7 Q49 16 62 14 M72 7 Q81 -1 87 6 Q82 16 66 14Z"
+            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="1.6" strokeLinejoin="round"/>
+          <path d="M64 5 Q64 10 64 15" stroke="#F7F8DC" strokeWidth="1.2" fill="none"/>
+          <g fill="#F5DEA0" stroke="#8A7048" strokeWidth=".8"><circle cx="37" cy="62" r="2.2"/><circle cx="91" cy="62" r="2.2"/><circle cx="47" cy="88" r="1.6"/><circle cx="81" cy="88" r="1.6"/></g>
+        </g>
+      ) : level === 2 ? (
+        <g>
+          {/* Sapling crest: a rising trunk, branching crown, and exposed young roots. */}
+          <path d="M64 4 C53 13 40 10 31 22 C20 36 25 50 15 60 C23 68 21 83 34 91 C40 105 53 110 64 120 C75 110 88 105 94 91 C107 83 105 68 113 60 C103 50 108 36 97 22 C88 10 75 13 64 4Z"
+            fill={"url(#" + metal + ")"} stroke="#38553D" strokeWidth="3" strokeLinejoin="round"/>
+          <path d="M64 12 C53 20 43 18 35 28 C27 39 33 52 23 61 C31 69 29 81 40 88 C47 100 56 106 64 113 C72 106 81 100 88 88 C99 81 97 69 105 61 C95 52 101 39 93 28 C85 18 75 20 64 12Z"
+            fill={"url(#" + enamel + ")"} stroke="#EAF0D5" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M64 104 C58 91 59 76 64 62 C69 76 70 91 64 104Z" fill={"url(#" + wood + ")"} stroke="#DCC69A" strokeWidth="1.4"/>
+          <path d="M64 67 C53 51 40 47 31 50 M64 67 C75 51 88 47 97 50 M64 52 C57 38 50 32 42 29 M64 52 C71 38 78 32 86 29"
+            fill="none" stroke="#76563B" strokeWidth="4" strokeLinecap="round"/>
+          <path d="M31 50 Q19 39 22 30 Q36 29 42 43 Q38 52 31 50Z M97 50 Q109 39 106 30 Q92 29 86 43 Q90 52 97 50Z M42 29 Q35 17 44 12 Q57 16 55 34Z M86 29 Q93 17 84 12 Q71 16 73 34Z"
+            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M64 102 Q51 108 43 116 M64 102 Q77 108 85 116 M64 103 L64 119"
+            fill="none" stroke="#76563B" strokeWidth="3.2" strokeLinecap="round"/>
+          <path d="M29 73 Q39 67 46 74 M99 73 Q89 67 82 74" fill="none" stroke="#C8DC91" strokeWidth="2" strokeLinecap="round"/>
+          <g fill="#F5DEA0"><circle cx="31" cy="58" r="2.2"/><circle cx="97" cy="58" r="2.2"/><circle cx="44" cy="91" r="1.8"/><circle cx="84" cy="91" r="1.8"/></g>
+        </g>
+      ) : (
+        <g>
+          {/* Ancient grove crest: broad old canopy, layered boughs, and a powerful root base. */}
+          <path d="M64 3 C53 13 42 7 32 15 C18 25 20 39 8 47 C16 59 7 72 17 82 C13 97 29 105 43 103 C49 115 58 117 64 125 C70 117 79 115 85 103 C99 105 115 97 111 82 C121 72 112 59 120 47 C108 39 110 25 96 15 C86 7 75 13 64 3Z"
+            fill={"url(#" + metal + ")"} stroke="#304D37" strokeWidth="3.2" strokeLinejoin="round"/>
+          <path d="M64 11 C53 20 44 14 35 22 C24 31 27 42 16 49 C25 59 17 71 25 80 C22 92 35 99 48 96 C53 108 59 111 64 118 C69 111 75 108 80 96 C93 99 106 92 103 80 C111 71 103 59 112 49 C101 42 104 31 93 22 C84 14 75 20 64 11Z"
+            fill={"url(#" + enamel + ")"} stroke="#EAF0D5" strokeWidth="1.9" strokeLinejoin="round"/>
+          <path d="M64 109 C53 92 53 70 64 49 C75 70 75 92 64 109Z" fill={"url(#" + wood + ")"} stroke="#E3D0A7" strokeWidth="1.7"/>
+          <path d="M64 65 C48 48 31 44 18 51 M64 65 C80 48 97 44 110 51 M64 48 C54 31 42 25 31 29 M64 48 C74 31 86 25 97 29 M64 37 L64 17"
+            fill="none" stroke="#624832" strokeWidth="5" strokeLinecap="round"/>
+          <path d="M18 51 Q3 38 11 25 Q29 22 37 43 Q31 54 18 51Z M110 51 Q125 38 117 25 Q99 22 91 43 Q97 54 110 51Z M31 29 Q18 12 32 7 Q50 10 49 34Z M97 29 Q110 12 96 7 Q78 10 79 34Z M64 17 Q51 1 41 10 Q44 28 64 34 Q84 28 87 10 Q77 1 64 17Z"
+            fill={"url(#" + leaf + ")"} stroke="#3E6240" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M64 104 Q48 108 35 121 M64 104 Q80 108 93 121 M64 105 L64 124 M49 99 Q40 111 25 111 M79 99 Q88 111 103 111"
+            fill="none" stroke="#604832" strokeWidth="5" strokeLinecap="round"/>
+          <path d="M28 68 Q39 60 48 69 M100 68 Q89 60 80 69 M36 85 Q45 78 52 86 M92 85 Q83 78 76 86"
+            fill="none" stroke="#C6D99A" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M34 38 Q42 31 49 38 M79 38 Q86 31 94 38" fill="none" stroke="#F4F2D8" strokeWidth="2" opacity=".8" strokeLinecap="round"/>
+          <g fill="#F5DEA0" stroke="#78915C" strokeWidth=".8"><circle cx="22" cy="62" r="2.5"/><circle cx="106" cy="62" r="2.5"/><circle cx="38" cy="96" r="2"/><circle cx="90" cy="96" r="2"/><circle cx="64" cy="23" r="2.2"/></g>
+        </g>
+      )}
+      
       {level === 1 ? (
         <g fill="#B98B52" stroke="#765638" strokeWidth="1.8" strokeLinejoin="round">
           <path d="M34 76 C20 66 21 48 31 43 C37 51 40 63 43 75Z"/>
