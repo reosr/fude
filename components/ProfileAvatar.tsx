@@ -935,12 +935,14 @@ export default function ProfileAvatar({
     ? {
         name: profileBadge.name,
         description: profileBadge.description,
+        icon: profileBadge.icon,
         tier: profileBadge.tier,
       }
     : gachaBadge
       ? {
           name: gachaBadge.name,
           description: gachaBadge.description ?? "Badge koleksi Gacha Fude.",
+          icon: gachaBadge.icon,
           tier: gachaBadge.rarity,
         }
       : undefined;
