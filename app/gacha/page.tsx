@@ -243,7 +243,8 @@ export default function GachaPage() {
       <button
         type="button"
         onClick={() => {
-          if (window.history.length > 1) router.back();
+          const historyIndex = window.history.state?.idx;
+          if (typeof historyIndex === "number" && historyIndex > 0) router.back();
           else router.push("/");
         }}
         className="mb-3 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-2 text-xs font-bold text-[#D8D1C5] backdrop-blur-md transition hover:bg-white/10 hover:text-white"
