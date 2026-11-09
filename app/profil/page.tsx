@@ -17,7 +17,6 @@ import {
   Trash2,
   Check,
   Coins,
-  Dices,
 } from "lucide-react";
 
 import { getProgress } from "../../lib/progress";
