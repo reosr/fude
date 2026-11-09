@@ -96,6 +96,7 @@ export default function Sidebar() {
 
     const refreshTokens = () => {
       setTokens(getFudeTokens());
+      syncNewCollectionUnlocks();
     };
 
     const handleCollectionUpdate = (event: Event) => {
