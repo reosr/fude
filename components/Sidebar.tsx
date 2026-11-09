@@ -190,6 +190,49 @@ export default function Sidebar() {
 
   return (
     <>
+      {/* HUD profil ringkas untuk mobile */}
+      <Link
+        href="/profil"
+        aria-label={`Profil ${profile.name}, level ${levelInfo.level}`}
+        className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[210px] items-center gap-2.5 rounded-2xl border border-[#B8860B]/35 bg-[#1A1918]/90 px-2.5 py-2 shadow-lg shadow-black/30 backdrop-blur-md transition-colors hover:bg-[#262523]"
+      >
+        <div className="shrink-0 pb-1">
+          <ProfileAvatar
+            avatar={profile.avatar}
+            photoSrc={photoSrc}
+            badgeId={profile.equippedBadgeId}
+            frameId={profile.equippedFrameId}
+            size={42}
+          />
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="max-w-[132px] truncate text-xs font-bold leading-tight text-[#EAE6DD]">
+            {profile.name}
+          </p>
+          <div className="mt-1.5 flex items-center justify-between gap-2">
+            <span className="text-[9px] font-bold tracking-wide text-[#D6AD4F]">
+              LV. {levelInfo.level}
+            </span>
+            <span className="text-[9px] tabular-nums text-[#A3A099]">
+              {levelInfo.currentExp}/{levelInfo.requiredExp} EXP
+            </span>
+          </div>
+          <div
+            className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-[#0D0C0B]"
+            role="progressbar"
+            aria-label="Experience menuju level berikutnya"
+            aria-valuenow={levelInfo.currentExp}
+            aria-valuemin={0}
+            aria-valuemax={levelInfo.requiredExp}
+          >
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-[#C93438] to-[#D6AD4F] transition-all duration-500"
+              style={{ width: `${levelInfo.progressPercent}%` }}
+            />
+          </div>
+        </div>
+      </Link>
+
       <aside className="hidden md:flex md:flex-col md:fixed md:inset-y-0 md:w-64 md:border-r md:border-[#33312E]/50 md:bg-[#1A1918]/80 md:backdrop-blur-xl z-40">
 
         {/* LOGO */}
