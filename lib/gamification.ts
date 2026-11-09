@@ -749,6 +749,33 @@ export function spendFudeTokensOnce(
   }
 }
 
+// Kembalikan Token untuk transaksi yang sudah tercatat sebagai spend.
+// ID refund unik memastikan pemanggilan ulang tidak menambah saldo dua kali.
+export function refundFudeTokensOnce(
+  actionId: string,
+  amount: number,
+  description: string
+): boolean {
+  if (typeof window === "undefined" || !actionId) return false;
+
+  initializeTokenEconomy();
+
+  if (!readTokenSpends().includes(actionId)) {
+    return false;
+  }
+
+  const refundId = `refund:${actionId}`;
+  if (readTokenRewards().includes(refundId)) {
+    return true;
+  }
+
+  return awardTokenRewardOnce(
+    refundId,
+    amount,
+    description
+  );
+}
+
 // =====================================================
 // EXP REWARD
 // =====================================================
