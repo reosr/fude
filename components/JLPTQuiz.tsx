@@ -38,6 +38,8 @@ interface JLPTQuizProps {
 
 interface SavedQuizResult {
   answers?: Record<string, Record<number, number>>;
+  activeSection?: string;
+  currentIndex?: number;
   isFinished?: boolean;
   isPerfect?: boolean;
   completedOnce?: boolean;
@@ -204,6 +206,26 @@ export default function JLPTQuiz({
 
         setUserAnswers(savedAnswers);
 
+        // Pulihkan posisi terakhir yang dibuka jika masih valid.
+        const savedSection = SECTIONS.find(
+          (section) =>
+            section.id === parsed.activeSection &&
+            (testSet.sections?.[section.id] || []).length > 0
+        );
+
+        const restoredSection = savedSection?.id || "vocab";
+        const restoredQuestions =
+          testSet.sections?.[restoredSection] || [];
+        const restoredIndex =
+          Number.isInteger(parsed.currentIndex) &&
+          parsed.currentIndex! >= 0 &&
+          parsed.currentIndex! < restoredQuestions.length
+            ? parsed.currentIndex!
+            : 0;
+
+        setActiveSection(restoredSection);
+        setCurrentIndex(restoredIndex);
+
         const score = calculateQuizScore(
           savedAnswers,
           testSet.sections
@@ -271,8 +293,11 @@ export default function JLPTQuiz({
 
     setShowReview(false);
     setShowConfirm(false);
-    setActiveSection("vocab");
-    setCurrentIndex(0);
+
+    if (!saved) {
+      setActiveSection("vocab");
+      setCurrentIndex(0);
+    }
 
     setIsLoaded(true);
   }, [storageKey, testSet, currentLevel, levelSetIds]);
@@ -323,6 +348,8 @@ export default function JLPTQuiz({
       storageKey,
       JSON.stringify({
         answers: emptyAnswers,
+        activeSection: "vocab",
+        currentIndex: 0,
         isFinished: false,
         isPerfect: false,
         completedOnce: previouslyCompleted,
@@ -346,9 +373,40 @@ export default function JLPTQuiz({
 
   const totalQuestionsInSection = currentQuestions.length;
 
+  // Simpan posisi terakhir agar ujian dapat dilanjutkan
+  // dari bagian dan nomor soal yang sama setelah halaman dibuka ulang.
   useEffect(() => {
-    setCurrentIndex(0);
-  }, [activeSection]);
+    if (!isLoaded || isFinished || isPerfect) return;
+
+    try {
+      const saved = localStorage.getItem(storageKey);
+      const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
+
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify({
+          ...parsed,
+          answers: userAnswers,
+          activeSection,
+          currentIndex,
+          isFinished: false,
+          isPerfect: false,
+          completedOnce,
+        })
+      );
+    } catch (error) {
+      console.error("Gagal menyimpan posisi ujian JLPT:", error);
+    }
+  }, [
+    isLoaded,
+    isFinished,
+    isPerfect,
+    storageKey,
+    userAnswers,
+    activeSection,
+    currentIndex,
+    completedOnce,
+  ]);
 
   const handleAnswer = (optIndex: number) => {
   if (isFinished || isPerfect) return;
@@ -367,6 +425,8 @@ export default function JLPTQuiz({
     storageKey,
     JSON.stringify({
       answers: updatedAnswers,
+      activeSection,
+      currentIndex,
       isFinished: false,
       isPerfect: false,
       completedOnce,
@@ -410,6 +470,7 @@ export default function JLPTQuiz({
       );
 
     if (nextSection) {
+      setCurrentIndex(0);
       setActiveSection(nextSection.id);
     } else {
       setShowConfirm(true);
@@ -783,7 +844,10 @@ export default function JLPTQuiz({
             return (
               <button
                 key={section.id}
-                onClick={() => setActiveSection(section.id)}
+                onClick={() => {
+                  setCurrentIndex(0);
+                  setActiveSection(section.id);
+                }}
                 className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
                   isActive
                     ? "bg-[#C93438] text-white shadow-lg"
