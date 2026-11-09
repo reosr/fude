@@ -2,6 +2,11 @@
 
 ## 2026-11-09
 
+### Badge catalog and visual direction
+- Rebalance the 300 badge catalog to 90 Common, 70 Uncommon, 55 Rare, 40 Epic, 25 Mythic, and 20 Legendary entries.
+- Keep all rarity tiers visually appealing; rarity controls scarcity and visual prestige, not baseline design quality.
+- Set the art direction toward polished 3D collectible-game artwork with a balanced mix of cute, cool, elegant, and playful designs for a broad audience.
+
 ### Badge artwork refinement
 - Expand the rarity-aware SVG medallion with layered metallic rims, engraved sigils, decorative ray systems, and more ornament layouts.
 - Derive the artwork composition from both rarity and catalog position so badge designs vary beyond a simple rarity palette swap.
@@ -23,7 +28,7 @@
 - Rename deity-based collection labels to folklore or nature-based alternatives and replace the yin-yang ornament with a geometric crest.
 
 ### Gacha foundation
-- Add a 300-entry badge catalog scaffold: 50 entries in each of the six rarities.
+- Add a 300-entry badge catalog with rarity-weighted distribution: Common 90, Uncommon 70, Rare 55, Epic 40, Mythic 25, Legendary 20.
 - Add transparent rarity rates that improve from N5 through N1.
 - Set summon costs to 1 token for 1x and 10 tokens for 10x.
 - Persist badge copies, NEW markers, and the latest 200 summon results in browser storage.
