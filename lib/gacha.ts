@@ -74,6 +74,7 @@ export type GachaOperationResult =
       reason:
         | "not-available"
         | "invalid-catalog"
+        | "invalid-count"
         | "insufficient-tokens"
         | "storage-error"
         | "not-enough-copies"
@@ -303,6 +304,10 @@ export function summonGacha(
     return { ok: false, reason: "invalid-catalog" };
   }
 
+  if (count !== 1 && count !== 10) {
+    return { ok: false, reason: "invalid-count" };
+  }
+
   const cost = count === 10 ? GACHA_TEN_COST : GACHA_SINGLE_COST;
   if (getFudeTokens() < cost) {
     return { ok: false, reason: "insufficient-tokens" };
@@ -409,7 +414,7 @@ export function evolveGachaBadge(
 
   if (!copies) return { ok: false, reason: "not-enough-copies" };
 
-  const levels: GachaEvolutionLevel[] = [0, 1, 2];
+  const levels: GachaEvolutionLevel[] = [2, 1, 0];
   const fromLevel = levels.find((level) => {
     const key = `level${level}` as keyof GachaBadgeCopies;
     const needed = level === 0 ? 10 : 3;
@@ -507,21 +512,21 @@ export function getGachaBadgeEvolutionProgress(
     };
   }
 
-  if (copies.level0 >= 10) {
-    return {
-      currentLevel: 0,
-      copiesOwned: copies.level0,
-      copiesRequired: 10,
-      canEvolve: true,
-    };
-  }
-
   if (copies.level3 > 0) {
     return {
       currentLevel: 3,
       copiesOwned: copies.level3,
       copiesRequired: 0,
       canEvolve: false,
+    };
+  }
+
+  if (copies.level0 >= 10) {
+    return {
+      currentLevel: 0,
+      copiesOwned: copies.level0,
+      copiesRequired: 10,
+      canEvolve: true,
     };
   }
 
