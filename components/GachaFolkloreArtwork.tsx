@@ -334,41 +334,53 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
         </g>
       ) : (
         <g>
-          {/* ADULT: a fully-awakened ancient tree spirit, with mature bark and lichen crown. */}
-          {/* Commanding stance: broad shoulders, crossed branch-arms, and planted roots. */}
-          <path d="M45 61 Q29 52 25 67 Q27 82 43 86 L52 77Z M83 61 Q99 52 103 67 Q101 82 85 86 L76 77Z"
-            fill="#76543A" stroke="#DCC69A" strokeWidth="1.8" strokeLinejoin="round"/>
-          <path d="M31 70 Q38 63 45 72 M97 70 Q90 63 83 72" fill="none" stroke="#B7D58A" strokeWidth="3.2" strokeLinecap="round"/>
-          <path d="M48 63 Q64 55 80 63 L84 91 Q79 103 64 104 Q49 103 44 91Z"
+          {/* ADULT: a composed ancient guardian, tall and grounded, with a clean heroic silhouette. */}
+          {/* A single sweeping branch mantle frames the head without crowding the face. */}
+          <path d="M46 42 Q28 33 24 20 Q39 19 51 32 M82 42 Q100 33 104 20 Q89 19 77 32"
+            fill="none" stroke="#4A6942" strokeWidth="5" strokeLinecap="round"/>
+          <path d="M27 22 Q20 12 29 8 Q43 10 49 30 Q38 32 27 22Z M101 22 Q108 12 99 8 Q85 10 79 30 Q90 32 101 22Z"
+            fill={"url(#" + leaf + ")"} stroke="#365B3B" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M64 32 Q51 17 56 7 Q68 8 68 28 Q78 13 89 17 Q88 31 69 38Z"
+            fill={"url(#" + leaf + ")"} stroke="#365B3B" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M57 24 Q61 16 64 12 M82 25 Q87 19 89 19" fill="none" stroke="#F4F4CE" strokeWidth="1.6" opacity=".9" strokeLinecap="round"/>
+
+          {/* Upright trunk body: broad mantle, tapered waist, and one hand resting on a living root-staff. */}
+          <path d="M45 65 Q34 59 30 69 L35 88 Q39 95 50 91 L55 78Z M83 65 Q94 59 98 69 L93 88 Q89 95 78 91 L73 78Z"
+            fill={"url(#" + wood + ")"} stroke="#D7C39A" strokeWidth="1.7" strokeLinejoin="round"/>
+          <path d="M48 62 Q64 54 80 62 L79 91 Q76 101 64 103 Q52 101 49 91Z"
             fill={"url(#" + wood + ")"} stroke="#E8D7B1" strokeWidth="2"/>
-          <path d="M54 67 Q64 72 74 67 M53 83 Q64 88 75 83" fill="none" stroke="#C89A67" strokeWidth="1.7" opacity=".8" strokeLinecap="round"/>
-          {/* Arms cross firmly over the chest instead of hanging at the sides. */}
-          <path d="M34 72 Q43 69 52 77 L75 87 Q82 90 78 96 Q74 100 68 95 L43 84 Q34 82 34 72Z"
-            fill="#806044" stroke="#DCC69A" strokeWidth="2" strokeLinejoin="round"/>
-          <path d="M94 72 Q85 69 76 77 L53 87 Q46 90 50 96 Q54 100 60 95 L85 84 Q94 82 94 72Z"
-            fill="#806044" stroke="#DCC69A" strokeWidth="2" strokeLinejoin="round"/>
-          <path d="M52 91 Q64 96 76 91" fill="none" stroke="#B7D58A" strokeWidth="2.4" strokeLinecap="round"/>
-          {/* Wide, grounded root-feet give the adult a stable silhouette. */}
-          <path d="M55 99 Q48 106 39 112 M73 99 Q80 106 89 112" fill="none" stroke="#76563B" strokeWidth="6" strokeLinecap="round"/>
-          <path d="M35 111 Q45 106 55 111 L58 117 Q45 121 32 117Z M73 111 Q83 106 93 111 L96 117 Q83 121 70 117Z"
-            fill="#806044" stroke="#E6D5B0" strokeWidth="1.2"/>
-          <path d="M64 28 C51 28 44 38 45 50 C46 62 54 68 64 68 C75 68 83 60 83 49 C84 37 76 28 64 28Z"
-            fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="2.2"/>
-          <path d="M47 39 Q34 22 24 28 Q24 43 43 49 M81 39 Q94 22 104 28 Q104 43 85 49"
-            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="2" strokeLinejoin="round"/>
-          <path d="M64 34 Q48 20 51 10 Q64 6 67 30 Q76 12 88 16 Q89 30 67 39Z"
-            fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="2" strokeLinejoin="round"/>
-          <path d="M49 34 Q40 19 34 14 M79 34 Q88 19 94 14" fill="none" stroke={"url(#" + wood + ")"} strokeWidth="4" strokeLinecap="round"/>
-          {/* Stern, self-assured gaze: alert eyes, decisive brows, no sorrowful droop. */}
-          <path d="M49 48 Q54 43 61 46 L61 51 Q55 54 50 51Z M67 46 Q74 43 79 48 L78 51 Q72 54 67 51Z"
-            fill="#F7F4DF" stroke="#40523E" strokeWidth="1.2" strokeLinejoin="round"/>
-          <path d="M53 47 Q57 45 60 48 L59 51 Q55 52 53 47Z M69 48 Q73 45 76 47 Q75 52 71 51Z" fill="#182A24"/>
-          <circle cx="56.5" cy="47.5" r="1" fill="#FFFFFF"/><circle cx="73" cy="47.5" r="1" fill="#FFFFFF"/>
-          <path d="M48 44 L61 42 M67 42 L80 44" fill="none" stroke="#493A2B" strokeWidth="3" strokeLinecap="round"/>
-          <path d="M58 60 Q64 59 70 60" fill="none" stroke="#5E452F" strokeWidth="2.4" strokeLinecap="round"/>
-          <path d="M64 68 L64 99" stroke="#C99A65" strokeWidth="2.3" strokeLinecap="round"/>
-          <path d="M58 75 Q64 79 70 75 M57 88 Q64 92 71 88" fill="none" stroke="#D8B27D" strokeWidth="1.4" opacity=".9"/>
-          <path d="M53 68 Q49 76 54 82 M75 68 Q79 76 74 82" fill="none" stroke="#C28E5D" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M53 67 Q64 72 75 67 M52 82 Q64 87 76 82 M55 94 Q64 98 73 94"
+            fill="none" stroke="#C99A68" strokeWidth="1.6" opacity=".9" strokeLinecap="round"/>
+          <path d="M57 62 Q60 69 58 77 M71 62 Q68 69 70 77" fill="none" stroke="#E7C995" strokeWidth="1.1" opacity=".8"/>
+
+          {/* Left arm rests firmly at the side; right hand holds a slim branch staff. */}
+          <path d="M37 70 Q29 76 33 88 Q36 93 42 89 L49 76Z"
+            fill="#76543A" stroke="#DCC69A" strokeWidth="1.7" strokeLinejoin="round"/>
+          <path d="M91 70 Q99 76 95 88 Q92 93 86 89 L79 76Z"
+            fill="#76543A" stroke="#DCC69A" strokeWidth="1.7" strokeLinejoin="round"/>
+          <path d="M98 47 Q103 65 99 82 Q98 95 104 111" fill="none" stroke="#493B2B" strokeWidth="4.5" strokeLinecap="round"/>
+          <path d="M98 49 Q88 43 87 34 M99 60 Q109 54 111 46" fill="none" stroke="#5F7F4B" strokeWidth="3.2" strokeLinecap="round"/>
+          <path d="M96 86 Q91 89 88 84 Q87 78 93 75 Q99 76 99 82Z"
+            fill="#8D6B47" stroke="#E3D0A7" strokeWidth="1.4"/>
+
+          {/* Long root-like legs and planted feet create a stable, deliberate stance. */}
+          <path d="M57 99 Q54 107 49 113 M71 99 Q74 107 79 113" fill="none" stroke="#604832" strokeWidth="6" strokeLinecap="round"/>
+          <path d="M43 112 Q49 107 57 111 L59 117 Q50 121 39 117Z M71 111 Q79 107 85 112 L89 117 Q78 121 69 117Z"
+            fill={"url(#" + wood + ")"} stroke="#E6D5B0" strokeWidth="1.4" strokeLinejoin="round"/>
+          <path d="M46 114 L55 113 M74 113 L83 114" stroke="#E6C995" strokeWidth="1.2" strokeLinecap="round"/>
+
+          {/* Mature face: level gaze, strong brow, and a firm neutral mouth. */}
+          <path d="M64 29 C51 29 44 39 45 51 C46 63 54 69 64 69 C75 69 83 61 83 50 C84 38 76 29 64 29Z"
+            fill={"url(#" + skin + ")"} stroke="#526B4A" strokeWidth="2.3"/>
+          <path d="M48 43 Q55 39 61 43 M67 43 Q74 39 80 43" fill="none" stroke="#493A2B" strokeWidth="3.2" strokeLinecap="round"/>
+          <path d="M49 49 Q55 44 61 48 L61 52 Q55 55 50 52Z M67 48 Q73 44 79 49 L78 52 Q72 55 67 52Z"
+            fill="#F7F4DF" stroke="#40523E" strokeWidth="1.1" strokeLinejoin="round"/>
+          <path d="M53 48 Q57 46 59 49 L58 52 Q54 53 53 48Z M70 49 Q74 46 76 48 Q75 53 71 52Z" fill="#172820"/>
+          <circle cx="56.5" cy="48" r="1" fill="#FFFFFF"/><circle cx="73" cy="48" r="1" fill="#FFFFFF"/>
+          <path d="M59 61 L69 61" stroke="#493A2B" strokeWidth="2.3" strokeLinecap="round"/>
+          <path d="M64 69 L64 98 M57 77 Q64 81 71 77 M56 89 Q64 93 72 89"
+            fill="none" stroke="#D6AE78" strokeWidth="1.5" opacity=".9" strokeLinecap="round"/>
+          <path d="M48 58 Q44 66 49 72 M80 58 Q84 66 79 72" fill="none" stroke="#B5C987" strokeWidth="2" strokeLinecap="round"/>
         </g>
       )}
 
