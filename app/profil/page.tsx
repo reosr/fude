@@ -239,6 +239,22 @@ export default function Profil() {
     };
   }, [photoSrc]);
 
+  useEffect(() => {
+    const modalOpen = collectionModalOpen || selectedItem !== null || isEditing;
+    if (!modalOpen) return;
+
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+    };
+  }, [collectionModalOpen, selectedItem, isEditing]);
+
+
   const levelInfo = getLevelInfo(totalXp);
   const safeBab = Math.min(51, Math.max(1, currentBab));
   const unlockedBab = Math.min(50, safeBab);
@@ -812,8 +828,8 @@ export default function Profil() {
       </section>
 
       {collectionModalOpen && (
-        <div className="fixed inset-0 z-[205] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6" onClick={() => setCollectionModalOpen(false)}>
-          <div role="dialog" aria-modal="true" aria-labelledby="collection-modal-title" onClick={(event) => event.stopPropagation()} className="flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-[#6B542F] bg-[#1B1917] shadow-2xl">
+        <div className="fixed inset-0 z-[205] flex items-center justify-center bg-[#08090D]/60 p-2 backdrop-blur-md sm:p-4" onClick={() => setCollectionModalOpen(false)}>
+          <div role="dialog" aria-modal="true" aria-labelledby="collection-modal-title" onClick={(event) => event.stopPropagation()} className="flex max-h-[92dvh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#17191D]/88 shadow-[0_24px_90px_rgba(0,0,0,0.55)] backdrop-blur-2xl">
             <div className="flex items-center justify-between gap-3 border-b border-[#38332B] p-4 sm:p-5">
               <div>
                 <h2 id="collection-modal-title" className="text-lg font-black text-[#F0E9D9]">{activeTab === "badges" ? "Semua Badge" : "Semua Frame"}</h2>
@@ -821,14 +837,14 @@ export default function Profil() {
               </div>
               <button onClick={() => setCollectionModalOpen(false)} aria-label="Tutup koleksi" className="rounded-lg bg-[#302B25] px-3 py-2 text-lg leading-none text-[#D8D1C5] hover:bg-[#40392F]">×</button>
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 sm:p-5">
               {activeTab === "badges" ? (
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                   {ALL_BADGES.map((badge) => {
                     const unlocked = COLLECTION_PREVIEW_MODE || unlockedBadgeIds.includes(badge.id);
                     const isNew = pendingIds.includes(`badge:${badge.id}`);
                     return (
-                      <button key={badge.id} onClick={() => { setCollectionModalOpen(false); openBadge(badge); }} className={`relative flex min-h-[125px] flex-col items-center justify-center rounded-xl border p-3 text-center ${unlocked ? "border-[#B8860B]/40 bg-[#262523]" : "border-[#33312E] bg-[#181716] opacity-60"}`}>
+                      <button key={badge.id} onClick={() => { setCollectionModalOpen(false); openBadge(badge); }} className={`relative flex min-h-[125px] flex-col items-center justify-center rounded-xl border p-3 text-center ${unlocked ? "border-white/15 bg-white/[0.06] shadow-lg shadow-black/20 backdrop-blur-md" : "border-white/10 bg-black/20 opacity-60"}`}>
                         {isNew && <span className="absolute right-2 top-2 rounded bg-[#C93438] px-1.5 py-1 text-[8px] font-black text-white">NEW</span>}
                         <div className={`mb-2 flex h-10 w-10 items-center justify-center rounded-full border text-xl ${unlocked ? TIER_STYLES[badge.tier] : "border-[#44413D] bg-[#33312E] grayscale"}`}>{unlocked ? badge.icon : <Lock size={16} />}</div>
                         <span className="text-[10px] font-bold leading-tight text-[#EAE6DD]">{badge.name}</span>
@@ -875,14 +891,14 @@ export default function Profil() {
       {/* MODAL DETAIL KOLEKSI */}
       {selectedItem && (
         <div
-          className="fixed inset-0 z-[210] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[210] flex items-center justify-center bg-[#08090D]/60 p-3 backdrop-blur-md sm:p-4"
           onClick={() => setSelectedItem(null)}
         >
           <div
             role="dialog"
             aria-modal="true"
             onClick={(event) => event.stopPropagation()}
-            className="w-full max-w-sm bg-[#1E1D1B] border border-[#44413D] rounded-2xl p-6 shadow-2xl"
+            className="w-full max-w-sm rounded-2xl border border-white/10 bg-[#17191D]/90 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.55)] backdrop-blur-2xl"
           >
             <div className="flex justify-end">
               <button
@@ -1002,7 +1018,7 @@ export default function Profil() {
       {/* MODAL EDIT NAMA DAN AVATAR */}
       {isEditing && (
         <div
-          className="fixed inset-0 z-[220] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 z-[220] flex items-center justify-center bg-[#08090D]/60 p-3 backdrop-blur-md sm:p-4"
           onClick={() => setIsEditing(false)}
         >
           <div
@@ -1010,7 +1026,7 @@ export default function Profil() {
             aria-modal="true"
             aria-labelledby="edit-profile-title"
             onClick={(event) => event.stopPropagation()}
-            className="w-full max-w-md bg-[#1E1D1B] border border-[#44413D] rounded-2xl p-6 shadow-2xl"
+            className="w-full max-w-md rounded-2xl border border-white/10 bg-[#17191D]/90 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.55)] backdrop-blur-2xl"
           >
             <div className="flex items-center justify-between mb-6">
               <h3
