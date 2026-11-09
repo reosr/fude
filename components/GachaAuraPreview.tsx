@@ -170,7 +170,15 @@ export default function GachaAuraPreview({
           left: -6%;
           opacity: .16;
           filter: blur(6px);
-          animation: none;
+          animation: compact-aura-breathe ${level === 2 ? "5.8s" : "4.8s"} ease-in-out infinite;
+        }
+        .fude-aura-compact.fude-aura-level-2 .fude-aura-cloud {
+          --compact-cloud-low: .07;
+          --compact-cloud-high: .16;
+        }
+        .fude-aura-compact.fude-aura-level-3 .fude-aura-cloud {
+          --compact-cloud-low: .1;
+          --compact-cloud-high: .23;
         }
         .fude-aura-compact .fude-aura-cloud-secondary,
         .fude-aura-compact .fude-aura-flare,
@@ -190,8 +198,14 @@ export default function GachaAuraPreview({
           width: 1.5px;
           height: 1.5px;
           box-shadow: 0 0 3px 1px var(--aura-color);
-          animation: none;
-          opacity: .45;
+          animation: compact-aura-particle ${level === 2 ? "7.2s" : "5.8s"} ease-in-out infinite;
+          opacity: 0;
+        }
+        .fude-aura-compact.fude-aura-level-2 .fude-aura-particle {
+          box-shadow: 0 0 3px 1px var(--aura-color);
+        }
+        .fude-aura-compact.fude-aura-level-3 .fude-aura-particle {
+          box-shadow: 0 0 4px 1.5px var(--aura-color);
         }
         .fude-aura-compact .fude-aura-particle-one {
           left: 9%;
@@ -303,6 +317,15 @@ export default function GachaAuraPreview({
         .fude-aura-legendary .fude-aura-surge { opacity: .28; filter: blur(5px); }
         .fude-aura-legendary .fude-aura-particle { box-shadow: 0 0 6px 2px #FF263F; }
         .fude-aura-epic .fude-aura-surge { opacity: .7; }
+        @keyframes compact-aura-breathe {
+          0%, 100% { transform: translateY(-50%) scale(.9); opacity: var(--compact-cloud-low); }
+          50% { transform: translateY(-50%) scale(1.06); opacity: var(--compact-cloud-high); }
+        }
+        @keyframes compact-aura-particle {
+          0%, 100% { transform: translateY(4px) scale(.65); opacity: 0; }
+          35%, 68% { opacity: .48; }
+          50% { transform: translateY(-7px) scale(1.08); }
+        }
         @keyframes mythic-radiance {
           0%, 100% { opacity: .42; transform: scale(.9) rotate(-5deg); }
           50% { opacity: 1; transform: scale(1.08) rotate(5deg); }
