@@ -27,7 +27,7 @@
 ### Badge artwork refinement
 - Expand the rarity-aware SVG medallion with layered metallic rims, engraved sigils, decorative ray systems, and more ornament layouts.
 - Derive the artwork composition from both rarity and catalog position so badge designs vary beyond a simple rarity palette swap.
-- Preserve the four evolution tiers, unique SVG gradient IDs, responsive sizing, and accessible badge labels.
+- Preserve unique SVG gradient IDs, responsive sizing, and accessible badge labels. The former Level 0–3 procedural stages were later replaced by the Level 1–3 progression.
 - This is an improved procedural art foundation; the 300 individually art-directed badge designs remain a future visual-production task.
 
 
@@ -49,7 +49,7 @@
 - Add transparent rarity rates that improve from N5 through N1.
 - Set summon costs to 1 token for 1x and 10 tokens for 10x.
 - Persist badge copies, NEW markers, and the latest 200 summon results in browser storage.
-- Add badge evolution: 10 Level 0 copies create Level 1; 3 Level 1 create Level 2; 3 Level 2 create Level 3.
+- Original evolution rule (superseded): 10 Level 0 copies created Level 1; 3 Level 1 created Level 2; 3 Level 2 created Level 3.
 - Exclude Level 3 badges from future summon pools. If every badge in a rolled rarity is maxed, grant 1 token compensation for that pull.
 - Add rarity filters, search, evolution progress, profile equipping, summon reveal animation, and collection progress on the profile page.
 - Add rarity-aware SVG badge artwork with distinct crest/archetype combinations and additional visual details at higher evolution levels.
