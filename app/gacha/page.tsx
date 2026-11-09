@@ -134,8 +134,8 @@ export default function GachaPage() {
     [inventory]
   );
 
-  const uniqueOwned = Object.keys(inventory.badges).filter(
-    (id) => getTotalGachaBadgeCopies(inventory.badges[id]) > 0
+  const uniqueOwned = GACHA_BADGES.filter(
+    (badge) => getTotalGachaBadgeCopies(copiesFor(inventory, badge.id)) > 0
   ).length;
 
   const rates = getGachaRates();
@@ -353,7 +353,10 @@ export default function GachaPage() {
               </h2>
             </div>
             <button
-              onClick={() => setLatestResults([])}
+              onClick={() => {
+                setLatestResults([]);
+                setLatestCompensations([]);
+              }}
               className="rounded-lg bg-[#33312E] px-3 py-2 text-xs font-bold text-[#D8D1C5] hover:bg-[#44413D]"
             >
               Tutup
