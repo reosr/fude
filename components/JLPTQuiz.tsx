@@ -473,7 +473,7 @@ export default function JLPTQuiz({
       const saved = localStorage.getItem(storageKey);
       const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
 
-      const progressSaved = persistQuizResult(storageKey, {
+      persistQuizResult(storageKey, {
         ...parsed,
         answers: userAnswers,
         activeSection,
@@ -482,9 +482,6 @@ export default function JLPTQuiz({
         isPerfect: false,
         completedOnce,
       });
-
-      if (progressSaved) setStorageError(null);
-      else setStorageError("Progress ujian gagal disimpan. Periksa ruang penyimpanan browser.");
     } catch (error) {
       console.error("Gagal menyimpan posisi ujian JLPT:", error);
     }
