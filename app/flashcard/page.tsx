@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useLayoutEffect, type ReactNode } from "react";
 import { getUnlockedVocab } from "../../lib/vocab";
 import { getProgress } from "../../lib/progress";
 import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
@@ -46,6 +46,48 @@ const bgImages = [
   "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?q=75&w=400&auto=format&fit=crop"
 ];
 
+
+// Mengecilkan isi (mis. kotak stroke) otomatis supaya muat di ruang yang tersedia.
+// Di ruang yang cukup (desktop) skalanya tetap 1, jadi tampilan tidak berubah.
+function ScaleToFit({ children, className = "" }: { children: ReactNode; className?: string }) {
+  const boxRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useLayoutEffect(() => {
+    const box = boxRef.current;
+    const inner = innerRef.current;
+    if (!box || !inner) return;
+
+    const fit = () => {
+      const bw = box.clientWidth;
+      const bh = box.clientHeight;
+      const iw = inner.offsetWidth;
+      const ih = inner.offsetHeight;
+      if (!bw || !bh || !iw || !ih) return;
+      const next = Math.min(1, bw / iw, bh / ih);
+      setScale((prev) => (Math.abs(prev - next) < 0.01 ? prev : next));
+    };
+
+    fit();
+    const ro = new ResizeObserver(fit);
+    ro.observe(box);
+    ro.observe(inner); // KanjiStroke dimuat belakangan -> ukur ulang
+    return () => ro.disconnect();
+  }, []);
+
+  return (
+    <div ref={boxRef} className={`flex items-center justify-center w-full min-h-0 ${className}`}>
+      <div
+        ref={innerRef}
+        className="shrink-0 w-max"
+        style={{ transform: scale < 1 ? `scale(${scale})` : undefined }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
 
 export default function Flashcard() {
   const [deck, setDeck] = useState<any[]>([]);
@@ -249,10 +291,10 @@ useEffect(() => {
 
   return (
     <div className="space-y-2 md:space-y-6 pb-6 md:pb-10 flex flex-col items-center relative overflow-hidden">
-      <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative z-20">
+      <div className="w-full flex flex-row justify-between items-center gap-3 relative z-20">
         <div>
-          <h2 className="text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
-          <p className="text-[#A3A099] text-sm mt-1">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
+          <p className="hidden sm:block text-[#A3A099] text-sm mt-1">
             Latihan mengingat kosakata. Klik kartu untuk melihat arti.
           </p>
         </div>
@@ -260,10 +302,10 @@ useEffect(() => {
         {memorized.length > 0 && (
           <button 
             onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-colors bg-[#1E1D1B] text-[#A3A099] border border-[#33312E] hover:text-[#EAE6DD] hover:border-[#C93438]"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs font-bold transition-colors bg-[#1E1D1B] text-[#A3A099] border border-[#33312E] hover:text-[#EAE6DD] hover:border-[#C93438]"
           >
             <BookOpen size={16} />
-            Daftar Hafalan ({memorized.length})
+            <span><span className="hidden sm:inline">Daftar Hafalan </span>({memorized.length})</span>
           </button>
         )}
       </div>
@@ -274,7 +316,7 @@ useEffect(() => {
       </div>
 
       <div 
-        className="relative w-full max-w-md h-[clamp(270px,40svh,360px)] sm:h-[min(420px,52svh)] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
+        className="relative w-full max-w-md h-[clamp(300px,calc(100svh_-_384px),460px)] sm:h-[min(420px,52svh)] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -320,7 +362,7 @@ useEffect(() => {
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,29,27,0.75)_0%,rgba(30,29,27,0.45)_45%,transparent_75%)]"></div>
                   </div>
 
-                  <span className="text-[10px] font-bold text-[#A3A099] absolute top-6 bg-[#33312E]/80 px-3 py-1 rounded-full z-10 border border-[#33312E]">TEKAN UNTUK BALIK</span>
+                  <span className="text-[10px] font-bold text-[#A3A099] absolute top-4 md:top-6 bg-[#33312E]/80 px-3 py-1 rounded-full z-10 border border-[#33312E]">TEKAN UNTUK BALIK</span>
                   <h3 className="relative z-10 w-full px-6">
                     <FitText
                       maxSize={72}
@@ -349,25 +391,26 @@ useEffect(() => {
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,25,24,0.75)_0%,rgba(26,25,24,0.45)_45%,transparent_75%)]"></div>
                   </div>
 
-                  <div className="relative z-10 flex flex-col items-center justify-center w-full h-full min-h-0 py-1">
-                    <div className="text-center w-full mb-2 md:mb-4 shrink-0">
+                  <div className="relative z-10 flex flex-col items-center justify-start md:justify-center w-full h-full min-h-0">
+                    <div className="text-center w-full mb-1 md:mb-4 shrink-0">
                       {verbType && (
-                        <span className={`inline-block mb-3 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
+                        <span className={`inline-block mb-1.5 md:mb-3 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
                           {verbType}
                         </span>
                       )}
-                      <div className="mb-1">
+                      <div className="mb-0.5 md:mb-1">
                         <FitText maxSize={24} minSize={12} className="text-[#EAE6DD] font-mincho drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
                           {card.kana}
                         </FitText>
                       </div>
-                      <p className="text-sm text-[#A3A099] mb-2 break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">({card.romaji})</p>
-                      <p className="text-2xl sm:text-3xl font-bold text-[#C93438] mt-2 break-words leading-snug drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]">{card.meaning}</p>
+                      <p className="text-xs md:text-sm text-[#A3A099] mb-1 md:mb-2 break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">({card.romaji})</p>
+                      <p className="text-xl sm:text-3xl font-bold text-[#C93438] mt-1 md:mt-2 break-words leading-snug drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]">{card.meaning}</p>
                     </div>
 
-                    <div className="w-full flex justify-center mb-1 md:mb-4 shrink-0">
+                    {/* Area stroke: di HP mengisi sisa ruang & mengecil otomatis, di desktop tetap seperti semula */}
+                    <ScaleToFit className="flex-1 md:flex-none mb-1 md:mb-4">
                       {isTop && isWindowFocused ? <KanjiStroke kanji={card.kanji} /> : <div className="h-[76px] md:h-[120px]"></div>}
-                    </div>
+                    </ScaleToFit>
 
                     <p className="text-[9px] md:text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-2 md:px-3 py-1 rounded-full mt-1 md:mt-2 border border-[#33312E] shrink-0">
                       TEKAN DI LUAR KANJI UNTUK KEMBALI
@@ -390,7 +433,55 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-4 sm:gap-6 md:justify-between md:gap-0 w-full max-w-md mt-5 md:mt-12 relative z-20 shrink-0">
+      {/* KONTROL — HP: satu bar dengan target sentuh besar + label */}
+      <div className="md:hidden w-full max-w-md mt-9 relative z-20 shrink-0">
+        <div className="grid grid-cols-5 gap-1.5 bg-[#1E1D1B]/90 backdrop-blur-md border border-[#33312E] rounded-2xl p-1.5 shadow-lg">
+          <button
+            onClick={handlePrev}
+            disabled={isAdvancing}
+            className="flex flex-col items-center justify-center gap-1 h-14 rounded-xl text-[#EAE6DD] active:bg-[#262523] active:scale-95 transition disabled:opacity-40"
+          >
+            <ArrowLeft size={20} />
+            <span className="text-[10px] font-semibold opacity-70">Mundur</span>
+          </button>
+
+          <button
+            onClick={() => setIsAutoPlay(!isAutoPlay)}
+            className={`flex flex-col items-center justify-center gap-1 h-14 rounded-xl active:scale-95 transition ${isAutoPlay ? "bg-[#B8860B]/15 text-[#B8860B]" : "text-[#A3A099] active:bg-[#262523]"}`}
+          >
+            {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
+            <span className="text-[10px] font-semibold">{isAutoPlay ? "Jeda" : "Putar"}</span>
+          </button>
+
+          <button
+            onClick={() => setIsFlipped(!isFlipped)}
+            className="flex flex-col items-center justify-center gap-1 h-14 rounded-xl bg-[#C93438] text-white shadow-lg shadow-[#C93438]/20 active:bg-[#B02A2E] active:scale-95 transition"
+          >
+            <RotateCcw size={20} />
+            <span className="text-[10px] font-semibold">Balik</span>
+          </button>
+
+          <button
+            onClick={toggleMemorized}
+            className={`flex flex-col items-center justify-center gap-1 h-14 rounded-xl active:scale-95 transition ${isMemorized ? "bg-green-600/15 text-green-500" : "text-[#A3A099] active:bg-[#262523]"}`}
+          >
+            <CheckCircle2 size={20} />
+            <span className="text-[10px] font-semibold">{isMemorized ? "Dihafal" : "Hafal"}</span>
+          </button>
+
+          <button
+            onClick={handleNext}
+            disabled={isAdvancing}
+            className="flex flex-col items-center justify-center gap-1 h-14 rounded-xl text-[#EAE6DD] active:bg-[#262523] active:scale-95 transition disabled:opacity-40"
+          >
+            <ArrowRight size={20} />
+            <span className="text-[10px] font-semibold opacity-70">Lanjut</span>
+          </button>
+        </div>
+      </div>
+
+      {/* KONTROL — Desktop (tampilan lama) */}
+      <div className="hidden md:flex items-center justify-between w-full max-w-md mt-12 relative z-20 shrink-0">
         <button onClick={handlePrev} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowLeft size={19} className="md:!h-6 md:!w-6" />
         </button>
