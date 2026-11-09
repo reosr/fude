@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useId } from "react";
 import type { GachaBadgeDefinition, GachaEvolutionLevel } from "@/lib/gacha";
 
@@ -79,6 +80,20 @@ export default function GachaBadgeArtwork({
   const gradientId = `gacha-gradient-${uniqueId}`;
   const glowId = `gacha-glow-${uniqueId}`;
   const ornamentPoints = ORNAMENT_LAYOUTS[layoutIndex];
+  const artworkSrc = badge.artwork?.[level];
+
+  if (artworkSrc) {
+    return (
+      <Image
+        src={artworkSrc}
+        alt={`${badge.name}, Level ${level}`}
+        width={size}
+        height={size}
+        unoptimized
+        className="shrink-0 object-contain drop-shadow-[0_5px_12px_rgba(0,0,0,0.4)]"
+      />
+    );
+  }
 
   return (
     <svg
