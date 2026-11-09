@@ -750,8 +750,8 @@ export default function GachaPage() {
                     const copies = copiesFor(inventory, badge.id);
                     const owned = getTotalGachaBadgeCopies(copies) > 0;
                     return (
-                      <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]} ${owned ? "" : "opacity-65"}`}>
-                        <div className={`flex justify-center ${owned ? "" : "grayscale"}`}>
+                      <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
+                        <div className="flex justify-center">
                           <div className="mx-auto w-[76px]">
                             {copies.level3 > 0 ? (
                               <GachaAuraPreview badge={badge} level={3} size={62} />
@@ -764,7 +764,7 @@ export default function GachaPage() {
                         </div>
                         <p className="mt-2 line-clamp-2 min-h-7 text-[10px] font-bold text-[#F0E9D9]">{badge.name}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
-                        <p className="mt-1 text-[9px] font-bold text-[#D6AD4F]">{owned ? `Dimiliki · ×${getTotalGachaBadgeCopies(copies)}` : "Belum dimiliki"}</p>
+                        <p className="mt-1 text-[9px] font-bold text-[#D6AD4F]">{owned ? `Dimiliki · ×${getTotalGachaBadgeCopies(copies)}` : "Preview · belum dimiliki"}</p>
                       </div>
                     );
                   })}
