@@ -549,21 +549,21 @@ export function getGachaBadgeEvolutionProgress(
     };
   }
 
-  if (copies.level3 > 0) {
-    return {
-      currentLevel: 3,
-      copiesOwned: copies.level3,
-      copiesRequired: 0,
-      canEvolve: false,
-    };
-  }
-
   if (copies.level0 >= 10) {
     return {
       currentLevel: 0,
       copiesOwned: copies.level0,
       copiesRequired: 10,
       canEvolve: true,
+    };
+  }
+
+  if (copies.level3 > 0) {
+    return {
+      currentLevel: 3,
+      copiesOwned: copies.level3,
+      copiesRequired: 0,
+      canEvolve: false,
     };
   }
 
