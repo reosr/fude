@@ -141,18 +141,18 @@ function Character({ id, level, p }: { id: FolkloreId; level: 1 | 2 | 3; p: type
 export default function GachaFolkloreArtwork({ id, level, size = 76 }: { id: FolkloreId; level: 1 | 2 | 3; size?: number }) {
   const uid = useId().replace(/:/g, "");
   const p = PALETTES[id];
-  const gradient = \`folklore-bg-\${uid}\`;
-  const rim = \`folklore-rim-\${uid}\`;
+  const gradient = `folklore-bg-${uid}`;
+  const rim = `folklore-rim-${uid}`;
   return (
-    <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label={\`\${id}, Level \${level}\`} className="shrink-0 overflow-visible drop-shadow-[0_7px_11px_rgba(0,0,0,0.42)]">
+    <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label={`${id}, Level ${level}`} className="shrink-0 overflow-visible drop-shadow-[0_7px_11px_rgba(0,0,0,0.42)]">
       <defs>
         <radialGradient id={gradient}><stop stopColor={p.light} stopOpacity=".32"/><stop offset="1" stopColor={p.dark} stopOpacity="0"/></radialGradient>
         <linearGradient id={rim} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFF8E5"/><stop offset=".42" stopColor={p.accent}/><stop offset="1" stopColor={p.dark}/></linearGradient>
       </defs>
-      <circle cx="64" cy="64" r={level === 1 ? 58 : level === 2 ? 61 : 63} fill={\`url(#\${gradient})\`}/>
+      <circle cx="64" cy="64" r={level === 1 ? 58 : level === 2 ? 61 : 63} fill={`url(#${gradient})`}/>
       {level >= 2 && <circle cx="64" cy="64" r="57" fill="none" stroke={p.light} strokeWidth="1.5" strokeDasharray={level === 2 ? "3 5" : "1.5 3"} opacity=".8"/>}
       {level === 3 && <circle cx="64" cy="64" r="51" fill="none" stroke={p.accent} strokeWidth="1.5" opacity=".85"/>}
-      <path d={level === 1 ? "M64 7 L70 15 L82 12 L86 23 L98 27 L96 40 L108 48 L103 60 L111 72 L101 82 L101 96 L86 99 L78 111 L64 105 L50 111 L42 99 L27 96 L27 82 L17 72 L25 60 L20 48 L32 40 L30 27 L42 23 L46 12 L58 15Z" : level === 2 ? "M64 3 L73 14 L89 9 L94 25 L110 32 L105 48 L119 61 L109 75 L112 92 L94 99 L84 116 L64 108 L44 116 L34 99 L16 92 L19 75 L9 61 L23 48 L18 32 L34 25 L39 9 L55 14Z" : "M64 1 L76 13 L94 6 L100 25 L119 34 L112 53 L126 67 L113 83 L116 103 L95 108 L83 126 L64 116 L45 126 L33 108 L12 103 L15 83 L2 67 L16 53 L9 34 L28 25 L34 6 L52 13Z"} fill="#171B1B" stroke={\`url(#\${rim})\`} strokeWidth={level === 1 ? 3 : 3.5} strokeLinejoin="round"/>
+      <path d={level === 1 ? "M64 7 L70 15 L82 12 L86 23 L98 27 L96 40 L108 48 L103 60 L111 72 L101 82 L101 96 L86 99 L78 111 L64 105 L50 111 L42 99 L27 96 L27 82 L17 72 L25 60 L20 48 L32 40 L30 27 L42 23 L46 12 L58 15Z" : level === 2 ? "M64 3 L73 14 L89 9 L94 25 L110 32 L105 48 L119 61 L109 75 L112 92 L94 99 L84 116 L64 108 L44 116 L34 99 L16 92 L19 75 L9 61 L23 48 L18 32 L34 25 L39 9 L55 14Z" : "M64 1 L76 13 L94 6 L100 25 L119 34 L112 53 L126 67 L113 83 L116 103 L95 108 L83 126 L64 116 L45 126 L33 108 L12 103 L15 83 L2 67 L16 53 L9 34 L28 25 L34 6 L52 13Z"} fill="#171B1B" stroke={`url(#${rim})`} strokeWidth={level === 1 ? 3 : 3.5} strokeLinejoin="round"/>
       <path d={level === 1 ? "M64 12 L72 21 L86 18 L90 30 L102 37 L96 51 L105 64 L96 77 L96 91 L81 94 L74 105 L64 99 L54 105 L47 94 L32 91 L32 77 L23 64 L32 51 L26 37 L38 30 L42 18 L56 21Z" : level === 2 ? "M64 9 L74 21 L88 16 L94 32 L107 39 L101 54 L112 65 L101 80 L104 93 L88 99 L79 108 L64 102 L49 108 L40 99 L24 93 L27 80 L16 65 L27 54 L21 39 L34 32 L40 16 L54 21Z" : "M64 7 L77 19 L91 13 L98 30 L112 39 L105 55 L117 68 L104 83 L107 98 L89 104 L80 116 L64 108 L48 116 L39 104 L21 98 L24 83 L11 68 L23 55 L16 39 L30 30 L37 13 L51 19Z"} fill={p.dark} stroke={p.light} strokeWidth="1.4" strokeLinejoin="round"/>
       <Character id={id} level={level} p={p}/>
       {level >= 2 && <g fill={p.accent}><path d="M64 5 L67 12 L74 15 L67 18 L64 25 L61 18 L54 15 L61 12Z"/><circle cx="17" cy="64" r="2.5"/><circle cx="111" cy="64" r="2.5"/></g>}
