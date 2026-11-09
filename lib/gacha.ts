@@ -212,10 +212,10 @@ export function getGachaInventory(): GachaInventory {
       : [];
     const newBadgeIds = Array.from(
       new Set(
-        rawNewBadgeIds.filter(
-          (id): id is string => typeof id === "string"
-        )
-      ).map(canonicalBadgeId)
+        rawNewBadgeIds
+          .filter((id): id is string => typeof id === "string")
+          .map(canonicalBadgeId)
+      )
     );
 
     return {
