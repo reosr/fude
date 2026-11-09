@@ -595,7 +595,7 @@ export default function GachaPage() {
           </button>
         </div>
         <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-          {GACHA_BADGES.slice(0, 8).map((badge) => (
+          {GACHA_RARITIES.flatMap((rarity) => GACHA_BADGES.filter((badge) => badge.rarity === rarity).slice(0, 2)).map((badge) => (
             <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
               <div className="flex justify-center">
                 <GachaBadgeArtwork badge={badge} size={58} />
@@ -661,7 +661,7 @@ export default function GachaPage() {
                     );
                   })}
               </div>
-              {GACHA_BADGES.filter((badge) => activeRarity === "all" || badge.rarity === activeRarity)
+              {GACHA_BADGES.filter((badge) => catalogRarity === "all" || badge.rarity === catalogRarity)
                 .filter((badge) => `${badge.name} ${badge.description ?? ""}`.toLowerCase().includes(catalogSearch.trim().toLowerCase())).length === 0 && (
                 <p className="py-12 text-center text-sm text-[#A99C89]">Badge tidak ditemukan.</p>
               )}
