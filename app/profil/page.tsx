@@ -24,7 +24,7 @@ import {
 import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfileAvatar from "../../components/ProfileAvatar";
-import { GACHA_BADGES } from "../../data/gacha-badges";
+import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../../data/gacha-badges";
 import type { GachaBadgeDefinition } from "../../lib/gacha";
 import {
   GACHA_UPDATED_EVENT,
@@ -252,8 +252,10 @@ export default function Profil() {
   const unlockedBab = Math.min(50, safeBab);
   const progressPercent = Math.round((completedBab / 50) * 100);
 
-  const equippedBadge =
-    GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId);
+  const equippedBadgeId = profile.equippedBadgeId
+    ? LEGACY_GACHA_BADGE_ID_MAP[profile.equippedBadgeId] ?? profile.equippedBadgeId
+    : null;
+  const equippedBadge = GACHA_BADGES.find((badge) => badge.id === equippedBadgeId);
 
   const unlockedBadgeCount = unlockedBadgeIds.length;
   const unlockedFrameCount = unlockedFrameIds.length;
@@ -671,7 +673,7 @@ export default function Profil() {
                 const unlocked =
                   COLLECTION_PREVIEW_MODE || actuallyUnlocked;
                 const isNew = gachaNewBadgeIds.includes(badge.id);
-                const equipped = profile.equippedBadgeId === badge.id;
+                const equipped = equippedBadgeId === badge.id;
 
                 return (
                   <button
@@ -913,7 +915,7 @@ export default function Profil() {
                 {unlockedBadgeIds.includes(selectedBadge.id) && (
                   <button
                     onClick={equipSelectedItem}
-                    disabled={profile.equippedBadgeId === selectedBadge.id}
+                    disabled={equippedBadgeId === selectedBadge.id}
                     className="w-full mt-6 py-3 rounded-xl bg-[#B8860B] text-[#171312] font-bold text-sm disabled:opacity-50"
                   >
                     {profile.equippedBadgeId === selectedBadge.id
