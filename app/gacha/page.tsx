@@ -17,6 +17,7 @@ import {
 
 import { GACHA_BADGES } from "@/data/gacha-badges";
 import GachaBadgeArtwork from "@/components/GachaBadgeArtwork";
+import GachaAuraPreview from "@/components/GachaAuraPreview";
 import {
   GACHA_CATALOG_SIZE,
   GACHA_RARITIES,
@@ -332,6 +333,44 @@ export default function GachaPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="overflow-hidden rounded-3xl border border-white/10 bg-[radial-gradient(circle_at_50%_0%,rgba(116,130,160,0.13),transparent_55%),#191A1D] p-5 md:p-7">
+        <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[10px] font-black tracking-[0.24em] text-[#C8B8E8]">COLLECTION EFFECTS · AURA LAB</p>
+            <h2 className="mt-2 text-xl font-black text-[#F0E9D9]">Rarity Aura Preview</h2>
+            <p className="mt-1 max-w-2xl text-xs leading-5 text-[#A99C89]">Perbandingan animasi aura Level 2 dan Level 3. Setiap rarity memakai warna dan karakter aura yang sama untuk seluruh badge di rarity tersebut.</p>
+          </div>
+          <span className="w-fit rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-[10px] font-bold text-[#C8C1D4]">12 ANIMATED PREVIEWS</span>
+        </div>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
+          {GACHA_RARITIES.map((rarity) => {
+            const sampleBadge = GACHA_BADGES.find((badge) => badge.rarity === rarity);
+            if (!sampleBadge) return null;
+            return (
+              <div key={rarity} className="rounded-2xl border border-white/[0.07] bg-black/20 p-3">
+                <div className="mb-3 text-center">
+                  <p className="text-[10px] font-black tracking-[0.12em] text-[#E8E0D2]">{RARITY_LABELS[rarity]}</p>
+                  <p className="mt-0.5 text-[9px] text-[#827D75]">Shared aura style</p>
+                </div>
+                {[2, 3].map((level) => (
+                  <div key={level} className="flex items-center gap-2 border-t border-white/[0.06] py-3 first:border-t-0">
+                    <div className="min-w-[42px]">
+                      <p className="text-[9px] font-bold text-[#B8B0A4]">LEVEL</p>
+                      <p className="text-sm font-black text-white">{level}</p>
+                    </div>
+                    <div className="flex min-h-[104px] flex-1 items-center justify-center overflow-visible rounded-xl bg-white/[0.025]">
+                      <GachaAuraPreview badge={sampleBadge} level={level as 2 | 3} size={88} />
+                    </div>
+                  </div>
+                ))}
+                <p className="mt-1 text-center text-[9px] text-[#77736D]">{sampleBadge.name}</p>
+              </div>
+            );
+          })}
+        </div>
+        <p className="mt-4 text-[10px] leading-5 text-[#827D75]">Level 2: aura tipis dan lembut. Level 3: aura lebih luas dan terang, dengan partikel serta kilatan tambahan. Efek ini hanya preview visual dan tidak mengubah inventori.</p>
       </section>
 
       <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
