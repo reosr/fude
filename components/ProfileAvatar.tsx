@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import {
   ALL_BADGES,
   PROFILE_FRAMES,
@@ -987,9 +988,12 @@ export default function ProfileAvatar({
         }}
       >
         {photoSrc ? (
-          <img
+          <Image
             src={photoSrc}
             alt="Foto profil"
+            width={size}
+            height={size}
+            unoptimized
             className="h-full w-full object-cover"
           />
         ) : (
