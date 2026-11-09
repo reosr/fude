@@ -354,9 +354,12 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
           <path d="M64 34 Q48 20 51 10 Q64 6 67 30 Q76 12 88 16 Q89 30 67 39Z"
             fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="2" strokeLinejoin="round"/>
           <path d="M49 34 Q40 19 34 14 M79 34 Q88 19 94 14" fill="none" stroke={"url(#" + wood + ")"} strokeWidth="4" strokeLinecap="round"/>
-          <ellipse cx="56" cy="48" rx="2.7" ry="3.8" fill="#344036"/><ellipse cx="72" cy="48" rx="2.7" ry="3.8" fill="#344036"/>
-          <circle cx="56.8" cy="47" r="1" fill="#FFFFFF"/><circle cx="72.8" cy="47" r="1" fill="#FFFFFF"/>
-          <path d="M59 59 Q64 63 69 59" fill="none" stroke="#98765D" strokeWidth="1.8" strokeLinecap="round"/>
+          {/* Mature expression: narrow, focused eyes and a composed, unsmiling mouth. */}
+          <path d="M50 47 Q56 42 61 47 Q57 52 51 51Z M67 47 Q72 42 78 47 L77 51 Q71 52 67 47Z"
+            fill="#F7F4DF" stroke="#40523E" strokeWidth="1.1" strokeLinejoin="round"/>
+          <path d="M53 47 Q57 45 59 48 L57 51 Q54 51 53 47Z M70 48 Q73 45 76 47 Q75 51 72 51Z" fill="#26352F"/>
+          <path d="M49 43 L61 41 M67 41 L79 43" fill="none" stroke="#604832" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M59 60 L69 60" fill="none" stroke="#76563B" strokeWidth="2" strokeLinecap="round"/>
           <path d="M64 68 L64 99" stroke="#C99A65" strokeWidth="2.3" strokeLinecap="round"/>
           <path d="M58 75 Q64 79 70 75 M57 88 Q64 92 71 88" fill="none" stroke="#D8B27D" strokeWidth="1.4" opacity=".9"/>
           <path d="M53 68 Q49 76 54 82 M75 68 Q79 76 74 82" fill="none" stroke="#C28E5D" strokeWidth="1.5" strokeLinecap="round"/>
