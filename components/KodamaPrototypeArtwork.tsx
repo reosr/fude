@@ -434,60 +434,18 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   // Keep the same collectible frame language, while giving the evolved
   // spirit a completely new silhouette and pose.
   const framePath = () => {
-    // Level 2 frame silhouette: branching crown, raised side roots,
-    // and a tapered root-point base. The inner enamel stays silver-toned.
+    // A clean seed-shaped medallion: the silhouette stays calm and organic,
+    // with a soft crown and a tapered base rather than scattered branches.
     ctx.beginPath();
-    ctx.moveTo(78, 7);
-    ctx.bezierCurveTo(87, 10, 92, 18, 96, 27);
-    ctx.lineTo(111, 11);
-    ctx.bezierCurveTo(117, 5, 126, 10, 122, 19);
-    ctx.lineTo(116, 31);
-    ctx.bezierCurveTo(134, 36, 141, 50, 139, 66);
-    ctx.lineTo(150, 72);
-    ctx.bezierCurveTo(157, 78, 150, 88, 140, 91);
-    ctx.bezierCurveTo(138, 110, 126, 124, 109, 133);
-    ctx.lineTo(91, 146);
-    ctx.bezierCurveTo(84, 153, 78, 151, 73, 145);
-    ctx.lineTo(66, 137);
-    ctx.lineTo(49, 134);
-    ctx.bezierCurveTo(31, 127, 21, 111, 20, 92);
-    ctx.bezierCurveTo(10, 88, 4, 79, 11, 72);
-    ctx.lineTo(21, 65);
-    ctx.bezierCurveTo(18, 47, 27, 35, 44, 29);
-    ctx.lineTo(38, 17);
-    ctx.bezierCurveTo(34, 8, 44, 4, 50, 11);
-    ctx.lineTo(65, 27);
-    ctx.bezierCurveTo(69, 17, 72, 10, 78, 7);
-    ctx.closePath();
-  };
-  ctx.save();
-  ctx.shadowColor = "rgba(0,0,0,.62)";
-  ctx.shadowBlur = 13;
-  ctx.shadowOffsetY = 7;
-  framePath();
-  ctx.fillStyle = "#13251b";
-  ctx.fill();
-  ctx.restore();
-
-  const rim = ctx.createLinearGradient(22, 15, 138, 143);
-  [["0","#ffffff"],[".13","#cbd0d1"],[".34","#626b70"],[".56","#eef1ef"],[".78","#7c8588"],["1","#f8faf7"]].forEach(([p,c]) => rim.addColorStop(Number(p), c));
-  framePath();
-  ctx.fillStyle = rim;
-  ctx.strokeStyle = "#302419";
-  ctx.lineWidth = 2.5;
-  ctx.fill();
-  ctx.stroke();
-
-  ctx.beginPath();
-  ctx.moveTo(80, 12);
-  ctx.bezierCurveTo(99, 15, 111, 19, 118, 30);
-  ctx.bezierCurveTo(135, 39, 132, 59, 137, 82);
-  ctx.bezierCurveTo(135, 104, 123, 119, 106, 126);
-  ctx.lineTo(80, 144);
-  ctx.lineTo(54, 126);
-  ctx.bezierCurveTo(37, 119, 25, 104, 23, 82);
-  ctx.bezierCurveTo(28, 59, 25, 39, 42, 30);
-  ctx.bezierCurveTo(49, 19, 61, 15, 80, 12);
+  ctx.moveTo(80, 14);
+  ctx.bezierCurveTo(96, 15, 111, 23, 121, 36);
+  ctx.bezierCurveTo(132, 49, 135, 66, 132, 86);
+  ctx.bezierCurveTo(129, 106, 114, 121, 97, 132);
+  ctx.lineTo(80, 143);
+  ctx.lineTo(63, 132);
+  ctx.bezierCurveTo(46, 121, 31, 106, 28, 86);
+  ctx.bezierCurveTo(25, 66, 28, 49, 39, 36);
+  ctx.bezierCurveTo(49, 23, 64, 15, 80, 14);
   ctx.closePath();
   ctx.fillStyle = radial(ctx, 65, 45, 112, [[0,"#899492"],[.45,"#586260"],[.82,"#343d3c"],[1,"#202827"]]);
   ctx.fill();
