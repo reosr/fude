@@ -20,6 +20,7 @@ import {
   getGachaBadgeEvolutionProgress,
   getGachaHistory,
   getGachaInventory,
+  markGachaBadgeSeen,
   getGachaRateLevel,
   getGachaRates,
   getTotalGachaBadgeCopies,
@@ -74,6 +75,7 @@ export default function GachaPage() {
   const [inventory, setInventory] = useState<GachaInventory>({
     version: 1,
     badges: {},
+    newBadgeIds: [],
     updatedAt: 0,
   });
   const [history, setHistory] = useState<GachaHistoryEntry[]>([]);
@@ -396,6 +398,7 @@ export default function GachaPage() {
               const copies = copiesFor(inventory, badge.id);
               const total = getTotalGachaBadgeCopies(copies);
               const progress = getGachaBadgeEvolutionProgress(copies);
+              const isNew = inventory.newBadgeIds.includes(badge.id);
               return (
                 <article
                   key={badge.id}
@@ -403,13 +406,20 @@ export default function GachaPage() {
                 >
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-3xl">{badge.icon}</span>
-                    <span className="rounded-md bg-black/20 px-2 py-1 text-[9px] font-black">
+                    <div className="flex flex-col items-end gap-1">
+                      {isNew && (
+                        <span className="rounded-md bg-[#C93438] px-2 py-1 text-[8px] font-black text-white">
+                          NEW
+                        </span>
+                      )}
+                      <span className="rounded-md bg-black/20 px-2 py-1 text-[9px] font-black">
                       Lv. {Math.max(
                         copies.level3 > 0 ? 3 : 0,
                         copies.level2 > 0 ? 2 : 0,
                         copies.level1 > 0 ? 1 : 0
                       )}
-                    </span>
+                      </span>
+                    </div>
                   </div>
                   <h3 className="mt-3 line-clamp-2 text-xs font-black text-[#F0E9D9]">
                     {badge.name}
@@ -430,10 +440,18 @@ export default function GachaPage() {
                       </p>
                     )}
                   </div>
+                  {isNew && (
+                    <button
+                      onClick={() => markGachaBadgeSeen(badge.id)}
+                      className="mt-3 w-full rounded-lg border border-[#C93438]/30 bg-[#C93438]/10 py-2 text-[10px] font-bold text-[#F0A0A0] hover:bg-[#C93438]/20"
+                    >
+                      Tandai sudah dilihat
+                    </button>
+                  )}
                   <button
                     onClick={() => handleEvolve(badge.id)}
                     disabled={!progress.canEvolve}
-                    className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg border border-[#B8860B]/40 bg-[#B8860B]/10 py-2 text-[10px] font-black text-[#E7C46A] transition hover:bg-[#B8860B]/20 disabled:cursor-not-allowed disabled:opacity-35"
+                    className="mt-2 flex w-full items-center justify-center gap-1.5 rounded-lg border border-[#B8860B]/40 bg-[#B8860B]/10 py-2 text-[10px] font-black text-[#E7C46A] transition hover:bg-[#B8860B]/20 disabled:cursor-not-allowed disabled:opacity-35"
                   >
                     <WandSparkles size={12} />
                     {progress.canEvolve ? "Evolusi" : "Belum cukup"}
