@@ -3,6 +3,7 @@
 import { getUnlockedVocab, type VocabItem } from "../../lib/vocab";
 import { useState, useEffect, useRef } from "react";
 import { getProgress } from "../../lib/progress";
+import { getMemorizedKanji } from "../../lib/memorized";
 import { Search, X, Volume2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
@@ -67,13 +68,7 @@ export default function Kosakata() {
 
     setCurrentBab(progress);
 
-    try {
-      setMemorized(
-        JSON.parse(localStorage.getItem("fude_memorized") || "[]")
-      );
-    } catch {
-      setMemorized([]);
-    }
+    setMemorized(getMemorizedKanji());
 
     try {
       const rawVocab = await getUnlockedVocab(progress);
