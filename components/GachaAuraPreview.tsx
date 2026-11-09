@@ -23,7 +23,7 @@ export default function GachaAuraPreview({
   size?: number;
 }) {
   const color = AURA_COLORS[badge.rarity];
-  const style = { "--aura-color": color, "--aura-scale": level === 2 ? 0.72 : 1 } as CSSProperties;
+  const style = { "--aura-color": color, "--aura-opacity": level === 2 ? ".22" : ".38", "--aura-min-opacity": level === 2 ? ".12" : ".2" } as CSSProperties;
 
   return (
     <div className={`fude-aura-preview relative flex items-center justify-center ${level === 3 ? "fude-aura-level-3" : "fude-aura-level-2"}`} style={style}>
@@ -39,14 +39,13 @@ export default function GachaAuraPreview({
         </>
       )}
       <div className="relative z-10">
-        <GachaBadgeArtwork badge={badge} level={level} size={size} />
+        <GachaBadgeArtwork badge={badge} level={1} size={size} />
       </div>
       <style jsx>{`
         .fude-aura-preview {
           width: 100%;
           min-height: 100px;
           isolation: isolate;
-          --aura-opacity: ${level === 2 ? ".22" : ".38"};
         }
         .fude-aura-cloud {
           width: 88%;
@@ -92,7 +91,7 @@ export default function GachaAuraPreview({
         .fude-aura-glint-one { top: 7%; right: 12%; font-size: 13px; }
         .fude-aura-glint-two { bottom: 9%; left: 10%; font-size: 11px; animation-delay: -1.6s; }
         @keyframes aura-breathe {
-          0%, 100% { transform: translateY(-50%) scale(.9); opacity: calc(var(--aura-opacity) * .72); }
+          0%, 100% { transform: translateY(-50%) scale(.9); opacity: var(--aura-min-opacity); }
           50% { transform: translateY(-50%) scale(1.12); opacity: var(--aura-opacity); }
         }
         @keyframes aura-drift {
