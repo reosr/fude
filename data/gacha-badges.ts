@@ -75,6 +75,25 @@ const generatedSelectedBase = (Object.keys(TARGET_COUNTS) as GachaRarity[]).flat
       .slice(0, generatedLimits[rarity])
 );
 
+// Curated folklore batch replaces generic Common placeholders while keeping
+// their IDs stable for existing inventories and legacy redirects.
+const folkloreCommonBadges: GachaBadgeDefinition[] = [
+  { id: "gacha-common-02", name: "Kodama", icon: "🌱", rarity: "common", tier: "common", description: "Roh pohon mungil yang tumbuh bersama tunas, lumut, dan semangat hutan.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-03", name: "Zashiki-warashi", icon: "🎎", rarity: "common", tier: "common", description: "Roh anak kecil pembawa keberuntungan yang menjaga rumah tradisional.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-04", name: "Akaname", icon: "👅", rarity: "common", tier: "common", description: "Yokai kecil dengan lidah panjang yang gemar membersihkan tempat kotor.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-05", name: "Tofu-kozo", icon: "🍥", rarity: "common", tier: "common", description: "Anak yokai pembawa nampan berisi tofu lembut.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-06", name: "Azukiarai", icon: "🫘", rarity: "common", tier: "common", description: "Roh sungai kecil yang terdengar mencuci kacang azuki di tepi air.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-07", name: "Sunekosuri", icon: "🐾", rarity: "common", tier: "common", description: "Makhluk kecil berbulu yang diam-diam bergesekan dengan kaki pejalan malam.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-08", name: "Betobeto-san", icon: "👣", rarity: "common", tier: "common", description: "Roh langkah kaki misterius yang mengikuti orang di jalan malam.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-09", name: "Amikiri", icon: "🦀", rarity: "common", tier: "common", description: "Yokai mungil bercapit yang dikenal suka memotong jaring ikan.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-10", name: "Shiro-uneri", icon: "🧣", rarity: "common", tier: "common", description: "Kain putih tua yang berubah hidup menjadi yokai lentur dan nakal.", unlockLabel: "Diperoleh melalui Gacha" },
+  { id: "gacha-common-11", name: "Kawauso", icon: "🦦", rarity: "common", tier: "common", description: "Yokai berwujud berang-berang sungai yang terkenal pandai menyamar.", unlockLabel: "Diperoleh melalui Gacha" },
+];
+const folkloreCommonById = new Map(folkloreCommonBadges.map((badge) => [badge.id, badge]));
+const curatedGeneratedSelectedBase = generatedSelectedBase.map(
+  (badge) => folkloreCommonById.get(badge.id) ?? badge
+);
+
 
 const kasaObakeBadge: GachaBadgeDefinition = {
   id: "kasa-obake-01",
@@ -87,7 +106,7 @@ const kasaObakeBadge: GachaBadgeDefinition = {
 };
 
 const generatedSelected: GachaBadgeDefinition[] = [
-  ...generatedSelectedBase.filter((badge, index) => !(badge.rarity === "common" && index === 0)),
+  ...curatedGeneratedSelectedBase.filter((badge, index) => !(badge.rarity === "common" && index === 0)),
   kasaObakeBadge,
 ];
 
