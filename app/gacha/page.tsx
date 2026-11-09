@@ -104,6 +104,7 @@ export default function GachaPage() {
   const [showCatalogModal, setShowCatalogModal] = useState(false);
   const [catalogSearch, setCatalogSearch] = useState("");
   const [catalogRarity, setCatalogRarity] = useState<GachaRarity | "all">("all");
+  const [catalogPreviewLevel, setCatalogPreviewLevel] = useState<1 | 2 | 3>(1);
   const [mochiPreviewLevel, setMochiPreviewLevel] = useState<1 | 2 | 3>(1);
 
   const refresh = useCallback(() => {
@@ -755,6 +756,20 @@ export default function GachaPage() {
                 className="min-w-0 flex-1 rounded-lg border border-[#40392F] bg-[#24211D] px-3 py-2 text-xs text-[#F0E9D9] outline-none placeholder:text-[#817A73] focus:border-[#B8860B]"
               />
             </div>
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#38332B] px-4 py-3 sm:px-5">
+              <div>
+                <p className="text-[10px] font-black tracking-widest text-[#D6AD4F]">PREVIEW EVOLUSI</p>
+                <p className="mt-1 text-[10px] text-[#A99C89]">Lihat desain setiap badge pada level yang dipilih, termasuk yang belum dimiliki.</p>
+              </div>
+              <div className="flex gap-1.5">
+                {([1, 2, 3] as const).map((level) => (
+                  <button key={level} type="button" onClick={() => setCatalogPreviewLevel(level)} aria-pressed={catalogPreviewLevel === level}
+                    className={`rounded-lg border px-4 py-2 text-xs font-black transition ${catalogPreviewLevel === level ? "border-[#D6AD4F]/70 bg-[#B8860B]/20 text-[#F4D98E]" : "border-white/10 bg-[#302B25] text-[#A99C89] hover:border-white/20"}`}>
+                    Level {level}
+                  </button>
+                ))}
+              </div>
+            </div>
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 sm:p-5">
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
                 {GACHA_BADGES.filter((badge) => catalogRarity === "all" || badge.rarity === catalogRarity)
@@ -766,13 +781,7 @@ export default function GachaPage() {
                       <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
                         <div className="relative flex justify-center">
                           <div className="mx-auto w-[76px]">
-                            {owned && copies.level3 > 0 ? (
-                              <GachaAuraPreview badge={badge} level={3} size={62} />
-                            ) : owned && copies.level2 > 0 ? (
-                              <GachaAuraPreview badge={badge} level={2} size={62} />
-                            ) : (
-                              <GachaBadgeArtwork badge={badge} size={62} level={1} />
-                            )}
+                            <GachaBadgeArtwork badge={badge} size={62} level={catalogPreviewLevel} />
                           </div>
                           {!owned && (
                             <div className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-[#17191D]/95 text-[#D6D1C8] shadow-lg" title="Belum dimiliki">
