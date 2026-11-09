@@ -279,7 +279,18 @@ function initializeXp(): void {
     // Versi lama dapat memiliki saldo EXP tanpa ledger klaim.
     // Rekonstruksi penanda dari progres/hasil yang tersimpan tanpa
     // menambah EXP lagi, agar reward lama tidak bisa diklaim ulang.
-    if (localStorage.getItem(XP_REWARDS_KEY) === null) {
+    let hasValidXpLedger = false;
+    try {
+      const rawLedger = localStorage.getItem(XP_REWARDS_KEY);
+      const parsedLedger = rawLedger === null ? null : JSON.parse(rawLedger);
+      hasValidXpLedger =
+        Array.isArray(parsedLedger) &&
+        parsedLedger.every((item: unknown) => typeof item === "string");
+    } catch {
+      hasValidXpLedger = false;
+    }
+
+    if (!hasValidXpLedger) {
       const migratedRewards = new Set<string>();
       const progress = Number(getProgress());
       const completedBab = Number.isFinite(progress)
