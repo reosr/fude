@@ -34,9 +34,7 @@ jobs:
           npx eslint
           app/gacha/page.tsx
           app/profil/page.tsx
-          app/jlpt/[level]/page.tsx
           components/BottomNav.tsx
-          components/JLPTQuiz.tsx
           components/ProfileAvatar.tsx
           components/Sidebar.tsx
           data/gacha-badges.ts
