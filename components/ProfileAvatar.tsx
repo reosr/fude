@@ -4,6 +4,7 @@ import {
   PROFILE_FRAMES,
 } from "../lib/profile-collections";
 import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../data/gacha-badges";
+import GachaBadgeArtwork from "./GachaBadgeArtwork";
 
 interface ProfileAvatarProps {
   avatar?: string;
@@ -1009,12 +1010,12 @@ export default function ProfileAvatar({
         color={frame.colors.border}
       />
 
-      {/* Badge medali */}
-      {badge && (
+      {/* Badge profil memakai artwork koleksi Gacha yang sama */}
+      {badge && collectionBadge && (
         <div
           title={`${badge.name} — ${badge.description}`}
           aria-label={`Badge terpasang: ${badge.name}`}
-          className="absolute flex items-center justify-center rounded-full select-none"
+          className="absolute flex items-center justify-center select-none"
           style={{
             width: badgeSize,
             height: badgeSize,
@@ -1022,49 +1023,9 @@ export default function ProfileAvatar({
             bottom: 0,
             transform: "translate(-50%, 50%)",
             zIndex: 20,
-            background: `radial-gradient(circle at 35% 30%, ${badgeColors.background}, #121110)`,
-            border: `2px solid ${badgeColors.border}`,
-            boxShadow: `
-              0 0 0 2px #1E1D1B,
-              0 3px 10px rgba(0,0,0,0.65),
-              0 0 12px ${badgeColors.border}66
-            `,
           }}
         >
-          {/* Detail ukiran medali */}
-          <svg
-            viewBox="0 0 100 100"
-            className="absolute inset-0 h-full w-full"
-            aria-hidden="true"
-          >
-            <circle
-              cx="50"
-              cy="50"
-              r="44"
-              fill="none"
-              stroke={badgeColors.border}
-              strokeWidth="2"
-              strokeDasharray="3 3"
-            />
-            <path
-              d="M 50 8 L 58 18 L 72 14 L 73 29 L 88 36 L 80 50 L 88 64 L 73 71 L 72 86 L 58 82 L 50 92 L 42 82 L 28 86 L 27 71 L 12 64 L 20 50 L 12 36 L 27 29 L 28 14 L 42 18 Z"
-              fill="none"
-              stroke={badgeColors.border}
-              strokeWidth="1"
-              opacity="0.75"
-            />
-          </svg>
-
-          <span
-            className="relative"
-            style={{
-              fontSize: badgeSize * 0.48,
-              lineHeight: 1,
-              color: badgeColors.text,
-            }}
-          >
-            {badge.icon}
-          </span>
+          <GachaBadgeArtwork badge={collectionBadge} level={1} size={badgeSize} />
         </div>
       )}
     </div>
