@@ -46,6 +46,7 @@ export interface GachaBadgeCopies {
 export interface GachaInventory {
   version: 1;
   badges: Record<string, GachaBadgeCopies>;
+  newBadgeIds: string[];
   updatedAt: number;
 }
 
@@ -129,7 +130,7 @@ export function getGachaRates(
   const highestCompleted = [...completedLevels]
     .reverse()
     .find((item) => item === "N1" || item === "N2" || item === "N3" || item === "N4" || item === "N5");
-  const selected = level && level in BASE_RATES
+  const selected = level && Object.prototype.hasOwnProperty.call(BASE_RATES, level)
     ? level
     : highestCompleted ?? "N5";
 
@@ -146,7 +147,7 @@ function emptyCopies(): GachaBadgeCopies {
 }
 
 function emptyInventory(): GachaInventory {
-  return { version: 1, badges: {}, updatedAt: Date.now() };
+  return { version: 1, badges: {}, newBadgeIds: [], updatedAt: Date.now() };
 }
 
 function isSafeCount(value: unknown): value is number {
@@ -184,6 +185,9 @@ export function getGachaInventory(): GachaInventory {
     return {
       version: 1,
       badges,
+      newBadgeIds: Array.isArray(parsed.newBadgeIds)
+        ? [...new Set(parsed.newBadgeIds.filter((id: unknown): id is string => typeof id === "string"))]
+        : [],
       updatedAt: typeof parsed.updatedAt === "number"
         ? parsed.updatedAt
         : Date.now(),
@@ -310,6 +314,7 @@ export function summonGacha(
   const nextInventory: GachaInventory = {
     ...previousInventory,
     badges: { ...previousInventory.badges },
+    newBadgeIds: [...previousInventory.newBadgeIds],
     updatedAt: Date.now(),
   };
   const results: GachaHistoryEntry[] = [];
@@ -337,6 +342,12 @@ export function summonGacha(
 
   const previousHistory = getGachaHistory(200);
   const nextHistory = [...results, ...previousHistory].slice(0, 200);
+  nextInventory.newBadgeIds = [
+    ...new Set([
+      ...previousInventory.newBadgeIds,
+      ...results.map((result) => result.badgeId),
+    ]),
+  ];
 
   try {
     // Simpan hasil terlebih dahulu; jika token gagal dibelanjakan,
@@ -441,6 +452,26 @@ export function evolveGachaBadge(
   } catch (error) {
     console.error("Gagal mengembangkan badge:", error);
     return { ok: false, reason: "storage-error" };
+  }
+}
+
+export function markGachaBadgeSeen(badgeId: string): void {
+  if (typeof window === "undefined" || !badgeId) return;
+
+  const inventory = getGachaInventory();
+  if (!inventory.newBadgeIds.includes(badgeId)) return;
+
+  const nextInventory: GachaInventory = {
+    ...inventory,
+    newBadgeIds: inventory.newBadgeIds.filter((id) => id !== badgeId),
+    updatedAt: Date.now(),
+  };
+
+  try {
+    saveGachaInventory(nextInventory);
+    window.dispatchEvent(new Event(GACHA_UPDATED_EVENT));
+  } catch (error) {
+    console.error("Gagal memperbarui status NEW badge:", error);
   }
 }
 
