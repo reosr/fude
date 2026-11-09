@@ -30,7 +30,11 @@ import {
   type GachaInventory,
   type GachaRarity,
 } from "@/lib/gacha";
-import { getFudeTokens } from "@/lib/gamification";
+import {
+  getFudeTokens,
+  getFudeProfile,
+  saveFudeProfile,
+} from "@/lib/gamification";
 
 const RARITY_LABELS: Record<GachaRarity, string> = {
   common: "Common",
@@ -80,6 +84,7 @@ export default function GachaPage() {
   });
   const [history, setHistory] = useState<GachaHistoryEntry[]>([]);
   const [tokens, setTokens] = useState(0);
+  const [equippedBadgeId, setEquippedBadgeId] = useState<string | null>(null);
   const [latestResults, setLatestResults] = useState<GachaHistoryEntry[]>([]);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -89,6 +94,7 @@ export default function GachaPage() {
     setInventory(getGachaInventory());
     setHistory(getGachaHistory(30));
     setTokens(getFudeTokens());
+    setEquippedBadgeId(getFudeProfile().equippedBadgeId ?? null);
   }, []);
 
   useEffect(() => {
@@ -152,6 +158,14 @@ export default function GachaPage() {
     } finally {
       setBusy(false);
     }
+  };
+
+  const handleEquip = (badgeId: string) => {
+    const copies = inventory.badges[badgeId];
+    if (!copies || getTotalGachaBadgeCopies(copies) <= 0) return;
+
+    saveFudeProfile({ equippedBadgeId: badgeId });
+    setEquippedBadgeId(badgeId);
   };
 
   const handleEvolve = (badgeId: string) => {
@@ -448,6 +462,13 @@ export default function GachaPage() {
                       Tandai sudah dilihat
                     </button>
                   )}
+                  <button
+                    onClick={() => handleEquip(badge.id)}
+                    disabled={equippedBadgeId === badge.id}
+                    className="mt-2 w-full rounded-lg border border-[#60A5FA]/30 bg-[#60A5FA]/10 py-2 text-[10px] font-bold text-[#BFDBFE] hover:bg-[#60A5FA]/20 disabled:cursor-default disabled:opacity-60"
+                  >
+                    {equippedBadgeId === badge.id ? "Terpasang di Profil" : "Pasang Badge"}
+                  </button>
                   <button
                     onClick={() => handleEvolve(badge.id)}
                     disabled={!progress.canEvolve}
