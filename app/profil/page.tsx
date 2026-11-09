@@ -375,6 +375,20 @@ export default function Profil() {
 
   const clearProfileBadgePreview = () => setProfileBadgePreview(null);
 
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent("fude:profile-badge-preview", { detail: profileBadgePreview })
+    );
+  }, [profileBadgePreview]);
+
+  useEffect(() => {
+    return () => {
+      window.dispatchEvent(
+        new CustomEvent("fude:profile-badge-preview", { detail: null })
+      );
+    };
+  }, []);
+
   const openFrame = (frame: ProfileFrame) => {
     const id = `frame:${frame.id}`;
 
