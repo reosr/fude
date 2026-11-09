@@ -939,22 +939,47 @@ export function awardXpOnce(
     );
 
     // Berikan token untuk setiap level baru yang dilewati.
+    // Jika pemberian gagal dan belum tercatat, gagalkan klaim EXP agar
+    // aktivitas yang sama dapat mencoba kembali pada pemulihan berikutnya.
     for (
       let level = oldLevel + 1;
       level <= newLevel;
       level++
     ) {
-      awardTokenRewardOnce(
-        `level-up:${level}`,
+      const levelRewardId = `level-up:${level}`;
+      const awarded = awardTokenRewardOnce(
+        levelRewardId,
         LEVEL_UP_TOKEN_REWARD,
         `Mencapai Level ${level}`
       );
+
+      if (
+        !awarded &&
+        !readTokenRewards().includes(levelRewardId)
+      ) {
+        throw new Error(
+          `Reward Token untuk Level ${level} gagal dicatat.`
+        );
+      }
     }
 
     dispatchEconomyUpdate();
 
     return true;
   } catch (error) {
+    // Batalkan klaim EXP jika rangkaian reward tidak selesai.
+    // Reward level-up yang sempat berhasil tetap aman karena ID-nya unik;
+    // percobaan berikutnya akan melewati ID yang sudah tercatat.
+    try {
+      localStorage.setItem(XP_KEY, String(currentXp));
+      localStorage.setItem(
+        XP_REWARDS_KEY,
+        JSON.stringify(rewards)
+      );
+    } catch (rollbackError) {
+      console.error("Gagal mengembalikan EXP:", rollbackError);
+    }
+
     console.error("Gagal memberikan EXP:", error);
     return false;
   }
