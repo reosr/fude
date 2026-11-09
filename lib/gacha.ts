@@ -4,6 +4,7 @@ import {
   spendFudeTokensOnce,
 } from "./gamification";
 import { getCompletedJlptLevels } from "./profile-collections";
+import { GACHA_BADGES, GACHA_BADGE_COUNTS, LEGACY_GACHA_BADGE_ID_MAP } from "../data/gacha-badges";
 
 // =====================================================
 // GACHA CONFIGURATION
@@ -16,8 +17,7 @@ export const GACHA_HISTORY_KEY = "fude_gacha_history_v1";
 export const GACHA_SINGLE_COST = 1;
 export const GACHA_TEN_COST = 10;
 export const GACHA_MAX_EVOLUTION = 3;
-export const GACHA_BADGES_PER_RARITY = 50;
-export const GACHA_CATALOG_SIZE = GACHA_BADGES_PER_RARITY * 6;
+export const GACHA_CATALOG_SIZE = 300;
 
 export const GACHA_RARITIES = [
   "common",
@@ -36,7 +36,9 @@ export interface GachaBadgeDefinition {
   name: string;
   icon: string;
   rarity: GachaRarity;
+  tier: GachaRarity;
   description?: string;
+  unlockLabel?: string;
 }
 
 export interface GachaBadgeCopies {
@@ -153,6 +155,10 @@ export function getGachaRateLevel(): string {
   return [...completed].reverse()[0] ?? "N5";
 }
 
+function canonicalBadgeId(id: string): string {
+  return LEGACY_GACHA_BADGE_ID_MAP[id] ?? id;
+}
+
 function emptyCopies(): GachaBadgeCopies {
   return { level0: 0, level1: 0, level2: 0, level3: 0 };
 }
@@ -185,11 +191,19 @@ export function getGachaInventory(): GachaInventory {
     for (const [id, value] of Object.entries(parsed.badges)) {
       if (!id || !value || typeof value !== "object") continue;
       const copies = value as Partial<GachaBadgeCopies>;
-      badges[id] = {
+      const canonicalId = canonicalBadgeId(id);
+      const normalized = {
         level0: isSafeCount(copies.level0) ? copies.level0 : 0,
         level1: isSafeCount(copies.level1) ? copies.level1 : 0,
         level2: isSafeCount(copies.level2) ? copies.level2 : 0,
         level3: isSafeCount(copies.level3) ? copies.level3 : 0,
+      };
+      const previous = badges[canonicalId] ?? emptyCopies();
+      badges[canonicalId] = {
+        level0: previous.level0 + normalized.level0,
+        level1: previous.level1 + normalized.level1,
+        level2: previous.level2 + normalized.level2,
+        level3: previous.level3 + normalized.level3,
       };
     }
 
@@ -201,7 +215,7 @@ export function getGachaInventory(): GachaInventory {
         rawNewBadgeIds.filter(
           (id): id is string => typeof id === "string"
         )
-      )
+      ).map(canonicalBadgeId)
     );
 
     return {
@@ -248,6 +262,16 @@ export function getGachaHistory(limit = 50): GachaHistoryEntry[] {
         item.evolutionLevel === 0 &&
         typeof item.createdAt === "number"
       )
+      .map((item) => {
+        const badgeId = canonicalBadgeId(item.badgeId);
+        const definition = GACHA_BADGES.find((badge) => badge.id === badgeId);
+        return {
+          ...item,
+          badgeId,
+          badgeName: definition?.name ?? item.badgeName,
+          rarity: definition?.rarity ?? item.rarity,
+        };
+      })
       .slice(0, Math.max(1, Math.min(200, Math.floor(limit))));
   } catch {
     return [];
@@ -283,7 +307,7 @@ function validateCatalog(
   }
 
   return GACHA_RARITIES.every(
-    (rarity) => counts[rarity] === GACHA_BADGES_PER_RARITY
+    (rarity) => counts[rarity] === GACHA_BADGE_COUNTS[rarity]
   ) && ids.size === GACHA_CATALOG_SIZE;
 }
 
