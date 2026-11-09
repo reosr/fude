@@ -132,11 +132,16 @@ function readTokenSpends(): string[] {
 function getStoredTokenBalance(): number {
   if (typeof window === "undefined") return 0;
 
-  const value = Number(localStorage.getItem(TOKEN_KEY));
+  try {
+    const value = Number(localStorage.getItem(TOKEN_KEY));
 
-  return Number.isFinite(value)
-    ? Math.max(0, Math.floor(value))
-    : 0;
+    return Number.isFinite(value)
+      ? Math.max(0, Math.floor(value))
+      : 0;
+  } catch (error) {
+    console.error("Gagal membaca saldo Token:", error);
+    return 0;
+  }
 }
 
 function readTransactions(): TokenTransaction[] {
@@ -597,19 +602,32 @@ function initializeTokenEconomy(): void {
 export function getFudeXp(): number {
   if (typeof window === "undefined") return 0;
 
-  initializeXp();
+  try {
+    initializeXp();
+  } catch (error) {
+    console.error("Gagal menginisialisasi data EXP:", error);
+  }
 
-  const xp = Number(localStorage.getItem(XP_KEY));
+  try {
+    const xp = Number(localStorage.getItem(XP_KEY));
 
-  return Number.isFinite(xp)
-    ? Math.max(0, Math.floor(xp))
-    : 0;
+    return Number.isFinite(xp)
+      ? Math.max(0, Math.floor(xp))
+      : 0;
+  } catch (error) {
+    console.error("Gagal membaca saldo EXP:", error);
+    return 0;
+  }
 }
 
 export function getFudeTokens(): number {
   if (typeof window === "undefined") return 0;
 
-  initializeTokenEconomy();
+  try {
+    initializeTokenEconomy();
+  } catch (error) {
+    console.error("Gagal menginisialisasi ekonomi Token:", error);
+  }
 
   return getStoredTokenBalance();
 }
@@ -619,12 +637,15 @@ export function getTokenTransactions(
 ): TokenTransaction[] {
   if (typeof window === "undefined") return [];
 
-  initializeTokenEconomy();
+  try {
+    initializeTokenEconomy();
+  } catch (error) {
+    console.error("Gagal menginisialisasi riwayat Token:", error);
+  }
 
-  const safeLimit = Math.max(
-    1,
-    Math.min(500, Math.floor(limit))
-  );
+  const safeLimit = Number.isFinite(limit)
+    ? Math.max(1, Math.min(500, Math.floor(limit)))
+    : 50;
 
   return readTransactions().slice(0, safeLimit);
 }
