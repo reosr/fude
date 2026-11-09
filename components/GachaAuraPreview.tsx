@@ -160,7 +160,7 @@ export default function GachaAuraPreview({
       <style jsx>{`
         .fude-aura-preview {
           width: 100%;
-          min-height: 112px;
+          min-height: ${Math.max(size + 24, 80)}px;
           isolation: isolate;
         }
         .fude-aura-cloud {
