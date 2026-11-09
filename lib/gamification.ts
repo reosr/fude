@@ -385,14 +385,85 @@ function initializeTokenEconomy(): void {
     return;
   }
 
-  // Jika saldo token sudah ada, jangan menimpanya.
+  // Jika saldo token sudah ada, pertahankan nilainya. Rekonstruksi ledger
+  // yang hilang dari riwayat transaksi dan progres lama agar klaim yang
+  // pernah terjadi tidak terbuka kembali setelah migrasi.
   if (localStorage.getItem(TOKEN_KEY) !== null) {
-    if (localStorage.getItem(TOKEN_REWARDS_KEY) === null) {
-      localStorage.setItem(TOKEN_REWARDS_KEY, "[]");
-    }
+    const hasValidStringArray = (key: string): boolean => {
+      try {
+        const raw = localStorage.getItem(key);
+        if (raw === null) return false;
+        return Array.isArray(JSON.parse(raw)) &&
+          JSON.parse(raw).every((item: unknown) => typeof item === "string");
+      } catch {
+        return false;
+      }
+    };
 
-    if (localStorage.getItem(TOKEN_SPENDS_KEY) === null) {
-      localStorage.setItem(TOKEN_SPENDS_KEY, "[]");
+    if (
+      !hasValidStringArray(TOKEN_REWARDS_KEY) ||
+      !hasValidStringArray(TOKEN_SPENDS_KEY)
+    ) {
+      const tokenRewards = new Set(readTokenRewards());
+      const tokenSpends = new Set(readTokenSpends());
+
+      // Riwayat transaksi menjadi sumber utama untuk ledger lama.
+      for (const transaction of readTransactions()) {
+        if (transaction.type === "spend") {
+          tokenSpends.add(transaction.id);
+        } else if (
+          transaction.type === "earn" ||
+          transaction.type === "migration"
+        ) {
+          tokenRewards.add(transaction.id);
+        }
+      }
+
+      // Rekonstruksi reward bab dan milestone dari progres yang tersimpan.
+      const progress = Number(getProgress());
+      const completedBab = Number.isFinite(progress)
+        ? Math.max(0, Math.floor(progress) - 1)
+        : 0;
+
+      for (let bab = 1; bab <= completedBab; bab++) {
+        tokenRewards.add(`chapter:${bab}`);
+        if (bab % 10 === 0) {
+          tokenRewards.add(`chapter-milestone:${bab}`);
+        }
+      }
+
+      // Reward level-up yang sudah tercapai tidak boleh diklaim ulang.
+      const currentXp = Number(localStorage.getItem(XP_KEY)) || 0;
+      const currentLevel = getLevelInfo(currentXp).level;
+      for (let level = 2; level <= currentLevel; level++) {
+        tokenRewards.add(`level-up:${level}`);
+      }
+
+      // Hasil perfect yang tersimpan menandakan reward JLPT pernah memenuhi syarat.
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (!key?.startsWith("jlpt_result_")) continue;
+
+        try {
+          const raw = localStorage.getItem(key);
+          const result = raw ? JSON.parse(raw) : null;
+          if (result?.isPerfect === true) {
+            const setId = key.slice("jlpt_result_".length);
+            if (setId) tokenRewards.add(`jlpt-perfect:${setId}`);
+          }
+        } catch {
+          // Lewati hasil JLPT lama yang tidak valid.
+        }
+      }
+
+      localStorage.setItem(
+        TOKEN_REWARDS_KEY,
+        JSON.stringify(Array.from(tokenRewards))
+      );
+      localStorage.setItem(
+        TOKEN_SPENDS_KEY,
+        JSON.stringify(Array.from(tokenSpends))
+      );
     }
 
     localStorage.setItem(ECONOMY_VERSION_KEY, "1");
