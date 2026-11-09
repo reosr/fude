@@ -186,13 +186,13 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
           <stop stopColor="#FFFBEA"/><stop offset=".35" stopColor="#D9E4C8"/><stop offset=".7" stopColor="#829A75"/><stop offset="1" stopColor="#405B43"/>
         </linearGradient>
         <linearGradient id={enamel} x1="0" y1="0" x2=".2" y2="1">
-          <stop stopColor="#A9C982"/><stop offset=".5" stopColor="#527C4D"/><stop offset="1" stopColor="#294C39"/>
+          <stop stopColor={level === 1 ? "#D5B978" : level === 2 ? "#9BC17A" : "#789B65"}/><stop offset=".5" stopColor={level === 1 ? "#8D9B58" : level === 2 ? "#527C4D" : "#385D43"}/><stop offset="1" stopColor={level === 1 ? "#4F6240" : level === 2 ? "#294C39" : "#203D32"}/>
         </linearGradient>
         <linearGradient id={skin} x1=".15" y1="0" x2=".8" y2="1">
-          <stop stopColor="#FFFDF0"/><stop offset=".65" stopColor="#E9E8CD"/><stop offset="1" stopColor="#C9D3A9"/>
+          <stop stopColor={level === 1 ? "#FFF3D5" : "#FFFDF0"}/><stop offset=".65" stopColor={level === 1 ? "#EAD9AE" : "#E9E8CD"}/><stop offset="1" stopColor={level === 1 ? "#C8B77F" : "#C9D3A9"}/>
         </linearGradient>
         <linearGradient id={leaf} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#E8F4B8"/><stop offset=".48" stopColor="#A6CA76"/><stop offset="1" stopColor="#54834D"/>
+          <stop stopColor={level === 1 ? "#F0D99A" : level === 2 ? "#D4E9A3" : "#E8F4B8"}/><stop offset=".48" stopColor={level === 1 ? "#A8B96B" : level === 2 ? "#A6CA76" : "#91B66C"}/><stop offset="1" stopColor={level === 1 ? "#657B45" : "#47774A"}/>
         </linearGradient>
         <linearGradient id={wood} x1="0" y1="0" x2="1" y2="1">
           <stop stopColor="#A77A4F"/><stop offset=".55" stopColor="#76543A"/><stop offset="1" stopColor="#493C2D"/>
@@ -206,7 +206,28 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
         fill={"url(#" + enamel + ")"} stroke="#F2F0D9" strokeWidth="1.8" strokeLinejoin="round"/>
       <path d="M35 36 Q43 26 54 27 M74 27 Q86 26 94 36" fill="none" stroke="#FFFFFF" strokeWidth="1.8" opacity=".65" strokeLinecap="round"/>
 
-      {/* Subtle forest floor and firefly details leave the face unobstructed. */}
+      {/* Each age has its own material story: seed husk, mossy sapling, ancient bark. */}
+      {level === 1 ? (
+        <g fill="#B98B52" stroke="#765638" strokeWidth="1.8" strokeLinejoin="round">
+          <path d="M34 76 C20 66 21 48 31 43 C37 51 40 63 43 75Z"/>
+          <path d="M94 76 C108 66 107 48 97 43 C91 51 88 63 85 75Z"/>
+          <path d="M34 76 Q39 70 43 67 M94 76 Q89 70 85 67" fill="none" stroke="#E8C987" strokeWidth="1.5"/>
+        </g>
+      ) : level === 2 ? (
+        <g>
+          <path d="M30 82 Q39 74 47 82 Q43 91 33 91Z M81 83 Q90 74 99 81 Q96 91 85 92Z"
+            fill="#789B58" stroke="#3F6743" strokeWidth="1.5"/>
+          <path d="M31 84 Q39 78 44 83 M84 84 Q91 78 97 82" fill="none" stroke="#C8DC91" strokeWidth="1.5" strokeLinecap="round"/>
+        </g>
+      ) : (
+        <g>
+          <path d="M28 79 Q39 68 47 78 Q45 91 31 93Z M81 78 Q91 68 100 78 Q97 92 83 93Z"
+            fill="#6C8B50" stroke="#3B6040" strokeWidth="1.7"/>
+          <path d="M31 85 Q39 75 44 80 M85 80 Q93 75 98 85" fill="none" stroke="#D5E4A4" strokeWidth="1.6" strokeLinecap="round"/>
+          <path d="M31 95 Q37 89 42 94 M86 94 Q92 89 97 95" fill="none" stroke="#B6C98A" strokeWidth="2.4" strokeLinecap="round"/>
+        </g>
+      )}
+      {/* Subtle forest-floor details leave the face unobstructed. */}
       <path d="M35 94 Q64 105 93 94" fill="none" stroke="#B6CF8A" strokeWidth="1.5" opacity=".5"/>
       <g fill="#F5DEA0">
         <circle cx="35" cy="67" r="1.7"/><circle cx="93" cy="61" r="1.7"/>
@@ -215,7 +236,12 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
 
       {level === 1 ? (
         <g>
-          {/* BABY: oversized soft head, tiny body, short limbs, and one new sprout. */}
+          {/* BABY: a newly-awakened seed spirit, still nestled in its split seed shell. */}
+          <path d="M46 76 Q35 79 37 92 Q43 101 56 98 L58 91 Q48 91 47 83Z"
+            fill="#B98B52" stroke="#765638" strokeWidth="2"/>
+          <path d="M82 76 Q93 79 91 92 Q85 101 72 98 L70 91 Q80 91 81 83Z"
+            fill="#B98B52" stroke="#765638" strokeWidth="2"/>
+          <path d="M43 88 Q48 94 55 93 M85 88 Q80 94 73 93" fill="none" stroke="#E8C987" strokeWidth="1.5" strokeLinecap="round"/>
           <path d="M51 78 Q43 80 41 87 Q42 93 51 94 M77 78 Q85 80 87 87 Q86 93 77 94"
             fill="none" stroke="#A4C77A" strokeWidth="5.5" strokeLinecap="round"/>
           <ellipse cx="64" cy="91" rx="13" ry="10" fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="1.8"/>
@@ -230,10 +256,15 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
           <ellipse cx="48" cy="59" rx="4" ry="2.2" fill="#E9A29A" opacity=".55"/><ellipse cx="80" cy="59" rx="4" ry="2.2" fill="#E9A29A" opacity=".55"/>
           <path d="M60 62 Q64 66 68 62" fill="none" stroke="#98765D" strokeWidth="1.6" strokeLinecap="round"/>
           <path d="M53 81 Q64 86 75 81" fill="none" stroke="#D5C99F" strokeWidth="1.4" strokeLinecap="round"/>
+          <circle cx="64" cy="91" r="2.1" fill="#E4C77E" stroke="#A7834D" strokeWidth=".8"/>
         </g>
       ) : level === 2 ? (
         <g>
-          {/* CHILD: longer limbs, a small tunic-like trunk body, and a pair of leaf locks. */}
+          {/* CHILD: the seedling has grown bark patches, moss, and a living vine mantle. */}
+          <path d="M45 67 Q36 61 31 69 Q34 78 45 80Z M83 67 Q92 61 97 69 Q94 78 83 80Z"
+            fill="#795B3D" stroke="#E4D2A9" strokeWidth="1.5"/>
+          <path d="M43 73 Q50 69 54 76 M85 73 Q78 69 74 76" fill="none" stroke="#B7D58A" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M48 88 Q64 96 80 88" fill="none" stroke="#6F9854" strokeWidth="3.2" strokeLinecap="round"/>
           <path d="M48 69 Q38 69 34 80 Q35 87 46 85 M80 69 Q90 69 94 80 Q93 87 82 85"
             fill="none" stroke="#8EB76D" strokeWidth="6" strokeLinecap="round"/>
           <path d="M52 66 Q64 60 76 66 L81 91 Q78 101 64 102 Q50 101 47 91Z"
@@ -255,7 +286,11 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
         </g>
       ) : (
         <g>
-          {/* ADULT: upright guardian proportions, mature bark torso, broad branch-crown. */}
+          {/* ADULT: a fully-awakened ancient tree spirit, with mature bark and lichen crown. */}
+          <path d="M45 61 Q32 54 27 69 Q28 84 44 88 L50 79Z M83 61 Q96 54 101 69 Q100 84 84 88 L78 79Z"
+            fill="#76543A" stroke="#DCC69A" strokeWidth="1.8" strokeLinejoin="round"/>
+          <path d="M31 73 Q37 65 43 72 M97 73 Q91 65 85 72" fill="none" stroke="#B7D58A" strokeWidth="3.2" strokeLinecap="round"/>
+          <path d="M52 64 Q64 70 76 64 M50 91 Q64 99 78 91" fill="none" stroke="#C99A65" strokeWidth="2.2" strokeLinecap="round"/>
           <path d="M48 62 Q36 59 30 73 Q29 84 44 86 M80 62 Q92 59 98 73 Q99 84 84 86"
             fill="none" stroke="#8BAF68" strokeWidth="7" strokeLinecap="round"/>
           <path d="M49 60 Q64 53 79 60 L83 91 Q80 102 64 104 Q48 102 45 91Z"
@@ -276,6 +311,7 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
           <path d="M59 59 Q64 63 69 59" fill="none" stroke="#98765D" strokeWidth="1.8" strokeLinecap="round"/>
           <path d="M64 68 L64 99" stroke="#C99A65" strokeWidth="2.3" strokeLinecap="round"/>
           <path d="M58 75 Q64 79 70 75 M57 88 Q64 92 71 88" fill="none" stroke="#D8B27D" strokeWidth="1.4" opacity=".9"/>
+          <path d="M53 68 Q49 76 54 82 M75 68 Q79 76 74 82" fill="none" stroke="#C28E5D" strokeWidth="1.5" strokeLinecap="round"/>
         </g>
       )}
 
