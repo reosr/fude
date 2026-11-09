@@ -3,7 +3,7 @@ import Image from "next/image";
 import {
   PROFILE_FRAMES,
 } from "../lib/profile-collections";
-import { GACHA_BADGES } from "../data/gacha-badges";
+import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../data/gacha-badges";
 
 interface ProfileAvatarProps {
   avatar?: string;
@@ -929,7 +929,10 @@ export default function ProfileAvatar({
     PROFILE_FRAMES.find((item) => item.id === frameId) ??
     PROFILE_FRAMES[0];
 
-  const collectionBadge = GACHA_BADGES.find((item) => item.id === badgeId);
+  const resolvedBadgeId = badgeId
+    ? LEGACY_GACHA_BADGE_ID_MAP[badgeId] ?? badgeId
+    : null;
+  const collectionBadge = GACHA_BADGES.find((item) => item.id === resolvedBadgeId);
   const badge = collectionBadge
     ? {
         name: collectionBadge.name,
