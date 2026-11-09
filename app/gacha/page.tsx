@@ -1,8 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Dices,
+  ArrowLeft,
   Sparkles,
   Coins,
   Layers3,
@@ -82,6 +84,7 @@ function copiesFor(
 }
 
 export default function GachaPage() {
+  const router = useRouter();
   const [inventory, setInventory] = useState<GachaInventory>({
     version: 1,
     badges: {},
@@ -122,6 +125,20 @@ export default function GachaPage() {
       window.removeEventListener("storage", refresh);
     };
   }, [refresh]);
+
+  useEffect(() => {
+    if (!showCatalogModal) return;
+
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
+    };
+  }, [showCatalogModal]);
 
   const ownedBadges = useMemo(
     () =>
@@ -223,6 +240,18 @@ export default function GachaPage() {
 
   return (
     <div className="mx-auto max-w-6xl space-y-7 pb-12">
+      <button
+        type="button"
+        onClick={() => {
+          if (window.history.length > 1) router.back();
+          else router.push("/");
+        }}
+        className="mb-3 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.06] px-3 py-2 text-xs font-bold text-[#D8D1C5] backdrop-blur-md transition hover:bg-white/10 hover:text-white"
+      >
+        <ArrowLeft size={15} />
+        Kembali
+      </button>
+
       <header className="relative overflow-hidden rounded-3xl border border-[#8E6B2B]/40 bg-[#1E1B18] p-6 md:p-9">
         <div className="pointer-events-none absolute -right-16 -top-24 h-72 w-72 rounded-full bg-[#B8860B]/15 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-28 left-1/3 h-64 w-64 rounded-full bg-[#C93438]/10 blur-3xl" />
@@ -585,7 +614,7 @@ export default function GachaPage() {
               <Layers3 size={19} className="text-[#D6AD4F]" />
               <h2 className="text-lg font-black text-[#EAE6DD]">Katalog 300 Badge</h2>
             </div>
-            <p className="mt-1 text-xs text-[#A3A099]">Lihat sekilas koleksi dari enam rarity. Buka katalog lengkap untuk menjelajahi semuanya.</p>
+            <p className="mt-1 max-w-2xl text-xs leading-5 text-[#A3A099]">Ini adalah katalog khusus badge Gacha yang didapat lewat summon. Berbeda dari badge pencapaian profil seperti Mochi Guardian dan Sakura Bloom.</p>
           </div>
           <button
             onClick={() => setShowCatalogModal(true)}
@@ -609,7 +638,7 @@ export default function GachaPage() {
 
       {showCatalogModal && (
         <div
-          className="fixed inset-0 z-[230] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
+          className="fixed inset-0 z-[230] flex items-center justify-center bg-[#08090D]/60 p-2 backdrop-blur-md sm:p-4"
           onClick={() => setShowCatalogModal(false)}
         >
           <div
@@ -617,12 +646,12 @@ export default function GachaPage() {
             aria-modal="true"
             aria-labelledby="gacha-catalog-title"
             onClick={(event) => event.stopPropagation()}
-            className="flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-[#6B542F] bg-[#1B1917] shadow-2xl"
+            className="flex max-h-[92dvh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#17191D]/90 shadow-[0_24px_90px_rgba(0,0,0,0.55)] backdrop-blur-2xl"
           >
             <div className="flex items-center justify-between gap-3 border-b border-[#38332B] p-4 sm:p-5">
               <div>
                 <h2 id="gacha-catalog-title" className="text-lg font-black text-[#F0E9D9]">Katalog Badge Lengkap</h2>
-                <p className="mt-1 text-xs text-[#A99C89]">{GACHA_BADGES.length} badge · 50 untuk setiap rarity</p>
+                <p className="mt-1 text-xs text-[#A99C89]">{GACHA_BADGES.length} badge · 90 Common / 70 Uncommon / 55 Rare / 40 Epic / 25 Mythic / 20 Legendary</p>
               </div>
               <button onClick={() => setShowCatalogModal(false)} aria-label="Tutup katalog" className="rounded-lg bg-[#302B25] p-2 text-[#D8D1C5] hover:bg-[#40392F]">
                 <span className="text-lg leading-none">×</span>
@@ -642,7 +671,7 @@ export default function GachaPage() {
                 className="min-w-0 flex-1 rounded-lg border border-[#40392F] bg-[#24211D] px-3 py-2 text-xs text-[#F0E9D9] outline-none placeholder:text-[#817A73] focus:border-[#B8860B]"
               />
             </div>
-            <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-4 sm:p-5">
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
                 {GACHA_BADGES.filter((badge) => catalogRarity === "all" || badge.rarity === catalogRarity)
                   .filter((badge) => `${badge.name} ${badge.description ?? ""}`.toLowerCase().includes(catalogSearch.trim().toLowerCase()))
