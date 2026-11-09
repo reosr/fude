@@ -28,8 +28,8 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
           <stop offset="1" stopColor="#9C7048"/>
         </linearGradient>
         <linearGradient id={moss} x1="0" y1="0" x2=".9" y2="1">
-          <stop stopColor="#D9E89C"/><stop offset=".24" stopColor="#A9C66C"/>
-          <stop offset=".62" stopColor="#64834A"/><stop offset="1" stopColor="#344D36"/>
+          <stop stopColor="#E7F0B0"/><stop offset=".18" stopColor="#B7D477"/>
+          <stop offset=".48" stopColor="#789B4E"/><stop offset=".76" stopColor="#48683E"/><stop offset="1" stopColor="#263F30"/>
         </linearGradient>
         <linearGradient id={porcelain} x1=".12" y1="0" x2=".82" y2="1">
           <stop stopColor="#FFFFFF"/><stop offset=".2" stopColor="#F7F1DA"/>
@@ -37,8 +37,8 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
           <stop offset="1" stopColor="#66745F"/>
         </linearGradient>
         <linearGradient id={leaf} x1=".15" y1="0" x2=".85" y2="1">
-          <stop stopColor="#F1F4B9"/><stop offset=".28" stopColor="#BBD47B"/>
-          <stop offset=".66" stopColor="#789C51"/><stop offset="1" stopColor="#3F623E"/>
+          <stop stopColor="#F5F3C2"/><stop offset=".2" stopColor="#C7DC83"/>
+          <stop offset=".52" stopColor="#83A956"/><stop offset=".82" stopColor="#527344"/><stop offset="1" stopColor="#304B35"/>
         </linearGradient>
         <radialGradient id={shade} cx=".32" cy=".18" r=".86">
           <stop stopColor="#FFFCE7" stopOpacity=".85"/><stop offset=".38" stopColor="#F7E7B5" stopOpacity=".2"/>
@@ -91,6 +91,19 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
       <path d="M34 84 Q40 77 48 82 M126 84 Q120 77 112 82" fill="none" stroke="#F1F2B9" strokeWidth="2" strokeLinecap="round"/>
       <g fill="#D9E9A0"><circle cx="42" cy="91" r="1.5"/><circle cx="51" cy="87" r="1.2"/><circle cx="118" cy="91" r="1.5"/><circle cx="109" cy="87" r="1.2"/></g>
 
+      {/* Forked sapling branches give the spirit a tree-born silhouette. */}
+      <g fill="none" strokeLinecap="round" strokeLinejoin="round" filter={`url(#kodama-proto-shadow-${uid})`}>
+        <path d="M66 49 Q57 38 51 29 Q46 22 40 22 M51 29 Q53 21 50 16 M94 49 Q103 38 109 29 Q114 22 120 22 M109 29 Q107 21 110 16" stroke="#302A22" strokeWidth="7"/>
+        <path d="M66 49 Q57 38 51 29 Q46 22 40 22 M51 29 Q53 21 50 16 M94 49 Q103 38 109 29 Q114 22 120 22 M109 29 Q107 21 110 16" stroke={`url(#${bark})`} strokeWidth="4.2"/>
+        <path d="M51 29 L43 25 M109 29 L117 25" stroke="#D9B17A" strokeWidth="1.1"/>
+      </g>
+      <g fill={`url(#${leaf})`} stroke="#344E35" strokeWidth="1.1">
+        <path d="M39 23 Q28 12 33 7 Q44 8 47 20 Q43 25 39 23Z"/>
+        <path d="M50 17 Q43 5 50 3 Q59 8 54 18Z"/>
+        <path d="M121 23 Q132 12 127 7 Q116 8 113 20 Q117 25 121 23Z"/>
+        <path d="M110 17 Q117 5 110 3 Q101 8 106 18Z"/>
+      </g>
+      <path d="M35 11 Q40 15 43 21 M124 11 Q120 15 117 21" fill="none" stroke="#F4F1BD" strokeWidth="1.2" strokeLinecap="round"/>
       {/* Three living leaves form the Kodama's unmistakable crown. */}
       <path d="M79 39 C59 32 51 17 58 12 C72 10 81 22 82 37 C90 20 105 17 110 26 C108 40 94 46 80 43Z"
         fill="#263A2B" stroke="#28382A" strokeWidth="3" strokeLinejoin="round" filter={`url(#kodama-proto-shadow-${uid})`}/>
@@ -101,8 +114,9 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
 
       {/* The Kodama itself: pale wood-spirit porcelain, round head and small root body. */}
       <g filter={`url(#kodama-proto-shadow-${uid})`}>
-        <path d="M58 91 Q49 95 48 106 Q50 116 62 117 L98 117 Q110 115 111 106 Q108 95 99 91Z"
-          fill={`url(#${porcelain})`} stroke="#4C5946" strokeWidth="2.2"/>
+        <path d="M58 91 Q49 95 48 106 Q50 116 62 117 L98 117 Q110 115 111 106 Q108 95 99 91Z" fill={`url(#${bark})`} stroke="#302A22" strokeWidth="2.4"/>
+        <path d="M62 94 Q80 101 98 94 L96 113 Q80 119 64 113Z" fill="#6C8750" stroke="#344A34" strokeWidth="1.4"/>
+        <path d="M67 98 Q80 103 93 98 M69 106 Q80 110 91 106" fill="none" stroke="#D7B17B" strokeWidth="1.4" strokeLinecap="round"/>
         <path d="M62 105 Q57 113 53 119 M98 105 Q103 113 107 119" fill="none" stroke="#647453" strokeWidth="5" strokeLinecap="round"/>
         <path d="M58 91 Q47 83 43 91 Q42 99 55 102 M100 91 Q113 83 117 91 Q118 99 105 102"
           fill="none" stroke="#75865B" strokeWidth="6" strokeLinecap="round"/>
