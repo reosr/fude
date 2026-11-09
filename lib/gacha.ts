@@ -204,7 +204,6 @@ export function getGachaInventory(): GachaInventory {
         : { level1: oldLevel1, level2: oldLevel2, level3: oldLevel3 };
       const previous = badges[canonicalId] ?? emptyCopies();
       badges[canonicalId] = {
-        level0: previous.level0 + normalized.level0,
         level1: previous.level1 + normalized.level1,
         level2: previous.level2 + normalized.level2,
         level3: previous.level3 + normalized.level3,
