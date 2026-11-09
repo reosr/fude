@@ -57,7 +57,6 @@ export default function Sidebar() {
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
   const [tokens, setTokens] = useState(0);
   const [levelInfo, setLevelInfo] = useState(() => getLevelInfo(0));
-  const [totalXp, setTotalXp] = useState(0);
 
   const [unlockNotices, setUnlockNotices] = useState<
     CollectionUnlockNotice[]
@@ -91,7 +90,6 @@ export default function Sidebar() {
 
     const refreshXp = () => {
       const xp = getFudeXp();
-      setTotalXp(xp);
       setLevelInfo(getLevelInfo(xp));
       syncNewCollectionUnlocks();
     };
