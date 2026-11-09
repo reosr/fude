@@ -689,12 +689,28 @@ export default function GachaPage() {
             </div>
             <p className="mt-1 max-w-2xl text-xs leading-5 text-[#A3A099]">Semua badge di sini adalah koleksi badge profil Fude. Setiap badge diperoleh melalui summon, bisa dikumpulkan duplikatnya hingga Level 3, lalu dipasang pada avatar profil.</p>
           </div>
-          <button
-            onClick={() => setShowCatalogModal(true)}
-            className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-4 py-2.5 text-xs font-black text-[#E7C46A] transition hover:bg-[#B8860B]/20"
-          >
-            Lihat Selengkapnya · {GACHA_BADGES.length}
-          </button>
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-1 rounded-xl border border-[#40392F] bg-[#24211D] p-1">
+              <span className="px-2 text-[9px] font-black tracking-wide text-[#A99C89]">LEVEL</span>
+              {([1, 2, 3] as const).map((level) => (
+                <button
+                  key={level}
+                  type="button"
+                  onClick={() => setCatalogPreviewLevel(level)}
+                  aria-pressed={catalogPreviewLevel === level}
+                  className={`rounded-lg px-3 py-2 text-[10px] font-black transition ${catalogPreviewLevel === level ? "bg-[#B8860B] text-white shadow" : "text-[#A99C89] hover:bg-white/5 hover:text-[#F0E9D9]"}`}
+                >
+                  {level}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={() => setShowCatalogModal(true)}
+              className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-4 py-2.5 text-xs font-black text-[#E7C46A] transition hover:bg-[#B8860B]/20"
+            >
+              Lihat Selengkapnya · {GACHA_BADGES.length}
+            </button>
+          </div>
         </div>
         <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
           {GACHA_RARITIES.flatMap((rarity) => GACHA_BADGES.filter((badge) => badge.rarity === rarity).slice(0, 2)).map((badge) => {
@@ -704,7 +720,7 @@ export default function GachaPage() {
               <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
                 <div className="relative flex justify-center">
                   <div className="">
-                    <GachaBadgeArtwork badge={badge} size={58} level={1} />
+                    <GachaBadgeArtwork badge={badge} size={58} level={catalogPreviewLevel} />
                   </div>
                   {!owned && (
                     <div className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-[#17191D]/90 text-[#D6D1C8] shadow-lg" title="Belum dimiliki">
