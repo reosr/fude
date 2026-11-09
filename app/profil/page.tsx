@@ -114,6 +114,7 @@ export default function Profil() {
 
   const [activeTab, setActiveTab] = useState<CollectionTab>("badges");
   const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null);
+  const [collectionModalOpen, setCollectionModalOpen] = useState(false);
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -679,7 +680,7 @@ export default function Profil() {
         {activeTab === "badges" && (
           <div className="p-4 md:p-5">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {ALL_BADGES.map((badge) => {
+              {ALL_BADGES.slice(0, 8).map((badge) => {
                 const actuallyUnlocked = unlockedBadgeIds.includes(badge.id);
                 const unlocked =
                   COLLECTION_PREVIEW_MODE || actuallyUnlocked;
@@ -729,6 +730,11 @@ export default function Profil() {
                 );
               })}
             </div>
+            {ALL_BADGES.length > 8 && (
+              <button onClick={() => setCollectionModalOpen(true)} className="mt-4 w-full rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 py-3 text-xs font-black text-[#F0C75E] transition hover:bg-[#B8860B]/20">
+                Lihat Selengkapnya · {ALL_BADGES.length} Badge
+              </button>
+            )}
           </div>
         )}
 
@@ -736,7 +742,7 @@ export default function Profil() {
         {activeTab === "frames" && (
           <div className="p-4 md:p-5">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-              {PROFILE_FRAMES.map((frame) => {
+              {PROFILE_FRAMES.slice(0, 8).map((frame) => {
                 const actuallyUnlocked = unlockedFrameIds.includes(frame.id);
                 const unlocked =
                   COLLECTION_PREVIEW_MODE || actuallyUnlocked;
@@ -796,9 +802,61 @@ export default function Profil() {
                 );
               })}
             </div>
+            {PROFILE_FRAMES.length > 8 && (
+              <button onClick={() => setCollectionModalOpen(true)} className="mt-4 w-full rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 py-3 text-xs font-black text-[#F0C75E] transition hover:bg-[#B8860B]/20">
+                Lihat Selengkapnya · {PROFILE_FRAMES.length} Frame
+              </button>
+            )}
           </div>
         )}
       </section>
+
+      {collectionModalOpen && (
+        <div className="fixed inset-0 z-[205] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6" onClick={() => setCollectionModalOpen(false)}>
+          <div role="dialog" aria-modal="true" aria-labelledby="collection-modal-title" onClick={(event) => event.stopPropagation()} className="flex max-h-[90vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-[#6B542F] bg-[#1B1917] shadow-2xl">
+            <div className="flex items-center justify-between gap-3 border-b border-[#38332B] p-4 sm:p-5">
+              <div>
+                <h2 id="collection-modal-title" className="text-lg font-black text-[#F0E9D9]">{activeTab === "badges" ? "Semua Badge" : "Semua Frame"}</h2>
+                <p className="mt-1 text-xs text-[#A99C89]">{activeTab === "badges" ? `${ALL_BADGES.length} desain badge` : `${PROFILE_FRAMES.length} desain frame`}</p>
+              </div>
+              <button onClick={() => setCollectionModalOpen(false)} aria-label="Tutup koleksi" className="rounded-lg bg-[#302B25] px-3 py-2 text-lg leading-none text-[#D8D1C5] hover:bg-[#40392F]">×</button>
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+              {activeTab === "badges" ? (
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+                  {ALL_BADGES.map((badge) => {
+                    const unlocked = COLLECTION_PREVIEW_MODE || unlockedBadgeIds.includes(badge.id);
+                    const isNew = pendingIds.includes(`badge:${badge.id}`);
+                    return (
+                      <button key={badge.id} onClick={() => { setCollectionModalOpen(false); openBadge(badge); }} className={`relative flex min-h-[125px] flex-col items-center justify-center rounded-xl border p-3 text-center ${unlocked ? "border-[#B8860B]/40 bg-[#262523]" : "border-[#33312E] bg-[#181716] opacity-60"}`}>
+                        {isNew && <span className="absolute right-2 top-2 rounded bg-[#C93438] px-1.5 py-1 text-[8px] font-black text-white">NEW</span>}
+                        <div className={`mb-2 flex h-10 w-10 items-center justify-center rounded-full border text-xl ${unlocked ? TIER_STYLES[badge.tier] : "border-[#44413D] bg-[#33312E] grayscale"}`}>{unlocked ? badge.icon : <Lock size={16} />}</div>
+                        <span className="text-[10px] font-bold leading-tight text-[#EAE6DD]">{badge.name}</span>
+                        <span className="mt-1 text-[8px] text-[#A3A099]">{TIER_LABELS[badge.tier]}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                  {PROFILE_FRAMES.map((frame) => {
+                    const unlocked = COLLECTION_PREVIEW_MODE || unlockedFrameIds.includes(frame.id);
+                    const isNew = pendingIds.includes(`frame:${frame.id}`);
+                    return (
+                      <button key={frame.id} onClick={() => { setCollectionModalOpen(false); openFrame(frame); }} className={`relative flex min-h-[150px] flex-col items-center justify-center rounded-xl border p-3 text-center ${unlocked ? "border-[#B8860B]/40 bg-[#262523]" : "border-[#33312E] bg-[#181716] opacity-60"}`}>
+                        {isNew && <span className="absolute right-2 top-2 rounded bg-[#C93438] px-1.5 py-1 text-[8px] font-black text-white">NEW</span>}
+                        <div className={unlocked ? "" : "grayscale opacity-50"}><ProfileAvatar avatar="筆" frameId={frame.id} size={82} /></div>
+                        <span className="mt-2 text-[10px] font-bold text-[#EAE6DD]">{frame.name}</span>
+                        <span className="mt-1 text-[8px] text-[#A3A099]">{frame.tier}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ACHIEVEMENT RINGKAS */}
       <section className="bg-[#1E1D1B] border border-[#33312E] rounded-2xl p-5">
