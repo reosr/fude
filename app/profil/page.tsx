@@ -69,7 +69,7 @@ const PROFILE_DESCRIPTION = "Pelajar bahasa Jepang di Fude";
 // MODE PENGEMBANGAN:
 // Semua badge dan frame bisa dilihat tanpa syarat unlock.
 // Ubah menjadi false setelah seluruh desain koleksi selesai.
-const COLLECTION_PREVIEW_MODE = true;
+const COLLECTION_PREVIEW_MODE = false;
 
 type CollectionTab = "badges" | "frames";
 
