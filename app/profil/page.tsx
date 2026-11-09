@@ -22,6 +22,7 @@ import {
 import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfileAvatar from "../../components/ProfileAvatar";
+import GachaBadgeArtwork from "../../components/GachaBadgeArtwork";
 import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../../data/gacha-badges";
 import type { GachaBadgeDefinition } from "../../lib/gacha";
 import {
@@ -692,14 +693,14 @@ export default function Profil() {
                       </span>
                     )}
 
-                    <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl mb-2 border ${
-                        unlocked
-                          ? TIER_STYLES[badge.tier]
-                          : "bg-[#33312E] border-[#44413D] grayscale"
-                      }`}
-                    >
-                      {unlocked ? badge.icon : <Lock size={19} />}
+                    <div className={`mb-2 flex h-12 w-12 items-center justify-center ${unlocked ? "" : "grayscale opacity-50"}`}>
+                      {unlocked ? (
+                        <GachaBadgeArtwork badge={badge} level={1} size={48} />
+                      ) : (
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#44413D] bg-[#33312E]">
+                          <Lock size={19} />
+                        </div>
+                      )}
                     </div>
 
                     <p className="text-xs font-bold text-[#EAE6DD] leading-tight">
@@ -813,7 +814,9 @@ export default function Profil() {
                     return (
                       <button key={badge.id} onClick={() => { setCollectionModalOpen(false); openBadge(badge); }} className={`relative flex min-h-[125px] flex-col items-center justify-center rounded-xl border p-3 text-center ${unlocked ? "border-white/15 bg-white/[0.06] shadow-lg shadow-black/20 backdrop-blur-md" : "border-white/10 bg-black/20 opacity-60"}`}>
                         {isNew && <span className="absolute right-2 top-2 rounded bg-[#C93438] px-1.5 py-1 text-[8px] font-black text-white">NEW</span>}
-                        <div className={`mb-2 flex h-10 w-10 items-center justify-center rounded-full border text-xl ${unlocked ? TIER_STYLES[badge.tier] : "border-[#44413D] bg-[#33312E] grayscale"}`}>{unlocked ? badge.icon : <Lock size={16} />}</div>
+                        <div className={`mb-2 flex h-12 w-12 items-center justify-center ${unlocked ? "" : "grayscale opacity-50"}`}>
+                          {unlocked ? <GachaBadgeArtwork badge={badge} level={1} size={48} /> : <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#44413D] bg-[#33312E]"><Lock size={16} /></div>}
+                        </div>
                         <span className="text-[10px] font-bold leading-tight text-[#EAE6DD]">{badge.name}</span>
                         <span className="mt-1 text-[8px] text-[#A3A099]">{TIER_LABELS[badge.tier]}</span>
                       </button>
