@@ -913,7 +913,7 @@ export default function ProfileAvatar({
       }
     : undefined;
 
-  const badgeSize = Math.round(size * 0.36);
+  const badgeSize = Math.round(size * (compactBadgeAura ? 0.46 : 0.36));
 
   // Ruang tengah foto lebih kecil agar artwork frame terlihat.
   const photoInset = Math.max(4, Math.round(size * 0.14));
@@ -985,7 +985,7 @@ export default function ProfileAvatar({
           style={{
             width: badgeLevel > 1
               ? compactBadgeAura
-                ? Math.max(32, badgeSize + 10)
+                ? Math.max(30, badgeSize + 4)
                 : Math.max(80, badgeSize + 24)
               : badgeSize,
             height: badgeLevel > 1
