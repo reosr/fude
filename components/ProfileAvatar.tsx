@@ -5,11 +5,13 @@ import {
 } from "../lib/profile-collections";
 import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../data/gacha-badges";
 import GachaBadgeArtwork from "./GachaBadgeArtwork";
+import type { GachaEvolutionLevel } from "../lib/gacha";
 
 interface ProfileAvatarProps {
   avatar?: string;
   photoSrc?: string | null;
   badgeId?: string | null;
+  badgeLevel?: GachaEvolutionLevel;
   frameId?: string | null;
   size?: number;
   className?: string;
@@ -886,6 +888,7 @@ export default function ProfileAvatar({
   avatar = "筆",
   photoSrc,
   badgeId,
+  badgeLevel = 1,
   frameId = "classic",
   size = 112,
   className = "",
@@ -985,7 +988,7 @@ export default function ProfileAvatar({
             zIndex: 20,
           }}
         >
-          <GachaBadgeArtwork badge={collectionBadge} level={1} size={badgeSize} />
+          <GachaBadgeArtwork badge={collectionBadge} level={badgeLevel} size={badgeSize} />
         </div>
       )}
     </div>
