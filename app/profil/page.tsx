@@ -892,14 +892,8 @@ export default function Profil() {
 
             {selectedBadge && (
               <div className="text-center">
-                <div
-                  className={`w-24 h-24 mx-auto rounded-full border-2 flex items-center justify-center text-5xl mb-4 ${
-                    TIER_STYLES[selectedBadge.tier]
-                  }`}
-                >
-                  {unlockedBadgeIds.includes(selectedBadge.id)
-                    ? selectedBadge.icon
-                    : <Lock size={34} />}
+                <div className="mx-auto mb-4 flex h-28 w-28 items-center justify-center">
+                  <GachaBadgeArtwork badge={selectedBadge} level={1} size={104} />
                 </div>
 
                 <p className="text-[10px] uppercase tracking-widest text-[#B8860B] font-black">
@@ -917,7 +911,9 @@ export default function Profil() {
                 <p className="text-xs text-[#817A73] mt-4">
                   {unlockedBadgeIds.includes(selectedBadge.id)
                     ? "Badge sudah menjadi milikmu."
-                    : "Belum dimiliki. Dapatkan melalui Gacha."}
+                    : COLLECTION_PREVIEW_MODE
+                      ? "Preview desain · Badge belum dimiliki. Dapatkan melalui Gacha untuk memasangnya."
+                      : "Belum dimiliki. Dapatkan melalui Gacha."}
                 </p>
 
                 {unlockedBadgeIds.includes(selectedBadge.id) && (
