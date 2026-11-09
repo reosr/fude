@@ -335,17 +335,22 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
       ) : (
         <g>
           {/* ADULT: a fully-awakened ancient tree spirit, with mature bark and lichen crown. */}
-          <path d="M45 61 Q32 54 27 69 Q28 84 44 88 L50 79Z M83 61 Q96 54 101 69 Q100 84 84 88 L78 79Z"
+          {/* Commanding stance: broad shoulders, crossed branch-arms, and planted roots. */}
+          <path d="M45 61 Q29 52 25 67 Q27 82 43 86 L52 77Z M83 61 Q99 52 103 67 Q101 82 85 86 L76 77Z"
             fill="#76543A" stroke="#DCC69A" strokeWidth="1.8" strokeLinejoin="round"/>
-          <path d="M31 73 Q37 65 43 72 M97 73 Q91 65 85 72" fill="none" stroke="#B7D58A" strokeWidth="3.2" strokeLinecap="round"/>
-          <path d="M52 64 Q64 70 76 64 M50 91 Q64 99 78 91" fill="none" stroke="#C99A65" strokeWidth="2.2" strokeLinecap="round"/>
-          <path d="M48 62 Q36 59 30 73 Q29 84 44 86 M80 62 Q92 59 98 73 Q99 84 84 86"
-            fill="none" stroke="#8BAF68" strokeWidth="7" strokeLinecap="round"/>
-          <path d="M49 60 Q64 53 79 60 L83 91 Q80 102 64 104 Q48 102 45 91Z"
+          <path d="M31 70 Q38 63 45 72 M97 70 Q90 63 83 72" fill="none" stroke="#B7D58A" strokeWidth="3.2" strokeLinecap="round"/>
+          <path d="M48 63 Q64 55 80 63 L84 91 Q79 103 64 104 Q49 103 44 91Z"
             fill={"url(#" + wood + ")"} stroke="#E8D7B1" strokeWidth="2"/>
-          <path d="M55 66 Q64 72 73 66 M54 81 Q64 87 74 81" fill="none" stroke="#C89A67" strokeWidth="1.7" opacity=".8" strokeLinecap="round"/>
-          <path d="M53 99 Q48 108 43 113 M75 99 Q80 108 85 113" fill="none" stroke="#76563B" strokeWidth="6" strokeLinecap="round"/>
-          <path d="M39 113 Q47 107 55 112 L54 117 Q45 120 38 117Z M73 112 Q81 107 89 113 L90 117 Q83 120 74 117Z"
+          <path d="M54 67 Q64 72 74 67 M53 83 Q64 88 75 83" fill="none" stroke="#C89A67" strokeWidth="1.7" opacity=".8" strokeLinecap="round"/>
+          {/* Arms cross firmly over the chest instead of hanging at the sides. */}
+          <path d="M34 72 Q43 69 52 77 L75 87 Q82 90 78 96 Q74 100 68 95 L43 84 Q34 82 34 72Z"
+            fill="#806044" stroke="#DCC69A" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M94 72 Q85 69 76 77 L53 87 Q46 90 50 96 Q54 100 60 95 L85 84 Q94 82 94 72Z"
+            fill="#806044" stroke="#DCC69A" strokeWidth="2" strokeLinejoin="round"/>
+          <path d="M52 91 Q64 96 76 91" fill="none" stroke="#B7D58A" strokeWidth="2.4" strokeLinecap="round"/>
+          {/* Wide, grounded root-feet give the adult a stable silhouette. */}
+          <path d="M55 99 Q48 106 39 112 M73 99 Q80 106 89 112" fill="none" stroke="#76563B" strokeWidth="6" strokeLinecap="round"/>
+          <path d="M35 111 Q45 106 55 111 L58 117 Q45 121 32 117Z M73 111 Q83 106 93 111 L96 117 Q83 121 70 117Z"
             fill="#806044" stroke="#E6D5B0" strokeWidth="1.2"/>
           <path d="M64 28 C51 28 44 38 45 50 C46 62 54 68 64 68 C75 68 83 60 83 49 C84 37 76 28 64 28Z"
             fill={"url(#" + skin + ")"} stroke="#657B55" strokeWidth="2.2"/>
@@ -354,12 +359,13 @@ function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
           <path d="M64 34 Q48 20 51 10 Q64 6 67 30 Q76 12 88 16 Q89 30 67 39Z"
             fill={"url(#" + leaf + ")"} stroke="#456B43" strokeWidth="2" strokeLinejoin="round"/>
           <path d="M49 34 Q40 19 34 14 M79 34 Q88 19 94 14" fill="none" stroke={"url(#" + wood + ")"} strokeWidth="4" strokeLinecap="round"/>
-          {/* Mature expression: narrow, focused eyes and a composed, unsmiling mouth. */}
-          <path d="M50 47 Q56 42 61 47 Q57 52 51 51Z M67 47 Q72 42 78 47 L77 51 Q71 52 67 47Z"
-            fill="#F7F4DF" stroke="#40523E" strokeWidth="1.1" strokeLinejoin="round"/>
-          <path d="M53 47 Q57 45 59 48 L57 51 Q54 51 53 47Z M70 48 Q73 45 76 47 Q75 51 72 51Z" fill="#26352F"/>
-          <path d="M49 43 L61 41 M67 41 L79 43" fill="none" stroke="#604832" strokeWidth="2.5" strokeLinecap="round"/>
-          <path d="M59 60 L69 60" fill="none" stroke="#76563B" strokeWidth="2" strokeLinecap="round"/>
+          {/* Stern, self-assured gaze: alert eyes, decisive brows, no sorrowful droop. */}
+          <path d="M49 48 Q54 43 61 46 L61 51 Q55 54 50 51Z M67 46 Q74 43 79 48 L78 51 Q72 54 67 51Z"
+            fill="#F7F4DF" stroke="#40523E" strokeWidth="1.2" strokeLinejoin="round"/>
+          <path d="M53 47 Q57 45 60 48 L59 51 Q55 52 53 47Z M69 48 Q73 45 76 47 Q75 52 71 51Z" fill="#182A24"/>
+          <circle cx="56.5" cy="47.5" r="1" fill="#FFFFFF"/><circle cx="73" cy="47.5" r="1" fill="#FFFFFF"/>
+          <path d="M48 44 L61 42 M67 42 L80 44" fill="none" stroke="#493A2B" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M58 60 Q64 59 70 60" fill="none" stroke="#5E452F" strokeWidth="2.4" strokeLinecap="round"/>
           <path d="M64 68 L64 99" stroke="#C99A65" strokeWidth="2.3" strokeLinecap="round"/>
           <path d="M58 75 Q64 79 70 75 M57 88 Q64 92 71 88" fill="none" stroke="#D8B27D" strokeWidth="1.4" opacity=".9"/>
           <path d="M53 68 Q49 76 54 82 M75 68 Q79 76 74 82" fill="none" stroke="#C28E5D" strokeWidth="1.5" strokeLinecap="round"/>
