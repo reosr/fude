@@ -506,37 +506,10 @@ export function getCompletedJlptLevels(): JLPTLevel[] {
   return order.filter((level) => levels.has(level));
 }
 
+// Badge tidak lagi dibuka melalui progres chapter/JLPT.
+// Semua 300 badge hanya dimiliki setelah diperoleh dari Gacha.
 export function getUnlockedBadges(): ProfileBadge[] {
-  const completedBab = getCompletedBabCount();
-  const completedJlpt = getCompletedJlptSetIds();
-
-  const chapterBadges = CHAPTER_BADGES.filter(
-    (badge) => (badge.chapter ?? 0) <= completedBab
-  );
-
-  const specialBadges = SPECIAL_BADGES.filter((badge) => {
-    switch (badge.id) {
-      case "special-first-bab":
-        return completedBab >= 1;
-
-      case "special-ten-babs":
-        return completedBab >= 10;
-
-      case "special-quarter":
-        return completedBab >= 25;
-
-      case "special-master":
-        return completedBab >= 50;
-
-      case "special-jlpt":
-        return completedJlpt.length >= 1;
-
-      default:
-        return false;
-    }
-  });
-
-  return [...chapterBadges, ...specialBadges];
+  return [];
 }
 
 export function getUnlockedFrames(): ProfileFrame[] {
