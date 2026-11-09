@@ -36,6 +36,7 @@ export interface GachaBadgeDefinition {
   id: string;
   name: string;
   icon: string;
+  artwork?: Partial<Record<GachaEvolutionLevel, string>>;
   rarity: GachaRarity;
   tier: GachaRarity;
   description?: string;
