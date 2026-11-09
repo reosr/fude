@@ -1,164 +1,450 @@
 "use client";
 
-import { useId } from "react";
+import { useEffect, useRef } from "react";
+
+const SIZE = 320;
+
+function radial(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  radius: number,
+  stops: Array<[number, string]>,
+) {
+  const gradient = ctx.createRadialGradient(x, y, 1, x, y, radius);
+  stops.forEach(([offset, color]) => gradient.addColorStop(offset, color));
+  return gradient;
+}
+
+function drawKodama(ctx: CanvasRenderingContext2D) {
+  const s = SIZE / 160;
+  ctx.save();
+  ctx.scale(s, s);
+  ctx.clearRect(0, 0, 160, 160);
+
+  // Soft ambient shadow beneath the complete medallion.
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.62)";
+  ctx.shadowBlur = 13;
+  ctx.shadowOffsetY = 7;
+  ctx.beginPath();
+  ctx.moveTo(80, 5);
+  ctx.bezierCurveTo(99, 8, 111, 12, 123, 25);
+  ctx.bezierCurveTo(143, 35, 140, 56, 145, 82);
+  ctx.bezierCurveTo(143, 108, 130, 125, 111, 132);
+  ctx.lineTo(80, 153);
+  ctx.lineTo(49, 132);
+  ctx.bezierCurveTo(30, 125, 17, 108, 15, 82);
+  ctx.bezierCurveTo(20, 56, 17, 35, 37, 25);
+  ctx.bezierCurveTo(49, 12, 61, 8, 80, 5);
+  ctx.closePath();
+  ctx.fillStyle = "#13251b";
+  ctx.fill();
+  ctx.restore();
+
+  // Layered bronze and forest-glass badge rim.
+  const rim = ctx.createLinearGradient(22, 15, 138, 143);
+  rim.addColorStop(0, "#fff0c1");
+  rim.addColorStop(.13, "#b88a4e");
+  rim.addColorStop(.34, "#493623");
+  rim.addColorStop(.56, "#e4c78a");
+  rim.addColorStop(.78, "#63452a");
+  rim.addColorStop(1, "#f7e2ad");
+  ctx.fillStyle = rim;
+  ctx.strokeStyle = "#302419";
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.moveTo(80, 5);
+  ctx.bezierCurveTo(99, 8, 111, 12, 123, 25);
+  ctx.bezierCurveTo(143, 35, 140, 56, 145, 82);
+  ctx.bezierCurveTo(143, 108, 130, 125, 111, 132);
+  ctx.lineTo(80, 153);
+  ctx.lineTo(49, 132);
+  ctx.bezierCurveTo(30, 125, 17, 108, 15, 82);
+  ctx.bezierCurveTo(20, 56, 17, 35, 37, 25);
+  ctx.bezierCurveTo(49, 12, 61, 8, 80, 5);
+  ctx.closePath();
+  ctx.fill();
+  ctx.stroke();
+
+  const enamel = radial(ctx, 65, 45, 112, [
+    [0, "#47644a"], [.42, "#1d3b30"], [.78, "#10251d"], [1, "#07130f"],
+  ]);
+  ctx.fillStyle = enamel;
+  ctx.beginPath();
+  ctx.moveTo(80, 12);
+  ctx.bezierCurveTo(99, 15, 111, 19, 118, 30);
+  ctx.bezierCurveTo(135, 39, 132, 59, 137, 82);
+  ctx.bezierCurveTo(135, 104, 123, 119, 106, 126);
+  ctx.lineTo(80, 144);
+  ctx.lineTo(54, 126);
+  ctx.bezierCurveTo(37, 119, 25, 104, 23, 82);
+  ctx.bezierCurveTo(28, 59, 25, 39, 42, 30);
+  ctx.bezierCurveTo(49, 19, 61, 15, 80, 12);
+  ctx.closePath();
+  ctx.fill();
+
+  // Atmospheric forest light, softly blurred behind the spirit.
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  ctx.filter = "blur(7px)";
+  ctx.fillStyle = "rgba(188,218,130,.25)";
+  ctx.beginPath();
+  ctx.ellipse(79, 75, 48, 52, -.18, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  // Sprout stems and leaves, shaded like waxy living foliage.
+  function leaf(path: (ctx: CanvasRenderingContext2D) => void, x: number, y: number, r: number) {
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,.45)";
+    ctx.shadowBlur = 3;
+    ctx.shadowOffsetY = 2;
+    ctx.beginPath();
+    path(ctx);
+    const g = ctx.createLinearGradient(x - r, y - r, x + r, y + r);
+    g.addColorStop(0, "#f4f1bd");
+    g.addColorStop(.22, "#c9df83");
+    g.addColorStop(.56, "#7da84f");
+    g.addColorStop(.84, "#426b3d");
+    g.addColorStop(1, "#203e2d");
+    ctx.fillStyle = g;
+    ctx.fill();
+    ctx.strokeStyle = "rgba(35,65,39,.9)";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+    ctx.restore();
+    ctx.save();
+    ctx.strokeStyle = "rgba(255,250,205,.72)";
+    ctx.lineWidth = .8;
+    ctx.lineCap = "round";
+    ctx.beginPath();
+    ctx.moveTo(x - r * .55, y + r * .45);
+    ctx.quadraticCurveTo(x, y, x + r * .52, y - r * .55);
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "#614a30";
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(77, 48);
+  ctx.quadraticCurveTo(69, 29, 58, 19);
+  ctx.moveTo(91, 45);
+  ctx.quadraticCurveTo(99, 28, 110, 23);
+  ctx.stroke();
+  leaf((c) => {
+    c.moveTo(59, 22);
+    c.bezierCurveTo(39, 17, 41, 5, 49, 5);
+    c.bezierCurveTo(62, 5, 69, 14, 65, 24);
+    c.bezierCurveTo(63, 26, 60, 25, 59, 22);
+  }, 55, 15, 12);
+  leaf((c) => {
+    c.moveTo(108, 27);
+    c.bezierCurveTo(117, 12, 131, 17, 128, 26);
+    c.bezierCurveTo(124, 38, 111, 38, 106, 31);
+  }, 117, 26, 12);
+
+  // Tiny asymmetrical body turned in three-quarter view.
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.48)";
+  ctx.shadowBlur = 5;
+  ctx.shadowOffsetY = 3;
+  ctx.beginPath();
+  ctx.moveTo(68, 91);
+  ctx.bezierCurveTo(56, 99, 59, 119, 69, 129);
+  ctx.bezierCurveTo(81, 140, 104, 135, 110, 119);
+  ctx.bezierCurveTo(115, 106, 102, 94, 91, 92);
+  ctx.closePath();
+  const body = ctx.createRadialGradient(74, 99, 3, 91, 115, 34);
+  body.addColorStop(0, "#fffde9");
+  body.addColorStop(.25, "#e0e5cc");
+  body.addColorStop(.58, "#a6b99a");
+  body.addColorStop(.84, "#647e69");
+  body.addColorStop(1, "#344e3e");
+  ctx.fillStyle = body;
+  ctx.fill();
+  ctx.restore();
+
+  // Root-like feet.
+  ctx.lineCap = "round";
+  ctx.lineWidth = 6;
+  ctx.strokeStyle = "#52684e";
+  ctx.beginPath();
+  ctx.moveTo(75, 126);
+  ctx.quadraticCurveTo(70, 137, 62, 138);
+  ctx.moveTo(96, 127);
+  ctx.quadraticCurveTo(103, 138, 111, 136);
+  ctx.stroke();
+  ctx.lineWidth = 1.3;
+  ctx.strokeStyle = "rgba(235,239,204,.75)";
+  ctx.beginPath();
+  ctx.moveTo(72, 132);
+  ctx.quadraticCurveTo(67, 137, 63, 137);
+  ctx.moveTo(100, 132);
+  ctx.quadraticCurveTo(105, 137, 109, 136);
+  ctx.stroke();
+
+  // Arms: one reaching out toward a floating forest seed.
+  ctx.lineCap = "round";
+  ctx.lineWidth = 9;
+  ctx.strokeStyle = "#7f9879";
+  ctx.beginPath();
+  ctx.moveTo(99, 103);
+  ctx.quadraticCurveTo(116, 103, 115, 119);
+  ctx.stroke();
+  ctx.strokeStyle = "#dce6c9";
+  ctx.lineWidth = 1.7;
+  ctx.beginPath();
+  ctx.moveTo(101, 103);
+  ctx.quadraticCurveTo(111, 107, 113, 114);
+  ctx.stroke();
+
+  const arm = ctx.createLinearGradient(44, 88, 65, 108);
+  arm.addColorStop(0, "#fffde9");
+  arm.addColorStop(.42, "#dce3ca");
+  arm.addColorStop(1, "#718a70");
+  ctx.lineWidth = 9;
+  ctx.strokeStyle = arm;
+  ctx.beginPath();
+  ctx.moveTo(68, 103);
+  ctx.quadraticCurveTo(54, 111, 48, 101);
+  ctx.quadraticCurveTo(44, 94, 48, 89);
+  ctx.stroke();
+  ctx.strokeStyle = "rgba(255,255,238,.8)";
+  ctx.lineWidth = 1.8;
+  ctx.beginPath();
+  ctx.moveTo(64, 104);
+  ctx.quadraticCurveTo(54, 108, 49, 100);
+  ctx.stroke();
+
+  // Oversized softly sculpted head. Multiple overlapping light fields
+  // create a painted, rounded surface rather than a flat vector fill.
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.58)";
+  ctx.shadowBlur = 7;
+  ctx.shadowOffsetY = 4;
+  ctx.beginPath();
+  ctx.moveTo(52, 62);
+  ctx.bezierCurveTo(50, 43, 64, 33, 80, 33);
+  ctx.bezierCurveTo(100, 31, 113, 45, 112, 63);
+  ctx.bezierCurveTo(113, 83, 101, 97, 85, 99);
+  ctx.bezierCurveTo(67, 101, 53, 86, 52, 69);
+  ctx.closePath();
+  const skin = ctx.createRadialGradient(70, 48, 3, 87, 70, 57);
+  skin.addColorStop(0, "#fffef0");
+  skin.addColorStop(.16, "#f3f0dc");
+  skin.addColorStop(.37, "#d9dfc7");
+  skin.addColorStop(.59, "#b1c2a5");
+  skin.addColorStop(.79, "#829b80");
+  skin.addColorStop(1, "#425e4b");
+  ctx.fillStyle = skin;
+  ctx.fill();
+  ctx.restore();
+
+  // Soft subsurface warmth and cool reflected light.
+  ctx.save();
+  ctx.globalCompositeOperation = "soft-light";
+  ctx.filter = "blur(5px)";
+  ctx.fillStyle = "#fff8d8";
+  ctx.beginPath();
+  ctx.ellipse(69, 52, 17, 20, -.45, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = "#638c76";
+  ctx.beginPath();
+  ctx.ellipse(103, 76, 12, 22, .3, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  // Moss cap with irregular lobes and deep, damp shadows.
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.48)";
+  ctx.shadowBlur = 4;
+  ctx.shadowOffsetY = 2;
+  ctx.beginPath();
+  ctx.moveTo(53, 59);
+  ctx.bezierCurveTo(47, 50, 52, 42, 60, 42);
+  ctx.bezierCurveTo(62, 33, 73, 34, 77, 37);
+  ctx.bezierCurveTo(84, 27, 96, 33, 98, 39);
+  ctx.bezierCurveTo(108, 37, 114, 47, 109, 59);
+  ctx.bezierCurveTo(101, 55, 97, 55, 92, 58);
+  ctx.bezierCurveTo(85, 51, 77, 52, 71, 59);
+  ctx.bezierCurveTo(64, 54, 59, 57, 53, 59);
+  ctx.closePath();
+  const moss = ctx.createRadialGradient(76, 39, 2, 83, 51, 32);
+  moss.addColorStop(0, "#f0f3b0");
+  moss.addColorStop(.22, "#c5dc7d");
+  moss.addColorStop(.48, "#8eae56");
+  moss.addColorStop(.74, "#557c3f");
+  moss.addColorStop(1, "#29462e");
+  ctx.fillStyle = moss;
+  ctx.fill();
+  ctx.restore();
+
+  // Moss texture: softly shaded tiny cushions, not hard dots.
+  const mossTufts = [
+    [60, 48, 4], [69, 42, 3.5], [79, 39, 4], [89, 40, 3.5],
+    [100, 47, 4], [72, 53, 3], [91, 52, 3.2], [106, 53, 2.6],
+  ] as const;
+  mossTufts.forEach(([x, y, r], i) => {
+    const tuft = ctx.createRadialGradient(x - r * .35, y - r * .45, .2, x, y, r);
+    tuft.addColorStop(0, i % 2 ? "#e8f0a8" : "#f5f0b6");
+    tuft.addColorStop(.45, "#a9c86a");
+    tuft.addColorStop(1, "rgba(48,76,40,.8)");
+    ctx.fillStyle = tuft;
+    ctx.beginPath();
+    ctx.arc(x, y, r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+
+  // Deep glossy eyes with layered reflections and a subtle lower rim.
+  function eye(x: number, y: number, rx: number, ry: number, rotation: number) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rotation);
+    ctx.shadowColor = "rgba(22,37,27,.45)";
+    ctx.shadowBlur = 2;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+    ctx.fillStyle = ctx.createLinearGradient(-rx, -ry, rx, ry);
+    const g = ctx.createLinearGradient(-rx, -ry, rx, ry);
+    g.addColorStop(0, "#60776a");
+    g.addColorStop(.24, "#263d32");
+    g.addColorStop(.68, "#07130e");
+    g.addColorStop(1, "#020704");
+    ctx.fillStyle = g;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.fillStyle = "rgba(255,255,255,.98)";
+    ctx.beginPath();
+    ctx.ellipse(-rx * .3, -ry * .43, rx * .28, ry * .23, -.3, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = "rgba(194,220,194,.72)";
+    ctx.beginPath();
+    ctx.arc(rx * .34, ry * .34, rx * .16, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+  eye(70, 68, 5.1, 7.2, -.13);
+  eye(94, 66, 4.6, 6.7, .12);
+
+  // Airbrushed blush, soft mouth and tiny organic freckles.
+  ctx.save();
+  ctx.globalCompositeOperation = "multiply";
+  ctx.filter = "blur(3px)";
+  ctx.fillStyle = "rgba(205,126,112,.3)";
+  ctx.beginPath();
+  ctx.ellipse(61, 80, 6, 3, -.2, 0, Math.PI * 2);
+  ctx.ellipse(103, 77, 5, 2.5, -.2, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+  ctx.strokeStyle = "rgba(75,96,76,.8)";
+  ctx.lineWidth = 1.2;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(80, 83);
+  ctx.quadraticCurveTo(83, 85, 86, 82);
+  ctx.stroke();
+
+  // Fine soft surface speckling, clipped to the head silhouette.
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(52, 62);
+  ctx.bezierCurveTo(50, 43, 64, 33, 80, 33);
+  ctx.bezierCurveTo(100, 31, 113, 45, 112, 63);
+  ctx.bezierCurveTo(113, 83, 101, 97, 85, 99);
+  ctx.bezierCurveTo(67, 101, 53, 86, 52, 69);
+  ctx.closePath();
+  ctx.clip();
+  for (let i = 0; i < 95; i += 1) {
+    const x = 55 + ((i * 37) % 54);
+    const y = 40 + ((i * 23) % 53);
+    const radius = .16 + ((i * 7) % 5) * .09;
+    ctx.fillStyle = i % 3 === 0 ? "rgba(255,255,235,.24)" : "rgba(49,77,53,.13)";
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
+
+  // Floating seed spirit and its diffuse glow.
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  ctx.filter = "blur(5px)";
+  ctx.fillStyle = "rgba(220,244,153,.5)";
+  ctx.beginPath();
+  ctx.arc(43, 79, 13, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+  ctx.beginPath();
+  ctx.moveTo(43, 85);
+  ctx.bezierCurveTo(34, 78, 39, 69, 45, 69);
+  ctx.bezierCurveTo(52, 76, 49, 82, 43, 85);
+  const seed = ctx.createLinearGradient(38, 69, 48, 85);
+  seed.addColorStop(0, "#fffbd4");
+  seed.addColorStop(.45, "#c9e88d");
+  seed.addColorStop(1, "#638f4d");
+  ctx.fillStyle = seed;
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255,250,209,.8)";
+  ctx.lineWidth = .8;
+  ctx.stroke();
+  ctx.strokeStyle = "rgba(255,255,220,.9)";
+  ctx.lineWidth = .9;
+  ctx.beginPath();
+  ctx.moveTo(43, 83);
+  ctx.quadraticCurveTo(44, 77, 45, 72);
+  ctx.stroke();
+
+  // Soft engraved botanical details on the inner enamel.
+  ctx.strokeStyle = "rgba(201,222,151,.34)";
+  ctx.lineWidth = 1;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(34, 39);
+  ctx.quadraticCurveTo(45, 23, 62, 22);
+  ctx.moveTo(98, 22);
+  ctx.quadraticCurveTo(115, 24, 126, 39);
+  ctx.moveTo(34, 106);
+  ctx.quadraticCurveTo(42, 114, 50, 114);
+  ctx.moveTo(126, 106);
+  ctx.quadraticCurveTo(118, 114, 110, 114);
+  ctx.stroke();
+
+  // Fine top-left specular glints on the metal rim.
+  ctx.strokeStyle = "rgba(255,245,207,.72)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(37, 34);
+  ctx.quadraticCurveTo(48, 20, 64, 18);
+  ctx.moveTo(27, 67);
+  ctx.quadraticCurveTo(24, 77, 28, 88);
+  ctx.stroke();
+
+  ctx.restore();
+}
 
 export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number }) {
-  const uid = useId().replace(/:/g, "");
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas?.getContext("2d");
+    if (!canvas || !ctx) return;
+    drawKodama(ctx);
+  }, []);
+
   return (
-    <svg viewBox="0 0 160 160" width={size} height={size} role="img"
-      aria-label="Semi-realistic chibi Kodama spirit collectible badge"
-      className="shrink-0 overflow-visible drop-shadow-[0_10px_14px_rgba(0,0,0,0.62)]">
-      <defs>
-        <linearGradient id={`k-frame-${uid}`} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#FFF0C1"/><stop offset=".16" stopColor="#B98D4D"/>
-          <stop offset=".38" stopColor="#58452E"/><stop offset=".62" stopColor="#E2C27E"/>
-          <stop offset=".84" stopColor="#6A4B2C"/><stop offset="1" stopColor="#F6E2AC"/>
-        </linearGradient>
-        <radialGradient id={`k-enamel-${uid}`} cx=".35" cy=".22" r=".95">
-          <stop stopColor="#46634A"/><stop offset=".48" stopColor="#1C392F"/>
-          <stop offset=".82" stopColor="#10251F"/><stop offset="1" stopColor="#081510"/>
-        </radialGradient>
-        <radialGradient id={`k-skin-${uid}`} cx=".28" cy=".16" r=".92">
-          <stop stopColor="#FFFDF0"/><stop offset=".2" stopColor="#F0F0D9"/>
-          <stop offset=".48" stopColor="#C9D3B7"/><stop offset=".72" stopColor="#91A487"/>
-          <stop offset=".9" stopColor="#647A68"/><stop offset="1" stopColor="#3D594B"/>
-        </radialGradient>
-        <linearGradient id={`k-skin-side-${uid}`} x1="0" y1="0" x2="1" y2=".2">
-          <stop stopColor="#F7F5E5"/><stop offset=".38" stopColor="#D4DCC4"/>
-          <stop offset=".72" stopColor="#8D9F84"/><stop offset="1" stopColor="#526B5A"/>
-        </linearGradient>
-        <radialGradient id={`k-moss-${uid}`} cx=".3" cy=".08" r=".95">
-          <stop stopColor="#F0F4B7"/><stop offset=".22" stopColor="#B9D47A"/>
-          <stop offset=".5" stopColor="#789D4D"/><stop offset=".78" stopColor="#45683C"/>
-          <stop offset="1" stopColor="#263F2E"/>
-        </radialGradient>
-        <linearGradient id={`k-leaf-${uid}`} x1=".1" y1="0" x2=".9" y2="1">
-          <stop stopColor="#F8F7C9"/><stop offset=".22" stopColor="#D4E994"/>
-          <stop offset=".55" stopColor="#8EBB61"/><stop offset=".82" stopColor="#4F8048"/>
-          <stop offset="1" stopColor="#294B35"/>
-        </linearGradient>
-        <linearGradient id={`k-bark-${uid}`} x1=".1" y1="0" x2=".8" y2="1">
-          <stop stopColor="#C69A69"/><stop offset=".24" stopColor="#8C6746"/>
-          <stop offset=".6" stopColor="#59432F"/><stop offset="1" stopColor="#302A22"/>
-        </linearGradient>
-        <radialGradient id={`k-eye-${uid}`} cx=".28" cy=".16" r=".9">
-          <stop stopColor="#63766B"/><stop offset=".18" stopColor="#273A31"/>
-          <stop offset=".58" stopColor="#0B1712"/><stop offset="1" stopColor="#020805"/>
-        </radialGradient>
-        <radialGradient id={`k-glow-${uid}`} cx=".5" cy=".5" r=".5">
-          <stop stopColor="#F4F6B7" stopOpacity=".8"/><stop offset=".42" stopColor="#B5D978" stopOpacity=".28"/>
-          <stop offset="1" stopColor="#A9D66D" stopOpacity="0"/>
-        </radialGradient>
-        <filter id={`k-shadow-${uid}`} x="-35%" y="-35%" width="180%" height="190%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="3.2" result="blur"/>
-          <feOffset dy="4" dx="1" result="offset"/>
-          <feComponentTransfer><feFuncA type="linear" slope=".58"/></feComponentTransfer>
-          <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-        <filter id={`k-soft-${uid}`} x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="3.4"/>
-        </filter>
-        <filter id={`k-texture-${uid}`} x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency=".58" numOctaves="2" seed="14" result="n"/>
-          <feColorMatrix in="n" type="saturate" values="0" result="mono"/>
-          <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 .12"/></feComponentTransfer>
-          <feBlend in="SourceGraphic" mode="soft-light"/>
-        </filter>
-      </defs>
-
-      {/* Dark, recessed forest-enamel medallion; the character is the focal point. */}
-      <path d="M80 5 C66 14 52 9 42 20 C28 23 24 37 25 48 C14 60 20 73 15 84 C22 97 20 109 34 117 C42 132 59 131 68 141 L80 153 L92 141 C101 131 118 132 126 117 C140 109 138 97 145 84 C140 73 146 60 135 48 C136 37 132 23 118 20 C108 9 94 14 80 5Z"
-        fill={`url(#k-frame-${uid})`} stroke="#30291F" strokeWidth="3"/>
-      <path d="M80 12 C67 20 55 16 46 26 C34 29 31 40 32 50 C23 61 28 73 24 84 C30 95 28 106 40 113 C47 125 60 125 69 134 L80 144 L91 134 C100 125 113 125 120 113 C132 106 130 95 136 84 C132 73 137 61 128 50 C129 40 126 29 114 26 C105 16 93 20 80 12Z"
-        fill={`url(#k-enamel-${uid})`} stroke="#E7D09A" strokeWidth="1.6"/>
-      <path d="M39 44 Q48 29 64 28 M121 44 Q112 29 96 28" fill="none" stroke="#A6B879" strokeWidth="1.4" opacity=".45" strokeLinecap="round"/>
-      <ellipse cx="80" cy="91" rx="48" ry="43" fill={`url(#k-glow-${uid})`} opacity=".24"/>
-
-      {/* Small living leaves break the silhouette; no antler-like branches. */}
-      <g filter={`url(#k-shadow-${uid})`}>
-        <path d="M77 46 Q72 29 59 20" fill="none" stroke="#493B2A" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M77 46 Q72 29 59 20" fill="none" stroke="#B58A59" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M59 21 C43 18 40 7 46 5 C59 4 68 13 66 23 C64 25 61 24 59 21Z"
-          fill={`url(#k-leaf-${uid})`} stroke="#36563A" strokeWidth="1.5"/>
-        <path d="M47 8 Q56 13 64 22" fill="none" stroke="#F8F4C9" strokeWidth="1.4" strokeLinecap="round"/>
-        <path d="M91 42 Q98 27 109 24" fill="none" stroke="#493B2A" strokeWidth="4.5" strokeLinecap="round"/>
-        <path d="M109 25 C119 12 130 17 128 25 C124 36 111 37 106 31Z"
-          fill={`url(#k-leaf-${uid})`} stroke="#36563A" strokeWidth="1.5"/>
-        <path d="M111 29 Q119 23 125 21" fill="none" stroke="#F8F4C9" strokeWidth="1.2" strokeLinecap="round"/>
-      </g>
-
-      {/* Body turned three-quarters: one arm reaches toward a tiny forest light. */}
-      <g filter={`url(#k-shadow-${uid})`}>
-        <path d="M68 91 Q58 99 61 116 Q64 132 82 135 Q101 136 109 121 Q113 106 99 94Z"
-          fill={`url(#k-skin-side-${uid})`} stroke="#465B4B" strokeWidth="2.2"/>
-        <path d="M79 99 Q91 102 103 96 Q111 107 105 122 Q99 133 85 132 Q93 118 79 99Z"
-          fill="#607A65" opacity=".52"/>
-        <path d="M72 107 Q82 114 99 108" fill="none" stroke="#F7F4DF" strokeWidth="2" opacity=".58" strokeLinecap="round"/>
-        {/* Far arm tucked behind the body. */}
-        <path d="M99 102 Q112 103 116 113 Q119 120 113 124 Q106 125 101 116"
-          fill="none" stroke="#71896E" strokeWidth="8" strokeLinecap="round"/>
-        <path d="M100 103 Q111 105 114 114" fill="none" stroke="#DDE4C8" strokeWidth="1.7" opacity=".55" strokeLinecap="round"/>
-        {/* Near arm lifted in a curious, gentle gesture. */}
-        <path d="M67 104 Q55 109 49 101 Q44 94 48 89"
-          fill="none" stroke={`url(#k-skin-${uid})`} strokeWidth="10" strokeLinecap="round"/>
-        <path d="M64 105 Q54 109 49 100" fill="none" stroke="#FFFBEA" strokeWidth="2" opacity=".75" strokeLinecap="round"/>
-        {/* Root-like feet, offset to sell the three-quarter pose. */}
-        <path d="M76 127 Q72 137 65 138 Q60 140 61 135 Q64 130 68 125 M94 128 Q99 137 108 138 Q113 139 111 134 Q106 129 102 124"
-          fill="none" stroke="#4C5F4C" strokeWidth="7" strokeLinecap="round"/>
-        <path d="M72 132 Q68 137 63 137 M99 132 Q104 137 110 136" fill="none" stroke="#C5D0AE" strokeWidth="1.5" opacity=".65" strokeLinecap="round"/>
-      </g>
-
-      {/* Oversized, asymmetrical spirit head with sculpted cheeks and a mossy crown. */}
-      <g filter={`url(#k-shadow-${uid})`}>
-        <path d="M52 62 C51 45 63 34 80 33 C99 31 112 43 112 61 C113 79 103 96 86 99 C67 101 53 86 52 69Z"
-          fill={`url(#k-skin-${uid})`} stroke="#506653" strokeWidth="2.5"/>
-        <path d="M56 61 C58 46 68 38 81 37 C72 46 69 57 72 70 C74 83 81 91 91 96 C73 99 56 84 56 66Z"
-          fill="#FFFDEB" opacity=".22"/>
-        <path d="M89 39 Q108 44 108 63 Q109 83 94 93" fill="none" stroke="#526B59" strokeWidth="3" opacity=".5" strokeLinecap="round"/>
-        <path d="M59 74 Q63 87 75 91" fill="none" stroke="#FDF8E4" strokeWidth="2.2" opacity=".65" strokeLinecap="round"/>
-        {/* A soft moss mantle hugs the top and rear of the head. */}
-        <path d="M53 59 Q48 49 58 43 Q61 33 73 36 Q81 27 91 34 Q103 30 108 43 Q117 49 109 61 Q102 54 96 56 Q88 48 80 55 Q69 49 62 60Z"
-          fill={`url(#k-moss-${uid})`} stroke="#3C5A38" strokeWidth="2"/>
-        <path d="M58 47 Q64 37 73 41 M81 38 Q89 32 96 40 M99 42 Q106 42 108 51"
-          fill="none" stroke="#F0F2B6" strokeWidth="2.2" opacity=".78" strokeLinecap="round"/>
-        <g fill="#D8E99A">
-          <circle cx="61" cy="49" r="1.7"/><circle cx="70" cy="42" r="1.4"/>
-          <circle cx="86" cy="39" r="1.6"/><circle cx="101" cy="47" r="1.5"/>
-        </g>
-        {/* Deep, glossy eyes with broad softbox reflections. */}
-        <ellipse cx="70" cy="68" rx="5.1" ry="7.1" fill={`url(#k-eye-${uid})`} transform="rotate(-8 70 68)"/>
-        <ellipse cx="94" cy="66" rx="4.5" ry="6.6" fill={`url(#k-eye-${uid})`} transform="rotate(7 94 66)"/>
-        <ellipse cx="68.4" cy="65.2" rx="1.75" ry="2.35" fill="#FFFFFF" opacity=".98"/>
-        <ellipse cx="92.7" cy="63.5" rx="1.55" ry="2.1" fill="#FFFFFF" opacity=".98"/>
-        <circle cx="73.8" cy="72.1" r=".9" fill="#9EB8A0" opacity=".7"/>
-        <circle cx="97.2" cy="70.2" r=".8" fill="#9EB8A0" opacity=".65"/>
-        {/* Subtle blush and a tiny, calm mouth. */}
-        <ellipse cx="61" cy="80" rx="5.8" ry="2.6" fill="#D58F82" opacity=".2" transform="rotate(-16 61 80)"/>
-        <ellipse cx="103" cy="77" rx="4.8" ry="2.3" fill="#D58F82" opacity=".16" transform="rotate(-12 103 77)"/>
-        <path d="M80 83 Q83 85 86 82" fill="none" stroke="#687B68" strokeWidth="1.6" strokeLinecap="round"/>
-        {/* Fine organic freckles and bark-like flecks. */}
-        <g fill="#81977B" opacity=".7">
-          <circle cx="59" cy="67" r=".8"/><circle cx="63" cy="58" r=".65"/>
-          <circle cx="101" cy="57" r=".75"/><circle cx="105" cy="70" r=".65"/>
-        </g>
-        <path d="M58 54 Q60 49 64 47 M101 49 Q105 53 106 57" fill="none" stroke="#FFFFFF" strokeWidth="1.3" opacity=".65" strokeLinecap="round"/>
-      </g>
-
-      {/* A floating seed-light, held just beyond the near hand. */}
-      <circle cx="43" cy="80" r="13" fill={`url(#k-glow-${uid})`} filter={`url(#k-soft-${uid})`}/>
-      <path d="M43 85 C35 78 39 70 45 69 C51 76 49 82 43 85Z"
-        fill={`url(#k-leaf-${uid})`} stroke="#D9E7A1" strokeWidth="1"/>
-      <path d="M43 83 Q44 77 45 72" fill="none" stroke="#FFF9D0" strokeWidth="1.1" strokeLinecap="round"/>
-      <circle cx="34" cy="73" r="1.3" fill="#FFF2BC"/>
-      <circle cx="52" cy="88" r="1" fill="#D6E99A"/>
-
-      {/* Restrained engraved roots and directional highlights on the medallion. */}
-      <path d="M34 105 Q40 111 48 112 M126 105 Q120 111 112 112 M48 122 Q56 130 66 132 M112 122 Q104 130 94 132"
-        fill="none" stroke="#B6C889" strokeWidth="1.3" opacity=".48" strokeLinecap="round"/>
-      <path d="M34 37 Q46 22 63 21 M97 21 Q114 22 126 37" fill="none" stroke="#FFF0C5" strokeWidth="1.8" opacity=".72" strokeLinecap="round"/>
-      <path d="M27 67 Q24 78 28 89 M133 67 Q136 78 132 89" fill="none" stroke="#A8BE7D" strokeWidth="1.2" opacity=".45" strokeLinecap="round"/>
-      <path d="M80 12 C67 20 55 16 46 26 C34 29 31 40 32 50 C23 61 28 73 24 84 C30 95 28 106 40 113 C47 125 60 125 69 134 L80 144 L91 134 C100 125 113 125 120 113 C132 106 130 95 136 84 C132 73 137 61 128 50 C129 40 126 29 114 26 C105 16 93 20 80 12Z"
-        fill="none" stroke="#FFF2C8" strokeWidth=".8" opacity=".34"/>
-    </svg>
+    <canvas
+      ref={canvasRef}
+      width={SIZE}
+      height={SIZE}
+      role="img"
+      aria-label="Kodama forest spirit collectible badge"
+      title="Kodama"
+      style={{ width: size, height: size }}
+      className="block shrink-0 overflow-visible drop-shadow-[0_8px_12px_rgba(0,0,0,0.52)]"
+    />
   );
 }
