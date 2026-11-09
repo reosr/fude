@@ -529,7 +529,7 @@ function FrameDecorations({
           <Gem x={37} y={91} color="#7869BD" />
           <Gem x={163} y={91} color="#7869BD" />
           <circle cx="100" cy="185" r="8" fill="#392C63" stroke="#D9CCFF" strokeWidth="1.5" />
-          <path d="M 100 177 A 4 4 0 0 1 100 185 A 4 4 0 0 0 100 193 A 8 8 0 0 0 100 177" fill="#F4E4B5" />
+          <path d="M 100 177 L 103 182 L 109 185 L 103 188 L 100 193 L 97 188 L 91 185 L 97 182 Z" fill="#F4E4B5" />
         </g>
       );
 
