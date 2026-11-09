@@ -5,43 +5,54 @@ import type { GachaBadgeDefinition, GachaEvolutionLevel } from "@/lib/gacha";
 
 const PALETTES: Record<
   GachaBadgeDefinition["rarity"],
-  { base: string; light: string; dark: string; glow: string }
+  { base: string; light: string; dark: string; glow: string; accent: string }
 > = {
-  common: { base: "#9A9A96", light: "#E6E5DF", dark: "#444541", glow: "#B9B8AE" },
-  uncommon: { base: "#45A879", light: "#C5F4D9", dark: "#174C37", glow: "#73D9A5" },
-  rare: { base: "#4D8FD4", light: "#C8E5FF", dark: "#17375D", glow: "#70B8F4" },
-  epic: { base: "#9561D4", light: "#E3CCFF", dark: "#3B205E", glow: "#B78AF2" },
-  mythic: { base: "#C99A36", light: "#FFF0B0", dark: "#604315", glow: "#F5CE68" },
-  legendary: { base: "#C94B4E", light: "#FFD0B9", dark: "#5C171D", glow: "#FF777A" },
+  common: { base: "#858984", light: "#E7E9E1", dark: "#343B38", glow: "#AEB9AF", accent: "#C5C9B9" },
+  uncommon: { base: "#3E9B72", light: "#C5F3D9", dark: "#123F30", glow: "#70D9A5", accent: "#A1E7BE" },
+  rare: { base: "#397FBD", light: "#C8E5FF", dark: "#142E50", glow: "#70B8F4", accent: "#9BD6FF" },
+  epic: { base: "#8954C5", light: "#E5D0FF", dark: "#321A54", glow: "#B78AF2", accent: "#D1B0FF" },
+  mythic: { base: "#BD8A2B", light: "#FFF0B0", dark: "#50370F", glow: "#F5CE68", accent: "#FFE39A" },
+  legendary: { base: "#B83E4A", light: "#FFD0B9", dark: "#4A111C", glow: "#FF777A", accent: "#FFB18D" },
 };
 
+const RARITY_ORDER: GachaBadgeDefinition["rarity"][] = [
+  "common", "uncommon", "rare", "epic", "mythic", "legendary",
+];
+
 const CRESTS = [
-  "M50 13 L58 28 L75 21 L72 40 L89 50 L72 60 L75 79 L58 72 L50 87 L42 72 L25 79 L28 60 L11 50 L28 40 L25 21 L42 28 Z",
-  "M50 12 C61 27 79 29 84 47 C89 67 69 84 50 88 C31 84 11 67 16 47 C21 29 39 27 50 12 Z",
-  "M50 12 L84 35 L73 78 L50 88 L27 78 L16 35 Z M50 12 L50 88 M16 35 L84 35 M27 78 L73 78",
-  "M50 12 C59 27 72 27 85 37 C72 48 72 62 85 75 C68 73 58 78 50 89 C42 78 32 73 15 75 C28 62 28 48 15 37 C28 27 41 27 50 12 Z",
-  "M50 12 C68 12 86 29 86 50 C86 71 68 88 50 88 C32 88 14 71 14 50 C14 29 32 12 50 12 Z",
-  "M50 12 L61 35 L86 39 L68 57 L72 83 L50 70 L28 83 L32 57 L14 39 L39 35 Z",
-  "M50 12 Q61 28 83 27 Q72 48 87 66 Q62 65 50 88 Q38 65 13 66 Q28 48 17 27 Q39 28 50 12 Z",
-  "M50 12 L80 25 L88 50 L80 75 L50 88 L20 75 L12 50 L20 25 Z M20 25 L80 75 M80 25 L20 75",
-  "M50 12 C58 28 75 32 88 50 C75 68 58 72 50 88 C42 72 25 68 12 50 C25 32 42 28 50 12 Z",
-  "M50 12 L59 30 L78 22 L73 42 L90 50 L73 58 L78 78 L59 70 L50 88 L41 70 L22 78 L27 58 L10 50 L27 42 L22 22 L41 30 Z",
+  "M50 8 L60 24 L79 17 L76 37 L94 50 L76 63 L79 83 L60 76 L50 92 L40 76 L21 83 L24 63 L6 50 L24 37 L21 17 L40 24 Z",
+  "M50 8 C64 25 82 27 89 45 C97 66 72 88 50 93 C28 88 3 66 11 45 C18 27 36 25 50 8 Z",
+  "M50 8 L91 36 L77 82 L50 94 L23 82 L9 36 Z M50 8 L50 94 M9 36 L91 36 M23 82 L77 82",
+  "M50 8 C62 25 77 27 92 37 C78 51 78 66 91 84 C69 79 59 83 50 94 C41 83 31 79 9 84 C22 66 22 51 8 37 C23 27 38 25 50 8 Z",
+  "M50 8 C74 8 92 27 92 50 C92 73 74 92 50 92 C26 92 8 73 8 50 C8 27 26 8 50 8 Z",
+  "M50 7 L63 31 L91 36 L70 56 L75 87 L50 72 L25 87 L30 56 L9 36 L37 31 Z",
+  "M50 7 Q64 27 88 24 Q75 49 94 70 Q65 67 50 94 Q35 67 6 70 Q25 49 12 24 Q36 27 50 7 Z",
+  "M50 8 L82 20 L94 50 L82 80 L50 92 L18 80 L6 50 L18 20 Z M18 20 L82 80 M82 20 L18 80",
+  "M50 8 C61 28 78 32 93 50 C78 68 61 72 50 92 C39 72 22 68 7 50 C22 32 39 28 50 8 Z",
+  "M50 7 L61 26 L82 17 L76 39 L94 50 L76 61 L82 83 L61 74 L50 93 L39 74 L18 83 L24 61 L6 50 L24 39 L18 17 L39 26 Z",
 ] as const;
 
-const ARCHETYPE_MARKS = [
-  "M34 45 L39 27 L50 39 L61 27 L66 45 Q64 62 50 68 Q36 62 34 45 Z",
-  "M50 27 C61 40 68 47 50 70 C32 47 39 40 50 27 Z",
-  "M25 43 Q37 25 50 42 Q63 25 75 43 L68 65 L50 72 L32 65 Z",
-  "M31 39 Q42 45 50 33 Q58 45 69 39 L64 65 Q50 76 36 65 Z",
-  "M34 33 L43 42 L50 34 L57 42 L66 33 L70 59 Q50 79 30 59 Z",
+const SIGILS = [
+  "M50 23 C61 32 69 42 63 55 C59 64 53 69 50 76 C47 69 41 64 37 55 C31 42 39 32 50 23 Z",
+  "M27 43 Q39 25 50 42 Q61 25 73 43 L66 63 L50 76 L34 63 Z",
+  "M31 31 L43 42 L50 30 L57 42 L69 31 L73 57 Q50 82 27 57 Z",
+  "M25 49 Q38 35 50 49 Q62 35 75 49 Q62 64 50 70 Q38 64 25 49 Z",
+  "M50 25 L57 43 L76 50 L57 57 L50 76 L43 57 L24 50 L43 43 Z",
+  "M32 35 Q50 19 68 35 L64 62 L50 77 L36 62 Z M38 46 L62 46 M40 56 L60 56",
 ] as const;
 
-const ORNAMENTS = [
-  [[50, 18], [82, 50], [50, 82], [18, 50]],
-  [[50, 16], [76, 24], [84, 50], [76, 76], [50, 84], [24, 76], [16, 50], [24, 24]],
-  [[50, 17], [78, 35], [67, 76], [33, 76], [22, 35]],
-  [[50, 16], [82, 38], [70, 78], [30, 78], [18, 38]],
-  [[50, 18], [80, 50], [50, 82], [20, 50], [50, 18]],
+const ORNAMENT_LAYOUTS = [
+  [[50, 15], [85, 50], [50, 85], [15, 50]],
+  [[50, 13], [76, 24], [87, 50], [76, 76], [50, 87], [24, 76], [13, 50], [24, 24]],
+  [[50, 14], [82, 34], [70, 79], [30, 79], [18, 34]],
+  [[50, 15], [83, 39], [68, 82], [32, 82], [17, 39]],
+  [[50, 15], [82, 50], [50, 85], [18, 50], [50, 15], [50, 50]],
+] as const;
+
+const RAY_SETS = [
+  "M50 4 L50 10 M50 90 L50 96 M4 50 L10 50 M90 50 L96 50",
+  "M50 4 L52 11 M50 89 L48 96 M4 50 L11 48 M89 50 L96 52 M18 18 L23 23 M77 77 L82 82 M82 18 L77 23 M23 77 L18 82",
+  "M50 3 L53 12 M50 88 L47 97 M3 50 L12 47 M88 50 L97 53 M25 5 L29 14 M75 95 L71 86 M95 25 L86 29 M5 75 L14 71",
 ] as const;
 
 export default function GachaBadgeArtwork({
@@ -55,12 +66,19 @@ export default function GachaBadgeArtwork({
 }) {
   const uniqueId = useId().replace(/:/g, "");
   const palette = PALETTES[badge.rarity];
-  const match = badge.id.match(/-(\d{2})$/);
+  const match = badge.id.match(/-(\\d{2})$/);
   const badgeNumber = match ? Number(match[1]) : 1;
-  const motifIndex = (badgeNumber - 1) % CRESTS.length;
-  const archetypeIndex = Math.floor((badgeNumber - 1) / 10) % ARCHETYPE_MARKS.length;
+  const rarityIndex = RARITY_ORDER.indexOf(badge.rarity);
+  // Mix rarity and catalog position so the same folklore archetype is not
+  // forced into one identical medallion layout throughout the full catalog.
+  const seed = rarityIndex * 17 + badgeNumber * 7;
+  const crestIndex = seed % CRESTS.length;
+  const sigilIndex = Math.floor(seed / 3) % SIGILS.length;
+  const layoutIndex = Math.floor(seed / 5) % ORNAMENT_LAYOUTS.length;
+  const rayIndex = seed % RAY_SETS.length;
   const gradientId = `gacha-gradient-${uniqueId}`;
-  const ornamentPoints = ORNAMENTS[archetypeIndex];
+  const glowId = `gacha-glow-${uniqueId}`;
+  const ornamentPoints = ORNAMENT_LAYOUTS[layoutIndex];
 
   return (
     <svg
@@ -72,136 +90,80 @@ export default function GachaBadgeArtwork({
       className="shrink-0 overflow-visible"
     >
       <defs>
-        <radialGradient id={gradientId} cx="35%" cy="25%" r="80%">
-          <stop offset="0%" stopColor={palette.base} stopOpacity="0.95" />
-          <stop offset="58%" stopColor={palette.dark} />
-          <stop offset="100%" stopColor="#11100F" />
+        <radialGradient id={gradientId} cx="34%" cy="24%" r="82%">
+          <stop offset="0%" stopColor={palette.base} />
+          <stop offset="48%" stopColor={palette.dark} />
+          <stop offset="100%" stopColor="#090B0B" />
+        </radialGradient>
+        <radialGradient id={glowId}>
+          <stop offset="0%" stopColor={palette.glow} stopOpacity="0.3" />
+          <stop offset="100%" stopColor={palette.glow} stopOpacity="0" />
         </radialGradient>
       </defs>
 
+      <circle cx="50" cy="50" r="49" fill={`url(#${glowId})`} />
       {level >= 3 && (
-        <circle
-          cx="50"
-          cy="50"
-          r="48"
-          fill="none"
-          stroke={palette.glow}
-          strokeWidth="1.5"
-          opacity="0.8"
-          strokeDasharray="2 3"
-        />
+        <circle cx="50" cy="50" r="48" fill="none" stroke={palette.glow} strokeWidth="1.4" strokeDasharray="1.5 2.5" />
       )}
       {level >= 2 && (
-        <circle
-          cx="50"
-          cy="50"
-          r="44"
-          fill="none"
-          stroke={palette.light}
-          strokeWidth="1"
-          opacity="0.65"
-        />
+        <circle cx="50" cy="50" r="44.5" fill="none" stroke={palette.light} strokeWidth="0.9" opacity="0.75" />
       )}
 
-      <circle
-        cx="50"
-        cy="50"
-        r="40"
-        fill={`url(#${gradientId})`}
-        stroke={palette.light}
-        strokeWidth={level >= 1 ? 3 : 2}
-      />
-      <circle
-        cx="50"
-        cy="50"
-        r="34"
-        fill="none"
-        stroke={palette.glow}
-        strokeWidth="1"
-        strokeDasharray={motifIndex % 2 === 0 ? "2 3" : "5 2"}
-        opacity="0.8"
-      />
+      <circle cx="50" cy="50" r="42" fill="#101313" stroke={palette.dark} strokeWidth="2.5" />
+      <circle cx="50" cy="50" r="39" fill={`url(#${gradientId})`} stroke={palette.light} strokeWidth={level >= 1 ? 3 : 2} />
+      <circle cx="50" cy="50" r="34.5" fill="none" stroke={palette.accent} strokeWidth="0.8" opacity="0.8" />
+      <circle cx="50" cy="50" r="31.5" fill="none" stroke={palette.glow} strokeWidth="1" strokeDasharray={seed % 2 === 0 ? "2 3" : "5 2"} opacity="0.9" />
 
+      <path d={RAY_SETS[rayIndex]} fill="none" stroke={palette.light} strokeWidth="1.1" strokeLinecap="round" opacity="0.8" />
       <path
-        d={CRESTS[motifIndex]}
+        d={CRESTS[crestIndex]}
         fill={palette.base}
-        fillOpacity="0.17"
+        fillOpacity="0.14"
         stroke={palette.light}
-        strokeWidth={motifIndex % 3 === 0 ? 1.8 : 1.2}
+        strokeWidth={crestIndex % 3 === 0 ? 1.8 : 1.25}
         strokeLinejoin="round"
       />
-
       <path
-        d={ARCHETYPE_MARKS[archetypeIndex]}
+        d={SIGILS[sigilIndex]}
         fill={palette.dark}
-        fillOpacity="0.55"
+        fillOpacity="0.72"
         stroke={palette.glow}
-        strokeWidth="1.2"
+        strokeWidth="1.4"
         strokeLinejoin="round"
       />
 
       {ornamentPoints.map(([x, y], index) => (
         <g key={index}>
-          <circle
-            cx={x}
-            cy={y}
-            r={level >= 2 ? 3 : 2.2}
-            fill={palette.light}
-            stroke={palette.dark}
-            strokeWidth="0.8"
-          />
+          <circle cx={x} cy={y} r={level >= 2 ? 3 : 2.2} fill={palette.light} stroke={palette.dark} strokeWidth="0.8" />
           {level >= 1 && (
             <path
-              d={`M ${x} ${y - 5} L ${x + 1.5} ${y - 1.5} L ${x + 5} ${y} L ${x + 1.5} ${y + 1.5} L ${x} ${y + 5} L ${x - 1.5} ${y + 1.5} L ${x - 5} ${y} L ${x - 1.5} ${y - 1.5} Z`}
+              d={`M ${x} ${y - 5} L ${x + 1.4} ${y - 1.4} L ${x + 5} ${y} L ${x + 1.4} ${y + 1.4} L ${x} ${y + 5} L ${x - 1.4} ${y + 1.4} L ${x - 5} ${y} L ${x - 1.4} ${y - 1.4} Z`}
               fill="none"
               stroke={palette.light}
               strokeWidth="0.7"
-              opacity="0.8"
+              opacity="0.9"
             />
           )}
         </g>
       ))}
 
-      <circle
-        cx="50"
-        cy="50"
-        r="18"
-        fill={palette.dark}
-        stroke={palette.light}
-        strokeWidth={level >= 1 ? 2 : 1.2}
-      />
-      <circle cx="50" cy="50" r="14" fill={palette.base} fillOpacity="0.35" />
-      <text
-        x="50"
-        y="57"
-        textAnchor="middle"
-        fontSize="22"
-        style={{ userSelect: "none" }}
-      >
+      <circle cx="50" cy="50" r="17.5" fill={palette.dark} stroke={palette.light} strokeWidth={level >= 1 ? 2 : 1.2} />
+      <circle cx="50" cy="50" r="13.5" fill={palette.base} fillOpacity="0.42" />
+      <text x="50" y="57" textAnchor="middle" fontSize="21" style={{ userSelect: "none" }}>
         {badge.icon}
       </text>
 
       {level >= 1 && (
-        <path
-          d="M50 5 L52 10 L58 12 L52 14 L50 20 L48 14 L42 12 L48 10 Z"
-          fill={palette.light}
-          stroke={palette.dark}
-          strokeWidth="0.7"
-        />
+        <path d="M50 3 L52.5 9.5 L59 12 L52.5 14.5 L50 21 L47.5 14.5 L41 12 L47.5 9.5 Z" fill={palette.light} stroke={palette.dark} strokeWidth="0.7" />
       )}
       {level >= 2 && (
         <>
-          <path d="M8 50 L13 48 L15 43 L17 48 L22 50 L17 52 L15 57 L13 52 Z" fill={palette.light} />
-          <path d="M92 50 L87 48 L85 43 L83 48 L78 50 L83 52 L85 57 L87 52 Z" fill={palette.light} />
+          <path d="M5 50 L11 47.5 L13.5 41 L16 47.5 L22 50 L16 52.5 L13.5 59 L11 52.5 Z" fill={palette.light} />
+          <path d="M95 50 L89 47.5 L86.5 41 L84 47.5 L78 50 L84 52.5 L86.5 59 L89 52.5 Z" fill={palette.light} />
         </>
       )}
       {level >= 3 && (
-        <path
-          d="M50 80 L53 87 L61 90 L53 93 L50 100 L47 93 L39 90 L47 87 Z"
-          fill={palette.light}
-          stroke={palette.dark}
-          strokeWidth="1"
-        />
+        <path d="M50 78 L53 86 L61 89 L53 92 L50 100 L47 92 L39 89 L47 86 Z" fill={palette.light} stroke={palette.dark} strokeWidth="1" />
       )}
     </svg>
   );
