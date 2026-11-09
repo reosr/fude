@@ -57,6 +57,35 @@ const createEmptyAnswers = () => ({
   listening: {},
 });
 
+function hasAllQuestionsAnswered(
+  answers: Record<string, Record<number, number>>,
+  sections: any
+): boolean {
+  let totalQuestions = 0;
+  let answeredQuestions = 0;
+
+  SECTIONS.forEach((section) => {
+    const questions = sections?.[section.id] || [];
+    const sectionAnswers = answers?.[section.id] || {};
+
+    totalQuestions += questions.length;
+
+    questions.forEach((question: any, index: number) => {
+      const selectedAnswer = sectionAnswers[index];
+
+      if (
+        Number.isInteger(selectedAnswer) &&
+        selectedAnswer >= 0 &&
+        selectedAnswer < (question.options?.length || 0)
+      ) {
+        answeredQuestions++;
+      }
+    });
+  });
+
+  return totalQuestions > 0 && answeredQuestions === totalQuestions;
+}
+
 function calculateQuizScore(
   answers: Record<string, Record<number, number>>,
   sections: any
@@ -107,11 +136,9 @@ function isSavedSetCompleted(setId: string): boolean {
 
     const parsed: SavedQuizResult = JSON.parse(saved);
 
-    return (
-      parsed.completedOnce === true ||
-      parsed.isFinished === true ||
-      parsed.isPerfect === true
-    );
+    // Hanya flag riwayat yang sudah tervalidasi yang boleh
+    // dihitung untuk hadiah penyelesaian level.
+    return parsed.completedOnce === true;
   } catch {
     return false;
   }
@@ -177,28 +204,49 @@ export default function JLPTQuiz({
 
         setUserAnswers(savedAnswers);
 
-        const wasFinished =
-        parsed.isFinished === true || parsed.isPerfect === true;
-
-        setIsFinished(wasFinished);
-
         const score = calculateQuizScore(
           savedAnswers,
           testSet.sections
         );
 
-        const wasPerfect =
-          parsed.isPerfect === true ||
-          (wasFinished && score.isPerfect);
+        const hasAllAnswers = hasAllQuestionsAnswered(
+          savedAnswers,
+          testSet.sections
+        );
 
+        // Status ujian hanya dianggap selesai jika semua soal benar-benar dijawab.
+        const wasFinished =
+          hasAllAnswers &&
+          (parsed.isFinished === true || parsed.isPerfect === true);
+
+        const wasPerfect =
+          hasAllAnswers && score.isPerfect;
+
+        setIsFinished(wasFinished);
         setIsPerfect(wasPerfect);
 
+        // completedOnce adalah riwayat penyelesaian yang tetap dipertahankan
+        // walaupun pengguna mengulang set dan jawaban saat ini dikosongkan.
         const wasCompleted =
           parsed.completedOnce === true ||
           wasFinished ||
           wasPerfect;
 
         setCompletedOnce(wasCompleted);
+
+        // Migrasikan hasil lama yang valid agar riwayatnya tetap tersimpan.
+        if (wasCompleted && parsed.completedOnce !== true) {
+          localStorage.setItem(
+            storageKey,
+            JSON.stringify({
+              ...parsed,
+              answers: savedAnswers,
+              isFinished: wasFinished,
+              isPerfect: wasPerfect,
+              completedOnce: true,
+            })
+          );
+        }
 
         // Migrasi reward untuk hasil sempurna dari sistem lama.
         if (wasPerfect) {
@@ -244,11 +292,25 @@ export default function JLPTQuiz({
       if (saved) {
         const parsed: SavedQuizResult = JSON.parse(saved);
 
+        const savedAnswers = {
+          ...createEmptyAnswers(),
+          ...(parsed.answers || {}),
+        };
+        const savedScore = calculateQuizScore(
+          savedAnswers,
+          testSet.sections
+        );
+        const hasAllAnswers = hasAllQuestionsAnswered(
+          savedAnswers,
+          testSet.sections
+        );
+
         previouslyCompleted =
           previouslyCompleted ||
           parsed.completedOnce === true ||
-          parsed.isFinished === true ||
-          parsed.isPerfect === true;
+          (hasAllAnswers &&
+            (parsed.isFinished === true ||
+              (parsed.isPerfect === true && savedScore.isPerfect)));
       }
     } catch {
       // Abaikan data lama yang tidak valid.
