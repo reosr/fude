@@ -16,6 +16,7 @@ interface ProfileAvatarProps {
   frameId?: string | null;
   size?: number;
   className?: string;
+  compactBadgeAura?: boolean;
 }
 
 // =====================================================
@@ -893,6 +894,7 @@ export default function ProfileAvatar({
   frameId = "classic",
   size = 112,
   className = "",
+  compactBadgeAura = false,
 }: ProfileAvatarProps) {
   const frame =
     PROFILE_FRAMES.find((item) => item.id === frameId) ??
@@ -981,8 +983,16 @@ export default function ProfileAvatar({
           aria-label={`Badge terpasang: ${badge.name}`}
           className="absolute flex items-center justify-center select-none"
           style={{
-            width: badgeLevel > 1 ? Math.max(80, badgeSize + 24) : badgeSize,
-            height: badgeLevel > 1 ? Math.max(80, badgeSize + 24) : badgeSize,
+            width: badgeLevel > 1
+              ? compactBadgeAura
+                ? Math.max(42, badgeSize + 22)
+                : Math.max(80, badgeSize + 24)
+              : badgeSize,
+            height: badgeLevel > 1
+              ? compactBadgeAura
+                ? Math.max(42, badgeSize + 22)
+                : Math.max(80, badgeSize + 24)
+              : badgeSize,
             left: "50%",
             bottom: 0,
             transform: "translate(-50%, 50%)",
@@ -990,7 +1000,12 @@ export default function ProfileAvatar({
           }}
         >
           {badgeLevel > 1 ? (
-            <GachaAuraPreview badge={collectionBadge} level={badgeLevel} size={badgeSize} />
+            <GachaAuraPreview
+              badge={collectionBadge}
+              level={badgeLevel}
+              size={badgeSize}
+              compact={compactBadgeAura}
+            />
           ) : (
             <GachaBadgeArtwork badge={collectionBadge} level={1} size={badgeSize} />
           )}
