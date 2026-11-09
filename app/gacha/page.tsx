@@ -76,7 +76,6 @@ function copiesFor(
   badgeId: string
 ): GachaBadgeCopies {
   return inventory.badges[badgeId] ?? {
-    level0: 0,
     level1: 0,
     level2: 0,
     level3: 0,
@@ -268,7 +267,7 @@ export default function GachaPage() {
             </h1>
             <p className="mt-3 max-w-lg text-sm leading-6 text-[#B7AA96]">
               Kumpulkan 300 badge dari enam rarity, temukan duplikat, lalu
-              kembangkan koleksi sampai Level 3.
+              kembangkan koleksi dari Level 1 hingga Level 3.
             </p>
           </div>
 
@@ -447,7 +446,7 @@ export default function GachaPage() {
                 >
                   {badge ? (
                     <div className="flex justify-center">
-                      <GachaBadgeArtwork badge={badge} size={66} />
+                      <GachaBadgeArtwork badge={badge} size={66} level={1} />
                     </div>
                   ) : (
                     <div className="text-3xl">✦</div>
@@ -472,7 +471,7 @@ export default function GachaPage() {
               <h2 className="text-lg font-black text-[#EAE6DD]">Inventori Badge</h2>
             </div>
             <p className="mt-1 text-xs text-[#A3A099]">
-              Duplikat bisa digabung untuk meningkatkan badge sampai Level 3.
+              Badge pertama langsung didapat di Level 1. Kumpulkan 3 salinan pada level yang sama untuk berevolusi ke level berikutnya.
             </p>
           </div>
           <div className="flex flex-wrap gap-1.5">
@@ -532,8 +531,7 @@ export default function GachaPage() {
                       size={62}
                       level={
                         copies.level3 > 0 ? 3 :
-                        copies.level2 > 0 ? 2 :
-                        copies.level1 > 0 ? 1 : 0
+                        copies.level2 > 0 ? 2 : 1
                       }
                     />
                     <div className="flex flex-col items-end gap-1">
@@ -565,7 +563,7 @@ export default function GachaPage() {
                       Salinan: <strong>{total}</strong>
                     </p>
                     <p className="mt-1 text-[9px] text-[#A3A099]">
-                      Lv0 {copies.level0} · Lv1 {copies.level1} · Lv2 {copies.level2} · Lv3 {copies.level3}
+                      Lv1 {copies.level1} · Lv2 {copies.level2} · Lv3 {copies.level3}
                     </p>
                     {progress.currentLevel === 3 ? (
                       <p className="mt-2 text-[9px] font-bold text-[#E7C46A]">
@@ -628,7 +626,7 @@ export default function GachaPage() {
           {GACHA_RARITIES.flatMap((rarity) => GACHA_BADGES.filter((badge) => badge.rarity === rarity).slice(0, 2)).map((badge) => (
             <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
               <div className="flex justify-center">
-                <GachaBadgeArtwork badge={badge} size={58} />
+                <GachaBadgeArtwork badge={badge} size={58} level={1} />
               </div>
               <p className="mt-2 line-clamp-2 text-[9px] font-bold text-[#F0E9D9]">{badge.name}</p>
               <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
@@ -682,7 +680,7 @@ export default function GachaPage() {
                     return (
                       <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]} ${owned ? "" : "opacity-65"}`}>
                         <div className={`flex justify-center ${owned ? "" : "grayscale"}`}>
-                          <GachaBadgeArtwork badge={badge} size={62} level={copies.level3 ? 3 : copies.level2 ? 2 : copies.level1 ? 1 : 0} />
+                          <GachaBadgeArtwork badge={badge} size={62} level={copies.level3 ? 3 : copies.level2 ? 2 : 1} />
                         </div>
                         <p className="mt-2 line-clamp-2 min-h-7 text-[10px] font-bold text-[#F0E9D9]">{badge.name}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
