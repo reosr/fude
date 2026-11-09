@@ -29,6 +29,7 @@ import {
   GACHA_UPDATED_EVENT,
   getGachaInventory,
   getTotalGachaBadgeCopies,
+  markGachaBadgeSeen,
 } from "../../lib/gacha";
 
 import {
@@ -45,16 +46,13 @@ import {
 } from "../../lib/gamification";
 
 import {
-  ALL_BADGES,
   PROFILE_FRAMES,
-  getUnlockedBadges,
   getUnlockedFrames,
   getCompletedBabCount,
   getCompletedJlptSetIds,
   getPendingCollectionIds,
   markCollectionSeen,
   COLLECTION_UPDATED_EVENT,
-  type ProfileBadge,
   type ProfileFrame,
 } from "../../lib/profile-collections";
 
@@ -109,8 +107,7 @@ export default function Profil() {
   const [unlockedBadgeIds, setUnlockedBadgeIds] = useState<string[]>([]);
   const [unlockedFrameIds, setUnlockedFrameIds] = useState<string[]>([]);
   const [pendingIds, setPendingIds] = useState<string[]>([]);
-  const [gachaUniqueCount, setGachaUniqueCount] = useState(0);
-  const [gachaNewCount, setGachaNewCount] = useState(0);
+  const [gachaNewBadgeIds, setGachaNewBadgeIds] = useState<string[]>([]);
 
   const [activeTab, setActiveTab] = useState<CollectionTab>("badges");
   const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null);
@@ -143,12 +140,6 @@ export default function Profil() {
 
     setProfile(getFudeProfile());
 
-    // Status kepemilikan asli tetap disimpan.
-    // Preview hanya membuka tampilan desain, bukan mengubah reward permanen.
-    setUnlockedBadgeIds(
-      getUnlockedBadges().map((badge) => badge.id)
-    );
-
     setUnlockedFrameIds(
       getUnlockedFrames().map((frame) => frame.id)
     );
@@ -156,7 +147,7 @@ export default function Profil() {
     setPendingIds(getPendingCollectionIds());
 
     const gachaInventory = getGachaInventory();
-    setGachaUniqueCount(
+    setUnlockedBadgeIds(
       GACHA_BADGES.filter(
         (badge) =>
           getTotalGachaBadgeCopies(
@@ -167,9 +158,9 @@ export default function Profil() {
               level3: 0,
             }
           ) > 0
-      ).length
+      ).map((badge) => badge.id)
     );
-    setGachaNewCount(gachaInventory.newBadgeIds.length);
+    setGachaNewBadgeIds(gachaInventory.newBadgeIds);
   };
 
   const refreshPhoto = async () => {
@@ -261,15 +252,13 @@ export default function Profil() {
   const progressPercent = Math.round((completedBab / 50) * 100);
 
   const equippedBadge =
-    ALL_BADGES.find((badge) => badge.id === profile.equippedBadgeId) ??
+    GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId) ??
     GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId);
 
   const unlockedBadgeCount = unlockedBadgeIds.length;
   const unlockedFrameCount = unlockedFrameIds.length;
 
-  const newBadgeCount = pendingIds.filter(
-    (id) => id.startsWith("badge:")
-  ).length;
+  const newBadgeCount = gachaNewBadgeIds.length;
 
   const newFrameCount = pendingIds.filter(
     (id) => id.startsWith("frame:")
@@ -358,10 +347,8 @@ export default function Profil() {
   };
 
   const openBadge = (badge: ProfileBadge) => {
-    const id = `badge:${badge.id}`;
-
-    if (pendingIds.includes(id)) {
-      markCollectionSeen(id);
+    if (gachaNewBadgeIds.includes(badge.id)) {
+      markGachaBadgeSeen(badge.id);
     }
 
     setSelectedItem({ type: "badge", id: badge.id });
@@ -636,24 +623,7 @@ export default function Profil() {
               )}
             </div>
 
-            <Link
-              href="/gacha"
-              className="rounded-xl border border-[#B8860B]/30 bg-[#262523] p-3 transition hover:border-[#E7C46A]/60 hover:bg-[#302B20]"
-            >
-              <div className="flex items-center gap-2">
-                <Dices size={15} className="text-[#E7C46A]" />
-                <span className="text-[10px] font-bold text-[#D8D1C5]">GACHA BADGES</span>
-              </div>
-              <p className="mt-2 text-2xl font-black text-[#EAE6DD]">
-                {gachaUniqueCount}/{GACHA_BADGES.length}
-              </p>
-              <p className="text-xs text-[#A3A099]">Badge unik</p>
-              {gachaNewCount > 0 && (
-                <span className="mt-1 inline-block text-[10px] font-black text-[#F0C75E]">
-                  {gachaNewCount} NEW
-                </span>
-              )}
-            </Link>
+     </Link>
           </div>
         </div>
 
@@ -700,7 +670,7 @@ export default function Profil() {
                 const actuallyUnlocked = unlockedBadgeIds.includes(badge.id);
                 const unlocked =
                   COLLECTION_PREVIEW_MODE || actuallyUnlocked;
-                const isNew = pendingIds.includes(`badge:${badge.id}`);
+                const isNew = gachaNewBadgeIds.includes(badge.id);
                 const equipped = profile.equippedBadgeId === badge.id;
 
                 return (
@@ -937,7 +907,7 @@ export default function Profil() {
                 <p className="text-xs text-[#817A73] mt-4">
                   {unlockedBadgeIds.includes(selectedBadge.id)
                     ? "Badge sudah menjadi milikmu."
-                    : `Syarat: ${selectedBadge.unlockLabel}`}
+                    : "Belum dimiliki. Dapatkan melalui Gacha."}
                 </p>
 
                 {unlockedBadgeIds.includes(selectedBadge.id) && (
