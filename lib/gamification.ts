@@ -709,6 +709,18 @@ export function spendFudeTokensOnce(
 
     return true;
   } catch (error) {
+    // Jika pencatatan transaksi gagal, kembalikan saldo dan
+    // daftar spend agar pemanggil tidak kehilangan token.
+    try {
+      localStorage.setItem(TOKEN_KEY, String(currentBalance));
+      localStorage.setItem(
+        TOKEN_SPENDS_KEY,
+        JSON.stringify(spends)
+      );
+    } catch (rollbackError) {
+      console.error("Gagal mengembalikan saldo token:", rollbackError);
+    }
+
     console.error("Gagal menggunakan token:", error);
     return false;
   }
