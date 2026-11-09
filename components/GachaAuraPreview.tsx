@@ -107,6 +107,7 @@ export default function GachaAuraPreview({
 
   return (
     <div className={`fude-aura-preview relative flex items-center justify-center fude-aura-${badge.rarity} ${level === 3 ? "fude-aura-level-3" : "fude-aura-level-2"} ${compact ? "fude-aura-compact" : ""}`} style={style}>
+      <div className={`fude-aura-effects ${compact ? "fude-aura-effects-compact" : ""}`}>
       <div className="fude-aura-cloud pointer-events-none absolute rounded-full" />
       <div className="fude-aura-cloud fude-aura-cloud-secondary pointer-events-none absolute rounded-full" />
       {level === 3 && (
@@ -150,20 +151,31 @@ export default function GachaAuraPreview({
           <span className="fude-aura-glint fude-aura-glint-three">✦</span>
         </>
       )}
-      <div className="relative z-10">
-        <GachaBadgeArtwork badge={badge} level={level} size={size} />
-      </div>
+
 {level === 3 && badge.rarity === "legendary" && lightningBolts.filter((bolt) => bolt.layer === "front").map((bolt) => (
         <svg key={bolt.id} className="fude-legendary-lightning fude-legendary-lightning-front" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
           <path className="lightning-bolt lightning-bolt-glow" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
           <path className="lightning-bolt lightning-bolt-core" d={bolt.path} style={{ animationDuration: `${bolt.duration}ms` }} />
         </svg>
       ))}
+      </div>
+      <div className="relative z-10">
+        <GachaBadgeArtwork badge={badge} level={level} size={size} />
+      </div>
       <style jsx>{`
         .fude-aura-preview {
           width: 100%;
           min-height: ${compact ? Math.max(size + 8, 28) : Math.max(size + 24, 80)}px;
           isolation: isolate;
+        }
+        .fude-aura-effects {
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+        }
+        .fude-aura-effects-compact {
+          transform: scale(.72);
+          transform-origin: center;
         }
         .fude-aura-cloud {
           width: 88%;
