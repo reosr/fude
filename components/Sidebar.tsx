@@ -81,10 +81,6 @@ export default function Sidebar() {
   }, []);
 
   useEffect(() => {
-    if (path !== "/profil") setBadgePreview(null);
-  }, [path]);
-
-  useEffect(() => {
     let active = true;
     let currentPhotoUrl: string | null = null;
 
