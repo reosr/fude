@@ -1,0 +1,17 @@
+AnimCJK Kana SVG Assets
+
+Copyright 2016-2026 FM&SH.
+
+Original source:
+https://github.com/parsimonhi/animCJK/tree/master/svgsJaKana
+
+Project website:
+https://parsimonhi.github.io/animCJK/
+
+These Kana SVG files are distributed under the GNU Lesser General
+Public License, version 3 or (at your option) any later version,
+as described in the upstream COPYING.txt.
+
+The original SVG files are retained without modification.
+
+See LGPL.txt and COPYING.txt for the license information.

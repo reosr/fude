@@ -1,14 +1,18 @@
 "use client";
 
-import allBabs from "../../data/all-bab.json";
+import { getUnlockedVocab, type VocabItem } from "../../lib/vocab";
 import { useState, useEffect, useRef } from "react";
 import { getProgress } from "../../lib/progress";
 import { Search, X, Volume2 } from "lucide-react";
 import dynamic from "next/dynamic";
+import FitText from "../../components/FitText";
+import verbTypeData from "../../data/verb-type-index.json";
+import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
 
-// Kumpulan gambar tema Jepang dari Unsplash (30 Gambar)
+const verbTypeMap = buildVerbTypeMap(verbTypeData);
+
 const bgImages = [
   "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=75&w=400&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=75&w=400&auto=format&fit=crop",
@@ -42,46 +46,79 @@ const bgImages = [
   "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?q=75&w=400&auto=format&fit=crop"
 ];
 
+
 export default function Kosakata() {
+  const [allVocab, setAllVocab] = useState<VocabItem[]>([]);
   const [currentBab, setCurrentBab] = useState<number>(1);
   const [search, setSearch] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedWord, setSelectedWord] = useState<any | null>(null);
+  const [memorized, setMemorized] = useState<string[]>([]);
+  const [memFilter, setMemFilter] = useState<"all" | "belum" | "sudah">("all");
   const [imageMap, setImageMap] = useState<Record<string, string>>({});
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // 1. Load progress & Bikin Map Gambar (Sistem Shuffle Pool)
   useEffect(() => {
+  let active = true;
+
+  const loadData = async () => {
     const progress = getProgress();
+
     setCurrentBab(progress);
-    setIsLoaded(true);
 
-    // Kumpulkan semua vocab dari bab 1 sampai bab sekarang
-    let allVocab: any[] = [];
-    allBabs.filter((b: any) => b.bab <= progress).forEach((b: any) => {
-      allVocab = [...allVocab, ...b.vocab];
-    });
+    try {
+      setMemorized(
+        JSON.parse(localStorage.getItem("fude_memorized") || "[]")
+      );
+    } catch {
+      setMemorized([]);
+    }
 
-    // Sistem Shuffle Pool
-    let currentPool = [...bgImages].sort(() => Math.random() - 0.5);
-    let poolIndex = 0;
-    const newMap: Record<string, string> = {};
+    try {
+      const rawVocab = await getUnlockedVocab(progress);
 
-    allVocab.forEach((v) => {
-      if (poolIndex >= currentPool.length) {
-        // Kalau gambar udah habis, kocok ulang
-        currentPool = [...bgImages].sort(() => Math.random() - 0.5);
-        poolIndex = 0;
-      }
-      // Simpan gambar berdasarkan gabungan kanji+kana
-      newMap[`${v.kanji}-${v.kana}`] = currentPool[poolIndex];
-      poolIndex++;
-    });
+      if (!active) return;
 
-    setImageMap(newMap);
-  }, []);
+      setAllVocab(rawVocab);
 
-  // 2. Cleanup audio
+      const stableOrder = [...rawVocab].sort(
+        (a, b) => a.kanji.localeCompare(b.kanji)
+      );
+
+      let currentPool = [...bgImages].sort(
+        () => Math.random() - 0.5
+      );
+
+      let poolIndex = 0;
+      const newMap: Record<string, string> = {};
+
+      stableOrder.forEach((v) => {
+        if (poolIndex >= currentPool.length) {
+          currentPool = [...bgImages].sort(
+            () => Math.random() - 0.5
+          );
+          poolIndex = 0;
+        }
+
+        newMap[`${v.kanji}-${v.kana}`] = currentPool[poolIndex];
+        poolIndex++;
+      });
+
+      setImageMap(newMap);
+    } catch (error) {
+      console.error("Gagal memuat kosakata:", error);
+    } finally {
+      if (active) setIsLoaded(true);
+    }
+  };
+
+  void loadData();
+
+  return () => {
+    active = false;
+  };
+}, []);
+
   useEffect(() => {
     return () => {
       if (audioRef.current) audioRef.current.pause();
@@ -100,17 +137,23 @@ export default function Kosakata() {
 
   if (!isLoaded) return null;
 
-  const allVocab = allBabs
-    .filter((b: any) => b.bab <= currentBab)
-    .flatMap((b: any) => b.vocab.map((v: any) => ({ ...v, bab: b.bab })));
+
+  const memorizedCount = allVocab.filter((v) => memorized.includes(v.kanji)).length;
+  const notMemorizedCount = allVocab.length - memorizedCount;
 
   const filteredVocab = allVocab.filter(
     (v) =>
-      v.kanji.includes(search) ||
-      v.kana.includes(search) ||
-      v.romaji.toLowerCase().includes(search.toLowerCase()) ||
-      v.meaning.toLowerCase().includes(search.toLowerCase())
+      (memFilter === "all" ||
+        (memFilter === "sudah" ? memorized.includes(v.kanji) : !memorized.includes(v.kanji))) &&
+      (v.kanji.includes(search) ||
+        v.kana.includes(search) ||
+        v.romaji.toLowerCase().includes(search.toLowerCase()) ||
+        v.meaning.toLowerCase().includes(search.toLowerCase()))
   );
+
+  const selectedVerbType = selectedWord
+    ? getVerbType(verbTypeMap, selectedWord.kanji, selectedWord.kana, selectedWord.romaji)
+    : undefined;
 
   return (
     <div className="space-y-6 pb-10 relative">
@@ -146,11 +189,34 @@ export default function Kosakata() {
         )}
       </div>
 
+      {/* FILTER HAFALAN */}
+      <div className="flex flex-wrap gap-2">
+        {([
+          { key: "all", label: "Semua", count: allVocab.length },
+          { key: "belum", label: "Belum hafal", count: notMemorizedCount },
+          { key: "sudah", label: "Sudah hafal", count: memorizedCount },
+        ] as const).map((f) => (
+          <button
+            key={f.key}
+            onClick={() => setMemFilter(f.key)}
+            className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors ${
+              memFilter === f.key
+                ? "bg-[#C93438] border-[#C93438] text-white"
+                : "bg-[#1E1D1B]/80 border-[#33312E] text-[#A3A099] hover:text-[#EAE6DD]"
+            }`}
+          >
+            {f.label} ({f.count})
+          </button>
+        ))}
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {filteredVocab.map((v, i) => {
           const kanjiLength = v.kanji.length;
-          const kanjiSize = kanjiLength > 5 ? "text-lg" : kanjiLength > 3 ? "text-2xl" : "text-3xl md:text-4xl";
+          // kata panjang dapat kolom kiri lebih lebar
+          const kanjiColWidth = kanjiLength > 5 ? "w-[48%]" : kanjiLength > 3 ? "w-[40%]" : "w-[35%]";
           const cardImage = imageMap[`${v.kanji}-${v.kana}`] || bgImages[0];
+          const verbType = getVerbType(verbTypeMap, v.kanji, v.kana, v.romaji);
 
           return (
             <div 
@@ -168,20 +234,28 @@ export default function Kosakata() {
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#1E1D1B]/80 to-[#1E1D1B]"></div>
               
               <div className="relative z-10 flex w-full h-full">
-                <div className="w-[35%] flex items-center justify-center p-2 shrink-0 overflow-hidden">
-                  <p className={`font-mincho ${kanjiSize} text-[#EAE6DD] font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] group-hover:text-[#C93438] transition-colors whitespace-nowrap text-center`}>
+                <div className={`${kanjiColWidth} flex flex-col items-center justify-center gap-1.5 px-3 py-2 shrink-0 overflow-hidden`}>
+                  <FitText
+                    maxSize={36}
+                    minSize={12}
+                    className="font-mincho text-[#EAE6DD] font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] group-hover:text-[#C93438] transition-colors"
+                  >
                     {v.kanji}
-                  </p>
+                  </FitText>
+                  {verbType && (
+                    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
+                      {verbType}
+                    </span>
+                  )}
                 </div>
                 
-                <div className="w-[65%] p-4 flex flex-col justify-center">
+                <div className="flex-1 min-w-0 py-3 pr-4 pl-1 flex flex-col justify-center">
                   <span className="absolute top-3 right-3 text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 backdrop-blur-sm px-2 py-0.5 rounded-md border border-[#33312E]/50">
                     Bab {v.bab}
                   </span>
                   
-                  <p className="text-xs text-[#A3A099] mb-1 mt-2 line-clamp-1">
-                    {v.kana} <span className="opacity-60">({v.romaji})</span>
-                  </p>
+                  <p className="text-xs text-[#EAE6DD]/80 mt-3 truncate">{v.kana}</p>
+                  <p className="text-[10px] text-[#A3A099] mb-1 truncate">({v.romaji})</p>
                   
                   <p className="text-sm font-bold text-[#EAE6DD] leading-snug line-clamp-2">
                     {v.meaning}
@@ -199,7 +273,6 @@ export default function Kosakata() {
         )}
       </div>
 
-      {/* MODAL DETAIL KOSAKATA */}
       {selectedWord && (
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
@@ -211,9 +284,16 @@ export default function Kosakata() {
           >
             
             <div className="flex justify-between items-center p-5 border-b border-[#33312E] sticky top-0 bg-[#1A1918]/90 backdrop-blur-md z-20">
-              <span className="text-xs font-bold text-[#C93438] bg-[#C93438]/10 px-2 py-1 rounded-md border border-[#C93438]/20">
-                Bab {selectedWord.bab}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-[#C93438] bg-[#C93438]/10 px-2 py-1 rounded-md border border-[#C93438]/20">
+                  Bab {selectedWord.bab}
+                </span>
+                {selectedVerbType && (
+                  <span className={`text-xs font-bold px-2 py-1 rounded-md border uppercase tracking-wider ${typeBadgeClass(selectedVerbType)}`}>
+                    {selectedVerbType}
+                  </span>
+                )}
+              </div>
               <button 
                 onClick={() => setSelectedWord(null)}
                 className="text-[#A3A099] hover:text-[#EAE6DD] transition-colors p-1 bg-[#262523] rounded-full"
@@ -224,7 +304,6 @@ export default function Kosakata() {
 
             <div className="relative p-8 pt-10 text-center min-h-[400px] flex flex-col justify-center">
               
-              {/* BACKGROUND GAMBAR & GRADASI DI MODAL */}
               <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
                 <img 
                   src={imageMap[`${selectedWord.kanji}-${selectedWord.kana}`] || bgImages[0]} 
@@ -234,9 +313,12 @@ export default function Kosakata() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1A1918] via-[#1A1918]/90 to-transparent"></div>
               </div>
 
-              {/* KONTEN MODAL (Z-10 biar di atas gradasi) */}
               <div className="relative z-10 w-full">
-                <h3 className="font-mincho text-6xl text-[#EAE6DD] mb-3">{selectedWord.kanji}</h3>
+                <h3 className="mb-3 px-6">
+                  <FitText maxSize={60} minSize={20} className="font-mincho text-[#EAE6DD]">
+                    {selectedWord.kanji}
+                  </FitText>
+                </h3>
                 <p className="text-xl text-[#A3A099] mb-1">{selectedWord.kana}</p>
                 <p className="text-base text-[#B8860B] font-medium mb-6">{selectedWord.romaji}</p>
                 

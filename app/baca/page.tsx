@@ -1,36 +1,27 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Play, Square, ArrowLeft, Volume2, Gauge, User } from "lucide-react";
-import allStories from "../../data/all-stories.json";
-import allBabs from "../../data/all-bab.json"; // <-- Import ini buat kamus Romaji
+import { Play, Square, ArrowLeft, Volume2, Gauge, User, BookOpen } from "lucide-react";
+import storyIndex from "../../data/story-index.json";
+import { loadStory } from "../../data/story-loaders";
 import { getProgress } from "../../lib/progress";
-import * as wanakana from "wanakana";
+
 
 const MACRON_TO_DOUBLE: Record<string, string> = {
   "ā": "aa", "ī": "ii", "ū": "uu", "ē": "ee", "ō": "oo",
   "Ā": "aa", "Ī": "ii", "Ū": "uu", "Ē": "ee", "Ō": "oo",
 };
 
-// Bungkus wanakana biar hasilnya konsisten:
-// - ん sebelum vokal/y dikasih apostrof (shin'ya, bukan shinya)
-// - ー (katakana) jadi vokal ganda: コーヒー -> koohii, bukan "ko-hi-"
-// - macron (ō, ū, dst) disamakan jadi vokal ganda, sama kayak hiragana (ookii)
 const toRomajiClean = (kana: string) => {
   const prepared = kana
     .replace(/ん(?=[あいうえおやゆよ])/g, "ん'")
     .replace(/ン(?=[アイウエオヤユヨ])/g, "ン'");
-  return wanakana
-    .toRomaji(prepared)
-    .replace(/[āīūēōĀĪŪĒŌ]/g, (m) => MACRON_TO_DOUBLE[m])
-    .replace(/([aiueo])[ー-]/g, "$1$1");
+  return wanakanaModule!
+  .toRomaji(prepared)
+  .replace(/[āīūēōĀĪŪĒŌ]/g, (m) => MACRON_TO_DOUBLE[m])
+  .replace(/([aiueo])[ー-]/g, "$1$1");
 };
 
-// ==========================================
-// ROMAJI BERBASIS Intl.Segmenter (bawaan browser)
-// Teks dipecah per kata dari versi yang MASIH ADA KANJI-nya (lebih akurat),
-// lalu tiap kata dibaca pakai furigana (<rt>) / kana-nya.
-// ==========================================
 const JOIN_COMMON_WORDS = [
   "これ", "それ", "あれ", "この", "その", "あの", "ここ", "そこ", "あそこ", "どこ",
   "どちら", "どう", "こんにちは", "こんばんは", "はじめまして", "おはようございます",
@@ -55,7 +46,6 @@ const SPECIAL_READINGS: Record<string, string> = {
   "ありがとうございます": "arigatou gozaimasu",
   "ありがとうございました": "arigatou gozaimashita",
 };
-// Kata+partikel yang sering dianggap satu kata oleh Segmenter
 const SPLIT_TOKENS: Record<string, string[]> = {
   "ほかに": ["ほか", "に"],
   "ほかには": ["ほか", "には"],
@@ -67,10 +57,47 @@ const PUNCT_ONLY = /^[\s。、！？!?,.「」『』]+$/;
 let japaneseSegmenter: any = null;
 const canSegmentJapanese = () => typeof Intl !== "undefined" && "Segmenter" in Intl;
 
+let vocabIndexCache: any[] | null = null;
+let vocabIndexPromise: Promise<any[]> | null = null;
+
+let wanakanaModule: typeof import("wanakana") | null = null;
+let wanakanaPromise: Promise<typeof import("wanakana")> | null = null;
+
+const loadWanakana = async (): Promise<typeof import("wanakana")> => {
+  if (!wanakanaPromise) {
+    wanakanaPromise = import("wanakana")
+      .then((module) => {
+        wanakanaModule = module;
+        return module;
+      })
+      .catch((error) => {
+        wanakanaPromise = null;
+        throw error;
+      });
+  }
+
+  return wanakanaPromise;
+};
+
+const loadVocabIndex = async (): Promise<any[]> => {
+  if (!vocabIndexPromise) {
+    vocabIndexPromise = import("../../data/vocab-index.json")
+      .then((module) => {
+        vocabIndexCache = module.default as any[];
+        return vocabIndexCache;
+      })
+      .catch((error) => {
+        vocabIndexPromise = null;
+        throw error;
+      });
+  }
+
+  return vocabIndexPromise;
+};
+
 const getRomajiSegmented = (jpText: string, bab: number): string => {
   if (!japaneseSegmenter) japaneseSegmenter = new (Intl as any).Segmenter("ja", { granularity: "word" });
 
-  // 1. Pisahkan teks (kanji tetap ada) dan posisi furigana-nya
   const plain = (t: string) => t.replace(/<[^>]+>/g, "").normalize("NFC");
   let surface = "";
   const rubies: { start: number; end: number; reading: string }[] = [];
@@ -86,7 +113,6 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
   }
   surface += plain(jpText.slice(last));
 
-  // 2. Pecah jadi kata, tapi jangan sampai memotong tengah-tengah furigana
   const spans: { start: number; end: number }[] = [];
   for (const s of japaneseSegmenter.segment(surface)) {
     const start = s.index as number;
@@ -115,10 +141,9 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
     .filter((t) => !/^\s+$/.test(t.text))
     .map(({ kana, punct }) => ({ kana, punct }));
 
-  // 3. Kata yang sering salah dipecah (terutama yang hiragana) disambung lagi lewat kamus
   const joinDict = new Set<string>(JOIN_COMMON_WORDS);
-  allBabs
-    .filter((b: any) => b.bab <= bab)
+  (vocabIndexCache ?? [])
+  .filter((b: any) => b.bab <= bab)
     .forEach((b: any) => b.vocab?.forEach((v: any) => v.kana && joinDict.add(v.kana)));
 
   const afterDict: Tok[] = [];
@@ -140,7 +165,6 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
     i += took;
   }
 
-  // 4. Perbaiki: 何かいります -> なに / か / いり..., lalu sambung akhiran ます-form
   const finalToks: Tok[] = [];
   const pushTok = (t: Tok) => {
     const prev = finalToks[finalToks.length - 1];
@@ -163,7 +187,6 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
     pushTok(t);
   }
 
-  // 5. Ubah ke romaji
   const parts: string[] = [];
   for (const t of finalToks) {
     if (t.punct) {
@@ -186,6 +209,8 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
 
 export default function Baca() {
   const [selectedStory, setSelectedStory] = useState<any | null>(null);
+  const [isStoryLoading, setIsStoryLoading] = useState(false);
+  const [storyLoadError, setStoryLoadError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [speed, setSpeed] = useState<number>(1.0);
@@ -205,11 +230,10 @@ export default function Baca() {
     };
   }, []);
 
-  // ==========================================
-  // FUNGSI ROMAJI VERSI CLAUDE (SUPER AKURAT)
-  // ==========================================
   const getRomajiLegacy = (jpText: string, bab: number) => {
-    const unlockedBabs = allBabs.filter((b: any) => b.bab <= bab);
+    const unlockedBabs = (vocabIndexCache ?? []).filter(
+  (b: any) => b.bab <= bab
+);
 
     const particles = [
       "から", "まで", "より", "しか", "だけ", "など", "は", "が", "を",
@@ -319,13 +343,10 @@ export default function Baca() {
       const unknownPrefix = unknownStart === undefined ? "" : cleanText.slice(unknownStart, position);
       const prefixHasKatakana = /[ァ-ヶ]/.test(unknownPrefix);
 
-      // を hampir selalu partikel, jadi selalu dipisah (biar jadi "o", bukan "wo")
       if (particle === "を") return true;
       if (previousKnownIsAdjacent) return true;
 
-      // partikel bertumpuk: ここ|で|は, えき|から|は, にも, でも, とも, dst.
-      const previousIsParticleAdjacent =
-        previousToken?.kind === "particle" && previousToken.end === position;
+      const previousIsParticleAdjacent = previousToken?.kind === "particle" && previousToken.end === position;
       if (previousIsParticleAdjacent) {
         if (particle === "は" && ["に", "で", "と", "から", "まで", "より", "へ"].includes(previousToken.text)) return true;
         if (particle === "も" && ["に", "で", "と", "から", "まで", "へ"].includes(previousToken.text)) return true;
@@ -399,7 +420,7 @@ export default function Baca() {
     const specialReadings: Record<string, string> = {
       "こんにちは": "konnichiwa",
       "こんばんは": "konbanwa",
-      "ではありません": "dewa arimasen", // は di sini dibaca "wa"
+      "ではありません": "dewa arimasen",
       "じゃありません": "ja arimasen",
       "おはようございます": "ohayou gozaimasu",
       "ありがとうございます": "arigatou gozaimasu",
@@ -407,8 +428,6 @@ export default function Baca() {
 
     return tokens
       .map((token) => {
-        // tanda baca nempel di akhir token (mis. "こんにちは。" -> "こんにちは."),
-        // jadi dipisah dulu supaya pencarian bacaan khusus & partikel tetap kena
         const trailing = token.text.match(/[.,!?]+$/)?.[0] ?? "";
         const core = trailing ? token.text.slice(0, -trailing.length) : token.text;
 
@@ -422,7 +441,6 @@ export default function Baca() {
       .filter(Boolean)
       .join(" ");
   };
-  // ==========================================
 
   const getRomaji = (jpText: string, bab: number) =>
     canSegmentJapanese() ? getRomajiSegmented(jpText, bab) : getRomajiLegacy(jpText, bab);
@@ -436,6 +454,29 @@ export default function Baca() {
     setIsPlaying(false);
     setActiveIndex(null);
   };
+
+  const openStory = async (storyId: string) => {
+  stopAudio();
+  setIsStoryLoading(true);
+  setStoryLoadError(false);
+
+  try {
+    const story = await loadStory(storyId);
+
+await Promise.all([
+  loadVocabIndex(),
+  loadWanakana(),
+]);
+
+setSelectedStory(story);
+    window.scrollTo(0, 0);
+  } catch (error) {
+    console.error("Gagal memuat cerita:", error);
+    setStoryLoadError(true);
+  } finally {
+    setIsStoryLoading(false);
+  }
+};
 
   const playOne = (url: string, index: number, rate: number) => {
     return new Promise<void>((resolve) => {
@@ -491,9 +532,14 @@ export default function Baca() {
     return () => stopAudio();
   }, []);
 
-  // ==========================================
-  // TAMPILAN 1: GRID DAFTAR CERITA
-  // ==========================================
+  if (isStoryLoading) {
+  return (
+    <div className="flex min-h-[50vh] items-center justify-center text-[#A3A099]">
+      Memuat cerita...
+    </div>
+  );
+}
+
   if (!selectedStory) {
     return (
       <div className="space-y-8 pb-10">
@@ -504,11 +550,17 @@ export default function Baca() {
           </p>
         </div>
 
+        {storyLoadError && (
+          <p className="text-sm text-red-400">
+            Gagal memuat cerita. Silakan coba pilih cerita lagi.
+          </p>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {allStories.map((story: any) => (
+          {storyIndex.map((story: any) => (
             <button
               key={story.id}
-              onClick={() => setSelectedStory(story)}
+              onClick={() => openStory(story.id)}
               className="relative flex flex-col items-start p-5 rounded-2xl border bg-[#1E1D1B] border-[#33312E] hover:border-[#C93438] transition-all text-left group h-full min-h-[160px]"
             >
               <div className="flex justify-between items-center w-full mb-3">
@@ -525,7 +577,7 @@ export default function Baca() {
                 {story.title}
               </h3>
               <p className="text-xs text-[#A3A099] line-clamp-2 mt-auto">
-                {story.sentences[0].jp.replace(/<[^>]+>/g, '')}...
+                {story.previewJP.replace(/<[^>]+>/g, '')}...
               </p>
             </button>
           ))}
@@ -534,110 +586,122 @@ export default function Baca() {
     );
   }
 
-  // ==========================================
-  // TAMPILAN 2: BACA CERITA
-  // ==========================================
   return (
-    <div className="space-y-6 pb-10 max-w-4xl mx-auto">
-      <button 
-        onClick={() => { stopAudio(); setSelectedStory(null); }}
-        className="flex items-center gap-2 text-sm font-bold text-[#A3A099] hover:text-[#EAE6DD] transition-colors mb-4"
-      >
-        <ArrowLeft size={16} /> Kembali ke Daftar Cerita
-      </button>
-
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#33312E] pb-6">
-        <div className="flex-1">
-          <div className="flex items-center gap-3 mb-2">
-             <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#C93438]/20 text-[#C93438]">
-                Level {selectedStory.level}
-              </span>
-              {selectedStory.isNatural && (
-                <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
-                  Natural Speed
-                </span>
-              )}
-          </div>
-          {/* Tambahin leading-tight biar judul 2 baris ga terlalu jauh */}
-          <h2 className="text-3xl font-bold text-[#EAE6DD] leading-tight">{selectedStory.title}</h2>
-        </div>
-        
-        {/* Tambahin shrink-0 biar tombol ga pernah mengecil / turun */}
-        <div className="flex items-center gap-3 shrink-0">
-          <div className="relative flex items-center gap-2 bg-[#1E1D1B] border border-[#33312E] rounded-xl px-3 py-2">
-            <Gauge size={16} className="text-[#A3A099]" />
-            <select 
-              value={speed} 
-              onChange={(e) => setSpeed(parseFloat(e.target.value))}
-              className="bg-transparent text-sm text-[#EAE6DD] outline-none cursor-pointer appearance-none pr-4"
-            >
-              <option value={0.7} className="bg-[#1E1D1B] text-[#EAE6DD]">0.7x (Pemula)</option>
-              <option value={0.85} className="bg-[#1E1D1B] text-[#EAE6DD]">0.85x (Santai)</option>
-              <option value={1.0} className="bg-[#1E1D1B] text-[#EAE6DD]">1.0x (Normal)</option>
-              <option value={1.2} className="bg-[#1E1D1B] text-[#EAE6DD]">1.2x (Native)</option>
-            </select>
-          </div>
-
-          <button
-            onClick={playAll}
-            className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all shadow-lg whitespace-nowrap ${
-              isPlaying 
-                ? "bg-[#33312E] text-[#EAE6DD] shadow-none" 
-                : "bg-[#C93438] text-white hover:bg-[#B02A2E] shadow-[#C93438]/20"
-            }`}
+    <div className="max-w-5xl mx-auto space-y-8 pb-10">
+      
+      {/* STICKY HEADER (PERSIS KAYAK HALAMAN BELAJAR) */}
+      <div className="sticky top-0 z-50 -mx-4 mb-2 px-4 py-2 lg:mx-0 lg:px-0 lg:py-3 pointer-events-none">
+        <div className="flex w-full items-center justify-between gap-3 rounded-2xl border border-[#49302D]/90 bg-[#171312]/95 px-3 py-2 shadow-[0_10px_28px_rgba(0,0,0,0.32)] backdrop-blur-xl lg:rounded-none lg:border-0 lg:bg-transparent lg:px-0 lg:py-0 lg:shadow-none lg:backdrop-blur-none xl:-ml-[clamp(0px,calc((100vw-77rem)/2-1rem),16rem)] xl:w-[calc(100%+clamp(0px,calc(100vw-79rem),32rem))]">
+          
+          <button 
+            type="button"
+            onClick={() => { stopAudio(); setSelectedStory(null); window.scrollTo(0, 0); }}
+            className="group inline-flex min-h-11 items-center gap-2.5 rounded-xl px-1.5 py-1 text-left text-sm font-semibold text-[#EAE6DD] transition-all duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C93438] focus-visible:ring-offset-2 focus-visible:ring-offset-[#121110] active:scale-[0.98] pointer-events-auto"
           >
-            {isPlaying ? <Square size={18} fill="currentColor" /> : <Play size={18} fill="currentColor" />}
-            {isPlaying ? "Hentikan" : "Putar Semua"}
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#C93438]/40 bg-[#C93438]/15 text-[#F06A6E] transition-all duration-200 group-hover:border-[#E05256]/80 group-hover:bg-[#C93438] group-hover:text-white group-hover:shadow-[0_0_22px_rgba(201,52,56,0.28)]">
+              <ArrowLeft size={17} className="transition-transform duration-200 group-hover:-translate-x-0.5" />
+            </span>
+            <span className="flex flex-col leading-tight">
+              <span className="sm:hidden">Daftar Cerita</span>
+              <span className="hidden sm:inline group-hover:text-[#F06A6E]">Kembali ke Daftar Cerita</span>
+              <span className="hidden pt-0.5 text-[10px] font-medium tracking-[0.12em] text-[#817A73] sm:block">LATIHAN BACA</span>
+            </span>
           </button>
+
+          <div className="pointer-events-auto inline-flex shrink-0 items-center gap-2 rounded-full border border-white/[0.08] bg-black/25 px-3 py-2 text-[11px] font-semibold text-[#A3A099] backdrop-blur-md sm:px-3.5 sm:text-xs">
+            <BookOpen size={13} className="text-[#B8860B]" />
+            <span>Level {selectedStory.level}</span>
+          </div>
         </div>
       </div>
 
-      {/* LIST PERCAKAPAN */}
-      <div className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-3xl p-2 md:p-4 shadow-xl">
-        <div className="flex flex-col divide-y divide-[#33312E]/60">
-          {selectedStory.sentences.map((s: any, i: number) => {
-            const isNarrator = s.speaker === "Narator";
-            
-            return (
-                            <div 
-                key={i} 
-                className={`group flex flex-col md:flex-row items-start gap-3 md:gap-4 py-2 px-4 rounded-xl transition-all ${
-                  activeIndex === i ? "bg-[#C93438]/10" : "hover:bg-[#262523]"
-                }`}
+      {/* KONTEN CERITA */}
+      <div className="space-y-6">
+        
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6 border-b border-[#33312E] pb-6">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+                {selectedStory.isNatural && (
+                  <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
+                    Natural Speed
+                  </span>
+                )}
+            </div>
+            <h2 className="text-3xl font-bold text-[#EAE6DD] leading-tight">{selectedStory.title}</h2>
+          </div>
+          
+          <div className="flex items-center gap-3 shrink-0">
+            <div className="relative flex items-center gap-2 bg-[#1E1D1B] border border-[#33312E] rounded-xl px-3 py-2">
+              <Gauge size={16} className="text-[#A3A099]" />
+              <select 
+                value={speed} 
+                onChange={(e) => setSpeed(parseFloat(e.target.value))}
+                className="bg-transparent text-sm text-[#EAE6DD] outline-none cursor-pointer appearance-none pr-4"
               >
-                <button
-                  onClick={() => playAudio(selectedStory.id, i)}
-                  className="shrink-0 w-8 h-8 mt-1 rounded-full bg-[#33312E] flex items-center justify-center text-[#A3A099] group-hover:text-white group-hover:bg-[#C93438] transition-all hidden md:flex"
-                >
-                  <Volume2 size={16} />
-                </button>
+                <option value={0.7} className="bg-[#1E1D1B] text-[#EAE6DD]">0.7x (Pemula)</option>
+                <option value={0.85} className="bg-[#1E1D1B] text-[#EAE6DD]">0.85x (Santai)</option>
+                <option value={1.0} className="bg-[#1E1D1B] text-[#EAE6DD]">1.0x (Normal)</option>
+                <option value={1.2} className="bg-[#1E1D1B] text-[#EAE6DD]">1.2x (Native)</option>
+              </select>
+            </div>
 
-                <div className="w-full">
-                  {!isNarrator && (
-                    <p className="text-xs font-bold text-[#B8860B] mb-0.5 flex items-center gap-1.5">
-                      <User size={12} /> {s.speaker}
+            <button
+              onClick={playAll}
+              className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all shadow-lg whitespace-nowrap ${
+                isPlaying 
+                  ? "bg-[#33312E] text-[#EAE6DD] shadow-none" 
+                  : "bg-[#C93438] text-white hover:bg-[#B02A2E] shadow-[#C93438]/20"
+              }`}
+            >
+              {isPlaying ? <Square size={18} fill="currentColor" /> : <Play size={18} fill="currentColor" />}
+              {isPlaying ? "Hentikan" : "Putar Semua"}
+            </button>
+          </div>
+        </div>
+
+        <div className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-3xl p-2 md:p-4 shadow-xl">
+          <div className="flex flex-col divide-y divide-[#33312E]/60">
+            {selectedStory.sentences.map((s: any, i: number) => {
+              const isNarrator = s.speaker === "Narator";
+              
+              return (
+                <div 
+                  key={i} 
+                  className={`group flex flex-col md:flex-row items-start gap-3 md:gap-4 py-2 px-4 rounded-xl transition-all ${
+                    activeIndex === i ? "bg-[#C93438]/10" : "hover:bg-[#262523]"
+                  }`}
+                >
+                  <button
+                    onClick={() => playAudio(selectedStory.id, i)}
+                    className="shrink-0 w-8 h-8 mt-1 rounded-full bg-[#33312E] flex items-center justify-center text-[#A3A099] group-hover:text-white group-hover:bg-[#C93438] transition-all hidden md:flex"
+                  >
+                    <Volume2 size={16} />
+                  </button>
+
+                  <div className="w-full">
+                    {!isNarrator && (
+                      <p className="text-xs font-bold text-[#B8860B] mb-0.5 flex items-center gap-1.5">
+                        <User size={12} /> {s.speaker}
+                      </p>
+                    )}
+                    
+                    <div 
+                      className={`text-xl md:text-2xl text-[#EAE6DD] font-mincho leading-[2] ${isNarrator ? "italic text-[#A3A099]" : ""} [&_rt]:text-[0.5em]`}
+                      dangerouslySetInnerHTML={{ __html: s.jp }}
+                    />
+                    
+                    <p className="text-sm text-[#B8860B] italic mt-1 mb-1">
+                      {s.romaji ?? getRomaji(s.jp, currentBab)}
                     </p>
-                  )}
-                  
-                  {/* Teks Jepang - Jarak Baris Dirapetin */}
-                  <div 
-                    className={`text-xl md:text-2xl text-[#EAE6DD] font-mincho leading-[2] ${isNarrator ? "italic text-[#A3A099]" : ""} [&_rt]:text-[0.5em]`}
-                    dangerouslySetInnerHTML={{ __html: s.jp }}
-                  />
-                  
-                  {/* Romaji - Jarak Dirapetin */}
-                  <p className="text-sm text-[#B8860B] italic mt-1 mb-1">
-                    {s.romaji ?? getRomaji(s.jp, currentBab)}
-                  </p>
-                  
-                  {/* Terjemahan */}
-                  <p className="text-sm text-[#A3A099] leading-snug">
-                    {s.id}
-                  </p>
+                    
+                    <p className="text-sm text-[#A3A099] leading-snug">
+                      {s.id}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

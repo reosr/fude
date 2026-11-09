@@ -1,9 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import jlptData from "../../../../data/jlpt.json";
 import JLPTQuiz from "../../../../components/JLPTQuiz";
-import { ArrowLeft } from "lucide-react";
 
 export default function JLPTTestPage() {
   const params = useParams();
@@ -11,15 +10,87 @@ export default function JLPTTestPage() {
   const level = params.level as string;
   const setId = params.setId as string;
 
-  // Cari data set yang dipilih
-  const levelData = jlptData.find((j: any) => j.level === level);
-  const testSet = levelData?.sets?.find((s: any) => s.id === setId);
+  const [testSet, setTestSet] = useState<any | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+
+    const loadData = async () => {
+      setIsLoading(true);
+      setLoadError(false);
+      setTestSet(null);
+
+      try {
+        const module = await import("../../../../data/jlpt.json");
+        const allJlptData = module.default as any[];
+
+        const levelData = allJlptData.find(
+          (j: any) => j.level === level
+        );
+
+        const selectedSet = levelData?.sets?.find(
+          (s: any) => s.id === setId
+        );
+
+        if (!active) return;
+
+        setTestSet(selectedSet ?? null);
+      } catch (error) {
+        console.error("Gagal memuat data ujian JLPT:", error);
+
+        if (active) {
+          setLoadError(true);
+        }
+      } finally {
+        if (active) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    void loadData();
+
+    return () => {
+      active = false;
+    };
+  }, [level, setId]);
+
+  if (isLoading) {
+    return (
+      <div className="text-center py-20 text-[#A3A099]">
+        Memuat soal ujian...
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="text-center py-20">
+        <p className="text-[#A3A099] mb-4">
+          Gagal memuat data ujian JLPT.
+        </p>
+        <button
+          onClick={() => router.push(`/jlpt/${level}`)}
+          className="text-[#C93438] hover:underline"
+        >
+          Kembali ke Daftar Set
+        </button>
+      </div>
+    );
+  }
 
   if (!testSet) {
     return (
       <div className="text-center py-20">
-        <h2 className="text-2xl font-bold text-[#EAE6DD] mb-4">Set Ujian tidak ditemukan</h2>
-        <button onClick={() => router.push(`/jlpt/${level}`)} className="text-[#C93438] hover:underline">
+        <h2 className="text-2xl font-bold text-[#EAE6DD] mb-4">
+          Set Ujian tidak ditemukan
+        </h2>
+        <button
+          onClick={() => router.push(`/jlpt/${level}`)}
+          className="text-[#C93438] hover:underline"
+        >
           Kembali ke Daftar Set
         </button>
       </div>
@@ -28,8 +99,10 @@ export default function JLPTTestPage() {
 
   return (
     <div className="max-w-4xl mx-auto pb-10">
-      {/* Komponen Kuisnya dipanggil di sini */}
-      <JLPTQuiz testSet={testSet} onBack={() => router.push(`/jlpt/${level}`)} />
+      <JLPTQuiz
+        testSet={testSet}
+        onBack={() => router.push(`/jlpt/${level}`)}
+      />
     </div>
   );
 }

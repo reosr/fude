@@ -8,180 +8,224 @@
         "sections": {
           "vocab": [
             {
-              "question": "「<ruby>友達<rt>ともだち</rt></ruby>」の読み方はどれですか。",
+              "question": "「友達」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
               "options": [
-                "ともだち",
                 "ともたち",
                 "ゆうだち",
+                "ともだち",
                 "ゆうたち"
               ],
-              "answer": 0,
+              "answer": 2,
               "explanation": "友達 dibaca ともだち (tomodachi), artinya teman. Dalam kata ini, 友 dibaca とも."
             },
             {
-              "question": "「<ruby>毎朝<rt>まいあさ</rt></ruby>」の読み方はどれですか。",
+              "question": "「毎朝」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
               "options": [
-                "まいばん",
                 "まいあさ",
+                "まいばん",
                 "まいにち",
                 "まいとき"
               ],
-              "answer": 1,
-              "explanation": "毎朝 dibaca まいあさ (maiasa), artinya setiap pagi. 毎 berarti setiap dan 朝 berarti pagi."
+              "answer": 0,
+              "explanation": "毎朝 dibaca まいあさ (maiasa), artinya setiap pagi."
             },
             {
-              "question": "「<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>」の読み方はどれですか。",
+              "question": "「牛乳」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
               "options": [
-                "ぎゅうにゅう",
                 "ぎゅうゆ",
                 "うしにゅう",
-                "ぎゅにゅう"
+                "ぎゅにゅう",
+                "ぎゅうにゅう"
               ],
-              "answer": 0,
-              "explanation": "牛乳 dibaca ぎゅうにゅう (gyuunyuu), artinya susu. Ini merupakan bacaan gabungan yang perlu diingat."
+              "answer": 3,
+              "explanation": "牛乳 dibaca ぎゅうにゅう (gyuunyuu), artinya susu."
             },
             {
-              "question": "「<ruby>時計<rt>とけい</rt></ruby>」の読み方はどれですか。",
+              "question": "「時計」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
               "options": [
                 "ときけい",
-                "じけい",
                 "とけい",
+                "じけい",
                 "とっけい"
               ],
-              "answer": 2,
+              "answer": 1,
               "explanation": "時計 dibaca とけい (tokei), artinya jam atau arloji."
             },
             {
               "question": "「きょうは としょかんへ いきます。」の「としょかん」は、どれですか。",
               "options": [
-                "図書館",
                 "学校",
+                "図書館",
                 "病院",
                 "会社"
               ],
-              "answer": 0,
+              "answer": 1,
               "explanation": "としょかん ditulis 図書館, artinya perpustakaan. 図書 berarti buku dan 館 berarti gedung atau tempat."
             },
             {
               "question": "「あした、せんせいに あいます。」の「せんせい」は、どれですか。",
               "options": [
-                "先生",
                 "学生",
                 "先週",
-                "生徒"
+                "生徒",
+                "先生"
               ],
-              "answer": 0,
+              "answer": 3,
               "explanation": "せんせい ditulis 先生, artinya guru. Jangan tertukar dengan 学生 (がくせい), yang berarti pelajar atau mahasiswa."
             },
             {
               "question": "「でんしゃで 会社へ いきます。」の「でんしゃ」は、どれですか。",
               "options": [
-                "電気",
                 "電車",
+                "電気",
                 "自転車",
                 "車"
               ],
-              "answer": 1,
+              "answer": 0,
               "explanation": "でんしゃ ditulis 電車, artinya kereta. 電気 (でんき) berarti listrik, sedangkan 自転車 (じてんしゃ) berarti sepeda."
             },
             {
               "question": "「わたしの かぞくは 四人です。」の「かぞく」は、どれですか。",
               "options": [
                 "家",
+                "家具",
                 "家族",
-                "家族だち",
-                "家具"
+                "家族だち"
               ],
-              "answer": 1,
+              "answer": 2,
               "explanation": "かぞく ditulis 家族, artinya keluarga."
             },
             {
-              "question": "外は とても さむいです。まどを（　）。",
+              "question": "<ruby>外<rt>そと</rt></ruby>は とても さむいです。まどを（　）。",
               "options": [
                 "あけます",
-                "しめます",
                 "つけます",
-                "あらいます"
+                "あらいます",
+                "しめます"
               ],
-              "answer": 1,
-              "explanation": "Jawabannya しめます (menutup). Karena di luar sangat dingin, jendela sebaiknya ditutup. あけます berarti membuka."
+              "answer": 3,
+              "explanation": "Karena di luar sangat dingin, tindakan yang paling sesuai adalah menutup jendela: まどをしめます."
             },
             {
-              "question": "たくさん あるいて、のどが かわきました。水を（　）。",
+              "question": "たくさん あるいて、のどが かわきました。<ruby>水<rt>みず</rt></ruby>を（　）。",
               "options": [
-                "のみます",
                 "たべます",
+                "のみます",
                 "ききます",
                 "かいます"
               ],
-              "answer": 0,
+              "answer": 1,
               "explanation": "のどがかわきました berarti haus. Hal yang dilakukan adalah minum air: 水を飲みます."
             },
             {
-              "question": "おなかが すきました。もう 十二時ですから、（　）を 食べましょう。",
+              "question": "おなかが すきました。もう <ruby>十二時<rt>じゅうにじ</rt></ruby>ですから、（　）を <ruby>食<rt>た</rt></ruby>べましょう。",
               "options": [
                 "あさごはん",
-                "ひるごはん",
                 "ばんごはん",
+                "ひるごはん",
                 "おやつ"
               ],
-              "answer": 1,
+              "answer": 2,
               "explanation": "Karena sekarang pukul dua belas dan perut lapar, pilihan yang sesuai adalah ひるごはん (makan siang)."
             },
             {
-              "question": "日曜日は 学校が 休みです。友達と 公園で（　）。",
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>は <ruby>学校<rt>がっこう</rt></ruby>が <ruby>休<rt>やす</rt></ruby>みです。<ruby>友達<rt>ともだち</rt></ruby>と <ruby>公園<rt>こうえん</rt></ruby>で（　）。",
               "options": [
-                "べんきょうします",
                 "あそびます",
+                "べんきょうします",
                 "はたらきます",
                 "ねます"
               ],
-              "answer": 1,
+              "answer": 0,
               "explanation": "公園であそびます berarti bermain di taman. Dalam konteks hari libur dan pergi bersama teman, あそびます paling sesuai."
             },
             {
-              "question": "「すぐ 行きます」と だいたい 同じ 意味のものは どれですか。",
+              "question": "「すぐ <ruby>行<rt>い</rt></ruby>きます」と だいたい <ruby>同<rt>おな</rt></ruby>じ <ruby>意味<rt>いみ</rt></ruby>のものは どれですか。",
               "options": [
-                "あとで 行きます",
-                "いまから 行きます",
-                "いつも 行きます",
-                "ときどき 行きます"
+                "<ruby>今<rt>いま</rt></ruby>、<ruby>行<rt>い</rt></ruby>きます",
+                "あとで <ruby>行<rt>い</rt></ruby>きます",
+                "いつも <ruby>行<rt>い</rt></ruby>きます",
+                "ときどき <ruby>行<rt>い</rt></ruby>きます"
               ],
-              "answer": 1,
-              "explanation": "すぐ行きます berarti segera pergi. いまから行きます (pergi mulai sekarang) paling dekat maknanya. あとで berarti nanti."
+              "answer": 0,
+              "explanation": "すぐ行きます berarti segera pergi. 今行きます (pergi sekarang) paling dekat maknanya. あとで berarti nanti."
             },
             {
-              "question": "「たくさん 本が あります」と だいたい 同じ 意味のものは どれですか。",
+              "question": "「たくさん <ruby>本<rt>ほん</rt></ruby>が あります」と だいたい <ruby>同<rt>おな</rt></ruby>じ <ruby>意味<rt>いみ</rt></ruby>のものは どれですか。",
               "options": [
-                "本が 少しです",
-                "本が 多いです",
-                "本が 新しいです",
-                "本が 古いです"
+                "<ruby>本<rt>ほん</rt></ruby>が <ruby>少<rt>すこ</rt></ruby>しです",
+                "<ruby>本<rt>ほん</rt></ruby>が <ruby>新<rt>あたら</rt></ruby>しいです",
+                "<ruby>本<rt>ほん</rt></ruby>が <ruby>多<rt>おお</rt></ruby>いです",
+                "<ruby>本<rt>ほん</rt></ruby>が <ruby>古<rt>ふる</rt></ruby>いです"
               ],
-              "answer": 1,
+              "answer": 2,
               "explanation": "たくさん berarti banyak. 本が多いです memiliki makna yang hampir sama, yaitu jumlah buku banyak."
             },
             {
-              "question": "「この はなは きれいです」と だいたい 同じ 意味のものは どれですか。",
+              "question": "「この はなは きれいです」と だいたい <ruby>同<rt>おな</rt></ruby>じ <ruby>意味<rt>いみ</rt></ruby>のものは どれですか。",
               "options": [
                 "この はなは しずかです",
-                "この はなは あたらしいです",
                 "この はなは うつくしいです",
+                "この はなは あたらしいです",
                 "この はなは ひろいです"
               ],
-              "answer": 2,
+              "answer": 1,
               "explanation": "きれい berarti indah atau cantik ketika membicarakan bunga. うつくしい (indah) adalah makna yang paling dekat."
             },
             {
-              "question": "「ちょっと 待ってください」と だいたい 同じ 意味のものは どれですか。",
+              "question": "「ちょっと <ruby>待<rt>ま</rt></ruby>ってください」と だいたい <ruby>同<rt>おな</rt></ruby>じ <ruby>意味<rt>いみ</rt></ruby>のものは どれですか。",
               "options": [
-                "少し 待ってください",
-                "長く 待ってください",
-                "早く 来てください",
-                "すぐ 帰ってください"
+                "<ruby>長<rt>なが</rt></ruby>く <ruby>待<rt>ま</rt></ruby>ってください",
+                "<ruby>早<rt>はや</rt></ruby>く <ruby>来<rt>き</rt></ruby>てください",
+                "すぐ <ruby>帰<rt>かえ</rt></ruby>ってください",
+                "<ruby>少<rt>すこ</rt></ruby>し <ruby>待<rt>ま</rt></ruby>ってください"
+              ],
+              "answer": 3,
+              "explanation": "ちょっと berarti sebentar atau sedikit. 少し待ってください berarti tunggu sebentar."
+            },
+            {
+              "question": "「去年」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
+              "options": [
+                "きょうねん",
+                "きょねん",
+                "らいねん",
+                "まいねん"
+              ],
+              "answer": 1,
+              "explanation": "去年 dibaca きょねん (kyonen), artinya tahun lalu."
+            },
+            {
+              "question": "「毎週」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
+              "options": [
+                "まいしゅう",
+                "まいにち",
+                "まいげつ",
+                "まいあさ"
               ],
               "answer": 0,
-              "explanation": "ちょっと berarti sebentar atau sedikit. 少し待ってください berarti tunggu sebentar, sehingga maknanya paling dekat."
+              "explanation": "毎週 dibaca まいしゅう (maishuu), artinya setiap minggu."
+            },
+            {
+              "question": "「きょうは てんきが いいです。」の「てんき」は、どれですか。",
+              "options": [
+                "電気",
+                "元気",
+                "天国",
+                "天気"
+              ],
+              "answer": 3,
+              "explanation": "てんき ditulis 天気, artinya cuaca. Pilihan lainnya memiliki penulisan dan makna yang berbeda."
+            },
+            {
+              "question": "この かばんは おもいです。<ruby>中<rt>なか</rt></ruby>に <ruby>本<rt>ほん</rt></ruby>が たくさん あります。「おもい」と <ruby>反対<rt>はんたい</rt></ruby>の <ruby>意味<rt>いみ</rt></ruby>は どれですか。",
+              "options": [
+                "<ruby>暑<rt>あつ</rt></ruby>い",
+                "<ruby>広<rt>ひろ</rt></ruby>い",
+                "<ruby>軽<rt>かる</rt></ruby>い",
+                "<ruby>長<rt>なが</rt></ruby>い"
+              ],
+              "answer": 2,
+              "explanation": "おもい (重い) berarti berat. Lawan katanya adalah かるい (軽い), yang berarti ringan."
             }
           ],
           "grammar": [
@@ -197,199 +241,590 @@
               "explanation": "Partikel は menandai topik kalimat. Polanya N1 は N2 です, yaitu 'N1 adalah N2'."
             },
             {
-              "question": "これは わたし（　）本です。",
+              "question": "これは <ruby>田中<rt>たなか</rt></ruby>さん（　）<ruby>本<rt>ほん</rt></ruby>です。",
               "options": [
                 "を",
                 "が",
-                "の",
-                "へ"
+                "へ",
+                "の"
               ],
-              "answer": 2,
-              "explanation": "Partikel の menghubungkan dua kata benda dan menunjukkan kepemilikan atau hubungan. わたしの本 berarti buku saya."
+              "answer": 3,
+              "explanation": "Partikel の menghubungkan kata benda dan dapat menunjukkan kepemilikan. 田中さんの本 berarti buku milik Tanaka."
             },
             {
-              "question": "毎朝 七時（　）起きます。",
+              "question": "<ruby>毎朝<rt>まいあさ</rt></ruby> <ruby>七時<rt>しちじ</rt></ruby>（　）<ruby>起<rt>お</rt></ruby>きます。",
+              "options": [
+                "に",
+                "で",
+                "へ",
+                "を"
+              ],
+              "answer": 0,
+              "explanation": "Partikel に digunakan untuk waktu yang spesifik. 七時に起きます berarti bangun pukul tujuh."
+            },
+            {
+              "question": "<ruby>学校<rt>がっこう</rt></ruby>は <ruby>月曜日<rt>げつようび</rt></ruby>（　）<ruby>金曜日<rt>きんようび</rt></ruby>までです。",
+              "options": [
+                "に",
+                "で",
+                "から",
+                "を"
+              ],
+              "answer": 2,
+              "explanation": "Pola ～から～まで menunjukkan rentang dari awal sampai akhir. 月曜日から金曜日まで berarti dari hari Senin sampai Jumat."
+            },
+            {
+              "question": "あした、<ruby>京都<rt>きょうと</rt></ruby>（　）<ruby>行<rt>い</rt></ruby>きます。",
+              "options": [
+                "を",
+                "で",
+                "へ",
+                "と"
+              ],
+              "answer": 2,
+              "explanation": "Partikel へ menunjukkan arah atau tujuan perpindahan. 京都へ行きます berarti pergi menuju Kyoto."
+            },
+            {
+              "question": "<ruby>毎朝<rt>まいあさ</rt></ruby> バス（　）<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
+              "options": [
+                "で",
+                "に",
+                "を",
+                "と"
+              ],
+              "answer": 0,
+              "explanation": "Partikel で digunakan untuk menyatakan alat transportasi. バスで berarti dengan bus."
+            },
+            {
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>に <ruby>友達<rt>ともだち</rt></ruby>（　）<ruby>映画<rt>えいが</rt></ruby>を <ruby>見<rt>み</rt></ruby>ました。",
               "options": [
                 "を",
                 "に",
                 "で",
+                "と"
+              ],
+              "answer": 3,
+              "explanation": "Partikel と menunjukkan orang yang melakukan kegiatan bersama. 友達と映画を見ました berarti menonton film bersama teman."
+            },
+            {
+              "question": "<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>水<rt>みず</rt></ruby>（　）<ruby>飲<rt>の</rt></ruby>みます。",
+              "options": [
+                "が",
+                "を",
+                "に",
                 "へ"
               ],
               "answer": 1,
-              "explanation": "Partikel に dipakai untuk menunjukkan waktu yang spesifik. 七時に起きます berarti bangun pada pukul tujuh."
+              "explanation": "Partikel を menandai objek langsung dari kata kerja. 水を飲みます berarti minum air."
             },
             {
-              "question": "図書館（　）日本語を 勉強します。",
+              "question": "<ruby>図書館<rt>としょかん</rt></ruby>（　）<ruby>日本語<rt>にほんご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>します。",
               "options": [
                 "に",
                 "へ",
-                "で",
-                "を"
+                "を",
+                "で"
               ],
-              "answer": 2,
-              "explanation": "Partikel で menunjukkan tempat berlangsungnya aktivitas. Kegiatan belajar dilakukan di perpustakaan, jadi gunakan 図書館で."
+              "answer": 3,
+              "explanation": "Partikel で menunjukkan tempat berlangsungnya aktivitas. Kegiatan belajar dilakukan di perpustakaan."
             },
             {
-              "question": "日曜日に 友達（　）映画を 見ました。",
+              "question": "いっしょに <ruby>昼<rt>ひる</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べ（　）か。",
               "options": [
-                "と",
+                "ましょう",
+                "ました",
+                "ません",
+                "ない"
+              ],
+              "answer": 2,
+              "explanation": "Pola ～ませんか digunakan untuk mengajak seseorang melakukan sesuatu dengan sopan. 食べませんか berarti 'maukah makan?'"
+            },
+            {
+              "question": "「いっしょに <ruby>行<rt>い</rt></ruby>きませんか。」—「はい、（　）。」",
+              "options": [
+                "行きません",
+                "行きましょう",
+                "行きました",
+                "行きませんでした"
+              ],
+              "answer": 1,
+              "explanation": "ましょう digunakan untuk menyatakan ajakan atau persetujuan melakukan kegiatan bersama. Respons positif yang alami adalah 行きましょう."
+            },
+            {
+              "question": "わたしは <ruby>日本語<rt>にほんご</rt></ruby>（　）<ruby>好<rt>す</rt></ruby>きです。",
+              "options": [
+                "が",
                 "を",
                 "に",
                 "で"
               ],
               "answer": 0,
-              "explanation": "Partikel と berarti 'bersama' ketika menghubungkan orang yang melakukan kegiatan bersama. 友達と映画を見ました berarti menonton film bersama teman."
+              "explanation": "Kata 好き biasanya menggunakan partikel が untuk menandai hal yang disukai. 日本語が好きです berarti menyukai bahasa Jepang."
             },
             {
-              "question": "りんごを 三つ（　）。",
+              "question": "<ruby>庭<rt>にわ</rt></ruby>に <ruby>犬<rt>いぬ</rt></ruby>が（　）。",
+              "options": [
+                "います",
+                "あります",
+                "です",
+                "します"
+              ],
+              "answer": 0,
+              "explanation": "います digunakan untuk menyatakan keberadaan makhluk hidup seperti manusia dan hewan. あります digunakan untuk benda mati."
+            },
+            {
+              "question": "つくえの <ruby>上<rt>うえ</rt></ruby>（　）<ruby>本<rt>ほん</rt></ruby>が あります。",
+              "options": [
+                "を",
+                "に",
+                "で",
+                "へ"
+              ],
+              "answer": 1,
+              "explanation": "Partikel に menunjukkan lokasi keberadaan. つくえの上に本があります berarti ada buku di atas meja."
+            },
+            {
+              "question": "りんごを <ruby>三<rt>みっ</rt></ruby>（　）ください。",
+              "options": [
+                "人",
+                "枚",
+                "つ",
+                "台"
+              ],
+              "answer": 2,
+              "explanation": "つ adalah kata bantu bilangan umum untuk menghitung benda. 三つ berarti tiga buah."
+            },
+            {
+              "question": "バスより <ruby>電車<rt>でんしゃ</rt></ruby>の ほうが（　）です。",
+              "options": [
+                "<ruby>速<rt>はや</rt></ruby>く",
+                "<ruby>速<rt>はや</rt></ruby>かった",
+                "<ruby>速<rt>はや</rt></ruby>いな",
+                "<ruby>速<rt>はや</rt></ruby>い"
+              ],
+              "answer": 3,
+              "explanation": "Pola N1よりN2のほうが～ digunakan untuk membandingkan dua hal. Bentuk sifat yang tepat di sini adalah 速いです."
+            },
+            {
+              "question": "きのうの テストは（　）です。",
+              "options": [
+                "むずかしい",
+                "むずかしかった",
+                "むずかしく",
+                "むずかしな"
+              ],
+              "answer": 1,
+              "explanation": "きのう menunjukkan waktu lampau. Bentuk lampau positif dari kata sifat い むずかしい adalah むずかしかった."
+            },
+            {
+              "question": "<ruby>新<rt>あたら</rt></ruby>しい <ruby>自転車<rt>じてんしゃ</rt></ruby>が（　）です。",
+              "options": [
+                "ほし",
+                "ほしく",
+                "ほしな",
+                "ほしい"
+              ],
+              "answer": 3,
+              "explanation": "ほしい digunakan untuk menyatakan keinginan memiliki suatu benda. 新しい自転車がほしいです berarti ingin memiliki sepeda baru."
+            },
+            {
+              "question": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>って、<ruby>日本語<rt>にほんご</rt></ruby>を <ruby>勉強<rt>べんきょう</rt></ruby>し（　）です。",
+              "options": [
+                "たく",
+                "て",
+                "たい",
+                "ます"
+              ],
+              "answer": 2,
+              "explanation": "Pola Vます-stem + たい menyatakan keinginan melakukan sesuatu. 勉強します berubah menjadi 勉強したいです."
+            },
+            {
+              "question": "<ruby>本<rt>ほん</rt></ruby>を <ruby>買<rt>か</rt></ruby>い（　）デパートへ <ruby>行<rt>い</rt></ruby>きます。",
+              "options": [
+                "に",
+                "で",
+                "を",
+                "が"
+              ],
+              "answer": 0,
+              "explanation": "Pola Vます-stem + に行きます menunjukkan tujuan melakukan suatu kegiatan. 買いに行きます berarti pergi untuk membeli."
+            },
+            {
+              "question": "ここに <ruby>名前<rt>なまえ</rt></ruby>を（　）ください。",
+              "options": [
+                "<ruby>書<rt>か</rt></ruby>く",
+                "<ruby>書<rt>か</rt></ruby>いた",
+                "<ruby>書<rt>か</rt></ruby>いて",
+                "<ruby>書<rt>か</rt></ruby>き"
+              ],
+              "answer": 2,
+              "explanation": "Pola Vてください digunakan untuk meminta seseorang melakukan sesuatu. 書きます berubah menjadi 書いてください."
+            },
+            {
+              "question": "<ruby>朝<rt>あさ</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べ（　）、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きます。",
+              "options": [
+                "たから",
+                "てから",
+                "るから",
+                "ながら"
+              ],
+              "answer": 1,
+              "explanation": "Pola Vてから menyatakan bahwa kegiatan kedua dilakukan setelah kegiatan pertama selesai. Sarapan dilakukan sebelum pergi ke sekolah."
+            },
+            {
+              "question": "ここで <ruby>写真<rt>しゃしん</rt></ruby>を <ruby>撮<rt>と</rt></ruby>っ（　）いいですか。",
+              "options": [
+                "ても",
+                "ては",
+                "たら",
+                "たり"
+              ],
+              "answer": 0,
+              "explanation": "Pola Vてもいいですか digunakan untuk meminta izin. 撮ってもいいですか berarti bolehkah mengambil foto?"
+            },
+            {
+              "question": "ここで <ruby>泳<rt>およ</rt></ruby>いで（　）いけません。",
+              "options": [
+                "も",
+                "が",
+                "を",
+                "は"
+              ],
+              "answer": 3,
+              "explanation": "Pola Vてはいけません menyatakan larangan. 泳いではいけません berarti tidak boleh berenang."
+            },
+            {
+              "question": "<ruby>毎日<rt>まいにち</rt></ruby> <ruby>宿題<rt>しゅくだい</rt></ruby>を し（　）なりません。",
+              "options": [
+                "なくても",
+                "ないで",
+                "ません",
+                "なければ"
+              ],
+              "answer": 3,
+              "explanation": "Pola Vなければなりません menyatakan kewajiban. しなければなりません berarti harus mengerjakan."
+            },
+            {
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みですから、<ruby>早<rt>はや</rt></ruby>く <ruby>起<rt>お</rt></ruby>き（　）いいです。",
+              "options": [
+                "なくても",
+                "なければ",
+                "ないで",
+                "なかったら"
+              ],
+              "answer": 0,
+              "explanation": "Pola Vなくてもいいです menyatakan bahwa sesuatu tidak wajib dilakukan. 起きなくてもいいです berarti tidak perlu bangun."
+            },
+            {
+              "question": "わたしは <ruby>漢字<rt>かんじ</rt></ruby>を <ruby>読<rt>よ</rt></ruby>むことが（　）。",
               "options": [
                 "あります",
+                "できます",
                 "います",
-                "ください",
+                "します"
+              ],
+              "answer": 1,
+              "explanation": "Pola V辞書形 + ことができます menyatakan kemampuan melakukan sesuatu. 読むことができます berarti bisa membaca."
+            },
+            {
+              "question": "<ruby>趣味<rt>しゅみ</rt></ruby>は <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>む（　）です。",
+              "options": [
+                "もの",
+                "ところ",
+                "こと",
+                "ため"
+              ],
+              "answer": 2,
+              "explanation": "Pola V辞書形 + ことです digunakan untuk menjelaskan kegiatan sebagai hobi. 本を読むこと berarti membaca buku."
+            },
+            {
+              "question": "<ruby>寝<rt>ね</rt></ruby>る（　）、<ruby>歯<rt>は</rt></ruby>を みがきます。",
+              "options": [
+                "前に",
+                "後で",
+                "まで",
+                "から"
+              ],
+              "answer": 0,
+              "explanation": "Pola V辞書形 + 前に menyatakan kegiatan yang dilakukan sebelum kegiatan lain. 寝る前に berarti sebelum tidur."
+            },
+            {
+              "question": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>ったことが（　）。",
+              "options": [
+                "います",
+                "できます",
+                "あります",
                 "します"
               ],
               "answer": 2,
-              "explanation": "ください dipakai saat meminta sesuatu dengan sopan. りんごを三つください berarti 'Tolong beri saya tiga buah apel'."
+              "explanation": "Pola Vたことがあります menyatakan pengalaman pernah melakukan sesuatu. 日本へ行ったことがあります berarti pernah pergi ke Jepang."
             },
             {
-              "question": "きのう、デパートへ（　）。",
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>は そうじを したり、<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>を したり（　）。",
               "options": [
-                "行きます",
-                "行きました",
-                "行きません",
-                "行きませんでしたか"
+                "あります",
+                "います",
+                "できます",
+                "します"
+              ],
+              "answer": 3,
+              "explanation": "Pola VたりVたりします digunakan untuk menyebutkan beberapa contoh kegiatan. Bentuk akhirnya adalah します."
+            },
+            {
+              "question": "<ruby>春<rt>はる</rt></ruby>に なると、<ruby>暖<rt>あたた</rt></ruby>かく（　）。",
+              "options": [
+                "します",
+                "なります",
+                "あります",
+                "います"
               ],
               "answer": 1,
-              "explanation": "きのう menunjukkan waktu lampau. Bentuk lampau positif dari 行きます adalah 行きました."
+              "explanation": "Pola い-adjective くなります menyatakan perubahan keadaan. 暖かくなります berarti menjadi hangat."
             },
             {
-              "question": "ここで 写真を（　）も いいですか。",
+              "question": "これは わたしが きのう（　）<ruby>本<rt>ほん</rt></ruby>です。",
               "options": [
-                "撮る",
-                "撮って",
-                "撮った",
-                "撮り"
+                "<ruby>買<rt>か</rt></ruby>います",
+                "<ruby>買<rt>か</rt></ruby>った",
+                "<ruby>買<rt>か</rt></ruby>って",
+                "<ruby>買<rt>か</rt></ruby>う"
               ],
               "answer": 1,
-              "explanation": "Pola izin adalah kata kerja bentuk て + もいいですか. 撮ります berubah menjadi 撮って, sehingga menjadi 写真を撮ってもいいですか."
+              "explanation": "Klausa biasa diletakkan sebelum kata benda untuk menerangkannya. 買った本 berarti buku yang dibeli. Karena pembeliannya terjadi kemarin, gunakan bentuk lampau 買った."
             },
             {
-              "question": "ことばを ただしい じゅんばんに ならべたものは どれですか。\n「わたしは　＿＿＿＿　★　＿＿＿＿　。」",
+              "question": "<ruby>家<rt>いえ</rt></ruby>に <ruby>帰<rt>かえ</rt></ruby>った（　）、<ruby>手<rt>て</rt></ruby>を <ruby>洗<rt>あら</rt></ruby>います。",
               "options": [
-                "毎朝 → 六時に → 起きます",
-                "六時に → 毎朝 → 起きます",
-                "起きます → 毎朝 → 六時に",
-                "毎朝 → 起きます → 六時に"
+                "とき",
+                "ので",
+                "のに",
+                "まで"
               ],
               "answer": 0,
-              "explanation": "Urutan yang benar adalah 毎朝 → 六時に → 起きます. Keterangan frekuensi 毎朝 diletakkan sebelum waktu spesifik 六時に, lalu kata kerja di akhir: わたしは毎朝六時に起きます."
+              "explanation": "Pola bentuk biasa + とき menyatakan waktu ketika suatu kegiatan terjadi. 帰ったとき berarti ketika sudah pulang."
             },
             {
-              "question": "ことばを ただしい じゅんばんに ならべたものは どれですか。\n「きのう　＿＿＿＿　★　＿＿＿＿　。」",
+              "question": "あした <ruby>雨<rt>あめ</rt></ruby>が（　）と <ruby>思<rt>おも</rt></ruby>います。",
               "options": [
-                "友達と → 公園で → あそびました",
-                "公園で → 友達と → あそびました",
-                "あそびました → 友達と → 公園で",
-                "友達と → あそびました → 公園で"
+                "<ruby>降<rt>ふ</rt></ruby>ります",
+                "<ruby>降<rt>ふ</rt></ruby>って",
+                "<ruby>降<rt>ふ</rt></ruby>る",
+                "<ruby>降<rt>ふ</rt></ruby>った"
               ],
-              "answer": 0,
-              "explanation": "Urutan yang tepat adalah 友達と → 公園で → あそびました. Keterangan teman dan tempat aktivitas diletakkan sebelum kata kerja: きのう友達と公園であそびました."
+              "answer": 2,
+              "explanation": "Sebelum とおもいます digunakan bentuk biasa. Bentuk kamus 降る adalah bentuk biasa positif nonlampau dari 降ります."
             },
             {
-              "question": "文の ながれに 合う ことばを えらんでください。\nわたしは 毎朝 六時に 起きます。（　）、朝ごはんを 食べて、学校へ 行きます。",
+              "question": "ひまが（　）、いっしょに <ruby>公園<rt>こうえん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きましょう。",
+              "options": [
+                "あるから",
+                "ありますが",
+                "あってから",
+                "あったら"
+              ],
+              "answer": 3,
+              "explanation": "Pola ～たら menyatakan kondisi jika sesuatu terjadi. ひまがあったら berarti jika ada waktu luang."
+            },
+            {
+              "question": "<ruby>雨<rt>あめ</rt></ruby>が（　）、サッカーを します。",
+              "options": [
+                "<ruby>降<rt>ふ</rt></ruby>ったら",
+                "<ruby>降<rt>ふ</rt></ruby>るので",
+                "<ruby>降<rt>ふ</rt></ruby>っても",
+                "<ruby>降<rt>ふ</rt></ruby>ってから"
+              ],
+              "answer": 2,
+              "explanation": "Pola Vても menyatakan bahwa tindakan tetap dilakukan meskipun ada kondisi tertentu. 雨が降っても berarti meskipun hujan."
+            },
+            {
+              "question": "<ruby>朝<rt>あさ</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べました。（　）、<ruby>学校<rt>がっこう</rt></ruby>へ <ruby>行<rt>い</rt></ruby>きました。",
               "options": [
                 "でも",
-                "それから",
                 "しかし",
-                "だから"
+                "まだ",
+                "それから"
               ],
-              "answer": 1,
-              "explanation": "それから berarti 'setelah itu/kemudian' dan menghubungkan kegiatan berurutan. Setelah bangun, tokoh sarapan lalu pergi ke sekolah."
+              "answer": 3,
+              "explanation": "それから berarti setelah itu atau kemudian. Kata ini menghubungkan dua kegiatan yang berlangsung berurutan."
             },
             {
-              "question": "文の ながれに 合う ことばを えらんでください。\nきょうは 日曜日です。学校は 休みです。（　）、友達と 公園へ 行きます。",
+              "question": "<ruby>今日<rt>きょう</rt></ruby>は <ruby>日曜日<rt>にちようび</rt></ruby>です。（　）、<ruby>学校<rt>がっこう</rt></ruby>は <ruby>休<rt>やす</rt></ruby>みです。",
               "options": [
-                "そして",
+                "だから",
                 "でも",
                 "しかし",
-                "まだ"
+                "それとも"
               ],
               "answer": 0,
-              "explanation": "そして berarti 'dan/kemudian', cocok untuk melanjutkan informasi atau kegiatan. Hari ini libur sekolah, lalu tokoh pergi ke taman bersama teman."
+              "explanation": "だから berarti karena itu. Hari Minggu menjadi alasan sekolah libur dalam konteks kalimat ini."
+            },
+            {
+              "question": "ことばを <ruby>正<rt>ただ</rt></ruby>しい <ruby>順番<rt>じゅんばん</rt></ruby>に ならべたものは どれですか。\n「きのう わたしは ＿＿＿＿。」",
+              "options": [
+                "<ruby>公園<rt>こうえん</rt></ruby>で → あそびました → <ruby>友達<rt>ともだち</rt></ruby>と",
+                "<ruby>友達<rt>ともだち</rt></ruby>と → <ruby>公園<rt>こうえん</rt></ruby>で → あそびました",
+                "あそびました → <ruby>友達<rt>ともだち</rt></ruby>と → <ruby>公園<rt>こうえん</rt></ruby>で",
+                "<ruby>友達<rt>ともだち</rt></ruby>と → あそびました → <ruby>公園<rt>こうえん</rt></ruby>で"
+              ],
+              "answer": 1,
+              "explanation": "Urutan yang benar adalah 友達と → 公園で → あそびました. Keterangan teman dan tempat diletakkan sebelum kata kerja."
+            },
+            {
+              "question": "ことばを <ruby>正<rt>ただ</rt></ruby>しい <ruby>順番<rt>じゅんばん</rt></ruby>に ならべたものは どれですか。\n「わたしは ＿＿＿＿。」",
+              "options": [
+                "<ruby>毎朝<rt>まいあさ</rt></ruby> → <ruby>六時<rt>ろくじ</rt></ruby>に → <ruby>起<rt>お</rt></ruby>きます",
+                "<ruby>六時<rt>ろくじ</rt></ruby>に → <ruby>起<rt>お</rt></ruby>きます → <ruby>毎朝<rt>まいあさ</rt></ruby>",
+                "<ruby>起<rt>お</rt></ruby>きます → <ruby>毎朝<rt>まいあさ</rt></ruby> → <ruby>六時<rt>ろくじ</rt></ruby>に",
+                "<ruby>毎朝<rt>まいあさ</rt></ruby> → <ruby>起<rt>お</rt></ruby>きます → <ruby>六時<rt>ろくじ</rt></ruby>に"
+              ],
+              "answer": 0,
+              "explanation": "Urutan yang tepat adalah 毎朝 → 六時に → 起きます. Keterangan frekuensi dan waktu diletakkan sebelum kata kerja."
             }
           ],
           "reading": [
             {
-              "question": "リサさんは 何時に 学校へ 行きますか。",
+              "question": "<ruby>山田<rt>やまだ</rt></ruby>さんは <ruby>何時<rt>なんじ</rt></ruby>に <ruby>家<rt>いえ</rt></ruby>を <ruby>出<rt>で</rt></ruby>ますか。",
               "options": [
-                "六時半",
-                "七時",
-                "七時半",
-                "八時"
+                "<ruby>六時<rt>ろくじ</rt></ruby>",
+                "<ruby>六時半<rt>ろくじはん</rt></ruby>",
+                "<ruby>七時<rt>しちじ</rt></ruby>",
+                "<ruby>七時半<rt>しちじはん</rt></ruby>"
               ],
               "answer": 2,
-              "explanation": "Dalam bacaan tertulis 七時半にバスで学校へ行きます. 七時半 berarti pukul 07.30.",
-              "passage": "リサさんは 毎朝 六時半に 起きます。朝ごはんを 食べて、七時半に バスで 学校へ 行きます。学校は 八時に 始まります。"
+              "explanation": "Dalam bacaan tertulis 七時に家を出ます. Artinya, Yamada meninggalkan rumah pukul tujuh.",
+              "passage": "<ruby>山田<rt>やまだ</rt></ruby>さんは<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます。<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べてから、<ruby>七時<rt>しちじ</rt></ruby>に<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます。<ruby>学校<rt>がっこう</rt></ruby>までバスで<ruby>二十分<rt>にじゅっぷん</rt></ruby>かかります。<ruby>学校<rt>がっこう</rt></ruby>は<ruby>七時半<rt>しちじはん</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まりますから、<ruby>山田<rt>やまだ</rt></ruby>さんはいつも<ruby>早<rt>はや</rt></ruby>く<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます。"
             },
             {
-              "question": "田中さんは どうして きょう 学校へ 来ませんか。",
+              "question": "<ruby>山田<rt>やまだ</rt></ruby>さんは どうして <ruby>早<rt>はや</rt></ruby>く <ruby>家<rt>いえ</rt></ruby>を <ruby>出<rt>で</rt></ruby>ますか。",
               "options": [
-                "病気だからです",
-                "旅行へ 行くからです",
-                "休みだからです",
-                "仕事が あるからです"
+                "<ruby>学校<rt>がっこう</rt></ruby>までバスで<ruby>二十分<rt>にじゅっぷん</rt></ruby>かかるからです。",
+                "<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>学校<rt>がっこう</rt></ruby>で<ruby>食<rt>た</rt></ruby>べるからです。",
+                "<ruby>学校<rt>がっこう</rt></ruby>が<ruby>六時<rt>ろくじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まるからです。",
+                "<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>友達<rt>ともだち</rt></ruby>と<ruby>会<rt>あ</rt></ruby>うからです。"
               ],
               "answer": 0,
-              "explanation": "Pesan menyebutkan かぜをひきました, yaitu terkena flu. Karena sakit, Tanaka tidak datang ke sekolah hari ini.",
-              "passage": "山田さんへ\n田中です。きょうは かぜを ひきました。あたまも いたいです。ですから、学校へ 行きません。あしたは 行きたいです。\n田中"
+              "explanation": "Bacaan menyebutkan bahwa perjalanan ke sekolah membutuhkan dua puluh menit dengan bus. Karena itu, Yamada berangkat pukul tujuh sebelum sekolah dimulai pukul tujuh setengah.",
+              "passage": "<ruby>山田<rt>やまだ</rt></ruby>さんは<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます。<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べてから、<ruby>七時<rt>しちじ</rt></ruby>に<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます。<ruby>学校<rt>がっこう</rt></ruby>までバスで<ruby>二十分<rt>にじゅっぷん</rt></ruby>かかります。<ruby>学校<rt>がっこう</rt></ruby>は<ruby>七時半<rt>しちじはん</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まりますから、<ruby>山田<rt>やまだ</rt></ruby>さんはいつも<ruby>早<rt>はや</rt></ruby>く<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ます。"
             },
             {
-              "question": "けんさんは 朝ごはんの あとで、まず 何を しますか。",
+              "question": "けんさんは、<ruby>家<rt>いえ</rt></ruby>を <ruby>出<rt>で</rt></ruby>るとき <ruby>何<rt>なに</rt></ruby>を <ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>きますか。",
               "options": [
-                "スーパーへ 行きます",
-                "へやを そうじします",
-                "日本語を 勉強します",
-                "サッカーを します"
+                "<ruby>本<rt>ほん</rt></ruby>",
+                "<ruby>お金<rt>おかね</rt></ruby>",
+                "お<ruby>弁当<rt>べんとう</rt></ruby>",
+                "かさ"
+              ],
+              "answer": 3,
+              "explanation": "Ibu meminta Ken membawa かさ (payung) karena hari itu hujan.",
+              "passage": "けんさんへ\nきょうは<ruby>雨<rt>あめ</rt></ruby>です。<ruby>午後<rt>ごご</rt></ruby>から<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>るとき、かさを<ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>ってください。<ruby>昼<rt>ひる</rt></ruby>ごはんは<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>にあります。<ruby>母<rt>はは</rt></ruby>は<ruby>六時<rt>ろくじ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります。\n<ruby>母<rt>はは</rt></ruby>より"
+            },
+            {
+              "question": "<ruby>母<rt>はは</rt></ruby>は <ruby>何時<rt>なんじ</rt></ruby>に <ruby>帰<rt>かえ</rt></ruby>りますか。",
+              "options": [
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>四時<rt>よじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>"
               ],
               "answer": 1,
-              "explanation": "Bacaan menyatakan 朝ごはんを食べます。それから、へやをそうじします. Jadi, setelah sarapan, kegiatan pertama Ken adalah membersihkan kamar. Ia baru pergi ke supermarket pada pukul sembilan.",
-              "passage": "けんさんは 日曜日が 好きです。朝 七時に 起きて、朝ごはんを 食べます。それから、へやを そうじします。九時に 母と スーパーへ 行きます。スーパーで パンと 牛乳と りんごを 買います。昼ごはんの あとで、家で 一時間 日本語を 勉強します。午後 三時に 友達が 来ます。二人で 公園へ 行って、サッカーを します。午後 六時に 家へ 帰ります。"
+              "explanation": "Pada bagian akhir pesan tertulis 母は六時に帰ります, artinya ibu pulang pukul enam.",
+              "passage": "けんさんへ\nきょうは<ruby>雨<rt>あめ</rt></ruby>です。<ruby>午後<rt>ごご</rt></ruby>から<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>るとき、かさを<ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>ってください。<ruby>昼<rt>ひる</rt></ruby>ごはんは<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>にあります。<ruby>母<rt>はは</rt></ruby>は<ruby>六時<rt>ろくじ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります。\n<ruby>母<rt>はは</rt></ruby>より"
             },
             {
-              "question": "さくらさんは 何曜日に 日本語の クラスが ありますか。",
+              "question": "たけしさんは <ruby>朝<rt>あさ</rt></ruby>ごはんを <ruby>食<rt>た</rt></ruby>べてから、まず <ruby>何<rt>なに</rt></ruby>を しましたか。",
               "options": [
-                "月曜日と 水曜日",
-                "火曜日と 木曜日",
-                "金曜日と 土曜日",
-                "土曜日と 日曜日"
+                "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>しました。",
+                "<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>しました。",
+                "<ruby>公園<rt>こうえん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。",
+                "<ruby>晩<rt>ばん</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べました。"
               ],
               "answer": 1,
-              "explanation": "Dalam bacaan tertulis 火曜日と木曜日は日本語のクラスがあります, artinya kelas bahasa Jepang berlangsung pada hari Selasa dan Kamis.",
-              "passage": "さくらさんは 今、東京に 住んでいます。月曜日から 金曜日まで 学校へ 行きます。学校は 九時に 始まって、午後 三時に 終わります。学校の あとで、図書館で 宿題を します。火曜日と 木曜日は 日本語の クラスが あります。土曜日は 朝から 店で アルバイトを します。日曜日は 休みです。日曜日の 午後、友達と テニスを します。"
+              "explanation": "Bacaan menyebutkan 朝ごはんを食べてから、部屋を掃除しました. Setelah sarapan, kegiatan pertama Takeshi adalah membersihkan kamar.",
+              "passage": "たけしさんは<ruby>日曜日<rt>にちようび</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>がありませんから、<ruby>朝<rt>あさ</rt></ruby>はいつもより<ruby>遅<rt>おそ</rt></ruby>く<ruby>起<rt>お</rt></ruby>きます。<ruby>先週<rt>せんしゅう</rt></ruby>の<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>七時半<rt>しちじはん</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて、<ruby>母<rt>はは</rt></ruby>と<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>作<rt>つく</rt></ruby>りました。<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べてから、<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>しました。そのあとで、<ruby>友達<rt>ともだち</rt></ruby>のマイクさんに<ruby>電話<rt>でんわ</rt></ruby>しました。マイクさんは<ruby>午後<rt>ごご</rt></ruby><ruby>二時<rt>にじ</rt></ruby>に<ruby>家<rt>いえ</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ました。<ruby>二人<rt>ふたり</rt></ruby>は<ruby>近<rt>ちか</rt></ruby>くの<ruby>公園<rt>こうえん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、サッカーをしました。<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>ごろ、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りましたから、<ruby>二人<rt>ふたり</rt></ruby>は<ruby>急<rt>いそ</rt></ruby>いで<ruby>家<rt>いえ</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>りました。たけしさんは<ruby>疲<rt>つか</rt></ruby>れましたが、とても<ruby>楽<rt>たの</rt></ruby>しかったです。<ruby>夜<rt>よる</rt></ruby>は<ruby>家族<rt>かぞく</rt></ruby>と<ruby>晩<rt>ばん</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べました。それから、お<ruby>茶<rt>ちゃ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んで、<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>ました。"
             },
             {
-              "question": "この プールは 日曜日の 午後、何時まで 使えますか。",
+              "question": "たけしさんと マイクさんは、どうして <ruby>急<rt>いそ</rt></ruby>いで <ruby>家<rt>いえ</rt></ruby>へ <ruby>帰<rt>かえ</rt></ruby>りましたか。",
               "options": [
-                "十二時まで",
-                "三時まで",
-                "五時まで",
-                "六時まで"
+                "おなかがすいたからです。",
+                "<ruby>母<rt>はは</rt></ruby>が<ruby>電話<rt>でんわ</rt></ruby>したからです。",
+                "<ruby>公園<rt>こうえん</rt></ruby>が<ruby>休<rt>やす</rt></ruby>みだったからです。",
+                "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ったからです。"
+              ],
+              "answer": 3,
+              "explanation": "Bacaan menyebutkan 午後五時ごろ、雨が降りましたから、二人は急いで家へ帰りました. Mereka pulang dengan cepat karena hujan turun.",
+              "passage": "たけしさんは<ruby>日曜日<rt>にちようび</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>がありませんから、<ruby>朝<rt>あさ</rt></ruby>はいつもより<ruby>遅<rt>おそ</rt></ruby>く<ruby>起<rt>お</rt></ruby>きます。<ruby>先週<rt>せんしゅう</rt></ruby>の<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>七時半<rt>しちじはん</rt></ruby>に<ruby>起<rt>お</rt></ruby>きて、<ruby>母<rt>はは</rt></ruby>と<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>作<rt>つく</rt></ruby>りました。<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べてから、<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>しました。そのあとで、<ruby>友達<rt>ともだち</rt></ruby>のマイクさんに<ruby>電話<rt>でんわ</rt></ruby>しました。マイクさんは<ruby>午後<rt>ごご</rt></ruby><ruby>二時<rt>にじ</rt></ruby>に<ruby>家<rt>いえ</rt></ruby>へ<ruby>来<rt>き</rt></ruby>ました。<ruby>二人<rt>ふたり</rt></ruby>は<ruby>近<rt>ちか</rt></ruby>くの<ruby>公園<rt>こうえん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、サッカーをしました。<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>ごろ、<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>りましたから、<ruby>二人<rt>ふたり</rt></ruby>は<ruby>急<rt>いそ</rt></ruby>いで<ruby>家<rt>いえ</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>りました。たけしさんは<ruby>疲<rt>つか</rt></ruby>れましたが、とても<ruby>楽<rt>たの</rt></ruby>しかったです。<ruby>夜<rt>よる</rt></ruby>は<ruby>家族<rt>かぞく</rt></ruby>と<ruby>晩<rt>ばん</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べました。それから、お<ruby>茶<rt>ちゃ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んで、<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>ました。"
+            },
+            {
+              "question": "さくらさんの <ruby>日本語<rt>にほんご</rt></ruby>の クラスは <ruby>何曜日<rt>なんようび</rt></ruby>に ありますか。",
+              "options": [
+                "<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>",
+                "<ruby>月曜日<rt>げつようび</rt></ruby>と<ruby>水曜日<rt>すいようび</rt></ruby>",
+                "<ruby>水曜日<rt>すいようび</rt></ruby>と<ruby>金曜日<rt>きんようび</rt></ruby>",
+                "<ruby>土曜日<rt>どようび</rt></ruby>と<ruby>日曜日<rt>にちようび</rt></ruby>"
+              ],
+              "answer": 0,
+              "explanation": "Bacaan menyebutkan 火曜日と木曜日は午後四時から日本語のクラスがあります. Jadi, kelas bahasa Jepang berlangsung pada hari Selasa dan Kamis.",
+              "passage": "さくらさんは<ruby>今<rt>いま</rt></ruby>、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>金曜日<rt>きんようび</rt></ruby>まで<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>学校<rt>がっこう</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まって、<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>に<ruby>終<rt>お</rt></ruby>わります。<ruby>学校<rt>がっこう</rt></ruby>のあとで、<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、<ruby>宿題<rt>しゅくだい</rt></ruby>をします。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby><ruby>四時<rt>よじ</rt></ruby>から<ruby>日本語<rt>にほんご</rt></ruby>のクラスがありますから、その<ruby>日<rt>ひ</rt></ruby>は<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きません。<ruby>土曜日<rt>どようび</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>から<ruby>店<rt>みせ</rt></ruby>でアルバイトをします。<ruby>店<rt>みせ</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>から<ruby>近<rt>ちか</rt></ruby>いですから、<ruby>歩<rt>ある</rt></ruby>いて<ruby>行<rt>い</rt></ruby>きます。<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みです。<ruby>日曜日<rt>にちようび</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>とテニスをします。<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ったら、<ruby>家<rt>いえ</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。<ruby>学校<rt>がっこう</rt></ruby>では<ruby>日本語<rt>にほんご</rt></ruby>と<ruby>英語<rt>えいご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しています。<ruby>毎晩<rt>まいばん</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>一時間<rt>いちじかん</rt></ruby>ぐらい<ruby>勉強<rt>べんきょう</rt></ruby>します。"
+            },
+            {
+              "question": "さくらさんは どうして <ruby>店<rt>みせ</rt></ruby>まで <ruby>歩<rt>ある</rt></ruby>いて <ruby>行<rt>い</rt></ruby>きますか。",
+              "options": [
+                "<ruby>店<rt>みせ</rt></ruby>が<ruby>学校<rt>がっこう</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にあるからです。",
+                "バスがないからです。",
+                "<ruby>店<rt>みせ</rt></ruby>が<ruby>家<rt>いえ</rt></ruby>から<ruby>近<rt>ちか</rt></ruby>いからです。",
+                "<ruby>友達<rt>ともだち</rt></ruby>といっしょに<ruby>行<rt>い</rt></ruby>くからです。"
               ],
               "answer": 2,
-              "explanation": "Jadwal menunjukkan hari Minggu buka dari 9:00 sampai 17:00. Jadi, kolam renang dapat digunakan sampai pukul lima sore.",
-              "passage": "【市民プール】\n月曜日：休み\n火曜日～土曜日：午前 9:00 ～ 午後 6:00\n日曜日：午前 9:00 ～ 午後 5:00\n料金：大人 300円、子ども 150円\n水を 持って 来てください。"
+              "explanation": "Bacaan menyebutkan 店は家から近いですから、歩いて行きます. Ia berjalan kaki karena toko dekat dari rumahnya.",
+              "passage": "さくらさんは<ruby>今<rt>いま</rt></ruby>、<ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>金曜日<rt>きんようび</rt></ruby>まで<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>学校<rt>がっこう</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まって、<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>に<ruby>終<rt>お</rt></ruby>わります。<ruby>学校<rt>がっこう</rt></ruby>のあとで、<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>って、<ruby>宿題<rt>しゅくだい</rt></ruby>をします。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby><ruby>四時<rt>よじ</rt></ruby>から<ruby>日本語<rt>にほんご</rt></ruby>のクラスがありますから、その<ruby>日<rt>ひ</rt></ruby>は<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きません。<ruby>土曜日<rt>どようび</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>から<ruby>店<rt>みせ</rt></ruby>でアルバイトをします。<ruby>店<rt>みせ</rt></ruby>は<ruby>家<rt>いえ</rt></ruby>から<ruby>近<rt>ちか</rt></ruby>いですから、<ruby>歩<rt>ある</rt></ruby>いて<ruby>行<rt>い</rt></ruby>きます。<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みです。<ruby>日曜日<rt>にちようび</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>とテニスをします。<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ったら、<ruby>家<rt>いえ</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。<ruby>学校<rt>がっこう</rt></ruby>では<ruby>日本語<rt>にほんご</rt></ruby>と<ruby>英語<rt>えいご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しています。<ruby>毎晩<rt>まいばん</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>で<ruby>一時間<rt>いちじかん</rt></ruby>ぐらい<ruby>勉強<rt>べんきょう</rt></ruby>します。"
             },
             {
-              "question": "この お知らせに 書いてある、テストに 持って行くものは どれですか。",
+              "question": "<ruby>市民<rt>しみん</rt></ruby>プールは <ruby>日曜日<rt>にちようび</rt></ruby>、<ruby>何時<rt>なんじ</rt></ruby>までですか。",
               "options": [
-                "学生証、えんぴつ、けしゴム",
-                "本、ノート、かばん",
-                "お金、水、タオル",
-                "学生証、かさ、時計"
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>四時<rt>よじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>"
+              ],
+              "answer": 3,
+              "explanation": "Jadwal menunjukkan 日曜日は午前九時から午後五時までです. Jadi, pada hari Minggu kolam renang tutup pukul lima sore.",
+              "passage": "【<ruby>市民<rt>しみん</rt></ruby>プールのお<ruby>知<rt>し</rt></ruby>らせ】\n<ruby>月曜日<rt>げつようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みです。<ruby>火曜日<rt>かようび</rt></ruby>から<ruby>土曜日<rt>どようび</rt></ruby>までは<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>までです。<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>までです。<ruby>大人<rt>おとな</rt></ruby>は<ruby>三百円<rt>さんびゃくえん</rt></ruby>、<ruby>子<rt>こ</rt></ruby>どもは<ruby>百五十円<rt>ひゃくごじゅうえん</rt></ruby>です。<ruby>小学生<rt>しょうがくせい</rt></ruby>は<ruby>大人<rt>おとな</rt></ruby>といっしょに<ruby>来<rt>き</rt></ruby>てください。プールの<ruby>中<rt>なか</rt></ruby>で<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>食<rt>た</rt></ruby>べてはいけませんが、<ruby>水<rt>みず</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てもいいです。タオルと<ruby>水着<rt>みずぎ</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください。<ruby>受付<rt>うけつけ</rt></ruby>でお<ruby>金<rt>かね</rt></ruby>を<ruby>払<rt>はら</rt></ruby>ってから、プールに<ruby>入<rt>はい</rt></ruby>ってください。プールへ<ruby>入<rt>はい</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に、<ruby>体<rt>からだ</rt></ruby>を<ruby>水<rt>みず</rt></ruby>で<ruby>洗<rt>あら</rt></ruby>ってください。<ruby>土曜日<rt>どようび</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>は<ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いです。"
+            },
+            {
+              "question": "プールの <ruby>中<rt>なか</rt></ruby>で してはいけないことは <ruby>何<rt>なん</rt></ruby>ですか。",
+              "options": [
+                "<ruby>水<rt>みず</rt></ruby>を<ruby>飲<rt>の</rt></ruby>むこと",
+                "<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>食<rt>た</rt></ruby>べること",
+                "タオルを<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>く</rt></ruby>ること",
+                "<ruby>受付<rt>うけつけ</rt></ruby>でお<ruby>金<rt>かね</rt></ruby>を<ruby>払<rt>はら</rt></ruby>うこと"
+              ],
+              "answer": 1,
+              "explanation": "Pengumuman menyatakan プールの中で食べ物を食べてはいけません, yaitu tidak boleh makan makanan di dalam kolam renang.",
+              "passage": "【<ruby>市民<rt>しみん</rt></ruby>プールのお<ruby>知<rt>し</rt></ruby>らせ】\n<ruby>月曜日<rt>げつようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みです。<ruby>火曜日<rt>かようび</rt></ruby>から<ruby>土曜日<rt>どようび</rt></ruby>までは<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>までです。<ruby>日曜日<rt>にちようび</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>までです。<ruby>大人<rt>おとな</rt></ruby>は<ruby>三百円<rt>さんびゃくえん</rt></ruby>、<ruby>子<rt>こ</rt></ruby>どもは<ruby>百五十円<rt>ひゃくごじゅうえん</rt></ruby>です。<ruby>小学生<rt>しょうがくせい</rt></ruby>は<ruby>大人<rt>おとな</rt></ruby>といっしょに<ruby>来<rt>き</rt></ruby>てください。プールの<ruby>中<rt>なか</rt></ruby>で<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<ruby>食<rt>た</rt></ruby>べてはいけませんが、<ruby>水<rt>みず</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てもいいです。タオルと<ruby>水着<rt>みずぎ</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください。<ruby>受付<rt>うけつけ</rt></ruby>でお<ruby>金<rt>かね</rt></ruby>を<ruby>払<rt>はら</rt></ruby>ってから、プールに<ruby>入<rt>はい</rt></ruby>ってください。プールへ<ruby>入<rt>はい</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に、<ruby>体<rt>からだ</rt></ruby>を<ruby>水<rt>みず</rt></ruby>で<ruby>洗<rt>あら</rt></ruby>ってください。<ruby>土曜日<rt>どようび</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>は<ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>いです。"
+            },
+            {
+              "question": "<ruby>日本語<rt>にほんご</rt></ruby>の テストに <ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>くものは どれですか。",
+              "options": [
+                "<ruby>本<rt>ほん</rt></ruby>、ノート、かばん",
+                "お<ruby>金<rt>かね</rt></ruby>、<ruby>水<rt>みず</rt></ruby>、タオル",
+                "<ruby>学生証<rt>がくせいしょう</rt></ruby>、えんぴつ、けしゴム",
+                "<ruby>学生証<rt>がくせいしょう</rt></ruby>、かさ、<ruby>時計<rt>とけい</rt></ruby>"
+              ],
+              "answer": 2,
+              "explanation": "Pengumuman mencantumkan 学生証、えんぴつ、けしゴム sebagai barang yang harus dibawa ke tes.",
+              "passage": "【<ruby>日本語<rt>にほんご</rt></ruby>テストのお<ruby>知<rt>し</rt></ruby>らせ】\n<ruby>日本語<rt>にほんご</rt></ruby>のテストは<ruby>来週<rt>らいしゅう</rt></ruby>の<ruby>火曜日<rt>かようび</rt></ruby>です。<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>始<rt>はじ</rt></ruby>まります。<ruby>三階<rt>さんがい</rt></ruby>の<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>来<rt>き</rt></ruby>てください。<ruby>八時五十分<rt>はちじごじゅっぷん</rt></ruby>までに<ruby>来<rt>き</rt></ruby>て、<ruby>教室<rt>きょうしつ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>で<ruby>待<rt>ま</rt></ruby>ってください。<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>るものは<ruby>学生証<rt>がくせいしょう</rt></ruby>、えんぴつ、けしゴムです。<ruby>辞書<rt>じしょ</rt></ruby>や<ruby>本<rt>ほん</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ってはいけません。テストは<ruby>一時間<rt>いちじかん</rt></ruby>です。テストのあとで、<ruby>先生<rt>せんせい</rt></ruby>に<ruby>質問<rt>しつもん</rt></ruby>してもいいです。<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてから、テストを<ruby>始<rt>はじ</rt></ruby>めてください。わからないことがある<ruby>人<rt>ひと</rt></ruby>は、<ruby>今日<rt>きょう</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>までに<ruby>先生<rt>せんせい</rt></ruby>に<ruby>聞<rt>き</rt></ruby>いてください。<ruby>学校<rt>がっこう</rt></ruby>の<ruby>門<rt>もん</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>に<ruby>開<rt>あ</rt></ruby>きます。<ruby>学校<rt>がっこう</rt></ruby>には<ruby>大<rt>おお</rt></ruby>きい<ruby>時計<rt>とけい</rt></ruby>があります。テストの<ruby>前<rt>まえ</rt></ruby>にトイレへ<ruby>行<rt>い</rt></ruby>ってください。"
+            },
+            {
+              "question": "テストの <ruby>日<rt>ひ</rt></ruby>は、<ruby>何時<rt>なんじ</rt></ruby>までに <ruby>教室<rt>きょうしつ</rt></ruby>へ <ruby>来<rt>き</rt></ruby>てくださいと <ruby>書<rt>か</rt></ruby>いてありますか。",
+              "options": [
+                "<ruby>午前<rt>ごぜん</rt></ruby><ruby>八時五十分<rt>はちじごじゅっぷん</rt></ruby>",
+                "<ruby>午前<rt>ごぜん</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>",
+                "<ruby>午前<rt>ごぜん</rt></ruby><ruby>八時半<rt>はちじはん</rt></ruby>",
+                "<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "Pemberitahuan mencantumkan tiga benda yang harus dibawa: 学生証 (kartu pelajar/mahasiswa), えんぴつ (pensil), dan けしゴム (penghapus).",
-              "passage": "【日本語テストの お知らせ】\n日時：6月10日（火）午前 9時\n場所：3階の 教室\n持って来るもの：学生証、えんぴつ、けしゴム\n午前 8時50分までに 来てください。"
+              "explanation": "Pengumuman menyebutkan 八時五十分までに来てください. Artinya peserta harus datang paling lambat pukul 08.50.",
+              "passage": "【<ruby>日本語<rt>にほんご</rt></ruby>テストのお<ruby>知<rt>し</rt></ruby>らせ】\n<ruby>日本語<rt>にほんご</rt></ruby>のテストは<ruby>来週<rt>らいしゅう</rt></ruby>の<ruby>火曜日<rt>かようび</rt></ruby>です。<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>始<rt>はじ</rt></ruby>まります。<ruby>三階<rt>さんがい</rt></ruby>の<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>来<rt>き</rt></ruby>てください。<ruby>八時五十分<rt>はちじごじゅっぷん</rt></ruby>までに<ruby>来<rt>き</rt></ruby>て、<ruby>教室<rt>きょうしつ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>で<ruby>待<rt>ま</rt></ruby>ってください。<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>るものは<ruby>学生証<rt>がくせいしょう</rt></ruby>、えんぴつ、けしゴムです。<ruby>辞書<rt>じしょ</rt></ruby>や<ruby>本<rt>ほん</rt></ruby>を<ruby>使<rt>つか</rt></ruby>ってはいけません。テストは<ruby>一時間<rt>いちじかん</rt></ruby>です。テストのあとで、<ruby>先生<rt>せんせい</rt></ruby>に<ruby>質問<rt>しつもん</rt></ruby>してもいいです。<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてから、テストを<ruby>始<rt>はじ</rt></ruby>めてください。わからないことがある<ruby>人<rt>ひと</rt></ruby>は、<ruby>今日<rt>きょう</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>までに<ruby>先生<rt>せんせい</rt></ruby>に<ruby>聞<rt>き</rt></ruby>いてください。<ruby>学校<rt>がっこう</rt></ruby>の<ruby>門<rt>もん</rt></ruby>は<ruby>午前<rt>ごぜん</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>に<ruby>開<rt>あ</rt></ruby>きます。<ruby>学校<rt>がっこう</rt></ruby>には<ruby>大<rt>おお</rt></ruby>きい<ruby>時計<rt>とけい</rt></ruby>があります。テストの<ruby>前<rt>まえ</rt></ruby>にトイレへ<ruby>行<rt>い</rt></ruby>ってください。"
             }
           ],
           "listening": [
@@ -459,10 +894,10 @@
               "options": [
                 "駅で切符を買います。",
                 "バスに乗ります。",
-                "家で朝ごはんを食べます。",
-                "旅行のかばんを買います。"
+                "旅行のかばんを買います。",
+                "家で朝ごはんを食べます。"
               ],
-              "answer": 2,
+              "answer": 3,
               "explanation": "Pria mengatakan 朝ごはんは家で食べます dan 朝ごはんを食べてから、駅へ行きます. Artinya, ia akan sarapan di rumah terlebih dahulu, baru pergi ke stasiun. Jawaban yang benar adalah 家で朝ごはんを食べます."
             },
             {
@@ -526,11 +961,11 @@
               "question": "二人は何時に会いますか。",
               "options": [
                 "午後二時",
-                "午後二時半",
                 "午後三時",
+                "午後二時半",
                 "午後三時半"
               ],
-              "answer": 1,
+              "answer": 2,
               "explanation": "Film mulai pukul tiga sore, tetapi mereka sepakat bertemu pukul 二時半 (jam 2.30), sebelum film dimulai. Perhatikan perbedaan waktu mulai film dan waktu mereka bertemu."
             },
             {
@@ -564,11 +999,11 @@
               "question": "妹さんは今週、何曜日にピアノを習いますか。",
               "options": [
                 "火曜日",
-                "水曜日",
                 "木曜日",
+                "水曜日",
                 "金曜日"
               ],
-              "answer": 1,
+              "answer": 2,
               "explanation": "Jadwal biasanya adalah Selasa dan Kamis. Namun, khusus minggu ini hari Kamis ada ujian sekolah, sehingga pelajaran piano dipindahkan ke 水曜日 (Rabu). Pertanyaan menanyakan jadwal minggu ini, bukan jadwal biasanya."
             },
             {
@@ -597,12 +1032,12 @@
               ],
               "question": "男の人が買ったシャツはいくらでしたか。",
               "options": [
+                "三千円",
                 "千円",
                 "二千円",
-                "三千円",
                 "四千円"
               ],
-              "answer": 2,
+              "answer": 0,
               "explanation": "Wanita menanyakan harga kemeja dengan いくらでしたか. Pria menjawab 三千円です, berarti harganya 3.000 yen. Harga celana tidak disebutkan sebagai barang yang dibeli."
             },
             {
@@ -644,11 +1079,11 @@
               "question": "男の人は土曜日の午後、まず何をしますか。",
               "options": [
                 "友達とテニスをします。",
-                "図書館へ本を返しに行きます。",
                 "買い物をします。",
-                "家で勉強します。"
+                "家で勉強します。",
+                "図書館へ本を返しに行きます。"
               ],
-              "answer": 1,
+              "answer": 3,
               "explanation": "Pria tersebut mengatakan bahwa pada pagi hari ia bermain tenis. Untuk sore hari, ia ingin pergi ke perpustakaan terlebih dahulu untuk mengembalikan buku pinjaman. Setelah itu, barulah ia akan pergi berbelanja bersama wanita tersebut. Jadi, kegiatan pertama pada Sabtu sore adalah 図書館へ本を返しに行きます (pergi ke perpustakaan untuk mengembalikan buku)."
             },
             {
@@ -736,11 +1171,11 @@
               "question": "男の人は図書館へ行く前に何をしますか。",
               "options": [
                 "友達と昼ごはんを食べます。",
-                "先生に本を返します。",
                 "教室で日本語を勉強します。",
-                "家へ帰ります。"
+                "家へ帰ります。",
+                "先生に本を返します。"
               ],
-              "answer": 1,
+              "answer": 3,
               "explanation": "Pria itu akan bertemu temannya di perpustakaan pukul tiga. Namun, sebelum ke perpustakaan, ia harus mengembalikan buku kepada guru. Ia bahkan menjelaskan bahwa ia akan meninggalkan kelas pukul setengah tiga, mengembalikan buku, lalu pergi ke perpustakaan. Jadi, kegiatan yang dilakukan terlebih dahulu adalah 先生に本を返します (mengembalikan buku kepada guru)."
             },
             {
@@ -753,12 +1188,12 @@
               ],
               "question": "いちばんいい答えを選んでください。",
               "options": [
-                "十一時に寝ます。",
                 "学校で寝ます。",
                 "きのう寝ました。",
+                "十一時に寝ます。",
                 "友達と寝ます。"
               ],
-              "answer": 0,
+              "answer": 2,
               "explanation": "Pertanyaan 毎晩、何時に寝ますか berarti “Setiap malam, pukul berapa kamu tidur?” Respons yang tepat harus menyebutkan waktu, yaitu 十一時に寝ます (saya tidur pukul sebelas)."
             },
             {
@@ -771,12 +1206,12 @@
               ],
               "question": "「山」の読み方はどれですか。",
               "options": [
-                "やまです。",
                 "あしたです。",
+                "やまです。",
                 "三つです。",
                 "大きいです。"
               ],
-              "answer": 0,
+              "answer": 1,
               "explanation": "Audio menanyakan cara membaca kanji yang ditampilkan pada soal, yaitu 山. Bacaan yang benar adalah やま. Pilihan lainnya tidak sesuai: あした berarti besok, 三つ berarti tiga benda, dan 大きい berarti besar."
             },
             {

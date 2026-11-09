@@ -1,0 +1,498 @@
+[
+  {
+    "bab": 1,
+    "level": "N5",
+    "title": "Perkenalan Diri dan Identitas",
+    "tips": "Urutan materi mengikuti pelajaran: pernyataan → penyangkalan → pertanyaan → の untuk afiliasi → も → umur. <br><b>Partikel:</b> は dibaca wa sebagai penanda topik; も berarti “juga”; の menghubungkan dua kata benda. <br><b>Umur:</b> 1歳 = いっさい, 8歳 = はっさい, 10歳 = じゅっさい／じっさい, 20歳 = はたち. Untuk bertanya sopan gunakan おいくつですか.",
+    "grammar": [
+      {
+        "pattern": "N1 は N2 です — N1 adalah N2",
+        "formula": "[Topik/orang] + は + [identitas, profesi, negara, atau status] + です。<br>Contoh susunan: わたし + は + 学生 + です。",
+        "meaning": "N1 adalah N2",
+        "explanation": "Pola dasar untuk memperkenalkan atau menjelaskan identitas seseorang. N1 adalah hal yang sedang dibicarakan (topik), sedangkan N2 adalah informasi tentang topik tersebut. は ditulis は tetapi dibaca wa ketika berfungsi sebagai partikel topik. です membuat pernyataan terdengar sopan; です bukan kata kerja “adalah” yang harus diterjemahkan secara harfiah dalam setiap kalimat.",
+        "examples": [
+          {
+            "kanji": "<ruby>私<rt>わたし</rt></ruby>は <ruby>学生<rt>がくせい</rt></ruby>です。",
+            "id": "Saya pelajar."
+          },
+          {
+            "kanji": "ミラーさんは <ruby>会社員<rt>かいしゃいん</rt></ruby>です。",
+            "id": "Miller adalah karyawan perusahaan."
+          },
+          {
+            "kanji": "サントスさんは ブラジル<ruby>人<rt>じん</rt></ruby>です。",
+            "id": "Santos adalah orang Brasil."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 は N2 じゃありません／ではありません — N1 bukan N2",
+        "formula": "[Topik/orang] + は + [identitas yang disangkal] + じゃありません。<br>Versi lebih formal: [Topik] + は + [N2] + ではありません。",
+        "meaning": "N1 bukan N2",
+        "explanation": "Gunakan bentuk ini untuk menyangkal identitas atau status. じゃありません adalah bentuk negatif sopan yang umum dipakai dalam percakapan. ではありません terdengar lebih formal. Yang dinegasikan adalah N2, bukan topiknya. Jangan menambahkan です setelah じゃありません.",
+        "examples": [
+          {
+            "kanji": "<ruby>私<rt>わたし</rt></ruby>は <ruby>先生<rt>せんせい</rt></ruby>じゃありません。",
+            "id": "Saya bukan guru."
+          },
+          {
+            "kanji": "ミラーさんは <ruby>医者<rt>いしゃ</rt></ruby>ではありません。",
+            "id": "Miller bukan dokter."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 は N2 ですか — Apakah N1 adalah N2?",
+        "formula": "[Topik/orang] + は + [identitas yang ditanyakan] + です + か。<br>Jawaban positif: はい、そうです。<br>Jawaban negatif: いいえ、そうじゃありません／ちがいます。",
+        "meaning": "Apakah N1 adalah N2?",
+        "explanation": "Tambahkan か di akhir kalimat sopan untuk membentuk pertanyaan ya/tidak. Urutan kalimat tidak berubah. は tetap menandai topik. Jawaban tidak harus mengulang seluruh kalimat: はい、そうです berarti “ya, benar”, sedangkan いいえ、そうじゃありません berarti “tidak, bukan”. Dalam tulisan Jepang, tanda tanya tidak wajib karena か sudah menandai pertanyaan.",
+        "examples": [
+          {
+            "kanji": "ミラーさんは <ruby>会社員<rt>かいしゃいん</rt></ruby>ですか。",
+            "id": "Apakah Miller karyawan perusahaan?"
+          },
+          {
+            "kanji": "はい、そうです。",
+            "id": "Ya, benar."
+          },
+          {
+            "kanji": "いいえ、<ruby>会社員<rt>かいしゃいん</rt></ruby>じゃありません。",
+            "id": "Tidak, Miller bukan karyawan perusahaan."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 は N2 の N3 です（所属） — N1 adalah N3 dari/di N2",
+        "formula": "[Orang/topik] + は + [lembaga, perusahaan, atau kelompok] + の + [jabatan/status] + です。<br>Contoh: ミラーさん + は + IMC + の + 社員 + です。",
+        "meaning": "N1 adalah N3 dari/di N2",
+        "explanation": "の menghubungkan dua kata benda untuk menunjukkan afiliasi atau keanggotaan. Dalam pola ini, N2 biasanya nama perusahaan, universitas, atau organisasi; N3 adalah status atau jabatan orang tersebut. Urutannya organisasi dahulu, lalu status. Ini berbeda dari kepemilikan benda yang akan dipelajari pada Bab 2.",
+        "examples": [
+          {
+            "kanji": "ミラーさんは IMC の <ruby>社員<rt>しゃいん</rt></ruby>です。",
+            "id": "Miller adalah karyawan IMC."
+          },
+          {
+            "kanji": "ワットさんは <ruby>大学<rt>だいがく</rt></ruby>の <ruby>先生<rt>せんせい</rt></ruby>です。",
+            "id": "Wat adalah dosen di universitas."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 も N2 です — N1 juga N2",
+        "formula": "[Topik pertama] は [keterangan] です。<br>[Topik kedua] + も + [keterangan yang sama] + です。<br>も menggantikan は pada topik kedua; jangan menulis はも sekaligus.",
+        "meaning": "N1 juga N2",
+        "explanation": "も berarti “juga”. Gunakan ketika informasi tentang topik kedua sama dengan informasi yang baru disebutkan. Partikel も menempati posisi yang biasanya ditempati は. Jika keterangannya berbeda, gunakan pola biasa dengan は.",
+        "examples": [
+          {
+            "kanji": "サントスさんは <ruby>会社員<rt>かいしゃいん</rt></ruby>です。ミラーさんも <ruby>会社員<rt>かいしゃいん</rt></ruby>です。",
+            "id": "Santos adalah karyawan perusahaan. Miller juga karyawan perusahaan."
+          },
+          {
+            "kanji": "<ruby>私<rt>わたし</rt></ruby>も インドネシア<ruby>人<rt>じん</rt></ruby>です。",
+            "id": "Saya juga orang Indonesia."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 は angka + 歳です／何歳ですか — N1 berumur ... tahun / Berapa umur N1?",
+        "formula": "Pernyataan: [Orang] + は + [angka umur] + 歳（さい）+ です。<br>Pertanyaan: [Orang] + は + 何歳（なんさい）+ ですか。<br>Bentuk lebih sopan: おいくつですか。",
+        "meaning": "N1 berumur ... tahun / Berapa umur N1?",
+        "explanation": "歳 adalah penghitung umur dan dibaca さい. Beberapa angka memiliki bacaan khusus: 1歳 いっさい, 8歳 はっさい, 10歳 じゅっさい／じっさい, dan 20歳 はたち. Untuk menanyakan umur dengan sopan, おいくつですか lebih halus daripada 何歳ですか. Gunakan pertanyaan umur dengan mempertimbangkan kesopanan karena umur bisa menjadi informasi pribadi.",
+        "examples": [
+          {
+            "kanji": "<ruby>妹<rt>いもうと</rt></ruby>は <ruby>十歳<rt>じゅっさい</rt></ruby>です。",
+            "id": "Adik perempuan saya berumur sepuluh tahun."
+          },
+          {
+            "kanji": "お<ruby>兄<rt>にい</rt></ruby>さん は <ruby>何歳<rt>なんさい</rt></ruby>ですか。",
+            "id": "Berapa umur kakak laki-laki Anda?"
+          },
+          {
+            "kanji": "<ruby>二十歳<rt>はたち</rt></ruby>です。",
+            "id": "Dia berumur dua puluh tahun."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "私",
+        "kana": "わたし",
+        "romaji": "watashi",
+        "meaning": "saya",
+        "imageQuery": "person",
+        "imageUrl": "https://loremflickr.com/400/300/person"
+      },
+      {
+        "kanji": "あなた",
+        "kana": "あなた",
+        "romaji": "anata",
+        "meaning": "Anda",
+        "imageQuery": "person",
+        "imageUrl": "https://loremflickr.com/400/300/person"
+      },
+      {
+        "kanji": "人",
+        "kana": "ひと",
+        "romaji": "hito",
+        "meaning": "orang",
+        "imageQuery": "person",
+        "imageUrl": "https://loremflickr.com/400/300/person"
+      },
+      {
+        "kanji": "学生",
+        "kana": "がくせい",
+        "romaji": "gakusei",
+        "meaning": "pelajar",
+        "imageQuery": "student",
+        "imageUrl": "https://loremflickr.com/400/300/student"
+      },
+      {
+        "kanji": "先生",
+        "kana": "せんせい",
+        "romaji": "sensei",
+        "meaning": "guru",
+        "imageQuery": "teacher",
+        "imageUrl": "https://loremflickr.com/400/300/teacher"
+      },
+      {
+        "kanji": "会社員",
+        "kana": "かいしゃいん",
+        "romaji": "kaishain",
+        "meaning": "karyawan perusahaan",
+        "imageQuery": "office worker",
+        "imageUrl": "https://loremflickr.com/400/300/office"
+      },
+      {
+        "kanji": "医者",
+        "kana": "いしゃ",
+        "romaji": "isha",
+        "meaning": "dokter",
+        "imageQuery": "doctor",
+        "imageUrl": "https://loremflickr.com/400/300/doctor"
+      },
+      {
+        "kanji": "研究者",
+        "kana": "けんきゅうしゃ",
+        "romaji": "kenkyuusha",
+        "meaning": "peneliti",
+        "imageQuery": "researcher",
+        "imageUrl": "https://loremflickr.com/400/300/researcher"
+      },
+      {
+        "kanji": "大学",
+        "kana": "だいがく",
+        "romaji": "daigaku",
+        "meaning": "universitas",
+        "imageQuery": "university",
+        "imageUrl": "https://loremflickr.com/400/300/university"
+      },
+      {
+        "kanji": "学校",
+        "kana": "がっこう",
+        "romaji": "gakkou",
+        "meaning": "sekolah",
+        "imageQuery": "school",
+        "imageUrl": "https://loremflickr.com/400/300/school"
+      },
+      {
+        "kanji": "日本",
+        "kana": "にほん",
+        "romaji": "nihon",
+        "meaning": "Jepang",
+        "imageQuery": "Japan",
+        "imageUrl": "https://loremflickr.com/400/300/Japan"
+      },
+      {
+        "kanji": "インドネシア",
+        "kana": "インドネシア",
+        "romaji": "indoneshia",
+        "meaning": "Indonesia",
+        "imageQuery": "Indonesia",
+        "imageUrl": "https://loremflickr.com/400/300/Indonesia"
+      },
+      {
+        "kanji": "日本人",
+        "kana": "にほんじん",
+        "romaji": "nihonjin",
+        "meaning": "orang Jepang",
+        "imageQuery": "Japanese person",
+        "imageUrl": "https://loremflickr.com/400/300/Japanese"
+      },
+      {
+        "kanji": "名前",
+        "kana": "なまえ",
+        "romaji": "namae",
+        "meaning": "nama",
+        "imageQuery": "name",
+        "imageUrl": "https://loremflickr.com/400/300/name"
+      },
+      {
+        "kanji": "友達",
+        "kana": "ともだち",
+        "romaji": "tomodachi",
+        "meaning": "teman",
+        "imageQuery": "friend",
+        "imageUrl": "https://loremflickr.com/400/300/friend"
+      }
+    ]
+  },
+  {
+    "bab": 2,
+    "level": "N5",
+    "title": "Benda, Penunjuk, dan Kepemilikan",
+    "tips": "Bedakan dua kelompok kata tunjuk: <b>これ・それ・あれ</b> berdiri sendiri, sedangkan <b>この・その・あの</b> wajib diikuti kata benda. <br><b>の</b> dapat menyatakan isi/jenis atau kepemilikan; terjemahannya ditentukan hubungan kedua kata benda. <br><b>だれの</b> digunakan untuk menanyakan pemilik benda.",
+    "grammar": [
+      {
+        "pattern": "これ／それ／あれ は N です — Ini/itu/yang di sana adalah N",
+        "formula": "[Benda dekat pembicara] + は + N + です。→ これ<br>[Benda dekat lawan bicara] + は + N + です。→ それ<br>[Benda jauh dari keduanya] + は + N + です。→ あれ",
+        "meaning": "Ini/itu/yang di sana adalah N",
+        "explanation": "これ・それ・あれ adalah kata tunjuk benda yang dapat berdiri sendiri tanpa diikuti kata benda. これ menunjuk benda dekat pembicara; それ menunjuk benda dekat lawan bicara atau yang baru disebut lawan bicara; あれ menunjuk benda yang jauh dari keduanya. Setelah kata tunjuk, は menandai topik dan です menutup kalimat sopan.",
+        "examples": [
+          {
+            "kanji": "これは <ruby>本<rt>ほん</rt></ruby>です。",
+            "id": "Ini buku."
+          },
+          {
+            "kanji": "それは <ruby>田中<rt>たなか</rt></ruby>さんの <ruby>傘<rt>かさ</rt></ruby>です。",
+            "id": "Itu payung milik Tanaka."
+          },
+          {
+            "kanji": "あれは <ruby>学校<rt>がっこう</rt></ruby>です。",
+            "id": "Itu di sana adalah sekolah."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 ですか、N2 ですか（pertanyaan pilihan） — Apakah N1 atau N2?",
+        "formula": "[Benda/topik] + は + [pilihan N1] + ですか、+ [pilihan N2] + ですか。<br>Jawaban: [pilihan yang benar] + です。",
+        "meaning": "Apakah N1 atau N2?",
+        "explanation": "Pola ini menanyakan pilihan di antara dua atau lebih kemungkinan. Ulangi ですか pada setiap pilihan, lalu jawab dengan menyebut pilihan yang benar. Ini berbeda dari pertanyaan ya/tidak yang hanya menambahkan satu か di akhir pernyataan.",
+        "examples": [
+          {
+            "kanji": "これは <ruby>本<rt>ほん</rt></ruby>ですか、<ruby>雑誌<rt>ざっし</rt></ruby>ですか。",
+            "id": "Ini buku atau majalah?"
+          },
+          {
+            "kanji": "<ruby>本<rt>ほん</rt></ruby>です。",
+            "id": "Buku."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 の N2（isi／jenis） — N2 tentang/berjenis N1",
+        "formula": "[Keterangan isi, bidang, atau jenis] + の + [benda yang diterangkan]。<br>Contoh: 日本語 + の + 本。",
+        "meaning": "N2 tentang/berjenis N1",
+        "explanation": "の menghubungkan dua kata benda. Pada penggunaan ini, kata benda pertama menerangkan isi, bidang, atau jenis kata benda kedua. Kata benda kedua adalah inti frasa: 日本語の本 berarti “buku bahasa Jepang”, bukan “bahasa Jepang milik buku”. Makna の ditentukan oleh hubungan kedua kata benda.",
+        "examples": [
+          {
+            "kanji": "これは <ruby>日本語<rt>にほんご</rt></ruby>の <ruby>本<rt>ほん</rt></ruby>です。",
+            "id": "Ini buku bahasa Jepang."
+          },
+          {
+            "kanji": "あれは <ruby>自動車<rt>じどうしゃ</rt></ruby>の <ruby>雑誌<rt>ざっし</rt></ruby>です。",
+            "id": "Itu majalah tentang mobil."
+          }
+        ]
+      },
+      {
+        "pattern": "N1 の N2（kepemilikan） — N2 milik N1",
+        "formula": "[Pemilik/orang] + の + [benda milik orang tersebut]。<br>Dalam kalimat: [Benda] + は + [pemilik] + の + です。",
+        "meaning": "N2 milik N1",
+        "explanation": "の menunjukkan hubungan kepemilikan. Nama orang atau kata ganti pemilik diletakkan sebelum の, kemudian diikuti benda. Pola ini juga dapat dipakai untuk menanyakan pemilik dengan だれの. Jangan tertukar dengan の yang menunjukkan isi atau jenis pada pola sebelumnya.",
+        "examples": [
+          {
+            "kanji": "これは <ruby>私<rt>わたし</rt></ruby>の <ruby>辞書<rt>じしょ</rt></ruby>です。",
+            "id": "Ini kamus saya."
+          },
+          {
+            "kanji": "それは <ruby>誰<rt>だれ</rt></ruby>の <ruby>傘<rt>かさ</rt></ruby>ですか。",
+            "id": "Itu payung milik siapa?"
+          }
+        ]
+      },
+      {
+        "pattern": "N1 は N2 のです（menghilangkan kata benda yang sudah diketahui） — N1 adalah milik N2",
+        "formula": "[Benda/topik] + は + [pemilik] + の + です。<br>Gunakan ketika kata benda setelah の sudah jelas dari konteks dan tidak perlu diulang.",
+        "meaning": "N1 adalah milik N2",
+        "explanation": "Kata benda yang sudah disebut atau sudah diketahui dapat dihilangkan setelah の. の tetap dipakai untuk menunjukkan kepemilikan, lalu です mengakhiri kalimat. Pola ini membuat jawaban tidak berulang. Jangan menghilangkan kata benda jika pendengar belum tahu benda apa yang sedang dibicarakan.",
+        "examples": [
+          {
+            "kanji": "この <ruby>本<rt>ほん</rt></ruby>は <ruby>私<rt>わたし</rt></ruby>のです。",
+            "id": "Buku ini milik saya."
+          },
+          {
+            "kanji": "その <ruby>時計<rt>とけい</rt></ruby>は <ruby>田中<rt>たなか</rt></ruby>さんのです。",
+            "id": "Jam itu milik Tanaka."
+          }
+        ]
+      },
+      {
+        "pattern": "この／その／あの N は [pemilik] のです — N ini/itu adalah milik ...",
+        "formula": "[この／その／あの] + [kata benda] + は + [pemilik] + の + です。<br>Contoh: この + 本 + は + 私 + の + です。<br>Ingat: この／その／あの harus langsung diikuti kata benda.",
+        "meaning": "N ini/itu adalah milik ...",
+        "explanation": "この・その・あの dipakai untuk menunjuk benda dan harus langsung diikuti kata benda. Dalam pola lengkap ini, benda yang ditunjuk menjadi topik dengan は, lalu pemilik disebut sebelum の. Kata benda setelah の (misalnya 本 atau 傘) dihilangkan karena sudah jelas dari konteks. この untuk benda dekat pembicara, その dekat lawan bicara, dan あの jauh dari keduanya. Bentuk dasarnya berkaitan dengan pola NはNのです pada materi sebelumnya.",
+        "examples": [
+          {
+            "kanji": "この <ruby>本<rt>ほん</rt></ruby>は <ruby>私<rt>わたし</rt></ruby>のです。",
+            "id": "Buku ini milik saya."
+          },
+          {
+            "kanji": "その <ruby>鞄<rt>かばん</rt></ruby>は <ruby>誰<rt>だれ</rt></ruby>のですか。",
+            "id": "Tas itu milik siapa?"
+          },
+          {
+            "kanji": "あの <ruby>時計<rt>とけい</rt></ruby>は <ruby>田中<rt>たなか</rt></ruby>さんのです。",
+            "id": "Jam yang di sana itu milik Tanaka."
+          }
+        ]
+      }
+    ],
+    "vocab": [
+      {
+        "kanji": "本",
+        "kana": "ほん",
+        "romaji": "hon",
+        "meaning": "buku",
+        "imageQuery": "book",
+        "imageUrl": "https://loremflickr.com/400/300/book"
+      },
+      {
+        "kanji": "辞書",
+        "kana": "じしょ",
+        "romaji": "jisho",
+        "meaning": "kamus",
+        "imageQuery": "dictionary",
+        "imageUrl": "https://loremflickr.com/400/300/dictionary"
+      },
+      {
+        "kanji": "雑誌",
+        "kana": "ざっし",
+        "romaji": "zasshi",
+        "meaning": "majalah",
+        "imageQuery": "magazine",
+        "imageUrl": "https://loremflickr.com/400/300/magazine"
+      },
+      {
+        "kanji": "新聞",
+        "kana": "しんぶん",
+        "romaji": "shinbun",
+        "meaning": "koran",
+        "imageQuery": "newspaper",
+        "imageUrl": "https://loremflickr.com/400/300/newspaper"
+      },
+      {
+        "kanji": "ノート",
+        "kana": "ノート",
+        "romaji": "nooto",
+        "meaning": "buku catatan",
+        "imageQuery": "notebook",
+        "imageUrl": "https://loremflickr.com/400/300/notebook"
+      },
+      {
+        "kanji": "鉛筆",
+        "kana": "えんぴつ",
+        "romaji": "enpitsu",
+        "meaning": "pensil",
+        "imageQuery": "pencil",
+        "imageUrl": "https://loremflickr.com/400/300/pencil"
+      },
+      {
+        "kanji": "ペン",
+        "kana": "ペン",
+        "romaji": "pen",
+        "meaning": "pena",
+        "imageQuery": "pen",
+        "imageUrl": "https://loremflickr.com/400/300/pen"
+      },
+      {
+        "kanji": "鞄",
+        "kana": "かばん",
+        "romaji": "kaban",
+        "meaning": "tas",
+        "imageQuery": "bag",
+        "imageUrl": "https://loremflickr.com/400/300/bag"
+      },
+      {
+        "kanji": "時計",
+        "kana": "とけい",
+        "romaji": "tokei",
+        "meaning": "jam",
+        "imageQuery": "clock",
+        "imageUrl": "https://loremflickr.com/400/300/clock"
+      },
+      {
+        "kanji": "傘",
+        "kana": "かさ",
+        "romaji": "kasa",
+        "meaning": "payung",
+        "imageQuery": "umbrella",
+        "imageUrl": "https://loremflickr.com/400/300/umbrella"
+      },
+      {
+        "kanji": "鍵",
+        "kana": "かぎ",
+        "romaji": "kagi",
+        "meaning": "kunci",
+        "imageQuery": "key",
+        "imageUrl": "https://loremflickr.com/400/300/key"
+      },
+      {
+        "kanji": "財布",
+        "kana": "さいふ",
+        "romaji": "saifu",
+        "meaning": "dompet",
+        "imageQuery": "wallet",
+        "imageUrl": "https://loremflickr.com/400/300/wallet"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "foto",
+        "imageQuery": "photograph",
+        "imageUrl": "https://loremflickr.com/400/300/photograph"
+      },
+      {
+        "kanji": "机",
+        "kana": "つくえ",
+        "romaji": "tsukue",
+        "meaning": "meja",
+        "imageQuery": "desk",
+        "imageUrl": "https://loremflickr.com/400/300/desk"
+      },
+      {
+        "kanji": "椅子",
+        "kana": "いす",
+        "romaji": "isu",
+        "meaning": "kursi",
+        "imageQuery": "chair",
+        "imageUrl": "https://loremflickr.com/400/300/chair"
+      },
+      {
+        "kanji": "私",
+        "kana": "わたし",
+        "romaji": "watashi",
+        "meaning": "saya",
+        "imageQuery": "person",
+        "imageUrl": "https://loremflickr.com/400/300/person"
+      },
+      {
+        "kanji": "新しい",
+        "kana": "あたらしい",
+        "romaji": "atarashii",
+        "meaning": "baru",
+        "imageQuery": "new",
+        "imageUrl": "https://loremflickr.com/400/300/new"
+      },
+      {
+        "kanji": "日本語",
+        "kana": "にほんご",
+        "romaji": "nihongo",
+        "meaning": "bahasa Jepang",
+        "imageQuery": "Japanese language",
+        "imageUrl": "https://loremflickr.com/400/300/Japanese"
+      }
+    ]
+  }
+]

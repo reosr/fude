@@ -1,11 +1,39 @@
 "use client";
 
-import { useState } from "react";
-import conjugations from "../../data/conjugations.json";
+import { useState, useEffect } from "react";
 import { Search, ChevronRight } from "lucide-react";
 
 export default function BentukKata() {
   const [search, setSearch] = useState("");
+  const [conjugations, setConjugations] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+
+    const loadData = async () => {
+      try {
+        const module = await import("../../data/conjugations.json");
+
+        if (!active) return;
+
+        setConjugations(module.default as any[]);
+      } catch (error) {
+        console.error("Gagal memuat data konjugasi:", error);
+
+        if (active) setLoadError(true);
+      } finally {
+        if (active) setIsLoading(false);
+      }
+    };
+
+    void loadData();
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   const filtered = conjugations.filter(
     (v) =>
@@ -13,6 +41,22 @@ export default function BentukKata() {
       v.kana.includes(search) ||
       v.meaning.toLowerCase().includes(search.toLowerCase())
   );
+
+  if (isLoading) {
+    return (
+      <div className="text-center py-20 text-[#A3A099]">
+        Memuat data konjugasi...
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="text-center py-20 text-[#A3A099]">
+        Gagal memuat data konjugasi. Silakan muat ulang halaman.
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6 pb-10">

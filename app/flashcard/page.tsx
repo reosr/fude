@@ -1,12 +1,17 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import allBabs from "../../data/all-bab.json";
+import { getUnlockedVocab } from "../../lib/vocab";
 import { getProgress } from "../../lib/progress";
 import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
 import dynamic from "next/dynamic";
+import FitText from "../../components/FitText";
+import verbTypeData from "../../data/verb-type-index.json";
+import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
+
+const verbTypeMap = buildVerbTypeMap(verbTypeData);
 
 const bgImages = [
   "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=75&w=400&auto=format&fit=crop",
@@ -41,6 +46,7 @@ const bgImages = [
   "https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?q=75&w=400&auto=format&fit=crop"
 ];
 
+
 export default function Flashcard() {
   const [deck, setDeck] = useState<any[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,44 +63,79 @@ export default function Flashcard() {
   const [isRewinding, setIsRewinding] = useState(false); 
   const [swipeDir, setSwipeDir] = useState<"left" | "right">("left"); 
   
-  // State buat nampung Map Gambar biar konsisten
   const [imageMap, setImageMap] = useState<Record<string, string>>({});
 
   const TIMER_FRONT = 5;
   const TIMER_BACK = 7;
   const [timeLeft, setTimeLeft] = useState(TIMER_FRONT * 20); 
 
-  useEffect(() => {
-    const savedMemorized = JSON.parse(localStorage.getItem("fude_memorized") || "[]");
-    setMemorized(savedMemorized);
+  
+useEffect(() => {
+  let active = true;
 
-    const currentBab = getProgress();
-    let allVocab: any[] = [];
-    allBabs.filter((b: any) => b.bab <= currentBab).forEach((b: any) => {
-      allVocab = [...allVocab, ...b.vocab];
-    });
+  const loadData = async () => {
+    try {
+      const savedMemorized = JSON.parse(
+        localStorage.getItem("fude_memorized") || "[]"
+      );
 
-    // 1. Bikin Map Gambar (di-sort dulu biar urutannya sama kayak di Kosakata)
-    let stableOrder = [...allVocab].sort((a, b) => a.kanji.localeCompare(b.kanji));
-    let currentPool = [...bgImages].sort(() => Math.random() - 0.5);
-    let poolIndex = 0;
-    const newMap: Record<string, string> = {};
-
-    stableOrder.forEach((v) => {
-      if (poolIndex >= currentPool.length) {
-        currentPool = [...bgImages].sort(() => Math.random() - 0.5);
-        poolIndex = 0;
+      if (active) {
+        setMemorized(savedMemorized);
       }
-      newMap[`${v.kanji}-${v.kana}`] = currentPool[poolIndex];
-      poolIndex++;
-    });
-    setImageMap(newMap);
 
-    // 2. Bikin Deck Flashcard (Acak, kasih UID unik buat animasi)
-    const shuffled = allVocab.sort(() => Math.random() - 0.5).map((v, i) => ({ ...v, uid: `vocab-${i}` }));
-    setDeck(shuffled);
-    setIsLoaded(true);
-  }, []);
+      const allVocab = await getUnlockedVocab(getProgress());
+
+      if (!active) return;
+
+      const stableOrder = [...allVocab].sort(
+        (a, b) => a.kanji.localeCompare(b.kanji)
+      );
+
+      let currentPool = [...bgImages].sort(
+        () => Math.random() - 0.5
+      );
+
+      let poolIndex = 0;
+      const newMap: Record<string, string> = {};
+
+      stableOrder.forEach((v) => {
+        if (poolIndex >= currentPool.length) {
+          currentPool = [...bgImages].sort(
+            () => Math.random() - 0.5
+          );
+          poolIndex = 0;
+        }
+
+        newMap[`${v.kanji}-${v.kana}`] = currentPool[poolIndex];
+        poolIndex++;
+      });
+
+      setImageMap(newMap);
+
+      const shuffled = [...allVocab]
+        .sort(() => Math.random() - 0.5)
+        .map((v, i) => ({
+          ...v,
+          uid: `vocab-${i}`,
+        }));
+
+      setDeck(shuffled);
+    } catch (error) {
+      console.error("Gagal memuat Flashcard:", error);
+    } finally {
+      if (active) {
+        setIsLoaded(true);
+      }
+    }
+  };
+
+  void loadData();
+
+  return () => {
+    active = false;
+  };
+}, []);
+
 
   useEffect(() => {
     const handleFocus = () => setIsWindowFocused(true);
@@ -206,11 +247,6 @@ export default function Flashcard() {
     }
   }
 
-  const kanjiLength = currentCard?.kanji.length || 0;
-  let kanjiSize = "text-6xl md:text-7xl"; 
-  if (kanjiLength === 3) kanjiSize = "text-5xl md:text-6xl";
-  else if (kanjiLength >= 4) kanjiSize = "text-4xl md:text-5xl";
-
   return (
     <div className="space-y-6 pb-10 flex flex-col items-center relative overflow-hidden">
       <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative z-20">
@@ -237,7 +273,6 @@ export default function Flashcard() {
         <span className="text-[#C93438]">{Math.round(((currentIndex + 1) / filteredDeck.length) * 100)}%</span>
       </div>
 
-      {/* WADAH TUMPUKAN KARTU */}
       <div 
         className="relative w-full max-w-md h-[500px] [perspective:1200px] mt-4"
         onMouseEnter={() => setIsHovered(true)}
@@ -245,8 +280,8 @@ export default function Flashcard() {
       >
         {stackCards.map((card, i) => {
           const isTop = i === 0;
-          // Ambil gambar dari imageMap yang udah di-shuffle
           const cardImg = imageMap[`${card.kanji}-${card.kana}`] || bgImages[0];
+          const verbType = getVerbType(verbTypeMap, card.kanji, card.kana, card.romaji);
           
           let wrapperStyle = "";
           if (i === 0) {
@@ -275,7 +310,6 @@ export default function Flashcard() {
             >
               <div className={`relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] ${(isTop && isFlipped) ? '[transform:rotateY(180deg)]' : ''}`}>
                 
-                {/* SISI DEPAN */}
                 <div 
                   className={`absolute inset-0 w-full h-full [backface-visibility:hidden] bg-[#1E1D1B] border-2 border-[#33312E] rounded-3xl flex flex-col items-center justify-center shadow-2xl overflow-hidden ${isTop ? "cursor-pointer hover:border-[#C93438]/50" : "pointer-events-none"} ${(isTop && isFlipped) ? "pointer-events-none" : ""}`}
                   onClick={() => { if (isTop) setIsFlipped(true); }}
@@ -283,15 +317,26 @@ export default function Flashcard() {
                   <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
                     <img src={cardImg} alt="Background" className="w-full h-full object-cover opacity-40" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1E1D1B] via-[#1E1D1B]/80 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(30,29,27,0.75)_0%,rgba(30,29,27,0.45)_45%,transparent_75%)]"></div>
                   </div>
 
                   <span className="text-[10px] font-bold text-[#A3A099] absolute top-6 bg-[#33312E]/80 px-3 py-1 rounded-full z-10 border border-[#33312E]">TEKAN UNTUK BALIK</span>
-                  <h3 className={`relative z-10 font-mincho ${kanjiSize} text-[#EAE6DD] font-bold text-center px-4 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] whitespace-nowrap`}>
-                    {card.kanji}
+                  <h3 className="relative z-10 w-full px-6">
+                    <FitText
+                      maxSize={72}
+                      minSize={18}
+                      className="font-mincho text-[#EAE6DD] font-bold drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]"
+                    >
+                      {card.kanji}
+                    </FitText>
                   </h3>
+                  {verbType && (
+                    <span className={`relative z-10 mt-4 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
+                      {verbType}
+                    </span>
+                  )}
                 </div>
 
-                {/* SISI BELAKANG */}
                 <div 
                   className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#1A1918] border-2 border-[#C93438] rounded-3xl flex flex-col items-center justify-center p-6 shadow-2xl overflow-hidden ${isTop ? "cursor-pointer" : "pointer-events-none"} ${(isTop && isFlipped) ? "" : "pointer-events-none"}`}
                   onClick={(e) => {
@@ -301,13 +346,23 @@ export default function Flashcard() {
                   <div className="absolute inset-0 w-full h-full z-0 pointer-events-none">
                     <img src={cardImg} alt="Background" className="w-full h-full object-cover opacity-30" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1918] via-[#1A1918]/90 to-transparent"></div>
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,25,24,0.75)_0%,rgba(26,25,24,0.45)_45%,transparent_75%)]"></div>
                   </div>
 
                   <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
                     <div className="text-center w-full mb-4">
-                      <p className="text-xl text-[#EAE6DD] mb-1 font-mincho whitespace-nowrap">{card.kana}</p>
-                      <p className="text-sm text-[#A3A099] mb-2">({card.romaji})</p>
-                      <p className="text-3xl font-bold text-[#C93438] mt-2 drop-shadow-md">{card.meaning}</p>
+                      {verbType && (
+                        <span className={`inline-block mb-3 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
+                          {verbType}
+                        </span>
+                      )}
+                      <div className="mb-1">
+                        <FitText maxSize={24} minSize={12} className="text-[#EAE6DD] font-mincho drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                          {card.kana}
+                        </FitText>
+                      </div>
+                      <p className="text-sm text-[#A3A099] mb-2 break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">({card.romaji})</p>
+                      <p className="text-2xl sm:text-3xl font-bold text-[#C93438] mt-2 break-words leading-snug drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]">{card.meaning}</p>
                     </div>
 
                     <div className="w-full flex justify-center mb-4">
@@ -325,7 +380,6 @@ export default function Flashcard() {
           );
         })}
 
-        {/* TIMER BAR */}
         <div className="absolute -bottom-6 left-0 right-0 px-4 z-30">
           <div className="h-1.5 bg-[#33312E] rounded-full overflow-hidden w-full">
             <div 
@@ -336,7 +390,6 @@ export default function Flashcard() {
         </div>
       </div>
 
-      {/* KONTROL BAWAH */}
       <div className="flex items-center justify-between w-full max-w-md mt-12 relative z-20">
         <button onClick={handlePrev} disabled={isAdvancing} className="w-14 h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowLeft size={24} />
@@ -367,9 +420,6 @@ export default function Flashcard() {
         </button>
       </div>
 
-      {/* =========================================
-          MODAL DAFTAR HAFALAN
-          ========================================= */}
       {isModalOpen && (
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
@@ -396,7 +446,6 @@ export default function Flashcard() {
               {deck
                 .filter((v, i, self) => memorized.includes(v.kanji) && self.findIndex(t => t.kanji === v.kanji) === i)
                 .map((v: any, i: number) => {
-                  // Ambil gambar yang sama persis dari Map
                   const modalImage = imageMap[`${v.kanji}-${v.kana}`] || bgImages[0];
                   return (
                     <div key={i} className="relative bg-[#1E1D1B] border border-[#33312E] rounded-xl overflow-hidden p-4 flex flex-col items-center justify-center text-center shadow-lg group min-h-[120px]">

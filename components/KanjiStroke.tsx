@@ -88,11 +88,11 @@ export default function KanjiStroke({ kanji }: { kanji: string }) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center bg-[#121110] border border-[#33312E] rounded-2xl p-4 my-4 relative z-20 cursor-default"
+      className="flex w-full max-w-full flex-col items-center justify-center bg-[#121110] border border-[#33312E] rounded-2xl p-4 my-4 relative z-20 cursor-default"
       onMouseDown={(e) => e.stopPropagation()}
       onPointerDown={(e) => e.stopPropagation()} 
     >
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex w-full flex-wrap justify-center gap-2">
         {characters.map((char, index) => (
           <div key={index} className="relative w-[100px] h-[100px] flex items-center justify-center">
             {/* KALAU ANIMASI GAGAL, TAMPILIN KANJI BIASA BESAR */}

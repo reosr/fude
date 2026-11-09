@@ -12,8 +12,8 @@
         "jpName": "辞書形",
         "ruby": "<ruby>書<rt>か</rt></ruby>く",
         "romaji": "kaku",
-        "desc": "Bentuk dasar. Dipakai untuk percakapan kasual.",
-        "example": "手紙を書く (Menulis surat)"
+        "desc": "Bentuk dasar.",
+        "example": "書く (menulis)"
       },
       {
         "id": "masu",
@@ -21,8 +21,8 @@
         "jpName": "ます形",
         "ruby": "<ruby>書<rt>か</rt></ruby>きます",
         "romaji": "kakimasu",
-        "desc": "Bentuk sopan. Digunakan saat berbicara dengan orang yang lebih tua atau atasan.",
-        "example": "手紙を書きます (Menulis surat)"
+        "desc": "Bentuk sopan.",
+        "example": "かきます (menulis)"
       },
       {
         "id": "te",
@@ -30,8 +30,8 @@
         "jpName": "て形",
         "ruby": "<ruby>書<rt>か</rt></ruby>いて",
         "romaji": "kaite",
-        "desc": "Untuk meminta tolong (～てください) atau menyambung dua kegiatan.",
-        "example": "名前を書いてください (Tolong tulis namanya)"
+        "desc": "Untuk menyambung kalimat.",
+        "example": "かいて (menulis)"
       },
       {
         "id": "ta",
@@ -39,8 +39,8 @@
         "jpName": "た形",
         "ruby": "<ruby>書<rt>か</rt></ruby>いた",
         "romaji": "kaita",
-        "desc": "Menyatakan kegiatan yang sudah selesai dilakukan di masa lampau.",
-        "example": "昨日、日記を書いた (Kemarin saya menulis buku harian)"
+        "desc": "Menyatakan lampau.",
+        "example": "かいた (menulis)"
       },
       {
         "id": "nai",
@@ -48,116 +48,170 @@
         "jpName": "ない形",
         "ruby": "<ruby>書<rt>か</rt></ruby>かない",
         "romaji": "kakanai",
-        "desc": "Bentuk kasual untuk menyatakan 'tidak melakukan' sesuatu.",
-        "example": "今日は宿題を書かない (Hari ini tidak mengerjakan PR)"
+        "desc": "Bentuk negatif.",
+        "example": "かかない (menulis)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>ける",
+        "romaji": "kakeru",
+        "desc": "Bisa melakukan.",
+        "example": "かける (menulis)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>こう",
+        "romaji": "kakou",
+        "desc": "Ayo melakukan.",
+        "example": "かこう (menulis)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>けば",
+        "romaji": "kakeba",
+        "desc": "Jika melakukan.",
+        "example": "かけば (menulis)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>け",
+        "romaji": "kake",
+        "desc": "Perintah tegas.",
+        "example": "かけ (menulis)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>かれる",
+        "romaji": "kakareru",
+        "desc": "Dikenai tindakan.",
+        "example": "かかれる (menulis)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>書<rt>か</rt></ruby>かせる",
+        "romaji": "kakaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "かかせる (menulis)"
       }
     ]
   },
   {
-    "kanji": "読む",
-    "kana": "よむ",
-    "romaji": "yomu",
-    "meaning": "membaca",
+    "kanji": "聞く",
+    "kana": "きく",
+    "romaji": "kiku",
+    "meaning": "mendengar",
     "type": "Godan",
     "forms": [
       {
         "id": "dict",
         "name": "Bentuk Kamus",
         "jpName": "辞書形",
-        "ruby": "<ruby>読<rt>よ</rt></ruby>む",
-        "romaji": "yomu",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>く",
+        "romaji": "kiku",
         "desc": "Bentuk dasar.",
-        "example": "本を読む (Membaca buku)"
+        "example": "聞く (mendengar)"
       },
       {
         "id": "masu",
         "name": "Bentuk Masu",
         "jpName": "ます形",
-        "ruby": "<ruby>読<rt>よ</rt></ruby>みます",
-        "romaji": "yomimasu",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>きます",
+        "romaji": "kikimasu",
         "desc": "Bentuk sopan.",
-        "example": "本を読みます (Membaca buku)"
+        "example": "ききます (mendengar)"
       },
       {
         "id": "te",
         "name": "Bentuk Te",
         "jpName": "て形",
-        "ruby": "<ruby>読<rt>よ</rt></ruby>んで",
-        "romaji": "yonde",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>いて",
+        "romaji": "kiite",
         "desc": "Untuk menyambung kalimat.",
-        "example": "本を読んでください (Tolong baca bukunya)"
+        "example": "きいて (mendengar)"
       },
       {
         "id": "ta",
         "name": "Bentuk Lampau",
         "jpName": "た形",
-        "ruby": "<ruby>読<rt>よ</rt></ruby>んだ",
-        "romaji": "yonda",
-        "desc": "Menyatakan sudah membaca.",
-        "example": "昨日、本を読んだ (Kemarin membaca buku)"
+        "ruby": "<ruby>聞<rt>き</rt></ruby>いた",
+        "romaji": "kiita",
+        "desc": "Menyatakan lampau.",
+        "example": "きいた (mendengar)"
       },
       {
         "id": "nai",
         "name": "Bentuk Negatif",
         "jpName": "ない形",
-        "ruby": "<ruby>読<rt>よ</rt></ruby>まない",
-        "romaji": "yomanai",
-        "desc": "Bentuk kasual negatif.",
-        "example": "今日は本を読まない (Hari ini tidak membaca buku)"
-      }
-    ]
-  },
-  {
-    "kanji": "食べる",
-    "kana": "たべる",
-    "romaji": "taberu",
-    "meaning": "makan",
-    "type": "Ichidan",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>食<rt>た</rt></ruby>べる",
-        "romaji": "taberu",
-        "desc": "Bentuk dasar.",
-        "example": "ケーキを食べる (Makan kue)"
+        "ruby": "<ruby>聞<rt>き</rt></ruby>かない",
+        "romaji": "kikanai",
+        "desc": "Bentuk negatif.",
+        "example": "きかない (mendengar)"
       },
       {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>食<rt>た</rt></ruby>べます",
-        "romaji": "tabemasu",
-        "desc": "Bentuk sopan.",
-        "example": "朝ごはんを食べます (Makan sarapan)"
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>ける",
+        "romaji": "kikeru",
+        "desc": "Bisa melakukan.",
+        "example": "きける (mendengar)"
       },
       {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>食<rt>た</rt></ruby>べて",
-        "romaji": "tabete",
-        "desc": "Untuk menyambung kalimat atau meminta tolong.",
-        "example": "野菜を食べてください (Tolong makan sayurnya)"
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>こう",
+        "romaji": "kikou",
+        "desc": "Ayo melakukan.",
+        "example": "きこう (mendengar)"
       },
       {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>食<rt>た</rt></ruby>べた",
-        "romaji": "tabeta",
-        "desc": "Menyatakan sudah makan.",
-        "example": "もう食べた (Sudah makan)"
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>けば",
+        "romaji": "kikeba",
+        "desc": "Jika melakukan.",
+        "example": "きけば (mendengar)"
       },
       {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>食<rt>た</rt></ruby>べない",
-        "romaji": "tabenai",
-        "desc": "Bentuk kasual untuk menyatakan tidak makan.",
-        "example": "肉は食べない (Tidak makan daging)"
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>け",
+        "romaji": "kike",
+        "desc": "Perintah tegas.",
+        "example": "きけ (mendengar)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>かれる",
+        "romaji": "kikareru",
+        "desc": "Dikenai tindakan.",
+        "example": "きかれる (mendengar)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>聞<rt>き</rt></ruby>かせる",
+        "romaji": "kikaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "きかせる (mendengar)"
       }
     ]
   },
@@ -166,7 +220,7 @@
     "kana": "いく",
     "romaji": "iku",
     "meaning": "pergi",
-    "type": "Godan (Pengecualian)",
+    "type": "Godan",
     "forms": [
       {
         "id": "dict",
@@ -175,7 +229,7 @@
         "ruby": "<ruby>行<rt>い</rt></ruby>く",
         "romaji": "iku",
         "desc": "Bentuk dasar.",
-        "example": "学校へ行く (Pergi ke sekolah)"
+        "example": "行く (pergi)"
       },
       {
         "id": "masu",
@@ -184,7 +238,7 @@
         "ruby": "<ruby>行<rt>い</rt></ruby>きます",
         "romaji": "ikimasu",
         "desc": "Bentuk sopan.",
-        "example": "会社へ行きます (Pergi ke kantor)"
+        "example": "いきます (pergi)"
       },
       {
         "id": "te",
@@ -192,8 +246,8 @@
         "jpName": "て形",
         "ruby": "<ruby>行<rt>い</rt></ruby>って",
         "romaji": "itte",
-        "desc": "Pengecualian! Harusnya '行いて', tapi berubah jadi '行って'.",
-        "example": "ちょっと行ってきます (Saya pergi sebentar)"
+        "desc": "Untuk menyambung kalimat.",
+        "example": "いって (pergi)"
       },
       {
         "id": "ta",
@@ -201,8 +255,8 @@
         "jpName": "た形",
         "ruby": "<ruby>行<rt>い</rt></ruby>った",
         "romaji": "itta",
-        "desc": "Pengecualian! Berubah jadi '行った'.",
-        "example": "昨日、映画館へ行った (Kemarin pergi ke bioskop)"
+        "desc": "Menyatakan lampau.",
+        "example": "いった (pergi)"
       },
       {
         "id": "nai",
@@ -210,494 +264,278 @@
         "jpName": "ない形",
         "ruby": "<ruby>行<rt>い</rt></ruby>かない",
         "romaji": "ikanai",
-        "desc": "Bentuk kasual negatif.",
-        "example": "明日は行かない (Besok tidak pergi)"
+        "desc": "Bentuk negatif.",
+        "example": "いかない (pergi)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>ける",
+        "romaji": "ikeru",
+        "desc": "Bisa melakukan.",
+        "example": "いける (pergi)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>こう",
+        "romaji": "ikou",
+        "desc": "Ayo melakukan.",
+        "example": "いこう (pergi)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>けば",
+        "romaji": "ikeba",
+        "desc": "Jika melakukan.",
+        "example": "いけば (pergi)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>け",
+        "romaji": "ike",
+        "desc": "Perintah tegas.",
+        "example": "いけ (pergi)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>かれる",
+        "romaji": "ikareru",
+        "desc": "Dikenai tindakan.",
+        "example": "いかれる (pergi)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>行<rt>い</rt></ruby>かせる",
+        "romaji": "ikaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "いかせる (pergi)"
       }
     ]
   },
   {
-    "kanji": "する",
-    "kana": "する",
-    "romaji": "suru",
-    "meaning": "melakukan",
-    "type": "Irregular",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "する",
-        "romaji": "suru",
-        "desc": "Bentuk dasar kata kerja tidak beraturan.",
-        "example": "宿題をする (Mengerjakan PR)"
-      },
-      {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "します",
-        "romaji": "shimasu",
-        "desc": "Bentuk sopan.",
-        "example": "掃除をします (Membersihkan)"
-      },
-      {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "して",
-        "romaji": "shite",
-        "desc": "Bentuk te tidak beraturan.",
-        "example": "コピーをしてください (Tolong fotokopi)"
-      },
-      {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "した",
-        "romaji": "shita",
-        "desc": "Bentuk lampau tidak beraturan.",
-        "example": "もう宿題をした (Sudah mengerjakan PR)"
-      },
-      {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "しない",
-        "romaji": "shinai",
-        "desc": "Bentuk negatif tidak beraturan.",
-        "example": "タバコはしない (Tidak merokok)"
-      }
-    ]
-  },
-  {
-    "kanji": "来る",
-    "kana": "くる",
-    "romaji": "kuru",
-    "meaning": "datang",
-    "type": "Irregular",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>来<rt>く</rt></ruby>る",
-        "romaji": "kuru",
-        "desc": "Bentuk dasar.",
-        "example": "友達が来る (Teman datang)"
-      },
-      {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>来<rt>き</rt></ruby>ます",
-        "romaji": "kimasu",
-        "desc": "Bentuk sopan.",
-        "example": "先生が来ます (Guru datang)"
-      },
-      {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>来<rt>き</rt></ruby>て",
-        "romaji": "kite",
-        "desc": "Bentuk te.",
-        "example": "ここに来てください (Tolong datang ke sini)"
-      },
-      {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>来<rt>き</rt></ruby>た",
-        "romaji": "kita",
-        "desc": "Bentuk lampau.",
-        "example": "昨日、来た (Kemarin datang)"
-      },
-      {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>来<rt>こ</rt></ruby>ない",
-        "romaji": "konai",
-        "desc": "Bentuk negatif. Perhatikan perubahan bacaan kanjinya.",
-        "example": "明日は来ない (Besok tidak datang)"
-      }
-    ]
-  },
-  {
-    "kanji": "飲む",
-    "kana": "のむ",
-    "romaji": "nomu",
-    "meaning": "minum",
+    "kanji": "歩く",
+    "kana": "あるく",
+    "romaji": "aruku",
+    "meaning": "berjalan",
     "type": "Godan",
     "forms": [
       {
         "id": "dict",
         "name": "Bentuk Kamus",
         "jpName": "辞書形",
-        "ruby": "<ruby>飲<rt>の</rt></ruby>む",
-        "romaji": "nomu",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>く",
+        "romaji": "aruku",
         "desc": "Bentuk dasar.",
-        "example": "水を飲む (Minum air)"
+        "example": "歩く (berjalan)"
       },
       {
         "id": "masu",
         "name": "Bentuk Masu",
         "jpName": "ます形",
-        "ruby": "<ruby>飲<rt>の</rt></ruby>みます",
-        "romaji": "nomimasu",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>きます",
+        "romaji": "arukimasu",
         "desc": "Bentuk sopan.",
-        "example": "お茶を飲みます (Minum teh)"
+        "example": "あるきます (berjalan)"
       },
       {
         "id": "te",
         "name": "Bentuk Te",
         "jpName": "て形",
-        "ruby": "<ruby>飲<rt>の</rt></ruby>んで",
-        "romaji": "nonde",
-        "desc": "Bentuk te.",
-        "example": "薬を飲んでください (Tolong minum obatnya)"
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>いて",
+        "romaji": "aruite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "あるいて (berjalan)"
       },
       {
         "id": "ta",
         "name": "Bentuk Lampau",
         "jpName": "た形",
-        "ruby": "<ruby>飲<rt>の</rt></ruby>んだ",
-        "romaji": "nonda",
-        "desc": "Bentuk lampau.",
-        "example": "もう飲んだ (Sudah minum)"
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>いた",
+        "romaji": "aruita",
+        "desc": "Menyatakan lampau.",
+        "example": "あるいた (berjalan)"
       },
       {
         "id": "nai",
         "name": "Bentuk Negatif",
         "jpName": "ない形",
-        "ruby": "<ruby>飲<rt>の</rt></ruby>まない",
-        "romaji": "nomanai",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>かない",
+        "romaji": "arukanai",
         "desc": "Bentuk negatif.",
-        "example": "お酒は飲まない (Tidak minum alkohol)"
+        "example": "あるかない (berjalan)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>ける",
+        "romaji": "arukeru",
+        "desc": "Bisa melakukan.",
+        "example": "あるける (berjalan)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>こう",
+        "romaji": "arukou",
+        "desc": "Ayo melakukan.",
+        "example": "あるこう (berjalan)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>けば",
+        "romaji": "arukeba",
+        "desc": "Jika melakukan.",
+        "example": "あるけば (berjalan)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>け",
+        "romaji": "aruke",
+        "desc": "Perintah tegas.",
+        "example": "あるけ (berjalan)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>かれる",
+        "romaji": "arukareru",
+        "desc": "Dikenai tindakan.",
+        "example": "あるかれる (berjalan)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>歩<rt>ある</rt></ruby>かせる",
+        "romaji": "arukaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "あるかせる (berjalan)"
       }
     ]
   },
   {
-    "kanji": "見る",
-    "kana": "みる",
-    "romaji": "miru",
-    "meaning": "melihat",
-    "type": "Ichidan",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>見<rt>み</rt></ruby>る",
-        "romaji": "miru",
-        "desc": "Bentuk dasar.",
-        "example": "テレビを見る (Menonton TV)"
-      },
-      {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>見<rt>み</rt></ruby>ます",
-        "romaji": "mimasu",
-        "desc": "Bentuk sopan.",
-        "example": "映画を見ます (Menonton film)"
-      },
-      {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>見<rt>み</rt></ruby>て",
-        "romaji": "mite",
-        "desc": "Bentuk te.",
-        "example": "これを見てください (Tolong lihat ini)"
-      },
-      {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>見<rt>み</rt></ruby>た",
-        "romaji": "mita",
-        "desc": "Bentuk lampau.",
-        "example": "昨日、映画を見た (Kemarin menonton film)"
-      },
-      {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>見<rt>み</rt></ruby>ない",
-        "romaji": "minai",
-        "desc": "Bentuk negatif.",
-        "example": "テレビは見ない (Tidak menonton TV)"
-      }
-    ]
-  },
-  {
-    "kanji": "買う",
-    "kana": "かう",
-    "romaji": "kau",
-    "meaning": "membeli",
+    "kanji": "働く",
+    "kana": "はたらく",
+    "romaji": "hataraku",
+    "meaning": "bekerja",
     "type": "Godan",
     "forms": [
       {
         "id": "dict",
         "name": "Bentuk Kamus",
         "jpName": "辞書形",
-        "ruby": "<ruby>買<rt>か</rt></ruby>う",
-        "romaji": "kau",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>く",
+        "romaji": "hataraku",
         "desc": "Bentuk dasar.",
-        "example": "パンを買う (Membeli roti)"
+        "example": "働く (bekerja)"
       },
       {
         "id": "masu",
         "name": "Bentuk Masu",
         "jpName": "ます形",
-        "ruby": "<ruby>買<rt>か</rt></ruby>います",
-        "romaji": "kaimasu",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>きます",
+        "romaji": "hatarakimasu",
         "desc": "Bentuk sopan.",
-        "example": "果物を買います (Membeli buah)"
+        "example": "はたらきます (bekerja)"
       },
       {
         "id": "te",
         "name": "Bentuk Te",
         "jpName": "て形",
-        "ruby": "<ruby>買<rt>か</rt></ruby>って",
-        "romaji": "katte",
-        "desc": "Bentuk te.",
-        "example": "これを買ってください (Tolong beli ini)"
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>いて",
+        "romaji": "hataraite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "はたらいて (bekerja)"
       },
       {
         "id": "ta",
         "name": "Bentuk Lampau",
         "jpName": "た形",
-        "ruby": "<ruby>買<rt>か</rt></ruby>った",
-        "romaji": "katta",
-        "desc": "Bentuk lampau.",
-        "example": "昨日、本を買った (Kemarin membeli buku)"
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>いた",
+        "romaji": "hataraita",
+        "desc": "Menyatakan lampau.",
+        "example": "はたらいた (bekerja)"
       },
       {
         "id": "nai",
         "name": "Bentuk Negatif",
         "jpName": "ない形",
-        "ruby": "<ruby>買<rt>か</rt></ruby>わない",
-        "romaji": "kawanai",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>かない",
+        "romaji": "hatarakanai",
         "desc": "Bentuk negatif.",
-        "example": "今日は買わない (Hari ini tidak membeli)"
-      }
-    ]
-  },
-  {
-    "kanji": "待つ",
-    "kana": "まつ",
-    "romaji": "matsu",
-    "meaning": "menunggu",
-    "type": "Godan",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>待<rt>ま</rt></ruby>つ",
-        "romaji": "matsu",
-        "desc": "Bentuk dasar.",
-        "example": "友達を待つ (Menunggu teman)"
+        "example": "はたらかない (bekerja)"
       },
       {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>待<rt>ま</rt></ruby>ちます",
-        "romaji": "machimasu",
-        "desc": "Bentuk sopan.",
-        "example": "駅で待ちます (Menunggu di stasiun)"
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>ける",
+        "romaji": "hatarakeru",
+        "desc": "Bisa melakukan.",
+        "example": "はたらける (bekerja)"
       },
       {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>待<rt>ま</rt></ruby>って",
-        "romaji": "matte",
-        "desc": "Bentuk te.",
-        "example": "ここで待ってください (Tolong tunggu di sini)"
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>こう",
+        "romaji": "hatarakou",
+        "desc": "Ayo melakukan.",
+        "example": "はたらこう (bekerja)"
       },
       {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>待<rt>ま</rt></ruby>った",
-        "romaji": "matta",
-        "desc": "Bentuk lampau.",
-        "example": "一時間待った (Menunggu satu jam)"
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>けば",
+        "romaji": "hatarakeba",
+        "desc": "Jika melakukan.",
+        "example": "はたらけば (bekerja)"
       },
       {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>待<rt>ま</rt></ruby>たない",
-        "romaji": "matanai",
-        "desc": "Bentuk negatif.",
-        "example": "もう待たない (Tidak menunggu lagi)"
-      }
-    ]
-  },
-  {
-    "kanji": "話す",
-    "kana": "はなす",
-    "romaji": "hanasu",
-    "meaning": "berbicara",
-    "type": "Godan",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>話<rt>はな</rt></ruby>す",
-        "romaji": "hanasu",
-        "desc": "Bentuk dasar.",
-        "example": "日本語で話す (Berbicara dalam bahasa Jepang)"
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>け",
+        "romaji": "hatarake",
+        "desc": "Perintah tegas.",
+        "example": "はたらけ (bekerja)"
       },
       {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>話<rt>はな</rt></ruby>します",
-        "romaji": "hanashimasu",
-        "desc": "Bentuk sopan.",
-        "example": "先生と話します (Berbicara dengan guru)"
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>かれる",
+        "romaji": "hatarakareru",
+        "desc": "Dikenai tindakan.",
+        "example": "はたらかれる (bekerja)"
       },
       {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>話<rt>はな</rt></ruby>して",
-        "romaji": "hanashite",
-        "desc": "Bentuk te.",
-        "example": "ゆっくり話してください (Tolong bicara pelan-pelan)"
-      },
-      {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>話<rt>はな</rt></ruby>した",
-        "romaji": "hanashita",
-        "desc": "Bentuk lampau.",
-        "example": "昨日、友達と話した (Kemarin berbicara dengan teman)"
-      },
-      {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>話<rt>はな</rt></ruby>さない",
-        "romaji": "hanasanai",
-        "desc": "Bentuk negatif.",
-        "example": "彼とは話さない (Tidak berbicara dengannya)"
-      }
-    ]
-  },
-  {
-    "kanji": "起きる",
-    "kana": "おきる",
-    "romaji": "okiru",
-    "meaning": "bangun",
-    "type": "Ichidan",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>起<rt>お</rt></ruby>きる",
-        "romaji": "okiru",
-        "desc": "Bentuk dasar.",
-        "example": "朝六時に起きる (Bangun jam 6 pagi)"
-      },
-      {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>起<rt>お</rt></ruby>きます",
-        "romaji": "okimasu",
-        "desc": "Bentuk sopan.",
-        "example": "毎朝七時に起きます (Bangun jam 7 setiap pagi)"
-      },
-      {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>起<rt>お</rt></ruby>きて",
-        "romaji": "okite",
-        "desc": "Bentuk te.",
-        "example": "早く起きてください (Tolong bangun cepat)"
-      },
-      {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>起<rt>お</rt></ruby>きた",
-        "romaji": "okita",
-        "desc": "Bentuk lampau.",
-        "example": "今日は早く起きた (Hari ini bangun cepat)"
-      },
-      {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>起<rt>お</rt></ruby>きない",
-        "romaji": "okinai",
-        "desc": "Bentuk negatif.",
-        "example": "休みの日は早く起きない (Hari libur tidak bangun cepat)"
-      }
-    ]
-  },
-  {
-    "kanji": "寝る",
-    "kana": "ねる",
-    "romaji": "neru",
-    "meaning": "tidur",
-    "type": "Ichidan",
-    "forms": [
-      {
-        "id": "dict",
-        "name": "Bentuk Kamus",
-        "jpName": "辞書形",
-        "ruby": "<ruby>寝<rt>ね</rt></ruby>る",
-        "romaji": "neru",
-        "desc": "Bentuk dasar.",
-        "example": "早く寝る (Tidur cepat)"
-      },
-      {
-        "id": "masu",
-        "name": "Bentuk Masu",
-        "jpName": "ます形",
-        "ruby": "<ruby>寝<rt>ね</rt></ruby>ます",
-        "romaji": "nemasu",
-        "desc": "Bentuk sopan.",
-        "example": "十一時に寝ます (Tidur jam 11)"
-      },
-      {
-        "id": "te",
-        "name": "Bentuk Te",
-        "jpName": "て形",
-        "ruby": "<ruby>寝<rt>ね</rt></ruby>て",
-        "romaji": "nete",
-        "desc": "Bentuk te.",
-        "example": "もう寝てください (Tolong tidur sekarang)"
-      },
-      {
-        "id": "ta",
-        "name": "Bentuk Lampau",
-        "jpName": "た形",
-        "ruby": "<ruby>寝<rt>ね</rt></ruby>た",
-        "romaji": "neta",
-        "desc": "Bentuk lampau.",
-        "example": "昨日はよく寝た (Kemarin tidur nyenyak)"
-      },
-      {
-        "id": "nai",
-        "name": "Bentuk Negatif",
-        "jpName": "ない形",
-        "ruby": "<ruby>寝<rt>ね</rt></ruby>ない",
-        "romaji": "nenai",
-        "desc": "Bentuk negatif.",
-        "example": "今夜は寝ない (Malam ini tidak tidur)"
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>働<rt>はたら</rt></ruby>かせる",
+        "romaji": "hatarakaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "はたらかせる (bekerja)"
       }
     ]
   },
@@ -715,7 +553,7 @@
         "ruby": "<ruby>泳<rt>およ</rt></ruby>ぐ",
         "romaji": "oyogu",
         "desc": "Bentuk dasar.",
-        "example": "海で泳ぐ (Berenang di laut)"
+        "example": "泳ぐ (berenang)"
       },
       {
         "id": "masu",
@@ -724,7 +562,7 @@
         "ruby": "<ruby>泳<rt>およ</rt></ruby>ぎます",
         "romaji": "oyogimasu",
         "desc": "Bentuk sopan.",
-        "example": "プールで泳ぎます (Berenang di kolam)"
+        "example": "およぎます (berenang)"
       },
       {
         "id": "te",
@@ -732,8 +570,8 @@
         "jpName": "て形",
         "ruby": "<ruby>泳<rt>およ</rt></ruby>いで",
         "romaji": "oyoide",
-        "desc": "Bentuk te.",
-        "example": "川で泳いでください (Tolong berenang di sungai)"
+        "desc": "Untuk menyambung kalimat.",
+        "example": "およいで (berenang)"
       },
       {
         "id": "ta",
@@ -741,8 +579,8 @@
         "jpName": "た形",
         "ruby": "<ruby>泳<rt>およ</rt></ruby>いだ",
         "romaji": "oyoida",
-        "desc": "Bentuk lampau.",
-        "example": "昨日、泳いだ (Kemarin berenang)"
+        "desc": "Menyatakan lampau.",
+        "example": "およいだ (berenang)"
       },
       {
         "id": "nai",
@@ -751,7 +589,709 @@
         "ruby": "<ruby>泳<rt>およ</rt></ruby>がない",
         "romaji": "oyoganai",
         "desc": "Bentuk negatif.",
-        "example": "今日は泳がない (Hari ini tidak berenang)"
+        "example": "およがない (berenang)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>げる",
+        "romaji": "oyogeru",
+        "desc": "Bisa melakukan.",
+        "example": "およげる (berenang)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>ごう",
+        "romaji": "oyogou",
+        "desc": "Ayo melakukan.",
+        "example": "およごう (berenang)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>げば",
+        "romaji": "oyogeba",
+        "desc": "Jika melakukan.",
+        "example": "およげば (berenang)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>げ",
+        "romaji": "oyoge",
+        "desc": "Perintah tegas.",
+        "example": "およげ (berenang)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>がれる",
+        "romaji": "oyogareru",
+        "desc": "Dikenai tindakan.",
+        "example": "およがれる (berenang)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>泳<rt>およ</rt></ruby>がせる",
+        "romaji": "oyogaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "およがせる (berenang)"
+      }
+    ]
+  },
+  {
+    "kanji": "急ぐ",
+    "kana": "いそぐ",
+    "romaji": "isogu",
+    "meaning": "bergegas",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>ぐ",
+        "romaji": "isogu",
+        "desc": "Bentuk dasar.",
+        "example": "急ぐ (bergegas)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>ぎます",
+        "romaji": "isogimasu",
+        "desc": "Bentuk sopan.",
+        "example": "いそぎます (bergegas)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>いで",
+        "romaji": "isoide",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "いそいで (bergegas)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>いだ",
+        "romaji": "isoida",
+        "desc": "Menyatakan lampau.",
+        "example": "いそいだ (bergegas)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>がない",
+        "romaji": "isoganai",
+        "desc": "Bentuk negatif.",
+        "example": "いそがない (bergegas)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>げる",
+        "romaji": "isogeru",
+        "desc": "Bisa melakukan.",
+        "example": "いそげる (bergegas)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>ごう",
+        "romaji": "isogou",
+        "desc": "Ayo melakukan.",
+        "example": "いそごう (bergegas)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>げば",
+        "romaji": "isogeba",
+        "desc": "Jika melakukan.",
+        "example": "いそげば (bergegas)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>げ",
+        "romaji": "isoge",
+        "desc": "Perintah tegas.",
+        "example": "いそげ (bergegas)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>がれる",
+        "romaji": "isogareru",
+        "desc": "Dikenai tindakan.",
+        "example": "いそがれる (bergegas)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>急<rt>いそ</rt></ruby>がせる",
+        "romaji": "isogaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "いそがせる (bergegas)"
+      }
+    ]
+  },
+  {
+    "kanji": "話す",
+    "kana": "はなす",
+    "romaji": "hanasu",
+    "meaning": "berbicara",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>す",
+        "romaji": "hanasu",
+        "desc": "Bentuk dasar.",
+        "example": "話す (berbicara)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>します",
+        "romaji": "hanashimasu",
+        "desc": "Bentuk sopan.",
+        "example": "はなします (berbicara)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>して",
+        "romaji": "hanashite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "はなして (berbicara)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>した",
+        "romaji": "hanashita",
+        "desc": "Menyatakan lampau.",
+        "example": "はなした (berbicara)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>さない",
+        "romaji": "hanasanai",
+        "desc": "Bentuk negatif.",
+        "example": "はなさない (berbicara)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>せる",
+        "romaji": "hanaseru",
+        "desc": "Bisa melakukan.",
+        "example": "はなせる (berbicara)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>そう",
+        "romaji": "hanasou",
+        "desc": "Ayo melakukan.",
+        "example": "はなそう (berbicara)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>せば",
+        "romaji": "hanaseba",
+        "desc": "Jika melakukan.",
+        "example": "はなせば (berbicara)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>せ",
+        "romaji": "hanase",
+        "desc": "Perintah tegas.",
+        "example": "はなせ (berbicara)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>される",
+        "romaji": "hanasareru",
+        "desc": "Dikenai tindakan.",
+        "example": "はなされる (berbicara)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>話<rt>はな</rt></ruby>させる",
+        "romaji": "hanasaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "はなさせる (berbicara)"
+      }
+    ]
+  },
+  {
+    "kanji": "貸す",
+    "kana": "かす",
+    "romaji": "kasu",
+    "meaning": "meminjamkan",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>す",
+        "romaji": "kasu",
+        "desc": "Bentuk dasar.",
+        "example": "貸す (meminjamkan)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>します",
+        "romaji": "kashimasu",
+        "desc": "Bentuk sopan.",
+        "example": "かします (meminjamkan)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>して",
+        "romaji": "kashite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "かして (meminjamkan)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>した",
+        "romaji": "kashita",
+        "desc": "Menyatakan lampau.",
+        "example": "かした (meminjamkan)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>さない",
+        "romaji": "kasanai",
+        "desc": "Bentuk negatif.",
+        "example": "かさない (meminjamkan)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>せる",
+        "romaji": "kaseru",
+        "desc": "Bisa melakukan.",
+        "example": "かせる (meminjamkan)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>そう",
+        "romaji": "kasou",
+        "desc": "Ayo melakukan.",
+        "example": "かそう (meminjamkan)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>せば",
+        "romaji": "kaseba",
+        "desc": "Jika melakukan.",
+        "example": "かせば (meminjamkan)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>せ",
+        "romaji": "kase",
+        "desc": "Perintah tegas.",
+        "example": "かせ (meminjamkan)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>される",
+        "romaji": "kasareru",
+        "desc": "Dikenai tindakan.",
+        "example": "かされる (meminjamkan)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>貸<rt>か</rt></ruby>させる",
+        "romaji": "kasaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "かさせる (meminjamkan)"
+      }
+    ]
+  },
+  {
+    "kanji": "待つ",
+    "kana": "まつ",
+    "romaji": "matsu",
+    "meaning": "menunggu",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>つ",
+        "romaji": "matsu",
+        "desc": "Bentuk dasar.",
+        "example": "待つ (menunggu)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>ちます",
+        "romaji": "machimasu",
+        "desc": "Bentuk sopan.",
+        "example": "まちます (menunggu)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>って",
+        "romaji": "matte",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "まって (menunggu)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>った",
+        "romaji": "matta",
+        "desc": "Menyatakan lampau.",
+        "example": "まった (menunggu)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>たない",
+        "romaji": "matanai",
+        "desc": "Bentuk negatif.",
+        "example": "またない (menunggu)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>てる",
+        "romaji": "materu",
+        "desc": "Bisa melakukan.",
+        "example": "まてる (menunggu)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>とう",
+        "romaji": "matou",
+        "desc": "Ayo melakukan.",
+        "example": "まとう (menunggu)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>てば",
+        "romaji": "mateba",
+        "desc": "Jika melakukan.",
+        "example": "まてば (menunggu)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>て",
+        "romaji": "mate",
+        "desc": "Perintah tegas.",
+        "example": "まて (menunggu)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>たれる",
+        "romaji": "matareru",
+        "desc": "Dikenai tindakan.",
+        "example": "またれる (menunggu)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>待<rt>ま</rt></ruby>たせる",
+        "romaji": "mataseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "またせる (menunggu)"
+      }
+    ]
+  },
+  {
+    "kanji": "持つ",
+    "kana": "もつ",
+    "romaji": "motsu",
+    "meaning": "membawa",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>つ",
+        "romaji": "motsu",
+        "desc": "Bentuk dasar.",
+        "example": "持つ (membawa)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>ちます",
+        "romaji": "mochimasu",
+        "desc": "Bentuk sopan.",
+        "example": "もちます (membawa)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>って",
+        "romaji": "motte",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "もって (membawa)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>った",
+        "romaji": "motta",
+        "desc": "Menyatakan lampau.",
+        "example": "もった (membawa)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>たない",
+        "romaji": "motanai",
+        "desc": "Bentuk negatif.",
+        "example": "もたない (membawa)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>てる",
+        "romaji": "moteru",
+        "desc": "Bisa melakukan.",
+        "example": "もてる (membawa)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>とう",
+        "romaji": "motou",
+        "desc": "Ayo melakukan.",
+        "example": "もとう (membawa)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>てば",
+        "romaji": "moteba",
+        "desc": "Jika melakukan.",
+        "example": "もてば (membawa)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>て",
+        "romaji": "mote",
+        "desc": "Perintah tegas.",
+        "example": "もて (membawa)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>たれる",
+        "romaji": "motareru",
+        "desc": "Dikenai tindakan.",
+        "example": "もたれる (membawa)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>持<rt>も</rt></ruby>たせる",
+        "romaji": "motaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "もたせる (membawa)"
+      }
+    ]
+  },
+  {
+    "kanji": "死ぬ",
+    "kana": "しぬ",
+    "romaji": "shinu",
+    "meaning": "mati",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>ぬ",
+        "romaji": "shinu",
+        "desc": "Bentuk dasar.",
+        "example": "死ぬ (mati)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>にます",
+        "romaji": "shinimasu",
+        "desc": "Bentuk sopan.",
+        "example": "しにます (mati)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>んで",
+        "romaji": "shinde",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "しんで (mati)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>んだ",
+        "romaji": "shinda",
+        "desc": "Menyatakan lampau.",
+        "example": "しんだ (mati)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>なない",
+        "romaji": "shinanai",
+        "desc": "Bentuk negatif.",
+        "example": "しなない (mati)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>ねる",
+        "romaji": "shineru",
+        "desc": "Bisa melakukan.",
+        "example": "しねる (mati)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>のう",
+        "romaji": "shinou",
+        "desc": "Ayo melakukan.",
+        "example": "しのう (mati)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>ねば",
+        "romaji": "shineba",
+        "desc": "Jika melakukan.",
+        "example": "しねば (mati)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>ね",
+        "romaji": "shine",
+        "desc": "Perintah tegas.",
+        "example": "しね (mati)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>なれる",
+        "romaji": "shinareru",
+        "desc": "Dikenai tindakan.",
+        "example": "しなれる (mati)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>死<rt>し</rt></ruby>なせる",
+        "romaji": "shinaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "しなせる (mati)"
       }
     ]
   },
@@ -769,7 +1309,7 @@
         "ruby": "<ruby>遊<rt>あそ</rt></ruby>ぶ",
         "romaji": "asobu",
         "desc": "Bentuk dasar.",
-        "example": "公園で遊ぶ (Bermain di taman)"
+        "example": "遊ぶ (bermain)"
       },
       {
         "id": "masu",
@@ -778,7 +1318,7 @@
         "ruby": "<ruby>遊<rt>あそ</rt></ruby>びます",
         "romaji": "asobimasu",
         "desc": "Bentuk sopan.",
-        "example": "友達と遊びます (Bermain dengan teman)"
+        "example": "あそびます (bermain)"
       },
       {
         "id": "te",
@@ -786,8 +1326,8 @@
         "jpName": "て形",
         "ruby": "<ruby>遊<rt>あそ</rt></ruby>んで",
         "romaji": "asonde",
-        "desc": "Bentuk te.",
-        "example": "外で遊んでください (Tolong bermain di luar)"
+        "desc": "Untuk menyambung kalimat.",
+        "example": "あそんで (bermain)"
       },
       {
         "id": "ta",
@@ -795,8 +1335,8 @@
         "jpName": "た形",
         "ruby": "<ruby>遊<rt>あそ</rt></ruby>んだ",
         "romaji": "asonda",
-        "desc": "Bentuk lampau.",
-        "example": "昨日、ゲームで遊んだ (Kemarin bermain game)"
+        "desc": "Menyatakan lampau.",
+        "example": "あそんだ (bermain)"
       },
       {
         "id": "nai",
@@ -805,7 +1345,2545 @@
         "ruby": "<ruby>遊<rt>あそ</rt></ruby>ばない",
         "romaji": "asobanai",
         "desc": "Bentuk negatif.",
-        "example": "今日は遊ばない (Hari ini tidak bermain)"
+        "example": "あそばない (bermain)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>べる",
+        "romaji": "asoberu",
+        "desc": "Bisa melakukan.",
+        "example": "あそべる (bermain)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>ぼう",
+        "romaji": "asobou",
+        "desc": "Ayo melakukan.",
+        "example": "あそぼう (bermain)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>べば",
+        "romaji": "asobeba",
+        "desc": "Jika melakukan.",
+        "example": "あそべば (bermain)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>べ",
+        "romaji": "asobe",
+        "desc": "Perintah tegas.",
+        "example": "あそべ (bermain)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>ばれる",
+        "romaji": "asobareru",
+        "desc": "Dikenai tindakan.",
+        "example": "あそばれる (bermain)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>遊<rt>あそ</rt></ruby>ばせる",
+        "romaji": "asobaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "あそばせる (bermain)"
+      }
+    ]
+  },
+  {
+    "kanji": "呼ぶ",
+    "kana": "よぶ",
+    "romaji": "yobu",
+    "meaning": "memanggil",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>ぶ",
+        "romaji": "yobu",
+        "desc": "Bentuk dasar.",
+        "example": "呼ぶ (memanggil)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>びます",
+        "romaji": "yobimasu",
+        "desc": "Bentuk sopan.",
+        "example": "よびます (memanggil)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>んで",
+        "romaji": "yonde",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "よんで (memanggil)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>んだ",
+        "romaji": "yonda",
+        "desc": "Menyatakan lampau.",
+        "example": "よんだ (memanggil)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>ばない",
+        "romaji": "yobanai",
+        "desc": "Bentuk negatif.",
+        "example": "よばない (memanggil)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>べる",
+        "romaji": "yoberu",
+        "desc": "Bisa melakukan.",
+        "example": "よべる (memanggil)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>ぼう",
+        "romaji": "yobou",
+        "desc": "Ayo melakukan.",
+        "example": "よぼう (memanggil)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>べば",
+        "romaji": "yobeba",
+        "desc": "Jika melakukan.",
+        "example": "よべば (memanggil)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>べ",
+        "romaji": "yobe",
+        "desc": "Perintah tegas.",
+        "example": "よべ (memanggil)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>ばれる",
+        "romaji": "yobareru",
+        "desc": "Dikenai tindakan.",
+        "example": "よばれる (memanggil)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>呼<rt>よ</rt></ruby>ばせる",
+        "romaji": "yobaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "よばせる (memanggil)"
+      }
+    ]
+  },
+  {
+    "kanji": "読む",
+    "kana": "よむ",
+    "romaji": "yomu",
+    "meaning": "membaca",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>む",
+        "romaji": "yomu",
+        "desc": "Bentuk dasar.",
+        "example": "読む (membaca)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>みます",
+        "romaji": "yomimasu",
+        "desc": "Bentuk sopan.",
+        "example": "よみます (membaca)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>んで",
+        "romaji": "yonde",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "よんで (membaca)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>んだ",
+        "romaji": "yonda",
+        "desc": "Menyatakan lampau.",
+        "example": "よんだ (membaca)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>まない",
+        "romaji": "yomanai",
+        "desc": "Bentuk negatif.",
+        "example": "よまない (membaca)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>める",
+        "romaji": "yomeru",
+        "desc": "Bisa melakukan.",
+        "example": "よめる (membaca)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>もう",
+        "romaji": "yomou",
+        "desc": "Ayo melakukan.",
+        "example": "よもう (membaca)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>めば",
+        "romaji": "yomeba",
+        "desc": "Jika melakukan.",
+        "example": "よめば (membaca)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>め",
+        "romaji": "yome",
+        "desc": "Perintah tegas.",
+        "example": "よめ (membaca)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>まれる",
+        "romaji": "yomareru",
+        "desc": "Dikenai tindakan.",
+        "example": "よまれる (membaca)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>読<rt>よ</rt></ruby>ませる",
+        "romaji": "yomaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "よませる (membaca)"
+      }
+    ]
+  },
+  {
+    "kanji": "飲む",
+    "kana": "のむ",
+    "romaji": "nomu",
+    "meaning": "minum",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>む",
+        "romaji": "nomu",
+        "desc": "Bentuk dasar.",
+        "example": "飲む (minum)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>みます",
+        "romaji": "nomimasu",
+        "desc": "Bentuk sopan.",
+        "example": "のみます (minum)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>んで",
+        "romaji": "nonde",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "のんで (minum)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>んだ",
+        "romaji": "nonda",
+        "desc": "Menyatakan lampau.",
+        "example": "のんだ (minum)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>まない",
+        "romaji": "nomanai",
+        "desc": "Bentuk negatif.",
+        "example": "のまない (minum)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>める",
+        "romaji": "nomeru",
+        "desc": "Bisa melakukan.",
+        "example": "のめる (minum)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>もう",
+        "romaji": "nomou",
+        "desc": "Ayo melakukan.",
+        "example": "のもう (minum)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>めば",
+        "romaji": "nomeba",
+        "desc": "Jika melakukan.",
+        "example": "のめば (minum)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>め",
+        "romaji": "nome",
+        "desc": "Perintah tegas.",
+        "example": "のめ (minum)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>まれる",
+        "romaji": "nomareru",
+        "desc": "Dikenai tindakan.",
+        "example": "のまれる (minum)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>飲<rt>の</rt></ruby>ませる",
+        "romaji": "nomaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "のませる (minum)"
+      }
+    ]
+  },
+  {
+    "kanji": "休む",
+    "kana": "やすむ",
+    "romaji": "yasumu",
+    "meaning": "beristirahat",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>む",
+        "romaji": "yasumu",
+        "desc": "Bentuk dasar.",
+        "example": "休む (beristirahat)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>みます",
+        "romaji": "yasumimasu",
+        "desc": "Bentuk sopan.",
+        "example": "やすみます (beristirahat)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>んで",
+        "romaji": "yasunde",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "やすんで (beristirahat)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>んだ",
+        "romaji": "yasunda",
+        "desc": "Menyatakan lampau.",
+        "example": "やすんだ (beristirahat)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>まない",
+        "romaji": "yasumanai",
+        "desc": "Bentuk negatif.",
+        "example": "やすまない (beristirahat)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>める",
+        "romaji": "yasumeru",
+        "desc": "Bisa melakukan.",
+        "example": "やすめる (beristirahat)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>もう",
+        "romaji": "yasumou",
+        "desc": "Ayo melakukan.",
+        "example": "やすもう (beristirahat)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>めば",
+        "romaji": "yasumeba",
+        "desc": "Jika melakukan.",
+        "example": "やすめば (beristirahat)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>め",
+        "romaji": "yasume",
+        "desc": "Perintah tegas.",
+        "example": "やすめ (beristirahat)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>まれる",
+        "romaji": "yasumareru",
+        "desc": "Dikenai tindakan.",
+        "example": "やすまれる (beristirahat)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>休<rt>やす</rt></ruby>ませる",
+        "romaji": "yasumaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "やすませる (beristirahat)"
+      }
+    ]
+  },
+  {
+    "kanji": "帰る",
+    "kana": "かえる",
+    "romaji": "kaeru",
+    "meaning": "pulang",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>る",
+        "romaji": "kaeru",
+        "desc": "Bentuk dasar.",
+        "example": "帰る (pulang)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>ります",
+        "romaji": "kaerimasu",
+        "desc": "Bentuk sopan.",
+        "example": "かえります (pulang)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>って",
+        "romaji": "kaette",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "かえって (pulang)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>った",
+        "romaji": "kaetta",
+        "desc": "Menyatakan lampau.",
+        "example": "かえった (pulang)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>らない",
+        "romaji": "kaeranai",
+        "desc": "Bentuk negatif.",
+        "example": "かえらない (pulang)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>れる",
+        "romaji": "kaereru",
+        "desc": "Bisa melakukan.",
+        "example": "かえれる (pulang)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>ろう",
+        "romaji": "kaerou",
+        "desc": "Ayo melakukan.",
+        "example": "かえろう (pulang)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>れば",
+        "romaji": "kaereba",
+        "desc": "Jika melakukan.",
+        "example": "かえれば (pulang)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>れ",
+        "romaji": "kaere",
+        "desc": "Perintah tegas.",
+        "example": "かえれ (pulang)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>られる",
+        "romaji": "kaerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "かえられる (pulang)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>帰<rt>かえ</rt></ruby>らせる",
+        "romaji": "kaeraseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "かえらせる (pulang)"
+      }
+    ]
+  },
+  {
+    "kanji": "入る",
+    "kana": "はいる",
+    "romaji": "hairu",
+    "meaning": "masuk",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>る",
+        "romaji": "hairu",
+        "desc": "Bentuk dasar.",
+        "example": "入る (masuk)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>ります",
+        "romaji": "hairimasu",
+        "desc": "Bentuk sopan.",
+        "example": "はいります (masuk)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>って",
+        "romaji": "haitte",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "はいって (masuk)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>った",
+        "romaji": "haitta",
+        "desc": "Menyatakan lampau.",
+        "example": "はいった (masuk)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>らない",
+        "romaji": "hairanai",
+        "desc": "Bentuk negatif.",
+        "example": "はいらない (masuk)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>れる",
+        "romaji": "haireru",
+        "desc": "Bisa melakukan.",
+        "example": "はいれる (masuk)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>ろう",
+        "romaji": "hairou",
+        "desc": "Ayo melakukan.",
+        "example": "はいろう (masuk)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>れば",
+        "romaji": "haireba",
+        "desc": "Jika melakukan.",
+        "example": "はいれば (masuk)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>れ",
+        "romaji": "haire",
+        "desc": "Perintah tegas.",
+        "example": "はいれ (masuk)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>られる",
+        "romaji": "hairareru",
+        "desc": "Dikenai tindakan.",
+        "example": "はいられる (masuk)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>入<rt>はい</rt></ruby>らせる",
+        "romaji": "hairaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "はいらせる (masuk)"
+      }
+    ]
+  },
+  {
+    "kanji": "買う",
+    "kana": "かう",
+    "romaji": "kau",
+    "meaning": "membeli",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>う",
+        "romaji": "kau",
+        "desc": "Bentuk dasar.",
+        "example": "買う (membeli)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>います",
+        "romaji": "kaimasu",
+        "desc": "Bentuk sopan.",
+        "example": "かいます (membeli)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>って",
+        "romaji": "katte",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "かって (membeli)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>った",
+        "romaji": "katta",
+        "desc": "Menyatakan lampau.",
+        "example": "かった (membeli)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>わない",
+        "romaji": "kawanai",
+        "desc": "Bentuk negatif.",
+        "example": "かわない (membeli)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>える",
+        "romaji": "kaeru",
+        "desc": "Bisa melakukan.",
+        "example": "かえる (membeli)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>おう",
+        "romaji": "kaou",
+        "desc": "Ayo melakukan.",
+        "example": "かおう (membeli)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>えば",
+        "romaji": "kaeba",
+        "desc": "Jika melakukan.",
+        "example": "かえば (membeli)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>え",
+        "romaji": "kae",
+        "desc": "Perintah tegas.",
+        "example": "かえ (membeli)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>われる",
+        "romaji": "kawareru",
+        "desc": "Dikenai tindakan.",
+        "example": "かわれる (membeli)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>買<rt>か</rt></ruby>わせる",
+        "romaji": "kawaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "かわせる (membeli)"
+      }
+    ]
+  },
+  {
+    "kanji": "会う",
+    "kana": "あう",
+    "romaji": "au",
+    "meaning": "bertemu",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>う",
+        "romaji": "au",
+        "desc": "Bentuk dasar.",
+        "example": "会う (bertemu)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>います",
+        "romaji": "aimasu",
+        "desc": "Bentuk sopan.",
+        "example": "あいます (bertemu)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>って",
+        "romaji": "atte",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "あって (bertemu)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>った",
+        "romaji": "atta",
+        "desc": "Menyatakan lampau.",
+        "example": "あった (bertemu)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>わない",
+        "romaji": "awanai",
+        "desc": "Bentuk negatif.",
+        "example": "あわない (bertemu)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>える",
+        "romaji": "aeru",
+        "desc": "Bisa melakukan.",
+        "example": "あえる (bertemu)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>おう",
+        "romaji": "aou",
+        "desc": "Ayo melakukan.",
+        "example": "あおう (bertemu)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>えば",
+        "romaji": "aeba",
+        "desc": "Jika melakukan.",
+        "example": "あえば (bertemu)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>え",
+        "romaji": "ae",
+        "desc": "Perintah tegas.",
+        "example": "あえ (bertemu)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>われる",
+        "romaji": "awareru",
+        "desc": "Dikenai tindakan.",
+        "example": "あわれる (bertemu)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>会<rt>あ</rt></ruby>わせる",
+        "romaji": "awaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "あわせる (bertemu)"
+      }
+    ]
+  },
+  {
+    "kanji": "洗う",
+    "kana": "あらう",
+    "romaji": "arau",
+    "meaning": "mencuci",
+    "type": "Godan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>う",
+        "romaji": "arau",
+        "desc": "Bentuk dasar.",
+        "example": "洗う (mencuci)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>います",
+        "romaji": "araimasu",
+        "desc": "Bentuk sopan.",
+        "example": "あらいます (mencuci)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>って",
+        "romaji": "aratte",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "あらって (mencuci)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>った",
+        "romaji": "aratta",
+        "desc": "Menyatakan lampau.",
+        "example": "あらった (mencuci)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>わない",
+        "romaji": "arawanai",
+        "desc": "Bentuk negatif.",
+        "example": "あらわない (mencuci)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>える",
+        "romaji": "araeru",
+        "desc": "Bisa melakukan.",
+        "example": "あらえる (mencuci)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>おう",
+        "romaji": "araou",
+        "desc": "Ayo melakukan.",
+        "example": "あらおう (mencuci)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>えば",
+        "romaji": "araeba",
+        "desc": "Jika melakukan.",
+        "example": "あらえば (mencuci)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>え",
+        "romaji": "arae",
+        "desc": "Perintah tegas.",
+        "example": "あらえ (mencuci)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>われる",
+        "romaji": "arawareru",
+        "desc": "Dikenai tindakan.",
+        "example": "あらわれる (mencuci)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>洗<rt>あら</rt></ruby>わせる",
+        "romaji": "arawaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "あらわせる (mencuci)"
+      }
+    ]
+  },
+  {
+    "kanji": "食べる",
+    "kana": "たべる",
+    "romaji": "taberu",
+    "meaning": "makan",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>る",
+        "romaji": "taberu",
+        "desc": "Bentuk dasar.",
+        "example": "食べる (makan)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>ます",
+        "romaji": "tabemasu",
+        "desc": "Bentuk sopan.",
+        "example": "たべます (makan)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>て",
+        "romaji": "tabete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "たべて (makan)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>た",
+        "romaji": "tabeta",
+        "desc": "Menyatakan lampau.",
+        "example": "たべた (makan)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>ない",
+        "romaji": "tabenai",
+        "desc": "Bentuk negatif.",
+        "example": "たべない (makan)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>られる",
+        "romaji": "taberareru",
+        "desc": "Bisa melakukan.",
+        "example": "たべられる (makan)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>よう",
+        "romaji": "tabeyou",
+        "desc": "Ayo melakukan.",
+        "example": "たべよう (makan)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>れば",
+        "romaji": "tabereba",
+        "desc": "Jika melakukan.",
+        "example": "たべれば (makan)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>ろ",
+        "romaji": "tabero",
+        "desc": "Perintah tegas.",
+        "example": "たべろ (makan)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>られる",
+        "romaji": "taberareru",
+        "desc": "Dikenai tindakan.",
+        "example": "たべられる (makan)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>食べ<rt>たべ</rt></ruby>させる",
+        "romaji": "tabesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "たべさせる (makan)"
+      }
+    ]
+  },
+  {
+    "kanji": "見る",
+    "kana": "みる",
+    "romaji": "miru",
+    "meaning": "melihat",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>る",
+        "romaji": "miru",
+        "desc": "Bentuk dasar.",
+        "example": "見る (melihat)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>ます",
+        "romaji": "mimasu",
+        "desc": "Bentuk sopan.",
+        "example": "みます (melihat)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>て",
+        "romaji": "mite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "みて (melihat)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>た",
+        "romaji": "mita",
+        "desc": "Menyatakan lampau.",
+        "example": "みた (melihat)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>ない",
+        "romaji": "minai",
+        "desc": "Bentuk negatif.",
+        "example": "みない (melihat)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>られる",
+        "romaji": "mirareru",
+        "desc": "Bisa melakukan.",
+        "example": "みられる (melihat)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>よう",
+        "romaji": "miyou",
+        "desc": "Ayo melakukan.",
+        "example": "みよう (melihat)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>れば",
+        "romaji": "mireba",
+        "desc": "Jika melakukan.",
+        "example": "みれば (melihat)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>ろ",
+        "romaji": "miro",
+        "desc": "Perintah tegas.",
+        "example": "みろ (melihat)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>られる",
+        "romaji": "mirareru",
+        "desc": "Dikenai tindakan.",
+        "example": "みられる (melihat)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>見<rt>み</rt></ruby>させる",
+        "romaji": "misaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "みさせる (melihat)"
+      }
+    ]
+  },
+  {
+    "kanji": "起きる",
+    "kana": "おきる",
+    "romaji": "okiru",
+    "meaning": "bangun",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>る",
+        "romaji": "okiru",
+        "desc": "Bentuk dasar.",
+        "example": "起きる (bangun)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>ます",
+        "romaji": "okimasu",
+        "desc": "Bentuk sopan.",
+        "example": "おきます (bangun)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>て",
+        "romaji": "okite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "おきて (bangun)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>た",
+        "romaji": "okita",
+        "desc": "Menyatakan lampau.",
+        "example": "おきた (bangun)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>ない",
+        "romaji": "okinai",
+        "desc": "Bentuk negatif.",
+        "example": "おきない (bangun)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>られる",
+        "romaji": "okirareru",
+        "desc": "Bisa melakukan.",
+        "example": "おきられる (bangun)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>よう",
+        "romaji": "okiyou",
+        "desc": "Ayo melakukan.",
+        "example": "おきよう (bangun)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>れば",
+        "romaji": "okireba",
+        "desc": "Jika melakukan.",
+        "example": "おきれば (bangun)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>ろ",
+        "romaji": "okiro",
+        "desc": "Perintah tegas.",
+        "example": "おきろ (bangun)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>られる",
+        "romaji": "okirareru",
+        "desc": "Dikenai tindakan.",
+        "example": "おきられる (bangun)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>起き<rt>おき</rt></ruby>させる",
+        "romaji": "okisaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "おきさせる (bangun)"
+      }
+    ]
+  },
+  {
+    "kanji": "寝る",
+    "kana": "ねる",
+    "romaji": "neru",
+    "meaning": "tidur",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>る",
+        "romaji": "neru",
+        "desc": "Bentuk dasar.",
+        "example": "寝る (tidur)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>ます",
+        "romaji": "nemasu",
+        "desc": "Bentuk sopan.",
+        "example": "ねます (tidur)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>て",
+        "romaji": "nete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "ねて (tidur)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>た",
+        "romaji": "neta",
+        "desc": "Menyatakan lampau.",
+        "example": "ねた (tidur)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>ない",
+        "romaji": "nenai",
+        "desc": "Bentuk negatif.",
+        "example": "ねない (tidur)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>られる",
+        "romaji": "nerareru",
+        "desc": "Bisa melakukan.",
+        "example": "ねられる (tidur)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>よう",
+        "romaji": "neyou",
+        "desc": "Ayo melakukan.",
+        "example": "ねよう (tidur)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>れば",
+        "romaji": "nereba",
+        "desc": "Jika melakukan.",
+        "example": "ねれば (tidur)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>ろ",
+        "romaji": "nero",
+        "desc": "Perintah tegas.",
+        "example": "ねろ (tidur)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>られる",
+        "romaji": "nerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "ねられる (tidur)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>寝<rt>ね</rt></ruby>させる",
+        "romaji": "nesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "ねさせる (tidur)"
+      }
+    ]
+  },
+  {
+    "kanji": "着る",
+    "kana": "きる",
+    "romaji": "kiru",
+    "meaning": "memakai",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>る",
+        "romaji": "kiru",
+        "desc": "Bentuk dasar.",
+        "example": "着る (memakai)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>ます",
+        "romaji": "kimasu",
+        "desc": "Bentuk sopan.",
+        "example": "きます (memakai)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>て",
+        "romaji": "kite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "きて (memakai)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>た",
+        "romaji": "kita",
+        "desc": "Menyatakan lampau.",
+        "example": "きた (memakai)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>ない",
+        "romaji": "kinai",
+        "desc": "Bentuk negatif.",
+        "example": "きない (memakai)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>られる",
+        "romaji": "kirareru",
+        "desc": "Bisa melakukan.",
+        "example": "きられる (memakai)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>よう",
+        "romaji": "kiyou",
+        "desc": "Ayo melakukan.",
+        "example": "きよう (memakai)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>れば",
+        "romaji": "kireba",
+        "desc": "Jika melakukan.",
+        "example": "きれば (memakai)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>ろ",
+        "romaji": "kiro",
+        "desc": "Perintah tegas.",
+        "example": "きろ (memakai)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>られる",
+        "romaji": "kirareru",
+        "desc": "Dikenai tindakan.",
+        "example": "きられる (memakai)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>着<rt>き</rt></ruby>させる",
+        "romaji": "kisaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "きさせる (memakai)"
+      }
+    ]
+  },
+  {
+    "kanji": "教える",
+    "kana": "おしえる",
+    "romaji": "oshieru",
+    "meaning": "mengajar",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>る",
+        "romaji": "oshieru",
+        "desc": "Bentuk dasar.",
+        "example": "教える (mengajar)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>ます",
+        "romaji": "oshiemasu",
+        "desc": "Bentuk sopan.",
+        "example": "おしえます (mengajar)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>て",
+        "romaji": "oshiete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "おしえて (mengajar)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>た",
+        "romaji": "oshieta",
+        "desc": "Menyatakan lampau.",
+        "example": "おしえた (mengajar)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>ない",
+        "romaji": "oshienai",
+        "desc": "Bentuk negatif.",
+        "example": "おしえない (mengajar)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>られる",
+        "romaji": "oshierareru",
+        "desc": "Bisa melakukan.",
+        "example": "おしえられる (mengajar)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>よう",
+        "romaji": "oshieyou",
+        "desc": "Ayo melakukan.",
+        "example": "おしえよう (mengajar)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>れば",
+        "romaji": "oshiereba",
+        "desc": "Jika melakukan.",
+        "example": "おしえれば (mengajar)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>ろ",
+        "romaji": "oshiero",
+        "desc": "Perintah tegas.",
+        "example": "おしえろ (mengajar)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>られる",
+        "romaji": "oshierareru",
+        "desc": "Dikenai tindakan.",
+        "example": "おしえられる (mengajar)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>教え<rt>おしえ</rt></ruby>させる",
+        "romaji": "oshiesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "おしえさせる (mengajar)"
+      }
+    ]
+  },
+  {
+    "kanji": "覚える",
+    "kana": "おぼえる",
+    "romaji": "oboeru",
+    "meaning": "mengingat",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>る",
+        "romaji": "oboeru",
+        "desc": "Bentuk dasar.",
+        "example": "覚える (mengingat)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>ます",
+        "romaji": "oboemasu",
+        "desc": "Bentuk sopan.",
+        "example": "おぼえます (mengingat)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>て",
+        "romaji": "oboete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "おぼえて (mengingat)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>た",
+        "romaji": "oboeta",
+        "desc": "Menyatakan lampau.",
+        "example": "おぼえた (mengingat)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>ない",
+        "romaji": "oboenai",
+        "desc": "Bentuk negatif.",
+        "example": "おぼえない (mengingat)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>られる",
+        "romaji": "oboerareru",
+        "desc": "Bisa melakukan.",
+        "example": "おぼえられる (mengingat)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>よう",
+        "romaji": "oboeyou",
+        "desc": "Ayo melakukan.",
+        "example": "おぼえよう (mengingat)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>れば",
+        "romaji": "oboereba",
+        "desc": "Jika melakukan.",
+        "example": "おぼえれば (mengingat)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>ろ",
+        "romaji": "oboero",
+        "desc": "Perintah tegas.",
+        "example": "おぼえろ (mengingat)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>られる",
+        "romaji": "oboerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "おぼえられる (mengingat)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>覚え<rt>おぼえ</rt></ruby>させる",
+        "romaji": "oboesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "おぼえさせる (mengingat)"
+      }
+    ]
+  },
+  {
+    "kanji": "忘れる",
+    "kana": "わすれる",
+    "romaji": "wasureru",
+    "meaning": "lupa",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>る",
+        "romaji": "wasureru",
+        "desc": "Bentuk dasar.",
+        "example": "忘れる (lupa)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>ます",
+        "romaji": "wasuremasu",
+        "desc": "Bentuk sopan.",
+        "example": "わすれます (lupa)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>て",
+        "romaji": "wasurete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "わすれて (lupa)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>た",
+        "romaji": "wasureta",
+        "desc": "Menyatakan lampau.",
+        "example": "わすれた (lupa)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>ない",
+        "romaji": "wasurenai",
+        "desc": "Bentuk negatif.",
+        "example": "わすれない (lupa)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>られる",
+        "romaji": "wasurerareru",
+        "desc": "Bisa melakukan.",
+        "example": "わすれられる (lupa)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>よう",
+        "romaji": "wasureyou",
+        "desc": "Ayo melakukan.",
+        "example": "わすれよう (lupa)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>れば",
+        "romaji": "wasurereba",
+        "desc": "Jika melakukan.",
+        "example": "わすれれば (lupa)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>ろ",
+        "romaji": "wasurero",
+        "desc": "Perintah tegas.",
+        "example": "わすれろ (lupa)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>られる",
+        "romaji": "wasurerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "わすれられる (lupa)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>忘れ<rt>わすれ</rt></ruby>させる",
+        "romaji": "wasuresaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "わすれさせる (lupa)"
+      }
+    ]
+  },
+  {
+    "kanji": "開ける",
+    "kana": "あける",
+    "romaji": "akeru",
+    "meaning": "membuka",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>る",
+        "romaji": "akeru",
+        "desc": "Bentuk dasar.",
+        "example": "開ける (membuka)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>ます",
+        "romaji": "akemasu",
+        "desc": "Bentuk sopan.",
+        "example": "あけます (membuka)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>て",
+        "romaji": "akete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "あけて (membuka)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>た",
+        "romaji": "aketa",
+        "desc": "Menyatakan lampau.",
+        "example": "あけた (membuka)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>ない",
+        "romaji": "akenai",
+        "desc": "Bentuk negatif.",
+        "example": "あけない (membuka)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>られる",
+        "romaji": "akerareru",
+        "desc": "Bisa melakukan.",
+        "example": "あけられる (membuka)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>よう",
+        "romaji": "akeyou",
+        "desc": "Ayo melakukan.",
+        "example": "あけよう (membuka)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>れば",
+        "romaji": "akereba",
+        "desc": "Jika melakukan.",
+        "example": "あければ (membuka)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>ろ",
+        "romaji": "akero",
+        "desc": "Perintah tegas.",
+        "example": "あけろ (membuka)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>られる",
+        "romaji": "akerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "あけられる (membuka)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>開け<rt>あけ</rt></ruby>させる",
+        "romaji": "akesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "あけさせる (membuka)"
+      }
+    ]
+  },
+  {
+    "kanji": "閉める",
+    "kana": "しめる",
+    "romaji": "shimeru",
+    "meaning": "menutup",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>る",
+        "romaji": "shimeru",
+        "desc": "Bentuk dasar.",
+        "example": "閉める (menutup)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>ます",
+        "romaji": "shimemasu",
+        "desc": "Bentuk sopan.",
+        "example": "しめます (menutup)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>て",
+        "romaji": "shimete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "しめて (menutup)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>た",
+        "romaji": "shimeta",
+        "desc": "Menyatakan lampau.",
+        "example": "しめた (menutup)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>ない",
+        "romaji": "shimenai",
+        "desc": "Bentuk negatif.",
+        "example": "しめない (menutup)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>られる",
+        "romaji": "shimerareru",
+        "desc": "Bisa melakukan.",
+        "example": "しめられる (menutup)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>よう",
+        "romaji": "shimeyou",
+        "desc": "Ayo melakukan.",
+        "example": "しめよう (menutup)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>れば",
+        "romaji": "shimereba",
+        "desc": "Jika melakukan.",
+        "example": "しめれば (menutup)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>ろ",
+        "romaji": "shimero",
+        "desc": "Perintah tegas.",
+        "example": "しめろ (menutup)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>られる",
+        "romaji": "shimerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "しめられる (menutup)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>閉め<rt>しめ</rt></ruby>させる",
+        "romaji": "shimesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "しめさせる (menutup)"
+      }
+    ]
+  },
+  {
+    "kanji": "借りる",
+    "kana": "かりる",
+    "romaji": "kariru",
+    "meaning": "meminjam",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>る",
+        "romaji": "kariru",
+        "desc": "Bentuk dasar.",
+        "example": "借りる (meminjam)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>ます",
+        "romaji": "karimasu",
+        "desc": "Bentuk sopan.",
+        "example": "かります (meminjam)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>て",
+        "romaji": "karite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "かりて (meminjam)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>た",
+        "romaji": "karita",
+        "desc": "Menyatakan lampau.",
+        "example": "かりた (meminjam)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>ない",
+        "romaji": "karinai",
+        "desc": "Bentuk negatif.",
+        "example": "かりない (meminjam)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>られる",
+        "romaji": "karirareru",
+        "desc": "Bisa melakukan.",
+        "example": "かりられる (meminjam)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>よう",
+        "romaji": "kariyou",
+        "desc": "Ayo melakukan.",
+        "example": "かりよう (meminjam)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>れば",
+        "romaji": "karireba",
+        "desc": "Jika melakukan.",
+        "example": "かりれば (meminjam)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>ろ",
+        "romaji": "kariro",
+        "desc": "Perintah tegas.",
+        "example": "かりろ (meminjam)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>られる",
+        "romaji": "karirareru",
+        "desc": "Dikenai tindakan.",
+        "example": "かりられる (meminjam)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>借り<rt>かり</rt></ruby>させる",
+        "romaji": "karisaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "かりさせる (meminjam)"
+      }
+    ]
+  },
+  {
+    "kanji": "出かける",
+    "kana": "でかける",
+    "romaji": "dekakeru",
+    "meaning": "keluar",
+    "type": "Ichidan",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>る",
+        "romaji": "dekakeru",
+        "desc": "Bentuk dasar.",
+        "example": "出かける (keluar)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>ます",
+        "romaji": "dekakemasu",
+        "desc": "Bentuk sopan.",
+        "example": "でかけます (keluar)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>て",
+        "romaji": "dekakete",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "でかけて (keluar)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>た",
+        "romaji": "dekaketa",
+        "desc": "Menyatakan lampau.",
+        "example": "でかけた (keluar)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>ない",
+        "romaji": "dekakenai",
+        "desc": "Bentuk negatif.",
+        "example": "でかけない (keluar)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>られる",
+        "romaji": "dekakerareru",
+        "desc": "Bisa melakukan.",
+        "example": "でかけられる (keluar)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>よう",
+        "romaji": "dekakeyou",
+        "desc": "Ayo melakukan.",
+        "example": "でかけよう (keluar)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>れば",
+        "romaji": "dekakereba",
+        "desc": "Jika melakukan.",
+        "example": "でかければ (keluar)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>ろ",
+        "romaji": "dekakero",
+        "desc": "Perintah tegas.",
+        "example": "でかけろ (keluar)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>られる",
+        "romaji": "dekakerareru",
+        "desc": "Dikenai tindakan.",
+        "example": "でかけられる (keluar)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "<ruby>出かけ<rt>でかけ</rt></ruby>させる",
+        "romaji": "dekakesaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "でかけさせる (keluar)"
+      }
+    ]
+  },
+  {
+    "kanji": "する",
+    "kana": "する",
+    "romaji": "suru",
+    "meaning": "melakukan",
+    "type": "Irregular",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "する",
+        "romaji": "suru",
+        "desc": "Bentuk dasar.",
+        "example": "する (melakukan)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "します",
+        "romaji": "shimasu",
+        "desc": "Bentuk sopan.",
+        "example": "します (melakukan)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "して",
+        "romaji": "shite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "して (melakukan)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "した",
+        "romaji": "shita",
+        "desc": "Menyatakan lampau.",
+        "example": "した (melakukan)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "しない",
+        "romaji": "shinai",
+        "desc": "Bentuk negatif.",
+        "example": "しない (melakukan)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "できる",
+        "romaji": "dekiru",
+        "desc": "Bisa melakukan.",
+        "example": "できる (melakukan)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "しよう",
+        "romaji": "shiyou",
+        "desc": "Ayo melakukan.",
+        "example": "しよう (melakukan)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "すれば",
+        "romaji": "sureba",
+        "desc": "Jika melakukan.",
+        "example": "すれば (melakukan)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "しろ",
+        "romaji": "shiro",
+        "desc": "Perintah tegas.",
+        "example": "しろ (melakukan)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "される",
+        "romaji": "sareru",
+        "desc": "Dikenai tindakan.",
+        "example": "される (melakukan)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "させる",
+        "romaji": "saseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "させる (melakukan)"
+      }
+    ]
+  },
+  {
+    "kanji": "来る",
+    "kana": "くる",
+    "romaji": "kuru",
+    "meaning": "datang",
+    "type": "Irregular",
+    "forms": [
+      {
+        "id": "dict",
+        "name": "Bentuk Kamus",
+        "jpName": "辞書形",
+        "ruby": "<ruby>来<rt>く</rt></ruby>る",
+        "romaji": "kuru",
+        "desc": "Bentuk dasar.",
+        "example": "来る (datang)"
+      },
+      {
+        "id": "masu",
+        "name": "Bentuk Masu",
+        "jpName": "ます形",
+        "ruby": "きます",
+        "romaji": "kimasu",
+        "desc": "Bentuk sopan.",
+        "example": "きます (datang)"
+      },
+      {
+        "id": "te",
+        "name": "Bentuk Te",
+        "jpName": "て形",
+        "ruby": "きて",
+        "romaji": "kite",
+        "desc": "Untuk menyambung kalimat.",
+        "example": "きて (datang)"
+      },
+      {
+        "id": "ta",
+        "name": "Bentuk Lampau",
+        "jpName": "た形",
+        "ruby": "きた",
+        "romaji": "kita",
+        "desc": "Menyatakan lampau.",
+        "example": "きた (datang)"
+      },
+      {
+        "id": "nai",
+        "name": "Bentuk Negatif",
+        "jpName": "ない形",
+        "ruby": "こない",
+        "romaji": "konai",
+        "desc": "Bentuk negatif.",
+        "example": "こない (datang)"
+      },
+      {
+        "id": "potential",
+        "name": "Bentuk Potensial",
+        "jpName": "可能形",
+        "ruby": "こられる",
+        "romaji": "korareru",
+        "desc": "Bisa melakukan.",
+        "example": "こられる (datang)"
+      },
+      {
+        "id": "volitional",
+        "name": "Bentuk Volisional",
+        "jpName": "意向形",
+        "ruby": "こよう",
+        "romaji": "koyou",
+        "desc": "Ayo melakukan.",
+        "example": "こよう (datang)"
+      },
+      {
+        "id": "conditional",
+        "name": "Bentuk Kondisional",
+        "jpName": "条件形",
+        "ruby": "<ruby>来<rt>く</rt></ruby>れば",
+        "romaji": "kureba",
+        "desc": "Jika melakukan.",
+        "example": "くれば (datang)"
+      },
+      {
+        "id": "imperative",
+        "name": "Bentuk Perintah",
+        "jpName": "命令形",
+        "ruby": "こい",
+        "romaji": "koi",
+        "desc": "Perintah tegas.",
+        "example": "こい (datang)"
+      },
+      {
+        "id": "passive",
+        "name": "Bentuk Pasif",
+        "jpName": "受身形",
+        "ruby": "こられる",
+        "romaji": "korareru",
+        "desc": "Dikenai tindakan.",
+        "example": "こられる (datang)"
+      },
+      {
+        "id": "causative",
+        "name": "Bentuk Kausatif",
+        "jpName": "使役形",
+        "ruby": "こさせる",
+        "romaji": "kosaseru",
+        "desc": "Menyuruh melakukan.",
+        "example": "こさせる (datang)"
       }
     ]
   }
