@@ -35,6 +35,7 @@ jobs:
           app/gacha/page.tsx
           app/profil/page.tsx
           components/BottomNav.tsx
+          components/GachaBadgeArtwork.tsx
           components/ProfileAvatar.tsx
           components/Sidebar.tsx
           data/gacha-badges.ts
