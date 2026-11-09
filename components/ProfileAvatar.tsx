@@ -5,6 +5,7 @@ import {
 } from "../lib/profile-collections";
 import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../data/gacha-badges";
 import GachaBadgeArtwork from "./GachaBadgeArtwork";
+import GachaAuraPreview from "./GachaAuraPreview";
 import type { GachaEvolutionLevel } from "../lib/gacha";
 
 interface ProfileAvatarProps {
@@ -980,15 +981,19 @@ export default function ProfileAvatar({
           aria-label={`Badge terpasang: ${badge.name}`}
           className="absolute flex items-center justify-center select-none"
           style={{
-            width: badgeSize,
-            height: badgeSize,
+            width: badgeLevel > 1 ? Math.max(80, badgeSize + 24) : badgeSize,
+            height: badgeLevel > 1 ? Math.max(80, badgeSize + 24) : badgeSize,
             left: "50%",
             bottom: 0,
             transform: "translate(-50%, 50%)",
             zIndex: 20,
           }}
         >
-          <GachaBadgeArtwork badge={collectionBadge} level={badgeLevel} size={badgeSize} />
+          {badgeLevel > 1 ? (
+            <GachaAuraPreview badge={collectionBadge} level={badgeLevel} size={badgeSize} />
+          ) : (
+            <GachaBadgeArtwork badge={collectionBadge} level={1} size={badgeSize} />
+          )}
         </div>
       )}
     </div>
