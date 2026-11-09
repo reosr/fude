@@ -147,7 +147,7 @@ export default function GachaPage() {
     );
   });
 
-  const handleSummon = (count: 1 | 10) => {
+  const handleSummon = async (count: 1 | 10) => {
     if (busy) return;
     setBusy(true);
     setError("");
@@ -155,6 +155,9 @@ export default function GachaPage() {
     setLatestCompensations([]);
 
     try {
+      // Beri waktu untuk animasi gerbang sebelum hasil dibuka.
+      await new Promise<void>((resolve) => window.setTimeout(resolve, 650));
+
       const result = summonGacha(count, GACHA_BADGES);
 
       if (!result.ok) {
@@ -263,7 +266,7 @@ export default function GachaPage() {
           </div>
 
           <div className="relative flex min-h-[250px] flex-col items-center justify-center text-center">
-            <div className="relative mb-5 flex h-28 w-28 items-center justify-center rounded-full border border-[#E7C46A]/50 bg-[#B8860B]/10 shadow-[0_0_60px_rgba(184,134,11,0.18)]">
+            <div className={`relative mb-5 flex h-28 w-28 items-center justify-center rounded-full border border-[#E7C46A]/50 bg-[#B8860B]/10 shadow-[0_0_60px_rgba(184,134,11,0.18)] ${busy ? "fude-gacha-pulse" : ""}`}>
               <div className="absolute inset-2 rounded-full border border-dashed border-[#E7C46A]/40" />
               <Dices size={48} className="text-[#E7C46A]" />
               <Sparkles size={17} className="absolute -right-1 top-3 text-[#F6E6AE]" />
@@ -386,12 +389,13 @@ export default function GachaPage() {
           )}
           {latestResults.length > 0 && (
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
-            {latestResults.map((result) => {
+            {latestResults.map((result, index) => {
               const badge = GACHA_BADGES.find((item) => item.id === result.badgeId);
               return (
                 <div
                   key={result.id}
-                  className={`rounded-2xl border p-3 text-center shadow-lg ${RARITY_STYLES[result.rarity]} ${RARITY_GLOW[result.rarity]}`}
+                  className={`fude-gacha-reveal rounded-2xl border p-3 text-center shadow-lg ${RARITY_STYLES[result.rarity]} ${RARITY_GLOW[result.rarity]}`}
+                  style={{ animationDelay: `${index * 65}ms` }}
                 >
                   <div className="text-3xl">{badge?.icon ?? "✦"}</div>
                   <p className="mt-2 line-clamp-2 text-xs font-black">{result.badgeName}</p>
