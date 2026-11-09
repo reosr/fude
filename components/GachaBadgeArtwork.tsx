@@ -57,7 +57,7 @@ const RAY_SETS = [
 
 export default function GachaBadgeArtwork({
   badge,
-  level = 0,
+  level = 1,
   size = 76,
 }: {
   badge: GachaBadgeDefinition;
@@ -105,12 +105,12 @@ export default function GachaBadgeArtwork({
       {level >= 3 && (
         <circle cx="50" cy="50" r="48" fill="none" stroke={palette.glow} strokeWidth="1.4" strokeDasharray="1.5 2.5" />
       )}
-      {level >= 2 && (
+      {level >= 3 && (
         <circle cx="50" cy="50" r="44.5" fill="none" stroke={palette.light} strokeWidth="0.9" opacity="0.75" />
       )}
 
       <circle cx="50" cy="50" r="42" fill="#101313" stroke={palette.dark} strokeWidth="2.5" />
-      <circle cx="50" cy="50" r="39" fill={`url(#${gradientId})`} stroke={palette.light} strokeWidth={level >= 1 ? 3 : 2} />
+      <circle cx="50" cy="50" r="39" fill={`url(#${gradientId})`} stroke={palette.light} strokeWidth={level >= 3 ? 3 : 2} />
       <circle cx="50" cy="50" r="34.5" fill="none" stroke={palette.accent} strokeWidth="0.8" opacity="0.8" />
       <circle cx="50" cy="50" r="31.5" fill="none" stroke={palette.glow} strokeWidth="1" strokeDasharray={seed % 2 === 0 ? "2 3" : "5 2"} opacity="0.9" />
 
@@ -134,8 +134,8 @@ export default function GachaBadgeArtwork({
 
       {ornamentPoints.map(([x, y], index) => (
         <g key={index}>
-          <circle cx={x} cy={y} r={level >= 2 ? 3 : 2.2} fill={palette.light} stroke={palette.dark} strokeWidth="0.8" />
-          {level >= 1 && (
+          <circle cx={x} cy={y} r={level >= 3 ? 3 : 2.2} fill={palette.light} stroke={palette.dark} strokeWidth="0.8" />
+          {level >= 3 && (
             <path
               d={`M ${x} ${y - 5} L ${x + 1.4} ${y - 1.4} L ${x + 5} ${y} L ${x + 1.4} ${y + 1.4} L ${x} ${y + 5} L ${x - 1.4} ${y + 1.4} L ${x - 5} ${y} L ${x - 1.4} ${y - 1.4} Z`}
               fill="none"
@@ -147,16 +147,16 @@ export default function GachaBadgeArtwork({
         </g>
       ))}
 
-      <circle cx="50" cy="50" r="17.5" fill={palette.dark} stroke={palette.light} strokeWidth={level >= 1 ? 2 : 1.2} />
+      <circle cx="50" cy="50" r="17.5" fill={palette.dark} stroke={palette.light} strokeWidth={level >= 3 ? 2 : 1.2} />
       <circle cx="50" cy="50" r="13.5" fill={palette.base} fillOpacity="0.42" />
       <text x="50" y="57" textAnchor="middle" fontSize="21" style={{ userSelect: "none" }}>
         {badge.icon}
       </text>
 
-      {level >= 1 && (
+      {level >= 3 && (
         <path d="M50 3 L52.5 9.5 L59 12 L52.5 14.5 L50 21 L47.5 14.5 L41 12 L47.5 9.5 Z" fill={palette.light} stroke={palette.dark} strokeWidth="0.7" />
       )}
-      {level >= 2 && (
+      {level >= 3 && (
         <>
           <path d="M5 50 L11 47.5 L13.5 41 L16 47.5 L22 50 L16 52.5 L13.5 59 L11 52.5 Z" fill={palette.light} />
           <path d="M95 50 L89 47.5 L86.5 41 L84 47.5 L78 50 L84 52.5 L86.5 59 L89 52.5 Z" fill={palette.light} />
