@@ -102,6 +102,7 @@ export default function GachaPage() {
   const [showCatalogModal, setShowCatalogModal] = useState(false);
   const [catalogSearch, setCatalogSearch] = useState("");
   const [catalogRarity, setCatalogRarity] = useState<GachaRarity | "all">("all");
+  const [mochiPreviewLevel, setMochiPreviewLevel] = useState<1 | 2 | 3>(1);
 
   const refresh = useCallback(() => {
     setInventory(getGachaInventory());
@@ -301,6 +302,37 @@ export default function GachaPage() {
           </div>
         </div>
       </header>
+
+      <section className="overflow-hidden rounded-3xl border border-[#557A69]/35 bg-[radial-gradient(circle_at_50%_20%,rgba(67,125,100,0.2),transparent_55%),#1E1D1B] p-5 md:p-7">
+        <div className="flex flex-col gap-5 md:flex-row md:items-center">
+          <div className="flex min-w-0 flex-1 flex-col items-center justify-center rounded-2xl border border-white/5 bg-black/15 px-5 py-6">
+            <div className="mb-3 text-[10px] font-black tracking-[0.22em] text-[#B9D5B9]">MOCHI GUARDIAN · EVOLUTION PREVIEW</div>
+            <div className="flex min-h-[210px] items-center justify-center">
+              <GachaBadgeArtwork badge={GACHA_BADGES.find((item) => item.id === "bab-1")!} level={mochiPreviewLevel} size={190} />
+            </div>
+            <h2 className="mt-2 text-xl font-black text-[#F4EBDD]">Mochi Guardian</h2>
+            <p className="mt-1 text-xs text-[#B9C9B6]">{mochiPreviewLevel === 1 ? "Awakened Guardian" : mochiPreviewLevel === 2 ? "Blooming Guardian" : "Celestial Guardian"}</p>
+            <span className="mt-3 rounded-full border border-stone-300/30 bg-stone-400/10 px-3 py-1 text-[10px] font-black text-stone-200">COMMON · LEVEL {mochiPreviewLevel}</span>
+          </div>
+          <div className="flex-1">
+            <p className="text-xs font-black tracking-widest text-[#D6AD4F]">LIHAT PERKEMBANGANNYA</p>
+            <h3 className="mt-2 text-lg font-black text-[#F0E9D9]">Tiga tahap, satu identitas</h3>
+            <p className="mt-2 max-w-lg text-xs leading-6 text-[#A99C89]">Pilih level untuk membandingkan desain Mochi Guardian. Ini preview visual; tidak mengubah inventori atau membutuhkan salinan badge.</p>
+            <div className="mt-5 grid grid-cols-3 gap-2">
+              {([1, 2, 3] as const).map((level) => (
+                <button key={level} type="button" onClick={() => setMochiPreviewLevel(level)} aria-pressed={mochiPreviewLevel === level} className={`rounded-xl border px-3 py-3 text-left transition ${mochiPreviewLevel === level ? "border-[#D6AD4F]/70 bg-[#B8860B]/15 text-[#F4D98E] shadow-[0_0_22px_rgba(214,173,79,0.12)]" : "border-white/10 bg-black/15 text-[#A99C89] hover:border-white/20"}`}>
+                  <span className="block text-sm font-black">Level {level}</span>
+                  <span className="mt-1 block text-[9px]">{level === 1 ? "Awakened" : level === 2 ? "Blooming" : "Celestial"}</span>
+                </button>
+              ))}
+            </div>
+            <div className="mt-4 rounded-xl border border-white/5 bg-black/15 p-3">
+              <p className="text-xs font-bold text-[#E8DFC9]">{mochiPreviewLevel === 1 ? "Bentuk awal penjaga mochi" : mochiPreviewLevel === 2 ? "Ornamen dan siluet mulai mekar" : "Bentuk final dengan aura celestial"}</p>
+              <p className="mt-1 text-[10px] leading-5 text-[#A99C89]">{mochiPreviewLevel === 1 ? "Karakter mochi sederhana dengan daun kecil dan enamel hijau." : mochiPreviewLevel === 2 ? "Mahkota daun lebih besar, bingkai mekar, dan detail sakura tambahan." : "Bingkai berlapis, halo bercahaya, dan ornamen sakura yang lebih megah."}</p>
+            </div>
+          </div>
+        </div>
+      
 
       <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="relative overflow-hidden rounded-3xl border border-[#5E4930] bg-gradient-to-br from-[#30271C] via-[#211D19] to-[#171615] p-6 md:p-8">
