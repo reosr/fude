@@ -111,7 +111,7 @@ function calculateQuizScore(
     const questions = sections?.[section.id] || [];
     totalQuestions += questions.length;
 
-    questions.forEach((question: any, index: number) => {
+    questions.forEach((question, index) => {
       if (answers?.[section.id]?.[index] === question.answer) {
         totalCorrect++;
       }
@@ -231,7 +231,12 @@ export default function JLPTQuiz({
   // LOAD HASIL SEBELUMNYA
   // ==========================================
   useEffect(() => {
-    const saved = localStorage.getItem(storageKey);
+    let active = true;
+
+    queueMicrotask(() => {
+      if (!active) return;
+
+      const saved = localStorage.getItem(storageKey);
 
     if (saved) {
       try {
@@ -355,8 +360,13 @@ export default function JLPTQuiz({
 
     setLoadedStorageKey(storageKey);
 
-    // Sinkronkan koleksi setelah hasil lama selesai dimigrasikan.
-    syncNewCollectionUnlocks();
+      // Sinkronkan koleksi setelah hasil lama selesai dimigrasikan.
+      syncNewCollectionUnlocks();
+    });
+
+    return () => {
+      active = false;
+    };
   }, [storageKey, testSet, currentLevel, levelSetIds]);
 
   // ==========================================
