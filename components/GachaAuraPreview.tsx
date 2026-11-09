@@ -49,8 +49,8 @@ export default function GachaAuraPreview({
             </div>
           )}
           {badge.rarity === "legendary" && (
-            <div className="fude-legendary-flames" aria-hidden="true">
-              <span /><span /><span /><span /><span /><span />
+            <div className="fude-legendary-lightning" aria-hidden="true">
+              <span /><span /><span /><span />
             </div>
           )}
           <div className="fude-aura-flare fude-aura-flare-one" />
@@ -151,31 +151,27 @@ export default function GachaAuraPreview({
         .fude-mythic-rays span:nth-child(8) { transform: translate(-50%,-100%) rotate(90deg); }
         .fude-aura-mythic .fude-aura-flare { opacity: .76; filter: blur(7px); }
         .fude-aura-mythic .fude-aura-surge { opacity: .48; }
-        .fude-legendary-flames {
+        .fude-legendary-lightning {
           position: absolute;
-          z-index: 3;
-          inset: 0;
+          z-index: 4;
+          inset: -13% -7%;
           pointer-events: none;
-          filter: drop-shadow(0 0 7px #FF263F);
+          animation: legendary-orbit 4.8s linear infinite;
+          filter: drop-shadow(0 0 5px #FF263F) drop-shadow(0 0 12px rgba(255,38,63,.85));
         }
-        .fude-legendary-flames span {
+        .fude-legendary-lightning span {
           position: absolute;
-          bottom: 12%;
           width: 15%;
-          height: 54%;
-          border-radius: 80% 10% 65% 20%;
-          background: linear-gradient(to top, rgba(255,38,63,.05), rgba(255,89,107,.82) 48%, rgba(255,210,210,.88) 72%, transparent);
-          filter: blur(2px);
+          height: 37%;
+          background: linear-gradient(135deg, #FFF2F3 0%, #FFB0B9 20%, #FF334F 55%, rgba(255,38,63,.12) 100%);
+          clip-path: polygon(48% 0, 100% 0, 65% 38%, 91% 38%, 19% 100%, 38% 54%, 5% 54%);
           opacity: 0;
-          transform-origin: 50% 100%;
-          animation: legendary-flare 1.45s ease-in-out infinite;
+          animation: legendary-bolt 1.25s ease-in-out infinite;
         }
-        .fude-legendary-flames span:nth-child(1) { left: 7%; height: 42%; transform: rotate(-28deg); }
-        .fude-legendary-flames span:nth-child(2) { left: 20%; height: 62%; animation-delay: -.35s; transform: rotate(-17deg); }
-        .fude-legendary-flames span:nth-child(3) { left: 37%; height: 46%; animation-delay: -.8s; transform: rotate(-8deg); }
-        .fude-legendary-flames span:nth-child(4) { right: 29%; height: 64%; animation-delay: -.55s; transform: rotate(12deg); }
-        .fude-legendary-flames span:nth-child(5) { right: 14%; height: 49%; animation-delay: -1s; transform: rotate(20deg); }
-        .fude-legendary-flames span:nth-child(6) { right: 3%; height: 58%; animation-delay: -.2s; transform: rotate(31deg); }
+        .fude-legendary-lightning span:nth-child(1) { top: 1%; left: 34%; }
+        .fude-legendary-lightning span:nth-child(2) { top: 30%; right: 0; transform: rotate(90deg); animation-delay: -.32s; }
+        .fude-legendary-lightning span:nth-child(3) { bottom: 0; left: 48%; transform: rotate(180deg); animation-delay: -.64s; }
+        .fude-legendary-lightning span:nth-child(4) { top: 35%; left: 0; transform: rotate(-90deg); animation-delay: -.96s; }
         .fude-aura-legendary .fude-aura-flare { opacity: .9; filter: blur(6px); }
         .fude-aura-legendary .fude-aura-surge { opacity: .88; filter: blur(3px); }
         .fude-aura-legendary .fude-aura-particle { box-shadow: 0 0 12px 4px #FF263F; }
@@ -298,7 +294,7 @@ export default function GachaAuraPreview({
           45%, 60% { transform: scale(1.3) rotate(45deg); opacity: 1; }
         }
         @media (prefers-reduced-motion: reduce) {
-          .fude-aura-cloud, .fude-aura-flare, .fude-aura-surge, .fude-aura-shard, .fude-aura-particle, .fude-aura-glint, .fude-mythic-rays, .fude-legendary-flames span { animation: none; }
+          .fude-aura-cloud, .fude-aura-flare, .fude-aura-surge, .fude-aura-shard, .fude-aura-particle, .fude-aura-glint, .fude-mythic-rays, .fude-legendary-lightning, .fude-legendary-lightning span { animation: none; }
         }
       `}</style>
     </div>
