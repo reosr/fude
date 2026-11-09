@@ -17,7 +17,7 @@ function prepareStrokeAnimation(
   const delayCounts = new Map<number, number>();
   let maxDelay = 0;
 
-  // AnimCJK đôi khi chia một nét thành nhiều path nhưng đặt cùng thời điểm.
+  // AnimCJK kadang membagi satu goresan menjadi beberapa path dengan waktu mulai sama.
   // Tách các path trùng delay để chúng lần lượt được vẽ thay vì chồng lên nhau.
   const staggeredMarkup = source.replace(
     /style="--d:([\d.]+)s;"/g,
