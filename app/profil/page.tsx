@@ -633,7 +633,7 @@ export default function Profil() {
                 <span className="text-[10px] font-bold text-[#D8D1C5]">GACHA BADGES</span>
               </div>
               <p className="mt-2 text-2xl font-black text-[#EAE6DD]">
-                {gachaUniqueCount}/300
+                {gachaUniqueCount}/{GACHA_BADGES.length}
               </p>
               <p className="text-xs text-[#A3A099]">Badge unik</p>
               {gachaNewCount > 0 && (
