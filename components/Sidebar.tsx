@@ -31,6 +31,11 @@ import {
 } from "../lib/gamification";
 
 import {
+  GACHA_UPDATED_EVENT,
+  getGachaInventory,
+} from "../lib/gacha";
+
+import {
   COLLECTION_UPDATED_EVENT,
   initializeCollectionTracking,
   syncNewCollectionUnlocks,
@@ -57,6 +62,7 @@ export default function Sidebar() {
 
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
   const [tokens, setTokens] = useState(0);
+  const [newGachaCount, setNewGachaCount] = useState(0);
   const [levelInfo, setLevelInfo] = useState(() => getLevelInfo(0));
 
   const [unlockNotices, setUnlockNotices] = useState<
@@ -101,6 +107,10 @@ export default function Sidebar() {
       syncNewCollectionUnlocks();
     };
 
+    const refreshGacha = () => {
+      setNewGachaCount(getGachaInventory().newBadgeIds.length);
+    };
+
     const handleCollectionUpdate = (event: Event) => {
       const detail = (
         event as CustomEvent<CollectionUnlockNotice[]>
@@ -131,7 +141,9 @@ export default function Sidebar() {
     window.addEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
     window.addEventListener(XP_UPDATED_EVENT, refreshXp);
     window.addEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
+    window.addEventListener(GACHA_UPDATED_EVENT, refreshGacha);
     window.addEventListener("storage", refreshTokens);
+    window.addEventListener("storage", refreshGacha);
     window.addEventListener("storage", refreshProfile);
     window.addEventListener("storage", refreshXp);
 
@@ -145,6 +157,7 @@ export default function Sidebar() {
     refreshProfile();
     refreshXp();
     refreshTokens();
+    refreshGacha();
 
     return () => {
       active = false;
@@ -156,7 +169,9 @@ export default function Sidebar() {
       window.removeEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
       window.removeEventListener(XP_UPDATED_EVENT, refreshXp);
       window.removeEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
+      window.removeEventListener(GACHA_UPDATED_EVENT, refreshGacha);
       window.removeEventListener("storage", refreshTokens);
+      window.removeEventListener("storage", refreshGacha);
       window.removeEventListener("storage", refreshProfile);
       window.removeEventListener("storage", refreshXp);
 
@@ -212,7 +227,12 @@ export default function Sidebar() {
                 }`}
               >
                 <Icon size={18} strokeWidth={isActive ? 2.5 : 2} />
-                <span className="text-sm font-medium">{tab.label}</span>
+                <span className="flex-1 text-sm font-medium">{tab.label}</span>
+                {tab.href === "/gacha" && newGachaCount > 0 && (
+                  <span className="rounded-full bg-[#C93438] px-2 py-0.5 text-[9px] font-black text-white">
+                    NEW {newGachaCount > 99 ? "99+" : newGachaCount}
+                  </span>
+                )}
               </Link>
             );
           })}
