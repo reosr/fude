@@ -46,7 +46,7 @@ const getTier = (chapter: number): BadgeTier => {
 };
 
 // =====================================================
-// 50 BADGE BERDASARKAN BAB
+// 55 IDENTITAS BADGE LAMA YANG DIPERTAHANKAN DALAM KOLEKSI GACHA
 // =====================================================
 
 const CHAPTER_BADGE_DATA = [
@@ -178,7 +178,7 @@ export const SPECIAL_BADGES: ProfileBadge[] = [
   },
 ];
 
-export const ALL_BADGES: ProfileBadge[] = [
+export const LEGACY_BADGE_SEEDS: ProfileBadge[] = [
   ...CHAPTER_BADGES,
   ...SPECIAL_BADGES,
 ];
