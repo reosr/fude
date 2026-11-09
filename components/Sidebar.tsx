@@ -31,6 +31,7 @@ import {
 import {
   COLLECTION_UPDATED_EVENT,
   initializeCollectionTracking,
+  syncNewCollectionUnlocks,
   type CollectionUnlockNotice,
 } from "../lib/profile-collections";
 
@@ -89,6 +90,7 @@ export default function Sidebar() {
       const xp = getFudeXp();
       setTotalXp(xp);
       setLevelInfo(getLevelInfo(xp));
+      syncNewCollectionUnlocks();
     };
 
 
@@ -113,10 +115,8 @@ export default function Sidebar() {
       });
     };
 
-    refreshProfile();
-    refreshXp();
-    refreshTokens();
-
+    // Pasang listener sebelum sinkronisasi awal agar unlock yang
+    // terjadi saat aplikasi tidak dibuka tetap bisa menampilkan notifikasi.
     window.addEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
     window.addEventListener(XP_UPDATED_EVENT, refreshXp);
     window.addEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
@@ -130,6 +130,10 @@ export default function Sidebar() {
     );
 
     initializeCollectionTracking();
+
+    refreshProfile();
+    refreshXp();
+    refreshTokens();
 
     return () => {
       active = false;
