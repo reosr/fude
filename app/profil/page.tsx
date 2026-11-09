@@ -24,6 +24,7 @@ import {
 import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfileAvatar from "../../components/ProfileAvatar";
+import { GACHA_BADGES } from "../../data/gacha-badges";
 
 import {
   DEFAULT_PROFILE,
@@ -215,9 +216,9 @@ export default function Profil() {
   const unlockedBab = Math.min(50, safeBab);
   const progressPercent = Math.round((completedBab / 50) * 100);
 
-  const equippedBadge = ALL_BADGES.find(
-    (badge) => badge.id === profile.equippedBadgeId
-  );
+  const equippedBadge =
+    ALL_BADGES.find((badge) => badge.id === profile.equippedBadgeId) ??
+    GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId);
 
   const equippedFrame =
     PROFILE_FRAMES.find(
