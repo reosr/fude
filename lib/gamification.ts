@@ -276,6 +276,45 @@ function initializeXp(): void {
   if (typeof window === "undefined") return;
 
   if (localStorage.getItem(XP_KEY) !== null) {
+    // Versi lama dapat memiliki saldo EXP tanpa ledger klaim.
+    // Rekonstruksi penanda dari progres/hasil yang tersimpan tanpa
+    // menambah EXP lagi, agar reward lama tidak bisa diklaim ulang.
+    if (localStorage.getItem(XP_REWARDS_KEY) === null) {
+      const migratedRewards = new Set<string>();
+      const progress = Number(getProgress());
+      const completedBab = Number.isFinite(progress)
+        ? Math.max(0, Math.floor(progress) - 1)
+        : 0;
+
+      for (let bab = 1; bab <= completedBab; bab++) {
+        migratedRewards.add(`bab:${bab}`);
+      }
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (!key?.startsWith("jlpt_result_")) continue;
+
+        try {
+          const raw = localStorage.getItem(key);
+          const result = raw ? JSON.parse(raw) : null;
+          if (
+            result?.completedOnce === true ||
+            result?.isFinished === true
+          ) {
+            const setId = key.slice("jlpt_result_".length);
+            if (setId) migratedRewards.add(`jlpt:${setId}`);
+          }
+        } catch {
+          // Lewati hasil JLPT lama yang tidak valid.
+        }
+      }
+
+      localStorage.setItem(
+        XP_REWARDS_KEY,
+        JSON.stringify(Array.from(migratedRewards))
+      );
+    }
+
     return;
   }
 
