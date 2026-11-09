@@ -542,6 +542,17 @@ function awardTokenRewardOnce(
 
     return true;
   } catch (error) {
+    // Jangan tinggalkan saldo atau klaim setengah tersimpan.
+    try {
+      localStorage.setItem(TOKEN_KEY, String(currentBalance));
+      localStorage.setItem(
+        TOKEN_REWARDS_KEY,
+        JSON.stringify(rewards)
+      );
+    } catch (rollbackError) {
+      console.error("Gagal mengembalikan reward token:", rollbackError);
+    }
+
     console.error("Gagal memberikan token:", error);
     return false;
   }
