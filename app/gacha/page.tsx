@@ -105,6 +105,7 @@ export default function GachaPage() {
   const [catalogSearch, setCatalogSearch] = useState("");
   const [catalogRarity, setCatalogRarity] = useState<GachaRarity | "all">("all");
   const [catalogPreviewLevel, setCatalogPreviewLevel] = useState<1 | 2 | 3>(1);
+  const [selectedCatalogBadgeId, setSelectedCatalogBadgeId] = useState<string | null>(null);
   const [mochiPreviewLevel, setMochiPreviewLevel] = useState<1 | 2 | 3>(1);
 
   const refresh = useCallback(() => {
@@ -794,7 +795,16 @@ export default function GachaPage() {
                     const copies = copiesFor(inventory, badge.id);
                     const owned = getTotalGachaBadgeCopies(copies) > 0;
                     return (
-                      <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
+                      <button
+                        key={badge.id}
+                        type="button"
+                        onClick={() => {
+                          setSelectedCatalogBadgeId(badge.id);
+                          setCatalogPreviewLevel(1);
+                        }}
+                        className={`w-full rounded-xl border p-2 text-center transition hover:-translate-y-0.5 hover:border-[#D6AD4F]/70 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D6AD4F] ${RARITY_STYLES[badge.rarity]}`}
+                        aria-label={`Lihat evolusi ${badge.name}`}
+                      >
                         <div className="relative flex justify-center">
                           <div className="mx-auto w-[76px]">
                             <GachaBadgeArtwork badge={badge} size={62} level={catalogPreviewLevel} />
@@ -808,7 +818,8 @@ export default function GachaPage() {
                         <p className="mt-2 line-clamp-2 min-h-7 text-[10px] font-bold text-[#F0E9D9]">{badge.name}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
                         <p className="mt-1 text-[9px] font-bold text-[#D6AD4F]">{owned ? `Dimiliki · ×${getTotalGachaBadgeCopies(copies)}` : "LOCKED · belum dimiliki"}</p>
-                      </div>
+                        <p className="mt-2 text-[8px] font-black tracking-wider text-[#E7C46A]">KLIK UNTUK PREVIEW</p>
+                      </button>
                     );
                   })}
               </div>
@@ -820,6 +831,39 @@ export default function GachaPage() {
           </div>
         </div>
       )}
+
+      {selectedCatalogBadgeId && (() => {
+        const selectedBadge = GACHA_BADGES.find((badge) => badge.id === selectedCatalogBadgeId);
+        if (!selectedBadge) return null;
+        const selectedCopies = copiesFor(inventory, selectedBadge.id);
+        const selectedOwned = getTotalGachaBadgeCopies(selectedCopies) > 0;
+        return (
+          <div className="fixed inset-0 z-[260] flex items-center justify-center bg-[#08090D]/75 p-4 backdrop-blur-md" onClick={() => setSelectedCatalogBadgeId(null)}>
+            <div role="dialog" aria-modal="true" aria-labelledby="badge-evolution-title" onClick={(event) => event.stopPropagation()} className="w-full max-w-sm rounded-2xl border border-[#6B5834]/70 bg-[#1B1A18] p-5 shadow-[0_24px_90px_rgba(0,0,0,0.65)]">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-[9px] font-black tracking-[0.2em] text-[#D6AD4F]">BADGE EVOLUTION PREVIEW</p>
+                  <h2 id="badge-evolution-title" className="mt-1 text-lg font-black text-[#F0E9D9]">{selectedBadge.name}</h2>
+                  <p className="mt-1 text-[10px] uppercase tracking-wider text-[#A99C89]">{RARITY_LABELS[selectedBadge.rarity]}</p>
+                </div>
+                <button type="button" onClick={() => setSelectedCatalogBadgeId(null)} aria-label="Tutup preview badge" className="rounded-lg bg-[#302B25] px-3 py-1 text-xl text-[#D8D1C5] hover:bg-[#40392F]">×</button>
+              </div>
+              <div className="my-5 flex min-h-48 items-center justify-center rounded-2xl border border-white/10 bg-[radial-gradient(circle_at_50%_45%,rgba(184,134,11,0.13),transparent_68%),#151513]">
+                <GachaBadgeArtwork badge={selectedBadge} size={176} level={catalogPreviewLevel} />
+              </div>
+              <div className="grid grid-cols-3 gap-2">
+                {([1, 2, 3] as const).map((level) => (
+                  <button key={level} type="button" onClick={() => setCatalogPreviewLevel(level)} aria-pressed={catalogPreviewLevel === level}
+                    className={`rounded-xl border py-3 text-xs font-black transition ${catalogPreviewLevel === level ? "border-[#D6AD4F] bg-[#B8860B]/20 text-[#F4D98E] shadow-[0_0_18px_rgba(214,173,79,0.12)]" : "border-white/10 bg-[#292621] text-[#A99C89] hover:border-[#D6AD4F]/40 hover:text-[#F0E9D9]"}`}>
+                    LEVEL {level}
+                  </button>
+                ))}
+              </div>
+              <p className="mt-4 text-center text-[10px] text-[#A99C89]">{selectedOwned ? `Dimiliki · ×${getTotalGachaBadgeCopies(selectedCopies)}` : "Belum dimiliki · preview tetap tersedia"}</p>
+            </div>
+          </div>
+        );
+      })()}
 
       <section className="rounded-3xl border border-[#33312E] bg-[#1E1D1B] p-5 md:p-6">
         <div className="flex items-center justify-between">
