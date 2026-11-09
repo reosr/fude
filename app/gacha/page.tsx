@@ -197,7 +197,7 @@ export default function GachaPage() {
           "invalid-catalog": "Data koleksi Gacha belum valid.",
           "invalid-count": "Jumlah summon tidak valid.",
           "insufficient-tokens": "Token lu belum cukup.",
-          "storage-error": "Gagal menyimpan hasil summon. Token tidak boleh terpotong.",
+          "storage-error": "Proses summon gagal disimpan. Periksa saldo dan riwayat transaksi sebelum mencoba lagi.",
           "not-enough-copies": "Duplikat badge belum cukup.",
           "max-evolution": "Badge ini sudah mencapai evolusi maksimal.",
         };
