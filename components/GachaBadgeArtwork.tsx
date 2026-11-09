@@ -261,7 +261,7 @@ export default function GachaBadgeArtwork({
   // Individually art-directed Common prototype: Kasa Obake.
   // Its umbrella silhouette, single eye, dangling tongue and geta foot are
   // intentionally unlike the round Mochi Guardian enamel pin.
-  if (badge.id === "kasa-obake-01") {
+  if (badge.id === "kasa-obake-01" && level === 1) {
     return (
       <svg viewBox="0 0 128 128" width={size} height={size} role="img"
         aria-label="Kasa Obake, Common, Level 1"
@@ -336,6 +336,90 @@ export default function GachaBadgeArtwork({
           fill="#E8D5A7" stroke="#8A6B49" strokeWidth=".8"/>
         <path d="M116 88 L118 93 L123 95 L118 98 L116 103 L114 98 L109 95 L114 93Z"
           fill="#E8D5A7" stroke="#8A6B49" strokeWidth=".8"/>
+      </svg>
+    );
+  }
+
+
+  // Kasa Obake Level 2: the umbrella has awakened; lacquered crimson panels,
+  // a richer brass frame and a small protective knot mark its growth.
+  if (badge.id === "kasa-obake-01" && level === 2) {
+    return (
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Kasa Obake, Common, Level 2 — Lantern Keeper" className="shrink-0 overflow-visible drop-shadow-[0_8px_12px_rgba(0,0,0,0.5)]">
+        <defs>
+          <linearGradient id={`kasa2-silver-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFF9E8"/><stop offset=".3" stopColor="#C9B88D"/><stop offset=".7" stopColor="#76563E"/><stop offset="1" stopColor="#F6E4B8"/></linearGradient>
+          <linearGradient id={`kasa2-red-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#F0B47D"/><stop offset=".36" stopColor="#C65D4D"/><stop offset=".72" stopColor="#7D303D"/><stop offset="1" stopColor="#442B3A"/></linearGradient>
+          <linearGradient id={`kasa2-gold-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFF0B6"/><stop offset=".5" stopColor="#D8A84F"/><stop offset="1" stopColor="#80552E"/></linearGradient>
+          <radialGradient id={`kasa2-eye-${uniqueId}`} cx=".35" cy=".25"><stop stopColor="#FFFFFF"/><stop offset=".42" stopColor="#FFF4D8"/><stop offset="1" stopColor="#B7A17D"/></radialGradient>
+        </defs>
+        <path d="M64 5 C37 5 13 23 7 51 C5 62 15 68 25 59 C31 74 43 76 51 64 C59 79 70 79 77 64 C87 77 99 71 103 60 C115 69 124 61 120 49 C113 22 89 5 64 5Z" fill={`url(#kasa2-silver-${uniqueId})`} stroke="#4C4037" strokeWidth="2.6" strokeLinejoin="round"/>
+        <path d="M64 11 C40 11 20 27 14 50 C13 56 18 60 26 53 C33 67 42 68 51 57 C58 70 69 70 77 57 C87 69 96 64 102 53 C110 59 116 56 113 49 C106 27 86 11 64 11Z" fill={`url(#kasa2-red-${uniqueId})`} stroke="#FFE8B7" strokeWidth="1.7"/>
+        <g fill="none" stroke={`url(#kasa2-gold-${uniqueId})`} strokeWidth="2.2" strokeLinecap="round">
+          <path d="M64 15 L26 52 M64 15 L51 57 M64 15 L64 59 M64 15 L77 57 M64 15 L102 52"/>
+          <path d="M32 31 Q43 20 54 18 M74 18 Q87 22 96 32" strokeWidth="1.4"/>
+        </g>
+        <path d="M64 8 L64 19" stroke="#FFF5D6" strokeWidth="3.5" strokeLinecap="round"/>
+        <path d="M57 17 Q64 10 71 17 L68 25 L60 25Z" fill={`url(#kasa2-gold-${uniqueId})`} stroke="#78502E" strokeWidth="1.2"/>
+        <path d="M42 33 Q64 21 86 33 Q85 59 64 64 Q43 59 42 33Z" fill="#50313A" stroke="#F4D59A" strokeWidth="2"/>
+        <ellipse cx="64" cy="43" rx="13.5" ry="15.5" fill={`url(#kasa2-eye-${uniqueId})`} stroke="#6B4939" strokeWidth="1.5"/>
+        <ellipse cx="67" cy="44" rx="4.9" ry="7.6" fill="#252B31"/>
+        <ellipse cx="68.5" cy="40.5" rx="1.8" ry="2.4" fill="#FFFFFF"/>
+        <path d="M59 58 Q64 64 69 58 L68 74 Q64 80 60 74Z" fill="#D97873" stroke="#753D45" strokeWidth="1.5"/>
+        <path d="M64 74 L64 91" stroke={`url(#kasa2-gold-${uniqueId})`} strokeWidth="6" strokeLinecap="round"/>
+        <path d="M49 91 Q64 85 79 91 L77 101 Q64 106 51 100Z" fill="#A56D45" stroke="#50392E" strokeWidth="2"/>
+        <path d="M53 94 Q64 91 75 94" fill="none" stroke="#F8DFA5" strokeWidth="2"/>
+        <path d="M64 87 L64 96" stroke="#F9E7B9" strokeWidth="1.5"/>
+        {/* A braided warding knot, the new evolution detail */}
+        <path d="M31 73 C22 65 17 76 26 81 C35 86 39 75 31 73 C23 82 34 91 40 82" fill="none" stroke="#E9C77D" strokeWidth="2.8" strokeLinecap="round"/>
+        <path d="M97 73 C106 65 111 76 102 81 C93 86 89 75 97 73 C105 82 94 91 88 82" fill="none" stroke="#E9C77D" strokeWidth="2.8" strokeLinecap="round"/>
+        <g fill="#E8D9B2" stroke="#8B6846" strokeWidth=".8"><circle cx="18" cy="91" r="3"/><circle cx="110" cy="91" r="3"/><circle cx="31" cy="21" r="2"/><circle cx="97" cy="21" r="2"/></g>
+        <path d="M10 103 L14 109 L21 111 L14 114 L10 121 L7 114 L1 111 L7 109Z M117 101 L120 107 L126 109 L120 112 L117 118 L114 112 L108 109 L114 107Z" fill="#F0D79D" stroke="#8D6944" strokeWidth=".8"/>
+      </svg>
+    );
+  }
+
+
+  // Kasa Obake Level 3: a fully awakened storm-spirit with a midnight-indigo
+  // canopy, ornate gold ribs and floating water pearls; the yokai stays central.
+  if (badge.id === "kasa-obake-01" && level === 3) {
+    return (
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Kasa Obake, Common, Level 3 — Moonlit Storm Spirit" className="shrink-0 overflow-visible drop-shadow-[0_9px_14px_rgba(0,0,0,0.55)]">
+        <defs>
+          <linearGradient id={`kasa3-frame-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFFCE9"/><stop offset=".26" stopColor="#E4C77D"/><stop offset=".62" stopColor="#86643D"/><stop offset="1" stopColor="#FFF0B6"/></linearGradient>
+          <linearGradient id={`kasa3-night-${uniqueId}`} x1="0" y1="0" x2=".8" y2="1"><stop stopColor="#A8C6D5"/><stop offset=".28" stopColor="#4F718C"/><stop offset=".65" stopColor="#293C60"/><stop offset="1" stopColor="#171F3B"/></linearGradient>
+          <linearGradient id={`kasa3-gold-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFF5C8"/><stop offset=".48" stopColor="#E6C16D"/><stop offset="1" stopColor="#89602F"/></linearGradient>
+          <radialGradient id={`kasa3-eye-${uniqueId}`} cx=".34" cy=".24"><stop stopColor="#FFFFFF"/><stop offset=".4" stopColor="#FFF8E6"/><stop offset="1" stopColor="#B7B6B0"/></radialGradient>
+          <radialGradient id={`kasa3-halo-${uniqueId}`}><stop stopColor="#D8F0F4" stopOpacity=".55"/><stop offset=".7" stopColor="#91B9D2" stopOpacity=".15"/><stop offset="1" stopColor="#91B9D2" stopOpacity="0"/></radialGradient>
+        </defs>
+        <circle cx="64" cy="58" r="61" fill={`url(#kasa3-halo-${uniqueId})`}/>
+        <path d="M64 3 C35 3 11 23 5 52 C3 64 14 70 25 59 C32 76 44 78 52 64 C59 81 70 81 77 64 C88 78 101 72 104 59 C117 70 126 61 122 49 C115 20 91 3 64 3Z" fill={`url(#kasa3-frame-${uniqueId})`} stroke="#4D4A43" strokeWidth="2.8" strokeLinejoin="round"/>
+        <path d="M64 9 C39 9 18 27 12 51 C11 57 17 61 26 53 C33 69 44 70 52 58 C59 73 70 73 77 58 C88 70 97 65 103 53 C111 60 118 56 115 49 C108 26 87 9 64 9Z" fill={`url(#kasa3-night-${uniqueId})`} stroke="#FFF0BD" strokeWidth="1.8"/>
+        <g fill="none" stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="2.1" strokeLinecap="round">
+          <path d="M64 12 L26 52 M64 12 L52 58 M64 12 L64 60 M64 12 L77 58 M64 12 L103 52"/>
+          <path d="M23 43 Q31 23 49 17 M79 17 Q97 23 105 43" strokeWidth="1.4"/>
+        </g>
+        <path d="M64 5 L64 17" stroke="#FFFBE9" strokeWidth="3.4" strokeLinecap="round"/>
+        <path d="M57 13 Q64 5 71 13 L68 22 L60 22Z" fill={`url(#kasa3-gold-${uniqueId})`} stroke="#70532F" strokeWidth="1.2"/>
+        {/* Moon crest above the eye */}
+        <path d="M64 24 C54 12 40 20 44 31 C48 42 63 39 68 30 C61 34 54 31 53 25 C57 22 61 22 64 24Z" fill="#E9E2BD" stroke="#FFF8D9" strokeWidth="1.2"/>
+        <path d="M40 39 Q64 25 88 39 Q86 64 64 69 Q42 64 40 39Z" fill="#343044" stroke="#E8D49C" strokeWidth="2"/>
+        <ellipse cx="64" cy="49" rx="14" ry="16" fill={`url(#kasa3-eye-${uniqueId})`} stroke="#756A59" strokeWidth="1.5"/>
+        <ellipse cx="67" cy="50" rx="5" ry="8" fill="#202A38"/>
+        <ellipse cx="68.5" cy="46.5" rx="1.9" ry="2.5" fill="#FFFFFF"/>
+        <path d="M59 64 Q64 70 69 64 L68 79 Q64 85 60 79Z" fill="#DC8581" stroke="#70404D" strokeWidth="1.5"/>
+        <path d="M64 80 L64 95" stroke={`url(#kasa3-gold-${uniqueId})`} strokeWidth="6.5" strokeLinecap="round"/>
+        <path d="M48 94 Q64 88 80 94 L78 104 Q64 110 50 103Z" fill="#4D5264" stroke={`url(#kasa3-frame-${uniqueId})`} strokeWidth="2.2"/>
+        <path d="M52 97 Q64 93 76 97" fill="none" stroke="#FFF0BD" strokeWidth="2"/>
+        <path d="M64 91 L64 100" stroke="#D9C27E" strokeWidth="1.6"/>
+        {/* Three suspended water pearls and small constellation marks */}
+        <g fill="#D7F3F4" stroke="#FFFBE9" strokeWidth="1">
+          <circle cx="16" cy="76" r="4.2"/><circle cx="112" cy="76" r="4.2"/><circle cx="64" cy="112" r="3.5"/>
+        </g>
+        <g fill="#FFF2C4" stroke="#8A7047" strokeWidth=".7">
+          <path d="M29 78 L32 85 L39 88 L32 91 L29 98 L26 91 L19 88 L26 85Z"/>
+          <path d="M99 78 L102 85 L109 88 L102 91 L99 98 L96 91 L89 88 L96 85Z"/>
+        </g>
+        <path d="M15 30 Q22 23 29 30 M99 30 Q106 23 113 30" fill="none" stroke="#E8F5F3" strokeWidth="1.7" strokeLinecap="round"/>
       </svg>
     );
   }
