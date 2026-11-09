@@ -209,7 +209,10 @@ export default function Profil() {
       void loadPhoto();
     };
 
-    refreshData();
+    const initialRefresh = window.requestAnimationFrame(() => {
+      refreshData();
+      setIsLoaded(true);
+    });
     void loadPhoto();
 
     window.addEventListener(PROFILE_UPDATED_EVENT, refresh);
@@ -218,11 +221,10 @@ export default function Profil() {
     window.addEventListener(COLLECTION_UPDATED_EVENT, refresh);
     window.addEventListener(GACHA_UPDATED_EVENT, refresh);
     window.addEventListener("storage", refresh);
-
-    setIsLoaded(true);
-
+ 
     return () => {
       active = false;
+      window.cancelAnimationFrame(initialRefresh);
       window.removeEventListener(PROFILE_UPDATED_EVENT, refresh);
       window.removeEventListener(XP_UPDATED_EVENT, refresh);
       window.removeEventListener(TOKEN_UPDATED_EVENT, refresh);
