@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import {
-  ALL_BADGES,
   PROFILE_FRAMES,
 } from "../lib/profile-collections";
 import { GACHA_BADGES } from "../data/gacha-badges";
@@ -930,23 +929,15 @@ export default function ProfileAvatar({
     PROFILE_FRAMES.find((item) => item.id === frameId) ??
     PROFILE_FRAMES[0];
 
-  const profileBadge = ALL_BADGES.find((item) => item.id === badgeId);
-  const gachaBadge = GACHA_BADGES.find((item) => item.id === badgeId);
-  const badge = profileBadge
+  const collectionBadge = GACHA_BADGES.find((item) => item.id === badgeId);
+  const badge = collectionBadge
     ? {
-        name: profileBadge.name,
-        description: profileBadge.description,
-        icon: profileBadge.icon,
-        tier: profileBadge.tier,
+        name: collectionBadge.name,
+        description: collectionBadge.description ?? "Badge koleksi Fude.",
+        icon: collectionBadge.icon,
+        tier: collectionBadge.rarity,
       }
-    : gachaBadge
-      ? {
-          name: gachaBadge.name,
-          description: gachaBadge.description ?? "Badge koleksi Gacha Fude.",
-          icon: gachaBadge.icon,
-          tier: gachaBadge.rarity,
-        }
-      : undefined;
+    : undefined;
 
   const badgeColors =
     (badge && TIER_COLORS[badge.tier]) ||
