@@ -196,13 +196,13 @@ export default function Sidebar() {
         aria-label={`Profil ${profile.name}, level ${levelInfo.level}`}
         className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[230px] items-center gap-3 rounded-2xl border border-[#B8860B]/40 bg-[#1A1918]/95 px-3 py-2.5 shadow-lg shadow-black/35 backdrop-blur-md transition-colors hover:bg-[#262523]"
       >
-        <div className="shrink-0 pb-1">
+        <div className="shrink-0 pb-3">
           <ProfileAvatar
             avatar={profile.avatar}
             photoSrc={photoSrc}
             badgeId={profile.equippedBadgeId}
             frameId={profile.equippedFrameId}
-            size={42}
+            size={56}
           />
         </div>
         <div className="min-w-0 flex-1">
@@ -231,7 +231,7 @@ export default function Sidebar() {
             />
           </div>
         </div>
-      </Link>
+      </Link>}
 
       <aside className="hidden md:flex md:flex-col md:fixed md:inset-y-0 md:w-64 md:border-r md:border-[#33312E]/50 md:bg-[#1A1918]/80 md:backdrop-blur-xl z-40">
 
