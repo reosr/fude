@@ -61,6 +61,7 @@ import {
   saveProfilePhoto,
   getProfilePhoto,
   deleteProfilePhoto,
+  PROFILE_PHOTO_UPDATED_EVENT,
 } from "../../lib/profile-photo";
 
 const AVATARS = ["筆", "🎌", "🌸", "🗻", "🦊", "🐈"];
@@ -216,6 +217,7 @@ export default function Profil() {
     });
     void loadPhoto();
 
+    window.addEventListener(PROFILE_PHOTO_UPDATED_EVENT, refresh);
     window.addEventListener(PROFILE_UPDATED_EVENT, refresh);
     window.addEventListener(XP_UPDATED_EVENT, refresh);
     window.addEventListener(TOKEN_UPDATED_EVENT, refresh);
@@ -226,6 +228,7 @@ export default function Profil() {
     return () => {
       active = false;
       window.cancelAnimationFrame(initialRefresh);
+      window.removeEventListener(PROFILE_PHOTO_UPDATED_EVENT, refresh);
       window.removeEventListener(PROFILE_UPDATED_EVENT, refresh);
       window.removeEventListener(XP_UPDATED_EVENT, refresh);
       window.removeEventListener(TOKEN_UPDATED_EVENT, refresh);
@@ -333,8 +336,6 @@ export default function Profil() {
       await saveProfilePhoto(file);
       await refreshPhoto();
 
-      // Memicu sinkronisasi avatar di Sidebar.
-      saveFudeProfile({});
     } catch (error) {
       setPhotoError(
         error instanceof Error
@@ -351,7 +352,6 @@ export default function Profil() {
     try {
       await deleteProfilePhoto();
       await refreshPhoto();
-      saveFudeProfile({});
       setPhotoError("");
     } catch {
       setPhotoError("Gagal menghapus foto.");
