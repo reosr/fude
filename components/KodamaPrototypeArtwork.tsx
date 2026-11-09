@@ -16,73 +16,122 @@ function radial(
   return gradient;
 }
 
+function drawKodamaFrame(ctx: CanvasRenderingContext2D, level: 1 | 2) {
+  // A polished woodland medallion: calm rounded silhouette, fine silver
+  // bevels, and a restrained sprout engraving integrated into the metal.
+  const outer = () => {
+    ctx.beginPath();
+    ctx.moveTo(80, 7);
+    ctx.bezierCurveTo(119, 7, 147, 35, 147, 76);
+    ctx.bezierCurveTo(147, 108, 128, 130, 104, 143);
+    ctx.quadraticCurveTo(80, 157, 56, 143);
+    ctx.bezierCurveTo(32, 130, 13, 108, 13, 76);
+    ctx.bezierCurveTo(13, 35, 41, 7, 80, 7);
+    ctx.closePath();
+  };
+  const inner = () => {
+    ctx.beginPath();
+    ctx.moveTo(80, 14);
+    ctx.bezierCurveTo(114, 14, 139, 39, 139, 76);
+    ctx.bezierCurveTo(139, 104, 122, 124, 100, 136);
+    ctx.quadraticCurveTo(80, 147, 60, 136);
+    ctx.bezierCurveTo(38, 124, 21, 104, 21, 76);
+    ctx.bezierCurveTo(21, 39, 46, 14, 80, 14);
+    ctx.closePath();
+  };
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.62)";
+  ctx.shadowBlur = level === 2 ? 15 : 12;
+  ctx.shadowOffsetY = 7;
+  outer();
+  ctx.fillStyle = "#14251d";
+  ctx.fill();
+  ctx.restore();
+
+  const silver = ctx.createLinearGradient(18, 8, 142, 151);
+  silver.addColorStop(0, "#ffffff");
+  silver.addColorStop(.16, "#dce1e2");
+  silver.addColorStop(.34, "#7b8589");
+  silver.addColorStop(.52, "#f4f6f4");
+  silver.addColorStop(.72, "#879195");
+  silver.addColorStop(.9, "#d9dede");
+  silver.addColorStop(1, "#596368");
+  outer();
+  ctx.fillStyle = silver;
+  ctx.strokeStyle = "#343d41";
+  ctx.lineWidth = 2;
+  ctx.fill();
+  ctx.stroke();
+
+  // Recessed enamel well.
+  inner();
+  ctx.fillStyle = radial(ctx, 65, 39, 126, [
+    [0, "#9ba9a1"], [.34, "#596c61"], [.72, "#2e4137"], [1, "#17271f"],
+  ]);
+  ctx.fill();
+
+  // Fine inner bevel catches light without competing with the character.
+  ctx.save();
+  inner();
+  ctx.strokeStyle = "rgba(246,250,246,.72)";
+  ctx.lineWidth = 1.15;
+  ctx.stroke();
+  ctx.restore();
+
+  if (level === 2) {
+    // Evolved version: a second recessed silver contour and tiny rivets.
+    ctx.save();
+    ctx.strokeStyle = "rgba(242,247,245,.82)";
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(80, 20);
+    ctx.bezierCurveTo(111, 20, 133, 43, 133, 76);
+    ctx.bezierCurveTo(133, 101, 117, 119, 97, 130);
+    ctx.quadraticCurveTo(80, 140, 63, 130);
+    ctx.bezierCurveTo(43, 119, 27, 101, 27, 76);
+    ctx.bezierCurveTo(27, 43, 49, 20, 80, 20);
+    ctx.closePath();
+    ctx.stroke();
+    [42, 118].forEach((x) => {
+      const g = ctx.createRadialGradient(x - 1, 43, .2, x, 44, 3.2);
+      g.addColorStop(0, "#ffffff");
+      g.addColorStop(.5, "#cbd2d3");
+      g.addColorStop(1, "#5f6a6e");
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.arc(x, 44, 2.3, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    ctx.restore();
+  }
+
+  // Small engraved sprout at the crown: an identity detail, not an add-on.
+  ctx.save();
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.strokeStyle = "rgba(38,52,44,.78)";
+  ctx.lineWidth = 1.25;
+  ctx.beginPath();
+  ctx.moveTo(80, 29);
+  ctx.quadraticCurveTo(79, 24, 80, 20);
+  ctx.moveTo(80, 25);
+  ctx.quadraticCurveTo(71, 17, 68, 23);
+  ctx.quadraticCurveTo(72, 29, 80, 25);
+  ctx.moveTo(80, 25);
+  ctx.quadraticCurveTo(88, 16, 93, 22);
+  ctx.quadraticCurveTo(89, 29, 80, 25);
+  ctx.stroke();
+  ctx.restore();
+}
+
 function drawKodama(ctx: CanvasRenderingContext2D) {
   const s = SIZE / 160;
   ctx.save();
   ctx.scale(s, s);
   ctx.clearRect(0, 0, 160, 160);
 
-  // Soft ambient shadow beneath the complete medallion.
-  ctx.save();
-  ctx.shadowColor = "rgba(0,0,0,.62)";
-  ctx.shadowBlur = 13;
-  ctx.shadowOffsetY = 7;
-  ctx.beginPath();
-  ctx.moveTo(80, 5);
-  ctx.bezierCurveTo(99, 8, 111, 12, 123, 25);
-  ctx.bezierCurveTo(143, 35, 140, 56, 145, 82);
-  ctx.bezierCurveTo(143, 108, 130, 125, 111, 132);
-  ctx.lineTo(80, 153);
-  ctx.lineTo(49, 132);
-  ctx.bezierCurveTo(30, 125, 17, 108, 15, 82);
-  ctx.bezierCurveTo(20, 56, 17, 35, 37, 25);
-  ctx.bezierCurveTo(49, 12, 61, 8, 80, 5);
-  ctx.closePath();
-  ctx.fillStyle = "#13251b";
-  ctx.fill();
-  ctx.restore();
-
-  // Layered silver metal badge rim for the Common rarity.
-  const rim = ctx.createLinearGradient(22, 15, 138, 143);
-  rim.addColorStop(0, "#ffffff");
-  rim.addColorStop(.13, "#cbd0d1");
-  rim.addColorStop(.34, "#626b70");
-  rim.addColorStop(.56, "#eef1ef");
-  rim.addColorStop(.78, "#7c8588");
-  rim.addColorStop(1, "#f8faf7");
-  ctx.fillStyle = rim;
-  ctx.strokeStyle = "#3b4245";
-  ctx.lineWidth = 2.5;
-  ctx.beginPath();
-  ctx.moveTo(80, 5);
-  ctx.bezierCurveTo(99, 8, 111, 12, 123, 25);
-  ctx.bezierCurveTo(143, 35, 140, 56, 145, 82);
-  ctx.bezierCurveTo(143, 108, 130, 125, 111, 132);
-  ctx.lineTo(80, 153);
-  ctx.lineTo(49, 132);
-  ctx.bezierCurveTo(30, 125, 17, 108, 15, 82);
-  ctx.bezierCurveTo(20, 56, 17, 35, 37, 25);
-  ctx.bezierCurveTo(49, 12, 61, 8, 80, 5);
-  ctx.closePath();
-  ctx.fill();
-  ctx.stroke();
-
-  const enamel = radial(ctx, 65, 45, 112, [
-    [0, "#899492"], [.42, "#586260"], [.78, "#343d3c"], [1, "#202827"],
-  ]);
-  ctx.fillStyle = enamel;
-  ctx.beginPath();
-  ctx.moveTo(80, 12);
-  ctx.bezierCurveTo(99, 15, 111, 19, 118, 30);
-  ctx.bezierCurveTo(135, 39, 132, 59, 137, 82);
-  ctx.bezierCurveTo(135, 104, 123, 119, 106, 126);
-  ctx.lineTo(80, 144);
-  ctx.lineTo(54, 126);
-  ctx.bezierCurveTo(37, 119, 25, 104, 23, 82);
-  ctx.bezierCurveTo(28, 59, 25, 39, 42, 30);
-  ctx.bezierCurveTo(49, 19, 61, 15, 80, 12);
-  ctx.closePath();
-  ctx.fill();
+  drawKodamaFrame(ctx, 1);
 
   // Atmospheric forest light, softly blurred behind the spirit.
   ctx.save();
@@ -431,54 +480,8 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   ctx.scale(SIZE / 160, SIZE / 160);
   ctx.clearRect(0, 0, 160, 160);
 
-  // Keep the same collectible frame language, while giving the evolved
-  // spirit a completely new silhouette and pose.
-  const framePath = () => {
-    // Clean, compact seed-shaped medallion for Kodama's evolved form.
-    ctx.beginPath();
-    ctx.moveTo(80, 7);
-    ctx.bezierCurveTo(98, 8, 116, 17, 127, 32);
-    ctx.bezierCurveTo(139, 47, 142, 66, 139, 87);
-    ctx.bezierCurveTo(136, 111, 119, 128, 101, 139);
-    ctx.lineTo(80, 151);
-    ctx.lineTo(59, 139);
-    ctx.bezierCurveTo(41, 128, 24, 111, 21, 87);
-    ctx.bezierCurveTo(18, 66, 21, 47, 33, 32);
-    ctx.bezierCurveTo(44, 17, 62, 8, 80, 7);
-    ctx.closePath();
-  };
-
-  ctx.save();
-  ctx.shadowColor = "rgba(0,0,0,.62)";
-  ctx.shadowBlur = 13;
-  ctx.shadowOffsetY = 7;
-  framePath();
-  ctx.fillStyle = "#13251b";
-  ctx.fill();
-  ctx.restore();
-
-  const rim = ctx.createLinearGradient(22, 15, 138, 143);
-  [["0","#ffffff"],[".13","#cbd0d1"],[".34","#626b70"],[".56","#eef1ef"],[".78","#7c8588"],["1","#f8faf7"]].forEach(([p,c]) => rim.addColorStop(Number(p), c));
-  framePath();
-  ctx.fillStyle = rim;
-  ctx.strokeStyle = "#3b4245";
-  ctx.lineWidth = 2.5;
-  ctx.fill();
-  ctx.stroke();
-
-  ctx.beginPath();
-  ctx.moveTo(80, 14);
-  ctx.bezierCurveTo(96, 15, 111, 23, 121, 36);
-  ctx.bezierCurveTo(132, 49, 135, 66, 132, 86);
-  ctx.bezierCurveTo(129, 106, 114, 121, 97, 132);
-  ctx.lineTo(80, 143);
-  ctx.lineTo(63, 132);
-  ctx.bezierCurveTo(46, 121, 31, 106, 28, 86);
-  ctx.bezierCurveTo(25, 66, 28, 49, 39, 36);
-  ctx.bezierCurveTo(49, 23, 64, 15, 80, 14);
-  ctx.closePath();
-  ctx.fillStyle = radial(ctx, 65, 45, 112, [[0,"#899492"],[.45,"#586260"],[.82,"#343d3c"],[1,"#202827"]]);
-  ctx.fill();
+  // Same refined medallion family, with an evolved double-bevel finish.
+  drawKodamaFrame(ctx, 2);
 
   // A sweeping breeze trail gives the new pose movement.
   ctx.save();
