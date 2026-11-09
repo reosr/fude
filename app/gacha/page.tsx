@@ -140,6 +140,12 @@ export default function GachaPage() {
 
   const rates = getGachaRates();
   const rateLevel = getGachaRateLevel();
+  const maxedRarities = GACHA_RARITIES.filter((rarity) => {
+    const rarityBadges = GACHA_BADGES.filter((badge) => badge.rarity === rarity);
+    return rarityBadges.length > 0 && rarityBadges.every(
+      (badge) => (inventory.badges[badge.id]?.level3 ?? 0) > 0
+    );
+  });
 
   const handleSummon = (count: 1 | 10) => {
     if (busy) return;
@@ -338,6 +344,12 @@ export default function GachaPage() {
               ditampilkan secara terbuka dan totalnya 100%.
             </p>
           </div>
+          {maxedRarities.length > 0 && (
+            <p className="mt-3 text-[10px] leading-5 text-[#E7C46A]">
+              Rarity maksimal: {maxedRarities.map((rarity) => RARITY_LABELS[rarity]).join(", ")}.
+              Jika rarity tersebut terpilih, lu mendapat kompensasi 1 token.
+            </p>
+          )}
         </div>
       </section>
 
