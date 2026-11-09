@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BookOpen, Languages, Layers, Home, User, Dices } from "lucide-react";
+import { BookOpen, Languages, Layers, Home, Dices } from "lucide-react";
 import { GACHA_UPDATED_EVENT, getGachaInventory } from "../lib/gacha";
 
 const tabs = [
@@ -11,7 +11,6 @@ const tabs = [
   { href: "/", label: "Home", icon: Home, isCenter: true }, // Tombol Tengah
   { href: "/flashcard", label: "Flashcard", icon: Layers },
   { href: "/gacha", label: "Gacha", icon: Dices },
-  { href: "/profil", label: "Profil", icon: User },
 ];
 
 export default function BottomNav() {
