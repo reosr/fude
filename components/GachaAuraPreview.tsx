@@ -30,11 +30,19 @@ export default function GachaAuraPreview({
   } as CSSProperties;
 
   return (
-    <div className={`fude-aura-preview relative flex items-center justify-center ${level === 3 ? "fude-aura-level-3" : "fude-aura-level-2"}`} style={style}>
+    <div className={`fude-aura-preview relative flex items-center justify-center fude-aura-${badge.rarity} ${level === 3 ? "fude-aura-level-3" : "fude-aura-level-2"}`} style={style}>
       <div className="fude-aura-cloud pointer-events-none absolute rounded-full" />
       <div className="fude-aura-cloud fude-aura-cloud-secondary pointer-events-none absolute rounded-full" />
       {level === 3 && (
         <>
+          {(badge.rarity === "epic" || badge.rarity === "mythic" || badge.rarity === "legendary") && (
+            <>
+              <span className="fude-aura-shard fude-aura-shard-one" />
+              <span className="fude-aura-shard fude-aura-shard-two" />
+              <span className="fude-aura-shard fude-aura-shard-three" />
+              <span className="fude-aura-shard fude-aura-shard-four" />
+            </>
+          )}
           <div className="fude-aura-flare fude-aura-flare-one" />
           <div className="fude-aura-flare fude-aura-flare-two" />
           <div className="fude-aura-surge fude-aura-surge-one" />
@@ -81,6 +89,52 @@ export default function GachaAuraPreview({
           opacity: ${level === 2 ? ".08" : ".23"};
           filter: blur(${level === 2 ? "22px" : "25px"});
           animation: aura-drift ${level === 2 ? "8s" : "5.5s"} ease-in-out infinite alternate;
+        }
+        .fude-aura-shard {
+          position: absolute;
+          z-index: 3;
+          width: 34%;
+          height: 5px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, transparent, color-mix(in srgb, white 35%, var(--aura-color)), var(--aura-color), transparent);
+          filter: drop-shadow(0 0 6px var(--aura-color)) blur(.5px);
+          opacity: 0;
+          transform-origin: center;
+          animation: aura-shard 2.8s ease-in-out infinite;
+          pointer-events: none;
+        }
+        .fude-aura-shard-one { top: 22%; left: 2%; transform: rotate(-38deg); }
+        .fude-aura-shard-two { top: 34%; right: 0; width: 29%; transform: rotate(42deg); animation-delay: -.7s; }
+        .fude-aura-shard-three { bottom: 23%; left: 4%; width: 26%; transform: rotate(32deg); animation-delay: -1.4s; }
+        .fude-aura-shard-four { right: 7%; bottom: 15%; width: 36%; transform: rotate(-35deg); animation-delay: -2.1s; }
+        .fude-aura-epic .fude-aura-shard {
+          height: 4px;
+          filter: drop-shadow(0 0 7px var(--aura-color));
+          animation-duration: 2.5s;
+        }
+        .fude-aura-mythic .fude-aura-shard {
+          height: 6px;
+          background: linear-gradient(90deg, transparent, #FFF1B8, var(--aura-color), #FFF1B8, transparent);
+          filter: drop-shadow(0 0 9px var(--aura-color)) blur(.7px);
+          animation-duration: 2.2s;
+        }
+        .fude-aura-legendary .fude-aura-shard {
+          height: 5px;
+          background: linear-gradient(90deg, transparent, #FFD0D0, var(--aura-color), #FF263F, transparent);
+          filter: drop-shadow(0 0 11px var(--aura-color));
+          animation-duration: 1.7s;
+        }
+        .fude-aura-legendary .fude-aura-flare { opacity: .82; filter: blur(7px); }
+        .fude-aura-legendary .fude-aura-surge { opacity: .8; filter: blur(4px); }
+        .fude-aura-mythic .fude-aura-flare { opacity: .7; }
+        .fude-aura-epic .fude-aura-surge { opacity: .7; }
+        .fude-aura-level-2.fude-aura-epic .fude-aura-cloud { opacity: .28; }
+        .fude-aura-level-2.fude-aura-mythic .fude-aura-cloud { opacity: .3; }
+        .fude-aura-level-2.fude-aura-legendary .fude-aura-cloud { opacity: .34; }
+        @keyframes aura-shard {
+          0%, 100% { opacity: 0; translate: -5px 5px; scale: .72; }
+          35%, 65% { opacity: .9; }
+          50% { translate: 7px -7px; scale: 1.12; }
         }
         .fude-aura-flare {
           position: absolute;
@@ -184,7 +238,7 @@ export default function GachaAuraPreview({
           45%, 60% { transform: scale(1.3) rotate(45deg); opacity: 1; }
         }
         @media (prefers-reduced-motion: reduce) {
-          .fude-aura-cloud, .fude-aura-flare, .fude-aura-surge, .fude-aura-particle, .fude-aura-glint { animation: none; }
+          .fude-aura-cloud, .fude-aura-flare, .fude-aura-surge, .fude-aura-shard, .fude-aura-particle, .fude-aura-glint { animation: none; }
         }
       `}</style>
     </div>
