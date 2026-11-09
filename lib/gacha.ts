@@ -1,0 +1,521 @@
+import {
+  getFudeTokens,
+  spendFudeTokensOnce,
+} from "./gamification";
+import { getCompletedJlptLevels } from "./profile-collections";
+
+// =====================================================
+// GACHA CONFIGURATION
+// =====================================================
+
+export const GACHA_UPDATED_EVENT = "fude-gacha-updated";
+export const GACHA_INVENTORY_KEY = "fude_gacha_inventory_v1";
+export const GACHA_HISTORY_KEY = "fude_gacha_history_v1";
+
+export const GACHA_SINGLE_COST = 1;
+export const GACHA_TEN_COST = 10;
+export const GACHA_MAX_EVOLUTION = 3;
+
+export const GACHA_RARITIES = [
+  "common",
+  "uncommon",
+  "rare",
+  "epic",
+  "mythic",
+  "legendary",
+] as const;
+
+export type GachaRarity = (typeof GACHA_RARITIES)[number];
+export type GachaEvolutionLevel = 0 | 1 | 2 | 3;
+
+export interface GachaBadgeDefinition {
+  id: string;
+  name: string;
+  icon: string;
+  rarity: GachaRarity;
+  description?: string;
+}
+
+export interface GachaBadgeCopies {
+  level0: number;
+  level1: number;
+  level2: number;
+  level3: number;
+}
+
+export interface GachaInventory {
+  version: 1;
+  badges: Record<string, GachaBadgeCopies>;
+  updatedAt: number;
+}
+
+export interface GachaHistoryEntry {
+  id: string;
+  badgeId: string;
+  badgeName: string;
+  rarity: GachaRarity;
+  evolutionLevel: 0;
+  createdAt: number;
+}
+
+export interface GachaSummonResult {
+  transactionId: string;
+  count: number;
+  cost: number;
+  results: GachaHistoryEntry[];
+  remainingTokens: number;
+}
+
+export type GachaOperationResult =
+  | { ok: true; inventory: GachaInventory }
+  | {
+      ok: false;
+      reason:
+        | "not-available"
+        | "invalid-catalog"
+        | "insufficient-tokens"
+        | "storage-error"
+        | "not-enough-copies"
+        | "max-evolution";
+    };
+
+const BASE_RATES: Record<string, Record<GachaRarity, number>> = {
+  N5: {
+    common: 65,
+    uncommon: 25,
+    rare: 8,
+    epic: 1.7,
+    mythic: 0.28,
+    legendary: 0.02,
+  },
+  N4: {
+    common: 62,
+    uncommon: 25,
+    rare: 9.5,
+    epic: 2.8,
+    mythic: 0.65,
+    legendary: 0.05,
+  },
+  N3: {
+    common: 58,
+    uncommon: 25,
+    rare: 11,
+    epic: 4.2,
+    mythic: 1.5,
+    legendary: 0.3,
+  },
+  N2: {
+    common: 54,
+    uncommon: 24,
+    rare: 13,
+    epic: 5.8,
+    mythic: 2.5,
+    legendary: 0.7,
+  },
+  N1: {
+    common: 50,
+    uncommon: 23,
+    rare: 14,
+    epic: 7,
+    mythic: 4,
+    legendary: 2,
+  },
+};
+
+export function getGachaRates(
+  level?: string
+): Record<GachaRarity, number> {
+  const completedLevels = getCompletedJlptLevels();
+  const highestCompleted = [...completedLevels]
+    .reverse()
+    .find((item) => item === "N1" || item === "N2" || item === "N3" || item === "N4" || item === "N5");
+  const selected = level && level in BASE_RATES
+    ? level
+    : highestCompleted ?? "N5";
+
+  return { ...BASE_RATES[selected] };
+}
+
+export function getGachaRateLevel(): string {
+  const completed = getCompletedJlptLevels();
+  return [...completed].reverse()[0] ?? "N5";
+}
+
+function emptyCopies(): GachaBadgeCopies {
+  return { level0: 0, level1: 0, level2: 0, level3: 0 };
+}
+
+function emptyInventory(): GachaInventory {
+  return { version: 1, badges: {}, updatedAt: Date.now() };
+}
+
+function isSafeCount(value: unknown): value is number {
+  return typeof value === "number" &&
+    Number.isFinite(value) &&
+    Number.isInteger(value) &&
+    value >= 0;
+}
+
+export function getGachaInventory(): GachaInventory {
+  if (typeof window === "undefined") return emptyInventory();
+
+  try {
+    const raw = localStorage.getItem(GACHA_INVENTORY_KEY);
+    if (!raw) return emptyInventory();
+
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" ||
+      !parsed.badges || typeof parsed.badges !== "object") {
+      return emptyInventory();
+    }
+
+    const badges: Record<string, GachaBadgeCopies> = {};
+    for (const [id, value] of Object.entries(parsed.badges)) {
+      if (!id || !value || typeof value !== "object") continue;
+      const copies = value as Partial<GachaBadgeCopies>;
+      badges[id] = {
+        level0: isSafeCount(copies.level0) ? copies.level0 : 0,
+        level1: isSafeCount(copies.level1) ? copies.level1 : 0,
+        level2: isSafeCount(copies.level2) ? copies.level2 : 0,
+        level3: isSafeCount(copies.level3) ? copies.level3 : 0,
+      };
+    }
+
+    return {
+      version: 1,
+      badges,
+      updatedAt: typeof parsed.updatedAt === "number"
+        ? parsed.updatedAt
+        : Date.now(),
+    };
+  } catch (error) {
+    console.error("Gagal membaca inventori Gacha:", error);
+    return emptyInventory();
+  }
+}
+
+function saveGachaInventory(inventory: GachaInventory): void {
+  localStorage.setItem(
+    GACHA_INVENTORY_KEY,
+    JSON.stringify({
+      ...inventory,
+      version: 1,
+      updatedAt: Date.now(),
+    })
+  );
+}
+
+export function getGachaHistory(limit = 50): GachaHistoryEntry[] {
+  if (typeof window === "undefined") return [];
+
+  try {
+    const raw = localStorage.getItem(GACHA_HISTORY_KEY);
+    const parsed = raw ? JSON.parse(raw) : [];
+    if (!Array.isArray(parsed)) return [];
+
+    return parsed
+      .filter((item): item is GachaHistoryEntry =>
+        item !== null &&
+        typeof item === "object" &&
+        typeof item.id === "string" &&
+        typeof item.badgeId === "string" &&
+        typeof item.badgeName === "string" &&
+        GACHA_RARITIES.includes(item.rarity) &&
+        item.evolutionLevel === 0 &&
+        typeof item.createdAt === "number"
+      )
+      .slice(0, Math.max(1, Math.min(200, Math.floor(limit))));
+  } catch {
+    return [];
+  }
+}
+
+function validateCatalog(
+  catalog: GachaBadgeDefinition[]
+): boolean {
+  if (!Array.isArray(catalog) || catalog.length === 0) return false;
+
+  const ids = new Set<string>();
+  const counts = Object.fromEntries(
+    GACHA_RARITIES.map((rarity) => [rarity, 0])
+  ) as Record<GachaRarity, number>;
+
+  for (const badge of catalog) {
+    if (
+      !badge ||
+      typeof badge.id !== "string" ||
+      !badge.id.trim() ||
+      typeof badge.name !== "string" ||
+      !badge.name.trim() ||
+      typeof badge.icon !== "string" ||
+      !GACHA_RARITIES.includes(badge.rarity) ||
+      ids.has(badge.id)
+    ) {
+      return false;
+    }
+
+    ids.add(badge.id);
+    counts[badge.rarity]++;
+  }
+
+  return GACHA_RARITIES.every((rarity) => counts[rarity] > 0);
+}
+
+function randomUnit(): number {
+  if (typeof crypto !== "undefined" && "getRandomValues" in crypto) {
+    const values = new Uint32Array(1);
+    crypto.getRandomValues(values);
+    return values[0] / 4294967296;
+  }
+
+  return Math.random();
+}
+
+function chooseRarity(rates: Record<GachaRarity, number>): GachaRarity {
+  const roll = randomUnit() * 100;
+  let cumulative = 0;
+
+  for (const rarity of GACHA_RARITIES) {
+    cumulative += rates[rarity];
+    if (roll < cumulative) return rarity;
+  }
+
+  return "legendary";
+}
+
+function createTransactionId(): string {
+  return `gacha-${Date.now().toString(36)}-${Math.floor(randomUnit() * 0xffffffff).toString(36)}`;
+}
+
+export function summonGacha(
+  count: 1 | 10,
+  catalog: GachaBadgeDefinition[]
+): GachaOperationResult & { summon?: GachaSummonResult } {
+  if (typeof window === "undefined") {
+    return { ok: false, reason: "not-available" };
+  }
+
+  if (!validateCatalog(catalog)) {
+    return { ok: false, reason: "invalid-catalog" };
+  }
+
+  const cost = count === 10 ? GACHA_TEN_COST : GACHA_SINGLE_COST;
+  if (getFudeTokens() < cost) {
+    return { ok: false, reason: "insufficient-tokens" };
+  }
+
+  const transactionId = createTransactionId();
+  const rates = getGachaRates();
+  const previousInventory = getGachaInventory();
+  const nextInventory: GachaInventory = {
+    ...previousInventory,
+    badges: { ...previousInventory.badges },
+    updatedAt: Date.now(),
+  };
+  const results: GachaHistoryEntry[] = [];
+
+  for (let index = 0; index < count; index++) {
+    const rarity = chooseRarity(rates);
+    const candidates = catalog.filter((badge) => badge.rarity === rarity);
+    const badge = candidates[Math.floor(randomUnit() * candidates.length)];
+
+    const copies = nextInventory.badges[badge.id] ?? emptyCopies();
+    nextInventory.badges[badge.id] = {
+      ...copies,
+      level0: copies.level0 + 1,
+    };
+
+    results.push({
+      id: `${transactionId}-${index + 1}`,
+      badgeId: badge.id,
+      badgeName: badge.name,
+      rarity,
+      evolutionLevel: 0,
+      createdAt: Date.now(),
+    });
+  }
+
+  const previousHistory = getGachaHistory(200);
+  const nextHistory = [...results, ...previousHistory].slice(0, 200);
+
+  try {
+    // Simpan hasil terlebih dahulu; jika token gagal dibelanjakan,
+    // kedua catatan dikembalikan ke kondisi sebelumnya.
+    saveGachaInventory(nextInventory);
+    localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(nextHistory));
+
+    const spent = spendFudeTokensOnce(
+      transactionId,
+      cost,
+      count === 10 ? "Gacha Summon 10x" : "Gacha Summon 1x"
+    );
+
+    if (!spent) {
+      saveGachaInventory(previousInventory);
+      localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(previousHistory));
+      return { ok: false, reason: "insufficient-tokens" };
+    }
+
+    window.dispatchEvent(new Event(GACHA_UPDATED_EVENT));
+
+    return {
+      ok: true,
+      inventory: nextInventory,
+      summon: {
+        transactionId,
+        count,
+        cost,
+        results,
+        remainingTokens: getFudeTokens(),
+      },
+    };
+  } catch (error) {
+    console.error("Gagal memproses Gacha:", error);
+    try {
+      saveGachaInventory(previousInventory);
+      localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(previousHistory));
+    } catch (rollbackError) {
+      console.error("Gagal mengembalikan data Gacha:", rollbackError);
+    }
+    return { ok: false, reason: "storage-error" };
+  }
+}
+
+export function evolveGachaBadge(
+  badgeId: string
+): GachaOperationResult & {
+  fromLevel?: GachaEvolutionLevel;
+  toLevel?: GachaEvolutionLevel;
+} {
+  if (typeof window === "undefined") {
+    return { ok: false, reason: "not-available" };
+  }
+
+  if (!badgeId) return { ok: false, reason: "not-enough-copies" };
+
+  const inventory = getGachaInventory();
+  const copies = inventory.badges[badgeId];
+
+  if (!copies) return { ok: false, reason: "not-enough-copies" };
+
+  const levels: GachaEvolutionLevel[] = [0, 1, 2];
+  const fromLevel = levels.find((level) => {
+    const key = `level${level}` as keyof GachaBadgeCopies;
+    const needed = level === 0 ? 10 : 3;
+    return copies[key] >= needed;
+  });
+
+  if (fromLevel === undefined) {
+    if (copies.level3 > 0) return { ok: false, reason: "max-evolution" };
+    return { ok: false, reason: "not-enough-copies" };
+  }
+
+  const needed = fromLevel === 0 ? 10 : 3;
+  const fromKey = `level${fromLevel}` as keyof GachaBadgeCopies;
+  const toKey = `level${fromLevel + 1}` as keyof GachaBadgeCopies;
+  const updatedCopies = {
+    ...copies,
+    [fromKey]: copies[fromKey] - needed,
+    [toKey]: copies[toKey] + 1,
+  };
+
+  const nextInventory: GachaInventory = {
+    ...inventory,
+    badges: {
+      ...inventory.badges,
+      [badgeId]: updatedCopies,
+    },
+    updatedAt: Date.now(),
+  };
+
+  try {
+    saveGachaInventory(nextInventory);
+    window.dispatchEvent(new Event(GACHA_UPDATED_EVENT));
+
+    return {
+      ok: true,
+      inventory: nextInventory,
+      fromLevel,
+      toLevel: (fromLevel + 1) as GachaEvolutionLevel,
+    };
+  } catch (error) {
+    console.error("Gagal mengembangkan badge:", error);
+    return { ok: false, reason: "storage-error" };
+  }
+}
+
+export function getTotalGachaBadgeCopies(
+  copies: GachaBadgeCopies
+): number {
+  return copies.level0 + copies.level1 + copies.level2 + copies.level3;
+}
+
+export function getGachaBadgeEvolutionProgress(
+  copies: GachaBadgeCopies
+): {
+  currentLevel: GachaEvolutionLevel;
+  copiesOwned: number;
+  copiesRequired: number;
+  canEvolve: boolean;
+} {
+  if (copies.level2 >= 3) {
+    return {
+      currentLevel: 2,
+      copiesOwned: copies.level2,
+      copiesRequired: 3,
+      canEvolve: true,
+    };
+  }
+
+  if (copies.level1 >= 3) {
+    return {
+      currentLevel: 1,
+      copiesOwned: copies.level1,
+      copiesRequired: 3,
+      canEvolve: true,
+    };
+  }
+
+  if (copies.level0 >= 10) {
+    return {
+      currentLevel: 0,
+      copiesOwned: copies.level0,
+      copiesRequired: 10,
+      canEvolve: true,
+    };
+  }
+
+  if (copies.level3 > 0) {
+    return {
+      currentLevel: 3,
+      copiesOwned: copies.level3,
+      copiesRequired: 0,
+      canEvolve: false,
+    };
+  }
+
+  if (copies.level2 > 0) {
+    return {
+      currentLevel: 2,
+      copiesOwned: copies.level2,
+      copiesRequired: 3,
+      canEvolve: false,
+    };
+  }
+
+  if (copies.level1 > 0) {
+    return {
+      currentLevel: 1,
+      copiesOwned: copies.level1,
+      copiesRequired: 3,
+      canEvolve: false,
+    };
+  }
+
+  return {
+    currentLevel: 0,
+    copiesOwned: copies.level0,
+    copiesRequired: 10,
+    canEvolve: false,
+  };
+}
