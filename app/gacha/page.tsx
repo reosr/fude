@@ -85,7 +85,7 @@ function copiesFor(
 export default function GachaPage() {
   const router = useRouter();
   const [inventory, setInventory] = useState<GachaInventory>({
-    version: 1,
+    version: 2,
     badges: {},
     newBadgeIds: [],
     updatedAt: 0,
