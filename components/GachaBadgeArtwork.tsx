@@ -82,6 +82,111 @@ export default function GachaBadgeArtwork({
   const ornamentPoints = ORNAMENT_LAYOUTS[layoutIndex];
   const artworkSrc = badge.artwork?.[level];
 
+  // First individually art-directed prototype: Mochi Guardian (Level 1).
+  // Keep this bespoke enamel-pin treatment isolated until the visual direction is approved.
+  if (badge.id === "bab-1" && level === 1) {
+    return (
+      <svg
+        viewBox="0 0 128 128"
+        width={size}
+        height={size}
+        role="img"
+        aria-label="Mochi Guardian, Common, Level 1"
+        className="shrink-0 overflow-visible drop-shadow-[0_7px_10px_rgba(0,0,0,0.42)]"
+      >
+        <defs>
+          <linearGradient id={`mochi-metal-${uniqueId}`} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="#FFF3C9" />
+            <stop offset="32%" stopColor="#D9AD58" />
+            <stop offset="66%" stopColor="#93632C" />
+            <stop offset="100%" stopColor="#F6D995" />
+          </linearGradient>
+          <linearGradient id={`mochi-enamel-${uniqueId}`} x1="0" y1="0" x2="0.9" y2="1">
+            <stop offset="0%" stopColor="#3C796C" />
+            <stop offset="55%" stopColor="#205247" />
+            <stop offset="100%" stopColor="#102F2B" />
+          </linearGradient>
+          <linearGradient id={`mochi-body-${uniqueId}`} x1="0.15" y1="0" x2="0.8" y2="1">
+            <stop offset="0%" stopColor="#FFFDF1" />
+            <stop offset="58%" stopColor="#F4E9D0" />
+            <stop offset="100%" stopColor="#D9C7A6" />
+          </linearGradient>
+          <radialGradient id={`mochi-cheek-${uniqueId}`}>
+            <stop offset="0%" stopColor="#F49A91" stopOpacity="0.72" />
+            <stop offset="100%" stopColor="#F49A91" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Die-cast pin silhouette and raised metallic rim */}
+        <path
+          d="M64 5 C72 5 77 13 84 15 C92 17 102 14 107 21 C112 28 107 38 111 46 C115 54 124 59 122 68 C120 77 109 81 106 89 C103 97 106 107 98 112 C90 117 81 110 73 114 C65 118 59 126 50 122 C41 119 39 108 31 104 C23 100 12 102 8 94 C4 86 12 77 10 68 C8 59 1 52 5 43 C9 35 20 34 25 27 C30 20 31 10 40 8 C49 6 56 13 64 5 Z"
+          fill={`url(#mochi-metal-${uniqueId})`}
+          stroke="#6C4826"
+          strokeWidth="2.2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M64 11 C72 11 77 19 83 21 C91 23 99 20 103 26 C107 32 102 40 106 47 C110 54 118 59 116 67 C114 75 104 79 101 86 C98 94 101 102 94 106 C87 110 79 104 72 108 C64 112 59 119 51 115 C43 112 41 102 34 98 C27 94 18 96 14 89 C10 82 18 74 16 67 C14 59 8 53 12 45 C16 38 25 37 30 30 C35 24 35 16 43 14 C51 12 57 18 64 11 Z"
+          fill={`url(#mochi-enamel-${uniqueId})`}
+          stroke="#F8E6B5"
+          strokeWidth="1.6"
+          strokeLinejoin="round"
+        />
+        <path d="M23 37 C31 24 43 20 55 21" fill="none" stroke="#B9D7B8" strokeWidth="2" strokeLinecap="round" opacity="0.48" />
+
+        {/* Tiny sakura ornaments */}
+        <g fill="#F5C6C2" stroke="#FFF0D7" strokeWidth="0.8">
+          <path d="M27 47 C23 41 27 37 31 42 C35 36 40 40 36 46 C43 47 42 53 35 53 C35 60 29 59 29 53 C22 56 19 51 27 47 Z" />
+          <circle cx="31" cy="48" r="2" fill="#D79A56" stroke="none" />
+          <path d="M93 43 C89 37 93 33 97 38 C101 32 106 36 102 42 C109 43 108 49 101 49 C101 56 95 55 95 49 C88 52 85 47 93 43 Z" />
+          <circle cx="97" cy="44" r="2" fill="#D79A56" stroke="none" />
+        </g>
+        <g fill="#E7C879" opacity="0.95">
+          <path d="M25 77 l2.2 4.5 4.8.7-3.5 3.4.8 4.8-4.3-2.3-4.3 2.3.8-4.8-3.5-3.4 4.8-.7z" />
+          <path d="M101 76 l1.7 3.5 3.8.6-2.8 2.7.7 3.8-3.4-1.8-3.4 1.8.7-3.8-2.8-2.7 3.8-.6z" />
+        </g>
+
+        {/* Mochi guardian: soft rice-cake body with a little sprout */}
+        <path d="M47 34 C45 27 49 20 56 18 C63 16 69 21 69 28 C76 25 82 29 82 36 C92 43 96 57 93 72 C91 87 80 97 64 98 C48 99 36 90 34 75 C31 60 36 44 47 34 Z"
+          fill={`url(#mochi-body-${uniqueId})`}
+          stroke="#8B7759"
+          strokeWidth="2.1"
+          strokeLinejoin="round"
+        />
+        <path d="M48 35 C48 29 52 24 57 23 C61 22 65 25 65 31 C70 28 76 31 76 37" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+        <path d="M58 23 C55 15 59 10 66 12 C72 14 74 20 69 25 C67 20 63 19 58 23 Z" fill="#9DBB78" stroke="#55744E" strokeWidth="1.5" />
+        <path d="M66 22 C69 14 77 14 80 19 C82 24 76 29 68 27" fill="#C3D59A" stroke="#55744E" strokeWidth="1.3" />
+        <path d="M64 24 Q69 18 76 19" fill="none" stroke="#EFF4D3" strokeWidth="1.3" strokeLinecap="round" />
+
+        {/* Face and rosy cheeks */}
+        <ellipse cx="49" cy="65" rx="8" ry="5" fill={`url(#mochi-cheek-${uniqueId})`} />
+        <ellipse cx="79" cy="65" rx="8" ry="5" fill={`url(#mochi-cheek-${uniqueId})`} />
+        <ellipse cx="54" cy="59" rx="2.2" ry="3.2" fill="#403C35" />
+        <ellipse cx="74" cy="59" rx="2.2" ry="3.2" fill="#403C35" />
+        <circle cx="54.7" cy="57.8" r="0.8" fill="#FFFFFF" />
+        <circle cx="74.7" cy="57.8" r="0.8" fill="#FFFFFF" />
+        <path d="M61 66 Q64 69 67 66" fill="none" stroke="#9B6C5C" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M43 52 Q45 48 49 47 M79 47 Q83 48 85 52" fill="none" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" opacity="0.72" />
+
+        {/* Little guardian sash and chest crest */}
+        <path d="M39 78 Q63 86 88 76 L85 85 Q62 96 42 87 Z" fill="#C77D65" stroke="#815342" strokeWidth="1.3" />
+        <path d="M64 78 L70 83 L64 90 L58 83 Z" fill="#F5D98F" stroke="#9B713A" strokeWidth="1.2" />
+        <path d="M64 81 L66 83 L64 86 L62 83 Z" fill="#4D7864" />
+
+        {/* Tiny arms and feet */}
+        <path d="M37 68 Q29 72 33 79 Q36 83 42 79" fill="none" stroke="#CBB998" strokeWidth="5" strokeLinecap="round" />
+        <path d="M87 67 Q95 71 91 78 Q88 82 82 78" fill="none" stroke="#CBB998" strokeWidth="5" strokeLinecap="round" />
+        <ellipse cx="51" cy="96" rx="8" ry="3.2" fill="#D7C5A5" />
+        <ellipse cx="77" cy="96" rx="8" ry="3.2" fill="#D7C5A5" />
+
+        {/* Glossy enamel highlights and pin glints */}
+        <path d="M18 62 Q17 72 22 77 M106 58 Q111 66 106 73" fill="none" stroke="#FFF0C9" strokeWidth="1.5" strokeLinecap="round" opacity="0.78" />
+        <path d="M43 39 Q49 32 57 33" fill="none" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" opacity="0.75" />
+        <path d="M91 23 l2.5 5.5 5.5 2.5-5.5 2.5-2.5 5.5-2.5-5.5-5.5-2.5 5.5-2.5z" fill="#FFF0C9" stroke="#B88B4D" strokeWidth="0.8" />
+      </svg>
+    );
+  }
+
   if (artworkSrc) {
     return (
       <Image
