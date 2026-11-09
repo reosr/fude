@@ -857,7 +857,11 @@ export default function JLPTQuiz({
                 Selesaikan Ujian?
               </h3>
 
-              {totalUnanswered > 0 ? (
+              {totalQuestions === 0 ? (
+                <p className="text-[#C93438] font-bold bg-[#C93438]/10 p-3 rounded-lg text-sm border border-[#C93438]/20">
+                  Set ini belum memiliki soal. Ujian belum bisa diselesaikan.
+                </p>
+              ) : totalUnanswered > 0 ? (
                 <p className="text-[#C93438] font-bold bg-[#C93438]/10 p-3 rounded-lg text-sm border border-[#C93438]/20">
                   Perhatian: Masih ada {totalUnanswered} soal
                   yang belum kamu jawab!
@@ -879,11 +883,11 @@ export default function JLPTQuiz({
               </button>
 
               <button
-                disabled={totalUnanswered > 0}
+                disabled={totalUnanswered > 0 || totalQuestions === 0}
                 onClick={() => {
-                  // Pengaman tambahan: jangan izinkan penyelesaian
-                  // atau reward jika masih ada soal yang kosong.
-                  if (totalUnanswered > 0) return;
+                  // Pengaman tambahan: set kosong atau belum lengkap
+                  // tidak boleh diselesaikan maupun menerima reward.
+                  if (totalUnanswered > 0 || totalQuestions === 0) return;
 
                   const score = calculateQuizScore(
                     userAnswers,
@@ -897,7 +901,10 @@ export default function JLPTQuiz({
 
                   // Bonus skor minimal 80%: +25,
                   // bisa diperoleh pada percobaan berikutnya.
-                  if (score.totalScorePercent >= 80) {
+                  if (
+                    score.totalQuestions > 0 &&
+                    score.totalCorrect / score.totalQuestions >= 0.8
+                  ) {
                     awardJlptHighScoreBonusOnce(testSet.id);
                   }
 
@@ -931,7 +938,7 @@ export default function JLPTQuiz({
                   );
                 }}
                 className={`flex-1 font-bold py-3 rounded-xl transition-colors shadow-lg ${
-                  totalUnanswered > 0
+                  totalUnanswered > 0 || totalQuestions === 0
                     ? "bg-[#33312E] text-[#817A73] cursor-not-allowed shadow-none"
                     : "bg-[#C93438] text-white hover:bg-[#B02A2E] shadow-[#C93438]/20"
                 }`}
