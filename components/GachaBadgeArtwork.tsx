@@ -257,6 +257,89 @@ export default function GachaBadgeArtwork({
     );
   }
 
+
+  // Individually art-directed Common prototype: Kasa Obake.
+  // Its umbrella silhouette, single eye, dangling tongue and geta foot are
+  // intentionally unlike the round Mochi Guardian enamel pin.
+  if (badge.id === "kasa-obake-01") {
+    return (
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img"
+        aria-label="Kasa Obake, Common, Level 1"
+        className="shrink-0 overflow-visible drop-shadow-[0_7px_11px_rgba(0,0,0,0.48)]">
+        <defs>
+          <linearGradient id={`kasa-metal-${uniqueId}`} x1="0" y1="0" x2="1" y2="1">
+            <stop stopColor="#FFFFFF"/><stop offset=".28" stopColor="#D9DED8"/>
+            <stop offset=".62" stopColor="#7D8982"/><stop offset="1" stopColor="#F5F0DF"/>
+          </linearGradient>
+          <linearGradient id={`kasa-paper-${uniqueId}`} x1="0" y1="0" x2=".9" y2="1">
+            <stop stopColor="#E8B66E"/><stop offset=".38" stopColor="#B86C48"/>
+            <stop offset=".72" stopColor="#713F42"/><stop offset="1" stopColor="#392E3C"/>
+          </linearGradient>
+          <linearGradient id={`kasa-rib-${uniqueId}`} x1="0" y1="0" x2="0" y2="1">
+            <stop stopColor="#FBE6B0"/><stop offset="1" stopColor="#A66D3E"/>
+          </linearGradient>
+          <linearGradient id={`kasa-wood-${uniqueId}`} x1="0" y1="0" x2="1" y2="0">
+            <stop stopColor="#E7C48A"/><stop offset=".5" stopColor="#94613D"/><stop offset="1" stopColor="#E5BD7B"/>
+          </linearGradient>
+          <radialGradient id={`kasa-eye-${uniqueId}`} cx=".36" cy=".28">
+            <stop stopColor="#FFFFFF"/><stop offset=".38" stopColor="#F8F0D9"/>
+            <stop offset="1" stopColor="#B7A98B"/>
+          </radialGradient>
+        </defs>
+
+        {/* Distinctive paper-umbrella canopy pin with raised silver edge */}
+        <path d="M64 7 C39 7 17 24 10 49 C8 57 14 62 22 58
+          C27 70 38 72 46 62 C52 73 62 75 68 63
+          C77 75 89 70 93 60 C103 67 116 61 115 51
+          C111 25 89 7 64 7Z"
+          fill={`url(#kasa-metal-${uniqueId})`} stroke="#505A55" strokeWidth="2.4" strokeLinejoin="round"/>
+        <path d="M64 13 C42 13 23 28 17 49 C16 53 19 56 24 52
+          C30 65 38 65 46 55 C53 67 62 68 68 56
+          C77 67 87 64 93 53 C101 59 109 56 108 50
+          C102 28 84 13 64 13Z"
+          fill={`url(#kasa-paper-${uniqueId})`} stroke="#F5E6C7" strokeWidth="1.5" strokeLinejoin="round"/>
+
+        {/* Bamboo ribs radiate from the umbrella crown */}
+        <g fill="none" stroke={`url(#kasa-rib-${uniqueId})`} strokeWidth="1.8" strokeLinecap="round" opacity=".95">
+          <path d="M64 17 L24 51 M64 17 L46 55 M64 17 L64 57 M64 17 L83 55 M64 17 L104 51"/>
+        </g>
+        <path d="M64 13 L64 20" stroke="#FFF2D2" strokeWidth="3" strokeLinecap="round"/>
+        <circle cx="64" cy="19" r="4.2" fill="#E8C98E" stroke="#77543A" strokeWidth="1.3"/>
+        <circle cx="64" cy="19" r="1.4" fill="#FFF7DE"/>
+
+        {/* One watchful eye: the unmistakable kasa-obake face */}
+        <path d="M43 35 Q64 24 85 35 Q84 57 64 62 Q44 57 43 35Z"
+          fill="#4B343B" stroke="#E8C98E" strokeWidth="1.8"/>
+        <ellipse cx="64" cy="43" rx="12.5" ry="14.5" fill={`url(#kasa-eye-${uniqueId})`} stroke="#6B5147" strokeWidth="1.4"/>
+        <ellipse cx="66" cy="44" rx="4.6" ry="7.2" fill="#292D31"/>
+        <ellipse cx="67.4" cy="40.8" rx="1.7" ry="2.2" fill="#FFFFFF"/>
+        <path d="M54 31 Q64 26 75 31" fill="none" stroke="#FFF1D5" strokeWidth="1.4" strokeLinecap="round" opacity=".7"/>
+
+        {/* Small tongue and hanging wooden geta foot */}
+        <path d="M60 57 Q64 62 68 57 L67 72 Q64 78 61 72Z"
+          fill="#C96B68" stroke="#713E43" strokeWidth="1.4" strokeLinejoin="round"/>
+        <path d="M64 73 L64 91" stroke={`url(#kasa-wood-${uniqueId})`} strokeWidth="5.5" strokeLinecap="round"/>
+        <path d="M52 91 Q64 86 77 91 L75 99 Q64 103 53 98Z"
+          fill={`url(#kasa-wood-${uniqueId})`} stroke="#5B4033" strokeWidth="1.8"/>
+        <path d="M57 93 L71 93" stroke="#F6DDA9" strokeWidth="1.3" strokeLinecap="round"/>
+        <path d="M64 88 L64 95" stroke="#684638" strokeWidth="1.2"/>
+
+        {/* Rain beads and enamel reflections; restrained so the face stays clear */}
+        <g fill="#B8D8D8" stroke="#F2F0DA" strokeWidth=".8">
+          <path d="M17 72 Q13 78 17 81 Q21 78 17 72Z"/>
+          <path d="M108 72 Q104 78 108 81 Q112 78 108 72Z"/>
+          <circle cx="31" cy="27" r="2.1"/><circle cx="96" cy="26" r="1.7"/>
+        </g>
+        <path d="M25 43 Q32 29 45 25" fill="none" stroke="#FFF4DC" strokeWidth="2.1" strokeLinecap="round" opacity=".72"/>
+        <path d="M82 24 Q94 30 100 41" fill="none" stroke="#F8D6A0" strokeWidth="1.5" strokeLinecap="round" opacity=".65"/>
+        <path d="M10 88 L13 94 L19 97 L13 100 L10 106 L7 100 L1 97 L7 94Z"
+          fill="#E8D5A7" stroke="#8A6B49" strokeWidth=".8"/>
+        <path d="M116 88 L118 93 L123 95 L118 98 L116 103 L114 98 L109 95 L114 93Z"
+          fill="#E8D5A7" stroke="#8A6B49" strokeWidth=".8"/>
+      </svg>
+    );
+  }
+
   if (artworkSrc) {
     return (
       <Image
