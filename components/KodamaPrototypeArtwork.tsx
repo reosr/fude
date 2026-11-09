@@ -425,15 +425,333 @@ function drawKodama(ctx: CanvasRenderingContext2D) {
   ctx.restore();
 }
 
-export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number }) {
+
+function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
+  ctx.save();
+  ctx.scale(SIZE / 160, SIZE / 160);
+  ctx.clearRect(0, 0, 160, 160);
+
+  // Keep the same collectible frame language, while giving the evolved
+  // spirit a completely new silhouette and pose.
+  const framePath = () => {
+    ctx.beginPath();
+    ctx.moveTo(80, 5);
+    ctx.bezierCurveTo(99, 8, 111, 12, 123, 25);
+    ctx.bezierCurveTo(143, 35, 140, 56, 145, 82);
+    ctx.bezierCurveTo(143, 108, 130, 125, 111, 132);
+    ctx.lineTo(80, 153);
+    ctx.lineTo(49, 132);
+    ctx.bezierCurveTo(30, 125, 17, 108, 15, 82);
+    ctx.bezierCurveTo(20, 56, 17, 35, 37, 25);
+    ctx.bezierCurveTo(49, 12, 61, 8, 80, 5);
+    ctx.closePath();
+  };
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.62)";
+  ctx.shadowBlur = 13;
+  ctx.shadowOffsetY = 7;
+  framePath();
+  ctx.fillStyle = "#13251b";
+  ctx.fill();
+  ctx.restore();
+
+  const rim = ctx.createLinearGradient(22, 15, 138, 143);
+  [["0","#fff0c1"],[".13","#b88a4e"],[".34","#493623"],[".56","#e4c78a"],[".78","#63452a"],["1","#f7e2ad"]].forEach(([p,c]) => rim.addColorStop(Number(p), c));
+  framePath();
+  ctx.fillStyle = rim;
+  ctx.strokeStyle = "#302419";
+  ctx.lineWidth = 2.5;
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(80, 12);
+  ctx.bezierCurveTo(99, 15, 111, 19, 118, 30);
+  ctx.bezierCurveTo(135, 39, 132, 59, 137, 82);
+  ctx.bezierCurveTo(135, 104, 123, 119, 106, 126);
+  ctx.lineTo(80, 144);
+  ctx.lineTo(54, 126);
+  ctx.bezierCurveTo(37, 119, 25, 104, 23, 82);
+  ctx.bezierCurveTo(28, 59, 25, 39, 42, 30);
+  ctx.bezierCurveTo(49, 19, 61, 15, 80, 12);
+  ctx.closePath();
+  ctx.fillStyle = radial(ctx, 65, 45, 112, [[0,"#526d49"],[.45,"#1d3b30"],[.82,"#10251d"],[1,"#07130f"]]);
+  ctx.fill();
+
+  // A sweeping breeze trail gives the new pose movement.
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  ctx.filter = "blur(5px)";
+  ctx.strokeStyle = "rgba(188,225,142,.38)";
+  ctx.lineWidth = 8;
+  ctx.beginPath();
+  ctx.moveTo(29, 112);
+  ctx.bezierCurveTo(48, 128, 91, 130, 126, 101);
+  ctx.stroke();
+  ctx.restore();
+
+  // Rear branch antlers, asymmetrical to keep the silhouette lively.
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "#76563a";
+  ctx.lineWidth = 5;
+  ctx.beginPath();
+  ctx.moveTo(74, 52);
+  ctx.quadraticCurveTo(56, 31, 49, 16);
+  ctx.moveTo(84, 49);
+  ctx.quadraticCurveTo(99, 26, 119, 20);
+  ctx.moveTo(55, 30);
+  ctx.quadraticCurveTo(43, 27, 37, 18);
+  ctx.moveTo(105, 31);
+  ctx.quadraticCurveTo(108, 16, 105, 10);
+  ctx.stroke();
+
+  function sprig(x: number, y: number, angle: number, scale: number) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.scale(scale, scale);
+    const leafShape = (dx: number, dy: number, flip: number) => {
+      ctx.save();
+      ctx.translate(dx, dy);
+      ctx.scale(flip, 1);
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.bezierCurveTo(-12, -15, -9, -25, 1, -23);
+      ctx.bezierCurveTo(13, -18, 12, -7, 0, 0);
+      const g = ctx.createLinearGradient(-8, -24, 8, 0);
+      g.addColorStop(0, "#f4f2bd");
+      g.addColorStop(.3, "#c9df83");
+      g.addColorStop(.72, "#6f9a49");
+      g.addColorStop(1, "#294a30");
+      ctx.fillStyle = g;
+      ctx.fill();
+      ctx.strokeStyle = "rgba(34,66,39,.9)";
+      ctx.lineWidth = 1.1;
+      ctx.stroke();
+      ctx.strokeStyle = "rgba(255,248,206,.75)";
+      ctx.lineWidth = .8;
+      ctx.beginPath();
+      ctx.moveTo(0, -1);
+      ctx.quadraticCurveTo(1, -11, 1, -21);
+      ctx.stroke();
+      ctx.restore();
+    };
+    leafShape(-5, 0, 1);
+    leafShape(5, -1, -1);
+    ctx.restore();
+  }
+  sprig(48, 18, -.4, .85);
+  sprig(118, 20, .5, 1);
+  sprig(104, 12, .05, .65);
+
+  // New Level 2 body: a nimble, twisting sapling spirit with a bark torso,
+  // root-kick legs and a broad leaf mantle—not an enlarged Level 1 head.
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.55)";
+  ctx.shadowBlur = 7;
+  ctx.shadowOffsetY = 4;
+  ctx.beginPath();
+  ctx.moveTo(76, 67);
+  ctx.bezierCurveTo(91, 68, 103, 82, 100, 100);
+  ctx.bezierCurveTo(98, 117, 82, 124, 68, 116);
+  ctx.bezierCurveTo(54, 108, 54, 89, 62, 77);
+  ctx.closePath();
+  const bark = ctx.createLinearGradient(58, 72, 101, 119);
+  bark.addColorStop(0, "#e5d8ad");
+  bark.addColorStop(.22, "#b5a078");
+  bark.addColorStop(.52, "#806044");
+  bark.addColorStop(.78, "#4c4934");
+  bark.addColorStop(1, "#273d2e");
+  ctx.fillStyle = bark;
+  ctx.fill();
+  ctx.restore();
+
+  // Curved root tail and two expressive root legs.
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  ctx.strokeStyle = "#76583d";
+  ctx.lineWidth = 8;
+  ctx.beginPath();
+  ctx.moveTo(67, 107);
+  ctx.bezierCurveTo(48, 119, 40, 133, 25, 126);
+  ctx.bezierCurveTo(15, 121, 23, 112, 31, 114);
+  ctx.moveTo(79, 112);
+  ctx.quadraticCurveTo(87, 128, 103, 128);
+  ctx.quadraticCurveTo(113, 128, 116, 119);
+  ctx.stroke();
+  ctx.strokeStyle = "rgba(235,214,165,.7)";
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(64, 112);
+  ctx.quadraticCurveTo(47, 125, 31, 123);
+  ctx.moveTo(84, 117);
+  ctx.quadraticCurveTo(99, 132, 111, 123);
+  ctx.stroke();
+
+  // A leaf mantle flares behind the torso like a little forest cloak.
+  const mantle = ctx.createLinearGradient(34, 69, 110, 111);
+  mantle.addColorStop(0, "#e4e9a5");
+  mantle.addColorStop(.25, "#9fbd67");
+  mantle.addColorStop(.62, "#557d43");
+  mantle.addColorStop(1, "#233f2d");
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.5)";
+  ctx.shadowBlur = 5;
+  ctx.beginPath();
+  ctx.moveTo(67, 75);
+  ctx.bezierCurveTo(49, 67, 35, 73, 29, 91);
+  ctx.bezierCurveTo(42, 91, 47, 103, 58, 112);
+  ctx.bezierCurveTo(62, 96, 71, 91, 82, 91);
+  ctx.bezierCurveTo(96, 105, 109, 101, 121, 91);
+  ctx.bezierCurveTo(112, 74, 98, 68, 84, 75);
+  ctx.closePath();
+  ctx.fillStyle = mantle;
+  ctx.fill();
+  ctx.restore();
+  ctx.strokeStyle = "rgba(245,244,190,.8)";
+  ctx.lineWidth = 1.3;
+  ctx.beginPath();
+  ctx.moveTo(35, 88);
+  ctx.quadraticCurveTo(55, 87, 64, 104);
+  ctx.moveTo(115, 88);
+  ctx.quadraticCurveTo(96, 85, 84, 103);
+  ctx.stroke();
+
+  // One branch arm reaches forward; the other trails behind in the leap.
+  ctx.lineCap = "round";
+  ctx.strokeStyle = "#896c49";
+  ctx.lineWidth = 7;
+  ctx.beginPath();
+  ctx.moveTo(60, 82);
+  ctx.quadraticCurveTo(44, 78, 39, 61);
+  ctx.moveTo(91, 83);
+  ctx.quadraticCurveTo(110, 72, 111, 56);
+  ctx.stroke();
+  sprig(38, 60, -.55, .52);
+  sprig(112, 55, .5, .55);
+
+  // Head is turned in three-quarter profile, tucked under the antlers.
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.58)";
+  ctx.shadowBlur = 6;
+  ctx.shadowOffsetY = 3;
+  ctx.beginPath();
+  ctx.moveTo(55, 54);
+  ctx.bezierCurveTo(50, 39, 59, 26, 75, 25);
+  ctx.bezierCurveTo(92, 23, 104, 35, 102, 51);
+  ctx.bezierCurveTo(101, 67, 90, 77, 75, 76);
+  ctx.bezierCurveTo(62, 75, 55, 67, 55, 54);
+  ctx.closePath();
+  const face = ctx.createRadialGradient(68, 36, 2, 83, 53, 43);
+  face.addColorStop(0, "#fff9df");
+  face.addColorStop(.22, "#e9e7c9");
+  face.addColorStop(.48, "#c4d0aa");
+  face.addColorStop(.76, "#829b70");
+  face.addColorStop(1, "#405b3f");
+  ctx.fillStyle = face;
+  ctx.fill();
+  ctx.restore();
+
+  // Mossy brow ridge and small leaf tufts frame the face.
+  ctx.beginPath();
+  ctx.moveTo(55, 48);
+  ctx.bezierCurveTo(53, 35, 63, 29, 72, 32);
+  ctx.bezierCurveTo(81, 23, 95, 31, 101, 42);
+  ctx.bezierCurveTo(91, 39, 86, 43, 80, 47);
+  ctx.bezierCurveTo(70, 41, 64, 46, 55, 48);
+  ctx.closePath();
+  ctx.fillStyle = ctx.createLinearGradient(58, 28, 99, 48);
+  ctx.fillStyle.addColorStop?.(0, "#e9f0ad");
+  ctx.fillStyle.addColorStop?.(1, "#496d3b");
+  ctx.fill();
+
+  // One visible glossy eye and a smaller far eye sell the turned pose.
+  ctx.save();
+  ctx.fillStyle = "#14251d";
+  ctx.beginPath();
+  ctx.ellipse(72, 54, 4.6, 6.2, -.12, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = "#fffef1";
+  ctx.beginPath();
+  ctx.ellipse(70.5, 51.5, 1.6, 2, -.3, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = "#26392a";
+  ctx.beginPath();
+  ctx.ellipse(91, 51, 2.7, 4.3, .1, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = "rgba(255,255,240,.9)";
+  ctx.beginPath();
+  ctx.arc(90.3, 49.4, 1, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  // Tiny smile, cheek warmth and bark grain.
+  ctx.strokeStyle = "rgba(77,94,66,.9)";
+  ctx.lineWidth = 1.2;
+  ctx.beginPath();
+  ctx.moveTo(78, 64);
+  ctx.quadraticCurveTo(82, 67, 86, 63);
+  ctx.stroke();
+  ctx.save();
+  ctx.globalCompositeOperation = "multiply";
+  ctx.filter = "blur(3px)";
+  ctx.fillStyle = "rgba(204,133,111,.35)";
+  ctx.beginPath();
+  ctx.ellipse(63, 64, 5, 2.5, -.2, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+
+  ctx.strokeStyle = "rgba(241,220,171,.58)";
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(69, 83);
+  ctx.quadraticCurveTo(75, 94, 70, 108);
+  ctx.moveTo(83, 83);
+  ctx.quadraticCurveTo(88, 96, 82, 112);
+  ctx.stroke();
+
+  // Firefly seed orb: a small forest-spirit companion, not a generic sparkle.
+  ctx.save();
+  ctx.globalCompositeOperation = "screen";
+  ctx.filter = "blur(6px)";
+  ctx.fillStyle = "rgba(225,246,157,.6)";
+  ctx.beginPath();
+  ctx.arc(36, 45, 15, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.restore();
+  ctx.beginPath();
+  ctx.moveTo(36, 52);
+  ctx.bezierCurveTo(25, 43, 32, 33, 38, 34);
+  ctx.bezierCurveTo(47, 41, 43, 48, 36, 52);
+  const orb = ctx.createLinearGradient(30, 33, 42, 52);
+  orb.addColorStop(0, "#fffbd5");
+  orb.addColorStop(.48, "#d5ed9d");
+  orb.addColorStop(1, "#668e4a");
+  ctx.fillStyle = orb;
+  ctx.fill();
+  ctx.strokeStyle = "rgba(255,250,210,.8)";
+  ctx.lineWidth = .8;
+  ctx.stroke();
+
+  // Flecks of moss and floating pollen, kept sparse at small display sizes.
+  [[58,39,1.3],[96,39,1],[47,83,1.1],[109,91,1.4],[70,119,1]].forEach(([x,y,r],i) => {
+    ctx.fillStyle = i % 2 ? "rgba(244,246,192,.85)" : "rgba(188,218,127,.8)";
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,Math.PI*2);
+    ctx.fill();
+  });
+  ctx.restore();
+}
+
+export default function KodamaPrototypeArtwork({ size = 76, level = 1 }: { size?: number; level?: 1 | 2 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext("2d");
     if (!canvas || !ctx) return;
-    drawKodama(ctx);
-  }, []);
+    if (level === 2) drawKodamaLevel2(ctx); else drawKodama(ctx);
+  }, [level]);
 
   return (
     <canvas
@@ -441,7 +759,7 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
       width={SIZE}
       height={SIZE}
       role="img"
-      aria-label="Kodama forest spirit collectible badge"
+      aria-label={level === 2 ? "Kodama, evolved forest spirit collectible badge" : "Kodama forest spirit collectible badge"}
       title="Kodama"
       style={{ width: size, height: size }}
       className="block shrink-0 overflow-visible drop-shadow-[0_8px_12px_rgba(0,0,0,0.52)]"
