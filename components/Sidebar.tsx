@@ -190,11 +190,11 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* HUD profil ringkas untuk mobile */}
-      <Link
+      {/* HUD profil ringkas untuk mobile; disembunyikan di halaman profil */}
+      {path !== "/profil" && <Link
         href="/profil"
         aria-label={`Profil ${profile.name}, level ${levelInfo.level}`}
-        className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[210px] items-center gap-2.5 rounded-2xl border border-[#B8860B]/35 bg-[#1A1918]/90 px-2.5 py-2 shadow-lg shadow-black/30 backdrop-blur-md transition-colors hover:bg-[#262523]"
+        className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[230px] items-center gap-3 rounded-2xl border border-[#B8860B]/40 bg-[#1A1918]/95 px-3 py-2.5 shadow-lg shadow-black/35 backdrop-blur-md transition-colors hover:bg-[#262523]"
       >
         <div className="shrink-0 pb-1">
           <ProfileAvatar
@@ -206,7 +206,7 @@ export default function Sidebar() {
           />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="max-w-[132px] truncate text-xs font-bold leading-tight text-[#EAE6DD]">
+          <p className="max-w-[142px] truncate text-[13px] font-bold leading-tight text-[#EAE6DD]">
             {profile.name}
           </p>
           <div className="mt-1.5 flex items-center justify-between gap-2">
