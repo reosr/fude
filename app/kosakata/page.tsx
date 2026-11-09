@@ -10,6 +10,7 @@ import verbTypeData from "../../data/verb-type-index.json";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
+const KanaStroke = dynamic(() => import("../../components/KanaStroke"), { ssr: false });
 
 const verbTypeMap = buildVerbTypeMap(verbTypeData);
 
@@ -327,6 +328,7 @@ export default function Kosakata() {
                 </div>
 
                 <KanjiStroke kanji={selectedWord.kanji} />
+                <KanaStroke kana={selectedWord.kana} />
 
                 <div className="flex gap-3 justify-center mt-6">
                   <button
