@@ -782,6 +782,61 @@ export function awardXpOnce(
   }
 }
 
+
+// =====================================================
+// JLPT EXP REWARDS
+// =====================================================
+
+export function awardJlptCompletionXpOnce(
+  setId: string
+): boolean {
+  if (!setId) return false;
+
+  const rewards = readRewards();
+
+  // Cegah EXP penyelesaian diberikan ulang
+  // kepada pengguna dari sistem reward lama.
+  if (rewards.includes(`jlpt:${setId}`)) {
+    return false;
+  }
+
+  return awardXpOnce(
+    `jlpt-completion:${setId}`,
+    JLPT_COMPLETION_XP
+  );
+}
+
+export function awardJlptHighScoreBonusOnce(
+  setId: string
+): boolean {
+  if (!setId) return false;
+
+  const rewards = readRewards();
+
+  const legacyId = `jlpt:${setId}`;
+  const bonusId = `jlpt-high-score:${setId}`;
+
+  if (rewards.includes(bonusId)) {
+    return false;
+  }
+
+  // Reward lama mungkin sudah mencakup bonus 80%.
+  // Tandai agar tidak diberikan dua kali.
+  if (rewards.includes(legacyId)) {
+    localStorage.setItem(
+      XP_REWARDS_KEY,
+      JSON.stringify([...rewards, bonusId])
+    );
+
+    return false;
+  }
+
+  return awardXpOnce(
+    bonusId,
+    JLPT_HIGH_SCORE_BONUS_XP
+  );
+}
+
 // =====================================================
 // PROFILE
 // =====================================================
