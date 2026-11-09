@@ -813,7 +813,7 @@ export function awardJlptHighScoreBonusOnce(
   if (!setId || typeof setId !== "string") {
     return false;
   }
-
+  initializeTokenEconomy();
   const rewards = readRewards();
 
   // Cegah bonus ganda dari sistem lama.
