@@ -572,15 +572,6 @@ export function getGachaBadgeEvolutionProgress(
   copiesRequired: number;
   canEvolve: boolean;
 } {
-  if (copies.level3 > 0) {
-    return {
-      currentLevel: 3,
-      copiesOwned: copies.level3,
-      copiesRequired: 0,
-      canEvolve: false,
-    };
-  }
-
   if (copies.level2 >= 3) {
     return {
       currentLevel: 2,
@@ -604,6 +595,15 @@ export function getGachaBadgeEvolutionProgress(
       currentLevel: 2,
       copiesOwned: copies.level2,
       copiesRequired: 3,
+      canEvolve: false,
+    };
+  }
+
+  if (copies.level3 > 0) {
+    return {
+      currentLevel: 3,
+      copiesOwned: copies.level3,
+      copiesRequired: 0,
       canEvolve: false,
     };
   }
