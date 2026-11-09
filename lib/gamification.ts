@@ -545,6 +545,29 @@ function initializeTokenEconomy(): void {
     }
   }
 
+  // Migrasikan reward Perfect Score JLPT yang sudah tercapai sebelum
+  // ekonomi Token pertama kali diinisialisasi.
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (!key?.startsWith("jlpt_result_")) continue;
+
+    try {
+      const raw = localStorage.getItem(key);
+      const result = raw ? JSON.parse(raw) : null;
+      if (result?.isPerfect !== true) continue;
+
+      const setId = key.slice("jlpt_result_".length);
+      const perfectRewardId = `jlpt-perfect:${setId}`;
+
+      if (setId && !rewardIds.has(perfectRewardId)) {
+        rewardIds.add(perfectRewardId);
+        migratedTokens += JLPT_PERFECT_TOKEN_REWARD;
+      }
+    } catch {
+      // Lewati hasil JLPT lama yang tidak valid.
+    }
+  }
+
   localStorage.setItem(
     TOKEN_REWARDS_KEY,
     JSON.stringify(Array.from(rewardIds))
