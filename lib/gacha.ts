@@ -193,12 +193,21 @@ export function getGachaInventory(): GachaInventory {
       };
     }
 
+    const rawNewBadgeIds: unknown[] = Array.isArray(parsed.newBadgeIds)
+      ? parsed.newBadgeIds
+      : [];
+    const newBadgeIds = Array.from(
+      new Set(
+        rawNewBadgeIds.filter(
+          (id): id is string => typeof id === "string"
+        )
+      )
+    );
+
     return {
       version: 1,
       badges,
-      newBadgeIds: Array.isArray(parsed.newBadgeIds)
-        ? [...new Set(parsed.newBadgeIds.filter((id: unknown): id is string => typeof id === "string"))]
-        : [],
+      newBadgeIds,
       updatedAt: typeof parsed.updatedAt === "number"
         ? parsed.updatedAt
         : Date.now(),
