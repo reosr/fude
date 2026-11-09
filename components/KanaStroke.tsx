@@ -50,6 +50,7 @@ function prepareStrokeAnimation(
 export default function KanaStroke({ kana }: { kana: string }) {
   const [loopKey, setLoopKey] = useState(0);
   const [svgMarkup, setSvgMarkup] = useState("");
+  const [loadedKana, setLoadedKana] = useState("");
   const [loopDuration, setLoopDuration] = useState(3500);
 
   const strokeAsset = strokeIndex[kana];
@@ -75,6 +76,7 @@ export default function KanaStroke({ kana }: { kana: string }) {
         );
 
         setSvgMarkup(prepared.markup);
+        setLoadedKana(kana);
         setLoopDuration(prepared.durationMs);
       })
       .catch((error) => {
@@ -101,7 +103,7 @@ export default function KanaStroke({ kana }: { kana: string }) {
 
   return (
     <div className="flex h-full w-full items-center justify-center">
-      {strokeAsset && svgMarkup ? (
+      {strokeAsset && svgMarkup && loadedKana === kana ? (
         <div
           key={`${kana}-${loopKey}`}
           role="img"
