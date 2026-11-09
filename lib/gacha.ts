@@ -1,4 +1,5 @@
 import {
+  awardGachaMaxedRarityCompensationOnce,
   getFudeTokens,
   spendFudeTokensOnce,
 } from "./gamification";
@@ -59,11 +60,18 @@ export interface GachaHistoryEntry {
   createdAt: number;
 }
 
+export interface GachaCompensation {
+  id: string;
+  rarity: GachaRarity;
+  tokens: number;
+}
+
 export interface GachaSummonResult {
   transactionId: string;
   count: number;
   cost: number;
   results: GachaHistoryEntry[];
+  compensations: GachaCompensation[];
   remainingTokens: number;
 }
 
@@ -323,12 +331,22 @@ export function summonGacha(
     updatedAt: Date.now(),
   };
   const results: GachaHistoryEntry[] = [];
+  const pendingCompensations: Array<{ rarity: GachaRarity; index: number }> = [];
 
   for (let index = 0; index < count; index++) {
     const rarity = chooseRarity(rates);
-    const candidates = catalog.filter((badge) => badge.rarity === rarity);
-    const badge = candidates[Math.floor(randomUnit() * candidates.length)];
+    // Badge yang sudah mencapai Level 3 tidak lagi masuk pool summon.
+    const candidates = catalog.filter((badge) => {
+      if (badge.rarity !== rarity) return false;
+      return (nextInventory.badges[badge.id]?.level3 ?? 0) === 0;
+    });
 
+    if (candidates.length === 0) {
+      pendingCompensations.push({ rarity, index });
+      continue;
+    }
+
+    const badge = candidates[Math.floor(randomUnit() * candidates.length)];
     const copies = nextInventory.badges[badge.id] ?? emptyCopies();
     nextInventory.badges[badge.id] = {
       ...copies,
@@ -372,6 +390,24 @@ export function summonGacha(
       return { ok: false, reason: "insufficient-tokens" };
     }
 
+    const compensations: GachaCompensation[] = [];
+
+    for (const compensation of pendingCompensations) {
+      const compensationId = `${transactionId}-compensation-${compensation.index + 1}`;
+      if (
+        awardGachaMaxedRarityCompensationOnce(
+          compensationId,
+          compensation.rarity
+        )
+      ) {
+        compensations.push({
+          id: compensationId,
+          rarity: compensation.rarity,
+          tokens: 1,
+        });
+      }
+    }
+
     window.dispatchEvent(new Event(GACHA_UPDATED_EVENT));
 
     return {
@@ -382,6 +418,7 @@ export function summonGacha(
         count,
         cost,
         results,
+        compensations,
         remainingTokens: getFudeTokens(),
       },
     };
