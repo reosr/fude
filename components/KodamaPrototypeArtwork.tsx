@@ -434,9 +434,39 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   // Keep the same collectible frame language, while giving the evolved
   // spirit a completely new silhouette and pose.
   const framePath = () => {
-    // A clean seed-shaped medallion: the silhouette stays calm and organic,
-    // with a soft crown and a tapered base rather than scattered branches.
+    // Clean, compact seed-shaped medallion for Kodama's evolved form.
     ctx.beginPath();
+    ctx.moveTo(80, 7);
+    ctx.bezierCurveTo(98, 8, 116, 17, 127, 32);
+    ctx.bezierCurveTo(139, 47, 142, 66, 139, 87);
+    ctx.bezierCurveTo(136, 111, 119, 128, 101, 139);
+    ctx.lineTo(80, 151);
+    ctx.lineTo(59, 139);
+    ctx.bezierCurveTo(41, 128, 24, 111, 21, 87);
+    ctx.bezierCurveTo(18, 66, 21, 47, 33, 32);
+    ctx.bezierCurveTo(44, 17, 62, 8, 80, 7);
+    ctx.closePath();
+  };
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,.62)";
+  ctx.shadowBlur = 13;
+  ctx.shadowOffsetY = 7;
+  framePath();
+  ctx.fillStyle = "#13251b";
+  ctx.fill();
+  ctx.restore();
+
+  const rim = ctx.createLinearGradient(22, 15, 138, 143);
+  [["0","#ffffff"],[".13","#cbd0d1"],[".34","#626b70"],[".56","#eef1ef"],[".78","#7c8588"],["1","#f8faf7"]].forEach(([p,c]) => rim.addColorStop(Number(p), c));
+  framePath();
+  ctx.fillStyle = rim;
+  ctx.strokeStyle = "#3b4245";
+  ctx.lineWidth = 2.5;
+  ctx.fill();
+  ctx.stroke();
+
+  ctx.beginPath();
   ctx.moveTo(80, 14);
   ctx.bezierCurveTo(96, 15, 111, 23, 121, 36);
   ctx.bezierCurveTo(132, 49, 135, 66, 132, 86);
