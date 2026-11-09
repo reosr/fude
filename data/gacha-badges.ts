@@ -68,12 +68,28 @@ const generatedLimits: Record<GachaRarity, number> = Object.fromEntries(
   ])
 ) as Record<GachaRarity, number>;
 
-const generatedSelected = (Object.keys(TARGET_COUNTS) as GachaRarity[]).flatMap(
+const generatedSelectedBase = (Object.keys(TARGET_COUNTS) as GachaRarity[]).flatMap(
   (rarity) =>
     generatedBadges
       .filter((badge) => badge.rarity === rarity)
       .slice(0, generatedLimits[rarity])
 );
+
+
+const kasaObakeBadge: GachaBadgeDefinition = {
+  id: "kasa-obake-01",
+  name: "Kasa Obake",
+  icon: "☂",
+  rarity: "common",
+  tier: "common",
+  description: "Yokai payung kertas yang hidup setelah bertahun-tahun digunakan. Ia melompat-lompat di tengah hujan dengan satu mata yang selalu ingin tahu.",
+  unlockLabel: "Diperoleh melalui Gacha",
+};
+
+const generatedSelected: GachaBadgeDefinition[] = [
+  ...generatedSelectedBase.filter((badge, index) => !(badge.rarity === "common" && index === 0)),
+  kasaObakeBadge,
+];
 
 const originalProfileBadges: GachaBadgeDefinition[] = PROFILE_BADGES.map(
   (badge) => ({
