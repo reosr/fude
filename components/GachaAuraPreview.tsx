@@ -342,7 +342,7 @@ export default function GachaAuraPreview({
           45%, 60% { transform: scale(1.3) rotate(45deg); opacity: 1; }
         }
         @media (prefers-reduced-motion: reduce) {
-          .fude-aura-cloud, .fude-aura-flare, .fude-aura-surge, .fude-aura-shard, .fude-aura-particle, .fude-aura-glint, .fude-mythic-rays, .fude-legendary-lightning, .fude-legendary-lightning span { animation: none; }
+          .fude-aura-cloud, .fude-aura-flare, .fude-aura-surge, .fude-aura-shard, .fude-aura-particle, .fude-aura-glint, .fude-mythic-rays, .fude-legendary-lightning, .fude-legendary-lightning span, .fude-legendary-lightning path { animation: none; }
         }
       `}</style>
     </div>
