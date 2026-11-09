@@ -615,7 +615,7 @@ export default function GachaPage() {
               <Layers3 size={19} className="text-[#D6AD4F]" />
               <h2 className="text-lg font-black text-[#EAE6DD]">Katalog 300 Badge</h2>
             </div>
-            <p className="mt-1 max-w-2xl text-xs leading-5 text-[#A3A099]">Ini adalah katalog khusus badge Gacha yang didapat lewat summon. Berbeda dari badge pencapaian profil seperti Mochi Guardian dan Sakura Bloom.</p>
+            <p className="mt-1 max-w-2xl text-xs leading-5 text-[#A3A099]">Semua badge di sini adalah koleksi badge profil Fude. Setiap badge diperoleh melalui summon, bisa dikumpulkan duplikatnya hingga Level 3, lalu dipasang pada avatar profil.</p>
           </div>
           <button
             onClick={() => setShowCatalogModal(true)}
