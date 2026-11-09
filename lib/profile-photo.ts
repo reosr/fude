@@ -2,6 +2,25 @@ const DB_NAME = "fude-profile-assets";
 const DB_VERSION = 1;
 const STORE_NAME = "assets";
 const PHOTO_KEY = "profile-photo";
+const PHOTO_UPDATED_KEY = "fude_profile_photo_updated";
+
+export const PROFILE_PHOTO_UPDATED_EVENT = "fude-profile-photo-updated";
+
+function notifyProfilePhotoUpdated(): void {
+  if (typeof window === "undefined") return;
+
+  window.dispatchEvent(new Event(PROFILE_PHOTO_UPDATED_EVENT));
+
+  // Storage events notify other tabs; the custom event updates this tab.
+  try {
+    localStorage.setItem(
+      PHOTO_UPDATED_KEY,
+      `${Date.now()}-${Math.random().toString(36).slice(2)}`
+    );
+  } catch (error) {
+    console.error("Gagal menyinkronkan perubahan foto profil:", error);
+  }
+}
 
 function openDatabase(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -39,6 +58,7 @@ export async function saveProfilePhoto(file: File): Promise<void> {
 
     transaction.oncomplete = () => {
       db.close();
+      notifyProfilePhotoUpdated();
       resolve();
     };
 
@@ -86,6 +106,7 @@ export async function deleteProfilePhoto(): Promise<void> {
 
     transaction.oncomplete = () => {
       db.close();
+      notifyProfilePhotoUpdated();
       resolve();
     };
 
