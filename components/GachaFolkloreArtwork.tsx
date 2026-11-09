@@ -168,9 +168,84 @@ function Character({ id, level, p }: { id: FolkloreId; level: 1 | 2 | 3; p: type
   }
 }
 
+
+function KodamaMedallion({ level, size }: { level: 1 | 2 | 3; size: number }) {
+  const uid = useId().replace(/:/g, "");
+  const silver = "kodama-silver-" + uid;
+  const enamel = "kodama-enamel-" + uid;
+  const leaf = "kodama-leaf-" + uid;
+  const body = "kodama-body-" + uid;
+  const glow = "kodama-glow-" + uid;
+  const rimPath = level === 1
+    ? "M64 5 C72 13 82 14 91 11 C91 22 99 29 111 31 C105 42 108 52 121 61 C111 70 109 81 115 92 C101 94 94 103 92 117 C80 111 71 114 64 125 C56 114 46 111 35 117 C32 104 24 96 10 94 C17 82 14 72 3 62 C15 53 17 43 10 31 C24 29 32 21 35 9 C46 15 56 13 64 5Z"
+    : level === 2
+    ? "M64 2 C74 14 84 16 96 9 C96 23 105 31 120 34 C111 47 114 57 127 66 C114 76 112 88 119 101 C103 102 94 111 91 126 C78 117 70 119 64 127 C56 117 46 115 34 125 C31 111 22 102 7 101 C14 87 12 77 1 66 C14 56 16 46 7 34 C22 31 31 23 32 9 C44 16 54 14 64 2Z"
+    : "M64 1 C75 14 88 16 101 7 C100 24 110 34 127 37 C116 51 119 63 128 75 C113 84 110 98 117 113 C100 111 89 121 84 128 C74 119 69 118 64 127 C55 118 48 119 39 128 C34 119 23 111 7 113 C14 98 11 84 0 75 C10 63 12 51 1 37 C18 34 28 24 27 7 C40 16 53 14 64 1Z";
+  return (
+    <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label={"Kodama, Common, Level " + level} className="shrink-0 overflow-visible drop-shadow-[0_8px_13px_rgba(0,0,0,0.5)]">
+      <defs>
+        <linearGradient id={silver} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFFDF1"/><stop offset=".2" stopColor="#DDE8D6"/><stop offset=".48" stopColor="#819A7B"/><stop offset=".72" stopColor="#E8EBD8"/><stop offset="1" stopColor="#526B55"/></linearGradient>
+        <linearGradient id={enamel} x1="0" y1="0" x2=".15" y2="1"><stop stopColor={level === 3 ? "#A6C88B" : "#91B77B"}/><stop offset=".48" stopColor="#3E704D"/><stop offset="1" stopColor="#183E35"/></linearGradient>
+        <linearGradient id={leaf} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#F1F6C9"/><stop offset=".48" stopColor="#A8CC83"/><stop offset="1" stopColor="#4E8758"/></linearGradient>
+        <linearGradient id={body} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFFBEA"/><stop offset=".65" stopColor="#E8E2C8"/><stop offset="1" stopColor="#B9C39A"/></linearGradient>
+        <radialGradient id={glow}><stop stopColor="#E5F6B9" stopOpacity=".62"/><stop offset="1" stopColor="#B8D89A" stopOpacity="0"/></radialGradient>
+      </defs>
+      <circle cx="64" cy="64" r="62" fill={"url(#" + glow + ")"} />
+      <path d={rimPath} fill={"url(#" + silver + ")"} stroke="#354D3B" strokeWidth="2.4" strokeLinejoin="round"/>
+      <path d={level === 1
+        ? "M64 12 C72 20 81 20 88 17 C89 28 97 35 108 37 C102 47 105 57 116 63 C106 72 104 81 109 90 C96 92 89 100 87 111 C76 106 69 108 64 117 C57 108 48 106 40 111 C37 100 30 93 18 90 C24 80 21 72 12 63 C23 56 25 47 19 37 C31 34 38 27 40 16 C49 21 57 20 64 12Z"
+        : level === 2
+        ? "M64 10 C74 20 83 22 94 16 C94 29 103 38 115 41 C107 52 111 62 120 68 C108 78 107 89 112 99 C98 99 89 108 86 118 C76 111 69 113 64 121 C56 112 47 111 39 118 C35 107 27 100 14 99 C20 88 18 78 8 68 C19 60 21 51 13 41 C27 38 34 29 34 16 C45 22 55 20 64 10Z"
+        : "M64 8 C76 19 87 21 98 13 C98 28 108 38 121 42 C111 54 114 66 124 76 C110 84 108 97 113 108 C98 106 87 116 82 122 C73 114 68 113 64 122 C55 113 49 114 41 122 C36 115 25 106 11 108 C17 96 15 84 4 76 C15 66 17 54 7 42 C21 38 30 28 29 13 C42 21 53 19 64 8Z"} fill={"url(#" + enamel + ")"} stroke="#F1F3D9" strokeWidth="1.7" strokeLinejoin="round"/>
+      <path d={level === 1 ? "M64 16 L67 24 L76 27 L68 31 L65 40 L61 31 L53 27 L61 24Z" : level === 2 ? "M64 12 L69 24 L81 29 L69 34 L64 46 L59 34 L47 29 L59 24Z" : "M64 8 L70 23 L85 29 L70 35 L64 50 L58 35 L43 29 L58 23Z"} fill="#F8E9A8" stroke="#FFF9DE" strokeWidth="1"/>
+      {level === 1 ? (
+        <g>
+          <path d="M64 48 C51 33 37 34 34 45 C38 58 51 62 64 55 C77 62 90 58 94 45 C91 34 77 33 64 48Z" fill={"url(#" + leaf + ")"} stroke="#31553B" strokeWidth="2"/>
+          <path d="M64 49 Q55 37 45 41 M64 49 Q75 37 84 41" fill="none" stroke="#EAF2C8" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M42 54 C33 65 38 87 49 94 C57 100 72 100 80 94 C91 87 95 65 86 54 C77 44 52 44 42 54Z" fill={"url(#" + body + ")"} stroke="#526B4A" strokeWidth="2.2"/>
+          <ellipse cx="54" cy="70" rx="2.7" ry="4" fill="#303C31"/><ellipse cx="74" cy="70" rx="2.7" ry="4" fill="#303C31"/>
+          <circle cx="55" cy="69" r="1" fill="#FFF"/><circle cx="75" cy="69" r="1" fill="#FFF"/>
+          <path d="M59 80 Q64 84 69 80" fill="none" stroke="#8C7760" strokeWidth="1.8" strokeLinecap="round"/>
+          <path d="M48 91 Q64 98 80 91" fill="none" stroke="#C69B62" strokeWidth="3" strokeLinecap="round"/>
+          <path d="M48 97 Q42 104 37 101 M80 97 Q86 104 91 101" fill="none" stroke="#A8C77F" strokeWidth="3" strokeLinecap="round"/>
+        </g>
+      ) : level === 2 ? (
+        <g>
+          <path d="M64 38 C48 22 31 28 29 43 C29 54 42 60 55 55 C43 66 40 80 49 91 C57 101 73 101 81 91 C90 80 85 65 73 55 C87 60 100 54 99 43 C97 28 80 22 64 38Z" fill={"url(#" + leaf + ")"} stroke="#31553B" strokeWidth="2.4"/>
+          <path d="M64 40 Q49 31 38 39 M64 40 Q79 31 90 39 M64 48 L64 86" fill="none" stroke="#F1F5D5" strokeWidth="2.2" strokeLinecap="round"/>
+          <path d="M64 51 C47 49 42 65 46 80 C49 95 58 100 64 100 C70 100 79 95 82 80 C86 65 81 49 64 51Z" fill={"url(#" + body + ")"} stroke="#526B4A" strokeWidth="2.2"/>
+          <path d="M44 71 Q34 63 28 72 Q27 83 44 86 M84 71 Q94 63 100 72 Q101 83 84 86" fill="none" stroke="#B9D38E" strokeWidth="6" strokeLinecap="round"/>
+          <ellipse cx="55" cy="70" rx="2.8" ry="4.2" fill="#303C31"/><ellipse cx="73" cy="70" rx="2.8" ry="4.2" fill="#303C31"/>
+          <path d="M59 81 Q64 86 69 81" fill="none" stroke="#8C7760" strokeWidth="2" strokeLinecap="round"/>
+          <path d="M57 96 Q49 108 41 109 M71 96 Q79 108 87 109 M64 96 L64 112" fill="none" stroke="#A8C77F" strokeWidth="5" strokeLinecap="round"/>
+          <g fill="#EAD58F" stroke="#FFF2C7" strokeWidth="1"><circle cx="25" cy="57" r="4"/><circle cx="103" cy="57" r="4"/><circle cx="64" cy="24" r="3.5"/></g>
+        </g>
+      ) : (
+        <g>
+          <path d="M64 49 C49 30 31 34 23 48 C10 49 11 65 22 71 C12 84 24 96 39 91 C45 106 58 108 64 96 C71 108 84 106 89 91 C104 96 116 84 106 71 C117 65 118 49 105 48 C97 34 79 30 64 49Z" fill={"url(#" + leaf + ")"} stroke="#294F39" strokeWidth="2.5" strokeLinejoin="round"/>
+          <path d="M64 51 C54 62 51 79 54 104 L74 104 C77 79 74 62 64 51Z" fill="#755D43" stroke="#E7D7A9" strokeWidth="2"/>
+          <path d="M55 68 Q47 59 39 64 M73 68 Q81 59 89 64" fill="none" stroke="#F5F1D7" strokeWidth="3" strokeLinecap="round"/>
+          <ellipse cx="55" cy="75" rx="3" ry="4.3" fill="#FFFBEA"/><ellipse cx="73" cy="75" rx="3" ry="4.3" fill="#FFFBEA"/>
+          <circle cx="56" cy="75" r="1.8" fill="#263D30"/><circle cx="74" cy="75" r="1.8" fill="#263D30"/>
+          <path d="M59 87 Q64 92 69 87" fill="none" stroke="#EED9A7" strokeWidth="2"/>
+          <path d="M54 101 Q38 111 29 119 M74 101 Q90 111 99 119 M64 101 L64 122" fill="none" stroke="#755D43" strokeWidth="5" strokeLinecap="round"/>
+          <path d="M42 48 Q24 25 14 33 M86 48 Q104 25 114 33 M64 48 Q55 20 64 13" fill="none" stroke="#755D43" strokeWidth="5" strokeLinecap="round"/>
+          <path d="M15 33 Q5 21 12 13 Q27 15 30 35 M113 33 Q123 21 116 13 Q101 15 98 35 M64 16 Q49 2 42 12 Q47 29 64 32 Q81 29 86 12 Q79 2 64 16Z" fill={"url(#" + leaf + ")"} stroke="#31553B" strokeWidth="2"/>
+          <g fill="#F6D98C" stroke="#FFF2CA" strokeWidth="1"><circle cx="29" cy="59" r="4"/><circle cx="99" cy="59" r="4"/><path d="M64 35l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+          <path d="M38 105 Q27 113 22 108 M90 105 Q101 113 106 108" fill="none" stroke="#C4D99A" strokeWidth="3" strokeLinecap="round"/>
+        </g>
+      )}
+      <path d="M20 39 Q26 24 41 20 M88 20 Q103 24 108 39" fill="none" stroke="#FFFFFF" strokeWidth="2" opacity=".72" strokeLinecap="round"/>
+      {level >= 2 && <g fill="#FFF1BD" stroke="#D9C58A" strokeWidth=".8"><path d="M16 67l2.5 5.5L24 75l-5.5 2.5L16 83l-2.5-5.5L8 75l5.5-2.5Z"/><path d="M112 67l2.5 5.5 5.5 2.5-5.5 2.5-2.5 5.5-2.5-5.5-5.5-2.5 5.5-2.5Z"/></g>}
+      {level === 3 && <g fill="#F8E7A6"><circle cx="20" cy="47" r="2.4"/><circle cx="108" cy="47" r="2.4"/><circle cx="64" cy="119" r="2.8"/></g>}
+    </svg>
+  );
+}
+
 export default function GachaFolkloreArtwork({ id, level, size = 76 }: { id: FolkloreId; level: 1 | 2 | 3; size?: number }) {
   const uid = useId().replace(/:/g, "");
   const p = PALETTES[id];
+  if (id === "kodama") return <KodamaMedallion level={level} size={size} />;
   const gradient = `folklore-bg-${uid}`;
   const rim = `folklore-rim-${uid}`;
   return (
