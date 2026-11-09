@@ -112,11 +112,32 @@ export default function JLPTLevelPage() {
                   ? 0
                   : Math.round((correct / total) * 100);
 
-              const isFinished = parsed.isFinished === true;
+              const hasAllAnswers =
+                total > 0 &&
+                SECTIONS.every((section) => {
+                  const questions = set.sections?.[section] || [];
+                  const sectionAnswers = answers[section] || {};
+
+                  return questions.every(
+                    (_question: any, index: number) => {
+                      const selectedAnswer = sectionAnswers[index];
+                      const optionCount =
+                        questions[index]?.options?.length || 0;
+
+                      return (
+                        Number.isInteger(selectedAnswer) &&
+                        selectedAnswer >= 0 &&
+                        selectedAnswer < optionCount
+                      );
+                    }
+                  );
+                });
+
+              const isFinished =
+                hasAllAnswers && parsed.isFinished === true;
 
               const isPerfect =
-                parsed.isPerfect === true ||
-                (isFinished && total > 0 && correct === total);
+                hasAllAnswers && correct === total;
 
               const completedOnce =
                 parsed.completedOnce === true ||
