@@ -13,6 +13,7 @@ import {
   RefreshCw,
   Info,
   Search,
+  Lock,
 } from "lucide-react";
 
 import { GACHA_BADGES } from "@/data/gacha-badges";
@@ -695,15 +696,28 @@ export default function GachaPage() {
           </button>
         </div>
         <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-          {GACHA_RARITIES.flatMap((rarity) => GACHA_BADGES.filter((badge) => badge.rarity === rarity).slice(0, 2)).map((badge) => (
-            <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
-              <div className="flex justify-center">
-                <GachaBadgeArtwork badge={badge} size={58} level={1} />
+          {GACHA_RARITIES.flatMap((rarity) => GACHA_BADGES.filter((badge) => badge.rarity === rarity).slice(0, 2)).map((badge) => {
+            const copies = copiesFor(inventory, badge.id);
+            const owned = getTotalGachaBadgeCopies(copies) > 0;
+            return (
+              <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
+                <div className="relative flex justify-center">
+                  <div className={owned ? "" : "opacity-20 grayscale blur-[1px]"}>
+                    <GachaBadgeArtwork badge={badge} size={58} level={1} />
+                  </div>
+                  {!owned && (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 rounded-lg bg-[#111]/55 text-[#D6D1C8]">
+                      <Lock size={15} />
+                      <span className="text-[8px] font-black tracking-widest">LOCKED</span>
+                    </div>
+                  )}
+                </div>
+                <p className="mt-2 line-clamp-2 text-[9px] font-bold text-[#F0E9D9]">{badge.name}</p>
+                <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
+                <p className="mt-1 text-[8px] font-black tracking-wider">{owned ? "OWNED" : "LOCKED"}</p>
               </div>
-              <p className="mt-2 line-clamp-2 text-[9px] font-bold text-[#F0E9D9]">{badge.name}</p>
-              <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -751,20 +765,26 @@ export default function GachaPage() {
                     const owned = getTotalGachaBadgeCopies(copies) > 0;
                     return (
                       <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
-                        <div className="flex justify-center">
-                          <div className="mx-auto w-[76px]">
-                            {copies.level3 > 0 ? (
+                        <div className="relative flex justify-center">
+                          <div className={`mx-auto w-[76px] ${owned ? "" : "opacity-20 grayscale blur-[1px]"}`}>
+                            {owned && copies.level3 > 0 ? (
                               <GachaAuraPreview badge={badge} level={3} size={62} />
-                            ) : copies.level2 > 0 ? (
+                            ) : owned && copies.level2 > 0 ? (
                               <GachaAuraPreview badge={badge} level={2} size={62} />
                             ) : (
                               <GachaBadgeArtwork badge={badge} size={62} level={1} />
                             )}
                           </div>
+                          {!owned && (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 rounded-lg bg-[#111]/65 text-[#D6D1C8]">
+                              <Lock size={17} />
+                              <span className="text-[9px] font-black tracking-[0.18em]">LOCKED</span>
+                            </div>
+                          )}
                         </div>
                         <p className="mt-2 line-clamp-2 min-h-7 text-[10px] font-bold text-[#F0E9D9]">{badge.name}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
-                        <p className="mt-1 text-[9px] font-bold text-[#D6AD4F]">{owned ? `Dimiliki · ×${getTotalGachaBadgeCopies(copies)}` : "Preview · belum dimiliki"}</p>
+                        <p className="mt-1 text-[9px] font-bold text-[#D6AD4F]">{owned ? `Dimiliki · ×${getTotalGachaBadgeCopies(copies)}` : "LOCKED · belum dimiliki"}</p>
                       </div>
                     );
                   })}
