@@ -142,6 +142,16 @@ function getJlptLevel(testSet: JLPTTestSet): string {
   return match ? match[1].toUpperCase() : "";
 }
 
+function persistQuizResult(storageKey: string, result: SavedQuizResult): boolean {
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(result));
+    return true;
+  } catch (error) {
+    console.error("Gagal menyimpan hasil ujian JLPT:", error);
+    return false;
+  }
+}
+
 function isSavedSetCompleted(setId: string): boolean {
   try {
     const saved = localStorage.getItem(`jlpt_result_${setId}`);
@@ -195,6 +205,7 @@ export default function JLPTQuiz({
   const [showReview, setShowReview] = useState(false);
   const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [storageError, setStorageError] = useState<string | null>(null);
 
   const storageKey = `jlpt_result_${testSet.id}`;
   const isLoaded = loadedStorageKey === storageKey;
@@ -236,7 +247,16 @@ export default function JLPTQuiz({
     queueMicrotask(() => {
       if (!active) return;
 
-      const saved = localStorage.getItem(storageKey);
+      let saved: string | null;
+
+      try {
+        saved = localStorage.getItem(storageKey);
+      } catch (error) {
+        console.error("Gagal membaca data ujian JLPT:", error);
+        setStorageError("Penyimpanan browser tidak dapat diakses. Progress ujian belum bisa dipulihkan.");
+        setLoadedStorageKey(storageKey);
+        return;
+      }
 
     if (saved) {
       try {
@@ -301,16 +321,17 @@ export default function JLPTQuiz({
 
         // Migrasikan hasil lama yang valid agar riwayatnya tetap tersimpan.
         if (wasCompleted && parsed.completedOnce !== true) {
-          localStorage.setItem(
-            storageKey,
-            JSON.stringify({
-              ...parsed,
-              answers: savedAnswers,
-              isFinished: wasFinished,
-              isPerfect: wasPerfect,
-              completedOnce: true,
-            })
-          );
+          const migratedResult = {
+            ...parsed,
+            answers: savedAnswers,
+            isFinished: wasFinished,
+            isPerfect: wasPerfect,
+            completedOnce: true,
+          };
+
+          if (!persistQuizResult(storageKey, migratedResult)) {
+            setStorageError("Riwayat ujian tidak dapat diperbarui di penyimpanan browser.");
+          }
         }
 
         // Pulihkan klaim reward secara idempoten dari hasil yang sudah tersimpan.
@@ -411,18 +432,21 @@ export default function JLPTQuiz({
     const emptyAnswers = createEmptyAnswers();
 
     // Riwayat penyelesaian tetap dipertahankan.
-    localStorage.setItem(
-      storageKey,
-      JSON.stringify({
-        answers: emptyAnswers,
-        activeSection: "vocab",
-        currentIndex: 0,
-        isFinished: false,
-        isPerfect: false,
-        completedOnce: previouslyCompleted,
-      })
-    );
+    const resetResult = {
+      answers: emptyAnswers,
+      activeSection: "vocab",
+      currentIndex: 0,
+      isFinished: false,
+      isPerfect: false,
+      completedOnce: previouslyCompleted,
+    };
 
+    if (!persistQuizResult(storageKey, resetResult)) {
+      setStorageError("Ujian belum bisa direset karena penyimpanan browser gagal.");
+      return;
+    }
+
+    setStorageError(null);
     setUserAnswers(emptyAnswers);
     setIsFinished(false);
     setIsPerfect(false);
@@ -449,18 +473,18 @@ export default function JLPTQuiz({
       const saved = localStorage.getItem(storageKey);
       const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
 
-      localStorage.setItem(
-        storageKey,
-        JSON.stringify({
-          ...parsed,
-          answers: userAnswers,
-          activeSection,
-          currentIndex,
-          isFinished: false,
-          isPerfect: false,
-          completedOnce,
-        })
-      );
+      const progressSaved = persistQuizResult(storageKey, {
+        ...parsed,
+        answers: userAnswers,
+        activeSection,
+        currentIndex,
+        isFinished: false,
+        isPerfect: false,
+        completedOnce,
+      });
+
+      if (progressSaved) setStorageError(null);
+      else setStorageError("Progress ujian gagal disimpan. Periksa ruang penyimpanan browser.");
     } catch (error) {
       console.error("Gagal menyimpan posisi ujian JLPT:", error);
     }
@@ -488,17 +512,17 @@ export default function JLPTQuiz({
 
   setUserAnswers(updatedAnswers);
 
-  localStorage.setItem(
-    storageKey,
-    JSON.stringify({
-      answers: updatedAnswers,
-      activeSection,
-      currentIndex,
-      isFinished: false,
-      isPerfect: false,
-      completedOnce,
-    })
-  );
+  const answerSaved = persistQuizResult(storageKey, {
+    answers: updatedAnswers,
+    activeSection,
+    currentIndex,
+    isFinished: false,
+    isPerfect: false,
+    completedOnce,
+  });
+
+  if (answerSaved) setStorageError(null);
+  else setStorageError("Jawaban tersimpan sementara di halaman ini, tetapi gagal disimpan ke browser.");
 };
 
   // ==========================================
@@ -882,6 +906,15 @@ export default function JLPTQuiz({
 
   return (
     <>
+      {storageError && (
+        <div
+          role="alert"
+          className="mb-4 rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-200"
+        >
+          {storageError}
+        </div>
+      )}
+
       <div className="bg-[#1E1D1B] border border-[#33312E] rounded-3xl p-6 md:p-8 shadow-xl mt-4">
         <div className="flex items-center gap-3 border-b border-[#33312E] pb-4 mb-6">
           <button
@@ -1105,10 +1138,12 @@ export default function JLPTQuiz({
                     completedOnce: true,
                   };
 
-                  localStorage.setItem(
-                    storageKey,
-                    JSON.stringify(savedResult)
-                  );
+                  if (!persistQuizResult(storageKey, savedResult)) {
+                    setStorageError("Ujian belum bisa diselesaikan karena hasilnya gagal disimpan. Coba lagi setelah ruang penyimpanan browser tersedia.");
+                    return;
+                  }
+
+                  setStorageError(null);
 
                   // EXP penyelesaian: +50, satu kali per set.
                   awardJlptCompletionXpOnce(testSet.id);
