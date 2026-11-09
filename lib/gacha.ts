@@ -16,6 +16,8 @@ export const GACHA_HISTORY_KEY = "fude_gacha_history_v1";
 export const GACHA_SINGLE_COST = 1;
 export const GACHA_TEN_COST = 10;
 export const GACHA_MAX_EVOLUTION = 3;
+export const GACHA_BADGES_PER_RARITY = 50;
+export const GACHA_CATALOG_SIZE = GACHA_BADGES_PER_RARITY * 6;
 
 export const GACHA_RARITIES = [
   "common",
@@ -271,7 +273,9 @@ function validateCatalog(
     counts[badge.rarity]++;
   }
 
-  return GACHA_RARITIES.every((rarity) => counts[rarity] > 0);
+  return GACHA_RARITIES.every(
+    (rarity) => counts[rarity] === GACHA_BADGES_PER_RARITY
+  ) && ids.size === GACHA_CATALOG_SIZE;
 }
 
 function randomUnit(): number {
