@@ -24,15 +24,45 @@ function Character({ id, level, p }: { id: FolkloreId; level: 1 | 2 | 3; p: type
   const shine = "#FFFFFF";
   switch (id) {
     case "kodama":
+      if (level === 1) {
+        // Seedling spirit: a compact, floating forest seed with a single sprout.
+        return <g>
+          <path d="M64 17 C52 7 39 14 40 28 C25 29 19 43 26 55 C18 72 32 91 51 92 L77 92 C96 88 105 70 94 55 C101 40 89 28 76 29 C78 17 68 12 64 17Z" fill={p.main} stroke={p.dark} strokeWidth="3"/>
+          <path d="M63 25 C49 15 48 4 54 1 C66 1 69 12 66 25 C74 10 87 9 91 16 C89 28 77 33 66 31" fill={p.light} stroke={p.dark} strokeWidth="2.5" strokeLinejoin="round"/>
+          <path d="M34 59 Q45 51 56 59 M72 59 Q83 51 94 59" fill="none" stroke={p.light} strokeWidth="3" strokeLinecap="round"/>
+          <ellipse cx="49" cy="62" rx="3.5" ry="5" fill={eye}/><ellipse cx="79" cy="62" rx="3.5" ry="5" fill={eye}/>
+          <circle cx="50" cy="60" r="1.2" fill={shine}/><circle cx="80" cy="60" r="1.2" fill={shine}/>
+          <path d="M57 74 Q64 80 71 74" fill="none" stroke={p.dark} strokeWidth="2.2" strokeLinecap="round"/>
+          <path d="M44 87 Q64 96 84 87" fill="none" stroke={p.light} strokeWidth="2.5" strokeLinecap="round"/>
+          <circle cx="31" cy="76" r="3" fill={p.accent}/><circle cx="97" cy="76" r="3" fill={p.accent}/>
+        </g>;
+      }
+      if (level === 2) {
+        // Root runner: the spirit has become a four-limbed, mobile sapling.
+        return <g>
+          <path d="M40 54 C30 40 31 28 43 24 C52 20 60 29 64 39 C69 27 81 22 89 29 C98 38 91 51 82 59 L86 78 C78 89 69 91 64 82 C58 92 45 91 39 80Z" fill={p.main} stroke={p.dark} strokeWidth="3"/>
+          <path d="M43 37 Q26 18 17 27 Q18 43 39 48 M84 38 Q102 18 111 29 Q108 44 89 50" fill={p.main} stroke={p.dark} strokeWidth="3" strokeLinejoin="round"/>
+          <path d="M43 76 Q28 78 23 94 Q37 99 51 84 M82 76 Q99 80 105 95 Q90 100 76 84" fill={p.dark} stroke={p.dark} strokeWidth="3" strokeLinejoin="round"/>
+          <path d="M64 22 Q51 8 42 13 Q43 27 61 31 M66 23 Q79 5 91 12 Q90 27 68 32" fill={p.light} stroke={p.dark} strokeWidth="2.5" strokeLinejoin="round"/>
+          <path d="M42 51 Q52 45 58 52 M70 52 Q77 45 86 51" fill="none" stroke={p.light} strokeWidth="3" strokeLinecap="round"/>
+          <ellipse cx="51" cy="58" rx="3.2" ry="4.5" fill={eye}/><ellipse cx="78" cy="58" rx="3.2" ry="4.5" fill={eye}/>
+          <path d="M58 68 Q64 73 70 68" fill="none" stroke={p.dark} strokeWidth="2" strokeLinecap="round"/>
+          <path d="M64 39 L64 75" stroke={p.light} strokeWidth="2" opacity=".8"/>
+          <g fill={p.accent}><circle cx="29" cy="58" r="3"/><circle cx="99" cy="60" r="3"/><circle cx="64" cy="15" r="3"/></g>
+        </g>;
+      }
+      // Ancient grove spirit: a vertical living tree with a trunk-face and a crown.
       return <g>
-        {level >= 2 && <path d="M64 30 Q25 14 24 42 Q39 48 55 42 M64 30 Q103 14 104 42 Q89 48 73 42" fill={p.main} stroke={p.dark} strokeWidth="2.5"/>}
-        <path d={level === 1 ? "M64 17 Q45 25 47 43 Q28 47 31 68 Q34 91 64 94 Q94 91 97 68 Q100 47 81 43 Q83 25 64 17Z" : level === 2 ? "M64 11 Q44 21 43 42 Q19 48 25 76 Q32 100 64 102 Q96 100 103 76 Q109 48 85 42 Q84 21 64 11Z" : "M64 7 Q39 18 40 43 Q12 48 19 79 Q27 108 64 111 Q101 108 109 79 Q116 48 88 43 Q89 18 64 7Z"} fill={p.main} stroke={p.dark} strokeWidth="3"/>
-        <path d="M64 23 Q55 9 60 3 Q75 2 72 22 Q82 7 91 14 Q91 28 70 31" fill={p.light} stroke={p.dark} strokeWidth="2"/>
-        {level === 3 && <><path d="M34 42 Q13 21 9 39 Q18 57 39 58 M94 42 Q115 21 119 39 Q110 57 89 58" fill={p.light} stroke={p.dark} strokeWidth="2.5"/><path d="M64 6 L64 0 M30 78 Q18 91 22 104 M98 78 Q110 91 106 104" stroke={p.accent} strokeWidth="4" strokeLinecap="round"/></>}
-        <path d="M42 69 Q64 81 86 69" fill="none" stroke={p.light} strokeWidth="3" strokeLinecap="round"/>
-        <ellipse cx="52" cy="61" rx="3" ry="4" fill={eye}/><ellipse cx="76" cy="61" rx="3" ry="4" fill={eye}/><circle cx="53" cy="60" r="1" fill={shine}/><circle cx="77" cy="60" r="1" fill={shine}/>
-        <path d="M58 72 Q64 77 70 72" fill="none" stroke={p.dark} strokeWidth="2" strokeLinecap="round"/>
-        <g fill={p.accent}><circle cx="37" cy="84" r="3"/><circle cx="91" cy="84" r="3"/>{level >= 2 && <><circle cx="29" cy="58" r="3"/><circle cx="99" cy="58" r="3"/></>}</g>
+        <path d="M64 39 C48 28 30 31 22 45 C8 44 6 60 17 69 C8 82 20 96 36 91 C43 106 56 106 64 94 C72 106 85 106 92 91 C108 96 120 82 111 69 C122 60 120 44 106 45 C98 31 80 28 64 39Z" fill={p.main} stroke={p.dark} strokeWidth="3" strokeLinejoin="round"/>
+        <path d="M64 49 C54 60 51 77 54 101 L74 101 C77 77 74 60 64 49Z" fill={p.dark} stroke={p.light} strokeWidth="2"/>
+        <path d="M55 64 Q47 55 39 60 M73 64 Q81 55 89 60" fill="none" stroke={p.light} strokeWidth="3" strokeLinecap="round"/>
+        <ellipse cx="54" cy="70" rx="3.2" ry="4.5" fill={shine}/><ellipse cx="74" cy="70" rx="3.2" ry="4.5" fill={shine}/>
+        <circle cx="55" cy="71" r="2" fill={eye}/><circle cx="75" cy="71" r="2" fill={eye}/>
+        <path d="M59 82 Q64 87 69 82" fill="none" stroke={p.light} strokeWidth="2" strokeLinecap="round"/>
+        <path d="M53 99 Q38 107 31 119 M75 99 Q90 107 97 119 M64 99 L64 121" fill="none" stroke={p.dark} strokeWidth="5" strokeLinecap="round"/>
+        <path d="M41 43 Q26 18 15 26 M87 43 Q102 18 113 26 M64 39 Q57 14 64 5" fill="none" stroke={p.dark} strokeWidth="5" strokeLinecap="round"/>
+        <path d="M18 26 Q7 15 12 7 Q26 9 29 27 M110 26 Q121 15 116 7 Q102 9 99 27 M64 10 Q52 -2 45 7 Q49 21 64 24 Q79 21 83 7 Q76 -2 64 10Z" fill={p.light} stroke={p.dark} strokeWidth="2"/>
+        <g fill={p.accent}><circle cx="28" cy="54" r="4"/><circle cx="100" cy="54" r="4"/><circle cx="64" cy="32" r="3.5"/></g>
       </g>;
     case "zashiki-warashi":
       return <g>
