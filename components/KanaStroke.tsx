@@ -17,10 +17,8 @@ function prepareStrokeAnimation(
   const delayCounts = new Map<number, number>();
   let maxDelay = 0;
 
-  // AnimCJK kadang membagi satu goresan menjadi beberapa path dengan waktu mulai sama.
-  // Tách các path trùng delay để chúng lần lượt được vẽ thay vì chồng lên nhau.
   const staggeredMarkup = source.replace(
-    /style="--d:([\d.]+)s;"/g,
+    /style="--d:([\\d.]+)s;"/g,
     (_match, rawDelay: string) => {
       const baseDelay = Number(rawDelay);
       const duplicateIndex = delayCounts.get(baseDelay) ?? 0;
@@ -33,48 +31,31 @@ function prepareStrokeAnimation(
     }
   );
 
-  const markup = staggeredMarkup.replace(
-    "<svg ",
-    '<svg width="100%" height="100%" '
-  );
-
   return {
-    markup,
-    durationMs: Math.max(
-      minimumDuration,
-      Math.ceil((maxDelay + 1) * 1000)
-    ),
+    markup: staggeredMarkup.replace("<svg ", '<svg width="100%" height="100%" '),
+    durationMs: Math.max(minimumDuration, Math.ceil((maxDelay + 1) * 1000)),
   };
 }
 
-export default function KanaStroke({ kana }: { kana: string }) {
+function KanaStrokeCharacter({ kana }: { kana: string }) {
   const [loopKey, setLoopKey] = useState(0);
   const [svgMarkup, setSvgMarkup] = useState("");
   const [loadedKana, setLoadedKana] = useState("");
   const [loopDuration, setLoopDuration] = useState(3500);
-
   const strokeAsset = strokeIndex[kana];
 
   useEffect(() => {
     if (!strokeAsset) return;
-
     let active = true;
 
     fetch(`/kana-strokes/${strokeAsset.file}`)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Gagal memuat animasi kana.");
-        }
+        if (!response.ok) throw new Error("Gagal memuat animasi kana.");
         return response.text();
       })
       .then((source) => {
         if (!active) return;
-
-        const prepared = prepareStrokeAnimation(
-          source,
-          strokeAsset.durationMs
-        );
-
+        const prepared = prepareStrokeAnimation(source, strokeAsset.durationMs);
         setSvgMarkup(prepared.markup);
         setLoadedKana(kana);
         setLoopDuration(prepared.durationMs);
@@ -91,18 +72,12 @@ export default function KanaStroke({ kana }: { kana: string }) {
 
   useEffect(() => {
     if (!strokeAsset) return;
-
-    const timer = window.setTimeout(() => {
-      setLoopKey((previous) => previous + 1);
-    }, loopDuration);
-
+    const timer = window.setTimeout(() => setLoopKey((previous) => previous + 1), loopDuration);
     return () => window.clearTimeout(timer);
   }, [loopKey, kana, loopDuration, strokeAsset]);
 
-  if (!kana) return null;
-
   return (
-    <div className="flex h-full w-full items-center justify-center">
+    <div className="flex h-14 w-14 shrink-0 items-center justify-center sm:h-16 sm:w-16">
       {strokeAsset && svgMarkup && loadedKana === kana ? (
         <div
           key={`${kana}-${loopKey}`}
@@ -113,15 +88,29 @@ export default function KanaStroke({ kana }: { kana: string }) {
           dangerouslySetInnerHTML={{ __html: svgMarkup }}
         />
       ) : (
-        <span
-          style={{
-            fontSize: "100px",
-            color: "#EAE6DD",
-          }}
-        >
-          {kana}
-        </span>
+        <span className="font-mincho text-4xl text-[#EAE6DD]">{kana}</span>
       )}
+    </div>
+  );
+}
+
+export default function KanaStroke({ kana }: { kana: string }) {
+  if (!kana) return null;
+
+  const characters = Array.from(kana).filter((character) => strokeIndex[character]);
+
+  if (characters.length === 0) return null;
+
+  return (
+    <div className="w-full max-w-full rounded-xl border border-[#33312E] bg-[#121110]/90 px-2 py-2">
+      <p className="mb-1 text-center text-[9px] font-bold uppercase tracking-wider text-[#C93438]">
+        Urutan Goresan Kana
+      </p>
+      <div className="flex max-w-full items-center justify-start gap-1 overflow-x-auto">
+        {characters.map((character, index) => (
+          <KanaStrokeCharacter key={`${character}-${index}`} kana={character} />
+        ))}
+      </div>
     </div>
   );
 }
