@@ -49,7 +49,7 @@ export interface GachaBadgeCopies {
 }
 
 export interface GachaInventory {
-  version: 1;
+  version: 2;
   badges: Record<string, GachaBadgeCopies>;
   newBadgeIds: string[];
   updatedAt: number;
