@@ -219,6 +219,7 @@ export default function Sidebar() {
             badgeLevel={badgePreview?.level ?? 1}
             frameId={profile.equippedFrameId}
             size={56}
+            compactBadgeAura
           />
         </div>
         <div className="min-w-0 flex-1">
@@ -309,9 +310,10 @@ export default function Sidebar() {
                   avatar={profile.avatar}
                   photoSrc={photoSrc}
                   badgeId={badgePreview?.id ?? profile.equippedBadgeId}
-            badgeLevel={badgePreview?.level ?? 1}
+                  badgeLevel={badgePreview?.level ?? 1}
                   frameId={profile.equippedFrameId}
                   size={46}
+                  compactBadgeAura
                 />
               </div>
 
