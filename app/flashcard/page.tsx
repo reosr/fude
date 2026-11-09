@@ -274,7 +274,7 @@ useEffect(() => {
       </div>
 
       <div 
-        className="relative w-full max-w-md h-[min(390px,48vh)] min-h-[300px] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
+        className="relative w-full max-w-md h-[min(440px,54svh)] min-h-[320px] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -390,7 +390,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="flex items-center justify-between w-full max-w-md mt-4 md:mt-12 relative z-20">
+      <div className="flex items-center justify-center md:justify-between w-full max-w-md mt-8 md:mt-12 relative z-20">
         <button onClick={handlePrev} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowLeft size={19} className="md:!h-6 md:!w-6" />
         </button>
