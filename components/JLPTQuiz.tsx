@@ -2,11 +2,10 @@
 "use client";
 
 import {
-  awardXpOnce,
+  awardJlptCompletionXpOnce,
+  awardJlptHighScoreBonusOnce,
   awardJlptPerfectRewardOnce,
   awardJlptLevelCompletionOnce,
-  JLPT_COMPLETION_XP,
-  JLPT_HIGH_SCORE_BONUS_XP,
 } from "../lib/gamification";
 
 import { useState, useEffect } from "react";
@@ -888,14 +887,14 @@ export default function JLPTQuiz({
 
                   const perfect = score.isPerfect;
 
-                  const earnedXp =
-                    JLPT_COMPLETION_XP +
-                    (score.totalScorePercent >= 80
-                      ? JLPT_HIGH_SCORE_BONUS_XP
-                      : 0);
+                  // EXP penyelesaian: +50, satu kali per set.
+awardJlptCompletionXpOnce(testSet.id);
 
-                  // EXP diberikan satu kali untuk ID set ini.
-                  awardXpOnce(`jlpt:${testSet.id}`, earnedXp);
+// Bonus skor minimal 80%: +25,
+// bisa diperoleh pada percobaan berikutnya.
+if (score.totalScorePercent >= 80) {
+  awardJlptHighScoreBonusOnce(testSet.id);
+}
 
                   // Token hanya diberikan jika semua jawaban benar.
                   if (perfect) {
