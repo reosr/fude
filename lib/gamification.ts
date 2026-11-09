@@ -875,13 +875,10 @@ export function awardJlptHighScoreBonusOnce(
   if (!setId || typeof setId !== "string") {
     return false;
   }
+  // Bonus skor tinggi adalah reward terpisah dari EXP penyelesaian.
+  // Marker migrasi lama jlpt:<setId> hanya mewakili EXP penyelesaian
+  // dan tidak boleh menghalangi bonus 80% yang belum pernah diklaim.
   initializeTokenEconomy();
-  const rewards = readRewards();
-
-  // Cegah bonus ganda dari sistem lama.
-  if (rewards.includes(`jlpt:${setId}`)) {
-    return false;
-  }
 
   return awardXpOnce(
     `jlpt-high-score:${setId}`,
