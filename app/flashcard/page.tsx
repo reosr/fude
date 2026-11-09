@@ -248,7 +248,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="space-y-2 md:space-y-6 pb-20 md:pb-10 flex flex-col items-center relative overflow-hidden">
+    <div className="space-y-2 md:space-y-6 pb-[calc(11rem+env(safe-area-inset-bottom))] md:pb-10 flex flex-col items-center relative overflow-hidden">
       <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative z-20">
         <div>
           <h2 className="text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
@@ -390,7 +390,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center md:justify-between w-full max-w-md mt-8 md:mt-12 relative z-20 shrink-0">
+      <div className="flex items-center justify-center gap-4 sm:gap-6 md:justify-between md:gap-0 w-full max-w-md mt-8 md:mt-12 relative z-20 shrink-0">
         <button onClick={handlePrev} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowLeft size={19} className="md:!h-6 md:!w-6" />
         </button>
