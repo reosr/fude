@@ -332,7 +332,7 @@ export default function GachaPage() {
             </div>
           </div>
         </div>
-      
+      </section>
 
       <section className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="relative overflow-hidden rounded-3xl border border-[#5E4930] bg-gradient-to-br from-[#30271C] via-[#211D19] to-[#171615] p-6 md:p-8">
