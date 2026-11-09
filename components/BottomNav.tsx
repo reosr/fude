@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Languages, Layers, Home, User } from "lucide-react";
+import { BookOpen, Languages, Layers, Home, User, Dices } from "lucide-react";
 
 const tabs = [
   { href: "/belajar", label: "Belajar", icon: BookOpen },
   { href: "/kosakata", label: "Kosakata", icon: Languages },
   { href: "/", label: "Home", icon: Home, isCenter: true }, // Tombol Tengah
   { href: "/flashcard", label: "Flashcard", icon: Layers },
+  { href: "/gacha", label: "Gacha", icon: Dices },
   { href: "/profil", label: "Profil", icon: User },
 ];
 
