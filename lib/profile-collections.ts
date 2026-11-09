@@ -467,7 +467,9 @@ export function getCompletedJlptSetIds(): string[] {
         const raw = localStorage.getItem(key);
         const result = raw ? JSON.parse(raw) : null;
 
-        if (result?.isFinished === true) {
+        // Gunakan flag riwayat yang sudah divalidasi oleh JLPTQuiz.
+        // isFinished saja tidak cukup karena data lama bisa tidak lengkap.
+        if (result?.completedOnce === true) {
           const setId = key.slice("jlpt_result_".length);
 
           if (setId && !completed.includes(setId)) {
