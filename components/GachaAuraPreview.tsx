@@ -162,7 +162,7 @@ export default function GachaAuraPreview({
       <style jsx>{`
         .fude-aura-preview {
           width: 100%;
-          min-height: ${compact ? Math.max(size + 12, 34) : Math.max(size + 24, 80)}px;
+          min-height: ${compact ? Math.max(size + 8, 28) : Math.max(size + 24, 80)}px;
           isolation: isolate;
         }
         .fude-aura-cloud {
