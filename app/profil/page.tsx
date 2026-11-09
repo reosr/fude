@@ -594,8 +594,7 @@ export default function Profil() {
                 DEVELOPMENT PREVIEW MODE
               </p>
               <p className="text-xs text-[#A3A099] mt-1">
-                Semua desain badge dan frame bisa dilihat. Syarat unlock
-                permanen tetap berlaku dan tidak diubah.
+                Semua desain badge dan frame bisa dilihat untuk keperluan preview. Badge tetap harus diperoleh melalui Gacha sebelum bisa dipakai.
               </p>
             </div>
           )}
