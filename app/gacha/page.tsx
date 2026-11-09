@@ -10,6 +10,7 @@ import {
   WandSparkles,
   RefreshCw,
   Info,
+  Search,
 } from "lucide-react";
 
 import { GACHA_BADGES } from "@/data/gacha-badges";
@@ -89,6 +90,7 @@ export default function GachaPage() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [activeRarity, setActiveRarity] = useState<GachaRarity | "all">("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const refresh = useCallback(() => {
     setInventory(getGachaInventory());
@@ -111,8 +113,14 @@ export default function GachaPage() {
     () =>
       GACHA_BADGES.filter(
         (badge) => getTotalGachaBadgeCopies(copiesFor(inventory, badge.id)) > 0
-      ).filter((badge) => activeRarity === "all" || badge.rarity === activeRarity),
-    [inventory, activeRarity]
+      )
+        .filter((badge) => activeRarity === "all" || badge.rarity === activeRarity)
+        .filter((badge) =>
+          `${badge.name} ${badge.description ?? ""}`
+            .toLowerCase()
+            .includes(searchTerm.trim().toLowerCase())
+        ),
+    [inventory, activeRarity, searchTerm]
   );
 
   const totalOwned = useMemo(
@@ -397,6 +405,16 @@ export default function GachaPage() {
           </div>
         </div>
 
+        <div className="mt-5 flex items-center gap-2 rounded-xl border border-[#33312E] bg-[#262523] px-3">
+          <Search size={15} className="shrink-0 text-[#817A73]" />
+          <input
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            placeholder="Cari nama atau deskripsi badge..."
+            className="w-full bg-transparent py-3 text-xs text-[#EAE6DD] outline-none placeholder:text-[#817A73]"
+          />
+        </div>
+
         {ownedBadges.length === 0 ? (
           <div className="mt-6 rounded-2xl border border-dashed border-[#44413D] p-8 text-center">
             <Dices size={30} className="mx-auto text-[#817A73]" />
@@ -441,6 +459,9 @@ export default function GachaPage() {
                   </h3>
                   <p className="mt-1 text-[9px] uppercase tracking-wider opacity-80">
                     {RARITY_LABELS[badge.rarity]}
+                  </p>
+                  <p className="mt-2 line-clamp-2 text-[10px] leading-4 text-[#A99C89]">
+                    {badge.description}
                   </p>
                   <div className="mt-3 rounded-lg bg-black/20 p-2">
                     <p className="text-[10px] text-[#D8D1C5]">
