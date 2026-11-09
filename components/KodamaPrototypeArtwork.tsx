@@ -660,9 +660,10 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   ctx.bezierCurveTo(91, 39, 86, 43, 80, 47);
   ctx.bezierCurveTo(70, 41, 64, 46, 55, 48);
   ctx.closePath();
-  ctx.fillStyle = ctx.createLinearGradient(58, 28, 99, 48);
-  ctx.fillStyle.addColorStop?.(0, "#e9f0ad");
-  ctx.fillStyle.addColorStop?.(1, "#496d3b");
+  const mossBrow = ctx.createLinearGradient(58, 28, 99, 48);
+  mossBrow.addColorStop(0, "#e9f0ad");
+  mossBrow.addColorStop(1, "#496d3b");
+  ctx.fillStyle = mossBrow;
   ctx.fill();
 
   // One visible glossy eye and a smaller far eye sell the turned pose.
