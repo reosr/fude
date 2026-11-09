@@ -8,7 +8,9 @@
 - Set the art direction toward polished 3D collectible-game artwork with a balanced mix of cute, cool, elegant, and playful designs for a broad audience.
 
 ### Gacha and profile collection UX
-- Explain that the 300-entry Gacha summon catalog is separate from chapter/JLPT achievement badges such as Mochi Guardian and Sakura Bloom.
+- Unify the 300 profile badges and Gacha summon pool into one collection, retaining Mochi Guardian, Sakura Bloom, and the other original badge identities.
+- Make Gacha the only source of badge ownership; chapter/JLPT progress no longer grants badges.
+- Preserve legacy Gacha inventory, evolution copies, NEW markers, summon history, and equipped badge IDs through ID migration.
 - Add a return action on the Gacha page with browser-history navigation and a Home fallback.
 - Restyle collection overlays with a translucent dark surface and backdrop blur while keeping the page visible behind them.
 - Lock document scrolling while profile collection/detail/edit dialogs or the Gacha catalog are open; keep scrolling inside the modal.
@@ -35,7 +37,7 @@
 - Rename deity-based collection labels to folklore or nature-based alternatives and replace the yin-yang ornament with a geometric crest.
 
 ### Gacha foundation
-- Add a 300-entry badge catalog with rarity-weighted distribution: Common 90, Uncommon 70, Rare 55, Epic 40, Mythic 25, Legendary 20.
+- Build one 300-entry profile/Gacha badge catalog with rarity distribution: Common 90, Uncommon 70, Rare 55, Epic 40, Mythic 25, Legendary 20.
 - Add transparent rarity rates that improve from N5 through N1.
 - Set summon costs to 1 token for 1x and 10 tokens for 10x.
 - Persist badge copies, NEW markers, and the latest 200 summon results in browser storage.
