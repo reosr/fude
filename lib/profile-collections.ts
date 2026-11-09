@@ -3,6 +3,7 @@ import { getProgress } from "./progress";
 
 export type BadgeTier =
   | "common"
+  | "uncommon"
   | "rare"
   | "epic"
   | "mythic"
