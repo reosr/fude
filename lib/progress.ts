@@ -5,7 +5,7 @@ export function getProgress(): number {
 
   try {
     const saved = localStorage.getItem(PROGRESS_KEY);
-    if (saved === null) return 1;
+    if (saved === null || !/^\d+$/.test(saved)) return 1;
 
     const progress = Number(saved);
 
