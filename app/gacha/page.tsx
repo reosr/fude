@@ -144,6 +144,7 @@ export default function GachaPage() {
         const messages = {
           "not-available": "Gacha hanya bisa digunakan di browser.",
           "invalid-catalog": "Data koleksi Gacha belum valid.",
+          "invalid-count": "Jumlah summon tidak valid.",
           "insufficient-tokens": "Token lu belum cukup.",
           "storage-error": "Gagal menyimpan hasil summon. Token tidak boleh terpotong.",
           "not-enough-copies": "Duplikat badge belum cukup.",
