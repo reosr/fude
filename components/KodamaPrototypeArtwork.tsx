@@ -434,16 +434,30 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   // Keep the same collectible frame language, while giving the evolved
   // spirit a completely new silhouette and pose.
   const framePath = () => {
+    // Level 2 frame silhouette: branching crown, raised side roots,
+    // and a tapered root-point base. The inner enamel stays silver-toned.
     ctx.beginPath();
-    ctx.moveTo(80, 5);
-    ctx.bezierCurveTo(99, 8, 111, 12, 123, 25);
-    ctx.bezierCurveTo(143, 35, 140, 56, 145, 82);
-    ctx.bezierCurveTo(143, 108, 130, 125, 111, 132);
-    ctx.lineTo(80, 153);
-    ctx.lineTo(49, 132);
-    ctx.bezierCurveTo(30, 125, 17, 108, 15, 82);
-    ctx.bezierCurveTo(20, 56, 17, 35, 37, 25);
-    ctx.bezierCurveTo(49, 12, 61, 8, 80, 5);
+    ctx.moveTo(78, 7);
+    ctx.bezierCurveTo(87, 10, 92, 18, 96, 27);
+    ctx.lineTo(111, 11);
+    ctx.bezierCurveTo(117, 5, 126, 10, 122, 19);
+    ctx.lineTo(116, 31);
+    ctx.bezierCurveTo(134, 36, 141, 50, 139, 66);
+    ctx.lineTo(150, 72);
+    ctx.bezierCurveTo(157, 78, 150, 88, 140, 91);
+    ctx.bezierCurveTo(138, 110, 126, 124, 109, 133);
+    ctx.lineTo(91, 146);
+    ctx.bezierCurveTo(84, 153, 78, 151, 73, 145);
+    ctx.lineTo(66, 137);
+    ctx.lineTo(49, 134);
+    ctx.bezierCurveTo(31, 127, 21, 111, 20, 92);
+    ctx.bezierCurveTo(10, 88, 4, 79, 11, 72);
+    ctx.lineTo(21, 65);
+    ctx.bezierCurveTo(18, 47, 27, 35, 44, 29);
+    ctx.lineTo(38, 17);
+    ctx.bezierCurveTo(34, 8, 44, 4, 50, 11);
+    ctx.lineTo(65, 27);
+    ctx.bezierCurveTo(69, 17, 72, 10, 78, 7);
     ctx.closePath();
   };
   ctx.save();
