@@ -55,7 +55,7 @@ export default function RootLayout({
           </Suspense>
 
           <main className="flex-1 pb-20 md:pb-0 md:pl-64">
-            <div className="max-w-6xl mx-auto px-4 pt-20 pb-4 md:p-8">{children}</div>
+            <div className="max-w-6xl mx-auto px-4 pt-28 pb-4 md:p-8">{children}</div>
           </main>
 
           {/* BUNGKUS BOTTOMNAV DENGAN SUSPENSE */}
