@@ -149,7 +149,7 @@ export default function GachaAuraPreview({
         </>
       )}
       <div className="relative z-10">
-        <GachaBadgeArtwork badge={badge} level={1} size={size} />
+        <GachaBadgeArtwork badge={badge} level={level} size={size} />
       </div>
 {level === 3 && badge.rarity === "legendary" && lightningBolts.filter((bolt) => bolt.layer === "front").map((bolt) => (
         <svg key={bolt.id} className="fude-legendary-lightning fude-legendary-lightning-front" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
