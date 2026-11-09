@@ -793,7 +793,7 @@ export function awardJlptCompletionXpOnce(
   if (!setId || typeof setId !== "string") {
     return false;
   }
-initializeTokenEconomy();
+  initializeTokenEconomy();
   const rewards = readRewards();
 
   // Cegah klaim ulang dari sistem reward lama.
