@@ -105,6 +105,7 @@ export default function Profil() {
   const [tokens, setTokens] = useState(0);
 
   const [unlockedBadgeIds, setUnlockedBadgeIds] = useState<string[]>([]);
+  const [equippedBadgeLevel, setEquippedBadgeLevel] = useState<1 | 2 | 3>(1);
   const [unlockedFrameIds, setUnlockedFrameIds] = useState<string[]>([]);
   const [pendingIds, setPendingIds] = useState<string[]>([]);
   const [gachaNewBadgeIds, setGachaNewBadgeIds] = useState<string[]>([]);
@@ -138,7 +139,8 @@ export default function Profil() {
     setTotalXp(getFudeXp());
     setTokens(getFudeTokens());
 
-    setProfile(getFudeProfile());
+    const currentProfile = getFudeProfile();
+    setProfile(currentProfile);
 
     setUnlockedFrameIds(
       getUnlockedFrames().map((frame) => frame.id)
@@ -158,6 +160,13 @@ export default function Profil() {
             }
           ) > 0
       ).map((badge) => badge.id)
+    );
+    const equippedId = currentProfile.equippedBadgeId
+      ? LEGACY_GACHA_BADGE_ID_MAP[currentProfile.equippedBadgeId] ?? currentProfile.equippedBadgeId
+      : null;
+    const equippedCopies = equippedId ? gachaInventory.badges[equippedId] : undefined;
+    setEquippedBadgeLevel(
+      equippedCopies?.level3 ? 3 : equippedCopies?.level2 ? 2 : 1
     );
     setGachaNewBadgeIds(gachaInventory.newBadgeIds);
   };
@@ -398,6 +407,7 @@ export default function Profil() {
                 avatar={profile.avatar}
                 photoSrc={photoSrc}
                 badgeId={profile.equippedBadgeId}
+                badgeLevel={equippedBadgeLevel}
                 frameId={profile.equippedFrameId}
                 size={116}
               />
