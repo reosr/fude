@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { GACHA_BADGES } from "@/data/gacha-badges";
+import GachaBadgeArtwork from "@/components/GachaBadgeArtwork";
 import {
   GACHA_CATALOG_SIZE,
   GACHA_RARITIES,
@@ -411,7 +412,13 @@ export default function GachaPage() {
                   className={`fude-gacha-reveal rounded-2xl border p-3 text-center shadow-lg ${RARITY_STYLES[result.rarity]} ${RARITY_GLOW[result.rarity]}`}
                   style={{ animationDelay: `${index * 65}ms` }}
                 >
-                  <div className="text-3xl">{badge?.icon ?? "✦"}</div>
+                  {badge ? (
+                    <div className="flex justify-center">
+                      <GachaBadgeArtwork badge={badge} size={66} />
+                    </div>
+                  ) : (
+                    <div className="text-3xl">✦</div>
+                  )}
                   <p className="mt-2 line-clamp-2 text-xs font-black">{result.badgeName}</p>
                   <p className="mt-1 text-[9px] font-bold uppercase tracking-wider opacity-80">
                     {RARITY_LABELS[result.rarity]}
@@ -487,7 +494,15 @@ export default function GachaPage() {
                   className={`rounded-2xl border bg-[#262523] p-3 shadow-lg ${RARITY_GLOW[badge.rarity]} ${RARITY_STYLES[badge.rarity]}`}
                 >
                   <div className="flex items-start justify-between gap-2">
-                    <span className="text-3xl">{badge.icon}</span>
+                    <GachaBadgeArtwork
+                      badge={badge}
+                      size={62}
+                      level={
+                        copies.level3 > 0 ? 3 :
+                        copies.level2 > 0 ? 2 :
+                        copies.level1 > 0 ? 1 : 0
+                      }
+                    />
                     <div className="flex flex-col items-end gap-1">
                       {isNew && (
                         <span className="rounded-md bg-[#C93438] px-2 py-1 text-[8px] font-black text-white">
