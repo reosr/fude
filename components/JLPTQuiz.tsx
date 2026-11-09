@@ -290,16 +290,28 @@ export default function JLPTQuiz({
   }, [activeSection]);
 
   const handleAnswer = (optIndex: number) => {
-    if (isFinished) return;
+  if (isFinished || isPerfect) return;
 
-    setUserAnswers((previous) => ({
-      ...previous,
-      [activeSection]: {
-        ...previous[activeSection],
-        [currentIndex]: optIndex,
-      },
-    }));
+  const updatedAnswers = {
+    ...userAnswers,
+    [activeSection]: {
+      ...userAnswers[activeSection],
+      [currentIndex]: optIndex,
+    },
   };
+
+  setUserAnswers(updatedAnswers);
+
+  localStorage.setItem(
+    storageKey,
+    JSON.stringify({
+      answers: updatedAnswers,
+      isFinished: false,
+      isPerfect: false,
+      completedOnce,
+    })
+  );
+};
 
   // ==========================================
   // HITUNG SOAL YANG BELUM DIJAWAB
