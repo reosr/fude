@@ -180,9 +180,13 @@ export default function GachaAuraPreview({
           0%, 100% { opacity: .42; transform: scale(.9) rotate(-5deg); }
           50% { opacity: 1; transform: scale(1.08) rotate(5deg); }
         }
-        @keyframes legendary-flare {
-          0%, 100% { opacity: .12; translate: 0 8px; scale: .8 .72; }
-          45% { opacity: .95; translate: 0 -8px; scale: 1.08 1.12; }
+        @keyframes legendary-orbit {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes legendary-bolt {
+          0%, 100% { opacity: .12; filter: brightness(.8); }
+          38%, 62% { opacity: 1; filter: brightness(1.55); }
         }
         .fude-aura-level-2.fude-aura-epic .fude-aura-cloud { opacity: .28; }
         .fude-aura-level-2.fude-aura-mythic .fude-aura-cloud { opacity: .3; }
