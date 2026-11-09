@@ -13,6 +13,21 @@ export default function KanjiStroke({ kanji }: { kanji: string }) {
   // State untuk nyimpen huruf mana yang gagal load animasinya
   const [failedChars, setFailedChars] = useState<Record<number, boolean>>({});
 
+  // Ukuran satu kotak kanji: 76px di HP, 100px mulai md (sama seperti breakpoint md Tailwind).
+  // Ukuran yang sama dipakai untuk kotaknya DAN untuk gambar HanziWriter, supaya kanji
+  // selalu pas di tengah kotak (dulu gambar dipatok 100px walau kotaknya 76px -> kegeser 12px).
+  const [size, setSize] = useState<number>(() =>
+    typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches ? 100 : 76
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const onChange = () => setSize(mq.matches ? 100 : 76);
+    onChange();
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
+  }, []);
+
   useEffect(() => {
     let isMounted = true;
 
@@ -23,8 +38,8 @@ export default function KanjiStroke({ kanji }: { kanji: string }) {
       container.innerHTML = ""; 
       try {
         const writer = HanziWriter.create(container, char, {
-          width: 100,
-          height: 100,
+          width: size,
+          height: size,
           padding: 5,
           strokeColor: "#EAE6DD",
           radicalColor: "#C93438",
@@ -82,7 +97,7 @@ export default function KanjiStroke({ kanji }: { kanji: string }) {
         if (container) container.innerHTML = "";
       });
     };
-  }, [kanji]);
+  }, [kanji, size]);
 
   if (characters.length === 0) return null;
 
@@ -94,7 +109,7 @@ export default function KanjiStroke({ kanji }: { kanji: string }) {
     >
       <div className="flex w-full flex-wrap justify-center gap-2">
         {characters.map((char, index) => (
-          <div key={index} className="relative w-[76px] h-[76px] md:w-[100px] md:h-[100px] flex items-center justify-center">
+          <div key={index} className="relative flex items-center justify-center" style={{ width: size, height: size }}>
             {/* KALAU ANIMASI GAGAL, TAMPILIN KANJI BIASA BESAR */}
             {failedChars[index] ? (
               <span className="text-5xl md:text-7xl font-mincho text-[#EAE6DD]">{char}</span>
