@@ -547,6 +547,20 @@ function awardTokenRewardOnce(
   }
 }
 
+// Kompensasi ketika seluruh badge dalam satu rarity sudah mencapai Level 3.
+export function awardGachaMaxedRarityCompensationOnce(
+  rewardId: string,
+  rarity: string
+): boolean {
+  if (!rewardId || !rarity) return false;
+
+  return awardTokenRewardOnce(
+    `gacha-compensation:${rewardId}`,
+    1,
+    `Kompensasi Gacha rarity ${rarity} telah maksimal`
+  );
+}
+
 // =====================================================
 // CHAPTER REWARDS
 // =====================================================
