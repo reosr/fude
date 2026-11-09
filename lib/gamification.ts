@@ -790,12 +790,13 @@ export function awardXpOnce(
 export function awardJlptCompletionXpOnce(
   setId: string
 ): boolean {
-  if (!setId) return false;
+  if (!setId || typeof setId !== "string") {
+    return false;
+  }
 
   const rewards = readRewards();
 
-  // Cegah EXP penyelesaian diberikan ulang
-  // kepada pengguna dari sistem reward lama.
+  // Cegah klaim ulang dari sistem reward lama.
   if (rewards.includes(`jlpt:${setId}`)) {
     return false;
   }
@@ -809,30 +810,19 @@ export function awardJlptCompletionXpOnce(
 export function awardJlptHighScoreBonusOnce(
   setId: string
 ): boolean {
-  if (!setId) return false;
-
-  const rewards = readRewards();
-
-  const legacyId = `jlpt:${setId}`;
-  const bonusId = `jlpt-high-score:${setId}`;
-
-  if (rewards.includes(bonusId)) {
+  if (!setId || typeof setId !== "string") {
     return false;
   }
 
-  // Reward lama mungkin sudah mencakup bonus 80%.
-  // Tandai agar tidak diberikan dua kali.
-  if (rewards.includes(legacyId)) {
-    localStorage.setItem(
-      XP_REWARDS_KEY,
-      JSON.stringify([...rewards, bonusId])
-    );
+  const rewards = readRewards();
 
+  // Cegah bonus ganda dari sistem lama.
+  if (rewards.includes(`jlpt:${setId}`)) {
     return false;
   }
 
   return awardXpOnce(
-    bonusId,
+    `jlpt-high-score:${setId}`,
     JLPT_HIGH_SCORE_BONUS_XP
   );
 }
