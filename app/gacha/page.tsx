@@ -37,6 +37,8 @@ import {
   getFudeTokens,
   getFudeProfile,
   saveFudeProfile,
+  TOKEN_UPDATED_EVENT,
+  XP_UPDATED_EVENT,
 } from "@/lib/gamification";
 
 const RARITY_LABELS: Record<GachaRarity, string> = {
@@ -105,10 +107,14 @@ export default function GachaPage() {
   useEffect(() => {
     const initialRefresh = window.requestAnimationFrame(refresh);
     window.addEventListener(GACHA_UPDATED_EVENT, refresh);
+    window.addEventListener(TOKEN_UPDATED_EVENT, refresh);
+    window.addEventListener(XP_UPDATED_EVENT, refresh);
     window.addEventListener("storage", refresh);
     return () => {
       window.cancelAnimationFrame(initialRefresh);
       window.removeEventListener(GACHA_UPDATED_EVENT, refresh);
+      window.removeEventListener(TOKEN_UPDATED_EVENT, refresh);
+      window.removeEventListener(XP_UPDATED_EVENT, refresh);
       window.removeEventListener("storage", refresh);
     };
   }, [refresh]);
