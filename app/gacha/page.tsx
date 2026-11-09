@@ -597,14 +597,13 @@ export default function GachaPage() {
                   className={`rounded-2xl border bg-[#262523] p-3 shadow-lg ${RARITY_GLOW[badge.rarity]} ${RARITY_STYLES[badge.rarity]}`}
                 >
                   <div className="flex items-start justify-between gap-2">
-                    <GachaBadgeArtwork
-                      badge={badge}
-                      size={62}
-                      level={
-                        copies.level3 > 0 ? 3 :
-                        copies.level2 > 0 ? 2 : 1
-                      }
-                    />
+                    {copies.level3 > 0 ? (
+                      <GachaAuraPreview badge={badge} level={3} size={62} />
+                    ) : copies.level2 > 0 ? (
+                      <GachaAuraPreview badge={badge} level={2} size={62} />
+                    ) : (
+                      <GachaBadgeArtwork badge={badge} size={62} level={1} />
+                    )}
                     <div className="flex flex-col items-end gap-1">
                       {isNew && (
                         <span className="rounded-md bg-[#C93438] px-2 py-1 text-[8px] font-black text-white">
@@ -751,7 +750,13 @@ export default function GachaPage() {
                     return (
                       <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]} ${owned ? "" : "opacity-65"}`}>
                         <div className={`flex justify-center ${owned ? "" : "grayscale"}`}>
-                          <GachaBadgeArtwork badge={badge} size={62} level={copies.level3 ? 3 : copies.level2 ? 2 : 1} />
+                          {copies.level3 > 0 ? (
+                            <GachaAuraPreview badge={badge} level={3} size={62} />
+                          ) : copies.level2 > 0 ? (
+                            <GachaAuraPreview badge={badge} level={2} size={62} />
+                          ) : (
+                            <GachaBadgeArtwork badge={badge} size={62} level={1} />
+                          )}
                         </div>
                         <p className="mt-2 line-clamp-2 min-h-7 text-[10px] font-bold text-[#F0E9D9]">{badge.name}</p>
                         <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
