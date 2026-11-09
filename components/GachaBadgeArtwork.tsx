@@ -5,6 +5,7 @@ import { useId } from "react";
 import type { GachaBadgeDefinition, GachaEvolutionLevel } from "@/lib/gacha";
 import { GACHA_BADGES } from "@/data/gacha-badges";
 import GachaFolkloreArtwork from "@/components/GachaFolkloreArtwork";
+import KodamaPrototypeArtwork from "@/components/KodamaPrototypeArtwork";
 
 const PALETTES: Record<
   GachaBadgeDefinition["rarity"],
@@ -98,6 +99,9 @@ export default function GachaBadgeArtwork({
     "gacha-common-11": "kawauso",
   } as const;
   const folkloreArtworkId = folkloreArtworkIds[badge.id as keyof typeof folkloreArtworkIds];
+  if (badge.id === "gacha-common-02" && level === 1) {
+    return <KodamaPrototypeArtwork size={size} />;
+  }
   if (folkloreArtworkId) {
     return <GachaFolkloreArtwork id={folkloreArtworkId} level={level} size={size} />;
   }
