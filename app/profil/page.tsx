@@ -112,6 +112,7 @@ export default function Profil() {
 
   const [activeTab, setActiveTab] = useState<CollectionTab>("badges");
   const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null);
+  const [selectedBadgePreviewLevel, setSelectedBadgePreviewLevel] = useState<1 | 2 | 3>(1);
   const [collectionModalOpen, setCollectionModalOpen] = useState(false);
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -356,6 +357,7 @@ export default function Profil() {
   };
 
   const openBadge = (badge: GachaBadgeDefinition) => {
+    setSelectedBadgePreviewLevel(1);
     if (gachaNewBadgeIds.includes(badge.id)) {
       markGachaBadgeSeen(badge.id);
     }
@@ -892,9 +894,29 @@ export default function Profil() {
 
             {selectedBadge && (
               <div className="text-center">
-                <div className="mx-auto mb-4 flex h-28 w-28 items-center justify-center">
-                  <GachaBadgeArtwork badge={selectedBadge} level={1} size={104} />
+                <div className="mx-auto mb-4 flex h-36 w-36 items-center justify-center">
+                  <GachaBadgeArtwork badge={selectedBadge} level={selectedBadgePreviewLevel} size={128} />
                 </div>
+
+                {COLLECTION_PREVIEW_MODE && (
+                  <div className="mx-auto mb-4 grid max-w-xs grid-cols-3 gap-2 rounded-xl border border-[#44413D] bg-[#121110] p-1.5">
+                    {([1, 2, 3] as const).map((level) => (
+                      <button
+                        key={level}
+                        type="button"
+                        onClick={() => setSelectedBadgePreviewLevel(level)}
+                        aria-pressed={selectedBadgePreviewLevel === level}
+                        className={`rounded-lg py-2 text-xs font-black transition-colors ${
+                          selectedBadgePreviewLevel === level
+                            ? "bg-[#B8860B] text-[#171312] shadow"
+                            : "text-[#A3A099] hover:bg-[#262523] hover:text-[#EAE6DD]"
+                        }`}
+                      >
+                        Level {level}
+                      </button>
+                    ))}
+                  </div>
+                )}
 
                 <p className="text-[10px] uppercase tracking-widest text-[#B8860B] font-black">
                   {TIER_LABELS[selectedBadge.tier]} BADGE
