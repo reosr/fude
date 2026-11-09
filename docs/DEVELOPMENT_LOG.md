@@ -3,6 +3,14 @@
 ## 2026-11-09
 
 ### Badge catalog and visual direction
+
+### Badge evolution and artwork production direction
+- Set the final badge artwork target to 900 unique illustrations: 300 badge identities, each with Level 1, Level 2, and Level 3 artwork.
+- Level 1 is the first Gacha acquisition; three Level 1 copies evolve into Level 2, and three Level 2 copies evolve into Level 3.
+- Remove Level 0 from the active inventory model. Migrate legacy Level 0 copies to Level 1, legacy Level 1 copies to Level 2, and legacy Level 2/3 copies to Level 3 so existing collection progress and total copies are preserved.
+- Keep badge identity recognizable across its three stages while giving each stage a substantial, character-specific visual redesign. Artwork must be individually art-directed, not emoji substitutions, palette swaps, or generic medallion overlays.
+- The existing procedural SVG remains temporary scaffolding; the 900 final artwork variants have not yet been produced.
+
 - Rebalance the 300 badge catalog to 90 Common, 70 Uncommon, 55 Rare, 40 Epic, 25 Mythic, and 20 Legendary entries.
 - Keep all rarity tiers visually appealing; rarity controls scarcity and visual prestige, not baseline design quality.
 - Set the art direction toward polished 3D collectible-game artwork with a balanced mix of cute, cool, elegant, and playful designs for a broad audience.
