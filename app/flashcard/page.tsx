@@ -62,8 +62,8 @@ function ScaleToFit({ children, className = "" }: { children: ReactNode; classNa
     const fit = () => {
       const bw = box.clientWidth;
       const bh = box.clientHeight;
-      const iw = inner.offsetWidth;
       const ih = inner.offsetHeight;
+      const iw = Math.max(inner.offsetWidth, inner.scrollWidth); // scrollWidth: isi yang melebar keluar
       if (!bw || !bh || !iw || !ih) return;
       const next = Math.min(1, bw / iw, bh / ih);
       setScale((prev) => (Math.abs(prev - next) < 0.01 ? prev : next));
@@ -80,7 +80,7 @@ function ScaleToFit({ children, className = "" }: { children: ReactNode; classNa
     <div ref={boxRef} className={`flex items-center justify-center w-full min-h-0 ${className}`}>
       <div
         ref={innerRef}
-        className="shrink-0 w-max"
+        className="shrink-0 w-full flex justify-center"
         style={{ transform: scale < 1 ? `scale(${scale})` : undefined }}
       >
         {children}
@@ -316,7 +316,7 @@ useEffect(() => {
       </div>
 
       <div 
-        className="relative w-full max-w-md h-[clamp(300px,calc(100svh_-_384px),460px)] sm:h-[min(420px,52svh)] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
+        className="relative w-full max-w-md h-[clamp(260px,calc(100svh_-_376px),460px)] sm:h-[min(420px,52svh)] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -433,81 +433,58 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* KONTROL — HP: satu bar dengan target sentuh besar + label */}
-      <div className="md:hidden w-full max-w-md mt-9 relative z-20 shrink-0">
-        <div className="grid grid-cols-5 gap-1.5 bg-[#1E1D1B]/90 backdrop-blur-md border border-[#33312E] rounded-2xl p-1.5 shadow-lg">
-          <button
-            onClick={handlePrev}
-            disabled={isAdvancing}
-            className="flex flex-col items-center justify-center gap-1 h-14 rounded-xl text-[#EAE6DD] active:bg-[#262523] active:scale-95 transition disabled:opacity-40"
-          >
-            <ArrowLeft size={20} />
-            <span className="text-[10px] font-semibold opacity-70">Mundur</span>
-          </button>
+      {/* KONTROL */}
+      <div className="flex items-center justify-between w-full max-w-md px-1 mt-9 md:mt-12 relative z-20 shrink-0">
+        <button
+          onClick={handlePrev}
+          disabled={isAdvancing}
+          aria-label="Kartu sebelumnya"
+          className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-[#EAE6DD] flex items-center justify-center touch-manipulation transition-all duration-200 hover:bg-white/10 hover:border-white/20 active:scale-90 disabled:opacity-40"
+        >
+          <ArrowLeft size={20} className="md:!h-6 md:!w-6" />
+        </button>
 
+        <div className="flex items-center gap-3 md:gap-4">
           <button
             onClick={() => setIsAutoPlay(!isAutoPlay)}
-            className={`flex flex-col items-center justify-center gap-1 h-14 rounded-xl active:scale-95 transition ${isAutoPlay ? "bg-[#B8860B]/15 text-[#B8860B]" : "text-[#A3A099] active:bg-[#262523]"}`}
+            aria-label={isAutoPlay ? "Jeda otomatis" : "Putar otomatis"}
+            className={`w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center touch-manipulation transition-all duration-200 active:scale-90 ${
+              isAutoPlay
+                ? "bg-[#B8860B] text-white shadow-[0_6px_18px_-4px_rgba(184,134,11,0.65)]"
+                : "bg-white/5 backdrop-blur-md border border-white/10 text-[#A3A099] hover:text-[#EAE6DD] hover:bg-white/10"
+            }`}
           >
-            {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
-            <span className="text-[10px] font-semibold">{isAutoPlay ? "Jeda" : "Putar"}</span>
+            {isAutoPlay ? <Pause size={18} /> : <Play size={18} />}
           </button>
 
           <button
             onClick={() => setIsFlipped(!isFlipped)}
-            className="flex flex-col items-center justify-center gap-1 h-14 rounded-xl bg-[#C93438] text-white shadow-lg shadow-[#C93438]/20 active:bg-[#B02A2E] active:scale-95 transition"
+            aria-label="Balik kartu"
+            className="w-14 h-14 rounded-full bg-gradient-to-br from-[#E0443F] to-[#B02A2E] text-white flex items-center justify-center touch-manipulation ring-4 ring-[#C93438]/15 shadow-[0_10px_28px_-6px_rgba(201,52,56,0.75)] transition-all duration-200 hover:brightness-110 active:scale-90"
           >
-            <RotateCcw size={20} />
-            <span className="text-[10px] font-semibold">Balik</span>
+            <RotateCcw size={22} />
           </button>
 
           <button
             onClick={toggleMemorized}
-            className={`flex flex-col items-center justify-center gap-1 h-14 rounded-xl active:scale-95 transition ${isMemorized ? "bg-green-600/15 text-green-500" : "text-[#A3A099] active:bg-[#262523]"}`}
+            aria-label={isMemorized ? "Batalkan hafal" : "Tandai hafal"}
+            className={`w-11 h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center touch-manipulation transition-all duration-200 active:scale-90 ${
+              isMemorized
+                ? "bg-green-600 text-white shadow-[0_6px_18px_-4px_rgba(22,163,74,0.65)]"
+                : "bg-white/5 backdrop-blur-md border border-white/10 text-[#A3A099] hover:text-green-400 hover:border-green-500/60 hover:bg-white/10"
+            }`}
           >
-            <CheckCircle2 size={20} />
-            <span className="text-[10px] font-semibold">{isMemorized ? "Dihafal" : "Hafal"}</span>
-          </button>
-
-          <button
-            onClick={handleNext}
-            disabled={isAdvancing}
-            className="flex flex-col items-center justify-center gap-1 h-14 rounded-xl text-[#EAE6DD] active:bg-[#262523] active:scale-95 transition disabled:opacity-40"
-          >
-            <ArrowRight size={20} />
-            <span className="text-[10px] font-semibold opacity-70">Lanjut</span>
-          </button>
-        </div>
-      </div>
-
-      {/* KONTROL — Desktop (tampilan lama) */}
-      <div className="hidden md:flex items-center justify-between w-full max-w-md mt-12 relative z-20 shrink-0">
-        <button onClick={handlePrev} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
-          <ArrowLeft size={19} className="md:!h-6 md:!w-6" />
-        </button>
-
-        <div className="flex items-center gap-2 md:gap-3">
-          <button 
-            onClick={() => setIsAutoPlay(!isAutoPlay)} 
-            className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isAutoPlay ? "bg-[#B8860B] text-white shadow-[#B8860B]/20" : "bg-[#262523] text-[#A3A099] border border-[#33312E]"}`}
-          >
-            {isAutoPlay ? <Pause size={17} /> : <Play size={17} />}
-          </button>
-
-          <button onClick={() => setIsFlipped(!isFlipped)} className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#C93438] text-white flex items-center justify-center hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20">
-            <RotateCcw size={17} />
-          </button>
-
-          <button 
-            onClick={toggleMemorized}
-            className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center transition-colors shadow-lg ${isMemorized ? "bg-green-600 text-white shadow-green-600/20" : "bg-[#1E1D1B] border border-[#33312E] text-[#A3A099] hover:text-green-500 hover:border-green-500"}`}
-          >
-            <CheckCircle2 size={17} />
+            <CheckCircle2 size={18} />
           </button>
         </div>
 
-        <button onClick={handleNext} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
-          <ArrowRight size={19} className="md:!h-6 md:!w-6" />
+        <button
+          onClick={handleNext}
+          disabled={isAdvancing}
+          aria-label="Kartu berikutnya"
+          className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-[#EAE6DD] flex items-center justify-center touch-manipulation transition-all duration-200 hover:bg-white/10 hover:border-white/20 active:scale-90 disabled:opacity-40"
+        >
+          <ArrowRight size={20} className="md:!h-6 md:!w-6" />
         </button>
       </div>
 
