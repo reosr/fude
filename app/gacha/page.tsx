@@ -178,6 +178,9 @@ export default function GachaPage() {
       setLatestResults(result.summon?.results ?? []);
       setLatestCompensations(result.summon?.compensations ?? []);
       refresh();
+    } catch (summonError) {
+      console.error("Gagal menjalankan Gacha:", summonError);
+      setError("Gacha gagal diproses. Coba lagi setelah memeriksa saldo token.");
     } finally {
       setBusy(false);
     }
@@ -266,7 +269,10 @@ export default function GachaPage() {
             <div className="absolute left-1/2 top-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#D6AD4F]/40" />
           </div>
 
-          <div className="relative flex min-h-[250px] flex-col items-center justify-center text-center">
+          <div
+            className="relative flex min-h-[250px] flex-col items-center justify-center text-center"
+            aria-busy={busy}
+          >
             <div className={`relative mb-5 flex h-28 w-28 items-center justify-center rounded-full border border-[#E7C46A]/50 bg-[#B8860B]/10 shadow-[0_0_60px_rgba(184,134,11,0.18)] ${busy ? "fude-gacha-pulse" : ""}`}>
               <div className="absolute inset-2 rounded-full border border-dashed border-[#E7C46A]/40" />
               <Dices size={48} className="text-[#E7C46A]" />
