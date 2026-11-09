@@ -99,6 +99,7 @@ export default function GachaPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showCatalogModal, setShowCatalogModal] = useState(false);
   const [catalogSearch, setCatalogSearch] = useState("");
+  const [catalogRarity, setCatalogRarity] = useState<GachaRarity | "all">("all");
 
   const refresh = useCallback(() => {
     setInventory(getGachaInventory());
@@ -629,9 +630,9 @@ export default function GachaPage() {
             </div>
             <div className="flex flex-col gap-3 border-b border-[#38332B] p-4 sm:flex-row">
               <div className="flex flex-wrap gap-1.5">
-                <button onClick={() => setActiveRarity("all")} className={`rounded-lg px-3 py-2 text-[10px] font-bold ${activeRarity === "all" ? "bg-[#B8860B] text-white" : "bg-[#302B25] text-[#A99C89]"}`}>Semua</button>
+                <button onClick={() => setCatalogRarity("all")} className={`rounded-lg px-3 py-2 text-[10px] font-bold ${catalogRarity === "all" ? "bg-[#B8860B] text-white" : "bg-[#302B25] text-[#A99C89]"}`}>Semua</button>
                 {GACHA_RARITIES.map((rarity) => (
-                  <button key={rarity} onClick={() => setActiveRarity(rarity)} className={`rounded-lg px-2.5 py-2 text-[10px] font-bold ${activeRarity === rarity ? "bg-[#B8860B] text-white" : "bg-[#302B25] text-[#A99C89]"}`}>{RARITY_LABELS[rarity]}</button>
+                  <button key={rarity} onClick={() => setCatalogRarity(rarity)} className={`rounded-lg px-2.5 py-2 text-[10px] font-bold ${catalogRarity === rarity ? "bg-[#B8860B] text-white" : "bg-[#302B25] text-[#A99C89]"}`}>{RARITY_LABELS[rarity]}</button>
                 ))}
               </div>
               <input
@@ -643,7 +644,7 @@ export default function GachaPage() {
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
-                {GACHA_BADGES.filter((badge) => activeRarity === "all" || badge.rarity === activeRarity)
+                {GACHA_BADGES.filter((badge) => catalogRarity === "all" || badge.rarity === catalogRarity)
                   .filter((badge) => `${badge.name} ${badge.description ?? ""}`.toLowerCase().includes(catalogSearch.trim().toLowerCase()))
                   .map((badge) => {
                     const copies = copiesFor(inventory, badge.id);
