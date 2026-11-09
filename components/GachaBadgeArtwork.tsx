@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useId } from "react";
 import type { GachaBadgeDefinition, GachaEvolutionLevel } from "@/lib/gacha";
 import { GACHA_BADGES } from "@/data/gacha-badges";
+import GachaFolkloreArtwork from "@/components/GachaFolkloreArtwork";
 
 const PALETTES: Record<
   GachaBadgeDefinition["rarity"],
@@ -84,6 +85,22 @@ export default function GachaBadgeArtwork({
   const glowId = `gacha-glow-${uniqueId}`;
   const ornamentPoints = ORNAMENT_LAYOUTS[layoutIndex];
   const artworkSrc = badge.artwork?.[level];
+  const folkloreArtworkIds = {
+    "gacha-common-02": "kodama",
+    "gacha-common-03": "zashiki-warashi",
+    "gacha-common-04": "akaname",
+    "gacha-common-05": "tofu-kozo",
+    "gacha-common-06": "azukiarai",
+    "gacha-common-07": "sunekosuri",
+    "gacha-common-08": "betobeto-san",
+    "gacha-common-09": "amikiri",
+    "gacha-common-10": "shiro-uneri",
+    "gacha-common-11": "kawauso",
+  } as const;
+  const folkloreArtworkId = folkloreArtworkIds[badge.id as keyof typeof folkloreArtworkIds];
+  if (folkloreArtworkId) {
+    return <GachaFolkloreArtwork id={folkloreArtworkId} level={level} size={size} />;
+  }
 
   // Mochi Guardian evolution previews: each level gets a distinct silhouette and finish.
   if (badge.id === "bab-1" && level === 2) {
