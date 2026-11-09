@@ -347,7 +347,7 @@ export default function JLPTLevelPage() {
               statusClass =
                 "bg-[#B8860B]/10 border border-[#B8860B]/30 text-[#B8860B]";
               actionLabel = "Lihat Hasil";
-            } else if (isFinished || completedOnce) {
+            } else if (isFinished || (completedOnce && !hasAnswers)) {
               statusLabel = "SUDAH DICOBA · BISA DIULANG";
               statusClass =
                 "bg-[#33312E] border border-[#55514B] text-[#C7C1B5]";
