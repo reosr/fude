@@ -8,6 +8,7 @@ import {
   awardJlptLevelCompletionOnce,
 } from "../lib/gamification";
 
+import { syncNewCollectionUnlocks } from "../lib/profile-collections";
 import { useState, useEffect } from "react";
 import {
   ArrowLeft,
@@ -327,6 +328,9 @@ export default function JLPTQuiz({
     }
 
     setIsLoaded(true);
+
+    // Sinkronkan koleksi setelah hasil lama selesai dimigrasikan.
+    syncNewCollectionUnlocks();
   }, [storageKey, testSet, currentLevel, levelSetIds]);
 
   // ==========================================
