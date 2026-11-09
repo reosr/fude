@@ -387,9 +387,7 @@ function initializeTokenEconomy(): void {
   let migratedTokens = 0;
 
   // Reward bab.
-  for (const id of rewardIds) {
-    migratedTokens += CHAPTER_TOKEN_REWARD;
-  }
+  migratedTokens += rewardIds.size * CHAPTER_TOKEN_REWARD;
 
   const completedChapters = Array.from(rewardIds)
     .map((id) => Number(id.slice("chapter:".length)))
