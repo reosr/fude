@@ -7,6 +7,13 @@
 - Keep all rarity tiers visually appealing; rarity controls scarcity and visual prestige, not baseline design quality.
 - Set the art direction toward polished 3D collectible-game artwork with a balanced mix of cute, cool, elegant, and playful designs for a broad audience.
 
+### Gacha and profile collection UX
+- Explain that the 300-entry Gacha summon catalog is separate from chapter/JLPT achievement badges such as Mochi Guardian and Sakura Bloom.
+- Add a return action on the Gacha page with browser-history navigation and a Home fallback.
+- Restyle collection overlays with a translucent dark surface and backdrop blur while keeping the page visible behind them.
+- Lock document scrolling while profile collection/detail/edit dialogs or the Gacha catalog are open; keep scrolling inside the modal.
+- Update the Gacha catalog rarity-count copy to match the 90/70/55/40/25/20 distribution.
+
 ### Badge artwork refinement
 - Expand the rarity-aware SVG medallion with layered metallic rims, engraved sigils, decorative ray systems, and more ornament layouts.
 - Derive the artwork composition from both rarity and catalog position so badge designs vary beyond a simple rarity palette swap.
