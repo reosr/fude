@@ -292,26 +292,26 @@ export default function JLPTQuiz({
   const handleAnswer = (optIndex: number) => {
   if (isFinished || isPerfect) return;
 
-  const updatedAnswers = {
-    ...userAnswers,
-    [activeSection]: {
-      ...userAnswers[activeSection],
-      [currentIndex]: optIndex,
-    },
-  };
+      const updatedAnswers = {
+        ...userAnswers,
+        [activeSection]: {
+          ...userAnswers[activeSection],
+          [currentIndex]: optIndex,
+        },
+      };
 
-  setUserAnswers(updatedAnswers);
+      setUserAnswers(updatedAnswers);
 
-  localStorage.setItem(
-    storageKey,
-    JSON.stringify({
-      answers: updatedAnswers,
-      isFinished: false,
-      isPerfect: false,
-      completedOnce,
-    })
-  );
-};
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify({
+          answers: updatedAnswers,
+          isFinished: false,
+          isPerfect: false,
+          completedOnce,
+        })
+      );
+    };
 
   // ==========================================
   // HITUNG SOAL YANG BELUM DIJAWAB
