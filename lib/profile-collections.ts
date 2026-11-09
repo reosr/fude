@@ -660,7 +660,8 @@ export function syncNewCollectionUnlocks(): CollectionUnlockNotice[] {
 export function getPendingCollectionIds(): string[] {
   if (typeof window === "undefined") return [];
 
-  return readCollectionIds(COLLECTION_PENDING_KEY);
+  // Badge NEW kini dikelola inventori Gacha; pending lama dari sistem unlock chapter dibuang.
+  return readCollectionIds(COLLECTION_PENDING_KEY).filter((id) => id.startsWith("frame:"));
 }
 
 export function markCollectionSeen(id: string): void {
