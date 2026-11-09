@@ -25,6 +25,7 @@ import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfileAvatar from "../../components/ProfileAvatar";
 import { GACHA_BADGES } from "../../data/gacha-badges";
+import type { GachaBadgeDefinition } from "../../lib/gacha";
 import {
   GACHA_UPDATED_EVENT,
   getGachaInventory,
@@ -252,7 +253,6 @@ export default function Profil() {
   const progressPercent = Math.round((completedBab / 50) * 100);
 
   const equippedBadge =
-    GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId) ??
     GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId);
 
   const unlockedBadgeCount = unlockedBadgeIds.length;
@@ -346,7 +346,7 @@ export default function Profil() {
     }
   };
 
-  const openBadge = (badge: ProfileBadge) => {
+  const openBadge = (badge: GachaBadgeDefinition) => {
     if (gachaNewBadgeIds.includes(badge.id)) {
       markGachaBadgeSeen(badge.id);
     }
