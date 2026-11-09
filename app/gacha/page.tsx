@@ -15,6 +15,7 @@ import {
 
 import { GACHA_BADGES } from "@/data/gacha-badges";
 import {
+  GACHA_CATALOG_SIZE,
   GACHA_RARITIES,
   GACHA_UPDATED_EVENT,
   evolveGachaBadge,
@@ -244,7 +245,7 @@ export default function GachaPage() {
 
         <div className="relative mt-7 grid grid-cols-3 gap-3">
           <div className="rounded-xl border border-white/5 bg-black/20 p-3">
-            <p className="text-xl font-black text-white">{uniqueOwned}/300</p>
+            <p className="text-xl font-black text-white">{uniqueOwned}/{GACHA_CATALOG_SIZE}</p>
             <p className="text-[10px] text-[#A3A099]">Badge unik</p>
           </div>
           <div className="rounded-xl border border-white/5 bg-black/20 p-3">
