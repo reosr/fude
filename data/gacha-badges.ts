@@ -12,26 +12,28 @@ const PREFIXES: Record<GachaRarity, readonly string[]> = {
   common: [
     "Wandering", "Misty", "Mossbound", "Lantern", "Riverbank",
     "Bamboo", "Petal", "Pebble", "Dewdrop", "Twilight",
+    "Puddle", "Acorn", "Clover", "Pocky", "Dango",
+    "Raindrop", "Firefly", "Mochi",
   ],
   uncommon: [
     "Moonlit", "Frostveil", "Amber", "Whispering", "Cloudstep",
     "Jade", "Maple", "Silverleaf", "Raincaller", "Duskborne",
+    "Blossom", "Starling", "Ripple", "Sakura",
   ],
   rare: [
     "Crimson", "Azure", "Obsidian", "Stormbound", "Starlit",
     "Sapphire", "Wildfire", "Galecrest", "Nightfall", "Sunflare",
+    "Moonstone",
   ],
   epic: [
     "Astral", "Tempest", "Eclipsed", "Voidtouched", "Runebound",
-    "Spiritforged", "Thunderheart", "Dreamweaver", "Phantom", "Starfall",
+    "Spiritforged", "Thunderheart", "Dreamweaver",
   ],
   mythic: [
     "Eternal", "Primordial", "Transcendent", "Aurora", "Worldroot",
-    "Abyssal", "Fabled", "Radiant", "Infinite", "Mythwoven",
   ],
   legendary: [
-    "Sovereign", "First Dawn", "Last Ember", "Dragonbound", "Starforged",
-    "Unbound", "Everlasting", "Golden Age", "Crown of Mist", "Celestial",
+    "Sovereign", "First Dawn", "Last Ember", "Dragonbound",
   ],
 };
 
@@ -59,10 +61,10 @@ export const GACHA_BADGES: GachaBadgeDefinition[] = (
 );
 
 export const GACHA_BADGE_COUNTS: Record<GachaRarity, number> = {
-  common: 50,
-  uncommon: 50,
-  rare: 50,
-  epic: 50,
-  mythic: 50,
-  legendary: 50,
+  common: 90,
+  uncommon: 70,
+  rare: 55,
+  epic: 40,
+  mythic: 25,
+  legendary: 20,
 };
