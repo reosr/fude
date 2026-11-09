@@ -304,10 +304,16 @@ function initializeXp(): void {
       const raw = localStorage.getItem(key);
       const result = raw ? JSON.parse(raw) : null;
 
-      if (result?.isFinished === true) {
+      // completedOnce tetap menjadi bukti penyelesaian walaupun pengguna
+      // sudah mengulang set non-perfect dan status isFinished kembali false.
+      // isFinished dipertahankan untuk kompatibilitas data versi lama.
+      if (
+        result?.completedOnce === true ||
+        result?.isFinished === true
+      ) {
         const setId = key.slice("jlpt_result_".length);
 
-        if (setId) {
+        if (setId && !rewards.includes(`jlpt:${setId}`)) {
           totalXp += JLPT_COMPLETION_XP;
           rewards.push(`jlpt:${setId}`);
         }
