@@ -624,7 +624,6 @@ export default function Profil() {
               )}
             </div>
 
-     </Link>
           </div>
         </div>
 
