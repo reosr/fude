@@ -298,7 +298,23 @@ export default function JLPTQuiz({
           );
         }
 
-        // Migrasi reward untuk hasil sempurna dari sistem lama.
+        // Pulihkan klaim reward secara idempoten dari hasil yang sudah tersimpan.
+        // Ini menutup celah jika halaman tertutup setelah hasil disimpan,
+        // tetapi sebelum seluruh fungsi reward selesai dijalankan.
+        if (wasCompleted) {
+          awardJlptCompletionXpOnce(testSet.id);
+        }
+
+        if (
+          wasFinished &&
+          score.totalQuestions > 0 &&
+          score.totalCorrect / score.totalQuestions >= 0.8
+        ) {
+          awardJlptHighScoreBonusOnce(testSet.id);
+        }
+
+        // Hasil 100% tetap menjadi satu-satunya kondisi untuk reward Token
+        // Perfect Score dan penguncian permanen Practice Set.
         if (wasPerfect) {
           awardJlptPerfectRewardOnce(testSet.id);
         }
