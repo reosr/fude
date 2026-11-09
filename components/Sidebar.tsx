@@ -17,7 +17,7 @@ import {
 import { useEffect, useState } from "react";
 
 import ProfileAvatar from "./ProfileAvatar";
-import { getProfilePhoto } from "../lib/profile-photo";
+import { getProfilePhoto, PROFILE_PHOTO_UPDATED_EVENT } from "../lib/profile-photo";
 
 import {
   getFudeProfile,
@@ -40,6 +40,7 @@ import {
   initializeCollectionTracking,
   syncNewCollectionUnlocks,
   getPendingCollectionIds,
+  COLLECTION_PENDING_KEY,
   type CollectionUnlockNotice,
 } from "../lib/profile-collections";
 
@@ -149,6 +150,14 @@ export default function Sidebar() {
 
     // Pasang listener sebelum sinkronisasi awal agar unlock yang
     // terjadi saat aplikasi tidak dibuka tetap bisa menampilkan notifikasi.
+    const handlePhotoUpdated = () => { void refreshPhoto(); };
+    const handleStorageCollection = (event: StorageEvent) => {
+      if (event.key === COLLECTION_PENDING_KEY || event.key === null) {
+        handleCollectionUpdate(new Event(COLLECTION_UPDATED_EVENT));
+      }
+    };
+
+    window.addEventListener(PROFILE_PHOTO_UPDATED_EVENT, handlePhotoUpdated);
     window.addEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
     window.addEventListener(XP_UPDATED_EVENT, refreshXp);
     window.addEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
@@ -157,6 +166,7 @@ export default function Sidebar() {
     window.addEventListener("storage", refreshGacha);
     window.addEventListener("storage", refreshProfile);
     window.addEventListener("storage", refreshXp);
+    window.addEventListener("storage", handleStorageCollection);
 
     window.addEventListener(
       COLLECTION_UPDATED_EVENT,
@@ -177,6 +187,7 @@ export default function Sidebar() {
         URL.revokeObjectURL(currentPhotoUrl);
       }
 
+      window.removeEventListener(PROFILE_PHOTO_UPDATED_EVENT, handlePhotoUpdated);
       window.removeEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
       window.removeEventListener(XP_UPDATED_EVENT, refreshXp);
       window.removeEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
@@ -185,6 +196,7 @@ export default function Sidebar() {
       window.removeEventListener("storage", refreshGacha);
       window.removeEventListener("storage", refreshProfile);
       window.removeEventListener("storage", refreshXp);
+      window.removeEventListener("storage", handleStorageCollection);
 
       window.removeEventListener(
         COLLECTION_UPDATED_EVENT,
