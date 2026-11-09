@@ -40,6 +40,18 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
           <stop stopColor="#F5F3C2"/><stop offset=".2" stopColor="#C7DC83"/>
           <stop offset=".52" stopColor="#83A956"/><stop offset=".82" stopColor="#527344"/><stop offset="1" stopColor="#304B35"/>
         </linearGradient>
+        <radialGradient id={`kodama-face-light-${uid}`} cx=".28" cy=".18" r=".88">
+          <stop stopColor="#FFFFFF"/><stop offset=".28" stopColor="#F8F4E8"/>
+          <stop offset=".62" stopColor="#D9DDC9"/><stop offset=".86" stopColor="#AAB69C"/>
+          <stop offset="1" stopColor="#68765F"/>
+        </radialGradient>
+        <radialGradient id={`kodama-eye-${uid}`} cx=".3" cy=".18" r=".85">
+          <stop stopColor="#526258"/><stop offset=".28" stopColor="#202D27"/>
+          <stop offset=".78" stopColor="#0C1713"/><stop offset="1" stopColor="#050B08"/>
+        </radialGradient>
+        <linearGradient id={`kodama-leaf-vein-${uid}`} x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#F8F5C9"/><stop offset=".55" stopColor="#A7C56C"/><stop offset="1" stopColor="#557344"/>
+        </linearGradient>
         <radialGradient id={shade} cx=".32" cy=".18" r=".86">
           <stop stopColor="#FFFCE7" stopOpacity=".85"/><stop offset=".38" stopColor="#F7E7B5" stopOpacity=".2"/>
           <stop offset="1" stopColor="#16231C" stopOpacity=".78"/>
@@ -106,17 +118,22 @@ export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number })
         <path d="M58 94 Q48 91 45 82 Q43 77 48 75 Q54 77 59 87 M99 94 Q110 91 116 97 Q119 101 115 105 Q108 105 101 101"
           fill="none" stroke="#75865B" strokeWidth="6.5" strokeLinecap="round"/>
         <path d="M53 53 C53 42 64 36 80 36 C96 36 107 43 107 57 C107 74 97 88 80 89 C63 88 53 74 53 53Z"
-          fill={`url(#${porcelain})`} stroke="#59664F" strokeWidth="2.4" transform="rotate(-8 80 63)"/>
-        <path d="M58 51 Q62 41 76 40" fill="none" stroke="#FFFFFF" strokeWidth="3.1" strokeLinecap="round" opacity=".9" transform="rotate(-8 80 63)"/>
-        <path d="M60 48 Q65 43 72 43" fill="none" stroke="#D5DCC0" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-8 80 63)"/>
+          fill={`url(#kodama-face-light-${uid})`} stroke="#59664F" strokeWidth="2.1" transform="rotate(-10 80 63)"/>
+        <path d="M58 51 Q62 41 76 40" fill="none" stroke="#FFFFFF" strokeWidth="3.1" strokeLinecap="round" opacity=".9" transform="rotate(-10 80 63)"/>
+        <path d="M60 48 Q65 43 72 43" fill="none" stroke="#D5DCC0" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-10 80 63)"/>
         {/* Hollow, deep-set eyes: a defining quiet Kodama expression. */}
-        <ellipse cx="70" cy="63" rx="4.2" ry="6.2" fill="#26362E" transform="rotate(-8 80 63)"/>
-        <ellipse cx="91" cy="63" rx="3.7" ry="5.8" fill="#26362E" transform="rotate(-8 80 63)"/>
-        <ellipse cx="69" cy="61" rx="1.25" ry="1.8" fill="#F7F5DF" opacity=".9" transform="rotate(-8 80 63)"/>
-        <ellipse cx="90" cy="61" rx="1.1" ry="1.6" fill="#F7F5DF" opacity=".9" transform="rotate(-8 80 63)"/>
-        <path d="M77 76 Q80 78 83 76" fill="none" stroke="#8D8C70" strokeWidth="1.7" strokeLinecap="round" transform="rotate(-8 80 63)"/>
+        <ellipse cx="70" cy="63" rx="4.6" ry="6.5" fill={`url(#kodama-eye-${uid})`} transform="rotate(-10 80 63)"/>
+        <ellipse cx="91" cy="63" rx="4.1" ry="6.1" fill={`url(#kodama-eye-${uid})`} transform="rotate(-10 80 63)"/>
+        <ellipse cx="68.7" cy="60.5" rx="1.55" ry="2.05" fill="#FFFFFF" opacity=".96" transform="rotate(-10 80 63)"/>
+        <ellipse cx="89.8" cy="60.5" rx="1.4" ry="1.9" fill="#FFFFFF" opacity=".94" transform="rotate(-10 80 63)"/>
+        <circle cx="72.5" cy="66.8" r=".8" fill="#9EB2A0" opacity=".55"/>
+        <circle cx="93" cy="66.8" r=".7" fill="#9EB2A0" opacity=".5"/>
+        <ellipse cx="61.5" cy="72" rx="5.2" ry="2.3" fill="#D99B8A" opacity=".18" transform="rotate(-14 61.5 72)"/>
+        <ellipse cx="99" cy="72" rx="4.8" ry="2.1" fill="#D99B8A" opacity=".16" transform="rotate(-14 99 72)"/>
+        <path d="M78 70 Q80 72 82 70" fill="none" stroke="#9CA58D" strokeWidth="1.15" strokeLinecap="round" opacity=".7"/>
+        <path d="M77 77 Q80 79 84 76" fill="none" stroke="#777F6B" strokeWidth="1.8" strokeLinecap="round" transform="rotate(-10 80 63)"/>
         {/* Soft natural shading under the head and along the body. */}
-        <path d="M58 79 Q80 92 102 79" fill="none" stroke="#8A9A7A" strokeWidth="2.4" opacity=".55" transform="rotate(-8 80 63)"/>
+        <path d="M58 79 Q80 92 102 79" fill="none" stroke="#8A9A7A" strokeWidth="2.4" opacity=".55" transform="rotate(-10 80 63)"/>
         <path d="M62 98 Q80 105 98 98" fill="none" stroke="#FFFFFF" strokeWidth="1.7" opacity=".75"/>
       </g>
 
