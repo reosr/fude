@@ -151,7 +151,6 @@ export default function Profil() {
         (badge) =>
           getTotalGachaBadgeCopies(
             gachaInventory.badges[badge.id] ?? {
-              level0: 0,
               level1: 0,
               level2: 0,
               level3: 0,
