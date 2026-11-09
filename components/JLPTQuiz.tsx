@@ -187,6 +187,33 @@ export default function JLPTQuiz({
   const storageKey = `jlpt_result_${testSet.id}`;
   const currentLevel = level || getJlptLevel(testSet);
 
+  // Simpan progress langsung saat navigasi, tidak hanya mengandalkan useEffect.
+  const saveProgress = (
+    section: string,
+    index: number,
+    answers = userAnswers
+  ) => {
+    try {
+      const saved = localStorage.getItem(storageKey);
+      const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
+
+      localStorage.setItem(
+        storageKey,
+        JSON.stringify({
+          ...parsed,
+          answers,
+          activeSection: section,
+          currentIndex: index,
+          isFinished: false,
+          isPerfect: false,
+          completedOnce,
+        })
+      );
+    } catch (error) {
+      console.error("Gagal menyimpan progress ujian JLPT:", error);
+    }
+  };
+
   // ==========================================
   // LOAD HASIL SEBELUMNYA
   // ==========================================
@@ -454,7 +481,9 @@ export default function JLPTQuiz({
   // ==========================================
   const nextQuestion = () => {
     if (currentIndex < totalQuestionsInSection - 1) {
-      setCurrentIndex((previous) => previous + 1);
+      const nextIndex = currentIndex + 1;
+      saveProgress(activeSection, nextIndex);
+      setCurrentIndex(nextIndex);
       return;
     }
 
@@ -470,6 +499,7 @@ export default function JLPTQuiz({
       );
 
     if (nextSection) {
+      saveProgress(nextSection.id, 0);
       setCurrentIndex(0);
       setActiveSection(nextSection.id);
     } else {
@@ -815,7 +845,10 @@ export default function JLPTQuiz({
       <div className="bg-[#1E1D1B] border border-[#33312E] rounded-3xl p-6 md:p-8 shadow-xl mt-4">
         <div className="flex items-center gap-3 border-b border-[#33312E] pb-4 mb-6">
           <button
-            onClick={onBack}
+            onClick={() => {
+              saveProgress(activeSection, currentIndex);
+              onBack();
+            }}
             className="p-2 bg-[#262523] rounded-full hover:text-white transition-colors"
           >
             <ArrowLeft size={20} />
@@ -845,6 +878,7 @@ export default function JLPTQuiz({
               <button
                 key={section.id}
                 onClick={() => {
+                  saveProgress(section.id, 0);
                   setCurrentIndex(0);
                   setActiveSection(section.id);
                 }}
