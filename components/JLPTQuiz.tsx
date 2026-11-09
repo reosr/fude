@@ -888,13 +888,13 @@ export default function JLPTQuiz({
                   const perfect = score.isPerfect;
 
                   // EXP penyelesaian: +50, satu kali per set.
-awardJlptCompletionXpOnce(testSet.id);
+                  awardJlptCompletionXpOnce(testSet.id);
 
-// Bonus skor minimal 80%: +25,
-// bisa diperoleh pada percobaan berikutnya.
-if (score.totalScorePercent >= 80) {
-  awardJlptHighScoreBonusOnce(testSet.id);
-}
+                  // Bonus skor minimal 80%: +25,
+                  // bisa diperoleh pada percobaan berikutnya.
+                  if (score.totalScorePercent >= 80) {
+                    awardJlptHighScoreBonusOnce(testSet.id);
+                  }
 
                   // Token hanya diberikan jika semua jawaban benar.
                   if (perfect) {
