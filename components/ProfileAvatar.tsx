@@ -15,42 +15,6 @@ interface ProfileAvatarProps {
   className?: string;
 }
 
-const TIER_COLORS: Record<
-  string,
-  { border: string; background: string; text: string }
-> = {
-  common: {
-    border: "#A8A29E",
-    background: "#292524",
-    text: "#F5F5F4",
-  },
-  uncommon: {
-    border: "#4ADE80",
-    background: "#123322",
-    text: "#DCFCE7",
-  },
-  rare: {
-    border: "#60A5FA",
-    background: "#172D47",
-    text: "#D9ECFF",
-  },
-  epic: {
-    border: "#C084FC",
-    background: "#30204C",
-    text: "#F3E8FF",
-  },
-  mythic: {
-    border: "#FACC15",
-    background: "#493813",
-    text: "#FEF3C7",
-  },
-  legendary: {
-    border: "#F87171",
-    background: "#4C1518",
-    text: "#FEE2E2",
-  },
-};
-
 // =====================================================
 // ORNAMEN SVG
 // =====================================================
@@ -942,10 +906,6 @@ export default function ProfileAvatar({
         tier: collectionBadge.rarity,
       }
     : undefined;
-
-  const badgeColors =
-    (badge && TIER_COLORS[badge.tier]) ||
-    TIER_COLORS.common;
 
   const badgeSize = Math.round(size * 0.36);
 
