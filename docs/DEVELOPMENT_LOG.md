@@ -2,6 +2,13 @@
 
 ## 2026-11-09
 
+### Badge artwork refinement
+- Expand the rarity-aware SVG medallion with layered metallic rims, engraved sigils, decorative ray systems, and more ornament layouts.
+- Derive the artwork composition from both rarity and catalog position so badge designs vary beyond a simple rarity palette swap.
+- Preserve the four evolution tiers, unique SVG gradient IDs, responsive sizing, and accessible badge labels.
+- This is an improved procedural art foundation; the 300 individually art-directed badge designs remain a future visual-production task.
+
+
 ### JLPT progress and completion
 - Save the active section, current question, and answers immediately before navigating or leaving a practice set.
 - Keep retry status separate from first-time completion status so an unfinished retry can be resumed.
