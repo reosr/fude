@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { BookOpen, Languages, Layers, Home, User, Dices } from "lucide-react";
+import { GACHA_UPDATED_EVENT, getGachaInventory } from "../lib/gacha";
 
 const tabs = [
   { href: "/belajar", label: "Belajar", icon: BookOpen },
@@ -14,6 +16,24 @@ const tabs = [
 
 export default function BottomNav() {
   const path = usePathname();
+  const [newGachaCount, setNewGachaCount] = useState(0);
+
+  useEffect(() => {
+    const refresh = () => {
+      setNewGachaCount(getGachaInventory().newBadgeIds.length);
+    };
+
+    const initialRefresh = window.requestAnimationFrame(refresh);
+    window.addEventListener(GACHA_UPDATED_EVENT, refresh);
+    window.addEventListener("storage", refresh);
+
+    return () => {
+      window.cancelAnimationFrame(initialRefresh);
+      window.removeEventListener(GACHA_UPDATED_EVENT, refresh);
+      window.removeEventListener("storage", refresh);
+    };
+  }, []);
+
   return (
     <nav className="md:hidden fixed bottom-0 inset-x-0 z-50 px-4 pb-4">
       <div className="bg-[#1A1918]/95 backdrop-blur-xl border border-[#33312E] rounded-3xl flex justify-around items-center h-16 relative shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
@@ -43,7 +63,14 @@ export default function BottomNav() {
                 isActive ? "text-[#C93438]" : "text-[#A3A099] hover:text-[#EAE6DD]"
               }`}
             >
-              <Icon size={22} strokeWidth={isActive ? 2.5 : 2} />
+              <span className="relative">
+                <Icon size={22} strokeWidth={isActive ? 2.5 : 2} />
+                {t.href === "/gacha" && newGachaCount > 0 && (
+                  <span className="absolute -right-3 -top-2 rounded-full bg-[#C93438] px-1.5 py-0.5 text-[7px] font-black leading-none text-white">
+                    NEW
+                  </span>
+                )}
+              </span>
               <span className="text-[10px] mt-1 font-medium">{t.label}</span>
             </Link>
           );
