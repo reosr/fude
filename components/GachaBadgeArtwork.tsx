@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useId } from "react";
 import type { GachaBadgeDefinition, GachaEvolutionLevel } from "@/lib/gacha";
+import { GACHA_BADGES } from "@/data/gacha-badges";
 
 const PALETTES: Record<
   GachaBadgeDefinition["rarity"],
@@ -19,6 +20,8 @@ const PALETTES: Record<
 const RARITY_ORDER: GachaBadgeDefinition["rarity"][] = [
   "common", "uncommon", "rare", "epic", "mythic", "legendary",
 ];
+
+const BADGE_ART_INDEX = new Map(GACHA_BADGES.map((badge, index) => [badge.id, index]));
 
 const CRESTS = [
   "M50 8 L60 24 L79 17 L76 37 L94 50 L76 63 L79 83 L60 76 L50 92 L40 76 L21 83 L24 63 L6 50 L24 37 L21 17 L40 24 Z",
@@ -67,16 +70,16 @@ export default function GachaBadgeArtwork({
 }) {
   const uniqueId = useId().replace(/:/g, "");
   const palette = PALETTES[badge.rarity];
-  const match = badge.id.match(/-(\\d{2})$/);
-  const badgeNumber = match ? Number(match[1]) : 1;
+  const catalogIndex = BADGE_ART_INDEX.get(badge.id);
   const rarityIndex = RARITY_ORDER.indexOf(badge.rarity);
-  // Mix rarity and catalog position so the same folklore archetype is not
-  // forced into one identical medallion layout throughout the full catalog.
-  const seed = rarityIndex * 17 + badgeNumber * 7;
+  // Assign each catalog entry its own medallion combination. The first 300
+  // catalog indices map one-to-one across 10 crests × 6 sigils × 5 layouts,
+  // preventing generated badge entries from receiving identical base art.
+  const seed = catalogIndex ?? badge.id.split("").reduce((value, char) => value + char.charCodeAt(0), 0);
   const crestIndex = seed % CRESTS.length;
-  const sigilIndex = Math.floor(seed / 3) % SIGILS.length;
-  const layoutIndex = Math.floor(seed / 5) % ORNAMENT_LAYOUTS.length;
-  const rayIndex = seed % RAY_SETS.length;
+  const sigilIndex = Math.floor(seed / CRESTS.length) % SIGILS.length;
+  const layoutIndex = Math.floor(seed / (CRESTS.length * SIGILS.length)) % ORNAMENT_LAYOUTS.length;
+  const rayIndex = catalogIndex === undefined ? (seed + rarityIndex) % RAY_SETS.length : Math.floor(seed / (CRESTS.length * SIGILS.length * ORNAMENT_LAYOUTS.length)) % RAY_SETS.length;
   const gradientId = `gacha-gradient-${uniqueId}`;
   const glowId = `gacha-glow-${uniqueId}`;
   const ornamentPoints = ORNAMENT_LAYOUTS[layoutIndex];
