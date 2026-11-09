@@ -1056,6 +1056,20 @@ export default function JLPTQuiz({
 
                   const perfect = score.isPerfect;
 
+                  // Simpan status selesai lebih dulu agar sinkronisasi koleksi
+                  // yang dipicu oleh reward langsung membaca riwayat valid.
+                  const savedResult = {
+                    answers: userAnswers,
+                    isFinished: true,
+                    isPerfect: perfect,
+                    completedOnce: true,
+                  };
+
+                  localStorage.setItem(
+                    storageKey,
+                    JSON.stringify(savedResult)
+                  );
+
                   // EXP penyelesaian: +50, satu kali per set.
                   awardJlptCompletionXpOnce(testSet.id);
 
@@ -1072,19 +1086,6 @@ export default function JLPTQuiz({
                   if (perfect) {
                     awardJlptPerfectRewardOnce(testSet.id);
                   }
-
-                  // Simpan hasil sebelum memeriksa bonus level.
-                  const savedResult = {
-                    answers: userAnswers,
-                    isFinished: true,
-                    isPerfect: perfect,
-                    completedOnce: true,
-                  };
-
-                  localStorage.setItem(
-                    storageKey,
-                    JSON.stringify(savedResult)
-                  );
 
                   setIsPerfect(perfect);
                   setCompletedOnce(true);
