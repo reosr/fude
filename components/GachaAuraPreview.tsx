@@ -51,14 +51,14 @@ export default function GachaAuraPreview({
           {badge.rarity === "legendary" && (
             <svg className="fude-legendary-lightning fude-legendary-lightning-back" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
               <g className="lightning-glow">
-                <path d="M18 74 L39 61 L32 51 L57 42 L51 29 L75 37 L89 21 L96 42 L121 33 L115 52 L143 57 L125 71 L151 83 L119 87 L110 111 L91 91 L67 112 L69 86 L42 94 Z" />
-                <path d="M25 37 L45 46 L56 31 L64 51 L82 55 L69 67 L48 62 L38 81" />
-                <path d="M155 37 L138 50 L146 62 L126 73 L138 91" />
+                <path d="M9 65 L21 58 L16 49 L31 43 L27 33 L42 38" />
+                <path d="M171 76 L157 69 L163 58 L148 50 L153 40 L139 35" />
+                <path d="M37 119 L45 108 L40 101 L52 92" />
               </g>
               <g className="lightning-core">
-                <path d="M18 74 L39 61 L32 51 L57 42 L51 29 L75 37 L89 21 L96 42 L121 33 L115 52 L143 57 L125 71 L151 83 L119 87 L110 111 L91 91 L67 112 L69 86 L42 94 Z" />
-                <path d="M25 37 L45 46 L56 31 L64 51 L82 55 L69 67 L48 62 L38 81" />
-                <path d="M155 37 L138 50 L146 62 L126 73 L138 91" />
+                <path d="M9 65 L21 58 L16 49 L31 43 L27 33 L42 38" />
+                <path d="M171 76 L157 69 L163 58 L148 50 L153 40 L139 35" />
+                <path d="M37 119 L45 108 L40 101 L52 92" />
               </g>
             </svg>
           )}
@@ -88,14 +88,14 @@ export default function GachaAuraPreview({
       {level === 3 && badge.rarity === "legendary" && (
         <svg className="fude-legendary-lightning fude-legendary-lightning-front" viewBox="0 0 180 140" preserveAspectRatio="none" aria-hidden="true">
           <g className="front-bolts">
-            <path d="M12 65 L32 57 L26 47 L49 44 L44 31 L65 42 L77 30 L82 52 L103 49 L94 64 L117 72 L96 81 L104 103 L81 87 L62 105 L63 82 L39 87 L47 70 Z" />
-            <path d="M139 28 L125 45 L136 53 L118 64 L127 78 L108 82 L113 98" />
-            <path d="M35 111 L50 96 L44 87 L62 77" />
+            <path d="M4 83 L16 76 L12 68 L25 61" />
+            <path d="M176 45 L164 52 L168 61 L155 69" />
+            <path d="M151 112 L143 103 L149 95" />
           </g>
           <g className="front-cores">
-            <path d="M12 65 L32 57 L26 47 L49 44 L44 31 L65 42 L77 30 L82 52 L103 49 L94 64 L117 72 L96 81 L104 103 L81 87 L62 105 L63 82 L39 87 L47 70 Z" />
-            <path d="M139 28 L125 45 L136 53 L118 64 L127 78 L108 82 L113 98" />
-            <path d="M35 111 L50 96 L44 87 L62 77" />
+            <path d="M4 83 L16 76 L12 68 L25 61" />
+            <path d="M176 45 L164 52 L168 61 L155 69" />
+            <path d="M151 112 L143 103 L149 95" />
           </g>
         </svg>
       )}
@@ -188,10 +188,10 @@ export default function GachaAuraPreview({
         .fude-legendary-lightning .front-bolts path {
           fill: none;
           stroke: #FF173F;
-          stroke-width: 6;
+          stroke-width: 2.8;
           stroke-linecap: square;
           stroke-linejoin: bevel;
-          filter: drop-shadow(0 0 4px #FF173F) drop-shadow(0 0 9px rgba(255,23,63,.95)) drop-shadow(0 0 17px rgba(255,23,63,.55));
+          filter: drop-shadow(0 0 2px #FF173F) drop-shadow(0 0 5px rgba(255,23,63,.72));
           stroke-dasharray: none;
           animation: lightning-flash 1.25s steps(2, end) infinite;
         }
@@ -203,19 +203,19 @@ export default function GachaAuraPreview({
         .fude-legendary-lightning .front-cores path {
           fill: none;
           stroke: #FFFDFE;
-          stroke-width: 1.65;
+          stroke-width: .9;
           stroke-linecap: square;
           stroke-linejoin: bevel;
-          filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 3px #FFD9E0) drop-shadow(0 0 7px #FF3157);
+          filter: drop-shadow(0 0 1px #FFFFFF) drop-shadow(0 0 2px #FFD9E0);
           animation: lightning-core-flash .95s steps(2, end) infinite;
         }
         .fude-legendary-lightning .lightning-core path:nth-child(2),
         .fude-legendary-lightning .front-cores path:nth-child(2) { animation-delay: -.31s; }
         .fude-legendary-lightning .lightning-core path:nth-child(3),
         .fude-legendary-lightning .front-cores path:nth-child(3) { animation-delay: -.63s; }
-        .fude-aura-legendary .fude-aura-flare { opacity: .9; filter: blur(6px); }
-        .fude-aura-legendary .fude-aura-surge { opacity: .88; filter: blur(3px); }
-        .fude-aura-legendary .fude-aura-particle { box-shadow: 0 0 12px 4px #FF263F; }
+        .fude-aura-legendary .fude-aura-flare { opacity: .38; filter: blur(8px); }
+        .fude-aura-legendary .fude-aura-surge { opacity: .28; filter: blur(5px); }
+        .fude-aura-legendary .fude-aura-particle { box-shadow: 0 0 6px 2px #FF263F; }
         .fude-aura-epic .fude-aura-surge { opacity: .7; }
         @keyframes mythic-radiance {
           0%, 100% { opacity: .42; transform: scale(.9) rotate(-5deg); }
