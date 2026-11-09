@@ -82,6 +82,62 @@ export default function GachaBadgeArtwork({
   const ornamentPoints = ORNAMENT_LAYOUTS[layoutIndex];
   const artworkSrc = badge.artwork?.[level];
 
+  // Mochi Guardian evolution previews: each level gets a distinct silhouette and finish.
+  if (badge.id === "bab-1" && level === 2) {
+    return (
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Mochi Guardian, Common, Level 2 — Blooming Guardian" className="shrink-0 overflow-visible drop-shadow-[0_8px_12px_rgba(0,0,0,0.48)]">
+        <defs>
+          <linearGradient id={`mochi2-gold-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFF5CF"/><stop offset=".42" stopColor="#D8AE62"/><stop offset="1" stopColor="#8C5A2D"/></linearGradient>
+          <linearGradient id={`mochi2-jade-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#75B99A"/><stop offset=".5" stopColor="#286B58"/><stop offset="1" stopColor="#123C35"/></linearGradient>
+          <linearGradient id={`mochi2-body-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFFDF1"/><stop offset="1" stopColor="#D9C7A6"/></linearGradient>
+        </defs>
+        <path d="M64 4 C74 15 84 13 91 22 C103 21 108 32 106 43 C119 52 119 67 108 76 C111 91 101 102 87 101 C80 116 68 119 58 108 C45 118 31 111 31 98 C16 96 11 82 20 70 C8 58 15 43 27 39 C25 24 39 15 50 21 Z" fill={`url(#mochi2-gold-${uniqueId})`} stroke="#69451F" strokeWidth="2.5"/>
+        <path d="M64 12 C73 23 82 20 87 29 C99 28 101 39 98 47 C110 56 109 66 99 74 C103 86 94 94 82 92 C76 105 66 108 58 98 C47 107 36 101 37 89 C24 88 21 77 29 68 C19 58 25 47 36 43 C34 31 44 24 53 29 Z" fill={`url(#mochi2-jade-${uniqueId})`} stroke="#F9E8B8" strokeWidth="1.8"/>
+        <g fill="#F5C8CF" stroke="#FFF0D7" strokeWidth="1"><path d="M25 45 C17 34 29 29 33 39 C42 30 48 42 37 48 C47 55 36 64 31 54 C21 63 13 51 25 45Z"/><path d="M91 39 C83 28 95 23 99 33 C108 24 114 36 103 42 C113 49 102 58 97 48 C87 57 79 45 91 39Z"/></g>
+        <g fill="#E8C875"><circle cx="32" cy="47" r="2.4"/><circle cx="98" cy="41" r="2.4"/><path d="M64 14l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+        <path d="M43 39 C39 31 45 23 54 25 C57 15 70 15 74 25 C84 21 91 30 84 39 C78 45 50 46 43 39Z" fill="#9CBF79" stroke="#55744E" strokeWidth="1.8"/>
+        <path d="M57 29 Q49 17 55 13 Q67 12 65 29 Q72 12 82 17 Q85 29 65 34" fill="#C7DDA0" stroke="#55744E" strokeWidth="1.5"/>
+        <path d="M43 44 C36 55 37 76 45 88 C53 101 77 100 86 87 C94 74 91 53 81 43 C72 34 52 35 43 44Z" fill={`url(#mochi2-body-${uniqueId})`} stroke="#8B7759" strokeWidth="2"/>
+        <ellipse cx="49" cy="68" rx="7" ry="4" fill="#F49A91" opacity=".45"/><ellipse cx="79" cy="68" rx="7" ry="4" fill="#F49A91" opacity=".45"/>
+        <ellipse cx="54" cy="62" rx="2.5" ry="3.4" fill="#403C35"/><ellipse cx="74" cy="62" rx="2.5" ry="3.4" fill="#403C35"/><path d="M60 70 Q64 75 68 70" fill="none" stroke="#9B6C5C" strokeWidth="1.8" strokeLinecap="round"/>
+        <path d="M39 80 Q64 91 89 78 L85 89 Q64 101 43 91Z" fill="#B86E61" stroke="#815342" strokeWidth="1.5"/>
+        <path d="M64 81l8 7-8 9-8-9Z" fill="#F7D98E" stroke="#9B713A" strokeWidth="1.2"/>
+        <path d="M31 68 Q20 67 22 78 Q26 85 37 81 M92 67 Q104 66 102 78 Q98 85 87 81" fill="none" stroke="#D9C8A9" strokeWidth="5" strokeLinecap="round"/>
+        <path d="M48 98 Q64 108 80 98" fill="none" stroke="#F4DDA8" strokeWidth="2.5" strokeLinecap="round"/>
+        <path d="M17 68l3 6 6 2-6 3-3 6-3-6-6-3 6-2z M110 66l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FFF0C9"/>
+      </svg>
+    );
+  }
+
+  if (badge.id === "bab-1" && level === 3) {
+    return (
+      <svg viewBox="0 0 128 128" width={size} height={size} role="img" aria-label="Mochi Guardian, Common, Level 3 — Celestial Guardian" className="shrink-0 overflow-visible drop-shadow-[0_9px_15px_rgba(0,0,0,0.55)]">
+        <defs>
+          <linearGradient id={`mochi3-metal-${uniqueId}`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#FFF9DA"/><stop offset=".35" stopColor="#E4C16E"/><stop offset=".7" stopColor="#9D6A37"/><stop offset="1" stopColor="#FFF0B7"/></linearGradient>
+          <linearGradient id={`mochi3-enamel-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#6A9F91"/><stop offset=".5" stopColor="#24594F"/><stop offset="1" stopColor="#102D32"/></linearGradient>
+          <linearGradient id={`mochi3-body-${uniqueId}`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#FFFFFF"/><stop offset=".65" stopColor="#F4EBD8"/><stop offset="1" stopColor="#D5C09C"/></linearGradient>
+        </defs>
+        <circle cx="64" cy="64" r="57" fill="none" stroke="#E8C875" strokeWidth="1.5" strokeDasharray="2 4"/>
+        <circle cx="64" cy="64" r="50" fill="none" stroke="#F6E5B5" strokeWidth="2" opacity=".9"/>
+        <path d="M64 3 L75 17 L93 12 L96 31 L115 40 L106 58 L121 73 L103 86 L105 106 L84 105 L64 124 L46 106 L25 111 L24 91 L7 79 L18 62 L7 44 L27 34 L30 14 L49 19Z" fill={`url(#mochi3-metal-${uniqueId})`} stroke="#6F4B25" strokeWidth="2.4" strokeLinejoin="round"/>
+        <path d="M64 11 L74 24 L90 20 L92 36 L108 44 L100 60 L112 73 L97 84 L98 100 L81 99 L64 115 L48 99 L31 103 L31 87 L16 77 L25 62 L16 47 L33 39 L35 23 L50 27Z" fill={`url(#mochi3-enamel-${uniqueId})`} stroke="#FFF0C6" strokeWidth="1.7"/>
+        <g fill="#F4C7CF" stroke="#FFF4DE" strokeWidth="1"><path d="M25 48 C17 37 29 31 34 41 C43 32 49 44 38 51 C48 58 36 67 31 57 C20 66 13 54 25 48Z"/><path d="M91 45 C83 34 95 28 100 38 C109 29 115 41 104 48 C114 55 102 64 97 54 C86 63 79 51 91 45Z"/></g>
+        <g fill="#F8D987"><path d="M64 12l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M19 77l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path d="M109 76l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/></g>
+        <path d="M42 42 C37 32 45 24 55 28 C57 17 71 17 75 28 C87 24 93 35 84 44 C74 52 51 51 42 42Z" fill="#B6D28C" stroke="#59784C" strokeWidth="1.8"/>
+        <path d="M56 31 Q45 17 53 12 Q65 11 65 30 Q73 12 84 18 Q87 31 66 36" fill="#D7E8AC" stroke="#59784C" strokeWidth="1.5"/>
+        <path d="M43 47 C33 59 36 83 46 96 C56 108 76 106 85 93 C95 79 92 56 81 46 C71 37 52 38 43 47Z" fill={`url(#mochi3-body-${uniqueId})`} stroke="#8B7759" strokeWidth="2.1"/>
+        <path d="M45 51 Q64 41 82 53" fill="none" stroke="#FFFFFF" strokeWidth="3" strokeLinecap="round"/>
+        <ellipse cx="49" cy="73" rx="8" ry="5" fill="#EF9994" opacity=".42"/><ellipse cx="80" cy="73" rx="8" ry="5" fill="#EF9994" opacity=".42"/>
+        <ellipse cx="55" cy="67" rx="2.6" ry="3.6" fill="#37362F"/><ellipse cx="75" cy="67" rx="2.6" ry="3.6" fill="#37362F"/><path d="M60 76 Q65 81 70 76" fill="none" stroke="#A16D5B" strokeWidth="1.8" strokeLinecap="round"/>
+        <path d="M39 86 Q64 99 90 84 L86 96 Q64 108 43 97Z" fill="#C98578" stroke="#815342" strokeWidth="1.4"/>
+        <path d="M64 87l9 8-9 10-9-10Z" fill="#FFE9A8" stroke="#A77A3C" strokeWidth="1.4"/><path d="M64 91l4 4-4 5-4-5Z" fill="#4D7864"/>
+        <path d="M31 72 Q16 66 17 83 Q21 92 38 88 M94 72 Q109 66 111 83 Q107 92 90 88" fill="none" stroke="#E8D8B9" strokeWidth="5" strokeLinecap="round"/>
+        <path d="M42 105 Q64 116 86 104" fill="none" stroke="#FFF0C9" strokeWidth="2.5" strokeLinecap="round"/>
+        <path d="M64 2l2 5 5 2-5 2-2 5-2-5-5-2 5-2z M4 58l2 5 5 2-5 2-2 5-2-5-5-2 5-2z M119 57l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#FFF7D8"/>
+      </svg>
+    );
+  }
+
   // First individually art-directed prototype: Mochi Guardian (Level 1).
   // Keep this bespoke enamel-pin treatment isolated until the visual direction is approved.
   if (badge.id === "bab-1" && level === 1) {
