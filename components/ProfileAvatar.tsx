@@ -990,7 +990,7 @@ export default function ProfileAvatar({
               : badgeSize,
             height: badgeLevel > 1
               ? compactBadgeAura
-                ? Math.max(32, badgeSize + 10)
+                ? Math.max(30, badgeSize + 4)
                 : Math.max(80, badgeSize + 24)
               : badgeSize,
             left: "50%",
