@@ -32,6 +32,7 @@ import {
   COLLECTION_UPDATED_EVENT,
   initializeCollectionTracking,
   syncNewCollectionUnlocks,
+  getPendingCollectionIds,
   type CollectionUnlockNotice,
 } from "../lib/profile-collections";
 
@@ -104,7 +105,15 @@ export default function Sidebar() {
         event as CustomEvent<CollectionUnlockNotice[]>
       ).detail;
 
-      if (!Array.isArray(detail) || detail.length === 0) return;
+      if (!Array.isArray(detail) || detail.length === 0) {
+        // Jika item sudah dibuka dari halaman profil, tutup toast terkait.
+        const pendingIds = new Set(getPendingCollectionIds());
+
+        setUnlockNotices((previous) =>
+          previous.filter((item) => pendingIds.has(item.id))
+        );
+        return;
+      }
 
       setUnlockNotices((previous) => {
         const ids = new Set(previous.map((item) => item.id));
