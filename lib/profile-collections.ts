@@ -543,7 +543,7 @@ export const COLLECTION_UPDATED_EVENT = "fude-collection-updated";
 
 const COLLECTION_TRACKING_KEY = "fude_collection_tracking";
 const COLLECTION_KNOWN_KEY = "fude_collection_known";
-const COLLECTION_PENDING_KEY = "fude_collection_pending";
+export const COLLECTION_PENDING_KEY = "fude_collection_pending";
 
 export interface CollectionUnlockNotice {
   id: string;
