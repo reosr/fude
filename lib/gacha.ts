@@ -1,6 +1,7 @@
 import {
   awardGachaMaxedRarityCompensationOnce,
   getFudeTokens,
+  refundFudeTokensOnce,
   spendFudeTokensOnce,
 } from "./gamification";
 import { getCompletedJlptLevels } from "./profile-collections";
@@ -414,13 +415,15 @@ export function summonGacha(
     ]),
   ];
 
+  let spent = false;
+
   try {
-    // Simpan hasil terlebih dahulu; jika token gagal dibelanjakan,
-    // kedua catatan dikembalikan ke kondisi sebelumnya.
+    // Simpan hasil sementara, lalu catat spend dengan ID transaksi yang sama.
+    // Jika langkah setelah spend gagal, hasil dikembalikan dan Token direfund.
     saveGachaInventory(nextInventory);
     localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(nextHistory));
 
-    const spent = spendFudeTokensOnce(
+    spent = spendFudeTokensOnce(
       transactionId,
       cost,
       count === 10 ? "Gacha Summon 10x" : "Gacha Summon 1x"
@@ -432,7 +435,9 @@ export function summonGacha(
       return { ok: false, reason: "insufficient-tokens" };
     }
 
+    const remainingAfterSpend = getFudeTokens();
     const compensations: GachaCompensation[] = [];
+    let compensationTokens = 0;
 
     for (const compensation of pendingCompensations) {
       const compensationId = `${transactionId}-compensation-${compensation.index + 1}`;
@@ -447,6 +452,7 @@ export function summonGacha(
           rarity: compensation.rarity,
           tokens: 1,
         });
+        compensationTokens += 1;
       }
     }
 
@@ -461,17 +467,30 @@ export function summonGacha(
         cost,
         results,
         compensations,
-        remainingTokens: getFudeTokens(),
+        remainingTokens: remainingAfterSpend + compensationTokens,
       },
     };
   } catch (error) {
     console.error("Gagal memproses Gacha:", error);
+
     try {
       saveGachaInventory(previousInventory);
       localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(previousHistory));
     } catch (rollbackError) {
       console.error("Gagal mengembalikan data Gacha:", rollbackError);
     }
+
+    if (spent) {
+      const refunded = refundFudeTokensOnce(
+        transactionId,
+        cost,
+        "Pengembalian Token karena transaksi Gacha gagal"
+      );
+      if (!refunded) {
+        console.error("Refund Token Gacha gagal; transaksi perlu diperiksa.");
+      }
+    }
+
     return { ok: false, reason: "storage-error" };
   }
 }
