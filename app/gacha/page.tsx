@@ -97,6 +97,8 @@ export default function GachaPage() {
   const [error, setError] = useState("");
   const [activeRarity, setActiveRarity] = useState<GachaRarity | "all">("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const [showCatalogModal, setShowCatalogModal] = useState(false);
+  const [catalogSearch, setCatalogSearch] = useState("");
 
   const refresh = useCallback(() => {
     setInventory(getGachaInventory());
@@ -574,6 +576,98 @@ export default function GachaPage() {
           </div>
         )}
       </section>
+
+      <section className="rounded-3xl border border-[#33312E] bg-[#1E1D1B] p-5 md:p-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div className="flex items-center gap-2">
+              <Layers3 size={19} className="text-[#D6AD4F]" />
+              <h2 className="text-lg font-black text-[#EAE6DD]">Katalog 300 Badge</h2>
+            </div>
+            <p className="mt-1 text-xs text-[#A3A099]">Lihat sekilas koleksi dari enam rarity. Buka katalog lengkap untuk menjelajahi semuanya.</p>
+          </div>
+          <button
+            onClick={() => setShowCatalogModal(true)}
+            className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-4 py-2.5 text-xs font-black text-[#E7C46A] transition hover:bg-[#B8860B]/20"
+          >
+            Lihat Selengkapnya · {GACHA_BADGES.length}
+          </button>
+        </div>
+        <div className="mt-5 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
+          {GACHA_BADGES.slice(0, 8).map((badge) => (
+            <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
+              <div className="flex justify-center">
+                <GachaBadgeArtwork badge={badge} size={58} />
+              </div>
+              <p className="mt-2 line-clamp-2 text-[9px] font-bold text-[#F0E9D9]">{badge.name}</p>
+              <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {showCatalogModal && (
+        <div
+          className="fixed inset-0 z-[230] flex items-center justify-center bg-black/85 p-3 backdrop-blur-sm sm:p-6"
+          onClick={() => setShowCatalogModal(false)}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="gacha-catalog-title"
+            onClick={(event) => event.stopPropagation()}
+            className="flex max-h-[92vh] w-full max-w-6xl flex-col overflow-hidden rounded-2xl border border-[#6B542F] bg-[#1B1917] shadow-2xl"
+          >
+            <div className="flex items-center justify-between gap-3 border-b border-[#38332B] p-4 sm:p-5">
+              <div>
+                <h2 id="gacha-catalog-title" className="text-lg font-black text-[#F0E9D9]">Katalog Badge Lengkap</h2>
+                <p className="mt-1 text-xs text-[#A99C89]">{GACHA_BADGES.length} badge · 50 untuk setiap rarity</p>
+              </div>
+              <button onClick={() => setShowCatalogModal(false)} aria-label="Tutup katalog" className="rounded-lg bg-[#302B25] p-2 text-[#D8D1C5] hover:bg-[#40392F]">
+                <span className="text-lg leading-none">×</span>
+              </button>
+            </div>
+            <div className="flex flex-col gap-3 border-b border-[#38332B] p-4 sm:flex-row">
+              <div className="flex flex-wrap gap-1.5">
+                <button onClick={() => setActiveRarity("all")} className={`rounded-lg px-3 py-2 text-[10px] font-bold ${activeRarity === "all" ? "bg-[#B8860B] text-white" : "bg-[#302B25] text-[#A99C89]"}`}>Semua</button>
+                {GACHA_RARITIES.map((rarity) => (
+                  <button key={rarity} onClick={() => setActiveRarity(rarity)} className={`rounded-lg px-2.5 py-2 text-[10px] font-bold ${activeRarity === rarity ? "bg-[#B8860B] text-white" : "bg-[#302B25] text-[#A99C89]"}`}>{RARITY_LABELS[rarity]}</button>
+                ))}
+              </div>
+              <input
+                value={catalogSearch}
+                onChange={(event) => setCatalogSearch(event.target.value)}
+                placeholder="Cari semua badge..."
+                className="min-w-0 flex-1 rounded-lg border border-[#40392F] bg-[#24211D] px-3 py-2 text-xs text-[#F0E9D9] outline-none placeholder:text-[#817A73] focus:border-[#B8860B]"
+              />
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+                {GACHA_BADGES.filter((badge) => activeRarity === "all" || badge.rarity === activeRarity)
+                  .filter((badge) => `${badge.name} ${badge.description ?? ""}`.toLowerCase().includes(catalogSearch.trim().toLowerCase()))
+                  .map((badge) => {
+                    const copies = copiesFor(inventory, badge.id);
+                    const owned = getTotalGachaBadgeCopies(copies) > 0;
+                    return (
+                      <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]} ${owned ? "" : "opacity-65"}`}>
+                        <div className={`flex justify-center ${owned ? "" : "grayscale"}`}>
+                          <GachaBadgeArtwork badge={badge} size={62} level={copies.level3 ? 3 : copies.level2 ? 2 : copies.level1 ? 1 : 0} />
+                        </div>
+                        <p className="mt-2 line-clamp-2 min-h-7 text-[10px] font-bold text-[#F0E9D9]">{badge.name}</p>
+                        <p className="mt-1 text-[8px] uppercase tracking-wide opacity-80">{RARITY_LABELS[badge.rarity]}</p>
+                        <p className="mt-1 text-[9px] font-bold text-[#D6AD4F]">{owned ? `Dimiliki · ×${getTotalGachaBadgeCopies(copies)}` : "Belum dimiliki"}</p>
+                      </div>
+                    );
+                  })}
+              </div>
+              {GACHA_BADGES.filter((badge) => activeRarity === "all" || badge.rarity === activeRarity)
+                .filter((badge) => `${badge.name} ${badge.description ?? ""}`.toLowerCase().includes(catalogSearch.trim().toLowerCase())).length === 0 && (
+                <p className="py-12 text-center text-sm text-[#A99C89]">Badge tidak ditemukan.</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       <section className="rounded-3xl border border-[#33312E] bg-[#1E1D1B] p-5 md:p-6">
         <div className="flex items-center justify-between">
