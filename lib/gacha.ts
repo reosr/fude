@@ -17,6 +17,7 @@ export const GACHA_HISTORY_KEY = "fude_gacha_history_v1";
 export const GACHA_SINGLE_COST = 1;
 export const GACHA_TEN_COST = 10;
 export const GACHA_MAX_EVOLUTION = 3;
+export const GACHA_INVENTORY_VERSION = 2;
 export const GACHA_CATALOG_SIZE = 300;
 
 export const GACHA_RARITIES = [
@@ -29,7 +30,7 @@ export const GACHA_RARITIES = [
 ] as const;
 
 export type GachaRarity = (typeof GACHA_RARITIES)[number];
-export type GachaEvolutionLevel = 0 | 1 | 2 | 3;
+export type GachaEvolutionLevel = 1 | 2 | 3;
 
 export interface GachaBadgeDefinition {
   id: string;
@@ -42,7 +43,6 @@ export interface GachaBadgeDefinition {
 }
 
 export interface GachaBadgeCopies {
-  level0: number;
   level1: number;
   level2: number;
   level3: number;
@@ -60,7 +60,7 @@ export interface GachaHistoryEntry {
   badgeId: string;
   badgeName: string;
   rarity: GachaRarity;
-  evolutionLevel: 0;
+  evolutionLevel: 1;
   createdAt: number;
 }
 
@@ -160,11 +160,11 @@ function canonicalBadgeId(id: string): string {
 }
 
 function emptyCopies(): GachaBadgeCopies {
-  return { level0: 0, level1: 0, level2: 0, level3: 0 };
+  return { level1: 0, level2: 0, level3: 0 };
 }
 
 function emptyInventory(): GachaInventory {
-  return { version: 1, badges: {}, newBadgeIds: [], updatedAt: Date.now() };
+  return { version: GACHA_INVENTORY_VERSION, badges: {}, newBadgeIds: [], updatedAt: Date.now() };
 }
 
 function isSafeCount(value: unknown): value is number {
@@ -192,12 +192,16 @@ export function getGachaInventory(): GachaInventory {
       if (!id || !value || typeof value !== "object") continue;
       const copies = value as Partial<GachaBadgeCopies>;
       const canonicalId = canonicalBadgeId(id);
-      const normalized = {
-        level0: isSafeCount(copies.level0) ? copies.level0 : 0,
-        level1: isSafeCount(copies.level1) ? copies.level1 : 0,
-        level2: isSafeCount(copies.level2) ? copies.level2 : 0,
-        level3: isSafeCount(copies.level3) ? copies.level3 : 0,
-      };
+      const isLegacyInventory = parsed.version !== GACHA_INVENTORY_VERSION;
+      const legacyLevel0 = isSafeCount((copies as Partial<GachaBadgeCopies> & { level0?: number }).level0)
+        ? (copies as Partial<GachaBadgeCopies> & { level0?: number }).level0 as number
+        : 0;
+      const oldLevel1 = isSafeCount(copies.level1) ? copies.level1 : 0;
+      const oldLevel2 = isSafeCount(copies.level2) ? copies.level2 : 0;
+      const oldLevel3 = isSafeCount(copies.level3) ? copies.level3 : 0;
+      const normalized = isLegacyInventory
+        ? { level1: legacyLevel0, level2: oldLevel1, level3: oldLevel2 + oldLevel3 }
+        : { level1: oldLevel1, level2: oldLevel2, level3: oldLevel3 };
       const previous = badges[canonicalId] ?? emptyCopies();
       badges[canonicalId] = {
         level0: previous.level0 + normalized.level0,
@@ -219,7 +223,7 @@ export function getGachaInventory(): GachaInventory {
     );
 
     return {
-      version: 1,
+      version: GACHA_INVENTORY_VERSION,
       badges,
       newBadgeIds,
       updatedAt: typeof parsed.updatedAt === "number"
@@ -237,7 +241,7 @@ function saveGachaInventory(inventory: GachaInventory): void {
     GACHA_INVENTORY_KEY,
     JSON.stringify({
       ...inventory,
-      version: 1,
+      version: GACHA_INVENTORY_VERSION,
       updatedAt: Date.now(),
     })
   );
@@ -259,7 +263,7 @@ export function getGachaHistory(limit = 50): GachaHistoryEntry[] {
         typeof item.badgeId === "string" &&
         typeof item.badgeName === "string" &&
         GACHA_RARITIES.includes(item.rarity) &&
-        item.evolutionLevel === 0 &&
+        (item.evolutionLevel === 0 || item.evolutionLevel === 1) &&
         typeof item.createdAt === "number"
       )
       .map((item) => {
@@ -267,6 +271,7 @@ export function getGachaHistory(limit = 50): GachaHistoryEntry[] {
         const definition = GACHA_BADGES.find((badge) => badge.id === badgeId);
         return {
           ...item,
+          evolutionLevel: 1 as const,
           badgeId,
           badgeName: definition?.name ?? item.badgeName,
           rarity: definition?.rarity ?? item.rarity,
@@ -387,7 +392,7 @@ export function summonGacha(
     const copies = nextInventory.badges[badge.id] ?? emptyCopies();
     nextInventory.badges[badge.id] = {
       ...copies,
-      level0: copies.level0 + 1,
+      level1: copies.level1 + 1,
     };
 
     results.push({
@@ -395,7 +400,7 @@ export function summonGacha(
       badgeId: badge.id,
       badgeName: badge.name,
       rarity,
-      evolutionLevel: 0,
+      evolutionLevel: 1,
       createdAt: Date.now(),
     });
   }
@@ -488,10 +493,10 @@ export function evolveGachaBadge(
 
   if (!copies) return { ok: false, reason: "not-enough-copies" };
 
-  const levels: GachaEvolutionLevel[] = [2, 1, 0];
+  const levels: GachaEvolutionLevel[] = [2, 1];
   const fromLevel = levels.find((level) => {
     const key = `level${level}` as keyof GachaBadgeCopies;
-    const needed = level === 0 ? 10 : 3;
+    const needed = 3;
     return copies[key] >= needed;
   });
 
@@ -500,7 +505,7 @@ export function evolveGachaBadge(
     return { ok: false, reason: "not-enough-copies" };
   }
 
-  const needed = fromLevel === 0 ? 10 : 3;
+  const needed = 3;
   const fromKey = `level${fromLevel}` as keyof GachaBadgeCopies;
   const toKey = `level${fromLevel + 1}` as keyof GachaBadgeCopies;
   const updatedCopies = {
@@ -557,7 +562,7 @@ export function markGachaBadgeSeen(badgeId: string): void {
 export function getTotalGachaBadgeCopies(
   copies: GachaBadgeCopies
 ): number {
-  return copies.level0 + copies.level1 + copies.level2 + copies.level3;
+  return copies.level1 + copies.level2 + copies.level3;
 }
 
 export function getGachaBadgeEvolutionProgress(
@@ -568,6 +573,15 @@ export function getGachaBadgeEvolutionProgress(
   copiesRequired: number;
   canEvolve: boolean;
 } {
+  if (copies.level3 > 0) {
+    return {
+      currentLevel: 3,
+      copiesOwned: copies.level3,
+      copiesRequired: 0,
+      canEvolve: false,
+    };
+  }
+
   if (copies.level2 >= 3) {
     return {
       currentLevel: 2,
@@ -583,24 +597,6 @@ export function getGachaBadgeEvolutionProgress(
       copiesOwned: copies.level1,
       copiesRequired: 3,
       canEvolve: true,
-    };
-  }
-
-  if (copies.level0 >= 10) {
-    return {
-      currentLevel: 0,
-      copiesOwned: copies.level0,
-      copiesRequired: 10,
-      canEvolve: true,
-    };
-  }
-
-  if (copies.level3 > 0) {
-    return {
-      currentLevel: 3,
-      copiesOwned: copies.level3,
-      copiesRequired: 0,
-      canEvolve: false,
     };
   }
 
@@ -623,9 +619,9 @@ export function getGachaBadgeEvolutionProgress(
   }
 
   return {
-    currentLevel: 0,
-    copiesOwned: copies.level0,
-    copiesRequired: 10,
+    currentLevel: 1,
+    copiesOwned: copies.level1,
+    copiesRequired: 3,
     canEvolve: false,
   };
 }
