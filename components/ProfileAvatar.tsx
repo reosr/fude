@@ -3,6 +3,7 @@ import {
   ALL_BADGES,
   PROFILE_FRAMES,
 } from "../lib/profile-collections";
+import { GACHA_BADGES } from "../data/gacha-badges";
 
 interface ProfileAvatarProps {
   avatar?: string;
@@ -928,11 +929,25 @@ export default function ProfileAvatar({
     PROFILE_FRAMES.find((item) => item.id === frameId) ??
     PROFILE_FRAMES[0];
 
-  const badge = ALL_BADGES.find((item) => item.id === badgeId);
+  const profileBadge = ALL_BADGES.find((item) => item.id === badgeId);
+  const gachaBadge = GACHA_BADGES.find((item) => item.id === badgeId);
+  const badge = profileBadge
+    ? {
+        name: profileBadge.name,
+        description: profileBadge.description,
+        tier: profileBadge.tier,
+      }
+    : gachaBadge
+      ? {
+          name: gachaBadge.name,
+          description: gachaBadge.description ?? "Badge koleksi Gacha Fude.",
+          tier: gachaBadge.rarity,
+        }
+      : undefined;
 
   const badgeColors =
-  (badge && TIER_COLORS[badge.tier]) ||
-  TIER_COLORS.common;
+    (badge && TIER_COLORS[badge.tier]) ||
+    TIER_COLORS.common;
 
   const badgeSize = Math.round(size * 0.36);
 
