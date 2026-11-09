@@ -179,7 +179,7 @@ export default function JLPTQuiz({
         setUserAnswers(savedAnswers);
 
         const wasFinished =
-          parsed.isFinished === true || parsed.isPerfect === true;
+        parsed.isFinished === true || parsed.isPerfect === true;
 
         setIsFinished(wasFinished);
 
