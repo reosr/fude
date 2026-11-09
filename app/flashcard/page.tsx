@@ -10,6 +10,7 @@ import verbTypeData from "../../data/verb-type-index.json";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
+const KanaStroke = dynamic(() => import("../../components/KanaStroke"), { ssr: false });
 
 const verbTypeMap = buildVerbTypeMap(verbTypeData);
 
@@ -409,7 +410,12 @@ useEffect(() => {
 
                     {/* Area stroke: di HP mengisi sisa ruang & mengecil otomatis, di desktop tetap seperti semula */}
                     <ScaleToFit className="flex-1 md:flex-none mb-1 md:mb-4">
-                      {isTop && isWindowFocused ? <KanjiStroke kanji={card.kanji} /> : <div className="h-[76px] md:h-[120px]"></div>}
+                      {isTop && isWindowFocused ? (
+                        <div className="flex w-full flex-col items-center gap-2">
+                          <KanjiStroke kanji={card.kanji} />
+                          <KanaStroke kana={card.kana} />
+                        </div>
+                      ) : <div className="h-[76px] md:h-[120px]"></div>}
                     </ScaleToFit>
 
                     <p className="text-[9px] md:text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-2 md:px-3 py-1 rounded-full mt-1 md:mt-2 border border-[#33312E] shrink-0">
