@@ -10,13 +10,11 @@ import {
   Trophy,
   Award,
   Target,
-  CheckCircle2,
   Lock,
   Save,
   X,
   ShieldCheck,
   Sparkles,
-  ImagePlus,
   Trash2,
   Check,
   Coins,
@@ -248,11 +246,6 @@ export default function Profil() {
   const equippedBadge =
     ALL_BADGES.find((badge) => badge.id === profile.equippedBadgeId) ??
     GACHA_BADGES.find((badge) => badge.id === profile.equippedBadgeId);
-
-  const equippedFrame =
-    PROFILE_FRAMES.find(
-      (frame) => frame.id === profile.equippedFrameId
-    ) ?? PROFILE_FRAMES[0];
 
   const unlockedBadgeCount = unlockedBadgeIds.length;
   const unlockedFrameCount = unlockedFrameIds.length;
