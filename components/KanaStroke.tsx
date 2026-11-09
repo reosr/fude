@@ -18,7 +18,7 @@ function prepareStrokeAnimation(
   let maxDelay = 0;
 
   const staggeredMarkup = source.replace(
-    /style="--d:([\\d.]+)s;"/g,
+    /style="--d:([\d.]+)s;"/g,
     (_match, rawDelay: string) => {
       const baseDelay = Number(rawDelay);
       const duplicateIndex = delayCounts.get(baseDelay) ?? 0;
