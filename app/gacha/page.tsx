@@ -702,13 +702,12 @@ export default function GachaPage() {
             return (
               <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
                 <div className="relative flex justify-center">
-                  <div className={owned ? "" : "opacity-20 grayscale blur-[1px]"}>
+                  <div className="">
                     <GachaBadgeArtwork badge={badge} size={58} level={1} />
                   </div>
                   {!owned && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 rounded-lg bg-[#111]/55 text-[#D6D1C8]">
-                      <Lock size={15} />
-                      <span className="text-[8px] font-black tracking-widest">LOCKED</span>
+                    <div className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 bg-[#17191D]/90 text-[#D6D1C8] shadow-lg" title="Belum dimiliki">
+                      <Lock size={12} />
                     </div>
                   )}
                 </div>
@@ -766,7 +765,7 @@ export default function GachaPage() {
                     return (
                       <div key={badge.id} className={`rounded-xl border p-2 text-center ${RARITY_STYLES[badge.rarity]}`}>
                         <div className="relative flex justify-center">
-                          <div className={`mx-auto w-[76px] ${owned ? "" : "opacity-20 grayscale blur-[1px]"}`}>
+                          <div className="mx-auto w-[76px]">
                             {owned && copies.level3 > 0 ? (
                               <GachaAuraPreview badge={badge} level={3} size={62} />
                             ) : owned && copies.level2 > 0 ? (
@@ -776,9 +775,8 @@ export default function GachaPage() {
                             )}
                           </div>
                           {!owned && (
-                            <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 rounded-lg bg-[#111]/65 text-[#D6D1C8]">
-                              <Lock size={17} />
-                              <span className="text-[9px] font-black tracking-[0.18em]">LOCKED</span>
+                            <div className="absolute -right-1 -top-1 flex h-7 w-7 items-center justify-center rounded-full border border-white/20 bg-[#17191D]/95 text-[#D6D1C8] shadow-lg" title="Belum dimiliki">
+                              <Lock size={13} />
                             </div>
                           )}
                         </div>
