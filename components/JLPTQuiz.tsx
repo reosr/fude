@@ -879,7 +879,12 @@ export default function JLPTQuiz({
               </button>
 
               <button
+                disabled={totalUnanswered > 0}
                 onClick={() => {
+                  // Pengaman tambahan: jangan izinkan penyelesaian
+                  // atau reward jika masih ada soal yang kosong.
+                  if (totalUnanswered > 0) return;
+
                   const score = calculateQuizScore(
                     userAnswers,
                     testSet.sections
@@ -925,7 +930,11 @@ export default function JLPTQuiz({
                     levelSetIds
                   );
                 }}
-                className="flex-1 bg-[#C93438] text-white font-bold py-3 rounded-xl hover:bg-[#B02A2E] transition-colors shadow-lg shadow-[#C93438]/20"
+                className={`flex-1 font-bold py-3 rounded-xl transition-colors shadow-lg ${
+                  totalUnanswered > 0
+                    ? "bg-[#33312E] text-[#817A73] cursor-not-allowed shadow-none"
+                    : "bg-[#C93438] text-white hover:bg-[#B02A2E] shadow-[#C93438]/20"
+                }`}
               >
                 Ya, Selesaikan
               </button>
