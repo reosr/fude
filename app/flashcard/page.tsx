@@ -248,7 +248,7 @@ useEffect(() => {
   }
 
   return (
-    <div className="space-y-2 md:space-y-6 pb-[calc(11rem+env(safe-area-inset-bottom))] md:pb-10 flex flex-col items-center relative overflow-hidden">
+    <div className="space-y-2 md:space-y-6 pb-6 md:pb-10 flex flex-col items-center relative overflow-hidden">
       <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 relative z-20">
         <div>
           <h2 className="text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
@@ -274,7 +274,7 @@ useEffect(() => {
       </div>
 
       <div 
-        className="relative w-full max-w-md h-[clamp(260px,48svh,440px)] min-h-0 md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
+        className="relative w-full max-w-md h-[clamp(270px,40svh,360px)] sm:h-[min(420px,52svh)] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -338,7 +338,7 @@ useEffect(() => {
                 </div>
 
                 <div 
-                  className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#1A1918] border-2 border-[#C93438] rounded-3xl flex flex-col items-center justify-center p-6 shadow-2xl overflow-hidden ${isTop ? "cursor-pointer" : "pointer-events-none"} ${(isTop && isFlipped) ? "" : "pointer-events-none"}`}
+                  className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#1A1918] border-2 border-[#C93438] rounded-3xl flex flex-col items-center justify-center p-3 sm:p-5 md:p-6 shadow-2xl overflow-hidden ${isTop ? "cursor-pointer" : "pointer-events-none"} ${(isTop && isFlipped) ? "" : "pointer-events-none"}`}
                   onClick={(e) => {
                     if (isTop && !(e.target as HTMLElement).closest("[data-no-flip]")) setIsFlipped(false);
                   }}
@@ -349,8 +349,8 @@ useEffect(() => {
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,25,24,0.75)_0%,rgba(26,25,24,0.45)_45%,transparent_75%)]"></div>
                   </div>
 
-                  <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
-                    <div className="text-center w-full mb-4">
+                  <div className="relative z-10 flex flex-col items-center justify-center w-full h-full min-h-0 py-1">
+                    <div className="text-center w-full mb-2 md:mb-4 shrink-0">
                       {verbType && (
                         <span className={`inline-block mb-3 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
                           {verbType}
@@ -365,11 +365,11 @@ useEffect(() => {
                       <p className="text-2xl sm:text-3xl font-bold text-[#C93438] mt-2 break-words leading-snug drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]">{card.meaning}</p>
                     </div>
 
-                    <div className="w-full flex justify-center mb-4">
-                      {isTop && isWindowFocused ? <KanjiStroke kanji={card.kanji} /> : <div className="h-[120px]"></div>}
+                    <div className="w-full flex justify-center mb-1 md:mb-4 shrink-0">
+                      {isTop && isWindowFocused ? <KanjiStroke kanji={card.kanji} /> : <div className="h-[76px] md:h-[120px]"></div>}
                     </div>
 
-                    <p className="text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-3 py-1 rounded-full mt-2 border border-[#33312E]">
+                    <p className="text-[9px] md:text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-2 md:px-3 py-1 rounded-full mt-1 md:mt-2 border border-[#33312E] shrink-0">
                       TEKAN DI LUAR KANJI UNTUK KEMBALI
                     </p>
                   </div>
@@ -390,7 +390,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center gap-4 sm:gap-6 md:justify-between md:gap-0 w-full max-w-md mt-8 md:mt-12 relative z-20 shrink-0">
+      <div className="flex items-center justify-center gap-4 sm:gap-6 md:justify-between md:gap-0 w-full max-w-md mt-5 md:mt-12 relative z-20 shrink-0">
         <button onClick={handlePrev} disabled={isAdvancing} className="w-11 h-11 md:w-14 md:h-14 rounded-full bg-[#1E1D1B] border border-[#33312E] flex items-center justify-center text-[#EAE6DD] hover:bg-[#262523] transition-colors disabled:opacity-50">
           <ArrowLeft size={19} className="md:!h-6 md:!w-6" />
         </button>
