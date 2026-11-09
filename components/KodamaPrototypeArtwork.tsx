@@ -4,157 +4,161 @@ import { useId } from "react";
 
 export default function KodamaPrototypeArtwork({ size = 76 }: { size?: number }) {
   const uid = useId().replace(/:/g, "");
-  const metal = `kodama-proto-metal-${uid}`;
-  const bark = `kodama-proto-bark-${uid}`;
-  const moss = `kodama-proto-moss-${uid}`;
-  const porcelain = `kodama-proto-porcelain-${uid}`;
-  const leaf = `kodama-proto-leaf-${uid}`;
-  const shade = `kodama-proto-shade-${uid}`;
-  const grain = `kodama-proto-grain-${uid}`;
-
   return (
     <svg viewBox="0 0 160 160" width={size} height={size} role="img"
-      aria-label="Kodama, Japanese tree spirit, collectible badge prototype"
-      className="shrink-0 overflow-visible drop-shadow-[0_9px_12px_rgba(0,0,0,0.58)]">
+      aria-label="Semi-realistic chibi Kodama spirit collectible badge"
+      className="shrink-0 overflow-visible drop-shadow-[0_10px_14px_rgba(0,0,0,0.62)]">
       <defs>
-        <linearGradient id={metal} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#FFF4CF"/><stop offset=".16" stopColor="#D9C18A"/>
-          <stop offset=".38" stopColor="#8B7047"/><stop offset=".62" stopColor="#E5D09A"/>
-          <stop offset=".82" stopColor="#66543A"/><stop offset="1" stopColor="#F4E3B5"/>
+        <linearGradient id={`k-frame-${uid}`} x1="0" y1="0" x2="1" y2="1">
+          <stop stopColor="#FFF0C1"/><stop offset=".16" stopColor="#B98D4D"/>
+          <stop offset=".38" stopColor="#58452E"/><stop offset=".62" stopColor="#E2C27E"/>
+          <stop offset=".84" stopColor="#6A4B2C"/><stop offset="1" stopColor="#F6E2AC"/>
         </linearGradient>
-        <linearGradient id={bark} x1=".12" y1="0" x2=".9" y2="1">
-          <stop stopColor="#B98A5A"/><stop offset=".22" stopColor="#8C603F"/>
-          <stop offset=".58" stopColor="#5C402E"/><stop offset=".82" stopColor="#382D26"/>
-          <stop offset="1" stopColor="#9C7048"/>
-        </linearGradient>
-        <linearGradient id={moss} x1="0" y1="0" x2=".9" y2="1">
-          <stop stopColor="#E7F0B0"/><stop offset=".18" stopColor="#B7D477"/>
-          <stop offset=".48" stopColor="#789B4E"/><stop offset=".76" stopColor="#48683E"/><stop offset="1" stopColor="#263F30"/>
-        </linearGradient>
-        <linearGradient id={porcelain} x1=".12" y1="0" x2=".82" y2="1">
-          <stop stopColor="#FFFFFF"/><stop offset=".2" stopColor="#F7F1DA"/>
-          <stop offset=".52" stopColor="#DCE0C8"/><stop offset=".78" stopColor="#AEB99C"/>
-          <stop offset="1" stopColor="#66745F"/>
-        </linearGradient>
-        <linearGradient id={leaf} x1=".15" y1="0" x2=".85" y2="1">
-          <stop stopColor="#F5F3C2"/><stop offset=".2" stopColor="#C7DC83"/>
-          <stop offset=".52" stopColor="#83A956"/><stop offset=".82" stopColor="#527344"/><stop offset="1" stopColor="#304B35"/>
-        </linearGradient>
-        <radialGradient id={`kodama-face-light-${uid}`} cx=".28" cy=".18" r=".88">
-          <stop stopColor="#FFFFFF"/><stop offset=".28" stopColor="#F8F4E8"/>
-          <stop offset=".62" stopColor="#D9DDC9"/><stop offset=".86" stopColor="#AAB69C"/>
-          <stop offset="1" stopColor="#68765F"/>
+        <radialGradient id={`k-enamel-${uid}`} cx=".35" cy=".22" r=".95">
+          <stop stopColor="#46634A"/><stop offset=".48" stopColor="#1C392F"/>
+          <stop offset=".82" stopColor="#10251F"/><stop offset="1" stopColor="#081510"/>
         </radialGradient>
-        <radialGradient id={`kodama-eye-${uid}`} cx=".3" cy=".18" r=".85">
-          <stop stopColor="#526258"/><stop offset=".28" stopColor="#202D27"/>
-          <stop offset=".78" stopColor="#0C1713"/><stop offset="1" stopColor="#050B08"/>
+        <radialGradient id={`k-skin-${uid}`} cx=".28" cy=".16" r=".92">
+          <stop stopColor="#FFFDF0"/><stop offset=".2" stopColor="#F0F0D9"/>
+          <stop offset=".48" stopColor="#C9D3B7"/><stop offset=".72" stopColor="#91A487"/>
+          <stop offset=".9" stopColor="#647A68"/><stop offset="1" stopColor="#3D594B"/>
         </radialGradient>
-        <linearGradient id={`kodama-leaf-vein-${uid}`} x1="0" y1="0" x2="1" y2="1">
-          <stop stopColor="#F8F5C9"/><stop offset=".55" stopColor="#A7C56C"/><stop offset="1" stopColor="#557344"/>
+        <linearGradient id={`k-skin-side-${uid}`} x1="0" y1="0" x2="1" y2=".2">
+          <stop stopColor="#F7F5E5"/><stop offset=".38" stopColor="#D4DCC4"/>
+          <stop offset=".72" stopColor="#8D9F84"/><stop offset="1" stopColor="#526B5A"/>
         </linearGradient>
-        <radialGradient id={shade} cx=".32" cy=".18" r=".86">
-          <stop stopColor="#FFFCE7" stopOpacity=".85"/><stop offset=".38" stopColor="#F7E7B5" stopOpacity=".2"/>
-          <stop offset="1" stopColor="#16231C" stopOpacity=".78"/>
+        <radialGradient id={`k-moss-${uid}`} cx=".3" cy=".08" r=".95">
+          <stop stopColor="#F0F4B7"/><stop offset=".22" stopColor="#B9D47A"/>
+          <stop offset=".5" stopColor="#789D4D"/><stop offset=".78" stopColor="#45683C"/>
+          <stop offset="1" stopColor="#263F2E"/>
         </radialGradient>
-        <filter id={grain} x="-20%" y="-20%" width="140%" height="140%">
-          <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="8" result="noise"/>
-          <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
-          <feComponentTransfer><feFuncA type="table" tableValues="0 .16"/></feComponentTransfer>
-          <feBlend in="SourceGraphic" mode="soft-light"/>
-        </filter>
-        <filter id={`kodama-proto-shadow-${uid}`} x="-30%" y="-30%" width="160%" height="170%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="blur"/>
-          <feOffset dy="3" result="offset"/>
-          <feComponentTransfer><feFuncA type="linear" slope=".5"/></feComponentTransfer>
+        <linearGradient id={`k-leaf-${uid}`} x1=".1" y1="0" x2=".9" y2="1">
+          <stop stopColor="#F8F7C9"/><stop offset=".22" stopColor="#D4E994"/>
+          <stop offset=".55" stopColor="#8EBB61"/><stop offset=".82" stopColor="#4F8048"/>
+          <stop offset="1" stopColor="#294B35"/>
+        </linearGradient>
+        <linearGradient id={`k-bark-${uid}`} x1=".1" y1="0" x2=".8" y2="1">
+          <stop stopColor="#C69A69"/><stop offset=".24" stopColor="#8C6746"/>
+          <stop offset=".6" stopColor="#59432F"/><stop offset="1" stopColor="#302A22"/>
+        </linearGradient>
+        <radialGradient id={`k-eye-${uid}`} cx=".28" cy=".16" r=".9">
+          <stop stopColor="#63766B"/><stop offset=".18" stopColor="#273A31"/>
+          <stop offset=".58" stopColor="#0B1712"/><stop offset="1" stopColor="#020805"/>
+        </radialGradient>
+        <radialGradient id={`k-glow-${uid}`} cx=".5" cy=".5" r=".5">
+          <stop stopColor="#F4F6B7" stopOpacity=".8"/><stop offset=".42" stopColor="#B5D978" stopOpacity=".28"/>
+          <stop offset="1" stopColor="#A9D66D" stopOpacity="0"/>
+        </radialGradient>
+        <filter id={`k-shadow-${uid}`} x="-35%" y="-35%" width="180%" height="190%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3.2" result="blur"/>
+          <feOffset dy="4" dx="1" result="offset"/>
+          <feComponentTransfer><feFuncA type="linear" slope=".58"/></feComponentTransfer>
           <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id={`k-soft-${uid}`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="3.4"/>
+        </filter>
+        <filter id={`k-texture-${uid}`} x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence type="fractalNoise" baseFrequency=".58" numOctaves="2" seed="14" result="n"/>
+          <feColorMatrix in="n" type="saturate" values="0" result="mono"/>
+          <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 .12"/></feComponentTransfer>
+          <feBlend in="SourceGraphic" mode="soft-light"/>
         </filter>
       </defs>
 
-      {/* A carved old-tree medallion, with a raised bronze edge and inset forest enamel. */}
-      <path d="M80 5 C68 14 54 10 44 19 C31 21 26 33 25 44 C14 54 18 67 13 78 C20 90 17 103 31 111 C38 126 53 126 63 136 L80 153 L97 136 C107 126 122 126 129 111 C143 103 140 90 147 78 C142 67 146 54 135 44 C134 33 129 21 116 19 C106 10 92 14 80 5Z"
-        fill={`url(#${metal})`} stroke="#3C3326" strokeWidth="3.2" strokeLinejoin="round"/>
-      <path d="M80 11 C69 19 56 16 47 24 C35 27 31 37 31 47 C22 56 25 67 21 78 C27 89 24 100 37 107 C43 119 56 120 65 130 L80 143 L95 130 C104 120 117 119 123 107 C136 100 133 89 139 78 C135 67 138 56 129 47 C129 37 125 27 113 24 C104 16 91 19 80 11Z"
-        fill="#243B30" stroke="#F2E4B7" strokeWidth="1.6" strokeLinejoin="round"/>
-      <path d="M80 17 C68 25 57 22 49 30 C39 34 37 43 37 51 C29 59 32 68 28 78 C34 88 31 97 43 103 C49 114 60 114 68 124 L80 135 L92 124 C100 114 111 114 117 103 C129 97 126 88 132 78 C128 68 131 59 123 51 C123 43 121 34 111 30 C103 22 92 25 80 17Z"
-        fill={`url(#${bark})`} stroke="#D8B77D" strokeWidth="1.4" strokeLinejoin="round"/>
+      {/* Dark, recessed forest-enamel medallion; the character is the focal point. */}
+      <path d="M80 5 C66 14 52 9 42 20 C28 23 24 37 25 48 C14 60 20 73 15 84 C22 97 20 109 34 117 C42 132 59 131 68 141 L80 153 L92 141 C101 131 118 132 126 117 C140 109 138 97 145 84 C140 73 146 60 135 48 C136 37 132 23 118 20 C108 9 94 14 80 5Z"
+        fill={`url(#k-frame-${uid})`} stroke="#30291F" strokeWidth="3"/>
+      <path d="M80 12 C67 20 55 16 46 26 C34 29 31 40 32 50 C23 61 28 73 24 84 C30 95 28 106 40 113 C47 125 60 125 69 134 L80 144 L91 134 C100 125 113 125 120 113 C132 106 130 95 136 84 C132 73 137 61 128 50 C129 40 126 29 114 26 C105 16 93 20 80 12Z"
+        fill={`url(#k-enamel-${uid})`} stroke="#E7D09A" strokeWidth="1.6"/>
+      <path d="M39 44 Q48 29 64 28 M121 44 Q112 29 96 28" fill="none" stroke="#A6B879" strokeWidth="1.4" opacity=".45" strokeLinecap="round"/>
+      <ellipse cx="80" cy="91" rx="48" ry="43" fill={`url(#k-glow-${uid})`} opacity=".24"/>
 
-      {/* Raised bark ridges and fine engraved grain. */}
-      <g fill="none" strokeLinecap="round" filter={`url(#${grain})`}>
-        <path d="M39 48 Q49 34 63 34 M33 76 Q44 66 49 53 M42 101 Q53 98 60 111 M121 48 Q111 34 97 34 M127 76 Q116 66 111 53 M118 101 Q107 98 100 111"
-          stroke="#D6A66C" strokeWidth="2.2" opacity=".78"/>
-        <path d="M43 52 Q49 44 56 43 M38 80 Q44 76 47 67 M49 105 Q55 106 59 116 M117 52 Q111 44 104 43 M122 80 Q116 76 113 67 M111 105 Q105 106 101 116"
-          stroke="#332A22" strokeWidth="2.5" opacity=".8"/>
-        <path d="M45 58 Q50 52 54 51 M115 58 Q110 52 106 51 M48 88 Q55 83 59 89 M112 88 Q105 83 101 89"
-          stroke="#E6C18A" strokeWidth="1.1" opacity=".8"/>
+      {/* Small living leaves break the silhouette; no antler-like branches. */}
+      <g filter={`url(#k-shadow-${uid})`}>
+        <path d="M77 46 Q72 29 59 20" fill="none" stroke="#493B2A" strokeWidth="5" strokeLinecap="round"/>
+        <path d="M77 46 Q72 29 59 20" fill="none" stroke="#B58A59" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M59 21 C43 18 40 7 46 5 C59 4 68 13 66 23 C64 25 61 24 59 21Z"
+          fill={`url(#k-leaf-${uid})`} stroke="#36563A" strokeWidth="1.5"/>
+        <path d="M47 8 Q56 13 64 22" fill="none" stroke="#F8F4C9" strokeWidth="1.4" strokeLinecap="round"/>
+        <path d="M91 42 Q98 27 109 24" fill="none" stroke="#493B2A" strokeWidth="4.5" strokeLinecap="round"/>
+        <path d="M109 25 C119 12 130 17 128 25 C124 36 111 37 106 31Z"
+          fill={`url(#k-leaf-${uid})`} stroke="#36563A" strokeWidth="1.5"/>
+        <path d="M111 29 Q119 23 125 21" fill="none" stroke="#F8F4C9" strokeWidth="1.2" strokeLinecap="round"/>
       </g>
 
-      {/* Ancient roots cradle the spirit without obscuring its silhouette. */}
-      <path d="M80 116 C68 124 57 132 43 135 C52 122 57 113 63 104 M80 116 C92 124 103 132 117 135 C108 122 103 113 97 104"
-        fill="none" stroke="#302A22" strokeWidth="11" strokeLinecap="round"/>
-      <path d="M80 116 C68 124 57 132 43 135 C52 122 57 113 63 104 M80 116 C92 124 103 132 117 135 C108 122 103 113 97 104"
-        fill="none" stroke={`url(#${bark})`} strokeWidth="7" strokeLinecap="round"/>
-      <path d="M54 125 Q61 120 66 113 M106 125 Q99 120 94 113" fill="none" stroke="#D8AD76" strokeWidth="1.5" strokeLinecap="round"/>
-
-      {/* Moss pads are sculpted into the bark, with bright upper edges and dark undersides. */}
-      <path d="M29 91 Q35 78 48 82 Q56 73 65 84 Q63 97 49 100 Q37 103 29 91Z M131 91 Q125 78 112 82 Q104 73 95 84 Q97 97 111 100 Q123 103 131 91Z"
-        fill="#293D2D" stroke="#263326" strokeWidth="2"/>
-      <path d="M30 88 Q35 77 47 81 Q56 72 64 83 Q60 93 48 96 Q37 98 30 88Z M130 88 Q125 77 113 81 Q104 72 96 83 Q100 93 112 96 Q123 98 130 88Z"
-        fill={`url(#${moss})`} stroke="#D0DB91" strokeWidth="1.3"/>
-      <path d="M34 84 Q40 77 48 82 M126 84 Q120 77 112 82" fill="none" stroke="#F1F2B9" strokeWidth="2" strokeLinecap="round"/>
-      <g fill="#D9E9A0"><circle cx="42" cy="91" r="1.5"/><circle cx="51" cy="87" r="1.2"/><circle cx="118" cy="91" r="1.5"/><circle cx="109" cy="87" r="1.2"/></g>
-
-      {/* A small living sprout grows from the crown, not antler-like branches. */}
-      <path d="M78 45 Q73 29 63 22 Q57 17 51 19 M78 40 Q83 27 94 20" fill="none" stroke="#4B3928" strokeWidth="4.5" strokeLinecap="round"/>
-      <path d="M78 45 Q73 29 63 22 Q57 17 51 19 M78 40 Q83 27 94 20" fill="none" stroke="#B88A59" strokeWidth="2.2" strokeLinecap="round"/>
-      <path d="M52 20 Q43 8 48 5 Q60 7 63 19 Q59 24 52 20Z" fill={`url(#${leaf})`} stroke="#405D39" strokeWidth="1.4"/>
-      <path d="M94 21 Q98 7 106 10 Q109 20 96 25Z" fill={`url(#${leaf})`} stroke="#405D39" strokeWidth="1.4"/>
-      <path d="M50 9 Q56 14 59 19 M104 13 Q100 18 97 22" fill="none" stroke="#F7F3C7" strokeWidth="1.2" strokeLinecap="round"/>
-      {/* The Kodama itself: pale wood-spirit porcelain, round head and small root body. */}
-      <g filter={`url(#kodama-proto-shadow-${uid})`}>
-        <path d="M58 91 Q49 95 48 106 Q50 116 62 117 L98 117 Q110 115 111 106 Q108 95 99 91Z" fill={`url(#${bark})`} stroke="#302A22" strokeWidth="2.4"/>
-        <path d="M62 94 Q80 101 98 94 L96 113 Q80 119 64 113Z" fill="#6C8750" stroke="#344A34" strokeWidth="1.4"/>
-        <path d="M67 98 Q80 103 93 98 M69 106 Q80 110 91 106" fill="none" stroke="#D7B17B" strokeWidth="1.4" strokeLinecap="round"/>
-        <path d="M62 105 Q57 113 53 119 M98 105 Q103 113 107 119" fill="none" stroke="#647453" strokeWidth="5" strokeLinecap="round"/>
-        <path d="M58 94 Q48 91 45 82 Q43 77 48 75 Q54 77 59 87 M99 94 Q110 91 116 97 Q119 101 115 105 Q108 105 101 101"
-          fill="none" stroke="#75865B" strokeWidth="6.5" strokeLinecap="round"/>
-        <path d="M53 53 C53 42 64 36 80 36 C96 36 107 43 107 57 C107 74 97 88 80 89 C63 88 53 74 53 53Z"
-          fill={`url(#kodama-face-light-${uid})`} stroke="#59664F" strokeWidth="2.1" transform="rotate(-10 80 63)"/>
-        <path d="M58 51 Q62 41 76 40" fill="none" stroke="#FFFFFF" strokeWidth="3.1" strokeLinecap="round" opacity=".9" transform="rotate(-10 80 63)"/>
-        <path d="M60 48 Q65 43 72 43" fill="none" stroke="#D5DCC0" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-10 80 63)"/>
-        {/* Hollow, deep-set eyes: a defining quiet Kodama expression. */}
-        <ellipse cx="70" cy="63" rx="4.6" ry="6.5" fill={`url(#kodama-eye-${uid})`} transform="rotate(-10 80 63)"/>
-        <ellipse cx="91" cy="63" rx="4.1" ry="6.1" fill={`url(#kodama-eye-${uid})`} transform="rotate(-10 80 63)"/>
-        <ellipse cx="68.7" cy="60.5" rx="1.55" ry="2.05" fill="#FFFFFF" opacity=".96" transform="rotate(-10 80 63)"/>
-        <ellipse cx="89.8" cy="60.5" rx="1.4" ry="1.9" fill="#FFFFFF" opacity=".94" transform="rotate(-10 80 63)"/>
-        <circle cx="72.5" cy="66.8" r=".8" fill="#9EB2A0" opacity=".55"/>
-        <circle cx="93" cy="66.8" r=".7" fill="#9EB2A0" opacity=".5"/>
-        <ellipse cx="61.5" cy="72" rx="5.2" ry="2.3" fill="#D99B8A" opacity=".18" transform="rotate(-14 61.5 72)"/>
-        <ellipse cx="99" cy="72" rx="4.8" ry="2.1" fill="#D99B8A" opacity=".16" transform="rotate(-14 99 72)"/>
-        <path d="M78 70 Q80 72 82 70" fill="none" stroke="#9CA58D" strokeWidth="1.15" strokeLinecap="round" opacity=".7"/>
-        <path d="M77 77 Q80 79 84 76" fill="none" stroke="#777F6B" strokeWidth="1.8" strokeLinecap="round" transform="rotate(-10 80 63)"/>
-        {/* Soft natural shading under the head and along the body. */}
-        <path d="M58 79 Q80 92 102 79" fill="none" stroke="#8A9A7A" strokeWidth="2.4" opacity=".55" transform="rotate(-10 80 63)"/>
-        <path d="M62 98 Q80 105 98 98" fill="none" stroke="#FFFFFF" strokeWidth="1.7" opacity=".75"/>
+      {/* Body turned three-quarters: one arm reaches toward a tiny forest light. */}
+      <g filter={`url(#k-shadow-${uid})`}>
+        <path d="M68 91 Q58 99 61 116 Q64 132 82 135 Q101 136 109 121 Q113 106 99 94Z"
+          fill={`url(#k-skin-side-${uid})`} stroke="#465B4B" strokeWidth="2.2"/>
+        <path d="M79 99 Q91 102 103 96 Q111 107 105 122 Q99 133 85 132 Q93 118 79 99Z"
+          fill="#607A65" opacity=".52"/>
+        <path d="M72 107 Q82 114 99 108" fill="none" stroke="#F7F4DF" strokeWidth="2" opacity=".58" strokeLinecap="round"/>
+        {/* Far arm tucked behind the body. */}
+        <path d="M99 102 Q112 103 116 113 Q119 120 113 124 Q106 125 101 116"
+          fill="none" stroke="#71896E" strokeWidth="8" strokeLinecap="round"/>
+        <path d="M100 103 Q111 105 114 114" fill="none" stroke="#DDE4C8" strokeWidth="1.7" opacity=".55" strokeLinecap="round"/>
+        {/* Near arm lifted in a curious, gentle gesture. */}
+        <path d="M67 104 Q55 109 49 101 Q44 94 48 89"
+          fill="none" stroke={`url(#k-skin-${uid})`} strokeWidth="10" strokeLinecap="round"/>
+        <path d="M64 105 Q54 109 49 100" fill="none" stroke="#FFFBEA" strokeWidth="2" opacity=".75" strokeLinecap="round"/>
+        {/* Root-like feet, offset to sell the three-quarter pose. */}
+        <path d="M76 127 Q72 137 65 138 Q60 140 61 135 Q64 130 68 125 M94 128 Q99 137 108 138 Q113 139 111 134 Q106 129 102 124"
+          fill="none" stroke="#4C5F4C" strokeWidth="7" strokeLinecap="round"/>
+        <path d="M72 132 Q68 137 63 137 M99 132 Q104 137 110 136" fill="none" stroke="#C5D0AE" strokeWidth="1.5" opacity=".65" strokeLinecap="round"/>
       </g>
 
-      {/* Fine fern fronds, tiny seed pods and restrained gold inlay. */}
-      <path d="M39 69 Q29 61 31 51 M39 69 Q27 67 24 59 M39 69 Q30 74 25 71 M121 69 Q131 61 129 51 M121 69 Q133 67 136 59 M121 69 Q130 74 135 71"
-        fill="none" stroke="#A9C978" strokeWidth="1.8" strokeLinecap="round"/>
-      <g fill={`url(#${moss})`} stroke="#DDE8A6" strokeWidth=".8">
-        <ellipse cx="28" cy="53" rx="3.5" ry="2"/><ellipse cx="25" cy="60" rx="3.2" ry="1.8"/><ellipse cx="27" cy="72" rx="3.4" ry="1.9"/>
-        <ellipse cx="132" cy="53" rx="3.5" ry="2"/><ellipse cx="135" cy="60" rx="3.2" ry="1.8"/><ellipse cx="133" cy="72" rx="3.4" ry="1.9"/>
+      {/* Oversized, asymmetrical spirit head with sculpted cheeks and a mossy crown. */}
+      <g filter={`url(#k-shadow-${uid})`}>
+        <path d="M52 62 C51 45 63 34 80 33 C99 31 112 43 112 61 C113 79 103 96 86 99 C67 101 53 86 52 69Z"
+          fill={`url(#k-skin-${uid})`} stroke="#506653" strokeWidth="2.5"/>
+        <path d="M56 61 C58 46 68 38 81 37 C72 46 69 57 72 70 C74 83 81 91 91 96 C73 99 56 84 56 66Z"
+          fill="#FFFDEB" opacity=".22"/>
+        <path d="M89 39 Q108 44 108 63 Q109 83 94 93" fill="none" stroke="#526B59" strokeWidth="3" opacity=".5" strokeLinecap="round"/>
+        <path d="M59 74 Q63 87 75 91" fill="none" stroke="#FDF8E4" strokeWidth="2.2" opacity=".65" strokeLinecap="round"/>
+        {/* A soft moss mantle hugs the top and rear of the head. */}
+        <path d="M53 59 Q48 49 58 43 Q61 33 73 36 Q81 27 91 34 Q103 30 108 43 Q117 49 109 61 Q102 54 96 56 Q88 48 80 55 Q69 49 62 60Z"
+          fill={`url(#k-moss-${uid})`} stroke="#3C5A38" strokeWidth="2"/>
+        <path d="M58 47 Q64 37 73 41 M81 38 Q89 32 96 40 M99 42 Q106 42 108 51"
+          fill="none" stroke="#F0F2B6" strokeWidth="2.2" opacity=".78" strokeLinecap="round"/>
+        <g fill="#D8E99A">
+          <circle cx="61" cy="49" r="1.7"/><circle cx="70" cy="42" r="1.4"/>
+          <circle cx="86" cy="39" r="1.6"/><circle cx="101" cy="47" r="1.5"/>
+        </g>
+        {/* Deep, glossy eyes with broad softbox reflections. */}
+        <ellipse cx="70" cy="68" rx="5.1" ry="7.1" fill={`url(#k-eye-${uid})`} transform="rotate(-8 70 68)"/>
+        <ellipse cx="94" cy="66" rx="4.5" ry="6.6" fill={`url(#k-eye-${uid})`} transform="rotate(7 94 66)"/>
+        <ellipse cx="68.4" cy="65.2" rx="1.75" ry="2.35" fill="#FFFFFF" opacity=".98"/>
+        <ellipse cx="92.7" cy="63.5" rx="1.55" ry="2.1" fill="#FFFFFF" opacity=".98"/>
+        <circle cx="73.8" cy="72.1" r=".9" fill="#9EB8A0" opacity=".7"/>
+        <circle cx="97.2" cy="70.2" r=".8" fill="#9EB8A0" opacity=".65"/>
+        {/* Subtle blush and a tiny, calm mouth. */}
+        <ellipse cx="61" cy="80" rx="5.8" ry="2.6" fill="#D58F82" opacity=".2" transform="rotate(-16 61 80)"/>
+        <ellipse cx="103" cy="77" rx="4.8" ry="2.3" fill="#D58F82" opacity=".16" transform="rotate(-12 103 77)"/>
+        <path d="M80 83 Q83 85 86 82" fill="none" stroke="#687B68" strokeWidth="1.6" strokeLinecap="round"/>
+        {/* Fine organic freckles and bark-like flecks. */}
+        <g fill="#81977B" opacity=".7">
+          <circle cx="59" cy="67" r=".8"/><circle cx="63" cy="58" r=".65"/>
+          <circle cx="101" cy="57" r=".75"/><circle cx="105" cy="70" r=".65"/>
+        </g>
+        <path d="M58 54 Q60 49 64 47 M101 49 Q105 53 106 57" fill="none" stroke="#FFFFFF" strokeWidth="1.3" opacity=".65" strokeLinecap="round"/>
       </g>
-      <path d="M43 31 Q50 24 57 25 M103 25 Q110 24 117 31" fill="none" stroke="#F3D99B" strokeWidth="1.3" strokeLinecap="round" opacity=".9"/>
-      <path d="M80 6 L82 13 L89 16 L82 19 L80 26 L77 19 L70 16 L77 13Z" fill="#FFF2C6" stroke="#9A7848" strokeWidth=".9"/>
-      <path d="M19 105 L21 110 L26 112 L21 114 L19 119 L17 114 L12 112 L17 110Z M141 105 L143 110 L148 112 L143 114 L141 119 L139 114 L134 112 L139 110Z"
-        fill="#EBD59D" stroke="#735B3A" strokeWidth=".8"/>
 
-      {/* Directional studio light across the raised metal and enamel. */}
-      <path d="M40 28 Q57 14 75 16" fill="none" stroke="#FFF8DF" strokeWidth="2.2" strokeLinecap="round" opacity=".78"/>
-      <path d="M28 49 Q24 61 27 69 M132 49 Q136 61 133 69" fill="none" stroke="#F8E9B8" strokeWidth="1.6" strokeLinecap="round" opacity=".65"/>
-      <path d="M49 118 Q62 132 80 139" fill="none" stroke="#E6C58C" strokeWidth="1.3" strokeLinecap="round" opacity=".7"/>
-      <path d="M80 17 C68 25 57 22 49 30 C39 34 37 43 37 51 C29 59 32 68 28 78 C34 88 31 97 43 103 C49 114 60 114 68 124 L80 135 L92 124 C100 114 111 114 117 103 C129 97 126 88 132 78 C128 68 131 59 123 51 C123 43 121 34 111 30 C103 22 92 25 80 17Z"
-        fill={`url(#${shade})`} opacity=".16" pointerEvents="none"/>
+      {/* A floating seed-light, held just beyond the near hand. */}
+      <circle cx="43" cy="80" r="13" fill={`url(#k-glow-${uid})`} filter={`url(#k-soft-${uid})`}/>
+      <path d="M43 85 C35 78 39 70 45 69 C51 76 49 82 43 85Z"
+        fill={`url(#k-leaf-${uid})`} stroke="#D9E7A1" strokeWidth="1"/>
+      <path d="M43 83 Q44 77 45 72" fill="none" stroke="#FFF9D0" strokeWidth="1.1" strokeLinecap="round"/>
+      <circle cx="34" cy="73" r="1.3" fill="#FFF2BC"/>
+      <circle cx="52" cy="88" r="1" fill="#D6E99A"/>
+
+      {/* Restrained engraved roots and directional highlights on the medallion. */}
+      <path d="M34 105 Q40 111 48 112 M126 105 Q120 111 112 112 M48 122 Q56 130 66 132 M112 122 Q104 130 94 132"
+        fill="none" stroke="#B6C889" strokeWidth="1.3" opacity=".48" strokeLinecap="round"/>
+      <path d="M34 37 Q46 22 63 21 M97 21 Q114 22 126 37" fill="none" stroke="#FFF0C5" strokeWidth="1.8" opacity=".72" strokeLinecap="round"/>
+      <path d="M27 67 Q24 78 28 89 M133 67 Q136 78 132 89" fill="none" stroke="#A8BE7D" strokeWidth="1.2" opacity=".45" strokeLinecap="round"/>
+      <path d="M80 12 C67 20 55 16 46 26 C34 29 31 40 32 50 C23 61 28 73 24 84 C30 95 28 106 40 113 C47 125 60 125 69 134 L80 144 L91 134 C100 125 113 125 120 113 C132 106 130 95 136 84 C132 73 137 61 128 50 C129 40 126 29 114 26 C105 16 93 20 80 12Z"
+        fill="none" stroke="#FFF2C8" strokeWidth=".8" opacity=".34"/>
     </svg>
   );
 }
