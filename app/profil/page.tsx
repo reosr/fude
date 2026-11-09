@@ -114,6 +114,7 @@ export default function Profil() {
   const [activeTab, setActiveTab] = useState<CollectionTab>("badges");
   const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null);
   const [selectedBadgePreviewLevel, setSelectedBadgePreviewLevel] = useState<1 | 2 | 3>(1);
+  const [profileBadgePreview, setProfileBadgePreview] = useState<{ id: string; level: 1 | 2 | 3 } | null>(null);
   const [collectionModalOpen, setCollectionModalOpen] = useState(false);
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -366,6 +367,14 @@ export default function Profil() {
     setSelectedItem({ type: "badge", id: badge.id });
   };
 
+  const previewBadgeOnProfile = () => {
+    if (!selectedBadge) return;
+    setProfileBadgePreview({ id: selectedBadge.id, level: selectedBadgePreviewLevel });
+    setSelectedItem(null);
+  };
+
+  const clearProfileBadgePreview = () => setProfileBadgePreview(null);
+
   const openFrame = (frame: ProfileFrame) => {
     const id = `frame:${frame.id}`;
 
@@ -409,12 +418,25 @@ export default function Profil() {
               <ProfileAvatar
                 avatar={profile.avatar}
                 photoSrc={photoSrc}
-                badgeId={profile.equippedBadgeId}
-                badgeLevel={equippedBadgeLevel}
+                badgeId={profileBadgePreview?.id ?? profile.equippedBadgeId}
+                badgeLevel={profileBadgePreview?.level ?? equippedBadgeLevel}
                 frameId={profile.equippedFrameId}
                 size={116}
               />
             </div>
+
+            {profileBadgePreview && (
+              <div className="mt-2 flex flex-col items-center gap-1">
+                <span className="text-[10px] font-bold text-[#E7C46A]">PREVIEW BADGE · TIDAK TERSIMPAN</span>
+                <button
+                  type="button"
+                  onClick={clearProfileBadgePreview}
+                  className="text-[10px] text-[#A3A099] underline underline-offset-2 hover:text-white"
+                >
+                  Kembali ke badge terpasang
+                </button>
+              </div>
+            )}
 
             <input
               ref={fileInputRef}
@@ -468,10 +490,12 @@ export default function Profil() {
               <LevelBadge currentBab={safeBab} />
             </div>
 
-            {equippedBadge && (
+            {(profileBadgePreview ? GACHA_BADGES.find((badge) => badge.id === profileBadgePreview.id) : equippedBadge) && (
               <p className="text-xs text-[#B8860B] mt-2">
                 <Sparkles size={12} className="inline mr-1" />
-                {equippedBadge.name}
+                {profileBadgePreview
+                  ? GACHA_BADGES.find((badge) => badge.id === profileBadgePreview.id)?.name
+                  : equippedBadge?.name}
               </p>
             )}
 
@@ -946,6 +970,16 @@ export default function Profil() {
                       ? "Preview desain · Badge belum dimiliki. Dapatkan melalui Gacha untuk memasangnya."
                       : "Belum dimiliki. Dapatkan melalui Gacha."}
                 </p>
+
+                {COLLECTION_PREVIEW_MODE && (
+                  <button
+                    type="button"
+                    onClick={previewBadgeOnProfile}
+                    className="w-full mt-5 py-3 rounded-xl border border-[#B8860B]/60 bg-[#B8860B]/10 text-[#E7C46A] font-bold text-sm hover:bg-[#B8860B]/20 transition-colors"
+                  >
+                    Coba Level {selectedBadgePreviewLevel} di Profil
+                  </button>
+                )}
 
                 {unlockedBadgeIds.includes(selectedBadge.id) && (
                   <button
