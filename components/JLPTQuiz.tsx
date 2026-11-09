@@ -180,7 +180,7 @@ export default function JLPTQuiz({
   levelSetIds,
 }: JLPTQuizProps) {
   const [activeSection, setActiveSection] =
-    useState<string>("vocab");
+    useState<SectionId>("vocab");
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
