@@ -103,10 +103,11 @@ export default function GachaPage() {
   }, []);
 
   useEffect(() => {
-    refresh();
+    const initialRefresh = window.requestAnimationFrame(refresh);
     window.addEventListener(GACHA_UPDATED_EVENT, refresh);
     window.addEventListener("storage", refresh);
     return () => {
+      window.cancelAnimationFrame(initialRefresh);
       window.removeEventListener(GACHA_UPDATED_EVENT, refresh);
       window.removeEventListener("storage", refresh);
     };
