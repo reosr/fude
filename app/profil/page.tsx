@@ -23,6 +23,7 @@ import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfileAvatar from "../../components/ProfileAvatar";
 import GachaBadgeArtwork from "../../components/GachaBadgeArtwork";
+import GachaAuraPreview from "../../components/GachaAuraPreview";
 import { GACHA_BADGES, LEGACY_GACHA_BADGE_ID_MAP } from "../../data/gacha-badges";
 import type { GachaBadgeDefinition } from "../../lib/gacha";
 import {
@@ -894,8 +895,16 @@ export default function Profil() {
 
             {selectedBadge && (
               <div className="text-center">
-                <div className="mx-auto mb-4 flex h-36 w-36 items-center justify-center">
-                  <GachaBadgeArtwork badge={selectedBadge} level={selectedBadgePreviewLevel} size={128} />
+                <div className="mx-auto mb-4 flex min-h-36 w-full max-w-[220px] items-center justify-center">
+                  {selectedBadgePreviewLevel === 1 ? (
+                    <GachaBadgeArtwork badge={selectedBadge} level={1} size={128} />
+                  ) : (
+                    <GachaAuraPreview
+                      badge={selectedBadge}
+                      level={selectedBadgePreviewLevel}
+                      size={116}
+                    />
+                  )}
                 </div>
 
                 {COLLECTION_PREVIEW_MODE && (
