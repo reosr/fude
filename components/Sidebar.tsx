@@ -11,6 +11,7 @@ import {
   Sparkles,
   X,
   Coins,
+  Dices,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -42,6 +43,7 @@ const tabs = [
   { href: "/kosakata", label: "Kosakata", icon: Languages },
   { href: "/flashcard", label: "Flashcard", icon: Layers },
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
+  { href: "/gacha", label: "Gacha", icon: Dices },
 ];
 
 export default function Sidebar() {
