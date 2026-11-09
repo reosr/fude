@@ -999,15 +999,15 @@ export default function ProfileAvatar({
             zIndex: 20,
           }}
         >
-          {badgeLevel > 1 ? (
+          {badgeLevel === 1 ? (
+            <GachaBadgeArtwork badge={collectionBadge} level={1} size={badgeSize} />
+          ) : (
             <GachaAuraPreview
               badge={collectionBadge}
               level={badgeLevel}
               size={badgeSize}
               compact={compactBadgeAura}
             />
-          ) : (
-            <GachaBadgeArtwork badge={collectionBadge} level={1} size={badgeSize} />
           )}
         </div>
       )}
