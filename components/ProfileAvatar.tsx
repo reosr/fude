@@ -985,12 +985,12 @@ export default function ProfileAvatar({
           style={{
             width: badgeLevel > 1
               ? compactBadgeAura
-                ? Math.max(42, badgeSize + 22)
+                ? Math.max(32, badgeSize + 10)
                 : Math.max(80, badgeSize + 24)
               : badgeSize,
             height: badgeLevel > 1
               ? compactBadgeAura
-                ? Math.max(42, badgeSize + 22)
+                ? Math.max(32, badgeSize + 10)
                 : Math.max(80, badgeSize + 24)
               : badgeSize,
             left: "50%",
