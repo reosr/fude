@@ -619,20 +619,23 @@ export function getGachaBadgeEvolutionProgress(
     };
   }
 
-  if (copies.level3 > 0) {
-    return {
-      currentLevel: 3,
-      copiesOwned: copies.level3,
-      copiesRequired: 0,
-      canEvolve: false,
-    };
-  }
-
+  // Jika badge sudah punya salinan Level 3 tetapi masih ada duplikat
+  // Level 1, tampilkan progres Level 1 agar duplikat tersebut tetap bisa
+  // dikumpulkan dan dievolusikan secara terpisah.
   if (copies.level1 > 0) {
     return {
       currentLevel: 1,
       copiesOwned: copies.level1,
       copiesRequired: 3,
+      canEvolve: false,
+    };
+  }
+
+  if (copies.level3 > 0) {
+    return {
+      currentLevel: 3,
+      copiesOwned: copies.level3,
+      copiesRequired: 0,
       canEvolve: false,
     };
   }
