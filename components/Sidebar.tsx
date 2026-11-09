@@ -61,6 +61,7 @@ export default function Sidebar() {
   });
 
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
+  const [badgePreview, setBadgePreview] = useState<{ id: string; level: 1 | 2 | 3 } | null>(null);
   const [tokens, setTokens] = useState(0);
   const [newGachaCount, setNewGachaCount] = useState(0);
   const [levelInfo, setLevelInfo] = useState(() => getLevelInfo(0));
@@ -68,6 +69,20 @@ export default function Sidebar() {
   const [unlockNotices, setUnlockNotices] = useState<
     CollectionUnlockNotice[]
   >([]);
+
+  useEffect(() => {
+    const handleBadgePreview = (event: Event) => {
+      const detail = (event as CustomEvent<{ id: string; level: 1 | 2 | 3 } | null>).detail;
+      setBadgePreview(detail);
+    };
+
+    window.addEventListener("fude:profile-badge-preview", handleBadgePreview);
+    return () => window.removeEventListener("fude:profile-badge-preview", handleBadgePreview);
+  }, []);
+
+  useEffect(() => {
+    if (path !== "/profil") setBadgePreview(null);
+  }, [path]);
 
   useEffect(() => {
     let active = true;
@@ -200,7 +215,8 @@ export default function Sidebar() {
           <ProfileAvatar
             avatar={profile.avatar}
             photoSrc={photoSrc}
-            badgeId={profile.equippedBadgeId}
+            badgeId={badgePreview?.id ?? profile.equippedBadgeId}
+            badgeLevel={badgePreview?.level ?? 1}
             frameId={profile.equippedFrameId}
             size={56}
           />
@@ -292,7 +308,8 @@ export default function Sidebar() {
                 <ProfileAvatar
                   avatar={profile.avatar}
                   photoSrc={photoSrc}
-                  badgeId={profile.equippedBadgeId}
+                  badgeId={badgePreview?.id ?? profile.equippedBadgeId}
+            badgeLevel={badgePreview?.level ?? 1}
                   frameId={profile.equippedFrameId}
                   size={46}
                 />
