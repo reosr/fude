@@ -42,16 +42,16 @@ function drawKodama(ctx: CanvasRenderingContext2D) {
   ctx.fill();
   ctx.restore();
 
-  // Layered bronze and forest-glass badge rim.
+  // Layered silver metal badge rim for the Common rarity.
   const rim = ctx.createLinearGradient(22, 15, 138, 143);
-  rim.addColorStop(0, "#fff0c1");
-  rim.addColorStop(.13, "#b88a4e");
-  rim.addColorStop(.34, "#493623");
-  rim.addColorStop(.56, "#e4c78a");
-  rim.addColorStop(.78, "#63452a");
-  rim.addColorStop(1, "#f7e2ad");
+  rim.addColorStop(0, "#ffffff");
+  rim.addColorStop(.13, "#cbd0d1");
+  rim.addColorStop(.34, "#626b70");
+  rim.addColorStop(.56, "#eef1ef");
+  rim.addColorStop(.78, "#7c8588");
+  rim.addColorStop(1, "#f8faf7");
   ctx.fillStyle = rim;
-  ctx.strokeStyle = "#302419";
+  ctx.strokeStyle = "#3b4245";
   ctx.lineWidth = 2.5;
   ctx.beginPath();
   ctx.moveTo(80, 5);
@@ -68,7 +68,7 @@ function drawKodama(ctx: CanvasRenderingContext2D) {
   ctx.stroke();
 
   const enamel = radial(ctx, 65, 45, 112, [
-    [0, "#47644a"], [.42, "#1d3b30"], [.78, "#10251d"], [1, "#07130f"],
+    [0, "#899492"], [.42, "#586260"], [.78, "#343d3c"], [1, "#202827"],
   ]);
   ctx.fillStyle = enamel;
   ctx.beginPath();
@@ -456,7 +456,7 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   ctx.restore();
 
   const rim = ctx.createLinearGradient(22, 15, 138, 143);
-  [["0","#fff0c1"],[".13","#b88a4e"],[".34","#493623"],[".56","#e4c78a"],[".78","#63452a"],["1","#f7e2ad"]].forEach(([p,c]) => rim.addColorStop(Number(p), c));
+  [["0","#ffffff"],[".13","#cbd0d1"],[".34","#626b70"],[".56","#eef1ef"],[".78","#7c8588"],["1","#f8faf7"]].forEach(([p,c]) => rim.addColorStop(Number(p), c));
   framePath();
   ctx.fillStyle = rim;
   ctx.strokeStyle = "#302419";
@@ -475,7 +475,7 @@ function drawKodamaLevel2(ctx: CanvasRenderingContext2D) {
   ctx.bezierCurveTo(28, 59, 25, 39, 42, 30);
   ctx.bezierCurveTo(49, 19, 61, 15, 80, 12);
   ctx.closePath();
-  ctx.fillStyle = radial(ctx, 65, 45, 112, [[0,"#526d49"],[.45,"#1d3b30"],[.82,"#10251d"],[1,"#07130f"]]);
+  ctx.fillStyle = radial(ctx, 65, 45, 112, [[0,"#899492"],[.45,"#586260"],[.82,"#343d3c"],[1,"#202827"]]);
   ctx.fill();
 
   // A sweeping breeze trail gives the new pose movement.
