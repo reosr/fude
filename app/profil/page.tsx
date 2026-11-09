@@ -914,7 +914,7 @@ export default function Profil() {
                     disabled={equippedBadgeId === selectedBadge.id}
                     className="w-full mt-6 py-3 rounded-xl bg-[#B8860B] text-[#171312] font-bold text-sm disabled:opacity-50"
                   >
-                    {profile.equippedBadgeId === selectedBadge.id
+                    {equippedBadgeId === selectedBadge.id
                       ? "Sedang Dipakai"
                       : "Pakai Badge"}
                   </button>
