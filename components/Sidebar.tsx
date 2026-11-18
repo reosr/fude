@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BookOpen, Languages, Layers, Home, BookA } from "lucide-react";
-import { useEffect, useState } from "react";
+import { BookOpen, Languages, Layers, Home, BookA, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 import ProfilePicture from "./ProfilePicture";
 import { getProfilePhoto, PROFILE_PHOTO_UPDATED_EVENT } from "../lib/profile-photo";
@@ -25,6 +25,13 @@ const tabs = [
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
 ];
 
+type XpFeedback = {
+  id: number;
+  amount: number;
+  level: number;
+  leveledUp: boolean;
+};
+
 export default function Sidebar() {
   const path = usePathname();
   const [profile, setProfile] = useState<FudeProfile>({
@@ -33,6 +40,11 @@ export default function Sidebar() {
   });
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
   const [levelInfo, setLevelInfo] = useState(() => getLevelInfo(0));
+  const [xpFeedback, setXpFeedback] = useState<XpFeedback | null>(null);
+
+  const previousXpRef = useRef<number | null>(null);
+  const xpFeedbackIdRef = useRef(0);
+  const xpFeedbackTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -56,9 +68,42 @@ export default function Sidebar() {
       void refreshPhoto();
     };
 
-    const refreshXp = () => {
-      setLevelInfo(getLevelInfo(getFudeXp()));
+    const refreshXp = (showFeedback = false) => {
+      const currentXp = getFudeXp();
+      const previousXp = previousXpRef.current;
+      const nextLevelInfo = getLevelInfo(currentXp);
+
+      previousXpRef.current = currentXp;
+      setLevelInfo(nextLevelInfo);
+
+      if (!showFeedback || previousXp === null || currentXp <= previousXp) {
+        return;
+      }
+
+      const gainedXp = currentXp - previousXp;
+      const previousLevel = getLevelInfo(previousXp).level;
+      const leveledUp = nextLevelInfo.level > previousLevel;
+      const nextFeedbackId = xpFeedbackIdRef.current + 1;
+      xpFeedbackIdRef.current = nextFeedbackId;
+
+      setXpFeedback((previous) => ({
+        id: nextFeedbackId,
+        amount: (previous?.amount ?? 0) + gainedXp,
+        level: nextLevelInfo.level,
+        leveledUp: Boolean(previous?.leveledUp || leveledUp),
+      }));
+
+      if (xpFeedbackTimeoutRef.current !== null) {
+        window.clearTimeout(xpFeedbackTimeoutRef.current);
+      }
+
+      xpFeedbackTimeoutRef.current = window.setTimeout(() => {
+        setXpFeedback(null);
+        xpFeedbackTimeoutRef.current = null;
+      }, 2200);
     };
+
+    const handleXpUpdate = () => refreshXp(true);
 
     const refreshAll = () => {
       refreshProfile();
@@ -67,7 +112,7 @@ export default function Sidebar() {
 
     window.addEventListener(PROFILE_PHOTO_UPDATED_EVENT, refreshPhoto);
     window.addEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
-    window.addEventListener(XP_UPDATED_EVENT, refreshXp);
+    window.addEventListener(XP_UPDATED_EVENT, handleXpUpdate);
     window.addEventListener("storage", refreshAll);
 
     refreshAll();
@@ -75,9 +120,12 @@ export default function Sidebar() {
     return () => {
       active = false;
       if (currentPhotoUrl) URL.revokeObjectURL(currentPhotoUrl);
+      if (xpFeedbackTimeoutRef.current !== null) {
+        window.clearTimeout(xpFeedbackTimeoutRef.current);
+      }
       window.removeEventListener(PROFILE_PHOTO_UPDATED_EVENT, refreshPhoto);
       window.removeEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
-      window.removeEventListener(XP_UPDATED_EVENT, refreshXp);
+      window.removeEventListener(XP_UPDATED_EVENT, handleXpUpdate);
       window.removeEventListener("storage", refreshAll);
     };
   }, []);
@@ -99,7 +147,7 @@ export default function Sidebar() {
         aria-valuemax={levelInfo.requiredExp}
       >
         <div
-          className="h-full bg-gradient-to-r from-[#C93438] to-[#B8860B] rounded-full transition-all duration-500"
+          className="h-full bg-gradient-to-r from-[#C93438] to-[#B8860B] rounded-full transition-all duration-700 ease-out"
           style={{ width: `${levelInfo.progressPercent}%` }}
         />
       </div>
@@ -132,12 +180,40 @@ export default function Sidebar() {
             </div>
             <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-[#0D0C0B]">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-[#C93438] to-[#D6AD4F] transition-all duration-500"
+                className="h-full rounded-full bg-gradient-to-r from-[#C93438] to-[#D6AD4F] transition-all duration-700 ease-out"
                 style={{ width: `${levelInfo.progressPercent}%` }}
               />
             </div>
           </div>
         </Link>
+      )}
+
+      {xpFeedback && (
+        <div
+          key={xpFeedback.id}
+          role="status"
+          aria-live="polite"
+          className="pointer-events-none fixed bottom-[calc(env(safe-area-inset-bottom)+5.5rem)] left-1/2 z-[120] -translate-x-1/2 md:bottom-6 md:left-auto md:right-6 md:translate-x-0"
+        >
+          <div className="fude-xp-feedback flex min-w-[205px] items-center gap-3 rounded-2xl border border-[#B8860B]/45 bg-[#1E1D1B]/95 px-4 py-3 shadow-[0_14px_45px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#B8860B]/30 bg-[#B8860B]/10 text-[#E2BC62]">
+              <Sparkles size={18} />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[9px] font-bold tracking-[0.16em] text-[#B8860B]">
+                EXP DIDAPATKAN
+              </p>
+              <p className="text-[18px] font-black leading-tight tabular-nums text-[#EAE6DD]">
+                +{xpFeedback.amount} EXP
+              </p>
+              <p className="mt-0.5 text-[10px] font-medium text-[#A3A099]">
+                {xpFeedback.leveledUp
+                  ? `LEVEL UP · SEKARANG LV. ${xpFeedback.level}`
+                  : "Progres belajarmu bertambah"}
+              </p>
+            </div>
+          </div>
+        </div>
       )}
 
       <aside className="hidden md:flex md:flex-col md:fixed md:inset-y-0 md:w-64 md:border-r md:border-[#33312E]/50 md:bg-[#1A1918]/80 md:backdrop-blur-xl z-40">
