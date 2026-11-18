@@ -39,6 +39,7 @@ jobs:
           components/KanaStroke.tsx
           components/JLPTQuiz.tsx
           components/ProfileAvatar.tsx
+          components/ProfilePicture.tsx
           components/Sidebar.tsx
           data/gacha-badges.ts
           lib/gacha.ts
