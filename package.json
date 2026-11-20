@@ -34,6 +34,6 @@
     "protobufjs@7.6.6": true
   },
   "overrides": {
-  "sharp": "0.35.5"
-}
+    "sharp": "0.35.5"
+  }
 }
