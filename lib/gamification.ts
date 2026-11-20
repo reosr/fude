@@ -28,6 +28,10 @@ export const TOKEN_UPDATED_EVENT = "fude-token-updated";
 // ECONOMY CONFIGURATION
 // =====================================================
 
+// Token economy is paused while Fude focuses on its learning features.
+// Existing balances and ledgers remain untouched for a future RPG release.
+const TOKEN_ECONOMY_ENABLED = false;
+
 // Level 1 membutuhkan 500 EXP.
 // Setiap level berikutnya membutuhkan tambahan 100 EXP.
 export const XP_PER_LEVEL = 500;
@@ -621,7 +625,7 @@ export function getFudeXp(): number {
 }
 
 export function getFudeTokens(): number {
-  if (typeof window === "undefined") return 0;
+  if (!TOKEN_ECONOMY_ENABLED || typeof window === "undefined") return 0;
 
   try {
     initializeTokenEconomy();
@@ -635,7 +639,7 @@ export function getFudeTokens(): number {
 export function getTokenTransactions(
   limit = 50
 ): TokenTransaction[] {
-  if (typeof window === "undefined") return [];
+  if (!TOKEN_ECONOMY_ENABLED || typeof window === "undefined") return [];
 
   try {
     initializeTokenEconomy();
@@ -659,7 +663,7 @@ function awardTokenRewardOnce(
   amount: number,
   description: string
 ): boolean {
-  if (typeof window === "undefined") return false;
+  if (!TOKEN_ECONOMY_ENABLED || typeof window === "undefined") return false;
 
   if (
     !rewardId ||
@@ -754,48 +758,19 @@ export function awardChapterCompletionOnce(
     milestoneTokensAwarded: false,
   };
 
-  if (typeof window === "undefined") {
-    return emptyResult;
-  }
+  if (typeof window === "undefined") return emptyResult;
 
   const bab = Math.floor(chapter);
+  if (!Number.isFinite(bab) || bab < 1) return emptyResult;
 
-  if (!Number.isFinite(bab) || bab < 1) {
-    return emptyResult;
-  }
-
-  initializeTokenEconomy();
-
-  // EXP bab, satu kali per bab.
-  const xpAwarded = awardXpOnce(
-    `bab:${bab}`,
-    BAB_COMPLETION_XP
-  );
-
-  // Token penyelesaian bab.
-  const chapterTokensAwarded = awardTokenRewardOnce(
-    `chapter:${bab}`,
-    CHAPTER_TOKEN_REWARD,
-    `Menyelesaikan Bab ${bab}`
-  );
-
-  // Bonus setiap kelipatan 10 bab.
-  let milestoneTokensAwarded = false;
-
-  if (bab % 10 === 0) {
-    milestoneTokensAwarded = awardTokenRewardOnce(
-      `chapter-milestone:${bab}`,
-      CHAPTER_MILESTONE_TOKEN_BONUS,
-      `Bonus milestone Bab ${bab}`
-    );
-  }
-
-  dispatchEconomyUpdate();
+  // EXP tetap aktif. Reward Token Bab dan milestone dijeda bersama Gacha.
+  initializeXp();
+  const xpAwarded = awardXpOnce(`bab:${bab}`, BAB_COMPLETION_XP);
 
   return {
     xpAwarded,
-    chapterTokensAwarded,
-    milestoneTokensAwarded,
+    chapterTokensAwarded: false,
+    milestoneTokensAwarded: false,
   };
 }
 
@@ -808,7 +783,7 @@ export function awardChapterCompletionOnce(
 export function awardJlptPerfectRewardOnce(
   setId: string
 ): boolean {
-  if (!setId || typeof setId !== "string") {
+  if (!TOKEN_ECONOMY_ENABLED || !setId || typeof setId !== "string") {
     return false;
   }
 
@@ -824,6 +799,7 @@ export function awardJlptPerfectRewardOnce(
 export function awardJlptLevelCompletionOnce(
   level: string
 ): boolean {
+  if (!TOKEN_ECONOMY_ENABLED) return false;
   const normalizedLevel = level.toUpperCase();
   const reward = JLPT_LEVEL_TOKEN_REWARDS[normalizedLevel];
 
@@ -847,7 +823,7 @@ export function spendFudeTokensOnce(
   amount: number,
   description: string
 ): boolean {
-  if (typeof window === "undefined") return false;
+  if (!TOKEN_ECONOMY_ENABLED || typeof window === "undefined") return false;
 
   if (
     !actionId ||
@@ -927,7 +903,7 @@ export function refundFudeTokensOnce(
   amount: number,
   description: string
 ): boolean {
-  if (typeof window === "undefined" || !actionId) return false;
+  if (!TOKEN_ECONOMY_ENABLED || typeof window === "undefined" || !actionId) return false;
 
   initializeTokenEconomy();
 
@@ -959,78 +935,33 @@ export function awardXpOnce(
 ): boolean {
   if (typeof window === "undefined") return false;
 
-  if (
-    !rewardId ||
-    !Number.isFinite(amount) ||
-    amount <= 0
-  ) {
+  if (!rewardId || !Number.isFinite(amount) || amount <= 0) {
     return false;
   }
 
-  initializeTokenEconomy();
-
+  // EXP berdiri sendiri dari ekonomi Token agar reward belajar tetap aktif.
+  initializeXp();
   const rewards = readRewards();
-
-  if (rewards.includes(rewardId)) {
-    return false;
-  }
-
-  const currentXp = getFudeXp();
-  const oldLevel = getLevelInfo(currentXp).level;
+  if (rewards.includes(rewardId)) return false;
 
   const safeAmount = Math.floor(amount);
-
   if (safeAmount <= 0) return false;
 
+  const currentXp = getFudeXp();
   const newXp = currentXp + safeAmount;
-  const newLevel = getLevelInfo(newXp).level;
 
   try {
     localStorage.setItem(XP_KEY, String(newXp));
-
     localStorage.setItem(
       XP_REWARDS_KEY,
       JSON.stringify([...rewards, rewardId])
     );
-
-    // Berikan token untuk setiap level baru yang dilewati.
-    // Jika pemberian gagal dan belum tercatat, gagalkan klaim EXP agar
-    // aktivitas yang sama dapat mencoba kembali pada pemulihan berikutnya.
-    for (
-      let level = oldLevel + 1;
-      level <= newLevel;
-      level++
-    ) {
-      const levelRewardId = `level-up:${level}`;
-      const awarded = awardTokenRewardOnce(
-        levelRewardId,
-        LEVEL_UP_TOKEN_REWARD,
-        `Mencapai Level ${level}`
-      );
-
-      if (
-        !awarded &&
-        !readTokenRewards().includes(levelRewardId)
-      ) {
-        throw new Error(
-          `Reward Token untuk Level ${level} gagal dicatat.`
-        );
-      }
-    }
-
-    dispatchEconomyUpdate();
-
+    window.dispatchEvent(new Event(XP_UPDATED_EVENT));
     return true;
   } catch (error) {
-    // Batalkan klaim EXP jika rangkaian reward tidak selesai.
-    // Reward level-up yang sempat berhasil tetap aman karena ID-nya unik;
-    // percobaan berikutnya akan melewati ID yang sudah tercatat.
     try {
       localStorage.setItem(XP_KEY, String(currentXp));
-      localStorage.setItem(
-        XP_REWARDS_KEY,
-        JSON.stringify(rewards)
-      );
+      localStorage.setItem(XP_REWARDS_KEY, JSON.stringify(rewards));
     } catch (rollbackError) {
       console.error("Gagal mengembalikan EXP:", rollbackError);
     }
@@ -1039,7 +970,6 @@ export function awardXpOnce(
     return false;
   }
 }
-
 
 // =====================================================
 // JLPT EXP REWARDS
@@ -1051,7 +981,7 @@ export function awardJlptCompletionXpOnce(
   if (!setId || typeof setId !== "string") {
     return false;
   }
-  initializeTokenEconomy();
+  initializeXp();
   const rewards = readRewards();
 
   // Cegah klaim ulang dari sistem reward lama.
@@ -1074,7 +1004,7 @@ export function awardJlptHighScoreBonusOnce(
   // Bonus skor tinggi adalah reward terpisah dari EXP penyelesaian.
   // Marker migrasi lama jlpt:<setId> hanya mewakili EXP penyelesaian
   // dan tidak boleh menghalangi bonus 80% yang belum pernah diklaim.
-  initializeTokenEconomy();
+  initializeXp();
 
   return awardXpOnce(
     `jlpt-high-score:${setId}`,

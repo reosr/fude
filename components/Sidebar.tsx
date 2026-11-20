@@ -3,46 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import {
-  BookOpen,
-  Languages,
-  Layers,
-  Home,
-  BookA,
-  Sparkles,
-  X,
-  Coins,
-  Dices,
-} from "lucide-react";
-import { useEffect, useState } from "react";
+import { BookOpen, Languages, Layers, Home, BookA, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
-import ProfileAvatar from "./ProfileAvatar";
+import ProfilePicture from "./ProfilePicture";
 import { getProfilePhoto, PROFILE_PHOTO_UPDATED_EVENT } from "../lib/profile-photo";
-
 import {
   getFudeProfile,
   getFudeXp,
-  getFudeTokens,
   getLevelInfo,
   PROFILE_UPDATED_EVENT,
   XP_UPDATED_EVENT,
-  TOKEN_UPDATED_EVENT,
   type FudeProfile,
 } from "../lib/gamification";
-
-import {
-  GACHA_UPDATED_EVENT,
-  getGachaInventory,
-} from "../lib/gacha";
-
-import {
-  COLLECTION_UPDATED_EVENT,
-  initializeCollectionTracking,
-  syncNewCollectionUnlocks,
-  getPendingCollectionIds,
-  COLLECTION_PENDING_KEY,
-  type CollectionUnlockNotice,
-} from "../lib/profile-collections";
 
 const tabs = [
   { href: "/", label: "Home", icon: Home },
@@ -50,36 +23,28 @@ const tabs = [
   { href: "/kosakata", label: "Kosakata", icon: Languages },
   { href: "/flashcard", label: "Flashcard", icon: Layers },
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
-  { href: "/gacha", label: "Gacha", icon: Dices },
 ];
+
+type XpFeedback = {
+  id: number;
+  amount: number;
+  level: number;
+  leveledUp: boolean;
+};
 
 export default function Sidebar() {
   const path = usePathname();
-
   const [profile, setProfile] = useState<FudeProfile>({
     name: "Pelajar Fude",
     avatar: "筆",
   });
-
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
-  const [badgePreview, setBadgePreview] = useState<{ id: string; level: 1 | 2 | 3 } | null>(null);
-  const [tokens, setTokens] = useState(0);
-  const [newGachaCount, setNewGachaCount] = useState(0);
   const [levelInfo, setLevelInfo] = useState(() => getLevelInfo(0));
+  const [xpFeedback, setXpFeedback] = useState<XpFeedback | null>(null);
 
-  const [unlockNotices, setUnlockNotices] = useState<
-    CollectionUnlockNotice[]
-  >([]);
-
-  useEffect(() => {
-    const handleBadgePreview = (event: Event) => {
-      const detail = (event as CustomEvent<{ id: string; level: 1 | 2 | 3 } | null>).detail;
-      setBadgePreview(detail);
-    };
-
-    window.addEventListener("fude:profile-badge-preview", handleBadgePreview);
-    return () => window.removeEventListener("fude:profile-badge-preview", handleBadgePreview);
-  }, []);
+  const previousXpRef = useRef<number | null>(null);
+  const xpFeedbackIdRef = useRef(0);
+  const xpFeedbackTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -88,17 +53,13 @@ export default function Sidebar() {
     const refreshPhoto = async () => {
       try {
         const blob = await getProfilePhoto();
-
         if (!active) return;
 
-        if (currentPhotoUrl) {
-          URL.revokeObjectURL(currentPhotoUrl);
-        }
-
+        if (currentPhotoUrl) URL.revokeObjectURL(currentPhotoUrl);
         currentPhotoUrl = blob ? URL.createObjectURL(blob) : null;
         setPhotoSrc(currentPhotoUrl);
       } catch (error) {
-        console.error("Gagal memuat foto Sidebar:", error);
+        console.error("Gagal memuat foto profil:", error);
       }
     };
 
@@ -107,160 +68,155 @@ export default function Sidebar() {
       void refreshPhoto();
     };
 
-    const refreshXp = () => {
-      const xp = getFudeXp();
-      setLevelInfo(getLevelInfo(xp));
-      syncNewCollectionUnlocks();
-    };
+    const refreshXp = (showFeedback = false) => {
+      const currentXp = getFudeXp();
+      const previousXp = previousXpRef.current;
+      const nextLevelInfo = getLevelInfo(currentXp);
 
+      previousXpRef.current = currentXp;
+      setLevelInfo(nextLevelInfo);
 
-    const refreshTokens = () => {
-      setTokens(getFudeTokens());
-      syncNewCollectionUnlocks();
-    };
-
-    const refreshGacha = () => {
-      setNewGachaCount(getGachaInventory().newBadgeIds.length);
-    };
-
-    const handleCollectionUpdate = (event: Event) => {
-      const detail = (
-        event as CustomEvent<CollectionUnlockNotice[]>
-      ).detail;
-
-      if (!Array.isArray(detail) || detail.length === 0) {
-        // Jika item sudah dibuka dari halaman profil, tutup toast terkait.
-        const pendingIds = new Set(getPendingCollectionIds());
-
-        setUnlockNotices((previous) =>
-          previous.filter((item) => pendingIds.has(item.id))
-        );
+      if (!showFeedback || previousXp === null || currentXp <= previousXp) {
         return;
       }
 
-      setUnlockNotices((previous) => {
-        const ids = new Set(previous.map((item) => item.id));
+      const gainedXp = currentXp - previousXp;
+      const previousLevel = getLevelInfo(previousXp).level;
+      const leveledUp = nextLevelInfo.level > previousLevel;
+      const nextFeedbackId = xpFeedbackIdRef.current + 1;
+      xpFeedbackIdRef.current = nextFeedbackId;
 
-        return [
-          ...previous,
-          ...detail.filter((item) => !ids.has(item.id)),
-        ];
-      });
-    };
+      setXpFeedback((previous) => ({
+        id: nextFeedbackId,
+        amount: (previous?.amount ?? 0) + gainedXp,
+        level: nextLevelInfo.level,
+        leveledUp: Boolean(previous?.leveledUp || leveledUp),
+      }));
 
-    // Pasang listener sebelum sinkronisasi awal agar unlock yang
-    // terjadi saat aplikasi tidak dibuka tetap bisa menampilkan notifikasi.
-    const handlePhotoUpdated = () => { void refreshPhoto(); };
-    const handleStorageCollection = (event: StorageEvent) => {
-      if (event.key === COLLECTION_PENDING_KEY || event.key === null) {
-        handleCollectionUpdate(new Event(COLLECTION_UPDATED_EVENT));
+      if (xpFeedbackTimeoutRef.current !== null) {
+        window.clearTimeout(xpFeedbackTimeoutRef.current);
       }
+
+      xpFeedbackTimeoutRef.current = window.setTimeout(() => {
+        setXpFeedback(null);
+        xpFeedbackTimeoutRef.current = null;
+      }, 2200);
     };
 
-    window.addEventListener(PROFILE_PHOTO_UPDATED_EVENT, handlePhotoUpdated);
+    const handleXpUpdate = () => refreshXp(true);
+
+    const refreshAll = () => {
+      refreshProfile();
+      refreshXp();
+    };
+
+    window.addEventListener(PROFILE_PHOTO_UPDATED_EVENT, refreshPhoto);
     window.addEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
-    window.addEventListener(XP_UPDATED_EVENT, refreshXp);
-    window.addEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
-    window.addEventListener(GACHA_UPDATED_EVENT, refreshGacha);
-    window.addEventListener("storage", refreshTokens);
-    window.addEventListener("storage", refreshGacha);
-    window.addEventListener("storage", refreshProfile);
-    window.addEventListener("storage", refreshXp);
-    window.addEventListener("storage", handleStorageCollection);
+    window.addEventListener(XP_UPDATED_EVENT, handleXpUpdate);
+    window.addEventListener("storage", refreshAll);
 
-    window.addEventListener(
-      COLLECTION_UPDATED_EVENT,
-      handleCollectionUpdate
-    );
-
-    initializeCollectionTracking();
-
-    refreshProfile();
-    refreshXp();
-    refreshTokens();
-    refreshGacha();
+    refreshAll();
 
     return () => {
       active = false;
-
-      if (currentPhotoUrl) {
-        URL.revokeObjectURL(currentPhotoUrl);
+      if (currentPhotoUrl) URL.revokeObjectURL(currentPhotoUrl);
+      if (xpFeedbackTimeoutRef.current !== null) {
+        window.clearTimeout(xpFeedbackTimeoutRef.current);
       }
-
-      window.removeEventListener(PROFILE_PHOTO_UPDATED_EVENT, handlePhotoUpdated);
+      window.removeEventListener(PROFILE_PHOTO_UPDATED_EVENT, refreshPhoto);
       window.removeEventListener(PROFILE_UPDATED_EVENT, refreshProfile);
-      window.removeEventListener(XP_UPDATED_EVENT, refreshXp);
-      window.removeEventListener(TOKEN_UPDATED_EVENT, refreshTokens);
-      window.removeEventListener(GACHA_UPDATED_EVENT, refreshGacha);
-      window.removeEventListener("storage", refreshTokens);
-      window.removeEventListener("storage", refreshGacha);
-      window.removeEventListener("storage", refreshProfile);
-      window.removeEventListener("storage", refreshXp);
-      window.removeEventListener("storage", handleStorageCollection);
-
-      window.removeEventListener(
-        COLLECTION_UPDATED_EVENT,
-        handleCollectionUpdate
-      );
+      window.removeEventListener(XP_UPDATED_EVENT, handleXpUpdate);
+      window.removeEventListener("storage", refreshAll);
     };
   }, []);
 
-  const dismissNotice = (id: string) => {
-    setUnlockNotices((previous) =>
-      previous.filter((item) => item.id !== id)
-    );
-  };
+  const expBar = (
+    <div className="mt-3">
+      <div className="flex justify-between items-center text-[10px] font-bold mb-1.5">
+        <span className="text-[#A3A099]">EXPERIENCE</span>
+        <span className="text-[#EAE6DD] tabular-nums">
+          {levelInfo.currentExp} / {levelInfo.requiredExp} EXP
+        </span>
+      </div>
+      <div
+        className="w-full h-2 bg-[#121110] rounded-full overflow-hidden"
+        role="progressbar"
+        aria-label="Experience menuju level berikutnya"
+        aria-valuenow={levelInfo.currentExp}
+        aria-valuemin={0}
+        aria-valuemax={levelInfo.requiredExp}
+      >
+        <div
+          className="h-full bg-gradient-to-r from-[#C93438] to-[#B8860B] rounded-full transition-all duration-700 ease-out"
+          style={{ width: `${levelInfo.progressPercent}%` }}
+        />
+      </div>
+      <p className="text-[10px] text-[#817A73] mt-1.5 text-right">
+        {levelInfo.remainingExp} EXP menuju level berikutnya
+      </p>
+    </div>
+  );
 
   return (
     <>
-      {/* HUD profil ringkas untuk mobile; disembunyikan di halaman profil */}
-      {path !== "/profil" && <Link
-        href="/profil"
-        aria-label={`Profil ${profile.name}, level ${levelInfo.level}`}
-        className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[210px] items-center gap-2 rounded-xl border border-[#B8860B]/40 bg-[#1A1918]/95 px-2 py-1.5 shadow-lg shadow-black/35 backdrop-blur-md transition-colors hover:bg-[#262523]"
-      >
-        <div className="shrink-0 pb-2">
-          <ProfileAvatar
-            avatar={profile.avatar}
-            photoSrc={photoSrc}
-            badgeId={badgePreview?.id ?? profile.equippedBadgeId}
-            badgeLevel={badgePreview?.level ?? 1}
-            frameId={profile.equippedFrameId}
-            size={56}
-            compactBadgeAura
-          />
-        </div>
-        <div className="min-w-0 flex-1">
-          <p className="max-w-[128px] truncate text-[12px] font-bold leading-tight text-[#EAE6DD]">
-            {profile.name}
-          </p>
-          <div className="mt-1.5 flex items-center justify-between gap-2">
-            <span className="text-[9px] font-bold tracking-wide text-[#D6AD4F]">
-              LV. {levelInfo.level}
-            </span>
-            <span className="text-[9px] tabular-nums text-[#A3A099]">
-              {levelInfo.currentExp}/{levelInfo.requiredExp} EXP
-            </span>
+      {path !== "/profil" && (
+        <Link
+          href="/profil"
+          aria-label={`Profil ${profile.name}, level ${levelInfo.level}`}
+          className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[210px] items-center gap-2 rounded-xl border border-[#B8860B]/40 bg-[#1A1918]/95 px-2 py-1.5 shadow-lg shadow-black/35 backdrop-blur-md transition-colors hover:bg-[#262523]"
+        >
+          <ProfilePicture avatar={profile.avatar} photoSrc={photoSrc} size={46} />
+          <div className="min-w-0 flex-1">
+            <p className="max-w-[128px] truncate text-[12px] font-bold leading-tight text-[#EAE6DD]">
+              {profile.name}
+            </p>
+            <div className="mt-1 flex items-center justify-between gap-2">
+              <span className="text-[9px] font-bold tracking-wide text-[#D6AD4F]">
+                LV. {levelInfo.level}
+              </span>
+              <span className="text-[9px] tabular-nums text-[#A3A099]">
+                {levelInfo.currentExp}/{levelInfo.requiredExp} EXP
+              </span>
+            </div>
+            <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-[#0D0C0B]">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[#C93438] to-[#D6AD4F] transition-all duration-700 ease-out"
+                style={{ width: `${levelInfo.progressPercent}%` }}
+              />
+            </div>
           </div>
-          <div
-            className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-[#0D0C0B]"
-            role="progressbar"
-            aria-label="Experience menuju level berikutnya"
-            aria-valuenow={levelInfo.currentExp}
-            aria-valuemin={0}
-            aria-valuemax={levelInfo.requiredExp}
-          >
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-[#C93438] to-[#D6AD4F] transition-all duration-500"
-              style={{ width: `${levelInfo.progressPercent}%` }}
-            />
+        </Link>
+      )}
+
+      {xpFeedback && (
+        <div
+          key={xpFeedback.id}
+          role="status"
+          aria-live="polite"
+          className="pointer-events-none fixed bottom-[calc(env(safe-area-inset-bottom)+5.5rem)] left-1/2 z-[120] -translate-x-1/2 md:bottom-6 md:left-auto md:right-6 md:translate-x-0"
+        >
+          <div className="fude-xp-feedback flex min-w-[205px] items-center gap-3 rounded-2xl border border-[#B8860B]/45 bg-[#1E1D1B]/95 px-4 py-3 shadow-[0_14px_45px_rgba(0,0,0,0.5)] backdrop-blur-xl">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#B8860B]/30 bg-[#B8860B]/10 text-[#E2BC62]">
+              <Sparkles size={18} />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[9px] font-bold tracking-[0.16em] text-[#B8860B]">
+                EXP DIDAPATKAN
+              </p>
+              <p className="text-[18px] font-black leading-tight tabular-nums text-[#EAE6DD]">
+                +{xpFeedback.amount} EXP
+              </p>
+              <p className="mt-0.5 text-[10px] font-medium text-[#A3A099]">
+                {xpFeedback.leveledUp
+                  ? `LEVEL UP · SEKARANG LV. ${xpFeedback.level}`
+                  : "Progres belajarmu bertambah"}
+              </p>
+            </div>
           </div>
         </div>
-      </Link>}
+      )}
 
       <aside className="hidden md:flex md:flex-col md:fixed md:inset-y-0 md:w-64 md:border-r md:border-[#33312E]/50 md:bg-[#1A1918]/80 md:backdrop-blur-xl z-40">
-
-        {/* LOGO */}
         <div className="p-6 border-b border-[#33312E]/50 flex items-center gap-3">
           <Image
             src="/logo.webp"
@@ -269,7 +225,6 @@ export default function Sidebar() {
             height={32}
             className="h-8 w-8 object-contain"
           />
-
           <div>
             <h1 className="text-xl font-bold text-[#EAE6DD]">Fude</h1>
             <p className="text-[10px] text-[#A3A099] mt-0.5 tracking-wider uppercase font-semibold">
@@ -278,16 +233,15 @@ export default function Sidebar() {
           </div>
         </div>
 
-        {/* NAVIGASI */}
         <nav className="flex-1 p-3">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             const isActive = path === tab.href;
-
             return (
               <Link
                 key={tab.href}
                 href={tab.href}
+                aria-current={isActive ? "page" : undefined}
                 className={`flex items-center gap-3 px-4 py-3 rounded-xl mb-1 transition-all ${
                   isActive
                     ? "bg-[#C93438] text-white shadow-lg shadow-[#C93438]/20"
@@ -296,147 +250,31 @@ export default function Sidebar() {
               >
                 <Icon size={18} strokeWidth={isActive ? 2.5 : 2} />
                 <span className="flex-1 text-sm font-medium">{tab.label}</span>
-                {tab.href === "/gacha" && newGachaCount > 0 && (
-                  <span className="rounded-full bg-[#C93438] px-2 py-0.5 text-[9px] font-black text-white">
-                    NEW {newGachaCount > 99 ? "99+" : newGachaCount}
-                  </span>
-                )}
               </Link>
             );
           })}
         </nav>
 
-        {/* PROFIL DAN EXP */}
         <div className="p-4 border-t border-[#33312E]/50">
           <Link
             href="/profil"
             className="block bg-[#262523] hover:bg-[#33312E] transition-all rounded-xl p-3 group"
           >
             <div className="flex items-center gap-3">
-              <div className="pb-2 shrink-0">
-                <ProfileAvatar
-                  avatar={profile.avatar}
-                  photoSrc={photoSrc}
-                  badgeId={badgePreview?.id ?? profile.equippedBadgeId}
-                  badgeLevel={badgePreview?.level ?? 1}
-                  frameId={profile.equippedFrameId}
-                  size={46}
-                  compactBadgeAura
-                />
-              </div>
-
+              <ProfilePicture avatar={profile.avatar} photoSrc={photoSrc} size={46} />
               <div className="overflow-hidden flex-1 min-w-0">
                 <p className="text-sm font-bold text-[#EAE6DD] truncate group-hover:text-white">
                   {profile.name}
                 </p>
-
                 <p className="text-[11px] text-[#B8860B] font-semibold mt-0.5">
                   {levelInfo.rank} · LVL {levelInfo.level}
                 </p>
               </div>
             </div>
-
-            {/* SALDO TOKEN */}
-            <div className="mt-3 flex items-center justify-between bg-[#1A1918] border border-[#B8860B]/20 rounded-lg px-3 py-2">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-[#B8860B]/10 flex items-center justify-center">
-                  <Coins size={15} className="text-[#D6AD4F]" />
-                </div>
-
-                <span className="text-[10px] font-bold tracking-wider text-[#A3A099]">
-                  TOKEN BALANCE
-                </span>
-              </div>
-
-              <span className="text-sm font-black text-[#E7C46A] tabular-nums">
-                {tokens.toLocaleString("id-ID")}
-              </span>
-            </div>
-
-            {/* BAR EXP */}
-            <div className="mt-3">
-              <div className="flex justify-between items-center text-[10px] font-bold mb-1.5">
-                <span className="text-[#A3A099]">EXPERIENCE</span>
-                <span className="text-[#EAE6DD] tabular-nums">
-                  {levelInfo.currentExp} / {levelInfo.requiredExp} EXP
-                </span>
-              </div>
-
-              <div
-                className="w-full h-2 bg-[#121110] rounded-full overflow-hidden"
-                role="progressbar"
-                aria-label="Experience menuju level berikutnya"
-                aria-valuenow={levelInfo.currentExp}
-                aria-valuemin={0}
-                aria-valuemax={levelInfo.requiredExp}
-              >
-                <div
-                  className="h-full bg-gradient-to-r from-[#C93438] to-[#B8860B] rounded-full transition-all duration-500"
-                  style={{ width: `${levelInfo.progressPercent}%` }}
-                />
-              </div>
-
-              <p className="text-[10px] text-[#817A73] mt-1.5 text-right">
-                {levelInfo.remainingExp} EXP menuju level berikutnya
-              </p>
-            </div>
+            {expBar}
           </Link>
         </div>
       </aside>
-
-      {/* NOTIFIKASI KOLEKSI BARU */}
-      {unlockNotices.length > 0 && (
-        <div
-          className="fixed top-4 right-4 z-[300] w-[min(360px,calc(100vw-2rem))] space-y-3 pointer-events-none"
-          aria-live="polite"
-        >
-          {unlockNotices.map((notice) => (
-            <div
-              key={notice.id}
-              className="pointer-events-auto bg-[#1E1D1B] border border-[#B8860B]/50 rounded-2xl p-4 shadow-2xl shadow-black/40 animate-in slide-in-from-top-3 fade-in"
-            >
-              <div className="flex items-start gap-3">
-                <div className="w-12 h-12 rounded-xl bg-[#B8860B]/10 border border-[#B8860B]/30 flex items-center justify-center text-2xl shrink-0">
-                  {notice.icon}
-                </div>
-
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5 text-[#B8860B] text-[10px] font-black tracking-widest">
-                    <Sparkles size={13} />
-                    NEW COLLECTION UNLOCKED
-                  </div>
-
-                  <p className="font-bold text-[#EAE6DD] mt-1">
-                    {notice.name}
-                  </p>
-
-                  <p className="text-xs text-[#A3A099] mt-1">
-                    {notice.type === "badge"
-                      ? "Badge baru berhasil dibuka!"
-                      : "Frame avatar baru berhasil dibuka!"}
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => dismissNotice(notice.id)}
-                  aria-label="Tutup notifikasi"
-                  className="text-[#817A73] hover:text-white p-1"
-                >
-                  <X size={17} />
-                </button>
-              </div>
-
-              <Link
-                href="/profil"
-                onClick={() => dismissNotice(notice.id)}
-                className="mt-3 block text-center bg-[#B8860B]/15 border border-[#B8860B]/30 text-[#EAE6DD] hover:bg-[#B8860B]/25 rounded-lg py-2 text-xs font-bold transition-colors"
-              >
-                Lihat Koleksi
-              </Link>
-            </div>
-          ))}
-        </div>
-      )}
     </>
   );
 }

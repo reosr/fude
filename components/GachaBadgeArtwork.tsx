@@ -99,7 +99,10 @@ export default function GachaBadgeArtwork({
     "gacha-common-11": "kawauso",
   } as const;
   const folkloreArtworkId = folkloreArtworkIds[badge.id as keyof typeof folkloreArtworkIds];
-  if (badge.id === "gacha-common-02" && level <= 2) {
+  if (
+    badge.id === "gacha-common-02" &&
+    (level === 1 || level === 2)
+  ) {
     return <KodamaPrototypeArtwork size={size} level={level} />;
   }
   if (folkloreArtworkId) {

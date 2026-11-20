@@ -27,7 +27,8 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        # The app uses browser-side ONNX Runtime; CI does not need the Linux CUDA provider.
+        run: npm ci --onnxruntime-node-install-cuda=skip
 
       - name: Lint changed feature files
         run: >-
@@ -39,6 +40,7 @@ jobs:
           components/KanaStroke.tsx
           components/JLPTQuiz.tsx
           components/ProfileAvatar.tsx
+          components/ProfilePicture.tsx
           components/Sidebar.tsx
           data/gacha-badges.ts
           lib/gacha.ts
