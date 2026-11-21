@@ -262,12 +262,12 @@ export default function Sidebar() {
           >
             <div className="flex items-center gap-3">
               <ProfilePicture
-  photoSrc={photoSrc}
-  photoPositionX={profile.photoPositionX}
-  photoPositionY={profile.photoPositionY}
-  photoZoom={profile.photoZoom}
-  size={46}
-/>
+                photoSrc={photoSrc}
+                photoPositionX={profile.photoPositionX}
+                photoPositionY={profile.photoPositionY}
+                photoZoom={profile.photoZoom}
+                size={46}
+              />
               <div className="overflow-hidden flex-1 min-w-0">
                 <p className="text-sm font-bold text-[#EAE6DD] truncate group-hover:text-white">
                   {profile.name}
