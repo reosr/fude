@@ -100,7 +100,9 @@ export default function IrodoriStarterPage() {
                             ? "Where is Yamada-san?"
                             : lesson === 9
                               ? "Lunch is from noon to 1 o’clock."
-                              : "Please lend me the stapler.";
+                              : lesson === 10
+                              ? "Please lend me the stapler."
+                              : "What kind of manga do you like?";
             const lessonDescription =
               lesson === 1
                 ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
@@ -120,7 +122,9 @@ export default function IrodoriStarterPage() {
                             ? "Mengenali ruangan di tempat kerja, mencari orang, menanyakan lokasi perlengkapan, dan membaca papan nama ruangan."
                             : lesson === 9
                               ? "Membicarakan jam bangun dan tidur, memahami jadwal kerja, membaca papan jadwal, dan menyepakati waktu bersama."
-                              : "Memahami instruksi kerja, mengonfirmasi jumlah dan waktu, membaca memo tugas, serta meminjam perlengkapan.";
+                              : lesson === 10
+                              ? "Memahami instruksi kerja, mengonfirmasi jumlah dan waktu, membaca memo tugas, serta meminjam perlengkapan."
+                              : "Membahas hobi, hal yang disukai, kegiatan saat libur, dan memahami profil sosial sederhana.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
