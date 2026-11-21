@@ -1,3 +1,4 @@
+
 "use client";
 
 interface ProfilePictureProps {
@@ -14,28 +15,35 @@ export default function ProfilePicture({
   photoSrc,
   size = 64,
   className = "",
+  photoPositionX = 50,
+  photoPositionY = 50,
+  photoZoom = 1,
 }: ProfilePictureProps) {
   return (
     <div
       role="img"
-      aria-label={photoSrc ? "Foto profil pengguna" : "Foto profil default Fude"}
+      aria-label={
+        photoSrc
+          ? "Foto profil pengguna"
+          : "Foto profil default Fude"
+      }
       className={`flex shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#B8860B]/50 bg-gradient-to-br from-[#49302D] via-[#282632] to-[#151719] shadow-inner ${className}`}
       style={{ width: size, height: size }}
     >
       {photoSrc ? (
         <img
-        src={photoSrc}
-        alt=""
-        className="h-full w-full object-cover"
-        style={{
-          objectPosition: `${100 - photoPositionX}% ${100 - photoPositionY}%`,
-          transform: `translate(
-            ${(photoPositionX - 50) * (photoZoom - 1)}%,
-            ${(photoPositionY - 50) * (photoZoom - 1)}%
-          ) scale(${photoZoom})`,
-          transformOrigin: "center",
-        }}
-      />
+          src={photoSrc}
+          alt=""
+          className="h-full w-full object-cover"
+          style={{
+            objectPosition: `${100 - photoPositionX}% ${100 - photoPositionY}%`,
+            transform: `translate(
+              ${(photoPositionX - 50) * (photoZoom - 1)}%,
+              ${(photoPositionY - 50) * (photoZoom - 1)}%
+            ) scale(${photoZoom})`,
+            transformOrigin: "center",
+          }}
+        />
       ) : (
         <svg
           viewBox="0 0 120 120"
@@ -44,7 +52,6 @@ export default function ProfilePicture({
           aria-hidden="true"
         >
           <circle cx="60" cy="60" r="59" fill="#242735" />
-
           <circle cx="91" cy="29" r="19" fill="#B8860B" opacity="0.9" />
 
           <path
@@ -67,14 +74,12 @@ export default function ProfilePicture({
           <ellipse cx="60" cy="51" rx="23" ry="27" fill="#F0C9AE" />
 
           <path
-            d="M36 53 Q30 19 61 18 Q91 19 85 58
-               L80 42 Q67 49 47 39 L39 62Z"
+            d="M36 53 Q30 19 61 18 Q91 19 85 58 L80 42 Q67 49 47 39 L39 62Z"
             fill="#282027"
           />
 
           <path
-            d="M38 48 Q45 39 55 43 Q61 47 67 43
-               Q79 38 83 49 L80 32 Q65 15 48 25Z"
+            d="M38 48 Q45 39 55 43 Q61 47 67 43 Q79 38 83 49 L80 32 Q65 15 48 25Z"
             fill="#35252A"
           />
 
