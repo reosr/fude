@@ -254,7 +254,7 @@ const situationQuestions = [
     prompt: "Kamu selesai bekerja dan pulang lebih dahulu daripada rekan kerja. Apa yang kamu katakan?",
     options: ["お疲れさまでした", "お先に失礼します", "おはようございます"],
     answer: "お先に失礼します",
-    explanation: "Orang yang pulang lebih dahulu mengatakan お先に失礼します. Rekan yang masih bekerja dapat membalas お疲れさまでした.",
+    explanation: "Orang yang pulang lebih dahulu menggunakan ungkapan pamit, sedangkan rekan yang masih bekerja memberikan balasan yang sesuai.",
   },
 ];
 
