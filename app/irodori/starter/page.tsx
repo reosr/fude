@@ -1,10 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
 import { useIrodoriProgress } from "@/lib/irodori-progress";
 
 const lessons = Array.from({ length: 18 }, (_, index) => index + 1);
-
-"use client";
 
 export default function IrodoriStarterPage() {
   const progress = useIrodoriProgress();
