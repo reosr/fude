@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   ClipboardList,
   Home,
-  MapPin,
   MessageCircle,
   RefreshCw,
   Settings,
@@ -836,7 +835,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Kamu tinggal di tempat seperti apa?</p>
           <p className="mt-3 font-mincho text-lg text-[#D9B66D]">
-            会社の<ruby>寮<rt>りょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。
+            <ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>寮<rt>りょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Saya tinggal di asrama perusahaan.</p>
         </div>
