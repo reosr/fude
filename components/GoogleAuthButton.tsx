@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
 
@@ -11,7 +11,24 @@ export default function GoogleAuthButton() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
+
+  const popupWatcherRef = useRef<number | null>(null);
+
+  const stopPopupWatcher = () => {
+    if (popupWatcherRef.current !== null) {
+      window.clearInterval(popupWatcherRef.current);
+      popupWatcherRef.current = null;
+    }
+  };
+
+  const readUser = async () => {
+    const { data, error } = await supabase.auth.getUser();
+    if (error) throw error;
+    return data.user;
+  };
 
   useEffect(() => {
     let mounted = true;
@@ -30,32 +47,137 @@ export default function GoogleAuthButton() {
       setLoading(false);
     });
 
+    const handleMessage = (event: MessageEvent) => {
+      if (event.origin !== window.location.origin) return;
+
+      if (event.data?.type === "fude-google-auth-success") {
+        stopPopupWatcher();
+
+        void readUser()
+          .then((currentUser) => {
+            if (!mounted) return;
+
+            setUser(currentUser);
+            setBusy(false);
+
+            if (currentUser) {
+              setModalOpen(false);
+              setNotice("Akun Google berhasil terhubung.");
+            } else {
+              setError("Session belum berhasil dibaca. Coba refresh halaman.");
+            }
+          })
+          .catch(() => {
+            if (!mounted) return;
+            setBusy(false);
+            setError("Gagal memeriksa session akun.");
+          });
+      }
+
+      if (event.data?.type === "fude-google-auth-error") {
+        stopPopupWatcher();
+        setBusy(false);
+        setError("Login Google belum berhasil. Silakan coba lagi.");
+      }
+    };
+
+    window.addEventListener("message", handleMessage);
+
     return () => {
       mounted = false;
+      stopPopupWatcher();
       subscription.unsubscribe();
+      window.removeEventListener("message", handleMessage);
     };
   }, [supabase]);
 
   const handleGoogleLogin = async () => {
     setBusy(true);
     setError("");
+    setNotice("");
+
+    const normalCallback =
+      `${window.location.origin}/auth/callback`;
 
     try {
-      const { error } = await supabase.auth.signInWithOAuth({
+      const isMobile = window.matchMedia(
+        "(max-width: 767px)"
+      ).matches;
+
+      // Browser mobile menggunakan redirect yang lebih kompatibel.
+      if (isMobile) {
+        const { error } = await supabase.auth.signInWithOAuth({
+          provider: "google",
+          options: { redirectTo: normalCallback },
+        });
+
+        if (error) throw error;
+        return;
+      }
+
+      // Buka jendela langsung dari klik pengguna agar tidak diblokir browser.
+      const popup = window.open(
+        "about:blank",
+        "fude-google-login",
+        "popup=yes,width=520,height=680"
+      );
+
+      // Fallback jika popup diblokir.
+      if (!popup) {
+        const { error } = await supabase.auth.signInWithOAuth({
+          provider: "google",
+          options: { redirectTo: normalCallback },
+        });
+
+        if (error) throw error;
+        return;
+      }
+
+      const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/auth/callback`,
+          redirectTo: `${window.location.origin}/auth/popup-callback`,
+          skipBrowserRedirect: true,
         },
       });
 
-      if (error) throw error;
+      if (error || !data.url) {
+        popup.close();
+        throw error ?? new Error("URL login Google tidak tersedia.");
+      }
+
+      popup.location.href = data.url;
+
+      // Periksa apabila pengguna menutup popup sendiri.
+      popupWatcherRef.current = window.setInterval(() => {
+        if (!popup.closed) return;
+
+        stopPopupWatcher();
+
+        void readUser()
+          .then((currentUser) => {
+            setUser(currentUser);
+            setBusy(false);
+
+            if (currentUser) {
+              setModalOpen(false);
+              setNotice("Akun Google berhasil terhubung.");
+            } else {
+              setError("Jendela login ditutup sebelum selesai.");
+            }
+          })
+          .catch(() => {
+            setBusy(false);
+            setError("Gagal memeriksa status login.");
+          });
+      }, 500);
     } catch (err) {
+      setBusy(false);
       setError(
         err instanceof Error
           ? err.message
           : "Gagal memulai login Google."
       );
-      setBusy(false);
     }
   };
 
@@ -66,7 +188,10 @@ export default function GoogleAuthButton() {
     try {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
+
       setUser(null);
+      setModalOpen(false);
+      setNotice("Kamu sudah keluar dari akun Fude.");
     } catch (err) {
       setError(
         err instanceof Error ? err.message : "Gagal logout."
@@ -77,56 +202,152 @@ export default function GoogleAuthButton() {
   };
 
   return (
-    <section className="rounded-2xl border border-[#33312E] bg-[#1E1D1B] p-5">
-      <h3 className="font-bold text-[#EAE6DD]">Akun Fude</h3>
+    <>
+      <section className="rounded-2xl border border-[#33312E] bg-[#1E1D1B] p-5">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0">
+            <p className="text-[10px] font-black tracking-[0.2em] text-[#B8860B]">
+              AKUN FUDE
+            </p>
 
-      {loading ? (
-        <p className="mt-2 text-sm text-[#A3A099]">
-          Memeriksa status akun...
-        </p>
-      ) : user ? (
-        <>
-          <p className="mt-2 text-xs text-[#A3A099]">
-            Masuk sebagai
-          </p>
-          <p className="mt-1 break-all text-sm font-semibold text-[#EAE6DD]">
-            {user.email ?? "Akun Google"}
-          </p>
+            <h3 className="mt-1 font-bold text-[#EAE6DD]">
+              {loading
+                ? "Memeriksa akun..."
+                : user
+                  ? "Akun terhubung"
+                  : "Hubungkan akunmu"}
+            </h3>
+
+            <p className="mt-1 break-all text-xs text-[#A3A099]">
+              {loading
+                ? "Memeriksa status login"
+                : user?.email ??
+                  "Gunakan Google untuk menyiapkan akun Fude."}
+            </p>
+          </div>
+
           <button
             type="button"
-            onClick={handleLogout}
-            disabled={busy}
-            className="mt-4 rounded-xl border border-[#44413D] bg-[#262523] px-4 py-2 text-sm font-bold text-[#EAE6DD] hover:border-[#C93438] disabled:opacity-50"
+            onClick={() => {
+              setError("");
+              setModalOpen(true);
+            }}
+            disabled={loading}
+            className="shrink-0 rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-4 py-3 text-sm font-bold text-[#E7C46A] transition hover:bg-[#B8860B]/20 disabled:opacity-50"
           >
-            {busy ? "Memproses..." : "Keluar"}
+            {user ? "Kelola Akun" : "Masuk / Daftar"}
           </button>
-        </>
-      ) : (
-        <>
-          <p className="mt-2 text-sm text-[#A3A099]">
-            Masuk dengan akun Google untuk membuat akun Fude.
+        </div>
+
+        {notice && (
+          <p className="mt-3 text-xs text-emerald-400" role="status">
+            {notice}
           </p>
-          <button
-            type="button"
-            onClick={handleGoogleLogin}
-            disabled={busy}
-            className="mt-4 rounded-xl bg-[#C93438] px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:opacity-50"
+        )}
+
+        {error && !modalOpen && (
+          <p className="mt-3 text-xs text-red-400" role="alert">
+            {error}
+          </p>
+        )}
+      </section>
+
+      {modalOpen && (
+        <div
+          className="fixed inset-0 z-[250] flex items-end justify-center bg-black/70 p-0 backdrop-blur-sm sm:items-center sm:p-4"
+          onClick={() => !busy && setModalOpen(false)}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="fude-auth-title"
+            onClick={(event) => event.stopPropagation()}
+            className="max-h-[90dvh] w-full max-w-md overflow-y-auto rounded-t-3xl border border-white/10 bg-[#1E1D1B] p-6 shadow-2xl sm:rounded-3xl"
           >
-            {busy ? "Menghubungkan..." : "Masuk dengan Google"}
-          </button>
-        </>
-      )}
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-black tracking-[0.2em] text-[#B8860B]">
+                FUDE ACCOUNT
+              </span>
 
-      {error && (
-        <p role="alert" className="mt-3 text-xs text-red-400">
-          {error}
-        </p>
-      )}
+              <button
+                type="button"
+                onClick={() => setModalOpen(false)}
+                disabled={busy}
+                aria-label="Tutup"
+                className="rounded-full bg-white/5 px-3 py-1.5 text-lg text-[#A3A099] hover:text-white disabled:opacity-40"
+              >
+                ×
+              </button>
+            </div>
 
-      <p className="mt-4 text-xs leading-5 text-[#817A73]">
-        Sinkronisasi progres antarperangkat belum aktif. Data belajar
-        tetap tersimpan di browser sampai fitur tersebut selesai.
-      </p>
-    </section>
+            <div className="mt-7 text-center">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#B8860B]/30 bg-[#B8860B]/10 text-3xl font-black text-[#E7C46A]">
+                筆
+              </div>
+
+              <h2
+                id="fude-auth-title"
+                className="mt-5 text-xl font-black text-[#EAE6DD]"
+              >
+                {user ? "Akun Fude kamu" : "Selamat datang di Fude"}
+              </h2>
+
+              <p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-[#A3A099]">
+                {user
+                  ? user.email
+                  : "Hubungkan akun Google untuk menyiapkan akun belajar Fude."}
+              </p>
+            </div>
+
+            {error && (
+              <p
+                role="alert"
+                className="mt-5 rounded-xl border border-red-500/20 bg-red-500/10 p-3 text-center text-xs text-red-300"
+              >
+                {error}
+              </p>
+            )}
+
+            {user ? (
+              <button
+                type="button"
+                onClick={handleLogout}
+                disabled={busy}
+                className="mt-7 w-full rounded-xl border border-red-500/30 bg-red-500/10 py-3.5 text-sm font-bold text-red-300 transition hover:bg-red-500/20 disabled:opacity-50"
+              >
+                {busy ? "Memproses..." : "Keluar dari akun"}
+              </button>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  onClick={handleGoogleLogin}
+                  disabled={busy}
+                  className="mt-7 flex w-full items-center justify-center gap-3 rounded-xl bg-white px-4 py-3.5 text-sm font-bold text-[#242424] shadow-lg transition hover:bg-gray-100 disabled:opacity-60"
+                >
+                  <span className="text-xl font-black text-[#4285F4]">
+                    G
+                  </span>
+                  {busy
+                    ? "Menghubungkan..."
+                    : "Lanjutkan dengan Google"}
+                </button>
+
+                <p className="mt-4 text-center text-[11px] leading-5 text-[#817A73]">
+                  Di HP, halaman Google akan terbuka dan kembali ke Fude
+                  setelah login selesai.
+                </p>
+              </>
+            )}
+
+            <p className="mt-5 text-center text-[10px] leading-5 text-[#68635D]">
+              Sinkronisasi progres antarperangkat belum aktif.
+              Data belajar lokal tetap dipertahankan selama tahap
+              persiapan akun.
+            </p>
+          </section>
+        </div>
+      )}
+    </>
   );
 }
