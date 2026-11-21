@@ -810,7 +810,7 @@ export default function IrodoriStarterLessonNinePage() {
                     </td>
                     <td className="border border-white/[0.08] p-3 font-mincho text-[#E7D2A1]">
                       {person.note === "外出 · 銀行" ? <><ruby>外出<rt>がいしゅつ</rt></ruby> · <ruby>銀行<rt>ぎんこう</rt></ruby></> :
-                       person.note === "休み" ? <ruby>休<rt>やす</rt></ruby>み :
+                       person.note === "休み" ? <><ruby>休<rt>やす</rt></ruby>み</> :
                        person.note.startsWith("早退") ? <><ruby>早退<rt>そうたい</rt></ruby> · 16.00</> :
                        person.note.startsWith("遅刻") ? <><ruby>遅刻<rt>ちこく</rt></ruby> · <ruby>午後<rt>ごご</rt></ruby>1<ruby>時<rt>じ</rt></ruby>から</> :
                        <><ruby>会議中<rt>かいぎちゅう</rt></ruby> · 10.30–11.30</>}
@@ -849,7 +849,7 @@ export default function IrodoriStarterLessonNinePage() {
               { jp: <ruby>遅刻<rt>ちこく</rt></ruby>, meaning: "Terlambat" },
               { jp: <ruby>早退<rt>そうたい</rt></ruby>, meaning: "Pulang lebih awal" },
               { jp: <ruby>外出<rt>がいしゅつ</rt></ruby>, meaning: "Sedang keluar" },
-              { jp: <ruby>休<rt>やす</rt></ruby>み, meaning: "Libur" },
+              { jp: <><ruby>休<rt>やす</rt></ruby>み</>, meaning: "Libur" },
               { jp: <ruby>会議中<rt>かいぎちゅう</rt></ruby>, meaning: "Sedang rapat" },
             ].map((word, index) => (
               <div key={index} className="rounded-lg bg-black/15 p-3">
