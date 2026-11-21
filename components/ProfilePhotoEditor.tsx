@@ -55,18 +55,25 @@ export default function ProfilePhotoEditor({
   }, [file]);
 
   function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
-    if (!ready || saving) return;
+  if (!ready || saving) return;
 
-    event.currentTarget.setPointerCapture(event.pointerId);
+  const activeZoom = zoom <= 1 ? 1.5 : zoom;
 
-    dragRef.current = {
-      id: event.pointerId,
-      x: event.clientX,
-      y: event.clientY,
-      startX: positionX,
-      startY: positionY,
-    };
+  if (activeZoom !== zoom) {
+    setZoom(activeZoom);
   }
+
+  event.currentTarget.setPointerCapture(event.pointerId);
+
+  dragRef.current = {
+    id: event.pointerId,
+    x: event.clientX,
+    y: event.clientY,
+    startX: positionX,
+    startY: positionY,
+    zoom: activeZoom,
+  };
+}
 
   function handlePointerMove(event: PointerEvent<HTMLDivElement>) {
     const drag = dragRef.current;
