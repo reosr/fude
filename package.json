@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.2",
     "hanzi-writer": "^3.7.3",
     "kokoro-js-jp": "^0.2.0",
     "lucide-react": "^1.68.0",
