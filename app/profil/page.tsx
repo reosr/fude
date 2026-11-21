@@ -427,26 +427,7 @@ export default function Profil() {
               <span>{draftName.length}/24</span>
             </div>
 
-            <p className="text-sm font-bold text-[#A3A099] mt-6 mb-3">
-              Avatar Bawaan
-            </p>
-            <div className="grid grid-cols-6 gap-2">
-              {AVATARS.map((avatar) => (
-                <button
-                  key={avatar}
-                  type="button"
-                  onClick={() => setDraftAvatar(avatar)}
-                  aria-pressed={draftAvatar === avatar}
-                  className={`aspect-square rounded-xl flex items-center justify-center text-2xl transition-colors ${
-                    draftAvatar === avatar
-                      ? "bg-[#C93438]/20 border-2 border-[#C93438]"
-                      : "bg-[#262523] border border-[#44413D] hover:border-[#817A73]"
-                  }`}
-                >
-                  {avatar}
-                </button>
-              ))}
-            </div>
+            
 
             {saveError && <p className="text-sm text-red-400 mt-4">{saveError}</p>}
 
