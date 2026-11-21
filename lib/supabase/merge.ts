@@ -1,5 +1,8 @@
-import type { FudeProfile } from "../gamification";
-import type { LocalFudeSnapshot, LocalJlptResult } from "./sync";
+import type { FudeProfile, FudeXpEvent } from "../gamification";
+import type {
+  LocalFudeSnapshot,
+  LocalJlptResult,
+} from "./sync";
 import type { CloudFudeData } from "./read-cloud";
 import type { PendingSyncChange } from "./events";
 
@@ -7,6 +10,8 @@ export interface MergedFudeData {
   profile: FudeProfile;
   currentBab: number;
   totalXp: number;
+  xpBase: number;
+  xpEvents: FudeXpEvent[];
   xpRewards: string[];
   memorizedKanji: string[];
   jlptResults: LocalJlptResult[];
@@ -31,6 +36,38 @@ function hasPending(
   return pending.some((item) => item.key === key);
 }
 
+function mergeXpEvents(
+  localEvents: FudeXpEvent[],
+  cloudEvents: FudeXpEvent[]
+): FudeXpEvent[] {
+  const events = new Map<string, number>();
+
+  for (const event of [...localEvents, ...cloudEvents]) {
+    if (
+      !event.id ||
+      !Number.isSafeInteger(event.amount) ||
+      event.amount <= 0
+    ) {
+      throw new Error("Ditemukan catatan reward EXP yang tidak valid.");
+    }
+
+    const existing = events.get(event.id);
+
+    if (existing !== undefined && existing !== event.amount) {
+      throw new Error(
+        `Nominal reward EXP berbeda untuk ID ${event.id}. Sinkronisasi dihentikan demi keamanan data.`
+      );
+    }
+
+    events.set(event.id, event.amount);
+  }
+
+  return Array.from(events, ([id, amount]) => ({
+    id,
+    amount,
+  }));
+}
+
 function mergeProfile(
   local: FudeProfile,
   cloud: Record<string, unknown> | null,
@@ -49,7 +86,6 @@ function mergeProfile(
         ? cloud.avatar
         : local.avatar,
 
-    // Foto lokal tidak diganti oleh data JSON cloud.
     photoDataUrl: local.photoDataUrl ?? null,
 
     equippedBadgeId:
@@ -77,11 +113,6 @@ export function mergeFudeData(
     1
   );
 
-  const totalXp = Math.max(
-    local.totalXp,
-    safeNumber(cloudProgress?.total_xp, 0)
-  );
-
   const xpRewards = mergeUnique(
     local.xpRewards,
     cloudProgress?.xp_rewards ?? []
@@ -91,6 +122,50 @@ export function mergeFudeData(
     local.memorizedKanji,
     cloudProgress?.memorized_kanji ?? []
   );
+
+  // Periksa apakah perangkat memiliki riwayat belajar lokal.
+  const hasLocalXpHistory =
+    local.stored.xp ||
+    local.currentBab > 1 ||
+    local.totalXp > 0 ||
+    local.xpRewards.length > 0 ||
+    local.xpEvents.length > 0 ||
+    local.jlptResults.length > 0;
+
+  // Jika perangkat dan cloud memiliki saldo dasar berbeda,
+  // jangan gabungkan secara otomatis.
+  const cloudXpBase = safeNumber(
+    cloudProgress?.xp_base,
+    safeNumber(cloudProgress?.total_xp, 0)
+  );
+
+  if (
+    cloudProgress &&
+    hasLocalXpHistory &&
+    local.xpBase !== cloudXpBase
+  ) {
+    throw new Error(
+      "Saldo dasar EXP lokal berbeda dengan cloud. Data belum diubah; perlu pemeriksaan manual sebelum sinkronisasi."
+    );
+  }
+
+  const xpBase = cloudProgress
+    ? hasLocalXpHistory
+      ? local.xpBase
+      : cloudXpBase
+    : local.xpBase;
+
+  const cloudXpEvents = cloudProgress?.xp_events ?? [];
+
+  const xpEvents = cloudProgress
+    ? hasLocalXpHistory
+      ? mergeXpEvents(local.xpEvents, cloudXpEvents)
+      : mergeXpEvents([], cloudXpEvents)
+    : mergeXpEvents(local.xpEvents, []);
+
+  const totalXp =
+    xpBase +
+    xpEvents.reduce((sum, event) => sum + event.amount, 0);
 
   const localJlptMap = new Map(
     local.jlptResults.map((item) => [item.setId, item.result])
@@ -134,6 +209,8 @@ export function mergeFudeData(
     ),
     currentBab,
     totalXp,
+    xpBase,
+    xpEvents,
     xpRewards,
     memorizedKanji,
     jlptResults,
