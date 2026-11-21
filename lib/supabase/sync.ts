@@ -19,12 +19,12 @@ export interface LocalFudeSnapshot {
   profile: FudeProfile;
   currentBab: number;
   totalXp: number;
+  xpBase: number;
+  xpEvents: FudeXpEvent[];
   xpRewards: string[];
   memorizedKanji: string[];
   jlptResults: LocalJlptResult[];
   capturedAt: string;
-  xpBase: number;
-  xpEvents: FudeXpEvent[];
   stored: {
     profile: boolean;
     progress: boolean;
