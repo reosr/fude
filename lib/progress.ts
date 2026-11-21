@@ -1,3 +1,5 @@
+import { notifyFudeLocalDataChanged } from "./supabase/events";
+
 const PROGRESS_KEY = "fude_progress";
 
 export function getProgress(): number {
@@ -23,6 +25,7 @@ export function setProgress(bab: number): void {
 
   try {
     localStorage.setItem(PROGRESS_KEY, String(bab));
+    notifyFudeLocalDataChanged(PROGRESS_KEY);
   } catch {
     // Progres tetap bisa dibaca dari state halaman selama sesi berjalan.
   }
