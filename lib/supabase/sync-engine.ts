@@ -5,6 +5,23 @@ import { mergeFudeData } from "./merge";
 import { applyMergedDataToLocal } from "./apply-local";
 import { writeCloudFudeData } from "./write-cloud";
 
+import {
+  getProfilePhoto,
+  getPendingProfilePhotoChange,
+  clearPendingProfilePhotoChange,
+  getSyncedProfilePhotoVersion,
+  setSyncedProfilePhotoVersion,
+  clearSyncedProfilePhotoVersion,
+  saveProfilePhotoFromCloud,
+  deleteProfilePhotoFromCloudLocal,
+} from "../profile-photo";
+
+import {
+  uploadProfilePhotoToCloud,
+  downloadProfilePhotoFromCloud,
+  deleteProfilePhotoFromCloud,
+  getCloudProfilePhotoVersion,
+} from "./profile-photo-cloud";
 
 import {
   getPendingSyncChanges,
