@@ -50,6 +50,7 @@ jobs:
           app/irodori/starter/lesson-13/page.tsx
           app/irodori/starter/lesson-14/page.tsx
           app/irodori/starter/lesson-15/page.tsx
+          app/irodori/starter/lesson-16/page.tsx
           components/IrodoriConversation.tsx
           lib/irodori-progress.ts
           lib/irodori-speakers.ts
