@@ -75,7 +75,6 @@ export default function Profil() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [draftName, setDraftName] = useState(DEFAULT_PROFILE.name);
-  const [draftAvatar, setDraftAvatar] = useState(DEFAULT_PROFILE.avatar);
   const [saveError, setSaveError] = useState("");
   const [photoError, setPhotoError] = useState("");
   const [photoLoading, setPhotoLoading] = useState(false);
