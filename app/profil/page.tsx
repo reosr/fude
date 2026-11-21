@@ -403,6 +403,7 @@ export default function Profil() {
           Foto profil saat ini masih tersimpan secara lokal di browser.
         </p>
       </section>
+      
       {cropFile && (
         <ProfilePhotoCropper
           file={cropFile}
