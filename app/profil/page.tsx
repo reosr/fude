@@ -226,7 +226,6 @@ export default function Profil() {
     try {
       await saveProfilePhoto(blob);
       await refreshPhoto();
-      setCropFile(null);
     } catch (error) {
       setPhotoError(
         error instanceof Error
