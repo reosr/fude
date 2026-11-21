@@ -813,7 +813,7 @@ export default function IrodoriStarterLessonFivePage() {
                 いただきます！
               </p>
               <p className="mt-3 text-[10px] text-[#B8860B]">
-                #<ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby> #<ruby>和食<rt>わしょく</rt></ruby>
+                #<ruby>朝ご飯<rt>あさごはん</rt></ruby> #<ruby>和食<rt>わしょく</rt></ruby>
               </p>
             </div>
           </article>
@@ -1003,7 +1003,7 @@ export default function IrodoriStarterLessonFivePage() {
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               いつも berarti selalu, よく berarti sering. あまり dipakai
-              bersama kalimat negatif, misalnya あまり<ruby>食<rt>た</rt></ruby>.
+              bersama kalimat negatif, misalnya あまり<ruby>食<rt>た</rt></ruby>べません。
             </p>
           </article>
         </div>
@@ -1021,8 +1021,8 @@ export default function IrodoriStarterLessonFivePage() {
         <div className="grid gap-2 sm:grid-cols-3">
           {[
             { jp: <ruby>水<rt>みず</rt></ruby>, reading: "mizu", meaning: "Air" },
-            { jp: <ruby>食<rt>た</rt></ruby>べます, reading: "tabemasu", meaning: "Makan" },
-            { jp: <ruby>飲<rt>の</rt></ruby>みます, reading: "nomimasu", meaning: "Minum" },
+            { jp: <><ruby>食<rt>た</rt></ruby>べます</>, reading: "tabemasu", meaning: "Makan" },
+            { jp: <><ruby>飲<rt>の</rt></ruby>みます</>, reading: "nomimasu", meaning: "Minum" },
           ].map((item) => (
             <article
               key={item.reading}
