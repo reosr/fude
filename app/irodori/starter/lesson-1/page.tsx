@@ -29,15 +29,32 @@ const morningGreetings: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>おはようございます。</>,
     romaji: "Ohayou gozaimasu.",
-    translation: "Selamat pagi.",
+    translation: "Selamat pagi (sopan).",
     audioFileName: "irodori-starter-01-a01-l01.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>おはようございます。</>,
     romaji: "Ohayou gozaimasu.",
-    translation: "Selamat pagi.",
+    translation: "Selamat pagi (sopan).",
     audioFileName: "irodori-starter-01-a01-l02.mp3",
+  },
+];
+
+const casualMorningGreetings: IrodoriUtterance[] = [
+  {
+    speakerId: "yui",
+    japanese: <>おはよう。</>,
+    romaji: "Ohayou.",
+    translation: "Pagi! (akrab).",
+    audioFileName: "irodori-starter-01-a01-l03.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>おはよう。</>,
+    romaji: "Ohayou.",
+    translation: "Pagi! (akrab).",
+    audioFileName: "irodori-starter-01-a01-l04.mp3",
   },
 ];
 
@@ -47,28 +64,31 @@ const daytimeGreetings: IrodoriUtterance[] = [
     japanese: <>こんにちは。</>,
     romaji: "Konnichiwa.",
     translation: "Halo. / Selamat siang.",
-    audioFileName: "irodori-starter-01-a01-l03.mp3",
+    audioFileName: "irodori-starter-01-a01-l05.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>こんにちは。</>,
     romaji: "Konnichiwa.",
     translation: "Halo. / Selamat siang.",
-    audioFileName: "irodori-starter-01-a01-l04.mp3",
+    audioFileName: "irodori-starter-01-a01-l06.mp3",
   },
+];
+
+const eveningGreetings: IrodoriUtterance[] = [
   {
     speakerId: "yui",
-    japanese: <><ruby>元気<rt>げんき</rt></ruby>ですか。</>,
-    romaji: "Genki desu ka.",
-    translation: "Apa kabar?",
-    audioFileName: "irodori-starter-01-a01-l05.mp3",
+    japanese: <>こんばんは。</>,
+    romaji: "Konbanwa.",
+    translation: "Selamat malam (sapaan saat bertemu).",
+    audioFileName: "irodori-starter-01-a01-l07.mp3",
   },
   {
     speakerId: "sota",
-    japanese: <>はい、<ruby>元気<rt>げんき</rt></ruby>です。ありがとうございます。</>,
-    romaji: "Hai, genki desu. Arigatou gozaimasu.",
-    translation: "Ya, saya baik. Terima kasih.",
-    audioFileName: "irodori-starter-01-a01-l06.mp3",
+    japanese: <>こんばんは。</>,
+    romaji: "Konbanwa.",
+    translation: "Selamat malam (sapaan saat bertemu).",
+    audioFileName: "irodori-starter-01-a01-l08.mp3",
   },
 ];
 
@@ -82,17 +102,44 @@ const leavingConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。また<ruby>明日<rt>あした</rt></ruby>。</>,
-    romaji: "Otsukaresama deshita. Mata ashita.",
-    translation: "Terima kasih atas kerja hari ini. Sampai besok.",
-    audioFileName: "irodori-starter-01-a02-l02.mp3",
-  },
-  {
-    speakerId: "yui",
     japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。</>,
     romaji: "Otsukaresama deshita.",
-    translation: "Terima kasih. Sampai jumpa.",
+    translation: "Terima kasih atas kerja hari ini.",
+    audioFileName: "irodori-starter-01-a02-l02.mp3",
+  },
+];
+
+const friendFarewellConversation: IrodoriUtterance[] = [
+  {
+    speakerId: "yui",
+    japanese: <>じゃあ、また。</>,
+    romaji: "Jaa, mata.",
+    translation: "Kalau begitu, sampai jumpa lagi.",
     audioFileName: "irodori-starter-01-a02-l03.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>またね。</>,
+    romaji: "Mata ne.",
+    translation: "Sampai jumpa, ya.",
+    audioFileName: "irodori-starter-01-a02-l04.mp3",
+  },
+];
+
+const nightFarewellConversation: IrodoriUtterance[] = [
+  {
+    speakerId: "yui",
+    japanese: <>おやすみなさい。</>,
+    romaji: "Oyasuminasai.",
+    translation: "Selamat malam (sebelum tidur).",
+    audioFileName: "irodori-starter-01-a02-l05.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>おやすみなさい。</>,
+    romaji: "Oyasuminasai.",
+    translation: "Selamat tidur.",
+    audioFileName: "irodori-starter-01-a02-l06.mp3",
   },
 ];
 
@@ -106,17 +153,41 @@ const thanksConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>ありがとうございます。</>,
-    romaji: "Arigatou gozaimasu.",
-    translation: "Terima kasih.",
+    japanese: <>あ、ありがとうございます。</>,
+    romaji: "A, arigatou gozaimasu.",
+    translation: "Oh, terima kasih.",
     audioFileName: "irodori-starter-01-a03-l02.mp3",
   },
   {
     speakerId: "yui",
-    japanese: <>どういたしまして。</>,
-    romaji: "Dou itashimashite.",
-    translation: "Sama-sama.",
+    japanese: <>いえいえ。</>,
+    romaji: "Ie ie.",
+    translation: "Tidak apa-apa. / Sama-sama.",
     audioFileName: "irodori-starter-01-a03-l03.mp3",
+  },
+];
+
+const thanksWithSumimasenConversation: IrodoriUtterance[] = [
+  {
+    speakerId: "yui",
+    japanese: <>どうぞ。</>,
+    romaji: "Douzo.",
+    translation: "Silakan.",
+    audioFileName: "irodori-starter-01-a03-l04.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>すみません。ありがとうございます。</>,
+    romaji: "Sumimasen. Arigatou gozaimasu.",
+    translation: "Wah, terima kasih. (Ungkapan sopan saat menerima bantuan.)",
+    audioFileName: "irodori-starter-01-a03-l05.mp3",
+  },
+  {
+    speakerId: "yui",
+    japanese: <>いえいえ。</>,
+    romaji: "Ie ie.",
+    translation: "Tidak apa-apa. / Sama-sama.",
+    audioFileName: "irodori-starter-01-a03-l06.mp3",
   },
 ];
 
@@ -126,54 +197,86 @@ const apologyConversation: IrodoriUtterance[] = [
     japanese: <>あっ、すみません。</>,
     romaji: "A, sumimasen.",
     translation: "Ah, maaf.",
-    audioFileName: "irodori-starter-01-a03-l04.mp3",
+    audioFileName: "irodori-starter-01-a03-l07.mp3",
   },
   {
     speakerId: "sota",
     japanese: <><ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。</>,
     romaji: "Daijoubu desu yo.",
     translation: "Tidak apa-apa.",
-    audioFileName: "irodori-starter-01-a03-l05.mp3",
+    audioFileName: "irodori-starter-01-a03-l08.mp3",
+  },
+];
+
+const casualApologyConversation: IrodoriUtterance[] = [
+  {
+    speakerId: "yui",
+    japanese: <>ごめんね。</>,
+    romaji: "Gomen ne.",
+    translation: "Maaf, ya. (Akrab.)",
+    audioFileName: "irodori-starter-01-a03-l09.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>ううん、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>。</>,
+    romaji: "Uun, daijoubu.",
+    translation: "Tidak, tidak apa-apa. (Akrab.)",
+    audioFileName: "irodori-starter-01-a03-l10.mp3",
   },
 ];
 
 const stickerQuestions = [
   {
-    sticker: "おはよう",
-    reading: "Ohayou",
-    question: "Apa arti pesan ini?",
-    options: ["Selamat pagi", "Terima kasih", "Sampai besok"],
-    answer: "Selamat pagi",
-    explanation: "おはよう adalah sapaan santai yang digunakan pada pagi hari.",
+    sticker: "おはようございます",
+    reading: "Ohayou gozaimasu",
+    question: "Stiker ini paling sesuai dikirim ketika ...",
+    options: [
+      "Mengirim pesan pada pagi hari",
+      "Akan tidur malam",
+      "Mengucapkan selamat tinggal setelah bekerja",
+    ],
+    answer: "Mengirim pesan pada pagi hari",
+    explanation: "おはようございます adalah sapaan sopan yang umum dipakai pada pagi hari.",
   },
   {
     sticker: "ありがとう",
     reading: "Arigatou",
-    question: "Pesan ini digunakan untuk ...",
-    options: ["Meminta maaf", "Mengucapkan terima kasih", "Berpamitan"],
-    answer: "Mengucapkan terima kasih",
-    explanation: "ありがとう adalah ungkapan terima kasih dalam suasana akrab.",
+    question: "Apa maksud stiker ini?",
+    options: ["Maaf ya", "Terima kasih", "Sampai jumpa"],
+    answer: "Terima kasih",
+    explanation: "ありがとう adalah ungkapan terima kasih yang akrab.",
   },
   {
-    sticker: "ごめんね",
-    reading: "Gomen ne",
-    question: "Apa maksud pesan ini?",
-    options: ["Selamat malam", "Maaf ya", "Apa kabar?"],
-    answer: "Maaf ya",
-    explanation: "ごめんね adalah ungkapan maaf yang akrab dan kasual.",
-  },
-  {
-    sticker: "おつかれさま",
-    reading: "Otsukaresama",
-    question: "Pesan ini biasanya berkaitan dengan ...",
+    sticker: "おやすみなさい",
+    reading: "Oyasuminasai",
+    question: "Kapan stiker ini cocok dikirim?",
     options: [
-      "Mengapresiasi usaha atau pekerjaan seseorang",
-      "Memperkenalkan diri",
-      "Mengucapkan selamat pagi",
+      "Saat bertemu pada siang hari",
+      "Saat akan tidur",
+      "Saat menerima hadiah pada pagi hari",
     ],
-    answer: "Mengapresiasi usaha atau pekerjaan seseorang",
-    explanation:
-      "おつかれさま digunakan untuk mengakui usaha seseorang, misalnya setelah bekerja atau menyelesaikan kegiatan.",
+    answer: "Saat akan tidur",
+    explanation: "おやすみなさい adalah ucapan sebelum tidur atau selamat tidur.",
+  },
+  {
+    sticker: "じゃあ、また",
+    reading: "Jaa, mata",
+    question: "Apa maksud pesan ini?",
+    options: ["Sampai jumpa lagi", "Selamat pagi", "Terima kasih banyak"],
+    answer: "Sampai jumpa lagi",
+    explanation: "じゃあ、また adalah ungkapan perpisahan santai.",
+  },
+  {
+    sticker: "すみません",
+    reading: "Sumimasen",
+    question: "Ungkapan ini dapat digunakan untuk ...",
+    options: [
+      "Meminta maaf atau menarik perhatian",
+      "Mengucapkan selamat tidur",
+      "Menyapa teman pada pagi hari",
+    ],
+    answer: "Meminta maaf atau menarik perhatian",
+    explanation: "すみません dapat berarti maaf atau permisi, tergantung situasinya.",
   },
 ];
 
@@ -181,12 +284,18 @@ const vocabulary = [
   { jp: <>おはようございます</>, romaji: "Ohayou gozaimasu", meaning: "Selamat pagi (sopan)" },
   { jp: <>おはよう</>, romaji: "Ohayou", meaning: "Selamat pagi (akrab)" },
   { jp: <>こんにちは</>, romaji: "Konnichiwa", meaning: "Halo / selamat siang" },
+  { jp: <>こんばんは</>, romaji: "Konbanwa", meaning: "Selamat malam (sapaan)" },
+  { jp: <>じゃあ、また</>, romaji: "Jaa, mata", meaning: "Kalau begitu, sampai jumpa lagi" },
+  { jp: <>またね</>, romaji: "Mata ne", meaning: "Sampai jumpa (akrab)" },
+  { jp: <>おやすみなさい</>, romaji: "Oyasuminasai", meaning: "Selamat tidur" },
   { jp: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します</>, romaji: "Osaki ni shitsurei shimasu", meaning: "Permisi, saya pamit lebih dahulu" },
-  { jp: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした</>, romaji: "Otsukaresama deshita", meaning: "Terima kasih atas usaha hari ini" },
+  { jp: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした</>, romaji: "Otsukaresama deshita", meaning: "Terima kasih atas kerja hari ini" },
   { jp: <>ありがとうございます</>, romaji: "Arigatou gozaimasu", meaning: "Terima kasih (sopan)" },
+  { jp: <>どうもありがとう</>, romaji: "Doumo arigatou", meaning: "Terima kasih banyak (akrab)" },
   { jp: <>すみません</>, romaji: "Sumimasen", meaning: "Maaf / permisi" },
-  { jp: <>ごめんなさい</>, romaji: "Gomennasai", meaning: "Maaf" },
-  { jp: <>また<ruby>明日<rt>あした</rt></ruby></>, romaji: "Mata ashita", meaning: "Sampai besok" },
+  { jp: <>ごめんね</>, romaji: "Gomen ne", meaning: "Maaf ya (akrab)" },
+  { jp: <>どうぞ</>, romaji: "Douzo", meaning: "Silakan / ini" },
+  { jp: <>いえいえ</>, romaji: "Ie ie", meaning: "Tidak apa-apa / sama-sama" },
 ];
 
 const canDos = [
@@ -220,6 +329,8 @@ const hiraganaWords = [
   { word: "ごめんね", romaji: "Gomen ne", meaning: "Maaf ya (akrab)" },
   { word: "またね", romaji: "Mata ne", meaning: "Sampai jumpa (akrab)" },
   { word: "こんにちは", romaji: "Konnichiwa", meaning: "Halo / selamat siang" },
+  { word: "こんばんは", romaji: "Konbanwa", meaning: "Selamat malam (sapaan)" },
+  { word: "おやすみなさい", romaji: "Oyasuminasai", meaning: "Selamat tidur" },
 ];
 
 export default function IrodoriStarterLessonOnePage() {
@@ -328,20 +439,48 @@ export default function IrodoriStarterLessonOnePage() {
           </div>
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
-          Pilih sapaan yang sesuai dengan waktu dan situasi. おはようございます
-          umum digunakan pada pagi hari dengan sopan, sedangkan こんにちは
-          digunakan sebagai sapaan pada siang hari.
+          Sapaan Jepang berubah mengikuti waktu saat bertemu. Pada pagi hari,
+          gunakan おはようございます dalam situasi sopan dan おはよう kepada
+          teman dekat. Pada siang hari gunakan こんにちは, sedangkan pada malam
+          hari saat bertemu gunakan こんばんは.
         </p>
         <IrodoriConversation
-          title="Scene A · Pagi hari"
+          title="Scene A · Pagi hari (sopan)"
           speakers={speakers}
           utterances={morningGreetings}
         />
         <IrodoriConversation
-          title="Scene B · Bertemu pada siang hari"
+          title="Scene B · Pagi hari (akrab)"
+          speakers={speakers}
+          utterances={casualMorningGreetings}
+        />
+        <IrodoriConversation
+          title="Scene C · Bertemu pada siang hari"
           speakers={speakers}
           utterances={daytimeGreetings}
         />
+        <IrodoriConversation
+          title="Scene D · Bertemu pada malam hari"
+          speakers={speakers}
+          utterances={eveningGreetings}
+        />
+        <div className="grid gap-2 sm:grid-cols-3">
+          <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
+            <p className="text-[9px] font-bold text-[#B8860B]">PAGI</p>
+            <p className="mt-1 font-mincho text-lg text-[#EAE6DD]">おはよう</p>
+            <p className="text-[10px] text-[#A3A099]">おはようございます lebih sopan.</p>
+          </div>
+          <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
+            <p className="text-[9px] font-bold text-[#B8860B]">SIANG</p>
+            <p className="mt-1 font-mincho text-lg text-[#EAE6DD]">こんにちは</p>
+            <p className="text-[10px] text-[#A3A099]">Sapaan umum pada siang hari.</p>
+          </div>
+          <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
+            <p className="text-[9px] font-bold text-[#B8860B]">MALAM</p>
+            <p className="mt-1 font-mincho text-lg text-[#EAE6DD]">こんばんは</p>
+            <p className="text-[10px] text-[#A3A099]">Sapaan saat bertemu pada malam hari.</p>
+          </div>
+        </div>
       </section>
 
       <section className="space-y-4">
@@ -365,10 +504,28 @@ export default function IrodoriStarterLessonOnePage() {
           お<ruby>疲<rt>つか</rt></ruby>れさまでした.
         </p>
         <IrodoriConversation
-          title="Scene · Selesai bekerja"
+          title="Scene A · Pulang lebih dahulu dari tempat kerja"
           speakers={speakers}
           utterances={leavingConversation}
         />
+        <IrodoriConversation
+          title="Scene B · Berpisah dengan teman"
+          speakers={speakers}
+          utterances={friendFarewellConversation}
+        />
+        <IrodoriConversation
+          title="Scene C · Sebelum tidur"
+          speakers={speakers}
+          utterances={nightFarewellConversation}
+        />
+        <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
+          <p className="text-xs font-bold text-[#E7D2A1]">Ingat perbedaannya</p>
+          <p className="mt-2 text-xs leading-6 text-[#A9A398]">
+            じゃあ、また dan またね cocok untuk perpisahan santai. お先に失礼します
+            digunakan saat meninggalkan tempat kerja lebih dahulu. おやすみなさい
+            diucapkan sebelum tidur, bukan sebagai sapaan ketika baru bertemu.
+          </p>
+        </div>
       </section>
 
       <section className="space-y-4">
@@ -386,19 +543,30 @@ export default function IrodoriStarterLessonOnePage() {
           </div>
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
-          Gunakan ありがとうございます untuk berterima kasih dengan sopan.
-          すみません dapat digunakan untuk meminta maaf. Dengarkan konteks
-          percakapannya, bukan hanya menghafal terjemahan.
+          ありがとうございます adalah ucapan terima kasih yang sopan.
+          すみません dapat menyampaikan permintaan maaf, menarik perhatian,
+          atau rasa terima kasih saat menerima bantuan. ごめんね lebih akrab
+          dan digunakan kepada orang yang dekat.
         </p>
         <IrodoriConversation
-          title="Scene A · Menerima bantuan"
+          title="Scene A · Menerima sesuatu"
           speakers={speakers}
           utterances={thanksConversation}
         />
         <IrodoriConversation
-          title="Scene B · Meminta maaf"
+          title="Scene B · Menerima bantuan dengan sopan"
+          speakers={speakers}
+          utterances={thanksWithSumimasenConversation}
+        />
+        <IrodoriConversation
+          title="Scene C · Meminta maaf dengan sopan"
           speakers={speakers}
           utterances={apologyConversation}
+        />
+        <IrodoriConversation
+          title="Scene D · Meminta maaf kepada teman"
+          speakers={speakers}
+          utterances={casualApologyConversation}
         />
       </section>
 
@@ -596,8 +764,9 @@ export default function IrodoriStarterLessonOnePage() {
               Tidak semua pamit adalah さようなら
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Untuk berpisah sebentar, またね atau また<ruby>明日<rt>あした</rt></ruby> sering lebih sesuai.
+              Untuk teman, じゃあ、また atau またね terdengar santai.
               Di tempat kerja, gunakan ungkapan pamit dan balasan yang sesuai.
+              おやすみなさい khusus untuk mengucapkan selamat tidur.
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
