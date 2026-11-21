@@ -39,7 +39,7 @@ const familyConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>父と母です。</>,
+    japanese: <><ruby>父<rt>ちち</rt></ruby>と<ruby>母<rt>はは</rt></ruby>です。</>,
     romaji: "Chichi to haha desu.",
     translation: "Ayah dan ibu saya.",
     audioFileName: "irodori-starter-04-a01-l03.mp3",
@@ -53,7 +53,7 @@ const familyConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>妹です。父と母と妹です。</>,
+    japanese: <><ruby>妹<rt>いもうと</rt></ruby>です。<ruby>父<rt>ちち</rt></ruby>と<ruby>母<rt>はは</rt></ruby>と<ruby>妹<rt>いもうと</rt></ruby>です。</>,
     romaji: "Imouto desu. Chichi to haha to imouto desu.",
     translation: "Adik perempuan saya. Ini ayah, ibu, dan adik perempuan saya.",
     audioFileName: "irodori-starter-04-a01-l05.mp3",
@@ -91,7 +91,7 @@ const ageResidenceConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "kenji",
-    japanese: <>名古屋に<ruby>住<rt>す</rt></ruby>んでいます。</>,
+    japanese: <><ruby>名古屋<rt>なごや</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Nagoya ni sunde imasu.",
     translation: "Saya tinggal di Nagoya.",
     audioFileName: "irodori-starter-04-a02-l04.mp3",
@@ -105,7 +105,7 @@ const ageResidenceConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "kenji",
-    japanese: <>家族は、インドネシアに<ruby>住<rt>す</rt></ruby>んでいます。</>,
+    japanese: <><ruby>家族<rt>かぞく</rt></ruby>は、インドネシアに<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Kazoku wa, Indonesia ni sunde imasu.",
     translation: "Keluarga saya tinggal di Indonesia.",
     audioFileName: "irodori-starter-04-a02-l06.mp3",
@@ -136,7 +136,7 @@ const photoConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>姉の子どもです。</>,
+    japanese: <><ruby>姉<rt>あね</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもです。</>,
     romaji: "Ane no kodomo desu.",
     translation: "Ini anak kakak perempuan saya.",
     audioFileName: "irodori-starter-04-a03-l04.mp3",
@@ -218,7 +218,7 @@ const quizQuestions: {
   },
   {
     prompt: "Seorang tokoh fiktif berusia 20 tahun. Bagaimana menyebut usianya?",
-    options: ["二十歳（はたち）", "二十歳（にじゅうさい）", "二十日（はつか）"],
+    options: ["二十歳（はたち）", "二十歳（にじゅっさい）", "二十日（はつか）"],
     answer: "二十歳（はたち）",
     explanation: "Usia 20 tahun memiliki bacaan khusus, yaitu はたち (hatachi).",
   },
@@ -226,19 +226,19 @@ const quizQuestions: {
     prompt: "Kamu ingin bertanya tempat tinggal seseorang. Kalimat mana yang tepat?",
     options: ["どこに住んでいますか？", "何歳ですか？", "これ、だれですか？"],
     answer: "どこに住んでいますか？",
-    explanation: "どこに住んでいますか？ berarti “Kamu tinggal di mana?”",
+    explanation: "Pilih pertanyaan yang menanyakan lokasi tempat tinggal.",
   },
   {
     prompt: "Kamu menjawab bahwa kamu tinggal di Nagoya. Pilih kalimat yang benar.",
     options: ["名古屋に住んでいます", "名古屋の住んでいます", "名古屋と住んでいます"],
     answer: "名古屋に住んでいます",
-    explanation: "Gunakan partikel に setelah nama tempat: 名古屋に住んでいます.",
+    explanation: "Gunakan partikel に setelah nama tempat untuk menyebut lokasi tinggal.",
   },
   {
     prompt: "Dalam sebuah foto, kamu ingin menyebut bahwa orang itu adalah ibumu. Pola mana yang tepat?",
     options: ["私の母です", "母と私ですか", "母に住んでいます"],
     answer: "私の母です",
-    explanation: "の menghubungkan kata benda untuk menunjukkan hubungan, seperti 私の母 (ibu saya).",
+    explanation: "の menghubungkan dua kata benda untuk menunjukkan hubungan atau kepemilikan.",
   },
   {
     prompt: "Ungkapan mana yang cocok untuk memperkenalkan hewan peliharaan bernama John?",
@@ -247,10 +247,10 @@ const quizQuestions: {
     explanation: "ペットのジョン berarti hewan peliharaan bernama John.",
   },
   {
-    prompt: "Sebuah unggahan menampilkan teman-teman di tepi pantai dengan tulisan “友だちと海！” Apa topik unggahan itu?",
+    prompt: "Sebuah unggahan menampilkan sekelompok teman di tepi pantai. Apa topik utama unggahan itu?",
     options: ["Teman-teman di pantai", "Ulang tahun keluarga", "Foto hewan peliharaan"],
     answer: "Teman-teman di pantai",
-    explanation: "海 berarti laut. Tulisan dan foto bersama-sama membantu memahami topik unggahan.",
+    explanation: "Gunakan petunjuk gambar dan kalimat pendek untuk menemukan topik utama.",
   },
 ];
 
@@ -429,7 +429,7 @@ export default function IrodoriStarterLessonFourPage() {
             { jp: <ruby>夫<rt>おっと</rt></ruby>, reading: "otto", meaning: "Suami" },
             { jp: <ruby>妻<rt>つま</rt></ruby>, reading: "tsuma", meaning: "Istri" },
             { jp: <ruby>子ども<rt>こども</rt></ruby>, reading: "kodomo", meaning: "Anak" },
-          ].map((item, index) => (
+          ].map((item) => (
             <article
               key={item.reading}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"
