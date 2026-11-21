@@ -8,7 +8,7 @@ const courses = [
     title: "Starter",
     level: "A1",
     description: "Mulai dari ungkapan sederhana, perkenalan, dan kebutuhan sehari-hari.",
-    status: "Tahap pertama",
+    status: "Mulai belajar",
     statusTone: "border-[#D6AD4F]/35 bg-[#D6AD4F]/10 text-[#E5C77D]",
     accent: "from-[#9A6F20]/25",
   },
@@ -116,53 +116,65 @@ export default function IrodoriPage() {
         </div>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {courses.map((course) => (
-            <article
-              key={course.id}
-              className={`relative isolate overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10`}
-            >
-              <div className="pointer-events-none absolute -right-5 -top-8 select-none font-mincho text-[112px] font-bold leading-none text-white/[0.035]">
-                {course.number}
-              </div>
-
-              <div className="relative z-10 flex min-h-[176px] flex-col">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-                    IRODORI • {course.number}
-                  </span>
-                  <span className="rounded-lg border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-2.5 py-1 text-xs font-black text-[#E7D2A1]">
-                    {course.level}
-                  </span>
+          {courses.map((course) => {
+            const card = (
+              <div className={`relative isolate h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10 transition-all ${course.id === "starter" ? "group-hover:-translate-y-0.5 group-hover:border-[#D6AD4F]/60" : "opacity-75"}`}>
+                <div className="pointer-events-none absolute -right-5 -top-8 select-none font-mincho text-[112px] font-bold leading-none text-white/[0.035]">
+                  {course.number}
                 </div>
 
-                <h3 className="mt-5 text-xl font-black text-[#F1EBDD]">
-                  {course.title}
-                </h3>
-                <p className="mt-2 max-w-sm text-xs leading-6 text-[#AAA49A]">
-                  {course.description}
-                </p>
+                <div className="relative z-10 flex min-h-[176px] flex-col">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+                      IRODORI • {course.number}
+                    </span>
+                    <span className="rounded-lg border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-2.5 py-1 text-xs font-black text-[#E7D2A1]">
+                      {course.level}
+                    </span>
+                  </div>
 
-                <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
-                  <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#A3A099]">
-                    <BookOpen size={13} />
-                    18 pelajaran
-                  </span>
-                  <span className={`rounded-full border px-2.5 py-1 text-[9px] font-bold ${course.statusTone}`}>
-                    {course.status}
-                  </span>
+                  <h3 className="mt-5 text-xl font-black text-[#F1EBDD]">
+                    {course.title}
+                  </h3>
+                  <p className="mt-2 max-w-sm text-xs leading-6 text-[#AAA49A]">
+                    {course.description}
+                  </p>
+
+                  <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#A3A099]">
+                      <BookOpen size={13} />
+                      18 pelajaran
+                    </span>
+                    <span className={`rounded-full border px-2.5 py-1 text-[9px] font-bold ${course.statusTone}`}>
+                      {course.status}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </article>
-          ))}
+            );
+
+            return course.id === "starter" ? (
+              <Link
+                key={course.id}
+                href="/irodori/starter"
+                aria-label="Buka Irodori Starter A1"
+                className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D6AD4F]"
+              >
+                {card}
+              </Link>
+            ) : (
+              <div key={course.id}>{card}</div>
+            );
+          })}
         </div>
       </section>
 
       <div className="rounded-2xl border border-[#B8860B]/20 bg-[#1B1917]/80 p-4 md:p-5">
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
-          adalah pemilih jalur. Materi Fude akan disusun bertahap dengan
-          penjelasan, dialog, dan latihan orisinal; kartu level belum membuka
-          pelajaran sampai materinya siap.
+          adalah pemilih jalur. Starter A1 sudah memiliki satu pelajaran contoh
+          yang bisa dibuka. Level lainnya dan pelajaran berikutnya akan aktif
+          setelah materi, dialog, dan latihan orisinalnya siap.
         </p>
       </div>
     </main>
