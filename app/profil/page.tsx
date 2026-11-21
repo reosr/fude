@@ -34,6 +34,7 @@ import {
   deleteProfilePhoto,
   PROFILE_PHOTO_UPDATED_EVENT,
 } from "../../lib/profile-photo";
+import BindFudeAccount from "@/components/BindFudeAccount";
 
 const PROFILE_DESCRIPTION = "Pelajar bahasa Jepang di Fude";
 
