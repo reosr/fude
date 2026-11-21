@@ -832,7 +832,7 @@ export default function IrodoriStarterLessonFivePage() {
             </div>
             <div className="p-4">
               <p className="font-mincho text-base leading-8 text-[#F1EBDD]">
-                <ruby>今日<rt>きょう</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>ご飯 ✨
+                <ruby>今日<rt>きょう</rt></ruby>の<ruby>朝ご飯<rt>あさごはん</rt></ruby> ✨
                 <br />
                 パンと<ruby>卵<rt>たまご</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。
                 <br />
@@ -863,7 +863,10 @@ export default function IrodoriStarterLessonFivePage() {
           <textarea
             id="irodori-breakfast-caption"
             value={postCaption}
-            onChange={(event) => {\n              setPostCaption(event.target.value);\n              setPreviewCaption("");\n            }}
+            onChange={(event) => {
+              setPostCaption(event.target.value);
+              setPreviewCaption("");
+            }}
             rows={3}
             maxLength={160}
             placeholder="Contoh: ぱんとたまごをたべます。みずをのみます。"
