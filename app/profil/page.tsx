@@ -404,6 +404,7 @@ export default function Profil() {
         </p>
       </section>
 
+
       {isEditing && (
         <div
           className="fixed inset-0 z-[220] flex items-center justify-center bg-[#08090D]/60 p-3 backdrop-blur-md sm:p-4"
