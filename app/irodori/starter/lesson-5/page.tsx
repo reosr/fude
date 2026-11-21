@@ -290,7 +290,7 @@ const quizQuestions: {
     options: [
       { key: "a", label: <>いえ、けっこうです。</> },
       { key: "b", label: <>はい、<ruby>お願い<rt>おねが</rt></ruby>。</> },
-      { key: "c", label: <>何ですか？</> },
+      { key: "c", label: <>なんですか？</> },
     ],
     answer: "b",
     explanation: <>はい、<ruby>お願い<rt>おねが</rt></ruby> berarti “Ya, boleh/terima kasih”.</>,
@@ -326,7 +326,7 @@ const quizQuestions: {
     explanation: <>よく berarti sering. Kata ini diletakkan sebelum kata kerja.</>,
   },
   {
-    prompt: <>「<ruby>朝<rt>あさ</rt></ruby>ご飯は、あまり<ruby>食<rt>た</rt></ruby>べません」 memiliki arti…</>,
+    prompt: <>「<ruby>朝ご飯<rt>あさごはん</rt></ruby>は、あまり<ruby>食<rt>た</rt></ruby>べません」 memiliki arti…</>,
     options: [
       { key: "a", label: "Saya selalu sarapan." },
       { key: "b", label: "Saya tidak terlalu sering makan sarapan." },
@@ -507,9 +507,9 @@ export default function IrodoriStarterLessonFivePage() {
           </div>
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
-          Gunakan <span className="font-semibold text-[#E7D2A1]">好きです</span>{" "}
+          Gunakan <span className="font-semibold text-[#E7D2A1]"><ruby>好<rt>す</rt></ruby>きです</span>{" "}
           untuk mengatakan suka, dan{" "}
-          <span className="font-semibold text-[#E7D2A1]">好きじゃないです</span>{" "}
+          <span className="font-semibold text-[#E7D2A1]"><ruby>好<rt>す</rt></ruby>きじゃないです</span>{" "}
           untuk mengatakan tidak suka. Saat menanggapi pertanyaan, jawaban
           singkat seperti はい、<ruby>好き<rt>す</rt></ruby> juga terdengar alami.
         </p>
