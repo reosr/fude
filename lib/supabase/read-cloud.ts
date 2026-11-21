@@ -79,6 +79,7 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
     profile:
       profileResult.data?.profile as Record<string, unknown> | null,
 
+        
     progress: progressResult.data,
 
     jlptResults: jlptResult.data ?? [],
