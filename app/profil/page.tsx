@@ -2,6 +2,7 @@
 
 import GoogleAuthButton from "@/components/GoogleAuthButton";
 import { useEffect, useRef, useState } from "react";
+import ProfilePhotoCropper from "@/components/ProfilePhotoCropper";
 import type { ChangeEvent } from "react";
 import {
   Camera,
