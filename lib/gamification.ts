@@ -1219,22 +1219,22 @@ export function getFudeProfile(): FudeProfile {
           : null,
 
       photoPositionX:
-  typeof parsed.photoPositionX === "number" &&
-  Number.isFinite(parsed.photoPositionX)
-    ? Math.min(100, Math.max(0, parsed.photoPositionX))
-    : DEFAULT_PROFILE.photoPositionX,
+        typeof parsed.photoPositionX === "number" &&
+        Number.isFinite(parsed.photoPositionX)
+          ? Math.min(100, Math.max(0, parsed.photoPositionX))
+          : DEFAULT_PROFILE.photoPositionX,
 
-photoPositionY:
-  typeof parsed.photoPositionY === "number" &&
-  Number.isFinite(parsed.photoPositionY)
-    ? Math.min(100, Math.max(0, parsed.photoPositionY))
-    : DEFAULT_PROFILE.photoPositionY,
+      photoPositionY:
+        typeof parsed.photoPositionY === "number" &&
+        Number.isFinite(parsed.photoPositionY)
+          ? Math.min(100, Math.max(0, parsed.photoPositionY))
+          : DEFAULT_PROFILE.photoPositionY,
 
-photoZoom:
-  typeof parsed.photoZoom === "number" &&
-  Number.isFinite(parsed.photoZoom)
-    ? Math.min(3, Math.max(1, parsed.photoZoom))
-    : DEFAULT_PROFILE.photoZoom,
+      photoZoom:
+        typeof parsed.photoZoom === "number" &&
+        Number.isFinite(parsed.photoZoom)
+          ? Math.min(3, Math.max(1, parsed.photoZoom))
+          : DEFAULT_PROFILE.photoZoom,
 
       equippedFrameId:
         typeof parsed.equippedFrameId === "string"
