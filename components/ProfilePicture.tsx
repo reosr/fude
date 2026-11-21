@@ -32,7 +32,8 @@ export default function ProfilePicture({
     height: 0,
   });
 
-  const layout = imageSize.width && photoSrc
+  const layout =
+  photoSrc && imageSize.src === photoSrc && imageSize.width > 0
     ? getProfilePhotoLayout(
         imageSize.width,
         imageSize.height,
