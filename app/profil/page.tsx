@@ -327,6 +327,7 @@ export default function Profil() {
 
       <GoogleAuthButton />
       <CloudSyncPreview />
+      <CloudSyncPreview />
 
       <section>
         <div className="flex items-center gap-2 mb-4">
