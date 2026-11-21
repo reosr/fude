@@ -307,6 +307,9 @@ export default function Profil() {
               className="rounded-full cursor-zoom-in disabled:cursor-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B8860B]"
             >
               <ProfilePicture
+                photoPositionX={profile.photoPositionX}
+photoPositionY={profile.photoPositionY}
+photoZoom={profile.photoZoom}
                 photoSrc={photoSrc}
                 size={116}
                 className="border-2 border-[#B8860B]/50"
