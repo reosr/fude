@@ -12,7 +12,6 @@ import {
   RefreshCw,
   ShoppingBag,
   ShoppingCart,
-  Store,
 } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
@@ -128,7 +127,7 @@ const quantityConversation: IrodoriUtterance[] = [
 const checkoutConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
-    japanese: <>こちら、温めますか？</>,
+    japanese: <>こちら、<ruby>温<rt>あたた</rt></ruby>めますか？</>,
     romaji: "Kochira, atatamemasu ka?",
     translation: "Apakah ini ingin dihangatkan?",
     audioFileName: "irodori-starter-16-a04-l01.mp3",
@@ -156,7 +155,7 @@ const checkoutConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>袋は、どうしますか？</>,
+    japanese: <><ruby>袋<rt>ふくろ</rt></ruby>は、どうしますか？</>,
     romaji: "Fukuro wa, dou shimasu ka?",
     translation: "Bagaimana dengan kantong belanja?",
     audioFileName: "irodori-starter-16-a04-l05.mp3",
@@ -173,7 +172,7 @@ const checkoutConversation: IrodoriUtterance[] = [
 const discountConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
-    japanese: <>このシャツ、安くなっていますね。</>,
+    japanese: <>このシャツ、<ruby>安<rt>やす</rt></ruby>くなっていますね。</>,
     romaji: "Kono shatsu, yasuku natte imasu ne.",
     translation: "Kemeja ini sedang didiskon, ya.",
     audioFileName: "irodori-starter-16-a05-l01.mp3",
@@ -669,14 +668,14 @@ export default function IrodoriStarterLessonSixteenPage() {
         </div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
           {[
-            ["～％引き", "potongan sekian persen"],
-            ["～円引き", "potongan sekian yen"],
-            ["半額", "setengah harga"],
-            ["値下げ", "harga diturunkan"],
-            ["税込", "sudah termasuk pajak"],
-            ["均一", "harga seragam"],
-          ].map(([jp, meaning]) => (
-            <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#27231D] p-3"><p className="font-mincho text-base text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p></article>
+            ["～％引き", "パーセントびき", "potongan sekian persen"],
+            ["～円引き", "えんびき", "potongan sekian yen"],
+            ["半額", "はんがく", "setengah harga"],
+            ["値下げ", "ねさげ", "harga diturunkan"],
+            ["税込", "ぜいこみ", "sudah termasuk pajak"],
+            ["均一", "きんいつ", "harga seragam"],
+          ].map(([jp, reading, meaning]) => (
+            <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#27231D] p-3"><p className="font-mincho text-base text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#D9B66D]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p></article>
           ))}
         </div>
       </section>
