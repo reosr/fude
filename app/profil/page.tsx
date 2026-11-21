@@ -183,10 +183,18 @@ export default function Profil() {
   const progressPercent = Math.round((completedBab / 50) * 100);
 
   const openEditor = () => {
-    setDraftName(profile.name);
-    setSaveError("");
-    setIsEditing(true);
-  };
+  setDraftName(profile.name);
+
+  setDraftPhotoSettings({
+    photoPositionX: profile.photoPositionX ?? 50,
+    photoPositionY: profile.photoPositionY ?? 50,
+    photoZoom: profile.photoZoom ?? 1,
+  });
+
+  setPhotoEditorFile(null);
+  setSaveError("");
+  setIsEditing(true);
+};
 
   const saveProfile = () => {
     const cleanName = draftName.trim().slice(0, 24);
