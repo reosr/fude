@@ -574,7 +574,7 @@ export default function IrodoriStarterLessonFivePage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Untuk menanyakan makanan Jepang yang disukai, gunakan
-          「<ruby>日本<rt>にほん</rt></ruby>の<ruby>食べ物<rt>たべもの</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>好き<rt>す</rt></ruby>か？」. Bila ada makanan yang kurang
+          「<ruby>日本<rt>にほん</rt></ruby>の<ruby>食べ物<rt>たべもの</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？」. Bila ada makanan yang kurang
           cocok, 「Nは、ちょっと…」 menjadi cara yang lebih halus daripada
           mengatakan tidak suka secara langsung.
         </p>
@@ -841,7 +841,7 @@ export default function IrodoriStarterLessonFivePage() {
                 おいしいです！
               </p>
               <p className="mt-3 text-[10px] text-[#B8860B]">
-                #<ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby> #フルーツ
+                #<ruby>朝ご飯<rt>あさごはん</rt></ruby> #フルーツ
               </p>
             </div>
           </article>
@@ -987,7 +987,7 @@ export default function IrodoriStarterLessonFivePage() {
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Ubah akhiran ます menjadi ません untuk membuat bentuk negatif
-              yang sopan. <ruby>食<rt>た</rt></ruby> memiliki arti serupa dan sering terdengar
+              yang sopan. <ruby>食<rt>た</rt></ruby>べないです memiliki arti serupa dan sering terdengar
               dalam percakapan.
             </p>
           </article>
