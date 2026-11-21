@@ -222,20 +222,20 @@ export default function Profil() {
   setPhotoError("");
   setPhotoLoading(true);
 
-  try {
-    await saveProfilePhoto(blob);
-    await refreshPhoto();
-    setCropFile(null);
-  } catch (error) {
-    setPhotoError(
-      error instanceof Error
-        ? error.message
-        : "Gagal menyimpan foto."
-    );
-  } finally {
-    setPhotoLoading(false);
-  }
-};
+    try {
+      await saveProfilePhoto(blob);
+      await refreshPhoto();
+      setCropFile(null);
+    } catch (error) {
+      setPhotoError(
+        error instanceof Error
+          ? error.message
+          : "Gagal menyimpan foto."
+      );
+    } finally {
+      setPhotoLoading(false);
+    }
+  };
 
   const handleDeletePhoto = async () => {
     try {
