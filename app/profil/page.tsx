@@ -37,7 +37,6 @@ import {
   PROFILE_PHOTO_UPDATED_EVENT,
 } from "../../lib/profile-photo";
 
-const AVATARS = ["筆", "🎌", "🌸", "🗻", "🦊", "🐈"];
 const PROFILE_DESCRIPTION = "Pelajar bahasa Jepang di Fude";
 
 function getCompletedJlptSetCount(): number {
