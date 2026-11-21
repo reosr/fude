@@ -2,8 +2,7 @@ import { createClient } from "./client";
 import type { MergedFudeData } from "./merge";
 
 export async function writeCloudFudeData(
-  data: MergedFudeData,
-  expectedUserId: string
+  data: MergedFudeData
 ): Promise<void> {
   const supabase = createClient();
 
@@ -19,7 +18,6 @@ export async function writeCloudFudeData(
   if (!user) {
     throw new Error("Belum login ke akun Fude.");
   }
-  
 
   const now = new Date().toISOString();
 
