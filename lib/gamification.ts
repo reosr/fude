@@ -169,6 +169,71 @@ function readXpEvents(): FudeXpEvent[] {
   }
 }
 
+export function getFudeXpSyncState(): {
+  base: number;
+  events: FudeXpEvent[];
+} {
+  if (typeof window === "undefined") {
+    return { base: 0, events: [] };
+  }
+
+  initializeXp();
+
+  const totalXp = getFudeXp();
+  const events = readXpEvents();
+
+  try {
+    const rawBase = localStorage.getItem(XP_BASE_KEY);
+
+    if (rawBase === null || !/^\d+$/.test(rawBase)) {
+      const hasEventStorage =
+        localStorage.getItem(XP_EVENTS_KEY) !== null;
+
+      const eventTotal = events.reduce(
+        (sum, event) => sum + event.amount,
+        0
+      );
+
+      const base = hasEventStorage
+        ? Math.max(0, totalXp - eventTotal)
+        : totalXp;
+
+      localStorage.setItem(XP_BASE_KEY, String(base));
+
+      if (!hasEventStorage) {
+        localStorage.setItem(XP_EVENTS_KEY, "[]");
+      }
+
+      return { base, events };
+    }
+
+    let base = Number(rawBase);
+
+    if (!Number.isSafeInteger(base)) {
+      throw new Error("Saldo dasar EXP tidak valid.");
+    }
+
+    const eventTotal = events.reduce(
+      (sum, event) => sum + event.amount,
+      0
+    );
+
+    const trackedTotal = base + eventTotal;
+
+    if (totalXp > trackedTotal) {
+      base += totalXp - trackedTotal;
+      localStorage.setItem(XP_BASE_KEY, String(base));
+    } else if (totalXp < trackedTotal) {
+      localStorage.setItem(XP_KEY, String(trackedTotal));
+    }
+
+    return { base, events };
+  } catch (error) {
+    console.error("Gagal membaca ledger EXP:", error);
+    throw error;
+  }
+}
+
 function readRewards(): string[] {
   return readStringArray(XP_REWARDS_KEY);
 }
