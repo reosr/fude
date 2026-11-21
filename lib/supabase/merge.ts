@@ -284,11 +284,11 @@ if (localResult && cloudResult) {
 
   return {
     profile: mergeProfile(
-    local.profile,
-    cloud.profile,
-    local.stored.profile,
-    hasPending(pending, "fude_profile")
-    ),
+  local.profile,
+  cloud.profile,
+  cloud.profileUpdatedAt,
+  pending
+),
     currentBab,
     totalXp,
     xpBase,
