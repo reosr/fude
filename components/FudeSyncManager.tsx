@@ -144,6 +144,7 @@ export default function FudeSyncManager() {
       cancelScheduledSync();
 
       subscription.unsubscribe();
+      
 
       window.removeEventListener(
         FUDE_LOCAL_DATA_CHANGED_EVENT,
