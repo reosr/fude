@@ -317,19 +317,7 @@ export default function Profil() {
   if (!isLoaded) return null;
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6 pb-12">
-          {photoEditorFile && (
-      <ProfilePhotoEditor
-        file={photoEditorFile}
-        initialSettings={{
-          photoPositionX: profile.photoPositionX ?? 50,
-          photoPositionY: profile.photoPositionY ?? 50,
-          photoZoom: profile.photoZoom ?? 1,
-        }}
-        onCancel={() => setPhotoEditorFile(null)}
-        onSave={handlePhotoEditorSave}
-      />
-    )}
+    
       <section className="relative bg-[#1E1D1B] border border-[#33312E] rounded-3xl p-6 md:p-8 overflow-hidden">
         <div className="absolute top-0 right-0 w-48 h-48 bg-[#C93438]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative flex flex-col sm:flex-row items-center gap-6">
