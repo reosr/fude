@@ -8,6 +8,7 @@ export interface CloudJlptResult {
 
 export interface CloudFudeData {
   profile: Record<string, unknown> | null;
+  profileUpdatedAt: string | null;
   progress: {
     current_bab: number;
     total_xp: number | string;
