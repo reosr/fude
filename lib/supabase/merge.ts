@@ -284,11 +284,11 @@ if (localResult && cloudResult) {
 
   return {
     profile: mergeProfile(
-  local.profile,
-  cloud.profile,
-  cloud.profileUpdatedAt,
-  pending
-),
+    local.profile,
+    cloud.profile,
+    cloud.profileUpdatedAt,
+    pending
+    ),
     currentBab,
     totalXp,
     xpBase,
