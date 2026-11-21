@@ -40,7 +40,7 @@ export default function IrodoriStarterPage() {
               </p>
             </div>
             <span className="rounded-xl border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]">
-              1 dari 18 materi tersedia
+              2 dari 18 materi tersedia
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -78,8 +78,17 @@ export default function IrodoriStarterPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson === 1;
-            const isCompleted = progress.completedLessons.includes("starter-01");
+            const isAvailable = lesson <= 2;
+            const lessonId = `starter-${String(lesson).padStart(2, "0")}`;
+            const isCompleted = progress.completedLessons.includes(lessonId);
+            const lessonTitle =
+              lesson === 1
+                ? "Good morning!"
+                : "I'm sorry, I don't really understand.";
+            const lessonDescription =
+              lesson === 1
+                ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
+                : "Meminta pengulangan, membicarakan kemampuan bahasa, dan menanyakan cara mengatakan sesuatu.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
@@ -93,12 +102,10 @@ export default function IrodoriStarterPage() {
                   )}
                 </div>
                 <h3 className="mt-5 text-base font-black text-[#EAE6DD]">
-                  {isAvailable ? "Good morning!" : `Pelajaran ${lesson}`}
+                  {isAvailable ? lessonTitle : `Pelajaran ${lesson}`}
                 </h3>
                 <p className="mt-1 text-xs leading-5 text-[#A3A099]">
-                  {isAvailable
-                    ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
-                    : "Materi sedang disiapkan."}
+                  {isAvailable ? lessonDescription : "Materi sedang disiapkan."}
                 </p>
                 <div className="mt-5 flex items-center justify-between gap-2">
                   <span
@@ -122,7 +129,7 @@ export default function IrodoriStarterPage() {
             return isAvailable ? (
               <Link
                 key={lesson}
-                href="/irodori/starter/lesson-1"
+                href={`/irodori/starter/lesson-${lesson}`}
                 className="group rounded-2xl border border-[#B8860B]/35 bg-gradient-to-br from-[#382A1B] to-[#1B1A18] p-5 shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:border-[#D6AD4F]/60"
               >
                 {content}
@@ -141,7 +148,7 @@ export default function IrodoriStarterPage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Pelajaran 2–18 akan dibuka setelah materi, contoh komunikasi, latihan,
+        Pelajaran 3–18 akan dibuka setelah materi, contoh komunikasi, latihan,
         dan evaluasinya selesai disiapkan.
       </p>
     </main>
