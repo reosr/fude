@@ -51,9 +51,11 @@ export async function writeCloudFudeData(
       {
         user_id: user.id,
         current_bab: data.currentBab,
-        total_xp: data.totalXp,
-        xp_rewards: data.xpRewards,
-        memorized_kanji: data.memorizedKanji,
+total_xp: data.totalXp,
+xp_base: data.xpBase,
+xp_events: data.xpEvents,
+xp_rewards: data.xpRewards,
+memorized_kanji: data.memorizedKanji,
         updated_at: now,
       },
       { onConflict: "user_id" }
