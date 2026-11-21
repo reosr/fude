@@ -203,7 +203,7 @@ type Task = {
 
 const practiceTasks: Task[] = [
   {
-    prompt: <>Kata bahasa Jepang untuk "kereta" adalah …</>,
+    prompt: <>Kata bahasa Jepang untuk &quot;kereta&quot; adalah …</>,
     options: [
       { key: "a", label: <><ruby>電車<rt>でんしゃ</rt></ruby></> },
       { key: "b", label: "バス" },
@@ -243,7 +243,7 @@ const practiceTasks: Task[] = [
     explanation: <>Contoh: バスで<ruby>来<rt>き</rt></ruby>ます berarti datang dengan bus.</>,
   },
   {
-    prompt: <>Kalimat yang berarti "perjalanannya sekitar 30 menit" adalah …</>,
+    prompt: <>Kalimat yang berarti &quot;perjalanannya sekitar 30 menit&quot; adalah …</>,
     options: [
       { key: "a", label: <>30<ruby>分<rt>ぷん</rt></ruby>ぐらいかかります。</> },
       { key: "b", label: <>30<ruby>分<rt>ぷん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。</> },
@@ -296,7 +296,7 @@ const quizQuestions: Task[] = [
     explanation: <>「ここ」 berarti di sini. 「<ruby>次<rt>つぎ</rt></ruby>」 berarti berikutnya.</>,
   },
   {
-    prompt: <>Bagaimana mengatakan "datang dengan kereta"?</>,
+    prompt: <>Bagaimana mengatakan &quot;datang dengan kereta&quot;?</>,
     options: [
       { key: "a", label: <>電車を来ます。</> },
       { key: "b", label: <>電車で来ます。</> },
@@ -316,7 +316,7 @@ const quizQuestions: Task[] = [
     explanation: <>Ungkapan ini menanyakan durasi perjalanan.</>,
   },
   {
-    prompt: <>Pilih kalimat yang berarti "turun di Stasiun Midori".</>,
+    prompt: <>Pilih kalimat yang berarti &quot;turun di Stasiun Midori&quot;.</>,
     options: [
       { key: "a", label: <>みどり<ruby>駅<rt>えき</rt></ruby>に<ruby>降<rt>お</rt></ruby>ります。</> },
       { key: "b", label: <>みどり<ruby>駅<rt>えき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。</> },
