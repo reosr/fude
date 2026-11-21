@@ -5,10 +5,8 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import {
   ArrowLeft,
-  BookOpen,
   CheckCircle2,
   Heart,
-  MessageCircle,
   RefreshCw,
   UserRound,
 } from "lucide-react";
@@ -446,7 +444,7 @@ export default function IrodoriStarterLessonElevenPage() {
             menceritakan kegiatan saat hari libur, dan memahami profil sederhana.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["4 target Can-do", "4 dialog", "24 audio slots", "16 kosakata", "10 kuis"].map((item) => (
+            {["4 target Can-do", "4 dialog", "20 slot audio", "16 kosakata", "10 kuis"].map((item) => (
               <span
                 key={item}
                 className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]"
