@@ -201,31 +201,31 @@ export default function Profil() {
   const handlePhotoEditorSave = async (
   file: File,
   settings: ProfilePhotoSettings
-) => {
-  setPhotoLoading(true);
-  setPhotoError("");
+    ) => {
+      setPhotoLoading(true);
+      setPhotoError("");
 
-  try {
-    // Simpan file asli, tanpa crop.
-    await saveProfilePhoto(file);
+      try {
+        // Simpan file asli, tanpa crop.
+        await saveProfilePhoto(file);
 
-    // Simpan pengaturan tampilan avatar.
-    saveFudeProfile(settings);
+        // Simpan pengaturan tampilan avatar.
+        saveFudeProfile(settings);
 
-    await refreshPhoto();
-    setPhotoEditorFile(null);
-  } catch (error) {
-    setPhotoError(
-      error instanceof Error
-        ? error.message
-        : "Gagal menyimpan foto."
-    );
+        await refreshPhoto();
+        setPhotoEditorFile(null);
+      } catch (error) {
+        setPhotoError(
+          error instanceof Error
+            ? error.message
+            : "Gagal menyimpan foto."
+        );
 
-    throw error;
-  } finally {
-    setPhotoLoading(false);
-  }
-};
+        throw error;
+      } finally {
+        setPhotoLoading(false);
+      }
+    };
 
   const handlePhotoUpload = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
