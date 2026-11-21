@@ -555,14 +555,14 @@ export default function Profil() {
               value={draftName}
               onChange={(event) => setDraftName(event.target.value)}
               onKeyDown={(event) => {
-  if (
-    event.key === "Enter" &&
-    !event.nativeEvent.isComposing
-  ) {
-    event.preventDefault();
-    void saveProfile();
-  }
-}}
+                if (
+                  event.key === "Enter" &&
+                  !event.nativeEvent.isComposing
+                ) {
+                  event.preventDefault();
+                  void saveProfile();
+                }
+              }}
               maxLength={24}
               placeholder="Masukkan nama"
               className="w-full bg-[#121110] border border-[#44413D] rounded-xl px-4 py-3 text-[#EAE6DD] outline-none focus:border-[#C93438]"
