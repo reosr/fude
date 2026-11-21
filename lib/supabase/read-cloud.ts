@@ -77,8 +77,7 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
 
   return {
     profile:
-      profileResult.data?.profile as Record<string,
-      profileUpdatedAt: profileResult.data?.updated_at ?? null, unknown> | null,
+      profileResult.data?.profile as Record<string, unknown> | null,
 
     progress: progressResult.data,
 
