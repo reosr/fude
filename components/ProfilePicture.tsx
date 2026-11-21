@@ -36,13 +36,13 @@ export default function ProfilePicture({
           alt=""
           className="h-full w-full object-cover"
           style={{
-  objectPosition: "50% 50%",
-  transform: `translate(
-    ${(photoPositionX - 50) * (photoZoom - 1)}%,
-    ${(photoPositionY - 50) * (photoZoom - 1)}%
-  ) scale(${photoZoom})`,
-  transformOrigin: "center",
-}}
+            objectPosition: "50% 50%",
+            transform: `translate(
+              ${(photoPositionX - 50) * (photoZoom - 1)}%,
+              ${(photoPositionY - 50) * (photoZoom - 1)}%
+            ) scale(${photoZoom})`,
+            transformOrigin: "center",
+          }}
         />
       ) : (
         <svg
