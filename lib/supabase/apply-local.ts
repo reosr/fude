@@ -3,7 +3,7 @@ import {
   XP_KEY,
   XP_REWARDS_KEY,
   XP_BASE_KEY,
-    XP_EVENTS_KEY,
+  XP_EVENTS_KEY,
   XP_UPDATED_EVENT,
 } from "../gamification";
 
