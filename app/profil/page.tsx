@@ -5,6 +5,7 @@ import CloudSyncPreview from "@/components/CloudSyncPreview";
 import { useEffect, useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import BindFudeAccount from "@/components/BindFudeAccount";
+<CloudSyncPreview />
 import {
   Camera,
   Pencil,
