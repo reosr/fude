@@ -76,23 +76,30 @@ export default function ProfilePhotoEditor({
 }
 
   function handlePointerMove(event: PointerEvent<HTMLDivElement>) {
-    const drag = dragRef.current;
+  const drag = dragRef.current;
 
-    if (!drag || drag.id !== event.pointerId) return;
+  if (!drag || drag.id !== event.pointerId) return;
 
-    const deltaX = event.clientX - drag.x;
-    const deltaY = event.clientY - drag.y;
+  const deltaX = event.clientX - drag.x;
+  const deltaY = event.clientY - drag.y;
 
-    const previewSize = 288;
+  const previewSize = 288;
+  const zoomRange = Math.max(drag.zoom - 1, 0.05);
 
-    setPositionX(
-      clamp(drag.startX + (deltaX / previewSize) * 100)
-    );
+  setPositionX(
+    clamp(
+      drag.startX +
+        (deltaX / previewSize) * 100 / zoomRange
+    )
+  );
 
-    setPositionY(
-      clamp(drag.startY + (deltaY / previewSize) * 100)
-    );
-  }
+  setPositionY(
+    clamp(
+      drag.startY +
+        (deltaY / previewSize) * 100 / zoomRange
+    )
+  );
+}
 
   function handlePointerUp(event: PointerEvent<HTMLDivElement>) {
     if (dragRef.current?.id === event.pointerId) {
