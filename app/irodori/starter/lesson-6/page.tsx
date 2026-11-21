@@ -292,7 +292,7 @@ const quizQuestions: {
     prompt: "Kalimat mana yang paling tepat untuk memesan minuman dengan sopan?",
     options: [
       { key: "a", label: <>コーヒー、<ruby>好<rt>す</rt></ruby>きです。</> },
-      { key: "b", label: <>コーヒー、お願いします。</> },
+      { key: "b", label: <>コーヒー、お<ruby>願<rt>ねが</rt></ruby>いします。</> },
       { key: "c", label: <>コーヒー、どこですか？</> },
     ],
     answer: "b",
@@ -352,7 +352,7 @@ const quizQuestions: {
     prompt: "Kamu ingin meminta piring kecil. Kalimat mana yang tepat?",
     options: [
       { key: "a", label: <><ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>、ありますか？</> },
-      { key: "b", label: <>取り皿、<ruby>食<rt>た</rt></ruby>べますか？</> },
+      { key: "b", label: <><ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>、<ruby>食<rt>た</rt></ruby>べますか？</> },
       { key: "c", label: <><ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>、<ruby>好<rt>す</rt></ruby>きですか？</> },
     ],
     answer: "a",
@@ -696,7 +696,7 @@ export default function IrodoriStarterLessonSixPage() {
               >
                 {menuBurgers.map((item) => (
                   <option key={item.jp} value={item.jp}>
-                    {item.jp}
+                    {item.jp === "水" ? "水（みず）" : item.jp}
                   </option>
                 ))}
               </select>
@@ -1035,7 +1035,7 @@ export default function IrodoriStarterLessonSixPage() {
               Nにします
             </p>
             <p className="mt-1 font-mincho text-base text-[#D9B66D]">
-              私は、カレーにします。
+              <ruby>私<rt>わたし</rt></ruby>は、カレーにします。
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Partikel に digunakan bersama します untuk menyatakan pilihan
