@@ -318,12 +318,12 @@ const quizQuestions: Task[] = [
   {
     prompt: <>Pilih kalimat yang berarti "turun di Stasiun Midori".</>,
     options: [
-      { key: "a", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>に<ruby>降<rt>お</rt></ruby>ります。</> },
-      { key: "b", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。</> },
-      { key: "c", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります。</> },
+      { key: "a", label: <>みどり<ruby>駅<rt>えき</rt></ruby>に<ruby>降<rt>お</rt></ruby>ります。</> },
+      { key: "b", label: <>みどり<ruby>駅<rt>えき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。</> },
+      { key: "c", label: <>みどり<ruby>駅<rt>えき</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります。</> },
     ],
     answer: "b",
-    explanation: <>Tempat turun memakai で: <ruby>緑駅<rt>みどりえき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります. Kendaraan yang ditinggalkan memakai を, misalnya <ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります.</>,
+    explanation: <>Tempat turun memakai で: みどり<ruby>駅<rt>えき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります. Kendaraan yang ditinggalkan memakai を, misalnya <ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります.</>,
   },
   {
     prompt: <>Ungkapan 「乗り換えます」 berarti …</>,
@@ -749,6 +749,7 @@ export default function IrodoriStarterLessonThirteenPage() {
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => (
                     <button key={option.key} type="button" disabled={quizSubmitted} aria-pressed={selected === option.key} onClick={() => setAnswers((current) => ({ ...current, [index]: option.key }))} className={"rounded-lg border px-3 py-2.5 text-left text-xs transition-colors " + (quizSubmitted && option.key === question.answer ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-200" : quizSubmitted && selected === option.key ? "border-red-400/50 bg-red-400/10 text-red-200" : selected === option.key ? "border-[#B8860B]/60 bg-[#B8860B]/10 text-[#F1EBDD]" : "border-white/[0.07] bg-black/15 text-[#A9A398]")}>{option.label}</button>
+                  ))}
                 </div>
                 {quizSubmitted && <p className="mt-3 text-[10px] leading-5 text-[#A9A398]"><span className={isCorrect ? "font-bold text-emerald-300" : "font-bold text-[#E7A1A1]"}>{isCorrect ? "Benar. " : "Belum tepat. "}</span>{question.explanation}</p>}
               </article>
