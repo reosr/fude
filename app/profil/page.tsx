@@ -308,8 +308,8 @@ export default function Profil() {
             >
               <ProfilePicture
                 photoPositionX={profile.photoPositionX}
-photoPositionY={profile.photoPositionY}
-photoZoom={profile.photoZoom}
+                photoPositionY={profile.photoPositionY}
+                photoZoom={profile.photoZoom}
                 photoSrc={photoSrc}
                 size={116}
                 className="border-2 border-[#B8860B]/50"
