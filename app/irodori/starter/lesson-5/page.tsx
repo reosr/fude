@@ -64,7 +64,7 @@ const favoriteFoodConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>野菜は、あまり<ruby>好<rt>す</rt></ruby>きじゃないです。</>,
+    japanese: <><ruby>野菜<rt>やさい</rt></ruby>は、あまり<ruby>好<rt>す</rt></ruby>きじゃないです。</>,
     romaji: "Yasai wa, amari suki janai desu.",
     translation: "Saya tidak terlalu suka sayuran.",
     audioFileName: "irodori-starter-05-a01-l06.mp3",
@@ -102,14 +102,14 @@ const japaneseFoodConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>納豆は、だいじょうぶですか？</>,
+    japanese: <><ruby>納豆<rt>なっとう</rt></ruby>は、だいじょうぶですか？</>,
     romaji: "Nattou wa, daijoubu desu ka?",
     translation: "Bagaimana dengan natto, kamu bisa memakannya?",
     audioFileName: "irodori-starter-05-a02-l05.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>あ、納豆は、ちょっと……。</>,
+    japanese: <>あ、<ruby>納豆<rt>なっとう</rt></ruby>は、ちょっと……。</>,
     romaji: "A, nattou wa, chotto...",
     translation: "Ah, kalau natto, agak kurang cocok untuk saya…",
     audioFileName: "irodori-starter-05-a02-l06.mp3",
@@ -119,7 +119,7 @@ const japaneseFoodConversation: IrodoriUtterance[] = [
 const drinkConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
-    japanese: <>ソウタさん、お茶、<ruby>飲<rt>の</rt></ruby>みますか？</>,
+    japanese: <>ソウタさん、お<ruby>茶<rt>ちゃ</rt></ruby>、<ruby>飲<rt>の</rt></ruby>みますか？</>,
     romaji: "Souta-san, ocha, nomimasu ka?",
     translation: "Sota, mau minum teh?",
     audioFileName: "irodori-starter-05-a03-l01.mp3",
@@ -154,7 +154,7 @@ const drinkConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>水、お願いします。</>,
+    japanese: <><ruby>水<rt>みず</rt></ruby>、お願いします。</>,
     romaji: "Mizu, onegaishimasu.",
     translation: "Air putih, tolong.",
     audioFileName: "irodori-starter-05-a03-l06.mp3",
@@ -178,42 +178,42 @@ const breakfastConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>牛乳も<ruby>飲<rt>の</rt></ruby>みますか？</>,
+    japanese: <><ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>も<ruby>飲<rt>の</rt></ruby>みますか？</>,
     romaji: "Gyuunyuu mo nomimasu ka?",
     translation: "Apakah kamu juga minum susu?",
     audioFileName: "irodori-starter-05-a04-l03.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>はい。牛乳をよく<ruby>飲<rt>の</rt></ruby>みます。</>,
+    japanese: <>はい。<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>をよく<ruby>飲<rt>の</rt></ruby>みます。</>,
     romaji: "Hai. Gyuunyuu o yoku nomimasu.",
     translation: "Ya. Saya sering minum susu.",
     audioFileName: "irodori-starter-05-a04-l04.mp3",
   },
   {
     speakerId: "akiko",
-    japanese: <>ご飯は<ruby>食<rt>た</rt></ruby>べますか？</>,
+    japanese: <><ruby>ご飯<rt>ごはん</rt></ruby>は<ruby>食<rt>た</rt></ruby>べますか？</>,
     romaji: "Gohan wa tabemasu ka?",
     translation: "Apakah kamu makan nasi?",
     audioFileName: "irodori-starter-05-a04-l05.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>ご飯は、あまり<ruby>食<rt>た</rt></ruby>べません。</>,
+    japanese: <><ruby>ご飯<rt>ごはん</rt></ruby>は、あまり<ruby>食<rt>た</rt></ruby>べません。</>,
     romaji: "Gohan wa, amari tabemasen.",
     translation: "Saya tidak terlalu sering makan nasi.",
     audioFileName: "irodori-starter-05-a04-l06.mp3",
   },
   {
     speakerId: "akiko",
-    japanese: <>そうですか。果物は？</>,
+    japanese: <>そうですか。<ruby>果物<rt>くだもの</rt></ruby>は？</>,
     romaji: "Sou desu ka. Kudamono wa?",
     translation: "Oh, begitu. Kalau buah?",
     audioFileName: "irodori-starter-05-a04-l07.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>果物は、ときどき<ruby>食<rt>た</rt></ruby>べます。</>,
+    japanese: <><ruby>果物<rt>くだもの</rt></ruby>は、ときどき<ruby>食<rt>た</rt></ruby>べます。</>,
     romaji: "Kudamono wa, tokidoki tabemasu.",
     translation: "Buah saya makan kadang-kadang.",
     audioFileName: "irodori-starter-05-a04-l08.mp3",
@@ -250,27 +250,27 @@ const ratingOptions: { value: IrodoriRating; label: string }[] = [
 ];
 
 const quizQuestions: {
-  prompt: string;
+  prompt: ReactNode;
   options: { key: string; label: ReactNode }[];
   answer: string;
   explanation: ReactNode;
 }[] = [
   {
-    prompt: "Kalimat 「魚が好きです」 memiliki arti…",
+    prompt: <>Kalimat 「<ruby>魚<rt>さかな</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです」 memiliki arti…</>,
     options: [
       { key: "a", label: "Saya suka ikan." },
       { key: "b", label: "Saya makan ikan." },
       { key: "c", label: "Saya tidak suka ikan." },
     ],
     answer: "a",
-    explanation: <>好きです berarti suka. Untuk menyatakan hal yang disukai, gunakan partikel が.</>,
+    explanation: <><ruby>好<rt>す</rt></ruby>きです berarti suka. Untuk menyatakan hal yang disukai, gunakan partikel が.</>,
   },
   {
     prompt: "Kalimat mana yang menyatakan “Saya tidak suka daging”?",
     options: [
-      { key: "a", label: <>肉が好きです。</> },
-      { key: "b", label: <>肉は好きじゃないです。</> },
-      { key: "c", label: <>肉を飲みます。</> },
+      { key: "a", label: <><ruby>肉<rt>にく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。</> },
+      { key: "b", label: <><ruby>肉<rt>にく</rt></ruby>は<ruby>好<rt>す</rt></ruby>きじゃないです。</> },
+      { key: "c", label: <><ruby>肉<rt>にく</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みます。</> },
     ],
     answer: "b",
     explanation: <><ruby>肉<rt>にく</rt></ruby>は<ruby>好<rt>す</rt></ruby>きじゃないです menyatakan tidak suka daging.</>,
@@ -278,9 +278,9 @@ const quizQuestions: {
   {
     prompt: "Saat ingin menyampaikan bahwa kamu kurang menyukai natto dengan halus, ungkapan mana yang cocok?",
     options: [
-      { key: "a", label: <>納豆は、ちょっと……。</> },
-      { key: "b", label: <>納豆を飲みます。</> },
-      { key: "c", label: <>納豆が大きいです。</> },
+      { key: "a", label: <><ruby>納豆<rt>なっとう</rt></ruby>は、ちょっと……。</> },
+      { key: "b", label: <><ruby>納豆<rt>なっとう</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みます。</> },
+      { key: "c", label: <><ruby>納豆<rt>なっとう</rt></ruby>が<ruby>大<rt>おお</rt></ruby>きいです。</> },
     ],
     answer: "a",
     explanation: <>「Nは、ちょっと…」 adalah cara halus untuk menyampaikan bahwa sesuatu kurang cocok atau tidak disukai.</>,
@@ -306,17 +306,17 @@ const quizQuestions: {
     explanation: <>いえ、けっこうです berarti “Tidak, terima kasih” saat menolak tawaran.</>,
   },
   {
-    prompt: "Lengkapi kalimat: 「水＿＿飲みます。」 Partikel yang tepat adalah…",
+    prompt: <>Lengkapi kalimat: 「<ruby>水<rt>みず</rt></ruby>＿＿<ruby>飲<rt>の</rt></ruby>みます。」 Partikel yang tepat adalah…</>,
     options: [
       { key: "a", label: "が" },
       { key: "b", label: "を" },
       { key: "c", label: "に" },
     ],
     answer: "b",
-    explanation: <>Partikel を menandai objek dari kata kerja. 水を<ruby>飲<rt>の</rt></ruby>みます berarti minum air.</>,
+    explanation: <>Partikel を menandai objek dari kata kerja. <ruby>水<rt>みず</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みます berarti minum air.</>,
   },
   {
-    prompt: "「よく食べます」 menunjukkan kebiasaan yang bagaimana?",
+    prompt: <>「よく<ruby>食<rt>た</rt></ruby>べます」 menunjukkan kebiasaan yang bagaimana?</>,
     options: [
       { key: "a", label: "Sering makan." },
       { key: "b", label: "Tidak pernah makan." },
@@ -326,17 +326,17 @@ const quizQuestions: {
     explanation: <>よく berarti sering. Kata ini diletakkan sebelum kata kerja.</>,
   },
   {
-    prompt: "「朝ご飯は、あまり食べません」 memiliki arti…",
+    prompt: <>「<ruby>朝<rt>あさ</rt></ruby>ご飯は、あまり<ruby>食<rt>た</rt></ruby>べません」 memiliki arti…</>,
     options: [
       { key: "a", label: "Saya selalu sarapan." },
       { key: "b", label: "Saya tidak terlalu sering makan sarapan." },
       { key: "c", label: "Saya suka sarapan." },
     ],
     answer: "b",
-    explanation: <>あまり biasanya dipakai bersama bentuk negatif, seperti 食べません, untuk menyatakan “tidak terlalu sering”.</>,
+    explanation: <>あまり biasanya dipakai bersama bentuk negatif, seperti <ruby>食<rt>た</rt></ruby>べません, untuk menyatakan “tidak terlalu sering”.</>,
   },
   {
-    prompt: "Kanji 「水」 dibaca dan berarti…",
+    prompt: <>Kanji 「<ruby>水<rt>みず</rt></ruby>」 dibaca dan berarti…</>,
     options: [
       { key: "a", label: "みず — air" },
       { key: "b", label: "たべます — makan" },
@@ -346,7 +346,7 @@ const quizQuestions: {
     explanation: <><ruby>水<rt>みず</rt></ruby> dibaca mizu dan berarti air.</>,
   },
   {
-    prompt: "Kamu membaca unggahan: 「パンと卵を食べます。牛乳を飲みます。」 Apa yang dilakukan penulis?",
+    prompt: <>Kamu membaca unggahan: 「パンと<ruby>卵<rt>たまご</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みます。」 Apa yang dilakukan penulis?</>,
     options: [
       { key: "a", label: "Makan roti dan telur, lalu minum susu." },
       { key: "b", label: "Makan ikan dan minum teh." },
@@ -370,30 +370,30 @@ const japaneseFoods = [
   { jp: "うどん", reading: "udon", meaning: "Mi tebal dari tepung terigu", icon: "🍜" },
   { jp: "そば", reading: "soba", meaning: "Mi dari tepung buckwheat", icon: "🥢" },
   { jp: "すし", reading: "sushi", meaning: "Nasi berbumbu dengan aneka topping", icon: "🍣" },
-  { jp: "天ぷら", reading: "tenpura", meaning: "Bahan makanan berbalut tepung lalu digoreng", icon: "🍤" },
+  { jp: <><ruby>天<rt>てん</rt></ruby>ぷら</>, reading: "tenpura", meaning: "Bahan makanan berbalut tepung lalu digoreng", icon: "🍤" },
   { jp: "ラーメン", reading: "raamen", meaning: "Mi kuah khas Jepang", icon: "🍥" },
   { jp: "カレー", reading: "karee", meaning: "Kari ala Jepang", icon: "🍛" },
-  { jp: "納豆", reading: "nattou", meaning: "Kedelai fermentasi", icon: "🫘" },
-  { jp: "梅干し", reading: "umeboshi", meaning: "Acar ume bercita rasa asam", icon: "🍑" },
+  { jp: <ruby>納豆<rt>なっとう</rt></ruby>, reading: "nattou", meaning: "Kedelai fermentasi", icon: "🫘" },
+  { jp: <ruby>梅干し<rt>うめぼし</rt></ruby>, reading: "umeboshi", meaning: "Acar ume bercita rasa asam", icon: "🍑" },
 ];
 
 const drinks = [
-  { jp: "水", reading: "みず · mizu", meaning: "Air putih", icon: "💧" },
-  { jp: "お茶", reading: "おちゃ · ocha", meaning: "Teh", icon: "🍵" },
+  { jp: <ruby>水<rt>みず</rt></ruby>, reading: "みず · mizu", meaning: "Air putih", icon: "💧" },
+  { jp: <><ruby>お茶<rt>おちゃ</rt></ruby></>, reading: "おちゃ · ocha", meaning: "Teh", icon: "🍵" },
   { jp: "コーヒー", reading: "koohii", meaning: "Kopi", icon: "☕" },
-  { jp: "紅茶", reading: "こうちゃ · koucha", meaning: "Teh hitam", icon: "🫖" },
+  { jp: <ruby>紅茶<rt>こうちゃ</rt></ruby>, reading: "こうちゃ · koucha", meaning: "Teh hitam", icon: "🫖" },
   { jp: "ジュース", reading: "juusu", meaning: "Jus", icon: "🧃" },
 ];
 
 const breakfastFoods = [
-  { jp: "ご飯", reading: "ごはん · gohan", meaning: "Nasi", icon: "🍚" },
+  { jp: <ruby>ご飯<rt>ごはん</rt></ruby>, reading: "ごはん · gohan", meaning: "Nasi", icon: "🍚" },
   { jp: "パン", reading: "pan", meaning: "Roti", icon: "🍞" },
-  { jp: "卵", reading: "たまご · tamago", meaning: "Telur", icon: "🥚" },
+  { jp: <ruby>卵<rt>たまご</rt></ruby>, reading: "たまご · tamago", meaning: "Telur", icon: "🥚" },
   { jp: "ヨーグルト", reading: "yooguruto", meaning: "Yoghurt", icon: "🥣" },
-  { jp: "果物", reading: "くだもの · kudamono", meaning: "Buah", icon: "🍎" },
+  { jp: <ruby>果物<rt>くだもの</rt></ruby>, reading: "くだもの · kudamono", meaning: "Buah", icon: "🍎" },
   { jp: "サラダ", reading: "sarada", meaning: "Salad", icon: "🥗" },
-  { jp: "みそ汁", reading: "みそしる · misoshiru", meaning: "Sup miso", icon: "🍲" },
-  { jp: "牛乳", reading: "ぎゅうにゅう · gyuunyuu", meaning: "Susu", icon: "🥛" },
+  { jp: <>みそ<ruby>汁<rt>しる</rt></ruby></>, reading: "みそしる · misoshiru", meaning: "Sup miso", icon: "🍲" },
+  { jp: <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>, reading: "ぎゅうにゅう · gyuunyuu", meaning: "Susu", icon: "🥛" },
 ];
 
 export default function IrodoriStarterLessonFivePage() {
@@ -813,7 +813,7 @@ export default function IrodoriStarterLessonFivePage() {
                 いただきます！
               </p>
               <p className="mt-3 text-[10px] text-[#B8860B]">
-                #朝ご飯 #和食
+                #<ruby>朝ご飯<rt>あさごはん</rt></ruby> #<ruby>和食<rt>わしょく</rt></ruby>
               </p>
             </div>
           </article>
@@ -841,7 +841,7 @@ export default function IrodoriStarterLessonFivePage() {
                 おいしいです！
               </p>
               <p className="mt-3 text-[10px] text-[#B8860B]">
-                #朝ご飯 #フルーツ
+                #<ruby>朝ご飯<rt>あさごはん</rt></ruby> #フルーツ
               </p>
             </div>
           </article>
