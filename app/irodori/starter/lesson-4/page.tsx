@@ -46,7 +46,7 @@ const familyConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>こちらの人は？</>,
+    japanese: <>こちらの<ruby>人<rt>ひと</rt></ruby>は？</>,
     romaji: "Kochira no hito wa?",
     translation: "Kalau orang yang ini?",
     audioFileName: "irodori-starter-04-a01-l04.mp3",
@@ -122,7 +122,7 @@ const photoConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>私の<ruby>母<rt>はは</rt></ruby>です。</>,
+    japanese: <><ruby>私<rt>わたし</rt></ruby>の<ruby>母<rt>はは</rt></ruby>です。</>,
     romaji: "Watashi no haha desu.",
     translation: "Ini ibu saya.",
     audioFileName: "irodori-starter-04-a03-l02.mp3",
@@ -264,8 +264,8 @@ function renderJapaneseTerm(term: string) {
       return <ruby>兄<rt>あに</rt></ruby>;
     case "二十歳（はたち）":
       return <><ruby>二十歳<rt>はたち</rt></ruby></>;
-    case "二十歳（にじゅうさい）":
-      return <><ruby>二十歳<rt>にじゅうさい</rt></ruby></>;
+    case "二十歳（にじゅっさい）":
+      return <><ruby>二十歳<rt>にじゅっさい</rt></ruby></>;
     case "二十日（はつか）":
       return <><ruby>二十日<rt>はつか</rt></ruby></>;
     case "どこに住んでいますか？":
