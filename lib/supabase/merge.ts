@@ -36,6 +36,26 @@ function hasPending(
   return pending.some((item) => item.key === key);
 }
 
+function isLocalChangeNewer(
+  pending: PendingSyncChange[],
+  key: string,
+  cloudUpdatedAt: string | null
+): boolean {
+  const localChange = pending.find((item) => item.key === key);
+
+  if (!localChange) return false;
+
+  const cloudTime = Date.parse(cloudUpdatedAt ?? "");
+
+  if (!Number.isFinite(cloudTime)) {
+    throw new Error(
+      `Waktu perubahan cloud untuk ${key} tidak valid. Sinkronisasi dihentikan.`
+    );
+  }
+
+  return localChange.updatedAt > cloudTime;
+}
+
 function normalizeForCompare(value: unknown): unknown {
   if (Array.isArray(value)) {
     return value.map(normalizeForCompare);
