@@ -543,7 +543,7 @@ export default function IrodoriStarterLessonOnePage() {
               Tidak semua pamit adalah さようなら
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Untuk berpisah sebentar, またね atau また明日 sering lebih sesuai.
+              Untuk berpisah sebentar, またね atau また<ruby>明日<rt>あした</rt></ruby> sering lebih sesuai.
               Di tempat kerja, gunakan ungkapan pamit dan balasan yang sesuai.
             </p>
           </article>
