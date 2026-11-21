@@ -169,28 +169,28 @@ const quizQuestions = [
       "ありがとうございます",
     ],
     answer: "ご出身はどちらですか？",
-    explanation: "ご出身はどちらですか？ adalah cara sopan untuk menanyakan tempat asal seseorang.",
+    explanation: "Ungkapan ini digunakan untuk menanyakan tempat asal seseorang dengan sopan.",
   },
   {
     prompt: "Pada kartu nama, kolom ini digunakan untuk menulis nama lengkap:",
     term: "氏名",
     options: ["Nama lengkap", "Negara asal", "Tanggal lahir"],
     answer: "Nama lengkap",
-    explanation: "氏名 dibaca しめい (shimei) dan berarti nama lengkap.",
+    explanation: "Kolom ini meminta nama lengkap.",
   },
   {
     prompt: "Pada formulir, kolom ini menanyakan kewarganegaraan:",
     term: "国籍",
     options: ["Nama lengkap", "Kewarganegaraan", "Tempat tinggal"],
     answer: "Kewarganegaraan",
-    explanation: "国籍 dibaca こくせき (kokuseki) dan berarti kewarganegaraan.",
+    explanation: "Kolom ini meminta kewarganegaraan.",
   },
   {
     prompt: "Pada formulir, kolom ini meminta tanggal lahir:",
     term: "生年月日",
     options: ["Tanggal lahir", "Nama", "Negara asal"],
     answer: "Tanggal lahir",
-    explanation: "生年月日 dibaca せいねんがっぴ (seinengappi) dan berarti tanggal lahir.",
+    explanation: "Kolom ini meminta tanggal lahir.",
   },
 ];
 
@@ -202,6 +202,14 @@ function renderJapaneseTerm(term: string) {
       return <ruby>国籍<rt>こくせき</rt></ruby>;
     case "生年月日":
       return <ruby>生年月日<rt>せいねんがっぴ</rt></ruby>;
+    case "ご出身はどちらですか？":
+      return <>ご<ruby>出身<rt>しゅっしん</rt></ruby>はどちらですか？</>;
+    case "お名前は？":
+      return <>お<ruby>名前<rt>なまえ</rt></ruby>は？</>;
+    case "インドネシアから来ました":
+      return <>インドネシアから<ruby>来<rt>き</rt></ruby>ました</>;
+    case "インドネシア語ができます":
+      return <>インドネシア<ruby>語<rt>ご</rt></ruby>ができます</>;
     default:
       return term;
   }
@@ -437,7 +445,7 @@ export default function IrodoriStarterLessonThreePage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Setelah berkenalan, kamu dapat menanyakan nama dan tempat asal orang
-          lain. お名前は？ menanyakan nama, sedangkan ご出身はどちらですか？
+          lain. Ungkapan pertama menanyakan nama, sedangkan ungkapan kedua
           menanyakan tempat asal dengan sopan.
         </p>
         <IrodoriConversation
@@ -725,7 +733,9 @@ export default function IrodoriStarterLessonThreePage() {
                       <span className="mr-2 inline-block w-4 text-center">
                         {quizSubmitted && correct ? "✓" : selected ? "●" : "○"}
                       </span>
-                      {option}
+                      <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
+                        {renderJapaneseTerm(option)}
+                      </span>
                     </button>
                   );
                 })}
