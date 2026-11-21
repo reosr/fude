@@ -77,14 +77,14 @@ const houseTourConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>二階には<ruby>何<rt>なに</rt></ruby>がありますか？</>,
+    japanese: <><ruby>二階<rt>にかい</rt></ruby>には<ruby>何<rt>なに</rt></ruby>がありますか？</>,
     romaji: "Nikai ni nani ga arimasu ka?",
     translation: "Apa yang ada di lantai dua?",
     audioFileName: "irodori-starter-07-a01-l08.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>二階に<ruby>部屋<rt>へや</rt></ruby>が<ruby>二<rt>ふた</rt></ruby>つあります。</>,
+    japanese: <><ruby>二階<rt>にかい</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>が<ruby>二<rt>ふた</rt></ruby>つあります。</>,
     romaji: "Nikai ni heya ga futatsu arimasu.",
     translation: "Di lantai dua ada dua kamar.",
     audioFileName: "irodori-starter-07-a01-l09.mp3",
@@ -153,7 +153,7 @@ const describeHouseConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>家はどうですか？</>,
+    japanese: <><ruby>家<rt>いえ</rt></ruby>はどうですか？</>,
     romaji: "Ie wa dou desu ka?",
     translation: "Bagaimana rumahnya?",
     audioFileName: "irodori-starter-07-a03-l03.mp3",
@@ -191,28 +191,28 @@ const residenceConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>会社の<ruby>寮<rt>りょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。</>,
+    japanese: <><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>寮<rt>りょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Kaisha no ryou ni sunde imasu.",
     translation: "Saya tinggal di asrama perusahaan.",
     audioFileName: "irodori-starter-07-a04-l02.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>広いですか？</>,
+    japanese: <><ruby>広<rt>ひろ</rt></ruby>いですか？</>,
     romaji: "Hiroi desu ka?",
     translation: "Apakah luas?",
     audioFileName: "irodori-starter-07-a04-l03.mp3",
   },
   {
     speakerId: "sota",
-    japanese: <>いいえ、広くないです。でも、とても<ruby>静<rt>しず</rt></ruby>かです。</>,
+    japanese: <>いいえ、<ruby>広<rt>ひろ</rt></ruby>くないです。でも、とても<ruby>静<rt>しず</rt></ruby>かです。</>,
     romaji: "Iie, hirokunai desu. Demo, totemo shizuka desu.",
     translation: "Tidak, tidak luas. Tetapi sangat tenang.",
     audioFileName: "irodori-starter-07-a04-l04.mp3",
   },
   {
     speakerId: "kenji",
-    japanese: <>そうですか。近くに<ruby>公園<rt>こうえん</rt></ruby>がありますか？</>,
+    japanese: <>そうですか。<ruby>近<rt>ちか</rt></ruby>くに<ruby>公園<rt>こうえん</rt></ruby>がありますか？</>,
     romaji: "Sou desu ka. Chikaku ni kouen ga arimasu ka?",
     translation: "Begitu ya. Apakah ada taman di dekatnya?",
     audioFileName: "irodori-starter-07-a04-l05.mp3",
@@ -269,11 +269,11 @@ const appliances = [
 
 const houseAdjectives = [
   { jp: <><ruby>広<rt>ひろ</rt></ruby>い</>, reading: "hiroi", meaning: "Luas", opposite: "せまい", type: "I-adjective" },
-  { jp: "せまい", reading: "semai", meaning: "Sempit", opposite: "広い", type: "I-adjective" },
-  { jp: <><ruby>大<rt>おお</rt></ruby>きい</>, reading: "ookii", meaning: "Besar", opposite: "小さい", type: "I-adjective" },
-  { jp: <><ruby>小<rt>ちい</rt></ruby>さい</>, reading: "chiisai", meaning: "Kecil", opposite: "大きい", type: "I-adjective" },
-  { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: "古い", type: "I-adjective" },
-  { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: "新しい", type: "I-adjective" },
+  { jp: "せまい", reading: "semai", meaning: "Sempit", opposite: <><ruby>広<rt>ひろ</rt></ruby>い</>, type: "I-adjective" },
+  { jp: <><ruby>大<rt>おお</rt></ruby>きい</>, reading: "ookii", meaning: "Besar", opposite: <><ruby>小<rt>ちい</rt></ruby>さい</>, type: "I-adjective" },
+  { jp: <><ruby>小<rt>ちい</rt></ruby>さい</>, reading: "chiisai", meaning: "Kecil", opposite: <><ruby>大<rt>おお</rt></ruby>きい</>, type: "I-adjective" },
+  { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: <><ruby>古<rt>ふる</rt></ruby>い</>, type: "I-adjective" },
+  { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: <><ruby>新<rt>あたら</rt></ruby>しい</>, type: "I-adjective" },
   { jp: <ruby>静<rt>しず</rt></ruby>か, reading: "shizuka", meaning: "Tenang", opposite: "うるさい", type: "Na-adjective" },
   { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: "静か", type: "I-adjective" },
   { jp: "きれい", reading: "kiree", meaning: "Bersih / indah", opposite: "きたない", type: "Na-adjective" },
@@ -318,8 +318,8 @@ const quizQuestions: {
     prompt: <>Bagaimana bertanya “Apakah ada microwave?”</>,
     options: [
       { key: "a", label: <><ruby>電子<rt>でんし</rt></ruby>レンジはありますか？</> },
-      { key: "b", label: <>電子レンジは好きですか？</> },
-      { key: "c", label: <>電子レンジは新しいですか？</> },
+      { key: "b", label: <><ruby>電子<rt>でんし</rt></ruby>レンジは<ruby>好<rt>す</rt></ruby>きですか？</> },
+      { key: "c", label: <><ruby>電子<rt>でんし</rt></ruby>レンジは<ruby>新<rt>あたら</rt></ruby>しいですか？</> },
     ],
     answer: "a",
     explanation: <>「Nはありますか？」 digunakan untuk menanyakan apakah suatu benda tersedia.</>,
@@ -329,7 +329,7 @@ const quizQuestions: {
     options: [
       { key: "a", label: <>はい、あります。</> },
       { key: "b", label: <>ベッドはありません。</> },
-      { key: "c", label: <>ベッドが好きです。</> },
+      { key: "c", label: <>ベッドが<ruby>好<rt>す</rt></ruby>きです。</> },
     ],
     answer: "b",
     explanation: <>「ありません」 dan 「ないです」 dapat digunakan untuk menyatakan bahwa sesuatu tidak tersedia.</>,
@@ -342,24 +342,24 @@ const quizQuestions: {
       { key: "c", label: "Rumahnya baru." },
     ],
     answer: "b",
-    explanation: <>「静か」 adalah na-adjective. Dalam kalimat, bentuknya 「静かです」.</>,
+    explanation: <>「<ruby>静<rt>しず</rt></ruby>か」 adalah na-adjective. Dalam kalimat, bentuknya 「<ruby>静<rt>しず</rt></ruby>かです」.</>,
   },
   {
-    prompt: <>Bentuk negatif yang tepat dari 「広いです」 adalah…</>,
+    prompt: <>Bentuk negatif yang tepat dari 「<ruby>広<rt>ひろ</rt></ruby>いです」 adalah…</>,
     options: [
-      { key: "a", label: <>広くないです。</> },
-      { key: "b", label: <>広いじゃないです。</> },
-      { key: "c", label: <>広くありませんです。</> },
+      { key: "a", label: <><ruby>広<rt>ひろ</rt></ruby>くないです。</> },
+      { key: "b", label: <><ruby>広<rt>ひろ</rt></ruby>いじゃないです。</> },
+      { key: "c", label: <><ruby>広<rt>ひろ</rt></ruby>くありませんです。</> },
     ],
     answer: "a",
     explanation: <>Untuk i-adjective, ubah akhiran 「～いです」 menjadi 「～くないです」.</>,
   },
   {
-    prompt: <>Bentuk negatif dari na-adjective 「静かです」 adalah…</>,
+    prompt: <>Bentuk negatif dari na-adjective 「<ruby>静<rt>しず</rt></ruby>かです」 adalah…</>,
     options: [
-      { key: "a", label: <>静かくないです。</> },
-      { key: "b", label: <>静かじゃないです。</> },
-      { key: "c", label: <>静かありません。</> },
+      { key: "a", label: <><ruby>静<rt>しず</rt></ruby>かくないです。</> },
+      { key: "b", label: <><ruby>静<rt>しず</rt></ruby>かじゃないです。</> },
+      { key: "c", label: <><ruby>静<rt>しず</rt></ruby>かありません。</> },
     ],
     answer: "b",
     explanation: <>Untuk na-adjective, ubah 「です」 menjadi 「じゃないです」.</>,
@@ -392,7 +392,7 @@ const quizQuestions: {
       { key: "c", label: "冷房（れいぼう）" },
     ],
     answer: "c",
-    explanation: <>「冷房」 adalah mode pendingin. 「暖房」 adalah mode pemanas dan 「停止」 berarti berhenti.</>,
+    explanation: <>「<ruby>冷房<rt>れいぼう</rt></ruby>」 adalah mode pendingin. 「<ruby>暖房<rt>だんぼう</rt></ruby>」 adalah mode pemanas dan 「<ruby>停止<rt>ていし</rt></ruby>」 berarti berhenti.</>,
   },
 ];
 
@@ -523,7 +523,7 @@ export default function IrodoriStarterLessonSevenPage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Saat seseorang menunjukkan bagian rumah, kamu akan mendengar ungkapan
-          seperti 「ここは玄関です」. Gunakan 「ここは～です」 untuk menyebut
+          seperti 「ここは<ruby>玄関<rt>げんかん</rt></ruby>です」. Gunakan 「ここは～です」 untuk menyebut
           tempat yang sedang ditunjuk, dan 「～に～があります」 untuk
           menjelaskan apa yang ada di suatu tempat.
         </p>
@@ -538,7 +538,7 @@ export default function IrodoriStarterLessonSevenPage() {
               FUDE HOUSE · CONTOH FIKTIF
             </p>
             <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
-              <ruby>家<rt>いえ</rt></ruby>の<ruby>間取<rt>まど</rt></ruby>り · Denah rumah
+              <ruby>家<rt>いえ</rt></ruby>の<ruby>間取り<rt>まどり</rt></ruby> · Denah rumah
             </h3>
             <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">
               Denah sederhana untuk latihan membaca lokasi dan jumlah ruangan.
@@ -781,7 +781,7 @@ export default function IrodoriStarterLessonSevenPage() {
             <div className="rounded-lg bg-black/15 p-3">
               <p className="font-mincho text-lg text-[#F1EBDD]">でも</p>
               <p className="mt-1 text-xs text-[#A9A398]">Tetapi</p>
-              <p className="mt-2 font-mincho text-base text-[#D9B66D]">古いです。でも、広いです。</p>
+              <p className="mt-2 font-mincho text-base text-[#D9B66D]"><ruby>古<rt>ふる</rt></ruby>いです。でも、<ruby>広<rt>ひろ</rt></ruby>いです。</p>
             </div>
           </div>
         </div>
@@ -878,8 +878,8 @@ export default function IrodoriStarterLessonSevenPage() {
             </div>
             <div className="grid grid-cols-2 gap-2 p-4">
               {[
-                { jp: "入", reading: "いり / ON", meaning: "Daya nyala", detail: "Menyalakan mesin" },
-                { jp: "切", reading: "きり / OFF", meaning: "Daya mati", detail: "Mematikan mesin" },
+                { jp: "入", reading: "いり · ON", meaning: "Daya nyala", detail: "Menyalakan mesin" },
+                { jp: "切", reading: "きり · OFF", meaning: "Daya mati", detail: "Mematikan mesin" },
                 { jp: "スタート", reading: "sutaato", meaning: "Mulai", detail: "Memulai proses mencuci" },
                 { jp: "一時停止", reading: "いちじていし", meaning: "Jeda", detail: "Menghentikan sementara" },
                 { jp: "コース", reading: "koosu", meaning: "Mode", detail: "Memilih jenis cucian" },
@@ -1121,7 +1121,7 @@ export default function IrodoriStarterLessonSevenPage() {
               ナA-です ／ イA-いです
             </p>
             <p className="mt-1 font-mincho text-base text-[#D9B66D]">
-              家は<ruby>静<rt>しず</rt></ruby>かです。／ちょっとせまいです。
+              <ruby>家<rt>いえ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かです。／ちょっとせまいです。
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Na-adjective menggunakan bentuk dasar tanpa な sebelum です.
@@ -1208,7 +1208,7 @@ export default function IrodoriStarterLessonSevenPage() {
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-            <h3 className="text-xs font-bold text-[#E7D2A1]">玄関 · Genkan</h3>
+            <h3 className="text-xs font-bold text-[#E7D2A1]"><ruby>玄関<rt>げんかん</rt></ruby> · Genkan</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Area pintu masuk biasanya memiliki perbedaan tinggi antara bagian
               luar dan bagian dalam rumah. Sepatu dilepas di area ini sebelum
@@ -1216,7 +1216,7 @@ export default function IrodoriStarterLessonSevenPage() {
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-            <h3 className="text-xs font-bold text-[#E7D2A1]">和室 · Washitsu</h3>
+            <h3 className="text-xs font-bold text-[#E7D2A1]"><ruby>和室<rt>わしつ</rt></ruby> · Washitsu</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Ruang bergaya tradisional Jepang biasanya memakai tatami.
               Sebagian ruangan memiliki pintu geser dan lemari penyimpanan
@@ -1234,8 +1234,8 @@ export default function IrodoriStarterLessonSevenPage() {
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             <h3 className="text-xs font-bold text-[#E7D2A1]">Jenis hunian</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Istilah seperti アパート、マンション、寮、シェアハウス、
-              dan 一戸建て menunjukkan jenis tempat tinggal yang berbeda.
+              Istilah seperti アパート、マンション、<ruby>寮<rt>りょう</rt></ruby>、シェアハウス、
+              dan <ruby>一戸建て<rt>いっこだて</rt></ruby> menunjukkan jenis tempat tinggal yang berbeda.
               Penggunaan istilah dapat bergantung pada ukuran dan bentuk
               bangunan.
             </p>
