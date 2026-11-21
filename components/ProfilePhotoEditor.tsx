@@ -3,7 +3,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { PointerEvent } from "react";
-import { X, ZoomIn, Move, RotateCcw } from "lucide-react";
+import { ZoomIn, Move, RotateCcw, Camera } from "lucide-react";
 import { getProfilePhotoLayout } from "@/lib/profile-photo-layout";
 
 export interface ProfilePhotoSettings {
@@ -13,31 +13,33 @@ export interface ProfilePhotoSettings {
 }
 
 interface Props {
-  file: File;
+  photoSrc: string | null;
+  file: File | null;
   initialSettings: ProfilePhotoSettings;
-  onCancel: () => void;
-  onSave: (file: File, settings: ProfilePhotoSettings) => Promise<void>;
+  onSettingsChange: (settings: ProfilePhotoSettings) => void;
+  onChoosePhoto: () => void;
 }
 
 const clamp = (value: number) => Math.max(0, Math.min(100, value));
 
 export default function ProfilePhotoEditor({
+  photoSrc,
   file,
   initialSettings,
-  onCancel,
-  onSave,
+  onSettingsChange,
+  onChoosePhoto,
 }: Props) {
-  const [url, setUrl] = useState("");
-  const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
-  const [previewSize, setPreviewSize] = useState(288);
+  const [fileUrl, setFileUrl] = useState<string | null>(null);
 
-  const [positionX, setPositionX] = useState(initialSettings.photoPositionX);
-  const [positionY, setPositionY] = useState(initialSettings.photoPositionY);
-  const [zoom, setZoom] = useState(initialSettings.photoZoom);
+  const [settings, setSettings] = useState(initialSettings);
 
+  const [imageSize, setImageSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  const [previewSize, setPreviewSize] = useState(240);
   const [ready, setReady] = useState(false);
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState("");
 
   const previewRef = useRef<HTMLDivElement>(null);
 
@@ -51,47 +53,63 @@ export default function ProfilePhotoEditor({
     size: number;
   } | null>(null);
 
-  useEffect(() => {
-    const objectUrl = URL.createObjectURL(file);
+  const imageUrl = fileUrl ?? photoSrc;
 
-    setUrl(objectUrl);
+  useEffect(() => {
+    if (!file) {
+      setFileUrl(null);
+      return;
+    }
+
+    const url = URL.createObjectURL(file);
+    setFileUrl(url);
+
+    return () => URL.revokeObjectURL(url);
+  }, [file]);
+
+  useEffect(() => {
+    setSettings(initialSettings);
+  }, [
+    initialSettings.photoPositionX,
+    initialSettings.photoPositionY,
+    initialSettings.photoZoom,
+  ]);
+
+  useEffect(() => {
     setReady(false);
     setImageSize({ width: 0, height: 0 });
-    setPositionX(initialSettings.photoPositionX);
-    setPositionY(initialSettings.photoPositionY);
-    setZoom(initialSettings.photoZoom);
-    setError("");
-
-    return () => URL.revokeObjectURL(objectUrl);
-  }, [file, initialSettings]);
+  }, [imageUrl]);
 
   useEffect(() => {
     const element = previewRef.current;
     if (!element) return;
 
-    const updateSize = () => {
+    const observer = new ResizeObserver(() => {
       setPreviewSize(element.getBoundingClientRect().width);
-    };
+    });
 
-    updateSize();
-
-    const observer = new ResizeObserver(updateSize);
     observer.observe(element);
+    setPreviewSize(element.getBoundingClientRect().width);
 
     return () => observer.disconnect();
   }, []);
+
+  function updateSettings(next: ProfilePhotoSettings) {
+    setSettings(next);
+    onSettingsChange(next);
+  }
 
   const layout = imageSize.width
     ? getProfilePhotoLayout(
         imageSize.width,
         imageSize.height,
         previewSize,
-        { photoPositionX: positionX, photoPositionY: positionY, photoZoom: zoom }
+        settings
       )
     : null;
 
   function handlePointerDown(event: PointerEvent<HTMLDivElement>) {
-    if (!ready || saving) return;
+    if (!ready) return;
 
     event.currentTarget.setPointerCapture(event.pointerId);
 
@@ -99,9 +117,9 @@ export default function ProfilePhotoEditor({
       id: event.pointerId,
       x: event.clientX,
       y: event.clientY,
-      startX: positionX,
-      startY: positionY,
-      zoom,
+      startX: settings.photoPositionX,
+      startY: settings.photoPositionY,
+      zoom: settings.photoZoom,
       size: event.currentTarget.getBoundingClientRect().width,
     };
   }
@@ -111,10 +129,7 @@ export default function ProfilePhotoEditor({
 
     if (!drag || drag.id !== event.pointerId) return;
 
-    const deltaX = event.clientX - drag.x;
-    const deltaY = event.clientY - drag.y;
-
-    const imageLayout = getProfilePhotoLayout(
+    const centeredLayout = getProfilePhotoLayout(
       imageSize.width,
       imageSize.height,
       drag.size,
@@ -125,23 +140,26 @@ export default function ProfilePhotoEditor({
       }
     );
 
-    if (!imageLayout) return;
+    if (!centeredLayout) return;
 
-    const overflowX = imageLayout.width - drag.size;
-    const overflowY = imageLayout.height - drag.size;
+    const overflowX = centeredLayout.width - drag.size;
+    const overflowY = centeredLayout.height - drag.size;
 
-    // Posisi hanya berubah. Zoom tidak disentuh saat drag.
-    if (overflowX > 0) {
-      setPositionX(
-        clamp(drag.startX - (deltaX / overflowX) * 100)
-      );
-    }
-
-    if (overflowY > 0) {
-      setPositionY(
-        clamp(drag.startY - (deltaY / overflowY) * 100)
-      );
-    }
+    updateSettings({
+      ...settings,
+      photoPositionX:
+        overflowX > 0
+          ? clamp(drag.startX - (
+              (event.clientX - drag.x) / overflowX
+            ) * 100)
+          : drag.startX,
+      photoPositionY:
+        overflowY > 0
+          ? clamp(drag.startY - (
+              (event.clientY - drag.y) / overflowY
+            ) * 100)
+          : drag.startY,
+    });
   }
 
   function handlePointerUp(event: PointerEvent<HTMLDivElement>) {
@@ -151,136 +169,123 @@ export default function ProfilePhotoEditor({
   }
 
   function resetSettings() {
-    setPositionX(50);
-    setPositionY(50);
-    setZoom(1);
-  }
-
-  async function handleSave() {
-    if (!ready || saving) return;
-
-    setSaving(true);
-    setError("");
-
-    try {
-      await onSave(file, {
-        photoPositionX: positionX,
-        photoPositionY: positionY,
-        photoZoom: zoom,
-      });
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Gagal menyimpan foto."
-      );
-    } finally {
-      setSaving(false);
-    }
+    updateSettings({
+      photoPositionX: 50,
+      photoPositionY: 50,
+      photoZoom: 1,
+    });
   }
 
   return (
-    <div className="fixed inset-0 z-[260] flex items-center justify-center bg-[#121110]/60 backdrop-blur-sm p-4">
-      <section className="w-full max-w-md rounded-3xl border border-white/10 bg-[#1B1A19]/95 p-5 shadow-2xl">
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h3 className="text-lg font-bold text-[#EAE6DD]">
-              Atur Foto Profil
-            </h3>
-            <p className="text-xs text-[#A3A099] mt-1">
-              Geser foto dan atur zoom sesuai keinginan.
-            </p>
-          </div>
-
-          <button type="button" onClick={onCancel} disabled={saving}
-            className="p-2 rounded-full bg-[#33312E] text-white/70">
-            <X size={19} />
-          </button>
+    <div className="mb-6">
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h4 className="text-sm font-bold text-[#EAE6DD]">
+            Foto Profil
+          </h4>
+          <p className="text-xs text-[#A3A099] mt-1">
+            Atur posisi dan pembesaran foto.
+          </p>
         </div>
 
-        <div
-          ref={previewRef}
-          className="relative mx-auto w-full max-w-[288px] aspect-square overflow-hidden rounded-full border-2 border-[#B8860B]/60 bg-[#121110] cursor-grab active:cursor-grabbing touch-none"
-          onPointerDown={handlePointerDown}
-          onPointerMove={handlePointerMove}
-          onPointerUp={handlePointerUp}
-          onPointerCancel={handlePointerUp}
+        <button
+          type="button"
+          onClick={onChoosePhoto}
+          className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[#262523] border border-[#44413D] text-xs font-bold text-[#EAE6DD] hover:border-[#B8860B]"
         >
-          {url && (
-            <img
-              src={url}
-              alt="Preview foto profil"
-              draggable={false}
-              onLoad={(event) => {
-                setImageSize({
-                  width: event.currentTarget.naturalWidth,
-                  height: event.currentTarget.naturalHeight,
-                });
-                setReady(true);
-              }}
-              onError={() => setError("Gambar tidak dapat dibuka.")}
-              className="absolute max-w-none pointer-events-none"
-              style={layout ? {
-                width: layout.width,
-                height: layout.height,
-                left: layout.left,
-                top: layout.top,
-              } : { visibility: "hidden" }}
-            />
-          )}
-
-          {!ready && (
-            <div className="absolute inset-0 flex items-center justify-center text-sm text-white/60">
-              Memuat foto...
-            </div>
-          )}
-        </div>
-
-        <p className="flex justify-center items-center gap-2 text-xs text-[#A3A099] mt-4">
-          <Move size={14} />
-          Geser foto untuk mengatur posisi
-        </p>
-
-        <div className="mt-7">
-          <div className="flex justify-between text-xs text-[#A3A099] mb-3">
-            <span className="flex items-center gap-2">
-              <ZoomIn size={15} />
-              Zoom
-            </span>
-            <span>{Math.round(zoom * 100)}%</span>
-          </div>
-
-          <input
-            type="range"
-            min="1"
-            max="3"
-            step="0.05"
-            value={zoom}
-            disabled={!ready || saving}
-            onChange={(event) => setZoom(Number(event.target.value))}
-            className="w-full accent-[#C93438]"
-          />
-        </div>
-
-        <button type="button" onClick={resetSettings} disabled={saving}
-          className="flex items-center gap-2 text-xs text-[#A3A099] hover:text-white mt-4">
-          <RotateCcw size={13} />
-          Reset posisi
+          <Camera size={14} />
+          Ganti Foto
         </button>
+      </div>
 
-        {error && <p className="text-sm text-red-400 mt-4">{error}</p>}
+      <div
+        ref={previewRef}
+        className="relative mx-auto w-full max-w-[240px] aspect-square overflow-hidden rounded-full border-2 border-[#B8860B]/60 bg-[#121110] cursor-grab active:cursor-grabbing touch-none"
+        onPointerDown={handlePointerDown}
+        onPointerMove={handlePointerMove}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+      >
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt="Preview foto profil"
+            draggable={false}
+            onLoad={(event) => {
+              setImageSize({
+                width: event.currentTarget.naturalWidth,
+                height: event.currentTarget.naturalHeight,
+              });
+              setReady(true);
+            }}
+            className="absolute max-w-none pointer-events-none"
+            style={
+              layout
+                ? {
+                    width: layout.width,
+                    height: layout.height,
+                    left: layout.left,
+                    top: layout.top,
+                  }
+                : { visibility: "hidden" }
+            }
+          />
+        )}
 
-        <div className="flex gap-3 mt-6">
-          <button type="button" onClick={onCancel} disabled={saving}
-            className="flex-1 py-3 rounded-xl bg-[#33312E] text-[#EAE6DD] text-sm font-bold">
-            Batal
-          </button>
+        {!imageUrl && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-[#817A73] gap-2">
+            <Camera size={28} />
+            <span className="text-xs">Belum ada foto</span>
+          </div>
+        )}
 
-          <button type="button" onClick={handleSave}
-            disabled={!ready || saving}
-            className="flex-1 py-3 rounded-xl bg-[#C93438] text-white text-sm font-bold disabled:opacity-50">
-            {saving ? "Menyimpan..." : "Simpan"}
-          </button>
+        {imageUrl && !ready && (
+          <div className="absolute inset-0 flex items-center justify-center text-xs text-white/60">
+            Memuat foto...
+          </div>
+        )}
+      </div>
+
+      <p className="flex items-center justify-center gap-2 text-[11px] text-[#817A73] mt-3">
+        <Move size={13} />
+        Geser foto untuk mengatur posisi
+      </p>
+
+      <div className="mt-5">
+        <div className="flex justify-between text-xs text-[#A3A099] mb-2">
+          <span className="flex items-center gap-2">
+            <ZoomIn size={14} />
+            Zoom
+          </span>
+          <span>{Math.round(settings.photoZoom * 100)}%</span>
         </div>
-      </section>
+
+        <input
+          type="range"
+          min="1"
+          max="3"
+          step="0.05"
+          value={settings.photoZoom}
+          disabled={!ready}
+          onChange={(event) =>
+            updateSettings({
+              ...settings,
+              photoZoom: Number(event.target.value),
+            })
+          }
+          className="w-full accent-[#C93438]"
+        />
+      </div>
+
+      <button
+        type="button"
+        onClick={resetSettings}
+        disabled={!ready}
+        className="flex items-center gap-2 text-xs text-[#A3A099] hover:text-white mt-3 disabled:opacity-40"
+      >
+        <RotateCcw size={13} />
+        Reset posisi foto
+      </button>
     </div>
   );
 }
