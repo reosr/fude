@@ -19,7 +19,7 @@ export async function writeCloudFudeData(
   if (!user) {
     throw new Error("Belum login ke akun Fude.");
   }
-  
+
   if (user.id !== expectedUserId) {
     throw new Error(
         "Akun berubah selama sinkronisasi. Pengiriman data dibatalkan."
@@ -29,11 +29,15 @@ export async function writeCloudFudeData(
   const now = new Date().toISOString();
 
   const profile = {
-    name: data.profile.name,
-    avatar: data.profile.avatar,
-    equippedBadgeId: data.profile.equippedBadgeId ?? null,
-    equippedFrameId: data.profile.equippedFrameId ?? null,
-  };
+  name: data.profile.name,
+  avatar: data.profile.avatar,
+  equippedBadgeId: data.profile.equippedBadgeId ?? null,
+  equippedFrameId: data.profile.equippedFrameId ?? null,
+
+  photoPositionX: data.profile.photoPositionX ?? 50,
+  photoPositionY: data.profile.photoPositionY ?? 50,
+  photoZoom: data.profile.photoZoom ?? 1,
+};
 
   const profileWrite = await supabase
     .from("fude_profiles")
