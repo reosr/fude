@@ -218,6 +218,11 @@ function renderJapaneseTerm(term: string) {
 export default function IrodoriStarterLessonThreePage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [nameTagDraft, setNameTagDraft] = useState({
+    name: "",
+    country: "",
+  });
+  const [nameTagSubmitted, setNameTagSubmitted] = useState(false);
   const [formDraft, setFormDraft] = useState({
     fullName: "",
     nationality: "",
@@ -236,6 +241,23 @@ export default function IrodoriStarterLessonThreePage() {
   const resetQuiz = () => {
     setAnswers({});
     setQuizSubmitted(false);
+  };
+
+  const normalizedNameTag = {
+    name: nameTagDraft.name.trim().replace(/\s/g, ""),
+    country: nameTagDraft.country.trim().replace(/\s/g, ""),
+  };
+  const nameTagResults = [
+    normalizedNameTag.name === "マリア・プトリ",
+    normalizedNameTag.country === "インドネシア",
+  ];
+  const canCheckNameTag = Object.values(nameTagDraft).every(
+    (value) => value.trim().length > 0
+  );
+
+  const resetNameTagPractice = () => {
+    setNameTagDraft({ name: "", country: "" });
+    setNameTagSubmitted(false);
   };
 
   const normalizedFormDraft = {
@@ -427,6 +449,103 @@ export default function IrodoriStarterLessonThreePage() {
           untuk latihan menulis nama, ikuti cara penulisan nama yang diminta
           pada kartu atau formulir. Contoh di atas hanya memakai tokoh fiktif.
         </p>
+
+        <div className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4">
+          <div>
+            <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+              LATIHAN KARTU NAMA
+            </p>
+            <h3 className="mt-1 text-sm font-bold text-[#EAE6DD]">
+              Salin nama dan negara
+            </h3>
+            <p className="mt-2 text-xs leading-6 text-[#A9A398]">
+              Gunakan contoh kartu nama di atas. Tulis nama dan negara dalam
+              bahasa Jepang.
+            </p>
+          </div>
+
+          <div className="mt-4 space-y-3">
+            <label className="block">
+              <span className="mb-1 block text-xs font-semibold text-[#C7C1B5]">
+                <ruby>名前<rt>なまえ</rt></ruby> · Nama
+              </span>
+              <input
+                type="text"
+                value={nameTagDraft.name}
+                onChange={(event) =>
+                  setNameTagDraft((current) => ({
+                    ...current,
+                    name: event.target.value,
+                  }))
+                }
+                disabled={nameTagSubmitted}
+                placeholder="マリア・プトリ"
+                aria-label="Tulis nama pada kartu nama"
+                className="w-full rounded-lg border border-white/[0.1] bg-black/20 px-3 py-3 font-mincho text-base text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#B8860B]/50 disabled:opacity-70"
+              />
+              {nameTagSubmitted && (
+                <span className={nameTagResults[0] ? "mt-1 block text-[10px] text-emerald-300" : "mt-1 block text-[10px] text-red-300"}>
+                  {nameTagResults[0] ? "Benar" : "Periksa kembali penulisan nama."}
+                </span>
+              )}
+            </label>
+
+            <label className="block">
+              <span className="mb-1 block text-xs font-semibold text-[#C7C1B5]">
+                <ruby>国<rt>くに</rt></ruby> · Negara
+              </span>
+              <input
+                type="text"
+                value={nameTagDraft.country}
+                onChange={(event) =>
+                  setNameTagDraft((current) => ({
+                    ...current,
+                    country: event.target.value,
+                  }))
+                }
+                disabled={nameTagSubmitted}
+                placeholder="インドネシア"
+                aria-label="Tulis negara pada kartu nama"
+                className="w-full rounded-lg border border-white/[0.1] bg-black/20 px-3 py-3 font-mincho text-base text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#B8860B]/50 disabled:opacity-70"
+              />
+              {nameTagSubmitted && (
+                <span className={nameTagResults[1] ? "mt-1 block text-[10px] text-emerald-300" : "mt-1 block text-[10px] text-red-300"}>
+                  {nameTagResults[1] ? "Benar" : "Periksa kembali nama negara."}
+                </span>
+              )}
+            </label>
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+            <p role="status" aria-live="polite" className="text-xs text-[#A9A398]">
+              {nameTagSubmitted
+                ? "Hasil: " + nameTagResults.filter(Boolean).length + " dari 2 bagian benar."
+                : "Isi kedua kolom menggunakan contoh fiktif."}
+            </p>
+            {nameTagSubmitted ? (
+              <button
+                type="button"
+                onClick={resetNameTagPractice}
+                className="inline-flex items-center gap-2 rounded-lg border border-[#B8860B]/35 px-4 py-2 text-xs font-bold text-[#E7D2A1] hover:bg-[#B8860B]/10"
+              >
+                <RefreshCw size={13} />
+                Ulangi latihan
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setNameTagSubmitted(true)}
+                disabled={!canCheckNameTag}
+                className="rounded-lg bg-[#C93438] px-4 py-2 text-xs font-bold text-white hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
+              >
+                Periksa kartu nama
+              </button>
+            )}
+          </div>
+          <p className="mt-3 text-[10px] leading-5 text-[#817A73]">
+            Isian ini hanya untuk latihan dan tidak disimpan ke profil atau progres.
+          </p>
+        </div>
       </section>
 
       <section className="space-y-4">
@@ -917,6 +1036,7 @@ export default function IrodoriStarterLessonThreePage() {
               onClick={() => completeIrodoriLesson("starter-03")}
               disabled={
                 !quizSubmitted ||
+                !nameTagSubmitted ||
                 !formSubmitted ||
                 canDos.some((canDo) => !ratings[canDo.id])
               }
@@ -935,9 +1055,9 @@ export default function IrodoriStarterLessonThreePage() {
             <ArrowLeft size={15} className="rotate-180" />
           </Link>
         </div>
-        {(!quizSubmitted || !formSubmitted) && (
+        {(!quizSubmitted || !nameTagSubmitted || !formSubmitted) && (
           <p className="mt-2 text-[10px] text-[#817A73]">
-            Selesaikan kuis situasi, latihan menulis formulir, dan isi keempat
+            Selesaikan kuis situasi, dua latihan menulis, dan isi keempat
             penilaian Can-do untuk menyelesaikan pelajaran.
           </p>
         )}
