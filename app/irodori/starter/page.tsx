@@ -40,7 +40,7 @@ export default function IrodoriStarterPage() {
               </p>
             </div>
             <span className="rounded-xl border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]">
-              7 dari 18 materi tersedia
+              8 dari 18 materi tersedia
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -78,7 +78,7 @@ export default function IrodoriStarterPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson <= 7;
+            const isAvailable = lesson <= 8;
             const lessonId = `starter-${String(lesson).padStart(2, "0")}`;
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle =
@@ -94,7 +94,8 @@ export default function IrodoriStarterPage() {
                       ? "I like udon."
                       : lesson === 6
                         ? "Cheeseburger, please."
-                        : "There are four rooms.";
+                        ? "There are four rooms."
+                        : "Where is Yamada-san.";
             const lessonDescription =
               lesson === 1
                 ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
@@ -108,7 +109,8 @@ export default function IrodoriStarterPage() {
                       ? "Menyatakan makanan yang disukai, merespons tawaran minuman, membahas sarapan, dan menulis unggahan makanan."
                       : lesson === 6
                         ? "Membaca menu, memesan makanan, memilih hidangan, menyebut jumlah, meminta barang tambahan, dan mengenali papan nama restoran."
-                        : "Tur rumah, fasilitas yang tersedia, kondisi rumah, jenis hunian, dan tombol mesin cuci serta remote AC.";
+                        ? "Tur rumah, fasilitas yang tersedia, kondisi rumah, jenis hunian, dan tombol mesin cuci serta remote AC."
+                        : "Mengenali ruangan di tempat kerja, mencari orang, menanyakan lokasi perlengkapan, dan membaca papan nama ruangan.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
@@ -168,7 +170,7 @@ export default function IrodoriStarterPage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Pelajaran 8–18 akan dibuka setelah materi, contoh komunikasi, latihan,
+        Pelajaran 9–18 akan dibuka setelah materi, contoh komunikasi, latihan,
         dan evaluasinya selesai disiapkan.
       </p>
     </main>
