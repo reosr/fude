@@ -928,7 +928,7 @@ export default function IrodoriStarterLessonSixPage() {
           <p className="text-xs font-bold text-[#E7D2A1]">Kosakata barang tambahan</p>
           <div className="mt-3 grid gap-2 sm:grid-cols-2">
             {[
-              { jp: <ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>, reading: "torizara", meaning: "Piring kecil" },
+              { jp: <><ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby></>, reading: "torizara", meaning: "Piring kecil" },
               { jp: "スプーン", reading: "supuun", meaning: "Sendok" },
               { jp: "フォーク", reading: "fooku", meaning: "Garpu" },
               { jp: <ruby>箸<rt>はし</rt></ruby>, reading: "hashi", meaning: "Sumpit" },
@@ -1088,7 +1088,7 @@ export default function IrodoriStarterLessonSixPage() {
           {[
             { jp: <ruby>魚<rt>さかな</rt></ruby>, reading: "sakana", meaning: "Ikan" },
             { jp: <ruby>肉<rt>にく</rt></ruby>, reading: "niku", meaning: "Daging" },
-            { jp: <ruby>好<rt>す</rt></ruby>き, reading: "suki", meaning: "Suka" },
+            { jp: <><ruby>好<rt>す</rt></ruby>き</>, reading: "suki", meaning: "Suka" },
           ].map((item) => (
             <article
               key={item.reading}
