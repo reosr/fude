@@ -5,7 +5,6 @@ import {
   getFudeXp,
   XP_REWARDS_KEY,
   type FudeProfile,
-  getFudeXpSyncState,
   type FudeXpEvent,
 } from "../gamification";
 import { getMemorizedKanji } from "../memorized";
