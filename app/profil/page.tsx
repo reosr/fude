@@ -80,6 +80,9 @@ export default function Profil() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+
+  
+
   const refreshData = () => {
     const progress = Number(getProgress());
     const safeProgress = Number.isFinite(progress)
