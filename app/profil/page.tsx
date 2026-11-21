@@ -323,7 +323,6 @@ export default function Profil() {
         </div>
       </section>
 
-
 <GoogleAuthButton />
 
       <section>
