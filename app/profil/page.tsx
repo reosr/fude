@@ -417,7 +417,7 @@ export default function Profil() {
 
       {isPhotoPreviewOpen && photoSrc && (
       <div
-        className="fixed inset-0 z-[280] flex items-center justify-center bg-black/85 backdrop-blur-md p-5"
+        className="fixed inset-0 z-[280] flex items-center justify-center bg-[#121110]/60 backdrop-blur-sm p-5"
         onClick={() => setIsPhotoPreviewOpen(false)}
       >
         <div
