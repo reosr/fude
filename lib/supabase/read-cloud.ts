@@ -39,7 +39,7 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
     await Promise.all([
       supabase
         .from("fude_profiles")
-        .select("profile")
+        .select("profile, updated_at")
         .eq("user_id", user.id)
         .maybeSingle(),
 
