@@ -24,18 +24,18 @@ export default function ProfilePicture({
     >
       {photoSrc ? (
         <img
-  src={photoSrc}
-  alt=""
-  className="h-full w-full object-cover"
-  style={{
-    objectPosition: `${100 - photoPositionX}% ${100 - photoPositionY}%`,
-    transform: `translate(
-      ${(photoPositionX - 50) * (photoZoom - 1)}%,
-      ${(photoPositionY - 50) * (photoZoom - 1)}%
-    ) scale(${photoZoom})`,
-    transformOrigin: "center",
-  }}
-/>
+        src={photoSrc}
+        alt=""
+        className="h-full w-full object-cover"
+        style={{
+          objectPosition: `${100 - photoPositionX}% ${100 - photoPositionY}%`,
+          transform: `translate(
+            ${(photoPositionX - 50) * (photoZoom - 1)}%,
+            ${(photoPositionY - 50) * (photoZoom - 1)}%
+          ) scale(${photoZoom})`,
+          transformOrigin: "center",
+        }}
+      />
       ) : (
         <svg
           viewBox="0 0 120 120"
