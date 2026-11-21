@@ -377,10 +377,10 @@ export default function Profil() {
           <h3 className="font-bold text-[#EAE6DD]">Data Profil</h3>
         </div>
         <p className="text-sm text-[#A3A099] leading-relaxed">
-  Nama profil, EXP, progres belajar, hafalan, dan hasil JLPT
-  disinkronkan otomatis ke akun cloud saat perangkat online.
-  Foto profil saat ini masih tersimpan secara lokal di browser.
-</p>
+          Nama profil, EXP, progres belajar, hafalan, dan hasil JLPT
+          disinkronkan otomatis ke akun cloud saat perangkat online.
+          Foto profil saat ini masih tersimpan secara lokal di browser.
+        </p>
       </section>
 
       {isEditing && (
