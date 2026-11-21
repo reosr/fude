@@ -43,6 +43,111 @@ export interface FudeSyncReport {
 let activeSync: Promise<FudeSyncReport> | null = null;
 let syncAgainRequested = false;
 
+async function syncProfilePhoto(
+  expectedUserId: string
+): Promise<void> {
+  const pending = getPendingProfilePhotoChange();
+
+  // Upload foto yang baru dipilih pengguna.
+  if (pending?.action === "upload") {
+    const photo = await getProfilePhoto();
+
+    if (!photo) {
+      throw new Error("Foto lokal tidak ditemukan untuk diunggah.");
+    }
+
+    await uploadProfilePhotoToCloud(photo, expectedUserId);
+
+    const version = await getCloudProfilePhotoVersion(expectedUserId);
+
+    if (!version) {
+      throw new Error("Upload berhasil, tetapi versi foto cloud tidak ditemukan.");
+    }
+
+    setSyncedProfilePhotoVersion(version);
+    clearPendingProfilePhotoChange(pending.token);
+    return;
+  }
+
+  // Hapus foto cloud ketika pengguna menghapus fotonya.
+  if (pending?.action === "delete") {
+    await deleteProfilePhotoFromCloud(expectedUserId);
+
+    clearSyncedProfilePhotoVersion();
+    clearPendingProfilePhotoChange(pending.token);
+    return;
+  }
+
+  const cloudVersion =
+    await getCloudProfilePhotoVersion(expectedUserId);
+
+  const localVersion = getSyncedProfilePhotoVersion();
+  const localPhoto = await getProfilePhoto();
+
+  // Periksa ulang supaya perubahan baru tidak tertimpa.
+  if (getPendingProfilePhotoChange()) return;
+
+  if (!cloudVersion) {
+    // Foto sebelumnya pernah tersinkron tetapi sekarang sudah dihapus cloud.
+    if (localVersion !== null) {
+      await deleteProfilePhotoFromCloudLocal();
+      return;
+    }
+
+    // Migrasikan foto lokal lama ke cloud.
+    if (localPhoto) {
+      await uploadProfilePhotoToCloud(
+        localPhoto,
+        expectedUserId
+      );
+
+      const version =
+        await getCloudProfilePhotoVersion(expectedUserId);
+
+      if (!version) {
+        throw new Error("Versi foto setelah migrasi tidak ditemukan.");
+      }
+
+      setSyncedProfilePhotoVersion(version);
+    }
+
+    return;
+  }
+
+  // Hindari menimpa foto lokal lama yang belum pernah ditautkan ke cloud.
+  if (localPhoto && !localVersion) {
+    throw new Error(
+      "Foto lokal dan foto cloud belum memiliki riwayat sinkronisasi yang sama. Perlu pemeriksaan sebelum memilih foto."
+    );
+  }
+
+  // Foto sudah sama dan masih tersedia secara lokal.
+  if (cloudVersion === localVersion && localPhoto) {
+    return;
+  }
+
+  const photo = await downloadProfilePhotoFromCloud(expectedUserId);
+
+  if (!photo) {
+    throw new Error("Foto cloud tidak ditemukan saat proses download.");
+  }
+
+  // Pastikan akun belum berubah.
+  const {
+    data: { user },
+    error,
+  } = await createClient().auth.getUser();
+
+  if (error || !user || user.id !== expectedUserId) {
+    throw new Error("Akun berubah. Pemulihan foto dibatalkan.");
+  }
+
+  // Jangan timpa foto jika pengguna menggantinya saat download berlangsung.
+  if (getPendingProfilePhotoChange()) return;
+
+  await saveProfilePhotoFromCloud(photo, cloudVersion);
+}
+
 async function performSync(
   expectedUserId: string
 ): Promise<FudeSyncReport> {
