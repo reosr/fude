@@ -241,8 +241,8 @@ export function mergeFudeData(
     local.jlptResults.map((item) => [item.setId, item.result])
   );
 
-  const cloudJlptMap = new Map(
-  cloud.jlptResults.map((item) => [item.set_id, item])
+const cloudJlptMap = new Map(
+cloud.jlptResults.map((item) => [item.set_id, item])
 );
 
 const allSetIds = new Set([
