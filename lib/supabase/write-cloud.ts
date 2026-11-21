@@ -23,7 +23,7 @@ export async function writeCloudFudeData(
     throw new Error(
         "Akun berubah selama sinkronisasi. Pengiriman data dibatalkan."
     );
-    }
+}
 
   const now = new Date().toISOString();
 
