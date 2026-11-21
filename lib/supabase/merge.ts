@@ -146,19 +146,19 @@ function mergeProfile(
         : null,
 
     photoPositionX:
-  typeof cloud.photoPositionX === "number"
-    ? Math.min(100, Math.max(0, cloud.photoPositionX))
-    : (local.photoPositionX ?? 50),
+    typeof cloud.photoPositionX === "number"
+        ? Math.min(100, Math.max(0, cloud.photoPositionX))
+        : (local.photoPositionX ?? 50),
 
-photoPositionY:
-  typeof cloud.photoPositionY === "number"
-    ? Math.min(100, Math.max(0, cloud.photoPositionY))
-    : (local.photoPositionY ?? 50),
+    photoPositionY:
+    typeof cloud.photoPositionY === "number"
+        ? Math.min(100, Math.max(0, cloud.photoPositionY))
+        : (local.photoPositionY ?? 50),
 
-photoZoom:
-  typeof cloud.photoZoom === "number"
-    ? Math.min(3, Math.max(1, cloud.photoZoom))
-    : (local.photoZoom ?? 1),
+    photoZoom:
+    typeof cloud.photoZoom === "number"
+        ? Math.min(3, Math.max(1, cloud.photoZoom))
+        : (local.photoZoom ?? 1),
   };
 
   const localProfile = {
