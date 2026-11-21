@@ -67,7 +67,7 @@ export default function FudeSyncManager() {
 
     function handlePhotoChange() {
         scheduleSync(900);
-        }
+    }
 
     function handleAccountBound() {
       scheduleSync(0);
