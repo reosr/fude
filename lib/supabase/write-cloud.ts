@@ -16,9 +16,11 @@ export async function writeCloudFudeData(
     throw new Error(`Gagal memeriksa akun: ${authError.message}`);
   }
 
-  if (!user) {
-    throw new Error("Belum login ke akun Fude.");
-  }
+  if (user.id !== expectedUserId) {
+  throw new Error(
+    "Akun berubah selama sinkronisasi. Pengiriman data dibatalkan."
+  );
+}
 
   const now = new Date().toISOString();
 
