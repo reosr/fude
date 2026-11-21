@@ -14,7 +14,9 @@ import {
   Trash2,
   Award,
 } from "lucide-react";
-
+import ProfilePhotoEditor, {
+  type ProfilePhotoSettings,
+} from "@/components/ProfilePhotoEditor";
 import { getProgress } from "../../lib/progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfilePicture from "../../components/ProfilePicture";
