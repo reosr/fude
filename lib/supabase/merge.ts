@@ -195,12 +195,11 @@ export function mergeFudeData(
 
   // Periksa apakah perangkat memiliki riwayat belajar lokal.
   const hasLocalXpHistory =
-    local.stored.xp ||
-    local.currentBab > 1 ||
-    local.totalXp > 0 ||
-    local.xpRewards.length > 0 ||
-    local.xpEvents.length > 0 ||
-    local.jlptResults.length > 0;
+  local.currentBab > 1 ||
+  local.totalXp > 0 ||
+  local.xpRewards.length > 0 ||
+  local.xpEvents.length > 0 ||
+  local.jlptResults.length > 0;
 
   // Jika perangkat dan cloud memiliki saldo dasar berbeda,
   // jangan gabungkan secara otomatis.
