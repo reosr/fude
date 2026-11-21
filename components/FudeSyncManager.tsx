@@ -146,9 +146,9 @@ export default function FudeSyncManager() {
       subscription.unsubscribe();
 
       window.removeEventListener(
-  PROFILE_PHOTO_UPDATED_EVENT,
-  handlePhotoChange
-);
+        PROFILE_PHOTO_UPDATED_EVENT,
+        handlePhotoChange
+    );
 
       window.removeEventListener(
         FUDE_LOCAL_DATA_CHANGED_EVENT,
