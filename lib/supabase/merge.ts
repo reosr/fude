@@ -219,10 +219,21 @@ export function mergeFudeData(
       `jlpt_result_${setId}`
     );
 
-    const result =
-      preferLocal && localResult
-        ? localResult
-        : cloudResult ?? localResult;
+    let result: Record<string, unknown> | undefined;
+
+if (localResult && cloudResult) {
+  if (sameJson(localResult, cloudResult)) {
+    result = cloudResult;
+  } else if (preferLocal) {
+    result = localResult;
+  } else {
+    throw new Error(
+      `Hasil JLPT untuk ${setId} berbeda antara perangkat dan cloud. Sinkronisasi dihentikan agar data tidak hilang.`
+    );
+  }
+} else {
+  result = cloudResult ?? localResult;
+}
 
     if (result) {
       jlptResults.push({ setId, result });
