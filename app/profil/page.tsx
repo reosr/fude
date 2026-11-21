@@ -404,12 +404,12 @@ export default function Profil() {
         </p>
       </section>
       {cropFile && (
-  <ProfilePhotoCropper
-    file={cropFile}
-    onCancel={() => setCropFile(null)}
-    onSave={handleCropSave}
-  />
-)}
+        <ProfilePhotoCropper
+          file={cropFile}
+          onCancel={() => setCropFile(null)}
+          onSave={handleCropSave}
+        />
+      )}
 
       {isEditing && (
         <div
