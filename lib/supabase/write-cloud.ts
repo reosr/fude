@@ -19,6 +19,7 @@ export async function writeCloudFudeData(
   if (!user) {
     throw new Error("Belum login ke akun Fude.");
   }
+  
   if (user.id !== expectedUserId) {
     throw new Error(
         "Akun berubah selama sinkronisasi. Pengiriman data dibatalkan."
