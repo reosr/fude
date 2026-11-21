@@ -75,6 +75,9 @@ export interface FudeProfile {
   photoDataUrl?: string | null;
   equippedBadgeId?: string | null;
   equippedFrameId?: string | null;
+  photoPositionX?: number;
+photoPositionY?: number;
+photoZoom?: number;
 }
 
 export interface LevelInfo {
