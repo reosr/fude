@@ -1,4 +1,5 @@
 
+import { notifyFudeLocalDataChanged } from "./supabase/events";
 import { getProgress } from "./progress";
 
 // =====================================================
