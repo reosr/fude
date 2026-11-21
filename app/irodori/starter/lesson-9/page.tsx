@@ -296,12 +296,12 @@ const practiceTasks: {
   {
     prompt: <>Yui bangun sekitar pukul berapa?</>,
     options: [
-      { key: "a", label: <>5<ruby>時<rt>じ</rt></ruby>ごろ (sekitar pukul lima)</> },
-      { key: "b", label: <>7<ruby>時<rt>じ</rt></ruby>ごろ (sekitar pukul tujuh)</> },
-      { key: "c", label: <>9<ruby>時<rt>じ</rt></ruby>ごろ (sekitar pukul sembilan)</> },
+      { key: "a", label: <><ruby>5時<rt>ごじ</rt></ruby>ごろ (sekitar pukul lima)</> },
+      { key: "b", label: <><ruby>7時<rt>しちじ</rt></ruby>ごろ (sekitar pukul tujuh)</> },
+      { key: "c", label: <><ruby>9時<rt>くじ</rt></ruby>ごろ (sekitar pukul sembilan)</> },
     ],
     answer: "b",
-    explanation: <>Yui mengatakan 「7時ごろ起きます」, artinya bangun sekitar pukul tujuh.</>,
+    explanation: <>Yui mengatakan 「<ruby>7時<rt>しちじ</rt></ruby>ごろ<ruby>起<rt>お</rt></ruby>きます」, artinya bangun sekitar pukul tujuh.</>,
   },
   {
     prompt: <>Pukul berapa pengarahan pagi dimulai?</>,
@@ -331,7 +331,7 @@ const practiceTasks: {
       { key: "c", label: "Kobayashi" },
     ],
     answer: "b",
-    explanation: <>Pada baris Erik tertulis 「休み」, artinya libur.</>,
+    explanation: <>Pada baris Erik tertulis 「<ruby>休<rt>やす</rt></ruby>み」, artinya libur.</>,
   },
   {
     prompt: <>Kapan Mina diperkirakan kembali ke kantor?</>,
@@ -372,7 +372,7 @@ const quizQuestions: {
     explanation: <>Gunakan partikel に setelah waktu yang tepat: 「7<ruby>時<rt>しちじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます」.</>,
   },
   {
-    prompt: <>Apa perbedaan 「7時に」 dan 「7時ごろ」?</>,
+    prompt: <>Apa perbedaan 「<ruby>7時<rt>しちじ</rt></ruby>に」 dan 「<ruby>7時<rt>しちじ</rt></ruby>ごろ」?</>,
     options: [
       { key: "a", label: "Keduanya hanya berarti tepat pukul tujuh." },
       { key: "b", label: "に menunjukkan waktu tertentu, ごろ menunjukkan sekitar waktu tersebut." },
@@ -382,7 +382,7 @@ const quizQuestions: {
     explanation: <>に menyatakan waktu tertentu, sedangkan ごろ menyatakan perkiraan waktu.</>,
   },
   {
-    prompt: <>Bacaan yang benar untuk 「4時」 adalah…</>,
+    prompt: <>Bacaan yang benar untuk 「<ruby>4時<rt>よじ</rt></ruby>」 adalah…</>,
     options: [
       { key: "a", label: "yonji" },
       { key: "b", label: "yoji" },
@@ -392,7 +392,7 @@ const quizQuestions: {
     explanation: <>4<ruby>時<rt>よじ</rt></ruby> dibaca yoji, salah satu bacaan waktu yang perlu diingat.</>,
   },
   {
-    prompt: <>「12時から1時まで」 berarti…</>,
+    prompt: <>「12<ruby>時<rt>じ</rt></ruby>から1<ruby>時<rt>じ</rt></ruby>まで」 berarti…</>,
     options: [
       { key: "a", label: "Sampai pukul dua belas dari pukul satu." },
       { key: "b", label: "Dari pukul dua belas sampai pukul satu." },
@@ -402,7 +402,7 @@ const quizQuestions: {
     explanation: <>から menandai waktu mulai dan まで menandai waktu selesai.</>,
   },
   {
-    prompt: <>Kalimat 「仕事は6時までです」 berarti…</>,
+    prompt: <>Kalimat 「<ruby>仕事<rt>しごと</rt></ruby>は6<ruby>時<rt>ろくじ</rt></ruby>までです」 berarti…</>,
     options: [
       { key: "a", label: "Pekerjaan dimulai pukul enam." },
       { key: "b", label: "Pekerjaan selesai pukul enam." },
@@ -412,7 +412,7 @@ const quizQuestions: {
     explanation: <>まで menandai batas akhir, sehingga kalimat tersebut berarti pekerjaan sampai pukul enam.</>,
   },
   {
-    prompt: <>Kata 「昼休み」 berarti…</>,
+    prompt: <>Kata 「<ruby>昼休<rt>ひるやす</rt></ruby>み」 berarti…</>,
     options: [
       { key: "a", label: "Istirahat siang." },
       { key: "b", label: "Pengarahan pagi." },
@@ -422,7 +422,7 @@ const quizQuestions: {
     explanation: <>昼休み (hiruyasumi) adalah waktu istirahat pada siang hari.</>,
   },
   {
-    prompt: <>Apa arti 「外出」 pada papan jadwal?</>,
+    prompt: <>Apa arti 「<ruby>外出<rt>がいしゅつ</rt></ruby>」 pada papan jadwal?</>,
     options: [
       { key: "a", label: "Sedang libur." },
       { key: "b", label: "Sedang keluar / berada di luar kantor." },
@@ -452,7 +452,7 @@ const quizQuestions: {
     explanation: <>「～はちょっと……」 adalah cara halus untuk menyatakan bahwa waktu tersebut kurang cocok.</>,
   },
   {
-    prompt: <>Apa maksud 「じゃあ、日曜日にしましょう」?</>,
+    prompt: <>Apa maksud 「じゃあ、<ruby>日曜日<rt>にちようび</rt></ruby>にしましょう」?</>,
     options: [
       { key: "a", label: "Kalau begitu, kita tetapkan hari Minggu." },
       { key: "b", label: "Hari Minggu tidak cocok." },
@@ -825,15 +825,15 @@ export default function IrodoriStarterLessonNinePage() {
           </div>
           <div className="grid gap-2 border-t border-white/[0.07] p-3 sm:grid-cols-3">
             <div className="rounded-lg bg-black/15 p-3">
-              <p className="font-mincho text-sm font-bold text-emerald-300">在</p>
+              <p className="font-mincho text-sm font-bold text-emerald-300"><ruby>在<rt>ざい</rt></ruby></p>
               <p className="mt-1 text-[10px] text-[#A9A398]">Berada di tempat kerja</p>
             </div>
             <div className="rounded-lg bg-black/15 p-3">
-              <p className="font-mincho text-sm font-bold text-amber-300">不在</p>
+              <p className="font-mincho text-sm font-bold text-amber-300"><ruby>不在<rt>ふざい</rt></ruby></p>
               <p className="mt-1 text-[10px] text-[#A9A398]">Tidak berada di tempat kerja</p>
             </div>
             <div className="rounded-lg bg-black/15 p-3">
-              <p className="font-mincho text-sm font-bold text-[#D9B66D]">外出 / 休み</p>
+              <p className="font-mincho text-sm font-bold text-[#D9B66D]"><ruby>外出<rt>がいしゅつ</rt></ruby> / <ruby>休<rt>やす</rt></ruby>み</p>
               <p className="mt-1 text-[10px] text-[#A9A398]">Keluar kantor / libur</p>
             </div>
           </div>
