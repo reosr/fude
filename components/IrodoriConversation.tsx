@@ -188,7 +188,7 @@ export default function IrodoriConversation({
             >
               {SPEED_OPTIONS.map((value) => (
                 <option key={value} value={value} className="bg-[#1B1A18]">
-                  {value.toFixed(value === 1 ? 1 : 2).replace(/0$/, "")}x
+                  {value === 1 ? "1.0" : value.toString()}x
                 </option>
               ))}
             </select>
