@@ -94,8 +94,9 @@ export default function IrodoriStarterPage() {
                       ? "I like udon."
                       : lesson === 6
                         ? "Cheeseburger, please."
-                        ? "There are four rooms."
-                        : "Where is Yamada-san.";
+                        : lesson === 7
+                          ? "There are four rooms."
+                          : "Where is Yamada-san?";
             const lessonDescription =
               lesson === 1
                 ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
@@ -109,8 +110,9 @@ export default function IrodoriStarterPage() {
                       ? "Menyatakan makanan yang disukai, merespons tawaran minuman, membahas sarapan, dan menulis unggahan makanan."
                       : lesson === 6
                         ? "Membaca menu, memesan makanan, memilih hidangan, menyebut jumlah, meminta barang tambahan, dan mengenali papan nama restoran."
-                        ? "Tur rumah, fasilitas yang tersedia, kondisi rumah, jenis hunian, dan tombol mesin cuci serta remote AC."
-                        : "Mengenali ruangan di tempat kerja, mencari orang, menanyakan lokasi perlengkapan, dan membaca papan nama ruangan.";
+                        : lesson === 7
+                          ? "Tur rumah, fasilitas yang tersedia, kondisi rumah, jenis hunian, dan tombol mesin cuci serta remote AC."
+                          : "Mengenali ruangan di tempat kerja, mencari orang, menanyakan lokasi perlengkapan, dan membaca papan nama ruangan.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
