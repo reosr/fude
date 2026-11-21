@@ -10,10 +10,10 @@ export interface CloudFudeData {
   profile: Record<string, unknown> | null;
   profileUpdatedAt: string | null;
   xp_base: number | string;
-xp_events: {
-  id: string;
-  amount: number;
-}[];
+    xp_events: {
+    id: string;
+    amount: number;
+    }[];
   progress: {
     current_bab: number;
     total_xp: number | string;
