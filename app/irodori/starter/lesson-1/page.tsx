@@ -351,9 +351,9 @@ const canDos = [
 ];
 
 const canDoRatingOptions: { value: IrodoriRating; label: string }[] = [
-  { value: 1, label: "Masih sulit" },
-  { value: 2, label: "Bisa" },
-  { value: 3, label: "Lancar" },
+  { value: 1, label: "★☆☆ Sudah bisa, masih perlu latihan" },
+  { value: 2, label: "★★☆ Sudah bisa" },
+  { value: 3, label: "★★★ Bisa dengan baik" },
 ];
 
 const hiraganaWords = [
@@ -938,9 +938,10 @@ export default function IrodoriStarterLessonOnePage() {
           Coba nilai kemampuanmu
         </h2>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">
-          Nilai kemampuanmu setelah mencoba aktivitas dan latihan. Penilaian
-          serta penyelesaian ini tersimpan khusus untuk Irodori, terpisah dari
-          progres Minna no Nihongo dan JLPT.
+          Nilai kemampuanmu setelah mencoba aktivitas dan latihan. ★☆☆ berarti
+          sudah bisa tetapi masih perlu latihan, ★★☆ berarti sudah bisa, dan
+          ★★★ berarti bisa dengan baik. Penilaian ini tersimpan khusus untuk
+          Irodori, terpisah dari progres Minna no Nihongo dan JLPT.
         </p>
         <div className="mt-4 space-y-3">
           {canDos.map((canDo, index) => (
