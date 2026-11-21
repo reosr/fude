@@ -3,6 +3,7 @@ import { getProgress } from "../progress";
 import {
   getFudeProfile,
   getFudeXp,
+  getFudeXpSyncState,
   XP_REWARDS_KEY,
   type FudeProfile,
   type FudeXpEvent,
