@@ -9,15 +9,15 @@ export interface CloudJlptResult {
 export interface CloudFudeData {
   profile: Record<string, unknown> | null;
   profileUpdatedAt: string | null;
-  xp_base: number | string;
-    xp_events: {
-    id: string;
-    amount: number;
-    }[];
   progress: {
     current_bab: number;
     total_xp: number | string;
     xp_rewards: string[];
+    xp_base: number | string;
+    xp_events: {
+    id: string;
+    amount: number;
+    }[];
     memorized_kanji: string[];
     updated_at: string;
   } | null;
