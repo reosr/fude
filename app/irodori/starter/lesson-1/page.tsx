@@ -104,7 +104,7 @@ const leavingConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。</>,
     romaji: "Otsukaresama deshita.",
-    translation: "Terima kasih atas kerja hari ini.",
+    translation: "Terima kasih atas kerja keras hari ini.",
     audioFileName: "irodori-starter-01-a02-l02.mp3",
   },
 ];
@@ -246,7 +246,7 @@ const situationQuestions = [
   },
   {
     prompt: "Pukul 19.00, kamu bertemu kenalan di depan rumah. Apa sapaannya?",
-    options: ["こんばんは", "おやすみなさい", "また明日"],
+    options: ["こんばんは", "おやすみなさい", "じゃあ、また"],
     answer: "こんばんは",
     explanation: "こんばんは digunakan saat bertemu seseorang pada malam hari. おやすみなさい diucapkan sebelum tidur.",
   },
@@ -257,6 +257,26 @@ const situationQuestions = [
     explanation: "Orang yang pulang lebih dahulu mengatakan お先に失礼します. Rekan yang masih bekerja dapat membalas お疲れさまでした.",
   },
 ];
+
+function renderJapaneseOption(option: string) {
+  switch (option) {
+    case "お先に失礼します":
+      return (
+        <>
+          お<ruby>先<rt>さき</rt></ruby>に
+          <ruby>失礼<rt>しつれい</rt></ruby>します
+        </>
+      );
+    case "お疲れさまでした":
+      return (
+        <>
+          お<ruby>疲<rt>つか</rt></ruby>れさまでした
+        </>
+      );
+    default:
+      return option;
+  }
+}
 
 const stickerQuestions = [
   {
@@ -322,7 +342,7 @@ const vocabulary = [
   { jp: <>またね</>, romaji: "Mata ne", meaning: "Sampai jumpa (akrab)" },
   { jp: <>おやすみなさい</>, romaji: "Oyasuminasai", meaning: "Selamat tidur" },
   { jp: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します</>, romaji: "Osaki ni shitsurei shimasu", meaning: "Permisi, saya pamit lebih dahulu" },
-  { jp: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした</>, romaji: "Otsukaresama deshita", meaning: "Terima kasih atas kerja hari ini" },
+  { jp: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした</>, romaji: "Otsukaresama deshita", meaning: "Terima kasih atas kerja keras hari ini" },
   { jp: <>ありがとうございます</>, romaji: "Arigatou gozaimasu", meaning: "Terima kasih (sopan)" },
   { jp: <>どうもありがとう</>, romaji: "Doumo arigatou", meaning: "Terima kasih banyak (akrab)" },
   { jp: <>すみません</>, romaji: "Sumimasen", meaning: "Maaf / permisi" },
@@ -565,7 +585,8 @@ export default function IrodoriStarterLessonOnePage() {
         <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
           <p className="text-xs font-bold text-[#E7D2A1]">Ingat perbedaannya</p>
           <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-            じゃあ、また dan またね cocok untuk perpisahan santai. お先に失礼します
+            じゃあ、また dan またね cocok untuk perpisahan santai.
+            お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します
             digunakan saat meninggalkan tempat kerja lebih dahulu. おやすみなさい
             diucapkan sebelum tidur, bukan sebagai sapaan ketika baru bertemu.
           </p>
@@ -632,14 +653,23 @@ export default function IrodoriStarterLessonOnePage() {
                             ? "●"
                             : "○"}
                       </span>
-                      <span className="font-mincho text-sm">{option}</span>
+                      <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">{renderJapaneseOption(option)}</span>
                     </button>
                   );
                 })}
               </div>
               {situationQuizSubmitted && (
                 <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
-                  {question.explanation}
+                  {index === 4 ? (
+                    <>
+                      Orang yang pulang lebih dahulu mengatakan
+                      {" "}お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します.
+                      {" "}Rekan yang masih bekerja dapat membalas
+                      {" "}お<ruby>疲<rt>つか</rt></ruby>れさまでした.
+                    </>
+                  ) : (
+                    question.explanation
+                  )}
                 </p>
               )}
             </article>
