@@ -1,6 +1,7 @@
 
 "use client";
 
+import { notifyFudeLocalDataChanged } from "@/lib/supabase/events";
 import {
   awardJlptCompletionXpOnce,
   awardJlptHighScoreBonusOnce,
