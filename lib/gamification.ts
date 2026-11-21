@@ -1217,6 +1217,7 @@ export function getFudeProfile(): FudeProfile {
         typeof parsed.equippedBadgeId === "string"
           ? parsed.equippedBadgeId
           : null,
+          
 
       equippedFrameId:
         typeof parsed.equippedFrameId === "string"
