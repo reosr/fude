@@ -231,9 +231,9 @@ export default function IrodoriStarterLessonThreePage() {
   };
 
   const normalizedFormDraft = {
-    fullName: formDraft.fullName.trim().replace(/\\s/g, ""),
-    nationality: formDraft.nationality.trim().replace(/\\s/g, ""),
-    birthDate: formDraft.birthDate.trim().replace(/\\s/g, ""),
+    fullName: formDraft.fullName.trim().replace(/\s/g, ""),
+    nationality: formDraft.nationality.trim().replace(/\s/g, ""),
+    birthDate: formDraft.birthDate.trim().replace(/\s/g, ""),
   };
   const formResults = [
     normalizedFormDraft.fullName === "マリア・プトリ",
@@ -523,9 +523,14 @@ export default function IrodoriStarterLessonThreePage() {
               <p className="text-xs font-semibold text-[#C7C1B5]">
                 <ruby>生年月日<rt>せいねんがっぴ</rt></ruby>
               </p>
-              <p className="rounded-lg border border-white/[0.07] bg-black/15 px-3 py-2 font-mincho text-base text-[#F1EBDD]">
-                2002年4月18日
-              </p>
+              <div>
+                <p className="rounded-lg border border-white/[0.07] bg-black/15 px-3 py-2 font-mincho text-base text-[#F1EBDD]">
+                  2002<ruby>年<rt>ねん</rt></ruby>4<ruby>月<rt>がつ</rt></ruby>18<ruby>日<rt>じゅうはちにち</rt></ruby>
+                </p>
+                <p className="mt-1 text-[9px] text-[#817A73]">
+                  にせんにねん・しがつ・じゅうはちにち
+                </p>
+              </div>
             </div>
           </div>
           <p className="border-t border-white/[0.06] px-4 py-3 text-[10px] leading-5 text-[#817A73]">
@@ -823,9 +828,10 @@ export default function IrodoriStarterLessonThreePage() {
               Kalender Jepang
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Selain kalender masehi (西暦), Jepang juga menggunakan kalender
-              era (和暦) pada beberapa dokumen. Perhatikan apakah formulir
-              meminta tahun masehi atau tahun era sebelum mengisi tanggal.
+              Selain kalender masehi (<ruby>西暦<rt>せいれき</rt></ruby>),
+              Jepang juga menggunakan kalender era
+              (<ruby>和暦<rt>われき</rt></ruby>) pada beberapa dokumen. Perhatikan
+              apakah formulir meminta tahun masehi atau tahun era sebelum mengisi tanggal.
             </p>
           </article>
         </div>
