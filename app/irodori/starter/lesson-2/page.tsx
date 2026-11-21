@@ -53,25 +53,39 @@ const repeatConversation: IrodoriUtterance[] = [
     audioFileName: "irodori-starter-02-a01-l04.mp3",
   },
   {
-    speakerId: "yui",
-    japanese: <>ありがとうございます。</>,
-    romaji: "Arigatou gozaimasu.",
-    translation: "Terima kasih.",
+    speakerId: "sota",
+    japanese: <>バスは３<ruby>時<rt>じ</rt></ruby>に<ruby>来<rt>き</rt></ruby>ます。</>,
+    romaji: "Basu wa sanji ni kimasu.",
+    translation: "Bus datang pukul tiga.",
     audioFileName: "irodori-starter-02-a01-l05.mp3",
   },
   {
-    speakerId: "sota",
-    japanese: <>わかりましたか？</>,
-    romaji: "Wakarimashita ka?",
-    translation: "Apakah sudah mengerti?",
+    speakerId: "yui",
+    japanese: <>バスは３<ruby>時<rt>じ</rt></ruby>ですね。</>,
+    romaji: "Basu wa sanji desu ne.",
+    translation: "Bus-nya pukul tiga, ya.",
     audioFileName: "irodori-starter-02-a01-l06.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>はい。わかりましたか？</>,
+    romaji: "Hai. Wakarimashita ka?",
+    translation: "Ya. Apakah sekarang sudah mengerti?",
+    audioFileName: "irodori-starter-02-a01-l07.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>はい、わかりました。</>,
     romaji: "Hai, wakarimashita.",
-    translation: "Ya, sekarang saya mengerti.",
-    audioFileName: "irodori-starter-02-a01-l07.mp3",
+    translation: "Ya, saya mengerti.",
+    audioFileName: "irodori-starter-02-a01-l08.mp3",
+  },
+  {
+    speakerId: "yui",
+    japanese: <>ありがとうございます。</>,
+    romaji: "Arigatou gozaimasu.",
+    translation: "Terima kasih.",
+    audioFileName: "irodori-starter-02-a01-l09.mp3",
   },
 ];
 
@@ -167,7 +181,7 @@ const wordingConversation: IrodoriUtterance[] = [
 
 const situationQuestions = [
   {
-    prompt: "Kamu tidak mendengar penjelasan teman dengan jelas. Apa yang bisa kamu katakan?",
+    prompt: "Kamu tidak memahami ucapan teman dengan jelas. Apa yang bisa kamu katakan?",
     options: ["もういちど、お願いします", "ありがとうございます", "おやすみなさい"],
     answer: "もういちど、お願いします",
     explanation: "もういちど、お願いします digunakan untuk meminta lawan bicara mengulangi ucapannya.",
@@ -450,6 +464,11 @@ export default function IrodoriStarterLessonTwoPage() {
             </p>
           </div>
         </div>
+        <p className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-3 text-xs leading-6 text-[#A9A398]">
+          <span className="font-bold text-[#E7D2A1]">Perhatikan:</span>{" "}
+          あまり biasanya digunakan bersama bentuk negatif. Jadi
+          あまりできません berarti tidak begitu bisa.
+        </p>
         <p className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-3 text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#E7D2A1]">Catatan:</span>{" "}
           sebutkan nama bahasa sebelum できますか？, misalnya
