@@ -958,8 +958,8 @@ export function awardXpOnce(
       JSON.stringify([...rewards, rewardId])
     );
     window.dispatchEvent(new Event(XP_UPDATED_EVENT));
-  notifyFudeLocalDataChanged(XP_KEY);
-  return true;
+    notifyFudeLocalDataChanged(XP_KEY);
+    return true;
   } catch (error) {
     try {
       localStorage.setItem(XP_KEY, String(currentXp));
