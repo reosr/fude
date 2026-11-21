@@ -617,8 +617,6 @@ export default function IrodoriStarterLessonTwoPage() {
                     question.explanation
                   )}
                 </p>
-              )}}
-                </p>
               )}
             </article>
           ))}
