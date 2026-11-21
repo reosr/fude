@@ -97,12 +97,13 @@ export function getLocalFudeSnapshot(): LocalFudeSnapshot {
   };
 
   return {
-    profile: getFudeProfile(),
-    currentBab: getProgress(),
-    totalXp: getFudeXp(),
-    xpRewards: readStringArray(XP_REWARDS_KEY),
-    memorizedKanji: getMemorizedKanji(),
-    jlptResults: readJlptResults(),
-    capturedAt: new Date().toISOString(),
-  };
+  profile: getFudeProfile(),
+  currentBab: getProgress(),
+  totalXp: getFudeXp(),
+  xpRewards: readStringArray(XP_REWARDS_KEY),
+  memorizedKanji: getMemorizedKanji(),
+  jlptResults: readJlptResults(),
+  capturedAt: new Date().toISOString(),
+  stored,
+};
 }
