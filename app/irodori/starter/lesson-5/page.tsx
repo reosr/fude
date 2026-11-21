@@ -50,14 +50,14 @@ const favoriteFoodConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>肉も<ruby>好<rt>す</rt></ruby>きです。</>,
+    japanese: <><ruby>肉<rt>にく</rt></ruby>も<ruby>好<rt>す</rt></ruby>きです。</>,
     romaji: "Niku mo suki desu.",
     translation: "Saya juga suka daging.",
     audioFileName: "irodori-starter-05-a01-l04.mp3",
   },
   {
     speakerId: "sota",
-    japanese: <>野菜は<ruby>好<rt>す</rt></ruby>きですか？</>,
+    japanese: <><ruby>野菜<rt>やさい</rt></ruby>は<ruby>好<rt>す</rt></ruby>きですか？</>,
     romaji: "Yasai wa suki desu ka?",
     translation: "Apakah kamu suka sayuran?",
     audioFileName: "irodori-starter-05-a01-l05.mp3",
@@ -74,7 +74,7 @@ const favoriteFoodConversation: IrodoriUtterance[] = [
 const japaneseFoodConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
-    japanese: <>日本の食べ物、<ruby>何<rt>なに</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</>,
+    japanese: <><ruby>日本<rt>にほん</rt></ruby>の<ruby>食べ物<rt>たべもの</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</>,
     romaji: "Nihon no tabemono, nani ga suki desu ka?",
     translation: "Makanan Jepang apa yang kamu suka?",
     audioFileName: "irodori-starter-05-a02-l01.mp3",
@@ -353,7 +353,7 @@ const quizQuestions: {
       { key: "c", label: "Tidak sarapan." },
     ],
     answer: "a",
-    explanation: <>パンと<ruby>卵<rt>たまご</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます berarti makan roti dan telur. 牛乳を<ruby>飲<rt>の</rt></ruby>みます berarti minum susu.</>,
+    explanation: <>パンと<ruby>卵<rt>たまご</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます berarti makan roti dan telur. <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みます berarti minum susu.</>,
   },
 ];
 
