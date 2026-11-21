@@ -549,6 +549,14 @@ export default function Profil() {
               </button>
             </div>
 
+            <ProfilePhotoEditor
+  photoSrc={photoSrc}
+  file={photoEditorFile}
+  initialSettings={draftPhotoSettings}
+  onSettingsChange={setDraftPhotoSettings}
+  onChoosePhoto={() => fileInputRef.current?.click()}
+/>
+
             <label htmlFor="profile-name" className="block text-sm font-bold text-[#A3A099] mb-2">
               Nama Pengguna
             </label>
