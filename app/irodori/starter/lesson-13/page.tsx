@@ -319,11 +319,11 @@ const quizQuestions: Task[] = [
     prompt: <>Pilih kalimat yang berarti "turun di Stasiun Midori".</>,
     options: [
       { key: "a", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>に<ruby>降<rt>お</rt></ruby>ります。</> },
-      { key: "b", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります。</> },
-      { key: "c", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>が<ruby>降<rt>お</rt></ruby>ります。</> },
+      { key: "b", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。</> },
+      { key: "c", label: <><ruby>緑駅<rt>みどりえき</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります。</> },
     ],
     answer: "b",
-    explanation: <>Kendaraan yang ditinggalkan memakai を: <ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります. Tempat turun ditandai dengan で.</>,
+    explanation: <>Tempat turun memakai で: <ruby>緑駅<rt>みどりえき</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります. Kendaraan yang ditinggalkan memakai を, misalnya <ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>降<rt>お</rt></ruby>ります.</>,
   },
   {
     prompt: <>Ungkapan 「乗り換えます」 berarti …</>,
