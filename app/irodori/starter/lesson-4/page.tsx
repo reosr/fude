@@ -183,18 +183,18 @@ const ratingOptions: { value: IrodoriRating; label: string }[] = [
 ];
 
 const ageExamples = [
-  { age: "1歳", reading: "いっさい", note: "issai" },
-  { age: "2歳", reading: "にさい", note: "nisai" },
-  { age: "3歳", reading: "さんさい", note: "sansai" },
-  { age: "4歳", reading: "よんさい", note: "yonsai" },
-  { age: "5歳", reading: "ごさい", note: "gosai" },
-  { age: "6歳", reading: "ろくさい", note: "rokusai" },
-  { age: "7歳", reading: "ななさい", note: "nanasai" },
-  { age: "8歳", reading: "はっさい", note: "hassai" },
-  { age: "9歳", reading: "きゅうさい", note: "kyuusai" },
-  { age: "10歳", reading: "じゅっさい", note: "jussai" },
-  { age: "18歳", reading: "じゅうはっさい", note: "juuhassai" },
-  { age: "20歳", reading: "はたち", note: "hatachi" },
+  { age: "1", reading: "いっさい", note: "issai" },
+  { age: "2", reading: "にさい", note: "nisai" },
+  { age: "3", reading: "さんさい", note: "sansai" },
+  { age: "4", reading: "よんさい", note: "yonsai" },
+  { age: "5", reading: "ごさい", note: "gosai" },
+  { age: "6", reading: "ろくさい", note: "rokusai" },
+  { age: "7", reading: "ななさい", note: "nanasai" },
+  { age: "8", reading: "はっさい", note: "hassai" },
+  { age: "9", reading: "きゅうさい", note: "kyuusai" },
+  { age: "10", reading: "じゅっさい", note: "jussai" },
+  { age: "18", reading: "じゅうはっさい", note: "juuhassai" },
+  { age: "20", reading: "はたち", note: "hatachi" },
 ];
 
 const quizQuestions: {
@@ -283,6 +283,8 @@ function renderJapaneseTerm(term: string) {
       return <><ruby>母<rt>はは</rt></ruby>と<ruby>私<rt>わたし</rt></ruby>ですか</>;
     case "母に住んでいます":
       return <><ruby>母<rt>はは</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます</>;
+    case "ジョンは何歳ですか":
+      return <>ジョンは<ruby>何歳<rt>なんさい</rt></ruby>ですか</>;
     case "海":
       return <ruby>海<rt>うみ</rt></ruby>;
     default:
@@ -347,7 +349,7 @@ export default function IrodoriStarterLessonFourPage() {
             I live in Tokyo.
           </h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
-            東京に住んでいます
+            <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます
           </p>
           <p className="mt-4 max-w-xl text-sm leading-7 text-[#B6B0A5]">
             Belajar memahami perkenalan keluarga, bertanya tentang usia dan
@@ -418,32 +420,22 @@ export default function IrodoriStarterLessonFourPage() {
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { jp: <>父</>, reading: "ちち · chichi", meaning: "Ayah saya" },
-            { jp: <>母</>, reading: "はは · haha", meaning: "Ibu saya" },
-            { jp: <>兄</>, reading: "あに · ani", meaning: "Kakak laki-laki saya" },
-            { jp: <>姉</>, reading: "あね · ane", meaning: "Kakak perempuan saya" },
-            { jp: <>弟</>, reading: "おとうと · otouto", meaning: "Adik laki-laki saya" },
-            { jp: <>妹</>, reading: "いもうと · imouto", meaning: "Adik perempuan saya" },
-            { jp: <>夫</>, reading: "おっと · otto", meaning: "Suami" },
-            { jp: <>妻</>, reading: "つま · tsuma", meaning: "Istri" },
-            { jp: <>子ども</>, reading: "こども · kodomo", meaning: "Anak" },
+            { jp: <ruby>父<rt>ちち</rt></ruby>, reading: "chichi", meaning: "Ayah saya" },
+            { jp: <ruby>母<rt>はは</rt></ruby>, reading: "haha", meaning: "Ibu saya" },
+            { jp: <ruby>兄<rt>あに</rt></ruby>, reading: "ani", meaning: "Kakak laki-laki saya" },
+            { jp: <ruby>姉<rt>あね</rt></ruby>, reading: "ane", meaning: "Kakak perempuan saya" },
+            { jp: <ruby>弟<rt>おとうと</rt></ruby>, reading: "otouto", meaning: "Adik laki-laki saya" },
+            { jp: <ruby>妹<rt>いもうと</rt></ruby>, reading: "imouto", meaning: "Adik perempuan saya" },
+            { jp: <ruby>夫<rt>おっと</rt></ruby>, reading: "otto", meaning: "Suami" },
+            { jp: <ruby>妻<rt>つま</rt></ruby>, reading: "tsuma", meaning: "Istri" },
+            { jp: <ruby>子ども<rt>こども</rt></ruby>, reading: "kodomo", meaning: "Anak" },
           ].map((item, index) => (
             <article
-              key={index}
+              key={item.reading}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"
             >
               <p className="font-mincho text-xl font-bold text-[#F1EBDD]">
-                {[
-                  <ruby key="father">父<rt>ちち</rt></ruby>,
-                  <ruby key="mother">母<rt>はは</rt></ruby>,
-                  <ruby key="older-brother">兄<rt>あに</rt></ruby>,
-                  <ruby key="older-sister">姉<rt>あね</rt></ruby>,
-                  <ruby key="younger-brother">弟<rt>おとうと</rt></ruby>,
-                  <ruby key="younger-sister">妹<rt>いもうと</rt></ruby>,
-                  <ruby key="husband">夫<rt>おっと</rt></ruby>,
-                  <ruby key="wife">妻<rt>つま</rt></ruby>,
-                  <ruby key="child">子ども<rt>こども</rt></ruby>,
-                ][index]}
+                {item.jp}
               </p>
               <p className="mt-1 text-[10px] italic text-[#B8860B]">
                 {item.reading}
@@ -454,9 +446,9 @@ export default function IrodoriStarterLessonFourPage() {
         </div>
         <p className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-3 text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#E7D2A1]">Catatan:</span>{" "}
-          kata seperti 父 dan 母 biasanya digunakan saat menyebut keluarga
+          kata seperti <ruby>父<rt>ちち</rt></ruby> dan <ruby>母<rt>はは</rt></ruby> biasanya digunakan saat menyebut keluarga
           sendiri. Saat menyebut keluarga orang lain dengan sopan, kamu dapat
-          mendengar お父さん dan お母さん.
+          mendengar お<ruby>父<rt>とう</rt></ruby>さん dan お<ruby>母<rt>かあ</rt></ruby>さん.
         </p>
       </section>
 
@@ -476,8 +468,8 @@ export default function IrodoriStarterLessonFourPage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Dua pertanyaan sederhana yang sering muncul saat berbincang adalah
-          何歳ですか？ untuk menanyakan usia dan どこに住んでいますか？
-          untuk menanyakan tempat tinggal.
+          <ruby>何歳<rt>なんさい</rt></ruby>ですか？ untuk menanyakan usia dan
+          どこに<ruby>住<rt>す</rt></ruby>んでいますか？ untuk menanyakan tempat tinggal.
         </p>
         <IrodoriConversation
           title="Scene A · Usia dan tempat tinggal"
@@ -526,8 +518,8 @@ export default function IrodoriStarterLessonFourPage() {
             CARA MENYEBUT USIA
           </p>
           <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-            Beberapa angka memiliki bacaan khusus saat diikuti 歳 (sai).
-            Perhatikan contoh berikut.
+            Beberapa angka memiliki bacaan khusus saat diikuti
+            <ruby>歳<rt>さい</rt></ruby>. Perhatikan contoh berikut.
           </p>
           <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {ageExamples.map((item) => (
@@ -536,10 +528,10 @@ export default function IrodoriStarterLessonFourPage() {
                 className="rounded-lg border border-white/[0.06] bg-black/15 p-3"
               >
                 <p className="font-mincho text-lg font-bold text-[#F1EBDD]">
-                  {item.age === "20歳" ? (
-                    <><ruby>二十歳<rt>はたち</rt></ruby></>
+                  {item.age === "20" ? (
+                    <ruby>二十歳<rt>はたち</rt></ruby>
                   ) : (
-                    item.age
+                    <>{item.age}<ruby>歳<rt>さい</rt></ruby></>
                   )}
                 </p>
                 <p className="mt-1 text-[10px] text-[#D9B66D]">
@@ -645,10 +637,10 @@ export default function IrodoriStarterLessonFourPage() {
             </div>
             <div className="p-4">
               <p className="font-mincho text-lg text-[#F1EBDD]">
-                友だちと海！
+                <ruby>友達<rt>ともだち</rt></ruby>と<ruby>海<rt>うみ</rt></ruby>！
               </p>
               <p className="mt-1 text-xs text-[#B6B0A5]">
-                お天気、最高！
+                お<ruby>天気<rt>てんき</rt></ruby>、<ruby>最高<rt>さいこう</rt></ruby>！
               </p>
               <p className="mt-3 text-[10px] text-[#817A73]">
                 Petunjuk ilustrasi: beberapa teman sedang berfoto di pantai.
@@ -681,8 +673,8 @@ export default function IrodoriStarterLessonFourPage() {
         </div>
         <div className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-3 text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#E7D2A1]">Strategi membaca:</span>{" "}
-          perhatikan nama akun, kata yang berulang, dan ilustrasi. Kata 海
-          berarti laut; ペット berarti hewan peliharaan.
+          perhatikan nama akun, kata yang berulang, dan ilustrasi. Kata
+          <ruby>海<rt>うみ</rt></ruby> berarti laut; ペット berarti hewan peliharaan.
         </div>
       </section>
 
@@ -775,11 +767,13 @@ export default function IrodoriStarterLessonFourPage() {
                     </>
                   ) : index === 4 ? (
                     <>
-                      Gunakan partikel に setelah nama tempat sebelum 住んでいます.
+                      Gunakan partikel に setelah nama tempat sebelum
+                      <ruby>住<rt>す</rt></ruby>んでいます.
                     </>
                   ) : index === 5 ? (
                     <>
-                      の menunjukkan hubungan antara dua kata benda. 私の母 berarti ibu saya.
+                      の menunjukkan hubungan antara dua kata benda.
+                      <ruby>私<rt>わたし</rt></ruby>の<ruby>母<rt>はは</rt></ruby> berarti ibu saya.
                     </>
                   ) : index === 6 ? (
                     <>
@@ -787,7 +781,8 @@ export default function IrodoriStarterLessonFourPage() {
                     </>
                   ) : (
                     <>
-                      海 dibaca うみ (umi), artinya laut. Tulisan dan ilustrasi membantu memahami unggahan.
+                      <ruby>海<rt>うみ</rt></ruby> dibaca umi dan berarti laut.
+                      Tulisan dan ilustrasi membantu memahami unggahan.
                     </>
                   )}
                 </p>
@@ -883,9 +878,9 @@ export default function IrodoriStarterLessonFourPage() {
               Menanyakan usia dengan sopan
             </h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              何歳ですか？ adalah pertanyaan umum. おいくつですか？ terdengar
-              lebih sopan. Pertanyaan tentang usia bisa terasa pribadi, jadi
-              perhatikan kedekatan dan situasinya.
+              <ruby>何歳<rt>なんさい</rt></ruby>ですか？ adalah pertanyaan umum.
+              おいくつですか？ terdengar lebih sopan. Pertanyaan tentang usia
+              bisa terasa pribadi, jadi perhatikan kedekatan dan situasinya.
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4 sm:col-span-2">
