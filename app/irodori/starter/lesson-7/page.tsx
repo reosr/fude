@@ -275,7 +275,7 @@ const houseAdjectives = [
   { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: <><ruby>古<rt>ふる</rt></ruby>い</>, type: "I-adjective" },
   { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: <><ruby>新<rt>あたら</rt></ruby>しい</>, type: "I-adjective" },
   { jp: <ruby>静<rt>しず</rt></ruby>か, reading: "shizuka", meaning: "Tenang", opposite: "うるさい", type: "Na-adjective" },
-  { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: "静か", type: "I-adjective" },
+  { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: <><ruby>静<rt>しず</rt></ruby>か</>, type: "I-adjective" },
   { jp: "きれい", reading: "kiree", meaning: "Bersih / indah", opposite: "きたない", type: "Na-adjective" },
   { jp: "きたない", reading: "kitanai", meaning: "Kotor", opposite: "きれい", type: "I-adjective" },
 ];
@@ -335,7 +335,7 @@ const quizQuestions: {
     explanation: <>「ありません」 dan 「ないです」 dapat digunakan untuk menyatakan bahwa sesuatu tidak tersedia.</>,
   },
   {
-    prompt: <>Kalimat 「家は<ruby>静<rt>しず</rt></ruby>かです」 memiliki arti…</>,
+    prompt: <>Kalimat 「<ruby>家<rt>いえ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かです」 memiliki arti…</>,
     options: [
       { key: "a", label: "Rumahnya luas." },
       { key: "b", label: "Rumahnya tenang." },
@@ -375,21 +375,21 @@ const quizQuestions: {
     explanation: <>「マンション」 dalam konteks tempat tinggal Jepang berarti hunian kolektif bertingkat, bukan mansion mewah dalam bahasa Inggris.</>,
   },
   {
-    prompt: <>Tombol 「入」 pada panel mesin cuci menunjukkan fungsi…</>,
+    prompt: <>Tombol 「<ruby>入<rt>いり</rt></ruby>」 pada panel mesin cuci menunjukkan fungsi…</>,
     options: [
       { key: "a", label: "Mematikan daya." },
       { key: "b", label: "Menyalakan daya." },
       { key: "c", label: "Mengubah mode." },
     ],
     answer: "b",
-    explanation: <>「入」 berarti ON / nyala, sedangkan 「切」 berarti OFF / mati.</>,
+    explanation: <>「<ruby>入<rt>いり</rt></ruby>」 berarti ON / nyala, sedangkan 「<ruby>切<rt>きり</rt></ruby>」 berarti OFF / mati.</>,
   },
   {
     prompt: <>Jika ruangan terasa panas dan ingin menyalakan AC untuk mendinginkan ruangan, tombol yang dipilih adalah…</>,
     options: [
-      { key: "a", label: "暖房（だんぼう）" },
-      { key: "b", label: "停止（ていし）" },
-      { key: "c", label: "冷房（れいぼう）" },
+      { key: "a", label: <><ruby>暖房<rt>だんぼう</rt></ruby></> },
+      { key: "b", label: <><ruby>停止<rt>ていし</rt></ruby></> },
+      { key: "c", label: <><ruby>冷房<rt>れいぼう</rt></ruby></> },
     ],
     answer: "c",
     explanation: <>「<ruby>冷房<rt>れいぼう</rt></ruby>」 adalah mode pendingin. 「<ruby>暖房<rt>だんぼう</rt></ruby>」 adalah mode pemanas dan 「<ruby>停止<rt>ていし</rt></ruby>」 berarti berhenti.</>,
@@ -1051,7 +1051,7 @@ export default function IrodoriStarterLessonSevenPage() {
               <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">
                 {appliancePracticeCorrect
                   ? "Kamu sudah mengenali tombol ON, mulai, pendingin, dan pemanas."
-                  : "Ingat: 入 = ON, スタート = mulai, 冷房 = pendingin, dan 暖房 = pemanas. Ubah pilihan lalu periksa lagi."}
+                  : <>Ingat: <ruby>入<rt>いり</rt></ruby> = ON, スタート = mulai, <ruby>冷房<rt>れいぼう</rt></ruby> = pendingin, dan <ruby>暖房<rt>だんぼう</rt></ruby> = pemanas. Ubah pilihan lalu periksa lagi.</>}
               </p>
             </div>
           )}
