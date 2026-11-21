@@ -66,7 +66,7 @@ function getCompletedJlptSetCount(): number {
 }
 
 export default function Profil() {
-  const [photoEditorFile, setPhotoEditorFile] = useState<File | null>(null);
+  
   const [profile, setProfile] = useState<FudeProfile>(DEFAULT_PROFILE);
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
   const [currentBab, setCurrentBab] = useState(1);
