@@ -698,6 +698,7 @@ export default function IrodoriStarterLessonOnePage() {
                     <button
                       key={option}
                       type="button"
+                      aria-pressed={selected}
                       onClick={() => {
                         if (quizSubmitted) return;
                         setAnswers((current) => ({ ...current, [index]: option }));
@@ -731,7 +732,7 @@ export default function IrodoriStarterLessonOnePage() {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-          <p className="text-xs text-[#A9A398]">
+          <p role="status" aria-live="polite" className="text-xs text-[#A9A398]">
             {quizSubmitted
               ? `Hasil latihan: ${score} dari ${stickerQuestions.length} benar.`
               : `${answeredCount} dari ${stickerQuestions.length} pertanyaan dijawab.`}
@@ -792,6 +793,7 @@ export default function IrodoriStarterLessonOnePage() {
                     <button
                       key={option}
                       type="button"
+                      aria-pressed={selected}
                       onClick={() => {
                         if (situationQuizSubmitted) return;
                         setSituationAnswers((current) => ({
@@ -841,7 +843,7 @@ export default function IrodoriStarterLessonOnePage() {
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-          <p className="text-xs text-[#A9A398]">
+          <p role="status" aria-live="polite" className="text-xs text-[#A9A398]">
             {situationQuizSubmitted
               ? `Hasil latihan: ${situationScore} dari ${situationQuestions.length} benar.`
               : `${situationAnsweredCount} dari ${situationQuestions.length} situasi dijawab.`}
