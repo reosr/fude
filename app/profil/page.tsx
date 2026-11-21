@@ -328,7 +328,7 @@ export default function Profil() {
       <section>
         <div className="flex items-center gap-2 mb-4">
           <Target size={19} className="text-[#C93438]" />
-          <h3 className="text-lg font-bold text-[#EAE6DD}">Statistik Belajar</h3>
+          <h3 className="text-lg font-bold text-[#EAE6DD}"></h3>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           <div className="bg-[#1E1D1B] border border-[#33312E] rounded-2xl p-5">
