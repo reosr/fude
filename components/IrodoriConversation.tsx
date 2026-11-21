@@ -1,0 +1,308 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import type { ReactNode } from "react";
+import { Gauge, Play, Square, User, Volume2 } from "lucide-react";
+
+export interface IrodoriSpeaker {
+  id: string;
+  name: string;
+  role: string;
+  voiceDescription: string;
+}
+
+export interface IrodoriUtterance {
+  speakerId: string;
+  japanese: ReactNode;
+  romaji: string;
+  translation: string;
+  audioFileName: string;
+  audioSrc?: string | null;
+}
+
+interface Props {
+  title: string;
+  speakers: IrodoriSpeaker[];
+  utterances: IrodoriUtterance[];
+}
+
+const SPEED_OPTIONS = [0.7, 0.85, 1, 1.2];
+
+export default function IrodoriConversation({
+  title,
+  speakers,
+  utterances,
+}: Props) {
+  const [speed, setSpeed] = useState(1);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audioError, setAudioError] = useState("");
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const shouldContinueRef = useRef(false);
+  const pendingResolveRef = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    const audio = new Audio();
+    audioRef.current = audio;
+
+    return () => {
+      shouldContinueRef.current = false;
+      audio.pause();
+      audio.removeAttribute("src");
+      audio.load();
+      pendingResolveRef.current?.();
+      pendingResolveRef.current = null;
+      audioRef.current = null;
+    };
+  }, []);
+
+  const stopAudio = () => {
+    shouldContinueRef.current = false;
+
+    const audio = audioRef.current;
+    if (audio) {
+      audio.onended = null;
+      audio.onerror = null;
+      audio.pause();
+      audio.currentTime = 0;
+    }
+
+    const finishPending = pendingResolveRef.current;
+    pendingResolveRef.current = null;
+    finishPending?.();
+
+    setIsPlaying(false);
+    setActiveIndex(null);
+  };
+
+  const playUtterance = (index: number) =>
+    new Promise<void>((resolve) => {
+      const utterance = utterances[index];
+      const audio = audioRef.current;
+
+      if (!audio || !utterance?.audioSrc) {
+        resolve();
+        return;
+      }
+
+      const finish = () => {
+        if (pendingResolveRef.current === finish) {
+          pendingResolveRef.current = null;
+        }
+        audio.onended = null;
+        audio.onerror = null;
+        resolve();
+      };
+
+      pendingResolveRef.current = finish;
+      audio.src = utterance.audioSrc;
+      audio.playbackRate = speed;
+      setActiveIndex(index);
+
+      audio.onended = finish;
+      audio.onerror = () => {
+        setAudioError(`Audio gagal diputar: ${utterance.audioFileName}`);
+        finish();
+      };
+
+      audio.play().catch(() => {
+        setAudioError(`Audio belum dapat diputar: ${utterance.audioFileName}`);
+        finish();
+      });
+    });
+
+  const playOne = async (index: number) => {
+    if (!utterances[index]?.audioSrc) return;
+
+    stopAudio();
+    setAudioError("");
+    shouldContinueRef.current = true;
+    setIsPlaying(true);
+
+    await playUtterance(index);
+
+    if (shouldContinueRef.current) {
+      shouldContinueRef.current = false;
+      setIsPlaying(false);
+      setActiveIndex(null);
+    }
+  };
+
+  const playAll = async () => {
+    if (isPlaying) {
+      stopAudio();
+      return;
+    }
+
+    const availableIndexes = utterances
+      .map((utterance, index) => (utterance.audioSrc ? index : -1))
+      .filter((index) => index >= 0);
+
+    if (availableIndexes.length === 0) return;
+
+    stopAudio();
+    setAudioError("");
+    shouldContinueRef.current = true;
+    setIsPlaying(true);
+
+    for (const index of availableIndexes) {
+      if (!shouldContinueRef.current) break;
+      await playUtterance(index);
+    }
+
+    if (shouldContinueRef.current) {
+      shouldContinueRef.current = false;
+      setIsPlaying(false);
+      setActiveIndex(null);
+    }
+  };
+
+  const availableAudioCount = utterances.filter(
+    (utterance) => Boolean(utterance.audioSrc)
+  ).length;
+
+  return (
+    <section className="overflow-hidden rounded-2xl border border-[#39342D] bg-[#1B1A18] shadow-lg shadow-black/10">
+      <div className="flex flex-col gap-3 border-b border-white/[0.06] p-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+            CONVERSATION PRACTICE
+          </p>
+          <h4 className="mt-1 text-sm font-bold text-[#EAE6DD]">{title}</h4>
+          <p className="mt-1 text-[10px] text-[#817A73]">
+            {availableAudioCount > 0
+              ? `${availableAudioCount} dari ${utterances.length} audio tersedia`
+              : "Audio sedang disiapkan"}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2">
+          <label className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] text-[#A3A099]">
+            <Gauge size={14} />
+            <span className="sr-only">Kecepatan audio</span>
+            <select
+              aria-label="Kecepatan audio"
+              value={speed}
+              onChange={(event) => setSpeed(Number(event.target.value))}
+              className="cursor-pointer bg-transparent text-[#EAE6DD] outline-none"
+            >
+              {SPEED_OPTIONS.map((value) => (
+                <option key={value} value={value} className="bg-[#1B1A18]">
+                  {value.toFixed(value === 1 ? 1 : 2).replace(/0$/, "")}x
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <button
+            type="button"
+            onClick={() => void playAll()}
+            disabled={availableAudioCount === 0}
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#C93438] px-4 py-2 text-[10px] font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
+          >
+            {isPlaying ? (
+              <Square size={13} fill="currentColor" />
+            ) : (
+              <Play size={13} fill="currentColor" />
+            )}
+            {isPlaying ? "Hentikan" : "Putar Semua"}
+          </button>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 border-b border-white/[0.05] px-4 py-3">
+        {speakers.map((speaker) => (
+          <div
+            key={speaker.id}
+            className="inline-flex items-center gap-2 rounded-xl border border-white/[0.07] bg-black/15 px-3 py-2"
+          >
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#B8860B]/15 text-[#D9B66D]">
+              <User size={14} />
+            </span>
+            <span className="flex flex-col">
+              <span className="text-[10px] font-bold text-[#EAE6DD]">
+                Speaker {speaker.id} · {speaker.name}
+              </span>
+              <span className="text-[9px] text-[#A3A099]">
+                {speaker.voiceDescription}
+              </span>
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div className="divide-y divide-white/[0.05] p-2 sm:p-3">
+        {utterances.map((utterance, index) => {
+          const speaker = speakers.find(
+            (candidate) => candidate.id === utterance.speakerId
+          );
+          const isActive = activeIndex === index;
+
+          return (
+            <article
+              key={`${utterance.audioFileName}-${index}`}
+              className={`rounded-xl px-3 py-4 transition-colors sm:px-4 ${
+                isActive ? "bg-[#C93438]/10" : "hover:bg-white/[0.025]"
+              }`}
+            >
+              <div className="flex items-start gap-3">
+                <button
+                  type="button"
+                  onClick={() => void playOne(index)}
+                  disabled={!utterance.audioSrc}
+                  aria-label={`Putar dialog ${index + 1}, ${speaker?.name ?? utterance.speakerId}`}
+                  title={
+                    utterance.audioSrc
+                      ? "Putar kalimat ini"
+                      : `Audio menyusul: ${utterance.audioFileName}`
+                  }
+                  className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/[0.07] bg-[#302D29] text-[#D9B66D] transition-colors hover:border-[#C93438]/50 hover:bg-[#C93438] hover:text-white disabled:cursor-not-allowed disabled:opacity-35"
+                >
+                  <Volume2 size={16} />
+                </button>
+
+                <div className="min-w-0 flex-1">
+                  <p className="text-[10px] font-bold text-[#D9B66D]">
+                    {speaker?.name ?? utterance.speakerId}
+                    {speaker?.role ? (
+                      <span className="ml-1 font-medium text-[#817A73]">
+                        · {speaker.role}
+                      </span>
+                    ) : null}
+                  </p>
+                  <div
+                    className={`mt-1 font-mincho text-xl leading-[2] text-[#F1EBDD] sm:text-2xl [&_rt]:text-[0.48em] [&_rt]:text-[#D6AD4F] ${
+                      isActive ? "text-white" : ""
+                    }`}
+                  >
+                    {utterance.japanese}
+                  </div>
+                  <p className="mt-0.5 text-xs italic text-[#B8860B]">
+                    {utterance.romaji}
+                  </p>
+                  <p className="mt-1 text-xs leading-5 text-[#A3A099]">
+                    {utterance.translation}
+                  </p>
+                  {!utterance.audioSrc && (
+                    <p className="mt-2 text-[9px] text-[#746F65]">
+                      Audio belum tersedia · {utterance.audioFileName}
+                    </p>
+                  )}
+                </div>
+                {isActive && (
+                  <span className="mt-2 h-2 w-2 shrink-0 animate-pulse rounded-full bg-[#C93438]" />
+                )}
+              </div>
+            </article>
+          );
+        })}
+      </div>
+
+      {audioError && (
+        <p role="status" className="border-t border-red-400/15 px-4 py-3 text-xs text-red-300">
+          {audioError}
+        </p>
+      )}
+    </section>
+  );
+}
