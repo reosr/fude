@@ -225,6 +225,39 @@ const casualApologyConversation: IrodoriUtterance[] = [
   },
 ];
 
+const situationQuestions = [
+  {
+    prompt: "Pukul 07.30. Kamu bertemu guru di sekolah. Apa sapaan yang sesuai?",
+    options: ["おはようございます", "こんにちは", "こんばんは"],
+    answer: "おはようございます",
+    explanation: "おはようございます adalah sapaan pagi yang sopan dan sesuai untuk guru.",
+  },
+  {
+    prompt: "Pagi hari, kamu bertemu teman dekat. Apa yang bisa kamu ucapkan?",
+    options: ["おやすみなさい", "おはよう", "お先に失礼します"],
+    answer: "おはよう",
+    explanation: "おはよう adalah bentuk akrab dari sapaan pagi.",
+  },
+  {
+    prompt: "Pukul 14.00, kamu bertemu tetangga. Apa sapaannya?",
+    options: ["こんばんは", "おはようございます", "こんにちは"],
+    answer: "こんにちは",
+    explanation: "こんにちは umum digunakan sebagai sapaan pada siang hari.",
+  },
+  {
+    prompt: "Pukul 19.00, kamu bertemu kenalan di depan rumah. Apa sapaannya?",
+    options: ["こんばんは", "おやすみなさい", "また明日"],
+    answer: "こんばんは",
+    explanation: "こんばんは digunakan saat bertemu seseorang pada malam hari. おやすみなさい diucapkan sebelum tidur.",
+  },
+  {
+    prompt: "Kamu selesai bekerja dan pulang lebih dahulu daripada rekan kerja. Apa yang kamu katakan?",
+    options: ["お疲れさまでした", "お先に失礼します", "おはようございます"],
+    answer: "お先に失礼します",
+    explanation: "Orang yang pulang lebih dahulu mengatakan お先に失礼します. Rekan yang masih bekerja dapat membalas お疲れさまでした.",
+  },
+];
+
 const stickerQuestions = [
   {
     sticker: "おはようございます",
@@ -336,6 +369,8 @@ const hiraganaWords = [
 export default function IrodoriStarterLessonOnePage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [situationAnswers, setSituationAnswers] = useState<Record<number, string>>({});
+  const [situationQuizSubmitted, setSituationQuizSubmitted] = useState(false);
   const progress = useIrodoriProgress();
   const canDoRatings = progress.selfEvaluations["starter-01"] ?? {};
   const isLessonCompleted = progress.completedLessons.includes("starter-01");
@@ -344,10 +379,19 @@ export default function IrodoriStarterLessonOnePage() {
   const score = stickerQuestions.filter(
     (question, index) => answers[index] === question.answer
   ).length;
+  const situationAnsweredCount = Object.keys(situationAnswers).length;
+  const situationScore = situationQuestions.filter(
+    (question, index) => situationAnswers[index] === question.answer
+  ).length;
 
   const resetQuiz = () => {
     setAnswers({});
     setQuizSubmitted(false);
+  };
+
+  const resetSituationQuiz = () => {
+    setSituationAnswers({});
+    setSituationQuizSubmitted(false);
   };
 
   return (
@@ -525,6 +569,107 @@ export default function IrodoriStarterLessonOnePage() {
             digunakan saat meninggalkan tempat kerja lebih dahulu. おやすみなさい
             diucapkan sebelum tidur, bukan sebagai sapaan ketika baru bertemu.
           </p>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+            LATIHAN TAMBAHAN
+          </p>
+          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">
+            Pilih ungkapan sesuai situasi
+          </h2>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">
+            Baca waktunya dan perhatikan siapa lawan bicaramu. Pilih ungkapan
+            yang paling sesuai, bukan sekadar yang artinya kamu ingat.
+          </p>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          {situationQuestions.map((question, index) => (
+            <article
+              key={question.prompt}
+              className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"
+            >
+              <p className="text-[9px] font-black tracking-widest text-[#B8860B]">
+                SITUASI 0{index + 1}
+              </p>
+              <p className="mt-3 min-h-12 text-xs font-semibold leading-6 text-[#EAE6DD]">
+                {question.prompt}
+              </p>
+              <div className="mt-3 space-y-2">
+                {question.options.map((option) => {
+                  const selected = situationAnswers[index] === option;
+                  const correct = option === question.answer;
+
+                  return (
+                    <button
+                      key={option}
+                      type="button"
+                      onClick={() => {
+                        if (situationQuizSubmitted) return;
+                        setSituationAnswers((current) => ({
+                          ...current,
+                          [index]: option,
+                        }));
+                      }}
+                      disabled={situationQuizSubmitted}
+                      className={`w-full rounded-lg border px-3 py-2.5 text-left text-xs transition-colors ${
+                        situationQuizSubmitted && correct
+                          ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-200"
+                          : situationQuizSubmitted && selected
+                            ? "border-red-400/50 bg-red-400/10 text-red-200"
+                            : selected
+                              ? "border-[#B8860B]/60 bg-[#B8860B]/10 text-[#F1EBDD]"
+                              : "border-white/[0.07] bg-black/15 text-[#A9A398] hover:border-white/20"
+                      }`}
+                    >
+                      <span className="mr-2 inline-block w-4 text-center">
+                        {situationQuizSubmitted && correct
+                          ? "✓"
+                          : selected
+                            ? "●"
+                            : "○"}
+                      </span>
+                      <span className="font-mincho text-sm">{option}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              {situationQuizSubmitted && (
+                <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
+                  {question.explanation}
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
+          <p className="text-xs text-[#A9A398]">
+            {situationQuizSubmitted
+              ? `Hasil latihan: ${situationScore} dari ${situationQuestions.length} benar.`
+              : `${situationAnsweredCount} dari ${situationQuestions.length} situasi dijawab.`}
+          </p>
+          {situationQuizSubmitted ? (
+            <button
+              type="button"
+              onClick={resetSituationQuiz}
+              className="rounded-lg border border-[#B8860B]/35 px-4 py-2 text-xs font-bold text-[#E7D2A1] hover:bg-[#B8860B]/10"
+            >
+              Ulangi latihan
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setSituationQuizSubmitted(true)}
+              disabled={situationAnsweredCount !== situationQuestions.length}
+              className="rounded-lg bg-[#C93438] px-4 py-2 text-xs font-bold text-white hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
+            >
+              Periksa jawaban
+            </button>
+          )}
         </div>
       </section>
 
@@ -850,6 +995,7 @@ export default function IrodoriStarterLessonOnePage() {
               onClick={() => completeIrodoriLesson("starter-01")}
               disabled={
                 !quizSubmitted ||
+                !situationQuizSubmitted ||
                 canDos.some((canDo) => !canDoRatings[canDo.id])
               }
               className="inline-flex items-center gap-2 rounded-xl bg-[#C93438] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
@@ -869,8 +1015,8 @@ export default function IrodoriStarterLessonOnePage() {
         </div>
         {!quizSubmitted && (
           <p className="mt-2 text-[10px] text-[#817A73]">
-            Periksa jawaban kuis terlebih dahulu, lalu isi penilaian Can-do untuk
-            menyelesaikan pelajaran.
+            Selesaikan kuis stiker dan latihan situasi, lalu isi penilaian
+            Can-do untuk menyelesaikan pelajaran.
           </p>
         )}
       </section>
