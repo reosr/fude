@@ -92,6 +92,7 @@ export default function FudeSyncManager() {
         key === "fude_xp" ||
         key === "fude_xp_rewards" ||
         key === "fude_xp_base" ||
+        key === "fude_profile_photo_updated" ||
         key === "fude_xp_events" ||
         key === "fude_memorized" ||
         key?.startsWith("jlpt_result_")
