@@ -119,17 +119,10 @@ function mergeXpEvents(
 function mergeProfile(
   local: FudeProfile,
   cloud: Record<string, unknown> | null,
-  localStored: boolean,
-  localChanged: boolean
+  cloudUpdatedAt: string | null,
+  pending: PendingSyncChange[]
 ): FudeProfile {
   if (!cloud) return local;
-
-  const localProfile = {
-    name: local.name,
-    avatar: local.avatar,
-    equippedBadgeId: local.equippedBadgeId ?? null,
-    equippedFrameId: local.equippedFrameId ?? null,
-  };
 
   const cloudProfile = {
     name:
@@ -153,20 +146,28 @@ function mergeProfile(
         : null,
   };
 
-  if (localChanged) {
-    return local;
-  }
-
-  if (localStored && !sameJson(localProfile, cloudProfile)) {
-    throw new Error(
-      "Profil lokal berbeda dengan profil cloud. Sinkronisasi dihentikan agar perubahan profil tidak hilang."
-    );
-  }
-
-  return {
-    ...cloudProfile,
-    photoDataUrl: local.photoDataUrl ?? null,
+  const localProfile = {
+    name: local.name,
+    avatar: local.avatar,
+    equippedBadgeId: local.equippedBadgeId ?? null,
+    equippedFrameId: local.equippedFrameId ?? null,
   };
+
+  if (
+    sameJson(localProfile, cloudProfile) ||
+    !isLocalChangeNewer(
+      pending,
+      "fude_profile",
+      cloudUpdatedAt
+    )
+  ) {
+    return {
+      ...cloudProfile,
+      photoDataUrl: local.photoDataUrl ?? null,
+    };
+  }
+
+  return local;
 }
 
 export function mergeFudeData(
