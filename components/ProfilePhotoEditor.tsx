@@ -39,12 +39,13 @@ export default function ProfilePhotoEditor({
   const [error, setError] = useState("");
 
   const dragRef = useRef<{
-    id: number;
-    x: number;
-    y: number;
-    startX: number;
-    startY: number;
-  } | null>(null);
+  id: number;
+  x: number;
+  y: number;
+  startX: number;
+  startY: number;
+  zoom: number;
+} | null>(null);
 
   useEffect(() => {
     const objectUrl = URL.createObjectURL(file);
