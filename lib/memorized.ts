@@ -1,4 +1,5 @@
 
+import { notifyFudeLocalDataChanged } from "./supabase/events";
 
 const MEMORIZED_KEY = "fude_memorized";
 
