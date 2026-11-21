@@ -23,14 +23,14 @@ export default function ProfilePicture({
   photoZoom = 1,
 }: ProfilePictureProps) {
   const [imageSize, setImageSize] = useState<{
-  src: string | null;
-  width: number;
-  height: number;
-}>({
-  src: null,
-  width: 0,
-  height: 0,
-});
+    src: string | null;
+    width: number;
+    height: number;
+  }>({
+    src: null,
+    width: 0,
+    height: 0,
+  });
 
   const layout = imageSize.width && photoSrc
     ? getProfilePhotoLayout(
