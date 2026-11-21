@@ -65,14 +65,14 @@ const daytimeGreetings: IrodoriUtterance[] = [
   },
   {
     speakerId: "A",
-    japanese: <>元気ですか。</>,
+    japanese: <><ruby>元気<rt>げんき</rt></ruby>ですか。</>,
     romaji: "Genki desu ka.",
     translation: "Apa kabar?",
     audioFileName: "irodori-starter-01-a01-l05.mp3",
   },
   {
     speakerId: "B",
-    japanese: <>はい、元気です。ありがとうございます。</>,
+    japanese: <>はい、<ruby>元気<rt>げんき</rt></ruby>です。ありがとうございます。</>,
     romaji: "Hai, genki desu. Arigatou gozaimasu.",
     translation: "Ya, saya baik. Terima kasih.",
     audioFileName: "irodori-starter-01-a01-l06.mp3",
@@ -82,21 +82,21 @@ const daytimeGreetings: IrodoriUtterance[] = [
 const leavingConversation: IrodoriUtterance[] = [
   {
     speakerId: "A",
-    japanese: <>お先に失礼します。</>,
+    japanese: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。</>,
     romaji: "Osaki ni shitsurei shimasu.",
     translation: "Permisi, saya pamit lebih dahulu.",
     audioFileName: "irodori-starter-01-a02-l01.mp3",
   },
   {
     speakerId: "B",
-    japanese: <>お疲れさまでした。また明日。</>,
+    japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。また<ruby>明日<rt>あした</rt></ruby>。</>,
     romaji: "Otsukaresama deshita. Mata ashita.",
     translation: "Terima kasih atas kerja hari ini. Sampai besok.",
     audioFileName: "irodori-starter-01-a02-l02.mp3",
   },
   {
     speakerId: "A",
-    japanese: <>お疲れさまでした。</>,
+    japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。</>,
     romaji: "Otsukaresama deshita.",
     translation: "Terima kasih. Sampai jumpa.",
     audioFileName: "irodori-starter-01-a02-l03.mp3",
@@ -137,7 +137,7 @@ const apologyConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "B",
-    japanese: <>大丈夫ですよ。</>,
+    japanese: <><ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。</>,
     romaji: "Daijoubu desu yo.",
     translation: "Tidak apa-apa.",
     audioFileName: "irodori-starter-01-a03-l05.mp3",
@@ -185,15 +185,15 @@ const stickerQuestions = [
 ];
 
 const vocabulary = [
-  { jp: "おはようございます", romaji: "Ohayou gozaimasu", meaning: "Selamat pagi (sopan)" },
-  { jp: "おはよう", romaji: "Ohayou", meaning: "Selamat pagi (akrab)" },
-  { jp: "こんにちは", romaji: "Konnichiwa", meaning: "Halo / selamat siang" },
-  { jp: "お先に失礼します", romaji: "Osaki ni shitsurei shimasu", meaning: "Permisi, saya pamit lebih dahulu" },
-  { jp: "お疲れさまでした", romaji: "Otsukaresama deshita", meaning: "Terima kasih atas usaha hari ini" },
-  { jp: "ありがとうございます", romaji: "Arigatou gozaimasu", meaning: "Terima kasih (sopan)" },
-  { jp: "すみません", romaji: "Sumimasen", meaning: "Maaf / permisi" },
-  { jp: "ごめんなさい", romaji: "Gomennasai", meaning: "Maaf" },
-  { jp: "また明日", romaji: "Mata ashita", meaning: "Sampai besok" },
+  { jp: <>おはようございます</>, romaji: "Ohayou gozaimasu", meaning: "Selamat pagi (sopan)" },
+  { jp: <>おはよう</>, romaji: "Ohayou", meaning: "Selamat pagi (akrab)" },
+  { jp: <>こんにちは</>, romaji: "Konnichiwa", meaning: "Halo / selamat siang" },
+  { jp: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します</>, romaji: "Osaki ni shitsurei shimasu", meaning: "Permisi, saya pamit lebih dahulu" },
+  { jp: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした</>, romaji: "Otsukaresama deshita", meaning: "Terima kasih atas usaha hari ini" },
+  { jp: <>ありがとうございます</>, romaji: "Arigatou gozaimasu", meaning: "Terima kasih (sopan)" },
+  { jp: <>すみません</>, romaji: "Sumimasen", meaning: "Maaf / permisi" },
+  { jp: <>ごめんなさい</>, romaji: "Gomennasai", meaning: "Maaf" },
+  { jp: <>また<ruby>明日<rt>あした</rt></ruby></>, romaji: "Mata ashita", meaning: "Sampai besok" },
 ];
 
 const canDos = [
@@ -338,8 +338,9 @@ export default function IrodoriStarterLessonOnePage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Dalam situasi kerja, orang yang pulang lebih dahulu dapat mengatakan
-          お先に失礼します. Rekan yang masih tinggal dapat membalas dengan
-          お疲れさまでした.
+          <ruby>お先<rt>おさき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します.
+          Rekan yang masih tinggal dapat membalas dengan
+          お<ruby>疲<rt>つか</rt></ruby>れさまでした.
         </p>
         <IrodoriConversation
           title="Scene · Selesai bekerja"
@@ -501,7 +502,7 @@ export default function IrodoriStarterLessonOnePage() {
         <div className="overflow-hidden rounded-2xl border border-white/[0.07] bg-[#1B1A18]">
           {vocabulary.map((item, index) => (
             <div
-              key={item.jp}
+              key={item.romaji}
               className={`grid grid-cols-1 gap-1 px-4 py-3 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:items-center sm:gap-4 ${
                 index > 0 ? "border-t border-white/[0.05]" : ""
               }`}
