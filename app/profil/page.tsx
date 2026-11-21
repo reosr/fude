@@ -1,7 +1,6 @@
 "use client";
 
 import GoogleAuthButton from "@/components/GoogleAuthButton";
-import CloudSyncPreview from "@/components/CloudSyncPreview";
 import { useEffect, useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import {
