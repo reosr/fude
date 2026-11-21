@@ -832,7 +832,7 @@ export default function IrodoriStarterLessonFourPage() {
           {[
             { jp: <ruby>父<rt>ちち</rt></ruby>, reading: "chichi", meaning: "Ayah saya" },
             { jp: <ruby>母<rt>はは</rt></ruby>, reading: "haha", meaning: "Ibu saya" },
-            { jp: <ruby>子<rt>こ</rt></ruby>ども, reading: "kodomo", meaning: "Anak" },
+            { jp: <><ruby>子<rt>こ</rt></ruby>ども</>, reading: "kodomo", meaning: "Anak" },
             { jp: <ruby>日本<rt>にほん</rt></ruby>, reading: "nihon", meaning: "Jepang" },
           ].map((item) => (
             <article
