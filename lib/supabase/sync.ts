@@ -100,6 +100,8 @@ export function getLocalFudeSnapshot(): LocalFudeSnapshot {
     memorizedKanji: localStorage.getItem("fude_memorized") !== null,
   };
 
+  const xpSyncState = getFudeXpSyncState();
+
   return {
     profile: getFudeProfile(),
     currentBab: getProgress(),
