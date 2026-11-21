@@ -2,7 +2,8 @@ import { createClient } from "./client";
 import type { MergedFudeData } from "./merge";
 
 export async function writeCloudFudeData(
-  data: MergedFudeData
+  data: MergedFudeData,
+  expectedUserId: string
 ): Promise<void> {
   const supabase = createClient();
 
