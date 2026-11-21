@@ -1,7 +1,8 @@
 
 "use client";
 
-import { useState } from "react";import { getProfilePhotoLayout } from "@/lib/profile-photo-layout";
+import { useState } from "react";
+import { getProfilePhotoLayout } from "@/lib/profile-photo-layout";
 
 interface ProfilePictureProps {
   avatar?: string;
