@@ -195,27 +195,29 @@ export default function Profil() {
     }
   };
 
-  const handlePhotoUpload = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
+  const handlePhotoUpload = async (
+  event: ChangeEvent<HTMLInputElement>
+) => {
+  const file = event.target.files?.[0];
+  if (!file) return;
 
-    setPhotoError("");
+  setPhotoError("");
+  setPhotoLoading(true);
 
-    if (!file.type.startsWith("image/")) {
-      setPhotoError("File harus berupa gambar.");
-      event.target.value = "";
-      return;
-    }
-
-    if (file.size > 5 * 1024 * 1024) {
-      setPhotoError("Ukuran foto maksimal 5 MB.");
-      event.target.value = "";
-      return;
-    }
-
-    setCropFile(file);
+  try {
+    await saveProfilePhoto(file);
+    await refreshPhoto();
+  } catch (error) {
+    setPhotoError(
+      error instanceof Error
+        ? error.message
+        : "Gagal mengunggah foto."
+    );
+  } finally {
+    setPhotoLoading(false);
     event.target.value = "";
-  };
+  }
+};
 
   const handleCropSave = async (blob: Blob) => {
   setPhotoError("");
