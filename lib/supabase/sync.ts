@@ -24,7 +24,7 @@ export interface LocalFudeSnapshot {
   jlptResults: LocalJlptResult[];
   capturedAt: string;
   xpBase: number;
-xpEvents: FudeXpEvent[];
+  xpEvents: FudeXpEvent[];
   stored: {
     profile: boolean;
     progress: boolean;
