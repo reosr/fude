@@ -39,7 +39,7 @@ const noticeConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>、<ruby>日曜日<rt>にちようび</rt></ruby>です。</>,
+    japanese: <>5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>です。</>,
     romaji: "Gogatsu juushichinichi, nichiyoubi desu.",
     translation: "Tanggal 17 Mei, hari Minggu.",
     audioFileName: "irodori-starter-12-a01-l03.mp3",
@@ -63,7 +63,7 @@ const noticeConversation: IrodoriUtterance[] = [
 const attendanceConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
-    japanese: <>ユイさん、<ruby>今週<rt>こんしゅう</rt></ruby>の<ruby>日曜日<rt>にちようび</rt></ruby>、<ruby>本<rt>ほん</rt></ruby>のイベントに<ruby>行<rt>い</rt></ruby>きますか？</>,
+    japanese: <>ユイさん、5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>のイベントに<ruby>行<rt>い</rt></ruby>きますか？</>,
     romaji: "Yui-san, konshuu no nichiyoubi, hon no ibento ni ikimasu ka?",
     translation: "Yui, hari Minggu minggu ini kamu akan pergi ke acara buku?",
     audioFileName: "irodori-starter-12-a02-l01.mp3",
@@ -177,8 +177,8 @@ const eventNotices = [
   {
     id: "book",
     title: "Pameran Buku Aoba",
-    date: "5月17日（日）",
-    reading: "Gogatsu juushichinichi · Nichiyoubi",
+    date: "5月17日",
+    reading: "Gogatsu juushichinichi",
     time: "10.00–15.00",
     place: "青葉公園（Aoba Park）",
     fee: "入場無料 · Gratis",
@@ -253,7 +253,7 @@ const practiceTasks: Task[] = [
       { key: "c", label: "Minggu, 19 Juli" },
     ],
     answer: "a",
-    explanation: <>Pada pengumuman pertama tertulis 「5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>（<ruby>日曜日<rt>にちようび</rt></ruby>）」.</>,
+    explanation: <>Pada pengumuman pertama tertulis 「5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>」.</>,
   },
   {
     prompt: "Di mana Hari Film Komunitas berlangsung?",
@@ -341,7 +341,7 @@ const quizQuestions: Task[] = [
   {
     prompt: "Bagaimana menanyakan apakah seseorang akan pergi ke acara?",
     options: [
-      { key: "a", label: <><ruby>イベント<rt></rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか？</> },
+      { key: "a", label: <>イベントに<ruby>行<rt>い</rt></ruby>きますか？</> },
       { key: "b", label: <>イベントをありますか？</> },
       { key: "c", label: <>イベントでしますか？</> },
     ],
@@ -457,7 +457,7 @@ export default function IrodoriStarterLessonTwelvePage() {
             mengajak teman melakukan kegiatan, dan membalas undangan dengan sopan.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["4 target Can-do", "4 dialog", "19 slot audio", "26 kosakata tanggal", "10 kuis"].map((item) => (
+            {["4 target Can-do", "4 dialog", "18 slot audio", "26 kosakata tanggal", "10 kuis"].map((item) => (
               <span key={item} className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">{item}</span>
             ))}
           </div>
