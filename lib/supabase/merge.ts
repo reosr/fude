@@ -144,6 +144,21 @@ function mergeProfile(
       typeof cloud.equippedFrameId === "string"
         ? cloud.equippedFrameId
         : null,
+
+    photoPositionX:
+      typeof cloud.photoPositionX === "number"
+        ? Math.min(100, Math.max(0, cloud.photoPositionX))
+        : 50,
+
+    photoPositionY:
+      typeof cloud.photoPositionY === "number"
+        ? Math.min(100, Math.max(0, cloud.photoPositionY))
+        : 50,
+
+    photoZoom:
+      typeof cloud.photoZoom === "number"
+        ? Math.min(3, Math.max(1, cloud.photoZoom))
+        : 1,
   };
 
   const localProfile = {
@@ -151,6 +166,10 @@ function mergeProfile(
     avatar: local.avatar,
     equippedBadgeId: local.equippedBadgeId ?? null,
     equippedFrameId: local.equippedFrameId ?? null,
+
+    photoPositionX: local.photoPositionX ?? 50,
+    photoPositionY: local.photoPositionY ?? 50,
+    photoZoom: local.photoZoom ?? 1,
   };
 
   if (
