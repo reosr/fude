@@ -196,28 +196,28 @@ export default function Profil() {
   };
 
   const handlePhotoUpload = async (
-  event: ChangeEvent<HTMLInputElement>
-) => {
-  const file = event.target.files?.[0];
-  if (!file) return;
+    event: ChangeEvent<HTMLInputElement>
+  ) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
 
-  setPhotoError("");
-  setPhotoLoading(true);
+    setPhotoError("");
+    setPhotoLoading(true);
 
-  try {
-    await saveProfilePhoto(file);
-    await refreshPhoto();
-  } catch (error) {
-    setPhotoError(
-      error instanceof Error
-        ? error.message
-        : "Gagal mengunggah foto."
-    );
-  } finally {
-    setPhotoLoading(false);
-    event.target.value = "";
-  }
-};
+    try {
+      await saveProfilePhoto(file);
+      await refreshPhoto();
+    } catch (error) {
+      setPhotoError(
+        error instanceof Error
+          ? error.message
+          : "Gagal mengunggah foto."
+      );
+    } finally {
+      setPhotoLoading(false);
+      event.target.value = "";
+    }
+  };
 
   const handleCropSave = async (blob: Blob) => {
   setPhotoError("");
