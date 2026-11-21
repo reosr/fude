@@ -90,11 +90,11 @@ export function getLocalFudeSnapshot(): LocalFudeSnapshot {
   }
 
   const stored = {
-  profile: localStorage.getItem("fude_profile") !== null,
-  progress: localStorage.getItem("fude_progress") !== null,
-  xp: localStorage.getItem("fude_xp") !== null,
-  memorizedKanji: localStorage.getItem("fude_memorized") !== null,
-};
+    profile: localStorage.getItem("fude_profile") !== null,
+    progress: localStorage.getItem("fude_progress") !== null,
+    xp: localStorage.getItem("fude_xp") !== null,
+    memorizedKanji: localStorage.getItem("fude_memorized") !== null,
+  };
 
   return {
     profile: getFudeProfile(),
