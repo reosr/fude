@@ -11,7 +11,6 @@ import {
   MessageCircle,
   RefreshCw,
   Send,
-  Sparkles,
   TrainFront,
 } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
