@@ -49,7 +49,7 @@ const facilityConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>あちらです。エレベーターの<ruby>横<rt>よこ</rt></ruby>ですよ。</>,
-    romaji: "Achira desu. Ereb eetaa no yoko desu yo.",
+    romaji: "Achira desu. Erebeetaa no yoko desu yo.",
     translation: "Di sebelah sana, di samping lift.",
     audioFileName: "irodori-starter-14-a01-l04.mp3",
   },
