@@ -40,7 +40,7 @@ export default function IrodoriStarterPage() {
               </p>
             </div>
             <span className="rounded-xl border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]">
-              17 dari 18 materi tersedia
+              18 dari 18 materi tersedia
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -78,7 +78,7 @@ export default function IrodoriStarterPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson <= 17;
+            const isAvailable = lesson <= 18;
             const lessonId = `starter-${String(lesson).padStart(2, "0")}`;
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle =
@@ -114,7 +114,9 @@ export default function IrodoriStarterPage() {
                                       ? "I need some batteries."
                                       : lesson === 16
                                         ? "How much is this?"
-                                        : "I went to see a movie.";
+                                        : lesson === 17
+                                          ? "I went to see a movie."
+                                          : "I want to go to a hot spring.";
             const lessonDescription =
               lesson === 1
                 ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
@@ -148,7 +150,9 @@ export default function IrodoriStarterPage() {
                                       ? "Mencari tempat membeli barang, membaca panduan lantai, bertanya kepada staf, memberi komentar produk, dan memahami papan tanda toko."
                                       : lesson === 16
                                         ? "Menanyakan harga, menyebut jumlah barang, menjawab pertanyaan kasir, dan membaca tanda diskon."
-                                        : "Menceritakan kegiatan hari libur, menyampaikan kesan, membaca unggahan, memahami daftar tarif, dan mengirim pesan setelah jalan bersama." ;
+                                        : lesson === 17
+                                          ? "Menceritakan kegiatan hari libur, menyampaikan kesan, membaca unggahan, memahami daftar tarif, dan mengirim pesan setelah jalan bersama."
+                                          : "Menceritakan rencana liburan, menyampaikan keinginan, menulis unggahan, dan berbagi pengalaman perjalanan.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
@@ -208,8 +212,8 @@ export default function IrodoriStarterPage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Pelajaran 18 akan dibuka setelah materi, contoh komunikasi, latihan,
-        dan evaluasinya selesai disiapkan.
+        Seluruh 18 pelajaran Starter A1 sudah tersedia. Progres dan evaluasi
+        setiap pelajaran tersimpan terpisah dari EXP dan JLPT.
       </p>
     </main>
   );
