@@ -268,13 +268,13 @@ const appliances = [
 
 const houseAdjectives = [
   { jp: <><ruby>広<rt>ひろ</rt></ruby>い</>, reading: "hiroi", meaning: "Luas", opposite: "せまい", type: "I-adjective" },
-  { jp: "せまい", reading: "semai", meaning: "Sempit", opposite: <><ruby>広<rt>ひろ</rt></ruby>い</>, type: "I-adjective" },
-  { jp: <><ruby>大<rt>おお</rt></ruby>きい</>, reading: "ookii", meaning: "Besar", opposite: <><ruby>小<rt>ちい</rt></ruby>さい</>, type: "I-adjective" },
-  { jp: <><ruby>小<rt>ちい</rt></ruby>さい</>, reading: "chiisai", meaning: "Kecil", opposite: <><ruby>大<rt>おお</rt></ruby>きい</>, type: "I-adjective" },
-  { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: <><ruby>古<rt>ふる</rt></ruby>い</>, type: "I-adjective" },
-  { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: <><ruby>新<rt>あたら</rt></ruby>しい</>, type: "I-adjective" },
+  { jp: "せまい", reading: "semai", meaning: "Sempit", opposite: "ひろい", type: "I-adjective" },
+  { jp: <><ruby>大<rt>おお</rt></ruby>きい</>, reading: "ookii", meaning: "Besar", opposite: "ちいさい", type: "I-adjective" },
+  { jp: <><ruby>小<rt>ちい</rt></ruby>さい</>, reading: "chiisai", meaning: "Kecil", opposite: "おおきい", type: "I-adjective" },
+  { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: "ふるい", type: "I-adjective" },
+  { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: "あたらしい", type: "I-adjective" },
   { jp: <><ruby>静<rt>しず</rt></ruby>か</>, reading: "shizuka", meaning: "Tenang", opposite: "うるさい", type: "Na-adjective" },
-  { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: <><ruby>静<rt>しず</rt></ruby>か</>, type: "I-adjective" },
+  { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: "しずか", type: "I-adjective" },
   { jp: "きれい", reading: "kiree", meaning: "Bersih / indah", opposite: "きたない", type: "Na-adjective" },
   { jp: "きたない", reading: "kitanai", meaning: "Kotor", opposite: "きれい", type: "I-adjective" },
 ];
