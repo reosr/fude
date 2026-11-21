@@ -166,12 +166,12 @@ export default function Sidebar() {
           className="md:hidden fixed top-3 left-3 z-[60] inline-flex max-w-[210px] items-center gap-2 rounded-xl border border-[#B8860B]/40 bg-[#1A1918]/95 px-2 py-1.5 shadow-lg shadow-black/35 backdrop-blur-md transition-colors hover:bg-[#262523]"
         >
           <ProfilePicture
-  photoSrc={photoSrc}
-  photoPositionX={profile.photoPositionX}
-  photoPositionY={profile.photoPositionY}
-  photoZoom={profile.photoZoom}
-  size={46}
-/>
+            photoSrc={photoSrc}
+            photoPositionX={profile.photoPositionX}
+            photoPositionY={profile.photoPositionY}
+            photoZoom={profile.photoZoom}
+            size={46}
+          />
           <div className="min-w-0 flex-1">
             <p className="max-w-[128px] truncate text-[12px] font-bold leading-tight text-[#EAE6DD]">
               {profile.name}
