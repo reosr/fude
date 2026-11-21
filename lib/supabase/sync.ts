@@ -23,6 +23,8 @@ export interface LocalFudeSnapshot {
   memorizedKanji: string[];
   jlptResults: LocalJlptResult[];
   capturedAt: string;
+  xpBase: number;
+xpEvents: FudeXpEvent[];
   stored: {
     profile: boolean;
     progress: boolean;
