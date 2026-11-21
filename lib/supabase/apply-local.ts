@@ -26,7 +26,9 @@ export function applyMergedDataToLocal(
   writes.set(PROFILE_KEY, JSON.stringify(data.profile));
   writes.set(PROGRESS_KEY, String(data.currentBab));
   writes.set(XP_KEY, String(data.totalXp));
-  writes.set(XP_REWARDS_KEY, JSON.stringify(data.xpRewards));
+writes.set(XP_BASE_KEY, String(data.xpBase));
+writes.set(XP_EVENTS_KEY, JSON.stringify(data.xpEvents));
+writes.set(XP_REWARDS_KEY, JSON.stringify(data.xpRewards));
   writes.set(MEMORIZED_KEY, JSON.stringify(data.memorizedKanji));
 
   for (const item of data.jlptResults) {
