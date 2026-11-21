@@ -234,7 +234,7 @@ export default function IrodoriConversation({
             </span>
             <span className="flex flex-col">
               <span className="text-[10px] font-bold text-[#EAE6DD]">
-                {speaker.name} · {speaker.role}
+                {speaker.name}
               </span>
               <span className="text-[9px] text-[#A3A099]">
                 {speaker.voiceDescription}
@@ -277,11 +277,6 @@ export default function IrodoriConversation({
                 <div className="min-w-0 flex-1">
                   <p className="text-[10px] font-bold text-[#D9B66D]">
                     {speaker?.name ?? utterance.speakerId}
-                    {speaker?.role ? (
-                      <span className="ml-1 font-medium text-[#817A73]">
-                        · {speaker.role}
-                      </span>
-                    ) : null}
                   </p>
                   <div
                     className={`mt-1 font-mincho text-xl leading-[2] text-[#F1EBDD] sm:text-2xl [&_rt]:text-[0.48em] [&_rt]:text-[#D6AD4F] ${
