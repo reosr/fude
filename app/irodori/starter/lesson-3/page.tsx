@@ -138,7 +138,13 @@ const vocabulary = [
   { word: "出身", reading: "しゅっしん · Shusshin", meaning: "Tempat asal" },
 ];
 
-const quizQuestions = [
+const quizQuestions: {
+  prompt: string;
+  term?: string;
+  options: string[];
+  answer: string;
+  explanation: string;
+}[] = [
   {
     prompt: "Kamu bertemu seseorang untuk pertama kali. Ungkapan pembuka mana yang sesuai?",
     options: ["はじめまして", "おやすみなさい", "じゃあ、また"],
@@ -745,7 +751,7 @@ export default function IrodoriStarterLessonThreePage() {
                   }))
                 }
                 disabled={formSubmitted}
-                placeholder="2002年4月18日"
+                placeholder="Salin tanggal dari contoh"
                 aria-label="Tulis tanggal lahir dalam format Jepang"
                 className="w-full rounded-lg border border-white/[0.1] bg-black/20 px-3 py-3 font-mincho text-base text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#B8860B]/50 disabled:opacity-70"
               />
@@ -806,7 +812,7 @@ export default function IrodoriStarterLessonThreePage() {
         <div className="grid gap-3 sm:grid-cols-2">
           {quizQuestions.map((question, index) => (
             <article
-              key={index}
+              key={question.prompt}
               className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
               <p className="text-[9px] font-black tracking-widest text-[#B8860B]">
