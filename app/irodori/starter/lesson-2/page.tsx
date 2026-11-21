@@ -8,7 +8,6 @@ import {
   Languages,
   MessageCircle,
   RefreshCw,
-  Sparkles,
 } from "lucide-react";
 import IrodoriConversation, {
   type IrodoriUtterance,
@@ -27,9 +26,9 @@ const akikoAndKenji = [IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji];
 const repeatConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
-    japanese: <>すみません。</>,
-    romaji: "Sumimasen.",
-    translation: "Permisi.",
+    japanese: <>すみません。よくわかりません。</>,
+    romaji: "Sumimasen. Yoku wakarimasen.",
+    translation: "Maaf, saya kurang mengerti.",
     audioFileName: "irodori-starter-02-a01-l01.mp3",
   },
   {
@@ -62,9 +61,9 @@ const repeatConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <><ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですか？</>,
-    romaji: "Daijoubu desu ka?",
-    translation: "Apakah sudah tidak apa-apa?",
+    japanese: <>わかりましたか？</>,
+    romaji: "Wakarimashita ka?",
+    translation: "Apakah sudah mengerti?",
     audioFileName: "irodori-starter-02-a01-l06.mp3",
   },
   {
@@ -107,9 +106,9 @@ const languageConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <><ruby>英語<rt>えいご</rt></ruby>、できますか？</>,
-    romaji: "Eigo, dekimasu ka?",
-    translation: "Apakah kamu bisa berbahasa Inggris?",
+    japanese: <>インドネシア<ruby>語<rt>ご</rt></ruby>、できますか？</>,
+    romaji: "Indoneshia-go, dekimasu ka?",
+    translation: "Apakah kamu bisa berbahasa Indonesia?",
     audioFileName: "irodori-starter-02-a02-l05.mp3",
   },
   {
@@ -180,16 +179,16 @@ const situationQuestions = [
     explanation: "ゆっくり berarti perlahan. Ungkapan ini meminta orang lain berbicara lebih pelan.",
   },
   {
-    prompt: "Seseorang bertanya 日本語、できますか？ Kamu bisa sedikit berbahasa Jepang. Apa jawabanmu?",
+    prompt: "Seseorang bertanya apakah kamu bisa berbahasa Jepang. Kamu bisa sedikit. Apa jawabanmu?",
     options: ["はい、少しできます", "いいえ、おやすみなさい", "じゃあ、また"],
     answer: "はい、少しできます",
-    explanation: "はい、少しできます berarti “Ya, saya bisa sedikit”.",
+    explanation: "Gunakan jawaban ini untuk mengatakan bahwa kamu bisa berbahasa Jepang sedikit.",
   },
   {
     prompt: "Kamu ingin menanyakan apakah seseorang bisa berbahasa Inggris. Apa kalimatnya?",
     options: ["英語、できますか？", "日本語で何と言いますか？", "お先に失礼します"],
     answer: "英語、できますか？",
-    explanation: "英語（えいご） berarti bahasa Inggris. Tambahkan できますか untuk menanyakan kemampuan.",
+    explanation: "Sebutkan nama bahasa, lalu tambahkan できますか untuk menanyakan kemampuan.",
   },
   {
     prompt: "Kamu memegang sebuah benda dan ingin tahu cara menyebutnya dalam bahasa Jepang. Apa yang kamu tanyakan?",
@@ -199,13 +198,13 @@ const situationQuestions = [
       "お疲れさまでした",
     ],
     answer: "これは日本語で何と言いますか？",
-    explanation: "これは日本語で何と言いますか？ berarti “Bagaimana mengatakan ini dalam bahasa Jepang?”",
+    explanation: "Kalimat ini digunakan untuk menanyakan cara menyebut benda atau kata dalam bahasa Jepang.",
   },
   {
     prompt: "Teman menjawab bahwa “water” dalam bahasa Jepang adalah “mizu”. Kata Jepang mana yang dimaksud?",
     options: ["水", "りんご", "ノート"],
     answer: "水",
-    explanation: "水 dibaca みず (mizu), artinya air.",
+    explanation: "Kata ini dibaca mizu dan berarti air.",
   },
 ];
 
@@ -435,7 +434,7 @@ export default function IrodoriStarterLessonTwoPage() {
           <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
             <p className="text-[9px] font-bold text-[#B8860B]">BISA SEDIKIT</p>
             <p className="mt-2 font-mincho text-base text-[#F1EBDD]">
-              はい、少しできます。
+              はい、<ruby>少<rt>すこ</rt></ruby>しできます。
             </p>
             <p className="mt-1 text-[10px] text-[#A9A398]">
               Ya, bisa sedikit.
@@ -454,7 +453,7 @@ export default function IrodoriStarterLessonTwoPage() {
         <p className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-3 text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#E7D2A1]">Catatan:</span>{" "}
           sebutkan nama bahasa sebelum できますか？, misalnya
-          <span className="font-mincho text-[#E7D2A1]"> 英語、できますか？</span>{" "}
+          <span className="font-mincho text-[#E7D2A1]"> <ruby>英語<rt>えいご</rt></ruby>、できますか？</span>{" "}
           untuk menanyakan bahasa Inggris.
         </p>
       </section>
@@ -488,7 +487,7 @@ export default function IrodoriStarterLessonTwoPage() {
             POLA KALIMAT
           </p>
           <p className="mt-2 font-mincho text-xl leading-[2] text-[#F1EBDD]">
-            これは日本語で何と言いますか？
+            これは<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と<ruby>言<rt>い</rt></ruby>いますか？
           </p>
           <p className="mt-1 text-xs text-[#B6B0A5]">
             Bagaimana mengatakan ini dalam bahasa Jepang?
@@ -575,6 +574,11 @@ export default function IrodoriStarterLessonTwoPage() {
                     <>
                       <ruby>英語<rt>えいご</rt></ruby> berarti bahasa Inggris.
                       Gunakan できますか untuk menanyakan kemampuan.
+                    </>
+                  ) : index === 4 ? (
+                    <>
+                      これは<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と
+                      <ruby>言<rt>い</rt></ruby>いますか？ berarti “Bagaimana mengatakan ini dalam bahasa Jepang?”
                     </>
                   ) : index === 5 ? (
                     <>
