@@ -190,7 +190,7 @@ const hobbyVocabulary: { jp: ReactNode; reading: string; meaning: string }[] = [
   { jp: <ruby>読書<rt>どくしょ</rt></ruby>, reading: "dokusho", meaning: "Membaca buku" },
   { jp: <ruby>音楽<rt>おんがく</rt></ruby>, reading: "ongaku", meaning: "Musik" },
   { jp: <ruby>映画<rt>えいが</rt></ruby>, reading: "eiga", meaning: "Film" },
-  { jp: <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>, reading: "kaimono", meaning: "Belanja" },
+  { jp: <><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby></>, reading: "kaimono", meaning: "Belanja" },
   { jp: <ruby>料理<rt>りょうり</rt></ruby>, reading: "ryouri", meaning: "Memasak" },
   { jp: "ゲーム", reading: "geemu", meaning: "Permainan" },
   { jp: "スポーツ", reading: "supootsu", meaning: "Olahraga" },
@@ -198,20 +198,20 @@ const hobbyVocabulary: { jp: ReactNode; reading: string; meaning: string }[] = [
   { jp: <ruby>掃除<rt>そうじ</rt></ruby>, reading: "souji", meaning: "Membersihkan" },
   { jp: <ruby>洗濯<rt>せんたく</rt></ruby>, reading: "sentaku", meaning: "Mencuci pakaian" },
   { jp: <ruby>勉強<rt>べんきょう</rt></ruby>, reading: "benkyou", meaning: "Belajar" },
-  { jp: <ruby>友<rt>とも</rt></ruby>だち, reading: "tomodachi", meaning: "Teman" },
-  { jp: <ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>, reading: "yasumi no hi", meaning: "Hari libur" },
+  { jp: <><ruby>友<rt>とも</rt></ruby>だち</>, reading: "tomodachi", meaning: "Teman" },
+  { jp: <><ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby></>, reading: "yasumi no hi", meaning: "Hari libur" },
   { jp: <ruby>公園<rt>こうえん</rt></ruby>, reading: "kouen", meaning: "Taman" },
 ];
 
 const activityWords: { jp: ReactNode; reading: string; meaning: string }[] = [
-  { jp: <ruby>読<rt>よ</rt></ruby>みます, reading: "yomimasu", meaning: "Membaca" },
-  { jp: <ruby>聞<rt>き</rt></ruby>きます, reading: "kikimasu", meaning: "Mendengarkan" },
-  { jp: <ruby>見<rt>み</rt></ruby>ます, reading: "mimasu", meaning: "Menonton / melihat" },
-  { jp: <ruby>します</ruby>, reading: "shimasu", meaning: "Melakukan" },
-  { jp: <ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をします, reading: "kaimono o shimasu", meaning: "Berbelanja" },
-  { jp: <ruby>料理<rt>りょうり</rt></ruby>をします, reading: "ryouri o shimasu", meaning: "Memasak" },
-  { jp: <ruby>散歩<rt>さんぽ</rt></ruby>します, reading: "sanpo shimasu", meaning: "Berjalan-jalan" },
-  { jp: <ruby>勉強<rt>べんきょう</rt></ruby>します, reading: "benkyou shimasu", meaning: "Belajar" },
+  { jp: <><ruby>読<rt>よ</rt></ruby>みます</>, reading: "yomimasu", meaning: "Membaca" },
+  { jp: <><ruby>聞<rt>き</rt></ruby>きます</>, reading: "kikimasu", meaning: "Mendengarkan" },
+  { jp: <><ruby>見<rt>み</rt></ruby>ます</>, reading: "mimasu", meaning: "Menonton / melihat" },
+  { jp: "します", reading: "shimasu", meaning: "Melakukan" },
+  { jp: <><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>をします</>, reading: "kaimono o shimasu", meaning: "Berbelanja" },
+  { jp: <><ruby>料理<rt>りょうり</rt></ruby>をします</>, reading: "ryouri o shimasu", meaning: "Memasak" },
+  { jp: <><ruby>散歩<rt>さんぽ</rt></ruby>します</>, reading: "sanpo shimasu", meaning: "Berjalan-jalan" },
+  { jp: <><ruby>勉強<rt>べんきょう</rt></ruby>します</>, reading: "benkyou shimasu", meaning: "Belajar" },
 ];
 
 const practiceTasks: {
