@@ -1,3 +1,4 @@
+
 const MEMORIZED_KEY = "fude_memorized";
 
 export function getMemorizedKanji(): string[] {
