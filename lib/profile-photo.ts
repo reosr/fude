@@ -172,7 +172,7 @@ async function writePhotoBlob(blob: Blob | null): Promise<void> {
 }
 
 // Dipanggil ketika pengguna memilih foto sendiri.
-export async function saveProfilePhoto(file: File): Promise<void> {
+export async function saveProfilePhoto(file: Blob): Promise<void> {
   if (!file.type.startsWith("image/")) {
     throw new Error("File harus berupa gambar.");
   }
