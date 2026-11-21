@@ -187,7 +187,7 @@ export default function Profil() {
     }
 
     try {
-      saveFudeProfile({ name: cleanName, avatar: draftAvatar });
+      saveFudeProfile({ name: cleanName });
       setIsEditing(false);
       setSaveError("");
     } catch {
