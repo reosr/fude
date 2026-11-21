@@ -1,6 +1,6 @@
 import HomeOverview from "../components/HomeOverview";
 import Link from "next/link";
-import { ArrowRightLeft, BookText, ChevronRight, Award, Flame, Trophy, BookA } from "lucide-react"; // BookA ditambahin
+import { ArrowRightLeft, BookText, Award, Trophy, BookA, BookOpen } from "lucide-react";
 import babIndex from "../data/bab-index.json";
 
 const JLPT_IMAGES: Record<string, string> = {
@@ -72,16 +72,17 @@ export default function Dashboard() {
             </div>
           </Link>
 
-          <div className="relative bg-[#1E1D1B] border border-[#33312E] rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 text-center opacity-60 cursor-not-allowed h-40">
-            <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?q=75&w=400&auto=format&fit=crop" alt="" className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#121110] via-[#121110]/80 to-transparent"></div>
+          <Link href="/irodori" className="relative bg-[#1E1D1B] border border-[#33312E] hover:border-[#B8860B] rounded-xl overflow-hidden flex flex-col items-center justify-center p-4 text-center transition-all group h-40">
+            <img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?q=75&w=400&auto=format&fit=crop" alt="" className="absolute inset-0 w-full h-full object-cover opacity-25 group-hover:opacity-40 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#121110] via-[#121110]/70 to-transparent"></div>
             <div className="relative z-10 flex flex-col items-center justify-center w-full">
-              <div className="w-12 h-12 bg-[#33312E] rounded-full flex items-center justify-center mb-3 shadow-lg">
-                <Flame className="text-[#A3A099]" size={24} />
+              <div className="w-12 h-12 bg-[#33312E]/80 backdrop-blur-sm rounded-full flex items-center justify-center mb-3 group-hover:bg-[#B8860B] transition-colors shadow-lg">
+                <BookOpen className="text-[#EAE6DD]" size={24} />
               </div>
-              <span className="text-sm font-bold text-[#A3A099]">Harian (Soon)</span>
+              <span className="text-sm font-bold text-[#EAE6DD] drop-shadow-md">Irodori</span>
+              <span className="mt-1 text-[9px] font-semibold tracking-wider text-[#D9B66D]">KOMUNIKASI A1–B1</span>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
 
