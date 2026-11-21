@@ -81,6 +81,7 @@ export default function Profil() {
 
   const [isPhotoPreviewOpen, setIsPhotoPreviewOpen] = useState(false);
 
+  const [cropFile, setCropFile] = useState<File | null>(null);
 
   const refreshData = () => {
     const progress = Number(getProgress());
