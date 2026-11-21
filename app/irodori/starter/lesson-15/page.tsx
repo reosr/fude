@@ -5,10 +5,8 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import {
   ArrowLeft,
-  BookOpen,
   CheckCircle2,
   Layers,
-  MapPin,
   MessageCircle,
   RefreshCw,
   ShoppingBag,
@@ -623,7 +621,7 @@ export default function IrodoriStarterLessonFifteenPage() {
           {
             title: "02 · Menanyakan tempat membeli",
             pattern: "どこで買えますか？",
-            example: <>この<ruby>近<rt>ちか</rt></ruby>くで、ノートはどこで<ruby>買<rt>か</rt></ruby>えますか？</>,
+            example: <>ノートはどこで<ruby>買<rt>か</rt></ruby>えますか？</>,
             note: "Gunakan どこで買えますか untuk menanyakan di mana barang dapat dibeli. Pada tingkat ini, hafalkan 買えます sebagai satu ungkapan praktis; bentuk potensialnya dipelajari lebih lanjut pada tahap berikutnya.",
           },
           {
