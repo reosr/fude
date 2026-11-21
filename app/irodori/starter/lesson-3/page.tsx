@@ -210,6 +210,12 @@ function renderJapaneseTerm(term: string) {
 export default function IrodoriStarterLessonThreePage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const [formDraft, setFormDraft] = useState({
+    fullName: "",
+    nationality: "",
+    birthDate: "",
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const progress = useIrodoriProgress();
   const ratings = progress.selfEvaluations["starter-03"] ?? {};
   const isCompleted = progress.completedLessons.includes("starter-03");
@@ -222,6 +228,25 @@ export default function IrodoriStarterLessonThreePage() {
   const resetQuiz = () => {
     setAnswers({});
     setQuizSubmitted(false);
+  };
+
+  const normalizedFormDraft = {
+    fullName: formDraft.fullName.trim().replace(/\\s/g, ""),
+    nationality: formDraft.nationality.trim().replace(/\\s/g, ""),
+    birthDate: formDraft.birthDate.trim().replace(/\\s/g, ""),
+  };
+  const formResults = [
+    normalizedFormDraft.fullName === "マリア・プトリ",
+    normalizedFormDraft.nationality === "インドネシア",
+    normalizedFormDraft.birthDate === "2002年4月18日",
+  ];
+  const canCheckForm = Object.values(formDraft).every(
+    (value) => value.trim().length > 0
+  );
+
+  const resetFormPractice = () => {
+    setFormDraft({ fullName: "", nationality: "", birthDate: "" });
+    setFormSubmitted(false);
   };
 
   return (
@@ -508,6 +533,129 @@ export default function IrodoriStarterLessonThreePage() {
             membaca kolom formulir.
           </p>
         </div>
+
+        <div className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4">
+          <div>
+            <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+              LATIHAN MENULIS
+            </p>
+            <h3 className="mt-1 text-sm font-bold text-[#EAE6DD]">
+              Isi formulir dari contoh
+            </h3>
+            <p className="mt-2 text-xs leading-6 text-[#A9A398]">
+              Salin informasi tokoh fiktif di atas ke dalam kolom Jepang.
+              Gunakan nama, negara, dan tanggal yang sama.
+            </p>
+          </div>
+
+          <div className="mt-4 space-y-3">
+            <label className="block">
+              <span className="mb-1 block text-xs font-semibold text-[#C7C1B5]">
+                <ruby>氏名<rt>しめい</rt></ruby> · Nama lengkap
+              </span>
+              <input
+                type="text"
+                value={formDraft.fullName}
+                onChange={(event) =>
+                  setFormDraft((current) => ({
+                    ...current,
+                    fullName: event.target.value,
+                  }))
+                }
+                disabled={formSubmitted}
+                placeholder="マリア・プトリ"
+                aria-label="Tulis nama lengkap dalam katakana"
+                className="w-full rounded-lg border border-white/[0.1] bg-black/20 px-3 py-3 font-mincho text-base text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#B8860B]/50 disabled:opacity-70"
+              />
+              {formSubmitted && (
+                <span className={formResults[0] ? "mt-1 block text-[10px] text-emerald-300" : "mt-1 block text-[10px] text-red-300"}>
+                  {formResults[0] ? "Benar" : "Periksa kembali penulisan nama."}
+                </span>
+              )}
+            </label>
+
+            <label className="block">
+              <span className="mb-1 block text-xs font-semibold text-[#C7C1B5]">
+                <ruby>国籍<rt>こくせき</rt></ruby> · Kewarganegaraan
+              </span>
+              <input
+                type="text"
+                value={formDraft.nationality}
+                onChange={(event) =>
+                  setFormDraft((current) => ({
+                    ...current,
+                    nationality: event.target.value,
+                  }))
+                }
+                disabled={formSubmitted}
+                placeholder="インドネシア"
+                aria-label="Tulis kewarganegaraan dalam bahasa Jepang"
+                className="w-full rounded-lg border border-white/[0.1] bg-black/20 px-3 py-3 font-mincho text-base text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#B8860B]/50 disabled:opacity-70"
+              />
+              {formSubmitted && (
+                <span className={formResults[1] ? "mt-1 block text-[10px] text-emerald-300" : "mt-1 block text-[10px] text-red-300"}>
+                  {formResults[1] ? "Benar" : "Periksa kembali penulisan negara."}
+                </span>
+              )}
+            </label>
+
+            <label className="block">
+              <span className="mb-1 block text-xs font-semibold text-[#C7C1B5]">
+                <ruby>生年月日<rt>せいねんがっぴ</rt></ruby> · Tanggal lahir
+              </span>
+              <input
+                type="text"
+                value={formDraft.birthDate}
+                onChange={(event) =>
+                  setFormDraft((current) => ({
+                    ...current,
+                    birthDate: event.target.value,
+                  }))
+                }
+                disabled={formSubmitted}
+                placeholder="2002年4月18日"
+                aria-label="Tulis tanggal lahir dalam format Jepang"
+                className="w-full rounded-lg border border-white/[0.1] bg-black/20 px-3 py-3 font-mincho text-base text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#B8860B]/50 disabled:opacity-70"
+              />
+              {formSubmitted && (
+                <span className={formResults[2] ? "mt-1 block text-[10px] text-emerald-300" : "mt-1 block text-[10px] text-red-300"}>
+                  {formResults[2] ? "Benar" : "Periksa kembali urutan tanggal."}
+                </span>
+              )}
+            </label>
+          </div>
+
+          <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+            <p role="status" aria-live="polite" className="text-xs text-[#A9A398]">
+              {formSubmitted
+                ? "Hasil: " + formResults.filter(Boolean).length + " dari 3 kolom benar."
+                : "Isi ketiga kolom menggunakan contoh fiktif."}
+            </p>
+            {formSubmitted ? (
+              <button
+                type="button"
+                onClick={resetFormPractice}
+                className="inline-flex items-center gap-2 rounded-lg border border-[#B8860B]/35 px-4 py-2 text-xs font-bold text-[#E7D2A1] hover:bg-[#B8860B]/10"
+              >
+                <RefreshCw size={13} />
+                Ulangi latihan
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setFormSubmitted(true)}
+                disabled={!canCheckForm}
+                className="rounded-lg bg-[#C93438] px-4 py-2 text-xs font-bold text-white hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
+              >
+                Periksa isian
+              </button>
+            )}
+          </div>
+          <p className="mt-3 text-[10px] leading-5 text-[#817A73]">
+            Isian latihan ini hanya berada di halaman selama latihan dan tidak
+            disimpan ke profil atau progres Irodori.
+          </p>
+        </div>
       </section>
 
       <section className="space-y-4">
@@ -753,6 +901,7 @@ export default function IrodoriStarterLessonThreePage() {
               onClick={() => completeIrodoriLesson("starter-03")}
               disabled={
                 !quizSubmitted ||
+                !formSubmitted ||
                 canDos.some((canDo) => !ratings[canDo.id])
               }
               className="inline-flex items-center gap-2 rounded-xl bg-[#C93438] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
@@ -770,10 +919,10 @@ export default function IrodoriStarterLessonThreePage() {
             <ArrowLeft size={15} className="rotate-180" />
           </Link>
         </div>
-        {!quizSubmitted && (
+        {(!quizSubmitted || !formSubmitted) && (
           <p className="mt-2 text-[10px] text-[#817A73]">
-            Selesaikan kuis situasi dan isi keempat penilaian Can-do untuk
-            menyelesaikan pelajaran.
+            Selesaikan kuis situasi, latihan menulis formulir, dan isi keempat
+            penilaian Can-do untuk menyelesaikan pelajaran.
           </p>
         )}
       </section>
