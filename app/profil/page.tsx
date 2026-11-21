@@ -81,7 +81,6 @@ export default function Profil() {
 
   const [isPhotoPreviewOpen, setIsPhotoPreviewOpen] = useState(false);
 
-
   const refreshData = () => {
     const progress = Number(getProgress());
     const safeProgress = Number.isFinite(progress)
