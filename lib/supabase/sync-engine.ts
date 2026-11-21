@@ -22,16 +22,14 @@ export interface FudeSyncReport {
   syncedAt: string;
 }
 
-export async function syncFudeNow(
+let activeSync: Promise<FudeSyncReport> | null = null;
+let syncAgainRequested = false;
+
+async function performSync(
   expectedUserId: string
 ): Promise<FudeSyncReport> {
-  if (typeof window === "undefined") {
-    throw new Error("Sinkronisasi hanya bisa dilakukan di browser.");
-  }
-
   const supabase = createClient();
 
-  // Pastikan pengguna masih login.
   const {
     data: { user },
     error: authError,
@@ -41,59 +39,62 @@ export async function syncFudeNow(
     throw new Error(`Gagal memeriksa akun: ${authError.message}`);
   }
 
-  if (!user) {
-    throw new Error("Silakan login terlebih dahulu.");
-  }
-
-  if (user.id !== expectedUserId) {
+  if (!user || user.id !== expectedUserId) {
     throw new Error("Akun berubah. Sinkronisasi dibatalkan.");
   }
 
-  // Pastikan perangkat terikat ke akun yang benar.
-  const boundUserId = getFudeSyncAccount();
-
-  if (!boundUserId || boundUserId !== user.id) {
-    throw new Error(
-      "Perangkat belum ditautkan ke akun cloud yang benar."
-    );
+  if (getFudeSyncAccount() !== user.id) {
+    throw new Error("Perangkat belum tertaut ke akun ini.");
   }
 
   checkFudeSyncAccount(user.id);
 
-  // Catat perubahan yang sudah ada sebelum proses dimulai.
-  const pendingAtStart = getPendingSyncChanges();
-
-  // Ambil data perangkat dan cloud.
-  const local = getLocalFudeSnapshot();
+  // Baca cloud terlebih dahulu.
   const cloud = await readCloudFudeData();
 
-  // Periksa kembali akun sebelum menerapkan perubahan.
+  // Pastikan sesi masih sama setelah membaca cloud.
   const {
     data: { user: currentUser },
     error: currentAuthError,
   } = await supabase.auth.getUser();
 
-  if (currentAuthError || !currentUser || currentUser.id !== user.id) {
+  if (
+    currentAuthError ||
+    !currentUser ||
+    currentUser.id !== user.id
+  ) {
+    throw new Error("Sesi berubah. Sinkronisasi dibatalkan.");
+  }
+
+  // Ambil snapshot terbaru setelah proses baca cloud selesai.
+  const pending = getPendingSyncChanges();
+  const local = getLocalFudeSnapshot();
+
+  const merged = mergeFudeData(local, cloud, pending);
+
+  // Terapkan hasil merge secara sinkron.
+  applyMergedDataToLocal(merged);
+
+  // Kirim hasil merge ke akun yang sama.
+  await writeCloudFudeData(merged, user.id);
+
+  // Jangan hapus penanda jika akun berubah.
+  const {
+    data: { user: finalUser },
+    error: finalAuthError,
+  } = await supabase.auth.getUser();
+
+  if (
+    finalAuthError ||
+    !finalUser ||
+    finalUser.id !== user.id
+  ) {
     throw new Error(
-      "Sesi akun berubah selama proses. Sinkronisasi dibatalkan."
+      "Sesi berubah setelah pengiriman. Penanda perubahan tetap dipertahankan."
     );
   }
 
-  // Gabungkan data menggunakan aturan keamanan Fude.
-  const merged = mergeFudeData(
-    local,
-    cloud,
-    pendingAtStart
-  );
-
-  // Terapkan hasil merge ke penyimpanan lokal.
-  applyMergedDataToLocal(merged);
-
-  // Simpan hasil penggabungan ke Supabase.
-  await writeCloudFudeData(merged, user.id);
-
-  // Hanya hapus penanda perubahan yang benar-benar sudah dikirim.
-  clearPendingSyncChanges(pendingAtStart);
+  clearPendingSyncChanges(pending);
 
   return {
     status: "synced",
@@ -101,4 +102,36 @@ export async function syncFudeNow(
     jlptSets: merged.jlptResults.length,
     syncedAt: new Date().toISOString(),
   };
+}
+
+export async function syncFudeNow(
+  expectedUserId: string
+): Promise<FudeSyncReport> {
+  // Cegah dua proses sinkronisasi berjalan bersamaan.
+  if (activeSync) {
+    syncAgainRequested = true;
+    return activeSync;
+  }
+
+  const runLoop = async (): Promise<FudeSyncReport> => {
+    let report: FudeSyncReport;
+
+    do {
+      syncAgainRequested = false;
+      report = await performSync(expectedUserId);
+    } while (syncAgainRequested);
+
+    return report;
+  };
+
+  const task = runLoop();
+  activeSync = task;
+
+  try {
+    return await task;
+  } finally {
+    if (activeSync === task) {
+      activeSync = null;
+    }
+  }
 }
