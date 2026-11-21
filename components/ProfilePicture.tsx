@@ -56,10 +56,10 @@ export default function ProfilePicture({
           draggable={false}
           onLoad={(event) => {
             setImageSize({
-  src: photoSrc,
-  width: event.currentTarget.naturalWidth,
-  height: event.currentTarget.naturalHeight,
-});
+            src: photoSrc,
+            width: event.currentTarget.naturalWidth,
+            height: event.currentTarget.naturalHeight,
+          });
           }}
           className="absolute max-w-none"
           style={layout ? {
