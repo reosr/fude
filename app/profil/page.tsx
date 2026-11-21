@@ -175,7 +175,6 @@ export default function Profil() {
 
   const openEditor = () => {
     setDraftName(profile.name);
-    setDraftAvatar(profile.avatar);
     setSaveError("");
     setIsEditing(true);
   };
