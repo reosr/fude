@@ -318,14 +318,7 @@ export default function Profil() {
 
   return (
     <div className="max-w-4xl mx-auto space-y-6 pb-12">
-          {photoEditorFile && (
-      <ProfilePhotoEditor
-        file={photoEditorFile}
-        initialSettings={{
-          photoPositionX: profile.photoPositionX ?? 50,
-          photoPositionY: profile.photoPositionY ?? 50,
-          photoZoom: profile.photoZoom ?? 1,
-        }}
+          
         onCancel={() => setPhotoEditorFile(null)}
         onSave={handlePhotoEditorSave}
       />
