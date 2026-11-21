@@ -1083,7 +1083,7 @@ export function saveFudeProfile(
 
   window.dispatchEvent(
   new Event(PROFILE_UPDATED_EVENT)
-);
+  );
 
-notifyFudeLocalDataChanged(PROFILE_KEY);
+  notifyFudeLocalDataChanged(PROFILE_KEY);
 }
