@@ -424,6 +424,33 @@ export default function Profil() {
         />
       )}
 
+      {isPhotoPreviewOpen && photoSrc && (
+  <div
+    className="fixed inset-0 z-[280] flex items-center justify-center bg-black/85 backdrop-blur-md p-5"
+    onClick={() => setIsPhotoPreviewOpen(false)}
+  >
+    <div
+      className="relative flex items-center justify-center"
+      onClick={(event) => event.stopPropagation()}
+    >
+      <button
+        type="button"
+        onClick={() => setIsPhotoPreviewOpen(false)}
+        aria-label="Tutup preview foto"
+        className="absolute -top-12 right-0 rounded-full bg-white/10 p-3 text-white hover:bg-white/20"
+      >
+        <X size={22} />
+      </button>
+
+      <img
+        src={photoSrc}
+        alt="Foto profil ukuran penuh"
+        className="max-h-[80vh] max-w-[90vw] rounded-2xl object-contain shadow-2xl"
+      />
+    </div>
+  </div>
+)}
+
       {isEditing && (
         <div
           className="fixed inset-0 z-[220] flex items-center justify-center bg-[#08090D]/60 p-3 backdrop-blur-md sm:p-4"
