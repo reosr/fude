@@ -114,7 +114,9 @@ export default function IrodoriStarterPage() {
                         ? "Membaca menu, memesan makanan, memilih hidangan, menyebut jumlah, meminta barang tambahan, dan mengenali papan nama restoran."
                         : lesson === 7
                           ? "Tur rumah, fasilitas yang tersedia, kondisi rumah, jenis hunian, dan tombol mesin cuci serta remote AC."
-                          : "Mengenali ruangan di tempat kerja, mencari orang, menanyakan lokasi perlengkapan, dan membaca papan nama ruangan.";
+                          : lesson === 8
+                            ? "Mengenali ruangan di tempat kerja, mencari orang, menanyakan lokasi perlengkapan, dan membaca papan nama ruangan."
+                            : "Membicarakan jam bangun dan tidur, memahami jadwal kerja, membaca papan jadwal, dan menyepakati waktu bersama.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
