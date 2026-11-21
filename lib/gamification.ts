@@ -11,6 +11,14 @@ export const PROFILE_KEY = "fude_profile";
 export const XP_KEY = "fude_xp";
 export const XP_REWARDS_KEY = "fude_xp_rewards";
 
+export const XP_BASE_KEY = "fude_xp_base";
+export const XP_EVENTS_KEY = "fude_xp_events";
+
+export interface FudeXpEvent {
+  id: string;
+  amount: number;
+}
+
 export const TOKEN_KEY = "fude_tokens";
 export const TOKEN_REWARDS_KEY = "fude_token_rewards";
 export const TOKEN_SPENDS_KEY = "fude_token_spends";
