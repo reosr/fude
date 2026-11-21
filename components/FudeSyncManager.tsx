@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { syncFudeNow } from "@/lib/supabase/sync-engine";
-
+import { PROFILE_PHOTO_UPDATED_EVENT } from "@/lib/profile-photo";
 import {
   FUDE_LOCAL_DATA_CHANGED_EVENT,
 } from "@/lib/supabase/events";
