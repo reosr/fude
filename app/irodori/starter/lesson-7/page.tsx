@@ -69,9 +69,9 @@ const houseTourConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "kenji",
-    japanese: <>あそこは<ruby>食堂<rt>しょくどう</rt></ruby>です。ここに<ruby>階段<rt>かいだん</rt></ruby>があります。</>,
+    japanese: <>あそこは<ruby>居間<rt>いま</rt></ruby>です。ここに<ruby>階段<rt>かいだん</rt></ruby>があります。</>,
     romaji: "Asoko wa shokudou desu. Koko ni kaidan ga arimasu.",
-    translation: "Itu ruang makan. Di sini ada tangga.",
+    translation: "Itu ruang keluarga. Di sini ada tangga.",
     audioFileName: "irodori-starter-07-a01-l07.mp3",
   },
   {
@@ -275,7 +275,7 @@ const houseAdjectives = [
   { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: "あたらしい", type: "I-adjective" },
   { jp: <><ruby>静<rt>しず</rt></ruby>か</>, reading: "shizuka", meaning: "Tenang", opposite: "うるさい", type: "Na-adjective" },
   { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: "しずか", type: "I-adjective" },
-  { jp: "きれい", reading: "kiree", meaning: "Bersih / indah", opposite: "きたない", type: "Na-adjective" },
+  { jp: "きれい", reading: "kirei", meaning: "Bersih / indah", opposite: "きたない", type: "Na-adjective" },
   { jp: "きたない", reading: "kitanai", meaning: "Kotor", opposite: "きれい", type: "I-adjective" },
 ];
 
