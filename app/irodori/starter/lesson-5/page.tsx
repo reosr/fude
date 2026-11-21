@@ -126,37 +126,37 @@ const drinkConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>はい、<ruby>お願い<rt>おねが</rt></ruby>。</>,
-    romaji: "Hai, onegaishimasu.",
-    translation: "Ya, boleh. Terima kasih.",
+    japanese: <>いえ、けっこうです。</>,
+    romaji: "Ie, kekkou desu.",
+    translation: "Tidak, terima kasih.",
     audioFileName: "irodori-starter-05-a03-l02.mp3",
-  },
-  {
-    speakerId: "yui",
-    japanese: <>はい、どうぞ。</>,
-    romaji: "Hai, douzo.",
-    translation: "Silakan.",
-    audioFileName: "irodori-starter-05-a03-l03.mp3",
-  },
-  {
-    speakerId: "sota",
-    japanese: <>ありがとうございます。</>,
-    romaji: "Arigatou gozaimasu.",
-    translation: "Terima kasih.",
-    audioFileName: "irodori-starter-05-a03-l04.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>じゃあ、<ruby>何<rt>なに</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みますか？</>,
     romaji: "Jaa, nani o nomimasu ka?",
     translation: "Kalau begitu, kamu mau minum apa?",
+    audioFileName: "irodori-starter-05-a03-l03.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <><ruby>水<rt>みず</rt></ruby>、お<ruby>願<rt>ねが</rt></ruby>いします。</>,
+    romaji: "Mizu, onegaishimasu.",
+    translation: "Air putih, tolong.",
+    audioFileName: "irodori-starter-05-a03-l04.mp3",
+  },
+  {
+    speakerId: "yui",
+    japanese: <>はい、どうぞ。</>,
+    romaji: "Hai, douzo.",
+    translation: "Silakan.",
     audioFileName: "irodori-starter-05-a03-l05.mp3",
   },
   {
     speakerId: "sota",
-    japanese: <><ruby>水<rt>みず</rt></ruby>、<ruby>お願い<rt>おねが</rt></ruby>。</>,
-    romaji: "Mizu, onegaishimasu.",
-    translation: "Air putih, tolong.",
+    japanese: <>ありがとうございます。</>,
+    romaji: "Arigatou gozaimasu.",
+    translation: "Terima kasih.",
     audioFileName: "irodori-starter-05-a03-l06.mp3",
   },
 ];
@@ -164,7 +164,7 @@ const drinkConversation: IrodoriUtterance[] = [
 const breakfastConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
-    japanese: <>ケンジさん、<ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby>、いつも<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べますか？</>,
+    japanese: <>ケンジさん、<ruby>朝ご飯<rt>あさごはん</rt></ruby>、いつも<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べますか？</>,
     romaji: "Kenji-san, asagohan, itsumo nani o tabemasu ka?",
     translation: "Kenji, biasanya kamu makan apa untuk sarapan?",
     audioFileName: "irodori-starter-05-a04-l01.mp3",
@@ -213,9 +213,9 @@ const breakfastConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "kenji",
-    japanese: <><ruby>果物<rt>くだもの</rt></ruby>は、ときどき<ruby>食<rt>た</rt></ruby>べます。</>,
-    romaji: "Kudamono wa, tokidoki tabemasu.",
-    translation: "Buah saya makan kadang-kadang.",
+    japanese: <><ruby>果物<rt>くだもの</rt></ruby>もよく<ruby>食<rt>た</rt></ruby>べます。</>,
+    romaji: "Kudamono mo yoku tabemasu.",
+    translation: "Saya juga sering makan buah.",
     audioFileName: "irodori-starter-05-a04-l08.mp3",
   },
 ];
@@ -289,7 +289,7 @@ const quizQuestions: {
     prompt: "Seseorang menawarkan teh. Bagaimana cara menerima tawaran dengan sopan?",
     options: [
       { key: "a", label: <>いえ、けっこうです。</> },
-      { key: "b", label: <>はい、<ruby>お願い<rt>おねが</rt></ruby>。</> },
+      { key: "b", label: <>はい、お<ruby>願<rt>ねが</rt></ruby>いします。</> },
       { key: "c", label: <>なんですか？</> },
     ],
     answer: "b",
@@ -692,7 +692,7 @@ export default function IrodoriStarterLessonFivePage() {
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Mau minum apa?</p>
           <p className="mt-3 font-mincho text-lg text-[#D9B66D]">
-            <ruby>水<rt>みず</rt></ruby>、<ruby>お願い<rt>おねが</rt></ruby>。
+            <ruby>水<rt>みず</rt></ruby>、お<ruby>願<rt>ねが</rt></ruby>いします。
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Air putih, tolong.</p>
         </div>
@@ -804,7 +804,7 @@ export default function IrodoriStarterLessonFivePage() {
             </div>
             <div className="p-4">
               <p className="font-mincho text-base leading-8 text-[#F1EBDD]">
-                <ruby>今日<rt>きょう</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>ご飯 🌞
+                <ruby>今日<rt>きょう</rt></ruby>の<ruby>朝ご飯<rt>あさごはん</rt></ruby> 🌞
                 <br />
                 <ruby>ご飯<rt>ごはん</rt></ruby>とみそ<ruby>汁<rt>しる</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。
                 <br />
@@ -863,7 +863,7 @@ export default function IrodoriStarterLessonFivePage() {
           <textarea
             id="irodori-breakfast-caption"
             value={postCaption}
-            onChange={(event) => setPostCaption(event.target.value)}
+            onChange={(event) => {\n              setPostCaption(event.target.value);\n              setPreviewCaption("");\n            }}
             rows={3}
             maxLength={160}
             placeholder="Contoh: ぱんとたまごをたべます。みずをのみます。"
