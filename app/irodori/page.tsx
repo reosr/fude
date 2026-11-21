@@ -17,9 +17,9 @@ const courses = [
     number: "02",
     title: "Elementary 1",
     level: "A2",
-    description: "Mengembangkan percakapan sederhana dalam situasi yang akrab.",
-    status: "Tahap berikutnya",
-    statusTone: "border-white/10 bg-white/[0.04] text-[#A3A099]",
+    description: "Mengembangkan percakapan sehari-hari dan menceritakan keadaan terkini.",
+    status: "Mulai belajar",
+    statusTone: "border-[#8EAE93]/35 bg-[#476C51]/15 text-[#CFE4D2]",
     accent: "from-[#4F8A67]/20",
   },
   {
@@ -118,7 +118,7 @@ export default function IrodoriPage() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {courses.map((course) => {
             const card = (
-              <div className={`relative isolate h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10 transition-all ${course.id === "starter" ? "group-hover:-translate-y-0.5 group-hover:border-[#D6AD4F]/60" : "opacity-75"}`}>
+              <div className={`relative isolate h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10 transition-all ${(course.id === "starter" || course.id === "elementary-1") ? "group-hover:-translate-y-0.5 group-hover:border-[#D6AD4F]/60" : "opacity-75"}`}>
                 <div className="pointer-events-none absolute -right-5 -top-8 select-none font-mincho text-[112px] font-bold leading-none text-white/[0.035]">
                   {course.number}
                 </div>
@@ -153,11 +153,11 @@ export default function IrodoriPage() {
               </div>
             );
 
-            return course.id === "starter" ? (
+            return course.id === "starter" || course.id === "elementary-1" ? (
               <Link
                 key={course.id}
-                href="/irodori/starter"
-                aria-label="Buka Irodori Starter A1"
+                href={course.id === "starter" ? "/irodori/starter" : "/irodori/elementary-1"}
+                aria-label={course.id === "starter" ? "Buka Irodori Starter A1" : "Buka Irodori Elementary 1 A2"}
                 className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D6AD4F]"
               >
                 {card}
@@ -172,9 +172,9 @@ export default function IrodoriPage() {
       <div className="rounded-2xl border border-[#B8860B]/20 bg-[#1B1917]/80 p-4 md:p-5">
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
-          adalah pemilih jalur. Starter A1 sudah memiliki seluruh delapan belas pelajaran
-          yang bisa dibuka. Level berikutnya akan aktif
-          setelah materi, dialog, dan latihan orisinalnya siap.
+          adalah pemilih jalur. Starter A1 sudah memiliki delapan belas pelajaran,
+          dan Elementary 1 A2 sudah membuka pelajaran pertamanya. Materi berikutnya
+          akan aktif setelah dialog dan latihan orisinalnya siap.
         </p>
       </div>
     </main>
