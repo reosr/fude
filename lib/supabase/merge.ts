@@ -243,42 +243,42 @@ export function mergeFudeData(
 
   const cloudJlptMap = new Map(
   cloud.jlptResults.map((item) => [item.set_id, item])
-);
+    );
 
-const allSetIds = new Set([
-  ...localJlptMap.keys(),
-  ...cloudJlptMap.keys(),
-]);
+    const allSetIds = new Set([
+    ...localJlptMap.keys(),
+    ...cloudJlptMap.keys(),
+    ]);
 
-const jlptResults: LocalJlptResult[] = [];
+    const jlptResults: LocalJlptResult[] = [];
 
-for (const setId of allSetIds) {
-  const localResult = localJlptMap.get(setId);
-  const cloudEntry = cloudJlptMap.get(setId);
-  const cloudResult = cloudEntry?.result;
+    for (const setId of allSetIds) {
+    const localResult = localJlptMap.get(setId);
+    const cloudEntry = cloudJlptMap.get(setId);
+    const cloudResult = cloudEntry?.result;
 
-  let result: Record<string, unknown> | undefined;
+    let result: Record<string, unknown> | undefined;
 
-  if (localResult && cloudResult) {
-    if (sameJson(localResult, cloudResult)) {
-      result = cloudResult;
+    if (localResult && cloudResult) {
+        if (sameJson(localResult, cloudResult)) {
+        result = cloudResult;
+        } else {
+        const localIsNewer = isLocalChangeNewer(
+            pending,
+            `jlpt_result_${setId}`,
+            cloudEntry.updated_at
+        );
+
+        result = localIsNewer ? localResult : cloudResult;
+        }
     } else {
-      const localIsNewer = isLocalChangeNewer(
-        pending,
-        `jlpt_result_${setId}`,
-        cloudEntry.updated_at
-      );
-
-      result = localIsNewer ? localResult : cloudResult;
+        result = cloudResult ?? localResult;
     }
-  } else {
-    result = cloudResult ?? localResult;
-  }
 
-  if (result) {
-    jlptResults.push({ setId, result });
-  }
-}
+    if (result) {
+        jlptResults.push({ setId, result });
+    }
+    }
 
   return {
     profile: mergeProfile(
