@@ -415,14 +415,6 @@ export default function Profil() {
         </p>
       </section>
 
-      {cropFile && (
-        <ProfilePhotoCropper
-          file={cropFile}
-          onCancel={() => setCropFile(null)}
-          onSave={handleCropSave}
-        />
-      )}
-
       {isPhotoPreviewOpen && photoSrc && (
       <div
         className="fixed inset-0 z-[280] flex items-center justify-center bg-black/85 backdrop-blur-md p-5"
