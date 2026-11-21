@@ -8,6 +8,7 @@ export interface IrodoriSpeaker {
   id: string;
   name: string;
   role: string;
+  voiceProfileId: string;
   voiceDescription: string;
 }
 
@@ -38,7 +39,7 @@ export default function IrodoriConversation({
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioError, setAudioError] = useState("");
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const shouldContinueRef = useRef(false);
+  const playbackSessionRef = useRef(0);
   const pendingResolveRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
@@ -46,7 +47,9 @@ export default function IrodoriConversation({
     audioRef.current = audio;
 
     return () => {
-      shouldContinueRef.current = false;
+      playbackSessionRef.current += 1;
+      audio.onended = null;
+      audio.onerror = null;
       audio.pause();
       audio.removeAttribute("src");
       audio.load();
@@ -57,7 +60,7 @@ export default function IrodoriConversation({
   }, []);
 
   const stopAudio = () => {
-    shouldContinueRef.current = false;
+    playbackSessionRef.current += 1;
 
     const audio = audioRef.current;
     if (audio) {
@@ -75,7 +78,7 @@ export default function IrodoriConversation({
     setActiveIndex(null);
   };
 
-  const playUtterance = (index: number) =>
+  const playUtterance = (index: number, session: number) =>
     new Promise<void>((resolve) => {
       const utterance = utterances[index];
       const audio = audioRef.current;
@@ -89,6 +92,7 @@ export default function IrodoriConversation({
         if (pendingResolveRef.current === finish) {
           pendingResolveRef.current = null;
         }
+
         audio.onended = null;
         audio.onerror = null;
         resolve();
@@ -97,16 +101,23 @@ export default function IrodoriConversation({
       pendingResolveRef.current = finish;
       audio.src = utterance.audioSrc;
       audio.playbackRate = speed;
-      setActiveIndex(index);
+
+      if (session === playbackSessionRef.current) {
+        setActiveIndex(index);
+      }
 
       audio.onended = finish;
       audio.onerror = () => {
-        setAudioError(`Audio gagal diputar: ${utterance.audioFileName}`);
+        if (session === playbackSessionRef.current) {
+          setAudioError(`Audio gagal diputar: ${utterance.audioFileName}`);
+        }
         finish();
       };
 
       audio.play().catch(() => {
-        setAudioError(`Audio belum dapat diputar: ${utterance.audioFileName}`);
+        if (session === playbackSessionRef.current) {
+          setAudioError(`Audio belum dapat diputar: ${utterance.audioFileName}`);
+        }
         finish();
       });
     });
@@ -115,14 +126,14 @@ export default function IrodoriConversation({
     if (!utterances[index]?.audioSrc) return;
 
     stopAudio();
+    const session = playbackSessionRef.current;
+
     setAudioError("");
-    shouldContinueRef.current = true;
     setIsPlaying(true);
 
-    await playUtterance(index);
+    await playUtterance(index, session);
 
-    if (shouldContinueRef.current) {
-      shouldContinueRef.current = false;
+    if (session === playbackSessionRef.current) {
       setIsPlaying(false);
       setActiveIndex(null);
     }
@@ -141,17 +152,17 @@ export default function IrodoriConversation({
     if (availableIndexes.length === 0) return;
 
     stopAudio();
+    const session = playbackSessionRef.current;
+
     setAudioError("");
-    shouldContinueRef.current = true;
     setIsPlaying(true);
 
     for (const index of availableIndexes) {
-      if (!shouldContinueRef.current) break;
-      await playUtterance(index);
+      if (session !== playbackSessionRef.current) break;
+      await playUtterance(index, session);
     }
 
-    if (shouldContinueRef.current) {
-      shouldContinueRef.current = false;
+    if (session === playbackSessionRef.current) {
       setIsPlaying(false);
       setActiveIndex(null);
     }
@@ -221,10 +232,13 @@ export default function IrodoriConversation({
             </span>
             <span className="flex flex-col">
               <span className="text-[10px] font-bold text-[#EAE6DD]">
-                Speaker {speaker.id} · {speaker.name}
+                {speaker.name} · {speaker.role}
               </span>
               <span className="text-[9px] text-[#A3A099]">
                 {speaker.voiceDescription}
+              </span>
+              <span className="text-[8px] tracking-wider text-[#746F65]">
+                VOICE PROFILE: {speaker.voiceProfileId}
               </span>
             </span>
           </div>

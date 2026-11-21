@@ -12,35 +12,28 @@ import {
   Sparkles,
 } from "lucide-react";
 import IrodoriConversation, {
-  type IrodoriSpeaker,
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import {
+  completeIrodoriLesson,
+  saveIrodoriSelfEvaluation,
+  useIrodoriProgress,
+} from "@/lib/irodori-progress";
+import type { IrodoriRating } from "@/lib/irodori-progress";
 
-const speakers: IrodoriSpeaker[] = [
-  {
-    id: "A",
-    name: "Yui",
-    role: "Rekan kerja",
-    voiceDescription: "Perempuan muda · jernih, ramah, natural",
-  },
-  {
-    id: "B",
-    name: "Sota",
-    role: "Rekan kerja",
-    voiceDescription: "Laki-laki muda · jelas, hangat, santai",
-  },
-];
+const speakers = [IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota];
 
 const morningGreetings: IrodoriUtterance[] = [
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>おはようございます。</>,
     romaji: "Ohayou gozaimasu.",
     translation: "Selamat pagi.",
     audioFileName: "irodori-starter-01-a01-l01.mp3",
   },
   {
-    speakerId: "B",
+    speakerId: "sota",
     japanese: <>おはようございます。</>,
     romaji: "Ohayou gozaimasu.",
     translation: "Selamat pagi.",
@@ -50,28 +43,28 @@ const morningGreetings: IrodoriUtterance[] = [
 
 const daytimeGreetings: IrodoriUtterance[] = [
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>こんにちは。</>,
     romaji: "Konnichiwa.",
     translation: "Halo. / Selamat siang.",
     audioFileName: "irodori-starter-01-a01-l03.mp3",
   },
   {
-    speakerId: "B",
+    speakerId: "sota",
     japanese: <>こんにちは。</>,
     romaji: "Konnichiwa.",
     translation: "Halo. / Selamat siang.",
     audioFileName: "irodori-starter-01-a01-l04.mp3",
   },
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <><ruby>元気<rt>げんき</rt></ruby>ですか。</>,
     romaji: "Genki desu ka.",
     translation: "Apa kabar?",
     audioFileName: "irodori-starter-01-a01-l05.mp3",
   },
   {
-    speakerId: "B",
+    speakerId: "sota",
     japanese: <>はい、<ruby>元気<rt>げんき</rt></ruby>です。ありがとうございます。</>,
     romaji: "Hai, genki desu. Arigatou gozaimasu.",
     translation: "Ya, saya baik. Terima kasih.",
@@ -81,21 +74,21 @@ const daytimeGreetings: IrodoriUtterance[] = [
 
 const leavingConversation: IrodoriUtterance[] = [
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。</>,
     romaji: "Osaki ni shitsurei shimasu.",
     translation: "Permisi, saya pamit lebih dahulu.",
     audioFileName: "irodori-starter-01-a02-l01.mp3",
   },
   {
-    speakerId: "B",
+    speakerId: "sota",
     japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。また<ruby>明日<rt>あした</rt></ruby>。</>,
     romaji: "Otsukaresama deshita. Mata ashita.",
     translation: "Terima kasih atas kerja hari ini. Sampai besok.",
     audioFileName: "irodori-starter-01-a02-l02.mp3",
   },
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。</>,
     romaji: "Otsukaresama deshita.",
     translation: "Terima kasih. Sampai jumpa.",
@@ -105,21 +98,21 @@ const leavingConversation: IrodoriUtterance[] = [
 
 const thanksConversation: IrodoriUtterance[] = [
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>これ、どうぞ。</>,
     romaji: "Kore, douzo.",
     translation: "Ini, silakan.",
     audioFileName: "irodori-starter-01-a03-l01.mp3",
   },
   {
-    speakerId: "B",
+    speakerId: "sota",
     japanese: <>ありがとうございます。</>,
     romaji: "Arigatou gozaimasu.",
     translation: "Terima kasih.",
     audioFileName: "irodori-starter-01-a03-l02.mp3",
   },
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>どういたしまして。</>,
     romaji: "Dou itashimashite.",
     translation: "Sama-sama.",
@@ -129,14 +122,14 @@ const thanksConversation: IrodoriUtterance[] = [
 
 const apologyConversation: IrodoriUtterance[] = [
   {
-    speakerId: "A",
+    speakerId: "yui",
     japanese: <>あっ、すみません。</>,
     romaji: "A, sumimasen.",
     translation: "Ah, maaf.",
     audioFileName: "irodori-starter-01-a03-l04.mp3",
   },
   {
-    speakerId: "B",
+    speakerId: "sota",
     japanese: <><ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。</>,
     romaji: "Daijoubu desu yo.",
     translation: "Tidak apa-apa.",
@@ -197,15 +190,44 @@ const vocabulary = [
 ];
 
 const canDos = [
-  "Bertukar sapaan saat bertemu seseorang.",
-  "Berpamitan ketika akan meninggalkan tempat.",
-  "Mengucapkan terima kasih atau meminta maaf.",
-  "Memahami pesan singkat seperti selamat pagi dan terima kasih.",
+  {
+    id: "greetings",
+    text: "Bertukar sapaan saat bertemu seseorang.",
+  },
+  {
+    id: "leave-taking",
+    text: "Berpamitan ketika akan meninggalkan tempat.",
+  },
+  {
+    id: "thanks-apology",
+    text: "Mengucapkan terima kasih atau meminta maaf.",
+  },
+  {
+    id: "message-stickers",
+    text: "Memahami pesan singkat seperti selamat pagi dan terima kasih.",
+  },
+];
+
+const canDoRatingOptions: { value: IrodoriRating; label: string }[] = [
+  { value: 1, label: "Masih sulit" },
+  { value: 2, label: "Bisa" },
+  { value: 3, label: "Lancar" },
+];
+
+const hiraganaWords = [
+  { word: "おはよう", romaji: "Ohayou", meaning: "Selamat pagi (akrab)" },
+  { word: "ありがとう", romaji: "Arigatou", meaning: "Terima kasih (akrab)" },
+  { word: "ごめんね", romaji: "Gomen ne", meaning: "Maaf ya (akrab)" },
+  { word: "またね", romaji: "Mata ne", meaning: "Sampai jumpa (akrab)" },
+  { word: "こんにちは", romaji: "Konnichiwa", meaning: "Halo / selamat siang" },
 ];
 
 export default function IrodoriStarterLessonOnePage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
+  const progress = useIrodoriProgress();
+  const canDoRatings = progress.selfEvaluations["starter-01"] ?? {};
+  const isLessonCompleted = progress.completedLessons.includes("starter-01");
 
   const answeredCount = Object.keys(answers).length;
   const score = stickerQuestions.filter(
@@ -279,13 +301,13 @@ export default function IrodoriStarterLessonOnePage() {
         <div className="grid gap-2 sm:grid-cols-2">
           {canDos.map((canDo, index) => (
             <div
-              key={canDo}
+              key={canDo.id}
               className="flex items-start gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#B8860B]/15 text-[10px] font-black text-[#D9B66D]">
                 0{index + 1}
               </span>
-              <p className="text-xs leading-6 text-[#C7C1B5]">{canDo}</p>
+              <p className="text-xs leading-6 text-[#C7C1B5]">{canDo.text}</p>
             </div>
           ))}
         </div>
@@ -519,6 +541,37 @@ export default function IrodoriStarterLessonOnePage() {
         </div>
       </section>
 
+      <section className="space-y-4">
+        <div>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+            KATA-KATA HIRAGANA
+          </p>
+          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">
+            Baca ungkapan berikut
+          </h2>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">
+            Semua contoh di bawah ditulis dengan hiragana. Coba baca perlahan,
+            lalu cocokkan dengan romaji dan artinya.
+          </p>
+        </div>
+        <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {hiraganaWords.map((item) => (
+            <article
+              key={item.word}
+              className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
+            >
+              <p className="font-mincho text-2xl font-bold text-[#F1EBDD]">
+                {item.word}
+              </p>
+              <p className="mt-1 text-[10px] italic text-[#B8860B]">
+                {item.romaji}
+              </p>
+              <p className="mt-2 text-xs text-[#A9A398]">{item.meaning}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="space-y-3">
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
@@ -571,24 +624,86 @@ export default function IrodoriStarterLessonOnePage() {
           Coba nilai kemampuanmu
         </h2>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">
-          Setelah belajar, coba lakukan empat hal berikut tanpa melihat contoh.
-          Penanda ini adalah refleksi mandiri dan belum disimpan sebagai progres akun.
+          Nilai kemampuanmu setelah mencoba aktivitas dan latihan. Penilaian
+          serta penyelesaian ini tersimpan khusus untuk Irodori, terpisah dari
+          progres Minna no Nihongo dan JLPT.
         </p>
-        <ul className="mt-4 space-y-2">
-          {canDos.map((canDo) => (
-            <li key={canDo} className="flex items-start gap-2 text-xs text-[#C7C1B5]">
-              <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-[#D9B66D]" />
-              {canDo}
-            </li>
+        <div className="mt-4 space-y-3">
+          {canDos.map((canDo, index) => (
+            <div
+              key={canDo.id}
+              className="rounded-xl border border-white/[0.07] bg-black/15 p-3"
+            >
+              <p className="text-xs font-semibold leading-5 text-[#EAE6DD]">
+                <span className="mr-2 text-[#D9B66D]">0{index + 1}</span>
+                {canDo.text}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {canDoRatingOptions.map((option) => {
+                  const selected = canDoRatings[canDo.id] === option.value;
+
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      aria-pressed={selected}
+                      onClick={() => {
+                        const nextRatings = {
+                          ...canDoRatings,
+                          [canDo.id]: option.value,
+                        };
+                        saveIrodoriSelfEvaluation("starter-01", nextRatings);
+                      }}
+                      className={`rounded-lg border px-3 py-2 text-[10px] font-semibold transition-colors ${
+                        selected
+                          ? "border-[#D6AD4F]/60 bg-[#B8860B]/15 text-[#F0D99F]"
+                          : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]"
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           ))}
-        </ul>
-        <Link
-          href="/irodori/starter"
-          className="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#C93438] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#B02A2E]"
-        >
-          Kembali ke daftar pelajaran
-          <ChevronRight size={15} />
-        </Link>
+        </div>
+
+        <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
+          {isLessonCompleted ? (
+            <span className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-xs font-bold text-emerald-200">
+              <CheckCircle2 size={15} />
+              Pelajaran selesai
+            </span>
+          ) : (
+            <button
+              type="button"
+              onClick={() => completeIrodoriLesson("starter-01")}
+              disabled={
+                !quizSubmitted ||
+                canDos.some((canDo) => !canDoRatings[canDo.id])
+              }
+              className="inline-flex items-center gap-2 rounded-xl bg-[#C93438] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
+            >
+              <CheckCircle2 size={15} />
+              Tandai pelajaran selesai
+            </button>
+          )}
+
+          <Link
+            href="/irodori/starter"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-xs font-bold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
+          >
+            Daftar pelajaran
+            <ChevronRight size={15} />
+          </Link>
+        </div>
+        {!quizSubmitted && (
+          <p className="mt-2 text-[10px] text-[#817A73]">
+            Periksa jawaban kuis terlebih dahulu, lalu isi penilaian Can-do untuk
+            menyelesaikan pelajaran.
+          </p>
+        )}
       </section>
 
       <p className="text-center text-[10px] leading-5 text-[#746F65]">

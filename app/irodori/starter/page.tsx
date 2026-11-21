@@ -1,9 +1,17 @@
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
+import { useIrodoriProgress } from "@/lib/irodori-progress";
 
 const lessons = Array.from({ length: 18 }, (_, index) => index + 1);
 
+"use client";
+
 export default function IrodoriStarterPage() {
+  const progress = useIrodoriProgress();
+  const completedCount = progress.completedLessons.filter((id) =>
+    id.startsWith("starter-")
+  ).length;
+
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
       <Link
@@ -32,7 +40,7 @@ export default function IrodoriStarterPage() {
               </p>
             </div>
             <span className="rounded-xl border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]">
-              1 materi tersedia
+              1 dari 18 materi tersedia
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -40,6 +48,21 @@ export default function IrodoriStarterPage() {
             kehidupan sehari-hari. Pelajari setiap tujuan Can-do melalui
             contoh, dialog, dan latihan.
           </p>
+          <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
+            <div className="flex items-center justify-between text-[10px]">
+              <span className="font-semibold text-[#A3A099]">Progres Irodori Starter</span>
+              <span className="font-bold text-[#E7D2A1]">{completedCount}/18 selesai</span>
+            </div>
+            <div className="mt-2 h-2 overflow-hidden rounded-full bg-[#302D29]">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-[#92272C] to-[#D6AD4F] transition-all"
+                style={{ width: `${(completedCount / 18) * 100}%` }}
+              />
+            </div>
+            <p className="mt-2 text-[9px] text-[#817A73]">
+              Progres ini tersimpan terpisah dari EXP dan JLPT.
+            </p>
+          </div>
         </div>
       </header>
 
@@ -56,6 +79,7 @@ export default function IrodoriStarterPage() {
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
             const isAvailable = lesson === 1;
+            const isCompleted = progress.completedLessons.includes("starter-01");
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
@@ -63,7 +87,7 @@ export default function IrodoriStarterPage() {
                     LESSON {String(lesson).padStart(2, "0")}
                   </span>
                   {isAvailable ? (
-                    <CheckCircle2 size={17} className="text-[#D9B66D]" />
+                    <CheckCircle2 size={17} className={isCompleted ? "text-emerald-300" : "text-[#D9B66D]"} />
                   ) : (
                     <Lock size={15} className="text-[#746F65]" />
                   )}
@@ -84,7 +108,7 @@ export default function IrodoriStarterPage() {
                         : "border-white/[0.07] bg-white/[0.03] text-[#817A73]"
                     }`}
                   >
-                    {isAvailable ? "Bisa dipelajari" : "Segera hadir"}
+                    {isAvailable ? (isCompleted ? "Selesai" : "Bisa dipelajari") : "Segera hadir"}
                   </span>
                   {isAvailable && (
                     <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#D9B66D]">
