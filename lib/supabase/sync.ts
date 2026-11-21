@@ -106,6 +106,8 @@ export function getLocalFudeSnapshot(): LocalFudeSnapshot {
     profile: getFudeProfile(),
     currentBab: getProgress(),
     totalXp: getFudeXp(),
+    xpBase: xpSyncState.base,
+xpEvents: xpSyncState.events,
     xpRewards: readStringArray(XP_REWARDS_KEY),
     memorizedKanji: getMemorizedKanji(),
     jlptResults: readJlptResults(),
