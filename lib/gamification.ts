@@ -130,6 +130,45 @@ function readStringArray(key: string): string[] {
   }
 }
 
+function readXpEvents(): FudeXpEvent[] {
+  if (typeof window === "undefined") return [];
+
+  try {
+    const raw = localStorage.getItem(XP_EVENTS_KEY);
+    if (!raw) return [];
+
+    const parsed: unknown = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+
+    const events = new Map<string, FudeXpEvent>();
+
+    for (const item of parsed) {
+      if (
+        item &&
+        typeof item === "object" &&
+        "id" in item &&
+        "amount" in item &&
+        typeof item.id === "string" &&
+        item.id.length > 0 &&
+        typeof item.amount === "number" &&
+        Number.isSafeInteger(item.amount) &&
+        item.amount > 0
+      ) {
+        const existing = events.get(item.id);
+
+        events.set(item.id, {
+          id: item.id,
+          amount: Math.max(existing?.amount ?? 0, item.amount),
+        });
+      }
+    }
+
+    return Array.from(events.values());
+  } catch {
+    return [];
+  }
+}
+
 function readRewards(): string[] {
   return readStringArray(XP_REWARDS_KEY);
 }
