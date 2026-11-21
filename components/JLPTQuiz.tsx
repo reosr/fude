@@ -143,9 +143,13 @@ function getJlptLevel(testSet: JLPTTestSet): string {
   return match ? match[1].toUpperCase() : "";
 }
 
-function persistQuizResult(storageKey: string, result: SavedQuizResult): boolean {
+function persistQuizResult(
+  storageKey: string,
+  result: SavedQuizResult
+): boolean {
   try {
     localStorage.setItem(storageKey, JSON.stringify(result));
+    notifyFudeLocalDataChanged(storageKey);
     return true;
   } catch (error) {
     console.error("Gagal menyimpan hasil ujian JLPT:", error);
