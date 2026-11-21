@@ -233,7 +233,6 @@ export default function Profil() {
         <div className="relative flex flex-col sm:flex-row items-center gap-6">
           <div className="flex flex-col items-center shrink-0">
             <ProfilePicture
-              avatar={profile.avatar}
               photoSrc={photoSrc}
               size={116}
               className="border-2 border-[#B8860B]/50"
