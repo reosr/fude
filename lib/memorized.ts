@@ -31,7 +31,8 @@ export function saveMemorizedKanji(items: string[]): boolean {
 
   try {
     localStorage.setItem(MEMORIZED_KEY, JSON.stringify(safeItems));
-    return true;
+notifyFudeLocalDataChanged(MEMORIZED_KEY);
+return true;
   } catch (error) {
     console.error("Gagal menyimpan daftar hafalan:", error);
     return false;
