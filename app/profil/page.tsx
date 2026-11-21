@@ -196,21 +196,42 @@ export default function Profil() {
     setIsEditing(true);
   };
 
-  const saveProfile = () => {
-    const cleanName = draftName.trim().slice(0, 24);
-    if (!cleanName) {
-      setSaveError("Nama tidak boleh kosong.");
-      return;
+  const saveProfile = async () => {
+  const cleanName = draftName.trim().slice(0, 24);
+
+  if (!cleanName) {
+    setSaveError("Nama tidak boleh kosong.");
+    return;
+  }
+
+  setPhotoLoading(true);
+  setSaveError("");
+
+  try {
+    // Simpan foto asli jika pengguna menggantinya.
+    if (photoEditorFile) {
+      await saveProfilePhoto(photoEditorFile);
+      await refreshPhoto();
     }
 
-    try {
-      saveFudeProfile({ name: cleanName });
-      setIsEditing(false);
-      setSaveError("");
-    } catch {
-      setSaveError("Gagal menyimpan profil.");
-    }
-  };
+    // Simpan nama dan pengaturan tampilan foto.
+    saveFudeProfile({
+      name: cleanName,
+      ...draftPhotoSettings,
+    });
+
+    setPhotoEditorFile(null);
+    setIsEditing(false);
+  } catch (error) {
+    setSaveError(
+      error instanceof Error
+        ? error.message
+        : "Gagal menyimpan profil."
+    );
+  } finally {
+    setPhotoLoading(false);
+  }
+};
 
   const handlePhotoEditorSave = async (
   file: File,
