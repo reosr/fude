@@ -23,7 +23,7 @@ export default function ProfilePicture({
         <img
           src={photoSrc}
           alt=""
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain bg-[#1E1D1B]"
         />
       ) : (
         <svg
