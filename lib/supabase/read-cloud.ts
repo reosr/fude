@@ -51,8 +51,8 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
       supabase
         .from("fude_learning_progress")
         .select(
-  "current_bab, total_xp, xp_base, xp_events, xp_rewards, memorized_kanji, updated_at"
-)
+            "current_bab, total_xp, xp_base, xp_events, xp_rewards, memorized_kanji, updated_at"
+            )
         .eq("user_id", user.id)
         .maybeSingle(),
 
