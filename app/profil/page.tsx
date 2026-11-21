@@ -80,8 +80,7 @@ export default function Profil() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-
-  
+  const [cropFile, setCropFile] = useState<File | null>(null);
 
   const refreshData = () => {
     const progress = Number(getProgress());
