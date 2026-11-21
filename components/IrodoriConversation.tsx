@@ -89,12 +89,14 @@ export default function IrodoriConversation({
       }
 
       const finish = () => {
-        if (pendingResolveRef.current === finish) {
+        const ownsPlayback = pendingResolveRef.current === finish;
+
+        if (ownsPlayback) {
           pendingResolveRef.current = null;
+          audio.onended = null;
+          audio.onerror = null;
         }
 
-        audio.onended = null;
-        audio.onerror = null;
         resolve();
       };
 
