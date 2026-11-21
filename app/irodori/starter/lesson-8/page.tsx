@@ -5,11 +5,9 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import {
   ArrowLeft,
-  BookOpen,
   Building2,
   CheckCircle2,
   ClipboardList,
-  MapPin,
   Package,
   RefreshCw,
   Users,
@@ -164,7 +162,7 @@ const roomSignConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>「<ruby>事務室<rt>じむしつ</rt></ruby>」です。</>,
-    romaji: "\"Jिमushitsu\" desu.",
+    romaji: "Jimushitsu desu.",
     translation: "Itu “ruang kantor”.",
     audioFileName: "irodori-starter-08-a04-l02.mp3",
   },
@@ -205,14 +203,14 @@ const ratingOptions: { value: IrodoriRating; label: string }[] = [
 ];
 
 const workplaceRooms = [
-  { jp: <ruby>会議室<rt>かいぎしつ</rt></ruby>, reading: "kaigishitsu", meaning: "Ruang rapat", icon: "🗣️", activity: "ここで会議をします。" },
-  { jp: <ruby>食堂<rt>しょくどう</rt></ruby>, reading: "shokudou", meaning: "Kantin", icon: "🍱", activity: "ここでご飯を食べます。" },
-  { jp: <ruby>休憩室<rt>きゅうけいしつ</rt></ruby>, reading: "kyuukeishitsu", meaning: "Ruang istirahat", icon: "☕", activity: "ここで休みます。" },
-  { jp: <ruby>事務室<rt>じむしつ</rt></ruby>, reading: "jimushitsu", meaning: "Ruang kantor", icon: "💻", activity: "ここで仕事をします。" },
-  { jp: <ruby>受付<rt>うけつけ</rt></ruby>, reading: "uketsuke", meaning: "Resepsionis", icon: "🛎️", activity: "ここで質問をします。" },
-  { jp: <ruby>倉庫<rt>そうこ</rt></ruby>, reading: "souko", meaning: "Gudang", icon: "📦", activity: "ここに道具があります。" },
-  { jp: <ruby>更衣室<rt>こういしつ</rt></ruby>, reading: "kouishitsu", meaning: "Ruang ganti", icon: "👕", activity: "ここで着替えます。" },
-  { jp: <ruby>給湯室<rt>きゅうとうしつ</rt></ruby>, reading: "kyuutoushitsu", meaning: "Ruang membuat minuman", icon: "🍵", activity: "ここでお茶をいれます。" },
+  { jp: <ruby>会議室<rt>かいぎしつ</rt></ruby>, reading: "kaigishitsu", meaning: "Ruang rapat", icon: "🗣️", activity: <>ここで<ruby>会議<rt>かいぎ</rt></ruby>をします。</> },
+  { jp: <ruby>食堂<rt>しょくどう</rt></ruby>, reading: "shokudou", meaning: "Kantin", icon: "🍱", activity: <>ここで<ruby>ご飯<rt>ごはん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。</> },
+  { jp: <ruby>休憩室<rt>きゅうけいしつ</rt></ruby>, reading: "kyuukeishitsu", meaning: "Ruang istirahat", icon: "☕", activity: <>ここで<ruby>休<rt>やす</rt></ruby>みます。</> },
+  { jp: <ruby>事務室<rt>じむしつ</rt></ruby>, reading: "jimushitsu", meaning: "Ruang kantor", icon: "💻", activity: <>ここで<ruby>仕事<rt>しごと</rt></ruby>をします。</> },
+  { jp: <ruby>受付<rt>うけつけ</rt></ruby>, reading: "uketsuke", meaning: "Resepsionis", icon: "🛎️", activity: <>ここで<ruby>質問<rt>しつもん</rt></ruby>をします。</> },
+  { jp: <ruby>倉庫<rt>そうこ</rt></ruby>, reading: "souko", meaning: "Gudang", icon: "📦", activity: <>ここに<ruby>道具<rt>どうぐ</rt></ruby>があります。</> },
+  { jp: <ruby>更衣室<rt>こういしつ</rt></ruby>, reading: "kouishitsu", meaning: "Ruang ganti", icon: "👕", activity: <>ここで<ruby>着替<rt>きが</rt></ruby>えます。</> },
+  { jp: <ruby>給湯室<rt>きゅうとうしつ</rt></ruby>, reading: "kyuutoushitsu", meaning: "Ruang membuat minuman", icon: "🍵", activity: <>ここでお<ruby>茶<rt>ちゃ</rt></ruby>をいれます。</> },
 ];
 
 const officeItems = [
@@ -251,12 +249,12 @@ const practiceTasks: {
   {
     prompt: <>Di manakah <ruby>山田<rt>やまだ</rt></ruby>さん berada?</>,
     options: [
-      { value: "a", label: "会議室 (ruang rapat)" },
-      { value: "b", label: "食堂 (kantin)" },
-      { value: "c", label: "倉庫 (gudang)" },
+      { value: "a", label: "かいぎしつ (ruang rapat)" },
+      { value: "b", label: "しょくどう (kantin)" },
+      { value: "c", label: "そうこ (gudang)" },
     ],
     answer: "b",
-    explanation: "Dalam informasi latihan, Yamada berada di kantin: 食堂にいます。",
+    explanation: "Dalam informasi latihan, Yamada berada di kantin: しょくどうにいます。",
   },
   {
     prompt: <>Jawaban yang tepat ketika <ruby>佐藤<rt>さとう</rt></ruby>さん sedang tidak ada di sini adalah…</>,
@@ -271,22 +269,22 @@ const practiceTasks: {
   {
     prompt: <>Di manakah gunting berada pada ilustrasi meja latihan?</>,
     options: [
-      { value: "a", label: "机の上 (di atas meja)" },
-      { value: "b", label: "机の下 (di bawah meja)" },
-      { value: "c", label: "引き出しの中 (di dalam laci)" },
+      { value: "a", label: "つくえのうえ (di atas meja)" },
+      { value: "b", label: "つくえのした (di bawah meja)" },
+      { value: "c", label: "ひきだしのなか (di dalam laci)" },
     ],
     answer: "a",
-    explanation: "Untuk benda, gunakan あります: はさみは机の上にあります。",
+    explanation: "Untuk benda, gunakan あります: はさみはつくえのうえにあります。",
   },
   {
     prompt: <>Di manakah lem disimpan?</>,
     options: [
-      { value: "a", label: "机の横 (di samping meja)" },
-      { value: "b", label: "引き出しの中 (di dalam laci)" },
+      { value: "a", label: "つくえのよこ (di samping meja)" },
+      { value: "b", label: "ひきだしのなか (di dalam laci)" },
       { value: "c", label: "食堂 (di kantin)" },
     ],
     answer: "b",
-    explanation: "Posisi di dalam sesuatu dinyatakan dengan の中: 引き出しの中にあります。",
+    explanation: "Posisi di dalam sesuatu dinyatakan dengan のなか: ひきだしのなかにあります。",
   },
   {
     prompt: <>Papan nama 「<ruby>会議室<rt>かいぎしつ</rt></ruby>」 menunjukkan ruangan untuk…</>,
@@ -374,7 +372,7 @@ const quizQuestions: {
       { key: "c", label: "Di bawah meja." },
     ],
     answer: "c",
-    explanation: "下 dibaca した (shita) dan berarti bagian bawah.",
+    explanation: "Kata した (shita) berarti bagian bawah.",
   },
   {
     prompt: <>「<ruby>引<rt>ひ</rt></ruby>き<ruby>出<rt>だ</rt></ruby>しの<ruby>中<rt>なか</rt></ruby>にあります」 berarti…</>,
@@ -810,8 +808,8 @@ export default function IrodoriStarterLessonEightPage() {
             Cara cepat mengenali papan nama
           </p>
           <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-            Perhatikan gabungan kanji dan akhiran kata. Misalnya, 室 sering
-            muncul pada nama ruangan, seperti 会議室 dan 事務室. Untuk tahap
+            Perhatikan gabungan kanji dan akhiran kata. Misalnya, kanji <ruby>室<rt>しつ</rt></ruby> sering muncul pada nama ruangan, seperti
+            <ruby>会議室<rt>かいぎしつ</rt></ruby> dan <ruby>事務室<rt>じむしつ</rt></ruby>. Untuk tahap
             pemula, cukup kenali beberapa nama ruangan yang sering digunakan.
           </p>
         </div>
