@@ -189,38 +189,39 @@ export default function IrodoriConversation({
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
-          <label className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] text-[#A3A099]">
-            <Gauge size={14} />
-            <span className="sr-only">Kecepatan audio</span>
-            <select
-              aria-label="Kecepatan audio"
-              value={speed}
-              onChange={(event) => setSpeed(Number(event.target.value))}
-              className="cursor-pointer bg-transparent text-[#EAE6DD] outline-none"
-            >
-              {SPEED_OPTIONS.map((value) => (
-                <option key={value} value={value} className="bg-[#1B1A18]">
-                  {value === 1 ? "1.0" : value.toString()}x
-                </option>
-              ))}
-            </select>
-          </label>
+{availableAudioCount > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <label className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] text-[#A3A099]">
+              <Gauge size={14} />
+              <span className="sr-only">Kecepatan audio</span>
+              <select
+                aria-label="Kecepatan audio"
+                value={speed}
+                onChange={(event) => setSpeed(Number(event.target.value))}
+                className="cursor-pointer bg-transparent text-[#EAE6DD] outline-none"
+              >
+                {SPEED_OPTIONS.map((value) => (
+                  <option key={value} value={value} className="bg-[#1B1A18]">
+                    {value === 1 ? "1.0" : value.toString()}x
+                  </option>
+                ))}
+              </select>
+            </label>
 
-          <button
-            type="button"
-            onClick={() => void playAll()}
-            disabled={availableAudioCount === 0}
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#C93438] px-4 py-2 text-[10px] font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
-          >
-            {isPlaying ? (
-              <Square size={13} fill="currentColor" />
-            ) : (
-              <Play size={13} fill="currentColor" />
-            )}
-            {isPlaying ? "Hentikan" : "Putar Semua"}
-          </button>
-        </div>
+            <button
+              type="button"
+              onClick={() => void playAll()}
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#C93438] px-4 py-2 text-[10px] font-bold text-white transition-colors hover:bg-[#B02A2E]"
+            >
+              {isPlaying ? (
+                <Square size={13} fill="currentColor" />
+              ) : (
+                <Play size={13} fill="currentColor" />
+              )}
+              {isPlaying ? "Hentikan" : "Putar Semua"}
+            </button>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-wrap gap-2 border-b border-white/[0.05] px-4 py-3">
@@ -291,7 +292,7 @@ export default function IrodoriConversation({
                   <p className="mt-1 text-xs leading-5 text-[#A3A099]">
                     {utterance.translation}
                   </p>
-                  {!utterance.audioSrc && (
+                  {!utterance.audioSrc && availableAudioCount > 0 && (
                     <p className="mt-2 text-[9px] text-[#746F65]">
                       Audio belum tersedia
                     </p>
