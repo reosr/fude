@@ -111,14 +111,14 @@ export default function IrodoriConversation({
       audio.onended = finish;
       audio.onerror = () => {
         if (session === playbackSessionRef.current) {
-          setAudioError(`Audio gagal diputar: ${utterance.audioFileName}`);
+          setAudioError("Audio gagal diputar. Silakan coba lagi.");
         }
         finish();
       };
 
       audio.play().catch(() => {
         if (session === playbackSessionRef.current) {
-          setAudioError(`Audio belum dapat diputar: ${utterance.audioFileName}`);
+          setAudioError("Audio belum dapat diputar. Silakan coba lagi.");
         }
         finish();
       });
@@ -185,7 +185,7 @@ export default function IrodoriConversation({
           <p className="mt-1 text-[10px] text-[#817A73]">
             {availableAudioCount > 0
               ? `${availableAudioCount} dari ${utterances.length} audio tersedia`
-              : "Audio sedang disiapkan"}
+              : "Audio belum tersedia"}
           </p>
         </div>
 
@@ -239,9 +239,6 @@ export default function IrodoriConversation({
               <span className="text-[9px] text-[#A3A099]">
                 {speaker.voiceDescription}
               </span>
-              <span className="text-[8px] tracking-wider text-[#746F65]">
-                VOICE PROFILE: {speaker.voiceProfileId}
-              </span>
             </span>
           </div>
         ))}
@@ -270,7 +267,7 @@ export default function IrodoriConversation({
                   title={
                     utterance.audioSrc
                       ? "Putar kalimat ini"
-                      : `Audio menyusul: ${utterance.audioFileName}`
+                      : "Audio belum tersedia"
                   }
                   className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/[0.07] bg-[#302D29] text-[#D9B66D] transition-colors hover:border-[#C93438]/50 hover:bg-[#C93438] hover:text-white disabled:cursor-not-allowed disabled:opacity-35"
                 >
@@ -301,7 +298,7 @@ export default function IrodoriConversation({
                   </p>
                   {!utterance.audioSrc && (
                     <p className="mt-2 text-[9px] text-[#746F65]">
-                      Audio belum tersedia · {utterance.audioFileName}
+                      Audio belum tersedia
                     </p>
                   )}
                 </div>
