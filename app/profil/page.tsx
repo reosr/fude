@@ -80,6 +80,8 @@ export default function Profil() {
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const [isPhotoPreviewOpen, setIsPhotoPreviewOpen] = useState(false);
+
   const [cropFile, setCropFile] = useState<File | null>(null);
 
   const refreshData = () => {
@@ -403,7 +405,7 @@ export default function Profil() {
           Foto profil saat ini masih tersimpan secara lokal di browser.
         </p>
       </section>
-      
+
       {cropFile && (
         <ProfilePhotoCropper
           file={cropFile}
