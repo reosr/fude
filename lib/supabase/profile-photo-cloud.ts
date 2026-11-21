@@ -86,6 +86,46 @@ export async function downloadProfilePhotoFromCloud(
   return data;
 }
 
+export async function getCloudProfilePhotoVersion(
+  expectedUserId: string
+): Promise<string | null> {
+  const { supabase, user } = await getAuthenticatedUser();
+
+  if (user.id !== expectedUserId) {
+    throw new Error("Akun berubah. Pemeriksaan foto dibatalkan.");
+  }
+
+  const { data, error } = await supabase.storage
+    .from(BUCKET)
+    .info(getPhotoPath(user.id));
+
+  if (error) {
+    const message = error.message.toLowerCase();
+
+    if (
+      error.statusCode === "404" ||
+      message.includes("not found") ||
+      message.includes("does not exist")
+    ) {
+      return null;
+    }
+
+    throw new Error(
+      `Gagal memeriksa versi foto cloud: ${error.message}`
+    );
+  }
+
+  if (
+    !data ||
+    typeof data.lastModified !== "string" ||
+    !data.lastModified
+  ) {
+    throw new Error("Metadata foto cloud tidak valid.");
+  }
+
+  return data.lastModified;
+}
+
 export async function deleteProfilePhotoFromCloud(
   expectedUserId: string
 ): Promise<void> {
