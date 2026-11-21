@@ -172,7 +172,7 @@ export default function IrodoriPage() {
       <div className="rounded-2xl border border-[#B8860B]/20 bg-[#1B1917]/80 p-4 md:p-5">
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
-          adalah pemilih jalur. Starter A1 sudah memiliki delapan pelajaran
+          adalah pemilih jalur. Starter A1 sudah memiliki sembilan pelajaran
           yang bisa dibuka. Pelajaran berikutnya dan level lainnya akan aktif
           setelah materi, dialog, dan latihan orisinalnya siap.
         </p>
