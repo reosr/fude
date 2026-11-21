@@ -1039,7 +1039,7 @@ export default function IrodoriStarterLessonSixPage() {
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Partikel に digunakan bersama します untuk menyatakan pilihan
-              atau keputusan. <ruby>何<rt>なに</rt></ruby>にしますか berarti “Mau pilih yang mana?".
+              atau keputusan. <ruby>何<rt>なに</rt></ruby>にしますか berarti “Mau pilih yang mana?”.
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
