@@ -256,6 +256,18 @@ const situationQuestions = [
     answer: "お先に失礼します",
     explanation: "Orang yang pulang lebih dahulu menggunakan ungkapan pamit, sedangkan rekan yang masih bekerja memberikan balasan yang sesuai.",
   },
+  {
+    prompt: "Seorang tetangga menahan pintu agar kamu bisa lewat. Ungkapan sopan apa yang juga dapat menyampaikan terima kasih?",
+    options: ["すみません", "おやすみなさい", "じゃあ、また"],
+    answer: "すみません",
+    explanation: "すみません dapat dipakai untuk menyampaikan terima kasih saat menerima bantuan kecil. Dalam situasi lain, ありがとうございます juga merupakan pilihan yang sopan.",
+  },
+  {
+    prompt: "Kamu tidak sengaja menyenggol teman dekat. Ungkapan akrab apa yang bisa kamu gunakan untuk meminta maaf?",
+    options: ["ごめんね", "こんばんは", "お先に失礼します"],
+    answer: "ごめんね",
+    explanation: "ごめんね adalah permintaan maaf yang akrab. Untuk orang yang belum dikenal atau situasi lebih sopan, gunakan すみません.",
+  },
 ];
 
 function renderJapaneseOption(option: string) {
@@ -594,116 +606,6 @@ export default function IrodoriStarterLessonOnePage() {
       </section>
 
       <section className="space-y-4">
-        <div>
-          <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-            LATIHAN TAMBAHAN
-          </p>
-          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">
-            Pilih ungkapan sesuai situasi
-          </h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Baca waktunya dan perhatikan siapa lawan bicaramu. Pilih ungkapan
-            yang paling sesuai, bukan sekadar yang artinya kamu ingat.
-          </p>
-        </div>
-
-        <div className="grid gap-3 sm:grid-cols-2">
-          {situationQuestions.map((question, index) => (
-            <article
-              key={question.prompt}
-              className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"
-            >
-              <p className="text-[9px] font-black tracking-widest text-[#B8860B]">
-                SITUASI 0{index + 1}
-              </p>
-              <p className="mt-3 min-h-12 text-xs font-semibold leading-6 text-[#EAE6DD]">
-                {question.prompt}
-              </p>
-              <div className="mt-3 space-y-2">
-                {question.options.map((option) => {
-                  const selected = situationAnswers[index] === option;
-                  const correct = option === question.answer;
-
-                  return (
-                    <button
-                      key={option}
-                      type="button"
-                      onClick={() => {
-                        if (situationQuizSubmitted) return;
-                        setSituationAnswers((current) => ({
-                          ...current,
-                          [index]: option,
-                        }));
-                      }}
-                      disabled={situationQuizSubmitted}
-                      className={`w-full rounded-lg border px-3 py-2.5 text-left text-xs transition-colors ${
-                        situationQuizSubmitted && correct
-                          ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-200"
-                          : situationQuizSubmitted && selected
-                            ? "border-red-400/50 bg-red-400/10 text-red-200"
-                            : selected
-                              ? "border-[#B8860B]/60 bg-[#B8860B]/10 text-[#F1EBDD]"
-                              : "border-white/[0.07] bg-black/15 text-[#A9A398] hover:border-white/20"
-                      }`}
-                    >
-                      <span className="mr-2 inline-block w-4 text-center">
-                        {situationQuizSubmitted && correct
-                          ? "✓"
-                          : selected
-                            ? "●"
-                            : "○"}
-                      </span>
-                      <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">{renderJapaneseOption(option)}</span>
-                    </button>
-                  );
-                })}
-              </div>
-              {situationQuizSubmitted && (
-                <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
-                  {index === 4 ? (
-                    <>
-                      Orang yang pulang lebih dahulu mengatakan
-                      {" "}お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します.
-                      {" "}Rekan yang masih bekerja dapat membalas
-                      {" "}お<ruby>疲<rt>つか</rt></ruby>れさまでした.
-                    </>
-                  ) : (
-                    question.explanation
-                  )}
-                </p>
-              )}
-            </article>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-          <p className="text-xs text-[#A9A398]">
-            {situationQuizSubmitted
-              ? `Hasil latihan: ${situationScore} dari ${situationQuestions.length} benar.`
-              : `${situationAnsweredCount} dari ${situationQuestions.length} situasi dijawab.`}
-          </p>
-          {situationQuizSubmitted ? (
-            <button
-              type="button"
-              onClick={resetSituationQuiz}
-              className="rounded-lg border border-[#B8860B]/35 px-4 py-2 text-xs font-bold text-[#E7D2A1] hover:bg-[#B8860B]/10"
-            >
-              Ulangi latihan
-            </button>
-          ) : (
-            <button
-              type="button"
-              onClick={() => setSituationQuizSubmitted(true)}
-              disabled={situationAnsweredCount !== situationQuestions.length}
-              className="rounded-lg bg-[#C93438] px-4 py-2 text-xs font-bold text-white hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
-            >
-              Periksa jawaban
-            </button>
-          )}
-        </div>
-      </section>
-
-      <section className="space-y-4">
         <div className="flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#4F8A67]/15 text-[#85C49A]">
             <CheckCircle2 size={18} />
@@ -858,6 +760,116 @@ export default function IrodoriStarterLessonOnePage() {
       <section className="space-y-4">
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
+            PRAKTIK SITUASI
+          </p>
+          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">
+            Pilih ungkapan sesuai situasi
+          </h2>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">
+            Baca waktunya dan perhatikan siapa lawan bicaramu. Pilih ungkapan
+            yang paling sesuai, bukan sekadar yang artinya kamu ingat.
+          </p>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2">
+          {situationQuestions.map((question, index) => (
+            <article
+              key={question.prompt}
+              className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"
+            >
+              <p className="text-[9px] font-black tracking-widest text-[#B8860B]">
+                SITUASI 0{index + 1}
+              </p>
+              <p className="mt-3 min-h-12 text-xs font-semibold leading-6 text-[#EAE6DD]">
+                {question.prompt}
+              </p>
+              <div className="mt-3 space-y-2">
+                {question.options.map((option) => {
+                  const selected = situationAnswers[index] === option;
+                  const correct = option === question.answer;
+
+                  return (
+                    <button
+                      key={option}
+                      type="button"
+                      onClick={() => {
+                        if (situationQuizSubmitted) return;
+                        setSituationAnswers((current) => ({
+                          ...current,
+                          [index]: option,
+                        }));
+                      }}
+                      disabled={situationQuizSubmitted}
+                      className={`w-full rounded-lg border px-3 py-2.5 text-left text-xs transition-colors ${
+                        situationQuizSubmitted && correct
+                          ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-200"
+                          : situationQuizSubmitted && selected
+                            ? "border-red-400/50 bg-red-400/10 text-red-200"
+                            : selected
+                              ? "border-[#B8860B]/60 bg-[#B8860B]/10 text-[#F1EBDD]"
+                              : "border-white/[0.07] bg-black/15 text-[#A9A398] hover:border-white/20"
+                      }`}
+                    >
+                      <span className="mr-2 inline-block w-4 text-center">
+                        {situationQuizSubmitted && correct
+                          ? "✓"
+                          : selected
+                            ? "●"
+                            : "○"}
+                      </span>
+                      <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">{renderJapaneseOption(option)}</span>
+                    </button>
+                  );
+                })}
+              </div>
+              {situationQuizSubmitted && (
+                <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
+                  {index === 4 ? (
+                    <>
+                      Orang yang pulang lebih dahulu mengatakan
+                      {" "}お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します.
+                      {" "}Rekan yang masih bekerja dapat membalas
+                      {" "}お<ruby>疲<rt>つか</rt></ruby>れさまでした.
+                    </>
+                  ) : (
+                    question.explanation
+                  )}
+                </p>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
+          <p className="text-xs text-[#A9A398]">
+            {situationQuizSubmitted
+              ? `Hasil latihan: ${situationScore} dari ${situationQuestions.length} benar.`
+              : `${situationAnsweredCount} dari ${situationQuestions.length} situasi dijawab.`}
+          </p>
+          {situationQuizSubmitted ? (
+            <button
+              type="button"
+              onClick={resetSituationQuiz}
+              className="rounded-lg border border-[#B8860B]/35 px-4 py-2 text-xs font-bold text-[#E7D2A1] hover:bg-[#B8860B]/10"
+            >
+              Ulangi latihan
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setSituationQuizSubmitted(true)}
+              disabled={situationAnsweredCount !== situationQuestions.length}
+              className="rounded-lg bg-[#C93438] px-4 py-2 text-xs font-bold text-white hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
+            >
+              Periksa jawaban
+            </button>
+          )}
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <div>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
             UNGKAPAN PENTING
           </p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">
@@ -895,6 +907,11 @@ export default function IrodoriStarterLessonOnePage() {
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
             Semua contoh di bawah ditulis dengan hiragana. Coba baca perlahan,
             lalu cocokkan dengan romaji dan artinya.
+          </p>
+          <p className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-3 text-xs leading-6 text-[#C7C1B5]">
+            <span className="font-bold text-[#E7D2A1]">Catatan baca:</span>{" "}
+            pada こんにちは dan こんばんは, huruf は di akhir sapaan dibaca
+            “wa”, bukan “ha”.
           </p>
         </div>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
