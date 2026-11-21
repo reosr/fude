@@ -6,6 +6,7 @@ import BottomNav from "@/components/BottomNav";
 import Sidebar from "@/components/Sidebar";
 import DisableRightClick from "@/components/DisableRightClick";
 import { Shippori_Mincho } from "next/font/google"; // <-- Tambahin ini
+import FudeSyncManager from "@/components/FudeSyncManager";
 
 // Setup font-nya
 const shipporiMincho = Shippori_Mincho({
