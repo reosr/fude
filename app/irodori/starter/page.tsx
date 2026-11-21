@@ -40,7 +40,7 @@ export default function IrodoriStarterPage() {
               </p>
             </div>
             <span className="rounded-xl border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]">
-              3 dari 18 materi tersedia
+              4 dari 18 materi tersedia
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -78,7 +78,7 @@ export default function IrodoriStarterPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson <= 3;
+            const isAvailable = lesson <= 4;
             const lessonId = `starter-${String(lesson).padStart(2, "0")}`;
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle =
@@ -86,13 +86,17 @@ export default function IrodoriStarterPage() {
                 ? "Good morning!"
                 : lesson === 2
                   ? "I'm sorry, I don't really understand."
-                  : "Nice to meet you.";
+                  : lesson === 3
+                    ? "Nice to meet you."
+                    : "I live in Tokyo.";
             const lessonDescription =
               lesson === 1
                 ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
                 : lesson === 2
                   ? "Meminta pengulangan, membicarakan kemampuan bahasa, dan menanyakan cara mengatakan sesuatu."
-                  : "Memperkenalkan diri, menulis kartu nama, menanyakan asal, dan memahami formulir.";
+                  : lesson === 3
+                    ? "Memperkenalkan diri, menulis kartu nama, menanyakan asal, dan memahami formulir."
+                    : "Mengenali keluarga, menanyakan usia dan tempat tinggal, membicarakan foto, serta membaca unggahan singkat.";
             const content = (
               <>
                 <div className="flex items-center justify-between gap-3">
@@ -152,7 +156,7 @@ export default function IrodoriStarterPage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Pelajaran 4–18 akan dibuka setelah materi, contoh komunikasi, latihan,
+        Pelajaran 5–18 akan dibuka setelah materi, contoh komunikasi, latihan,
         dan evaluasinya selesai disiapkan.
       </p>
     </main>
