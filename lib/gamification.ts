@@ -1052,35 +1052,85 @@ export function awardXpOnce(
     return false;
   }
 
-  // EXP berdiri sendiri dari ekonomi Token agar reward belajar tetap aktif.
-  initializeXp();
-  const rewards = readRewards();
-  if (rewards.includes(rewardId)) return false;
-
-  const safeAmount = Math.floor(amount);
-  if (safeAmount <= 0) return false;
-
-  const currentXp = getFudeXp();
-  const newXp = currentXp + safeAmount;
-
   try {
-    localStorage.setItem(XP_KEY, String(newXp));
-    localStorage.setItem(
-      XP_REWARDS_KEY,
-      JSON.stringify([...rewards, rewardId])
-    );
-    window.dispatchEvent(new Event(XP_UPDATED_EVENT));
-    notifyFudeLocalDataChanged(XP_KEY);
-    return true;
-  } catch (error) {
-    try {
-      localStorage.setItem(XP_KEY, String(currentXp));
-      localStorage.setItem(XP_REWARDS_KEY, JSON.stringify(rewards));
-    } catch (rollbackError) {
-      console.error("Gagal mengembalikan EXP:", rollbackError);
+    initializeXp();
+
+    const safeAmount = Math.floor(amount);
+    if (safeAmount <= 0) return false;
+
+    const rewards = readRewards();
+
+    if (rewards.includes(rewardId)) return false;
+
+    const xpState = getFudeXpSyncState();
+
+    // Cegah reward yang sudah tercatat di ledger baru
+    // diberikan kembali.
+    if (xpState.events.some((event) => event.id === rewardId)) {
+      localStorage.setItem(
+        XP_REWARDS_KEY,
+        JSON.stringify([...rewards, rewardId])
+      );
+      return false;
     }
 
-    console.error("Gagal memberikan EXP:", error);
+    const newEvent: FudeXpEvent = {
+      id: rewardId,
+      amount: safeAmount,
+    };
+
+    const nextEvents = [...xpState.events, newEvent];
+    const nextRewards = [...rewards, rewardId];
+
+    const newTotalXp =
+      xpState.base +
+      nextEvents.reduce((sum, event) => sum + event.amount, 0);
+
+    const oldXp = localStorage.getItem(XP_KEY);
+    const oldRewards = localStorage.getItem(XP_REWARDS_KEY);
+    const oldEvents = localStorage.getItem(XP_EVENTS_KEY);
+
+    try {
+      localStorage.setItem(XP_KEY, String(newTotalXp));
+      localStorage.setItem(
+        XP_REWARDS_KEY,
+        JSON.stringify(nextRewards)
+      );
+      localStorage.setItem(
+        XP_EVENTS_KEY,
+        JSON.stringify(nextEvents)
+      );
+
+      window.dispatchEvent(new Event(XP_UPDATED_EVENT));
+      notifyFudeLocalDataChanged(XP_KEY);
+
+      return true;
+    } catch (error) {
+      // Kembalikan data jika salah satu penyimpanan gagal.
+      const restore = (
+        key: string,
+        value: string | null
+      ) => {
+        if (value === null) {
+          localStorage.removeItem(key);
+        } else {
+          localStorage.setItem(key, value);
+        }
+      };
+
+      try {
+        restore(XP_KEY, oldXp);
+        restore(XP_REWARDS_KEY, oldRewards);
+        restore(XP_EVENTS_KEY, oldEvents);
+      } catch (rollbackError) {
+        console.error("Gagal mengembalikan data EXP:", rollbackError);
+      }
+
+      console.error("Gagal memberikan EXP:", error);
+      return false;
+    }
+  } catch (error) {
+    console.error("Gagal memproses reward EXP:", error);
     return false;
   }
 }
