@@ -6,7 +6,6 @@ import type { ReactNode } from "react";
 import {
   ArrowLeft,
   CalendarDays,
-  Camera,
   CheckCircle2,
   Clock3,
   MessageCircle,
