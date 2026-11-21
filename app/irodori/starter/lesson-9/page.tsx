@@ -9,7 +9,6 @@ import {
   BriefcaseBusiness,
   CalendarDays,
   CheckCircle2,
-  Clock3,
   Coffee,
   Moon,
   RefreshCw,
@@ -88,31 +87,45 @@ const workScheduleConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "kenji",
-    japanese: <><ruby>昼休<rt>ひるやす</rt></ruby>みは、<ruby>何時<rt>なんじ</rt></ruby>から<ruby>何時<rt>なんじ</rt></ruby>までですか？</>,
-    romaji: "Hiruyasumi wa, nanji kara nanji made desu ka?",
-    translation: "Istirahat siang mulai pukul berapa sampai pukul berapa?",
+    japanese: <><ruby>午前<rt>ごぜん</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は、<ruby>何時<rt>なんじ</rt></ruby>までですか？</>,
+    romaji: "Gozen no shigoto wa, nanji made desu ka?",
+    translation: "Pekerjaan pagi sampai pukul berapa?",
     audioFileName: "irodori-starter-09-a02-l03.mp3",
   },
   {
     speakerId: "sota",
-    japanese: <>12<ruby>時<rt>じ</rt></ruby>から1<ruby>時<rt>じ</rt></ruby>までです。</>,
-    romaji: "Juuniji kara ichiji made desu.",
-    translation: "Dari pukul dua belas sampai pukul satu.",
+    japanese: <>12<ruby>時<rt>じ</rt></ruby>までです。</>,
+    romaji: "Juuni-ji made desu.",
+    translation: "Sampai pukul dua belas.",
     audioFileName: "irodori-starter-09-a02-l04.mp3",
+  },
+  {
+    speakerId: "kenji",
+    japanese: <><ruby>昼休<rt>ひるやす</rt></ruby>みは、<ruby>何時<rt>なんじ</rt></ruby>から<ruby>何時<rt>なんじ</rt></ruby>までですか？</>,
+    romaji: "Hiruyasumi wa, nanji kara nanji made desu ka?",
+    translation: "Istirahat siang mulai pukul berapa sampai pukul berapa?",
+    audioFileName: "irodori-starter-09-a02-l05.mp3",
+  },
+  {
+    speakerId: "sota",
+    japanese: <>12<ruby>時<rt>じ</rt></ruby>から1<ruby>時<rt>じ</rt></ruby>までです。</>,
+    romaji: "Juuni-ji kara ichiji made desu.",
+    translation: "Dari pukul dua belas sampai pukul satu.",
+    audioFileName: "irodori-starter-09-a02-l06.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <><ruby>午後<rt>ごご</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は、<ruby>何時<rt>なんじ</rt></ruby>までですか？</>,
     romaji: "Gogo no shigoto wa, nanji made desu ka?",
     translation: "Pekerjaan sore sampai pukul berapa?",
-    audioFileName: "irodori-starter-09-a02-l05.mp3",
+    audioFileName: "irodori-starter-09-a02-l07.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>6<ruby>時<rt>じ</rt></ruby>までです。ときどき、<ruby>残業<rt>ざんぎょう</rt></ruby>があります。</>,
     romaji: "Rokuji made desu. Tokidoki, zangyou ga arimasu.",
     translation: "Sampai pukul enam. Kadang-kadang ada lembur.",
-    audioFileName: "irodori-starter-09-a02-l06.mp3",
+    audioFileName: "irodori-starter-09-a02-l08.mp3",
   },
 ];
 
@@ -255,7 +268,7 @@ const scheduleBoard = [
   { name: "Erik", status: "不在", statusReading: "fuzai", note: "休み", detail: "Libur hari ini", color: "text-[#A9A398]" },
   { name: "Kobayashi", status: "在", statusReading: "zai", note: "早退 · 16.00", detail: "Pulang lebih awal pukul 16.00", color: "text-emerald-300" },
   { name: "Emma", status: "不在", statusReading: "fuzai", note: "遅刻 · 午後1時から", detail: "Datang mulai pukul 13.00", color: "text-amber-300" },
-  { name: "Sato", status: "不在", statusReading: "fuzai", note: "会議中 · 10.30–11.30", detail: "Sedang rapat sampai 11.30", color: "text-amber-300" },
+  { name: "Sato", status: "在", statusReading: "zai", note: "会議中 · 10.30–11.30", detail: "Sedang rapat sampai 11.30", color: "text-emerald-300" },
 ];
 
 const weekdays = [
@@ -283,9 +296,9 @@ const practiceTasks: {
   {
     prompt: <>Yui bangun sekitar pukul berapa?</>,
     options: [
-      { key: "a", label: "5時ごろ (sekitar pukul lima)" },
-      { key: "b", label: "7時ごろ (sekitar pukul tujuh)" },
-      { key: "c", label: "9時ごろ (sekitar pukul sembilan)" },
+      { key: "a", label: <>5<ruby>時<rt>じ</rt></ruby>ごろ (sekitar pukul lima)</> },
+      { key: "b", label: <>7<ruby>時<rt>じ</rt></ruby>ごろ (sekitar pukul tujuh)</> },
+      { key: "c", label: <>9<ruby>時<rt>じ</rt></ruby>ごろ (sekitar pukul sembilan)</> },
     ],
     answer: "b",
     explanation: <>Yui mengatakan 「7時ごろ起きます」, artinya bangun sekitar pukul tujuh.</>,
@@ -298,7 +311,7 @@ const practiceTasks: {
       { key: "c", label: "10.00" },
     ],
     answer: "b",
-    explanation: <>Jadwal dimulai pukul 9.00 dengan 「朝礼」 atau pengarahan pagi.</>,
+    explanation: <>Jadwal dimulai pukul 9.00 dengan 「<ruby>朝礼<rt>ちょうれい</rt></ruby>」 atau pengarahan pagi.</>,
   },
   {
     prompt: <>Istirahat siang berlangsung dari jam berapa sampai jam berapa?</>,
@@ -308,7 +321,7 @@ const practiceTasks: {
       { key: "c", label: "13.00–14.00" },
     ],
     answer: "b",
-    explanation: <>「12時から1時まで」 berarti dari pukul dua belas sampai pukul satu.</>,
+    explanation: <>「12<ruby>時<rt>じ</rt></ruby>から1<ruby>時<rt>じ</rt></ruby>まで」 berarti dari pukul dua belas sampai pukul satu.</>,
   },
   {
     prompt: <>Siapa yang sedang libur hari ini menurut papan jadwal?</>,
@@ -356,7 +369,7 @@ const quizQuestions: {
       { key: "c", label: <><ruby>7時<rt>しちじ</rt></ruby>から<ruby>起<rt>お</rt></ruby>きます。</> },
     ],
     answer: "a",
-    explanation: <>Gunakan partikel に setelah waktu yang tepat: 「7時に起きます」.</>,
+    explanation: <>Gunakan partikel に setelah waktu yang tepat: 「7<ruby>時<rt>しちじ</rt></ruby>に<ruby>起<rt>お</rt></ruby>きます」.</>,
   },
   {
     prompt: <>Apa perbedaan 「7時に」 dan 「7時ごろ」?</>,
@@ -376,7 +389,7 @@ const quizQuestions: {
       { key: "c", label: "shichiji" },
     ],
     answer: "b",
-    explanation: <>4時 dibaca よじ (yoji), salah satu bacaan waktu yang perlu diingat.</>,
+    explanation: <>4<ruby>時<rt>よじ</rt></ruby> dibaca yoji, salah satu bacaan waktu yang perlu diingat.</>,
   },
   {
     prompt: <>「12時から1時まで」 berarti…</>,
@@ -416,7 +429,7 @@ const quizQuestions: {
       { key: "c", label: "Pulang lebih awal." },
     ],
     answer: "b",
-    explanation: <>外出 berarti sedang keluar dari tempat kerja untuk suatu keperluan.</>,
+    explanation: <><ruby>外出<rt>がいしゅつ</rt></ruby> berarti sedang keluar dari tempat kerja untuk suatu keperluan.</>,
   },
   {
     prompt: <>Bagaimana mengatakan “Hari Sabtu cocok untuk saya”?</>,
@@ -793,10 +806,7 @@ export default function IrodoriStarterLessonNinePage() {
                       {person.name}
                     </td>
                     <td className={"border border-white/[0.08] p-3 font-mincho font-bold " + person.color}>
-                      {person.status}
-                      <span className="ml-1 text-[9px] font-normal text-[#817A73]">
-                        ({person.statusReading})
-                      </span>
+                      {person.status === "在" ? <ruby>在<rt>ざい</rt></ruby> : <ruby>不在<rt>ふざい</rt></ruby>}
                     </td>
                     <td className="border border-white/[0.08] p-3 font-mincho text-[#E7D2A1]">
                       {person.note === "外出 · 銀行" ? <><ruby>外出<rt>がいしゅつ</rt></ruby> · <ruby>銀行<rt>ぎんこう</rt></ruby></> :
