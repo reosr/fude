@@ -104,6 +104,9 @@ export interface ChapterRewardResult {
 export const DEFAULT_PROFILE: FudeProfile = {
   name: "Pelajar Fude",
   avatar: "筆",
+  photoPositionX?: number;
+photoPositionY?: number;
+photoZoom?: number;
   photoDataUrl: null,
   equippedBadgeId: null,
   equippedFrameId: "classic",
