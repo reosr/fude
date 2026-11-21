@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Compass, Headphones, MessageCircle, Sparkles } from "lucide-react";
 
