@@ -323,7 +323,7 @@ export default function Profil() {
         </div>
       </section>
 
-<GoogleAuthButton />
+      <GoogleAuthButton />
 
       <section>
         <div className="flex items-center gap-2 mb-4">
