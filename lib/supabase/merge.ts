@@ -36,6 +36,34 @@ function hasPending(
   return pending.some((item) => item.key === key);
 }
 
+function normalizeForCompare(value: unknown): unknown {
+  if (Array.isArray(value)) {
+    return value.map(normalizeForCompare);
+  }
+
+  if (value !== null && typeof value === "object") {
+    const object = value as Record<string, unknown>;
+
+    return Object.fromEntries(
+      Object.keys(object)
+        .sort()
+        .map((key) => [
+          key,
+          normalizeForCompare(object[key]),
+        ])
+    );
+  }
+
+  return value;
+}
+
+function sameJson(a: unknown, b: unknown): boolean {
+  return (
+    JSON.stringify(normalizeForCompare(a)) ===
+    JSON.stringify(normalizeForCompare(b))
+  );
+}
+
 function mergeXpEvents(
   localEvents: FudeXpEvent[],
   cloudEvents: FudeXpEvent[]
