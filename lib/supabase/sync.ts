@@ -22,11 +22,11 @@ export interface LocalFudeSnapshot {
   jlptResults: LocalJlptResult[];
   capturedAt: string;
   stored: {
-  profile: boolean;
-  progress: boolean;
-  xp: boolean;
-  memorizedKanji: boolean;
-};
+    profile: boolean;
+    progress: boolean;
+    xp: boolean;
+    memorizedKanji: boolean;
+  };
 }
 
 function readStringArray(key: string): string[] {
