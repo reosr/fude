@@ -6,8 +6,8 @@ interface ProfilePictureProps {
   size?: number;
   className?: string;
   photoPositionX?: number;
-photoPositionY?: number;
-photoZoom?: number;
+  photoPositionY?: number;
+  photoZoom?: number;
 }
 
 export default function ProfilePicture({
