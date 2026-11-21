@@ -126,7 +126,7 @@ const drinkConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <>はい、お願いします。</>,
+    japanese: <>はい、<ruby>お願い<rt>おねが</rt></ruby>。</>,
     romaji: "Hai, onegaishimasu.",
     translation: "Ya, boleh. Terima kasih.",
     audioFileName: "irodori-starter-05-a03-l02.mp3",
@@ -154,7 +154,7 @@ const drinkConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "sota",
-    japanese: <><ruby>水<rt>みず</rt></ruby>、お願いします。</>,
+    japanese: <><ruby>水<rt>みず</rt></ruby>、<ruby>お願い<rt>おねが</rt></ruby>。</>,
     romaji: "Mizu, onegaishimasu.",
     translation: "Air putih, tolong.",
     audioFileName: "irodori-starter-05-a03-l06.mp3",
@@ -164,7 +164,7 @@ const drinkConversation: IrodoriUtterance[] = [
 const breakfastConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
-    japanese: <>ケンジさん、朝ご飯、いつも<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べますか？</>,
+    japanese: <>ケンジさん、<ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby>、いつも<ruby>何<rt>なに</rt></ruby>を<ruby>食<rt>た</rt></ruby>べますか？</>,
     romaji: "Kenji-san, asagohan, itsumo nani o tabemasu ka?",
     translation: "Kenji, biasanya kamu makan apa untuk sarapan?",
     audioFileName: "irodori-starter-05-a04-l01.mp3",
@@ -289,11 +289,11 @@ const quizQuestions: {
     prompt: "Seseorang menawarkan teh. Bagaimana cara menerima tawaran dengan sopan?",
     options: [
       { key: "a", label: <>いえ、けっこうです。</> },
-      { key: "b", label: <>はい、お願いします。</> },
+      { key: "b", label: <>はい、<ruby>お願い<rt>おねが</rt></ruby>。</> },
       { key: "c", label: <>何ですか？</> },
     ],
     answer: "b",
-    explanation: <>はい、お願いします berarti “Ya, boleh/terima kasih”.</>,
+    explanation: <>はい、<ruby>お願い<rt>おねが</rt></ruby> berarti “Ya, boleh/terima kasih”.</>,
   },
   {
     prompt: "Bagaimana cara menolak tawaran minuman dengan sopan?",
@@ -447,7 +447,7 @@ export default function IrodoriStarterLessonFivePage() {
             I like udon.
           </h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
-            うどんが好きです
+            うどんが<ruby>好き<rt>す</rt></ruby>
           </p>
           <p className="mt-4 max-w-xl text-sm leading-7 text-[#B6B0A5]">
             Ungkapkan makanan yang kamu sukai, bertanya tentang makanan Jepang,
@@ -511,7 +511,7 @@ export default function IrodoriStarterLessonFivePage() {
           untuk mengatakan suka, dan{" "}
           <span className="font-semibold text-[#E7D2A1]">好きじゃないです</span>{" "}
           untuk mengatakan tidak suka. Saat menanggapi pertanyaan, jawaban
-          singkat seperti はい、好きです juga terdengar alami.
+          singkat seperti はい、<ruby>好き<rt>す</rt></ruby> juga terdengar alami.
         </p>
         <IrodoriConversation
           title="Scene A · Obrolan saat makan siang"
@@ -574,7 +574,7 @@ export default function IrodoriStarterLessonFivePage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Untuk menanyakan makanan Jepang yang disukai, gunakan
-          「日本の食べ物、何が好きですか？」. Bila ada makanan yang kurang
+          「<ruby>日本<rt>にほん</rt></ruby>の<ruby>食べ物<rt>たべもの</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>好き<rt>す</rt></ruby>か？」. Bila ada makanan yang kurang
           cocok, 「Nは、ちょっと…」 menjadi cara yang lebih halus daripada
           mengatakan tidak suka secara langsung.
         </p>
@@ -604,13 +604,13 @@ export default function IrodoriStarterLessonFivePage() {
         </div>
         <div className="rounded-xl border border-[#B8860B]/15 bg-[#1B1A18] p-4">
           <p className="font-mincho text-lg text-[#F1EBDD]">
-            日本の食べ物、<ruby>何<rt>なに</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？
+            <ruby>日本<rt>にほん</rt></ruby>の<ruby>食べ物<rt>たべもの</rt></ruby>、<ruby>何<rt>なに</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">
             Makanan Jepang apa yang kamu suka?
           </p>
           <p className="mt-3 font-mincho text-lg text-[#D9B66D]">
-            納豆は、ちょっと……。
+            <ruby>納豆<rt>なっとう</rt></ruby>は、ちょっと……。
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">
             Kalau natto, saya kurang cocok…
@@ -638,9 +638,9 @@ export default function IrodoriStarterLessonFivePage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Saat seseorang menawarkan minuman, kamu dapat menerima dengan
-          「はい、お願いします」 atau menolak dengan sopan menggunakan
+          「はい、<ruby>お願い<rt>おねが</rt></ruby>」 atau menolak dengan sopan menggunakan
           「いえ、けっこうです」. Untuk memilih minuman, sebutkan namanya lalu
-          tambahkan お願いします.
+          tambahkan <ruby>お願い<rt>おねが</rt></ruby>.
         </p>
         <IrodoriConversation
           title="Scene C · Ditawari teh"
@@ -672,7 +672,7 @@ export default function IrodoriStarterLessonFivePage() {
               MENERIMA
             </p>
             <p className="mt-2 font-mincho text-xl text-[#F1EBDD]">
-              はい、お願いします。
+              はい、<ruby>お願い<rt>おねが</rt></ruby>。
             </p>
             <p className="mt-1 text-xs text-[#A9A398]">Ya, boleh. Terima kasih.</p>
           </div>
@@ -692,7 +692,7 @@ export default function IrodoriStarterLessonFivePage() {
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Mau minum apa?</p>
           <p className="mt-3 font-mincho text-lg text-[#D9B66D]">
-            水、お願いします。
+            <ruby>水<rt>みず</rt></ruby>、<ruby>お願い<rt>おねが</rt></ruby>。
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Air putih, tolong.</p>
         </div>
@@ -806,14 +806,14 @@ export default function IrodoriStarterLessonFivePage() {
               <p className="font-mincho text-base leading-8 text-[#F1EBDD]">
                 <ruby>今日<rt>きょう</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>ご飯 🌞
                 <br />
-                ご飯とみそ<ruby>汁<rt>しる</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。
+                <ruby>ご飯<rt>ごはん</rt></ruby>とみそ<ruby>汁<rt>しる</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。
                 <br />
-                お茶を<ruby>飲<rt>の</rt></ruby>みます。
+                <ruby>お茶<rt>おちゃ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>みます。
                 <br />
                 いただきます！
               </p>
               <p className="mt-3 text-[10px] text-[#B8860B]">
-                #<ruby>朝ご飯<rt>あさごはん</rt></ruby> #<ruby>和食<rt>わしょく</rt></ruby>
+                #<ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby> #<ruby>和食<rt>わしょく</rt></ruby>
               </p>
             </div>
           </article>
@@ -836,12 +836,12 @@ export default function IrodoriStarterLessonFivePage() {
                 <br />
                 パンと<ruby>卵<rt>たまご</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。
                 <br />
-                果物も<ruby>食<rt>た</rt></ruby>べます。
+                <ruby>果物<rt>くだもの</rt></ruby>も<ruby>食<rt>た</rt></ruby>べます。
                 <br />
                 おいしいです！
               </p>
               <p className="mt-3 text-[10px] text-[#B8860B]">
-                #<ruby>朝ご飯<rt>あさごはん</rt></ruby> #フルーツ
+                #<ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby> #フルーツ
               </p>
             </div>
           </article>
@@ -866,7 +866,7 @@ export default function IrodoriStarterLessonFivePage() {
             onChange={(event) => setPostCaption(event.target.value)}
             rows={3}
             maxLength={160}
-            placeholder="Contoh: パンと卵を食べます。水を飲みます。"
+            placeholder="Contoh: ぱんとたまごをたべます。みずをのみます。"
             className="mt-2 w-full resize-y rounded-xl border border-white/[0.09] bg-black/20 px-3 py-3 font-mincho text-base leading-7 text-[#F1EBDD] outline-none placeholder:text-[#746F65] focus:border-[#B8860B]/50"
           />
           <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
@@ -917,14 +917,14 @@ export default function IrodoriStarterLessonFivePage() {
               01 · MENYATAKAN SUKA
             </p>
             <p className="mt-2 font-mincho text-lg text-[#F1EBDD]">
-              Nが好きです
+              Nが<ruby>好き<rt>す</rt></ruby>
             </p>
             <p className="mt-1 font-mincho text-base text-[#D9B66D]">
-              うどんが好きです。
+              うどんが<ruby>好き<rt>す</rt></ruby>。
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Gunakan が setelah kata benda untuk menyebut sesuatu yang disukai.
-              Bentuk negatifnya adalah Nは好きじゃないです.
+              Bentuk negatifnya adalah Nは<ruby>好き<rt>す</rt></ruby>.
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
@@ -950,10 +950,10 @@ export default function IrodoriStarterLessonFivePage() {
               V-ますか？
             </p>
             <p className="mt-1 font-mincho text-base text-[#D9B66D]">
-              お茶、<ruby>飲<rt>の</rt></ruby>みますか？
+              <ruby>お茶<rt>おちゃ</rt></ruby>、<ruby>飲<rt>の</rt></ruby>みますか？
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Untuk menerima, ucapkan はい、お願いします. Untuk menolak dengan
+              Untuk menerima, ucapkan はい、<ruby>お願い<rt>おねが</rt></ruby>. Untuk menolak dengan
               sopan, ucapkan いえ、けっこうです.
             </p>
           </article>
@@ -980,11 +980,11 @@ export default function IrodoriStarterLessonFivePage() {
               V-ません
             </p>
             <p className="mt-1 font-mincho text-base text-[#D9B66D]">
-              朝ご飯は<ruby>食<rt>た</rt></ruby>べません。
+              <ruby>朝<ruby>ご飯<rt>ごはん</rt></ruby><rt>あさごはん</rt></ruby>は<ruby>食<rt>た</rt></ruby>べません。
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Ubah akhiran ます menjadi ません untuk membuat bentuk negatif
-              yang sopan. 食べないです memiliki arti serupa dan sering terdengar
+              yang sopan. <ruby>食<rt>た</rt></ruby> memiliki arti serupa dan sering terdengar
               dalam percakapan.
             </p>
           </article>
@@ -1000,7 +1000,7 @@ export default function IrodoriStarterLessonFivePage() {
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               いつも berarti selalu, よく berarti sering. あまり dipakai
-              bersama kalimat negatif, misalnya あまり食べません.
+              bersama kalimat negatif, misalnya あまり<ruby>食<rt>た</rt></ruby>.
             </p>
           </article>
         </div>
