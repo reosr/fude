@@ -258,20 +258,20 @@ export default function Profil() {
         <div className="relative flex flex-col sm:flex-row items-center gap-6">
           <div className="flex flex-col items-center shrink-0">
             <button
-  type="button"
-  onClick={() => {
-    if (photoSrc) setIsPhotoPreviewOpen(true);
-  }}
-  disabled={!photoSrc}
-  aria-label="Lihat foto profil ukuran penuh"
-  className="rounded-full cursor-zoom-in disabled:cursor-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B8860B]"
->
-  <ProfilePicture
-    photoSrc={photoSrc}
-    size={116}
-    className="border-2 border-[#B8860B]/50"
-  />
-</button>
+              type="button"
+              onClick={() => {
+                if (photoSrc) setIsPhotoPreviewOpen(true);
+              }}
+              disabled={!photoSrc}
+              aria-label="Lihat foto profil ukuran penuh"
+              className="rounded-full cursor-zoom-in disabled:cursor-default focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#B8860B]"
+            >
+              <ProfilePicture
+                photoSrc={photoSrc}
+                size={116}
+                className="border-2 border-[#B8860B]/50"
+              />
+            </button>
             <input
               ref={fileInputRef}
               type="file"
