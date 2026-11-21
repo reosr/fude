@@ -120,7 +120,7 @@ export default function FudeSyncManager() {
     window.addEventListener(
         PROFILE_PHOTO_UPDATED_EVENT,
         handlePhotoChange
-        );
+    );
 
     window.addEventListener(
       FUDE_SYNC_ACCOUNT_BOUND_EVENT,
