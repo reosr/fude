@@ -181,44 +181,44 @@ const wordingConversation: IrodoriUtterance[] = [
 
 const situationQuestions = [
   {
-    prompt: "Kamu tidak memahami ucapan teman dengan jelas. Apa yang bisa kamu katakan?",
-    options: ["もういちど、お願いします", "ありがとうございます", "おやすみなさい"],
+    prompt: "Kamu ingin meminta teman mengulangi ucapannya karena belum paham. Ungkapan mana yang secara langsung meminta pengulangan?",
+    options: ["もういちど、お願いします", "ゆっくり、お願いします", "はい、わかりました"],
     answer: "もういちど、お願いします",
-    explanation: "もういちど、お願いします digunakan untuk meminta lawan bicara mengulangi ucapannya.",
+    explanation: "もういちど berarti sekali lagi. Ungkapan ini meminta lawan bicara mengulangi ucapannya.",
   },
   {
-    prompt: "Lawan bicara berbicara terlalu cepat. Apa permintaan yang sesuai?",
-    options: ["ゆっくり、お願いします", "じゃあ、また", "おはようございます"],
+    prompt: "Teman berbicara terlalu cepat. Kamu ingin ia berbicara lebih pelan. Apa yang kamu katakan?",
+    options: ["もういちど、お願いします", "ゆっくり、お願いします", "はい、わかりました"],
     answer: "ゆっくり、お願いします",
-    explanation: "ゆっくり berarti perlahan. Ungkapan ini meminta orang lain berbicara lebih pelan.",
+    explanation: "ゆっくり berarti perlahan. Ungkapan ini meminta orang lain berbicara lebih pelan, bukan mengulangi seluruh ucapan.",
   },
   {
-    prompt: "Seseorang bertanya apakah kamu bisa berbahasa Jepang. Kamu bisa sedikit. Apa jawabanmu?",
-    options: ["はい、少しできます", "いいえ、おやすみなさい", "じゃあ、また"],
+    prompt: "Seseorang bertanya apakah kamu bisa berbahasa Jepang. Kamu bisa sedikit. Apa jawaban yang paling sesuai?",
+    options: ["はい、少しできます", "はい、できます", "いいえ、できません"],
     answer: "はい、少しできます",
-    explanation: "Gunakan jawaban ini untuk mengatakan bahwa kamu bisa berbahasa Jepang sedikit.",
+    explanation: "少し berarti sedikit. Jawaban ini menyampaikan bahwa kamu bisa berbahasa Jepang, tetapi masih sedikit.",
   },
   {
-    prompt: "Kamu ingin menanyakan apakah seseorang bisa berbahasa Inggris. Apa kalimatnya?",
-    options: ["英語、できますか？", "日本語で何と言いますか？", "お先に失礼します"],
+    prompt: "Kamu ingin menanyakan apakah seseorang bisa berbahasa Inggris, bukan bahasa Jepang. Apa kalimatnya?",
+    options: ["英語、できますか？", "日本語、できますか？", "英語で何と言いますか？"],
     answer: "英語、できますか？",
-    explanation: "Sebutkan nama bahasa, lalu tambahkan できますか untuk menanyakan kemampuan.",
+    explanation: "英語 berarti bahasa Inggris. 日本語 berarti bahasa Jepang, sedangkan 英語で何と言いますか menanyakan cara mengatakan sesuatu dalam bahasa Inggris.",
   },
   {
     prompt: "Kamu memegang sebuah benda dan ingin tahu cara menyebutnya dalam bahasa Jepang. Apa yang kamu tanyakan?",
     options: [
       "これは日本語で何と言いますか？",
+      "これは何ですか？",
       "もういちど、お願いします",
-      "お疲れさまでした",
     ],
     answer: "これは日本語で何と言いますか？",
-    explanation: "Kalimat ini digunakan untuk menanyakan cara menyebut benda atau kata dalam bahasa Jepang.",
+    explanation: "これは日本語で何と言いますか？ menanyakan bagaimana mengatakan sesuatu dalam bahasa Jepang. これは何ですか？ hanya menanyakan benda itu apa.",
   },
   {
     prompt: "Teman menjawab bahwa “water” dalam bahasa Jepang adalah “mizu”. Kata Jepang mana yang dimaksud?",
     options: ["水", "りんご", "ノート"],
     answer: "水",
-    explanation: "Kata ini dibaca mizu dan berarti air.",
+    explanation: "水 dibaca みず (mizu), artinya air.",
   },
 ];
 
@@ -226,6 +226,15 @@ function renderJapaneseOption(option: string) {
   switch (option) {
     case "はい、少しできます":
       return <>はい、<ruby>少<rt>すこ</rt></ruby>しできます</>;
+    case "はい、できます":
+    case "いいえ、できません":
+      return option;
+    case "日本語、できますか？":
+      return <><ruby>日本語<rt>にほんご</rt></ruby>、できますか？</>;
+    case "英語で何と言いますか？":
+      return <><ruby>英語<rt>えいご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と<ruby>言<rt>い</rt></ruby>いますか？</>;
+    case "これは何ですか？":
+      return <>これは<ruby>何<rt>なん</rt></ruby>ですか？</>;
     case "英語、できますか？":
       return <><ruby>英語<rt>えいご</rt></ruby>、できますか？</>;
     case "日本語で何と言いますか？":
@@ -586,18 +595,19 @@ export default function IrodoriStarterLessonTwoPage() {
                 <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
                   {index === 2 ? (
                     <>
-                      はい、<ruby>少<rt>すこ</rt></ruby>しできます berarti
-                      “Ya, bisa sedikit”.
+                      <ruby>少<rt>すこ</rt></ruby>し berarti “sedikit”.
+                      Jawaban ini menyatakan bahwa kamu bisa sedikit.
                     </>
                   ) : index === 3 ? (
                     <>
-                      <ruby>英語<rt>えいご</rt></ruby> berarti bahasa Inggris.
-                      Gunakan できますか untuk menanyakan kemampuan.
+                      <ruby>英語<rt>えいご</rt></ruby> berarti bahasa Inggris,
+                      sedangkan <ruby>日本語<rt>にほんご</rt></ruby> berarti bahasa Jepang.
                     </>
                   ) : index === 4 ? (
                     <>
                       これは<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と
-                      <ruby>言<rt>い</rt></ruby>いますか？ berarti “Bagaimana mengatakan ini dalam bahasa Jepang?”
+                      <ruby>言<rt>い</rt></ruby>いますか？ menanyakan cara mengatakan sesuatu
+                      dalam bahasa Jepang.
                     </>
                   ) : index === 5 ? (
                     <>
@@ -606,6 +616,8 @@ export default function IrodoriStarterLessonTwoPage() {
                   ) : (
                     question.explanation
                   )}
+                </p>
+              )}}
                 </p>
               )}
             </article>
