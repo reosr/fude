@@ -7,9 +7,7 @@ import {
   ArrowLeft,
   CheckCircle2,
   ClipboardList,
-  Coffee,
   MapPin,
-  MessageCircle,
   PackageCheck,
   RefreshCw,
   ShoppingBag,
@@ -81,7 +79,7 @@ const fastFoodConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>チーズバーガーのセット、お願いします。</>,
+    japanese: <>チーズバーガーのセット、お<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Chiizubaagaa no setto, onegaishimasu.",
     translation: "Paket cheeseburger, tolong.",
     audioFileName: "irodori-starter-06-a02-l02.mp3",
@@ -109,7 +107,7 @@ const fastFoodConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>テイクアウトでお願いします。</>,
+    japanese: <>テイクアウトでお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Teikuauto de onegaishimasu.",
     translation: "Dibungkus untuk dibawa pulang, ya.",
     audioFileName: "irodori-starter-06-a02-l06.mp3",
@@ -140,14 +138,14 @@ const chooseMealConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>私は、うどんにします。</>,
+    japanese: <><ruby>私<rt>わたし</rt></ruby>は、うどんにします。</>,
     romaji: "Watashi wa, udon ni shimasu.",
     translation: "Saya pilih udon.",
     audioFileName: "irodori-starter-06-a03-l04.mp3",
   },
   {
     speakerId: "akiko",
-    japanese: <>じゃあ、私はそばにします。</>,
+    japanese: <>じゃあ、<ruby>私<rt>わたし</rt></ruby>はそばにします。</>,
     romaji: "Jaa, watashi wa soba ni shimasu.",
     translation: "Kalau begitu, saya pilih soba.",
     audioFileName: "irodori-starter-06-a03-l05.mp3",
@@ -301,7 +299,7 @@ const quizQuestions: {
     explanation: <>Sebut nama pesanan, lalu tambahkan お願いします untuk meminta dengan sopan.</>,
   },
   {
-    prompt: "Apa arti 「テイクアウトでお願いします」?",
+    prompt: <>Apa arti 「テイクアウトでお<ruby>願<rt>ねが</rt></ruby>いします」?</>,
     options: [
       { key: "a", label: "Saya makan di sini." },
       { key: "b", label: "Saya ingin membatalkan pesanan." },
@@ -311,17 +309,17 @@ const quizQuestions: {
     explanation: <>テイクアウト berarti dibawa pulang. Untuk makan di tempat, kamu dapat mengatakan ここで.</>,
   },
   {
-    prompt: "Staf bertanya 「ドリンクは何にしますか？」. Apa yang sedang ditanyakan?",
+    prompt: <>Staf bertanya 「ドリンクは<ruby>何<rt>なに</rt></ruby>にしますか？」. Apa yang sedang ditanyakan?</>,
     options: [
       { key: "a", label: "Minuman apa yang kamu pilih?" },
       { key: "b", label: "Berapa harga minumannya?" },
       { key: "c", label: "Di mana tempat duduknya?" },
     ],
     answer: "a",
-    explanation: <>「何にしますか」 digunakan untuk menanyakan pilihan seseorang.</>,
+    explanation: <>「<ruby>何<rt>なに</rt></ruby>にしますか」 digunakan untuk menanyakan pilihan seseorang.</>,
   },
   {
-    prompt: "Lengkapi jawaban: 「私は、カレー＿＿します。」",
+    prompt: <>Lengkapi jawaban: 「<ruby>私<rt>わたし</rt></ruby>は、カレー＿＿します。」</>,
     options: [
       { key: "a", label: "を" },
       { key: "b", label: "に" },
@@ -335,7 +333,7 @@ const quizQuestions: {
     options: [
       { key: "a", label: <><ruby>唐揚<rt>からあ</rt></ruby>げ、ふたつください。</> },
       { key: "b", label: <>ふたつ、<ruby>唐揚<rt>からあ</rt></ruby>げください。</> },
-      { key: "c", label: <>唐揚げ、ににください。</> },
+      { key: "c", label: <><ruby>唐揚<rt>からあ</rt></ruby>げ、にこください。</> },
     ],
     answer: "a",
     explanation: <>Untuk menghitung benda atau porsi secara umum, gunakan ひとつ、ふたつ… dan sebutkan jumlah setelah nama benda.</>,
@@ -355,7 +353,7 @@ const quizQuestions: {
     options: [
       { key: "a", label: <><ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>、ありますか？</> },
       { key: "b", label: <>取り皿、<ruby>食<rt>た</rt></ruby>べますか？</> },
-      { key: "c", label: <>取り皿、好きですか？</> },
+      { key: "c", label: <><ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>、<ruby>好<rt>す</rt></ruby>きですか？</> },
     ],
     answer: "a",
     explanation: <>Nはありますか digunakan untuk bertanya apakah suatu barang tersedia. Partikel は kadang dihilangkan dalam percakapan.</>,
@@ -371,7 +369,7 @@ const quizQuestions: {
     explanation: <>そば dan うどん adalah jenis mi Jepang. Papan itu menunjukkan restoran yang menyediakan keduanya.</>,
   },
   {
-    prompt: "Pada papan nama restoran tertulis 「焼肉」. Makanan apa yang menjadi ciri tempat tersebut?",
+    prompt: <>Pada papan nama restoran tertulis 「<ruby>焼肉<rt>やきにく</rt></ruby>」. Makanan apa yang menjadi ciri tempat tersebut?</>,
     options: [
       { key: "a", label: "Daging panggang" },
       { key: "b", label: "Pai apel" },
@@ -576,7 +574,7 @@ export default function IrodoriStarterLessonSixPage() {
                       <span className="text-2xl">{item.icon}</span>
                       <div className="min-w-0 flex-1">
                         <p className="font-mincho text-sm font-bold text-[#F1EBDD]">
-                          {item.jp}
+                          {item.jp === "ウーロン茶" ? <>ウーロン<ruby>茶<rt>ちゃ</rt></ruby></> : item.jp === "水" ? <ruby>水<rt>みず</rt></ruby> : item.jp}
                         </p>
                         <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
                         <p className="text-[10px] text-[#A9A398]">{item.meaning}</p>
@@ -663,7 +661,7 @@ export default function IrodoriStarterLessonSixPage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Untuk memesan, sebutkan nama makanan lalu tambahkan ください atau
-          お願いします. Ungkapan お願いします terdengar lebih sopan. Staf juga
+          お<ruby>願<rt>ねが</rt></ruby>いします. Ungkapan お<ruby>願<rt>ねが</rt></ruby>いします terdengar lebih sopan. Staf juga
           mungkin bertanya apakah kamu makan di tempat atau membawa pulang.
         </p>
         <IrodoriConversation
@@ -779,11 +777,11 @@ export default function IrodoriStarterLessonSixPage() {
                 PESANANMU
               </p>
               <p className="mt-2 font-mincho text-lg leading-8 text-[#F1EBDD]">
-                {selectedMain}のセット、お願いします。
+                {selectedMain}のセット、お<ruby>願<rt>ねが</rt></ruby>いします。
                 <br />
-                {selectedDrink}、{selectedSize}サイズ、お願いします。
+                {selectedDrink}、{selectedSize}サイズ、お<ruby>願<rt>ねが</rt></ruby>いします。
                 <br />
-                {selectedStyle === "ここで" ? "ここで食べます。" : "テイクアウトでお願いします。"}
+                {selectedStyle === "ここで" ? <>ここで<ruby>食<rt>た</rt></ruby>べます。</> : <>テイクアウトでお<ruby>願<rt>ねが</rt></ruby>いします。</>}
               </p>
               <p className="mt-2 text-xs leading-5 text-[#A9A398]">
                 Ini adalah contoh susunan pesanan. Coba ucapkan dengan suara
@@ -810,7 +808,7 @@ export default function IrodoriStarterLessonSixPage() {
         </div>
         <p className="text-sm leading-7 text-[#A9A398]">
           Gunakan pola Nにします untuk mengatakan pilihan yang sudah kamu
-          tentukan. Pertanyaan 「何にしますか？」 berarti “Mau pilih yang mana?”.
+          tentukan. Pertanyaan 「<ruby>何<rt>なに</rt></ruby>にしますか？」 berarti “Mau pilih yang mana?”. 
         </p>
         <IrodoriConversation
           title="Scene C · Memilih makan siang"
@@ -844,7 +842,7 @@ export default function IrodoriStarterLessonSixPage() {
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Mau pilih yang mana?</p>
           <p className="mt-3 font-mincho text-xl text-[#D9B66D]">
-            私は、カレーにします。
+            <ruby>私<rt>わたし</rt></ruby>は、カレーにします。
           </p>
           <p className="mt-1 text-xs text-[#A9A398]">Saya pilih kari.</p>
         </div>
@@ -980,7 +978,7 @@ export default function IrodoriStarterLessonSixPage() {
               <div className="flex h-28 items-center justify-center bg-gradient-to-br from-[#4A3825] to-[#211B17] p-3">
                 <div className="flex h-20 w-full items-center justify-center rounded-lg border-2 border-[#D9B66D]/45 bg-[#E8D7B1] px-2 shadow-lg">
                   <span className="font-mincho text-xl font-black tracking-wider text-[#382719]">
-                    {item.sign}
+                    {item.sign === "焼肉" ? <ruby>焼肉<rt className="text-[0.5em]">やきにく</rt></ruby> : item.sign}
                   </span>
                 </div>
               </div>
@@ -1019,13 +1017,13 @@ export default function IrodoriStarterLessonSixPage() {
               01 · MEMESAN SESUATU
             </p>
             <p className="mt-2 font-mincho text-lg text-[#F1EBDD]">
-              N、ください / お願いします
+              N、ください / お<ruby>願<rt>ねが</rt></ruby>いします
             </p>
             <p className="mt-1 font-mincho text-base text-[#D9B66D]">
               チーズバーガー、ください。
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Sebutkan nama barang, lalu tambahkan ください. お願いします
+              Sebutkan nama barang, lalu tambahkan ください. お<ruby>願<rt>ねが</rt></ruby>いします
               terdengar lebih sopan karena berupa permintaan kepada orang lain.
             </p>
           </article>
@@ -1041,7 +1039,7 @@ export default function IrodoriStarterLessonSixPage() {
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Partikel に digunakan bersama します untuk menyatakan pilihan
-              atau keputusan. 何にしますか berarti “Mau pilih yang mana?”.
+              atau keputusan. <ruby>何<rt>なに</rt></ruby>にしますか berarti “Mau pilih yang mana?".
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
