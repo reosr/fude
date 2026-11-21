@@ -19,6 +19,7 @@ export async function writeCloudFudeData(
   if (!user) {
     throw new Error("Belum login ke akun Fude.");
   }
+  
 
   const now = new Date().toISOString();
 
