@@ -39,6 +39,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-[#121110] text-[#EAE6DD] overflow-x-hidden antialiased`}>
         
         <DisableRightClick />
+        <FudeSyncManager />
 
         {/* EFEK ORBS DI BACKGROUND */}
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
