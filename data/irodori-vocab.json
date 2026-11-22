@@ -8046,5 +8046,364 @@
         "imageQuery": "Japanese taiko drum"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-09",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 9,
+    "lessonTitle": "What do people do on Coming-of-Age Day?",
+    "vocab": [
+      {
+        "kanji": "今年",
+        "kana": "ことし",
+        "romaji": "kotoshi",
+        "meaning": "Tahun ini",
+        "imageQuery": "new year calendar"
+      },
+      {
+        "kanji": "昨年",
+        "kana": "さくねん",
+        "romaji": "sakunen",
+        "meaning": "Tahun lalu",
+        "imageQuery": "previous year calendar"
+      },
+      {
+        "kanji": "毎年",
+        "kana": "まいとし",
+        "romaji": "maitoshi",
+        "meaning": "Setiap tahun",
+        "imageQuery": "yearly calendar"
+      },
+      {
+        "kanji": "年末",
+        "kana": "ねんまつ",
+        "romaji": "nenmatsu",
+        "meaning": "Akhir tahun",
+        "imageQuery": "end of year decorations"
+      },
+      {
+        "kanji": "年始",
+        "kana": "ねんし",
+        "romaji": "nenshi",
+        "meaning": "Awal tahun",
+        "imageQuery": "new year celebrations"
+      },
+      {
+        "kanji": "正月",
+        "kana": "しょうがつ",
+        "romaji": "shougatsu",
+        "meaning": "Tahun Baru Jepang",
+        "imageQuery": "Japanese New Year celebration"
+      },
+      {
+        "kanji": "お正月休み",
+        "kana": "おしょうがつやすみ",
+        "romaji": "oshougatsu yasumi",
+        "meaning": "Libur Tahun Baru",
+        "imageQuery": "Japanese new year holiday"
+      },
+      {
+        "kanji": "成人の日",
+        "kana": "せいじんのひ",
+        "romaji": "seijin no hi",
+        "meaning": "Hari Kedewasaan",
+        "imageQuery": "Coming of Age Day Japan"
+      },
+      {
+        "kanji": "成人式",
+        "kana": "せいじんしき",
+        "romaji": "seijinshiki",
+        "meaning": "Upacara kedewasaan",
+        "imageQuery": "coming of age ceremony"
+      },
+      {
+        "kanji": "成人",
+        "kana": "せいじん",
+        "romaji": "seijin",
+        "meaning": "Orang dewasa",
+        "imageQuery": "adult life concept"
+      },
+      {
+        "kanji": "大人",
+        "kana": "おとな",
+        "romaji": "otona",
+        "meaning": "Orang dewasa",
+        "imageQuery": "adult person"
+      },
+      {
+        "kanji": "式",
+        "kana": "しき",
+        "romaji": "shiki",
+        "meaning": "Upacara atau seremoni",
+        "imageQuery": "ceremony hall"
+      },
+      {
+        "kanji": "文化",
+        "kana": "ぶんか",
+        "romaji": "bunka",
+        "meaning": "Budaya",
+        "imageQuery": "Japanese culture"
+      },
+      {
+        "kanji": "祭り",
+        "kana": "まつり",
+        "romaji": "matsuri",
+        "meaning": "Festival",
+        "imageQuery": "Japanese festival"
+      },
+      {
+        "kanji": "行事",
+        "kana": "ぎょうじ",
+        "romaji": "gyouji",
+        "meaning": "Acara atau kegiatan khusus",
+        "imageQuery": "annual traditional event"
+      },
+      {
+        "kanji": "年中行事",
+        "kana": "ねんちゅうぎょうじ",
+        "romaji": "nenchuu gyouji",
+        "meaning": "Perayaan tahunan",
+        "imageQuery": "annual festivals in Japan"
+      },
+      {
+        "kanji": "お祝い",
+        "kana": "おいわい",
+        "romaji": "oiwai",
+        "meaning": "Perayaan atau ucapan selamat",
+        "imageQuery": "congratulations message"
+      },
+      {
+        "kanji": "祝う",
+        "kana": "いわう",
+        "romaji": "iwau",
+        "meaning": "Merayakan",
+        "imageQuery": "celebration flowers"
+      },
+      {
+        "kanji": "家族",
+        "kana": "かぞく",
+        "romaji": "kazoku",
+        "meaning": "Keluarga",
+        "imageQuery": "family gathering"
+      },
+      {
+        "kanji": "親戚",
+        "kana": "しんせき",
+        "romaji": "shinseki",
+        "meaning": "Kerabat",
+        "imageQuery": "relatives gathering"
+      },
+      {
+        "kanji": "実家",
+        "kana": "じっか",
+        "romaji": "jikka",
+        "meaning": "Rumah orang tua atau kampung halaman",
+        "imageQuery": "family home countryside"
+      },
+      {
+        "kanji": "田舎",
+        "kana": "いなか",
+        "romaji": "inaka",
+        "meaning": "Daerah asal atau pedesaan",
+        "imageQuery": "rural hometown"
+      },
+      {
+        "kanji": "帰る",
+        "kana": "かえる",
+        "romaji": "kaeru",
+        "meaning": "Pulang",
+        "imageQuery": "returning home trip"
+      },
+      {
+        "kanji": "集まる",
+        "kana": "あつまる",
+        "romaji": "atsumaru",
+        "meaning": "Berkumpul",
+        "imageQuery": "family gathering dinner"
+      },
+      {
+        "kanji": "お年玉",
+        "kana": "おとしだま",
+        "romaji": "otoshidama",
+        "meaning": "Hadiah uang Tahun Baru untuk anak-anak",
+        "imageQuery": "Japanese new year gift envelope"
+      },
+      {
+        "kanji": "甥",
+        "kana": "おい",
+        "romaji": "oi",
+        "meaning": "Keponakan laki-laki",
+        "imageQuery": "nephew family illustration"
+      },
+      {
+        "kanji": "姪",
+        "kana": "めい",
+        "romaji": "mei",
+        "meaning": "Keponakan perempuan",
+        "imageQuery": "niece family illustration"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan atau hidangan",
+        "imageQuery": "traditional Japanese food"
+      },
+      {
+        "kanji": "特別",
+        "kana": "とくべつ",
+        "romaji": "tokubetsu",
+        "meaning": "Khusus atau istimewa",
+        "imageQuery": "special celebration"
+      },
+      {
+        "kanji": "おせち料理",
+        "kana": "おせちりょうり",
+        "romaji": "osechi ryouri",
+        "meaning": "Hidangan tradisional Tahun Baru",
+        "imageQuery": "osechi new year dishes"
+      },
+      {
+        "kanji": "もち",
+        "kana": "もち",
+        "romaji": "mochi",
+        "meaning": "Kue beras Jepang",
+        "imageQuery": "Japanese mochi rice cake"
+      },
+      {
+        "kanji": "雑煮",
+        "kana": "ぞうに",
+        "romaji": "zouni",
+        "meaning": "Sup Tahun Baru berisi mochi",
+        "imageQuery": "ozoni soup"
+      },
+      {
+        "kanji": "初詣",
+        "kana": "はつもうで",
+        "romaji": "hatsumoude",
+        "meaning": "Kunjungan pertama ke tempat ibadah pada Tahun Baru",
+        "imageQuery": "hatsumode shrine visit"
+      },
+      {
+        "kanji": "願い事",
+        "kana": "ねがいごと",
+        "romaji": "negaigoto",
+        "meaning": "Harapan atau permohonan",
+        "imageQuery": "wish ema new year"
+      },
+      {
+        "kanji": "年賀状",
+        "kana": "ねんがじょう",
+        "romaji": "nengajou",
+        "meaning": "Kartu ucapan Tahun Baru",
+        "imageQuery": "Japanese new year greeting card"
+      },
+      {
+        "kanji": "新年",
+        "kana": "しんねん",
+        "romaji": "shinnen",
+        "meaning": "Tahun Baru",
+        "imageQuery": "new year greeting"
+      },
+      {
+        "kanji": "あいさつ",
+        "kana": "あいさつ",
+        "romaji": "aisatsu",
+        "meaning": "Salam atau ucapan",
+        "imageQuery": "Japanese greeting card"
+      },
+      {
+        "kanji": "あけましておめでとうございます",
+        "kana": "あけましておめでとうございます",
+        "romaji": "akemashite omedetou gozaimasu",
+        "meaning": "Selamat Tahun Baru",
+        "imageQuery": "new year greeting message"
+      },
+      {
+        "kanji": "今年もよろしくお願いします",
+        "kana": "ことしもよろしくおねがいします",
+        "romaji": "kotoshi mo yoroshiku onegaishimasu",
+        "meaning": "Mohon kerja samanya juga tahun ini",
+        "imageQuery": "Chinese new year lantern"
+      },
+      {
+        "kanji": "春節",
+        "kana": "しゅんせつ",
+        "romaji": "shunsetsu",
+        "meaning": "Tahun Baru Imlek",
+        "imageQuery": "Songkran Thailand festival"
+      },
+      {
+        "kanji": "ソンクラーン",
+        "kana": "ソンクラーン",
+        "romaji": "sonkuraan",
+        "meaning": "Songkran, perayaan Tahun Baru Thailand",
+        "imageQuery": "Indonesia independence day celebration"
+      },
+      {
+        "kanji": "独立記念日",
+        "kana": "どくりつきねんび",
+        "romaji": "dokuritsu kinenbi",
+        "meaning": "Hari Kemerdekaan",
+        "imageQuery": "local neighborhood community"
+      },
+      {
+        "kanji": "地域",
+        "kana": "ちいき",
+        "romaji": "chiiki",
+        "meaning": "Wilayah atau lingkungan",
+        "imageQuery": "festival activity"
+      },
+      {
+        "kanji": "イベント",
+        "kana": "イベント",
+        "romaji": "ibento",
+        "meaning": "Acara",
+        "imageQuery": "community participation"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Berpartisipasi atau ikut",
+        "imageQuery": "festival preparations"
+      },
+      {
+        "kanji": "準備する",
+        "kana": "じゅんびする",
+        "romaji": "junbi suru",
+        "meaning": "Mempersiapkan",
+        "imageQuery": "festival decorations"
+      },
+      {
+        "kanji": "飾り",
+        "kana": "かざり",
+        "romaji": "kazari",
+        "meaning": "Hiasan",
+        "imageQuery": "traditional dance"
+      },
+      {
+        "kanji": "踊る",
+        "kana": "おどる",
+        "romaji": "odoru",
+        "meaning": "Menari",
+        "imageQuery": "singing together"
+      },
+      {
+        "kanji": "歌う",
+        "kana": "うたう",
+        "romaji": "utau",
+        "meaning": "Bernyanyi",
+        "imageQuery": "happy festival memories"
+      },
+      {
+        "kanji": "思い出",
+        "kana": "おもいで",
+        "romaji": "omoide",
+        "meaning": "Kenangan",
+        "imageQuery": "family holiday photo album"
+      }
+    ]
   }
 ]
