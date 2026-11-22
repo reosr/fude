@@ -5927,5 +5927,336 @@
         "imageQuery": "concern"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-03",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 3,
+    "lessonTitle": "I cannot eat it because of an allergy.",
+    "vocab": [
+      {
+        "kanji": "アレルギー",
+        "kana": "アレルギー",
+        "romaji": "arerugii",
+        "meaning": "Alergi",
+        "imageQuery": "food allergy"
+      },
+      {
+        "kanji": "食べられない",
+        "kana": "たべられない",
+        "romaji": "taberarenai",
+        "meaning": "Tidak bisa makan",
+        "imageQuery": "food"
+      },
+      {
+        "kanji": "苦手",
+        "kana": "にがて",
+        "romaji": "nigate",
+        "meaning": "Kurang suka atau tidak mahir",
+        "imageQuery": "preference"
+      },
+      {
+        "kanji": "注文",
+        "kana": "ちゅうもん",
+        "romaji": "chuumon",
+        "meaning": "Pesanan",
+        "imageQuery": "restaurant order"
+      },
+      {
+        "kanji": "注文する",
+        "kana": "ちゅうもんする",
+        "romaji": "chuumon suru",
+        "meaning": "Memesan",
+        "imageQuery": "restaurant order"
+      },
+      {
+        "kanji": "定食",
+        "kana": "ていしょく",
+        "romaji": "teishoku",
+        "meaning": "Menu paket",
+        "imageQuery": "japanese set meal"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan atau hidangan",
+        "imageQuery": "japanese food"
+      },
+      {
+        "kanji": "値段",
+        "kana": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga",
+        "imageQuery": "menu price"
+      },
+      {
+        "kanji": "料金",
+        "kana": "りょうきん",
+        "romaji": "ryoukin",
+        "meaning": "Biaya",
+        "imageQuery": "price"
+      },
+      {
+        "kanji": "ご飯",
+        "kana": "ごはん",
+        "romaji": "gohan",
+        "meaning": "Nasi atau makanan",
+        "imageQuery": "rice"
+      },
+      {
+        "kanji": "牛乳",
+        "kana": "ぎゅうにゅう",
+        "romaji": "gyuunyuu",
+        "meaning": "Susu",
+        "imageQuery": "milk"
+      },
+      {
+        "kanji": "卵",
+        "kana": "たまご",
+        "romaji": "tamago",
+        "meaning": "Telur",
+        "imageQuery": "egg"
+      },
+      {
+        "kanji": "エビ",
+        "kana": "エビ",
+        "romaji": "ebi",
+        "meaning": "Udang",
+        "imageQuery": "shrimp"
+      },
+      {
+        "kanji": "ナッツ",
+        "kana": "ナッツ",
+        "romaji": "nattsu",
+        "meaning": "Kacang-kacangan",
+        "imageQuery": "nuts"
+      },
+      {
+        "kanji": "小麦",
+        "kana": "こむぎ",
+        "romaji": "komugi",
+        "meaning": "Gandum",
+        "imageQuery": "wheat"
+      },
+      {
+        "kanji": "材料",
+        "kana": "ざいりょう",
+        "romaji": "zairyou",
+        "meaning": "Bahan",
+        "imageQuery": "ingredients"
+      },
+      {
+        "kanji": "入る",
+        "kana": "はいる",
+        "romaji": "hairu",
+        "meaning": "Masuk atau terkandung",
+        "imageQuery": "ingredients"
+      },
+      {
+        "kanji": "抜き",
+        "kana": "ぬき",
+        "romaji": "nuki",
+        "meaning": "Tanpa atau tidak memakai",
+        "imageQuery": "without ingredient"
+      },
+      {
+        "kanji": "予約",
+        "kana": "よやく",
+        "romaji": "yoyaku",
+        "meaning": "Reservasi",
+        "imageQuery": "reservation"
+      },
+      {
+        "kanji": "人数",
+        "kana": "にんずう",
+        "romaji": "ninzuu",
+        "meaning": "Jumlah orang",
+        "imageQuery": "people count"
+      },
+      {
+        "kanji": "日にち",
+        "kana": "ひにち",
+        "romaji": "hinichi",
+        "meaning": "Tanggal",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "電話番号",
+        "kana": "でんわばんごう",
+        "romaji": "denwa bangou",
+        "meaning": "Nomor telepon",
+        "imageQuery": "telephone"
+      },
+      {
+        "kanji": "何名様",
+        "kana": "なんめいさま",
+        "romaji": "nanmeisama",
+        "meaning": "Berapa orang? (sopan)",
+        "imageQuery": "restaurant staff"
+      },
+      {
+        "kanji": "会計",
+        "kana": "かいけい",
+        "romaji": "kaikei",
+        "meaning": "Pembayaran",
+        "imageQuery": "checkout"
+      },
+      {
+        "kanji": "別々",
+        "kana": "べつべつ",
+        "romaji": "betsubetsu",
+        "meaning": "Terpisah",
+        "imageQuery": "separate bill"
+      },
+      {
+        "kanji": "店員",
+        "kana": "てんいん",
+        "romaji": "tenin",
+        "meaning": "Pegawai toko atau restoran",
+        "imageQuery": "restaurant staff"
+      },
+      {
+        "kanji": "おすすめ",
+        "kana": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi",
+        "imageQuery": "menu recommendation"
+      },
+      {
+        "kanji": "人気",
+        "kana": "にんき",
+        "romaji": "ninki",
+        "meaning": "Populer",
+        "imageQuery": "popular menu"
+      },
+      {
+        "kanji": "座席",
+        "kana": "ざせき",
+        "romaji": "zaseki",
+        "meaning": "Tempat duduk",
+        "imageQuery": "restaurant seating"
+      },
+      {
+        "kanji": "テーブル",
+        "kana": "テーブル",
+        "romaji": "teeburu",
+        "meaning": "Meja",
+        "imageQuery": "table seating"
+      },
+      {
+        "kanji": "カウンター",
+        "kana": "カウンター",
+        "romaji": "kauntaa",
+        "meaning": "Konter",
+        "imageQuery": "counter seating"
+      },
+      {
+        "kanji": "座敷",
+        "kana": "ざしき",
+        "romaji": "zashiki",
+        "meaning": "Tempat duduk lesehan bergaya Jepang",
+        "imageQuery": "tatami seating"
+      },
+      {
+        "kanji": "大盛り",
+        "kana": "おおもり",
+        "romaji": "oomori",
+        "meaning": "Porsi besar",
+        "imageQuery": "large serving"
+      },
+      {
+        "kanji": "普通",
+        "kana": "ふつう",
+        "romaji": "futsuu",
+        "meaning": "Biasa atau normal",
+        "imageQuery": "regular serving"
+      },
+      {
+        "kanji": "少なめ",
+        "kana": "すくなめ",
+        "romaji": "sukuname",
+        "meaning": "Sedikit lebih sedikit",
+        "imageQuery": "small serving"
+      },
+      {
+        "kanji": "おかわり",
+        "kana": "おかわり",
+        "romaji": "okawari",
+        "meaning": "Tambah porsi",
+        "imageQuery": "food refill"
+      },
+      {
+        "kanji": "自由",
+        "kana": "じゆう",
+        "romaji": "jiyuu",
+        "meaning": "Bebas",
+        "imageQuery": "free refill"
+      },
+      {
+        "kanji": "クーポン",
+        "kana": "クーポン",
+        "romaji": "kuupon",
+        "meaning": "Kupon",
+        "imageQuery": "restaurant coupon"
+      },
+      {
+        "kanji": "半額",
+        "kana": "はんがく",
+        "romaji": "hangaku",
+        "meaning": "Setengah harga",
+        "imageQuery": "half off"
+      },
+      {
+        "kanji": "割引",
+        "kana": "わりびき",
+        "romaji": "waribiki",
+        "meaning": "Potongan harga",
+        "imageQuery": "discount"
+      },
+      {
+        "kanji": "有効期限",
+        "kana": "ゆうこうきげん",
+        "romaji": "yuukoukigen",
+        "meaning": "Masa berlaku",
+        "imageQuery": "expiration date"
+      },
+      {
+        "kanji": "次回",
+        "kana": "じかい",
+        "romaji": "jikai",
+        "meaning": "Kesempatan berikutnya",
+        "imageQuery": "next visit"
+      },
+      {
+        "kanji": "提示する",
+        "kana": "ていじする",
+        "romaji": "teiji suru",
+        "meaning": "Menunjukkan atau memperlihatkan",
+        "imageQuery": "show coupon"
+      },
+      {
+        "kanji": "確認する",
+        "kana": "かくにんする",
+        "romaji": "kakunin suru",
+        "meaning": "Memeriksa atau memastikan",
+        "imageQuery": "checking information"
+      },
+      {
+        "kanji": "水",
+        "kana": "みず",
+        "romaji": "mizu",
+        "meaning": "Air",
+        "imageQuery": "water"
+      },
+      {
+        "kanji": "ジュース",
+        "kana": "ジュース",
+        "romaji": "juusu",
+        "meaning": "Jus",
+        "imageQuery": "juice"
+      }
+    ]
   }
 ]
