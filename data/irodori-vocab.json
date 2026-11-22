@@ -3836,5 +3836,164 @@
         "meaning": "Sepatu olahraga"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-09",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 9,
+    "lessonTitle": "Will you tell me how to read this?",
+    "vocab": [
+      {
+        "kanji": "日本語",
+        "kana": "にほんご",
+        "romaji": "nihongo",
+        "meaning": "Bahasa Jepang"
+      },
+      {
+        "kanji": "高校",
+        "kana": "こうこう",
+        "romaji": "koukou",
+        "meaning": "SMA"
+      },
+      {
+        "kanji": "大学",
+        "kana": "だいがく",
+        "romaji": "daigaku",
+        "meaning": "Universitas"
+      },
+      {
+        "kanji": "練習",
+        "kana": "れんしゅう",
+        "romaji": "renshuu",
+        "meaning": "Latihan"
+      },
+      {
+        "kanji": "漢字",
+        "kana": "かんじ",
+        "romaji": "kanji",
+        "meaning": "Kanji"
+      },
+      {
+        "kanji": "無料",
+        "kana": "むりょう",
+        "romaji": "muryou",
+        "meaning": "Gratis"
+      },
+      {
+        "kanji": "言う",
+        "kana": "いう",
+        "romaji": "iu",
+        "meaning": "Mengatakan"
+      },
+      {
+        "kanji": "書く",
+        "kana": "かく",
+        "romaji": "kaku",
+        "meaning": "Menulis"
+      },
+      {
+        "kanji": "貸す",
+        "kana": "かす",
+        "romaji": "kasu",
+        "meaning": "Meminjamkan"
+      },
+      {
+        "kanji": "教える",
+        "kana": "おしえる",
+        "romaji": "oshieru",
+        "meaning": "Mengajari / memberi tahu"
+      },
+      {
+        "kanji": "説明する",
+        "kana": "せつめいする",
+        "romaji": "setsumei suru",
+        "meaning": "Menjelaskan"
+      },
+      {
+        "kanji": "学習",
+        "kana": "がくしゅう",
+        "romaji": "gakushuu",
+        "meaning": "Pembelajaran"
+      },
+      {
+        "kanji": "読み方",
+        "kana": "よみかた",
+        "romaji": "yomikata",
+        "meaning": "Cara membaca"
+      },
+      {
+        "kanji": "書き方",
+        "kana": "かきかた",
+        "romaji": "kakikata",
+        "meaning": "Cara menulis"
+      },
+      {
+        "kanji": "文字",
+        "kana": "もじ",
+        "romaji": "moji",
+        "meaning": "Huruf / tulisan"
+      },
+      {
+        "kanji": "会話",
+        "kana": "かいわ",
+        "romaji": "kaiwa",
+        "meaning": "Percakapan"
+      },
+      {
+        "kanji": "文法",
+        "kana": "ぶんぽう",
+        "romaji": "bunpou",
+        "meaning": "Tata bahasa"
+      },
+      {
+        "kanji": "発音",
+        "kana": "はつおん",
+        "romaji": "hatsuon",
+        "meaning": "Pelafalan"
+      },
+      {
+        "kanji": "単語",
+        "kana": "たんご",
+        "romaji": "tango",
+        "meaning": "Kata / kosakata"
+      },
+      {
+        "kanji": "意味",
+        "kana": "いみ",
+        "romaji": "imi",
+        "meaning": "Arti / makna"
+      },
+      {
+        "kanji": "辞書",
+        "kana": "じしょ",
+        "romaji": "jisho",
+        "meaning": "Kamus"
+      },
+      {
+        "kanji": "教科書",
+        "kana": "きょうかしょ",
+        "romaji": "kyoukasho",
+        "meaning": "Buku pelajaran"
+      },
+      {
+        "kanji": "覚える",
+        "kana": "おぼえる",
+        "romaji": "oboeru",
+        "meaning": "Menghafal / mengingat"
+      },
+      {
+        "kanji": "読む",
+        "kana": "よむ",
+        "romaji": "yomu",
+        "meaning": "Membaca"
+      },
+      {
+        "kanji": "アプリ",
+        "kana": "アプリ",
+        "romaji": "apuri",
+        "meaning": "Aplikasi"
+      }
+    ]
   }
 ]
