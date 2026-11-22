@@ -1,0 +1,165 @@
+[
+  {
+    "lessonId": "elementary1-01",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 1,
+    "lessonTitle": "I work in a restaurant.",
+    "vocab": [
+      {
+        "kanji": "久しぶり",
+        "kana": "ひさしぶり",
+        "romaji": "hisashiburi",
+        "meaning": "sudah lama tidak bertemu",
+        "imageQuery": "greeting"
+      },
+      {
+        "kanji": "お元気",
+        "kana": "おげんき",
+        "romaji": "ogenki",
+        "meaning": "kabar atau keadaan sehat (sopan)",
+        "imageQuery": "greeting"
+      },
+      {
+        "kanji": "最近",
+        "kana": "さいきん",
+        "romaji": "saikin",
+        "meaning": "akhir-akhir ini",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "生活",
+        "kana": "せいかつ",
+        "romaji": "seikatsu",
+        "meaning": "kehidupan",
+        "imageQuery": "daily life"
+      },
+      {
+        "kanji": "慣れる",
+        "kana": "なれる",
+        "romaji": "nareru",
+        "meaning": "menjadi terbiasa",
+        "imageQuery": "daily life"
+      },
+      {
+        "kanji": "去年",
+        "kana": "きょねん",
+        "romaji": "kyonen",
+        "meaning": "tahun lalu",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "先月",
+        "kana": "せんげつ",
+        "romaji": "sengetsu",
+        "meaning": "bulan lalu",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "先週",
+        "kana": "せんしゅう",
+        "romaji": "senshuu",
+        "meaning": "minggu lalu",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "半年",
+        "kana": "はんとし",
+        "romaji": "hantoshi",
+        "meaning": "setengah tahun",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "一年",
+        "kana": "いちねん",
+        "romaji": "ichinen",
+        "meaning": "satu tahun",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "仕事",
+        "kana": "しごと",
+        "romaji": "shigoto",
+        "meaning": "pekerjaan",
+        "imageQuery": "work"
+      },
+      {
+        "kanji": "働く",
+        "kana": "はたらく",
+        "romaji": "hataraku",
+        "meaning": "bekerja",
+        "imageQuery": "work"
+      },
+      {
+        "kanji": "学校に通う",
+        "kana": "がっこうにかよう",
+        "romaji": "gakkou ni kayou",
+        "meaning": "bersekolah atau rutin pergi ke sekolah",
+        "imageQuery": "school"
+      },
+      {
+        "kanji": "勉強する",
+        "kana": "べんきょうする",
+        "romaji": "benkyou suru",
+        "meaning": "belajar",
+        "imageQuery": "study"
+      },
+      {
+        "kanji": "毎日",
+        "kana": "まいにち",
+        "romaji": "mainichi",
+        "meaning": "setiap hari",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "忙しい",
+        "kana": "いそがしい",
+        "romaji": "isogashii",
+        "meaning": "sibuk",
+        "imageQuery": "work"
+      },
+      {
+        "kanji": "親切",
+        "kana": "しんせつ",
+        "romaji": "shinsetsu",
+        "meaning": "baik hati atau ramah",
+        "imageQuery": "kindness"
+      },
+      {
+        "kanji": "楽しい",
+        "kana": "たのしい",
+        "romaji": "tanoshii",
+        "meaning": "menyenangkan",
+        "imageQuery": "happy"
+      },
+      {
+        "kanji": "元気",
+        "kana": "げんき",
+        "romaji": "genki",
+        "meaning": "sehat atau baik",
+        "imageQuery": "health"
+      },
+      {
+        "kanji": "学校",
+        "kana": "がっこう",
+        "romaji": "gakkou",
+        "meaning": "sekolah",
+        "imageQuery": "school"
+      },
+      {
+        "kanji": "学生",
+        "kana": "がくせい",
+        "romaji": "gakusei",
+        "meaning": "pelajar",
+        "imageQuery": "student"
+      },
+      {
+        "kanji": "作る",
+        "kana": "つくる",
+        "romaji": "tsukuru",
+        "meaning": "membuat",
+        "imageQuery": "making"
+      }
+    ]
+  }
+]
