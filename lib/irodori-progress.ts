@@ -132,6 +132,10 @@ export function completeIrodoriLesson(lessonId: string): void {
   });
 }
 
+export function getCompletedIrodoriLessons(): string[] {
+  return [...getSnapshot().completedLessons];
+}
+
 export function useIrodoriProgress(): IrodoriProgress {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }
