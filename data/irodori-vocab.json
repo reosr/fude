@@ -5267,5 +5267,164 @@
         "meaning": "Ucapan terima kasih"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-18",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 18,
+    "lessonTitle": "How about giving something as a gift?",
+    "vocab": [
+      {
+        "kanji": "プレゼント",
+        "kana": "プレゼント",
+        "romaji": "purezento",
+        "meaning": "Hadiah"
+      },
+      {
+        "kanji": "お祝い",
+        "kana": "おいわい",
+        "romaji": "oiwai",
+        "meaning": "Perayaan / ucapan selamat"
+      },
+      {
+        "kanji": "誕生日",
+        "kana": "たんじょうび",
+        "romaji": "tanjoubi",
+        "meaning": "Ulang tahun"
+      },
+      {
+        "kanji": "結婚",
+        "kana": "けっこん",
+        "romaji": "kekkon",
+        "meaning": "Pernikahan"
+      },
+      {
+        "kanji": "合格",
+        "kana": "ごうかく",
+        "romaji": "goukaku",
+        "meaning": "Kelulusan / lulus ujian"
+      },
+      {
+        "kanji": "男の子",
+        "kana": "おとこのこ",
+        "romaji": "otokonoko",
+        "meaning": "Anak laki-laki"
+      },
+      {
+        "kanji": "女の子",
+        "kana": "おんなのこ",
+        "romaji": "onnanoko",
+        "meaning": "Anak perempuan"
+      },
+      {
+        "kanji": "時計",
+        "kana": "とけい",
+        "romaji": "tokei",
+        "meaning": "Jam"
+      },
+      {
+        "kanji": "フォトフレーム",
+        "kana": "フォトフレーム",
+        "romaji": "fotofureemu",
+        "meaning": "Bingkai foto"
+      },
+      {
+        "kanji": "ハンカチ",
+        "kana": "ハンカチ",
+        "romaji": "hankachi",
+        "meaning": "Sapu tangan"
+      },
+      {
+        "kanji": "花",
+        "kana": "はな",
+        "romaji": "hana",
+        "meaning": "Bunga"
+      },
+      {
+        "kanji": "ケーキ",
+        "kana": "ケーキ",
+        "romaji": "keeki",
+        "meaning": "Kue"
+      },
+      {
+        "kanji": "ギフトカード",
+        "kana": "ギフトカード",
+        "romaji": "gifuto kaado",
+        "meaning": "Kartu hadiah"
+      },
+      {
+        "kanji": "送別会",
+        "kana": "そうべつかい",
+        "romaji": "soubetsukai",
+        "meaning": "Acara perpisahan"
+      },
+      {
+        "kanji": "色紙",
+        "kana": "しきし",
+        "romaji": "shikishi",
+        "meaning": "Kertas khusus untuk pesan bersama"
+      },
+      {
+        "kanji": "思い出",
+        "kana": "おもいで",
+        "romaji": "omoide",
+        "meaning": "Kenangan"
+      },
+      {
+        "kanji": "幸せ",
+        "kana": "しあわせ",
+        "romaji": "shiawase",
+        "meaning": "Kebahagiaan"
+      },
+      {
+        "kanji": "生まれる",
+        "kana": "うまれる",
+        "romaji": "umareru",
+        "meaning": "Lahir"
+      },
+      {
+        "kanji": "思う",
+        "kana": "おもう",
+        "romaji": "omou",
+        "meaning": "Berpikir / berpendapat"
+      },
+      {
+        "kanji": "選ぶ",
+        "kana": "えらぶ",
+        "romaji": "erabu",
+        "meaning": "Memilih"
+      },
+      {
+        "kanji": "合格する",
+        "kana": "ごうかくする",
+        "romaji": "goukaku suru",
+        "meaning": "Lulus ujian"
+      },
+      {
+        "kanji": "あげる",
+        "kana": "あげる",
+        "romaji": "ageru",
+        "meaning": "Memberi kepada orang lain"
+      },
+      {
+        "kanji": "もらう",
+        "kana": "もらう",
+        "romaji": "morau",
+        "meaning": "Menerima"
+      },
+      {
+        "kanji": "言う",
+        "kana": "いう",
+        "romaji": "iu",
+        "meaning": "Mengatakan"
+      },
+      {
+        "kanji": "大切にする",
+        "kana": "たいせつにする",
+        "romaji": "taisetsu ni suru",
+        "meaning": "Menjaga baik-baik / menghargai"
+      }
+    ]
   }
 ]
