@@ -3200,5 +3200,164 @@
         "meaning": "Sore / setelah tengah hari"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-05",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 5,
+    "lessonTitle": "It is very lively and convenient.",
+    "vocab": [
+      {
+        "kanji": "町",
+        "kana": "まち",
+        "romaji": "machi",
+        "meaning": "Kota"
+      },
+      {
+        "kanji": "店",
+        "kana": "みせ",
+        "romaji": "mise",
+        "meaning": "Toko"
+      },
+      {
+        "kanji": "食堂",
+        "kana": "しょくどう",
+        "romaji": "shokudou",
+        "meaning": "Kedai makan / kantin"
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "meaning": "Praktis / nyaman"
+      },
+      {
+        "kanji": "不便",
+        "kana": "ふべん",
+        "romaji": "fuben",
+        "meaning": "Tidak praktis"
+      },
+      {
+        "kanji": "静か",
+        "kana": "しずか",
+        "romaji": "shizuka",
+        "meaning": "Tenang"
+      },
+      {
+        "kanji": "有名",
+        "kana": "ゆうめい",
+        "romaji": "yuumei",
+        "meaning": "Terkenal"
+      },
+      {
+        "kanji": "多い",
+        "kana": "おおい",
+        "romaji": "ooi",
+        "meaning": "Banyak"
+      },
+      {
+        "kanji": "少ない",
+        "kana": "すくない",
+        "romaji": "sukunai",
+        "meaning": "Sedikit"
+      },
+      {
+        "kanji": "遠い",
+        "kana": "とおい",
+        "romaji": "tooi",
+        "meaning": "Jauh"
+      },
+      {
+        "kanji": "にぎやか",
+        "kana": "にぎやか",
+        "romaji": "nigiyaka",
+        "meaning": "Ramai"
+      },
+      {
+        "kanji": "田舎",
+        "kana": "いなか",
+        "romaji": "inaka",
+        "meaning": "Pedesaan"
+      },
+      {
+        "kanji": "商店街",
+        "kana": "しょうてんがい",
+        "romaji": "shoutengai",
+        "meaning": "Area pertokoan"
+      },
+      {
+        "kanji": "公園",
+        "kana": "こうえん",
+        "romaji": "kouen",
+        "meaning": "Taman"
+      },
+      {
+        "kanji": "図書館",
+        "kana": "としょかん",
+        "romaji": "toshokan",
+        "meaning": "Perpustakaan"
+      },
+      {
+        "kanji": "駅",
+        "kana": "えき",
+        "romaji": "eki",
+        "meaning": "Stasiun"
+      },
+      {
+        "kanji": "場所",
+        "kana": "ばしょ",
+        "romaji": "basho",
+        "meaning": "Tempat"
+      },
+      {
+        "kanji": "おすすめ",
+        "kana": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan"
+      },
+      {
+        "kanji": "住む",
+        "kana": "すむ",
+        "romaji": "sumu",
+        "meaning": "Tinggal / menetap"
+      },
+      {
+        "kanji": "人",
+        "kana": "ひと",
+        "romaji": "hito",
+        "meaning": "Orang"
+      },
+      {
+        "kanji": "緑",
+        "kana": "みどり",
+        "romaji": "midori",
+        "meaning": "Pepohonan / kehijauan"
+      },
+      {
+        "kanji": "近く",
+        "kana": "ちかく",
+        "romaji": "chikaku",
+        "meaning": "Dekat / sekitar"
+      },
+      {
+        "kanji": "きれい",
+        "kana": "きれい",
+        "romaji": "kirei",
+        "meaning": "Indah / bersih"
+      },
+      {
+        "kanji": "住みやすい",
+        "kana": "すみやすい",
+        "romaji": "sumiyasui",
+        "meaning": "Nyaman untuk ditinggali"
+      }
+    ]
   }
 ]
