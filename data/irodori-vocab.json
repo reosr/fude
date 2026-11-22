@@ -3677,5 +3677,164 @@
         "meaning": "Menunggu"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-08",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 8,
+    "lessonTitle": "Have you ever played baseball?",
+    "vocab": [
+      {
+        "kanji": "お金",
+        "kana": "おかね",
+        "romaji": "okane",
+        "meaning": "Uang"
+      },
+      {
+        "kanji": "食事",
+        "kana": "しょくじ",
+        "romaji": "shokuji",
+        "meaning": "Makan / waktu makan"
+      },
+      {
+        "kanji": "〜店",
+        "kana": "〜てん",
+        "romaji": "~ten",
+        "meaning": "Akhiran nama toko"
+      },
+      {
+        "kanji": "博物館",
+        "kana": "はくぶつかん",
+        "romaji": "hakubutsukan",
+        "meaning": "Museum"
+      },
+      {
+        "kanji": "動物園",
+        "kana": "どうぶつえん",
+        "romaji": "doubutsuen",
+        "meaning": "Kebun binatang"
+      },
+      {
+        "kanji": "試合",
+        "kana": "しあい",
+        "romaji": "shiai",
+        "meaning": "Pertandingan"
+      },
+      {
+        "kanji": "楽しい",
+        "kana": "たのしい",
+        "romaji": "tanoshii",
+        "meaning": "Menyenangkan"
+      },
+      {
+        "kanji": "難しい",
+        "kana": "むずかしい",
+        "romaji": "muzukashii",
+        "meaning": "Sulit"
+      },
+      {
+        "kanji": "登る",
+        "kana": "のぼる",
+        "romaji": "noboru",
+        "meaning": "Mendaki / naik"
+      },
+      {
+        "kanji": "買う",
+        "kana": "かう",
+        "romaji": "kau",
+        "meaning": "Membeli"
+      },
+      {
+        "kanji": "野球",
+        "kana": "やきゅう",
+        "romaji": "yakyuu",
+        "meaning": "Bisbol"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman"
+      },
+      {
+        "kanji": "一度",
+        "kana": "いちど",
+        "romaji": "ichido",
+        "meaning": "Satu kali / pernah sekali"
+      },
+      {
+        "kanji": "もう",
+        "kana": "もう",
+        "romaji": "mou",
+        "meaning": "Sudah"
+      },
+      {
+        "kanji": "まだ",
+        "kana": "まだ",
+        "romaji": "mada",
+        "meaning": "Belum / masih"
+      },
+      {
+        "kanji": "行く",
+        "kana": "いく",
+        "romaji": "iku",
+        "meaning": "Pergi"
+      },
+      {
+        "kanji": "見る",
+        "kana": "みる",
+        "romaji": "miru",
+        "meaning": "Melihat / menonton"
+      },
+      {
+        "kanji": "食べる",
+        "kana": "たべる",
+        "romaji": "taberu",
+        "meaning": "Makan"
+      },
+      {
+        "kanji": "遊ぶ",
+        "kana": "あそぶ",
+        "romaji": "asobu",
+        "meaning": "Bermain"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto"
+      },
+      {
+        "kanji": "かわいい",
+        "kana": "かわいい",
+        "romaji": "kawaii",
+        "meaning": "Lucu"
+      },
+      {
+        "kanji": "前",
+        "kana": "まえ",
+        "romaji": "mae",
+        "meaning": "Sebelum / depan"
+      },
+      {
+        "kanji": "あと",
+        "kana": "あと",
+        "romaji": "ato",
+        "meaning": "Setelah"
+      },
+      {
+        "kanji": "買い物",
+        "kana": "かいもの",
+        "romaji": "kaimono",
+        "meaning": "Belanja"
+      },
+      {
+        "kanji": "運動靴",
+        "kana": "うんどうぐつ",
+        "romaji": "undougutsu",
+        "meaning": "Sepatu olahraga"
+      }
+    ]
   }
 ]
