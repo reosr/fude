@@ -4472,5 +4472,164 @@
         "meaning": "Mencampur"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-13",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 13,
+    "lessonTitle": "It will probably end in about ten minutes.",
+    "vocab": [
+      {
+        "kanji": "コピー機",
+        "kana": "コピーき",
+        "romaji": "kopiiki",
+        "meaning": "Mesin fotokopi"
+      },
+      {
+        "kanji": "数字",
+        "kana": "すうじ",
+        "romaji": "suuji",
+        "meaning": "Angka"
+      },
+      {
+        "kanji": "電気",
+        "kana": "でんき",
+        "romaji": "denki",
+        "meaning": "Listrik / lampu"
+      },
+      {
+        "kanji": "音",
+        "kana": "おと",
+        "romaji": "oto",
+        "meaning": "Suara"
+      },
+      {
+        "kanji": "机",
+        "kana": "つくえ",
+        "romaji": "tsukue",
+        "meaning": "Meja"
+      },
+      {
+        "kanji": "都合",
+        "kana": "つごう",
+        "romaji": "tsugou",
+        "meaning": "Keadaan / waktu yang cocok"
+      },
+      {
+        "kanji": "悪い",
+        "kana": "わるい",
+        "romaji": "warui",
+        "meaning": "Buruk / tidak baik"
+      },
+      {
+        "kanji": "動く",
+        "kana": "うごく",
+        "romaji": "ugoku",
+        "meaning": "Bergerak / berfungsi"
+      },
+      {
+        "kanji": "使う",
+        "kana": "つかう",
+        "romaji": "tsukau",
+        "meaning": "Menggunakan"
+      },
+      {
+        "kanji": "終わる",
+        "kana": "おわる",
+        "romaji": "owaru",
+        "meaning": "Selesai"
+      },
+      {
+        "kanji": "お願いします",
+        "kana": "おねがいします",
+        "romaji": "onegaishimasu",
+        "meaning": "Mohon bantuan / tolong"
+      },
+      {
+        "kanji": "パソコン",
+        "kana": "パソコン",
+        "romaji": "pasokon",
+        "meaning": "Komputer"
+      },
+      {
+        "kanji": "会議室",
+        "kana": "かいぎしつ",
+        "romaji": "kaigishitsu",
+        "meaning": "Ruang rapat"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi / memberi kabar"
+      },
+      {
+        "kanji": "担当",
+        "kana": "たんとう",
+        "romaji": "tantou",
+        "meaning": "Penanggung jawab"
+      },
+      {
+        "kanji": "状況",
+        "kana": "じょうきょう",
+        "romaji": "joukyou",
+        "meaning": "Situasi / keadaan"
+      },
+      {
+        "kanji": "作業",
+        "kana": "さぎょう",
+        "romaji": "sagyou",
+        "meaning": "Pekerjaan / tugas"
+      },
+      {
+        "kanji": "資料",
+        "kana": "しりょう",
+        "romaji": "shiryou",
+        "meaning": "Dokumen / materi"
+      },
+      {
+        "kanji": "準備",
+        "kana": "じゅんび",
+        "romaji": "junbi",
+        "meaning": "Persiapan"
+      },
+      {
+        "kanji": "両面",
+        "kana": "りょうめん",
+        "romaji": "ryoumen",
+        "meaning": "Dua sisi"
+      },
+      {
+        "kanji": "片面",
+        "kana": "かためん",
+        "romaji": "katamen",
+        "meaning": "Satu sisi"
+      },
+      {
+        "kanji": "押す",
+        "kana": "おす",
+        "romaji": "osu",
+        "meaning": "Menekan"
+      },
+      {
+        "kanji": "始まる",
+        "kana": "はじまる",
+        "romaji": "hajimaru",
+        "meaning": "Dimulai"
+      },
+      {
+        "kanji": "並べる",
+        "kana": "ならべる",
+        "romaji": "naraberu",
+        "meaning": "Menyusun / menata"
+      },
+      {
+        "kanji": "変更",
+        "kana": "へんこう",
+        "romaji": "henkou",
+        "meaning": "Perubahan"
+      }
+    ]
   }
 ]
