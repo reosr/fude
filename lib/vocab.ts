@@ -1,7 +1,7 @@
+import { getCompletedIrodoriLessons } from "./irodori-progress";
+
 let kosakataPromise: Promise<any[]> | null = null;
 let irodoriVocabPromise: Promise<IrodoriVocabLesson[]> | null = null;
-
-import { getCompletedIrodoriLessons } from "./irodori-progress";
 
 export type VocabSource =
   | { type: "minna"; bab: number }
@@ -36,7 +36,7 @@ type IrodoriVocabLesson = {
 const norm = (s: string) =>
   (s || "")
     .normalize("NFKC")
-    .replace(/[\\s\\u3000]/g, "")
+    .replace(/[\s\u3000]/g, "")
     .replace(/[ã€œï½žâˆ¼]/g, "~");
 
 export const vocabKey = (v: { kanji: string; kana: string }) =>
