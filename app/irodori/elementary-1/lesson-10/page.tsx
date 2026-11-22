@@ -238,17 +238,6 @@ export default function IrodoriElementaryOneLessonTenPage() {
       </section>
 
       <section className="space-y-4">
-        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#8EAE93]">TATA BAHASA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Lima pola untuk belajar dan meminta bantuan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Pahami fungsi setiap pola dan perhatikan perubahan bentuk kata kerja pada contoh.</p></div>
-        {[
-          {title:"01 · Menyatakan sarana atau metode",pattern:"N で",example:<>アプリで日本語を勉強しました。／ ネットで調べました。</>,note:"Partikel で dapat menunjukkan sarana atau metode. Contoh lain: 本で (dengan buku), ラジオで (melalui radio), dan アプリで (dengan aplikasi)."},
-          {title:"02 · Menjelaskan bagian atau hal yang sulit",pattern:"N1 は N2 が ナA-です／イA-いです\nN は V-る の が ナA-です／イA-いです",example:<>日本語は文字が難しいです。／ 日本語は話すのが大変です。</>,note:"N1 は memperkenalkan topik, sedangkan N2 が menunjukkan bagian yang dijelaskan. Jika bagian itu berupa kegiatan, gunakan kata kerja bentuk kamus + の: 読むのが難しいです (membaca itu sulit)."},
-          {title:"03 · Membandingkan dua hal",pattern:"N1 は ～。でも、N2 は ～。",example:<>日本語は読むのは少し難しいです。でも、会話は得意です。</>,note:"Pola ini membandingkan dua karakteristik. は menandai hal yang dibandingkan dan でも berarti tetapi. Contoh: ひらがなは好きです。でも、カタカナは苦手です。"},
-          {title:"04 · Meminta bantuan dengan sopan",pattern:"V-て + もらえませんか？",example:<>この漢字の読み方を教えてもらえませんか。／ もう一度説明してもらえませんか。</>,note:"Ini merupakan permintaan yang lebih sopan. Hubungkan bentuk て kata kerja dengan もらえませんか: 教えます → 教えて, 貸します → 貸して, 説明します → 説明して."},
-          {title:"05 · Menyatakan cara melakukan sesuatu",pattern:"V-ます (hapus ます) + 方（かた）",example:<>読みます → 読み方 ／ 書きます → 書き方 ／ 使います → 使い方</>,note:"方 menunjukkan cara atau metode melakukan sesuatu. Ambil bentuk ます, hilangkan ます, lalu tambahkan 方: 読みます → 読み方 (cara membaca)."},
-        ].map((item)=>(<article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-[9px] font-black tracking-[0.15em] text-[#8EAE93]">{item.title}</p><p className="mt-2 whitespace-pre-line font-mincho text-base leading-7 text-[#F1EBDD]">{item.pattern}</p><p className="mt-2 font-mincho text-base leading-7 text-[#A9CDB0]">{item.example}</p><p className="mt-2 text-xs leading-6 text-[#A9A398]">{item.note}</p></article>))}
-      </section>
-
-      <section className="space-y-4">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#8EAE93]">TATA BAHASA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Lima pola untuk mengikuti kegiatan dan kelas</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Pola untuk mengatakan ingin mencoba, menanyakan frekuensi, menawarkan bantuan, meminta penjelasan, dan membicarakan waktu.</p></div>
         {[
           {title:"01 · Menyampaikan keinginan mencoba",pattern:"V-て + みたいんですが…",example:<>書道教室に参加してみたいんですが。</>,note:"V-てみたい menyatakan ingin mencoba melakukan sesuatu. Bentuk ini dapat diikuti んですが untuk membuka pertanyaan dengan halus."},
