@@ -4790,5 +4790,164 @@
         "meaning": "Menyerahkan / mengajukan"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-15",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 15,
+    "lessonTitle": "I have a fever, and my throat is sore.",
+    "vocab": [
+      {
+        "kanji": "症状",
+        "kana": "しょうじょう",
+        "romaji": "shoujou",
+        "meaning": "Gejala"
+      },
+      {
+        "kanji": "のど",
+        "kana": "のど",
+        "romaji": "nodo",
+        "meaning": "Tenggorokan"
+      },
+      {
+        "kanji": "痛い",
+        "kana": "いたい",
+        "romaji": "itai",
+        "meaning": "Sakit / terasa nyeri"
+      },
+      {
+        "kanji": "お腹",
+        "kana": "おなか",
+        "romaji": "onaka",
+        "meaning": "Perut"
+      },
+      {
+        "kanji": "熱",
+        "kana": "ねつ",
+        "romaji": "netsu",
+        "meaning": "Demam"
+      },
+      {
+        "kanji": "せき",
+        "kana": "せき",
+        "romaji": "seki",
+        "meaning": "Batuk"
+      },
+      {
+        "kanji": "鼻水",
+        "kana": "はなみず",
+        "romaji": "hanamizu",
+        "meaning": "Cairan hidung"
+      },
+      {
+        "kanji": "吐き気",
+        "kana": "はきけ",
+        "romaji": "hakike",
+        "meaning": "Rasa mual"
+      },
+      {
+        "kanji": "食欲",
+        "kana": "しょくよく",
+        "romaji": "shokuyoku",
+        "meaning": "Nafsu makan"
+      },
+      {
+        "kanji": "目",
+        "kana": "め",
+        "romaji": "me",
+        "meaning": "Mata"
+      },
+      {
+        "kanji": "かゆい",
+        "kana": "かゆい",
+        "romaji": "kayui",
+        "meaning": "Gatal"
+      },
+      {
+        "kanji": "足",
+        "kana": "あし",
+        "romaji": "ashi",
+        "meaning": "Kaki"
+      },
+      {
+        "kanji": "くじく",
+        "kana": "くじく",
+        "romaji": "kujiku",
+        "meaning": "Membuat keseleo"
+      },
+      {
+        "kanji": "頭",
+        "kana": "あたま",
+        "romaji": "atama",
+        "meaning": "Kepala"
+      },
+      {
+        "kanji": "ぶつける",
+        "kana": "ぶつける",
+        "romaji": "butsukeru",
+        "meaning": "Membenturkan"
+      },
+      {
+        "kanji": "転ぶ",
+        "kana": "ころぶ",
+        "romaji": "korobu",
+        "meaning": "Terjatuh"
+      },
+      {
+        "kanji": "おととい",
+        "kana": "おととい",
+        "romaji": "ototoi",
+        "meaning": "Dua hari yang lalu"
+      },
+      {
+        "kanji": "一週間",
+        "kana": "いっしゅうかん",
+        "romaji": "isshuukan",
+        "meaning": "Satu minggu"
+      },
+      {
+        "kanji": "花粉症",
+        "kana": "かふんしょう",
+        "romaji": "kafunshou",
+        "meaning": "Alergi serbuk sari"
+      },
+      {
+        "kanji": "病院",
+        "kana": "びょういん",
+        "romaji": "byouin",
+        "meaning": "Rumah sakit"
+      },
+      {
+        "kanji": "医者",
+        "kana": "いしゃ",
+        "romaji": "isha",
+        "meaning": "Dokter"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Meja pendaftaran"
+      },
+      {
+        "kanji": "問診票",
+        "kana": "もんしんひょう",
+        "romaji": "monshinhyou",
+        "meaning": "Formulir pertanyaan medis"
+      },
+      {
+        "kanji": "待合室",
+        "kana": "まちあいしつ",
+        "romaji": "machiaishitsu",
+        "meaning": "Ruang tunggu"
+      },
+      {
+        "kanji": "記入する",
+        "kana": "きにゅうする",
+        "romaji": "kinyuu suru",
+        "meaning": "Mengisi / menuliskan"
+      }
+    ]
   }
 ]
