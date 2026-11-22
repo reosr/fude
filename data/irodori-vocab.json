@@ -2882,5 +2882,164 @@
         "meaning": "Satu kali"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-03",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 3,
+    "lessonTitle": "It gets very cold in winter.",
+    "vocab": [
+      {
+        "kanji": "季節",
+        "kana": "きせつ",
+        "romaji": "kisetsu",
+        "meaning": "Musim"
+      },
+      {
+        "kanji": "春",
+        "kana": "はる",
+        "romaji": "haru",
+        "meaning": "Musim semi"
+      },
+      {
+        "kanji": "夏",
+        "kana": "なつ",
+        "romaji": "natsu",
+        "meaning": "Musim panas"
+      },
+      {
+        "kanji": "秋",
+        "kana": "あき",
+        "romaji": "aki",
+        "meaning": "Musim gugur"
+      },
+      {
+        "kanji": "冬",
+        "kana": "ふゆ",
+        "romaji": "fuyu",
+        "meaning": "Musim dingin"
+      },
+      {
+        "kanji": "暑い",
+        "kana": "あつい",
+        "romaji": "atsui",
+        "meaning": "Panas (cuaca)"
+      },
+      {
+        "kanji": "寒い",
+        "kana": "さむい",
+        "romaji": "samui",
+        "meaning": "Dingin"
+      },
+      {
+        "kanji": "暖かい",
+        "kana": "あたたかい",
+        "romaji": "atatakai",
+        "meaning": "Hangat"
+      },
+      {
+        "kanji": "すずしい",
+        "kana": "すずしい",
+        "romaji": "suzushii",
+        "meaning": "Sejuk"
+      },
+      {
+        "kanji": "蒸し暑い",
+        "kana": "むしあつい",
+        "romaji": "mushiatsui",
+        "meaning": "Gerah / panas lembap"
+      },
+      {
+        "kanji": "雨が降る",
+        "kana": "あめがふる",
+        "romaji": "ame ga furu",
+        "meaning": "Hujan turun"
+      },
+      {
+        "kanji": "雪が降る",
+        "kana": "ゆきがふる",
+        "romaji": "yuki ga furu",
+        "meaning": "Salju turun"
+      },
+      {
+        "kanji": "桜",
+        "kana": "さくら",
+        "romaji": "sakura",
+        "meaning": "Bunga sakura"
+      },
+      {
+        "kanji": "花が咲く",
+        "kana": "はながさく",
+        "romaji": "hana ga saku",
+        "meaning": "Bunga bermekaran"
+      },
+      {
+        "kanji": "もみじ",
+        "kana": "もみじ",
+        "romaji": "momiji",
+        "meaning": "Daun maple Jepang"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan"
+      },
+      {
+        "kanji": "梅雨",
+        "kana": "つゆ",
+        "romaji": "tsuyu",
+        "meaning": "Musim hujan di Jepang"
+      },
+      {
+        "kanji": "雨季",
+        "kana": "うき",
+        "romaji": "uki",
+        "meaning": "Musim hujan"
+      },
+      {
+        "kanji": "乾季",
+        "kana": "かんき",
+        "romaji": "kanki",
+        "meaning": "Musim kemarau"
+      },
+      {
+        "kanji": "一年中",
+        "kana": "いちねんじゅう",
+        "romaji": "ichinenjuu",
+        "meaning": "Sepanjang tahun"
+      },
+      {
+        "kanji": "同じ",
+        "kana": "おなじ",
+        "romaji": "onaji",
+        "meaning": "Sama"
+      },
+      {
+        "kanji": "変わる",
+        "kana": "かわる",
+        "romaji": "kawaru",
+        "meaning": "Berubah"
+      },
+      {
+        "kanji": "果物",
+        "kana": "くだもの",
+        "romaji": "kudamono",
+        "meaning": "Buah-buahan"
+      },
+      {
+        "kanji": "セミ",
+        "kana": "せみ",
+        "romaji": "semi",
+        "meaning": "Tonggeret / cicada"
+      },
+      {
+        "kanji": "たくさん",
+        "kana": "たくさん",
+        "romaji": "takusan",
+        "meaning": "Banyak"
+      }
+    ]
   }
 ]
