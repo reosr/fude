@@ -149,7 +149,7 @@ const understandVenueAnnouncementConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>はい。飲食は、外の休憩コーナーでお願いします。</>,
-    romaji: "Hai. Inshoku wa, soto no k休憩 koonaa de onegaishimasu.",
+    romaji: "Hai. Inshoku wa, soto no kyuukei koonaa de onegaishimasu.",
     translation: "Ya. Silakan makan dan minum di area istirahat luar.",
     audioFileName: "irodori-elementary2-08-a04-l04.mp3",
   },
@@ -266,7 +266,7 @@ const vocabRows = [
   ["設定する", "せっていする · settei suru", "Mengatur atau menyetel"],
   ["持ち込み", "もちこみ · mochikomi", "Membawa masuk"],
   ["禁止", "きんし · kinshi", "Larangan"],
-  ["休憩", "きゅうけい · k休憩", "Istirahat"],
+  ["休憩", "きゅうけい · kyuukei", "Istirahat"],
   ["感想", "かんそう · kansou", "Kesan atau pendapat"],
   ["来年", "らいねん · rainen", "Tahun depan"],
   ["太鼓", "たいこ · taiko", "Genderang Jepang"],
@@ -337,7 +337,7 @@ const venueAnnouncements = [
   {
     title: "飲食について · Tentang makan dan minum",
     japanese: "ホールの中への食べ物や飲み物の持ち込みは禁止されています。飲食は、外の休憩コーナーをご利用ください。",
-    reading: "Hooru no naka e no tabemono ya nomimono no mochikomi wa kinshi sarete imasu. Inshoku wa, soto no k休憩 koonaa o goriyou kudasai.",
+    reading: "Hooru no naka e no tabemono ya nomimono no mochikomi wa kinshi sarete imasu. Inshoku wa, soto no kyuukei koonaa o goriyou kudasai.",
     meaning: "Makanan dan minuman tidak boleh dibawa masuk ke aula. Silakan gunakan area istirahat di luar untuk makan dan minum.",
   },
 ];
