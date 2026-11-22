@@ -69,7 +69,7 @@ const canDos = [
   { id: "talk-about-ability", text: "Menyampaikan kegiatan yang sedang dipelajari dan kemampuan yang dimiliki." },
 ];
 
-const ratingOptions:const ratingOptions: { value: IrodoriRating; label: string }[] = [
+const ratingOptions: { value: IrodoriRating; label: string }[] = [
   { value: 1, label: "★☆☆ Masih perlu latihan" },
   { value: 2, label: "★★☆ Sudah bisa" },
   { value: 3, label: "★★★ Bisa dengan baik" },
@@ -303,7 +303,7 @@ const kanjiWords = [
   ["図書館", "としょかん · toshokan", "Perpustakaan"],
 ];
 
-export default functionexport default function IrodoriElementaryOneLessonTwoPage() {
+export default function IrodoriElementaryOneLessonTwoPage() {
   const progress = useIrodoriProgress();
   const [practiceAnswers, setPracticeAnswers] = useState<Record<number, string>>({});
   const [practiceSubmitted, setPracticeSubmitted] = useState(false);
@@ -452,7 +452,7 @@ export default functionexport default function IrodoriElementaryOneLessonTwoPage
             example: <><ruby>日本語<rt>にほんご</rt></ruby>ができます。／ <ruby>簡単<rt>かんたん</rt></ruby>な<ruby>料理<rt>りょうり</rt></ruby>ができます。</>,
             note: "できます menyatakan bahwa seseorang mampu melakukan sesuatu. Pola ini dapat dipakai untuk bahasa, olahraga, musik, dan keterampilan lainnya. Untuk nama bahasa, tambahkan 語 seperti 日本語 atau 英語.",
           },
-        ].map((item) => (        ].map((item) => (
+        ].map((item) => (
           <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             <p className="text-[9px] font-black tracking-[0.15em] text-[#8EAE93]">{item.title}</p>
             <p className="mt-2 font-mincho text-base leading-7 text-[#F1EBDD]">{item.pattern}</p>
