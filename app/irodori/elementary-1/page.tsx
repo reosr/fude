@@ -12,7 +12,8 @@ export default function IrodoriElementaryOnePage() {
     id.startsWith("elementary1-")
   ).length;
   const lessonOneCompleted = progress.completedLessons.includes("elementary1-01");
-  const availableCount = lessonOneCompleted ? 2 : 1;
+  const lessonTwoCompleted = progress.completedLessons.includes("elementary1-02");
+  const availableCount = lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -80,19 +81,25 @@ export default function IrodoriElementaryOnePage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson === 1 || (lesson === 2 && lessonOneCompleted);
+            const isAvailable = lesson === 1
+              || (lesson === 2 && lessonOneCompleted)
+              || (lesson === 3 && lessonTwoCompleted);
             const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
               ? "I work in a restaurant."
               : lesson === 2
                 ? "I like playing video games."
-                : "Pelajaran " + lesson;
+                : lesson === 3
+                  ? "It gets very cold in winter."
+                  : "Pelajaran " + lesson;
             const lessonDescription = lesson === 1
               ? "Sapaan setelah lama tidak bertemu, kabar terkini, durasi tinggal, dan kegiatan sehari-hari."
               : lesson === 2
                 ? "Hobi, hal yang disukai, kegiatan hari libur, rutinitas, dan kemampuan sederhana."
-                : "Materi orisinal sedang disiapkan.";
+                : lesson === 3
+                  ? "Empat musim di Jepang, iklim negara sendiri, cuaca, dan musim favorit."
+                  : "Materi orisinal sedang disiapkan.";
 
             const content = (
               <>
@@ -132,7 +139,13 @@ export default function IrodoriElementaryOnePage() {
             return isAvailable ? (
               <Link
                 key={lesson}
-                href={lesson === 1 ? "/irodori/elementary-1/lesson-1" : "/irodori/elementary-1/lesson-2"}
+                href={
+                  lesson === 1
+                    ? "/irodori/elementary-1/lesson-1"
+                    : lesson === 2
+                      ? "/irodori/elementary-1/lesson-2"
+                      : "/irodori/elementary-1/lesson-3"
+                }
                 className="group rounded-2xl border border-[#6E9A75]/35 bg-gradient-to-br from-[#263D2D] to-[#1B1A18] p-5 shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:border-[#A9CDB0]/60"
               >
                 {content}
@@ -151,8 +164,9 @@ export default function IrodoriElementaryOnePage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Pelajaran 1 sudah tersedia. Pelajaran 2 terbuka setelah Pelajaran 1
-        selesai; pelajaran berikutnya akan dibuka bertahap setelah siap.
+        Pelajaran berikutnya terbuka setelah pelajaran sebelumnya selesai.
+        Selesaikan materi, simulasi, praktik, kuis, dan penilaian Can-do untuk
+        melanjutkan perjalanan belajar.
       </p>
     </main>
   );
