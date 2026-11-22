@@ -7687,5 +7687,364 @@
         "imageQuery": "minimum requirement notice"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-08",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 8,
+    "lessonTitle": "Do you know where the food stands are?",
+    "vocab": [
+      {
+        "kanji": "屋台",
+        "kana": "やたい",
+        "romaji": "yatai",
+        "meaning": "Kios atau stan makanan",
+        "imageQuery": "festival food stall"
+      },
+      {
+        "kanji": "会場",
+        "kana": "かいじょう",
+        "romaji": "kaijou",
+        "meaning": "Tempat acara",
+        "imageQuery": "event venue"
+      },
+      {
+        "kanji": "ステージ",
+        "kana": "ステージ",
+        "romaji": "suteeji",
+        "meaning": "Panggung",
+        "imageQuery": "festival stage"
+      },
+      {
+        "kanji": "出し物",
+        "kana": "だしもの",
+        "romaji": "dashimono",
+        "meaning": "Pertunjukan atau acara yang ditampilkan",
+        "imageQuery": "festival performance"
+      },
+      {
+        "kanji": "プログラム",
+        "kana": "プログラム",
+        "romaji": "puroguramu",
+        "meaning": "Susunan acara",
+        "imageQuery": "event programme"
+      },
+      {
+        "kanji": "国際交流",
+        "kana": "こくさいこうりゅう",
+        "romaji": "kokusai kouryuu",
+        "meaning": "Pertukaran internasional",
+        "imageQuery": "international cultural exchange"
+      },
+      {
+        "kanji": "フェスティバル",
+        "kana": "フェスティバル",
+        "romaji": "fesutibaru",
+        "meaning": "Festival",
+        "imageQuery": "festival event"
+      },
+      {
+        "kanji": "入場料",
+        "kana": "にゅうじょうりょう",
+        "romaji": "nyuujouryou",
+        "meaning": "Biaya masuk",
+        "imageQuery": "admission fee"
+      },
+      {
+        "kanji": "無料",
+        "kana": "むりょう",
+        "romaji": "muryou",
+        "meaning": "Gratis",
+        "imageQuery": "free entry"
+      },
+      {
+        "kanji": "案内",
+        "kana": "あんない",
+        "romaji": "annai",
+        "meaning": "Informasi atau panduan",
+        "imageQuery": "event information desk"
+      },
+      {
+        "kanji": "係の人",
+        "kana": "かかりのひと",
+        "romaji": "kakari no hito",
+        "meaning": "Petugas yang bertanggung jawab",
+        "imageQuery": "event staff"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Meja pendaftaran atau penerimaan",
+        "imageQuery": "registration counter"
+      },
+      {
+        "kanji": "場所",
+        "kana": "ばしょ",
+        "romaji": "basho",
+        "meaning": "Tempat atau lokasi",
+        "imageQuery": "event location"
+      },
+      {
+        "kanji": "時間",
+        "kana": "じかん",
+        "romaji": "jikan",
+        "meaning": "Waktu",
+        "imageQuery": "clock time"
+      },
+      {
+        "kanji": "始まる",
+        "kana": "はじまる",
+        "romaji": "hajimaru",
+        "meaning": "Mulai",
+        "imageQuery": "event starting"
+      },
+      {
+        "kanji": "終わる",
+        "kana": "おわる",
+        "romaji": "owaru",
+        "meaning": "Selesai",
+        "imageQuery": "event ending"
+      },
+      {
+        "kanji": "まだ",
+        "kana": "まだ",
+        "romaji": "mada",
+        "meaning": "Belum atau masih",
+        "imageQuery": "still not yet"
+      },
+      {
+        "kanji": "もう",
+        "kana": "もう",
+        "romaji": "mou",
+        "meaning": "Sudah",
+        "imageQuery": "already finished"
+      },
+      {
+        "kanji": "コンテスト",
+        "kana": "コンテスト",
+        "romaji": "kontesuto",
+        "meaning": "Kontes",
+        "imageQuery": "competition contest"
+      },
+      {
+        "kanji": "大会",
+        "kana": "たいかい",
+        "romaji": "taikai",
+        "meaning": "Kompetisi atau perlombaan",
+        "imageQuery": "festival competition"
+      },
+      {
+        "kanji": "スピーチ",
+        "kana": "スピーチ",
+        "romaji": "supiichi",
+        "meaning": "Pidato",
+        "imageQuery": "speech presentation"
+      },
+      {
+        "kanji": "カラオケ",
+        "kana": "カラオケ",
+        "romaji": "karaoke",
+        "meaning": "Karaoke",
+        "imageQuery": "karaoke singing"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Berpartisipasi atau ikut",
+        "imageQuery": "participating activity"
+      },
+      {
+        "kanji": "参加者",
+        "kana": "さんかしゃ",
+        "romaji": "sankasha",
+        "meaning": "Peserta",
+        "imageQuery": "event participants"
+      },
+      {
+        "kanji": "参加条件",
+        "kana": "さんかじょうけん",
+        "romaji": "sanka jouken",
+        "meaning": "Persyaratan keikutsertaan",
+        "imageQuery": "participation requirements"
+      },
+      {
+        "kanji": "参加費",
+        "kana": "さんかひ",
+        "romaji": "sanka hi",
+        "meaning": "Biaya partisipasi",
+        "imageQuery": "entry fee"
+      },
+      {
+        "kanji": "申し込む",
+        "kana": "もうしこむ",
+        "romaji": "moushikomu",
+        "meaning": "Mendaftar",
+        "imageQuery": "event application"
+      },
+      {
+        "kanji": "申込書",
+        "kana": "もうしこみしょ",
+        "romaji": "moushikomisho",
+        "meaning": "Formulir pendaftaran",
+        "imageQuery": "application form"
+      },
+      {
+        "kanji": "必要",
+        "kana": "ひつよう",
+        "romaji": "hitsuyou",
+        "meaning": "Perlu atau dibutuhkan",
+        "imageQuery": "necessary supplies"
+      },
+      {
+        "kanji": "以上",
+        "kana": "いじょう",
+        "romaji": "ijou",
+        "meaning": "Sekurang-kurangnya atau lebih",
+        "imageQuery": "minimum requirement"
+      },
+      {
+        "kanji": "先着順",
+        "kana": "せんちゃくじゅん",
+        "romaji": "senchakujun",
+        "meaning": "Urutan berdasarkan siapa cepat",
+        "imageQuery": "first come first served"
+      },
+      {
+        "kanji": "抽選",
+        "kana": "ちゅうせん",
+        "romaji": "chuusen",
+        "meaning": "Pengundian",
+        "imageQuery": "raffle lottery drawing"
+      },
+      {
+        "kanji": "賞品",
+        "kana": "しょうひん",
+        "romaji": "shouhin",
+        "meaning": "Hadiah",
+        "imageQuery": "event prize"
+      },
+      {
+        "kanji": "発表",
+        "kana": "はっぴょう",
+        "romaji": "happyou",
+        "meaning": "Penampilan atau presentasi",
+        "imageQuery": "stage presentation"
+      },
+      {
+        "kanji": "演奏",
+        "kana": "えんそう",
+        "romaji": "ensou",
+        "meaning": "Pertunjukan musik",
+        "imageQuery": "music performance"
+      },
+      {
+        "kanji": "体験",
+        "kana": "たいけん",
+        "romaji": "taiken",
+        "meaning": "Pengalaman atau mencoba langsung",
+        "imageQuery": "hands on activity"
+      },
+      {
+        "kanji": "展示",
+        "kana": "てんじ",
+        "romaji": "tenji",
+        "meaning": "Pameran",
+        "imageQuery": "exhibition display"
+      },
+      {
+        "kanji": "民族衣装",
+        "kana": "みんぞくいしょう",
+        "romaji": "minzoku ishou",
+        "meaning": "Pakaian tradisional",
+        "imageQuery": "traditional clothing"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto",
+        "imageQuery": "photograph"
+      },
+      {
+        "kanji": "動画",
+        "kana": "どうが",
+        "romaji": "douga",
+        "meaning": "Video",
+        "imageQuery": "video camera"
+      },
+      {
+        "kanji": "撮影する",
+        "kana": "さつえいする",
+        "romaji": "satsuei suru",
+        "meaning": "Mengambil foto atau video",
+        "imageQuery": "taking photographs"
+      },
+      {
+        "kanji": "携帯電話",
+        "kana": "けいたいでんわ",
+        "romaji": "keitai denwa",
+        "meaning": "Telepon genggam",
+        "imageQuery": "mobile phone"
+      },
+      {
+        "kanji": "電源",
+        "kana": "でんげん",
+        "romaji": "dengen",
+        "meaning": "Daya atau tombol daya",
+        "imageQuery": "power switch"
+      },
+      {
+        "kanji": "設定する",
+        "kana": "せっていする",
+        "romaji": "settei suru",
+        "meaning": "Mengatur atau menyetel",
+        "imageQuery": "phone settings"
+      },
+      {
+        "kanji": "持ち込み",
+        "kana": "もちこみ",
+        "romaji": "mochikomi",
+        "meaning": "Membawa masuk",
+        "imageQuery": "bringing items inside"
+      },
+      {
+        "kanji": "禁止",
+        "kana": "きんし",
+        "romaji": "kinshi",
+        "meaning": "Larangan",
+        "imageQuery": "prohibition sign"
+      },
+      {
+        "kanji": "休憩",
+        "kana": "きゅうけい",
+        "romaji": "kyuukei",
+        "meaning": "Istirahat",
+        "imageQuery": "rest area"
+      },
+      {
+        "kanji": "感想",
+        "kana": "かんそう",
+        "romaji": "kansou",
+        "meaning": "Kesan atau pendapat",
+        "imageQuery": "event impressions"
+      },
+      {
+        "kanji": "来年",
+        "kana": "らいねん",
+        "romaji": "rainen",
+        "meaning": "Tahun depan",
+        "imageQuery": "next year calendar"
+      },
+      {
+        "kanji": "太鼓",
+        "kana": "たいこ",
+        "romaji": "taiko",
+        "meaning": "Genderang Jepang",
+        "imageQuery": "Japanese taiko drum"
+      }
+    ]
   }
 ]
