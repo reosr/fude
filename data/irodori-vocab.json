@@ -5610,5 +5610,322 @@
         "imageQuery": "tourists"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-02",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 2,
+    "lessonTitle": "He looks a serious person.",
+    "vocab": [
+      {
+        "kanji": "髪",
+        "kana": "かみ",
+        "romaji": "kami",
+        "meaning": "Rambut",
+        "imageQuery": "hair"
+      },
+      {
+        "kanji": "長い",
+        "kana": "ながい",
+        "romaji": "nagai",
+        "meaning": "Panjang",
+        "imageQuery": "length"
+      },
+      {
+        "kanji": "短い",
+        "kana": "みじかい",
+        "romaji": "mijikai",
+        "meaning": "Pendek",
+        "imageQuery": "length"
+      },
+      {
+        "kanji": "背",
+        "kana": "せ",
+        "romaji": "se",
+        "meaning": "Tinggi badan",
+        "imageQuery": "height"
+      },
+      {
+        "kanji": "高い",
+        "kana": "たかい",
+        "romaji": "takai",
+        "meaning": "Tinggi",
+        "imageQuery": "height"
+      },
+      {
+        "kanji": "座る",
+        "kana": "すわる",
+        "romaji": "suwaru",
+        "meaning": "Duduk",
+        "imageQuery": "sitting"
+      },
+      {
+        "kanji": "立つ",
+        "kana": "たつ",
+        "romaji": "tatsu",
+        "meaning": "Berdiri",
+        "imageQuery": "standing"
+      },
+      {
+        "kanji": "帽子",
+        "kana": "ぼうし",
+        "romaji": "boushi",
+        "meaning": "Topi",
+        "imageQuery": "hat"
+      },
+      {
+        "kanji": "かぶる",
+        "kana": "かぶる",
+        "romaji": "kaburu",
+        "meaning": "Memakai topi",
+        "imageQuery": "hat"
+      },
+      {
+        "kanji": "ピアス",
+        "kana": "ピアス",
+        "romaji": "piasu",
+        "meaning": "Anting tindik",
+        "imageQuery": "earrings"
+      },
+      {
+        "kanji": "ワンピース",
+        "kana": "ワンピース",
+        "romaji": "wanpiisu",
+        "meaning": "Gaun terusan",
+        "imageQuery": "dress"
+      },
+      {
+        "kanji": "着る",
+        "kana": "きる",
+        "romaji": "kiru",
+        "meaning": "Memakai pakaian",
+        "imageQuery": "clothing"
+      },
+      {
+        "kanji": "靴",
+        "kana": "くつ",
+        "romaji": "kutsu",
+        "meaning": "Sepatu",
+        "imageQuery": "shoes"
+      },
+      {
+        "kanji": "はく",
+        "kana": "はく",
+        "romaji": "haku",
+        "meaning": "Memakai sepatu atau celana",
+        "imageQuery": "clothing"
+      },
+      {
+        "kanji": "めがね",
+        "kana": "めがね",
+        "romaji": "megane",
+        "meaning": "Kacamata",
+        "imageQuery": "glasses"
+      },
+      {
+        "kanji": "かける",
+        "kana": "かける",
+        "romaji": "kakeru",
+        "meaning": "Memakai kacamata",
+        "imageQuery": "glasses"
+      },
+      {
+        "kanji": "ひげ",
+        "kana": "ひげ",
+        "romaji": "hige",
+        "meaning": "Janggut atau kumis",
+        "imageQuery": "facial hair"
+      },
+      {
+        "kanji": "ネクタイ",
+        "kana": "ネクタイ",
+        "romaji": "nekutai",
+        "meaning": "Dasi",
+        "imageQuery": "tie"
+      },
+      {
+        "kanji": "シャツ",
+        "kana": "シャツ",
+        "romaji": "shatsu",
+        "meaning": "Kemeja",
+        "imageQuery": "shirt"
+      },
+      {
+        "kanji": "ズボン",
+        "kana": "ズボン",
+        "romaji": "zubon",
+        "meaning": "Celana panjang",
+        "imageQuery": "trousers"
+      },
+      {
+        "kanji": "赤い",
+        "kana": "あかい",
+        "romaji": "akai",
+        "meaning": "Merah",
+        "imageQuery": "red"
+      },
+      {
+        "kanji": "白い",
+        "kana": "しろい",
+        "romaji": "shiroi",
+        "meaning": "Putih",
+        "imageQuery": "white"
+      },
+      {
+        "kanji": "黄色い",
+        "kana": "きいろい",
+        "romaji": "kiiroi",
+        "meaning": "Kuning",
+        "imageQuery": "yellow"
+      },
+      {
+        "kanji": "青い",
+        "kana": "あおい",
+        "romaji": "aoi",
+        "meaning": "Biru",
+        "imageQuery": "blue"
+      },
+      {
+        "kanji": "黒い",
+        "kana": "くろい",
+        "romaji": "kuroi",
+        "meaning": "Hitam",
+        "imageQuery": "black"
+      },
+      {
+        "kanji": "まじめ",
+        "kana": "まじめ",
+        "romaji": "majime",
+        "meaning": "Serius atau sungguh-sungguh",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "やさしい",
+        "kana": "やさしい",
+        "romaji": "yasashii",
+        "meaning": "Baik hati",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "きびしい",
+        "kana": "きびしい",
+        "romaji": "kibishii",
+        "meaning": "Tegas",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "こわい",
+        "kana": "こわい",
+        "romaji": "kowai",
+        "meaning": "Menakutkan",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "おもしろい",
+        "kana": "おもしろい",
+        "romaji": "omoshiroi",
+        "meaning": "Menarik atau menyenangkan",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "かわいい",
+        "kana": "かわいい",
+        "romaji": "kawaii",
+        "meaning": "Lucu",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "忙しい",
+        "kana": "いそがしい",
+        "romaji": "isogashii",
+        "meaning": "Sibuk",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "元気",
+        "kana": "げんき",
+        "romaji": "genki",
+        "meaning": "Sehat atau bersemangat",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "見た目",
+        "kana": "みため",
+        "romaji": "mitame",
+        "meaning": "Penampilan luar",
+        "imageQuery": "appearance"
+      },
+      {
+        "kanji": "歌手",
+        "kana": "かしゅ",
+        "romaji": "kashu",
+        "meaning": "Penyanyi",
+        "imageQuery": "singer"
+      },
+      {
+        "kanji": "俳優",
+        "kana": "はいゆう",
+        "romaji": "haiyuu",
+        "meaning": "Aktor",
+        "imageQuery": "actor"
+      },
+      {
+        "kanji": "演技",
+        "kana": "えんぎ",
+        "romaji": "engi",
+        "meaning": "Akting",
+        "imageQuery": "acting"
+      },
+      {
+        "kanji": "上手",
+        "kana": "じょうず",
+        "romaji": "jouzu",
+        "meaning": "Mahir atau pandai",
+        "imageQuery": "skill"
+      },
+      {
+        "kanji": "きっかけ",
+        "kana": "きっかけ",
+        "romaji": "kikkake",
+        "meaning": "Awal atau pemicu ketertarikan",
+        "imageQuery": "interest"
+      },
+      {
+        "kanji": "引退する",
+        "kana": "いんたいする",
+        "romaji": "intai suru",
+        "meaning": "Pensiun dari profesi",
+        "imageQuery": "retirement"
+      },
+      {
+        "kanji": "世界中",
+        "kana": "せかいじゅう",
+        "romaji": "sekaijuu",
+        "meaning": "Di seluruh dunia",
+        "imageQuery": "world"
+      },
+      {
+        "kanji": "ファン",
+        "kana": "ファン",
+        "romaji": "fan",
+        "meaning": "Penggemar",
+        "imageQuery": "fans"
+      },
+      {
+        "kanji": "明るい",
+        "kana": "あかるい",
+        "romaji": "akarui",
+        "meaning": "Ceria atau terang",
+        "imageQuery": "personality"
+      },
+      {
+        "kanji": "心配",
+        "kana": "しんぱい",
+        "romaji": "shinpai",
+        "meaning": "Khawatir",
+        "imageQuery": "concern"
+      }
+    ]
   }
 ]
