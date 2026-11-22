@@ -54,10 +54,10 @@ const libraryReturnConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>いいえ。DVDは、図書館が開いているときに返してください。</>, romaji: "Iie. DVD wa, toshokan ga aite iru toki ni kaeshite kudasai.", translation: "Tidak. DVD harus dikembalikan saat perpustakaan buka.", audioFileName: "irodori-elementary2-13-a04-l04.mp3" },
 ];
 const facilitySignsConversation: IrodoriUtterance[] = [
-  { speakerId: "friendYui", japanese: <>入口に「撮影禁止」と書いてありますね。</>, romaji: "Iriguchi ni 'satsuei kinshi' to kaite arimasu ne.", translation: "Di pintu masuk tertulis 'Dilarang memotret', ya.", audioFileName: "irodori-elementary2-13-a05-l01.mp3" },
-  { speakerId: "friendSota", japanese: <>ここでは、写真を撮ってはいけないという意味です。</>, romaji: "Koko de wa, shashin o totte wa ikenai to iu imi desu.", translation: "Artinya, kita tidak boleh mengambil foto di sini.", audioFileName: "irodori-elementary2-13-a05-l02.mp3" },
-  { speakerId: "friendYui", japanese: <>大きなかばんは、どうすればいいですか。</>, romaji: "Ookina kaban wa, dou sureba ii desu ka?", translation: "Apa yang harus dilakukan dengan tas besar?", audioFileName: "irodori-elementary2-13-a05-l03.mp3" },
-  { speakerId: "friendSota", japanese: <>ロッカーにお預けください、と書いてあります。</>, romaji: "Rokkaa ni o-azuke kudasai, to kaite arimasu.", translation: "Tertulis, 'Silakan titipkan di loker'.", audioFileName: "irodori-elementary2-13-a05-l04.mp3" },
+  { speakerId: "yui", japanese: <>入口に「撮影禁止」と書いてありますね。</>, romaji: "Iriguchi ni 'satsuei kinshi' to kaite arimasu ne.", translation: "Di pintu masuk tertulis 'Dilarang memotret', ya.", audioFileName: "irodori-elementary2-13-a05-l01.mp3" },
+  { speakerId: "sota", japanese: <>ここでは、写真を撮ってはいけないという意味です。</>, romaji: "Koko de wa, shashin o totte wa ikenai to iu imi desu.", translation: "Artinya, kita tidak boleh mengambil foto di sini.", audioFileName: "irodori-elementary2-13-a05-l02.mp3" },
+  { speakerId: "yui", japanese: <>大きなかばんは、どうすればいいですか。</>, romaji: "Ookina kaban wa, dou sureba ii desu ka?", translation: "Apa yang harus dilakukan dengan tas besar?", audioFileName: "irodori-elementary2-13-a05-l03.mp3" },
+  { speakerId: "sota", japanese: <>ロッカーにお預けください、と書いてあります。</>, romaji: "Rokkaa ni o-azuke kudasai, to kaite arimasu.", translation: "Tertulis, 'Silakan titipkan di loker'.", audioFileName: "irodori-elementary2-13-a05-l04.mp3" },
 ];
 
 const canDos = [
