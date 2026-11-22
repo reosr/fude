@@ -5108,5 +5108,164 @@
         "meaning": "Berolahraga"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-17",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 17,
+    "lessonTitle": "This is a personal amulet my older brother gave me.",
+    "vocab": [
+      {
+        "kanji": "お土産",
+        "kana": "おみやげ",
+        "romaji": "omiyage",
+        "meaning": "Oleh-oleh"
+      },
+      {
+        "kanji": "お守り",
+        "kana": "おまもり",
+        "romaji": "omamori",
+        "meaning": "Omamori / benda kenangan pembawa keberuntungan"
+      },
+      {
+        "kanji": "飾り",
+        "kana": "かざり",
+        "romaji": "kazari",
+        "meaning": "Hiasan"
+      },
+      {
+        "kanji": "置物",
+        "kana": "おきもの",
+        "romaji": "okimono",
+        "meaning": "Benda pajangan"
+      },
+      {
+        "kanji": "人形",
+        "kana": "にんぎょう",
+        "romaji": "ningyou",
+        "meaning": "Boneka"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto"
+      },
+      {
+        "kanji": "手紙",
+        "kana": "てがみ",
+        "romaji": "tegami",
+        "meaning": "Surat"
+      },
+      {
+        "kanji": "贈り物",
+        "kana": "おくりもの",
+        "romaji": "okurimono",
+        "meaning": "Hadiah"
+      },
+      {
+        "kanji": "プレゼント",
+        "kana": "プレゼント",
+        "romaji": "purezento",
+        "meaning": "Hadiah"
+      },
+      {
+        "kanji": "兄",
+        "kana": "あに",
+        "romaji": "ani",
+        "meaning": "Kakak laki-laki sendiri"
+      },
+      {
+        "kanji": "お兄さん",
+        "kana": "おにいさん",
+        "romaji": "oniisan",
+        "meaning": "Kakak laki-laki orang lain"
+      },
+      {
+        "kanji": "姉",
+        "kana": "あね",
+        "romaji": "ane",
+        "meaning": "Kakak perempuan sendiri"
+      },
+      {
+        "kanji": "お姉さん",
+        "kana": "おねえさん",
+        "romaji": "oneesan",
+        "meaning": "Kakak perempuan orang lain"
+      },
+      {
+        "kanji": "弟",
+        "kana": "おとうと",
+        "romaji": "otouto",
+        "meaning": "Adik laki-laki"
+      },
+      {
+        "kanji": "妹",
+        "kana": "いもうと",
+        "romaji": "imouto",
+        "meaning": "Adik perempuan"
+      },
+      {
+        "kanji": "両親",
+        "kana": "りょうしん",
+        "romaji": "ryoushin",
+        "meaning": "Kedua orang tua"
+      },
+      {
+        "kanji": "父",
+        "kana": "ちち",
+        "romaji": "chichi",
+        "meaning": "Ayah sendiri"
+      },
+      {
+        "kanji": "母",
+        "kana": "はは",
+        "romaji": "haha",
+        "meaning": "Ibu sendiri"
+      },
+      {
+        "kanji": "持って来る",
+        "kana": "もってくる",
+        "romaji": "motte kuru",
+        "meaning": "Membawa ke tempat pembicara"
+      },
+      {
+        "kanji": "くれる",
+        "kana": "くれる",
+        "romaji": "kureru",
+        "meaning": "Memberi kepada saya / pihak saya"
+      },
+      {
+        "kanji": "もらう",
+        "kana": "もらう",
+        "romaji": "morau",
+        "meaning": "Menerima"
+      },
+      {
+        "kanji": "買う",
+        "kana": "かう",
+        "romaji": "kau",
+        "meaning": "Membeli"
+      },
+      {
+        "kanji": "作る",
+        "kana": "つくる",
+        "romaji": "tsukuru",
+        "meaning": "Membuat"
+      },
+      {
+        "kanji": "招待する",
+        "kana": "しょうたいする",
+        "romaji": "shoutai suru",
+        "meaning": "Mengundang"
+      },
+      {
+        "kanji": "お礼",
+        "kana": "おれい",
+        "romaji": "orei",
+        "meaning": "Ucapan terima kasih"
+      }
+    ]
   }
 ]
