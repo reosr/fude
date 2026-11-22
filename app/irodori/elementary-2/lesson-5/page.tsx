@@ -7,6 +7,7 @@ import {
   ArrowLeft,
   CalendarDays,
   CheckCircle2,
+  FileText,
   MapPin,
   RefreshCw,
   Star,
