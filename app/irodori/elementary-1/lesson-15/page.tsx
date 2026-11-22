@@ -38,11 +38,11 @@ const receptionConversation: IrodoriUtterance[] = [
 ];
 
 const waitingConversation: IrodoriUtterance[] = [
-{speakerId:"sota",japanese:<>このあと、どこで待てばいいですか。</>,romaji:"Kono ato, doko de mateba ii desu ka?",translation:"Setelah ini, saya harus menunggu di mana?",audioFileName:"irodori-elementary1-15-a04-l01.mp3"},
-{speakerId:"kenji",japanese:<>こちらの待合室でお待ちください。</>,romaji:"Kochira no machiaishitsu de omachi kudasai.",translation:"Silakan menunggu di ruang tunggu ini.",audioFileName:"irodori-elementary1-15-a04-l02.mp3"},
-{speakerId:"sota",japanese:<>名前を呼ばれたら、どうしますか。</>,romaji:"Namae o yobaretara, dou shimasu ka?",translation:"Kalau nama saya dipanggil, apa yang harus saya lakukan?",audioFileName:"irodori-elementary1-15-a04-l03.mp3"},
-{speakerId:"kenji",japanese:<>呼ばれたら、こちらの受付に来てください。</>,romaji:"Yobaretara, kochira no uketsuke ni kite kudasai.",translation:"Kalau sudah dipanggil, silakan datang ke meja pendaftaran ini.",audioFileName:"irodori-elementary1-15-a04-l04.mp3"},
-{speakerId:"sota",japanese:<>わかりました。ありがとうございます。</>,romaji:"Wakarimashita. Arigatou gozaimasu.",translation:"Baik, saya mengerti. Terima kasih.",audioFileName:"irodori-elementary1-15-a04-l05.mp3"},
+{speakerId:"akiko",japanese:<>診察の前に、こちらに座ってください。</>,romaji:"Shinsatsu no mae ni, kochira ni suwatte kudasai.",translation:"Sebelum pemeriksaan, silakan duduk di sini.",audioFileName:"irodori-elementary1-15-a04-l01.mp3"},
+{speakerId:"sota",japanese:<>はい。</>,romaji:"Hai.",translation:"Baik.",audioFileName:"irodori-elementary1-15-a04-l02.mp3"},
+{speakerId:"akiko",japanese:<>問診票を見せてください。わからないことはありますか。</>,romaji:"Monshinhyou o misete kudasai. Wakaranai koto wa arimasu ka?",translation:"Tolong tunjukkan formulir pertanyaan. Apakah ada hal yang belum dipahami?",audioFileName:"irodori-elementary1-15-a04-l03.mp3"},
+{speakerId:"sota",japanese:<>ここに名前を書けばいいですか。</>,romaji:"Koko ni namae o kakeba ii desu ka?",translation:"Apakah saya harus menulis nama di sini?",audioFileName:"irodori-elementary1-15-a04-l04.mp3"},
+{speakerId:"akiko",japanese:<>はい、そうです。</>,romaji:"Hai, sou desu.",translation:"Ya, benar.",audioFileName:"irodori-elementary1-15-a04-l05.mp3"},
 ];
 
 const formConversation: IrodoriUtterance[] = [
@@ -213,7 +213,7 @@ export default function IrodoriElementaryOneLessonFifteenPage() {
     <IrodoriConversation title="Menjelaskan demam dan sakit tenggorokan" speakers={[doctor,visitorYui]} utterances={symptomConversation}/>
     <IrodoriConversation title="Menjelaskan keluhan lain" speakers={[doctor,visitorSota]} utterances={stomachConversation}/>
     <IrodoriConversation title="Berbicara di meja pendaftaran" speakers={[visitorYui,receptionist]} utterances={receptionConversation}/>
-    <IrodoriConversation title="Memahami arahan di ruang tunggu" speakers={[visitorSota,receptionist]} utterances={waitingConversation}/>
+    <IrodoriConversation title="Memahami arahan dokter" speakers={[doctor,visitorSota]} utterances={waitingConversation}/>
     <IrodoriConversation title="Bertanya tentang formulir" speakers={[visitorYui,receptionist]} utterances={formConversation}/>
    </div>
   </section>
