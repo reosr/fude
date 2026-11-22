@@ -17,7 +17,8 @@ export default function IrodoriElementaryOnePage() {
   const lessonFourCompleted = progress.completedLessons.includes("elementary1-04");
   const lessonFiveCompleted = progress.completedLessons.includes("elementary1-05");
   const lessonSixCompleted = progress.completedLessons.includes("elementary1-06");
-  const availableCount = lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const lessonSevenCompleted = progress.completedLessons.includes("elementary1-07");
+  const availableCount = lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -91,7 +92,8 @@ export default function IrodoriElementaryOnePage() {
               || (lesson === 4 && lessonThreeCompleted)
               || (lesson === 5 && lessonFourCompleted)
               || (lesson === 6 && lessonFiveCompleted)
-              || (lesson === 7 && lessonSixCompleted);
+              || (lesson === 7 && lessonSixCompleted)
+              || (lesson === 8 && lessonSevenCompleted);
             const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
@@ -108,7 +110,9 @@ export default function IrodoriElementaryOnePage() {
                         ? "Please tell me how to get to the post office."
                         : lesson === 7
                           ? "I will be a bit late because I got lost."
-                          : "Pelajaran " + lesson;
+                          : lesson === 8
+                            ? "Have you ever played baseball?"
+                            : "Pelajaran " + lesson;
             const lessonDescription = lesson === 1
               ? "Sapaan setelah lama tidak bertemu, kabar terkini, durasi tinggal, dan kegiatan sehari-hari."
               : lesson === 2
@@ -123,7 +127,9 @@ export default function IrodoriElementaryOnePage() {
                         ? "Meminta dan memberi petunjuk arah secara langsung, melalui telepon, dan saat diantar."
                         : lesson === 7
                           ? "Menentukan waktu dan tempat pertemuan, membaca pesan keterlambatan, dan memberi kabar jika terlambat."
-                          : "Materi orisinal sedang disiapkan.";
+                          : lesson === 8
+                            ? "Menanyakan pengalaman, mengajak teman, menentukan kegiatan berikutnya, dan menyampaikan kesan setelah acara."
+                            : "Materi orisinal sedang disiapkan.";
 
             const content = (
               <>
@@ -176,7 +182,9 @@ export default function IrodoriElementaryOnePage() {
                           ? "/irodori/elementary-1/lesson-5"
                           : lesson === 6
                             ? "/irodori/elementary-1/lesson-6"
-                            : "/irodori/elementary-1/lesson-7"
+                            : lesson === 7
+                              ? "/irodori/elementary-1/lesson-7"
+                              : "/irodori/elementary-1/lesson-8"
                 }
                 className="group rounded-2xl border border-[#6E9A75]/35 bg-gradient-to-br from-[#263D2D] to-[#1B1A18] p-5 shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:border-[#A9CDB0]/60"
               >
