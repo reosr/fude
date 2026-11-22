@@ -2723,5 +2723,164 @@
         "meaning": "Pemandangan"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-02",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 2,
+    "lessonTitle": "I like playing video games.",
+    "vocab": [
+      {
+        "kanji": "趣味",
+        "kana": "しゅみ",
+        "romaji": "shumi",
+        "meaning": "Hobi"
+      },
+      {
+        "kanji": "好き",
+        "kana": "すき",
+        "romaji": "suki",
+        "meaning": "Suka"
+      },
+      {
+        "kanji": "大好き",
+        "kana": "だいすき",
+        "romaji": "daisuki",
+        "meaning": "Sangat suka"
+      },
+      {
+        "kanji": "休みの日",
+        "kana": "やすみのひ",
+        "romaji": "yasumi no hi",
+        "meaning": "Hari libur"
+      },
+      {
+        "kanji": "週末",
+        "kana": "しゅうまつ",
+        "romaji": "shuumatsu",
+        "meaning": "Akhir pekan"
+      },
+      {
+        "kanji": "映画",
+        "kana": "えいが",
+        "romaji": "eiga",
+        "meaning": "Film"
+      },
+      {
+        "kanji": "音楽",
+        "kana": "おんがく",
+        "romaji": "ongaku",
+        "meaning": "Musik"
+      },
+      {
+        "kanji": "本",
+        "kana": "ほん",
+        "romaji": "hon",
+        "meaning": "Buku"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto"
+      },
+      {
+        "kanji": "撮る",
+        "kana": "とる",
+        "romaji": "toru",
+        "meaning": "Memotret"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan / memasak"
+      },
+      {
+        "kanji": "旅行",
+        "kana": "りょこう",
+        "romaji": "ryokou",
+        "meaning": "Perjalanan / wisata"
+      },
+      {
+        "kanji": "ゲーム",
+        "kana": "ゲーム",
+        "romaji": "geemu",
+        "meaning": "Permainan / game"
+      },
+      {
+        "kanji": "読む",
+        "kana": "よむ",
+        "romaji": "yomu",
+        "meaning": "Membaca"
+      },
+      {
+        "kanji": "聞く",
+        "kana": "きく",
+        "romaji": "kiku",
+        "meaning": "Mendengarkan"
+      },
+      {
+        "kanji": "友達",
+        "kana": "ともだち",
+        "romaji": "tomodachi",
+        "meaning": "Teman"
+      },
+      {
+        "kanji": "公園",
+        "kana": "こうえん",
+        "romaji": "kouen",
+        "meaning": "Taman"
+      },
+      {
+        "kanji": "図書館",
+        "kana": "としょかん",
+        "romaji": "toshokan",
+        "meaning": "Perpustakaan"
+      },
+      {
+        "kanji": "出かける",
+        "kana": "でかける",
+        "romaji": "dekakeru",
+        "meaning": "Pergi keluar"
+      },
+      {
+        "kanji": "たいてい",
+        "kana": "たいてい",
+        "romaji": "taitei",
+        "meaning": "Biasanya"
+      },
+      {
+        "kanji": "ときどき",
+        "kana": "ときどき",
+        "romaji": "tokidoki",
+        "meaning": "Kadang-kadang"
+      },
+      {
+        "kanji": "習う",
+        "kana": "ならう",
+        "romaji": "narau",
+        "meaning": "Belajar dari seseorang / mengikuti pelajaran"
+      },
+      {
+        "kanji": "できる",
+        "kana": "できる",
+        "romaji": "dekiru",
+        "meaning": "Bisa / mampu"
+      },
+      {
+        "kanji": "一週間",
+        "kana": "いっしゅうかん",
+        "romaji": "isshuukan",
+        "meaning": "Satu minggu"
+      },
+      {
+        "kanji": "一回",
+        "kana": "いっかい",
+        "romaji": "ikkai",
+        "meaning": "Satu kali"
+      }
+    ]
   }
 ]
