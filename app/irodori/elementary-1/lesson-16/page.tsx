@@ -111,6 +111,7 @@ const adviceExamples=[
 ];
 
 const posterItems=[
+{label:"症状",reading:"しょうじょう · shoujou",meaning:"Gejala",detail:"せき、くしゃみ、のどの痛みなど。"},
 {label:"手洗い",reading:"てあらい · tearai",meaning:"Cuci tangan",detail:"外から帰ったとき、食事の前に手を洗いましょう。"},
 {label:"せきエチケット",reading:"seki echiketto",meaning:"Etika batuk dan bersin",detail:"せきやくしゃみをするとき、口と鼻をおおいましょう。"},
 {label:"換気",reading:"かんき · kanki",meaning:"Ventilasi / pergantian udara",detail:"部屋の空気をときどき入れかえましょう。"},
