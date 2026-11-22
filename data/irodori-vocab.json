@@ -7328,5 +7328,364 @@
         "imageQuery": "travel memory"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-07",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 7,
+    "lessonTitle": "If it rains, it will be held at the hall.",
+    "vocab": [
+      {
+        "kanji": "お知らせ",
+        "kana": "おしらせ",
+        "romaji": "oshirase",
+        "meaning": "Pengumuman atau pemberitahuan",
+        "imageQuery": "community notice"
+      },
+      {
+        "kanji": "掲示板",
+        "kana": "けいじばん",
+        "romaji": "keijiban",
+        "meaning": "Papan informasi",
+        "imageQuery": "community bulletin board"
+      },
+      {
+        "kanji": "郵便受け",
+        "kana": "ゆうびんうけ",
+        "romaji": "yuubinuke",
+        "meaning": "Kotak surat",
+        "imageQuery": "mailbox"
+      },
+      {
+        "kanji": "地域",
+        "kana": "ちいき",
+        "romaji": "chiiki",
+        "meaning": "Lingkungan atau wilayah setempat",
+        "imageQuery": "neighborhood community"
+      },
+      {
+        "kanji": "自治会",
+        "kana": "じちかい",
+        "romaji": "jichikai",
+        "meaning": "Asosiasi warga lingkungan",
+        "imageQuery": "neighborhood association"
+      },
+      {
+        "kanji": "市民センター",
+        "kana": "しみんセンター",
+        "romaji": "shimin sentaa",
+        "meaning": "Pusat komunitas warga",
+        "imageQuery": "community center"
+      },
+      {
+        "kanji": "公民館",
+        "kana": "こうみんかん",
+        "romaji": "kouminkan",
+        "meaning": "Balai warga",
+        "imageQuery": "public community hall"
+      },
+      {
+        "kanji": "市役所",
+        "kana": "しやくしょ",
+        "romaji": "shiyakusho",
+        "meaning": "Kantor pemerintah kota",
+        "imageQuery": "city hall"
+      },
+      {
+        "kanji": "役場",
+        "kana": "やくば",
+        "romaji": "yakuba",
+        "meaning": "Kantor pemerintah daerah kecil",
+        "imageQuery": "town office"
+      },
+      {
+        "kanji": "行事",
+        "kana": "ぎょうじ",
+        "romaji": "gyouji",
+        "meaning": "Kegiatan atau acara",
+        "imageQuery": "local community event"
+      },
+      {
+        "kanji": "イベント",
+        "kana": "イベント",
+        "romaji": "ibento",
+        "meaning": "Acara",
+        "imageQuery": "community event"
+      },
+      {
+        "kanji": "祭り",
+        "kana": "まつり",
+        "romaji": "matsuri",
+        "meaning": "Festival",
+        "imageQuery": "local festival"
+      },
+      {
+        "kanji": "盆踊り",
+        "kana": "ぼんおどり",
+        "romaji": "bon odori",
+        "meaning": "Tarian festival musim panas",
+        "imageQuery": "Bon Odori dance"
+      },
+      {
+        "kanji": "練習",
+        "kana": "れんしゅう",
+        "romaji": "renshuu",
+        "meaning": "Latihan",
+        "imageQuery": "community practice"
+      },
+      {
+        "kanji": "発表会",
+        "kana": "はっぴょうかい",
+        "romaji": "happyoukai",
+        "meaning": "Pertunjukan atau acara presentasi",
+        "imageQuery": "community performance"
+      },
+      {
+        "kanji": "交換会",
+        "kana": "こうかんかい",
+        "romaji": "koukankai",
+        "meaning": "Acara tukar-menukar",
+        "imageQuery": "book exchange event"
+      },
+      {
+        "kanji": "展示",
+        "kana": "てんじ",
+        "romaji": "tenji",
+        "meaning": "Pameran atau pajangan",
+        "imageQuery": "exhibition display"
+      },
+      {
+        "kanji": "展示会",
+        "kana": "てんじかい",
+        "romaji": "tenjikai",
+        "meaning": "Pameran",
+        "imageQuery": "local exhibition"
+      },
+      {
+        "kanji": "開催する",
+        "kana": "かいさいする",
+        "romaji": "kaisai suru",
+        "meaning": "Menyelenggarakan acara",
+        "imageQuery": "event opening"
+      },
+      {
+        "kanji": "開く",
+        "kana": "ひらく",
+        "romaji": "hiraku",
+        "meaning": "Mengadakan atau membuka",
+        "imageQuery": "open event"
+      },
+      {
+        "kanji": "行う",
+        "kana": "おこなう",
+        "romaji": "okonau",
+        "meaning": "Melaksanakan",
+        "imageQuery": "conduct activity"
+      },
+      {
+        "kanji": "行われる",
+        "kana": "おこなわれる",
+        "romaji": "okonawareru",
+        "meaning": "Diadakan atau dilaksanakan",
+        "imageQuery": "event held"
+      },
+      {
+        "kanji": "開かれる",
+        "kana": "ひらかれる",
+        "romaji": "hirakareru",
+        "meaning": "Diadakan atau dibuka",
+        "imageQuery": "exhibition held"
+      },
+      {
+        "kanji": "中止する",
+        "kana": "ちゅうしする",
+        "romaji": "chuushi suru",
+        "meaning": "Membatalkan",
+        "imageQuery": "cancel event notice"
+      },
+      {
+        "kanji": "場合",
+        "kana": "ばあい",
+        "romaji": "baai",
+        "meaning": "Jika atau dalam keadaan",
+        "imageQuery": "condition notice"
+      },
+      {
+        "kanji": "条件",
+        "kana": "じょうけん",
+        "romaji": "jouken",
+        "meaning": "Syarat atau ketentuan",
+        "imageQuery": "event requirements"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Berpartisipasi atau ikut",
+        "imageQuery": "community participation"
+      },
+      {
+        "kanji": "参加者",
+        "kana": "さんかしゃ",
+        "romaji": "sankasha",
+        "meaning": "Peserta",
+        "imageQuery": "event participants"
+      },
+      {
+        "kanji": "申し込む",
+        "kana": "もうしこむ",
+        "romaji": "moushikomu",
+        "meaning": "Mendaftar",
+        "imageQuery": "event application"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Bagian penerimaan atau pendaftaran",
+        "imageQuery": "event reception desk"
+      },
+      {
+        "kanji": "会場",
+        "kana": "かいじょう",
+        "romaji": "kaijou",
+        "meaning": "Tempat acara",
+        "imageQuery": "event venue"
+      },
+      {
+        "kanji": "広場",
+        "kana": "ひろば",
+        "romaji": "hiroba",
+        "meaning": "Lapangan atau plaza",
+        "imageQuery": "public plaza"
+      },
+      {
+        "kanji": "体育館",
+        "kana": "たいいくかん",
+        "romaji": "taiikukan",
+        "meaning": "Gedung olahraga",
+        "imageQuery": "school gymnasium"
+      },
+      {
+        "kanji": "ホール",
+        "kana": "ホール",
+        "romaji": "hooru",
+        "meaning": "Aula",
+        "imageQuery": "community hall"
+      },
+      {
+        "kanji": "日時",
+        "kana": "にちじ",
+        "romaji": "nichiji",
+        "meaning": "Tanggal dan waktu",
+        "imageQuery": "event date and time"
+      },
+      {
+        "kanji": "今月",
+        "kana": "こんげつ",
+        "romaji": "kongetsu",
+        "meaning": "Bulan ini",
+        "imageQuery": "monthly calendar"
+      },
+      {
+        "kanji": "来月",
+        "kana": "らいげつ",
+        "romaji": "raigetsu",
+        "meaning": "Bulan depan",
+        "imageQuery": "next month calendar"
+      },
+      {
+        "kanji": "今週",
+        "kana": "こんしゅう",
+        "romaji": "konshuu",
+        "meaning": "Minggu ini",
+        "imageQuery": "weekly calendar"
+      },
+      {
+        "kanji": "来週",
+        "kana": "らいしゅう",
+        "romaji": "raishuu",
+        "meaning": "Minggu depan",
+        "imageQuery": "next week calendar"
+      },
+      {
+        "kanji": "当日",
+        "kana": "とうじつ",
+        "romaji": "toujitsu",
+        "meaning": "Hari pelaksanaan",
+        "imageQuery": "event day calendar"
+      },
+      {
+        "kanji": "雨",
+        "kana": "あめ",
+        "romaji": "ame",
+        "meaning": "Hujan",
+        "imageQuery": "rainy weather"
+      },
+      {
+        "kanji": "天気",
+        "kana": "てんき",
+        "romaji": "tenki",
+        "meaning": "Cuaca",
+        "imageQuery": "weather forecast"
+      },
+      {
+        "kanji": "降る",
+        "kana": "ふる",
+        "romaji": "furu",
+        "meaning": "Turun, seperti hujan",
+        "imageQuery": "rainfall"
+      },
+      {
+        "kanji": "晴れる",
+        "kana": "はれる",
+        "romaji": "hareru",
+        "meaning": "Cerah",
+        "imageQuery": "clear weather"
+      },
+      {
+        "kanji": "変更",
+        "kana": "へんこう",
+        "romaji": "henkou",
+        "meaning": "Perubahan",
+        "imageQuery": "schedule change"
+      },
+      {
+        "kanji": "連絡",
+        "kana": "れんらく",
+        "romaji": "renraku",
+        "meaning": "Pemberitahuan atau kontak",
+        "imageQuery": "contact notice"
+      },
+      {
+        "kanji": "水道",
+        "kana": "すいどう",
+        "romaji": "suidou",
+        "meaning": "Saluran atau layanan air",
+        "imageQuery": "water service"
+      },
+      {
+        "kanji": "工事",
+        "kana": "こうじ",
+        "romaji": "kouji",
+        "meaning": "Pekerjaan konstruksi",
+        "imageQuery": "construction notice"
+      },
+      {
+        "kanji": "点検",
+        "kana": "てんけん",
+        "romaji": "tenken",
+        "meaning": "Pemeriksaan",
+        "imageQuery": "facility inspection"
+      },
+      {
+        "kanji": "以上",
+        "kana": "いじょう",
+        "romaji": "ijou",
+        "meaning": "Sekurang-kurangnya atau lebih",
+        "imageQuery": "minimum requirement notice"
+      }
+    ]
   }
 ]
