@@ -26,8 +26,8 @@ const lessonId = "elementary1-07";
 
 const askingMeetingDetailsConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>明日のイベント、何時にどこで会いますか。</>, romaji: "Ashita no ibento, nanji ni doko de aimasu ka?", translation: "Untuk acara besok, kita bertemu jam berapa dan di mana?", audioFileName: "irodori-elementary1-07-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>午前九時に駅の東口はどうですか。</>, romaji: "Gozen kuji ni eki no higashiguchi wa dou desu ka?", translation: "Bagaimana kalau pukul sembilan pagi di pintu keluar timur stasiun?", audioFileName: "irodori-elementary1-07-a01-l02.mp3" },
-  { speakerId: "yui", japanese: <>九時ですね。場所は東口ですか。</>, romaji: "Kuji desu ne. Basho wa higashiguchi desu ka?", translation: "Pukul sembilan, ya. Tempatnya pintu keluar timur?", audioFileName: "irodori-elementary1-07-a01-l03.mp3" },
+  { speakerId: "sota", japanese: <>午前九時はどうですか。待ち合わせ場所は駅の東口にしましょう。</>, romaji: "Gozen kuji wa dou desu ka? Machiawase basho wa eki no higashiguchi ni shimashou.", translation: "Bagaimana kalau pukul sembilan pagi? Mari tentukan pintu keluar timur stasiun sebagai tempat bertemu.", audioFileName: "irodori-elementary1-07-a01-l02.mp3" },
+  { speakerId: "yui", japanese: <>九時ですね。駅の東口ですね。</>, romaji: "Kuji desu ne. Eki no higashiguchi desu ne.", translation: "Pukul sembilan, ya. Di pintu keluar timur stasiun.", audioFileName: "irodori-elementary1-07-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。わかりやすいですよ。</>, romaji: "Hai. Wakariyasui desu yo.", translation: "Iya. Tempatnya mudah ditemukan.", audioFileName: "irodori-elementary1-07-a01-l04.mp3" },
   { speakerId: "yui", japanese: <>わかりました。では、明日。</>, romaji: "Wakarimashita. Dewa, ashita.", translation: "Baik, mengerti. Sampai besok.", audioFileName: "irodori-elementary1-07-a01-l05.mp3" },
 ];
