@@ -4949,5 +4949,164 @@
         "meaning": "Mengisi / menuliskan"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-16",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 16,
+    "lessonTitle": "I try not to eat too much.",
+    "vocab": [
+      {
+        "kanji": "体",
+        "kana": "からだ",
+        "romaji": "karada",
+        "meaning": "Tubuh"
+      },
+      {
+        "kanji": "顔",
+        "kana": "かお",
+        "romaji": "kao",
+        "meaning": "Wajah"
+      },
+      {
+        "kanji": "頭",
+        "kana": "あたま",
+        "romaji": "atama",
+        "meaning": "Kepala"
+      },
+      {
+        "kanji": "目",
+        "kana": "め",
+        "romaji": "me",
+        "meaning": "Mata"
+      },
+      {
+        "kanji": "耳",
+        "kana": "みみ",
+        "romaji": "mimi",
+        "meaning": "Telinga"
+      },
+      {
+        "kanji": "口",
+        "kana": "くち",
+        "romaji": "kuchi",
+        "meaning": "Mulut"
+      },
+      {
+        "kanji": "歯",
+        "kana": "は",
+        "romaji": "ha",
+        "meaning": "Gigi"
+      },
+      {
+        "kanji": "鼻",
+        "kana": "はな",
+        "romaji": "hana",
+        "meaning": "Hidung"
+      },
+      {
+        "kanji": "首",
+        "kana": "くび",
+        "romaji": "kubi",
+        "meaning": "Leher"
+      },
+      {
+        "kanji": "肩",
+        "kana": "かた",
+        "romaji": "kata",
+        "meaning": "Bahu"
+      },
+      {
+        "kanji": "胸",
+        "kana": "むね",
+        "romaji": "mune",
+        "meaning": "Dada"
+      },
+      {
+        "kanji": "お腹",
+        "kana": "おなか",
+        "romaji": "onaka",
+        "meaning": "Perut"
+      },
+      {
+        "kanji": "背中",
+        "kana": "せなか",
+        "romaji": "senaka",
+        "meaning": "Punggung"
+      },
+      {
+        "kanji": "腰",
+        "kana": "こし",
+        "romaji": "koshi",
+        "meaning": "Pinggang"
+      },
+      {
+        "kanji": "腕",
+        "kana": "うで",
+        "romaji": "ude",
+        "meaning": "Lengan"
+      },
+      {
+        "kanji": "手",
+        "kana": "て",
+        "romaji": "te",
+        "meaning": "Tangan"
+      },
+      {
+        "kanji": "指",
+        "kana": "ゆび",
+        "romaji": "yubi",
+        "meaning": "Jari"
+      },
+      {
+        "kanji": "足",
+        "kana": "あし",
+        "romaji": "ashi",
+        "meaning": "Kaki"
+      },
+      {
+        "kanji": "眠い",
+        "kana": "ねむい",
+        "romaji": "nemui",
+        "meaning": "Mengantuk"
+      },
+      {
+        "kanji": "眠る",
+        "kana": "ねむる",
+        "romaji": "nemuru",
+        "meaning": "Tidur"
+      },
+      {
+        "kanji": "疲れる",
+        "kana": "つかれる",
+        "romaji": "tsukareru",
+        "meaning": "Menjadi lelah"
+      },
+      {
+        "kanji": "だるい",
+        "kana": "だるい",
+        "romaji": "darui",
+        "meaning": "Merasa lemas"
+      },
+      {
+        "kanji": "歩く",
+        "kana": "あるく",
+        "romaji": "aruku",
+        "meaning": "Berjalan"
+      },
+      {
+        "kanji": "走る",
+        "kana": "はしる",
+        "romaji": "hashiru",
+        "meaning": "Berlari"
+      },
+      {
+        "kanji": "運動する",
+        "kana": "うんどうする",
+        "romaji": "undou suru",
+        "meaning": "Berolahraga"
+      }
+    ]
   }
 ]
