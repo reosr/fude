@@ -4313,5 +4313,164 @@
         "meaning": "Tepung terigu"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-12",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 12,
+    "lessonTitle": "Your bento looks delicious.",
+    "vocab": [
+      {
+        "kanji": "お弁当",
+        "kana": "おべんとう",
+        "romaji": "obentou",
+        "meaning": "Bekal / kotak makan"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan"
+      },
+      {
+        "kanji": "卵",
+        "kana": "たまご",
+        "romaji": "tamago",
+        "meaning": "Telur"
+      },
+      {
+        "kanji": "卵焼き",
+        "kana": "たまごやき",
+        "romaji": "tamagoyaki",
+        "meaning": "Telur dadar gulung Jepang"
+      },
+      {
+        "kanji": "味",
+        "kana": "あじ",
+        "romaji": "aji",
+        "meaning": "Rasa"
+      },
+      {
+        "kanji": "甘い",
+        "kana": "あまい",
+        "romaji": "amai",
+        "meaning": "Manis"
+      },
+      {
+        "kanji": "辛い",
+        "kana": "からい",
+        "romaji": "karai",
+        "meaning": "Pedas"
+      },
+      {
+        "kanji": "すっぱい",
+        "kana": "すっぱい",
+        "romaji": "suppai",
+        "meaning": "Asam"
+      },
+      {
+        "kanji": "しょっぱい",
+        "kana": "しょっぱい",
+        "romaji": "shoppai",
+        "meaning": "Asin"
+      },
+      {
+        "kanji": "苦い",
+        "kana": "にがい",
+        "romaji": "nigai",
+        "meaning": "Pahit"
+      },
+      {
+        "kanji": "おいしい",
+        "kana": "おいしい",
+        "romaji": "oishii",
+        "meaning": "Enak"
+      },
+      {
+        "kanji": "まずい",
+        "kana": "まずい",
+        "romaji": "mazui",
+        "meaning": "Tidak enak"
+      },
+      {
+        "kanji": "苦手",
+        "kana": "にがて",
+        "romaji": "nigate",
+        "meaning": "Kurang cocok / tidak mahir"
+      },
+      {
+        "kanji": "材料",
+        "kana": "ざいりょう",
+        "romaji": "zairyou",
+        "meaning": "Bahan"
+      },
+      {
+        "kanji": "入る",
+        "kana": "はいる",
+        "romaji": "hairu",
+        "meaning": "Masuk / terkandung"
+      },
+      {
+        "kanji": "入れる",
+        "kana": "いれる",
+        "romaji": "ireru",
+        "meaning": "Memasukkan"
+      },
+      {
+        "kanji": "食べてみる",
+        "kana": "たべてみる",
+        "romaji": "tabete miru",
+        "meaning": "Mencoba makan"
+      },
+      {
+        "kanji": "お湯",
+        "kana": "おゆ",
+        "romaji": "oyu",
+        "meaning": "Air panas"
+      },
+      {
+        "kanji": "調理方法",
+        "kana": "ちょうりほうほう",
+        "romaji": "chouri houhou",
+        "meaning": "Petunjuk penyiapan"
+      },
+      {
+        "kanji": "少し",
+        "kana": "すこし",
+        "romaji": "sukoshi",
+        "meaning": "Sedikit"
+      },
+      {
+        "kanji": "フタ",
+        "kana": "フタ",
+        "romaji": "futa",
+        "meaning": "Tutup kemasan"
+      },
+      {
+        "kanji": "取り出す",
+        "kana": "とりだす",
+        "romaji": "toridasu",
+        "meaning": "Mengeluarkan / mengambil keluar"
+      },
+      {
+        "kanji": "めん",
+        "kana": "めん",
+        "romaji": "men",
+        "meaning": "Mi"
+      },
+      {
+        "kanji": "注ぐ",
+        "kana": "そそぐ",
+        "romaji": "sosogu",
+        "meaning": "Menuangkan"
+      },
+      {
+        "kanji": "混ぜる",
+        "kana": "まぜる",
+        "romaji": "mazeru",
+        "meaning": "Mencampur"
+      }
+    ]
   }
 ]
