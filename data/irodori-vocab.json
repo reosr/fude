@@ -8405,5 +8405,364 @@
         "imageQuery": "family holiday photo album"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-10",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 10,
+    "lessonTitle": "What kind of clothes should I wear?",
+    "vocab": [
+      {
+        "kanji": "服",
+        "kana": "ふく",
+        "romaji": "fuku",
+        "meaning": "Pakaian",
+        "imageQuery": "clothing garments"
+      },
+      {
+        "kanji": "服装",
+        "kana": "ふくそう",
+        "romaji": "fukusou",
+        "meaning": "Busana atau cara berpakaian",
+        "imageQuery": "formal clothing outfit"
+      },
+      {
+        "kanji": "洋服",
+        "kana": "ようふく",
+        "romaji": "youfuku",
+        "meaning": "Pakaian model Barat",
+        "imageQuery": "Western-style clothes"
+      },
+      {
+        "kanji": "正装",
+        "kana": "せいそう",
+        "romaji": "seisou",
+        "meaning": "Pakaian resmi",
+        "imageQuery": "formal attire"
+      },
+      {
+        "kanji": "普段着",
+        "kana": "ふだんぎ",
+        "romaji": "fudangi",
+        "meaning": "Pakaian sehari-hari",
+        "imageQuery": "casual everyday clothes"
+      },
+      {
+        "kanji": "上着",
+        "kana": "うわぎ",
+        "romaji": "uwagi",
+        "meaning": "Jaket atau pakaian luar",
+        "imageQuery": "jacket outerwear"
+      },
+      {
+        "kanji": "袋",
+        "kana": "ふくろ",
+        "romaji": "fukuro",
+        "meaning": "Kantong atau tas",
+        "imageQuery": "bag"
+      },
+      {
+        "kanji": "靴",
+        "kana": "くつ",
+        "romaji": "kutsu",
+        "meaning": "Sepatu",
+        "imageQuery": "shoes"
+      },
+      {
+        "kanji": "靴下",
+        "kana": "くつした",
+        "romaji": "kutsushita",
+        "meaning": "Kaos kaki",
+        "imageQuery": "socks"
+      },
+      {
+        "kanji": "玄関",
+        "kana": "げんかん",
+        "romaji": "genkan",
+        "meaning": "Area pintu masuk rumah",
+        "imageQuery": "Japanese home entrance genkan"
+      },
+      {
+        "kanji": "脱ぐ",
+        "kana": "ぬぐ",
+        "romaji": "nugu",
+        "meaning": "Melepas pakaian atau sepatu",
+        "imageQuery": "taking off shoes"
+      },
+      {
+        "kanji": "履く",
+        "kana": "はく",
+        "romaji": "haku",
+        "meaning": "Memakai sepatu atau bawahan",
+        "imageQuery": "putting on shoes"
+      },
+      {
+        "kanji": "着る",
+        "kana": "きる",
+        "romaji": "kiru",
+        "meaning": "Memakai pakaian",
+        "imageQuery": "putting on clothes"
+      },
+      {
+        "kanji": "持ち物",
+        "kana": "もちもの",
+        "romaji": "mochimono",
+        "meaning": "Barang bawaan",
+        "imageQuery": "personal belongings"
+      },
+      {
+        "kanji": "持って行く",
+        "kana": "もっていく",
+        "romaji": "motte iku",
+        "meaning": "Membawa pergi",
+        "imageQuery": "carrying items"
+      },
+      {
+        "kanji": "花",
+        "kana": "はな",
+        "romaji": "hana",
+        "meaning": "Bunga",
+        "imageQuery": "flower"
+      },
+      {
+        "kanji": "お見舞い",
+        "kana": "おみまい",
+        "romaji": "omimai",
+        "meaning": "Kunjungan untuk menjenguk",
+        "imageQuery": "visiting a friend in hospital"
+      },
+      {
+        "kanji": "病院",
+        "kana": "びょういん",
+        "romaji": "byouin",
+        "meaning": "Rumah sakit",
+        "imageQuery": "hospital"
+      },
+      {
+        "kanji": "入院する",
+        "kana": "にゅういんする",
+        "romaji": "nyuuin suru",
+        "meaning": "Dirawat di rumah sakit",
+        "imageQuery": "hospital patient"
+      },
+      {
+        "kanji": "面会",
+        "kana": "めんかい",
+        "romaji": "menkai",
+        "meaning": "Kunjungan atau pertemuan",
+        "imageQuery": "hospital visit"
+      },
+      {
+        "kanji": "面会時間",
+        "kana": "めんかいじかん",
+        "romaji": "menkaijikan",
+        "meaning": "Jam kunjungan",
+        "imageQuery": "hospital visiting hours"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Resepsionis atau loket",
+        "imageQuery": "reception desk"
+      },
+      {
+        "kanji": "病室",
+        "kana": "びょうしつ",
+        "romaji": "byoushitsu",
+        "meaning": "Ruang pasien",
+        "imageQuery": "hospital room"
+      },
+      {
+        "kanji": "静か",
+        "kana": "しずか",
+        "romaji": "shizuka",
+        "meaning": "Tenang atau sunyi",
+        "imageQuery": "quiet"
+      },
+      {
+        "kanji": "声",
+        "kana": "こえ",
+        "romaji": "koe",
+        "meaning": "Suara",
+        "imageQuery": "voice"
+      },
+      {
+        "kanji": "店長",
+        "kana": "てんちょう",
+        "romaji": "tenchou",
+        "meaning": "Manajer toko",
+        "imageQuery": "shop manager"
+      },
+      {
+        "kanji": "自分",
+        "kana": "じぶん",
+        "romaji": "jibun",
+        "meaning": "Diri sendiri",
+        "imageQuery": "self"
+      },
+      {
+        "kanji": "全員",
+        "kana": "ぜんいん",
+        "romaji": "zen'in",
+        "meaning": "Semua orang",
+        "imageQuery": "everyone"
+      },
+      {
+        "kanji": "習慣",
+        "kana": "しゅうかん",
+        "romaji": "shuukan",
+        "meaning": "Kebiasaan",
+        "imageQuery": "customs traditions"
+      },
+      {
+        "kanji": "普通",
+        "kana": "ふつう",
+        "romaji": "futsuu",
+        "meaning": "Biasa atau normal",
+        "imageQuery": "ordinary"
+      },
+      {
+        "kanji": "暗い",
+        "kana": "くらい",
+        "romaji": "kurai",
+        "meaning": "Gelap",
+        "imageQuery": "dark"
+      },
+      {
+        "kanji": "怒る",
+        "kana": "おこる",
+        "romaji": "okoru",
+        "meaning": "Marah",
+        "imageQuery": "angry expression"
+      },
+      {
+        "kanji": "注意する",
+        "kana": "ちゅういする",
+        "romaji": "chuui suru",
+        "meaning": "Mengingatkan atau menegur",
+        "imageQuery": "gentle reminder"
+      },
+      {
+        "kanji": "気をつける",
+        "kana": "きをつける",
+        "romaji": "ki o tsukeru",
+        "meaning": "Berhati-hati",
+        "imageQuery": "being careful"
+      },
+      {
+        "kanji": "食器",
+        "kana": "しょっき",
+        "romaji": "shokki",
+        "meaning": "Peralatan makan",
+        "imageQuery": "tableware dishes"
+      },
+      {
+        "kanji": "片付ける",
+        "kana": "かたづける",
+        "romaji": "katazukeru",
+        "meaning": "Membereskan",
+        "imageQuery": "tidying up"
+      },
+      {
+        "kanji": "返す",
+        "kana": "かえす",
+        "romaji": "kaesu",
+        "meaning": "Mengembalikan",
+        "imageQuery": "returning an item"
+      },
+      {
+        "kanji": "会場",
+        "kana": "かいじょう",
+        "romaji": "kaijou",
+        "meaning": "Tempat acara",
+        "imageQuery": "event venue"
+      },
+      {
+        "kanji": "結婚式",
+        "kana": "けっこんしき",
+        "romaji": "kekkonshiki",
+        "meaning": "Pernikahan atau upacara pernikahan",
+        "imageQuery": "wedding ceremony"
+      },
+      {
+        "kanji": "招待状",
+        "kana": "しょうたいじょう",
+        "romaji": "shoutaijou",
+        "meaning": "Undangan",
+        "imageQuery": "invitation card"
+      },
+      {
+        "kanji": "出席する",
+        "kana": "しゅっせきする",
+        "romaji": "shusseki suru",
+        "meaning": "Menghadiri acara",
+        "imageQuery": "attending an event"
+      },
+      {
+        "kanji": "案内",
+        "kana": "あんない",
+        "romaji": "annai",
+        "meaning": "Petunjuk atau informasi",
+        "imageQuery": "information notice"
+      },
+      {
+        "kanji": "確認する",
+        "kana": "かくにんする",
+        "romaji": "kakunin suru",
+        "meaning": "Memastikan atau memeriksa",
+        "imageQuery": "checking information"
+      },
+      {
+        "kanji": "規則",
+        "kana": "きそく",
+        "romaji": "kisoku",
+        "meaning": "Peraturan",
+        "imageQuery": "rules"
+      },
+      {
+        "kanji": "許可",
+        "kana": "きょか",
+        "romaji": "kyoka",
+        "meaning": "Izin",
+        "imageQuery": "permission"
+      },
+      {
+        "kanji": "撮影する",
+        "kana": "さつえいする",
+        "romaji": "satsuei suru",
+        "meaning": "Mengambil foto atau video",
+        "imageQuery": "taking a photo"
+      },
+      {
+        "kanji": "撮る",
+        "kana": "とる",
+        "romaji": "toru",
+        "meaning": "Mengambil foto",
+        "imageQuery": "taking a photograph"
+      },
+      {
+        "kanji": "迷惑",
+        "kana": "めいわく",
+        "romaji": "meiwaku",
+        "meaning": "Gangguan atau ketidaknyamanan",
+        "imageQuery": "bothering others"
+      },
+      {
+        "kanji": "国によって",
+        "kana": "くにによって",
+        "romaji": "kuni ni yotte",
+        "meaning": "Bergantung pada negara",
+        "imageQuery": "different customs by country"
+      },
+      {
+        "kanji": "丁寧",
+        "kana": "ていねい",
+        "romaji": "teinei",
+        "meaning": "Sopan atau teliti",
+        "imageQuery": "polite manner"
+      }
+    ]
   }
 ]
