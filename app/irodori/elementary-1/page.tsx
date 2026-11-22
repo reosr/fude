@@ -23,9 +23,10 @@ export default function IrodoriElementaryOnePage() {
   const lessonTenCompleted = progress.completedLessons.includes("elementary1-10");
   const lessonElevenCompleted = progress.completedLessons.includes("elementary1-11");
   const lessonTwelveCompleted = progress.completedLessons.includes("elementary1-12");
+  const lessonFifteenCompleted = progress.completedLessons.includes("elementary1-15");
   const lessonFourteenCompleted = progress.completedLessons.includes("elementary1-14");
   const lessonThirteenCompleted = progress.completedLessons.includes("elementary1-13");
-  const availableCount = lessonFourteenCompleted ? 15 : lessonThirteenCompleted ? 14 : lessonTwelveCompleted ? 13 : lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const availableCount = lessonFifteenCompleted ? 16 : lessonFourteenCompleted ? 15 : lessonThirteenCompleted ? 14 : lessonTwelveCompleted ? 13 : lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -107,7 +108,8 @@ export default function IrodoriElementaryOnePage() {
               || (lesson === 12 && lessonElevenCompleted)
               || (lesson === 13 && lessonTwelveCompleted)
               || (lesson === 14 && lessonThirteenCompleted)
-              || (lesson === 15 && lessonFourteenCompleted);
+              || (lesson === 15 && lessonFourteenCompleted)
+              || (lesson === 16 && lessonFifteenCompleted);
             const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
@@ -140,6 +142,8 @@ export default function IrodoriElementaryOnePage() {
                                         ? "May I take a day off?"
                                         : lesson === 15
                                           ? "I have a fever, and my throat is sore."
+                                          : lesson === 16
+                                          ? "I try not to eat too much."
                                           : "Pelajaran " + lesson;
             const lessonDescription = lesson === 1
               ? "Sapaan setelah lama tidak bertemu, kabar terkini, durasi tinggal, dan kegiatan sehari-hari."
@@ -171,7 +175,9 @@ export default function IrodoriElementaryOnePage() {
                                         ? "Menelepon saat terlambat atau tidak masuk, meminta izin, mengajukan cuti, dan memahami formulir permohonan cuti."
                                         : lesson === 15
                                           ? "Menjelaskan gejala, menyebutkan sejak kapan gejala muncul, memahami arahan di klinik, dan mengisi formulir pertanyaan."
-                                          : "Materi orisinal sedang disiapkan.";
+                                          : lesson === 16
+                                            ? "Memberi saran sederhana, membicarakan kebiasaan sehat, memahami berita singkat, dan membaca poster pencegahan penyakit."
+                                            : "Materi orisinal sedang disiapkan.";
 
             const content = (
               <>
@@ -240,7 +246,9 @@ export default function IrodoriElementaryOnePage() {
                                         ? "/irodori/elementary-1/lesson-13"
                                         : lesson === 14
                                           ? "/irodori/elementary-1/lesson-14"
-                                          : "/irodori/elementary-1/lesson-15"
+                                          : lesson === 15
+                                            ? "/irodori/elementary-1/lesson-15"
+                                            : "/irodori/elementary-1/lesson-16"
                 }
                 className="group rounded-2xl border border-[#6E9A75]/35 bg-gradient-to-br from-[#263D2D] to-[#1B1A18] p-5 shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:border-[#A9CDB0]/60"
               >
