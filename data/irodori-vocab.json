@@ -9841,5 +9841,364 @@
         "imageQuery": "bag locker deposit"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-14",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 14,
+    "lessonTitle": "Will you cut my bangs a little shorter?",
+    "vocab": [
+      {
+        "kanji": "銀行",
+        "kana": "ぎんこう",
+        "romaji": "ginkou",
+        "meaning": "Bank",
+        "imageQuery": "bank service counter"
+      },
+      {
+        "kanji": "郵便局",
+        "kana": "ゆうびんきょく",
+        "romaji": "yuubinkyoku",
+        "meaning": "Kantor pos",
+        "imageQuery": "post office service counter"
+      },
+      {
+        "kanji": "理髪店",
+        "kana": "りはつてん",
+        "romaji": "rihatsuten",
+        "meaning": "Tempat pangkas rambut",
+        "imageQuery": "barbershop"
+      },
+      {
+        "kanji": "美容院",
+        "kana": "びよういん",
+        "romaji": "biyouin",
+        "meaning": "Salon rambut",
+        "imageQuery": "hair salon"
+      },
+      {
+        "kanji": "クリーニング店",
+        "kana": "クリーニングてん",
+        "romaji": "kuriiningu ten",
+        "meaning": "Toko penatu atau dry cleaning",
+        "imageQuery": "dry cleaning service shop"
+      },
+      {
+        "kanji": "コインランドリー",
+        "kana": "コインランドリー",
+        "romaji": "koin randorii",
+        "meaning": "Laundry koin",
+        "imageQuery": "coin laundry"
+      },
+      {
+        "kanji": "自転車店",
+        "kana": "じてんしゃてん",
+        "romaji": "jitensha ten",
+        "meaning": "Toko sepeda",
+        "imageQuery": "bicycle shop service counter"
+      },
+      {
+        "kanji": "リサイクルショップ",
+        "kana": "リサイクルショップ",
+        "romaji": "risaikuru shoppu",
+        "meaning": "Toko barang daur ulang atau bekas",
+        "imageQuery": "recycle and second hand shop"
+      },
+      {
+        "kanji": "サービス",
+        "kana": "サービス",
+        "romaji": "saabisu",
+        "meaning": "Layanan",
+        "imageQuery": "public service"
+      },
+      {
+        "kanji": "利用する",
+        "kana": "りようする",
+        "romaji": "riyou suru",
+        "meaning": "Menggunakan atau memanfaatkan",
+        "imageQuery": "using a public service"
+      },
+      {
+        "kanji": "利用方法",
+        "kana": "りようほうほう",
+        "romaji": "riyou houhou",
+        "meaning": "Cara penggunaan",
+        "imageQuery": "service instructions guide"
+      },
+      {
+        "kanji": "料金",
+        "kana": "りょうきん",
+        "romaji": "ryoukin",
+        "meaning": "Biaya atau tarif",
+        "imageQuery": "service price list"
+      },
+      {
+        "kanji": "別料金",
+        "kana": "べつりょうきん",
+        "romaji": "betsu ryoukin",
+        "meaning": "Biaya tambahan",
+        "imageQuery": "extra service charge notice"
+      },
+      {
+        "kanji": "仕上がり",
+        "kana": "しあがり",
+        "romaji": "shiagari",
+        "meaning": "Hasil akhir atau waktu selesai",
+        "imageQuery": "finished laundry clothes"
+      },
+      {
+        "kanji": "受け取る",
+        "kana": "うけとる",
+        "romaji": "uketoru",
+        "meaning": "Menerima atau mengambil",
+        "imageQuery": "parcel pickup counter"
+      },
+      {
+        "kanji": "預ける",
+        "kana": "あずける",
+        "romaji": "azukeru",
+        "meaning": "Menitipkan",
+        "imageQuery": "clothes drop off service"
+      },
+      {
+        "kanji": "お渡し",
+        "kana": "おわたし",
+        "romaji": "o-watashi",
+        "meaning": "Penyerahan atau pemberian",
+        "imageQuery": "service handover counter"
+      },
+      {
+        "kanji": "シミ",
+        "kana": "シミ",
+        "romaji": "shimi",
+        "meaning": "Noda",
+        "imageQuery": "stain on trousers"
+      },
+      {
+        "kanji": "落ちる",
+        "kana": "おちる",
+        "romaji": "ochiru",
+        "meaning": "Hilang atau terangkat (noda)",
+        "imageQuery": "stain removal before after"
+      },
+      {
+        "kanji": "シミ抜き",
+        "kana": "しみぬき",
+        "romaji": "shimi nuki",
+        "meaning": "Penghilangan noda",
+        "imageQuery": "stain removal service"
+      },
+      {
+        "kanji": "洗う",
+        "kana": "あらう",
+        "romaji": "arau",
+        "meaning": "Mencuci",
+        "imageQuery": "washing clothes"
+      },
+      {
+        "kanji": "空気",
+        "kana": "くうき",
+        "romaji": "kuuki",
+        "meaning": "Udara",
+        "imageQuery": "air"
+      },
+      {
+        "kanji": "空気入れ",
+        "kana": "くうきいれ",
+        "romaji": "kuuki ire",
+        "meaning": "Pompa angin",
+        "imageQuery": "bicycle hand pump"
+      },
+      {
+        "kanji": "タイヤ",
+        "kana": "タイヤ",
+        "romaji": "taiya",
+        "meaning": "Ban",
+        "imageQuery": "bicycle tire"
+      },
+      {
+        "kanji": "キャップ",
+        "kana": "キャップ",
+        "romaji": "kyappu",
+        "meaning": "Tutup atau katup kecil",
+        "imageQuery": "small valve cap"
+      },
+      {
+        "kanji": "はずす",
+        "kana": "はずす",
+        "romaji": "hazusu",
+        "meaning": "Melepaskan",
+        "imageQuery": "removing a cap"
+      },
+      {
+        "kanji": "はさむ",
+        "kana": "はさむ",
+        "romaji": "hasamu",
+        "meaning": "Menjepit",
+        "imageQuery": "clamp holding an object"
+      },
+      {
+        "kanji": "かぶせる",
+        "kana": "かぶせる",
+        "romaji": "kabuseru",
+        "meaning": "Memasang penutup",
+        "imageQuery": "placing a cover"
+      },
+      {
+        "kanji": "油を差す",
+        "kana": "あぶらをさす",
+        "romaji": "abura o sasu",
+        "meaning": "Memberi pelumas",
+        "imageQuery": "bicycle maintenance lubrication"
+      },
+      {
+        "kanji": "宅配便",
+        "kana": "たくはいびん",
+        "romaji": "takuhaibin",
+        "meaning": "Layanan pengiriman paket",
+        "imageQuery": "parcel delivery box"
+      },
+      {
+        "kanji": "荷物",
+        "kana": "にもつ",
+        "romaji": "nimotsu",
+        "meaning": "Paket atau barang bawaan",
+        "imageQuery": "shipping parcel"
+      },
+      {
+        "kanji": "着払い",
+        "kana": "ちゃくばらい",
+        "romaji": "chakubarai",
+        "meaning": "Ongkos kirim dibayar penerima",
+        "imageQuery": "cash on delivery parcel form"
+      },
+      {
+        "kanji": "元払い",
+        "kana": "もとばらい",
+        "romaji": "motobarai",
+        "meaning": "Ongkos kirim dibayar pengirim",
+        "imageQuery": "prepaid parcel form"
+      },
+      {
+        "kanji": "伝票",
+        "kana": "でんぴょう",
+        "romaji": "denpyou",
+        "meaning": "Formulir pengiriman",
+        "imageQuery": "parcel waybill form"
+      },
+      {
+        "kanji": "配達",
+        "kana": "はいたつ",
+        "romaji": "haitatsu",
+        "meaning": "Pengantaran",
+        "imageQuery": "parcel delivery"
+      },
+      {
+        "kanji": "再配達",
+        "kana": "さいはいたつ",
+        "romaji": "sai haitatsu",
+        "meaning": "Pengiriman ulang",
+        "imageQuery": "redelivery notice"
+      },
+      {
+        "kanji": "不在",
+        "kana": "ふざい",
+        "romaji": "fuzai",
+        "meaning": "Tidak berada di tempat",
+        "imageQuery": "not at home delivery notice"
+      },
+      {
+        "kanji": "通知",
+        "kana": "つうち",
+        "romaji": "tsuuchi",
+        "meaning": "Pemberitahuan",
+        "imageQuery": "delivery notification"
+      },
+      {
+        "kanji": "受取人",
+        "kana": "うけとりにん",
+        "romaji": "uketorin nin",
+        "meaning": "Penerima",
+        "imageQuery": "recipient name field"
+      },
+      {
+        "kanji": "保管期限",
+        "kana": "ほかんきげん",
+        "romaji": "hokan kigen",
+        "meaning": "Batas waktu penyimpanan",
+        "imageQuery": "parcel storage deadline notice"
+      },
+      {
+        "kanji": "郵便物",
+        "kana": "ゆうびんぶつ",
+        "romaji": "yuubinbutsu",
+        "meaning": "Kiriman pos",
+        "imageQuery": "mail delivery envelope"
+      },
+      {
+        "kanji": "希望時間帯",
+        "kana": "きぼうじかんたい",
+        "romaji": "kibou jikantai",
+        "meaning": "Rentang waktu yang diinginkan",
+        "imageQuery": "delivery time slot form"
+      },
+      {
+        "kanji": "窓口",
+        "kana": "まどぐち",
+        "romaji": "madoguchi",
+        "meaning": "Loket layanan",
+        "imageQuery": "public information counter"
+      },
+      {
+        "kanji": "外国",
+        "kana": "がいこく",
+        "romaji": "gaikoku",
+        "meaning": "Negara asing atau luar negeri",
+        "imageQuery": "foreign country"
+      },
+      {
+        "kanji": "情報",
+        "kana": "じょうほう",
+        "romaji": "jouhou",
+        "meaning": "Informasi",
+        "imageQuery": "information guide"
+      },
+      {
+        "kanji": "相談",
+        "kana": "そうだん",
+        "romaji": "soudan",
+        "meaning": "Konsultasi",
+        "imageQuery": "consultation counter"
+      },
+      {
+        "kanji": "質問",
+        "kana": "しつもん",
+        "romaji": "shitsumon",
+        "meaning": "Pertanyaan",
+        "imageQuery": "question form"
+      },
+      {
+        "kanji": "自動",
+        "kana": "じどう",
+        "romaji": "jidou",
+        "meaning": "Otomatis",
+        "imageQuery": "automatic service machine"
+      },
+      {
+        "kanji": "入力する",
+        "kana": "にゅうりょくする",
+        "romaji": "nyuuryoku suru",
+        "meaning": "Memasukkan data",
+        "imageQuery": "data entry screen"
+      },
+      {
+        "kanji": "近所",
+        "kana": "きんじょ",
+        "romaji": "kinjo",
+        "meaning": "Lingkungan sekitar",
+        "imageQuery": "neighborhood post office"
+      }
+    ]
   }
 ]
