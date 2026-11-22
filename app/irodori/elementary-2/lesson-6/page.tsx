@@ -583,6 +583,7 @@ export default function IrodoriElementaryTwoLessonSixPage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [ratings, setRatings] = useState<Record<string, IrodoriRating>>({});
+  const [travelDraft, setTravelDraft] = useState("");
 
   const isCompleted = progress.completedLessons.includes(lessonId);
   const visibleRatings = { ...(progress.selfEvaluations[lessonId] ?? {}), ...ratings };
@@ -811,6 +812,31 @@ export default function IrodoriElementaryTwoLessonSixPage() {
           <p className="mt-2 text-[10px] leading-6 text-[#E7C58C]">{travelPost.reading}</p>
           <p className="mt-3 border-t border-white/[0.07] pt-3 text-xs leading-6 text-[#A9A398]">{travelPost.translation}</p>
         </article>
+      </section>
+
+      <section className="space-y-4 rounded-2xl border border-[#9A7442]/20 bg-[#211D17] p-4 md:p-5">
+        <div>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#E7C58C]">LATIHAN MENULIS</p>
+          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Buat unggahan perjalananmu sendiri</h2>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Tulislah 2–4 kalimat sederhana dalam bahasa Jepang. Ceritakan kapan dan dengan siapa kamu pergi, apa yang dilakukan, serta bagaimana kesanmu.</p>
+        </div>
+        <div className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
+          <p className="font-mincho text-sm leading-7 text-[#F1EBDD]">いつ、だれと、どこへ行きましたか。何をしましたか。どう思いましたか。</p>
+          <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">Kapan, dengan siapa, dan ke mana kamu pergi? Apa yang kamu lakukan? Bagaimana perasaanmu?</p>
+        </div>
+        <label htmlFor="travel-post-draft" className="block text-xs font-semibold text-[#E7C58C]">Tulis unggahan dalam bahasa Jepang</label>
+        <textarea
+          id="travel-post-draft"
+          value={travelDraft}
+          onChange={(event) => setTravelDraft(event.target.value)}
+          rows={5}
+          placeholder="先週、友だちと二人で……"
+          className="w-full resize-y rounded-xl border border-white/[0.1] bg-[#171411] px-3 py-3 font-mincho text-sm leading-7 text-[#F1EBDD] outline-none transition-colors placeholder:text-[#746F65] focus:border-[#E7C58C]/50"
+        />
+        <div className="flex items-center justify-between gap-3">
+          <p className="text-[10px] text-[#817A73]">Draf ini hanya untuk latihan di halaman ini.</p>
+          <span className="text-[10px] tabular-nums text-[#E7C58C]">{travelDraft.length} karakter</span>
+        </div>
       </section>
 
       <section className="space-y-4">
