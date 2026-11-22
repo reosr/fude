@@ -7,13 +7,10 @@ import {
   ArrowLeft,
   CalendarDays,
   CheckCircle2,
-  Clock3,
   FileText,
-  MapPin,
   PhoneCall,
   Receipt,
   RefreshCw,
-  ShoppingBag,
   Utensils,
 } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
@@ -80,7 +77,7 @@ const confirmIngredientsConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>そうですか。卵のアレルギーがあるので、卵を抜きにできますか。</>,
+    japanese: <>そうですか。卵のアレルギーがあるので、卵抜きにできますか。</>,
     romaji: "Sou desu ka. Tamago no arerugii ga aru node, tamago o nuki ni dekimasu ka?",
     translation: "Begitu, ya. Karena saya alergi telur, apakah telurnya bisa dihilangkan?",
     audioFileName: "irodori-elementary2-03-a02-l03.mp3",
@@ -715,7 +712,7 @@ export default function IrodoriElementaryTwoLessonThreePage() {
         <div className="grid gap-2 sm:grid-cols-2">
           {[
             ["エビのアレルギーがあるので、食べられないんです。", "Ebi no arerugii ga aru node, taberarenai n desu.", "Karena saya alergi udang, saya tidak bisa memakannya."],
-            ["卵が苦手なので、卵を抜きでお願いします。", "Tamago ga nigate na node, tamago o nuki de onegaishimasu.", "Karena saya kurang suka telur, tolong tanpa telur."],
+            ["卵が苦手なので、卵抜きでお願いします。", "Tamago ga nigate na node, tamago o nuki de onegaishimasu.", "Karena saya kurang suka telur, tolong tanpa telur."],
             ["この料理に牛乳は入っていますか。", "Kono ryouri ni gyuunyuu wa haitte imasu ka?", "Apakah hidangan ini mengandung susu?"],
             ["このソース、ナッツが入っていますよね。", "Kono soosu, nattsu ga haitte imasu yo ne.", "Saus ini mengandung kacang, ya?"],
             ["小麦のアレルギーがあるので、確認してください。", "Komugi no arerugii ga aru node, kakunin shite kudasai.", "Karena saya alergi gandum, mohon periksa terlebih dahulu."],
