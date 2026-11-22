@@ -6610,5 +6610,364 @@
         "imageQuery": "shop suffix"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-05",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 5,
+    "lessonTitle": "You should make a reservation early.",
+    "vocab": [
+      {
+        "kanji": "観光地",
+        "kana": "かんこうち",
+        "romaji": "kankouchi",
+        "meaning": "Tempat wisata",
+        "imageQuery": "tourist destination"
+      },
+      {
+        "kanji": "観光客",
+        "kana": "かんこうきゃく",
+        "romaji": "kankoukyaku",
+        "meaning": "Wisatawan",
+        "imageQuery": "tourist"
+      },
+      {
+        "kanji": "自然",
+        "kana": "しぜん",
+        "romaji": "shizen",
+        "meaning": "Alam",
+        "imageQuery": "nature"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan",
+        "imageQuery": "scenery"
+      },
+      {
+        "kanji": "豊か",
+        "kana": "ゆたか",
+        "romaji": "yutaka",
+        "meaning": "Kaya atau melimpah",
+        "imageQuery": "abundant"
+      },
+      {
+        "kanji": "海",
+        "kana": "うみ",
+        "romaji": "umi",
+        "meaning": "Laut",
+        "imageQuery": "sea"
+      },
+      {
+        "kanji": "暖かい",
+        "kana": "あたたかい",
+        "romaji": "atatakai",
+        "meaning": "Hangat",
+        "imageQuery": "warm weather"
+      },
+      {
+        "kanji": "涼しい",
+        "kana": "すずしい",
+        "romaji": "suzushii",
+        "meaning": "Sejuk",
+        "imageQuery": "cool weather"
+      },
+      {
+        "kanji": "古い町",
+        "kana": "ふるいまち",
+        "romaji": "furui machi",
+        "meaning": "Kota tua",
+        "imageQuery": "old town"
+      },
+      {
+        "kanji": "人が多い",
+        "kana": "ひとがおおい",
+        "romaji": "hito ga ooi",
+        "meaning": "Banyak orang",
+        "imageQuery": "crowded place"
+      },
+      {
+        "kanji": "混んでいる",
+        "kana": "こんでいる",
+        "romaji": "konde iru",
+        "meaning": "Ramai atau padat",
+        "imageQuery": "crowded"
+      },
+      {
+        "kanji": "人気がある",
+        "kana": "にんきがある",
+        "romaji": "ninki ga aru",
+        "meaning": "Populer",
+        "imageQuery": "popular"
+      },
+      {
+        "kanji": "遊べる",
+        "kana": "あそべる",
+        "romaji": "asoberu",
+        "meaning": "Bisa bermain",
+        "imageQuery": "recreation"
+      },
+      {
+        "kanji": "食べられる",
+        "kana": "たべられる",
+        "romaji": "taberareru",
+        "meaning": "Bisa makan",
+        "imageQuery": "food"
+      },
+      {
+        "kanji": "見られる",
+        "kana": "みられる",
+        "romaji": "mirareru",
+        "meaning": "Bisa melihat",
+        "imageQuery": "sightseeing"
+      },
+      {
+        "kanji": "水族館",
+        "kana": "すいぞくかん",
+        "romaji": "suizokukan",
+        "meaning": "Akuarium",
+        "imageQuery": "aquarium"
+      },
+      {
+        "kanji": "お土産",
+        "kana": "おみやげ",
+        "romaji": "omiyage",
+        "meaning": "Oleh-oleh",
+        "imageQuery": "souvenir"
+      },
+      {
+        "kanji": "旅行",
+        "kana": "りょこう",
+        "romaji": "ryokou",
+        "meaning": "Perjalanan atau wisata",
+        "imageQuery": "travel"
+      },
+      {
+        "kanji": "行き先",
+        "kana": "いきさき",
+        "romaji": "ikisaki",
+        "meaning": "Tujuan perjalanan",
+        "imageQuery": "destination"
+      },
+      {
+        "kanji": "計画",
+        "kana": "けいかく",
+        "romaji": "keikaku",
+        "meaning": "Rencana",
+        "imageQuery": "planning"
+      },
+      {
+        "kanji": "交通",
+        "kana": "こうつう",
+        "romaji": "koutsuu",
+        "meaning": "Transportasi atau lalu lintas",
+        "imageQuery": "transportation"
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "meaning": "Praktis atau nyaman",
+        "imageQuery": "convenient"
+      },
+      {
+        "kanji": "飛行機",
+        "kana": "ひこうき",
+        "romaji": "hikouki",
+        "meaning": "Pesawat terbang",
+        "imageQuery": "airplane"
+      },
+      {
+        "kanji": "船",
+        "kana": "ふね",
+        "romaji": "fune",
+        "meaning": "Kapal",
+        "imageQuery": "ship"
+      },
+      {
+        "kanji": "電車",
+        "kana": "でんしゃ",
+        "romaji": "densha",
+        "meaning": "Kereta",
+        "imageQuery": "train"
+      },
+      {
+        "kanji": "バス",
+        "kana": "バス",
+        "romaji": "basu",
+        "meaning": "Bus",
+        "imageQuery": "bus"
+      },
+      {
+        "kanji": "車",
+        "kana": "くるま",
+        "romaji": "kuruma",
+        "meaning": "Mobil",
+        "imageQuery": "car"
+      },
+      {
+        "kanji": "自転車",
+        "kana": "じてんしゃ",
+        "romaji": "jitensha",
+        "meaning": "Sepeda",
+        "imageQuery": "bicycle"
+      },
+      {
+        "kanji": "出発する",
+        "kana": "しゅっぱつする",
+        "romaji": "shuppatsu suru",
+        "meaning": "Berangkat",
+        "imageQuery": "departure"
+      },
+      {
+        "kanji": "到着する",
+        "kana": "とうちゃくする",
+        "romaji": "touchaku suru",
+        "meaning": "Tiba",
+        "imageQuery": "arrival"
+      },
+      {
+        "kanji": "泊まる",
+        "kana": "とまる",
+        "romaji": "tomaru",
+        "meaning": "Menginap",
+        "imageQuery": "lodging"
+      },
+      {
+        "kanji": "旅館",
+        "kana": "りょかん",
+        "romaji": "ryokan",
+        "meaning": "Penginapan tradisional Jepang",
+        "imageQuery": "ryokan inn"
+      },
+      {
+        "kanji": "民宿",
+        "kana": "みんしゅく",
+        "romaji": "minshuku",
+        "meaning": "Penginapan kecil milik keluarga",
+        "imageQuery": "guesthouse"
+      },
+      {
+        "kanji": "宿",
+        "kana": "やど",
+        "romaji": "yado",
+        "meaning": "Penginapan",
+        "imageQuery": "accommodation"
+      },
+      {
+        "kanji": "予約する",
+        "kana": "よやくする",
+        "romaji": "yoyaku suru",
+        "meaning": "Memesan atau reservasi",
+        "imageQuery": "reservation"
+      },
+      {
+        "kanji": "調べる",
+        "kana": "しらべる",
+        "romaji": "shiraberu",
+        "meaning": "Memeriksa atau mencari tahu",
+        "imageQuery": "research"
+      },
+      {
+        "kanji": "準備する",
+        "kana": "じゅんびする",
+        "romaji": "junbi suru",
+        "meaning": "Mempersiapkan",
+        "imageQuery": "preparation"
+      },
+      {
+        "kanji": "持って行く",
+        "kana": "もっていく",
+        "romaji": "motte iku",
+        "meaning": "Membawa pergi",
+        "imageQuery": "travel packing"
+      },
+      {
+        "kanji": "上着",
+        "kana": "うわぎ",
+        "romaji": "uwagi",
+        "meaning": "Jaket atau pakaian luar",
+        "imageQuery": "jacket"
+      },
+      {
+        "kanji": "帽子",
+        "kana": "ぼうし",
+        "romaji": "boushi",
+        "meaning": "Topi",
+        "imageQuery": "hat"
+      },
+      {
+        "kanji": "手袋",
+        "kana": "てぶくろ",
+        "romaji": "tebukuro",
+        "meaning": "Sarung tangan",
+        "imageQuery": "gloves"
+      },
+      {
+        "kanji": "サングラス",
+        "kana": "サングラス",
+        "romaji": "sangurasu",
+        "meaning": "Kacamata hitam",
+        "imageQuery": "sunglasses"
+      },
+      {
+        "kanji": "水着",
+        "kana": "みずぎ",
+        "romaji": "mizugi",
+        "meaning": "Baju renang",
+        "imageQuery": "swimwear"
+      },
+      {
+        "kanji": "旅行サイト",
+        "kana": "りょこうサイト",
+        "romaji": "ryokou saito",
+        "meaning": "Situs perjalanan",
+        "imageQuery": "travel website"
+      },
+      {
+        "kanji": "口コミ",
+        "kana": "くちこみ",
+        "romaji": "kuchikomi",
+        "meaning": "Ulasan pengguna",
+        "imageQuery": "travel review"
+      },
+      {
+        "kanji": "評判",
+        "kana": "ひょうばん",
+        "romaji": "hyouban",
+        "meaning": "Reputasi atau penilaian",
+        "imageQuery": "reputation"
+      },
+      {
+        "kanji": "おすすめ",
+        "kana": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi",
+        "imageQuery": "recommendation"
+      },
+      {
+        "kanji": "いつか",
+        "kana": "いつか",
+        "romaji": "itsuka",
+        "meaning": "Suatu hari nanti",
+        "imageQuery": "someday"
+      },
+      {
+        "kanji": "紅葉",
+        "kana": "こうよう",
+        "romaji": "kouyou",
+        "meaning": "Daun musim gugur yang berubah warna",
+        "imageQuery": "autumn leaves"
+      },
+      {
+        "kanji": "温泉",
+        "kana": "おんせん",
+        "romaji": "onsen",
+        "meaning": "Pemandian air panas alami",
+        "imageQuery": "hot spring"
+      }
+    ]
   }
 ]
