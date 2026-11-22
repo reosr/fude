@@ -22,7 +22,8 @@ export default function IrodoriElementaryOnePage() {
   const lessonNineCompleted = progress.completedLessons.includes("elementary1-09");
   const lessonTenCompleted = progress.completedLessons.includes("elementary1-10");
   const lessonElevenCompleted = progress.completedLessons.includes("elementary1-11");
-  const availableCount = lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const lessonTwelveCompleted = progress.completedLessons.includes("elementary1-12");
+  const availableCount = lessonTwelveCompleted ? 13 : lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -102,6 +103,7 @@ export default function IrodoriElementaryOnePage() {
               || (lesson === 10 && lessonNineCompleted)
               || (lesson === 11 && lessonTenCompleted)
               || (lesson === 12 && lessonElevenCompleted);
+              || (lesson === 13 && lessonTwelveCompleted);
             const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
@@ -128,7 +130,9 @@ export default function IrodoriElementaryOnePage() {
                                   ? "I will bring meat and vegetables."
                                   : lesson === 12
                                     ? "Your bento looks delicious."
-                                    : "Pelajaran " + lesson;
+                                    : lesson === 13
+                                      ? "It will probably end in about ten minutes."
+                                      : "Pelajaran " + lesson;
             const lessonDescription = lesson === 1
               ? "Sapaan setelah lama tidak bertemu, kabar terkini, durasi tinggal, dan kegiatan sehari-hari."
               : lesson === 2
@@ -153,7 +157,9 @@ export default function IrodoriElementaryOnePage() {
                                   ? "Membagi barang untuk acara makan bersama, memilih makanan, dan membaca informasi bahan serta tanggal pada label."
                                   : lesson === 12
                                     ? "Mengomentari penampilan dan rasa makanan, bertanya tentang bahan masakan, dan memahami petunjuk pada kemasan."
-                                    : "Materi orisinal sedang disiapkan.";
+                                    : lesson === 13
+                                      ? "Melaporkan kendala, memperkirakan waktu pekerjaan, memahami instruksi penggunaan mesin, menyiapkan rapat, dan membaca email."
+                                      : "Materi orisinal sedang disiapkan.";
 
             const content = (
               <>
@@ -216,7 +222,9 @@ export default function IrodoriElementaryOnePage() {
                                     ? "/irodori/elementary-1/lesson-10"
                                     : lesson === 11
                                       ? "/irodori/elementary-1/lesson-11"
-                                      : "/irodori/elementary-1/lesson-12"
+                                      : lesson === 12
+                                        ? "/irodori/elementary-1/lesson-12"
+                                        : "/irodori/elementary-1/lesson-13"
                 }
                 className="group rounded-2xl border border-[#6E9A75]/35 bg-gradient-to-br from-[#263D2D] to-[#1B1A18] p-5 shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:border-[#A9CDB0]/60"
               >
