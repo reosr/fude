@@ -14,7 +14,8 @@ export default function IrodoriElementaryOnePage() {
   const lessonOneCompleted = progress.completedLessons.includes("elementary1-01");
   const lessonTwoCompleted = progress.completedLessons.includes("elementary1-02");
   const lessonThreeCompleted = progress.completedLessons.includes("elementary1-03");
-  const availableCount = lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const lessonFourCompleted = progress.completedLessons.includes("elementary1-04");
+  const availableCount = lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -85,7 +86,8 @@ export default function IrodoriElementaryOnePage() {
             const isAvailable = lesson === 1
               || (lesson === 2 && lessonOneCompleted)
               || (lesson === 3 && lessonTwoCompleted)
-              || (lesson === 4 && lessonThreeCompleted);
+              || (lesson === 4 && lessonThreeCompleted)
+              || (lesson === 5 && lessonFourCompleted);
             const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
@@ -96,7 +98,9 @@ export default function IrodoriElementaryOnePage() {
                   ? "It gets very cold in winter."
                   : lesson === 4
                     ? "It rained heavily yesterday."
-                    : "Pelajaran " + lesson;
+                    : lesson === 5
+                      ? "It is very lively and convenient."
+                      : "Pelajaran " + lesson;
             const lessonDescription = lesson === 1
               ? "Sapaan setelah lama tidak bertemu, kabar terkini, durasi tinggal, dan kegiatan sehari-hari."
               : lesson === 2
@@ -105,7 +109,9 @@ export default function IrodoriElementaryOnePage() {
                   ? "Empat musim di Jepang, iklim negara sendiri, cuaca, dan musim favorit."
                   : lesson === 4
                     ? "Menyapa sambil membicarakan cuaca, memahami prakiraan, dan membaca unggahan cuaca."
-                    : "Materi orisinal sedang disiapkan.";
+                    : lesson === 5
+                      ? "Mendeskripsikan kota, bertanya tentang tempat rekomendasi, dan membaca peta sederhana."
+                      : "Materi orisinal sedang disiapkan.";
 
             const content = (
               <>
@@ -152,7 +158,9 @@ export default function IrodoriElementaryOnePage() {
                       ? "/irodori/elementary-1/lesson-2"
                       : lesson === 3
                       ? "/irodori/elementary-1/lesson-3"
-                      : "/irodori/elementary-1/lesson-4"
+                      : lesson === 4
+                        ? "/irodori/elementary-1/lesson-4"
+                        : "/irodori/elementary-1/lesson-5"
                 }
                 className="group rounded-2xl border border-[#6E9A75]/35 bg-gradient-to-br from-[#263D2D] to-[#1B1A18] p-5 shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:border-[#A9CDB0]/60"
               >
