@@ -54,7 +54,7 @@ export default function Kosakata() {
   const [currentBab, setCurrentBab] = useState<number>(1);
   const [search, setSearch] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedWord, setSelectedWord] = useState<any | null>(null);
+  const [selectedWord, setSelectedWord] = useState<VocabItem | null>(null);
   const [memorized, setMemorized] = useState<string[]>([]);
   const [memFilter, setMemFilter] = useState<"all" | "belum" | "sudah">("all");
   const [imageMap, setImageMap] = useState<Record<string, string>>({});
@@ -246,7 +246,8 @@ export default function Kosakata() {
                 </div>
                 
                 <div className="flex-1 min-w-0 py-3 pr-4 pl-1 flex flex-col justify-center">
-                  <span className="absolute top-3 right-3 text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 backdrop-blur-sm px-2 py-0.5 rounded-md border border-[#33312E]/50">
+                  <span title={getVocabSourceLabel(v)}
+                    className="absolute top-3 right-3 max-w-[calc(100%-1rem)] truncate text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 backdrop-blur-sm px-2 py-0.5 rounded-md border border-[#33312E]/50">
                     {getVocabSourceLabel(v)}
                   </span>
                   
@@ -264,7 +265,7 @@ export default function Kosakata() {
 
         {filteredVocab.length === 0 && (
           <div className="col-span-full text-center py-10 text-[#A3A099]">
-            Tidak ada kosakata yang cocok dengan pencarian "{search}".
+            Tidak ada kosakata yang cocok dengan pencarian &quot;{search}&quot;.
           </div>
         )}
       </div>
