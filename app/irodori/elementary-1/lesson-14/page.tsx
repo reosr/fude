@@ -19,7 +19,7 @@ const phoneCallConversation: IrodoriUtterance[] = [
 ];
 
 const askingBriefPermissionConversation: IrodoriUtterance[] = [
-{speakerId:"sota",japanese:<>あのう、すみません。少し休憩してもいいですか。</>,romaji:"Anou, sumimasen. Sukoshi k休憩 shite mo ii desu ka.",translation:"Permisi. Bolehkah saya beristirahat sebentar?",audioFileName:"irodori-elementary1-14-a02-l01.mp3"},
+{speakerId:"sota",japanese:<>あのう、すみません。少し休憩してもいいですか。</>,romaji:"Anou, sumimasen. Sukoshi kyuukei shite mo ii desu ka?",translation:"Permisi. Bolehkah saya beristirahat sebentar?",audioFileName:"irodori-elementary1-14-a02-l01.mp3"},
 {speakerId:"akiko",japanese:<>はい、どうぞ。</>,romaji:"Hai, douzo.",translation:"Ya, silakan.",audioFileName:"irodori-elementary1-14-a02-l02.mp3"},
 {speakerId:"sota",japanese:<>ありがとうございます。すぐ戻ります。</>,romaji:"Arigatou gozaimasu. Sugu modorimasu.",translation:"Terima kasih. Saya segera kembali.",audioFileName:"irodori-elementary1-14-a02-l03.mp3"},
 {speakerId:"akiko",japanese:<>わかりました。</>,romaji:"Wakarimashita.",translation:"Baik.",audioFileName:"irodori-elementary1-14-a02-l04.mp3"},
