@@ -71,7 +71,6 @@ const vocabRows = [
   ["銀行", "ぎんこう · ginkou", "Bank"],
   ["郵便局", "ゆうびんきょく · yuubinkyoku", "Kantor pos"],
   ["理髪店", "りはつてん · rihatsuten", "Tempat pangkas rambut"],
-  ["床屋", "とこや · tokoya", "Pangkas rambut (sebutan sehari-hari)"],
   ["美容院", "びよういん · biyouin", "Salon rambut"],
   ["クリーニング店", "クリーニングてん · kuriiningu ten", "Toko penatu atau dry cleaning"],
   ["コインランドリー", "コインランドリー · koin randorii", "Laundry koin"],
