@@ -1,6 +1,6 @@
 "use client";
 
-import { getUnlockedVocab, type VocabItem } from "../../lib/vocab";
+import { getUnlockedVocab, getVocabSourceLabel, type VocabItem } from "../../lib/vocab";
 import { useState, useEffect, useRef } from "react";
 import { getProgress } from "../../lib/progress";
 import { getMemorizedKanji } from "../../lib/memorized";
@@ -247,7 +247,7 @@ export default function Kosakata() {
                 
                 <div className="flex-1 min-w-0 py-3 pr-4 pl-1 flex flex-col justify-center">
                   <span className="absolute top-3 right-3 text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 backdrop-blur-sm px-2 py-0.5 rounded-md border border-[#33312E]/50">
-                    Bab {v.bab}
+                    {getVocabSourceLabel(v)}
                   </span>
                   
                   <p className="text-xs text-[#EAE6DD]/80 mt-3 truncate">{v.kana}</p>
@@ -282,7 +282,7 @@ export default function Kosakata() {
             <div className="flex justify-between items-center p-5 border-b border-[#33312E] sticky top-0 bg-[#1A1918]/90 backdrop-blur-md z-20">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold text-[#C93438] bg-[#C93438]/10 px-2 py-1 rounded-md border border-[#C93438]/20">
-                  Bab {selectedWord.bab}
+                  {getVocabSourceLabel(selectedWord)}
                 </span>
                 {selectedVerbType && (
                   <span className={`text-xs font-bold px-2 py-1 rounded-md border uppercase tracking-wider ${typeBadgeClass(selectedVerbType)}`}>
