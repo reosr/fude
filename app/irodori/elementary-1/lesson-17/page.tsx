@@ -13,7 +13,6 @@ const speakers = IRODORI_SPEAKERS;
 const guestYui = { ...speakers.yui, name: "Yui", role: "Tamu" };
 const hostSota = { ...speakers.sota, name: "Sota", role: "Tuan rumah" };
 const friendAkiko = { ...speakers.akiko, name: "Akiko", role: "Teman" };
-const brotherKenji = { ...speakers.kenji, name: "Kakak", role: "Keluarga" };
 const lessonId = "elementary1-17";
 
 const visitingHomeConversation: IrodoriUtterance[] = [
