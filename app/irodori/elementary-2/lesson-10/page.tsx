@@ -52,7 +52,7 @@ const foodCourtMannersConversation: IrodoriUtterance[] = [
 const homeCustomDifferenceConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>日本の家に入るとき、靴を脱がなくちゃいけませんか。</>, romaji: "Nihon no ie ni hairu toki, kutsu o nuganakucha ikemasen ka?", translation: "Saat masuk ke rumah di Jepang, apakah kita harus melepas sepatu?", audioFileName: "irodori-elementary2-10-a04-l01.mp3" },
   { speakerId: "kenji", japanese: <>はい。玄関で靴を脱ぎます。靴のまま入っちゃだめですよ。</>, romaji: "Hai. Genkan de kutsu o nugimasu. Kutsu no mama haitcha dame desu yo.", translation: "Ya. Sepatu dilepas di area pintu masuk. Jangan masuk ke dalam rumah dengan sepatu.", audioFileName: "irodori-elementary2-10-a04-l02.mp3" },
-  { speakerId: "akiko", japanese: <>私の国でも同じ家がありますが、家によって違います。</>, romaji: "Watashi no kuni demo onaji ie ga arimasu ga, ie ni yotte chigaimasu.", translation: "Di negara saya juga ada rumah dengan kebiasaan yang sama, tetapi berbeda-beda menurut rumah.", audioFileName: "irodori-elementary2-10-a04-l03.mp3" },
+  { speakerId: "akiko", japanese: <>私の国でも、家によって習慣が違います。</>, romaji: "Watashi no kuni demo, ie ni yotte shuukan ga chigaimasu.", translation: "Di negara saya juga, kebiasaan berbeda-beda menurut rumah.", audioFileName: "irodori-elementary2-10-a04-l03.mp3" },
   { speakerId: "kenji", japanese: <>そうですね。わからないときは、家の人に聞けばいいですよ。</>, romaji: "Sou desu ne. Wakaranai toki wa, ie no hito ni kikeba ii desu yo.", translation: "Betul. Kalau tidak tahu, sebaiknya tanyakan kepada penghuni rumah.", audioFileName: "irodori-elementary2-10-a04-l04.mp3" },
 ];
 const photoPermissionConversation: IrodoriUtterance[] = [
@@ -63,7 +63,7 @@ const photoPermissionConversation: IrodoriUtterance[] = [
 ];
 
 const canDos = [
-  { id: "ask-about-event-manners", source: "CAN-DO 43", text: "Menanyakan kebiasaan dan etiket di Jepang dalam acara resmi, lalu memahami penjelasan yang diberikan." },
+  { id: "ask-about-event-manners", source: "CAN-DO 43", text: "Menanyakan kebiasaan dan etiket dalam acara pernikahan atau pemakaman di Jepang, lalu memahami penjelasan yang diberikan." },
   { id: "compare-customs", source: "CAN-DO 44", text: "Menanyakan dan mengomentari perbedaan kebiasaan antara Jepang dan negara sendiri." },
   { id: "talk-intercultural-experience", source: "CAN-DO 45", text: "Menceritakan secara sederhana pengalaman atau kejadian yang berkaitan dengan perbedaan budaya." },
   { id: "read-online-customs-post", source: "CAN-DO 46", text: "Membaca unggahan online tentang perbedaan etiket dan kebiasaan, lalu memahami garis besar isinya." },
@@ -166,7 +166,7 @@ const mannersPhraseExamples = [
 const grammarNotes = [
   { title: "01 · Meminta saran tentang aturan atau kebiasaan", pattern: "Kata tanya + V-ばいいですか？", example: <>何を持って行けばいいですか。<br />どんな服を着て行けばいいですか。</>, note: "Gunakan ～ばいいですか untuk bertanya tentang cara atau aturan yang sebaiknya diikuti. Untuk kata kerja golongan 1, ubah bunyi akhir dari baris う ke baris え lalu tambahkan ば: 行く → 行けば. Golongan 2: 着る → 着れば. Kata kerja tidak beraturan: する → すれば、来る → 来れば." },
   { title: "02 · Menyatakan larangan", pattern: "V-てはいけません／V-てはだめです\nBentuk percakapan: V-ちゃいけません／V-ちゃだめ", example: <>ここで写真を撮ってはいけません。<br />靴のまま入っちゃだめですよ。</>, note: "Pola ini digunakan untuk menyatakan sesuatu yang tidak boleh dilakukan. ～てはいけません lebih jelas dan sopan; ～ちゃだめ merupakan bentuk percakapan yang lebih santai." },
-  { title: "03 · Menyatakan keharusan dengan bentuk percakapan", pattern: "V-なくちゃ", example: <>食器は自分で片付けなくちゃ。<br />面会時間を確認しなくちゃ。</>, note: "～なくちゃ merupakan bentuk percakapan dari ～なくちゃならない. Maknanya harus melakukan sesuatu. Bentuk ini sering dipakai dalam percakapan sehari-hari." },
+  { title: "03 · Menyatakan keharusan dengan bentuk percakapan", pattern: "V-なくちゃ", example: <>食器は自分で片付けなくちゃ。<br />面会時間を確認しなくちゃ。</>, note: "～なくちゃ merupakan bentuk percakapan singkat dari ～なくてはならない. Maknanya harus melakukan sesuatu. Bentuk ini sering dipakai dalam percakapan sehari-hari." },
   { title: "04 · Menyatakan tujuan atau hal yang perlu dihindari", pattern: "V-るように、～／V-ないように、～", example: <>次の人が使えるように、テーブルをきれいにします。<br />迷惑をかけないように、静かに話します。</>, note: "Gunakan V-るように untuk menyatakan tujuan atau hasil yang diharapkan. Gunakan V-ないように untuk menyatakan upaya agar sesuatu yang tidak diinginkan tidak terjadi." },
   { title: "05 · Bentuk pasif", pattern: "V-(ら)れます", example: <>友だちにマナーを説明されました。<br />店長さんに注意されました。</>, note: "Bentuk pasif menempatkan orang atau benda yang menerima tindakan sebagai fokus kalimat. Contoh: 説明する → 説明される, 注意する → 注意される." },
   { title: "06 · Meminta penjelasan dalam percakapan santai", pattern: "S (bentuk biasa) + の？", example: <>どうしたの。<br />どうして靴を脱ぐの。</>, note: "～の？ digunakan untuk meminta penjelasan tentang situasi atau alasan dengan gaya santai. Bentuk ini lebih kasual daripada ～んですか？. Gunakan kepada teman atau orang yang akrab." },
