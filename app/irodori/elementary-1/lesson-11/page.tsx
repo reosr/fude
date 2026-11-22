@@ -224,10 +224,10 @@ export default function IrodoriElementaryOneLessonElevenPage() {
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">Semua dialog ditulis orisinal oleh Fude. Perhatikan cara membagi barang yang dibawa, memilih makanan, dan menanyakan bahan serta tanggal produk.</p>
         </div>
         <div className="space-y-4">
-          <IrodoriConversation title="Membagi barang untuk acara bersama" speakers={[speakers.yui, speakers.sota]} utterances={planningFoodConversation} />
-          <IrodoriConversation title="Memilih makanan untuk acara" speakers={[speakers.akiko, speakers.kenji]} utterances={choosingPartyFoodConversation} />
-          <IrodoriConversation title="Menanyakan bahan makanan" speakers={[speakers.sota, speakers.yui]} utterances={askingAboutIngredientsConversation} />
-          <IrodoriConversation title="Memeriksa tanggal makanan" speakers={[speakers.kenji, speakers.akiko]} utterances={checkingFoodDateConversation} />
+          <IrodoriConversation title="Membagi barang untuk acara bersama" speakers={[speakers.yui, speakers.sota, speakers.akiko, speakers.kenji]} utterances={planningFoodConversation} />
+          <IrodoriConversation title="Memilih makanan untuk acara" speakers={[speakers.yui, speakers.sota, speakers.akiko]} utterances={choosingPartyFoodConversation} />
+          <IrodoriConversation title="Menanyakan bahan makanan" speakers={[speakers.kenji, speakers.akiko]} utterances={askingAboutIngredientsConversation} />
+          <IrodoriConversation title="Memeriksa tanggal makanan" speakers={[speakers.akiko, speakers.kenji]} utterances={checkingFoodDateConversation} />
           <IrodoriConversation title="Membawa perlengkapan makan" speakers={[speakers.yui, speakers.sota]} utterances={bringingItemsConversation} />
         </div>
       </section>
