@@ -5,12 +5,10 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import {
   ArrowLeft,
-  BookOpen,
   CalendarDays,
   CheckCircle2,
   FileText,
   MapPin,
-  MessageCircle,
   RefreshCw,
   Star,
   Utensils,
@@ -252,7 +250,7 @@ const vocabRows = [
   ["ゆで卵", "ゆでたまご · yude tamago", "Telur rebus"],
   ["ピーナッツ", "ピーナッツ · piinattsu", "Kacang tanah"],
   ["ソース", "ソース · soosu", "Saus"],
-  ["甘辛い", "あまからい · amak ar ai", "Manis dan pedas"],
+  ["甘辛い", "あまからい · amak arai", "Manis dan pedas"],
   ["家庭料理", "かていりょうり · katei ryouri", "Masakan rumahan"],
   ["紹介する", "しょうかいする · shoukai suru", "Memperkenalkan"],
   ["食べ方", "たべかた · tabekata", "Cara makan"],
