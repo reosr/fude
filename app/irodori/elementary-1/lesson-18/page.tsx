@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { ArrowLeft, CalendarDays, CheckCircle2, Clock3, FileText, Gift, RefreshCw, Users } from "lucide-react";
+import { ArrowLeft, CalendarDays, CheckCircle2, FileText, Gift, RefreshCw, Users } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import { completeIrodoriLesson, saveIrodoriSelfEvaluation, useIrodoriProgress } from "@/lib/irodori-progress";
