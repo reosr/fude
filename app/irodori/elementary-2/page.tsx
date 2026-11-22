@@ -11,7 +11,7 @@ export default function IrodoriElementaryTwoPage() {
   const completedCount = progress.completedLessons.filter((id) =>
     id.startsWith("elementary2-")
   ).length;
-  const availableCount = Math.min(completedCount + 1, 18);
+  const availableCount = 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -76,16 +76,15 @@ export default function IrodoriElementaryTwoPage() {
             Daftar pelajaran
           </h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Pelajaran pertama sudah tersedia. Pelajaran berikutnya terbuka
-            secara berurutan setelah materi sebelumnya selesai.
+            Lesson 1 sudah tersedia. Pelajaran berikutnya akan ditambahkan
+            dan dibuka secara berurutan setelah materinya siap.
           </p>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
             const lessonId = "elementary2-" + String(lesson).padStart(2, "0");
-            const previousLessonId = "elementary2-" + String(lesson - 1).padStart(2, "0");
-            const isAvailable = lesson === 1 || progress.completedLessons.includes(previousLessonId);
+            const isAvailable = lesson === 1;
             const isCompleted = progress.completedLessons.includes(lessonId);
             const title = lesson === 1
               ? "I just came to Japan last week."
