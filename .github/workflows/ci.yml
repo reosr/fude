@@ -62,6 +62,7 @@ jobs:
           app/irodori/elementary-1/lesson-6/page.tsx
           app/irodori/elementary-1/lesson-7/page.tsx
           app/irodori/elementary-1/lesson-8/page.tsx
+          app/irodori/elementary-1/lesson-9/page.tsx
           app/kosakata/page.tsx
           lib/vocab.ts
           components/IrodoriConversation.tsx
