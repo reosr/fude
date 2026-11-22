@@ -42,7 +42,7 @@ type IrodoriVocabLesson = {
 const norm = (s: string) =>
   (s || "")
     .normalize("NFKC")
-    .replace(/[\\s\\u3000]/g, "")
+    .replace(/[\s\u3000]/g, "")
     .replace(/[ã€œï½žâˆ¼]/g, "~");
 
 export const vocabKey = (v: { kanji: string; kana: string }) =>
