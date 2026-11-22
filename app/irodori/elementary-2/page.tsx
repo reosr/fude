@@ -94,7 +94,9 @@ export default function IrodoriElementaryTwoPage() {
                 : "Lesson " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
-              : "Materi akan tersedia setelah lesson sebelumnya selesai.";
+              : lesson === 2
+                ? "Mengenali ciri seseorang, mendeskripsikan sifat, membicarakan figur favorit, dan memahami artikel wawancara."
+                : "Materi akan tersedia setelah lesson sebelumnya selesai.";
 
             const card = (
               <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (
