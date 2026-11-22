@@ -394,11 +394,11 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
         </div>
         <div className="space-y-4">
-          <IrodoriConversation title="Meminta izin mencoba sweater" speakers={[friendYui, friendSota]} utterances={askFormalEventConversation} />
-          <IrodoriConversation title="Memilih warna dan ukuran" speakers={[friendAkiko, friendKenji]} utterances={hospitalVisitConversation} />
-          <IrodoriConversation title="Menjelaskan kartu poin tertinggal" speakers={[friendSota, friendYui]} utterances={foodCourtMannersConversation} />
-          <IrodoriConversation title="Mencari botol minum yang tertinggal" speakers={[friendAkiko, friendKenji]} utterances={homeCustomDifferenceConversation} />
-          <IrodoriConversation title="Memahami pengumuman pusat perbelanjaan" speakers={[friendYui, friendSota]} utterances={photoPermissionConversation} />
+          <IrodoriConversation title="Meminta izin mencoba sweater" speakers={[friendYui, friendSota]} utterances={shoppingTryOnConversation} />
+          <IrodoriConversation title="Memilih warna dan ukuran" speakers={[friendAkiko, friendKenji]} utterances={chooseColorSizeConversation} />
+          <IrodoriConversation title="Menjelaskan kartu poin tertinggal" speakers={[friendSota, friendYui]} utterances={forgotPointCardConversation} />
+          <IrodoriConversation title="Mencari botol minum yang tertinggal" speakers={[friendAkiko, friendKenji]} utterances={lostBottleConversation} />
+          <IrodoriConversation title="Memahami pengumuman pusat perbelanjaan" speakers={[friendYui, friendSota]} utterances={mallAnnouncementConversation} />
         </div>
       </section>
 
