@@ -5426,5 +5426,189 @@
         "meaning": "Menjaga baik-baik / menghargai"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-01",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 1,
+    "lessonTitle": "I just came to Japan last week.",
+    "vocab": [
+      {
+        "kanji": "担当",
+        "kana": "たんとう",
+        "romaji": "tantou",
+        "meaning": "Tugas atau bagian yang menjadi tanggung jawab",
+        "imageQuery": "team roles"
+      },
+      {
+        "kanji": "役割",
+        "kana": "やくわり",
+        "romaji": "yakuwari",
+        "meaning": "Peran",
+        "imageQuery": "team roles"
+      },
+      {
+        "kanji": "紹介",
+        "kana": "しょうかい",
+        "romaji": "shoukai",
+        "meaning": "Perkenalan",
+        "imageQuery": "introduction"
+      },
+      {
+        "kanji": "出身",
+        "kana": "しゅっしん",
+        "romaji": "shusshin",
+        "meaning": "Asal daerah",
+        "imageQuery": "hometown"
+      },
+      {
+        "kanji": "名前",
+        "kana": "なまえ",
+        "romaji": "namae",
+        "meaning": "Nama",
+        "imageQuery": "introduction"
+      },
+      {
+        "kanji": "意味",
+        "kana": "いみ",
+        "romaji": "imi",
+        "meaning": "Arti atau makna",
+        "imageQuery": "meaning"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman",
+        "imageQuery": "experience"
+      },
+      {
+        "kanji": "趣味",
+        "kana": "しゅみ",
+        "romaji": "shumi",
+        "meaning": "Hobi",
+        "imageQuery": "hobbies"
+      },
+      {
+        "kanji": "一生懸命",
+        "kana": "いっしょうけんめい",
+        "romaji": "isshoukenmei",
+        "meaning": "Dengan sungguh-sungguh",
+        "imageQuery": "studying"
+      },
+      {
+        "kanji": "頑張る",
+        "kana": "がんばる",
+        "romaji": "ganbaru",
+        "meaning": "Berusaha sebaik mungkin",
+        "imageQuery": "effort"
+      },
+      {
+        "kanji": "先週",
+        "kana": "せんしゅう",
+        "romaji": "senshuu",
+        "meaning": "Minggu lalu",
+        "imageQuery": "calendar"
+      },
+      {
+        "kanji": "来る",
+        "kana": "くる",
+        "romaji": "kuru",
+        "meaning": "Datang",
+        "imageQuery": "arrival"
+      },
+      {
+        "kanji": "働く",
+        "kana": "はたらく",
+        "romaji": "hataraku",
+        "meaning": "Bekerja",
+        "imageQuery": "work"
+      },
+      {
+        "kanji": "勉強する",
+        "kana": "べんきょうする",
+        "romaji": "benkyou suru",
+        "meaning": "Belajar",
+        "imageQuery": "studying"
+      },
+      {
+        "kanji": "山",
+        "kana": "やま",
+        "romaji": "yama",
+        "meaning": "Gunung",
+        "imageQuery": "mountain"
+      },
+      {
+        "kanji": "川",
+        "kana": "かわ",
+        "romaji": "kawa",
+        "meaning": "Sungai",
+        "imageQuery": "river"
+      },
+      {
+        "kanji": "海",
+        "kana": "うみ",
+        "romaji": "umi",
+        "meaning": "Laut",
+        "imageQuery": "sea"
+      },
+      {
+        "kanji": "島",
+        "kana": "しま",
+        "romaji": "shima",
+        "meaning": "Pulau",
+        "imageQuery": "island"
+      },
+      {
+        "kanji": "森",
+        "kana": "もり",
+        "romaji": "mori",
+        "meaning": "Hutan",
+        "imageQuery": "forest"
+      },
+      {
+        "kanji": "首都",
+        "kana": "しゅと",
+        "romaji": "shuto",
+        "meaning": "Ibu kota",
+        "imageQuery": "capital city"
+      },
+      {
+        "kanji": "観光地",
+        "kana": "かんこうち",
+        "romaji": "kankouchi",
+        "meaning": "Tempat wisata",
+        "imageQuery": "tourist destination"
+      },
+      {
+        "kanji": "都会",
+        "kana": "とかい",
+        "romaji": "tokai",
+        "meaning": "Kota besar",
+        "imageQuery": "city"
+      },
+      {
+        "kanji": "にぎやか",
+        "kana": "にぎやか",
+        "romaji": "nigiyaka",
+        "meaning": "Ramai dan hidup",
+        "imageQuery": "lively town"
+      },
+      {
+        "kanji": "のんびり",
+        "kana": "のんびり",
+        "romaji": "nonbiri",
+        "meaning": "Santai dan tenang",
+        "imageQuery": "quiet town"
+      },
+      {
+        "kanji": "観光客",
+        "kana": "かんこうきゃく",
+        "romaji": "kankoukyaku",
+        "meaning": "Wisatawan",
+        "imageQuery": "tourists"
+      }
+    ]
   }
 ]
