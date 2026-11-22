@@ -3995,5 +3995,164 @@
         "meaning": "Aplikasi"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-10",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 10,
+    "lessonTitle": "I would like to take a Japanese-language class.",
+    "vocab": [
+      {
+        "kanji": "午前",
+        "kana": "ごぜん",
+        "romaji": "gozen",
+        "meaning": "Pagi / sebelum tengah hari"
+      },
+      {
+        "kanji": "午後",
+        "kana": "ごご",
+        "romaji": "gogo",
+        "meaning": "Siang / setelah tengah hari"
+      },
+      {
+        "kanji": "教科書",
+        "kana": "きょうかしょ",
+        "romaji": "kyoukasho",
+        "meaning": "Buku pelajaran"
+      },
+      {
+        "kanji": "教室",
+        "kana": "きょうしつ",
+        "romaji": "kyoushitsu",
+        "meaning": "Ruang kelas"
+      },
+      {
+        "kanji": "先生",
+        "kana": "せんせい",
+        "romaji": "sensei",
+        "meaning": "Guru"
+      },
+      {
+        "kanji": "全部",
+        "kana": "ぜんぶ",
+        "romaji": "zenbu",
+        "meaning": "Semuanya"
+      },
+      {
+        "kanji": "～回",
+        "kana": "～かい",
+        "romaji": "~kai",
+        "meaning": "Kali (frekuensi)"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Berpartisipasi / ikut"
+      },
+      {
+        "kanji": "用意する",
+        "kana": "よういする",
+        "romaji": "youi suru",
+        "meaning": "Menyiapkan"
+      },
+      {
+        "kanji": "日本語クラス",
+        "kana": "にほんごクラス",
+        "romaji": "nihongo kurasu",
+        "meaning": "Kelas bahasa Jepang"
+      },
+      {
+        "kanji": "入門",
+        "kana": "にゅうもん",
+        "romaji": "nyuumon",
+        "meaning": "Pengantar / pemula"
+      },
+      {
+        "kanji": "初級",
+        "kana": "しょきゅう",
+        "romaji": "shokyuu",
+        "meaning": "Tingkat pemula"
+      },
+      {
+        "kanji": "中級",
+        "kana": "ちゅうきゅう",
+        "romaji": "chuukyuu",
+        "meaning": "Tingkat menengah"
+      },
+      {
+        "kanji": "市民センター",
+        "kana": "しみんセンター",
+        "romaji": "shimin sentaa",
+        "meaning": "Pusat komunitas"
+      },
+      {
+        "kanji": "教室案内",
+        "kana": "きょうしつあんない",
+        "romaji": "kyoushitsu annai",
+        "meaning": "Informasi kelas"
+      },
+      {
+        "kanji": "曜日",
+        "kana": "ようび",
+        "romaji": "youbi",
+        "meaning": "Hari dalam sepekan"
+      },
+      {
+        "kanji": "火曜日",
+        "kana": "かようび",
+        "romaji": "kayoubi",
+        "meaning": "Hari Selasa"
+      },
+      {
+        "kanji": "木曜日",
+        "kana": "もくようび",
+        "romaji": "mokuyoubi",
+        "meaning": "Hari Kamis"
+      },
+      {
+        "kanji": "水曜日",
+        "kana": "すいようび",
+        "romaji": "suiyoubi",
+        "meaning": "Hari Rabu"
+      },
+      {
+        "kanji": "土曜日",
+        "kana": "どようび",
+        "romaji": "doyoubi",
+        "meaning": "Hari Sabtu"
+      },
+      {
+        "kanji": "日程",
+        "kana": "にってい",
+        "romaji": "nittei",
+        "meaning": "Jadwal / tanggal kegiatan"
+      },
+      {
+        "kanji": "申し込み",
+        "kana": "もうしこみ",
+        "romaji": "moushikomi",
+        "meaning": "Pendaftaran"
+      },
+      {
+        "kanji": "費用",
+        "kana": "ひよう",
+        "romaji": "hiyou",
+        "meaning": "Biaya"
+      },
+      {
+        "kanji": "書道",
+        "kana": "しょどう",
+        "romaji": "shodou",
+        "meaning": "Kaligrafi Jepang"
+      },
+      {
+        "kanji": "質問",
+        "kana": "しつもん",
+        "romaji": "shitsumon",
+        "meaning": "Pertanyaan"
+      }
+    ]
   }
 ]
