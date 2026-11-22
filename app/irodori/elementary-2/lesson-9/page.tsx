@@ -12,7 +12,6 @@ import {
   RefreshCw,
   Star,
   Users,
-  BookOpen,
   Sparkles,
 } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
@@ -520,7 +519,7 @@ const quizQuestions: Task[] = [
     options: [
       { key: "a", label: "カードだけあります。" },
       { key: "b", label: "カードによってあります。" },
-      { key: "c", label: "カードしかありません。" },
+      { key: "c", label: "カードが一枚しかありません。" },
     ],
     answer: "c",
     explanation: <>しか digunakan bersama kalimat negatif untuk menekankan keterbatasan.</>,
