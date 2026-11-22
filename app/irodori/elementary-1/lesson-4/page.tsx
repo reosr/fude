@@ -101,7 +101,7 @@ const weatherPosts = [
   },
 ];
 
-const ratingOptions:const ratingOptions: { value: IrodoriRating; label: string }[] = [
+const ratingOptions: { value: IrodoriRating; label: string }[] = [
   { value: 1, label: "★☆☆ Masih perlu latihan" },
   { value: 2, label: "★★☆ Sudah bisa" },
   { value: 3, label: "★★★ Bisa dengan baik" },
