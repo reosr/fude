@@ -102,7 +102,7 @@ export default function IrodoriElementaryOnePage() {
               || (lesson === 9 && lessonEightCompleted)
               || (lesson === 10 && lessonNineCompleted)
               || (lesson === 11 && lessonTenCompleted)
-              || (lesson === 12 && lessonElevenCompleted);
+              || (lesson === 12 && lessonElevenCompleted)
               || (lesson === 13 && lessonTwelveCompleted);
             const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
             const isCompleted = progress.completedLessons.includes(lessonId);
