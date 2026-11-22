@@ -3518,5 +3518,164 @@
         "meaning": "Ke arah sana / tempat Anda"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-07",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 7,
+    "lessonTitle": "I will be a bit late because I got lost.",
+    "vocab": [
+      {
+        "kanji": "待ち合わせ",
+        "kana": "まちあわせ",
+        "romaji": "machiawase",
+        "meaning": "Janji bertemu di waktu dan tempat tertentu"
+      },
+      {
+        "kanji": "集合する",
+        "kana": "しゅうごうする",
+        "romaji": "shuugou suru",
+        "meaning": "Berkumpul"
+      },
+      {
+        "kanji": "時間",
+        "kana": "じかん",
+        "romaji": "jikan",
+        "meaning": "Waktu"
+      },
+      {
+        "kanji": "場所",
+        "kana": "ばしょ",
+        "romaji": "basho",
+        "meaning": "Tempat"
+      },
+      {
+        "kanji": "駅",
+        "kana": "えき",
+        "romaji": "eki",
+        "meaning": "Stasiun"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Resepsionis / meja penerimaan"
+      },
+      {
+        "kanji": "ホール",
+        "kana": "ホール",
+        "romaji": "hooru",
+        "meaning": "Aula"
+      },
+      {
+        "kanji": "会社",
+        "kana": "かいしゃ",
+        "romaji": "kaisha",
+        "meaning": "Perusahaan"
+      },
+      {
+        "kanji": "門",
+        "kana": "もん",
+        "romaji": "mon",
+        "meaning": "Gerbang"
+      },
+      {
+        "kanji": "案内する",
+        "kana": "あんないする",
+        "romaji": "annai suru",
+        "meaning": "Memandu / menunjukkan tempat"
+      },
+      {
+        "kanji": "イベント",
+        "kana": "イベント",
+        "romaji": "ibento",
+        "meaning": "Acara"
+      },
+      {
+        "kanji": "始まる",
+        "kana": "はじまる",
+        "romaji": "hajimaru",
+        "meaning": "Dimulai"
+      },
+      {
+        "kanji": "スタッフ",
+        "kana": "スタッフ",
+        "romaji": "sutaffu",
+        "meaning": "Staf"
+      },
+      {
+        "kanji": "〜前",
+        "kana": "〜まえ",
+        "romaji": "mae",
+        "meaning": "Sebelum / di depan"
+      },
+      {
+        "kanji": "待ち合わせする",
+        "kana": "まちあわせする",
+        "romaji": "machiawase suru",
+        "meaning": "Bertemu sesuai janji"
+      },
+      {
+        "kanji": "事故",
+        "kana": "じこ",
+        "romaji": "jiko",
+        "meaning": "Insiden / kecelakaan"
+      },
+      {
+        "kanji": "止まる",
+        "kana": "とまる",
+        "romaji": "tomaru",
+        "meaning": "Berhenti"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi / memberi kabar"
+      },
+      {
+        "kanji": "ねぼうする",
+        "kana": "ねぼうする",
+        "romaji": "nebou suru",
+        "meaning": "Bangun kesiangan"
+      },
+      {
+        "kanji": "今から",
+        "kana": "いまから",
+        "romaji": "ima kara",
+        "meaning": "Mulai sekarang"
+      },
+      {
+        "kanji": "急ぐ",
+        "kana": "いそぐ",
+        "romaji": "isogu",
+        "meaning": "Bergegas"
+      },
+      {
+        "kanji": "道に迷う",
+        "kana": "みちにまよう",
+        "romaji": "michi ni mayou",
+        "meaning": "Tersesat"
+      },
+      {
+        "kanji": "遅れる",
+        "kana": "おくれる",
+        "romaji": "okureru",
+        "meaning": "Terlambat"
+      },
+      {
+        "kanji": "着く",
+        "kana": "つく",
+        "romaji": "tsuku",
+        "meaning": "Tiba / sampai"
+      },
+      {
+        "kanji": "待つ",
+        "kana": "まつ",
+        "romaji": "matsu",
+        "meaning": "Menunggu"
+      }
+    ]
   }
 ]
