@@ -4154,5 +4154,164 @@
         "meaning": "Pertanyaan"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-11",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 11,
+    "lessonTitle": "I will bring meat and vegetables.",
+    "vocab": [
+      {
+        "kanji": "飲み物",
+        "kana": "のみもの",
+        "romaji": "nomimono",
+        "meaning": "Minuman"
+      },
+      {
+        "kanji": "お茶",
+        "kana": "おちゃ",
+        "romaji": "ocha",
+        "meaning": "Teh"
+      },
+      {
+        "kanji": "材料",
+        "kana": "ざいりょう",
+        "romaji": "zairyou",
+        "meaning": "Bahan"
+      },
+      {
+        "kanji": "野菜",
+        "kana": "やさい",
+        "romaji": "yasai",
+        "meaning": "Sayuran"
+      },
+      {
+        "kanji": "牛肉",
+        "kana": "ぎゅうにく",
+        "romaji": "gyuuniku",
+        "meaning": "Daging sapi"
+      },
+      {
+        "kanji": "豚肉",
+        "kana": "ぶたにく",
+        "romaji": "butaniku",
+        "meaning": "Daging babi"
+      },
+      {
+        "kanji": "皿",
+        "kana": "さら",
+        "romaji": "sara",
+        "meaning": "Piring"
+      },
+      {
+        "kanji": "売る",
+        "kana": "うる",
+        "romaji": "uru",
+        "meaning": "Menjual"
+      },
+      {
+        "kanji": "持って行く",
+        "kana": "もっていく",
+        "romaji": "motte iku",
+        "meaning": "Membawa pergi ke tempat tujuan"
+      },
+      {
+        "kanji": "買う",
+        "kana": "かう",
+        "romaji": "kau",
+        "meaning": "Membeli"
+      },
+      {
+        "kanji": "持って来る",
+        "kana": "もってくる",
+        "romaji": "motte kuru",
+        "meaning": "Membawa ke tempat pembicara"
+      },
+      {
+        "kanji": "作る",
+        "kana": "つくる",
+        "romaji": "tsukuru",
+        "meaning": "Membuat"
+      },
+      {
+        "kanji": "おにぎり",
+        "kana": "おにぎり",
+        "romaji": "onigiri",
+        "meaning": "Nasi kepal Jepang"
+      },
+      {
+        "kanji": "コップ",
+        "kana": "コップ",
+        "romaji": "koppu",
+        "meaning": "Gelas"
+      },
+      {
+        "kanji": "果物",
+        "kana": "くだもの",
+        "romaji": "kudamono",
+        "meaning": "Buah-buahan"
+      },
+      {
+        "kanji": "ケーキ",
+        "kana": "ケーキ",
+        "romaji": "keeki",
+        "meaning": "Kue"
+      },
+      {
+        "kanji": "チーズ",
+        "kana": "チーズ",
+        "romaji": "chiizu",
+        "meaning": "Keju"
+      },
+      {
+        "kanji": "塩",
+        "kana": "しお",
+        "romaji": "shio",
+        "meaning": "Garam"
+      },
+      {
+        "kanji": "砂糖",
+        "kana": "さとう",
+        "romaji": "satou",
+        "meaning": "Gula"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan"
+      },
+      {
+        "kanji": "食品表示",
+        "kana": "しょくひんひょうじ",
+        "romaji": "shokuhin hyouji",
+        "meaning": "Label makanan"
+      },
+      {
+        "kanji": "賞味期限",
+        "kana": "しょうみきげん",
+        "romaji": "shoumi kigen",
+        "meaning": "Baik dikonsumsi sebelum"
+      },
+      {
+        "kanji": "消費期限",
+        "kana": "しょうひきげん",
+        "romaji": "shouhi kigen",
+        "meaning": "Batas waktu konsumsi"
+      },
+      {
+        "kanji": "卵",
+        "kana": "たまご",
+        "romaji": "tamago",
+        "meaning": "Telur"
+      },
+      {
+        "kanji": "小麦粉",
+        "kana": "こむぎこ",
+        "romaji": "komugiko",
+        "meaning": "Tepung terigu"
+      }
+    ]
   }
 ]
