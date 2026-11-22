@@ -4631,5 +4631,164 @@
         "meaning": "Perubahan"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-14",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 14,
+    "lessonTitle": "May I take a day off?",
+    "vocab": [
+      {
+        "kanji": "用事",
+        "kana": "ようじ",
+        "romaji": "youji",
+        "meaning": "Keperluan / urusan"
+      },
+      {
+        "kanji": "氏名",
+        "kana": "しめい",
+        "romaji": "shimei",
+        "meaning": "Nama lengkap"
+      },
+      {
+        "kanji": "理由",
+        "kana": "りゆう",
+        "romaji": "riyuu",
+        "meaning": "Alasan"
+      },
+      {
+        "kanji": "連絡先",
+        "kana": "れんらくさき",
+        "romaji": "renrakusaki",
+        "meaning": "Kontak"
+      },
+      {
+        "kanji": "別に",
+        "kana": "べつに",
+        "romaji": "betsuni",
+        "meaning": "Tidak secara khusus / tidak masalah (sesuai konteks)"
+      },
+      {
+        "kanji": "早く",
+        "kana": "はやく",
+        "romaji": "hayaku",
+        "meaning": "Lebih awal / cepat"
+      },
+      {
+        "kanji": "休む",
+        "kana": "やすむ",
+        "romaji": "yasumu",
+        "meaning": "Beristirahat / tidak masuk"
+      },
+      {
+        "kanji": "取る",
+        "kana": "とる",
+        "romaji": "toru",
+        "meaning": "Mengambil"
+      },
+      {
+        "kanji": "帰る",
+        "kana": "かえる",
+        "romaji": "kaeru",
+        "meaning": "Pulang / kembali"
+      },
+      {
+        "kanji": "伝える",
+        "kana": "つたえる",
+        "romaji": "tsutaeru",
+        "meaning": "Menyampaikan"
+      },
+      {
+        "kanji": "休み",
+        "kana": "やすみ",
+        "romaji": "yasumi",
+        "meaning": "Libur / istirahat"
+      },
+      {
+        "kanji": "休暇",
+        "kana": "きゅうか",
+        "romaji": "kyuuka",
+        "meaning": "Cuti"
+      },
+      {
+        "kanji": "遅刻",
+        "kana": "ちこく",
+        "romaji": "chikoku",
+        "meaning": "Keterlambatan"
+      },
+      {
+        "kanji": "遅れる",
+        "kana": "おくれる",
+        "romaji": "okureru",
+        "meaning": "Terlambat"
+      },
+      {
+        "kanji": "早退",
+        "kana": "そうたい",
+        "romaji": "soutai",
+        "meaning": "Pulang lebih awal"
+      },
+      {
+        "kanji": "職場",
+        "kana": "しょくば",
+        "romaji": "shokuba",
+        "meaning": "Tempat kerja"
+      },
+      {
+        "kanji": "上司",
+        "kana": "じょうし",
+        "romaji": "joushi",
+        "meaning": "Atasan"
+      },
+      {
+        "kanji": "同僚",
+        "kana": "どうりょう",
+        "romaji": "douryou",
+        "meaning": "Rekan kerja"
+      },
+      {
+        "kanji": "電話",
+        "kana": "でんわ",
+        "romaji": "denwa",
+        "meaning": "Telepon"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi / memberi kabar"
+      },
+      {
+        "kanji": "休暇届",
+        "kana": "きゅうかとどけ",
+        "romaji": "kyuuka todoke",
+        "meaning": "Formulir permohonan cuti"
+      },
+      {
+        "kanji": "所属",
+        "kana": "しょぞく",
+        "romaji": "shozoku",
+        "meaning": "Bagian / tim"
+      },
+      {
+        "kanji": "期間",
+        "kana": "きかん",
+        "romaji": "kikan",
+        "meaning": "Periode"
+      },
+      {
+        "kanji": "私用",
+        "kana": "しよう",
+        "romaji": "shiyou",
+        "meaning": "Keperluan pribadi"
+      },
+      {
+        "kanji": "提出する",
+        "kana": "ていしゅつする",
+        "romaji": "teishutsu suru",
+        "meaning": "Menyerahkan / mengajukan"
+      }
+    ]
   }
 ]
