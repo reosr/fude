@@ -218,11 +218,11 @@ export default function IrodoriElementaryOneLessonNinePage() {
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">Semua dialog ditulis orisinal oleh Fude. Perhatikan cara menceritakan pengalaman belajar, menjelaskan bagian yang sulit, membandingkan kemampuan, dan meminta bantuan dengan sopan.</p>
         </div>
         <div className="space-y-4">
-          <IrodoriConversation title="Menceritakan pengalaman belajar" speakers={[speakers.yui, speakers.sota]} utterances={baseballExperienceConversation} />
-          <IrodoriConversation title="Memberi kesan tentang belajar bahasa Jepang" speakers={[speakers.akiko, speakers.kenji]} utterances={checkingPopularPlaceConversation} />
-          <IrodoriConversation title="Membandingkan kemampuan bahasa" speakers={[speakers.sota, speakers.yui]} utterances={decidingNextActivityConversation} />
-          <IrodoriConversation title="Meminta bantuan membaca kanji" speakers={[speakers.kenji, speakers.akiko]} utterances={sharingEventImpressionsConversation} />
-          <IrodoriConversation title="Meminta penjelasan tata bahasa" speakers={[speakers.yui, speakers.sota]} utterances={askingAtSportsShopConversation} />
+          <IrodoriConversation title="Menceritakan pengalaman belajar" speakers={[speakers.yui, speakers.sota]} utterances={studyExperienceConversation} />
+          <IrodoriConversation title="Memberi kesan tentang belajar bahasa Jepang" speakers={[speakers.akiko, speakers.kenji]} utterances={sharingLearningImpressionsConversation} />
+          <IrodoriConversation title="Membandingkan kemampuan bahasa" speakers={[speakers.sota, speakers.yui]} utterances={comparingJapaneseSkillsConversation} />
+          <IrodoriConversation title="Meminta bantuan membaca kanji" speakers={[speakers.kenji, speakers.akiko]} utterances={askingKanjiReadingConversation} />
+          <IrodoriConversation title="Meminta penjelasan tata bahasa" speakers={[speakers.yui, speakers.sota]} utterances={askingForStudyHelpConversation} />
         </div>
       </section>
 
