@@ -3041,5 +3041,164 @@
         "meaning": "Banyak"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-04",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 4,
+    "lessonTitle": "It rained heavily yesterday.",
+    "vocab": [
+      {
+        "kanji": "天気",
+        "kana": "てんき",
+        "romaji": "tenki",
+        "meaning": "Cuaca"
+      },
+      {
+        "kanji": "晴れ",
+        "kana": "はれ",
+        "romaji": "hare",
+        "meaning": "Cerah"
+      },
+      {
+        "kanji": "晴れる",
+        "kana": "はれる",
+        "romaji": "hareru",
+        "meaning": "Menjadi cerah"
+      },
+      {
+        "kanji": "曇り",
+        "kana": "くもり",
+        "romaji": "kumori",
+        "meaning": "Berawan"
+      },
+      {
+        "kanji": "雨",
+        "kana": "あめ",
+        "romaji": "ame",
+        "meaning": "Hujan"
+      },
+      {
+        "kanji": "大雨",
+        "kana": "おおあめ",
+        "romaji": "ooame",
+        "meaning": "Hujan deras"
+      },
+      {
+        "kanji": "雪",
+        "kana": "ゆき",
+        "romaji": "yuki",
+        "meaning": "Salju"
+      },
+      {
+        "kanji": "風",
+        "kana": "かぜ",
+        "romaji": "kaze",
+        "meaning": "Angin"
+      },
+      {
+        "kanji": "強い",
+        "kana": "つよい",
+        "romaji": "tsuyoi",
+        "meaning": "Kuat"
+      },
+      {
+        "kanji": "弱い",
+        "kana": "よわい",
+        "romaji": "yowai",
+        "meaning": "Lemah"
+      },
+      {
+        "kanji": "降る",
+        "kana": "ふる",
+        "romaji": "furu",
+        "meaning": "Turun (hujan atau salju)"
+      },
+      {
+        "kanji": "やむ",
+        "kana": "やむ",
+        "romaji": "yamu",
+        "meaning": "Berhenti (hujan atau salju)"
+      },
+      {
+        "kanji": "吹く",
+        "kana": "ふく",
+        "romaji": "fuku",
+        "meaning": "Bertiup"
+      },
+      {
+        "kanji": "天気予報",
+        "kana": "てんきよほう",
+        "romaji": "tenki yohou",
+        "meaning": "Prakiraan cuaca"
+      },
+      {
+        "kanji": "予報",
+        "kana": "よほう",
+        "romaji": "yohou",
+        "meaning": "Prakiraan"
+      },
+      {
+        "kanji": "気温",
+        "kana": "きおん",
+        "romaji": "kion",
+        "meaning": "Suhu udara"
+      },
+      {
+        "kanji": "台風",
+        "kana": "たいふう",
+        "romaji": "taifuu",
+        "meaning": "Angin topan"
+      },
+      {
+        "kanji": "近づく",
+        "kana": "ちかづく",
+        "romaji": "chikazuku",
+        "meaning": "Mendekat"
+      },
+      {
+        "kanji": "今",
+        "kana": "いま",
+        "romaji": "ima",
+        "meaning": "Sekarang"
+      },
+      {
+        "kanji": "昨日",
+        "kana": "きのう",
+        "romaji": "kinou",
+        "meaning": "Kemarin"
+      },
+      {
+        "kanji": "明日",
+        "kana": "あした",
+        "romaji": "ashita",
+        "meaning": "Besok"
+      },
+      {
+        "kanji": "毎日",
+        "kana": "まいにち",
+        "romaji": "mainichi",
+        "meaning": "Setiap hari"
+      },
+      {
+        "kanji": "傘",
+        "kana": "かさ",
+        "romaji": "kasa",
+        "meaning": "Payung"
+      },
+      {
+        "kanji": "午前",
+        "kana": "ごぜん",
+        "romaji": "gozen",
+        "meaning": "Pagi / sebelum tengah hari"
+      },
+      {
+        "kanji": "午後",
+        "kana": "ごご",
+        "romaji": "gogo",
+        "meaning": "Sore / setelah tengah hari"
+      }
+    ]
   }
 ]
