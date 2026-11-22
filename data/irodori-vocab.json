@@ -6969,5 +6969,364 @@
         "imageQuery": "hot spring"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-06",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 6,
+    "lessonTitle": "I am glad that I went to a lot of different places.",
+    "vocab": [
+      {
+        "kanji": "切符",
+        "kana": "きっぷ",
+        "romaji": "kippu",
+        "meaning": "Tiket",
+        "imageQuery": "train ticket"
+      },
+      {
+        "kanji": "指定席",
+        "kana": "していせき",
+        "romaji": "shiteiseki",
+        "meaning": "Kursi dengan nomor yang dipesan",
+        "imageQuery": "reserved train seat"
+      },
+      {
+        "kanji": "自由席",
+        "kana": "じゆうせき",
+        "romaji": "jiyuuseki",
+        "meaning": "Kursi bebas tanpa nomor khusus",
+        "imageQuery": "unreserved train seat"
+      },
+      {
+        "kanji": "号車",
+        "kana": "ごうしゃ",
+        "romaji": "gousha",
+        "meaning": "Nomor gerbong",
+        "imageQuery": "train car number"
+      },
+      {
+        "kanji": "何番線",
+        "kana": "なんばんせん",
+        "romaji": "nanbansen",
+        "meaning": "Jalur nomor berapa",
+        "imageQuery": "train platform number"
+      },
+      {
+        "kanji": "～発",
+        "kana": "～はつ",
+        "romaji": "~hatsu",
+        "meaning": "Berangkat dari",
+        "imageQuery": "departure station label"
+      },
+      {
+        "kanji": "～着",
+        "kana": "～ちゃく",
+        "romaji": "~chaku",
+        "meaning": "Tiba di",
+        "imageQuery": "arrival station label"
+      },
+      {
+        "kanji": "～行き",
+        "kana": "～ゆき",
+        "romaji": "~yuki",
+        "meaning": "Tujuan ke",
+        "imageQuery": "train destination sign"
+      },
+      {
+        "kanji": "～方面",
+        "kana": "～ほうめん",
+        "romaji": "~houmen",
+        "meaning": "Arah menuju",
+        "imageQuery": "direction sign"
+      },
+      {
+        "kanji": "発車する",
+        "kana": "はっしゃする",
+        "romaji": "hassha suru",
+        "meaning": "Berangkat (kereta)",
+        "imageQuery": "train departure"
+      },
+      {
+        "kanji": "到着する",
+        "kana": "とうちゃくする",
+        "romaji": "touchaku suru",
+        "meaning": "Tiba",
+        "imageQuery": "train arrival"
+      },
+      {
+        "kanji": "乗り換える",
+        "kana": "のりかえる",
+        "romaji": "norikaeru",
+        "meaning": "Berganti kendaraan",
+        "imageQuery": "transfer train"
+      },
+      {
+        "kanji": "運転",
+        "kana": "うんてん",
+        "romaji": "unten",
+        "meaning": "Operasi atau mengemudi",
+        "imageQuery": "transport operation"
+      },
+      {
+        "kanji": "事故",
+        "kana": "じこ",
+        "romaji": "jiko",
+        "meaning": "Kecelakaan",
+        "imageQuery": "traffic incident symbol"
+      },
+      {
+        "kanji": "故障",
+        "kana": "こしょう",
+        "romaji": "koshou",
+        "meaning": "Kerusakan mesin",
+        "imageQuery": "train maintenance"
+      },
+      {
+        "kanji": "駅員",
+        "kana": "えきいん",
+        "romaji": "ekiin",
+        "meaning": "Petugas stasiun",
+        "imageQuery": "station staff"
+      },
+      {
+        "kanji": "案内",
+        "kana": "あんない",
+        "romaji": "annai",
+        "meaning": "Informasi atau panduan",
+        "imageQuery": "information guide"
+      },
+      {
+        "kanji": "放送",
+        "kana": "ほうそう",
+        "romaji": "housou",
+        "meaning": "Pengumuman siaran",
+        "imageQuery": "station announcement"
+      },
+      {
+        "kanji": "乗り場",
+        "kana": "のりば",
+        "romaji": "noriba",
+        "meaning": "Tempat naik kendaraan",
+        "imageQuery": "boarding area"
+      },
+      {
+        "kanji": "週末",
+        "kana": "しゅうまつ",
+        "romaji": "shuumatsu",
+        "meaning": "Akhir pekan",
+        "imageQuery": "weekend calendar"
+      },
+      {
+        "kanji": "予定",
+        "kana": "よてい",
+        "romaji": "yotei",
+        "meaning": "Rencana atau jadwal",
+        "imageQuery": "schedule planner"
+      },
+      {
+        "kanji": "旅行先",
+        "kana": "りょこうさき",
+        "romaji": "ryokousaki",
+        "meaning": "Tempat tujuan perjalanan",
+        "imageQuery": "travel destination"
+      },
+      {
+        "kanji": "友だち",
+        "kana": "ともだち",
+        "romaji": "tomodachi",
+        "meaning": "Teman",
+        "imageQuery": "friends"
+      },
+      {
+        "kanji": "二人で",
+        "kana": "ふたりで",
+        "romaji": "futari de",
+        "meaning": "Berdua",
+        "imageQuery": "two friends together"
+      },
+      {
+        "kanji": "つもり",
+        "kana": "つもり",
+        "romaji": "tsumori",
+        "meaning": "Niat atau rencana",
+        "imageQuery": "planning"
+      },
+      {
+        "kanji": "泳ぐ",
+        "kana": "およぐ",
+        "romaji": "oyogu",
+        "meaning": "Berenang",
+        "imageQuery": "swimming"
+      },
+      {
+        "kanji": "泳げる",
+        "kana": "およげる",
+        "romaji": "oyogeru",
+        "meaning": "Bisa berenang",
+        "imageQuery": "swimming"
+      },
+      {
+        "kanji": "見る",
+        "kana": "みる",
+        "romaji": "miru",
+        "meaning": "Melihat",
+        "imageQuery": "sightseeing"
+      },
+      {
+        "kanji": "見られる",
+        "kana": "みられる",
+        "romaji": "mirareru",
+        "meaning": "Bisa melihat",
+        "imageQuery": "viewing scenery"
+      },
+      {
+        "kanji": "絵",
+        "kana": "え",
+        "romaji": "e",
+        "meaning": "Gambar atau lukisan",
+        "imageQuery": "picture drawing"
+      },
+      {
+        "kanji": "描く",
+        "kana": "えがく",
+        "romaji": "egaku",
+        "meaning": "Menggambar",
+        "imageQuery": "drawing"
+      },
+      {
+        "kanji": "空",
+        "kana": "そら",
+        "romaji": "sora",
+        "meaning": "Langit",
+        "imageQuery": "blue sky"
+      },
+      {
+        "kanji": "光る",
+        "kana": "ひかる",
+        "romaji": "hikaru",
+        "meaning": "Bersinar",
+        "imageQuery": "shining light"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan",
+        "imageQuery": "scenery"
+      },
+      {
+        "kanji": "夕日",
+        "kana": "ゆうひ",
+        "romaji": "yuuhi",
+        "meaning": "Matahari terbenam",
+        "imageQuery": "sunset"
+      },
+      {
+        "kanji": "海",
+        "kana": "うみ",
+        "romaji": "umi",
+        "meaning": "Laut",
+        "imageQuery": "ocean"
+      },
+      {
+        "kanji": "公園",
+        "kana": "こうえん",
+        "romaji": "kouen",
+        "meaning": "Taman",
+        "imageQuery": "city park"
+      },
+      {
+        "kanji": "感想",
+        "kana": "かんそう",
+        "romaji": "kansou",
+        "meaning": "Kesan atau pendapat",
+        "imageQuery": "travel journal"
+      },
+      {
+        "kanji": "楽しい",
+        "kana": "たのしい",
+        "romaji": "tanoshii",
+        "meaning": "Menyenangkan",
+        "imageQuery": "happy travel"
+      },
+      {
+        "kanji": "おもしろい",
+        "kana": "おもしろい",
+        "romaji": "omoshiroi",
+        "meaning": "Menarik atau seru",
+        "imageQuery": "interesting experience"
+      },
+      {
+        "kanji": "すてき",
+        "kana": "すてき",
+        "romaji": "suteki",
+        "meaning": "Bagus atau mengagumkan",
+        "imageQuery": "beautiful place"
+      },
+      {
+        "kanji": "気持ちいい",
+        "kana": "きもちいい",
+        "romaji": "kimochi ii",
+        "meaning": "Terasa nyaman atau menyenangkan",
+        "imageQuery": "relaxing scenery"
+      },
+      {
+        "kanji": "感動する",
+        "kana": "かんどうする",
+        "romaji": "kandou suru",
+        "meaning": "Merasa terharu atau kagum",
+        "imageQuery": "wonderful scenery"
+      },
+      {
+        "kanji": "残念",
+        "kana": "ざんねん",
+        "romaji": "zannen",
+        "meaning": "Disayangkan",
+        "imageQuery": "disappointed expression"
+      },
+      {
+        "kanji": "大変",
+        "kana": "たいへん",
+        "romaji": "taihen",
+        "meaning": "Berat atau melelahkan",
+        "imageQuery": "tired traveler"
+      },
+      {
+        "kanji": "疲れる",
+        "kana": "つかれる",
+        "romaji": "tsukareru",
+        "meaning": "Merasa lelah",
+        "imageQuery": "rest after travel"
+      },
+      {
+        "kanji": "びっくりする",
+        "kana": "びっくりする",
+        "romaji": "bikkuri suru",
+        "meaning": "Terkejut",
+        "imageQuery": "surprised expression"
+      },
+      {
+        "kanji": "投稿する",
+        "kana": "とうこうする",
+        "romaji": "toukou suru",
+        "meaning": "Mengunggah atau memposting",
+        "imageQuery": "social media post"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto",
+        "imageQuery": "travel photo"
+      },
+      {
+        "kanji": "思い出",
+        "kana": "おもいで",
+        "romaji": "omoide",
+        "meaning": "Kenangan",
+        "imageQuery": "travel memory"
+      }
+    ]
   }
 ]
