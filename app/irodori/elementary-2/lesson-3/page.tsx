@@ -7,7 +7,6 @@ import {
   ArrowLeft,
   CalendarDays,
   CheckCircle2,
-  FileText,
   PhoneCall,
   Receipt,
   RefreshCw,
@@ -865,7 +864,7 @@ export default function IrodoriElementaryTwoLessonThreePage() {
             title: "01 · Menjelaskan alasan dengan sopan",
             pattern: "S1 ので、S2",
             example: <>エビのアレルギーがあるので、食べられないんです。<br />この店は人気なので、いつも混んでいます。</>,
-            note: "ので menghubungkan alasan dan hasilnya. Kata kerja dan kata sifat dapat memakai bentuk biasa sebelum ので. Kata benda dan kata sifat-na menggunakan なので: アレルギーがあるので、静かなので. Dibandingkan から, ので sering terdengar lebih halus ketika menyampaikan alasan pribadi.",
+            note: "ので menghubungkan alasan dan hasilnya. Kata kerja dan kata sifat dapat memakai bentuk biasa sebelum ので. Kata benda dan kata sifat-na menggunakan なので, misalnya 人気店なので atau 静かなので. Dibandingkan から, ので sering terdengar lebih halus ketika menyampaikan alasan pribadi.",
           },
           {
             title: "02 · Meminta konfirmasi atas dugaan",
@@ -882,7 +881,7 @@ export default function IrodoriElementaryTwoLessonThreePage() {
           {
             title: "04 · Menyampaikan informasi utama",
             pattern: "ナA-な／イA-い／V-る のは、Nです",
-            example: <>人気があるのは、チキン定食です。<br />おすすめなのは、野菜カレーです。<br />一番安いのは、野菜うどんです。</>,
+            example: <>人気があるのは、チキン定食です。<br />おいしいのは、野菜カレーです。<br />一番安いのは、野菜うどんです。</>,
             note: "Pola ～のは、Nです dipakai untuk menempatkan informasi utama di bagian akhir kalimat. Bagian sebelum のは menjelaskan kondisi atau hal yang sedang dibicarakan, lalu N menyebutkan jawabannya.",
           },
         ].map((item) => (
