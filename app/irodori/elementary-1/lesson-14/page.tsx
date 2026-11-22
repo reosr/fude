@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { ArrowLeft, BriefcaseBusiness, CalendarDays, CheckCircle2, Clock3, FileText, RefreshCw, Users } from "lucide-react";
+import { ArrowLeft, CalendarDays, CheckCircle2, Clock3, FileText, RefreshCw, Users } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import { completeIrodoriLesson, saveIrodoriSelfEvaluation, useIrodoriProgress } from "@/lib/irodori-progress";
@@ -127,7 +127,7 @@ type Task={prompt:ReactNode;options:{key:string;label:ReactNode}[];answer:string
 
 const practiceTasks:Task[]=[
 {prompt:<>Kalimat 「電車が遅れていて、少し遅れます」 memakai bentuk ～ていて untuk …</>,options:[{key:"a",label:"Menyatakan alasan keterlambatan."},{key:"b",label:"Meminta izin cuti."},{key:"c",label:"Menanyakan nama lengkap."}],answer:"a",explanation:<>Bentuk ～て、～ dapat menghubungkan dua kalimat. Bagian pertama menjelaskan alasan bagian kedua.</>},
-{prompt:<>Fungsi 「それで」 dalam 「電車が遅れています。それで、遅刻します」 adalah …</>,options:[{key:"a",label:"Menghubungkan alasan dengan akibat."},{key:"b",label:"Menanyakan pilihan."},{key:"c",label:"Memberi perintah."}],answer:"a",explanation:<>それで berarti 'karena itu / jadi' dan menghubungkan alasan dengan akibat.</>},
+{prompt:<>Fungsi 「それで」 dalam 「電車が遅れています。それで、遅刻します」 adalah …</>,options:[{key:"a",label:"Menghubungkan alasan dengan akibat."},{key:"b",label:"Menanyakan pilihan."},{key:"c",label:"Memberi perintah."}],answer:"a",explanation:<>それで berarti &quot;karena itu / jadi&quot; dan menghubungkan alasan dengan akibat.</>},
 {prompt:<>Pilih bentuk yang tepat untuk meminta izin sebentar kepada rekan kerja.</>,options:[{key:"a",label:"少し休憩してもいいですか。"},{key:"b",label:"少し休憩しなければなりませんか。"},{key:"c",label:"少し休憩しましたか。"}],answer:"a",explanation:<>V-てもいいですか digunakan untuk meminta izin; kata kerja memakai bentuk て.</>},
 {prompt:<>Bentuk yang lebih sopan untuk bertanya kepada atasan adalah …</>,options:[{key:"a",label:"休みを取ってもいいでしょうか。"},{key:"b",label:"休みを取ってもいいだろう。"},{key:"c",label:"休みを取りますか。"}],answer:"a",explanation:<>V-てもいいでしょうか adalah bentuk permintaan izin yang lebih sopan daripada V-てもいいですか.</>},
 {prompt:<>「市役所に行かなければなりません」 berarti …</>,options:[{key:"a",label:"Harus pergi ke kantor pemerintahan kota."},{key:"b",label:"Boleh pergi ke kantor pemerintahan kota."},{key:"c",label:"Tidak jadi pergi ke kantor pemerintahan kota."}],answer:"a",explanation:<>V-なければなりません menyatakan sesuatu yang harus dilakukan.</>},
