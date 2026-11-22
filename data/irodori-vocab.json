@@ -3359,5 +3359,164 @@
         "meaning": "Nyaman untuk ditinggali"
       }
     ]
+  },
+  {
+    "lessonId": "elementary1-06",
+    "courseId": "elementary1",
+    "courseLabel": "Irodori Elementary 1",
+    "lessonNumber": 6,
+    "lessonTitle": "Please tell me how to get to the post office.",
+    "vocab": [
+      {
+        "kanji": "道",
+        "kana": "みち",
+        "romaji": "michi",
+        "meaning": "Jalan"
+      },
+      {
+        "kanji": "公園",
+        "kana": "こうえん",
+        "romaji": "kouen",
+        "meaning": "Taman"
+      },
+      {
+        "kanji": "銀行",
+        "kana": "ぎんこう",
+        "romaji": "ginkou",
+        "meaning": "Bank"
+      },
+      {
+        "kanji": "お寺",
+        "kana": "おてら",
+        "romaji": "otera",
+        "meaning": "Kuil Buddha"
+      },
+      {
+        "kanji": "神社",
+        "kana": "じんじゃ",
+        "romaji": "jinja",
+        "meaning": "Kuil Shinto"
+      },
+      {
+        "kanji": "右",
+        "kana": "みぎ",
+        "romaji": "migi",
+        "meaning": "Kanan"
+      },
+      {
+        "kanji": "左",
+        "kana": "ひだり",
+        "romaji": "hidari",
+        "meaning": "Kiri"
+      },
+      {
+        "kanji": "近く",
+        "kana": "ちかく",
+        "romaji": "chikaku",
+        "meaning": "Dekat / sekitar"
+      },
+      {
+        "kanji": "車",
+        "kana": "くるま",
+        "romaji": "kuruma",
+        "meaning": "Mobil"
+      },
+      {
+        "kanji": "送る",
+        "kana": "おくる",
+        "romaji": "okuru",
+        "meaning": "Mengantar seseorang"
+      },
+      {
+        "kanji": "郵便局",
+        "kana": "ゆうびんきょく",
+        "romaji": "yuubinkyoku",
+        "meaning": "Kantor pos"
+      },
+      {
+        "kanji": "バス停",
+        "kana": "バスてい",
+        "romaji": "basutei",
+        "meaning": "Halte bus"
+      },
+      {
+        "kanji": "信号",
+        "kana": "しんごう",
+        "romaji": "shingou",
+        "meaning": "Lampu lalu lintas"
+      },
+      {
+        "kanji": "角",
+        "kana": "かど",
+        "romaji": "kado",
+        "meaning": "Sudut jalan"
+      },
+      {
+        "kanji": "交差点",
+        "kana": "こうさてん",
+        "romaji": "kousaten",
+        "meaning": "Persimpangan"
+      },
+      {
+        "kanji": "まっすぐ",
+        "kana": "まっすぐ",
+        "romaji": "massugu",
+        "meaning": "Lurus"
+      },
+      {
+        "kanji": "曲がる",
+        "kana": "まがる",
+        "romaji": "magaru",
+        "meaning": "Berbelok"
+      },
+      {
+        "kanji": "渡る",
+        "kana": "わたる",
+        "romaji": "wataru",
+        "meaning": "Menyeberang"
+      },
+      {
+        "kanji": "出る",
+        "kana": "でる",
+        "romaji": "deru",
+        "meaning": "Keluar"
+      },
+      {
+        "kanji": "前",
+        "kana": "まえ",
+        "romaji": "mae",
+        "meaning": "Depan"
+      },
+      {
+        "kanji": "この先",
+        "kana": "このさき",
+        "romaji": "kono saki",
+        "meaning": "Di depan sana"
+      },
+      {
+        "kanji": "一つ目",
+        "kana": "ひとつめ",
+        "romaji": "hitotsume",
+        "meaning": "Yang pertama"
+      },
+      {
+        "kanji": "二つ目",
+        "kana": "ふたつめ",
+        "romaji": "futatsume",
+        "meaning": "Yang kedua"
+      },
+      {
+        "kanji": "行きたい",
+        "kana": "いきたい",
+        "romaji": "ikitai",
+        "meaning": "Ingin pergi"
+      },
+      {
+        "kanji": "そちら",
+        "kana": "そちら",
+        "romaji": "sochira",
+        "meaning": "Ke arah sana / tempat Anda"
+      }
+    ]
   }
 ]
