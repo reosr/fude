@@ -143,7 +143,9 @@ export default function IrodoriElementaryTwoPage() {
                             ? "Membaca program festival, menanyakan waktu dan lokasi acara, memahami persyaratan kegiatan serta pengumuman, dan berbagi pengalaman."
                             : lesson === 9
                               ? "Memahami perayaan tahunan, menceritakan liburan, memperkenalkan festival negara sendiri, membaca artikel acara, dan menulis ucapan Tahun Baru."
-                              : "Materi akan tersedia setelah lesson sebelumnya selesai.";
+                              : lesson === 10
+                                ? "Menanyakan etiket acara, memilih pakaian yang sesuai, membandingkan kebiasaan antarnegara, membaca unggahan tentang etiket, dan menceritakan pengalaman lintas budaya."
+                                : "Materi akan tersedia setelah lesson sebelumnya selesai.";
 
             const card = (
               <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (
