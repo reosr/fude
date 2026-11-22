@@ -78,9 +78,9 @@ const talkNewYearHolidayConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>何をしたりしましたか。</>,
-    romaji: "Nani o shitari shimashita ka?",
-    translation: "Apa saja yang kamu lakukan?",
+    japanese: <>何をしましたか。</>,
+    romaji: "Nani o shimashita ka?",
+    translation: "Apa yang kamu lakukan?",
     audioFileName: "irodori-elementary2-09-a02-l03.mp3",
   },
   {
