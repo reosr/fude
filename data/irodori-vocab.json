@@ -9482,5 +9482,364 @@
         "imageQuery": "difficult to use appliance"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-13",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 13,
+    "lessonTitle": "They display a lot of materials.",
+    "vocab": [
+      {
+        "kanji": "市",
+        "kana": "し",
+        "romaji": "shi",
+        "meaning": "Kota atau pemerintahan kota",
+        "imageQuery": "city municipality"
+      },
+      {
+        "kanji": "市民",
+        "kana": "しみん",
+        "romaji": "shimin",
+        "meaning": "Warga kota",
+        "imageQuery": "city residents"
+      },
+      {
+        "kanji": "公共施設",
+        "kana": "こうきょうしせつ",
+        "romaji": "koukyou shisetsu",
+        "meaning": "Fasilitas umum",
+        "imageQuery": "public facility building"
+      },
+      {
+        "kanji": "文化施設",
+        "kana": "ぶんかしせつ",
+        "romaji": "bunka shisetsu",
+        "meaning": "Fasilitas kebudayaan",
+        "imageQuery": "cultural facility"
+      },
+      {
+        "kanji": "施設",
+        "kana": "しせつ",
+        "romaji": "shisetsu",
+        "meaning": "Fasilitas",
+        "imageQuery": "public facility"
+      },
+      {
+        "kanji": "ホール",
+        "kana": "ホール",
+        "romaji": "hooru",
+        "meaning": "Aula",
+        "imageQuery": "event hall"
+      },
+      {
+        "kanji": "図書館",
+        "kana": "としょかん",
+        "romaji": "toshokan",
+        "meaning": "Perpustakaan",
+        "imageQuery": "public library"
+      },
+      {
+        "kanji": "美術館",
+        "kana": "びじゅつかん",
+        "romaji": "bijutsukan",
+        "meaning": "Museum seni",
+        "imageQuery": "art museum"
+      },
+      {
+        "kanji": "博物館",
+        "kana": "はくぶつかん",
+        "romaji": "hakubutsukan",
+        "meaning": "Museum",
+        "imageQuery": "museum"
+      },
+      {
+        "kanji": "民俗資料館",
+        "kana": "みんぞくしりょうかん",
+        "romaji": "minzoku shiryokan",
+        "meaning": "Museum sejarah dan budaya rakyat",
+        "imageQuery": "folklore museum"
+      },
+      {
+        "kanji": "体育館",
+        "kana": "たいいくかん",
+        "romaji": "taiikukan",
+        "meaning": "Gedung olahraga",
+        "imageQuery": "gymnasium"
+      },
+      {
+        "kanji": "スポーツジム",
+        "kana": "スポーツジム",
+        "romaji": "supootsu jimu",
+        "meaning": "Pusat kebugaran",
+        "imageQuery": "sports gym"
+      },
+      {
+        "kanji": "プール",
+        "kana": "プール",
+        "romaji": "puuru",
+        "meaning": "Kolam renang",
+        "imageQuery": "swimming pool"
+      },
+      {
+        "kanji": "入浴施設",
+        "kana": "にゅうよくしせつ",
+        "romaji": "nyuuyoku shisetsu",
+        "meaning": "Fasilitas pemandian",
+        "imageQuery": "public bath facility"
+      },
+      {
+        "kanji": "インフォメーションコーナー",
+        "kana": "インフォメーションコーナー",
+        "romaji": "infomeeshon koonaa",
+        "meaning": "Pusat informasi",
+        "imageQuery": "information desk"
+      },
+      {
+        "kanji": "物産コーナー",
+        "kana": "ぶっさんコーナー",
+        "romaji": "bussan koonaa",
+        "meaning": "Area produk khas daerah",
+        "imageQuery": "local products display"
+      },
+      {
+        "kanji": "展示する",
+        "kana": "てんじする",
+        "romaji": "tenji suru",
+        "meaning": "Memamerkan atau memajang",
+        "imageQuery": "museum exhibit display"
+      },
+      {
+        "kanji": "資料",
+        "kana": "しりょう",
+        "romaji": "shiryou",
+        "meaning": "Bahan informasi atau dokumen",
+        "imageQuery": "reference materials"
+      },
+      {
+        "kanji": "道具",
+        "kana": "どうぐ",
+        "romaji": "dougu",
+        "meaning": "Alat atau perlengkapan",
+        "imageQuery": "tools equipment"
+      },
+      {
+        "kanji": "歴史",
+        "kana": "れきし",
+        "romaji": "rekishi",
+        "meaning": "Sejarah",
+        "imageQuery": "history"
+      },
+      {
+        "kanji": "文化",
+        "kana": "ぶんか",
+        "romaji": "bunka",
+        "meaning": "Budaya",
+        "imageQuery": "culture"
+      },
+      {
+        "kanji": "行事",
+        "kana": "ぎょうじ",
+        "romaji": "gyouji",
+        "meaning": "Acara atau kegiatan",
+        "imageQuery": "community event"
+      },
+      {
+        "kanji": "利用する",
+        "kana": "りようする",
+        "romaji": "riyou suru",
+        "meaning": "Menggunakan atau memanfaatkan",
+        "imageQuery": "public facility usage"
+      },
+      {
+        "kanji": "利用方法",
+        "kana": "りようほうほう",
+        "romaji": "riyou houhou",
+        "meaning": "Cara penggunaan",
+        "imageQuery": "facility usage guide"
+      },
+      {
+        "kanji": "規則",
+        "kana": "きそく",
+        "romaji": "kisoku",
+        "meaning": "Peraturan",
+        "imageQuery": "facility rules"
+      },
+      {
+        "kanji": "料金",
+        "kana": "りょうきん",
+        "romaji": "ryoukin",
+        "meaning": "Biaya atau tarif",
+        "imageQuery": "service fee"
+      },
+      {
+        "kanji": "延長料金",
+        "kana": "えんちょうりょうきん",
+        "romaji": "enchou ryoukin",
+        "meaning": "Biaya tambahan untuk perpanjangan",
+        "imageQuery": "extension fee"
+      },
+      {
+        "kanji": "必要",
+        "kana": "ひつよう",
+        "romaji": "hitsuyou",
+        "meaning": "Perlu atau diperlukan",
+        "imageQuery": "required sign"
+      },
+      {
+        "kanji": "室内用",
+        "kana": "しつないよう",
+        "romaji": "shitsunaiyou",
+        "meaning": "Untuk digunakan di dalam ruangan",
+        "imageQuery": "indoor use"
+      },
+      {
+        "kanji": "靴",
+        "kana": "くつ",
+        "romaji": "kutsu",
+        "meaning": "Sepatu",
+        "imageQuery": "indoor shoes"
+      },
+      {
+        "kanji": "更衣室",
+        "kana": "こういしつ",
+        "romaji": "kouishitsu",
+        "meaning": "Ruang ganti",
+        "imageQuery": "locker changing room"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Resepsionis atau loket",
+        "imageQuery": "reception counter"
+      },
+      {
+        "kanji": "利用カード",
+        "kana": "りようカード",
+        "romaji": "riyou kaado",
+        "meaning": "Kartu anggota atau kartu pengguna",
+        "imageQuery": "library membership card"
+      },
+      {
+        "kanji": "確認する",
+        "kana": "かくにんする",
+        "romaji": "kakunin suru",
+        "meaning": "Memeriksa atau memastikan",
+        "imageQuery": "checking information"
+      },
+      {
+        "kanji": "住所",
+        "kana": "じゅうしょ",
+        "romaji": "juusho",
+        "meaning": "Alamat",
+        "imageQuery": "address document"
+      },
+      {
+        "kanji": "借りる",
+        "kana": "かりる",
+        "romaji": "kariru",
+        "meaning": "Meminjam",
+        "imageQuery": "borrow a book"
+      },
+      {
+        "kanji": "返す",
+        "kana": "かえす",
+        "romaji": "kaesu",
+        "meaning": "Mengembalikan",
+        "imageQuery": "return books"
+      },
+      {
+        "kanji": "返却ポスト",
+        "kana": "へんきゃくポスト",
+        "romaji": "henkyaku posuto",
+        "meaning": "Kotak pengembalian buku",
+        "imageQuery": "library return box"
+      },
+      {
+        "kanji": "開く",
+        "kana": "あく",
+        "romaji": "aku",
+        "meaning": "Buka (misalnya perpustakaan buka)",
+        "imageQuery": "library opening hours"
+      },
+      {
+        "kanji": "閉まる",
+        "kana": "しまる",
+        "romaji": "shimaru",
+        "meaning": "Tutup (misalnya perpustakaan tutup)",
+        "imageQuery": "library closing sign"
+      },
+      {
+        "kanji": "返却日",
+        "kana": "へんきゃくび",
+        "romaji": "henkyakubi",
+        "meaning": "Tanggal pengembalian",
+        "imageQuery": "library return due date"
+      },
+      {
+        "kanji": "～冊",
+        "kana": "～さつ",
+        "romaji": "~satsu",
+        "meaning": "Kata bantu hitung untuk buku",
+        "imageQuery": "books counter"
+      },
+      {
+        "kanji": "～点",
+        "kana": "～てん",
+        "romaji": "~ten",
+        "meaning": "Kata bantu hitung untuk barang",
+        "imageQuery": "item counter"
+      },
+      {
+        "kanji": "延ばす",
+        "kana": "のばす",
+        "romaji": "nobasu",
+        "meaning": "Memperpanjang",
+        "imageQuery": "extend return due date"
+      },
+      {
+        "kanji": "予約",
+        "kana": "よやく",
+        "romaji": "yoyaku",
+        "meaning": "Pemesanan atau reservasi",
+        "imageQuery": "library book reservation"
+      },
+      {
+        "kanji": "撮影禁止",
+        "kana": "さつえいきんし",
+        "romaji": "satsuei kinshi",
+        "meaning": "Dilarang memotret",
+        "imageQuery": "no photography sign"
+      },
+      {
+        "kanji": "立入禁止",
+        "kana": "たちいりきんし",
+        "romaji": "tachiiri kinshi",
+        "meaning": "Dilarang masuk",
+        "imageQuery": "staff only no entry sign"
+      },
+      {
+        "kanji": "飲食禁止",
+        "kana": "いんしょくきんし",
+        "romaji": "inshoku kinshi",
+        "meaning": "Dilarang makan dan minum",
+        "imageQuery": "no food drink sign"
+      },
+      {
+        "kanji": "館内",
+        "kana": "かんない",
+        "romaji": "kannai",
+        "meaning": "Di dalam gedung",
+        "imageQuery": "inside building sign"
+      },
+      {
+        "kanji": "預ける",
+        "kana": "あずける",
+        "romaji": "azukeru",
+        "meaning": "Menitipkan atau menyimpan sementara",
+        "imageQuery": "bag locker deposit"
+      }
+    ]
   }
 ]
