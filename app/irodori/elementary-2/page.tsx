@@ -12,7 +12,8 @@ export default function IrodoriElementaryTwoPage() {
     id.startsWith("elementary2-")
   ).length;
   const lessonOneCompleted = progress.completedLessons.includes("elementary2-01");
-  const availableCount = lessonOneCompleted ? 2 : 1;
+  const lessonTwoCompleted = progress.completedLessons.includes("elementary2-02");
+  const availableCount = lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -77,21 +78,25 @@ export default function IrodoriElementaryTwoPage() {
             Daftar pelajaran
           </h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Lesson 1 dan 2 tersedia secara berurutan. Lesson 2 terbuka
-            setelah Lesson 1 selesai; lesson berikutnya akan ditambahkan bertahap.
+            Lesson 1–3 tersedia secara berurutan. Setiap lesson baru terbuka
+            setelah lesson sebelumnya selesai.
           </p>
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
             const lessonId = "elementary2-" + String(lesson).padStart(2, "0");
-            const isAvailable = lesson === 1 || (lesson === 2 && lessonOneCompleted);
+            const isAvailable = lesson === 1
+              || (lesson === 2 && lessonOneCompleted)
+              || (lesson === 3 && lessonTwoCompleted);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const title = lesson === 1
               ? "I just came to Japan last week."
               : lesson === 2
                 ? "He looks a serious person."
-                : "Lesson " + String(lesson).padStart(2, "0");
+                : lesson === 3
+                  ? "I cannot eat it because of an allergy."
+                  : "Lesson " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
               : lesson === 2
@@ -134,7 +139,7 @@ export default function IrodoriElementaryTwoPage() {
             );
 
             return isAvailable ? (
-              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : "/irodori/elementary-2/lesson-2"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
+              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : "/irodori/elementary-2/lesson-3"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
                 {card}
               </Link>
             ) : (
