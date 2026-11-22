@@ -161,5 +161,2567 @@
         "imageQuery": "making"
       }
     ]
+  },
+  {
+    "lessonId": "starter-01",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 1,
+    "lessonTitle": "Good morning!",
+    "vocab": [
+      {
+        "kanji": "おはようございます",
+        "kana": "おはようございます",
+        "romaji": "ohayou gozaimasu",
+        "meaning": "Selamat pagi (sopan)"
+      },
+      {
+        "kanji": "おはよう",
+        "kana": "おはよう",
+        "romaji": "ohayou",
+        "meaning": "Selamat pagi (akrab)"
+      },
+      {
+        "kanji": "こんにちは",
+        "kana": "こんにちは",
+        "romaji": "konnichiwa",
+        "meaning": "Halo / selamat siang"
+      },
+      {
+        "kanji": "こんばんは",
+        "kana": "こんばんは",
+        "romaji": "konbanwa",
+        "meaning": "Selamat malam (sapaan)"
+      },
+      {
+        "kanji": "じゃあ、また",
+        "kana": "じゃあ、また",
+        "romaji": "jaa mata",
+        "meaning": "Kalau begitu, sampai jumpa lagi"
+      },
+      {
+        "kanji": "またね",
+        "kana": "またね",
+        "romaji": "mata ne",
+        "meaning": "Sampai jumpa (akrab)"
+      },
+      {
+        "kanji": "おやすみなさい",
+        "kana": "おやすみなさい",
+        "romaji": "oyasuminasai",
+        "meaning": "Selamat tidur"
+      },
+      {
+        "kanji": "お先に失礼します",
+        "kana": "おさきにしつれいします",
+        "romaji": "osaki ni shitsurei shimasu",
+        "meaning": "Permisi, saya pamit lebih dahulu"
+      },
+      {
+        "kanji": "お疲れさまでした",
+        "kana": "おつかれさまでした",
+        "romaji": "otsukaresama deshita",
+        "meaning": "Terima kasih atas kerja keras hari ini"
+      },
+      {
+        "kanji": "ありがとうございます",
+        "kana": "ありがとうございます",
+        "romaji": "arigatou gozaimasu",
+        "meaning": "Terima kasih (sopan)"
+      },
+      {
+        "kanji": "どうもありがとう",
+        "kana": "どうもありがとう",
+        "romaji": "doumo arigatou",
+        "meaning": "Terima kasih banyak (akrab)"
+      },
+      {
+        "kanji": "すみません",
+        "kana": "すみません",
+        "romaji": "sumimasen",
+        "meaning": "Maaf / permisi"
+      },
+      {
+        "kanji": "ごめんね",
+        "kana": "ごめんね",
+        "romaji": "gomen ne",
+        "meaning": "Maaf ya (akrab)"
+      },
+      {
+        "kanji": "どうぞ",
+        "kana": "どうぞ",
+        "romaji": "douzo",
+        "meaning": "Silakan / ini"
+      },
+      {
+        "kanji": "いえいえ",
+        "kana": "いえいえ",
+        "romaji": "ie ie",
+        "meaning": "Tidak apa-apa / sama-sama"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-02",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 2,
+    "lessonTitle": "I'm sorry, I don't really understand.",
+    "vocab": [
+      {
+        "kanji": "コーヒー",
+        "kana": "コーヒー",
+        "romaji": "koohii",
+        "meaning": "Kopi"
+      },
+      {
+        "kanji": "テレビ",
+        "kana": "テレビ",
+        "romaji": "terebi",
+        "meaning": "Televisi"
+      },
+      {
+        "kanji": "ノート",
+        "kana": "ノート",
+        "romaji": "nooto",
+        "meaning": "Buku catatan"
+      },
+      {
+        "kanji": "バス",
+        "kana": "バス",
+        "romaji": "basu",
+        "meaning": "Bus"
+      },
+      {
+        "kanji": "ホテル",
+        "kana": "ホテル",
+        "romaji": "hoteru",
+        "meaning": "Hotel"
+      },
+      {
+        "kanji": "レストラン",
+        "kana": "レストラン",
+        "romaji": "resutoran",
+        "meaning": "Restoran"
+      },
+      {
+        "kanji": "コンビニ",
+        "kana": "コンビニ",
+        "romaji": "konbini",
+        "meaning": "Minimarket"
+      },
+      {
+        "kanji": "スマホ",
+        "kana": "スマホ",
+        "romaji": "sumaho",
+        "meaning": "Ponsel pintar"
+      },
+      {
+        "kanji": "もういちど",
+        "kana": "もういちど",
+        "romaji": "mou ichido",
+        "meaning": "Sekali lagi"
+      },
+      {
+        "kanji": "お願いします",
+        "kana": "おねがいします",
+        "romaji": "onegaishimasu",
+        "meaning": "Tolong / mohon"
+      },
+      {
+        "kanji": "ゆっくり",
+        "kana": "ゆっくり",
+        "romaji": "yukkuri",
+        "meaning": "Pelan-pelan"
+      },
+      {
+        "kanji": "少し",
+        "kana": "すこし",
+        "romaji": "sukoshi",
+        "meaning": "Sedikit"
+      },
+      {
+        "kanji": "英語",
+        "kana": "えいご",
+        "romaji": "eigo",
+        "meaning": "Bahasa Inggris"
+      },
+      {
+        "kanji": "日本語",
+        "kana": "にほんご",
+        "romaji": "nihongo",
+        "meaning": "Bahasa Jepang"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-03",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 3,
+    "lessonTitle": "Nice to meet you.",
+    "vocab": [
+      {
+        "kanji": "私",
+        "kana": "わたし",
+        "romaji": "watashi",
+        "meaning": "Saya"
+      },
+      {
+        "kanji": "名前",
+        "kana": "なまえ",
+        "romaji": "namae",
+        "meaning": "Nama"
+      },
+      {
+        "kanji": "国",
+        "kana": "くに",
+        "romaji": "kuni",
+        "meaning": "Negara"
+      },
+      {
+        "kanji": "出身",
+        "kana": "しゅっしん",
+        "romaji": "shusshin",
+        "meaning": "Tempat asal"
+      },
+      {
+        "kanji": "はじめまして",
+        "kana": "はじめまして",
+        "romaji": "hajimemashite",
+        "meaning": "Senang berkenalan"
+      },
+      {
+        "kanji": "どうぞよろしくお願いします",
+        "kana": "どうぞよろしくおねがいします",
+        "romaji": "douzo yoroshiku onegaishimasu",
+        "meaning": "Senang berkenalan; mohon bantuannya"
+      },
+      {
+        "kanji": "よろしくお願いします",
+        "kana": "よろしくおねがいします",
+        "romaji": "yoroshiku onegaishimasu",
+        "meaning": "Mohon bantuannya / salam kenal"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-04",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 4,
+    "lessonTitle": "I live in Tokyo.",
+    "vocab": [
+      {
+        "kanji": "東京",
+        "kana": "とうきょう",
+        "romaji": "toukyou",
+        "meaning": "Tokyo"
+      },
+      {
+        "kanji": "住む",
+        "kana": "すむ",
+        "romaji": "sumu",
+        "meaning": "Tinggal / menetap"
+      },
+      {
+        "kanji": "住んでいます",
+        "kana": "すんでいます",
+        "romaji": "sunde imasu",
+        "meaning": "Sedang tinggal / berdomisili"
+      },
+      {
+        "kanji": "家族",
+        "kana": "かぞく",
+        "romaji": "kazoku",
+        "meaning": "Keluarga"
+      },
+      {
+        "kanji": "父",
+        "kana": "ちち",
+        "romaji": "chichi",
+        "meaning": "Ayah (keluarga sendiri)"
+      },
+      {
+        "kanji": "母",
+        "kana": "はは",
+        "romaji": "haha",
+        "meaning": "Ibu (keluarga sendiri)"
+      },
+      {
+        "kanji": "兄",
+        "kana": "あに",
+        "romaji": "ani",
+        "meaning": "Kakak laki-laki"
+      },
+      {
+        "kanji": "姉",
+        "kana": "あね",
+        "romaji": "ane",
+        "meaning": "Kakak perempuan"
+      },
+      {
+        "kanji": "弟",
+        "kana": "おとうと",
+        "romaji": "otouto",
+        "meaning": "Adik laki-laki"
+      },
+      {
+        "kanji": "妹",
+        "kana": "いもうと",
+        "romaji": "imouto",
+        "meaning": "Adik perempuan"
+      },
+      {
+        "kanji": "何歳",
+        "kana": "なんさい",
+        "romaji": "nansai",
+        "meaning": "Berapa usia"
+      },
+      {
+        "kanji": "二十歳",
+        "kana": "はたち",
+        "romaji": "hatachi",
+        "meaning": "Dua puluh tahun (usia)"
+      },
+      {
+        "kanji": "ペット",
+        "kana": "ペット",
+        "romaji": "petto",
+        "meaning": "Hewan peliharaan"
+      },
+      {
+        "kanji": "犬",
+        "kana": "いぬ",
+        "romaji": "inu",
+        "meaning": "Anjing"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-05",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 5,
+    "lessonTitle": "I like udon.",
+    "vocab": [
+      {
+        "kanji": "魚",
+        "kana": "さかな",
+        "romaji": "sakana",
+        "meaning": "Ikan"
+      },
+      {
+        "kanji": "肉",
+        "kana": "にく",
+        "romaji": "niku",
+        "meaning": "Daging"
+      },
+      {
+        "kanji": "野菜",
+        "kana": "やさい",
+        "romaji": "yasai",
+        "meaning": "Sayuran"
+      },
+      {
+        "kanji": "果物",
+        "kana": "くだもの",
+        "romaji": "kudamono",
+        "meaning": "Buah-buahan"
+      },
+      {
+        "kanji": "パン",
+        "kana": "パン",
+        "romaji": "pan",
+        "meaning": "Roti"
+      },
+      {
+        "kanji": "卵",
+        "kana": "たまご",
+        "romaji": "tamago",
+        "meaning": "Telur"
+      },
+      {
+        "kanji": "うどん",
+        "kana": "うどん",
+        "romaji": "udon",
+        "meaning": "Mi tebal Jepang"
+      },
+      {
+        "kanji": "そば",
+        "kana": "そば",
+        "romaji": "soba",
+        "meaning": "Mi soba"
+      },
+      {
+        "kanji": "すし",
+        "kana": "すし",
+        "romaji": "sushi",
+        "meaning": "Sushi"
+      },
+      {
+        "kanji": "天ぷら",
+        "kana": "てんぷら",
+        "romaji": "tenpura",
+        "meaning": "Tempura"
+      },
+      {
+        "kanji": "ラーメン",
+        "kana": "ラーメン",
+        "romaji": "raamen",
+        "meaning": "Ramen"
+      },
+      {
+        "kanji": "カレー",
+        "kana": "カレー",
+        "romaji": "karee",
+        "meaning": "Kari ala Jepang"
+      },
+      {
+        "kanji": "納豆",
+        "kana": "なっとう",
+        "romaji": "nattou",
+        "meaning": "Kedelai fermentasi"
+      },
+      {
+        "kanji": "梅干し",
+        "kana": "うめぼし",
+        "romaji": "umeboshi",
+        "meaning": "Acar ume"
+      },
+      {
+        "kanji": "水",
+        "kana": "みず",
+        "romaji": "mizu",
+        "meaning": "Air putih"
+      },
+      {
+        "kanji": "お茶",
+        "kana": "おちゃ",
+        "romaji": "ocha",
+        "meaning": "Teh"
+      },
+      {
+        "kanji": "コーヒー",
+        "kana": "コーヒー",
+        "romaji": "koohii",
+        "meaning": "Kopi"
+      },
+      {
+        "kanji": "紅茶",
+        "kana": "こうちゃ",
+        "romaji": "koucha",
+        "meaning": "Teh hitam"
+      },
+      {
+        "kanji": "ジュース",
+        "kana": "ジュース",
+        "romaji": "juusu",
+        "meaning": "Jus"
+      },
+      {
+        "kanji": "ご飯",
+        "kana": "ごはん",
+        "romaji": "gohan",
+        "meaning": "Nasi / makanan"
+      },
+      {
+        "kanji": "ヨーグルト",
+        "kana": "ヨーグルト",
+        "romaji": "yooguruto",
+        "meaning": "Yoghurt"
+      },
+      {
+        "kanji": "サラダ",
+        "kana": "サラダ",
+        "romaji": "sarada",
+        "meaning": "Salad"
+      },
+      {
+        "kanji": "みそ汁",
+        "kana": "みそしる",
+        "romaji": "misoshiru",
+        "meaning": "Sup miso"
+      },
+      {
+        "kanji": "牛乳",
+        "kana": "ぎゅうにゅう",
+        "romaji": "gyuunyuu",
+        "meaning": "Susu"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-06",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 6,
+    "lessonTitle": "Cheeseburger, please.",
+    "vocab": [
+      {
+        "kanji": "ハンバーガー",
+        "kana": "ハンバーガー",
+        "romaji": "hanbaagaa",
+        "meaning": "Hamburger"
+      },
+      {
+        "kanji": "チーズバーガー",
+        "kana": "チーズバーガー",
+        "romaji": "chiizubaagaa",
+        "meaning": "Cheeseburger"
+      },
+      {
+        "kanji": "てりやきバーガー",
+        "kana": "てりやきバーガー",
+        "romaji": "teriyaki baagaa",
+        "meaning": "Burger teriyaki"
+      },
+      {
+        "kanji": "フィッシュバーガー",
+        "kana": "フィッシュバーガー",
+        "romaji": "fisshu baagaa",
+        "meaning": "Burger ikan"
+      },
+      {
+        "kanji": "チキンバーガー",
+        "kana": "チキンバーガー",
+        "romaji": "chikin baagaa",
+        "meaning": "Burger ayam"
+      },
+      {
+        "kanji": "フライドポテト",
+        "kana": "フライドポテト",
+        "romaji": "furaido poteto",
+        "meaning": "Kentang goreng"
+      },
+      {
+        "kanji": "アップルパイ",
+        "kana": "アップルパイ",
+        "romaji": "appurupai",
+        "meaning": "Pai apel"
+      },
+      {
+        "kanji": "アイスクリーム",
+        "kana": "アイスクリーム",
+        "romaji": "aisukuriimu",
+        "meaning": "Es krim"
+      },
+      {
+        "kanji": "オレンジジュース",
+        "kana": "オレンジジュース",
+        "romaji": "orenji juusu",
+        "meaning": "Jus jeruk"
+      },
+      {
+        "kanji": "ウーロン茶",
+        "kana": "ウーロンちゃ",
+        "romaji": "uuroncha",
+        "meaning": "Teh oolong"
+      },
+      {
+        "kanji": "ホットコーヒー",
+        "kana": "ホットコーヒー",
+        "romaji": "hotto koohii",
+        "meaning": "Kopi panas"
+      },
+      {
+        "kanji": "アイスコーヒー",
+        "kana": "アイスコーヒー",
+        "romaji": "aisu koohii",
+        "meaning": "Kopi dingin"
+      },
+      {
+        "kanji": "サラダ",
+        "kana": "サラダ",
+        "romaji": "sarada",
+        "meaning": "Salad"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-07",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 7,
+    "lessonTitle": "There are four rooms.",
+    "vocab": [
+      {
+        "kanji": "玄関",
+        "kana": "げんかん",
+        "romaji": "genkan",
+        "meaning": "Area pintu masuk"
+      },
+      {
+        "kanji": "台所",
+        "kana": "だいどころ",
+        "romaji": "daidokoro",
+        "meaning": "Dapur"
+      },
+      {
+        "kanji": "居間",
+        "kana": "いま",
+        "romaji": "ima",
+        "meaning": "Ruang keluarga"
+      },
+      {
+        "kanji": "食堂",
+        "kana": "しょくどう",
+        "romaji": "shokudou",
+        "meaning": "Ruang makan"
+      },
+      {
+        "kanji": "部屋",
+        "kana": "へや",
+        "romaji": "heya",
+        "meaning": "Kamar / ruangan"
+      },
+      {
+        "kanji": "風呂",
+        "kana": "ふろ",
+        "romaji": "furo",
+        "meaning": "Kamar mandi / bak mandi"
+      },
+      {
+        "kanji": "トイレ",
+        "kana": "トイレ",
+        "romaji": "toire",
+        "meaning": "Toilet"
+      },
+      {
+        "kanji": "階段",
+        "kana": "かいだん",
+        "romaji": "kaidan",
+        "meaning": "Tangga"
+      },
+      {
+        "kanji": "庭",
+        "kana": "にわ",
+        "romaji": "niwa",
+        "meaning": "Taman"
+      },
+      {
+        "kanji": "エアコン",
+        "kana": "エアコン",
+        "romaji": "eakon",
+        "meaning": "AC"
+      },
+      {
+        "kanji": "冷蔵庫",
+        "kana": "れいぞうこ",
+        "romaji": "reizouko",
+        "meaning": "Kulkas"
+      },
+      {
+        "kanji": "電子レンジ",
+        "kana": "でんしレンジ",
+        "romaji": "denshi renji",
+        "meaning": "Microwave"
+      },
+      {
+        "kanji": "炊飯器",
+        "kana": "すいはんき",
+        "romaji": "suihanki",
+        "meaning": "Penanak nasi"
+      },
+      {
+        "kanji": "トースター",
+        "kana": "トースター",
+        "romaji": "toosutaa",
+        "meaning": "Pemanggang roti"
+      },
+      {
+        "kanji": "ベッド",
+        "kana": "ベッド",
+        "romaji": "beddo",
+        "meaning": "Tempat tidur"
+      },
+      {
+        "kanji": "ふとん",
+        "kana": "ふとん",
+        "romaji": "futon",
+        "meaning": "Futon"
+      },
+      {
+        "kanji": "テーブル",
+        "kana": "テーブル",
+        "romaji": "teeburu",
+        "meaning": "Meja"
+      },
+      {
+        "kanji": "いす",
+        "kana": "いす",
+        "romaji": "isu",
+        "meaning": "Kursi"
+      },
+      {
+        "kanji": "洗濯機",
+        "kana": "せんたくき",
+        "romaji": "sentakuki",
+        "meaning": "Mesin cuci"
+      },
+      {
+        "kanji": "テレビ",
+        "kana": "テレビ",
+        "romaji": "terebi",
+        "meaning": "Televisi"
+      },
+      {
+        "kanji": "Wi-Fi",
+        "kana": "ワイファイ",
+        "romaji": "waifai",
+        "meaning": "Wi-Fi"
+      },
+      {
+        "kanji": "広い",
+        "kana": "ひろい",
+        "romaji": "hiroi",
+        "meaning": "Luas"
+      },
+      {
+        "kanji": "せまい",
+        "kana": "せまい",
+        "romaji": "semai",
+        "meaning": "Sempit"
+      },
+      {
+        "kanji": "大きい",
+        "kana": "おおきい",
+        "romaji": "ookii",
+        "meaning": "Besar"
+      },
+      {
+        "kanji": "小さい",
+        "kana": "ちいさい",
+        "romaji": "chiisai",
+        "meaning": "Kecil"
+      },
+      {
+        "kanji": "新しい",
+        "kana": "あたらしい",
+        "romaji": "atarashii",
+        "meaning": "Baru"
+      },
+      {
+        "kanji": "古い",
+        "kana": "ふるい",
+        "romaji": "furui",
+        "meaning": "Lama / tua"
+      },
+      {
+        "kanji": "静か",
+        "kana": "しずか",
+        "romaji": "shizuka",
+        "meaning": "Tenang"
+      },
+      {
+        "kanji": "うるさい",
+        "kana": "うるさい",
+        "romaji": "urusai",
+        "meaning": "Berisik"
+      },
+      {
+        "kanji": "きれい",
+        "kana": "きれい",
+        "romaji": "kirei",
+        "meaning": "Bersih / indah"
+      },
+      {
+        "kanji": "きたない",
+        "kana": "きたない",
+        "romaji": "kitanai",
+        "meaning": "Kotor"
+      },
+      {
+        "kanji": "アパート",
+        "kana": "アパート",
+        "romaji": "apaato",
+        "meaning": "Apartemen sederhana"
+      },
+      {
+        "kanji": "マンション",
+        "kana": "マンション",
+        "romaji": "manshon",
+        "meaning": "Apartemen bertingkat / kondominium"
+      },
+      {
+        "kanji": "寮",
+        "kana": "りょう",
+        "romaji": "ryou",
+        "meaning": "Asrama"
+      },
+      {
+        "kanji": "シェアハウス",
+        "kana": "シェアハウス",
+        "romaji": "sheahausu",
+        "meaning": "Rumah bersama"
+      },
+      {
+        "kanji": "一戸建て",
+        "kana": "いっこだて",
+        "romaji": "ikkodate",
+        "meaning": "Rumah tapak"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-08",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 8,
+    "lessonTitle": "Where is Yamada-san?",
+    "vocab": [
+      {
+        "kanji": "会議室",
+        "kana": "かいぎしつ",
+        "romaji": "kaigishitsu",
+        "meaning": "Ruang rapat"
+      },
+      {
+        "kanji": "食堂",
+        "kana": "しょくどう",
+        "romaji": "shokudou",
+        "meaning": "Kantin"
+      },
+      {
+        "kanji": "休憩室",
+        "kana": "きゅうけいしつ",
+        "romaji": "kyuukeishitsu",
+        "meaning": "Ruang istirahat"
+      },
+      {
+        "kanji": "事務室",
+        "kana": "じむしつ",
+        "romaji": "jimushitsu",
+        "meaning": "Ruang kantor"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Resepsionis"
+      },
+      {
+        "kanji": "倉庫",
+        "kana": "そうこ",
+        "romaji": "souko",
+        "meaning": "Gudang"
+      },
+      {
+        "kanji": "更衣室",
+        "kana": "こういしつ",
+        "romaji": "kouishitsu",
+        "meaning": "Ruang ganti"
+      },
+      {
+        "kanji": "給湯室",
+        "kana": "きゅうとうしつ",
+        "romaji": "kyuutoushitsu",
+        "meaning": "Ruang membuat minuman"
+      },
+      {
+        "kanji": "はさみ",
+        "kana": "はさみ",
+        "romaji": "hasami",
+        "meaning": "Gunting"
+      },
+      {
+        "kanji": "のり",
+        "kana": "のり",
+        "romaji": "nori",
+        "meaning": "Lem"
+      },
+      {
+        "kanji": "机",
+        "kana": "つくえ",
+        "romaji": "tsukue",
+        "meaning": "Meja"
+      },
+      {
+        "kanji": "引き出し",
+        "kana": "ひきだし",
+        "romaji": "hikidashi",
+        "meaning": "Laci"
+      },
+      {
+        "kanji": "ごみ箱",
+        "kana": "ごみばこ",
+        "romaji": "gomibako",
+        "meaning": "Tempat sampah"
+      },
+      {
+        "kanji": "複合機",
+        "kana": "ふくごうき",
+        "romaji": "fukugouki",
+        "meaning": "Mesin fotokopi / printer"
+      },
+      {
+        "kanji": "電話",
+        "kana": "でんわ",
+        "romaji": "denwa",
+        "meaning": "Telepon"
+      },
+      {
+        "kanji": "書類",
+        "kana": "しょるい",
+        "romaji": "shorui",
+        "meaning": "Dokumen"
+      },
+      {
+        "kanji": "上",
+        "kana": "うえ",
+        "romaji": "ue",
+        "meaning": "Di atas"
+      },
+      {
+        "kanji": "下",
+        "kana": "した",
+        "romaji": "shita",
+        "meaning": "Di bawah"
+      },
+      {
+        "kanji": "中",
+        "kana": "なか",
+        "romaji": "naka",
+        "meaning": "Di dalam"
+      },
+      {
+        "kanji": "横",
+        "kana": "よこ",
+        "romaji": "yoko",
+        "meaning": "Di samping"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-09",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 9,
+    "lessonTitle": "Lunch is from noon to 1 o’clock.",
+    "vocab": [
+      {
+        "kanji": "朝",
+        "kana": "あさ",
+        "romaji": "asa",
+        "meaning": "Pagi"
+      },
+      {
+        "kanji": "昼",
+        "kana": "ひる",
+        "romaji": "hiru",
+        "meaning": "Siang"
+      },
+      {
+        "kanji": "夜",
+        "kana": "よる",
+        "romaji": "yoru",
+        "meaning": "Malam"
+      },
+      {
+        "kanji": "午前",
+        "kana": "ごぜん",
+        "romaji": "gozen",
+        "meaning": "AM / sebelum tengah hari"
+      },
+      {
+        "kanji": "午後",
+        "kana": "ごご",
+        "romaji": "gogo",
+        "meaning": "PM / setelah tengah hari"
+      },
+      {
+        "kanji": "毎朝",
+        "kana": "まいあさ",
+        "romaji": "maiasa",
+        "meaning": "Setiap pagi"
+      },
+      {
+        "kanji": "毎晩",
+        "kana": "まいばん",
+        "romaji": "maiban",
+        "meaning": "Setiap malam"
+      },
+      {
+        "kanji": "毎日",
+        "kana": "まいにち",
+        "romaji": "mainichi",
+        "meaning": "Setiap hari"
+      },
+      {
+        "kanji": "朝礼",
+        "kana": "ちょうれい",
+        "romaji": "chourei",
+        "meaning": "Pengarahan pagi"
+      },
+      {
+        "kanji": "昼休み",
+        "kana": "ひるやすみ",
+        "romaji": "hiruyasumi",
+        "meaning": "Istirahat siang"
+      },
+      {
+        "kanji": "休憩時間",
+        "kana": "きゅうけいじかん",
+        "romaji": "kyuukeijikan",
+        "meaning": "Waktu istirahat"
+      },
+      {
+        "kanji": "残業",
+        "kana": "ざんぎょう",
+        "romaji": "zangyou",
+        "meaning": "Lembur"
+      },
+      {
+        "kanji": "月曜日",
+        "kana": "げつようび",
+        "romaji": "getsuyoubi",
+        "meaning": "Senin"
+      },
+      {
+        "kanji": "火曜日",
+        "kana": "かようび",
+        "romaji": "kayoubi",
+        "meaning": "Selasa"
+      },
+      {
+        "kanji": "水曜日",
+        "kana": "すいようび",
+        "romaji": "suiyoubi",
+        "meaning": "Rabu"
+      },
+      {
+        "kanji": "木曜日",
+        "kana": "もくようび",
+        "romaji": "mokuyoubi",
+        "meaning": "Kamis"
+      },
+      {
+        "kanji": "金曜日",
+        "kana": "きんようび",
+        "romaji": "kinyoubi",
+        "meaning": "Jumat"
+      },
+      {
+        "kanji": "土曜日",
+        "kana": "どようび",
+        "romaji": "doyoubi",
+        "meaning": "Sabtu"
+      },
+      {
+        "kanji": "日曜日",
+        "kana": "にちようび",
+        "romaji": "nichiyoubi",
+        "meaning": "Minggu"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-10",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 10,
+    "lessonTitle": "Please lend me the stapler.",
+    "vocab": [
+      {
+        "kanji": "手伝う",
+        "kana": "てつだう",
+        "romaji": "tetsudau",
+        "meaning": "Membantu"
+      },
+      {
+        "kanji": "置く",
+        "kana": "おく",
+        "romaji": "oku",
+        "meaning": "Meletakkan"
+      },
+      {
+        "kanji": "取る",
+        "kana": "とる",
+        "romaji": "toru",
+        "meaning": "Mengambil"
+      },
+      {
+        "kanji": "並べる",
+        "kana": "ならべる",
+        "romaji": "naraberu",
+        "meaning": "Menyusun"
+      },
+      {
+        "kanji": "片付ける",
+        "kana": "かたづける",
+        "romaji": "katazukeru",
+        "meaning": "Merapikan"
+      },
+      {
+        "kanji": "捨てる",
+        "kana": "すてる",
+        "romaji": "suteru",
+        "meaning": "Membuang"
+      },
+      {
+        "kanji": "閉める",
+        "kana": "しめる",
+        "romaji": "shimeru",
+        "meaning": "Menutup"
+      },
+      {
+        "kanji": "貸す",
+        "kana": "かす",
+        "romaji": "kasu",
+        "meaning": "Meminjamkan"
+      },
+      {
+        "kanji": "借りる",
+        "kana": "かりる",
+        "romaji": "kariru",
+        "meaning": "Meminjam"
+      },
+      {
+        "kanji": "返す",
+        "kana": "かえす",
+        "romaji": "kaesu",
+        "meaning": "Mengembalikan"
+      },
+      {
+        "kanji": "ホチキス",
+        "kana": "ホチキス",
+        "romaji": "hochikisu",
+        "meaning": "Stapler"
+      },
+      {
+        "kanji": "はさみ",
+        "kana": "はさみ",
+        "romaji": "hasami",
+        "meaning": "Gunting"
+      },
+      {
+        "kanji": "クリップ",
+        "kana": "クリップ",
+        "romaji": "kurippu",
+        "meaning": "Klip kertas"
+      },
+      {
+        "kanji": "のり",
+        "kana": "のり",
+        "romaji": "nori",
+        "meaning": "Lem"
+      },
+      {
+        "kanji": "ペン",
+        "kana": "ペン",
+        "romaji": "pen",
+        "meaning": "Pena"
+      },
+      {
+        "kanji": "充電器",
+        "kana": "じゅうでんき",
+        "romaji": "juudenki",
+        "meaning": "Pengisi daya"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-11",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 11,
+    "lessonTitle": "What kind of manga do you like?",
+    "vocab": [
+      {
+        "kanji": "読書",
+        "kana": "どくしょ",
+        "romaji": "dokusho",
+        "meaning": "Membaca buku"
+      },
+      {
+        "kanji": "マンガ",
+        "kana": "マンガ",
+        "romaji": "manga",
+        "meaning": "Komik / manga"
+      },
+      {
+        "kanji": "散歩",
+        "kana": "さんぽ",
+        "romaji": "sanpo",
+        "meaning": "Jalan-jalan"
+      },
+      {
+        "kanji": "音楽",
+        "kana": "おんがく",
+        "romaji": "ongaku",
+        "meaning": "Musik"
+      },
+      {
+        "kanji": "映画",
+        "kana": "えいが",
+        "romaji": "eiga",
+        "meaning": "Film"
+      },
+      {
+        "kanji": "休日",
+        "kana": "きゅうじつ",
+        "romaji": "kyuujitsu",
+        "meaning": "Hari libur"
+      },
+      {
+        "kanji": "趣味",
+        "kana": "しゅみ",
+        "romaji": "shumi",
+        "meaning": "Hobi"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto"
+      },
+      {
+        "kanji": "どんな",
+        "kana": "どんな",
+        "romaji": "donna",
+        "meaning": "Seperti apa / jenis apa"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-12",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 12,
+    "lessonTitle": "Shall we go together?",
+    "vocab": [
+      {
+        "kanji": "イベント",
+        "kana": "イベント",
+        "romaji": "ibento",
+        "meaning": "Acara"
+      },
+      {
+        "kanji": "案内",
+        "kana": "あんない",
+        "romaji": "annai",
+        "meaning": "Pengumuman / panduan"
+      },
+      {
+        "kanji": "日時",
+        "kana": "にちじ",
+        "romaji": "nichiji",
+        "meaning": "Tanggal dan waktu"
+      },
+      {
+        "kanji": "場所",
+        "kana": "ばしょ",
+        "romaji": "basho",
+        "meaning": "Tempat"
+      },
+      {
+        "kanji": "会場",
+        "kana": "かいじょう",
+        "romaji": "kaijou",
+        "meaning": "Lokasi acara"
+      },
+      {
+        "kanji": "入場料",
+        "kana": "にゅうじょうりょう",
+        "romaji": "nyuujouryou",
+        "meaning": "Biaya masuk"
+      },
+      {
+        "kanji": "無料",
+        "kana": "むりょう",
+        "romaji": "muryou",
+        "meaning": "Gratis"
+      },
+      {
+        "kanji": "夏祭り",
+        "kana": "なつまつり",
+        "romaji": "natsumatsuri",
+        "meaning": "Festival musim panas"
+      },
+      {
+        "kanji": "交流会",
+        "kana": "こうりゅうかい",
+        "romaji": "kouryuukai",
+        "meaning": "Acara pertemuan / pertukaran"
+      },
+      {
+        "kanji": "広場",
+        "kana": "ひろば",
+        "romaji": "hiroba",
+        "meaning": "Lapangan"
+      },
+      {
+        "kanji": "ホール",
+        "kana": "ホール",
+        "romaji": "hooru",
+        "meaning": "Aula"
+      },
+      {
+        "kanji": "行く",
+        "kana": "いく",
+        "romaji": "iku",
+        "meaning": "Pergi"
+      },
+      {
+        "kanji": "見に行く",
+        "kana": "みにいく",
+        "romaji": "mi ni iku",
+        "meaning": "Pergi untuk menonton"
+      },
+      {
+        "kanji": "食べに行く",
+        "kana": "たべにいく",
+        "romaji": "tabe ni iku",
+        "meaning": "Pergi untuk makan"
+      },
+      {
+        "kanji": "楽しみ",
+        "kana": "たのしみ",
+        "romaji": "tanoshimi",
+        "meaning": "Hal yang dinantikan"
+      },
+      {
+        "kanji": "1月",
+        "kana": "いちがつ",
+        "romaji": "ichigatsu",
+        "meaning": "Januari"
+      },
+      {
+        "kanji": "2月",
+        "kana": "にがつ",
+        "romaji": "nigatsu",
+        "meaning": "Februari"
+      },
+      {
+        "kanji": "3月",
+        "kana": "さんがつ",
+        "romaji": "sangatsu",
+        "meaning": "Maret"
+      },
+      {
+        "kanji": "4月",
+        "kana": "しがつ",
+        "romaji": "shigatsu",
+        "meaning": "April"
+      },
+      {
+        "kanji": "5月",
+        "kana": "ごがつ",
+        "romaji": "gogatsu",
+        "meaning": "Mei"
+      },
+      {
+        "kanji": "6月",
+        "kana": "ろくがつ",
+        "romaji": "rokugatsu",
+        "meaning": "Juni"
+      },
+      {
+        "kanji": "7月",
+        "kana": "しちがつ",
+        "romaji": "shichigatsu",
+        "meaning": "Juli"
+      },
+      {
+        "kanji": "8月",
+        "kana": "はちがつ",
+        "romaji": "hachigatsu",
+        "meaning": "Agustus"
+      },
+      {
+        "kanji": "9月",
+        "kana": "くがつ",
+        "romaji": "kugatsu",
+        "meaning": "September"
+      },
+      {
+        "kanji": "10月",
+        "kana": "じゅうがつ",
+        "romaji": "juugatsu",
+        "meaning": "Oktober"
+      },
+      {
+        "kanji": "11月",
+        "kana": "じゅういちがつ",
+        "romaji": "juuichigatsu",
+        "meaning": "November"
+      },
+      {
+        "kanji": "12月",
+        "kana": "じゅうにがつ",
+        "romaji": "juunigatsu",
+        "meaning": "Desember"
+      },
+      {
+        "kanji": "1日",
+        "kana": "ついたち",
+        "romaji": "tsuitachi",
+        "meaning": "Tanggal 1"
+      },
+      {
+        "kanji": "2日",
+        "kana": "ふつか",
+        "romaji": "futsuka",
+        "meaning": "Tanggal 2"
+      },
+      {
+        "kanji": "3日",
+        "kana": "みっか",
+        "romaji": "mikka",
+        "meaning": "Tanggal 3"
+      },
+      {
+        "kanji": "4日",
+        "kana": "よっか",
+        "romaji": "yokka",
+        "meaning": "Tanggal 4"
+      },
+      {
+        "kanji": "5日",
+        "kana": "いつか",
+        "romaji": "itsuka",
+        "meaning": "Tanggal 5"
+      },
+      {
+        "kanji": "6日",
+        "kana": "むいか",
+        "romaji": "muika",
+        "meaning": "Tanggal 6"
+      },
+      {
+        "kanji": "7日",
+        "kana": "なのか",
+        "romaji": "nanoka",
+        "meaning": "Tanggal 7"
+      },
+      {
+        "kanji": "8日",
+        "kana": "ようか",
+        "romaji": "youka",
+        "meaning": "Tanggal 8"
+      },
+      {
+        "kanji": "9日",
+        "kana": "ここのか",
+        "romaji": "kokonoka",
+        "meaning": "Tanggal 9"
+      },
+      {
+        "kanji": "10日",
+        "kana": "とおか",
+        "romaji": "tooka",
+        "meaning": "Tanggal 10"
+      },
+      {
+        "kanji": "14日",
+        "kana": "じゅうよっか",
+        "romaji": "juuyokka",
+        "meaning": "Tanggal 14"
+      },
+      {
+        "kanji": "20日",
+        "kana": "はつか",
+        "romaji": "hatsuka",
+        "meaning": "Tanggal 20"
+      },
+      {
+        "kanji": "24日",
+        "kana": "にじゅうよっか",
+        "romaji": "nijuyokka",
+        "meaning": "Tanggal 24"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-13",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 13,
+    "lessonTitle": "Does this bus go to the airport?",
+    "vocab": [
+      {
+        "kanji": "電車",
+        "kana": "でんしゃ",
+        "romaji": "densha",
+        "meaning": "Kereta"
+      },
+      {
+        "kanji": "バス",
+        "kana": "バス",
+        "romaji": "basu",
+        "meaning": "Bus"
+      },
+      {
+        "kanji": "タクシー",
+        "kana": "タクシー",
+        "romaji": "takushii",
+        "meaning": "Taksi"
+      },
+      {
+        "kanji": "地下鉄",
+        "kana": "ちかてつ",
+        "romaji": "chikatetsu",
+        "meaning": "Kereta bawah tanah"
+      },
+      {
+        "kanji": "飛行機",
+        "kana": "ひこうき",
+        "romaji": "hikouki",
+        "meaning": "Pesawat"
+      },
+      {
+        "kanji": "船",
+        "kana": "ふね",
+        "romaji": "fune",
+        "meaning": "Kapal"
+      },
+      {
+        "kanji": "駅",
+        "kana": "えき",
+        "romaji": "eki",
+        "meaning": "Stasiun"
+      },
+      {
+        "kanji": "空港",
+        "kana": "くうこう",
+        "romaji": "kuukou",
+        "meaning": "Bandara"
+      },
+      {
+        "kanji": "学校",
+        "kana": "がっこう",
+        "romaji": "gakkou",
+        "meaning": "Sekolah"
+      },
+      {
+        "kanji": "会社",
+        "kana": "かいしゃ",
+        "romaji": "kaisha",
+        "meaning": "Kantor / perusahaan"
+      },
+      {
+        "kanji": "図書館",
+        "kana": "としょかん",
+        "romaji": "toshokan",
+        "meaning": "Perpustakaan"
+      },
+      {
+        "kanji": "市役所",
+        "kana": "しやくしょ",
+        "romaji": "shiyakusho",
+        "meaning": "Kantor pemerintah kota"
+      },
+      {
+        "kanji": "乗る",
+        "kana": "のる",
+        "romaji": "noru",
+        "meaning": "Naik kendaraan"
+      },
+      {
+        "kanji": "降りる",
+        "kana": "おりる",
+        "romaji": "oriru",
+        "meaning": "Turun dari kendaraan"
+      },
+      {
+        "kanji": "乗り換える",
+        "kana": "のりかえる",
+        "romaji": "norikaeru",
+        "meaning": "Berganti kendaraan"
+      },
+      {
+        "kanji": "歩いて",
+        "kana": "あるいて",
+        "romaji": "aruite",
+        "meaning": "Dengan berjalan kaki"
+      },
+      {
+        "kanji": "行く",
+        "kana": "いく",
+        "romaji": "iku",
+        "meaning": "Pergi"
+      },
+      {
+        "kanji": "来る",
+        "kana": "くる",
+        "romaji": "kuru",
+        "meaning": "Datang"
+      },
+      {
+        "kanji": "東",
+        "kana": "ひがし",
+        "romaji": "higashi",
+        "meaning": "Timur"
+      },
+      {
+        "kanji": "西",
+        "kana": "にし",
+        "romaji": "nishi",
+        "meaning": "Barat"
+      },
+      {
+        "kanji": "南",
+        "kana": "みなみ",
+        "romaji": "minami",
+        "meaning": "Selatan"
+      },
+      {
+        "kanji": "北",
+        "kana": "きた",
+        "romaji": "kita",
+        "meaning": "Utara"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-14",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 14,
+    "lessonTitle": "It’s a big building, isn’t it?",
+    "vocab": [
+      {
+        "kanji": "上",
+        "kana": "うえ",
+        "romaji": "ue",
+        "meaning": "Di atas"
+      },
+      {
+        "kanji": "下",
+        "kana": "した",
+        "romaji": "shita",
+        "meaning": "Di bawah"
+      },
+      {
+        "kanji": "前",
+        "kana": "まえ",
+        "romaji": "mae",
+        "meaning": "Di depan"
+      },
+      {
+        "kanji": "後ろ",
+        "kana": "うしろ",
+        "romaji": "ushiro",
+        "meaning": "Di belakang"
+      },
+      {
+        "kanji": "中",
+        "kana": "なか",
+        "romaji": "naka",
+        "meaning": "Di dalam"
+      },
+      {
+        "kanji": "横",
+        "kana": "よこ",
+        "romaji": "yoko",
+        "meaning": "Di samping"
+      },
+      {
+        "kanji": "トイレ",
+        "kana": "トイレ",
+        "romaji": "toire",
+        "meaning": "Toilet"
+      },
+      {
+        "kanji": "コインロッカー",
+        "kana": "コインロッカー",
+        "romaji": "koin rokkaa",
+        "meaning": "Loker koin"
+      },
+      {
+        "kanji": "自動販売機",
+        "kana": "じどうはんばいき",
+        "romaji": "jidouhanbaiki",
+        "meaning": "Mesin penjual otomatis"
+      },
+      {
+        "kanji": "コンビニ",
+        "kana": "コンビニ",
+        "romaji": "konbini",
+        "meaning": "Minimarket"
+      },
+      {
+        "kanji": "ATM",
+        "kana": "エーティーエム",
+        "romaji": "eetiiemu",
+        "meaning": "ATM"
+      },
+      {
+        "kanji": "インフォメーション",
+        "kana": "インフォメーション",
+        "romaji": "infomeeshon",
+        "meaning": "Meja informasi"
+      },
+      {
+        "kanji": "エレベーター",
+        "kana": "エレベーター",
+        "romaji": "erebeetaa",
+        "meaning": "Lift"
+      },
+      {
+        "kanji": "改札",
+        "kana": "かいさつ",
+        "romaji": "kaisatsu",
+        "meaning": "Gerbang tiket"
+      },
+      {
+        "kanji": "大きい",
+        "kana": "おおきい",
+        "romaji": "ookii",
+        "meaning": "Besar"
+      },
+      {
+        "kanji": "小さい",
+        "kana": "ちいさい",
+        "romaji": "chiisai",
+        "meaning": "Kecil"
+      },
+      {
+        "kanji": "高い",
+        "kana": "たかい",
+        "romaji": "takai",
+        "meaning": "Tinggi"
+      },
+      {
+        "kanji": "低い",
+        "kana": "ひくい",
+        "romaji": "hikui",
+        "meaning": "Rendah"
+      },
+      {
+        "kanji": "広い",
+        "kana": "ひろい",
+        "romaji": "hiroi",
+        "meaning": "Luas"
+      },
+      {
+        "kanji": "せまい",
+        "kana": "せまい",
+        "romaji": "semai",
+        "meaning": "Sempit"
+      },
+      {
+        "kanji": "古い",
+        "kana": "ふるい",
+        "romaji": "furui",
+        "meaning": "Lama / tua"
+      },
+      {
+        "kanji": "新しい",
+        "kana": "あたらしい",
+        "romaji": "atarashii",
+        "meaning": "Baru"
+      },
+      {
+        "kanji": "にぎやか",
+        "kana": "にぎやか",
+        "romaji": "nigiyaka",
+        "meaning": "Ramai"
+      },
+      {
+        "kanji": "静か",
+        "kana": "しずか",
+        "romaji": "shizuka",
+        "meaning": "Tenang"
+      },
+      {
+        "kanji": "きれい",
+        "kana": "きれい",
+        "romaji": "kirei",
+        "meaning": "Indah / bersih"
+      },
+      {
+        "kanji": "有名",
+        "kana": "ゆうめい",
+        "romaji": "yuumei",
+        "meaning": "Terkenal"
+      },
+      {
+        "kanji": "営業時間",
+        "kana": "えいぎょうじかん",
+        "romaji": "eigyou jikan",
+        "meaning": "Jam operasional"
+      },
+      {
+        "kanji": "定休日",
+        "kana": "ていきゅうび",
+        "romaji": "teikyuu-bi",
+        "meaning": "Hari libur rutin"
+      },
+      {
+        "kanji": "営業中",
+        "kana": "えいぎょうちゅう",
+        "romaji": "eigyou-chuu",
+        "meaning": "Sedang buka"
+      },
+      {
+        "kanji": "準備中",
+        "kana": "じゅんびちゅう",
+        "romaji": "junbi-chuu",
+        "meaning": "Sedang persiapan"
+      },
+      {
+        "kanji": "休業",
+        "kana": "きゅうぎょう",
+        "romaji": "kyuugyou",
+        "meaning": "Tutup / tidak beroperasi"
+      },
+      {
+        "kanji": "年中無休",
+        "kana": "ねんじゅうむきゅう",
+        "romaji": "nenjuu mukyuu",
+        "meaning": "Buka sepanjang tahun"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-15",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 15,
+    "lessonTitle": "I need some batteries.",
+    "vocab": [
+      {
+        "kanji": "コンビニ",
+        "kana": "コンビニ",
+        "romaji": "konbini",
+        "meaning": "Minimarket"
+      },
+      {
+        "kanji": "スーパー",
+        "kana": "スーパー",
+        "romaji": "suupaa",
+        "meaning": "Supermarket"
+      },
+      {
+        "kanji": "100円ショップ",
+        "kana": "ひゃくえんショップ",
+        "romaji": "hyaku-en shoppu",
+        "meaning": "Toko serba 100 yen"
+      },
+      {
+        "kanji": "ホームセンター",
+        "kana": "ホームセンター",
+        "romaji": "hoomu sentaa",
+        "meaning": "Toko perlengkapan rumah"
+      },
+      {
+        "kanji": "文房具店",
+        "kana": "ぶんぼうぐてん",
+        "romaji": "bunbougu-ten",
+        "meaning": "Toko alat tulis"
+      },
+      {
+        "kanji": "家電量販店",
+        "kana": "かでんりょうはんてん",
+        "romaji": "kaden ryouhanten",
+        "meaning": "Toko elektronik"
+      },
+      {
+        "kanji": "デパート",
+        "kana": "デパート",
+        "romaji": "depaato",
+        "meaning": "Department store"
+      },
+      {
+        "kanji": "ショッピングセンター",
+        "kana": "ショッピングセンター",
+        "romaji": "shoppingu sentaa",
+        "meaning": "Pusat perbelanjaan"
+      },
+      {
+        "kanji": "電池",
+        "kana": "でんち",
+        "romaji": "denchi",
+        "meaning": "Baterai"
+      },
+      {
+        "kanji": "ノート",
+        "kana": "ノート",
+        "romaji": "nooto",
+        "meaning": "Buku catatan"
+      },
+      {
+        "kanji": "ボールペン",
+        "kana": "ボールペン",
+        "romaji": "boorupen",
+        "meaning": "Pulpen"
+      },
+      {
+        "kanji": "傘",
+        "kana": "かさ",
+        "romaji": "kasa",
+        "meaning": "Payung"
+      },
+      {
+        "kanji": "お弁当箱",
+        "kana": "おべんとうばこ",
+        "romaji": "obentoubako",
+        "meaning": "Kotak bekal"
+      },
+      {
+        "kanji": "懐中電灯",
+        "kana": "かいちゅうでんとう",
+        "romaji": "kaichuu dentou",
+        "meaning": "Senter"
+      },
+      {
+        "kanji": "延長コード",
+        "kana": "えんちょうコード",
+        "romaji": "enchou koodo",
+        "meaning": "Kabel ekstensi"
+      },
+      {
+        "kanji": "洗濯ばさみ",
+        "kana": "せんたくばさみ",
+        "romaji": "sentakubasami",
+        "meaning": "Jepitan jemuran"
+      },
+      {
+        "kanji": "くつ下",
+        "kana": "くつした",
+        "romaji": "kutsushita",
+        "meaning": "Kaos kaki"
+      },
+      {
+        "kanji": "バッグ",
+        "kana": "バッグ",
+        "romaji": "baggu",
+        "meaning": "Tas"
+      },
+      {
+        "kanji": "帽子",
+        "kana": "ぼうし",
+        "romaji": "boushi",
+        "meaning": "Topi"
+      },
+      {
+        "kanji": "文房具",
+        "kana": "ぶんぼうぐ",
+        "romaji": "bunbougu",
+        "meaning": "Alat tulis"
+      },
+      {
+        "kanji": "かっこいい",
+        "kana": "かっこいい",
+        "romaji": "kakkoii",
+        "meaning": "Keren"
+      },
+      {
+        "kanji": "かわいい",
+        "kana": "かわいい",
+        "romaji": "kawaii",
+        "meaning": "Imut"
+      },
+      {
+        "kanji": "おもしろい",
+        "kana": "おもしろい",
+        "romaji": "omoshiroi",
+        "meaning": "Menarik / unik"
+      },
+      {
+        "kanji": "すてき",
+        "kana": "すてき",
+        "romaji": "suteki",
+        "meaning": "Bagus / menawan"
+      },
+      {
+        "kanji": "おしゃれ",
+        "kana": "おしゃれ",
+        "romaji": "oshare",
+        "meaning": "Modis"
+      },
+      {
+        "kanji": "安い",
+        "kana": "やすい",
+        "romaji": "yasui",
+        "meaning": "Murah"
+      },
+      {
+        "kanji": "高い",
+        "kana": "たかい",
+        "romaji": "takai",
+        "meaning": "Mahal / tinggi"
+      },
+      {
+        "kanji": "軽い",
+        "kana": "かるい",
+        "romaji": "karui",
+        "meaning": "Ringan"
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "meaning": "Praktis"
+      },
+      {
+        "kanji": "入口",
+        "kana": "いりぐち",
+        "romaji": "iriguchi",
+        "meaning": "Pintu masuk"
+      },
+      {
+        "kanji": "出口",
+        "kana": "でぐち",
+        "romaji": "deguchi",
+        "meaning": "Pintu keluar"
+      },
+      {
+        "kanji": "お客様入口",
+        "kana": "おきゃくさまいりぐち",
+        "romaji": "okyakusama iriguchi",
+        "meaning": "Pintu masuk pengunjung"
+      },
+      {
+        "kanji": "化粧室",
+        "kana": "けしょうしつ",
+        "romaji": "keshoushitsu",
+        "meaning": "Toilet"
+      },
+      {
+        "kanji": "非常口",
+        "kana": "ひじょうぐち",
+        "romaji": "hijouguchi",
+        "meaning": "Pintu keluar darurat"
+      },
+      {
+        "kanji": "押す",
+        "kana": "おす",
+        "romaji": "osu",
+        "meaning": "Dorong"
+      },
+      {
+        "kanji": "引く",
+        "kana": "ひく",
+        "romaji": "hiku",
+        "meaning": "Tarik"
+      },
+      {
+        "kanji": "開く",
+        "kana": "ひらく",
+        "romaji": "hiraku",
+        "meaning": "Buka"
+      },
+      {
+        "kanji": "閉じる",
+        "kana": "とじる",
+        "romaji": "tojiru",
+        "meaning": "Tutup"
+      },
+      {
+        "kanji": "上り",
+        "kana": "のぼり",
+        "romaji": "nobori",
+        "meaning": "Arah naik"
+      },
+      {
+        "kanji": "下り",
+        "kana": "くだり",
+        "romaji": "kudari",
+        "meaning": "Arah turun"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-16",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 16,
+    "lessonTitle": "How much is this?",
+    "vocab": [
+      {
+        "kanji": "1円",
+        "kana": "いちえん",
+        "romaji": "ichien",
+        "meaning": "1 yen"
+      },
+      {
+        "kanji": "5円",
+        "kana": "ごえん",
+        "romaji": "goen",
+        "meaning": "5 yen"
+      },
+      {
+        "kanji": "10円",
+        "kana": "じゅうえん",
+        "romaji": "juuen",
+        "meaning": "10 yen"
+      },
+      {
+        "kanji": "50円",
+        "kana": "ごじゅうえん",
+        "romaji": "gojuuen",
+        "meaning": "50 yen"
+      },
+      {
+        "kanji": "100円",
+        "kana": "ひゃくえん",
+        "romaji": "hyakuen",
+        "meaning": "100 yen"
+      },
+      {
+        "kanji": "500円",
+        "kana": "ごひゃくえん",
+        "romaji": "gohyaku en",
+        "meaning": "500 yen"
+      },
+      {
+        "kanji": "1,000円",
+        "kana": "せんえん",
+        "romaji": "sen en",
+        "meaning": "1.000 yen"
+      },
+      {
+        "kanji": "5,000円",
+        "kana": "ごせんえん",
+        "romaji": "gosen en",
+        "meaning": "5.000 yen"
+      },
+      {
+        "kanji": "10,000円",
+        "kana": "いちまんえん",
+        "romaji": "ichiman en",
+        "meaning": "10.000 yen"
+      },
+      {
+        "kanji": "ノート",
+        "kana": "ノート",
+        "romaji": "nooto",
+        "meaning": "Buku catatan"
+      },
+      {
+        "kanji": "シャツ",
+        "kana": "シャツ",
+        "romaji": "shatsu",
+        "meaning": "Kemeja"
+      },
+      {
+        "kanji": "バッグ",
+        "kana": "バッグ",
+        "romaji": "baggu",
+        "meaning": "Tas"
+      },
+      {
+        "kanji": "カレンダー",
+        "kana": "カレンダー",
+        "romaji": "karendaa",
+        "meaning": "Kalender"
+      },
+      {
+        "kanji": "お菓子",
+        "kana": "おかし",
+        "romaji": "okashi",
+        "meaning": "Camilan"
+      },
+      {
+        "kanji": "ケーキ",
+        "kana": "ケーキ",
+        "romaji": "keeki",
+        "meaning": "Kue"
+      },
+      {
+        "kanji": "メロンパン",
+        "kana": "メロンパン",
+        "romaji": "meronpan",
+        "meaning": "Roti melon"
+      },
+      {
+        "kanji": "クッキー",
+        "kana": "クッキー",
+        "romaji": "kukkii",
+        "meaning": "Kukis"
+      },
+      {
+        "kanji": "お弁当",
+        "kana": "おべんとう",
+        "romaji": "obentou",
+        "meaning": "Bekal / bento"
+      },
+      {
+        "kanji": "おはし",
+        "kana": "おはし",
+        "romaji": "ohashi",
+        "meaning": "Sumpit"
+      },
+      {
+        "kanji": "袋",
+        "kana": "ふくろ",
+        "romaji": "fukuro",
+        "meaning": "Kantong"
+      },
+      {
+        "kanji": "値段",
+        "kana": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga"
+      },
+      {
+        "kanji": "～％引き",
+        "kana": "～パーセントびき",
+        "romaji": "~paasento biki",
+        "meaning": "Potongan sekian persen"
+      },
+      {
+        "kanji": "～円引き",
+        "kana": "～えんびき",
+        "romaji": "~enbiki",
+        "meaning": "Potongan sekian yen"
+      },
+      {
+        "kanji": "半額",
+        "kana": "はんがく",
+        "romaji": "hangaku",
+        "meaning": "Setengah harga"
+      },
+      {
+        "kanji": "値下げ",
+        "kana": "ねさげ",
+        "romaji": "nesage",
+        "meaning": "Harga diturunkan"
+      },
+      {
+        "kanji": "税込",
+        "kana": "ぜいこみ",
+        "romaji": "zeikomi",
+        "meaning": "Sudah termasuk pajak"
+      },
+      {
+        "kanji": "均一",
+        "kana": "きんいつ",
+        "romaji": "kinitsu",
+        "meaning": "Harga seragam"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-17",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 17,
+    "lessonTitle": "I went to see a movie.",
+    "vocab": [
+      {
+        "kanji": "映画を見る",
+        "kana": "えいがをみる",
+        "romaji": "eiga o miru",
+        "meaning": "Menonton film"
+      },
+      {
+        "kanji": "運動する",
+        "kana": "うんどうする",
+        "romaji": "undou suru",
+        "meaning": "Berolahraga"
+      },
+      {
+        "kanji": "服を買う",
+        "kana": "ふくをかう",
+        "romaji": "fuku o kau",
+        "meaning": "Membeli pakaian"
+      },
+      {
+        "kanji": "勉強する",
+        "kana": "べんきょうする",
+        "romaji": "benkyou suru",
+        "meaning": "Belajar"
+      },
+      {
+        "kanji": "掃除する",
+        "kana": "そうじする",
+        "romaji": "souji suru",
+        "meaning": "Membersihkan"
+      },
+      {
+        "kanji": "洗濯する",
+        "kana": "せんたくする",
+        "romaji": "sentaku suru",
+        "meaning": "Mencuci pakaian"
+      },
+      {
+        "kanji": "寝る",
+        "kana": "ねる",
+        "romaji": "neru",
+        "meaning": "Tidur"
+      },
+      {
+        "kanji": "ゆっくりする",
+        "kana": "ゆっくりする",
+        "romaji": "yukkuri suru",
+        "meaning": "Bersantai"
+      },
+      {
+        "kanji": "水族館に行く",
+        "kana": "すいぞくかんにいく",
+        "romaji": "suizokukan ni iku",
+        "meaning": "Pergi ke akuarium"
+      },
+      {
+        "kanji": "コンサートに行く",
+        "kana": "コンサートにいく",
+        "romaji": "konsaato ni iku",
+        "meaning": "Pergi ke konser"
+      },
+      {
+        "kanji": "家族",
+        "kana": "かぞく",
+        "romaji": "kazoku",
+        "meaning": "Keluarga"
+      },
+      {
+        "kanji": "週末",
+        "kana": "しゅうまつ",
+        "romaji": "shuumatsu",
+        "meaning": "Akhir pekan"
+      },
+      {
+        "kanji": "楽しい",
+        "kana": "たのしい",
+        "romaji": "tanoshii",
+        "meaning": "Menyenangkan"
+      },
+      {
+        "kanji": "おもしろい",
+        "kana": "おもしろい",
+        "romaji": "omoshiroi",
+        "meaning": "Menarik"
+      },
+      {
+        "kanji": "いい",
+        "kana": "いい",
+        "romaji": "ii",
+        "meaning": "Bagus"
+      },
+      {
+        "kanji": "すばらしい",
+        "kana": "すばらしい",
+        "romaji": "subarashii",
+        "meaning": "Hebat / luar biasa"
+      },
+      {
+        "kanji": "まあまあ",
+        "kana": "まあまあ",
+        "romaji": "maamaa",
+        "meaning": "Lumayan"
+      },
+      {
+        "kanji": "大変",
+        "kana": "たいへん",
+        "romaji": "taihen",
+        "meaning": "Berat / melelahkan"
+      },
+      {
+        "kanji": "つまらない",
+        "kana": "つまらない",
+        "romaji": "tsumaranai",
+        "meaning": "Membosankan"
+      },
+      {
+        "kanji": "いまいち",
+        "kana": "いまいち",
+        "romaji": "imaichi",
+        "meaning": "Kurang memuaskan"
+      },
+      {
+        "kanji": "きれい",
+        "kana": "きれい",
+        "romaji": "kirei",
+        "meaning": "Indah / bersih"
+      },
+      {
+        "kanji": "多い",
+        "kana": "おおい",
+        "romaji": "ooi",
+        "meaning": "Banyak"
+      },
+      {
+        "kanji": "大人",
+        "kana": "おとな",
+        "romaji": "otona",
+        "meaning": "Orang dewasa"
+      },
+      {
+        "kanji": "高校生",
+        "kana": "こうこうせい",
+        "romaji": "koukousei",
+        "meaning": "Siswa SMA"
+      },
+      {
+        "kanji": "小・中学生",
+        "kana": "しょう・ちゅうがくせい",
+        "romaji": "shou-chuugakusei",
+        "meaning": "Siswa SD dan SMP"
+      },
+      {
+        "kanji": "料金",
+        "kana": "りょうきん",
+        "romaji": "ryoukin",
+        "meaning": "Tarif"
+      },
+      {
+        "kanji": "チケット",
+        "kana": "チケット",
+        "romaji": "chiketto",
+        "meaning": "Tiket"
+      },
+      {
+        "kanji": "営業時間",
+        "kana": "えいぎょうじかん",
+        "romaji": "eigyou jikan",
+        "meaning": "Jam operasional"
+      },
+      {
+        "kanji": "休業日",
+        "kana": "きゅうぎょうび",
+        "romaji": "kyuugyoubi",
+        "meaning": "Hari tutup"
+      },
+      {
+        "kanji": "入館券",
+        "kana": "にゅうかんけん",
+        "romaji": "nyuukan ken",
+        "meaning": "Tiket masuk fasilitas"
+      }
+    ]
+  },
+  {
+    "lessonId": "starter-18",
+    "courseId": "starter",
+    "courseLabel": "Irodori Starter",
+    "lessonNumber": 18,
+    "lessonTitle": "I want to go to a hot spring.",
+    "vocab": [
+      {
+        "kanji": "休み",
+        "kana": "やすみ",
+        "romaji": "yasumi",
+        "meaning": "Hari libur"
+      },
+      {
+        "kanji": "今度",
+        "kana": "こんど",
+        "romaji": "kondo",
+        "meaning": "Lain kali / mendatang"
+      },
+      {
+        "kanji": "予定",
+        "kana": "よてい",
+        "romaji": "yotei",
+        "meaning": "Rencana"
+      },
+      {
+        "kanji": "連休",
+        "kana": "れんきゅう",
+        "romaji": "renkyuu",
+        "meaning": "Libur berurutan"
+      },
+      {
+        "kanji": "夏休み",
+        "kana": "なつやすみ",
+        "romaji": "natsuyasumi",
+        "meaning": "Libur musim panas"
+      },
+      {
+        "kanji": "旅行",
+        "kana": "りょこう",
+        "romaji": "ryokou",
+        "meaning": "Perjalanan"
+      },
+      {
+        "kanji": "どこか",
+        "kana": "どこか",
+        "romaji": "dokoka",
+        "meaning": "Suatu tempat"
+      },
+      {
+        "kanji": "ゆっくりする",
+        "kana": "ゆっくりする",
+        "romaji": "yukkuri suru",
+        "meaning": "Bersantai"
+      },
+      {
+        "kanji": "友だちに会う",
+        "kana": "ともだちにあう",
+        "romaji": "tomodachi ni au",
+        "meaning": "Bertemu teman"
+      },
+      {
+        "kanji": "買い物する",
+        "kana": "かいものする",
+        "romaji": "kaimono suru",
+        "meaning": "Berbelanja"
+      },
+      {
+        "kanji": "温泉に入る",
+        "kana": "おんせんにはいる",
+        "romaji": "onsen ni hairu",
+        "meaning": "Masuk / berendam di pemandian air panas"
+      },
+      {
+        "kanji": "雪を見る",
+        "kana": "ゆきをみる",
+        "romaji": "yuki o miru",
+        "meaning": "Melihat salju"
+      },
+      {
+        "kanji": "新幹線に乗る",
+        "kana": "しんかんせんにのる",
+        "romaji": "shinkansen ni noru",
+        "meaning": "Naik Shinkansen"
+      },
+      {
+        "kanji": "富士山に登る",
+        "kana": "ふじさんにのぼる",
+        "romaji": "fujisan ni noboru",
+        "meaning": "Mendaki Gunung Fuji"
+      },
+      {
+        "kanji": "京都へ行く",
+        "kana": "きょうとへいく",
+        "romaji": "kyouto e iku",
+        "meaning": "Pergi ke Kyoto"
+      },
+      {
+        "kanji": "船に乗る",
+        "kana": "ふねにのる",
+        "romaji": "fune ni noru",
+        "meaning": "Naik kapal"
+      },
+      {
+        "kanji": "写真を撮る",
+        "kana": "しゃしんをとる",
+        "romaji": "shashin o toru",
+        "meaning": "Mengambil foto"
+      },
+      {
+        "kanji": "お菓子を食べる",
+        "kana": "おかしをたべる",
+        "romaji": "okashi o taberu",
+        "meaning": "Makan kue / camilan"
+      },
+      {
+        "kanji": "景色を見る",
+        "kana": "けしきをみる",
+        "romaji": "keshiki o miru",
+        "meaning": "Melihat pemandangan"
+      },
+      {
+        "kanji": "家で休む",
+        "kana": "いえでやすむ",
+        "romaji": "ie de yasumu",
+        "meaning": "Beristirahat di rumah"
+      },
+      {
+        "kanji": "温泉",
+        "kana": "おんせん",
+        "romaji": "onsen",
+        "meaning": "Pemandian air panas"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan"
+      }
+    ]
   }
 ]
