@@ -14,7 +14,8 @@ export default function IrodoriElementaryTwoPage() {
   const lessonOneCompleted = progress.completedLessons.includes("elementary2-01");
   const lessonTwoCompleted = progress.completedLessons.includes("elementary2-02");
   const lessonThreeCompleted = progress.completedLessons.includes("elementary2-03");
-  const availableCount = lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const lessonFourCompleted = progress.completedLessons.includes("elementary2-04");
+  const availableCount = lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -79,7 +80,7 @@ export default function IrodoriElementaryTwoPage() {
             Daftar pelajaran
           </h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Lesson 1–4 tersedia secara berurutan. Setiap lesson baru terbuka
+            Lesson 1–5 tersedia secara berurutan. Setiap lesson baru terbuka
             setelah lesson sebelumnya selesai.
           </p>
         </div>
@@ -90,7 +91,8 @@ export default function IrodoriElementaryTwoPage() {
             const isAvailable = lesson === 1
               || (lesson === 2 && lessonOneCompleted)
               || (lesson === 3 && lessonTwoCompleted)
-              || (lesson === 4 && lessonThreeCompleted);
+              || (lesson === 4 && lessonThreeCompleted)
+              || (lesson === 5 && lessonFourCompleted);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const title = lesson === 1
               ? "I just came to Japan last week."
@@ -100,12 +102,20 @@ export default function IrodoriElementaryTwoPage() {
                   ? "I cannot eat it because of an allergy."
                   : lesson === 4
                     ? "Please eat it without soy sauce."
-                    : "Lesson " + String(lesson).padStart(2, "0");
+                    : lesson === 5
+                      ? "You should make a reservation early."
+                      : "Lesson " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
               : lesson === 2
                 ? "Mengenali ciri seseorang, mendeskripsikan sifat, membicarakan figur favorit, dan memahami artikel wawancara."
-                : "Materi akan tersedia setelah lesson sebelumnya selesai.";
+                : lesson === 3
+                  ? "Menyampaikan alergi dan alasan, memesan tempat, memahami menu, dan membaca kupon restoran."
+                  : lesson === 4
+                    ? "Memahami rekomendasi hidangan, bertanya tentang cara makan, memperkenalkan makanan, dan membaca ulasan restoran."
+                    : lesson === 5
+                      ? "Memahami destinasi, menyusun rencana perjalanan, meminta dan memberi saran, serta membaca ulasan perjalanan."
+                      : "Materi akan tersedia setelah lesson sebelumnya selesai.";
 
             const card = (
               <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (
@@ -143,7 +153,7 @@ export default function IrodoriElementaryTwoPage() {
             );
 
             return isAvailable ? (
-              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : lesson === 3 ? "/irodori/elementary-2/lesson-3" : "/irodori/elementary-2/lesson-4"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
+              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : lesson === 3 ? "/irodori/elementary-2/lesson-3" : lesson === 4 ? "/irodori/elementary-2/lesson-4" : "/irodori/elementary-2/lesson-5"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
                 {card}
               </Link>
             ) : (
