@@ -10559,5 +10559,364 @@
         "imageQuery": "reusable shopping bag"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-16",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 16,
+    "lessonTitle": "Do not panic in case of an earthquake.",
+    "vocab": [
+      {
+        "kanji": "災害",
+        "kana": "さいがい",
+        "romaji": "saigai",
+        "meaning": "Bencana",
+        "imageQuery": "災害 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "台風",
+        "kana": "たいふう",
+        "romaji": "taifuu",
+        "meaning": "Topan",
+        "imageQuery": "台風 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "地震",
+        "kana": "じしん",
+        "romaji": "jishin",
+        "meaning": "Gempa bumi",
+        "imageQuery": "地震 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "火事",
+        "kana": "かじ",
+        "romaji": "kaji",
+        "meaning": "Kebakaran",
+        "imageQuery": "火事 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "大雪",
+        "kana": "おおゆき",
+        "romaji": "ooyuki",
+        "meaning": "Salju lebat",
+        "imageQuery": "大雪 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "津波",
+        "kana": "つなみ",
+        "romaji": "tsunami",
+        "meaning": "Tsunami",
+        "imageQuery": "津波 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "揺れる",
+        "kana": "ゆれる",
+        "romaji": "yureru",
+        "meaning": "Berguncang atau bergoyang",
+        "imageQuery": "揺れる Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "警報",
+        "kana": "けいほう",
+        "romaji": "keihou",
+        "meaning": "Peringatan atau alarm",
+        "imageQuery": "警報 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "緊急地震速報",
+        "kana": "きんきゅうじしんそくほう",
+        "romaji": "kinkyuu jishin sokuhou",
+        "meaning": "Peringatan dini gempa",
+        "imageQuery": "緊急地震速報 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "ニュース",
+        "kana": "ニュース",
+        "romaji": "nyuusu",
+        "meaning": "Berita",
+        "imageQuery": "ニュース Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "放送",
+        "kana": "ほうそう",
+        "romaji": "housou",
+        "meaning": "Siaran atau pengumuman",
+        "imageQuery": "放送 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "アナウンス",
+        "kana": "アナウンス",
+        "romaji": "anaunsu",
+        "meaning": "Pengumuman",
+        "imageQuery": "アナウンス Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "安全",
+        "kana": "あんぜん",
+        "romaji": "anzen",
+        "meaning": "Aman atau keselamatan",
+        "imageQuery": "安全 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "危険",
+        "kana": "きけん",
+        "romaji": "kiken",
+        "meaning": "Bahaya",
+        "imageQuery": "危険 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "避難する",
+        "kana": "ひなんする",
+        "romaji": "hinan suru",
+        "meaning": "Mengungsi atau melakukan evakuasi",
+        "imageQuery": "避難する Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "避難所",
+        "kana": "ひなんじょ",
+        "romaji": "hinanjo",
+        "meaning": "Tempat pengungsian",
+        "imageQuery": "避難所 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "避難訓練",
+        "kana": "ひなんくんれん",
+        "romaji": "hinan kunren",
+        "meaning": "Latihan evakuasi",
+        "imageQuery": "避難訓練 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "防災",
+        "kana": "ぼうさい",
+        "romaji": "bousai",
+        "meaning": "Pencegahan dan kesiapsiagaan bencana",
+        "imageQuery": "防災 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "防災訓練",
+        "kana": "ぼうさいくんれん",
+        "romaji": "bousai kunren",
+        "meaning": "Latihan kesiapsiagaan bencana",
+        "imageQuery": "防災訓練 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "指示",
+        "kana": "しじ",
+        "romaji": "shiji",
+        "meaning": "Instruksi atau arahan",
+        "imageQuery": "指示 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "係員",
+        "kana": "かかりいん",
+        "romaji": "kakariin",
+        "meaning": "Petugas",
+        "imageQuery": "係員 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "集まる",
+        "kana": "あつまる",
+        "romaji": "atsumaru",
+        "meaning": "Berkumpul",
+        "imageQuery": "集まる Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "並ぶ",
+        "kana": "ならぶ",
+        "romaji": "narabu",
+        "meaning": "Berbaris atau mengantre",
+        "imageQuery": "並ぶ Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "点呼する",
+        "kana": "てんこする",
+        "romaji": "tenko suru",
+        "meaning": "Memeriksa kehadiran",
+        "imageQuery": "点呼する Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "報告する",
+        "kana": "ほうこくする",
+        "romaji": "houkoku suru",
+        "meaning": "Melaporkan",
+        "imageQuery": "報告する Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "姿勢",
+        "kana": "しせい",
+        "romaji": "shisei",
+        "meaning": "Postur atau posisi tubuh",
+        "imageQuery": "姿勢 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "煙",
+        "kana": "けむり",
+        "romaji": "kemuri",
+        "meaning": "Asap",
+        "imageQuery": "煙 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "床",
+        "kana": "ゆか",
+        "romaji": "yuka",
+        "meaning": "Lantai",
+        "imageQuery": "床 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "注意点",
+        "kana": "ちゅういてん",
+        "romaji": "chuuiten",
+        "meaning": "Hal yang perlu diperhatikan",
+        "imageQuery": "注意点 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "消防署",
+        "kana": "しょうぼうしょ",
+        "romaji": "shoubousho",
+        "meaning": "Kantor pemadam kebakaran",
+        "imageQuery": "消防署 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "火災報知器",
+        "kana": "かさいほうちき",
+        "romaji": "kasai houchiki",
+        "meaning": "Alarm kebakaran",
+        "imageQuery": "火災報知器 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "断水する",
+        "kana": "だんすいする",
+        "romaji": "dansui suru",
+        "meaning": "Mengalami penghentian pasokan air",
+        "imageQuery": "断水する Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "停電する",
+        "kana": "ていでんする",
+        "romaji": "teiden suru",
+        "meaning": "Mengalami pemadaman listrik",
+        "imageQuery": "停電する Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "通行止め",
+        "kana": "つうこうどめ",
+        "romaji": "tsuukoudome",
+        "meaning": "Jalan ditutup untuk lalu lintas",
+        "imageQuery": "通行止め Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "給水車",
+        "kana": "きゅうすいしゃ",
+        "romaji": "kyuusuisha",
+        "meaning": "Kendaraan pemasok air",
+        "imageQuery": "給水車 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "炊き出し",
+        "kana": "たきだし",
+        "romaji": "takidashi",
+        "meaning": "Penyediaan makanan untuk umum",
+        "imageQuery": "炊き出し Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "非常食",
+        "kana": "ひじょうしょく",
+        "romaji": "hijoushoku",
+        "meaning": "Makanan untuk keadaan darurat",
+        "imageQuery": "非常食 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "懐中電灯",
+        "kana": "かいちゅうでんとう",
+        "romaji": "kaichuudentou",
+        "meaning": "Senter",
+        "imageQuery": "懐中電灯 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "ラジオ",
+        "kana": "ラジオ",
+        "romaji": "rajio",
+        "meaning": "Radio",
+        "imageQuery": "ラジオ Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "毛布",
+        "kana": "もうふ",
+        "romaji": "moufu",
+        "meaning": "Selimut",
+        "imageQuery": "毛布 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "寝袋",
+        "kana": "ねぶくろ",
+        "romaji": "nebukuro",
+        "meaning": "Kantong tidur",
+        "imageQuery": "寝袋 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "水",
+        "kana": "みず",
+        "romaji": "mizu",
+        "meaning": "Air",
+        "imageQuery": "水 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "非常持ち出し袋",
+        "kana": "ひじょうもちだしぶくろ",
+        "romaji": "hijou mochidashi bukuro",
+        "meaning": "Tas perlengkapan darurat",
+        "imageQuery": "非常持ち出し袋 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "貴重品",
+        "kana": "きちょうひん",
+        "romaji": "kichouhin",
+        "meaning": "Barang berharga",
+        "imageQuery": "貴重品 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "薬",
+        "kana": "くすり",
+        "romaji": "kusuri",
+        "meaning": "Obat",
+        "imageQuery": "薬 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "情報",
+        "kana": "じょうほう",
+        "romaji": "jouhou",
+        "meaning": "Informasi",
+        "imageQuery": "情報 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "ハザードマップ",
+        "kana": "ハザードマップ",
+        "romaji": "hazaado mappu",
+        "meaning": "Peta risiko bencana",
+        "imageQuery": "ハザードマップ Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "地域",
+        "kana": "ちいき",
+        "romaji": "chiiki",
+        "meaning": "Wilayah atau daerah",
+        "imageQuery": "地域 Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "準備する",
+        "kana": "じゅんびする",
+        "romaji": "junbi suru",
+        "meaning": "Mempersiapkan",
+        "imageQuery": "準備する Japanese disaster preparedness vocabulary"
+      },
+      {
+        "kanji": "確認する",
+        "kana": "かくにんする",
+        "romaji": "kakunin suru",
+        "meaning": "Memeriksa atau memastikan",
+        "imageQuery": "確認する Japanese disaster preparedness vocabulary"
+      }
+    ]
   }
 ]
