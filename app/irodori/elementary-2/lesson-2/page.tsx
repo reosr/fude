@@ -9,11 +9,9 @@ import {
   CheckCircle2,
   Eye,
   FileText,
-  MessageCircle,
   RefreshCw,
   Search,
   Star,
-  Users,
 } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
@@ -227,7 +225,7 @@ const vocabRows = [
   ["めがね", "めがね · megane", "Kacamata"],
   ["かける", "かける · kakeru", "Memakai kacamata"],
   ["ひげ", "ひげ · hige", "Janggut atau kumis"],
-  ["ネクタイ", "ネクタイ · nekタイ", "Dasi"],
+  ["ネクタイ", "ネクタイ · nekutai", "Dasi"],
   ["シャツ", "シャツ · shatsu", "Kemeja"],
   ["ズボン", "ズボン · zubon", "Celana panjang"],
   ["赤い", "あかい · akai", "Merah"],
