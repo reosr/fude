@@ -75,7 +75,7 @@ const vocabRows = [
   ["活動", "かつどう · katsudou", "Kegiatan atau aktivitas"],
   ["エコ活動", "エコかつどう · eko katsudou", "Kegiatan ramah lingkungan"],
   ["貼り紙", "はりがみ · harigami", "Poster atau pemberitahuan yang ditempel"],
-  ["注意点", "ちゅういてん · chuu iten", "Hal yang perlu diperhatikan"],
+  ["注意点", "ちゅういてん · chuuiten", "Hal yang perlu diperhatikan"],
   ["電気", "でんき · denki", "Listrik atau lampu"],
   ["温度", "おんど · ondo", "Suhu"],
   ["設定する", "せっていする · settei suru", "Mengatur atau menetapkan"],
@@ -92,7 +92,6 @@ const vocabRows = [
   ["つける", "つける · tsukeru", "Menyalakan"],
   ["止める", "とめる · tomeru", "Menghentikan"],
   ["出す", "だす · dasu", "Mengeluarkan atau menaruh sampah"],
-  ["止まる", "とまる · tomaru", "Berhenti"],
   ["リサイクルする", "リサイクルする · risaikuru suru", "Mendaur ulang"],
   ["ごみ", "ごみ · gomi", "Sampah"],
   ["ごみ箱", "ごみばこ · gomibako", "Tempat sampah"],
@@ -190,7 +189,7 @@ const simulations: Simulation[] = [
     { key: "b", label: "ペットボトルは、何時に開きますか。", meaning: "Kalimat ini menanyakan jam buka, bukan cara membuang." },
     { key: "c", label: "ペットボトルは、どこで買いましたか。", meaning: "Kalimat ini menanyakan tempat membeli." },
   ], answer: "a", explanation: "Gunakan どうやって untuk menanyakan cara melakukan sesuatu." },
-  { title: "05 · Memahami keadaan yang masih berlangsung", heading: "Menafsirkan V-たまま", prompt: "Seseorang berkata 「水が出したままですよ」. Apa yang sedang terjadi?", japanese: <>水が出したままですよ。</>, translation: "Air masih dibiarkan mengalir.", options: [
+  { title: "05 · Memahami keadaan yang masih berlangsung", heading: "Menafsirkan V-たまま", prompt: "Seseorang berkata 「水が出したままですよ」. Apa yang sedang terjadi?", japanese: <>水が出たままですよ。</>, translation: "Air masih dibiarkan mengalir.", options: [
     { key: "a", label: "Air sudah berhenti.", meaning: "まま menunjukkan keadaan tetap berlangsung." },
     { key: "b", label: "Air masih mengalir dan belum dihentikan.", meaning: "Kalimat itu menunjukkan keadaan yang dibiarkan tetap berlangsung." },
     { key: "c", label: "Air sedang dibawa ke tempat lain.", meaning: "Tidak ada informasi tentang memindahkan air." },
