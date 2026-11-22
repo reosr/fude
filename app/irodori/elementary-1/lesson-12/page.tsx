@@ -38,8 +38,9 @@ const ingredientsConversation: IrodoriUtterance[] = [
 {speakerId:"kenji",japanese:<>これは茶碗蒸しです。卵の料理ですよ。</>,romaji:"Kore wa chawanmushi desu. Tamago no ryouri desu yo.",translation:"Ini chawanmushi, masakan berbahan telur.",audioFileName:"irodori-elementary1-12-a05-l01.mp3"},
 {speakerId:"yui",japanese:<>中に何が入っていますか。</>,romaji:"Naka ni nani ga haitte imasu ka?",translation:"Apa saja yang ada di dalamnya?",audioFileName:"irodori-elementary1-12-a05-l02.mp3"},
 {speakerId:"kenji",japanese:<>鶏肉と、きのこが入っています。だしも使います。</>,romaji:"Toriniku to, kinoko ga haitte imasu. Dashi mo tsukaimasu.",translation:"Di dalamnya ada ayam dan jamur. Kaldu dashi juga digunakan.",audioFileName:"irodori-elementary1-12-a05-l03.mp3"},
-{speakerId:"yui",japanese:<>甘くなくて、おいしそうですね。</>,romaji:"Amakunakute, oishisou desu ne.",translation:"Tidak manis dan kelihatannya enak.",audioFileName:"irodori-elementary1-12-a05-l04.mp3"},
+{speakerId:"yui",japanese:<>いいにおいですね。いただきます。</>,romaji:"Ii nioi desu ne. Itadakimasu.",translation:"Aromanya harum, ya. Saya coba, ya.",audioFileName:"irodori-elementary1-12-a05-l04.mp3"},
 {speakerId:"kenji",japanese:<>味は、うすくないですか。</>,romaji:"Aji wa, usukunai desu ka?",translation:"Apakah rasanya tidak terlalu tawar?",audioFileName:"irodori-elementary1-12-a05-l05.mp3"},
+{speakerId:"yui",japanese:<>いいえ、ちょうどいいです。おいしいですよ。</>,romaji:"Iie, choudo ii desu. Oishii desu yo.",translation:"Tidak, rasanya pas. Enak.",audioFileName:"irodori-elementary1-12-a05-l06.mp3"},
 ];
 const canDos=[
 {id:"describe-food-appearance",text:"Memberi kesan tentang makanan berdasarkan penampilannya, misalnya terlihat enak, manis, atau pedas."},
