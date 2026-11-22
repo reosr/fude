@@ -9123,5 +9123,364 @@
         "imageQuery": "information desk staff"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-12",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 12,
+    "lessonTitle": "This vacuum cleaner is light and easy to move around.",
+    "vocab": [
+      {
+        "kanji": "家電",
+        "kana": "かでん",
+        "romaji": "kaden",
+        "meaning": "Peralatan rumah tangga elektronik",
+        "imageQuery": "home electrical appliances"
+      },
+      {
+        "kanji": "電気製品",
+        "kana": "でんきせいひん",
+        "romaji": "denki seihin",
+        "meaning": "Produk elektronik",
+        "imageQuery": "electrical household appliances"
+      },
+      {
+        "kanji": "冷蔵庫",
+        "kana": "れいぞうこ",
+        "romaji": "reizouko",
+        "meaning": "Kulkas",
+        "imageQuery": "refrigerator"
+      },
+      {
+        "kanji": "洗濯機",
+        "kana": "せんたくき",
+        "romaji": "sentakuki",
+        "meaning": "Mesin cuci",
+        "imageQuery": "washing machine"
+      },
+      {
+        "kanji": "炊飯器",
+        "kana": "すいはんき",
+        "romaji": "suihanki",
+        "meaning": "Penanak nasi",
+        "imageQuery": "rice cooker"
+      },
+      {
+        "kanji": "電子レンジ",
+        "kana": "でんしレンジ",
+        "romaji": "denshi renji",
+        "meaning": "Microwave",
+        "imageQuery": "microwave oven"
+      },
+      {
+        "kanji": "掃除機",
+        "kana": "そうじき",
+        "romaji": "soujiki",
+        "meaning": "Penyedot debu",
+        "imageQuery": "vacuum cleaner"
+      },
+      {
+        "kanji": "扇風機",
+        "kana": "せんぷうき",
+        "romaji": "senpuuki",
+        "meaning": "Kipas angin",
+        "imageQuery": "electric fan"
+      },
+      {
+        "kanji": "テレビ",
+        "kana": "テレビ",
+        "romaji": "terebi",
+        "meaning": "Televisi",
+        "imageQuery": "television"
+      },
+      {
+        "kanji": "パソコン",
+        "kana": "パソコン",
+        "romaji": "pasokon",
+        "meaning": "Komputer pribadi",
+        "imageQuery": "laptop computer"
+      },
+      {
+        "kanji": "タブレット",
+        "kana": "タブレット",
+        "romaji": "taburetto",
+        "meaning": "Tablet",
+        "imageQuery": "tablet computer"
+      },
+      {
+        "kanji": "スマホ",
+        "kana": "スマホ",
+        "romaji": "sumaho",
+        "meaning": "Ponsel pintar",
+        "imageQuery": "smartphone"
+      },
+      {
+        "kanji": "イヤホン",
+        "kana": "イヤホン",
+        "romaji": "iyahon",
+        "meaning": "Earphone",
+        "imageQuery": "earphones"
+      },
+      {
+        "kanji": "ドライヤー",
+        "kana": "ドライヤー",
+        "romaji": "doraiyaa",
+        "meaning": "Pengering rambut",
+        "imageQuery": "hair dryer"
+      },
+      {
+        "kanji": "アイロン",
+        "kana": "アイロン",
+        "romaji": "airon",
+        "meaning": "Setrika",
+        "imageQuery": "electric iron"
+      },
+      {
+        "kanji": "メーカー",
+        "kana": "メーカー",
+        "romaji": "meekaa",
+        "meaning": "Produsen atau merek pembuat",
+        "imageQuery": "manufacturer nameplate"
+      },
+      {
+        "kanji": "商品",
+        "kana": "しょうひん",
+        "romaji": "shouhin",
+        "meaning": "Barang atau produk",
+        "imageQuery": "product item"
+      },
+      {
+        "kanji": "製品",
+        "kana": "せいひん",
+        "romaji": "seihin",
+        "meaning": "Produk",
+        "imageQuery": "manufactured product"
+      },
+      {
+        "kanji": "型",
+        "kana": "かた",
+        "romaji": "kata",
+        "meaning": "Tipe atau bentuk model",
+        "imageQuery": "product type label"
+      },
+      {
+        "kanji": "モデル",
+        "kana": "モデル",
+        "romaji": "moderu",
+        "meaning": "Model",
+        "imageQuery": "appliance model number"
+      },
+      {
+        "kanji": "新品",
+        "kana": "しんぴん",
+        "romaji": "shinpin",
+        "meaning": "Barang baru",
+        "imageQuery": "new appliance in box"
+      },
+      {
+        "kanji": "中古",
+        "kana": "ちゅうこ",
+        "romaji": "chuuko",
+        "meaning": "Barang bekas",
+        "imageQuery": "used household appliance"
+      },
+      {
+        "kanji": "状態",
+        "kana": "じょうたい",
+        "romaji": "joutai",
+        "meaning": "Kondisi",
+        "imageQuery": "product condition checklist"
+      },
+      {
+        "kanji": "傷",
+        "kana": "きず",
+        "romaji": "kizu",
+        "meaning": "Goresan atau kerusakan kecil",
+        "imageQuery": "small product scratch"
+      },
+      {
+        "kanji": "汚れ",
+        "kana": "よごれ",
+        "romaji": "yogore",
+        "meaning": "Kotoran atau noda",
+        "imageQuery": "product stain"
+      },
+      {
+        "kanji": "説明書",
+        "kana": "せつめいしょ",
+        "romaji": "setsumeisho",
+        "meaning": "Buku petunjuk",
+        "imageQuery": "instruction manual"
+      },
+      {
+        "kanji": "付属品",
+        "kana": "ふぞくひん",
+        "romaji": "fuzokuhin",
+        "meaning": "Aksesori atau barang pelengkap",
+        "imageQuery": "product accessories"
+      },
+      {
+        "kanji": "重さ",
+        "kana": "おもさ",
+        "romaji": "omosa",
+        "meaning": "Berat",
+        "imageQuery": "weight scale"
+      },
+      {
+        "kanji": "軽い",
+        "kana": "かるい",
+        "romaji": "karui",
+        "meaning": "Ringan",
+        "imageQuery": "lightweight appliance"
+      },
+      {
+        "kanji": "重い",
+        "kana": "おもい",
+        "romaji": "omoi",
+        "meaning": "Berat",
+        "imageQuery": "heavy appliance"
+      },
+      {
+        "kanji": "連続使用時間",
+        "kana": "れんぞくしようじかん",
+        "romaji": "renzoku shiyou jikan",
+        "meaning": "Waktu penggunaan berkelanjutan",
+        "imageQuery": "battery runtime display"
+      },
+      {
+        "kanji": "充電",
+        "kana": "じゅうでん",
+        "romaji": "juuden",
+        "meaning": "Pengisian daya",
+        "imageQuery": "battery charging"
+      },
+      {
+        "kanji": "充電時間",
+        "kana": "じゅうでんじかん",
+        "romaji": "juuden jikan",
+        "meaning": "Waktu pengisian daya",
+        "imageQuery": "charging time display"
+      },
+      {
+        "kanji": "機能",
+        "kana": "きのう",
+        "romaji": "kinou",
+        "meaning": "Fungsi atau fitur",
+        "imageQuery": "appliance features control panel"
+      },
+      {
+        "kanji": "吸引力",
+        "kana": "きゅういんりょく",
+        "romaji": "kyuuinryoku",
+        "meaning": "Daya hisap",
+        "imageQuery": "vacuum cleaner suction"
+      },
+      {
+        "kanji": "デザイン",
+        "kana": "デザイン",
+        "romaji": "dezain",
+        "meaning": "Desain",
+        "imageQuery": "appliance design"
+      },
+      {
+        "kanji": "価格",
+        "kana": "かかく",
+        "romaji": "kakaku",
+        "meaning": "Harga",
+        "imageQuery": "price label"
+      },
+      {
+        "kanji": "値段",
+        "kana": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga",
+        "imageQuery": "price tag"
+      },
+      {
+        "kanji": "税込",
+        "kana": "ぜいこみ",
+        "romaji": "zeikomi",
+        "meaning": "Termasuk pajak",
+        "imageQuery": "tax included price label"
+      },
+      {
+        "kanji": "税別",
+        "kana": "ぜいべつ",
+        "romaji": "zeibetsu",
+        "meaning": "Belum termasuk pajak",
+        "imageQuery": "price before tax label"
+      },
+      {
+        "kanji": "消費税",
+        "kana": "しょうひぜい",
+        "romaji": "shouhizei",
+        "meaning": "Pajak konsumsi",
+        "imageQuery": "tax receipt"
+      },
+      {
+        "kanji": "割引",
+        "kana": "わりびき",
+        "romaji": "waribiki",
+        "meaning": "Diskon",
+        "imageQuery": "discount price tag"
+      },
+      {
+        "kanji": "値引き",
+        "kana": "ねびき",
+        "romaji": "nebiki",
+        "meaning": "Potongan harga",
+        "imageQuery": "discount negotiation at shop"
+      },
+      {
+        "kanji": "送料",
+        "kana": "そうりょう",
+        "romaji": "souryou",
+        "meaning": "Ongkos kirim",
+        "imageQuery": "shipping cost note"
+      },
+      {
+        "kanji": "配送",
+        "kana": "はいそう",
+        "romaji": "haisou",
+        "meaning": "Pengiriman",
+        "imageQuery": "delivery service"
+      },
+      {
+        "kanji": "フリマアプリ",
+        "kana": "フリマアプリ",
+        "romaji": "furima apuri",
+        "meaning": "Aplikasi pasar barang bekas",
+        "imageQuery": "fictional second hand product listing"
+      },
+      {
+        "kanji": "検索",
+        "kana": "けんさく",
+        "romaji": "kensaku",
+        "meaning": "Pencarian",
+        "imageQuery": "product search box"
+      },
+      {
+        "kanji": "比較",
+        "kana": "ひかく",
+        "romaji": "hikaku",
+        "meaning": "Perbandingan",
+        "imageQuery": "product comparison table"
+      },
+      {
+        "kanji": "使いやすい",
+        "kana": "つかいやすい",
+        "romaji": "tsukai yasui",
+        "meaning": "Mudah digunakan",
+        "imageQuery": "easy to use appliance"
+      },
+      {
+        "kanji": "使いにくい",
+        "kana": "つかいにくい",
+        "romaji": "tsukai nikui",
+        "meaning": "Sulit digunakan",
+        "imageQuery": "difficult to use appliance"
+      }
+    ]
   }
 ]
