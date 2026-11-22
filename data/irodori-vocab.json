@@ -8764,5 +8764,364 @@
         "imageQuery": "polite manner"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-11",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 11,
+    "lessonTitle": "I forgot to bring my point card.",
+    "vocab": [
+      {
+        "kanji": "色",
+        "kana": "いろ",
+        "romaji": "iro",
+        "meaning": "Warna",
+        "imageQuery": "color swatches"
+      },
+      {
+        "kanji": "赤",
+        "kana": "あか",
+        "romaji": "aka",
+        "meaning": "Merah",
+        "imageQuery": "red color swatch"
+      },
+      {
+        "kanji": "青",
+        "kana": "あお",
+        "romaji": "ao",
+        "meaning": "Biru",
+        "imageQuery": "blue color swatch"
+      },
+      {
+        "kanji": "緑",
+        "kana": "みどり",
+        "romaji": "midori",
+        "meaning": "Hijau",
+        "imageQuery": "green color swatch"
+      },
+      {
+        "kanji": "黄色",
+        "kana": "きいろ",
+        "romaji": "kiiro",
+        "meaning": "Kuning",
+        "imageQuery": "yellow color swatch"
+      },
+      {
+        "kanji": "黒",
+        "kana": "くろ",
+        "romaji": "kuro",
+        "meaning": "Hitam",
+        "imageQuery": "black color swatch"
+      },
+      {
+        "kanji": "白",
+        "kana": "しろ",
+        "romaji": "shiro",
+        "meaning": "Putih",
+        "imageQuery": "white color swatch"
+      },
+      {
+        "kanji": "ベージュ",
+        "kana": "ベージュ",
+        "romaji": "beeju",
+        "meaning": "Beige",
+        "imageQuery": "beige color swatch"
+      },
+      {
+        "kanji": "ピンク",
+        "kana": "ピンク",
+        "romaji": "pinku",
+        "meaning": "Merah muda",
+        "imageQuery": "pink color swatch"
+      },
+      {
+        "kanji": "茶色",
+        "kana": "ちゃいろ",
+        "romaji": "chairo",
+        "meaning": "Cokelat",
+        "imageQuery": "brown color swatch"
+      },
+      {
+        "kanji": "グレー",
+        "kana": "グレー",
+        "romaji": "guree",
+        "meaning": "Abu-abu",
+        "imageQuery": "gray color swatch"
+      },
+      {
+        "kanji": "カーキ",
+        "kana": "カーキ",
+        "romaji": "kaaki",
+        "meaning": "Khaki",
+        "imageQuery": "khaki color swatch"
+      },
+      {
+        "kanji": "サイズ",
+        "kana": "サイズ",
+        "romaji": "saizu",
+        "meaning": "Ukuran",
+        "imageQuery": "clothing size label"
+      },
+      {
+        "kanji": "フリーサイズ",
+        "kana": "フリーサイズ",
+        "romaji": "furii saizu",
+        "meaning": "Ukuran bebas",
+        "imageQuery": "free size clothing label"
+      },
+      {
+        "kanji": "セーター",
+        "kana": "セーター",
+        "romaji": "seetaa",
+        "meaning": "Sweater",
+        "imageQuery": "sweater"
+      },
+      {
+        "kanji": "洋服",
+        "kana": "ようふく",
+        "romaji": "youfuku",
+        "meaning": "Pakaian",
+        "imageQuery": "clothing store"
+      },
+      {
+        "kanji": "靴",
+        "kana": "くつ",
+        "romaji": "kutsu",
+        "meaning": "Sepatu",
+        "imageQuery": "shoes"
+      },
+      {
+        "kanji": "試着する",
+        "kana": "しちゃくする",
+        "romaji": "shichaku suru",
+        "meaning": "Mencoba pakaian",
+        "imageQuery": "trying on a sweater"
+      },
+      {
+        "kanji": "試着室",
+        "kana": "しちゃくしつ",
+        "romaji": "shichakushitsu",
+        "meaning": "Ruang pas",
+        "imageQuery": "clothing fitting room"
+      },
+      {
+        "kanji": "派手",
+        "kana": "はで",
+        "romaji": "hade",
+        "meaning": "Mencolok",
+        "imageQuery": "bright clothing color"
+      },
+      {
+        "kanji": "大きい",
+        "kana": "おおきい",
+        "romaji": "ookii",
+        "meaning": "Besar",
+        "imageQuery": "large sweater"
+      },
+      {
+        "kanji": "小さい",
+        "kana": "ちいさい",
+        "romaji": "chiisai",
+        "meaning": "Kecil",
+        "imageQuery": "small sweater"
+      },
+      {
+        "kanji": "似合う",
+        "kana": "にあう",
+        "romaji": "niau",
+        "meaning": "Cocok atau terlihat serasi",
+        "imageQuery": "clothing matching style"
+      },
+      {
+        "kanji": "店員",
+        "kana": "てんいん",
+        "romaji": "ten'in",
+        "meaning": "Pegawai toko",
+        "imageQuery": "shop assistant"
+      },
+      {
+        "kanji": "売り場",
+        "kana": "うりば",
+        "romaji": "uriba",
+        "meaning": "Bagian atau area penjualan",
+        "imageQuery": "department store section"
+      },
+      {
+        "kanji": "全品",
+        "kana": "ぜんぴん",
+        "romaji": "zenpin",
+        "meaning": "Semua barang",
+        "imageQuery": "all items sale sign"
+      },
+      {
+        "kanji": "割引",
+        "kana": "わりびき",
+        "romaji": "waribiki",
+        "meaning": "Diskon",
+        "imageQuery": "discount tag"
+      },
+      {
+        "kanji": "会計",
+        "kana": "かいけい",
+        "romaji": "kaikei",
+        "meaning": "Pembayaran atau kasir",
+        "imageQuery": "store checkout counter"
+      },
+      {
+        "kanji": "レシート",
+        "kana": "レシート",
+        "romaji": "reshiito",
+        "meaning": "Struk belanja",
+        "imageQuery": "shopping receipt"
+      },
+      {
+        "kanji": "ポイントカード",
+        "kana": "ポイントカード",
+        "romaji": "pointo kaado",
+        "meaning": "Kartu poin",
+        "imageQuery": "loyalty points card"
+      },
+      {
+        "kanji": "会員証",
+        "kana": "かいいんしょう",
+        "romaji": "kaiinshou",
+        "meaning": "Kartu anggota",
+        "imageQuery": "membership card"
+      },
+      {
+        "kanji": "スタンプ",
+        "kana": "スタンプ",
+        "romaji": "sutanpu",
+        "meaning": "Cap atau stempel",
+        "imageQuery": "store stamp on loyalty card"
+      },
+      {
+        "kanji": "次回",
+        "kana": "じかい",
+        "romaji": "jikai",
+        "meaning": "Lain kali",
+        "imageQuery": "next visit calendar"
+      },
+      {
+        "kanji": "忘れる",
+        "kana": "わすれる",
+        "romaji": "wasureru",
+        "meaning": "Lupa",
+        "imageQuery": "forgotten item note"
+      },
+      {
+        "kanji": "忘れ物",
+        "kana": "わすれもの",
+        "romaji": "wasuremono",
+        "meaning": "Barang yang tertinggal",
+        "imageQuery": "lost and found counter"
+      },
+      {
+        "kanji": "落とし物",
+        "kana": "おとしもの",
+        "romaji": "otoshimono",
+        "meaning": "Barang yang terjatuh atau hilang",
+        "imageQuery": "lost property desk"
+      },
+      {
+        "kanji": "水筒",
+        "kana": "すいとう",
+        "romaji": "suitou",
+        "meaning": "Botol minum",
+        "imageQuery": "water bottle"
+      },
+      {
+        "kanji": "特徴",
+        "kana": "とくちょう",
+        "romaji": "tokuchou",
+        "meaning": "Ciri-ciri",
+        "imageQuery": "object description checklist"
+      },
+      {
+        "kanji": "カバー",
+        "kana": "カバー",
+        "romaji": "kabaa",
+        "meaning": "Pelindung atau cover",
+        "imageQuery": "phone protective cover"
+      },
+      {
+        "kanji": "機種",
+        "kana": "きしゅ",
+        "romaji": "kishu",
+        "meaning": "Jenis atau model perangkat",
+        "imageQuery": "device model"
+      },
+      {
+        "kanji": "フードコート",
+        "kana": "フードコート",
+        "romaji": "fuudo kooto",
+        "meaning": "Area makan di pusat perbelanjaan",
+        "imageQuery": "shopping mall food court"
+      },
+      {
+        "kanji": "広場",
+        "kana": "ひろば",
+        "romaji": "hiroba",
+        "meaning": "Plaza atau area terbuka",
+        "imageQuery": "shopping mall plaza"
+      },
+      {
+        "kanji": "入口",
+        "kana": "いりぐち",
+        "romaji": "iriguchi",
+        "meaning": "Pintu masuk",
+        "imageQuery": "shopping mall entrance"
+      },
+      {
+        "kanji": "駐輪場",
+        "kana": "ちゅうりんじょう",
+        "romaji": "chuurinjou",
+        "meaning": "Area parkir sepeda",
+        "imageQuery": "bicycle parking area"
+      },
+      {
+        "kanji": "インフォメーション",
+        "kana": "インフォメーション",
+        "romaji": "infomeeshon",
+        "meaning": "Pusat informasi",
+        "imageQuery": "shopping center information counter"
+      },
+      {
+        "kanji": "営業時間",
+        "kana": "えいぎょうじかん",
+        "romaji": "eigyou jikan",
+        "meaning": "Jam operasional",
+        "imageQuery": "store opening hours sign"
+      },
+      {
+        "kanji": "店内放送",
+        "kana": "てんないほうそう",
+        "romaji": "tennai housou",
+        "meaning": "Pengumuman di dalam toko",
+        "imageQuery": "shopping mall announcement speaker"
+      },
+      {
+        "kanji": "呼び出す",
+        "kana": "よびだす",
+        "romaji": "yobidasu",
+        "meaning": "Memanggil seseorang",
+        "imageQuery": "store announcement speaker"
+      },
+      {
+        "kanji": "延長する",
+        "kana": "えんちょうする",
+        "romaji": "enchou suru",
+        "meaning": "Memperpanjang",
+        "imageQuery": "store hours extension sign"
+      },
+      {
+        "kanji": "案内する",
+        "kana": "あんないする",
+        "romaji": "annai suru",
+        "meaning": "Memberi petunjuk atau mengarahkan",
+        "imageQuery": "information desk staff"
+      }
+    ]
   }
 ]
