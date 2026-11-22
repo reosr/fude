@@ -6258,5 +6258,357 @@
         "imageQuery": "juice"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-04",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 4,
+    "lessonTitle": "Please eat it without soy sauce.",
+    "vocab": [
+      {
+        "kanji": "おすすめ",
+        "kana": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi",
+        "imageQuery": "restaurant recommendation"
+      },
+      {
+        "kanji": "飲食店",
+        "kana": "いんしょくてん",
+        "romaji": "inshokuten",
+        "meaning": "Tempat makan atau restoran",
+        "imageQuery": "restaurant"
+      },
+      {
+        "kanji": "この辺",
+        "kana": "このへん",
+        "romaji": "konohen",
+        "meaning": "Sekitar sini",
+        "imageQuery": "nearby area"
+      },
+      {
+        "kanji": "近く",
+        "kana": "ちかく",
+        "romaji": "chikaku",
+        "meaning": "Dekat",
+        "imageQuery": "nearby"
+      },
+      {
+        "kanji": "看板",
+        "kana": "かんばん",
+        "romaji": "kanban",
+        "meaning": "Papan nama atau papan tanda",
+        "imageQuery": "signboard"
+      },
+      {
+        "kanji": "新しく",
+        "kana": "あたらしく",
+        "romaji": "atarashiku",
+        "meaning": "Baru",
+        "imageQuery": "new"
+      },
+      {
+        "kanji": "特徴",
+        "kana": "とくちょう",
+        "romaji": "tokuchou",
+        "meaning": "Ciri khas",
+        "imageQuery": "features"
+      },
+      {
+        "kanji": "メニュー",
+        "kana": "メニュー",
+        "romaji": "menyuu",
+        "meaning": "Menu",
+        "imageQuery": "restaurant menu"
+      },
+      {
+        "kanji": "味",
+        "kana": "あじ",
+        "romaji": "aji",
+        "meaning": "Rasa",
+        "imageQuery": "taste"
+      },
+      {
+        "kanji": "量",
+        "kana": "りょう",
+        "romaji": "ryou",
+        "meaning": "Jumlah atau porsi",
+        "imageQuery": "portion size"
+      },
+      {
+        "kanji": "値段",
+        "kana": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga",
+        "imageQuery": "price"
+      },
+      {
+        "kanji": "安い",
+        "kana": "やすい",
+        "romaji": "yasui",
+        "meaning": "Murah",
+        "imageQuery": "inexpensive"
+      },
+      {
+        "kanji": "人気",
+        "kana": "にんき",
+        "romaji": "ninki",
+        "meaning": "Populer",
+        "imageQuery": "popular"
+      },
+      {
+        "kanji": "満足",
+        "kana": "まんぞく",
+        "romaji": "manzoku",
+        "meaning": "Puas",
+        "imageQuery": "satisfaction"
+      },
+      {
+        "kanji": "ボリューム",
+        "kana": "ボリューム",
+        "romaji": "boryuumu",
+        "meaning": "Jumlah atau ukuran porsi",
+        "imageQuery": "portion"
+      },
+      {
+        "kanji": "リーズナブル",
+        "kana": "リーズナブル",
+        "romaji": "riizunaburu",
+        "meaning": "Terjangkau",
+        "imageQuery": "reasonable price"
+      },
+      {
+        "kanji": "混む",
+        "kana": "こむ",
+        "romaji": "komu",
+        "meaning": "Ramai atau penuh",
+        "imageQuery": "crowded restaurant"
+      },
+      {
+        "kanji": "口コミ",
+        "kana": "くちこみ",
+        "romaji": "kuchikomi",
+        "meaning": "Ulasan dari pengguna",
+        "imageQuery": "restaurant review"
+      },
+      {
+        "kanji": "評判",
+        "kana": "ひょうばん",
+        "romaji": "hyouban",
+        "meaning": "Reputasi atau penilaian",
+        "imageQuery": "reputation"
+      },
+      {
+        "kanji": "つける",
+        "kana": "つける",
+        "romaji": "tsukeru",
+        "meaning": "Mencelupkan atau menambahkan saus",
+        "imageQuery": "dip sauce"
+      },
+      {
+        "kanji": "混ぜる",
+        "kana": "まぜる",
+        "romaji": "mazeru",
+        "meaning": "Mengaduk atau mencampur",
+        "imageQuery": "mixing food"
+      },
+      {
+        "kanji": "かける",
+        "kana": "かける",
+        "romaji": "kakeru",
+        "meaning": "Menuangkan atau menyiramkan",
+        "imageQuery": "add sauce"
+      },
+      {
+        "kanji": "入れる",
+        "kana": "いれる",
+        "romaji": "ireru",
+        "meaning": "Memasukkan",
+        "imageQuery": "add ingredient"
+      },
+      {
+        "kanji": "巻く",
+        "kana": "まく",
+        "romaji": "maku",
+        "meaning": "Menggulung",
+        "imageQuery": "roll food"
+      },
+      {
+        "kanji": "のせる",
+        "kana": "のせる",
+        "romaji": "noseru",
+        "meaning": "Meletakkan di atas",
+        "imageQuery": "put on top"
+      },
+      {
+        "kanji": "むく",
+        "kana": "むく",
+        "romaji": "muku",
+        "meaning": "Mengupas",
+        "imageQuery": "peel"
+      },
+      {
+        "kanji": "そのまま",
+        "kana": "そのまま",
+        "romaji": "sono mama",
+        "meaning": "Apa adanya",
+        "imageQuery": "as is"
+      },
+      {
+        "kanji": "皮",
+        "kana": "かわ",
+        "romaji": "kawa",
+        "meaning": "Kulit",
+        "imageQuery": "skin"
+      },
+      {
+        "kanji": "つゆ",
+        "kana": "つゆ",
+        "romaji": "tsuyu",
+        "meaning": "Saus celup",
+        "imageQuery": "dipping sauce"
+      },
+      {
+        "kanji": "ポン酢",
+        "kana": "ぽんず",
+        "romaji": "ponzu",
+        "meaning": "Saus ponzu",
+        "imageQuery": "ponzu sauce"
+      },
+      {
+        "kanji": "ごまだれ",
+        "kana": "ごまだれ",
+        "romaji": "gomadare",
+        "meaning": "Saus wijen",
+        "imageQuery": "sesame sauce"
+      },
+      {
+        "kanji": "白菜",
+        "kana": "はくさい",
+        "romaji": "hakusai",
+        "meaning": "Sawi putih",
+        "imageQuery": "napa cabbage"
+      },
+      {
+        "kanji": "野菜",
+        "kana": "やさい",
+        "romaji": "yasai",
+        "meaning": "Sayuran",
+        "imageQuery": "vegetables"
+      },
+      {
+        "kanji": "豆腐",
+        "kana": "とうふ",
+        "romaji": "toufu",
+        "meaning": "Tahu",
+        "imageQuery": "tofu"
+      },
+      {
+        "kanji": "ゆで卵",
+        "kana": "ゆでたまご",
+        "romaji": "yude tamago",
+        "meaning": "Telur rebus",
+        "imageQuery": "boiled egg"
+      },
+      {
+        "kanji": "ピーナッツ",
+        "kana": "ピーナッツ",
+        "romaji": "piinattsu",
+        "meaning": "Kacang tanah",
+        "imageQuery": "peanuts"
+      },
+      {
+        "kanji": "ソース",
+        "kana": "ソース",
+        "romaji": "soosu",
+        "meaning": "Saus",
+        "imageQuery": "sauce"
+      },
+      {
+        "kanji": "甘辛い",
+        "kana": "あまからい",
+        "romaji": "amakarai",
+        "meaning": "Manis dan pedas",
+        "imageQuery": "sweet and spicy"
+      },
+      {
+        "kanji": "家庭料理",
+        "kana": "かていりょうり",
+        "romaji": "katei ryouri",
+        "meaning": "Masakan rumahan",
+        "imageQuery": "home cooking"
+      },
+      {
+        "kanji": "紹介する",
+        "kana": "しょうかいする",
+        "romaji": "shoukai suru",
+        "meaning": "Memperkenalkan",
+        "imageQuery": "introduce"
+      },
+      {
+        "kanji": "食べ方",
+        "kana": "たべかた",
+        "romaji": "tabekata",
+        "meaning": "Cara makan",
+        "imageQuery": "how to eat"
+      },
+      {
+        "kanji": "焼く",
+        "kana": "やく",
+        "romaji": "yaku",
+        "meaning": "Memanggang",
+        "imageQuery": "grill"
+      },
+      {
+        "kanji": "煮る",
+        "kana": "にる",
+        "romaji": "niru",
+        "meaning": "Merebus atau memasak berkuah",
+        "imageQuery": "simmer"
+      },
+      {
+        "kanji": "蒸す",
+        "kana": "むす",
+        "romaji": "musu",
+        "meaning": "Mengukus",
+        "imageQuery": "steam"
+      },
+      {
+        "kanji": "揚げる",
+        "kana": "あげる",
+        "romaji": "ageru",
+        "meaning": "Menggoreng",
+        "imageQuery": "deep fry"
+      },
+      {
+        "kanji": "切る",
+        "kana": "きる",
+        "romaji": "kiru",
+        "meaning": "Memotong",
+        "imageQuery": "cut"
+      },
+      {
+        "kanji": "塩",
+        "kana": "しお",
+        "romaji": "shio",
+        "meaning": "Garam",
+        "imageQuery": "salt"
+      },
+      {
+        "kanji": "油",
+        "kana": "あぶら",
+        "romaji": "abura",
+        "meaning": "Minyak",
+        "imageQuery": "oil"
+      },
+      {
+        "kanji": "～屋",
+        "kana": "～や",
+        "romaji": "~ya",
+        "meaning": "Akhiran untuk nama toko atau restoran",
+        "imageQuery": "shop suffix"
+      }
+    ]
   }
 ]
