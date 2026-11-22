@@ -10200,5 +10200,364 @@
         "imageQuery": "neighborhood post office"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-15",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 15,
+    "lessonTitle": "The lights in the meeting room were left on.",
+    "vocab": [
+      {
+        "kanji": "自然",
+        "kana": "しぜん",
+        "romaji": "shizen",
+        "meaning": "Alam",
+        "imageQuery": "natural forest river landscape"
+      },
+      {
+        "kanji": "環境",
+        "kana": "かんきょう",
+        "romaji": "kankyou",
+        "meaning": "Lingkungan",
+        "imageQuery": "green environment conservation"
+      },
+      {
+        "kanji": "地球",
+        "kana": "ちきゅう",
+        "romaji": "chikyuu",
+        "meaning": "Bumi",
+        "imageQuery": "planet earth"
+      },
+      {
+        "kanji": "エコ",
+        "kana": "エコ",
+        "romaji": "eko",
+        "meaning": "Ramah lingkungan atau eco",
+        "imageQuery": "eco friendly reusable items"
+      },
+      {
+        "kanji": "活動",
+        "kana": "かつどう",
+        "romaji": "katsudou",
+        "meaning": "Kegiatan atau aktivitas",
+        "imageQuery": "community activity"
+      },
+      {
+        "kanji": "エコ活動",
+        "kana": "エコかつどう",
+        "romaji": "eko katsudou",
+        "meaning": "Kegiatan ramah lingkungan",
+        "imageQuery": "environmental awareness poster"
+      },
+      {
+        "kanji": "貼り紙",
+        "kana": "はりがみ",
+        "romaji": "harigami",
+        "meaning": "Poster atau pemberitahuan yang ditempel",
+        "imageQuery": "environmental reminder poster on wall"
+      },
+      {
+        "kanji": "注意点",
+        "kana": "ちゅういてん",
+        "romaji": "chuuiten",
+        "meaning": "Hal yang perlu diperhatikan",
+        "imageQuery": "important notice checklist"
+      },
+      {
+        "kanji": "電気",
+        "kana": "でんき",
+        "romaji": "denki",
+        "meaning": "Listrik atau lampu",
+        "imageQuery": "light switch electricity"
+      },
+      {
+        "kanji": "温度",
+        "kana": "おんど",
+        "romaji": "ondo",
+        "meaning": "Suhu",
+        "imageQuery": "thermometer temperature setting"
+      },
+      {
+        "kanji": "設定する",
+        "kana": "せっていする",
+        "romaji": "settei suru",
+        "meaning": "Mengatur atau menetapkan",
+        "imageQuery": "air conditioner temperature control"
+      },
+      {
+        "kanji": "節電",
+        "kana": "せつでん",
+        "romaji": "setsuden",
+        "meaning": "Penghematan listrik",
+        "imageQuery": "turning off unused lights"
+      },
+      {
+        "kanji": "節水",
+        "kana": "せっすい",
+        "romaji": "sessui",
+        "meaning": "Penghematan air",
+        "imageQuery": "turning off water tap"
+      },
+      {
+        "kanji": "紙",
+        "kana": "かみ",
+        "romaji": "kami",
+        "meaning": "Kertas",
+        "imageQuery": "stack of paper"
+      },
+      {
+        "kanji": "節約する",
+        "kana": "せつやくする",
+        "romaji": "setsuyaku suru",
+        "meaning": "Menghemat",
+        "imageQuery": "double sided printing paper saving"
+      },
+      {
+        "kanji": "両面コピー",
+        "kana": "りょうめんコピー",
+        "romaji": "ryoumen kopii",
+        "meaning": "Fotokopi dua sisi",
+        "imageQuery": "double sided photocopy paper"
+      },
+      {
+        "kanji": "水",
+        "kana": "みず",
+        "romaji": "mizu",
+        "meaning": "Air",
+        "imageQuery": "running water tap"
+      },
+      {
+        "kanji": "もったいない",
+        "kana": "もったいない",
+        "romaji": "mottainai",
+        "meaning": "Sayang jika terbuang atau boros",
+        "imageQuery": "reusable items avoid waste"
+      },
+      {
+        "kanji": "エアコン",
+        "kana": "エアコン",
+        "romaji": "eakon",
+        "meaning": "Pendingin ruangan",
+        "imageQuery": "air conditioner control"
+      },
+      {
+        "kanji": "照明",
+        "kana": "しょうめい",
+        "romaji": "shoumei",
+        "meaning": "Penerangan atau lampu",
+        "imageQuery": "ceiling lights in room"
+      },
+      {
+        "kanji": "消す",
+        "kana": "けす",
+        "romaji": "kesu",
+        "meaning": "Mematikan",
+        "imageQuery": "turning off room light"
+      },
+      {
+        "kanji": "つける",
+        "kana": "つける",
+        "romaji": "tsukeru",
+        "meaning": "Menyalakan",
+        "imageQuery": "turning on room light"
+      },
+      {
+        "kanji": "止める",
+        "kana": "とめる",
+        "romaji": "tomeru",
+        "meaning": "Menghentikan",
+        "imageQuery": "turning off water tap"
+      },
+      {
+        "kanji": "出す",
+        "kana": "だす",
+        "romaji": "dasu",
+        "meaning": "Mengeluarkan atau menaruh sampah",
+        "imageQuery": "putting sorted waste outside"
+      },
+      {
+        "kanji": "リサイクルする",
+        "kana": "リサイクルする",
+        "romaji": "risaikuru suru",
+        "meaning": "Mendaur ulang",
+        "imageQuery": "recycling bins"
+      },
+      {
+        "kanji": "ごみ",
+        "kana": "ごみ",
+        "romaji": "gomi",
+        "meaning": "Sampah",
+        "imageQuery": "sorted household rubbish"
+      },
+      {
+        "kanji": "ごみ箱",
+        "kana": "ごみばこ",
+        "romaji": "gomibako",
+        "meaning": "Tempat sampah",
+        "imageQuery": "waste bin"
+      },
+      {
+        "kanji": "ごみ袋",
+        "kana": "ごみぶくろ",
+        "romaji": "gomibukuro",
+        "meaning": "Kantong sampah",
+        "imageQuery": "recycling rubbish bag"
+      },
+      {
+        "kanji": "分別する",
+        "kana": "ぶんべつする",
+        "romaji": "bunbetsu suru",
+        "meaning": "Memilah",
+        "imageQuery": "sorting household waste categories"
+      },
+      {
+        "kanji": "分ける",
+        "kana": "わける",
+        "romaji": "wakeru",
+        "meaning": "Memisahkan atau membagi",
+        "imageQuery": "separating recyclable items"
+      },
+      {
+        "kanji": "種類",
+        "kana": "しゅるい",
+        "romaji": "shurui",
+        "meaning": "Jenis atau macam",
+        "imageQuery": "different recycling categories"
+      },
+      {
+        "kanji": "資源ごみ",
+        "kana": "しげんごみ",
+        "romaji": "shigen gomi",
+        "meaning": "Sampah yang dapat didaur ulang",
+        "imageQuery": "recyclable paper cans plastic bottles"
+      },
+      {
+        "kanji": "燃えるごみ",
+        "kana": "もえるごみ",
+        "romaji": "moeru gomi",
+        "meaning": "Sampah yang dapat dibakar",
+        "imageQuery": "general burnable waste category sign"
+      },
+      {
+        "kanji": "燃えないごみ",
+        "kana": "もえないごみ",
+        "romaji": "moenai gomi",
+        "meaning": "Sampah yang tidak dapat dibakar",
+        "imageQuery": "non burnable waste category sign"
+      },
+      {
+        "kanji": "粗大ごみ",
+        "kana": "そだいごみ",
+        "romaji": "sodai gomi",
+        "meaning": "Sampah berukuran besar",
+        "imageQuery": "oversized household waste collection guide"
+      },
+      {
+        "kanji": "曜日",
+        "kana": "ようび",
+        "romaji": "youbi",
+        "meaning": "Hari dalam minggu",
+        "imageQuery": "weekly calendar"
+      },
+      {
+        "kanji": "決める",
+        "kana": "きめる",
+        "romaji": "kimeru",
+        "meaning": "Menentukan atau memutuskan",
+        "imageQuery": "calendar schedule checklist"
+      },
+      {
+        "kanji": "回収日",
+        "kana": "かいしゅうび",
+        "romaji": "kaishuubi",
+        "meaning": "Hari pengumpulan sampah",
+        "imageQuery": "waste collection calendar"
+      },
+      {
+        "kanji": "収集場所",
+        "kana": "しゅうしゅうばしょ",
+        "romaji": "shuushuu basho",
+        "meaning": "Tempat pengumpulan",
+        "imageQuery": "community collection area"
+      },
+      {
+        "kanji": "ペットボトル",
+        "kana": "ペットボトル",
+        "romaji": "petto botoru",
+        "meaning": "Botol plastik",
+        "imageQuery": "plastic drink bottle for recycling"
+      },
+      {
+        "kanji": "缶",
+        "kana": "かん",
+        "romaji": "kan",
+        "meaning": "Kaleng",
+        "imageQuery": "empty beverage cans recycling"
+      },
+      {
+        "kanji": "びん",
+        "kana": "びん",
+        "romaji": "bin",
+        "meaning": "Botol kaca",
+        "imageQuery": "glass bottles recycling"
+      },
+      {
+        "kanji": "段ボール",
+        "kana": "だんボール",
+        "romaji": "danbooru",
+        "meaning": "Kardus bergelombang",
+        "imageQuery": "cardboard recycling bundle"
+      },
+      {
+        "kanji": "古紙",
+        "kana": "こし",
+        "romaji": "koshi",
+        "meaning": "Kertas bekas",
+        "imageQuery": "recycled paper stack"
+      },
+      {
+        "kanji": "資源",
+        "kana": "しげん",
+        "romaji": "shigen",
+        "meaning": "Sumber daya atau bahan yang dapat dimanfaatkan kembali",
+        "imageQuery": "reusable resources recycling symbol"
+      },
+      {
+        "kanji": "ラベル",
+        "kana": "ラベル",
+        "romaji": "raberu",
+        "meaning": "Label",
+        "imageQuery": "bottle label"
+      },
+      {
+        "kanji": "キャップ",
+        "kana": "キャップ",
+        "romaji": "kyappu",
+        "meaning": "Tutup botol",
+        "imageQuery": "bottle cap"
+      },
+      {
+        "kanji": "生ごみ",
+        "kana": "なまごみ",
+        "romaji": "namagomi",
+        "meaning": "Sampah organik atau sisa makanan",
+        "imageQuery": "food scraps compost bin"
+      },
+      {
+        "kanji": "リユース",
+        "kana": "リユース",
+        "romaji": "riyuusu",
+        "meaning": "Menggunakan kembali",
+        "imageQuery": "reusable shopping items"
+      },
+      {
+        "kanji": "マイバッグ",
+        "kana": "マイバッグ",
+        "romaji": "mai baggu",
+        "meaning": "Tas belanja pakai ulang",
+        "imageQuery": "reusable shopping bag"
+      }
+    ]
   }
 ]
