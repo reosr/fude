@@ -17,7 +17,8 @@ export default function IrodoriElementaryTwoPage() {
   const lessonFourCompleted = progress.completedLessons.includes("elementary2-04");
   const lessonFiveCompleted = progress.completedLessons.includes("elementary2-05");
   const lessonSixCompleted = progress.completedLessons.includes("elementary2-06");
-  const availableCount = lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const lessonSevenCompleted = progress.completedLessons.includes("elementary2-07");
+  const availableCount = lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -82,7 +83,7 @@ export default function IrodoriElementaryTwoPage() {
             Daftar pelajaran
           </h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Lesson 1–7 tersedia secara berurutan. Setiap lesson baru terbuka
+            Lesson 1–8 tersedia secara berurutan. Setiap lesson baru terbuka
             setelah lesson sebelumnya selesai.
           </p>
         </div>
@@ -96,7 +97,8 @@ export default function IrodoriElementaryTwoPage() {
               || (lesson === 4 && lessonThreeCompleted)
               || (lesson === 5 && lessonFourCompleted)
               || (lesson === 6 && lessonFiveCompleted)
-              || (lesson === 7 && lessonSixCompleted);
+              || (lesson === 7 && lessonSixCompleted)
+              || (lesson === 8 && lessonSevenCompleted);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const title = lesson === 1
               ? "I just came to Japan last week."
@@ -112,7 +114,9 @@ export default function IrodoriElementaryTwoPage() {
                         ? "I am glad that I went to a lot of different places."
                         : lesson === 7
                           ? "If it rains, it will be held at the hall."
-                          : "Lesson " + String(lesson).padStart(2, "0");
+                          : lesson === 8
+                            ? "Do you know where the food stands are?"
+                            : "Lesson " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
               : lesson === 2
@@ -127,7 +131,9 @@ export default function IrodoriElementaryTwoPage() {
                         ? "Membaca tiket dan pengumuman kereta, menjelaskan rencana, menceritakan kesan perjalanan, dan menulis unggahan singkat."
                         : lesson === 7
                           ? "Membaca pengumuman lingkungan, bertanya tentang acara, memahami siaran komunitas, dan menanyakan detail kegiatan."
-                          : "Materi akan tersedia setelah lesson sebelumnya selesai.";
+                          : lesson === 8
+                            ? "Membaca program festival, menanyakan waktu dan lokasi acara, memahami persyaratan kegiatan serta pengumuman, dan berbagi pengalaman."
+                            : "Materi akan tersedia setelah lesson sebelumnya selesai.";
 
             const card = (
               <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (
@@ -165,7 +171,7 @@ export default function IrodoriElementaryTwoPage() {
             );
 
             return isAvailable ? (
-              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : lesson === 3 ? "/irodori/elementary-2/lesson-3" : lesson === 4 ? "/irodori/elementary-2/lesson-4" : lesson === 5 ? "/irodori/elementary-2/lesson-5" : lesson === 6 ? "/irodori/elementary-2/lesson-6" : "/irodori/elementary-2/lesson-7"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
+              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : lesson === 3 ? "/irodori/elementary-2/lesson-3" : lesson === 4 ? "/irodori/elementary-2/lesson-4" : lesson === 5 ? "/irodori/elementary-2/lesson-5" : lesson === 6 ? "/irodori/elementary-2/lesson-6" : lesson === 7 ? "/irodori/elementary-2/lesson-7" : "/irodori/elementary-2/lesson-8"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
                 {card}
               </Link>
             ) : (
