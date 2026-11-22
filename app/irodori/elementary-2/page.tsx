@@ -22,7 +22,8 @@ export default function IrodoriElementaryTwoPage() {
   const lessonNineCompleted = progress.completedLessons.includes("elementary2-09");
   const lessonTenCompleted = progress.completedLessons.includes("elementary2-10");
   const lessonElevenCompleted = progress.completedLessons.includes("elementary2-11");
-  const availableCount = lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const lessonTwelveCompleted = progress.completedLessons.includes("elementary2-12");
+  const availableCount = lessonTwelveCompleted ? 13 : lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -87,7 +88,7 @@ export default function IrodoriElementaryTwoPage() {
             Daftar pelajaran
           </h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Lesson 1–12 tersedia secara berurutan. Setiap lesson baru terbuka
+            Lesson 1–13 tersedia secara berurutan. Setiap lesson baru terbuka
             setelah lesson sebelumnya selesai.
           </p>
         </div>
@@ -106,7 +107,8 @@ export default function IrodoriElementaryTwoPage() {
               || (lesson === 9 && lessonEightCompleted)
               || (lesson === 10 && lessonNineCompleted)
               || (lesson === 11 && lessonTenCompleted)
-              || (lesson === 12 && lessonElevenCompleted);
+              || (lesson === 12 && lessonElevenCompleted)
+              || (lesson === 13 && lessonTwelveCompleted);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const title = lesson === 1
               ? "I just came to Japan last week."
@@ -132,7 +134,9 @@ export default function IrodoriElementaryTwoPage() {
                                   ? "I forgot to bring my point card."
                                   : lesson === 12
                                     ? "This vacuum cleaner is light and easy to move around."
-                                    : "Lesson " + String(lesson).padStart(2, "0");
+                                    : lesson === 13
+                                      ? "They display a lot of materials."
+                                      : "Lesson " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
               : lesson === 2
@@ -157,7 +161,9 @@ export default function IrodoriElementaryTwoPage() {
                                 ? "Berbelanja pakaian, menjelaskan kartu poin tertinggal, mencari barang yang tertinggal, dan memahami pengumuman pusat perbelanjaan."
                                 : lesson === 12
                                   ? "Meminta saran membeli barang elektronik, memahami iklan barang bekas, membaca tabel perbandingan, dan menanyakan spesifikasi serta harga kepada pegawai toko."
-                                  : "Materi akan tersedia setelah lesson sebelumnya selesai.";
+                                  : lesson === 13
+                                    ? "Mengenal fasilitas umum, memahami aturan gym dan perpustakaan, membaca panduan layanan, serta memahami tanda larangan."
+                                    : "Materi akan tersedia setelah lesson sebelumnya selesai.";
 
             const card = (
               <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (
@@ -195,7 +201,7 @@ export default function IrodoriElementaryTwoPage() {
             );
 
             return isAvailable ? (
-              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : lesson === 3 ? "/irodori/elementary-2/lesson-3" : lesson === 4 ? "/irodori/elementary-2/lesson-4" : lesson === 5 ? "/irodori/elementary-2/lesson-5" : lesson === 6 ? "/irodori/elementary-2/lesson-6" : lesson === 7 ? "/irodori/elementary-2/lesson-7" : lesson === 8 ? "/irodori/elementary-2/lesson-8" : lesson === 9 ? "/irodori/elementary-2/lesson-9" : lesson === 10 ? "/irodori/elementary-2/lesson-10" : lesson === 11 ? "/irodori/elementary-2/lesson-11" : "/irodori/elementary-2/lesson-12"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
+              <Link key={lesson} href={lesson === 1 ? "/irodori/elementary-2/lesson-1" : lesson === 2 ? "/irodori/elementary-2/lesson-2" : lesson === 3 ? "/irodori/elementary-2/lesson-3" : lesson === 4 ? "/irodori/elementary-2/lesson-4" : lesson === 5 ? "/irodori/elementary-2/lesson-5" : lesson === 6 ? "/irodori/elementary-2/lesson-6" : lesson === 7 ? "/irodori/elementary-2/lesson-7" : lesson === 8 ? "/irodori/elementary-2/lesson-8" : lesson === 9 ? "/irodori/elementary-2/lesson-9" : lesson === 10 ? "/irodori/elementary-2/lesson-10" : lesson === 11 ? "/irodori/elementary-2/lesson-11" : lesson === 12 ? "/irodori/elementary-2/lesson-12" : "/irodori/elementary-2/lesson-13"} className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A9C9E8]">
                 {card}
               </Link>
             ) : (
