@@ -1,6 +1,6 @@
 import { getCompletedIrodoriLessons } from "./irodori-progress";
 
-let kosakataPromise: Promise<any[]> | null = null;
+let kosakataPromise: Promise<MinnaVocabGroup[]> | null = null;
 let irodoriVocabPromise: Promise<IrodoriVocabLesson[]> | null = null;
 
 export type VocabSource =
@@ -19,9 +19,15 @@ export type VocabItem = {
   kana: string;
   romaji: string;
   meaning: string;
+  imageQuery?: string;
+  imageUrl?: string;
   bab?: number;
   sources?: VocabSource[];
-  [key: string]: any;
+};
+
+type MinnaVocabGroup = {
+  bab: number;
+  vocab: Omit<VocabItem, "bab" | "sources">[];
 };
 
 type IrodoriVocabLesson = {
@@ -36,16 +42,16 @@ type IrodoriVocabLesson = {
 const norm = (s: string) =>
   (s || "")
     .normalize("NFKC")
-    .replace(/[\s\u3000]/g, "")
+    .replace(/[\\s\\u3000]/g, "")
     .replace(/[ã€œï½žâˆ¼]/g, "~");
 
 export const vocabKey = (v: { kanji: string; kana: string }) =>
   `${norm(v.kanji)}-${norm(v.kana)}`;
 
-async function loadKosakata(): Promise<any[]> {
+async function loadKosakata(): Promise<MinnaVocabGroup[]> {
   if (!kosakataPromise) {
     kosakataPromise = import("../data/kosakata.json")
-      .then((module) => module.default as any[])
+      .then((module) => module.default as MinnaVocabGroup[])
       .catch((error) => {
         kosakataPromise = null;
         throw error;
@@ -87,7 +93,11 @@ function addSource(item: VocabItem, source: VocabSource): void {
 }
 
 export function getVocabSourceLabel(item: VocabItem): string {
-  const sources = item.sources ?? (item.bab !== undefined ? [{ type: "minna" as const, bab: item.bab }] : []);
+  const sources = item.sources ?? (
+    item.bab !== undefined
+      ? [{ type: "minna" as const, bab: item.bab }]
+      : []
+  );
 
   return sources.map((source) => {
     if (source.type === "minna") return `Bab ${source.bab}`;
@@ -117,11 +127,11 @@ export async function getUnlockedVocab(
   const itemByKey = new Map<string, VocabItem>();
 
   allKosakata
-    .filter((group: any) => Number(group.bab) <= Number(currentBab))
-    .sort((a: any, b: any) => Number(a.bab) - Number(b.bab))
-    .forEach((group: any) => {
-      (group.vocab || []).forEach((v: any) => {
-        const key = vocabKey(v);
+    .filter((group) => Number(group.bab) <= Number(currentBab))
+    .sort((a, b) => Number(a.bab) - Number(b.bab))
+    .forEach((group) => {
+      group.vocab.forEach((vocab) => {
+        const key = vocabKey(vocab);
         const existing = itemByKey.get(key);
 
         if (existing) {
@@ -130,7 +140,7 @@ export async function getUnlockedVocab(
         }
 
         const item: VocabItem = {
-          ...v,
+          ...vocab,
           bab: Number(group.bab),
           sources: [{ type: "minna", bab: Number(group.bab) }],
         };
