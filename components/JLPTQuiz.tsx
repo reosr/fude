@@ -814,7 +814,7 @@ export default function JLPTQuiz({
 
                           {question.passage && (
                             <div className="bg-[#121110]/50 border-l-4 border-[#33312E] rounded-r-lg mb-3">
-                              <JapaneseReading
+                              <JapaneseReading allowIndexFallback
                                 html={question.passage}
                                 contentClassName="p-4 max-h-[200px] overflow-y-auto text-sm text-[#EAE6DD] leading-relaxed font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] text-left"
                                 kanaClassName="px-4 pb-2 font-mincho text-sm text-[#D6AD4F]"
@@ -823,7 +823,7 @@ export default function JLPTQuiz({
                             </div>
                           )}
 
-                          <JapaneseReading
+                          <JapaneseReading allowIndexFallback
                             html={question.question}
                             contentClassName="text-[#EAE6DD] font-mincho mb-4 text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
                             kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
@@ -834,7 +834,7 @@ export default function JLPTQuiz({
                             <p className="text-[#A3A099]">
                               Jawaban kamu:{" "}
                               <span className={isUnanswered ? "text-yellow-500" : isCorrect ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
-                                {isUnanswered ? "Tidak dijawab" : <JapaneseReading html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />}
+                                {isUnanswered ? "Tidak dijawab" : <JapaneseReading allowIndexFallback html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />}
                               </span>
                             </p>
 
@@ -842,7 +842,7 @@ export default function JLPTQuiz({
                               <p className="text-[#A3A099]">
                                 Jawaban benar:{" "}
                                 <span className="text-green-500 font-bold">
-                                  <JapaneseReading html={question.options[question.answer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />
+                                  <JapaneseReading allowIndexFallback html={question.options[question.answer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />
                                 </span>
                               </p>
                             )}
@@ -853,9 +853,13 @@ export default function JLPTQuiz({
                               PENJELASAN
                             </p>
 
-                            <p className="text-sm text-[#A3A099] leading-relaxed">
-                              {question.explanation}
-                            </p>
+                            <JapaneseReading
+                              html={question.explanation}
+                              allowIndexFallback
+                              contentClassName="text-sm text-[#A3A099] leading-relaxed"
+                              kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]"
+                              romajiClassName="mt-1 text-xs italic text-[#A9A398]"
+                            />
                           </div>
                         </div>
                       </div>
@@ -976,7 +980,7 @@ export default function JLPTQuiz({
 
             {currentQ.passage && (
               <div className="bg-[#1A1918] border-l-4 border-[#B8860B] rounded-r-xl mb-6 shadow-md">
-                <JapaneseReading
+                <JapaneseReading allowIndexFallback
                   html={currentQ.passage}
                   contentClassName="p-5 md:p-6 max-h-[300px] overflow-y-auto text-[#EAE6DD] text-base md:text-lg leading-[2] font-mincho [&_rt]:text-[0.55em] [&_rt]:text-[#B8860B] pr-2 custom-scrollbar text-left"
                   kanaClassName="px-5 md:px-6 pb-1 font-mincho text-sm md:text-base text-[#D6AD4F]"
@@ -1006,7 +1010,7 @@ export default function JLPTQuiz({
               </div>
             )}
 
-            <JapaneseReading
+            <JapaneseReading allowIndexFallback
               html={currentQ.question}
               contentClassName="text-xl md:text-2xl font-bold text-[#EAE6DD] mb-2 text-center leading-[2] font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
               kanaClassName="mt-1 font-mincho text-sm md:text-base text-[#D6AD4F] text-center"
@@ -1031,7 +1035,7 @@ export default function JLPTQuiz({
                     onClick={() => handleAnswer(index)}
                     className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass}`}
                   >
-                    <JapaneseReading
+                    <JapaneseReading allowIndexFallback
                       html={option}
                       contentClassName="font-mincho text-base md:text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
                       kanaClassName="mt-1 font-mincho text-sm text-[#F4DFA7]"
