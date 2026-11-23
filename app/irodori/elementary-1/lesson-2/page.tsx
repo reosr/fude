@@ -29,21 +29,21 @@ const lessonId = "elementary1-02";
 
 
 const hobbyConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>ソウタさんの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？</>, romaji: "Souta-san no shumi wa nan desu ka?", translation: "Apa hobi Sota?", audioFileName: "irodori-elementary1-02-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>くことです。よく<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>聞<rt>き</rt></ruby>きます。</>, romaji: "Ongaku o kiku koto desu. Yoku densha de kikimasu.", translation: "Mendengarkan musik. Saya sering mendengarkannya di kereta.", audioFileName: "irodori-elementary1-02-a01-l02.mp3" },
+  { speakerId: "yui", japanese: <>ソウタさんの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？</>, romaji: "Souta-san no shumi wa nan desu ka?", translation: "Sota, apa hobimu?", audioFileName: "irodori-elementary1-02-a01-l01.mp3" },
+  { speakerId: "sota", japanese: <><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>くことです。よく<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>聞<rt>き</rt></ruby>きます。</>, romaji: "Ongaku o kiku koto desu. Yoku densha de kikimasu.", translation: "Hobi saya mendengarkan musik. Saya sering mendengarkannya di kereta.", audioFileName: "irodori-elementary1-02-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>そうですか。<ruby>私<rt>わたし</rt></ruby>も<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。</>, romaji: "Sou desu ka. Watashi mo ongaku ga suki desu.", translation: "Begitu, ya. Saya juga suka musik.", audioFileName: "irodori-elementary1-02-a01-l03.mp3" },
-  { speakerId: "sota", japanese: <>どんな<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</>, romaji: "Donna ongaku ga suki desu ka?", translation: "Musik seperti apa yang disukai?", audioFileName: "irodori-elementary1-02-a01-l04.mp3" },
+  { speakerId: "sota", japanese: <>どんな<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</>, romaji: "Donna ongaku ga suki desu ka?", translation: "Kamu suka musik seperti apa?", audioFileName: "irodori-elementary1-02-a01-l04.mp3" },
 ];
 
 const favoriteActivityConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>ケンジさんは、<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をするのが<ruby>好<rt>す</rt></ruby>きですか？</>, romaji: "Kenji-san wa, yasumi no hi ni nani o suru no ga suki desu ka?", translation: "Kenji suka melakukan apa pada hari libur?", audioFileName: "irodori-elementary1-02-a02-l01.mp3" },
+  { speakerId: "akiko", japanese: <>ケンジさんは、<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をするのが<ruby>好<rt>す</rt></ruby>きですか？</>, romaji: "Kenji-san wa, yasumi no hi ni nani o suru no ga suki desu ka?", translation: "Kenji, apa yang kamu suka lakukan saat hari libur?", audioFileName: "irodori-elementary1-02-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <><ruby>家<rt>いえ</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>むのが<ruby>好<rt>す</rt></ruby>きです。</>, romaji: "Ie de hon o yomu no ga suki desu.", translation: "Saya suka membaca buku di rumah.", audioFileName: "irodori-elementary1-02-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <><ruby>外<rt>そと</rt></ruby>に<ruby>出<rt>で</rt></ruby>かけるのは<ruby>好<rt>す</rt></ruby>きじゃないですか？</>, romaji: "Soto ni dekakeru no wa suki ja nai desu ka?", translation: "Apakah tidak suka pergi keluar?", audioFileName: "irodori-elementary1-02-a02-l03.mp3" },
+  { speakerId: "akiko", japanese: <><ruby>外<rt>そと</rt></ruby>に<ruby>出<rt>で</rt></ruby>かけるのは<ruby>好<rt>す</rt></ruby>きじゃないですか？</>, romaji: "Soto ni dekakeru no wa suki ja nai desu ka?", translation: "Kamu tidak suka pergi keluar?", audioFileName: "irodori-elementary1-02-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>はい。うちでゆっくりするのが<ruby>好<rt>す</rt></ruby>きです。</>, romaji: "Hai. Uchi de yukkuri suru no ga suki desu.", translation: "Ya. Saya suka bersantai di rumah.", audioFileName: "irodori-elementary1-02-a02-l04.mp3" },
 ];
 
 const holidayConversation: IrodoriUtterance[] = [
-  { speakerId: "sota", japanese: <>ユイさんは、<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>はたいてい<ruby>何<rt>なに</rt></ruby>をしますか？</>, romaji: "Yui-san wa, yasumi no hi wa taitei nani o shimasu ka?", translation: "Yui biasanya melakukan apa pada hari libur?", audioFileName: "irodori-elementary1-02-a03-l01.mp3" },
+  { speakerId: "sota", japanese: <>ユイさんは、<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>はたいてい<ruby>何<rt>なに</rt></ruby>をしますか？</>, romaji: "Yui-san wa, yasumi no hi wa taitei nani o shimasu ka?", translation: "Yui, biasanya kamu melakukan apa saat hari libur?", audioFileName: "irodori-elementary1-02-a03-l01.mp3" },
   { speakerId: "yui", japanese: <>たいてい<ruby>友達<rt>ともだち</rt></ruby>と<ruby>公園<rt>こうえん</rt></ruby>でバドミントンをします。</>, romaji: "Taitei tomodachi to kouen de badominton o shimasu.", translation: "Biasanya saya bermain bulu tangkis di taman bersama teman.", audioFileName: "irodori-elementary1-02-a03-l02.mp3" },
   { speakerId: "sota", japanese: <>いいですね。どのぐらいしますか？</>, romaji: "Ii desu ne. Dono gurai shimasu ka?", translation: "Kedengarannya menyenangkan. Berapa lama biasanya bermain?", audioFileName: "irodori-elementary1-02-a03-l03.mp3" },
   { speakerId: "yui", japanese: <>二時間ぐらいです。そのあと、みんなでご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。</>, romaji: "Nijikan gurai desu. Sono ato, minna de gohan o tabemasu.", translation: "Sekitar dua jam. Setelah itu, kami makan bersama.", audioFileName: "irodori-elementary1-02-a03-l04.mp3" },
@@ -51,16 +51,16 @@ const holidayConversation: IrodoriUtterance[] = [
 ];
 
 const weeklyRoutineConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>アキコさんは、<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をしていますか？</>, romaji: "Akiko-san wa, shuumatsu ni nani o shite imasu ka?", translation: "Akiko biasanya melakukan apa pada akhir pekan?", audioFileName: "irodori-elementary1-02-a04-l01.mp3" },
+  { speakerId: "yui", japanese: <>アキコさんは、<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をしていますか？</>, romaji: "Akiko-san wa, shuumatsu ni nani o shite imasu ka?", translation: "Akiko, biasanya kamu melakukan apa pada akhir pekan?", audioFileName: "irodori-elementary1-02-a04-l01.mp3" },
   { speakerId: "akiko", japanese: <>日曜日に<ruby>友達<rt>ともだち</rt></ruby>と<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しています。</>, romaji: "Nichiyoubi ni tomodachi to toshokan de nihongo o benkyou shite imasu.", translation: "Pada hari Minggu saya belajar bahasa Jepang di perpustakaan bersama teman.", audioFileName: "irodori-elementary1-02-a04-l02.mp3" },
-  { speakerId: "yui", japanese: <>そのあと、<ruby>何<rt>なに</rt></ruby>をしますか？</>, romaji: "Sono ato, nani o shimasu ka?", translation: "Setelah itu, apa yang dilakukan?", audioFileName: "irodori-elementary1-02-a04-l03.mp3" },
-  { speakerId: "akiko", japanese: <><ruby>勉強<rt>べんきょう</rt></ruby>して、それからカフェで<ruby>休<rt>やす</rt></ruby>みます。</>, romaji: "Benkyou shite, sorekara kafe de yasumimasu.", translation: "Setelah belajar, lalu saya beristirahat di kafe.", audioFileName: "irodori-elementary1-02-a04-l04.mp3" },
+  { speakerId: "yui", japanese: <>そのあと、<ruby>何<rt>なに</rt></ruby>をしますか？</>, romaji: "Sono ato, nani o shimasu ka?", translation: "Setelah itu, kamu melakukan apa?", audioFileName: "irodori-elementary1-02-a04-l03.mp3" },
+  { speakerId: "akiko", japanese: <><ruby>勉強<rt>べんきょう</rt></ruby>して、それからカフェで<ruby>休<rt>やす</rt></ruby>みます。</>, romaji: "Benkyou shite, sorekara kafe de yasumimasu.", translation: "Setelah belajar, saya beristirahat di kafe.", audioFileName: "irodori-elementary1-02-a04-l04.mp3" },
 ];
 
 const learningAndAbilityConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>ユイさん、<ruby>最近<rt>さいきん</rt></ruby>、<ruby>何<rt>なに</rt></ruby>か<ruby>習<rt>なら</rt></ruby>っていますか？</>, romaji: "Yui-san, saikin, nanika naratte imasu ka?", translation: "Yui, akhir-akhir ini apakah sedang mempelajari sesuatu?", audioFileName: "irodori-elementary1-02-a05-l01.mp3" },
+  { speakerId: "kenji", japanese: <>ユイさん、<ruby>最近<rt>さいきん</rt></ruby>、<ruby>何<rt>なに</rt></ruby>か<ruby>習<rt>なら</rt></ruby>っていますか？</>, romaji: "Yui-san, saikin, nanika naratte imasu ka?", translation: "Yui, belakangan ini kamu sedang belajar sesuatu?", audioFileName: "irodori-elementary1-02-a05-l01.mp3" },
   { speakerId: "yui", japanese: <>はい。<ruby>週<rt>しゅう</rt></ruby>に<ruby>一回<rt>いっかい</rt></ruby>、<ruby>料理<rt>りょうり</rt></ruby>を<ruby>習<rt>なら</rt></ruby>っています。</>, romaji: "Hai. Shuu ni ikkai, ryouri o naratte imasu.", translation: "Ya. Saya belajar memasak sekali seminggu.", audioFileName: "irodori-elementary1-02-a05-l02.mp3" },
-  { speakerId: "kenji", japanese: <>そうですか。<ruby>料理<rt>りょうり</rt></ruby>ができますか？</>, romaji: "Sou desu ka. Ryouri ga dekimasu ka?", translation: "Begitu, ya. Apakah bisa memasak?", audioFileName: "irodori-elementary1-02-a05-l03.mp3" },
+  { speakerId: "kenji", japanese: <>そうですか。<ruby>料理<rt>りょうり</rt></ruby>ができますか？</>, romaji: "Sou desu ka. Ryouri ga dekimasu ka?", translation: "Oh, begitu. Kamu bisa memasak?", audioFileName: "irodori-elementary1-02-a05-l03.mp3" },
   { speakerId: "yui", japanese: <>はい、<ruby>簡単<rt>かんたん</rt></ruby>なものならできます。</>, romaji: "Hai, kantan na mono nara dekimasu.", translation: "Ya, saya bisa membuat masakan sederhana.", audioFileName: "irodori-elementary1-02-a05-l04.mp3" },
 ];
 
@@ -198,7 +198,7 @@ const simulations = [
     heading: "Menceritakan kegemaran",
     prompt: "Sota ingin mengatakan bahwa hobinya adalah mendengarkan musik.",
     japanese: <>ソウタさんの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？</>,
-    translation: "Apa hobi Sota?",
+    translation: "Sota, apa hobimu?",
     options: [
       { key: "hobby", label: "趣味は音楽を聞くことです。", meaning: "Hobi saya adalah mendengarkan musik." },
       { key: "like", label: "音楽を聞いています。", meaning: "Saya sedang mendengarkan musik." },
@@ -212,7 +212,7 @@ const simulations = [
     heading: "Menjawab hal yang disukai",
     prompt: "Akiko ingin mengatakan bahwa ia suka membaca buku.",
     japanese: <>どんなことをするのが<ruby>好<rt>す</rt></ruby>きですか？</>,
-    translation: "Kegiatan apa yang disukai?",
+    translation: "Apa kegiatan yang kamu sukai?",
     options: [
       { key: "reading", label: "本を読むのが好きです。", meaning: "Saya suka membaca buku." },
       { key: "past", label: "本を読んで好きです。", meaning: "Bentuk ini tidak tepat untuk menyatakan kesukaan." },
@@ -226,7 +226,7 @@ const simulations = [
     heading: "Menyebut teman dan tempat",
     prompt: "Yui biasanya bermain bulu tangkis bersama temannya di taman.",
     japanese: <>休みの日は、たいてい何をしますか？</>,
-    translation: "Biasanya melakukan apa pada hari libur?",
+    translation: "Biasanya kamu melakukan apa saat hari libur?",
     options: [
       { key: "place", label: "友達と公園でバドミントンをします。", meaning: "Bermain bulu tangkis di taman bersama teman." },
       { key: "wrong", label: "友達で公園とバドミントンをします。", meaning: "Partikel と dan で tertukar." },
@@ -240,7 +240,7 @@ const simulations = [
     heading: "Menceritakan dua kegiatan berurutan",
     prompt: "Setelah belajar di perpustakaan, Akiko beristirahat di kafe.",
     japanese: <>そのあと、何をしますか？</>,
-    translation: "Setelah itu, apa yang dilakukan?",
+    translation: "Setelah itu, kamu melakukan apa?",
     options: [
       { key: "sequence", label: "図書館で勉強して、カフェで休みます。", meaning: "Belajar di perpustakaan, lalu beristirahat di kafe." },
       { key: "wrong", label: "図書館で勉強する、カフェで休みます。", meaning: "Kedua verba belum dihubungkan dengan bentuk て." },
@@ -254,7 +254,7 @@ const simulations = [
     heading: "Menjelaskan hal yang bisa dilakukan",
     prompt: "Yui sedang belajar memasak dan ingin mengatakan bahwa ia bisa membuat masakan sederhana.",
     japanese: <>料理ができますか？</>,
-    translation: "Apakah bisa memasak?",
+    translation: "Kamu bisa memasak?",
     options: [
       { key: "ability", label: "簡単な料理ができます。", meaning: "Saya bisa membuat masakan sederhana." },
       { key: "hobby", label: "料理をすることです。", meaning: "Hobi saya adalah memasak." },
@@ -278,7 +278,7 @@ const vocabulary = [
   ["撮る", "とる · toru", "Memotret"],
   ["料理", "りょうり · ryouri", "Masakan / memasak"],
   ["旅行", "りょこう · ryokou", "Perjalanan / wisata"],
-  ["ゲーム", "ゲーム · geemu", "Permainan / game"],
+  ["ゲーム", "ゲーム · geemu", "Game"],
   ["読む", "よむ · yomu", "Membaca"],
   ["聞く", "きく · kiku", "Mendengarkan"],
   ["友達", "ともだち · tomodachi", "Teman"],
