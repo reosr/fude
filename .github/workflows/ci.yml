@@ -93,6 +93,9 @@ jobs:
           app/irodori/elementary-2/lesson-18/page.tsx
           app/irodori/pre-intermediate/page.tsx
           app/irodori/pre-intermediate/lesson-1/page.tsx
+          app/irodori/pre-intermediate/lesson-2/page.tsx
+          app/irodori/pre-intermediate/lesson-3/page.tsx
+          app/irodori/pre-intermediate/lesson-4/page.tsx
           app/kosakata/page.tsx
           lib/vocab.ts
           components/JapaneseReading.tsx
@@ -100,6 +103,7 @@ jobs:
           lib/japanese-text.ts
           data/japanese-reading-index.json
           components/IrodoriConversation.tsx
+          components/IrodoriInteractiveLesson.tsx
           lib/irodori-progress.ts
           lib/irodori-speakers.ts
           app/gacha/page.tsx
