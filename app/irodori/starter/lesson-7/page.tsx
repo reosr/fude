@@ -111,14 +111,14 @@ const equipmentConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>トースターはありますか？</>,
     romaji: "Toosutaa wa arimasu ka?",
-    translation: "Apakah ada toaster?",
+    translation: "Apakah ada pemanggang roti?",
     audioFileName: "irodori-starter-07-a02-l03.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>トースターはありません。</>,
     romaji: "Toosutaa wa arimasen.",
-    translation: "Toaster tidak ada.",
+    translation: "pemanggang roti tidak ada.",
     audioFileName: "irodori-starter-07-a02-l04.mp3",
   },
   {
@@ -1065,7 +1065,7 @@ export default function IrodoriPemulaLessonSevenPage() {
               </p>
               <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">
                 {appliancePracticeCorrect
-                  ? "Kamu sudah mengenali tombol ON, mulai, pendingin, dan pemanas."
+                  ? "Kamu sudah mengenali tombol NYALA, mulai, pendingin, dan pemanas."
                   : <>Ingat: <ruby>入<rt>いり</rt></ruby> = nyala, スタート = mulai, <ruby>冷房<rt>れいぼう</rt></ruby> = pendingin, dan <ruby>暖房<rt>だんぼう</rt></ruby> = pemanas. Ubah pilihan lalu periksa lagi.</>}
               </p>
             </div>
