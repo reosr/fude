@@ -34,7 +34,7 @@ const lessonId = "elementary2-14";
 
 const dryCleaningConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>このズボンをクリーニングに出したいんですが。</>, romaji: "Kono zubon o kuriiningu ni dashitai n desu ga.", translation: "Saya ingin menggunakan jasa laundry untuk celana ini.", audioFileName: "irodori-elementary2-14-a01-l01.mp3" },
-  { speakerId: "akiko", japanese: <>こちらにシミがありますね。シミ抜きもしますか。</>, romaji: "Kochira ni shimi ga arimasu ne. Shimi nuki mo shimasu ka?", translation: "Ada noda di bagian ini. Mau sekalian dibersihkan nodanya?", audioFileName: "irodori-elementary2-14-a01-l02.mp3" },
+  { speakerId: "akiko", japanese: <>こちらにシミがありますね。シミ抜きもしますか。</>, romaji: "Kochira ni shimi ga arimasu ne. Shimi nuki mo shimasu ka?", translation: "Di sini ada noda. Mau sekalian dihilangkan?", audioFileName: "irodori-elementary2-14-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>はい。別料金はいくらですか。</>, romaji: "Hai. Betsu ryoukin wa ikura desu ka?", translation: "Ya. Berapa biaya tambahannya?", audioFileName: "irodori-elementary2-14-a01-l03.mp3" },
   { speakerId: "akiko", japanese: <>この店では三百円です。仕上がりは三日後です。</>, romaji: "Kono mise de wa sanbyaku en desu. Shiagari wa mikka go desu.", translation: "Di toko ini biaya tambahannya 300 yen. Pakaian bisa diambil tiga hari lagi.", audioFileName: "irodori-elementary2-14-a01-l04.mp3" },
 ];
