@@ -339,33 +339,110 @@ const GRAMMAR_LABELS: Record<string, string> = {
   S: "kalimat",
 };
 
-const NOTATION_SUFFIXES: Record<string, string> = {
-  "て": "kata kerja bentuk て",
-  "た": "kata kerja bentuk た",
-  "る": "kata kerja bentuk kamus",
-  "ます": "kata kerja bentuk ます",
-  "ない": "kata kerja bentuk ない",
-  "（よ）う": "kata kerja bentuk volisional",
-  "(よ)う": "kata kerja bentuk volisional",
-  "（られ）る": "kata kerja bentuk potensial/pasif",
-  "(られ)る": "kata kerja bentuk potensial/pasif",
-  "い": "kata sifat -i",
-  "な": "kata sifat -na",
-  "可能形": "kata kerja bentuk potensial",
-  "受身形": "kata kerja bentuk pasif",
-  "使役形": "kata kerja bentuk kausatif",
-  "kan": "kata kerja berimbuhan -kan",
-};
-
+/**
+ * Ubah notasi ringkas Minna menjadi istilah bahasa Indonesia yang mudah
+ * dipahami. Urutan aturan penting: bentuk khusus harus diproses sebelum
+ * simbol umum agar V pada Vます atau Vます-stem tidak tertinggal.
+ */
 export function formatGrammarNotation(value: string): string {
-  return value.replace(
-    /(^|[^\p{L}\p{N}])([NVAS])(\d*)(?:-((?:（よ）う|\(よ\)う|（られ）る|\(られ\)る|ます|ない|て|た|る|い|な|可能形|受身形|使役形|kan)))?(?=$|[^\p{L}\p{N}]|[ぁ-ゖァ-ヶ一-龯々])/gu,
-    (_match, prefix: string, symbol: string, number: string, suffix: string | undefined) => {
-      if (number) return prefix + GRAMMAR_LABELS[symbol] + " " + number;
-      if (suffix && (symbol === "V" || symbol === "A")) {
-        return prefix + (NOTATION_SUFFIXES[suffix] ?? GRAMMAR_LABELS[symbol]) + " + ";
-      }
-      return prefix + GRAMMAR_LABELS[symbol];
+  let formatted = value;
+
+  // Pangkal kata kerja bentuk ます (ます-stem).
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)ます-stem(?=$|[^\\p{L}\\p{N}])/gu,
+    (_match, prefix: string, number: string) =>
+      prefix + `pangkal kata kerja${number ? ` ${number}` : ""} bentuk ます`
+  );
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-stem(?=$|[^\\p{L}\\p{N}])/gu,
+    (_match, prefix: string, number: string) =>
+      prefix + `pangkal kata kerja${number ? ` ${number}` : ""} bentuk ます`
+  );
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-form(?=$|[^\\p{L}\\p{N}])/gu,
+    (_match, prefix: string, number: string) =>
+      prefix + `kata kerja${number ? ` ${number}` : ""} bentuk ます`
+  );
+
+  // Placeholder kata kerja dalam bentuk di-...-kan, misalnya di-V-kan.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V-kan(?=$|[^\\p{L}\\p{N}])/gu,
+    (_match, prefix: string) => prefix + "(kata kerja)"
+  );
+
+  // Bentuk sopan, negatif, dan lampau.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-?(ませんでした|ません|ました|ます)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
+    (_match, prefix: string, number: string, suffix: string) => {
+      const form = {
+        "ませんでした": "bentuk negatif lampau ます",
+        "ません": "bentuk negatif ます",
+        "ました": "bentuk lampau ます",
+        "ます": "bentuk ます",
+      }[suffix];
+      return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
     }
   );
+
+  // Bentuk て yang diikuti kata bantu atau ungkapan permintaan.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-?て(?=(?:ください|あります|います|おきます|しまいます|みます|いる|おく|しまう|みる|あげる|くれる|もらう))/gu,
+    (_match, prefix: string, number: string) =>
+      prefix + `kata kerja${number ? ` ${number}` : ""} bentuk て + `
+  );
+
+  // Bentuk pasif, kausatif, dan potensial.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-?(受身形|受身|使役形|使役|可能形|可能)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
+    (_match, prefix: string, number: string, suffix: string) => {
+      const form = {
+        "受身形": "bentuk pasif",
+        "受身": "bentuk pasif",
+        "使役形": "bentuk kausatif",
+        "使役": "bentuk kausatif",
+        "可能形": "bentuk potensial",
+        "可能": "bentuk potensial",
+      }[suffix];
+      return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
+    }
+  );
+
+  // Bentuk sambung, kamus, negatif, dan たり.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-?(てから|ないで|て|た|る|ない|たり)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
+    (_match, prefix: string, number: string, suffix: string) => {
+      const form = {
+        "てから": "bentuk て + から",
+        "ないで": "bentuk ないで",
+        "て": "bentuk て",
+        "た": "bentuk た",
+        "る": "bentuk kamus",
+        "ない": "bentuk ない",
+        "たり": "bentuk たり",
+      }[suffix];
+      return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
+    }
+  );
+
+  // Jenis kata sifat ditulis sebagai -i dan -na, bukan notasi huruf A.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])A-?(い|な)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
+    (_match, prefix: string, suffix: string) =>
+      prefix + (suffix === "い" ? "kata sifat -i" : "kata sifat -na")
+  );
+
+  // N1, V1, A1, S1, termasuk bentuk N2-nya.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])([NVAS])(\\d+)(-nya)?(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ一-龯々])/gu,
+    (_match, prefix: string, symbol: string, number: string, suffix: string | undefined) =>
+      prefix + `${GRAMMAR_LABELS[symbol]} ${number}${suffix ?? ""}`
+  );
+
+  // Simbol umum tanpa nomor.
+  formatted = formatted.replace(
+    /(^|[^\\p{L}\\p{N}])([NVAS])(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ一-龯々])/gu,
+    (_match, prefix: string, symbol: string) => prefix + GRAMMAR_LABELS[symbol]
+  );
+
+  return formatted;
 }
