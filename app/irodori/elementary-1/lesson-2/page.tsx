@@ -30,7 +30,7 @@ const lessonId = "elementary1-02";
 
 const hobbyConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>ソウタさんの<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか？</>, romaji: "Souta-san no shumi wa nan desu ka?", translation: "Sota, apa hobimu?", audioFileName: "irodori-elementary1-02-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>くことです。よく<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>聞<rt>き</rt></ruby>きます。</>, romaji: "Ongaku o kiku koto desu. Yoku densha de kikimasu.", translation: "Hobi saya mendengarkan musik. Saya sering mendengarkannya di kereta.", audioFileName: "irodori-elementary1-02-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <><ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聞<rt>き</rt></ruby>くことです。よく<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>聞<rt>き</rt></ruby>きます。</>, romaji: "Ongaku o kiku koto desu. Yoku densha de kikimasu.", translation: "Hobi saya adalah mendengarkan musik. Saya sering mendengarkannya di kereta.", audioFileName: "irodori-elementary1-02-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>そうですか。<ruby>私<rt>わたし</rt></ruby>も<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです。</>, romaji: "Sou desu ka. Watashi mo ongaku ga suki desu.", translation: "Begitu, ya. Saya juga suka musik.", audioFileName: "irodori-elementary1-02-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>どんな<ruby>音楽<rt>おんがく</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか？</>, romaji: "Donna ongaku ga suki desu ka?", translation: "Kamu suka musik seperti apa?", audioFileName: "irodori-elementary1-02-a01-l04.mp3" },
 ];
@@ -45,7 +45,7 @@ const favoriteActivityConversation: IrodoriUtterance[] = [
 const holidayConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>ユイさんは、<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>はたいてい<ruby>何<rt>なに</rt></ruby>をしますか？</>, romaji: "Yui-san wa, yasumi no hi wa taitei nani o shimasu ka?", translation: "Yui, biasanya kamu melakukan apa saat hari libur?", audioFileName: "irodori-elementary1-02-a03-l01.mp3" },
   { speakerId: "yui", japanese: <>たいてい<ruby>友達<rt>ともだち</rt></ruby>と<ruby>公園<rt>こうえん</rt></ruby>でバドミントンをします。</>, romaji: "Taitei tomodachi to kouen de badominton o shimasu.", translation: "Biasanya saya bermain bulu tangkis di taman bersama teman.", audioFileName: "irodori-elementary1-02-a03-l02.mp3" },
-  { speakerId: "sota", japanese: <>いいですね。どのぐらいしますか？</>, romaji: "Ii desu ne. Dono gurai shimasu ka?", translation: "Kedengarannya menyenangkan. Berapa lama biasanya bermain?", audioFileName: "irodori-elementary1-02-a03-l03.mp3" },
+  { speakerId: "sota", japanese: <>いいですね。どのぐらいしますか？</>, romaji: "Ii desu ne. Dono gurai shimasu ka?", translation: "Wah, seru, ya. Biasanya bermain berapa lama?", audioFileName: "irodori-elementary1-02-a03-l03.mp3" },
   { speakerId: "yui", japanese: <>二時間ぐらいです。そのあと、みんなでご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。</>, romaji: "Nijikan gurai desu. Sono ato, minna de gohan o tabemasu.", translation: "Sekitar dua jam. Setelah itu, kami makan bersama.", audioFileName: "irodori-elementary1-02-a03-l04.mp3" },
   { speakerId: "sota", japanese: <>とても<ruby>楽<rt>たの</rt></ruby>しそうですね。</>, romaji: "Totemo tanoshisou desu ne.", translation: "Sepertinya sangat menyenangkan.", audioFileName: "irodori-elementary1-02-a03-l05.mp3" },
 ];
