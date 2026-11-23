@@ -211,7 +211,7 @@ export default function IrodoriElementaryOneLessonThirteenPage() {
   <section className="rounded-2xl border border-[#8D514B]/20 bg-[#241D1C]/80 p-4 md:p-5">
    <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#D6A39A]"/><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2></div>
    <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Kelima target komunikasi mengikuti sasaran target komunikasi resmi Irodori Dasar 1 Lesson 13.</p>
-   <div className="mt-3 grid gap-2 sm:grid-cols-2">{canDos.map((item,index)=><article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3"><p className="text-[9px] font-black tracking-[0.15em] text-[#D6A39A]">CAN-DO · 0{index+1}</p><p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p></article>)}</div>
+   <div className="mt-3 grid gap-2 sm:grid-cols-2">{canDos.map((item,index)=><article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3"><p className="text-[9px] font-black tracking-[0.15em] text-[#D6A39A]">TARGET KOMUNIKASI · 0{index+1}</p><p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p></article>)}</div>
   </section>
 
   <section className="space-y-4">
@@ -302,7 +302,7 @@ export default function IrodoriElementaryOneLessonThirteenPage() {
   </section>
 
   <section className="rounded-2xl border border-[#8D514B]/25 bg-gradient-to-br from-[#2B211F] to-[#191817] p-5 md:p-6">
-   <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#E8B6AC]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#E8B6AC]">CAN-DO CHECK</p></div>
+   <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#E8B6AC]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#E8B6AC]">CEK TARGET KOMUNIKASI</p></div>
    <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
    <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Dasar 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
    <div className="mt-4 space-y-3">{canDos.map((item,index)=><div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3"><p className="text-xs font-semibold leading-5 text-[#EAE6DD]"><span className="mr-2 text-[#E8B6AC]">{String(index+1).padStart(2,"0")}</span>{item.text}</p><div className="mt-3 flex flex-wrap gap-2">{ratingOptions.map(option=><button key={option.value} type="button" disabled={!quizSubmitted||!practiceIsCorrect||!simulationsComplete} aria-pressed={visibleRatings[item.id]===option.value} onClick={()=>{const next={...visibleRatings,[item.id]:option.value};setRatings(next);saveIrodoriSelfEvaluation(lessonId,next);}} className={"rounded-lg border px-3 py-2 text-[10px] font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-40 "+(visibleRatings[item.id]===option.value?"border-[#C98E84]/60 bg-[#8D514B]/20 text-[#F2CDC5]":"border-white/[0.08] bg-[#24221F] text-[#A3A099]")}><JapaneseReading allowIndexFallback>{option.label}</JapaneseReading></button>)}</div></div>)}</div>
