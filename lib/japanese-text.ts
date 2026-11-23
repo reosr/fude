@@ -407,7 +407,7 @@ export function formatGrammarNotation(value: string): string {
 
   // Bentuk て yang diikuti kata bantu atau ungkapan permintaan.
   formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-?て(?=(?:ください|あります|います|おきます|しまいます|みます|いる|おく|しまう|みる|あげる|くれる|もらう))/gu,
+    /(^|[^\\p{L}\\p{N}])V(\\d*)-?て\s*(?=(?:ください|あります|います|おきます|しまいます|みます|いる|おく|しまう|みる|あげる|くれる|もらう|から))/gu,
     (_match, prefix: string, number: string) =>
       prefix + `kata kerja${number ? ` ${number}` : ""} bentuk て + `
   );
