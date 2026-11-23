@@ -77,7 +77,7 @@ const impressionConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>とてもおもしろかったです。</>,
     romaji: "Totemo omoshirokatta desu.",
-    translation: "Sangat menarik.",
+    translation: "Seru sekali.",
     audioFileName: "irodori-starter-17-a02-l02.mp3",
   },
   {
@@ -91,7 +91,7 @@ const impressionConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>いいえ、あまり<ruby>多<rt>おお</rt></ruby>くなかったです。</>,
     romaji: "Iie, amari ooku nakatta desu.",
-    translation: "Tidak, pengunjungnya tidak terlalu banyak.",
+    translation: "Tidak, bioskopnya tidak terlalu ramai.",
     audioFileName: "irodori-starter-17-a02-l04.mp3",
   },
 ];
