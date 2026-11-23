@@ -15,7 +15,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
@@ -26,35 +26,35 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const introductionConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>はじめまして。ユイです。</>,
     romaji: "Hajimemashite. Yui desu.",
     translation: "Salam kenal. Saya Yui.",
     audioFileName: "irodori-starter-03-a01-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はじめまして。ソウタです。</>,
     romaji: "Hajimemashite. Souta desu.",
     translation: "Salam kenal. Saya Sota.",
     audioFileName: "irodori-starter-03-a01-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>インドネシアから<ruby>来<rt>き</rt></ruby>ました。</>,
     romaji: "Indonesia kara kimashita.",
     translation: "Saya datang dari Indonesia.",
     audioFileName: "irodori-starter-03-a01-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>そうですか。どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Sou desu ka. Douzo yoroshiku onegaishimasu.",
     translation: "Oh, begitu. Senang berkenalan denganmu.",
     audioFileName: "irodori-starter-03-a01-l04.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Kochira koso, yoroshiku onegaishimasu.",
     translation: "Saya juga senang berkenalan denganmu.",
@@ -64,42 +64,42 @@ const introductionConversation: IrodoriUtterance[] = [
 
 const originConversation: IrodoriUtterance[] = [
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>お<ruby>名前<rt>なまえ</rt></ruby>は？</>,
     romaji: "Onamae wa?",
     translation: "Siapa nama Anda?",
     audioFileName: "irodori-starter-03-a03-l01.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ケンジです。</>,
     romaji: "Kenji desu.",
     translation: "Saya Kenji.",
     audioFileName: "irodori-starter-03-a03-l02.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ご<ruby>出身<rt>しゅっしん</rt></ruby>はどちらですか？</>,
     romaji: "Goshusshin wa dochira desu ka?",
     translation: "Anda berasal dari mana?",
     audioFileName: "irodori-starter-03-a03-l03.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>インドネシアのバンドンです。</>,
     romaji: "Indonesia no Bandon desu.",
     translation: "Saya dari Bandung, Indonesia.",
     audioFileName: "irodori-starter-03-a03-l04.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>そうですか。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Sou desu ka. Yoroshiku onegaishimasu.",
     translation: "Oh, begitu. Senang berkenalan dengan Anda.",
     audioFileName: "irodori-starter-03-a03-l05.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Kochira koso, yoroshiku onegaishimasu.",
     translation: "Saya juga senang berkenalan dengan Anda.",
@@ -379,7 +379,7 @@ export default function IrodoriPemulaLessonThreePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Berkenalan untuk pertama kali"
-          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={introductionConversation}
         />
         <div className="rounded-xl border border-[#B8860B]/20 bg-gradient-to-br from-[#2B2118] to-[#191817] p-4">
@@ -574,7 +574,7 @@ export default function IrodoriPemulaLessonThreePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Bertanya tentang asal"
-          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
+          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={originConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2">
