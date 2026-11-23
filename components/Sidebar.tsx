@@ -18,10 +18,10 @@ import {
 } from "../lib/gamification";
 
 const tabs = [
-  { href: "/", label: "Home", icon: Home },
+  { href: "/", label: "Beranda", icon: Home },
   { href: "/belajar", label: "Belajar", icon: BookOpen },
   { href: "/kosakata", label: "Kosakata", icon: Languages },
-  { href: "/flashcard", label: "Flashcard", icon: Layers },
+  { href: "/flashcard", label: "Kartu Hafalan", icon: Layers },
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
 ];
 
@@ -133,7 +133,7 @@ export default function Sidebar() {
   const expBar = (
     <div className="mt-3">
       <div className="flex justify-between items-center text-[10px] font-bold mb-1.5">
-        <span className="text-[#A3A099]">EXPERIENCE</span>
+        <span className="text-[#A3A099]">PENGALAMAN</span>
         <span className="text-[#EAE6DD] tabular-nums">
           {levelInfo.currentExp} / {levelInfo.requiredExp} EXP
         </span>
