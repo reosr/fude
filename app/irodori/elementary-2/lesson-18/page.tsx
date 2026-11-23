@@ -99,7 +99,7 @@ const vocabRows: [string, string, string][] = [
   ["若者", "わかもの · wakamono", "Anak muda"],
   ["卒業する", "そつぎょうする · sotsugyou suru", "Lulus"],
   ["広げる", "ひろげる · hirogeru", "Memperluas"],
-  ["募集", "ぼしゅう · boshū", "Perekrutan atau lowongan"],
+  ["募集", "ぼしゅう · boshuu", "Perekrutan atau lowongan"],
   ["応募する", "おうぼする · oubo suru", "Melamar"],
   ["続ける", "つづける · tsuzukeru", "Melanjutkan"],
   ["とにかく", "とにかく · tonikaku", "Pokoknya atau bagaimanapun"],
@@ -121,7 +121,7 @@ const vocabRows: [string, string, string][] = [
 
 const kanjiWords = [
   ["希望", "きぼう · kibou", "Harapan"],
-  ["募集", "ぼしゅう · boshū", "Perekrutan atau lowongan"],
+  ["募集", "ぼしゅう · boshuu", "Perekrutan atau lowongan"],
   ["特に", "とくに · tokuni", "Khususnya"],
   ["住む", "すむ · sumu", "Tinggal"],
   ["建てる", "たてる · tateru", "Membangun"],
