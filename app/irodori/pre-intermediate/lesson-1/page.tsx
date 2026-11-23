@@ -234,7 +234,7 @@ export default function IrodoriPreIntermediateLessonOnePage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D9C2F4]/[0.08]">球</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#C8A9EA]">IRODORI • PRE-INTERMEDIATE A2/B1 • LESSON 01</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">What is futsal again?</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Futsal itu apa, ya?</h1>
           <p className="mt-2 text-sm font-semibold text-[#C8A9EA]">フットサルって、何でしたっけ？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Mendengarkan cerita tentang olahraga favorit, bertukar informasi tentang acara, mengundang teman, dan menulis pesan singkat untuk membatalkan rencana.</p>
           <div className="mt-5 flex flex-wrap gap-2">
