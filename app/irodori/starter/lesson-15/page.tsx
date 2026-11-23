@@ -290,9 +290,9 @@ const quizQuestions: Task[] = [
   {
     prompt: <>Bacaan yang benar untuk 「1階」 adalah …</>,
     options: [
-      { key: "a", label: "いちかい (ichikai)" },
-      { key: "b", label: "いっかい (ikkai)" },
-      { key: "c", label: "ひとかい (hitokai)" },
+      { key: "a", label: "いちかい" },
+      { key: "b", label: "いっかい" },
+      { key: "c", label: "ひとかい" },
     ],
     answer: "b",
     explanation: <>1階 memiliki bacaan khusus 「いっかい」.</>,
@@ -300,9 +300,9 @@ const quizQuestions: Task[] = [
   {
     prompt: <>Bacaan yang benar untuk 「6階」 adalah …</>,
     options: [
-      { key: "a", label: "ろくかい (rokukai)" },
-      { key: "b", label: "ろっかい (rokkai)" },
-      { key: "c", label: "むっかい (mukkai)" },
+      { key: "a", label: "ろくかい" },
+      { key: "b", label: "ろっかい" },
+      { key: "c", label: "むっかい" },
     ],
     answer: "b",
     explanation: <>6階 dibaca 「ろっかい」.</>,
