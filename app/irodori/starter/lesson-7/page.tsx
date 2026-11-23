@@ -889,7 +889,7 @@ export default function IrodoriPemulaLessonSevenPage() {
             </div>
             <div className="grid grid-cols-2 gap-2 p-4">
               {[
-                { jp: "入", reading: "いり", meaning: "Hidup", detail: "Menyalakan mesin" },
+                { jp: "入", reading: "いり", meaning: "Nyala", detail: "Menyalakan mesin" },
                 { jp: "切", reading: "きり", meaning: "Mati", detail: "Mematikan mesin" },
                 { jp: "スタート", reading: "sutaato", meaning: "Mulai", detail: "Memulai proses mencuci" },
                 { jp: "一時停止", reading: "いちじていし", meaning: "Jeda", detail: "Menghentikan sementara" },
@@ -976,7 +976,7 @@ export default function IrodoriPemulaLessonSevenPage() {
                 }}
                 className="mt-2 w-full rounded-lg border border-white/[0.1] bg-[#24221F] px-3 py-2.5 text-sm text-[#F1EBDD] outline-none focus:border-[#B8860B]/50"
               >
-                <option value="入">入 · Hidup</option>
+                <option value="入">入 · Nyala</option>
                 <option value="切">切 · Mati</option>
                 <option value="予約">予約 · Atur waktu</option>
               </select>
