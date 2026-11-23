@@ -59,10 +59,13 @@ interface SavedQuizResult {
   completedOnce?: boolean;
 }
 
-// Jangan tampilkan bacaan otomatis pada soal yang memang menguji cara membaca kanji.
+// Jangan tampilkan bacaan otomatis pada soal yang sedang menguji bacaan
+// kanji atau meminta memilih penulisan kanji dari petunjuk kana.
 function canShowAutomaticReadingHint(sectionId: string, question: string): boolean {
   const asksKanjiReading = /読み方はどれですか|何と読みますか/.test(question);
-  return sectionId !== "vocab" && !asksKanjiReading;
+  const asksKanjiSpelling = sectionId === "vocab" &&
+    /「[^」]+」の「[^」]+」は、どれですか/.test(question);
+  return !asksKanjiReading && !asksKanjiSpelling;
 }
 
 const SECTIONS = [
