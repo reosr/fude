@@ -339,7 +339,7 @@ const GRAMMAR_LABELS: Record<string, string> = {
   S: "kalimat",
 };
 
-const VERB_NOTATION_FORMS: Array<[string, string]> = [
+const VERB_NOTATION_FORMS: Array<[string, string]> = ([
   ["ます-stem", "pangkal"],
   ["stem", "pangkal"],
   ["form", "bentuk ます"],
@@ -431,7 +431,7 @@ const VERB_NOTATION_FORMS: Array<[string, string]> = [
   ["れる", "bentuk pasif/kehormatan"],
   ["ば", "bentuk ば"],
   ["て", "bentuk て"],
-].sort(([left], [right]) => right.length - left.length);
+] as Array<[string, string]>).sort(([left], [right]) => right.length - left.length);
 
 const VERB_NOTATION_PATTERN = new RegExp(
   "(^|[^A-Za-z0-9])V([0-9]*)-?(" +
