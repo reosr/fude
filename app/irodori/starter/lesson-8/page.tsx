@@ -30,7 +30,7 @@ const workplaceTourConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>こちらへどうぞ。<ruby>部屋<rt>へや</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>します。</>,
     romaji: "Kochira e douzo. Heya o annai shimasu.",
-    translation: "Silakan lewat sini. Saya akan menunjukkan ruangan.",
+    translation: "Silakan lewat sini. Saya akan mengajak Anda melihat-lihat ruangan.",
     audioFileName: "irodori-starter-08-a01-l01.mp3",
   },
   {
@@ -96,7 +96,7 @@ const personLocationConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>すみません。<ruby>今<rt>いま</rt></ruby>、いません。たぶん<ruby>会議室<rt>かいぎしつ</rt></ruby>です。</>,
     romaji: "Sumimasen. Ima, imasen. Tabun kaigishitsu desu.",
-    translation: "Maaf, sekarang tidak ada di sini. Mungkin di ruang rapat.",
+    translation: "Maaf, beliau sedang tidak ada di sini. Mungkin ada di ruang rapat.",
     audioFileName: "irodori-starter-08-a02-l04.mp3",
   },
   {
@@ -532,7 +532,7 @@ export default function IrodoriPemulaLessonEightPage() {
           “Rapat dilakukan di sini”.
         </p>
         <IrodoriConversation
-          title="Percakapan A · Tur gedung contoh"
+          title="Percakapan A · Tur keliling kantor"
           speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={workplaceTourConversation}
         />
