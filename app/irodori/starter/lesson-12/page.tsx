@@ -459,7 +459,7 @@ export default function IrodoriPemulaLessonTwelvePage() {
             mengajak teman melakukan kegiatan, dan membalas undangan dengan sopan.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["4 target target komunikasi", "4 dialog", "18 slot audio", "26 kosakata tanggal", "10 kuis"].map((item) => (
+            {["4 target komunikasi", "4 dialog", "18 slot audio", "26 kosakata tanggal", "10 kuis"].map((item) => (
               <span key={item} className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">{item}</span>
             ))}
           </div>
@@ -718,7 +718,7 @@ export default function IrodoriPemulaLessonTwelvePage() {
       </section>
 
       <section className="rounded-2xl border border-[#B8860B]/25 bg-gradient-to-br from-[#2B2118] to-[#191817] p-5 md:p-6">
-        <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#D9B66D]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">CAN-DO CHECK</p></div>
+        <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#D9B66D]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">CEK TARGET KOMUNIKASI</p></div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Nilai empat kemampuan setelah menyelesaikan latihan. Progres tersimpan terpisah dari Minna no Nihongo dan JLPT.</p>
         <div className="mt-4 space-y-3">
