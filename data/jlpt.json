@@ -16,7 +16,7 @@
                 "ゆうたち"
               ],
               "answer": 2,
-              "explanation": "友達 dibaca ともだち (tomodachi), artinya teman. Dalam kata ini, 友 dibaca とも."
+              "explanation": "友達 dibaca ともだち, artinya teman. Dalam kata ini, 友 dibaca とも."
             },
             {
               "question": "「毎朝」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
@@ -27,7 +27,7 @@
                 "まいとき"
               ],
               "answer": 0,
-              "explanation": "毎朝 dibaca まいあさ (maiasa), artinya setiap pagi."
+              "explanation": "毎朝 dibaca まいあさ, artinya setiap pagi."
             },
             {
               "question": "「牛乳」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
@@ -38,7 +38,7 @@
                 "ぎゅうにゅう"
               ],
               "answer": 3,
-              "explanation": "牛乳 dibaca ぎゅうにゅう (gyuunyuu), artinya susu."
+              "explanation": "牛乳 dibaca ぎゅうにゅう, artinya susu."
             },
             {
               "question": "「時計」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
@@ -49,7 +49,7 @@
                 "とっけい"
               ],
               "answer": 1,
-              "explanation": "時計 dibaca とけい (tokei), artinya jam atau arloji."
+              "explanation": "時計 dibaca とけい, artinya jam atau arloji."
             },
             {
               "question": "「きょうは としょかんへ いきます。」の「としょかん」は、どれですか。",
@@ -192,7 +192,7 @@
                 "まいねん"
               ],
               "answer": 1,
-              "explanation": "去年 dibaca きょねん (kyonen), artinya tahun lalu."
+              "explanation": "去年 dibaca きょねん, artinya tahun lalu."
             },
             {
               "question": "「毎週」の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>はどれですか。",
@@ -203,7 +203,7 @@
                 "まいあさ"
               ],
               "answer": 0,
-              "explanation": "毎週 dibaca まいしゅう (maishuu), artinya setiap minggu."
+              "explanation": "毎週 dibaca まいしゅう, artinya setiap minggu."
             },
             {
               "question": "「きょうは てんきが いいです。」の「てんき」は、どれですか。",
