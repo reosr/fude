@@ -568,9 +568,9 @@ setSelectedStory(story);
                 <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#C93438]/20 text-[#C93438]">
                   Tingkat {story.level}
                 </span>
-                {story.isBahasa alami && (
+                {story.isNatural && (
                   <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
-                    Natural
+                    Alami
                   </span>
                 )}
               </div>
