@@ -38,7 +38,7 @@ const askFormalEventConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>友だちの結婚式に招待されたんですが、どんな服を着て行けばいいですか。</>, romaji: "Tomodachi no kekkonshiki ni shoutai sareta n desu ga, donna fuku o kite ikeba ii desu ka?", translation: "Saya diundang ke pernikahan teman. Pakaian seperti apa yang sebaiknya saya kenakan?", audioFileName: "irodori-elementary2-10-a01-l01.mp3" },
   { speakerId: "sota", japanese: <>招待状や案内を確認すればいいですよ。</>, romaji: "Shoutaijou ya annai o kakunin sureba ii desu yo.", translation: "Sebaiknya periksa undangan atau petunjuk acaranya.", audioFileName: "irodori-elementary2-10-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>会場で写真を撮ってもいいですか。</>, romaji: "Kaijou de shashin o totte mo ii desu ka?", translation: "Apakah boleh mengambil foto di tempat acara?", audioFileName: "irodori-elementary2-10-a01-l03.mp3" },
-  { speakerId: "sota", japanese: <>先に主催者に聞けば安心ですね。</>, romaji: "Saki ni shusai-sha ni kikeba anshin desu ne.", translation: "Lebih baik bertanya kepada penyelenggara terlebih dahulu agar yakin.", audioFileName: "irodori-elementary2-10-a01-l04.mp3" },
+  { speakerId: "sota", japanese: <>先に主催者に聞けば安心ですね。</>, romaji: "Saki ni shusai-sha ni kikeba anshin desu ne.", translation: "Biar lebih yakin, sebaiknya tanyakan dulu kepada penyelenggara.", audioFileName: "irodori-elementary2-10-a01-l04.mp3" },
 ];
 const hospitalVisitConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>友だちのお見舞いに行くんです。面会時間はどこで確認すればいいですか。</>, romaji: "Tomodachi no omimai ni ikun desu. Menkai jikan wa doko de kakunin sureba ii desu ka?", translation: "Saya akan menjenguk teman. Di mana saya bisa memeriksa jam kunjungan?", audioFileName: "irodori-elementary2-10-a02-l01.mp3" },
@@ -48,20 +48,20 @@ const hospitalVisitConversation: IrodoriUtterance[] = [
 ];
 const foodCourtMannersConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>食器は自分で片付けるんですか。</>, romaji: "Shokki wa jibun de katazukeru n desu ka?", translation: "Apakah kita harus membereskan peralatan makan sendiri?", audioFileName: "irodori-elementary2-10-a03-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。使った食器は返却口に持って行かなくちゃ。</>, romaji: "Hai. Tsukatta shokki wa henkyaku-guchi ni motte ikanakucha.", translation: "Ya. Alat makan yang sudah dipakai harus dibawa ke tempat pengembalian.", audioFileName: "irodori-elementary2-10-a03-l02.mp3" },
+  { speakerId: "sota", japanese: <>はい。使った食器は返却口に持って行かなくちゃ。</>, romaji: "Hai. Tsukatta shokki wa henkyaku-guchi ni motte ikanakucha.", translation: "Ya. Bawa peralatan makan yang sudah dipakai ke tempat pengembalian.", audioFileName: "irodori-elementary2-10-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>どうしてですか。</>, romaji: "Doushite desu ka?", translation: "Mengapa begitu?", audioFileName: "irodori-elementary2-10-a03-l03.mp3" },
   { speakerId: "sota", japanese: <>次の人がすぐに使えるように、テーブルをきれいにするんです。</>, romaji: "Tsugi no hito ga sugu ni tsukaeru you ni, teeburu o kirei ni suru n desu.", translation: "Mejanya harus dirapikan supaya orang berikutnya bisa langsung menggunakannya.", audioFileName: "irodori-elementary2-10-a03-l04.mp3" },
 ];
 const homeCustomDifferenceConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>日本の家に入るとき、靴を脱がなくちゃいけませんか。</>, romaji: "Nihon no ie ni hairu toki, kutsu o nuganakucha ikemasen ka?", translation: "Saat masuk ke rumah di Jepang, apakah kita harus melepas sepatu?", audioFileName: "irodori-elementary2-10-a04-l01.mp3" },
-  { speakerId: "kenji", japanese: <>はい。玄関で靴を脱ぎます。靴のまま入っちゃだめですよ。</>, romaji: "Hai. Genkan de kutsu o nugimasu. Kutsu no mama haitcha dame desu yo.", translation: "Ya. Sepatu dilepas di area pintu masuk. Jangan masuk ke dalam rumah dengan sepatu.", audioFileName: "irodori-elementary2-10-a04-l02.mp3" },
-  { speakerId: "akiko", japanese: <>私の国でも、家によって習慣が違います。</>, romaji: "Watashi no kuni demo, ie ni yotte shuukan ga chigaimasu.", translation: "Di negara saya juga, kebiasaan tiap rumah berbeda.", audioFileName: "irodori-elementary2-10-a04-l03.mp3" },
+  { speakerId: "kenji", japanese: <>はい。玄関で靴を脱ぎます。靴のまま入っちゃだめですよ。</>, romaji: "Hai. Genkan de kutsu o nugimasu. Kutsu no mama haitcha dame desu yo.", translation: "Ya. Lepas sepatu di area pintu masuk. Jangan masuk ke rumah dengan masih memakai sepatu.", audioFileName: "irodori-elementary2-10-a04-l02.mp3" },
+  { speakerId: "akiko", japanese: <>私の国でも、家によって習慣が違います。</>, romaji: "Watashi no kuni demo, ie ni yotte shuukan ga chigaimasu.", translation: "Di negara saya juga, kebiasaan di setiap rumah berbeda-beda.", audioFileName: "irodori-elementary2-10-a04-l03.mp3" },
   { speakerId: "kenji", japanese: <>そうですね。わからないときは、家の人に聞けばいいですよ。</>, romaji: "Sou desu ne. Wakaranai toki wa, ie no hito ni kikeba ii desu yo.", translation: "Betul. Kalau tidak tahu, sebaiknya tanyakan kepada penghuni rumah.", audioFileName: "irodori-elementary2-10-a04-l04.mp3" },
 ];
 const photoPermissionConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>どうしたの。</>, romaji: "Doushita no?", translation: "Ada apa?", audioFileName: "irodori-elementary2-10-a05-l01.mp3" },
-  { speakerId: "sota", japanese: <>写真を撮る前に、許可をもらわなかったんです。</>, romaji: "Shashin o toru mae ni, kyoka o morawanakatta n desu.", translation: "Saya belum minta izin sebelum mengambil foto.", audioFileName: "irodori-elementary2-10-a05-l02.mp3" },
-  { speakerId: "yui", japanese: <>会場では、先に係の人に聞かなきゃ。</>, romaji: "Kaijou de wa, saki ni kakari no hito ni kikanakya.", translation: "Kalau di tempat acara, sebaiknya kamu bertanya dulu kepada petugas.", audioFileName: "irodori-elementary2-10-a05-l03.mp3" },
+  { speakerId: "sota", japanese: <>写真を撮る前に、許可をもらわなかったんです。</>, romaji: "Shashin o toru mae ni, kyoka o morawanakatta n desu.", translation: "Saya tidak meminta izin sebelum mengambil foto.", audioFileName: "irodori-elementary2-10-a05-l02.mp3" },
+  { speakerId: "yui", japanese: <>会場では、先に係の人に聞かなきゃ。</>, romaji: "Kaijou de wa, saki ni kakari no hito ni kikanakya.", translation: "Kalau di tempat acara, kamu harus bertanya dulu kepada petugas.", audioFileName: "irodori-elementary2-10-a05-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。友だちにマナーを説明されました。次から気をつけます。</>, romaji: "Hai. Tomodachi ni manaa o setsumei saremashita. Tsugi kara ki o tsukemasu.", translation: "Ya. Teman saya menjelaskan tata kramanya. Lain kali saya akan lebih berhati-hati.", audioFileName: "irodori-elementary2-10-a05-l04.mp3" },
 ];
 
