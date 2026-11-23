@@ -54,7 +54,7 @@ const wakeSleepConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>11<ruby>時半<rt>じはん</rt></ruby>に<ruby>寝<rt>ね</rt></ruby>ます。</>,
     romaji: "Juuichiji han ni nemasu.",
-    translation: "Saya tidur pukul setengah dua belas.",
+    translation: "Saya tidur pukul setengah dua belas malam.",
     audioFileName: "irodori-starter-09-a01-l04.mp3",
   },
   {
@@ -92,7 +92,7 @@ const workScheduleConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <><ruby>午前<rt>ごぜん</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は、<ruby>何時<rt>なんじ</rt></ruby>までですか？</>,
     romaji: "Gozen no shigoto wa, nanji made desu ka?",
-    translation: "Pekerjaan pagi sampai pukul berapa?",
+    translation: "Jam kerja pagi sampai pukul berapa?",
     audioFileName: "irodori-starter-09-a02-l03.mp3",
   },
   {
@@ -120,7 +120,7 @@ const workScheduleConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <><ruby>午後<rt>ごご</rt></ruby>の<ruby>仕事<rt>しごと</rt></ruby>は、<ruby>何時<rt>なんじ</rt></ruby>までですか？</>,
     romaji: "Gogo no shigoto wa, nanji made desu ka?",
-    translation: "Pekerjaan sore sampai pukul berapa?",
+    translation: "Jam kerja setelah istirahat siang sampai pukul berapa?",
     audioFileName: "irodori-starter-09-a02-l07.mp3",
   },
   {
@@ -189,7 +189,7 @@ const availabilityConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <><ruby>土曜日<rt>どようび</rt></ruby>がいいです。</>,
     romaji: "Doyoubi ga ii desu.",
-    translation: "Hari Sabtu cocok untuk saya.",
+    translation: "Hari Sabtu cocok buat saya.",
     audioFileName: "irodori-starter-09-a04-l02.mp3",
   },
   {
@@ -217,7 +217,7 @@ const availabilityConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>じゃあ、<ruby>日曜日<rt>にちようび</rt></ruby>にしましょう。</>,
     romaji: "Jaa, nichiyoubi ni shimashou.",
-    translation: "Kalau begitu, kita tetapkan hari Minggu.",
+    translation: "Kalau begitu, kita pilih hari Minggu.",
     audioFileName: "irodori-starter-09-a04-l06.mp3",
   },
 ];
