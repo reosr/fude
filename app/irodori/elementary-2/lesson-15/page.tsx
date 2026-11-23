@@ -35,7 +35,7 @@ const lessonId = "elementary2-15";
 const readEcoPosterConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>このポスターには、何と書いてありますか。</>, romaji: "Kono posutaa ni wa, nan to kaite arimasu ka?", translation: "Apa yang tertulis di poster ini?", audioFileName: "irodori-elementary2-15-a01-l01.mp3" },
   { speakerId: "sota", japanese: <>使い終わったら、電気を消してください、と書いてあります。</>, romaji: "Tsukai owattara, denki o keshite kudasai, to kaite arimasu.", translation: "Tertulis, 'Setelah selesai digunakan, silakan matikan lampu'.", audioFileName: "irodori-elementary2-15-a01-l02.mp3" },
-  { speakerId: "yui", japanese: <>電気を消すのを忘れないようにしたいですね。</>, romaji: "Denki o kesu no o wasurenai you ni shitai desu ne.", translation: "Kita usahakan agar tidak lupa mematikan lampu, ya.", audioFileName: "irodori-elementary2-15-a01-l03.mp3" },
+  { speakerId: "yui", japanese: <>電気を消すのを忘れないようにしたいですね。</>, romaji: "Denki o kesu no o wasurenai you ni shitai desu ne.", translation: "Kita usahakan jangan lupa mematikan lampu, ya.", audioFileName: "irodori-elementary2-15-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>そうですね。使っていない部屋の電気は消しましょう。</>, romaji: "Sou desu ne. Tsukatte inai heya no denki wa keshimashou.", translation: "Betul. Mari matikan lampu di ruangan yang tidak digunakan.", audioFileName: "irodori-elementary2-15-a01-l04.mp3" },
 ];
 const saveEnergyConversation: IrodoriUtterance[] = [
@@ -46,13 +46,13 @@ const saveEnergyConversation: IrodoriUtterance[] = [
 ];
 const saveWaterConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>お皿を洗うとき、水を出したままにしていますか。</>, romaji: "Osara o arau toki, mizu o dashita mama ni shite imasu ka?", translation: "Saat mencuci piring, apakah air dibiarkan mengalir terus?", audioFileName: "irodori-elementary2-15-a03-l01.mp3" },
-  { speakerId: "akiko", japanese: <>いいえ。洗剤をつけるときは、水を止めています。</>, romaji: "Iie. Senzai o tsukeru toki wa, mizu o tomete imasu.", translation: "Tidak. Saat memakai sabun, kerannya saya tutup.", audioFileName: "irodori-elementary2-15-a03-l02.mp3" },
+  { speakerId: "akiko", japanese: <>いいえ。洗剤をつけるときは、水を止めています。</>, romaji: "Iie. Senzai o tsukeru toki wa, mizu o tomete imasu.", translation: "Tidak. Saat memakai sabun, saya mematikan keran.", audioFileName: "irodori-elementary2-15-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>それは節水にいいですね。</>, romaji: "Sore wa sessui ni ii desu ne.", translation: "Itu cara yang bagus untuk menghemat air, ya.", audioFileName: "irodori-elementary2-15-a03-l03.mp3" },
   { speakerId: "akiko", japanese: <>はい。できることから続けるようにしています。</>, romaji: "Hai. Dekiru koto kara tsuzukeru you ni shite imasu.", translation: "Ya. Saya mulai dari hal-hal yang bisa saya lakukan.", audioFileName: "irodori-elementary2-15-a03-l04.mp3" },
 ];
 const readWasteGuideConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>この地域では、ごみを何種類に分けていますか。</>, romaji: "Kono chiiki de wa, gomi o nan shurui ni wakete imasu ka?", translation: "Di daerah ini, sampah dipilah menjadi berapa jenis?", audioFileName: "irodori-elementary2-15-a04-l01.mp3" },
-  { speakerId: "sota", japanese: <>四種類です。資源ごみ、燃えるごみ、燃えないごみ、粗大ごみです。</>, romaji: "Yon shurui desu. Shigen gomi, moeru gomi, moenai gomi, sodai gomi desu.", translation: "Empat jenis: sampah daur ulang, sampah yang dapat dibakar, yang tidak dapat dibakar, dan sampah berukuran besar.", audioFileName: "irodori-elementary2-15-a04-l02.mp3" },
+  { speakerId: "sota", japanese: <>四種類です。資源ごみ、燃えるごみ、燃えないごみ、粗大ごみです。</>, romaji: "Yon shurui desu. Shigen gomi, moeru gomi, moenai gomi, sodai gomi desu.", translation: "Ada empat jenis: sampah daur ulang, sampah yang bisa dibakar, sampah yang tidak bisa dibakar, dan sampah berukuran besar.", audioFileName: "irodori-elementary2-15-a04-l02.mp3" },
   { speakerId: "kenji", japanese: <>種類によって、出す曜日が違いますか。</>, romaji: "Shurui ni yotte, dasu youbi ga chigaimasu ka?", translation: "Apakah jadwal membuangnya berbeda-beda, tergantung jenis sampah?", audioFileName: "irodori-elementary2-15-a04-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。説明の紙で、曜日と注意点を確認してください。</>, romaji: "Hai. Setsumei no kami de, youbi to chuuiten o kakunin shite kudasai.", translation: "Ya. Cek jadwal dan hal-hal yang perlu diperhatikan di lembar panduan.", audioFileName: "irodori-elementary2-15-a04-l04.mp3" },
 ];
@@ -60,7 +60,7 @@ const askWasteDisposalConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>このペットボトルは、どうやって捨てればいいですか。</>, romaji: "Kono petto botoru wa, dou yatte sutereba ii desu ka?", translation: "Bagaimana cara membuang botol plastik ini?", audioFileName: "irodori-elementary2-15-a05-l01.mp3" },
   { speakerId: "kenji", japanese: <>この地域の案内では、資源ごみの日に出すことになっています。</>, romaji: "Kono chiiki no annai de wa, shigen gomi no hi ni dasu koto ni natte imasu.", translation: "Menurut panduan di daerah ini, botol plastik dibuang pada hari pengumpulan sampah daur ulang.", audioFileName: "irodori-elementary2-15-a05-l02.mp3" },
   { speakerId: "akiko", japanese: <>ほかに、気をつけることはありますか。</>, romaji: "Hoka ni, ki o tsukeru koto wa arimasu ka?", translation: "Apakah ada hal lain yang perlu diperhatikan?", audioFileName: "irodori-elementary2-15-a05-l03.mp3" },
-  { speakerId: "kenji", japanese: <>はい。ラベルなどの扱いも、地域の説明を確認してください。</>, romaji: "Hai. Raberu nado no atsukai mo, chiiki no setsumei o kakunin shite kudasai.", translation: "Ya. Periksa juga aturan setempat tentang label dan bagian lainnya.", audioFileName: "irodori-elementary2-15-a05-l04.mp3" },
+  { speakerId: "kenji", japanese: <>はい。ラベルなどの扱いも、地域の説明を確認してください。</>, romaji: "Hai. Raberu nado no atsukai mo, chiiki no setsumei o kakunin shite kudasai.", translation: "Ya. Periksa juga panduan setempat tentang cara menangani label dan bagian lainnya.", audioFileName: "irodori-elementary2-15-a05-l04.mp3" },
 ];
 
 const canDos = [
