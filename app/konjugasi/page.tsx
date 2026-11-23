@@ -869,6 +869,7 @@ return (
               </span>
               <div className="relative z-10 flex flex-col items-center justify-center w-full">
                 <JapaneseReading
+                  allowIndexFallback
                   kana={v.kana}
                   romaji={v.romaji}
                   translation={v.meaning}
