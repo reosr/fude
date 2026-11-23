@@ -5,6 +5,7 @@ import { Play, Square, ArrowLeft, Volume2, Gauge, User, BookOpen } from "lucide-
 import storyIndex from "../../data/story-index.json";
 import { loadStory } from "../../data/story-loaders";
 import { getProgress } from "../../lib/progress";
+import JapaneseReading from "@/components/JapaneseReading";
 
 
 const MACRON_TO_DOUBLE: Record<string, string> = {
@@ -685,18 +686,16 @@ setSelectedStory(story);
                       </p>
                     )}
                     
-                    <div 
-                      className={`text-xl md:text-2xl text-[#EAE6DD] font-mincho leading-[2] ${isNarrator ? "italic text-[#A3A099]" : ""} [&_rt]:text-[0.5em]`}
-                      dangerouslySetInnerHTML={{ __html: s.jp }}
+                    <JapaneseReading
+                      html={s.jp}
+                      allowIndexFallback
+                      romaji={s.romaji ?? getRomaji(s.jp, currentBab)}
+                      translation={s.id}
+                      contentClassName={`block text-xl md:text-2xl text-[#EAE6DD] font-mincho leading-[2] ${isNarrator ? "italic text-[#A3A099]" : ""} [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]`}
+                      kanaClassName="mt-1 font-mincho text-sm md:text-base leading-relaxed text-[#D6AD4F]"
+                      romajiClassName="mt-1 text-sm text-[#B8860B] italic"
+                      translationClassName="mt-1 text-sm text-[#A3A099] leading-snug"
                     />
-                    
-                    <p className="text-sm text-[#B8860B] italic mt-1 mb-1">
-                      {s.romaji ?? getRomaji(s.jp, currentBab)}
-                    </p>
-                    
-                    <p className="text-sm text-[#A3A099] leading-snug">
-                      {s.id}
-                    </p>
                   </div>
                 </div>
               );
