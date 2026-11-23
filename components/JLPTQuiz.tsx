@@ -62,9 +62,15 @@ interface SavedQuizResult {
 // Jangan tampilkan bacaan otomatis pada soal yang sedang menguji bacaan
 // kanji atau meminta memilih penulisan kanji dari petunjuk kana.
 function canShowAutomaticReadingHint(sectionId: string, question: string): boolean {
-  const asksKanjiReading = /読み方はどれですか|何と読みますか/.test(question);
+  // Data soal boleh berisi tag ruby pada kata petunjuk seperti 読み方.
+  // Hilangkan tag dan isi rt sebelum mendeteksi jenis soal agar target kanji
+  // tetap terlindungi setelah furigana ditambahkan ke teks pendamping.
+  const plainQuestion = question
+    .replace(/<rt\\b[^>]*>[\\s\\S]*?<\\/rt>/gi, "")
+    .replace(/<[^>]*>/g, "");
+  const asksKanjiReading = /読み方はどれですか|何と読みますか/.test(plainQuestion);
   const asksKanjiSpelling = sectionId === "vocab" &&
-    /「[^」]+」の「[^」]+」は、どれですか/.test(question);
+    /「[^」]+」の「[^」]+」は、どれですか/.test(plainQuestion);
   return !asksKanjiReading && !asksKanjiSpelling;
 }
 
