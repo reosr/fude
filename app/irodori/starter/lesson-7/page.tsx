@@ -260,7 +260,7 @@ const appliances = [
   { jp: <ruby>炊飯器<rt>すいはんき</rt></ruby>, reading: "suihanki", meaning: "Penanak nasi", icon: "🍚" },
   { jp: "トースター", reading: "toosutaa", meaning: "Pemanggang roti", icon: "🍞" },
   { jp: "ベッド", reading: "beddo", meaning: "Tempat tidur", icon: "🛏️" },
-  { jp: "ふとん", reading: "futon", meaning: "Kasur tradisional Jepang", icon: "🛌" },
+  { jp: "ふとん", reading: "futon", meaning: "Kasur tipis tradisional Jepang", icon: "🛌" },
   { jp: "テーブル", reading: "teeburu", meaning: "Meja", icon: "🪑" },
   { jp: "いす", reading: "isu", meaning: "Kursi", icon: "🪑" },
   { jp: <ruby>洗濯機<rt>せんたくき</rt></ruby>, reading: "sentakuki", meaning: "Mesin cuci", icon: "🧺" },
@@ -895,7 +895,7 @@ export default function IrodoriPemulaLessonSevenPage() {
                 { jp: "一時停止", reading: "いちじていし", meaning: "Jeda", detail: "Menghentikan sementara" },
                 { jp: "コース", reading: "koosu", meaning: "Mode", detail: "Memilih jenis cucian" },
                 { jp: "水量", reading: "すいりょう", meaning: "Jumlah air", detail: "Mengatur air" },
-                { jp: "予約", reading: "よやく", meaning: "Atur waktu", detail: "Mengatur waktu mulai" },
+                { jp: "予約", reading: "よやく", meaning: "Pengatur waktu", detail: "Mengatur waktu mulai" },
               ].map((item) => (
                 <div
                   key={item.jp}
@@ -917,10 +917,10 @@ export default function IrodoriPemulaLessonSevenPage() {
           <article className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
             <div className="border-b border-white/[0.07] bg-[#2B2118] p-4">
               <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">
-                PENGENDALI AC
+                REMOT AC
               </p>
               <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
-                エアコン · pengendali AC
+                エアコン · remot AC
               </h3>
             </div>
             <div className="grid grid-cols-2 gap-2 p-4">
@@ -1240,7 +1240,7 @@ export default function IrodoriPemulaLessonSevenPage() {
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-            <h3 className="text-xs font-bold text-[#E7D2A1]">Kasur tradisional Jepang</h3>
+            <h3 className="text-xs font-bold text-[#E7D2A1]">Kasur tipis tradisional Jepang</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Kasur futon dapat dibentangkan di lantai untuk tidur dan disimpan
               kembali setelah digunakan. Menjemur atau mengeringkannya secara
