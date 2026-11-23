@@ -28,9 +28,9 @@ const congratulationsConversation: IrodoriUtterance[] = [
 
 const choosingGiftConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>来月、アナさんが別の町に引っ越すそうですね。</>,romaji:"Raigetsu, Ana-san ga betsu no machi ni hikkosu sou desu ne.",translation:"Saya dengar bulan depan Ana akan pindah ke kota lain.",audioFileName:"irodori-elementary1-18-a02-l01.mp3"},
-{speakerId:"kenji",japanese:<>そうですね。みんなで送別会をしませんか。</>,romaji:"Sou desu ne. Minna de soubetsukai o shimasen ka?",translation:"Benar. Bagaimana kalau kita mengadakan acara perpisahan bersama?",audioFileName:"irodori-elementary1-18-a02-l02.mp3"},
-{speakerId:"sota",japanese:<>いいですね。アナさん、前に写真が好きだと言っていました。</>,romaji:"Ii desu ne. Ana-san, mae ni shashin ga suki da to itte imashita.",translation:"Ide bagus. Ana pernah mengatakan bahwa dia suka foto.",audioFileName:"irodori-elementary1-18-a02-l03.mp3"},
-{speakerId:"kenji",japanese:<>じゃあ、みんなの写真を入れたフォトフレームをあげませんか。思い出に残ると思います。</>,romaji:"Jaa, minna no shashin o ireta fotofureemu o agemasen ka? Omoide ni nokoru to omoimasu.",translation:"Kalau begitu, bagaimana kalau kita memberinya bingkai foto berisi foto kita semua? Menurut saya itu akan menjadi kenangan.",audioFileName:"irodori-elementary1-18-a02-l04.mp3"},
+{speakerId:"kenji",japanese:<>そうですね。みんなで送別会をしませんか。</>,romaji:"Sou desu ne. Minna de soubetsukai o shimasen ka?",translation:"Iya. Bagaimana kalau kita adakan acara perpisahan untuk Ana?",audioFileName:"irodori-elementary1-18-a02-l02.mp3"},
+{speakerId:"sota",japanese:<>いいですね。アナさん、前に写真が好きだと言っていました。</>,romaji:"Ii desu ne. Ana-san, mae ni shashin ga suki da to itte imashita.",translation:"Ide bagus. Ana pernah bilang bahwa dia suka fotografi.",audioFileName:"irodori-elementary1-18-a02-l03.mp3"},
+{speakerId:"kenji",japanese:<>じゃあ、みんなの写真を入れたフォトフレームをあげませんか。思い出に残ると思います。</>,romaji:"Jaa, minna no shashin o ireta fotofureemu o agemasen ka? Omoide ni nokoru to omoimasu.",translation:"Bagaimana kalau kita beri dia bingkai foto yang berisi foto kita semua? Menurutku, hadiah itu akan jadi kenangan yang berharga.",audioFileName:"irodori-elementary1-18-a02-l04.mp3"},
 ];
 
 const thankingGiftConversation: IrodoriUtterance[] = [
