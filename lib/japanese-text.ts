@@ -40,6 +40,7 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
   const hasKanji = KANJI_RE.test(text);
 
   if (!hasKanji) {
+    if (/[A-Za-z]{3,}/.test(text)) return null;
     const normalized = text.replace(/\s+/g, " ").trim();
     return normalized && KANA_RE.test(normalized)
       ? { kana: normalized, hasKanji: false }
@@ -48,15 +49,16 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
 
   if (!allowIndexFallback) return null;
 
-  if (/[A-Za-z]{3,}/.test(text.replace(/\b(?:IMC|JLPT|N[1-5])\b/g, ""))) {
-    return null;
-  }
+  // Ketika teks mencampur bahasa Indonesia dan Jepang, baca bagian Jepang saja.
+  const japaneseText = text
+    .replace(/[A-Za-z][A-Za-z0-9._'-]*/g, " ")
+    .replace(/[0-9０-９]+/g, " ");
 
   let kana = "";
   let index = 0;
 
-  while (index < text.length) {
-    const match = READING_ENTRIES.find(([word]) => text.startsWith(word, index));
+  while (index < japaneseText.length) {
+    const match = READING_ENTRIES.find(([word]) => japaneseText.startsWith(word, index));
 
     if (match) {
       kana += match[1];
@@ -64,7 +66,7 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
       continue;
     }
 
-    const char = text[index];
+    const char = japaneseText[index];
     if (KANJI_RE.test(char)) return null;
 
     kana += char;
@@ -243,20 +245,17 @@ const NOTATION_SUFFIXES: Record<string, string> = {
   "可能形": "kata kerja bentuk potensial",
   "受身形": "kata kerja bentuk pasif",
   "使役形": "kata kerja bentuk kausatif",
+  "kan": "kata kerja berimbuhan -kan",
 };
 
 export function formatGrammarNotation(value: string): string {
   return value.replace(
     /(^|[^\p{L}\p{N}])([NVAS])(\d*)(?:-((?:（よ）う|\(よ\)う|（られ）る|\(られ\)る|ます|ない|て|た|る|い|な|可能形|受身形|使役形|kan)))?(?=$|[^\p{L}\p{N}]|[ぁ-ゖァ-ヶ一-龯々])/gu,
     (_match, prefix: string, symbol: string, number: string, suffix: string | undefined) => {
-      if (number) {
-        return prefix + GRAMMAR_LABELS[symbol] + " " + number;
+      if (number) return prefix + GRAMMAR_LABELS[symbol] + " " + number;
+      if (suffix && (symbol === "V" || symbol === "A")) {
+        return prefix + (NOTATION_SUFFIXES[suffix] ?? GRAMMAR_LABELS[symbol]);
       }
-
-      if (suffix) {
-        if (symbol === "V" || symbol === "A") return prefix + (NOTATION_SUFFIXES[suffix] ?? GRAMMAR_LABELS[symbol]);
-      }
-
       return prefix + GRAMMAR_LABELS[symbol];
     }
   );
