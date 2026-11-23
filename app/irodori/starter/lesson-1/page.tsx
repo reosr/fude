@@ -252,10 +252,10 @@ const situationQuestions = [
     explanation: "こんばんは digunakan saat bertemu seseorang pada malam hari. おやすみなさい diucapkan sebelum tidur.",
   },
   {
-    prompt: "Kamu selesai bekerja dan pulang lebih dahulu daripada rekan kerja. Apa yang kamu katakan?",
+    prompt: "Kamu sudah selesai bekerja dan akan pulang lebih dulu daripada rekan kerja. Apa yang kamu katakan?",
     options: ["お疲れさまでした", "お先に失礼します", "おはようございます"],
     answer: "お先に失礼します",
-    explanation: "Orang yang pulang lebih dahulu menggunakan ungkapan pamit, sedangkan rekan yang masih bekerja memberikan balasan yang sesuai.",
+    explanation: "Orang yang pulang lebih dahulu mengucapkan ungkapan pamit. Rekan yang masih bekerja biasanya membalas dengan ungkapan terima kasih atas kerja keras hari itu.",
   },
   {
     prompt: "Seorang tetangga menahan pintu agar kamu bisa lewat. Ungkapan sopan apa yang juga dapat menyampaikan terima kasih?",
