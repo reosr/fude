@@ -677,7 +677,7 @@ export default function IrodoriPemulaLessonTwelvePage() {
                   { key: "decline", jp: "ごめんなさい。明日はちょっと……。", meaning: "Maaf, besok agak sulit." },
                 ].map((item) => (
                   <button key={item.key} type="button" disabled={replySubmitted} aria-pressed={replyChoice === item.key} onClick={() => setReplyChoice(item.key)} className={"block w-full rounded-lg border p-2.5 text-left " + (replyChoice === item.key ? "border-[#B7D19A]/60 bg-[#B7D19A]/10" : "border-white/[0.07] bg-black/10")}>
-                    <p className="font-mincho text-xs text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p>
+                    <p className="font-mincho text-xs text-[#F1EBDD]"><JapaneseReading showRomaji={false} allowIndexFallback>{item.jp}</JapaneseReading></p>
                     <p className="mt-1 text-[9px] text-[#A9A398]">{item.meaning}</p>
                   </button>
                 ))}
