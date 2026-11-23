@@ -15,6 +15,7 @@ import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -775,14 +776,14 @@ export default function IrodoriStarterLessonOnePage() {
         <div className="grid gap-3 sm:grid-cols-2">
           {situationQuestions.map((question, index) => (
             <article
-              key={question.prompt}
+              key=<JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
               className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
               <p className="text-[9px] font-black tracking-widest text-[#B8860B]">
                 SITUASI 0{index + 1}
               </p>
               <p className="mt-3 min-h-12 text-xs font-semibold leading-6 text-[#EAE6DD]">
-                {question.prompt}
+                <JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
               </p>
               <div className="mt-3 space-y-2">
                 {question.options.map((option) => {
@@ -888,7 +889,7 @@ export default function IrodoriStarterLessonOnePage() {
             >
               <div>
                 <p className="font-mincho text-base font-bold text-[#EAE6DD]">
-                  {item.jp}
+                  <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                 </p>
                 <p className="text-[10px] italic text-[#B8860B]">{item.romaji}</p>
               </div>
@@ -1024,7 +1025,7 @@ export default function IrodoriStarterLessonOnePage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]"
                       }`}
                     >
-                      {option.label}
+                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
