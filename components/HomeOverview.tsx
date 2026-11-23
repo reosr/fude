@@ -42,7 +42,7 @@ export default function HomeOverview({ babTitles }: HomeOverviewProps) {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBg}
-            alt="Japan Background"
+            alt="Latar pemandangan Jepang"
             className="w-full h-full object-cover opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#121110] via-[#121110]/80 to-transparent"></div>
@@ -72,7 +72,7 @@ export default function HomeOverview({ babTitles }: HomeOverviewProps) {
         <div className="flex justify-between items-center mb-4 relative z-10">
           <div>
             <p className="text-xs font-bold text-[#C93438] uppercase tracking-wider mb-1">
-              Progress Belajar
+              Progres Belajar
             </p>
             <h3 className="text-2xl font-bold text-[#EAE6DD]">
               Bab {currentBab}: {currentBabData?.title || "Selesai"}
