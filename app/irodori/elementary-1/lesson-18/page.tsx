@@ -7,6 +7,7 @@ import { ArrowLeft, CalendarDays, CheckCircle2, FileText, Gift, RefreshCw, Users
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import { completeIrodoriLesson, saveIrodoriSelfEvaluation, useIrodoriProgress } from "@/lib/irodori-progress";
 import type { IrodoriRating } from "@/lib/irodori-progress";
@@ -206,7 +207,7 @@ export default function IrodoriElementaryOneLessonEighteenPage() {
 
   <section className="space-y-4">
    <div><p className="text-[9px] font-black tracking-[0.2em] text-[#D990AE]">KOSAKATA HADIAH DAN UCAPAN</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Perayaan, hadiah, dan pesan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Pelajari kata untuk memberi selamat, memilih hadiah, menyampaikan pendapat, dan menulis pesan sederhana.</p></div>
-   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">{vocabRows.map(([jp,reading,meaning])=><article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><p className="font-mincho text-base text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#E5A4BF]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p></article>)}</div>
+   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">{vocabRows.map(([jp,reading,meaning])=><article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><JapaneseVocabularyReading reading={reading} meaning={meaning} contentClassName="font-mincho text-base leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#E5A4BF]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{jp}</JapaneseVocabularyReading></article>)}</div>
   </section>
 
   <section className="space-y-4">
@@ -281,7 +282,7 @@ export default function IrodoriElementaryOneLessonEighteenPage() {
 
   <section className="space-y-4">
    <div><p className="text-[9px] font-black tracking-[0.2em] text-[#D990AE]">KANJI DAN KATA PENTING</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Kanji untuk perayaan dan kabar baik</h2></div>
-   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">{kanjiWords.map(([jp,reading,meaning])=><article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><p className="font-mincho text-lg text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#E5A4BF]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p></article>)}</div>
+   <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">{kanjiWords.map(([jp,reading,meaning])=><article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><JapaneseVocabularyReading reading={reading} meaning={meaning} contentClassName="font-mincho text-lg leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#E5A4BF]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{jp}</JapaneseVocabularyReading></article>)}</div>
   </section>
 
   <section className="space-y-4">
