@@ -616,7 +616,6 @@ export default function Quiz({
                   allowIndexFallback
                   contentClassName="font-mincho text-lg text-[#EAE6DD] leading-[2]"
                   kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
-                  showRomaji={false}
                 />
               </div>
             )}
@@ -628,7 +627,6 @@ export default function Quiz({
                 allowIndexFallback
                 contentClassName="text-base text-[#A3A099] leading-relaxed"
                 kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
-                showRomaji={false}
               />
             </div>
           </div>
