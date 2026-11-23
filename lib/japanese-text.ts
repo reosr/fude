@@ -35,7 +35,7 @@ function stripHtml(value: string): string {
 // Contoh: 来ます（きます） menjadi <ruby>来ます<rt>きます</rt></ruby>.
 export function addRubyFromParentheticalReadings(value: string): string {
   return value.replace(
-    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー]+)[）)]/g,
+    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー／/・、,]+)[）)]/g,
     (_match, base: string, reading: string) => `<ruby>${base}<rt>${reading}</rt></ruby>`
   );
 }
@@ -59,7 +59,7 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
   // Terima format bacaan dalam kurung, misalnya 来（き） atau 十歳（じゅっさい）.
   // Ini juga dipakai pada penjelasan yang tidak seluruhnya ditulis dengan tag ruby.
   const withExplicitReadings = original.replace(
-    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+)[（(]([ぁ-ゖァ-ヶー]+)[）)]/g,
+    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+)[（(]([ぁ-ゖァ-ヺー／/・、,]+)[）)]/g,
     "$2"
   );
 
