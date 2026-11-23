@@ -128,7 +128,7 @@ const chooseMealConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>うーん……。カレーにします。</>,
     romaji: "Uun... Karee ni shimasu.",
-    translation: "Hmm… Saya pilih kari.",
+    translation: "Hmm… Saya pilih kare.",
     audioFileName: "irodori-starter-06-a03-l02.mp3",
   },
   {
@@ -259,7 +259,7 @@ const drinkMenu = [
 ];
 
 const mealChoices = [
-  { jp: "カレー", reading: "karee", meaning: "Kari Jepang", icon: "🍛" },
+  { jp: "カレー", reading: "karee", meaning: "Kare (kari khas Jepang)", icon: "🍛" },
   { jp: "うどん", reading: "udon", meaning: "Udon", icon: "🍜" },
   { jp: "そば", reading: "soba", meaning: "Soba", icon: "🥢" },
   { jp: "すし", reading: "sushi", meaning: "Sushi", icon: "🍣" },
@@ -268,7 +268,7 @@ const mealChoices = [
 const restaurantSigns = [
   { sign: "すし", reading: "sushi", meaning: "Restoran sushi", clue: "Ikan dan nasi", icon: "🍣" },
   { sign: "ラーメン", reading: "raamen", meaning: "Restoran ramen", clue: "Mi berkuah", icon: "🍜" },
-  { sign: "カレー", reading: "karee", meaning: "Restoran kari", clue: "Nasi dengan saus kari", icon: "🍛" },
+  { sign: "カレー", reading: "karee", meaning: "Restoran kare", clue: "Nasi dengan saus kari", icon: "🍛" },
   { sign: "そば・うどん", reading: "soba · udon", meaning: "Restoran soba dan udon", clue: "Pilihan mi Jepang", icon: "🥢" },
   { sign: "焼肉", reading: "やきにく · yakiniku", meaning: "Restoran yakiniku", clue: "Daging panggang", icon: "🥩" },
   { sign: "パン", reading: "pan", meaning: "Toko roti", clue: "Roti dan pastry", icon: "🥐" },
