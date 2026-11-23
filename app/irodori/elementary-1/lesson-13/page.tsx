@@ -196,7 +196,7 @@ export default function IrodoriElementaryOneLessonThirteenPage() {
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D08A7D]/[0.08]">連</div>
    <div className="relative z-10">
     <p className="text-[9px] font-black tracking-[0.24em] text-[#D6A39A]">IRODORI • ELEMENTARY 1 A2 • LESSON 13</p>
-    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">It will probably end in about ten minutes.</h1>
+    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Sepertinya akan selesai dalam sekitar sepuluh menit.</h1>
     <p className="mt-2 text-sm font-semibold text-[#D6A39A]">あと10分ぐらいで終わりそうです。</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar melaporkan kendala di tempat kerja, menyampaikan perkiraan waktu penyelesaian, bertanya cara menggunakan mesin, memahami instruksi persiapan rapat, dan membaca email pemberitahuan.</p>
     <div className="mt-5 flex flex-wrap gap-2">
