@@ -37,8 +37,8 @@ export default function JapaneseReading({
       ) : (
         <span className={contentClassName}>{children}</span>
       )}
-      {showKanaLine && reading && <p className={kanaClassName}>（{reading.kana}）</p>}
-      {romaji && <p className={romajiClassName}>{romaji}</p>}
+      {showKanaLine && reading && <span className={kanaClassName + " block"}>（{reading.kana}）</span>}
+      {romaji && <span className={romajiClassName + " block"}>{romaji}</span>}
     </span>
   );
 }
