@@ -15,7 +15,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
 import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
@@ -26,35 +26,35 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const introductionConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>はじめまして。ユイです。</>,
     romaji: "Hajimemashite. Yui desu.",
     translation: "Salam kenal. Saya Yui.",
     audioFileName: "irodori-starter-03-a01-l01.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>はじめまして。ソウタです。</>,
     romaji: "Hajimemashite. Souta desu.",
     translation: "Salam kenal. Saya Sota.",
     audioFileName: "irodori-starter-03-a01-l02.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>インドネシアから<ruby>来<rt>き</rt></ruby>ました。</>,
     romaji: "Indonesia kara kimashita.",
     translation: "Saya datang dari Indonesia.",
     audioFileName: "irodori-starter-03-a01-l03.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>そうですか。どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Sou desu ka. Douzo yoroshiku onegaishimasu.",
     translation: "Oh, begitu. Senang berkenalan denganmu.",
     audioFileName: "irodori-starter-03-a01-l04.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Kochira koso, yoroshiku onegaishimasu.",
     translation: "Saya juga senang berkenalan denganmu.",
@@ -64,42 +64,42 @@ const introductionConversation: IrodoriUtterance[] = [
 
 const originConversation: IrodoriUtterance[] = [
   {
-    speakerId: "akiko",
+    tokohId: "akiko",
     japanese: <>お<ruby>名前<rt>なまえ</rt></ruby>は？</>,
     romaji: "Onamae wa?",
     translation: "Siapa nama Anda?",
     audioFileName: "irodori-starter-03-a03-l01.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>ケンジです。</>,
     romaji: "Kenji desu.",
     translation: "Saya Kenji.",
     audioFileName: "irodori-starter-03-a03-l02.mp3",
   },
   {
-    speakerId: "akiko",
+    tokohId: "akiko",
     japanese: <>ご<ruby>出身<rt>しゅっしん</rt></ruby>はどちらですか？</>,
     romaji: "Goshusshin wa dochira desu ka?",
     translation: "Anda berasal dari mana?",
     audioFileName: "irodori-starter-03-a03-l03.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>インドネシアのバンドンです。</>,
     romaji: "Indonesia no Bandon desu.",
     translation: "Saya dari Bandung, Indonesia.",
     audioFileName: "irodori-starter-03-a03-l04.mp3",
   },
   {
-    speakerId: "akiko",
+    tokohId: "akiko",
     japanese: <>そうですか。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Sou desu ka. Yoroshiku onegaishimasu.",
     translation: "Oh, begitu. Senang berkenalan dengan Anda.",
     audioFileName: "irodori-starter-03-a03-l05.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Kochira koso, yoroshiku onegaishimasu.",
     translation: "Saya juga senang berkenalan dengan Anda.",
@@ -222,7 +222,7 @@ function renderJapaneseTerm(term: string) {
   }
 }
 
-export default function IrodoriStarterLessonThreePage() {
+export default function IrodoriPemulaLessonThreePage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [nameTagDraft, setNameTagDraft] = useState({
@@ -322,7 +322,7 @@ export default function IrodoriStarterLessonThreePage() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
-              4 target Can-do
+              4 target target komunikasi
             </span>
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
               2 dialog orisinal
@@ -365,7 +365,7 @@ export default function IrodoriStarterLessonThreePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 01
+              KEGIATAN 01
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Memperkenalkan diri
@@ -379,7 +379,7 @@ export default function IrodoriStarterLessonThreePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Berkenalan untuk pertama kali"
-          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={introductionConversation}
         />
         <div className="rounded-xl border border-[#B8860B]/20 bg-gradient-to-br from-[#2B2118] to-[#191817] p-4">
@@ -409,7 +409,7 @@ export default function IrodoriStarterLessonThreePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 02
+              KEGIATAN 02
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Menulis kartu nama
@@ -560,7 +560,7 @@ export default function IrodoriStarterLessonThreePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 03
+              KEGIATAN 03
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Menanyakan nama dan tempat asal
@@ -574,7 +574,7 @@ export default function IrodoriStarterLessonThreePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Bertanya tentang asal"
-          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
+          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={originConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2">
@@ -610,7 +610,7 @@ export default function IrodoriStarterLessonThreePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 04
+              KEGIATAN 04
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Membaca formulir sederhana
@@ -1067,7 +1067,7 @@ export default function IrodoriStarterLessonThreePage() {
         {(!quizSubmitted || !nameTagSubmitted || !formSubmitted) && (
           <p className="mt-2 text-[10px] text-[#817A73]">
             Selesaikan kuis situasi, dua latihan menulis, dan isi keempat
-            penilaian Can-do untuk menyelesaikan pelajaran.
+            penilaian target komunikasi untuk menyelesaikan pelajaran.
           </p>
         )}
       </section>
