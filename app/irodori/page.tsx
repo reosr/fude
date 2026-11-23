@@ -38,9 +38,9 @@ const courses = [
     title: "Pre-Intermediate",
     level: "A2/B1",
     description: "Berlatih menyampaikan informasi dan pengalaman dengan lebih mandiri.",
-    status: "Tahap berikutnya",
-    statusTone: "border-white/10 bg-white/[0.04] text-[#A3A099]",
-    accent: "from-[#80619B]/20",
+    status: "Mulai belajar",
+    statusTone: "border-[#B79ADE]/35 bg-[#80619B]/15 text-[#E3D5F6]",
+    accent: "from-[#80619B]/25",
   },
 ];
 
@@ -118,7 +118,7 @@ export default function IrodoriPage() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {courses.map((course) => {
             const card = (
-              <div className={`relative isolate h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10 transition-all ${(course.id === "starter" || course.id === "elementary-1" || course.id === "elementary-2") ? "group-hover:-translate-y-0.5 group-hover:border-[#D6AD4F]/60" : "opacity-75"}`}>
+              <div className={`relative isolate h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10 transition-all ${(course.id === "starter" || course.id === "elementary-1" || course.id === "elementary-2" || course.id === "pre-intermediate") ? "group-hover:-translate-y-0.5 group-hover:border-[#B79ADE]/60" : "opacity-75"}`}>
                 <div className="pointer-events-none absolute -right-5 -top-8 select-none font-mincho text-[112px] font-bold leading-none text-white/[0.035]">
                   {course.number}
                 </div>
@@ -153,11 +153,11 @@ export default function IrodoriPage() {
               </div>
             );
 
-            return course.id === "starter" || course.id === "elementary-1" || course.id === "elementary-2" ? (
+            return course.id === "starter" || course.id === "elementary-1" || course.id === "elementary-2" || course.id === "pre-intermediate" ? (
               <Link
                 key={course.id}
-                href={course.id === "starter" ? "/irodori/starter" : course.id === "elementary-1" ? "/irodori/elementary-1" : "/irodori/elementary-2"}
-                aria-label={course.id === "starter" ? "Buka Irodori Starter A1" : course.id === "elementary-1" ? "Buka Irodori Elementary 1 A2" : "Buka Irodori Elementary 2 A2"}
+                href={course.id === "starter" ? "/irodori/starter" : course.id === "elementary-1" ? "/irodori/elementary-1" : course.id === "elementary-2" ? "/irodori/elementary-2" : "/irodori/pre-intermediate"}
+                aria-label={course.id === "starter" ? "Buka Irodori Starter A1" : course.id === "elementary-1" ? "Buka Irodori Elementary 1 A2" : course.id === "elementary-2" ? "Buka Irodori Elementary 2 A2" : "Buka Irodori Pre-Intermediate A2/B1"}
                 className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D6AD4F]"
               >
                 {card}
@@ -173,8 +173,8 @@ export default function IrodoriPage() {
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
           adalah pemilih jalur. Starter A1 dan Elementary 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
-          Elementary 2 A2 kini membuka Lesson 1, dan pelajaran selanjutnya terbuka
-          secara berurutan setelah materi sebelumnya selesai.
+          Elementary 2 A2 sudah memiliki 18 lesson. Jalur Pre-Intermediate A2/B1
+          kini dapat dimulai, dengan pelajaran berikutnya terbuka secara berurutan.
         </p>
       </div>
     </main>
