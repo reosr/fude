@@ -930,6 +930,7 @@ return (
               <div className="md:sticky md:top-0 md:z-30 p-4 sm:p-5 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 border-b border-[#4A4743] bg-[#1E1D1B]/95 backdrop-blur-xl shadow-xl md:shrink-0">
                 <div className="w-full sm:flex-1 sm:max-w-md min-w-0 text-center">
                   <JapaneseReading
+                    allowIndexFallback
                     kana={selectedVerb.kana}
                     romaji={selectedVerb.romaji}
                     translation={selectedVerb.meaning}
