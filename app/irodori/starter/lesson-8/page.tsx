@@ -1027,7 +1027,7 @@ export default function IrodoriPemulaLessonEightPage() {
                 LATIHAN 0{index + 1}
               </p>
               <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                <JapaneseReading showRomaji={false} allowIndexFallback>{task.prompt}</JapaneseReading>
+                <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{task.prompt}</JapaneseReading>
               </h3>
               <select
                 value={practiceAnswers[index] ?? ""}
@@ -1043,7 +1043,7 @@ export default function IrodoriPemulaLessonEightPage() {
                 <option value="">Pilih jawaban…</option>
                 {task.options.map((option) => (
                   <option key={option.value} value={option.value}>
-                    <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
+                    <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                   </option>
                 ))}
               </select>
@@ -1059,7 +1059,7 @@ export default function IrodoriPemulaLessonEightPage() {
                   >
                     {practiceAnswers[index] === task.answer ? "Benar." : "Belum tepat."}
                   </span>
-                  <JapaneseReading showRomaji={false} allowIndexFallback>{task.explanation}</JapaneseReading>
+                  <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{task.explanation}</JapaneseReading>
                 </p>
               )}
             </article>
@@ -1120,7 +1120,7 @@ export default function IrodoriPemulaLessonEightPage() {
                   SOAL {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                  <JapaneseReading showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading>
+                  <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading>
                 </h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => {
@@ -1155,7 +1155,7 @@ export default function IrodoriPemulaLessonEightPage() {
                           {quizSubmitted && correct ? "✓" : selected ? "●" : "○"}
                         </span>
                         <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
-                          <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
+                          <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                         </span>
                       </button>
                     );
@@ -1171,7 +1171,7 @@ export default function IrodoriPemulaLessonEightPage() {
                     >
                       {isCorrect ? "Benar." : "Belum tepat."}
                     </span>
-                    <JapaneseReading showRomaji={false} allowIndexFallback>{question.explanation}</JapaneseReading>
+                    <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -1256,7 +1256,7 @@ export default function IrodoriPemulaLessonEightPage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]")
                       }
                     >
-                      <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
+                      <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}

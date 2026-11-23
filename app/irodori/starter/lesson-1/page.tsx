@@ -781,7 +781,7 @@ export default function IrodoriPemulaLessonOnePage() {
                 SITUASI 0{index + 1}
               </p>
               <p className="mt-3 min-h-12 text-xs font-semibold leading-6 text-[#EAE6DD]">
-                <JapaneseReading showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading>
+                <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading>
               </p>
               <div className="mt-3 space-y-2">
                 {question.options.map((option) => {
@@ -1028,7 +1028,7 @@ export default function IrodoriPemulaLessonOnePage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]"
                       }`}
                     >
-                      <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
+                      <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
