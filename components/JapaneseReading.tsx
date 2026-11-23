@@ -2,10 +2,12 @@
 "use client";
 
 import { toRomaji } from "wanakana";
-import { extractKanaFromRubyHtml } from "@/lib/japanese-text";
+import type { ReactNode } from "react";
+import { extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
 
 interface Props {
-  html: string;
+  html?: string;
+  children?: ReactNode;
   contentClassName?: string;
   kanaClassName?: string;
   romajiClassName?: string;
@@ -16,6 +18,7 @@ interface Props {
 
 export default function JapaneseReading({
   html,
+  children,
   contentClassName = "font-mincho text-lg leading-[2.2] text-[#F1EBDD]",
   kanaClassName = "mt-1 font-mincho text-sm leading-relaxed text-[#D6AD4F]",
   romajiClassName = "mt-1 text-xs italic leading-relaxed text-[#A9A398]",
@@ -23,13 +26,17 @@ export default function JapaneseReading({
   showRomaji = true,
   showKanaForKanaOnly = false,
 }: Props) {
-  const reading = extractKanaFromRubyHtml(html);
+  const reading = html !== undefined ? extractKanaFromRubyHtml(html) : extractKanaFromReactNode(children);
   const showKanaLine = Boolean(reading && showKana && (reading.hasKanji || showKanaForKanaOnly));
   const romaji = reading && showRomaji ? toRomaji(reading.kana) : "";
 
   return (
     <div className="min-w-0">
-      <div className={contentClassName} dangerouslySetInnerHTML={{ __html: html }} />
+      {html !== undefined ? (
+        <div className={contentClassName} dangerouslySetInnerHTML={{ __html: html }} />
+      ) : (
+        <div className={contentClassName}>{children}</div>
+      )}
       {showKanaLine && reading && <p className={kanaClassName}>（{reading.kana}）</p>}
       {romaji && <p className={romajiClassName}>{romaji}</p>}
     </div>
