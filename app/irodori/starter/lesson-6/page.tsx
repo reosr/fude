@@ -18,6 +18,7 @@ import IrodoriConversation, {
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -540,13 +541,19 @@ export default function IrodoriStarterLessonSixPage() {
                         {item.icon}
                       </span>
                       <div className="min-w-0">
-                        <p className="font-mincho text-sm font-bold text-[#F1EBDD]">
-                          <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
-                        </p>
-                        <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
+                        <JapaneseReading
+                          allowIndexFallback
+                          romaji={item.reading}
+                          translation={item.meaning}
+                          contentClassName="font-mincho text-sm font-bold leading-relaxed text-[#F1EBDD]"
+                          kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]"
+                          romajiClassName="mt-1 text-[10px] text-[#B8860B]"
+                          translationClassName="mt-2 text-[10px] leading-5 text-[#A9A398]"
+                        >
+                          {item.jp}
+                        </JapaneseReading>
                       </div>
                     </div>
-                    <p className="mt-2 text-[10px] text-[#A9A398]">{item.meaning}</p>
                     <div className="mt-2 flex justify-between gap-2 border-t border-white/[0.06] pt-2 text-[10px]">
                       <span className="text-[#A9A398]">Satuan</span>
                       <span className="font-bold text-[#E7D2A1]">{item.single}</span>
@@ -572,11 +579,17 @@ export default function IrodoriStarterLessonSixPage() {
                     >
                       <span className="text-2xl">{item.icon}</span>
                       <div className="min-w-0 flex-1">
-                        <p className="font-mincho text-sm font-bold text-[#F1EBDD]">
+                        <JapaneseReading
+                          allowIndexFallback
+                          romaji={item.reading}
+                          translation={item.meaning}
+                          contentClassName="font-mincho text-sm font-bold leading-relaxed text-[#F1EBDD]"
+                          kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]"
+                          romajiClassName="mt-1 text-[9px] text-[#B8860B]"
+                          translationClassName="mt-2 text-[10px] leading-5 text-[#A9A398]"
+                        >
                           {item.jp === "ウーロン茶" ? <>ウーロン<ruby>茶<rt>ちゃ</rt></ruby></> : item.jp === "水" ? <ruby>水<rt>みず</rt></ruby> : item.jp}
-                        </p>
-                        <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
-                        <p className="text-[10px] text-[#A9A398]">{item.meaning}</p>
+                        </JapaneseReading>
                       </div>
                       <span className="shrink-0 text-[10px] font-bold text-[#E7D2A1]">
                         {item.price}
@@ -902,12 +915,16 @@ export default function IrodoriStarterLessonSixPage() {
               className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"
             >
               <div>
-                <p className="font-mincho text-lg font-bold text-[#F1EBDD]">
+                <JapaneseVocabularyReading
+                  reading={item.reading}
+                  meaning={item.meaning}
+                  contentClassName="font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]"
+                  kanaClassName="mt-1 font-mincho text-base text-[#D6AD4F]"
+                  romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
+                  translationClassName="mt-1 text-xs text-[#A9A398]"
+                >
                   {item.num}
-                </p>
-                <p className="text-[10px] text-[#B8860B]">{item.reading}</p>
-              </div>
-              <span className="text-xs text-[#A9A398]">{item.meaning}</span>
+                </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
@@ -951,10 +968,18 @@ export default function IrodoriStarterLessonSixPage() {
                 className="flex items-center justify-between gap-3 rounded-lg bg-black/15 px-3 py-2"
               >
                 <div>
-                  <p className="font-mincho text-sm text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p>
-                  <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
+                  <JapaneseReading
+                    allowIndexFallback
+                    romaji={item.reading}
+                    translation={item.meaning}
+                    contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]"
+                    kanaClassName="mt-1 font-mincho text-base text-[#D6AD4F]"
+                    romajiClassName="mt-1 text-[9px] text-[#B8860B]"
+                    translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+                  >
+                    {item.jp}
+                  </JapaneseReading>
                 </div>
-                <span className="text-xs text-[#A9A398]">{item.meaning}</span>
               </div>
             ))}
           </div>
