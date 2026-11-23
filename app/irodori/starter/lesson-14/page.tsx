@@ -53,7 +53,7 @@ const facilityConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>あちらです。エレベーターの<ruby>横<rt>よこ</rt></ruby>ですよ。</>,
     romaji: "Achira desu. Erebeetaa no yoko desu yo.",
-    translation: "Di sebelah sana, di samping lift.",
+    translation: "Di sana, di sebelah lift.",
     audioFileName: "irodori-starter-14-a01-l04.mp3",
   },
 ];
@@ -63,7 +63,7 @@ const phoneConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>もしもし。アキコさん、<ruby>今<rt>いま</rt></ruby>、どこにいますか？</>,
     romaji: "Moshi moshi. Akiko-san, ima doko ni imasu ka?",
-    translation: "Halo. Akiko, sekarang sedang berada di mana?",
+    translation: "Akiko, sekarang kamu ada di mana?",
     audioFileName: "irodori-starter-14-a02-l01.mp3",
   },
   {
@@ -77,7 +77,7 @@ const phoneConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>インフォメーションの<ruby>前<rt>まえ</rt></ruby>ですね。わかりました。</>,
     romaji: "Infomeeshon no mae desu ne. Wakarimashita.",
-    translation: "Di depan meja informasi, ya. Baik, saya mengerti.",
+    translation: "Oh, di depan meja informasi, ya. Baik.",
     audioFileName: "irodori-starter-14-a02-l03.mp3",
   },
   {
@@ -94,7 +94,7 @@ const positionConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>ユイさん、<ruby>今<rt>いま</rt></ruby>、どこですか？</>,
     romaji: "Yui-san, ima doko desu ka?",
-    translation: "Yui, sekarang di mana?",
+    translation: "Yui, sekarang kamu di mana?",
     audioFileName: "irodori-starter-14-a03-l01.mp3",
   },
   {
@@ -139,7 +139,7 @@ const townConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>あの<ruby>建物<rt>たてもの</rt></ruby>は、まちの<ruby>図書館<rt>としょかん</rt></ruby>です。</>,
     romaji: "Ano tatemono wa, machi no toshokan desu.",
-    translation: "Bangunan itu adalah perpustakaan kota.",
+    translation: "Itu perpustakaan kota.",
     audioFileName: "irodori-starter-14-a04-l03.mp3",
   },
   {
@@ -156,7 +156,7 @@ const streetConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>あれは、<ruby>駅<rt>えき</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くの<ruby>商店街<rt>しょうてんがい</rt></ruby>です。</>,
     romaji: "Are wa, eki no chikaku no shoutengai desu.",
-    translation: "Itu adalah kawasan pertokoan dekat stasiun.",
+    translation: "Itu kawasan pertokoan dekat stasiun.",
     audioFileName: "irodori-starter-14-a05-l01.mp3",
   },
   {
