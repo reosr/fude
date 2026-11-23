@@ -868,17 +868,22 @@ return (
                 {verbTypeLabel(v.type)}
               </span>
               <div className="relative z-10 flex flex-col items-center justify-center w-full">
-                <div className="w-full mb-3">
+                <JapaneseReading
+                  kana={v.kana}
+                  romaji={v.romaji}
+                  translation={v.meaning}
+                  contentClassName="block w-full text-center"
+                  kanaClassName="mt-1 font-mincho text-sm text-[#EAE6DD]/90 truncate"
+                  romajiClassName="mt-1 text-xs text-[#A3A099] truncate"
+                  translationClassName="mt-2 text-sm font-bold text-[#EAE6DD] leading-snug line-clamp-2"
+                >
                   <FitText maxSize={44} minSize={18} className="font-mincho text-[#EAE6DD] font-bold group-hover:text-[#C93438] transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     {v.kanji}
                   </FitText>
-                </div>
-                <p className="text-sm text-[#EAE6DD]/90 w-full truncate">{v.kana}</p>
-                <p className="text-xs text-[#A3A099] mb-2 w-full truncate">({v.romaji})</p>
-                <span className={`text-[10px] font-bold px-2 py-1 rounded-md border mb-2 ${transitivityClass(v)}`}>
+                </JapaneseReading>
+                <span className={`mt-2 text-[10px] font-bold px-2 py-1 rounded-md border ${transitivityClass(v)}`}>
                   {transitivityLabel(v)}
                 </span>
-                <p className="text-sm font-bold text-[#EAE6DD] leading-snug line-clamp-2">{v.meaning}</p>
                 {matchingForm && (
                   <p className="mt-2 text-xs text-[#E7C46A] leading-relaxed">
                     Bentuk cocok: <span className="font-mincho text-sm [&_rt]:text-[0.7em] [&_rt]:text-[#D6AD4F]" dangerouslySetInnerHTML={{ __html: matchingForm.ruby }} />
@@ -915,7 +920,6 @@ return (
               <div className="flex items-center gap-2 min-w-0">
                 <span className="text-[10px] font-bold px-2 py-1 rounded-md border border-[#B8860B]/40 bg-[#B8860B]/10 text-[#E7C46A] shrink-0">{selectedVerb.jlptLevel}</span>
                 <span className={`text-xs font-bold px-2 py-1 rounded-md border uppercase shrink-0 ${typeBadgeClass(selectedVerb.type)}`}>{verbTypeLabel(selectedVerb.type)}</span>
-                <span className="text-sm font-medium text-[#A3A099] truncate">{selectedVerb.meaning}</span>
               </div>
               <button onClick={() => setSelectedVerb(null)} className="text-[#A3A099] hover:text-[#EAE6DD] transition-colors p-1.5 bg-[#262523] rounded-full shrink-0">
                 <X size={20} />
@@ -925,11 +929,17 @@ return (
             <div ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overscroll-contain custom-scrollbar relative z-10">
               <div className="md:sticky md:top-0 md:z-30 p-4 sm:p-5 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 border-b border-[#4A4743] bg-[#1E1D1B]/95 backdrop-blur-xl shadow-xl md:shrink-0">
                 <div className="w-full sm:flex-1 sm:max-w-md min-w-0 text-center">
-                  <h3 className="mb-1 md:mb-2 drop-shadow-md">
+                  <JapaneseReading
+                    kana={selectedVerb.kana}
+                    romaji={selectedVerb.romaji}
+                    translation={selectedVerb.meaning}
+                    contentClassName="block w-full text-center"
+                    kanaClassName="mt-1 font-mincho text-xl sm:text-2xl md:text-3xl text-[#D6AD4F] leading-relaxed break-words"
+                    romajiClassName="mt-1 text-sm md:text-lg text-[#A3A099] break-words"
+                    translationClassName="mt-2 text-sm md:text-base text-[#A3A099] leading-relaxed break-words"
+                  >
                     <FitText maxSize={88} minSize={28} className="font-mincho text-[#EAE6DD]">{selectedVerb.kanji}</FitText>
-                  </h3>
-                  <p className="text-xl sm:text-2xl md:text-3xl text-[#C93438] mb-1 font-medium break-words">{selectedVerb.kana}</p>
-                  <p className="text-sm md:text-lg text-[#A3A099] break-words">{selectedVerb.romaji}</p>
+                  </JapaneseReading>
                 </div>
                 <div
                   className="relative h-auto min-h-[148px] bg-[#121110] rounded-2xl p-2 flex items-center justify-center border border-[#33312E] shadow-inner shrink-0 overflow-visible"
@@ -1063,12 +1073,13 @@ return (
                             <div key={`${example.sourceId || "example"}-${index}`} className="rounded-lg border border-[#33312E] bg-[#1E1D1B] p-3">
                               <JapaneseReading
                                 html={furiganaToSafeHtml(example.furigana || example.ja)}
+                                romaji={romajiText}
+                                translation={example.translation}
                                 contentClassName="text-base md:text-lg text-[#EAE6DD] font-mincho leading-relaxed"
-                                kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
-                                showRomaji={false}
+                                kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F] leading-relaxed"
+                                romajiClassName="mt-1 text-sm text-[#B8860B] italic break-words"
+                                translationClassName="mt-2 text-sm text-[#D0CAC0] leading-relaxed"
                               />
-                              {romajiText && <p className="text-xs text-[#B8860B] italic mt-1 break-words">{romajiText}</p>}
-                              <p className="text-sm text-[#D0CAC0] mt-2">{example.translation}</p>
                               {example.sourceUrl && (
                                 <a href={example.sourceUrl} target="_blank" rel="noreferrer" className="inline-block text-[10px] text-[#A3A099] underline underline-offset-2 mt-2 hover:text-[#EAE6DD]">
                                   Sumber kalimat: Tatoeba #{example.sourceId}
