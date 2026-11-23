@@ -444,9 +444,7 @@ export default function IrodoriStarterLessonFivePage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 5
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            I like udon.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya suka udon.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             うどんが<ruby>好き<rt>す</rt></ruby>
           </p>
