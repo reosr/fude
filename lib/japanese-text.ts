@@ -72,7 +72,23 @@ export function segmentTextByReadingIndex(value: string): JapaneseReadingSegment
 
   while (cursor < value.length) {
     const candidates = READINGS_BY_INITIAL.get(value[cursor]);
-    const matched = candidates?.find(([word]) => value.startsWith(word, cursor));
+    const matched = candidates?.find(([word]) => {
+      if (!value.startsWith(word, cursor)) return false;
+
+      // Bacaan satu kanji sering berubah ketika menjadi bagian kata majemuk
+      // (contoh 上手, 何人, 今年). Jangan tempelkan bacaan kata tunggal di
+      // tengah gabungan kanji/angka; gunakan entri kata lengkap jika tersedia.
+      if (Array.from(word).length === 1 && KANJI_RE.test(word)) {
+        const previous = cursor > 0 ? value[cursor - 1] : "";
+        const next = value[cursor + word.length] ?? "";
+        const isKanjiOrNumber = (char: string) =>
+          Boolean(char) && (KANJI_RE.test(char) || /[0-9０-９]/.test(char));
+
+        if (isKanjiOrNumber(previous) || isKanjiOrNumber(next)) return false;
+      }
+
+      return true;
+    });
 
     if (matched) {
       if (plain) {
