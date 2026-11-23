@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { toHiragana } from "wanakana";
 import type { ReactNode } from "react";
 import { extractKanaFromReactNode } from "@/lib/japanese-text";
 import { Gauge, Play, Square, User, Volume2 } from "lucide-react";
@@ -252,7 +253,7 @@ export default function IrodoriConversation({
             (candidate) => candidate.id === utterance.speakerId
           );
           const isActive = activeIndex === index;
-          const kanaReading = extractKanaFromReactNode(utterance.japanese);
+          const kanaReading = toHiragana(utterance.romaji) || extractKanaFromReactNode(utterance.japanese)?.kana || "";
 
           return (
             <article
@@ -288,9 +289,9 @@ export default function IrodoriConversation({
                   >
                     {utterance.japanese}
                   </div>
-                  {kanaReading?.hasKanji && (
+                  {kanaReading && (
                     <p className="mt-1 font-mincho text-sm leading-relaxed text-[#D6AD4F]">
-                      （{kanaReading.kana}）
+                      （{kanaReading}）
                     </p>
                   )}
                   <p className="mt-1 text-xs italic text-[#B8860B]">
