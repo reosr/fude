@@ -238,7 +238,7 @@
                 "で"
               ],
               "answer": 1,
-              "explanation": "Partikel は menandai topik kalimat. Polanya N1 は N2 です, yaitu 'N1 adalah N2'."
+              "explanation": "Partikel は menandai topik kalimat. Pola dasarnya adalah [topik] + は + [identitas atau keterangan]. Contohnya, わたしはインドネシア人です berarti “Saya orang Indonesia”."
             },
             {
               "question": "これは <ruby>田中<rt>たなか</rt></ruby>さん（　）<ruby>本<rt>ほん</rt></ruby>です。",
@@ -403,7 +403,7 @@
                 "<ruby>速<rt>はや</rt></ruby>い"
               ],
               "answer": 3,
-              "explanation": "Pola N1よりN2のほうが～ digunakan untuk membandingkan dua hal. Bentuk sifat yang tepat di sini adalah 速いです."
+              "explanation": "Pola ～より～のほうが digunakan untuk membandingkan dua hal. Bagian setelah のほうが menyatakan hal yang lebih ... . Bentuk yang tepat pada soal ini adalah 速いです (lebih cepat)."
             },
             {
               "question": "きのうの テストは（　）です。",
@@ -436,7 +436,7 @@
                 "ます"
               ],
               "answer": 2,
-              "explanation": "Pola Vます-stem + たい menyatakan keinginan melakukan sesuatu. 勉強します berubah menjadi 勉強したいです."
+              "explanation": "Pangkal kata kerja bentuk ます + たい digunakan untuk menyatakan keinginan melakukan sesuatu. Caranya, hilangkan ます lalu tambahkan たい. 勉強します berubah menjadi 勉強したいです."
             },
             {
               "question": "<ruby>本<rt>ほん</rt></ruby>を <ruby>買<rt>か</rt></ruby>い（　）デパートへ <ruby>行<rt>い</rt></ruby>きます。",
@@ -447,7 +447,7 @@
                 "が"
               ],
               "answer": 0,
-              "explanation": "Pola Vます-stem + に行きます menunjukkan tujuan melakukan suatu kegiatan. 買いに行きます berarti pergi untuk membeli."
+              "explanation": "Pangkal kata kerja bentuk ます + に行きます digunakan untuk menyatakan tujuan pergi melakukan suatu kegiatan. 買います berubah menjadi 買いに行きます, artinya pergi untuk membeli."
             },
             {
               "question": "ここに <ruby>名前<rt>なまえ</rt></ruby>を（　）ください。",
@@ -524,7 +524,7 @@
                 "します"
               ],
               "answer": 1,
-              "explanation": "Pola V辞書形 + ことができます menyatakan kemampuan melakukan sesuatu. 読むことができます berarti bisa membaca."
+              "explanation": "Bentuk kamus kata kerja + ことができます digunakan untuk menyatakan kemampuan melakukan suatu kegiatan. 読むことができます berarti bisa membaca."
             },
             {
               "question": "<ruby>趣味<rt>しゅみ</rt></ruby>は <ruby>本<rt>ほん</rt></ruby>を <ruby>読<rt>よ</rt></ruby>む（　）です。",
@@ -535,7 +535,7 @@
                 "ため"
               ],
               "answer": 2,
-              "explanation": "Pola V辞書形 + ことです digunakan untuk menjelaskan kegiatan sebagai hobi. 本を読むこと berarti membaca buku."
+              "explanation": "Bentuk kamus kata kerja + ことです dapat digunakan untuk menjelaskan kegiatan yang menjadi hobi. 本を読むこと berarti membaca buku."
             },
             {
               "question": "<ruby>寝<rt>ね</rt></ruby>る（　）、<ruby>歯<rt>は</rt></ruby>を みがきます。",
@@ -546,7 +546,7 @@
                 "から"
               ],
               "answer": 0,
-              "explanation": "Pola V辞書形 + 前に menyatakan kegiatan yang dilakukan sebelum kegiatan lain. 寝る前に berarti sebelum tidur."
+              "explanation": "Bentuk kamus kata kerja + 前に menyatakan kegiatan yang dilakukan sebelum kegiatan lain. 寝る前に berarti sebelum tidur."
             },
             {
               "question": "<ruby>日本<rt>にほん</rt></ruby>へ <ruby>行<rt>い</rt></ruby>ったことが（　）。",
@@ -579,7 +579,7 @@
                 "います"
               ],
               "answer": 1,
-              "explanation": "Pola い-adjective くなります menyatakan perubahan keadaan. 暖かくなります berarti menjadi hangat."
+              "explanation": "Kata sifat berakhiran い berubah menjadi bentuk ～く + なります untuk menyatakan perubahan keadaan. 暖かくなります berarti menjadi hangat."
             },
             {
               "question": "これは わたしが きのう（　）<ruby>本<rt>ほん</rt></ruby>です。",
