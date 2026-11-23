@@ -15,9 +15,9 @@ const speakers = IRODORI_SPEAKERS;
 const lessonId = "elementary1-14";
 
 const phoneCallConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>おはようございます。ユイです。電車が遅れていて、15分ぐらい遅れます。</>,romaji:"Ohayou gozaimasu. Yui desu. Densha ga okurete ite, juugo-fun gurai okuremasu.",translation:"Selamat pagi. Saya Yui. Keretanya terlambat, jadi saya akan terlambat sekitar 15 menit.",audioFileName:"irodori-elementary1-14-a01-l01.mp3"},
-{speakerId:"kenji",japanese:<>わかりました。気をつけて来てください。</>,romaji:"Wakarimashita. Ki o tsukete kite kudasai.",translation:"Baik, saya mengerti. Hati-hati di perjalanan.",audioFileName:"irodori-elementary1-14-a01-l02.mp3"},
-{speakerId:"yui",japanese:<>すみません。みなさんに伝えていただけますか。</>,romaji:"Sumimasen. Minasan ni tsutaete itadakemasu ka?",translation:"Maaf. Bisakah tolong sampaikan kepada semuanya?",audioFileName:"irodori-elementary1-14-a01-l03.mp3"},
+{speakerId:"yui",japanese:<>おはようございます。ユイです。電車が遅れていて、15分ぐらい遅れます。</>,romaji:"Ohayou gozaimasu. Yui desu. Densha ga okurete ite, juugo-fun gurai okuremasu.",translation:"Selamat pagi. Saya Yui. Kereta terlambat, jadi saya juga akan terlambat sekitar 15 menit.",audioFileName:"irodori-elementary1-14-a01-l01.mp3"},
+{speakerId:"kenji",japanese:<>わかりました。気をつけて来てください。</>,romaji:"Wakarimashita. Ki o tsukete kite kudasai.",translation:"Baik, saya mengerti. Hati-hati di jalan.",audioFileName:"irodori-elementary1-14-a01-l02.mp3"},
+{speakerId:"yui",japanese:<>すみません。みなさんに伝えていただけますか。</>,romaji:"Sumimasen. Minasan ni tsutaete itadakemasu ka?",translation:"Maaf. Bisa tolong sampaikan ke semua orang?",audioFileName:"irodori-elementary1-14-a01-l03.mp3"},
 {speakerId:"kenji",japanese:<>はい、伝えておきます。</>,romaji:"Hai, tsutaete okimasu.",translation:"Ya, akan saya sampaikan.",audioFileName:"irodori-elementary1-14-a01-l04.mp3"},
 ];
 
@@ -29,23 +29,23 @@ const askingBriefPermissionConversation: IrodoriUtterance[] = [
 ];
 
 const askingDayOffConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>すみません。来週の月曜日、午後から休みを取ってもいいでしょうか。</>,romaji:"Sumimasen. Raishuu no getsuyoubi, gogo kara yasumi o totte mo ii deshou ka?",translation:"Permisi. Apakah saya boleh mengambil cuti mulai Senin siang minggu depan?",audioFileName:"irodori-elementary1-14-a03-l01.mp3"},
+{speakerId:"yui",japanese:<>すみません。来週の月曜日、午後から休みを取ってもいいでしょうか。</>,romaji:"Sumimasen. Raishuu no getsuyoubi, gogo kara yasumi o totte mo ii deshou ka?",translation:"Permisi. Bolehkah saya mengambil cuti mulai Senin siang minggu depan?",audioFileName:"irodori-elementary1-14-a03-l01.mp3"},
 {speakerId:"kenji",japanese:<>何か用事がありますか。</>,romaji:"Nanika youji ga arimasu ka?",translation:"Apakah ada keperluan?",audioFileName:"irodori-elementary1-14-a03-l02.mp3"},
 {speakerId:"yui",japanese:<>市役所に行かなければならないんです。</>,romaji:"Shiyakusho ni ikanakereba naranai n desu.",translation:"Saya harus pergi ke kantor pemerintahan kota.",audioFileName:"irodori-elementary1-14-a03-l03.mp3"},
-{speakerId:"kenji",japanese:<>わかりました。休暇届を出してください。</>,romaji:"Wakarimashita. Kyuuka todoke o dashite kudasai.",translation:"Baik. Tolong serahkan formulir permohonan cuti.",audioFileName:"irodori-elementary1-14-a03-l04.mp3"},
+{speakerId:"kenji",japanese:<>わかりました。休暇届を出してください。</>,romaji:"Wakarimashita. Kyuuka todoke o dashite kudasai.",translation:"Baik. Tolong serahkan formulir cuti.",audioFileName:"irodori-elementary1-14-a03-l04.mp3"},
 ];
 
 const fillingLeaveFormConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>休暇届の書き方を教えてもらえませんか。</>,romaji:"Kyuuka todoke no kakikata o oshiete moraemasen ka?",translation:"Bisakah Anda menjelaskan cara mengisi formulir cuti?",audioFileName:"irodori-elementary1-14-a04-l01.mp3"},
-{speakerId:"akiko",japanese:<>はい。ここに所属チームと氏名を書いてください。</>,romaji:"Hai. Koko ni shozoku chiimu to shimei o kaite kudasai.",translation:"Tentu. Tuliskan tim bagian dan nama lengkap di sini.",audioFileName:"irodori-elementary1-14-a04-l02.mp3"},
+{speakerId:"akiko",japanese:<>はい。ここに所属チームと氏名を書いてください。</>,romaji:"Hai. Koko ni shozoku chiimu to shimei o kaite kudasai.",translation:"Tentu. Tuliskan nama tim/bagian dan nama lengkap di sini.",audioFileName:"irodori-elementary1-14-a04-l02.mp3"},
 {speakerId:"sota",japanese:<>休む期間は、どこに書きますか。</>,romaji:"Yasumu kikan wa, doko ni kakimasu ka?",translation:"Di mana saya menuliskan periode cutinya?",audioFileName:"irodori-elementary1-14-a04-l03.mp3"},
-{speakerId:"akiko",japanese:<>この「期間」のところです。理由と休み中の連絡先も書いてください。</>,romaji:"Kono 'kikan' no tokoro desu. Riyuu to yasumi-chuu no renrakusaki mo kaite kudasai.",translation:"Di bagian 'periode' ini. Tuliskan juga alasan dan kontak selama cuti.",audioFileName:"irodori-elementary1-14-a04-l04.mp3"},
+{speakerId:"akiko",japanese:<>この「期間」のところです。理由と休み中の連絡先も書いてください。</>,romaji:"Kono 'kikan' no tokoro desu. Riyuu to yasumi-chuu no renrakusaki mo kaite kudasai.",translation:"Isi bagian “periode” ini. Tulis juga alasan dan informasi kontak selama cuti.",audioFileName:"irodori-elementary1-14-a04-l04.mp3"},
 {speakerId:"sota",japanese:<>わかりました。ありがとうございます。</>,romaji:"Wakarimashita. Arigatou gozaimasu.",translation:"Saya mengerti. Terima kasih.",audioFileName:"irodori-elementary1-14-a04-l05.mp3"},
 ];
 
 const afterReturnConversation: IrodoriUtterance[] = [
-{speakerId:"kenji",japanese:<>昨日はお休みでしたね。用事は済みましたか。</>,romaji:"Kinou wa oyasumi deshita ne. Youji wa sumimashita ka?",translation:"Kemarin kamu libur, ya. Apakah keperluannya sudah selesai?",audioFileName:"irodori-elementary1-14-a05-l01.mp3"},
-{speakerId:"yui",japanese:<>はい。おかげさまで、終わりました。</>,romaji:"Hai. Okagesama de, owarimashita.",translation:"Ya. Berkat bantuan dan pengertiannya, sudah selesai.",audioFileName:"irodori-elementary1-14-a05-l02.mp3"},
+{speakerId:"kenji",japanese:<>昨日はお休みでしたね。用事は済みましたか。</>,romaji:"Kinou wa oyasumi deshita ne. Youji wa sumimashita ka?",translation:"Kemarin kamu libur, ya. Urusannya sudah selesai?",audioFileName:"irodori-elementary1-14-a05-l01.mp3"},
+{speakerId:"yui",japanese:<>はい。おかげさまで、終わりました。</>,romaji:"Hai. Okagesama de, owarimashita.",translation:"Ya, urusan saya sudah selesai. Terima kasih.",audioFileName:"irodori-elementary1-14-a05-l02.mp3"},
 {speakerId:"kenji",japanese:<>それはよかったです。</>,romaji:"Sore wa yokatta desu.",translation:"Syukurlah kalau begitu.",audioFileName:"irodori-elementary1-14-a05-l03.mp3"},
 {speakerId:"yui",japanese:<>昨日は、休んですみませんでした。ありがとうございました。</>,romaji:"Kinou wa, yasunde sumimasen deshita. Arigatou gozaimashita.",translation:"Maaf kemarin saya tidak masuk. Terima kasih atas pengertiannya.",audioFileName:"irodori-elementary1-14-a05-l04.mp3"},
 ];
@@ -155,7 +155,7 @@ const simulations=[
 {title:"02 · Meminta izin sebentar",heading:"Meminta izin mengambil istirahat singkat",prompt:"Kamu perlu beristirahat sebentar dan meminta izin kepada rekan kerja.",japanese:<>少し休憩してもいいですか。</>,translation:"Bolehkah saya beristirahat sebentar?",options:[{key:"a",label:"少し休憩してもいいですか。",meaning:"Meminta izin dengan V-てもいいですか."},{key:"b",label:"少し休憩しなければなりません。",meaning:"Menyatakan keharusan, bukan meminta izin."},{key:"c",label:"少し休憩しました。",meaning:"Menyatakan sudah beristirahat."}],answer:"a",explanation:"休憩する berubah menjadi 休憩して, lalu ditambah もいいですか untuk meminta izin."},
 {title:"03 · Meminta izin cuti",heading:"Berbicara kepada atasan lebih dahulu",prompt:"Kamu perlu pergi ke kantor pemerintahan kota pada Senin siang minggu depan. Pilih permintaan izin yang sopan dan alasan yang sesuai.",japanese:<>来週の月曜日、午後から休みを取ってもいいでしょうか。市役所に行かなければならないんです。</>,translation:"Bolehkah saya cuti mulai Senin siang minggu depan? Saya harus pergi ke kantor pemerintahan kota.",options:[{key:"a",label:"休みを取ってもいいでしょうか。市役所に行かなければならないんです。",meaning:"Meminta izin dengan sopan dan menjelaskan alasan."},{key:"b",label:"休みを取ってください。市役所に行きますか。",meaning:"Memerintah orang lain dan bertanya."},{key:"c",label:"休みを取ると、いいです。",meaning:"Tidak membentuk permintaan izin yang tepat."}],answer:"a",explanation:"てもいいでしょうか adalah permintaan izin yang sopan; なければならないんです menjelaskan sesuatu yang harus dilakukan."},
 {title:"04 · Memahami formulir cuti",heading:"Menemukan bagian yang benar",prompt:"Kamu perlu menuliskan alasan mengambil cuti. Bagian formulir mana yang harus diisi?",japanese:<>理由</>,translation:"Alasan.",options:[{key:"a",label:"理由",meaning:"Bagian untuk menuliskan alasan."},{key:"b",label:"氏名",meaning:"Bagian nama lengkap."},{key:"c",label:"期間",meaning:"Bagian periode cuti."}],answer:"a",explanation:"理由（りゆう）berarti alasan. Pastikan mengisi formulir sesuai aturan tempat kerja."},
-{title:"05 · Menyampaikan pesan",heading:"Meminta rekan menyampaikan kabar",prompt:"Kamu sudah memberi kabar kepada satu rekan dan ingin memintanya menyampaikan informasi itu kepada seluruh tim.",japanese:<>みなさんに伝えていただけますか。</>,translation:"Bisakah tolong sampaikan kepada semuanya?",options:[{key:"a",label:"みなさんに伝えていただけますか。",meaning:"Meminta bantuan menyampaikan informasi dengan sopan."},{key:"b",label:"みなさんが帰ってもいいですか。",meaning:"Menanyakan izin orang lain untuk pulang."},{key:"c",label:"みなさんの理由を書きます。",meaning:"Mengatakan akan menulis alasan semua orang."}],answer:"a",explanation:"伝えていただけますか adalah permintaan sopan agar lawan bicara menyampaikan informasi."},
+{title:"05 · Menyampaikan pesan",heading:"Meminta rekan menyampaikan kabar",prompt:"Kamu sudah memberi kabar kepada satu rekan dan ingin memintanya menyampaikan informasi itu kepada seluruh tim.",japanese:<>みなさんに伝えていただけますか。</>,translation:"Bisa tolong sampaikan ke semua orang?",options:[{key:"a",label:"みなさんに伝えていただけますか。",meaning:"Meminta bantuan menyampaikan informasi dengan sopan."},{key:"b",label:"みなさんが帰ってもいいですか。",meaning:"Menanyakan izin orang lain untuk pulang."},{key:"c",label:"みなさんの理由を書きます。",meaning:"Mengatakan akan menulis alasan semua orang."}],answer:"a",explanation:"伝えていただけますか adalah permintaan sopan agar lawan bicara menyampaikan informasi."},
 ];
 
 export default function IrodoriElementaryOneLessonFourteenPage() {
