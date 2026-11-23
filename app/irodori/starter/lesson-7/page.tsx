@@ -898,7 +898,7 @@ export default function IrodoriStarterLessonSevenPage() {
                 { jp: "予約", reading: "よやく", meaning: "Timer", detail: "Mengatur waktu mulai" },
               ].map((item) => (
                 <div
-                  key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
+                  key={item.jp}
                   className="rounded-lg border border-white/[0.07] bg-black/15 p-3"
                 >
                   <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
@@ -933,19 +933,20 @@ export default function IrodoriStarterLessonSevenPage() {
                 { jp: "停止", reading: "ていし", meaning: "Berhenti", icon: "⏹️" },
               ].map((item) => (
                 <div
-                  key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
+                  key={item.jp}
                   className="rounded-lg border border-white/[0.07] bg-black/15 p-3 text-center"
                 >
                   <span className="text-xl">{item.icon}</span>
-                  <p className="mt-1 font-mincho text-xl font-black text-[#F1EBDD]">
-                    {item.jp === "冷房" ? <ruby>冷房<rt>れいぼう</rt></ruby> :
-                     item.jp === "暖房" ? <ruby>暖房<rt>だんぼう</rt></ruby> :
-                     item.jp === "除湿" ? <ruby>除湿<rt>じょしつ</rt></ruby> :
-                     item.jp === "自動" ? <ruby>自動<rt>じどう</rt></ruby> :
-                     item.jp === "温度" ? <ruby>温度<rt>おんど</rt></ruby> :
-                     <ruby>停止<rt>ていし</rt></ruby>}
-                  </p>
-                  <p className="mt-1 text-xs font-bold text-[#D9B66D]">{item.meaning}</p>
+                  <JapaneseVocabularyReading
+                    reading={item.reading}
+                    meaning={item.meaning}
+                    contentClassName="mt-1 font-mincho text-xl font-black leading-relaxed text-[#F1EBDD]"
+                    kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+                    romajiClassName="mt-1 text-sm italic text-[#B8860B]"
+                    translationClassName="mt-2 text-xs font-bold text-[#D9B66D]"
+                  >
+                    {item.jp}
+                  </JapaneseVocabularyReading>
                 </div>
               ))}
             </div>
