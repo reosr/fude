@@ -15,7 +15,6 @@ interface Props {
   showRomaji?: boolean;
   showKanaForKanaOnly?: boolean;
   allowIndexFallback?: boolean;
-  allowIndexFallback?: boolean;
 }
 
 export default function JapaneseReading({
