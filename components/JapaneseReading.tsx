@@ -136,8 +136,8 @@ export default function JapaneseReading({
 
     if (displayHtml !== undefined) {
       const particleAwareHtml = displayHtml
-        .replace(/<\\/ruby>(\\s*)は/g, "</ruby>$1わ")
-        .replace(/<\\/ruby>(\\s*)へ/g, "</ruby>$1え")
+        .replace(/<\/ruby>(\s*)は/g, "</ruby>$1わ")
+        .replace(/<\/ruby>(\s*)へ/g, "</ruby>$1え")
         .replace(/こんにちは/g, "こんにちわ")
         .replace(/こんばんは/g, "こんばんわ")
         .replace(/を/g, "お");
