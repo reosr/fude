@@ -438,9 +438,7 @@ export default function IrodoriStarterLessonSixPage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 6
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            Cheeseburger, please.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya pesan cheeseburger.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             チーズバーガー、ください
           </p>
