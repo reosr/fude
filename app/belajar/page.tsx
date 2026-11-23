@@ -788,12 +788,14 @@ const findWordAt = (index: number): string | null => {
                       <div key={index} className="bg-[#121110]/50 rounded-lg p-4 text-sm border border-[#33312E]/50">
                         <JapaneseReading
                           html={ex.kanji}
+                          romaji={getRomaji(ex.kanji, babData.bab)}
+                          translation={<span dangerouslySetInnerHTML={{ __html: ex.id }} />}
                           contentClassName="text-[#EAE6DD] text-lg md:text-2xl font-mincho leading-[2.8] pt-2 tracking-wide mb-1 [&_rt]:text-[0.5em]"
-                          kanaClassName="mt-1 font-mincho text-sm md:text-base leading-relaxed text-[#D6AD4F]"
-                          showRomaji={false}
+                          kanaClassName="mt-2 font-mincho text-base md:text-lg leading-relaxed text-[#D6AD4F]"
+                          romajiClassName="mt-1 text-sm md:text-base italic tracking-wide text-[#B8860B]"
+                          translationClassName="mt-3 border-t border-[#333132]/50 pt-3 text-sm leading-6 text-[#A3A099]"
+                          allowIndexFallback
                         />
-                        <p className="text-sm text-[#B8860B] mb-3 italic tracking-wide">{getRomaji(ex.kanji, babData.bab)}</p>
-                        <div className="text-[#A3A099] border-t border-[#333132]/50 pt-3" dangerouslySetInnerHTML={{ __html: ex.id }} />
                       </div>
                     ))}
                   </div>
