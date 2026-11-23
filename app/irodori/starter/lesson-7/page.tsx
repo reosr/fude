@@ -16,7 +16,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
 import JapaneseReading from "@/components/JapaneseReading";
 import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
@@ -28,63 +28,63 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const houseTourConversation: IrodoriUtterance[] = [
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>どうぞ。<ruby>入<rt>はい</rt></ruby>ってください。</>,
     romaji: "Douzo. Haitte kudasai.",
     translation: "Silakan masuk.",
     audioFileName: "irodori-starter-07-a01-l01.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>ありがとうございます。</>,
     romaji: "Arigatou gozaimasu.",
     translation: "Terima kasih.",
     audioFileName: "irodori-starter-07-a01-l02.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>ここは<ruby>玄関<rt>げんかん</rt></ruby>です。くつを<ruby>脱<rt>ぬ</rt></ruby>いでください。</>,
     romaji: "Koko wa genkan desu. Kutsu o nuide kudasai.",
     translation: "Ini area pintu masuk. Silakan lepas sepatu.",
     audioFileName: "irodori-starter-07-a01-l03.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>はい、わかりました。</>,
     romaji: "Hai, wakarimashita.",
     translation: "Baik, saya mengerti.",
     audioFileName: "irodori-starter-07-a01-l04.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>ここは<ruby>台所<rt>だいどころ</rt></ruby>です。<ruby>一階<rt>いっかい</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>が<ruby>四<rt>よっ</rt></ruby>つあります。</>,
     romaji: "Koko wa daidokoro desu. Ikkai ni heya ga yottsu arimasu.",
     translation: "Ini dapur. Di lantai satu ada empat ruangan.",
     audioFileName: "irodori-starter-07-a01-l05.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>あそこは<ruby>何<rt>なん</rt></ruby>ですか？</>,
     romaji: "Asoko wa nan desu ka?",
     translation: "Tempat di sana itu apa?",
     audioFileName: "irodori-starter-07-a01-l06.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>あそこは<ruby>居間<rt>いま</rt></ruby>です。ここに<ruby>階段<rt>かいだん</rt></ruby>があります。</>,
     romaji: "Asoko wa shokudou desu. Koko ni kaidan ga arimasu.",
     translation: "Itu ruang keluarga. Di sini ada tangga.",
     audioFileName: "irodori-starter-07-a01-l07.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <><ruby>二階<rt>にかい</rt></ruby>には<ruby>何<rt>なに</rt></ruby>がありますか？</>,
     romaji: "Nikai ni nani ga arimasu ka?",
     translation: "Apa yang ada di lantai dua?",
     audioFileName: "irodori-starter-07-a01-l08.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <><ruby>二階<rt>にかい</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>が<ruby>二<rt>ふた</rt></ruby>つあります。</>,
     romaji: "Nikai ni heya ga futatsu arimasu.",
     translation: "Di lantai dua ada dua kamar.",
@@ -94,42 +94,42 @@ const houseTourConversation: IrodoriUtterance[] = [
 
 const equipmentConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>すみません。<ruby>電子<rt>でんし</rt></ruby>レンジはありますか？</>,
     romaji: "Sumimasen. Denshi renji wa arimasu ka?",
     translation: "Permisi. Apakah ada microwave?",
     audioFileName: "irodori-starter-07-a02-l01.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>はい、あります。<ruby>台所<rt>だいどころ</rt></ruby>にあります。</>,
     romaji: "Hai, arimasu. Daidokoro ni arimasu.",
     translation: "Ya, ada. Ada di dapur.",
     audioFileName: "irodori-starter-07-a02-l02.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>トースターはありますか？</>,
     romaji: "Toosutaa wa arimasu ka?",
     translation: "Apakah ada toaster?",
     audioFileName: "irodori-starter-07-a02-l03.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>トースターはありません。</>,
     romaji: "Toosutaa wa arimasen.",
     translation: "Toaster tidak ada.",
     audioFileName: "irodori-starter-07-a02-l04.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>Wi-Fiはありますか？</>,
     romaji: "Waifai wa arimasu ka?",
     translation: "Apakah ada Wi-Fi?",
     audioFileName: "irodori-starter-07-a02-l05.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>はい、ありますよ。</>,
     romaji: "Hai, arimasu yo.",
     translation: "Ya, ada.",
@@ -139,42 +139,42 @@ const equipmentConversation: IrodoriUtterance[] = [
 
 const describeHouseConversation: IrodoriUtterance[] = [
   {
-    speakerId: "akiko",
+    tokohId: "akiko",
     japanese: <>ユイさんは、どこに<ruby>住<rt>す</rt></ruby>んでいますか？</>,
     romaji: "Yui-san wa, doko ni sunde imasu ka?",
     translation: "Yui, kamu tinggal di mana?",
     audioFileName: "irodori-starter-07-a03-l01.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>あおば<ruby>町<rt>まち</rt></ruby>のアパートに<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Aoba-machi no apaato ni sunde imasu.",
     translation: "Saya tinggal di apartemen di daerah Aoba.",
     audioFileName: "irodori-starter-07-a03-l02.mp3",
   },
   {
-    speakerId: "akiko",
+    tokohId: "akiko",
     japanese: <><ruby>家<rt>いえ</rt></ruby>はどうですか？</>,
     romaji: "Ie wa dou desu ka?",
     translation: "Bagaimana rumahnya?",
     audioFileName: "irodori-starter-07-a03-l03.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>ちょっとせまいです。でも、きれいです。</>,
     romaji: "Chotto semai desu. Demo, kirei desu.",
     translation: "Agak sempit. Tetapi, bersih.",
     audioFileName: "irodori-starter-07-a03-l04.mp3",
   },
   {
-    speakerId: "akiko",
+    tokohId: "akiko",
     japanese: <>そうですか。<ruby>静<rt>しず</rt></ruby>かですか？</>,
     romaji: "Sou desu ka. Shizuka desu ka?",
     translation: "Begitu ya. Apakah tenang?",
     audioFileName: "irodori-starter-07-a03-l05.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>いいえ、あまり<ruby>静<rt>しず</rt></ruby>かじゃないです。<ruby>近<rt>ちか</rt></ruby>くに<ruby>学校<rt>がっこう</rt></ruby>があります。</>,
     romaji: "Iie, amari shizuka janai desu. Chikaku ni gakkou ga arimasu.",
     translation: "Tidak, tidak terlalu tenang. Di dekatnya ada sekolah.",
@@ -184,42 +184,42 @@ const describeHouseConversation: IrodoriUtterance[] = [
 
 const residenceConversation: IrodoriUtterance[] = [
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>ソウタさんは、どんな<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいますか？</>,
     romaji: "Souta-san wa, donna ie ni sunde imasu ka?",
     translation: "Sota, kamu tinggal di rumah seperti apa?",
     audioFileName: "irodori-starter-07-a04-l01.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>寮<rt>りょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Kaisha no ryou ni sunde imasu.",
     translation: "Saya tinggal di asrama perusahaan.",
     audioFileName: "irodori-starter-07-a04-l02.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <><ruby>広<rt>ひろ</rt></ruby>いですか？</>,
     romaji: "Hiroi desu ka?",
     translation: "Apakah luas?",
     audioFileName: "irodori-starter-07-a04-l03.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>いいえ、<ruby>広<rt>ひろ</rt></ruby>くないです。でも、とても<ruby>静<rt>しず</rt></ruby>かです。</>,
     romaji: "Iie, hirokunai desu. Demo, totemo shizuka desu.",
     translation: "Tidak, tidak luas. Tetapi sangat tenang.",
     audioFileName: "irodori-starter-07-a04-l04.mp3",
   },
   {
-    speakerId: "kenji",
+    tokohId: "kenji",
     japanese: <>そうですか。<ruby>近<rt>ちか</rt></ruby>くに<ruby>公園<rt>こうえん</rt></ruby>がありますか？</>,
     romaji: "Sou desu ka. Chikaku ni kouen ga arimasu ka?",
     translation: "Begitu ya. Apakah ada taman di dekatnya?",
     audioFileName: "irodori-starter-07-a04-l05.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>はい、あります。</>,
     romaji: "Hai, arimasu.",
     translation: "Ya, ada.",
@@ -269,16 +269,16 @@ const appliances = [
 ];
 
 const houseAdjectives = [
-  { jp: <><ruby>広<rt>ひろ</rt></ruby>い</>, reading: "hiroi", meaning: "Luas", opposite: "せまい", type: "I-adjective" },
-  { jp: "せまい", reading: "semai", meaning: "Sempit", opposite: "ひろい", type: "I-adjective" },
-  { jp: <><ruby>大<rt>おお</rt></ruby>きい</>, reading: "ookii", meaning: "Besar", opposite: "ちいさい", type: "I-adjective" },
-  { jp: <><ruby>小<rt>ちい</rt></ruby>さい</>, reading: "chiisai", meaning: "Kecil", opposite: "おおきい", type: "I-adjective" },
-  { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: "ふるい", type: "I-adjective" },
-  { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: "あたらしい", type: "I-adjective" },
-  { jp: <><ruby>静<rt>しず</rt></ruby>か</>, reading: "shizuka", meaning: "Tenang", opposite: "うるさい", type: "Na-adjective" },
-  { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: "しずか", type: "I-adjective" },
-  { jp: "きれい", reading: "kirei", meaning: "Bersih / indah", opposite: "きたない", type: "Na-adjective" },
-  { jp: "きたない", reading: "kitanai", meaning: "Kotor", opposite: "きれい", type: "I-adjective" },
+  { jp: <><ruby>広<rt>ひろ</rt></ruby>い</>, reading: "hiroi", meaning: "Luas", opposite: "せまい", type: "kata sifat -i" },
+  { jp: "せまい", reading: "semai", meaning: "Sempit", opposite: "ひろい", type: "kata sifat -i" },
+  { jp: <><ruby>大<rt>おお</rt></ruby>きい</>, reading: "ookii", meaning: "Besar", opposite: "ちいさい", type: "kata sifat -i" },
+  { jp: <><ruby>小<rt>ちい</rt></ruby>さい</>, reading: "chiisai", meaning: "Kecil", opposite: "おおきい", type: "kata sifat -i" },
+  { jp: <><ruby>新<rt>あたら</rt></ruby>しい</>, reading: "atarashii", meaning: "Baru", opposite: "ふるい", type: "kata sifat -i" },
+  { jp: <><ruby>古<rt>ふる</rt></ruby>い</>, reading: "furui", meaning: "Lama / tua", opposite: "あたらしい", type: "kata sifat -i" },
+  { jp: <><ruby>静<rt>しず</rt></ruby>か</>, reading: "shizuka", meaning: "Tenang", opposite: "うるさい", type: "kata sifat -na" },
+  { jp: "うるさい", reading: "urusai", meaning: "Berisik", opposite: "しずか", type: "kata sifat -i" },
+  { jp: "きれい", reading: "kirei", meaning: "Bersih / indah", opposite: "きたない", type: "kata sifat -na" },
+  { jp: "きたない", reading: "kitanai", meaning: "Kotor", opposite: "きれい", type: "kata sifat -i" },
 ];
 
 const residences = [
@@ -397,7 +397,7 @@ const quizQuestions: {
   },
 ];
 
-export default function IrodoriStarterLessonSevenPage() {
+export default function IrodoriPemulaLessonSevenPage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [washerPower, setWasherPower] = useState("入");
@@ -470,7 +470,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
-              5 target Can-do
+              5 target target komunikasi
             </span>
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
               4 dialog orisinal
@@ -513,7 +513,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 01
+              KEGIATAN 01
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Mengikuti tur rumah
@@ -528,7 +528,7 @@ export default function IrodoriStarterLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Tur rumah contoh"
-          speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
+          tokohs={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={houseTourConversation}
         />
         <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
@@ -660,7 +660,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 02
+              KEGIATAN 02
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Mengecek fasilitas dan perlengkapan
@@ -674,7 +674,7 @@ export default function IrodoriStarterLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene B · Mengecek fasilitas kamar"
-          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={equipmentConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -728,7 +728,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 03
+              KEGIATAN 03
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Menjelaskan kondisi rumah
@@ -743,7 +743,7 @@ export default function IrodoriStarterLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene C · Bercerita tentang rumah fiktif"
-          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.yui]}
+          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.yui]}
           utterances={describeHouseConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -802,7 +802,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 04
+              KEGIATAN 04
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Mengenali jenis tempat tinggal
@@ -817,7 +817,7 @@ export default function IrodoriStarterLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene D · Membicarakan jenis hunian"
-          speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.sota]}
+          tokohs={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.sota]}
           utterances={residenceConversation}
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -865,7 +865,7 @@ export default function IrodoriStarterLessonSevenPage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 05
+              KEGIATAN 05
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Membaca tombol mesin cuci dan remote AC
@@ -1139,8 +1139,8 @@ export default function IrodoriStarterLessonSevenPage() {
               <ruby>家<rt>いえ</rt></ruby>は<ruby>静<rt>しず</rt></ruby>かです。／ちょっとせまいです。
             </p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Na-adjective menggunakan bentuk dasar tanpa な sebelum です.
-              I-adjective mempertahankan akhiran い sebelum です.
+              kata sifat -na menggunakan bentuk dasar tanpa な sebelum です.
+              kata sifat -i mempertahankan akhiran い sebelum です.
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4 sm:col-span-2">
@@ -1156,7 +1156,7 @@ export default function IrodoriStarterLessonSevenPage() {
                   <ruby>静<rt>しず</rt></ruby>かじゃないです。
                 </p>
                 <p className="mt-1 text-xs text-[#A9A398]">
-                  Tidak tenang. Na-adjective: ganti です menjadi じゃないです.
+                  Tidak tenang. kata sifat -na: ganti です menjadi じゃないです.
                 </p>
               </div>
               <div className="rounded-lg bg-black/15 p-3">
@@ -1164,7 +1164,7 @@ export default function IrodoriStarterLessonSevenPage() {
                   <ruby>広<rt>ひろ</rt></ruby>くないです。
                 </p>
                 <p className="mt-1 text-xs text-[#A9A398]">
-                  Tidak luas. I-adjective: ubah い menjadi くないです.
+                  Tidak luas. kata sifat -i: ubah い menjadi くないです.
                 </p>
               </div>
             </div>
@@ -1472,7 +1472,7 @@ export default function IrodoriStarterLessonSevenPage() {
         {!quizSubmitted || !appliancePracticeSubmitted || !appliancePracticeCorrect || !canDosRated ? (
           <p className="mt-2 text-[10px] leading-5 text-[#817A73]">
             Selesaikan kuis, jawab benar praktik tombol peralatan, dan isi
-            kelima penilaian Can-do untuk menyelesaikan pelajaran.
+            kelima penilaian target komunikasi untuk menyelesaikan pelajaran.
           </p>
         ) : null}
       </section>
