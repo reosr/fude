@@ -49,7 +49,6 @@ export default function JapaneseReading({
   const rawKana = explicitKana?.trim() || extractedReading?.kana || "";
   const normalizedKana = rawKana ? toHiragana(rawKana) : "";
   const romanization = explicitRomaji?.trim() || (normalizedKana ? toRomaji(normalizedKana) : "");
-  const hasReading = Boolean(normalizedKana);
   const showKanaLine = Boolean(
     showKana &&
     normalizedKana &&
