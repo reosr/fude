@@ -60,7 +60,7 @@ const readFestivalProgramConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>午前はダンス、午後は音楽の発表があります。</>,
     romaji: "Gozen wa dansu, gogo wa ongaku no happyou ga arimasu.",
-    translation: "Pagi ada pertunjukan tari dan sore ada penampilan musik.",
+    translation: "Pagi ada pertunjukan tari, sedangkan sore ada penampilan musik.",
     audioFileName: "irodori-elementary2-08-a01-l04.mp3",
   },
 ];
@@ -70,7 +70,7 @@ const askEventTimeAndPlaceConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>すみません。料理の紹介コーナーは、どこですか。</>,
     romaji: "Sumimasen. Ryouri no shoukai koonaa wa, doko desu ka?",
-    translation: "Permisi, di mana area pengenalan makanan?",
+    translation: "Permisi, di mana stan makanan dari berbagai negara?",
     audioFileName: "irodori-elementary2-08-a02-l01.mp3",
   },
   {
@@ -177,7 +177,7 @@ const shareFestivalExperienceConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>屋台の食べ物はどうでしたか。</>,
     romaji: "Yatai no tabemono wa dou deshita ka?",
-    translation: "Bagaimana makanan di kios festival?",
+    translation: "Bagaimana makanan di stan-stan festival?",
     audioFileName: "irodori-elementary2-08-a05-l03.mp3",
   },
   {
