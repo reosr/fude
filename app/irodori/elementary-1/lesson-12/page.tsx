@@ -133,7 +133,7 @@ type Task = {prompt:ReactNode;options:{key:string;label:ReactNode}[];answer:stri
 const practiceTasks:Task[]=[
 {prompt:<>Kalimat 「おいしそうですね」 menyatakan …</>,options:[{key:"a",label:"Kesan bahwa makanan terlihat enak."},{key:"b",label:"Kepastian setelah memakan makanan."},{key:"c",label:"Permintaan untuk membeli makanan."}],answer:"a",explanation:<>～そうです digunakan untuk menyatakan kesan atau perkiraan berdasarkan penampilan.</>},
 {prompt:<>Bentuk 「辛そうな料理」 berarti …</>,options:[{key:"a",label:"Masakan yang kelihatannya pedas."},{key:"b",label:"Masakan yang sudah dimakan."},{key:"c",label:"Masakan yang tidak pedas."}],answer:"a",explanation:<>～そうな diletakkan sebelum kata benda, misalnya 辛そうな料理.</>},
-{prompt:<>Lengkapi: 「この卵焼きは、甘___おいしいです。」</>,options:[{key:"a",label:"くて"},{key:"b",label:"くない"},{key:"c",label:"そうな"}],answer:"a",explanation:<>I-adjective berakhiran い berubah menjadi ～くて untuk menghubungkan sifat atau alasan.</>},
+{prompt:<>Lengkapi: 「この卵焼きは、甘___おいしいです。」</>,options:[{key:"a",label:"くて"},{key:"b",label:"くない"},{key:"c",label:"そうな"}],answer:"a",explanation:<>kata sifat -i berakhiran い berubah menjadi ～くて untuk menghubungkan sifat atau alasan.</>},
 {prompt:<>Apa arti 「食べてみてください」?</>,options:[{key:"a",label:"Silakan coba makan."},{key:"b",label:"Jangan makan."},{key:"c",label:"Sudah selesai makan."}],answer:"a",explanation:<>V-てみます menyatakan mencoba sesuatu untuk mengetahui seperti apa hasil atau rasanya.</>},
 {prompt:<>Pilih bentuk yang menjelaskan bahan yang terkandung di dalam masakan.</>,options:[{key:"a",label:"きのこが入っています。"},{key:"b",label:"きのこを入ってます。"},{key:"c",label:"きのこが入れます。"}],answer:"a",explanation:<>入っています menyatakan keadaan bahwa sesuatu terkandung atau berada di dalam masakan.</>},
 {prompt:<>「味は、うすくないですか。」 biasanya digunakan untuk …</>,options:[{key:"a",label:"Memastikan apakah rasa makanan tidak terlalu tawar."},{key:"b",label:"Meminta daftar harga makanan."},{key:"c",label:"Menanyakan nama orang."}],answer:"a",explanation:<>～くないですか dapat dipakai untuk menunjukkan perhatian dan memastikan apakah sesuatu terasa baik-baik saja bagi lawan bicara.</>},
@@ -179,11 +179,11 @@ export default function IrodoriElementaryOneLessonTwelvePage() {
 
  return (
  <main className="mx-auto max-w-5xl space-y-7 pb-12">
-  <Link href="/irodori/elementary-1" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"><ArrowLeft size={15}/> Kembali ke Elementary 1</Link>
+  <Link href="/irodori/elementary-1" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"><ArrowLeft size={15}/> Kembali ke Dasar 1</Link>
   <header className="relative isolate overflow-hidden rounded-[28px] border border-[#476C51]/45 bg-gradient-to-br from-[#203428] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#91B99A]/[0.08]">弁</div>
    <div className="relative z-10">
-    <p className="text-[9px] font-black tracking-[0.24em] text-[#9CC5A3]">IRODORI • ELEMENTARY 1 A2 • LESSON 12</p>
+    <p className="text-[9px] font-black tracking-[0.24em] text-[#9CC5A3]">IRODORI • DASAR 1 A2 • PELAJARAN 12</p>
     <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Bekal makan siangmu kelihatannya enak.</h1>
     <p className="mt-2 text-sm font-semibold text-[#A9CDB0]">お弁当、おいしそうですね。</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memberi kesan tentang penampilan makanan, menceritakan rasa setelah mencicipi, bertanya tentang bahan masakan, dan memahami informasi pada kemasan makanan instan.</p>
@@ -195,8 +195,8 @@ export default function IrodoriElementaryOneLessonTwelvePage() {
    </div>
   </header>
   <section className="rounded-2xl border border-[#6E9A75]/20 bg-[#1B201C]/80 p-4 md:p-5">
-   <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#A9CDB0]"/><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2></div>
-   <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target pertama mengikuti sasaran Can-do resmi Irodori. Target terakhir merupakan latihan penguatan Fude.</p>
+   <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#A9CDB0]"/><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2></div>
+   <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target pertama mengikuti sasaran target komunikasi resmi Irodori. Target terakhir merupakan latihan penguatan Fude.</p>
    <div className="mt-3 grid gap-2 sm:grid-cols-2">{canDos.map((item,index)=><article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3"><p className="text-[9px] font-black tracking-[0.15em] text-[#A9CDB0]">{index<4?"CAN-DO UTAMA":"LATIHAN PENGUATAN"} · 0{index+1}</p><p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p></article>)}</div>
   </section>
   <section className="space-y-4">
@@ -276,12 +276,12 @@ export default function IrodoriElementaryOneLessonTwelvePage() {
   <section className="rounded-2xl border border-[#6E9A75]/25 bg-gradient-to-br from-[#202D22] to-[#191817] p-5 md:p-6">
    <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#A9CDB0]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#A9CDB0]">CAN-DO CHECK</p></div>
    <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
-   <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Elementary 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
+   <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Dasar 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
    <div className="mt-4 space-y-3">{canDos.map((item,index)=><div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3"><p className="text-xs font-semibold leading-5 text-[#EAE6DD]"><span className="mr-2 text-[#A9CDB0]">{String(index+1).padStart(2,"0")}</span>{item.text}</p><div className="mt-3 flex flex-wrap gap-2">{ratingOptions.map(option=><button key={option.value} type="button" disabled={!quizSubmitted||!practiceIsCorrect||!simulationsComplete} aria-pressed={visibleRatings[item.id]===option.value} onClick={()=>{const next={...visibleRatings,[item.id]:option.value};setRatings(next);saveIrodoriSelfEvaluation(lessonId,next);}} className={"rounded-lg border px-3 py-2 text-[10px] font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-40 "+(visibleRatings[item.id]===option.value?"border-[#8EAE93]/60 bg-[#476C51]/20 text-[#CFE4D2]":"border-white/[0.08] bg-[#24221F] text-[#A3A099]")}><JapaneseReading allowIndexFallback>{option.label}</JapaneseReading></button>)}</div></div>)}</div>
    <div className="mt-5 flex flex-wrap items-center justify-between gap-3">{isCompleted?<span className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-xs font-bold text-emerald-200"><CheckCircle2 size={15}/> Pelajaran selesai</span>:<button type="button" onClick={()=>completeIrodoriLesson(lessonId)} disabled={!quizSubmitted||!practiceIsCorrect||!simulationsComplete||!canDosRated} className="inline-flex items-center gap-2 rounded-xl bg-[#426B4C] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#365A3F] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"><CheckCircle2 size={15}/> Tandai pelajaran selesai</button>}
     <Link href="/irodori/elementary-1" className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-xs font-bold text-[#C7C1B5] transition-colors hover:border-[#8EAE93]/40 hover:text-[#EAE6DD]">Daftar pelajaran <ArrowLeft size={15} className="rotate-180"/></Link>
    </div>
-   {(!quizSubmitted||!practiceIsCorrect||!simulationsComplete||!canDosRated)&&<p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian Can-do.</p>}
+   {(!quizSubmitted||!practiceIsCorrect||!simulationsComplete||!canDosRated)&&<p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian target komunikasi.</p>}
   </section>
   <p className="text-center text-[10px] leading-5 text-[#746F65]">Dialog, tokoh, label contoh, dan situasi latihan dibuat orisinal oleh Fude untuk melatih percakapan tentang makanan dan informasi kemasan.</p>
  </main>
