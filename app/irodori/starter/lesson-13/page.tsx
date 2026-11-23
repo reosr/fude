@@ -701,7 +701,7 @@ export default function IrodoriPemulaLessonThirteenPage() {
           ))}
         </div>
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p role="status" aria-live="polite" className="text-[10px] text-[#A9A398]">{signSubmitted ? signIsCorrect ? "Benar. 東口 berarti pintu keluar timur." : "Belum tepat. Ingat: 東 (higashi) berarti timur." : "Pilih papan petunjuk."}</p>
+          <p role="status" aria-live="polite" className="text-[10px] text-[#A9A398]">{signSubmitted ? signIsCorrect ? "Benar. 東口 berarti pintu keluar timur." : "Belum tepat. Ingat, 東 berarti timur." : "Pilih papan petunjuk."}</p>
           {signSubmitted ? <button type="button" onClick={() => { setSignChoice(""); setSignSubmitted(false); }} className="inline-flex items-center gap-2 rounded-lg border border-[#B8860B]/35 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]"><RefreshCw size={12}/>Ulangi</button> : <button type="button" disabled={!signChoice} onClick={() => setSignSubmitted(true)} className="rounded-lg bg-[#C93438] px-4 py-2 text-xs font-bold text-white disabled:bg-[#39342D] disabled:text-[#817A73]">Periksa tanda</button>}
         </div>
       </section>
