@@ -4,7 +4,7 @@
 import { useState, useEffect } from "react";
 import { RotateCcw, X } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
-import { formatGrammarNotation } from "@/lib/japanese-text";
+import { addRubyFromParentheticalReadings, formatGrammarNotation } from "@/lib/japanese-text";
 
 // =====================================================
 // TYPES
@@ -536,7 +536,7 @@ export default function Quiz({
   const currentQ = questions[currentIndex];
 
   return (
-    <div className="bg-[#1E1D1B] border border-[#33312E] rounded-2xl p-6 shadow-2xl relative max-h-[90vh] overflow-y-auto w-full">
+    <div className="bg-[#1E1D1B] border border-[#33312E] rounded-2xl p-4 sm:p-6 shadow-2xl relative max-h-[90dvh] overflow-y-auto w-full">
       <button
         onClick={onClose}
         className="absolute top-4 right-4 text-[#A3A099] hover:text-white transition-colors bg-[#262523] p-1.5 rounded-full"
@@ -545,23 +545,23 @@ export default function Quiz({
       </button>
 
       <div className="flex justify-between items-center mb-6 pr-8">
-        <span className="text-xs font-bold text-[#A3A099]">
+        <span className="text-sm font-bold text-[#A3A099]">
           SOAL {currentIndex + 1} DARI {questions.length}
         </span>
 
-        <span className="text-xs font-bold text-[#B8860B]">
+        <span className="text-sm font-bold text-[#B8860B]">
           Skor: {score}
         </span>
       </div>
 
       <div className="text-center mb-6">
-        <JapaneseReading html={currentQ.question} allowIndexFallback contentClassName="text-sm text-[#A3A099] mb-2 leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#A9A398]" />
+        <JapaneseReading html={addRubyFromParentheticalReadings(currentQ.question)} allowIndexFallback contentClassName="text-base text-[#C7C1B5] mb-3 leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" />
 
         <JapaneseReading
-          html={currentQ.sentence}
+          html={addRubyFromParentheticalReadings(currentQ.sentence)}
           allowIndexFallback
-          contentClassName="text-2xl font-bold text-[#EAE6DD] font-mincho leading-[2.5] [&_rt]:text-[0.5em] break-words"
-          kanaClassName="mt-1 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+          contentClassName="text-2xl md:text-3xl font-bold text-[#EAE6DD] font-mincho leading-[2.3] [&_rt]:text-[0.55em] break-words"
+          kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
           romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]"
         />
       </div>
@@ -592,9 +592,9 @@ export default function Quiz({
               className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${btnClass}`}
             >
               <JapaneseReading
-                 html={opt}
+                 html={addRubyFromParentheticalReadings(opt)}
                   allowIndexFallback
-                 contentClassName="font-mincho text-lg leading-[2] [&_rt]:text-[0.55em]"
+                 contentClassName="font-mincho text-lg md:text-xl leading-[2] [&_rt]:text-[0.6em]"
                  kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
                  romajiClassName="mt-1 text-xs italic text-[#A9A398]"
                />
@@ -605,12 +605,32 @@ export default function Quiz({
 
       {isAnswered && (
         <div className="mt-6 space-y-4">
-          <div className="text-sm text-[#B8860B] italic">
-            {selectedAnswer === currentQ.correctAnswer
-              ? "Benar! "
-              : `Jawaban yang benar: ${currentQ.correctAnswer}. `}
+          <div className="space-y-3 text-sm">
+            {selectedAnswer === currentQ.correctAnswer ? (
+              <p className="font-bold text-emerald-300">Benar!</p>
+            ) : (
+              <div className="rounded-xl border border-[#B8860B]/25 bg-[#B8860B]/[0.06] p-3">
+                <p className="mb-1 font-semibold text-[#D6AD4F]">Jawaban yang benar:</p>
+                <JapaneseReading
+                  html={addRubyFromParentheticalReadings(currentQ.correctAnswer)}
+                  allowIndexFallback
+                  contentClassName="font-mincho text-lg text-[#EAE6DD] leading-[2]"
+                  kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                  showRomaji={false}
+                />
+              </div>
+            )}
 
-            <span className="block mt-2 text-[#A3A099] not-italic leading-relaxed"><JapaneseReading html={formatGrammarNotation(currentQ.explanation)} allowIndexFallback contentClassName="text-sm text-[#A3A099] leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" showRomaji={false} /></span>
+            <div className="rounded-xl border border-[#33312E] bg-[#121110]/70 p-3">
+              <p className="mb-1 text-xs font-bold uppercase tracking-wide text-[#A3A099]">Pembahasan</p>
+              <JapaneseReading
+                html={addRubyFromParentheticalReadings(formatGrammarNotation(currentQ.explanation))}
+                allowIndexFallback
+                contentClassName="text-base text-[#A3A099] leading-relaxed"
+                kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                showRomaji={false}
+              />
+            </div>
           </div>
 
           <div className="flex justify-end">
