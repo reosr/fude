@@ -339,115 +339,157 @@ const GRAMMAR_LABELS: Record<string, string> = {
   S: "kalimat",
 };
 
-const POLITE_VERB_FORMS: Record<string, string> = {
-  "ませんでした": "bentuk negatif lampau ます",
-  "ません": "bentuk negatif ます",
-  "ました": "bentuk lampau ます",
-  "ます": "bentuk ます",
-};
+const VERB_NOTATION_FORMS: Array<[string, string]> = [
+  ["ます-stem", "pangkal"],
+  ["stem", "pangkal"],
+  ["form", "bentuk ます"],
+  ["kan", "(kata kerja)"],
+  ["ませんでした", "bentuk negatif lampau ます"],
+  ["なければなりません", "bentuk ない + ければなりません"],
+  ["なければいけません", "bentuk ない + ければいけません"],
+  ["てくださいませんか", "bentuk て + くださいませんか"],
+  ["ていただけませんか", "bentuk て + いただけませんか"],
+  ["ないほうがいいです", "bentuk ない + ほうがいいです"],
+  ["たことがありません", "bentuk た + ことがありません"],
+  ["ていませんでした", "bentuk て + いませんでした"],
+  ["なくてもいいです", "bentuk ない + くてもいいです"],
+  ["たことがあります", "bentuk た + ことがあります"],
+  ["てもいいですか", "bentuk て + もいいですか"],
+  ["ていただきます", "bentuk て + いただきます"],
+  ["てくださいます", "bentuk て + くださいます"],
+  ["てみてください", "bentuk て + みてください"],
+  ["ないでください", "bentuk ないで + ください"],
+  ["てはいけません", "bentuk て + はいけません"],
+  ["てしまいます", "bentuk て + しまいます"],
+  ["ておきました", "bentuk て + おきました"],
+  ["てみたいです", "bentuk て + みたいです"],
+  ["るのにどのくらいかかりますか", "bentuk kamus + のにどのくらいかかりますか"],
+  ["るのにいくらかかりますか", "bentuk kamus + のにいくらかかりますか"],
+  ["たらいいです", "bentuk た + らいいです"],
+  ["たりしました", "bentuk たり + しました"],
+  ["ましょう", "bentuk ajakan ます"],
+  ["ませんか", "bentuk ajakan/pertanyaan ませんか"],
+  ["ますか", "bentuk pertanyaan ますか"],
+  ["てしまう", "bentuk て + しまう"],
+  ["ておきます", "bentuk て + おきます"],
+  ["てあります", "bentuk て + あります"],
+  ["ていました", "bentuk て + いました"],
+  ["ていません", "bentuk て + いません"],
+  ["てみました", "bentuk て + みました"],
+  ["てみます", "bentuk て + みます"],
+  ["ないために", "bentuk ない + ために"],
+  ["ないように", "bentuk ない + ように"],
+  ["たばかりの", "bentuk た + ばかりの"],
+  ["たりします", "bentuk たり + します"],
+  ["るそうです", "bentuk kamus + そうです"],
+  ["るところ", "bentuk kamus + ところ"],
+  ["るために", "bentuk kamus + ために"],
+  ["条件形", "bentuk syarat ば"],
+  ["意向形", "bentuk ajakan"],
+  ["受身形", "bentuk pasif"],
+  ["使役形", "bentuk kausatif"],
+  ["可能形", "bentuk potensial"],
+  ["てある", "bentuk て + ある"],
+  ["てください", "bentuk て + ください"],
+  ["てから", "bentuk て + から"],
+  ["てもいいです", "bentuk て + もいいです"],
+  ["ないとき", "bentuk ない + とき"],
+  ["たばかり", "bentuk た + ばかり"],
+  ["たところ", "bentuk た + ところ"],
+  ["たとき", "bentuk た + とき"],
+  ["るのに", "bentuk kamus + のに"],
+  ["るのを", "bentuk kamus + のを"],
+  ["るとき", "bentuk kamus + とき"],
+  ["られる", "bentuk pasif/potensial/kehormatan"],
+  ["ません", "bentuk negatif ます"],
+  ["ました", "bentuk lampau ます"],
+  ["ます", "bentuk ます"],
+  ["辞書形", "bentuk kamus"],
+  ["受身", "bentuk pasif"],
+  ["使役", "bentuk kausatif"],
+  ["可能", "bentuk potensial"],
+  ["ないで", "bentuk ないで"],
+  ["なかった", "bentuk negatif lampau"],
+  ["なくても", "bentuk ない + くても"],
+  ["なくて", "bentuk なくて"],
+  ["なければ", "bentuk ない + ければ"],
+  ["ない", "bentuk ない"],
+  ["たら", "bentuk た + ら"],
+  ["たり", "bentuk たり"],
+  ["た形", "bentuk た"],
+  ["た", "bentuk た"],
+  ["ようになりました", "bentuk menjadi ..."],
+  ["れる", "bentuk pasif/kehormatan"],
+  ["ば", "bentuk ば"],
+  ["て", "bentuk て"],
+].sort(([left], [right]) => right.length - left.length);
 
-const VOICE_VERB_FORMS: Record<string, string> = {
-  "受身形": "bentuk pasif",
-  "受身": "bentuk pasif",
-  "使役形": "bentuk kausatif",
-  "使役": "bentuk kausatif",
-  "可能形": "bentuk potensial",
-  "可能": "bentuk potensial",
-};
-
-const VERB_FORM_SUFFIXES: Record<string, string> = {
-  "てから": "bentuk て + から",
-  "ないで": "bentuk ないで",
-  "て": "bentuk て",
-  "た": "bentuk た",
-  "る": "bentuk kamus",
-  "ない": "bentuk ない",
-  "たり": "bentuk たり",
-};
+const VERB_NOTATION_PATTERN = new RegExp(
+  \`(^|[^A-Za-z0-9])V(\\\\d*)-?(\${VERB_NOTATION_FORMS.map(([suffix]) =>
+    suffix.replace(/[.*+?^\${}()|[\\\\]\\\\]/g, "\\\\$&")
+  ).join("|")})\`,
+  "g"
+);
 
 /**
  * Ubah notasi ringkas Minna menjadi istilah bahasa Indonesia yang mudah
- * dipahami. Urutan aturan penting: bentuk khusus harus diproses sebelum
- * simbol umum agar V pada Vます atau Vます-stem tidak tertinggal.
+ * dipahami. Bentuk terpanjang diproses lebih dahulu agar, misalnya,
+ * Vてください tidak terpotong menjadi Vて + teks yang tersisa.
  */
 export function formatGrammarNotation(value: string): string {
-  let formatted = value;
-
-  // Pangkal kata kerja bentuk ます (ます-stem).
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)ます-stem(?=$|[^\\p{L}\\p{N}])/gu,
-    (_match, prefix: string, number: string) =>
-      prefix + `pangkal kata kerja${number ? ` ${number}` : ""} bentuk ます`
-  );
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-stem(?=$|[^\\p{L}\\p{N}])/gu,
-    (_match, prefix: string, number: string) =>
-      prefix + `pangkal kata kerja${number ? ` ${number}` : ""} bentuk ます`
-  );
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-form(?=$|[^\\p{L}\\p{N}])/gu,
-    (_match, prefix: string, number: string) =>
-      prefix + `kata kerja${number ? ` ${number}` : ""} bentuk ます`
-  );
-
-  // Placeholder kata kerja dalam bentuk di-...-kan, misalnya di-V-kan.
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V-kan(?=$|[^\\p{L}\\p{N}])/gu,
-    (_match, prefix: string) => prefix + "(kata kerja)"
-  );
-
-  // Bentuk sopan, negatif, dan lampau.
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-?(ませんでした|ません|ました|ます)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
-    (_match, prefix: string, number: string, suffix: string) => {
-      const form = POLITE_VERB_FORMS[suffix];
-      return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
+  let formatted = value.replace(
+    VERB_NOTATION_PATTERN,
+    (match, prefix: string, number: string, suffix: string) => {
+      const description = VERB_NOTATION_FORMS.find(([key]) => key === suffix)?.[1] ?? suffix;
+      if (description === "pangkal") {
+        return prefix + \`pangkal kata kerja\${number ? \` \${number}\` : ""} bentuk ます\`;
+      }
+      return prefix + \`kata kerja\${number ? \` \${number}\` : ""} \${description}\`;
     }
   );
 
-  // Bentuk て yang diikuti kata bantu atau ungkapan permintaan.
+  // Bentuk kata sifat berakhiran い atau pola kata sifat jenis な.
   formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-?て\s*(?=(?:ください|あります|います|おきます|しまいます|みます|いる|おく|しまう|みる|あげる|くれる|もらう|から))/gu,
-    (_match, prefix: string, number: string) =>
-      prefix + `kata kerja${number ? ` ${number}` : ""} bentuk て + `
-  );
-
-  // Bentuk pasif, kausatif, dan potensial.
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-?(受身形|受身|使役形|使役|可能形|可能)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
-    (_match, prefix: string, number: string, suffix: string) => {
-      const form = VOICE_VERB_FORMS[suffix];
-      return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
-    }
-  );
-
-  // Bentuk sambung, kamus, negatif, dan たり.
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])V(\\d*)-?(てから|ないで|て|た|る|ない|たり)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
-    (_match, prefix: string, number: string, suffix: string) => {
-      const form = VERB_FORM_SUFFIXES[suffix];
-      return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
-    }
-  );
-
-  // Jenis kata sifat ditulis sebagai -i dan -na, bukan notasi huruf A.
-  formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])A-?(い|な)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
+    /(^|[^A-Za-z0-9])A-?(い|な)(?=$|[^A-Za-z0-9])/g,
     (_match, prefix: string, suffix: string) =>
-      prefix + (suffix === "い" ? "kata sifat -i" : "kata sifat -na")
+      prefix + (suffix === "い" ? "kata sifat berakhiran い" : "kata sifat jenis な")
+  );
+  formatted = formatted.replace(
+    /(^|[^A-Za-z0-9])A(くないです|じゃありません|ければ|なら|し|い|な)(?=$|[^A-Za-z0-9])/g,
+    (_match, prefix: string, suffix: string) => {
+      const descriptions: Record<string, string> = {
+        "くないです": "kata sifat bentuk negatif くないです",
+        "じゃありません": "kata sifat bentuk negatif じゃありません",
+        "ければ": "kata sifat bentuk ければ",
+        "なら": "kata sifat jenis な + なら",
+        "し": "kata sifat + し",
+        "い": "kata sifat berakhiran い",
+        "な": "kata sifat jenis な",
+      };
+      return prefix + descriptions[suffix];
+    }
   );
 
-  // N1, V1, A1, S1, termasuk bentuk N2-nya.
+  // Notasi kata benda dan kalimat, termasuk N1, N2, S1, serta N2-nya.
   formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])([NVAS])(\\d+)(-nya)?(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ一-龯々])/gu,
-    (_match, prefix: string, symbol: string, number: string, suffix: string | undefined) =>
-      prefix + `${GRAMMAR_LABELS[symbol]} ${number}${suffix ?? ""}`
+    /(^|[^A-Za-z0-9])([NAS])(\\d*)(-nya)?(?=$|[^A-Za-z0-9])/g,
+    (match, prefix: string, symbol: string, number: string, suffix: string | undefined, offset: number, whole: string) => {
+      const tail = whole.slice(offset + match.length);
+      const needsSpace = /^[\\u3040-\\u30ff\\u3400-\\u9fff々〆ヵヶ]/.test(tail);
+      return prefix +
+        \`\${GRAMMAR_LABELS[symbol]}\${number ? \` \${number}\` : ""}\${suffix ?? ""}\${needsSpace ? " " : ""}\`;
+    }
   );
 
-  // Simbol umum tanpa nomor.
+  // Notasi V yang tidak memiliki akhiran khusus tetap diberi label dan spasi
+  // agar tidak menempel pada partikel atau bentuk bahasa Jepang sesudahnya.
   formatted = formatted.replace(
-    /(^|[^\\p{L}\\p{N}])([NVAS])(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ一-龯々])/gu,
-    (_match, prefix: string, symbol: string) => prefix + GRAMMAR_LABELS[symbol]
+    /(^|[^A-Za-z0-9])V(\\d*)(?=$|[^A-Za-z0-9])/g,
+    (match, prefix: string, number: string, offset: number, whole: string) => {
+      const tail = whole.slice(offset + match.length);
+      const needsSpace = /^[\\u3040-\\u30ff\\u3400-\\u9fff々〆ヵヶ]/.test(tail);
+      return prefix + \`kata kerja\${number ? \` \${number}\` : ""}\${needsSpace ? " " : ""}\`;
+    }
   );
 
   return formatted;
