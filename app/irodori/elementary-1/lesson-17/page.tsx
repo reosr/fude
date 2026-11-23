@@ -174,7 +174,7 @@ export default function IrodoriElementaryOneLessonSeventeenPage() {
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D8BC82]/[0.08]">贈</div>
    <div className="relative z-10">
     <p className="text-[9px] font-black tracking-[0.24em] text-[#D8BC82]">IRODORI • ELEMENTARY 1 A2 • LESSON 17</p>
-    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">This is a personal amulet my older brother gave me.</h1>
+    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Ini jimat pribadi yang diberikan kakak laki-laki saya.</h1>
     <p className="mt-2 text-sm font-semibold text-[#D8BC82]">兄がくれたお守りです</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar bertamu ke rumah orang lain, memberikan oleh-oleh, menjelaskan asal-usul barang pribadi, serta menulis email terima kasih sederhana.</p>
     <div className="mt-5 flex flex-wrap gap-2">
