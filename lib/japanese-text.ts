@@ -35,7 +35,7 @@ function stripHtml(value: string): string {
 // Contoh: 来ます（きます） menjadi <ruby>来ます<rt>きます</rt></ruby>.
 export function addRubyFromParentheticalReadings(value: string): string {
   return value.replace(
-    /([\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー]+)[）)]/g,
+    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー]+)[）)]/g,
     (_match, base: string, reading: string) => `<ruby>${base}<rt>${reading}</rt></ruby>`
   );
 }
