@@ -640,12 +640,18 @@ export default function IrodoriStarterLessonNinePage() {
                   <span className="text-lg font-black tabular-nums text-[#D9B66D]">
                     {item.time}
                   </span>
-                  <span className="font-mincho text-lg font-bold text-[#F1EBDD]">
-                    <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
-                  </span>
+                  <JapaneseReading
+                    allowIndexFallback
+                    romaji={item.reading}
+                    translation={formatGrammarNotation(item.note)}
+                    contentClassName="font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]"
+                    kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]"
+                    romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
+                    translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+                  >
+                    {item.jp}
+                  </JapaneseReading>
                 </div>
-                <p className="mt-1 text-[10px] italic text-[#B8860B]">{item.reading}</p>
-                <p className="mt-1 text-xs text-[#A9A398]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
               </article>
             ))}
           </div>
