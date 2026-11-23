@@ -10,7 +10,7 @@ export default function Loading() {
         {/* Logo Fude dengan Animasi Melayang */}
         <img
           src="/logo.webp"
-          alt="Loading..."
+          alt="Memuat aplikasi Fude"
           className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 object-contain relative z-10 animate-float-breath"
         />
       </div>
