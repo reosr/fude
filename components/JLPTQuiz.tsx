@@ -59,6 +59,12 @@ interface SavedQuizResult {
   completedOnce?: boolean;
 }
 
+// Jangan tampilkan bacaan otomatis pada soal yang memang menguji cara membaca kanji.
+function canShowAutomaticReadingHint(sectionId: string, question: string): boolean {
+  const asksKanjiReading = /読み方はどれですか|何と読みますか/.test(question);
+  return sectionId !== "vocab" && !asksKanjiReading;
+}
+
 const SECTIONS = [
   { id: "vocab", label: "Kosakata (文字・語彙)" },
   { id: "grammar", label: "Tata Bahasa (文法)" },
@@ -774,6 +780,7 @@ export default function JLPTQuiz({
                 </h4>
 
                 {questions.map((question, index) => {
+                  const showReadingHint = canShowAutomaticReadingHint(section.id, question.question);
                   const userAnswer =
                     userAnswers[section.id]?.[index];
 
@@ -823,7 +830,7 @@ export default function JLPTQuiz({
                             </div>
                           )}
 
-                          <JapaneseReading allowIndexFallback
+                          <JapaneseReading allowIndexFallback={showReadingHint}
                             html={question.question}
                             contentClassName="text-[#EAE6DD] font-mincho mb-4 text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
                             kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
@@ -834,7 +841,7 @@ export default function JLPTQuiz({
                             <p className="text-[#A3A099]">
                               Jawaban kamu:{" "}
                               <span className={isUnanswered ? "text-yellow-500" : isCorrect ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
-                                {isUnanswered ? "Tidak dijawab" : <JapaneseReading allowIndexFallback html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />}
+                                {isUnanswered ? "Tidak dijawab" : <JapaneseReading allowIndexFallback={showReadingHint} html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />}
                               </span>
                             </p>
 
@@ -842,7 +849,7 @@ export default function JLPTQuiz({
                               <p className="text-[#A3A099]">
                                 Jawaban benar:{" "}
                                 <span className="text-green-500 font-bold">
-                                  <JapaneseReading allowIndexFallback html={question.options[question.answer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />
+                                  <JapaneseReading allowIndexFallback={showReadingHint} html={question.options[question.answer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />
                                 </span>
                               </p>
                             )}
@@ -900,6 +907,9 @@ export default function JLPTQuiz({
     userAnswers[activeSection]?.[currentIndex];
 
   const isAnswered = selectedAnswer !== undefined;
+  const showReadingHint = currentQ
+    ? canShowAutomaticReadingHint(activeSection, currentQ.question)
+    : false;
 
   return (
     <>
@@ -1010,7 +1020,7 @@ export default function JLPTQuiz({
               </div>
             )}
 
-            <JapaneseReading allowIndexFallback
+            <JapaneseReading allowIndexFallback={showReadingHint}
               html={currentQ.question}
               contentClassName="text-xl md:text-2xl font-bold text-[#EAE6DD] mb-2 text-center leading-[2] font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
               kanaClassName="mt-1 font-mincho text-sm md:text-base text-[#D6AD4F] text-center"
@@ -1035,7 +1045,7 @@ export default function JLPTQuiz({
                     onClick={() => handleAnswer(index)}
                     className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass}`}
                   >
-                    <JapaneseReading allowIndexFallback
+                    <JapaneseReading allowIndexFallback={showReadingHint}
                       html={option}
                       contentClassName="font-mincho text-base md:text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
                       kanaClassName="mt-1 font-mincho text-sm text-[#F4DFA7]"
