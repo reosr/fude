@@ -214,7 +214,7 @@ export default function Sidebar() {
               </p>
               <p className="mt-0.5 text-[10px] font-medium text-[#A3A099]">
                 {xpFeedback.leveledUp
-                  ? `LEVEL UP · SEKARANG LV. ${xpFeedback.level}`
+                  ? `NAIK LEVEL · SEKARANG LV. ${xpFeedback.level}`
                   : "Progres belajarmu bertambah"}
               </p>
             </div>
