@@ -37,37 +37,37 @@ const lessonId = "elementary2-11";
 
 const shoppingTryOnConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>すみません。このセーター、着てみてもいいですか。</>, romaji: "Sumimasen. Kono seetaa, kite mite mo ii desu ka?", translation: "Permisi, bolehkah saya mencoba sweater ini?", audioFileName: "irodori-elementary2-11-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。試着室はこちらです。</>, romaji: "Hai. Shichakushitsu wa kochira desu.", translation: "Tentu. Ruang pas ada di sini.", audioFileName: "irodori-elementary2-11-a01-l02.mp3" },
-  { speakerId: "yui", japanese: <>ありがとうございます。少し大きすぎますね。</>, romaji: "Arigatou gozaimasu. Sukoshi ookisugimasu ne.", translation: "Terima kasih. Sepertinya sedikit terlalu besar.", audioFileName: "irodori-elementary2-11-a01-l03.mp3" },
+  { speakerId: "sota", japanese: <>はい。試着室はこちらです。</>, romaji: "Hai. Shichakushitsu wa kochira desu.", translation: "Tentu. Ruang gantinya ada di sini.", audioFileName: "irodori-elementary2-11-a01-l02.mp3" },
+  { speakerId: "yui", japanese: <>ありがとうございます。少し大きすぎますね。</>, romaji: "Arigatou gozaimasu. Sukoshi ookisugimasu ne.", translation: "Terima kasih. Sepertinya agak kebesaran.", audioFileName: "irodori-elementary2-11-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>では、もう少し小さいのをお持ちします。</>, romaji: "Dewa, mou sukoshi chiisai no o omochi shimasu.", translation: "Kalau begitu, saya ambilkan yang sedikit lebih kecil.", audioFileName: "irodori-elementary2-11-a01-l04.mp3" },
 ];
 
 const chooseColorSizeConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>ほかの色もありますか。</>, romaji: "Hoka no iro mo arimasu ka?", translation: "Apakah ada warna lain juga?", audioFileName: "irodori-elementary2-11-a02-l01.mp3" },
+  { speakerId: "akiko", japanese: <>ほかの色もありますか。</>, romaji: "Hoka no iro mo arimasu ka?", translation: "Ada warna lain?", audioFileName: "irodori-elementary2-11-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>はい。青とグレーがございます。</>, romaji: "Hai. Ao to guree ga gozaimasu.", translation: "Ada. Tersedia warna biru dan abu-abu.", audioFileName: "irodori-elementary2-11-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>この青いの、見せてもらえますか。</>, romaji: "Kono aoi no, misete moraemasu ka?", translation: "Bolehkah saya melihat yang biru ini?", audioFileName: "irodori-elementary2-11-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>もちろんです。こちらです。お気に入りでしたら、こちらにしますか。</>, romaji: "Mochiron desu. Kochira desu. Oki ni iri deshitara, kochira ni shimasu ka?", translation: "Tentu. Ini barangnya. Kalau cocok, apakah Anda memilih yang ini?", audioFileName: "irodori-elementary2-11-a02-l04.mp3" },
+  { speakerId: "kenji", japanese: <>もちろんです。こちらです。お気に入りでしたら、こちらにしますか。</>, romaji: "Mochiron desu. Kochira desu. Oki ni iri deshitara, kochira ni shimasu ka?", translation: "Tentu. Ini. Kalau suka, mau pilih yang ini?", audioFileName: "irodori-elementary2-11-a02-l04.mp3" },
 ];
 
 const forgotPointCardConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>ポイントカードはお持ちですか。</>, romaji: "Pointo kaado wa omochi desu ka?", translation: "Apakah Anda membawa kartu poin?", audioFileName: "irodori-elementary2-11-a03-l01.mp3" },
+  { speakerId: "yui", japanese: <>ポイントカードはお持ちですか。</>, romaji: "Pointo kaado wa omochi desu ka?", translation: "Apakah Anda punya kartu poin?", audioFileName: "irodori-elementary2-11-a03-l01.mp3" },
   { speakerId: "sota", japanese: <>すみません。ポイントカードを忘れてしまいました。</>, romaji: "Sumimasen. Pointo kaado o wasurete shimaimashita.", translation: "Maaf, saya lupa membawa kartu poin.", audioFileName: "irodori-elementary2-11-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>レシートにスタンプを押しておきますね。</>, romaji: "Reshiito ni sutanpu o oshite okimasu ne.", translation: "Saya akan memberi cap pada struknya, ya.", audioFileName: "irodori-elementary2-11-a03-l03.mp3" },
   { speakerId: "sota", japanese: <>ありがとうございます。次回、カードとレシートを持って来ます。</>, romaji: "Arigatou gozaimasu. Jikai, kaado to reshiito o motte kimasu.", translation: "Terima kasih. Lain kali saya akan membawa kartu dan struknya.", audioFileName: "irodori-elementary2-11-a03-l04.mp3" },
 ];
 
 const lostBottleConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>すみません。水筒を忘れてしまったんですが、届いていませんか。</>, romaji: "Sumimasen. Suitou o wasurete shimattan desu ga, todoite imasen ka?", translation: "Permisi, saya sepertinya tertinggal botol minum. Apakah ada yang menyerahkannya ke sini?", audioFileName: "irodori-elementary2-11-a04-l01.mp3" },
-  { speakerId: "kenji", japanese: <>どんな水筒ですか。特徴を教えてください。</>, romaji: "Donna suitou desu ka? Tokuchou o oshiete kudasai.", translation: "Botol minum seperti apa? Tolong jelaskan ciri-cirinya.", audioFileName: "irodori-elementary2-11-a04-l02.mp3" },
+  { speakerId: "akiko", japanese: <>すみません。水筒を忘れてしまったんですが、届いていませんか。</>, romaji: "Sumimasen. Suitou o wasurete shimattan desu ga, todoite imasen ka?", translation: "Permisi, sepertinya botol minum saya tertinggal. Apakah ada yang menyerahkannya ke sini?", audioFileName: "irodori-elementary2-11-a04-l01.mp3" },
+  { speakerId: "kenji", japanese: <>どんな水筒ですか。特徴を教えてください。</>, romaji: "Donna suitou desu ka? Tokuchou o oshiete kudasai.", translation: "Botol minum seperti apa? Bisa jelaskan ciri-cirinya?", audioFileName: "irodori-elementary2-11-a04-l02.mp3" },
   { speakerId: "akiko", japanese: <>青い水筒で、白い星のシールがついています。</>, romaji: "Aoi suitou de, shiroi hoshi no shiiru ga tsuite imasu.", translation: "Botolnya berwarna biru dan ada stiker bintang putih.", audioFileName: "irodori-elementary2-11-a04-l03.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin botol itu ada di area area makan sekitar siang tadi.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin tadi botol itu ada di food court sekitar tengah hari.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
 ];
 
 const mallAnnouncementConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>今の店内放送、聞きましたか。</>, romaji: "Ima no tennai housou, kikimashita ka?", translation: "Apakah kamu mendengar pengumuman toko tadi?", audioFileName: "irodori-elementary2-11-a05-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。文具売り場でセールをしているそうです。</>, romaji: "Hai. Bungu uriba de seeru o shite iru sou desu.", translation: "Ya. Katanya sedang ada obral di bagian alat tulis.", audioFileName: "irodori-elementary2-11-a05-l02.mp3" },
+  { speakerId: "yui", japanese: <>今の店内放送、聞きましたか。</>, romaji: "Ima no tennai housou, kikimashita ka?", translation: "Kamu dengar pengumuman di toko tadi?", audioFileName: "irodori-elementary2-11-a05-l01.mp3" },
+  { speakerId: "sota", japanese: <>はい。文具売り場でセールをしているそうです。</>, romaji: "Hai. Bungu uriba de seeru o shite iru sou desu.", translation: "Ya. Katanya sedang ada diskon di bagian alat tulis.", audioFileName: "irodori-elementary2-11-a05-l02.mp3" },
   { speakerId: "yui", japanese: <>何階ですか。</>, romaji: "Nankai desu ka?", translation: "Di lantai berapa?", audioFileName: "irodori-elementary2-11-a05-l03.mp3" },
-  { speakerId: "sota", japanese: <>一階です。今日から日曜日までだそうですよ。</>, romaji: "Ikkai desu. Kyou kara nichiyoubi made da sou desu yo.", translation: "Di lantai satu. Katanya berlangsung dari hari ini sampai Minggu.", audioFileName: "irodori-elementary2-11-a05-l04.mp3" },
+  { speakerId: "sota", japanese: <>一階です。今日から日曜日までだそうですよ。</>, romaji: "Ikkai desu. Kyou kara nichiyoubi made da sou desu yo.", translation: "Di lantai satu. Katanya diskonnya berlaku mulai hari ini sampai Minggu.", audioFileName: "irodori-elementary2-11-a05-l04.mp3" },
 ];
 
 const canDos = [
@@ -96,7 +96,7 @@ const vocabRows = [
   ["洋服", "ようふく · youfuku", "Pakaian"],
   ["靴", "くつ · kutsu", "Sepatu"],
   ["試着する", "しちゃくする · shichaku suru", "Mencoba pakaian"],
-  ["試着室", "しちゃくしつ · shichakushitsu", "Ruang pas"],
+  ["試着室", "しちゃくしつ · shichakushitsu", "Ruang ganti"],
   ["派手", "はで · hade", "Mencolok"],
   ["大きい", "おおきい · ookii", "Besar"],
   ["小さい", "ちいさい · chiisai", "Kecil"],
@@ -252,7 +252,7 @@ const simulations: Simulation[] = [
     heading: "Memberi informasi kepada pusat informasi",
     prompt: "Botol minummu tertinggal. Kamu ingat mungkin meninggalkannya di area makan. Pilih kalimat yang menunjukkan perkiraan.",
     japanese: <>フードコートに忘れたかもしれません。</>,
-    translation: "Mungkin saya meninggalkannya di area makan.",
+    translation: "Mungkin saya meninggalkannya di food court.",
     options: [
       { key: "a", label: "フードコートに忘れました。", meaning: "Kalimat ini menyampaikan kepastian, bukan perkiraan." },
       { key: "b", label: "フードコートに忘れたかもしれません。", meaning: "Bentuk biasa + かもしれません menyatakan kemungkinan." },
@@ -287,16 +287,16 @@ const practiceTasks: Task[] = [
 ];
 
 const quizQuestions: Task[] = [
-  { prompt: <>Apa arti 「試着室」?</>, options: [{ key: "a", label: "Ruang pas." }, { key: "b", label: "Ruang makan." }, { key: "c", label: "Pusat informasi." }], answer: "a", explanation: <>試着室 adalah ruang untuk mencoba pakaian.</> },
+  { prompt: <>Apa arti 「試着室」?</>, options: [{ key: "a", label: "Ruang ganti." }, { key: "b", label: "Ruang makan." }, { key: "c", label: "Pusat informasi." }], answer: "a", explanation: <>試着室 adalah ruang untuk mencoba pakaian.</> },
   { prompt: <>Apa fungsi 「着てみてもいいですか」?</>, options: [{ key: "a", label: "Meminta izin untuk mencoba memakai sesuatu." }, { key: "b", label: "Menyatakan pakaian terlalu besar." }, { key: "c", label: "Menjelaskan barang tertinggal." }], answer: "a", explanation: <>V-てみてもいいですか digunakan untuk meminta izin mencoba sesuatu.</> },
   { prompt: <>Pilih bentuk yang benar dari 「派手な」 + すぎます.</>, options: [{ key: "a", label: "派手なすぎます" }, { key: "b", label: "派手すぎます" }, { key: "c", label: "派手いすぎます" }], answer: "b", explanation: <>Untuk ナ形容詞, hapus な sebelum menambahkan すぎます.</> },
   { prompt: <>Dalam 「赤いのがいいです」, apa fungsi の?</>, options: [{ key: "a", label: "Menggantikan kata benda yang sudah diketahui." }, { key: "b", label: "Menandai waktu lampau." }, { key: "c", label: "Menyatakan kemungkinan." }], answer: "a", explanation: <>赤いの berarti barang yang berwarna merah.</> },
   { prompt: <>Apa arti 「次回」?</>, options: [{ key: "a", label: "Kemarin." }, { key: "b", label: "Lain kali." }, { key: "c", label: "Setiap hari." }], answer: "b", explanation: <>次回 berarti kesempatan atau kunjungan berikutnya.</> },
   { prompt: <>Kalimat 「私は友だちに水筒を使われました」 memakai bentuk apa?</>, options: [{ key: "a", label: "Bentuk pasif yang menunjukkan pihak terdampak." }, { key: "b", label: "Bentuk potensial." }, { key: "c", label: "Bentuk larangan." }], answer: "a", explanation: <>使われました adalah bentuk pasif dari 使う.</> },
-  { prompt: <>Apa arti 「フードコートに忘れたかもしれません」?</>, options: [{ key: "a", label: "Pasti saya tidak meninggalkannya di area makan." }, { key: "b", label: "Mungkin saya meninggalkannya di area makan." }, { key: "c", label: "Saya ingin pergi ke area makan." }], answer: "b", explanation: <>Bentuk biasa + かもしれません menyatakan kemungkinan yang belum pasti.</> },
+  { prompt: <>Apa arti 「フードコートに忘れたかもしれません」?</>, options: [{ key: "a", label: "Pasti saya tidak meninggalkannya di area makan." }, { key: "b", label: "Mungkin saya meninggalkannya di food court." }, { key: "c", label: "Saya ingin pergi ke area makan." }], answer: "b", explanation: <>Bentuk biasa + かもしれません menyatakan kemungkinan yang belum pasti.</> },
   { prompt: <>Apa fungsi 「忘れてしまいました」?</>, options: [{ key: "a", label: "Menunjukkan penyesalan atas sesuatu yang terjadi." }, { key: "b", label: "Meminta izin untuk mencoba." }, { key: "c", label: "Menyatakan ukuran barang." }], answer: "a", explanation: <>V-てしまいました dapat menyampaikan rasa menyesal atau kecewa.</> },
-  { prompt: <>Apa arti 「営業時間」?</>, options: [{ key: "a", label: "Jam operasional." }, { key: "b", label: "Kartu poin." }, { key: "c", label: "Ruang pas." }], answer: "a", explanation: <>営業時間 berarti jam saat toko atau tempat usaha beroperasi.</> },
-  { prompt: <>Jika pengumuman menyebut 「一階のインフォメーションカウンター」, ke mana kita harus pergi?</>, options: [{ key: "a", label: "Konter informasi lantai satu." }, { key: "b", label: "Area parkir lantai tiga." }, { key: "c", label: "Ruang pas di lantai dua." }], answer: "a", explanation: <>一階 berarti lantai satu dan インフォメーションカウンター berarti konter informasi.</> },
+  { prompt: <>Apa arti 「営業時間」?</>, options: [{ key: "a", label: "Jam operasional." }, { key: "b", label: "Kartu poin." }, { key: "c", label: "Ruang ganti." }], answer: "a", explanation: <>営業時間 berarti jam saat toko atau tempat usaha beroperasi.</> },
+  { prompt: <>Jika pengumuman menyebut 「一階のインフォメーションカウンター」, ke mana kita harus pergi?</>, options: [{ key: "a", label: "Konter informasi lantai satu." }, { key: "b", label: "Area parkir lantai tiga." }, { key: "c", label: "Ruang ganti di lantai dua." }], answer: "a", explanation: <>一階 berarti lantai satu dan インフォメーションカウンター berarti konter informasi.</> },
 ];
 
 export default function IrodoriElementaryTwoLessonElevenPage() {
