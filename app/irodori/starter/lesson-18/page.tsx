@@ -346,7 +346,7 @@ const quizQuestions: Task[] = [
     explanation: <>あと dipakai untuk menambahkan informasi atau keinginan lain.</>,
   },
   {
-    prompt: <>Penghubung yang cocok untuk urutan “Pertama pergi ke taman. Setelah itu makan bekal.” adalah …</>,
+    prompt: <>Penghubung yang cocok untuk urutan “Pertama pergi ke taman. Setelah itu makan bento.” adalah …</>,
     options: [
       { key: "a", label: "でも" },
       { key: "b", label: "それから" },
@@ -694,7 +694,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
           <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">UNGGAHAN YUI · 日曜日</p>
           <JapaneseReading
             allowIndexFallback
-            translation="Hari Minggu pergi ke taman. Makan bekal. Sangat menyenangkan. Lain kali ingin pergi ke laut."
+            translation="Hari Minggu pergi ke taman. Makan bento. Sangat menyenangkan. Lain kali ingin pergi ke laut."
             contentClassName="mt-2 font-mincho text-sm leading-7 text-[#F1EBDD]"
             kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]"
             romajiClassName="mt-1 text-xs italic text-[#A9A398]"
