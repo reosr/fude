@@ -33,7 +33,7 @@ const friendKenji = { ...speakers.kenji, name: "Kenji", role: "Teman" };
 const lessonId = "elementary2-16";
 
 const emergencyNewsConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>ニュースで、台風が近づいていると言っていましたね。</>, romaji: "Nyuusu de, taifuu ga chikazuite iru to itte imashita ne.", translation: "Tadi diberitakan bahwa topan sedang mendekat, ya.", audioFileName: "irodori-elementary2-16-a01-l01.mp3" },
+  { speakerId: "yui", japanese: <>ニュースで、台風が近づいていると言っていましたね。</>, romaji: "Nyuusu de, taifuu ga chikazuite iru to itte imashita ne.", translation: "Tadi di berita disebutkan bahwa topan sedang mendekat, ya.", audioFileName: "irodori-elementary2-16-a01-l01.mp3" },
   { speakerId: "sota", japanese: <>はい。大雨のおそれがあるそうです。</>, romaji: "Hai. Ooame no osore ga aru sou desu.", translation: "Ya. Katanya ada kemungkinan hujan deras.", audioFileName: "irodori-elementary2-16-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>何を確認したらいいですか。</>, romaji: "Nani o kakunin shitara ii desu ka?", translation: "Apa yang sebaiknya diperiksa?", audioFileName: "irodori-elementary2-16-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>市のアナウンスを聞いて、最新の情報を確認してください。</>, romaji: "Shi no anaunsu o kiite, saishin no jouhou o kakunin shite kudasai.", translation: "Dengarkan pengumuman kota dan periksa informasi terbaru.", audioFileName: "irodori-elementary2-16-a01-l04.mp3" },
@@ -57,8 +57,8 @@ const askShelterInformationConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>市の公式情報で確認できます。先生や家族にも聞いてください。</>, romaji: "Shi no koushiki jouhou de kakunin dekimasu. Sensei ya kazoku ni mo kiite kudasai.", translation: "Cek informasi resmi dari pemerintah kota. Kamu juga bisa bertanya kepada guru atau keluarga.", audioFileName: "irodori-elementary2-16-a04-l04.mp3" },
 ];
 const readPreparednessPamphletConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>この防災パンフレットには、何が書いてありますか。</>, romaji: "Kono bousai pamphlet ni wa, nani ga kaite arimasu ka?", translation: "Apa isi brosur kesiapsiagaan menghadapi bencana ini?", audioFileName: "irodori-elementary2-16-a05-l01.mp3" },
-  { speakerId: "kenji", japanese: <>非常用の品物や、連絡先を確認することが書いてあります。</>, romaji: "Hijouyou no shinamono ya, renrakusaki o kakunin suru koto ga kaite arimasu.", translation: "Tertulis tentang memeriksa barang-barang darurat dan kontak penting.", audioFileName: "irodori-elementary2-16-a05-l02.mp3" },
+  { speakerId: "akiko", japanese: <>この防災パンフレットには、何が書いてありますか。</>, romaji: "Kono bousai pamphlet ni wa, nani ga kaite arimasu ka?", translation: "Apa isi brosur kesiapsiagaan bencana ini?", audioFileName: "irodori-elementary2-16-a05-l01.mp3" },
+  { speakerId: "kenji", japanese: <>非常用の品物や、連絡先を確認することが書いてあります。</>, romaji: "Hijouyou no shinamono ya, renrakusaki o kakunin suru koto ga kaite arimasu.", translation: "Brosur itu menjelaskan perlunya memeriksa perlengkapan darurat dan informasi kontak penting.", audioFileName: "irodori-elementary2-16-a05-l02.mp3" },
   { speakerId: "akiko", japanese: <>どんな品物が紹介されていますか。</>, romaji: "Donna shinamono ga shoukai sarete imasu ka?", translation: "Barang apa saja yang disebutkan?", audioFileName: "irodori-elementary2-16-a05-l03.mp3" },
   { speakerId: "kenji", japanese: <>水やライト、ラジオなどです。地域の案内も読んでおくといいそうです。</>, romaji: "Mizu ya raito, rajio nado desu. Chiiki no annai mo yonde oku to ii sou desu.", translation: "Seperti air minum, senter, dan radio. Kita juga sebaiknya membaca panduan dari wilayah setempat.", audioFileName: "irodori-elementary2-16-a05-l04.mp3" },
 ];
