@@ -140,7 +140,7 @@ const wordingConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>これは<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と<ruby>言<rt>い</rt></ruby>いますか？</>,
     romaji: "Kore wa nihongo de nan to iimasu ka?",
-    translation: "Bagaimana mengatakan ini dalam bahasa Jepang?",
+    translation: "Apa bahasa Jepangnya ini?",
     audioFileName: "irodori-starter-02-a03-l01.mp3",
   },
   {
