@@ -29,23 +29,23 @@ const lessonId = "elementary1-05";
 
 const townImpressionConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>この町はどうですか。</>, romaji: "Kono machi wa dou desu ka?", translation: "Bagaimana menurutmu kota ini?", audioFileName: "irodori-elementary1-05-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>とてもにぎやかで、便利です。</>, romaji: "Totemo nigiyaka de, benri desu.", translation: "Sangat ramai dan praktis.", audioFileName: "irodori-elementary1-05-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>とてもにぎやかで、便利です。</>, romaji: "Totemo nigiyaka de, benri desu.", translation: "Ramai dan fasilitasnya lengkap.", audioFileName: "irodori-elementary1-05-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>そうですか。店も多いですね。</>, romaji: "Sou desu ka. Mise mo ooi desu ne.", translation: "Begitu, ya. Tokonya juga banyak.", audioFileName: "irodori-elementary1-05-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。でも、駅の近くは人が多いです。</>, romaji: "Hai. Demo, eki no chikaku wa hito ga ooi desu.", translation: "Iya. Tetapi, di dekat stasiun banyak orang.", audioFileName: "irodori-elementary1-05-a01-l04.mp3" },
   { speakerId: "yui", japanese: <>そうですね。でも、住みやすい町ですね。</>, romaji: "Sou desu ne. Demo, sumiyasui machi desu ne.", translation: "Betul. Tetapi, kota ini nyaman untuk ditinggali, ya.", audioFileName: "irodori-elementary1-05-a01-l05.mp3" },
 ];
 
 const recommendedPlaceConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>この近くに、おすすめの場所がありますか。</>, romaji: "Kono chikaku ni, osusume no basho ga arimasu ka?", translation: "Apakah ada tempat rekomendasi di dekat sini?", audioFileName: "irodori-elementary1-05-a02-l01.mp3" },
-  { speakerId: "kenji", japanese: <>はい。桜公園がおすすめです。</>, romaji: "Hai. Sakura Kouen ga osusume desu.", translation: "Ada. Taman Sakura adalah tempat yang saya rekomendasikan.", audioFileName: "irodori-elementary1-05-a02-l02.mp3" },
+  { speakerId: "akiko", japanese: <>この近くに、おすすめの場所がありますか。</>, romaji: "Kono chikaku ni, osusume no basho ga arimasu ka?", translation: "Ada tempat yang kamu rekomendasikan di dekat sini?", audioFileName: "irodori-elementary1-05-a02-l01.mp3" },
+  { speakerId: "kenji", japanese: <>はい。桜公園がおすすめです。</>, romaji: "Hai. Sakura Kouen ga osusume desu.", translation: "Ada. Saya merekomendasikan Taman Sakura.", audioFileName: "irodori-elementary1-05-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>どんなところですか。</>, romaji: "Donna tokoro desu ka?", translation: "Tempat seperti apa itu?", audioFileName: "irodori-elementary1-05-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>駅から遠いけど、静かで、きれいですよ。</>, romaji: "Eki kara tooi kedo, shizuka de, kirei desu yo.", translation: "Memang jauh dari stasiun, tetapi tenang dan indah.", audioFileName: "irodori-elementary1-05-a02-l04.mp3" },
 ];
 
 const localShopConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>この町に有名な食堂がありますか。</>, romaji: "Kono machi ni yuumei na shokudou ga arimasu ka?", translation: "Apakah ada kedai makan terkenal di kota ini?", audioFileName: "irodori-elementary1-05-a03-l01.mp3" },
-  { speakerId: "yui", japanese: <>はい。駅の近くに、ひかり食堂があります。</>, romaji: "Hai. Eki no chikaku ni, Hikari Shokudou ga arimasu.", translation: "Ada. Di dekat stasiun terdapat Kedai Makan Hikari.", audioFileName: "irodori-elementary1-05-a03-l02.mp3" },
-  { speakerId: "sota", japanese: <>どんな店ですか。</>, romaji: "Donna mise desu ka?", translation: "Toko atau kedai seperti apa itu?", audioFileName: "irodori-elementary1-05-a03-l03.mp3" },
+  { speakerId: "yui", japanese: <>はい。駅の近くに、ひかり食堂があります。</>, romaji: "Hai. Eki no chikaku ni, Hikari Shokudou ga arimasu.", translation: "Ada. Di dekat stasiun ada Hikari Shokudo.", audioFileName: "irodori-elementary1-05-a03-l02.mp3" },
+  { speakerId: "sota", japanese: <>どんな店ですか。</>, romaji: "Donna mise desu ka?", translation: "Restorannya seperti apa?", audioFileName: "irodori-elementary1-05-a03-l03.mp3" },
   { speakerId: "yui", japanese: <>料理がおいしくて、値段も安いです。</>, romaji: "Ryouri ga oishikute, nedan mo yasui desu.", translation: "Masakannya enak dan harganya juga murah.", audioFileName: "irodori-elementary1-05-a03-l04.mp3" },
 ];
 
@@ -53,12 +53,12 @@ const townMapConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>この町の地図を見ていますか。</>, romaji: "Kono machi no chizu o mite imasu ka?", translation: "Apakah kamu sedang melihat peta kota ini?", audioFileName: "irodori-elementary1-05-a04-l01.mp3" },
   { speakerId: "akiko", japanese: <>はい。図書館はどこですか。</>, romaji: "Hai. Toshokan wa doko desu ka?", translation: "Iya. Di mana perpustakaannya?", audioFileName: "irodori-elementary1-05-a04-l02.mp3" },
   { speakerId: "kenji", japanese: <>公園の近くです。駅から少し遠いです。</>, romaji: "Kouen no chikaku desu. Eki kara sukoshi tooi desu.", translation: "Letaknya dekat taman. Agak jauh dari stasiun.", audioFileName: "irodori-elementary1-05-a04-l03.mp3" },
-  { speakerId: "akiko", japanese: <>そうですか。静かなところですね。</>, romaji: "Sou desu ka. Shizuka na tokoro desu ne.", translation: "Begitu, ya. Tempat yang tenang.", audioFileName: "irodori-elementary1-05-a04-l04.mp3" },
+  { speakerId: "akiko", japanese: <>そうですか。静かなところですね。</>, romaji: "Sou desu ka. Shizuka na tokoro desu ne.", translation: "Oh, begitu. Tempatnya tenang, ya.", audioFileName: "irodori-elementary1-05-a04-l04.mp3" },
 ];
 
 const townActivityConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>この町には何がありますか。</>, romaji: "Kono machi ni wa nani ga arimasu ka?", translation: "Ada apa saja di kota ini?", audioFileName: "irodori-elementary1-05-a05-l01.mp3" },
-  { speakerId: "sota", japanese: <>大きい公園があります。春には花を見ることができます。</>, romaji: "Ookii kouen ga arimasu. Haru ni wa hana o miru koto ga dekimasu.", translation: "Ada taman yang besar. Pada musim semi, kita bisa melihat bunga.", audioFileName: "irodori-elementary1-05-a05-l02.mp3" },
+  { speakerId: "sota", japanese: <>大きい公園があります。春には花を見ることができます。</>, romaji: "Ookii kouen ga arimasu. Haru ni wa hana o miru koto ga dekimasu.", translation: "Ada taman besar. Pada musim semi, kita bisa melihat bunga-bunga.", audioFileName: "irodori-elementary1-05-a05-l02.mp3" },
   { speakerId: "yui", japanese: <>町は静かですか。</>, romaji: "Machi wa shizuka desu ka?", translation: "Apakah kotanya tenang?", audioFileName: "irodori-elementary1-05-a05-l03.mp3" },
   { speakerId: "sota", japanese: <>駅の周りはにぎやかだけど、少し離れると静かです。</>, romaji: "Eki no mawari wa nigiyaka da kedo, sukoshi hanareru to shizuka desu.", translation: "Di sekitar stasiun ramai, tetapi agak jauh dari sana suasananya tenang.", audioFileName: "irodori-elementary1-05-a05-l04.mp3" },
 ];
@@ -233,11 +233,11 @@ const simulations = [
   {
     title: "01 · Mendeskripsikan kota",
     heading: "Menggabungkan dua kesan",
-    prompt: "Yui bertanya bagaimana kesan Sota tentang kota tempat tinggalnya. Kota itu ramai dan praktis.",
+    prompt: "Yui bertanya bagaimana kesan Sota tentang kota tempat tinggalnya. Kota itu ramai dan fasilitasnya lengkap.",
     japanese: <>この町はどうですか。</>,
     translation: "Bagaimana menurutmu kota ini?",
     options: [
-      { key: "correct", label: "とてもにぎやかで、便利です。", meaning: "Sangat ramai dan praktis." },
+      { key: "correct", label: "とてもにぎやかで、便利です。", meaning: "Ramai dan fasilitasnya lengkap." },
       { key: "contrast", label: "とてもにぎやかだけど、便利です。", meaning: "Sangat ramai, tetapi praktis." },
       { key: "past", label: "昨日はとてもにぎやかでした。", meaning: "Kemarin sangat ramai." },
     ],
@@ -249,7 +249,7 @@ const simulations = [
     heading: "Memilih bentuk くて",
     prompt: "Kamu ingin menjelaskan bahwa jalan dekat stasiun dan praktis.",
     japanese: <>駅は近いです。それに、便利です。</>,
-    translation: "Stasiunnya dekat. Selain itu, praktis.",
+    translation: "Stasiunnya dekat dan aksesnya mudah.",
     options: [
       { key: "correct", label: "駅が近くて、便利です。", meaning: "Stasiunnya dekat dan praktis." },
       { key: "wrong1", label: "駅が近いで、便利です。", meaning: "Bentuk penghubungnya tidak tepat." },
@@ -263,7 +263,7 @@ const simulations = [
     heading: "Memahami jawaban tentang taman",
     prompt: "Akiko bertanya tentang tempat yang direkomendasikan. Kenji menyarankan taman yang agak jauh, tetapi tenang dan indah.",
     japanese: <>おすすめの場所がありますか。</>,
-    translation: "Apakah ada tempat yang direkomendasikan?",
+    translation: "Ada tempat yang bisa kamu rekomendasikan?",
     options: [
       { key: "park", label: "駅から遠いけど、静かで、きれいですよ。", meaning: "Jauh dari stasiun, tetapi tenang dan indah." },
       { key: "shop", label: "店が多くて、にぎやかです。", meaning: "Tokonya banyak dan ramai." },
