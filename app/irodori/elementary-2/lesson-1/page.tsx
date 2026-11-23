@@ -190,22 +190,22 @@ const snsIntroductionConversation: IrodoriUtterance[] = [
 const canDos = [
   {
     id: "understand-staff-introduction",
-    source: "CAN-DO 01",
+    source: "TARGET KOMUNIKASI 01",
     text: "Memahami nama dan peran anggota ketika diperkenalkan kepada orang-orang di lingkungan baru.",
   },
   {
     id: "give-detailed-self-introduction",
-    source: "CAN-DO 02",
+    source: "TARGET KOMUNIKASI 02",
     text: "Memberikan perkenalan diri yang cukup lengkap, seperti nama, asal, pengalaman, dan hobi.",
   },
   {
     id: "talk-about-hometown",
-    source: "CAN-DO 03",
+    source: "TARGET KOMUNIKASI 03",
     text: "Menceritakan secara sederhana kota asal, ciri-ciri tempat, dan letaknya.",
   },
   {
     id: "write-sns-self-introduction",
-    source: "CAN-DO 04",
+    source: "TARGET KOMUNIKASI 04",
     text: "Menulis perkenalan singkat di komunitas atau grup media sosial.",
   },
 ];
@@ -586,7 +586,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
           <CalendarDays size={16} className="text-[#A9C9E8]" />
           <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target komunikasi ini mengikuti target komunikasi resmi Irodori Dasar 2 Lesson 1.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target komunikasi ini mengikuti target komunikasi resmi Irodori Dasar 2, Pelajaran 1.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -1058,7 +1058,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.07] pt-4">
           <p className="text-xs text-[#A9A398]">
             {isCompleted
-              ? "Lesson 1 selesai. Progres tersimpan."
+              ? "Pelajaran 1 selesai. Progres tersimpan."
               : canDosRated
                 ? "Semua target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
@@ -1069,7 +1069,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
             disabled={!canComplete || isCompleted}
             className="rounded-xl bg-[#486C91] px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-[#3B5E82] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"
           >
-            {isCompleted ? "Lesson 1 selesai" : "Selesaikan Lesson 1"}
+            {isCompleted ? "Pelajaran 1 selesai" : "Selesaikan Pelajaran 1"}
           </button>
         </div>
       </section>
