@@ -410,8 +410,8 @@ const signWords = [
   ["準備中", "じゅんびちゅう · junbi-chuu", "Sedang persiapan"],
   ["休業", "きゅうぎょう · kyuugyou", "Tutup / tidak beroperasi"],
   ["年中無休", "ねんじゅうむきゅう · nenjuu mukyuu", "Buka sepanjang tahun"],
-  ["午前", "ごぜん · gozen", "Pagi / AM"],
-  ["午後", "ごご · gogo", "Siang atau sore / PM"],
+  ["午前", "ごぜん · gozen", "Sebelum pukul 12 siang"],
+  ["午後", "ごご · gogo", "Setelah pukul 12 siang"],
 ];
 
 const shopSigns = [
