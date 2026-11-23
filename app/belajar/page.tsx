@@ -840,9 +840,18 @@ const findWordAt = (index: number): string | null => {
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {babData.vocab.map((v: any, i: number) => (
-                  <div key={i} className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-xl p-4 shadow-xl flex justify-between items-center">
-                    <div><p className="font-bold text-xl text-[#EAE6DD]">{v.kanji}</p></div>
-                    <div className="text-right"><p className="text-sm font-medium text-[#C93438]">{v.meaning}</p><p className="text-xs text-[#A3A099]">{v.kana} ({v.romaji})</p></div>
+                  <div key={v.kanji || i} className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-xl p-4 shadow-xl">
+                    <JapaneseReading
+                      kana={v.kana}
+                      romaji={v.romaji}
+                      translation={v.meaning}
+                      contentClassName="block font-mincho text-2xl md:text-3xl leading-relaxed text-[#EAE6DD]"
+                      kanaClassName="mt-1 font-mincho text-base md:text-lg leading-relaxed text-[#D6AD4F]"
+                      romajiClassName="mt-1 text-sm italic text-[#A9A398]"
+                      translationClassName="mt-3 border-t border-[#33312E]/70 pt-3 text-sm leading-6 text-[#A3A099]"
+                    >
+                      {v.kanji}
+                    </JapaneseReading>
                   </div>
                 ))}
               </div>
