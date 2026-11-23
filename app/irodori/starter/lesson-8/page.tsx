@@ -463,9 +463,7 @@ export default function IrodoriStarterLessonEightPage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 8
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            Where is Yamada-san?
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Yamada ada di mana?</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             <ruby>山田<rt>やまだ</rt></ruby>さんはどこにいますか？
           </p>
