@@ -8,7 +8,6 @@ const yui = { ...speakers.yui, name: "Yui", role: "Teman" };
 const sota = { ...speakers.sota, name: "Sota", role: "Teman" };
 const akiko = { ...speakers.akiko, name: "Akiko", role: "Teman" };
 const kenji = { ...speakers.kenji, name: "Kenji", role: "Teman" };
-const chi = { ...speakers.chi, name: "Chi", role: "Teman" };
 
 const content: IrodoriLessonContent = {
   lessonId: "preintermediate-02",
@@ -50,15 +49,15 @@ const content: IrodoriLessonContent = {
       utterances: [
         { speakerId: "yui", japanese: <>最近、何かドラマを見てる？</>, romaji: "Saikin, nanika dorama o miteru?", translation: "Akhir-akhir ini kamu sedang menonton drama?", audioFileName: "" },
         { speakerId: "akiko", japanese: <>うん。小さな町のパン屋さんが主人公のドラマだよ。</>, romaji: "Un. Chiisana machi no pan-ya-san ga shujinkou no dorama da yo.", translation: "Iya. Drama itu tokoh utamanya pemilik toko roti di sebuah kota kecil.", audioFileName: "" },
-        { speakerId: "yui", japanese: <>どんな話なの？</>, romaji: "Donna hanashi na no?", translation: "Ceritanya tentang apa?", audioFile: "" },
+        { speakerId: "yui", japanese: <>どんな話なの？</>, romaji: "Donna hanashi na no?", translation: "Ceritanya tentang apa?", audioFileName: "" },
         { speakerId: "akiko", japanese: <>町の人たちと協力して、お店を立て直すって話。見ていると元気が出るよ。</>, romaji: "Machi no hitotachi to kyouryoku shite, omise o tatenaosu tte hanashi. Mite iru to genki ga deru yo.", translation: "Ceritanya tentang bekerja sama dengan warga untuk membangun kembali toko itu. Setiap menontonnya, aku jadi bersemangat.", audioFileName: "" },
       ],
     },
     {
       title: "Bercerita tentang musik favorit",
-      speakers: [sota, chi],
+      speakers: [sota, akiko],
       utterances: [
-        { speakerId: "chi", japanese: <>ソウタさんは、どんな音楽がいちばん好きですか。</>, romaji: "Souta-san wa, donna ongaku ga ichiban suki desu ka?", translation: "Sota, jenis musik apa yang paling kamu sukai?", audioFileName: "" },
+        { speakerId: "akiko", japanese: <>ソウタさんは、どんな音楽がいちばん好きですか。</>, romaji: "Souta-san wa, donna ongaku ga ichiban suki desu ka?", translation: "Sota, jenis musik apa yang paling kamu sukai?", audioFileName: "" },
         { speakerId: "sota", japanese: <>映画のサウンドトラックを聞くのが好きです。</>, romaji: "Eiga no saundotorakku o kiku no ga suki desu.", translation: "Saya suka mendengarkan soundtrack film.", audioFileName: "" },
         { speakerId: "chi", japanese: <>どうしてですか。</>, romaji: "Doushite desu ka?", translation: "Kenapa?", audioFileName: "" },
         { speakerId: "sota", japanese: <>聞くと、その映画の場面を思い出すし、気持ちも落ち着くんです。</>, romaji: "Kiku to, sono eiga no bamen o omoidasu shi, kimochi mo ochitsuku n desu.", translation: "Karena saat mendengarkannya, saya teringat adegan film itu dan perasaan saya juga menjadi lebih tenang.", audioFileName: "" },
