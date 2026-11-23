@@ -324,7 +324,7 @@ export default function Profil() {
       <header className="flex items-center justify-between px-1">
         <div>
           <p className="text-[10px] font-bold tracking-[0.3em] text-[#B8860B]">
-            FUDE • CHARACTER ARCHIVE
+            FUDE • ARSIP KARAKTER
           </p>
           <h1 className="text-2xl md:text-3xl font-black text-[#EAE6DD] mt-1">
             旅人の記録
@@ -337,7 +337,7 @@ export default function Profil() {
         <div className="hidden sm:flex items-center gap-2 border border-[#B8860B]/30 bg-[#1B1918] rounded-full px-4 py-2">
           <span className="w-2 h-2 rounded-full bg-[#C93438]" />
           <span className="text-[10px] font-bold tracking-widest text-[#C9B98D]">
-            PLAYER STATUS
+            STATUS PEMAIN
           </span>
         </div>
       </header>
@@ -430,13 +430,13 @@ export default function Profil() {
           <div className="min-w-0 flex flex-col justify-center">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-[10px] font-bold tracking-[0.25em] text-[#B8860B]">
-                冒険者 • ADVENTURER
+                冒険者 • PETUALANG
               </span>
               <span className="h-px flex-1 bg-gradient-to-r from-[#B8860B]/40 to-transparent" />
             </div>
 
             <p className="text-[10px] font-bold tracking-widest text-[#817A73]">
-              PLAYER NAME
+              NAMA PEMAIN
             </p>
 
             <h2 className="mt-1 text-3xl md:text-4xl font-black text-[#F1EBDD] break-words">
@@ -461,10 +461,10 @@ export default function Profil() {
               <div className="flex items-center justify-between mb-3">
                 <div>
                   <p className="text-[10px] font-black tracking-[0.2em] text-[#B8860B]">
-                    経験値 • EXPERIENCE
+                    経験値 • PENGALAMAN
                   </p>
                   <p className="text-xs text-[#817A73] mt-1">
-                    Level progression
+                    Progres level
                   </p>
                 </div>
 
@@ -529,7 +529,7 @@ export default function Profil() {
               STATUS • 能力値
             </p>
             <h3 className="text-lg font-black text-[#EAE6DD]">
-              Player Attributes
+              Atribut Pemain
             </h3>
           </div>
         </div>
@@ -548,7 +548,7 @@ export default function Profil() {
               Bab diselesaikan
             </p>
             <p className="text-[9px] text-[#B8860B] mt-2 tracking-widest">
-              CHAPTER CLEAR
+              BAB SELESAI
             </p>
           </div>
 
@@ -564,7 +564,7 @@ export default function Profil() {
               Set JLPT selesai
             </p>
             <p className="text-[9px] text-[#C93438] mt-2 tracking-widest">
-              EXAM CLEAR
+              UJIAN SELESAI
             </p>
           </div>
 
@@ -574,13 +574,13 @@ export default function Profil() {
             </div>
             <Award size={21} className="text-[#D0A74F] mb-4" />
             <p className="text-3xl font-black text-[#F1EBDD]">
-              LVL {levelInfo.level}
+              LEVEL {levelInfo.level}
             </p>
             <p className="text-xs text-[#A3A099] mt-1">
               {levelInfo.rank}
             </p>
             <p className="text-[9px] text-[#B8860B] mt-2 tracking-widest">
-              PLAYER RANK
+              PERINGKAT PEMAIN
             </p>
           </div>
         </div>
@@ -596,10 +596,10 @@ export default function Profil() {
           <div className="flex justify-between items-start gap-3 mb-6">
             <div>
               <p className="text-[9px] font-black tracking-[0.25em] text-[#B8860B]">
-                MAIN QUEST • 学習の旅
+                MISI UTAMA • 学習の旅
               </p>
               <h3 className="text-xl font-black text-[#EAE6DD] mt-1">
-                Learning Journey
+                Perjalanan Belajar
               </h3>
               <p className="text-xs text-[#817A73] mt-1">
                 Minna no Nihongo • Bab 1–50
@@ -611,7 +611,7 @@ export default function Profil() {
                 {progressPercent}%
               </p>
               <p className="text-[8px] font-bold tracking-widest text-[#C93438]">
-                COMPLETED
+                TUNTAS
               </p>
             </div>
           </div>
@@ -633,19 +633,19 @@ export default function Profil() {
               <p className="text-lg font-black text-[#D9B66D]">
                 {completedBab}
               </p>
-              <p className="text-[9px] text-[#817A73]">COMPLETED</p>
+              <p className="text-[9px] text-[#817A73]">TUNTAS</p>
             </div>
             <div className="rounded-xl bg-black/20 border border-white/[0.05] p-3 text-center">
               <p className="text-lg font-black text-[#EAE6DD]">
                 {unlockedBab}
               </p>
-              <p className="text-[9px] text-[#817A73]">UNLOCKED</p>
+              <p className="text-[9px] text-[#817A73]">TERBUKA</p>
             </div>
             <div className="rounded-xl bg-black/20 border border-white/[0.05] p-3 text-center">
               <p className="text-lg font-black text-[#EAE6DD]">
                 {50 - completedBab}
               </p>
-              <p className="text-[9px] text-[#817A73]">REMAINING</p>
+              <p className="text-[9px] text-[#817A73]">TERSISA</p>
             </div>
           </div>
         </div>
@@ -660,13 +660,13 @@ export default function Profil() {
         <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <p className="text-[9px] font-black tracking-[0.25em] text-[#B8860B]">
-              TREASURE COLLECTION • 宝物
+              KOLEKSI • 宝物
             </p>
             <h3 className="text-lg font-black text-[#EAE6DD] mt-1">
-              Equipment & Collection
+              Perlengkapan & Koleksi
             </h3>
             <p className="text-xs text-[#A3A099] mt-1">
-              Badge, frame, dan berbagai koleksi karakter.
+              Lencana, bingkai, dan berbagai koleksi karakter.
             </p>
           </div>
 
@@ -684,7 +684,7 @@ export default function Profil() {
         <div className="flex items-center gap-2 mb-3">
           <Target size={16} className="text-[#B8860B]" />
           <p className="text-[10px] font-bold tracking-[0.2em] text-[#A3A099]">
-            ACCOUNT • AKUN PEMAIN
+            AKUN PEMAIN
           </p>
         </div>
         <GoogleAuthButton />
@@ -737,13 +737,13 @@ export default function Profil() {
             <div className="flex items-center justify-between mb-5">
               <div>
                 <p className="text-[9px] font-bold tracking-[0.25em] text-[#B8860B]">
-                  CHARACTER CUSTOMIZATION
+                  KUSTOMISASI KARAKTER
                 </p>
                 <h3
                   id="edit-profile-title"
                   className="text-xl font-black text-[#EAE6DD] mt-1"
                 >
-                  人物設定 • Edit Profil
+                  人物設定 • Pengaturan Profil
                 </h3>
               </div>
 
@@ -773,7 +773,7 @@ export default function Profil() {
                 htmlFor="profile-name"
                 className="block text-[10px] font-black tracking-[0.15em] text-[#B8860B] mb-2"
               >
-                PLAYER NAME • 名前
+                NAMA PEMAIN • 名前
               </label>
 
               <input
