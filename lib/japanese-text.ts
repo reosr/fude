@@ -59,6 +59,38 @@ function escapeRubyText(value: string): string {
   return value.replace(/[&<>"']/g, (char) => entities[char] ?? char);
 }
 
+export interface JapaneseReadingSegment {
+  text: string;
+  reading?: string;
+}
+
+/** Pecah teks menjadi bagian biasa dan kata yang punya bacaan terverifikasi. */
+export function segmentTextByReadingIndex(value: string): JapaneseReadingSegment[] {
+  const segments: JapaneseReadingSegment[] = [];
+  let plain = "";
+  let cursor = 0;
+
+  while (cursor < value.length) {
+    const candidates = READINGS_BY_INITIAL.get(value[cursor]);
+    const matched = candidates?.find(([word]) => value.startsWith(word, cursor));
+
+    if (matched) {
+      if (plain) {
+        segments.push({ text: plain });
+        plain = "";
+      }
+      segments.push({ text: matched[0], reading: matched[1] });
+      cursor += matched[0].length;
+    } else {
+      plain += value[cursor];
+      cursor += 1;
+    }
+  }
+
+  if (plain) segments.push({ text: plain });
+  return segments;
+}
+
 /**
  * Tambahkan furigana dari indeks bacaan terverifikasi pada bagian teks yang
  * belum memiliki ruby. Tag HTML dan ruby yang sudah ditulis di data tetap utuh.
@@ -78,23 +110,11 @@ export function addRubyFromReadingIndex(value: string): string {
 
     if (rubyDepth > 0) return fragment;
 
-    let output = "";
-    let cursor = 0;
-
-    while (cursor < fragment.length) {
-      const candidates = READINGS_BY_INITIAL.get(fragment[cursor]);
-      const matched = candidates?.find(([word]) => fragment.startsWith(word, cursor));
-
-      if (matched) {
-        output += `<ruby>${escapeRubyText(matched[0])}<rt>${escapeRubyText(matched[1])}</rt></ruby>`;
-        cursor += matched[0].length;
-      } else {
-        output += fragment[cursor];
-        cursor += 1;
-      }
-    }
-
-    return output;
+    return segmentTextByReadingIndex(fragment).map((segment) =>
+      segment.reading
+        ? `<ruby>${escapeRubyText(segment.text)}<rt>${escapeRubyText(segment.reading)}</rt></ruby>`
+        : segment.text
+    ).join("");
   }).join("");
 }
 
