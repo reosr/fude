@@ -187,7 +187,7 @@ export default function IrodoriElementaryOneLessonEighteenPage() {
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#E5A4BF]/[0.08]">祝</div>
    <div className="relative z-10">
     <p className="text-[9px] font-black tracking-[0.24em] text-[#E5A4BF]">IRODORI • ELEMENTARY 1 A2 • LESSON 18</p>
-    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">How about giving something as a gift?</h1>
+    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Bagaimana kalau memberi sesuatu sebagai hadiah?</h1>
     <p className="mt-2 text-sm font-semibold text-[#E5A4BF]">何かプレゼントをあげませんか？</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar mengucapkan selamat, berdiskusi memilih hadiah, mengucapkan terima kasih, memahami unggahan ulang tahun, dan menulis pesan pada kartu.</p>
     <div className="mt-5 flex flex-wrap gap-2">
