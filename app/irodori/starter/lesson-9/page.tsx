@@ -603,11 +603,17 @@ export default function IrodoriStarterLessonNinePage() {
                 {word.icon}
               </span>
               <div className="min-w-0">
-                <p className="font-mincho text-base font-bold text-[#F1EBDD]">
+<JapaneseReading
+                  allowIndexFallback
+                  romaji={word.reading}
+                  translation={word.meaning}
+                  contentClassName="font-mincho text-base font-bold leading-relaxed text-[#F1EBDD]"
+                  kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+                  romajiClassName="mt-1 text-sm italic text-[#B8860B]"
+                  translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+                >
                   {word.jp}
-                </p>
-                <p className="text-[10px] italic text-[#B8860B]">{word.reading}</p>
-                <p className="text-xs text-[#A9A398]">{word.meaning}</p>
+                </JapaneseReading>
               </div>
             </article>
           ))}
