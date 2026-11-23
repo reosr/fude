@@ -11277,5 +11277,364 @@
         "imageQuery": "続ける everyday life Japanese vocabulary"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-18",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 18,
+    "lessonTitle": "I am thinking about starting my own company in the future.",
+    "vocab": [
+      {
+        "kanji": "将来",
+        "kana": "しょうらい",
+        "romaji": "shourai",
+        "meaning": "Masa depan",
+        "imageQuery": "将来 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "夢",
+        "kana": "ゆめ",
+        "romaji": "yume",
+        "meaning": "Impian",
+        "imageQuery": "夢 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "希望",
+        "kana": "きぼう",
+        "romaji": "kibou",
+        "meaning": "Harapan",
+        "imageQuery": "希望 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "会社",
+        "kana": "かいしゃ",
+        "romaji": "kaisha",
+        "meaning": "Perusahaan",
+        "imageQuery": "会社 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "作る",
+        "kana": "つくる",
+        "romaji": "tsukuru",
+        "meaning": "Membuat",
+        "imageQuery": "作る Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "就職する",
+        "kana": "しゅうしょくする",
+        "romaji": "shuushoku suru",
+        "meaning": "Mendapat pekerjaan",
+        "imageQuery": "就職する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "店",
+        "kana": "みせ",
+        "romaji": "mise",
+        "meaning": "Toko",
+        "imageQuery": "店 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "持つ",
+        "kana": "もつ",
+        "romaji": "motsu",
+        "meaning": "Memiliki",
+        "imageQuery": "持つ Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "稼ぐ",
+        "kana": "かせぐ",
+        "romaji": "kasegu",
+        "meaning": "Menghasilkan uang",
+        "imageQuery": "稼ぐ Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "貯金する",
+        "kana": "ちょきんする",
+        "romaji": "chokin suru",
+        "meaning": "Menabung",
+        "imageQuery": "貯金する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "結婚する",
+        "kana": "けっこんする",
+        "romaji": "kekkon suru",
+        "meaning": "Menikah",
+        "imageQuery": "結婚する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "家",
+        "kana": "いえ",
+        "romaji": "ie",
+        "meaning": "Rumah",
+        "imageQuery": "家 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "建てる",
+        "kana": "たてる",
+        "romaji": "tateru",
+        "meaning": "Membangun",
+        "imageQuery": "建てる Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "買う",
+        "kana": "かう",
+        "romaji": "kau",
+        "meaning": "Membeli",
+        "imageQuery": "買う Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "進学する",
+        "kana": "しんがくする",
+        "romaji": "shingaku suru",
+        "meaning": "Melanjutkan pendidikan",
+        "imageQuery": "進学する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "留学する",
+        "kana": "りゅうがくする",
+        "romaji": "ryuugaku suru",
+        "meaning": "Belajar di luar negeri",
+        "imageQuery": "留学する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "暮らす",
+        "kana": "くらす",
+        "romaji": "kurasu",
+        "meaning": "Menjalani kehidupan atau tinggal",
+        "imageQuery": "暮らす Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "のんびり",
+        "kana": "のんびり",
+        "romaji": "nonbiri",
+        "meaning": "Dengan santai",
+        "imageQuery": "のんびり Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "職人",
+        "kana": "しょくにん",
+        "romaji": "shokunin",
+        "meaning": "Perajin atau tenaga ahli",
+        "imageQuery": "職人 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "ガイド",
+        "kana": "ガイド",
+        "romaji": "gaido",
+        "meaning": "Pemandu",
+        "imageQuery": "ガイド Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "通訳",
+        "kana": "つうやく",
+        "romaji": "tsuuyaku",
+        "meaning": "Penerjemah lisan",
+        "imageQuery": "通訳 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "日本語教師",
+        "kana": "にほんごきょうし",
+        "romaji": "nihongo kyoushi",
+        "meaning": "Guru bahasa Jepang",
+        "imageQuery": "日本語教師 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "自動車",
+        "kana": "じどうしゃ",
+        "romaji": "jidousha",
+        "meaning": "Mobil",
+        "imageQuery": "自動車 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "整備",
+        "kana": "せいび",
+        "romaji": "seibi",
+        "meaning": "Perawatan atau pemeliharaan",
+        "imageQuery": "整備 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "役に立つ",
+        "kana": "やくにたつ",
+        "romaji": "yaku ni tatsu",
+        "meaning": "Bermanfaat atau berguna",
+        "imageQuery": "役に立つ Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "技術",
+        "kana": "ぎじゅつ",
+        "romaji": "gijutsu",
+        "meaning": "Keterampilan atau teknik",
+        "imageQuery": "技術 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "がんばる",
+        "kana": "がんばる",
+        "romaji": "ganbaru",
+        "meaning": "Berusaha dengan tekun",
+        "imageQuery": "がんばる Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "暮らし",
+        "kana": "くらし",
+        "romaji": "kurashi",
+        "meaning": "Kehidupan sehari-hari",
+        "imageQuery": "暮らし Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "うまくいく",
+        "kana": "うまくいく",
+        "romaji": "umaku iku",
+        "meaning": "Berjalan dengan baik",
+        "imageQuery": "うまくいく Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "若者",
+        "kana": "わかもの",
+        "romaji": "wakamono",
+        "meaning": "Anak muda",
+        "imageQuery": "若者 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "卒業する",
+        "kana": "そつぎょうする",
+        "romaji": "sotsugyou suru",
+        "meaning": "Lulus",
+        "imageQuery": "卒業する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "広げる",
+        "kana": "ひろげる",
+        "romaji": "hirogeru",
+        "meaning": "Memperluas",
+        "imageQuery": "広げる Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "募集",
+        "kana": "ぼしゅう",
+        "romaji": "boshuu",
+        "meaning": "Perekrutan atau lowongan",
+        "imageQuery": "募集 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "応募する",
+        "kana": "おうぼする",
+        "romaji": "oubo suru",
+        "meaning": "Melamar",
+        "imageQuery": "応募する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "続ける",
+        "kana": "つづける",
+        "romaji": "tsuzukeru",
+        "meaning": "Melanjutkan",
+        "imageQuery": "続ける Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "とにかく",
+        "kana": "とにかく",
+        "romaji": "tonikaku",
+        "meaning": "Pokoknya atau bagaimanapun",
+        "imageQuery": "とにかく Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "知り合う",
+        "kana": "しりあう",
+        "romaji": "shiriau",
+        "meaning": "Berkenalan",
+        "imageQuery": "知り合う Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman",
+        "imageQuery": "経験 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "文化",
+        "kana": "ぶんか",
+        "romaji": "bunka",
+        "meaning": "Budaya",
+        "imageQuery": "文化 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "相談する",
+        "kana": "そうだんする",
+        "romaji": "soudan suru",
+        "meaning": "Berkonsultasi atau berdiskusi",
+        "imageQuery": "相談する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "送別会",
+        "kana": "そうべつかい",
+        "romaji": "soubetsukai",
+        "meaning": "Acara perpisahan",
+        "imageQuery": "送別会 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "最後",
+        "kana": "さいご",
+        "romaji": "saigo",
+        "meaning": "Terakhir",
+        "imageQuery": "最後 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "あいさつ",
+        "kana": "あいさつ",
+        "romaji": "aisatsu",
+        "meaning": "Salam atau sambutan",
+        "imageQuery": "あいさつ Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "感謝する",
+        "kana": "かんしゃする",
+        "romaji": "kansha suru",
+        "meaning": "Berterima kasih",
+        "imageQuery": "感謝する Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "親切（な）",
+        "kana": "しんせつ（な）",
+        "romaji": "shinsetsu (na)",
+        "meaning": "Ramah atau baik hati",
+        "imageQuery": "親切（な） Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "助ける",
+        "kana": "たすける",
+        "romaji": "tasukeru",
+        "meaning": "Membantu",
+        "imageQuery": "助ける Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "貸す",
+        "kana": "かす",
+        "romaji": "kasu",
+        "meaning": "Meminjamkan",
+        "imageQuery": "貸す Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "ごちそうする",
+        "kana": "ごちそうする",
+        "romaji": "gochisou suru",
+        "meaning": "Menraktir atau menjamu",
+        "imageQuery": "ごちそうする Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "思い出",
+        "kana": "おもいで",
+        "romaji": "omoide",
+        "meaning": "Kenangan",
+        "imageQuery": "思い出 Japanese future plans vocabulary"
+      },
+      {
+        "kanji": "世話になる",
+        "kana": "せわになる",
+        "romaji": "sewa ni naru",
+        "meaning": "Menerima bantuan atau perhatian",
+        "imageQuery": "世話になる Japanese future plans vocabulary"
+      }
+    ]
   }
 ]
