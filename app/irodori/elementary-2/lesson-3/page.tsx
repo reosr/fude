@@ -143,7 +143,7 @@ const phoneReservationConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>来週の土曜日です。4人で、午後6時はだいじょうぶですか。</>,
     romaji: "Raishuu no doyoubi desu. Yonin de, gogo rokuji wa daijoubu desu ka?",
-    translation: "Sabtu depan untuk empat orang. Apakah pukul enam sore bisa?",
+    translation: "Untuk Sabtu depan, empat orang. Apakah masih ada tempat pukul enam sore?",
     audioFileName: "irodori-elementary2-03-a04-l03.mp3",
   },
   {
@@ -277,10 +277,10 @@ const kanjiWords = [
 ];
 
 const menuItems = [
-  { name: "チキン定食", reading: "Chikin teishoku", meaning: "Set menu ayam", price: 780, note: "Termasuk nasi dan sup" },
-  { name: "焼き魚定食", reading: "Yakizakana teishoku", meaning: "Set menu ikan panggang", price: 850, note: "Jenis ikan tersedia hari itu" },
+  { name: "チキン定食", reading: "Chikin teishoku", meaning: "Paket ayam", price: 780, note: "Termasuk nasi dan sup" },
+  { name: "焼き魚定食", reading: "Yakizakana teishoku", meaning: "Paket ikan panggang", price: 850, note: "Jenis ikan tersedia hari itu" },
   { name: "野菜カレー", reading: "Yasai karee", meaning: "Kari sayuran", price: 680, note: "Disajikan dengan nasi" },
-  { name: "ハンバーグ定食", reading: "Hanbaagu teishoku", meaning: "Set menu hamburger steak", price: 820, note: "Termasuk nasi dan sup" },
+  { name: "ハンバーグ定食", reading: "Hanbaagu teishoku", meaning: "Paket hamburger steak", price: 820, note: "Termasuk nasi dan sup" },
   { name: "野菜うどん", reading: "Yasai udon", meaning: "Udon sayuran", price: 620, note: "Kuah sayuran" },
 ];
 
