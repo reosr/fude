@@ -32,7 +32,7 @@ const weekendConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>ケンジさん、<ruby>週末<rt>しゅうまつ</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしましたか？</>,
     romaji: "Kenji-san, shuumatsu wa nani o shimashita ka?",
-    translation: "Kenji, apa yang kamu lakukan akhir pekan?",
+    translation: "Kenji, apa yang kamu lakukan akhir pekan kemarin?",
     audioFileName: "irodori-starter-17-a01-l01.mp3",
   },
   {
@@ -91,7 +91,7 @@ const impressionConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>いいえ、あまり<ruby>多<rt>おお</rt></ruby>くなかったです。</>,
     romaji: "Iie, amari ooku nakatta desu.",
-    translation: "Tidak, tidak terlalu ramai.",
+    translation: "Tidak, pengunjungnya tidak terlalu banyak.",
     audioFileName: "irodori-starter-17-a02-l04.mp3",
   },
 ];
@@ -132,7 +132,7 @@ const feeConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>この<ruby>科学館<rt>かがくかん</rt></ruby>の<ruby>料金<rt>りょうきん</rt></ruby>を<ruby>見<rt>み</rt></ruby>てください。</>,
     romaji: "Kono kagakukan no ryoukin o mite kudasai.",
-    translation: "Tolong lihat tarif gedung sains ini.",
+    translation: "Coba lihat biaya masuk ke museum sains ini.",
     audioFileName: "irodori-starter-17-a04-l01.mp3",
   },
   {
@@ -146,7 +146,7 @@ const feeConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>500<ruby>円<rt>えん</rt></ruby>です。</>,
     romaji: "Gohyaku en desu.",
-    translation: "500 yen.",
+    translation: "Harganya 500 yen.",
     audioFileName: "irodori-starter-17-a04-l03.mp3",
   },
   {
@@ -170,7 +170,7 @@ const messageConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>こちらこそ。<ruby>映画<rt>えいが</rt></ruby>はとても<ruby>楽<rt>たの</rt></ruby>しかったです。</>,
     romaji: "Kochira koso. Eiga wa totemo tanoshikatta desu.",
-    translation: "Sama-sama. Filmnya sangat menyenangkan.",
+    translation: "Sama-sama. Filmnya seru sekali.",
     audioFileName: "irodori-starter-17-a05-l02.mp3",
   },
   {
@@ -828,7 +828,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
         <div className="grid gap-2">
           {[
             { key: "where", label: "今、どこですか？", meaning: "Sekarang di mana?" },
-            { key: "thank-you", label: "こちらこそ。映画はとても楽しかったです。また行きましょう！", meaning: "Sama-sama. Filmnya sangat menyenangkan. Ayo pergi lagi!" },
+            { key: "thank-you", label: "こちらこそ。映画はとても楽しかったです。また行きましょう！", meaning: "Sama-sama. Filmnya seru sekali. Ayo pergi lagi!" },
             { key: "price", label: "チケットはいくらですか？", meaning: "Tiketnya berapa?" },
           ].map((item) => (
             <button key={item.key} type="button" disabled={messageSubmitted} aria-pressed={messageChoice === item.key} onClick={() => setMessageChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (messageSubmitted && item.key === "thank-you" ? "border-emerald-500/50 bg-emerald-500/10" : messageSubmitted && messageChoice === item.key ? "border-red-400/50 bg-red-400/10" : messageChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
