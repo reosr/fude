@@ -11,6 +11,8 @@ import LevelBadge from "../../components/LevelBadge";
 import { ChevronLeft, ChevronRight, CheckCircle2, Lock, BookOpen, ArrowLeft, X, Volume2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { syncNewCollectionUnlocks } from "../../lib/profile-collections";
+import JapaneseReading from "@/components/JapaneseReading";
+import { formatGrammarNotation } from "@/lib/japanese-text";
 
 let wanakanaModule: typeof import("wanakana") | null = null;
 let wanakanaPromise: Promise<typeof import("wanakana")> | null = null;
@@ -763,28 +765,33 @@ const findWordAt = (index: number): string | null => {
 
           {babData.tips && (
             <div className="bg-[#B8860B]/10 border border-[#B8860B]/30 rounded-xl p-4 shadow-sm mt-4">
-              <div className="flex items-center gap-2 mb-2"><span className="text-lg">💡</span><span className="text-sm font-bold text-[#B8860B]">Tips & Nuansa Penting</span></div>
-              <div className="text-sm text-[#EAE6DD] leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: babData.tips }} />
+              <div className="flex items-center gap-2 mb-2"><span className="text-lg">💡</span><span className="text-sm font-bold text-[#B8860B]">Tips dan Nuansa Penting</span></div>
+              <div className="text-sm text-[#EAE6DD] leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(babData.tips) }} />
             </div>
           )}
 
           {babData.grammar && babData.grammar.length > 0 && (
             <div className="space-y-4">
-              <h4 className="font-bold text-lg text-[#EAE6DD]">Pola Kalimat (Grammar)</h4>
+              <h4 className="font-bold text-lg text-[#EAE6DD]">Pola Tata Bahasa</h4>
               {babData.grammar.map((g: any, i: number) => (
                 <div key={i} className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-xl p-5 shadow-xl">
-                  <div className="font-bold text-xl text-[#EAE6DD] font-mincho leading-[2] pt-3 mb-1 [&_rt]:text-[0.45em]" dangerouslySetInnerHTML={{ __html: g.pattern }} />
+                  <div className="font-bold text-xl text-[#EAE6DD] font-mincho leading-[2] pt-3 mb-1 [&_rt]:text-[0.45em]" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(g.pattern) }} />
                   {g.formula && (
                     <div className="bg-[#262523] border border-[#44413D] rounded-lg p-3 my-3">
                       <p className="text-xs font-bold text-[#B8860B] mb-1">RUMUS / PERUBAHAN</p>
-                      <div className="text-base font-mono text-[#EAE6DD] whitespace-pre-wrap leading-[2.4] pt-2 [&_rt]:text-[0.75em]" dangerouslySetInnerHTML={{ __html: g.formula }} />
+                      <div className="text-base font-mono text-[#EAE6DD] whitespace-pre-wrap leading-[2.4] pt-2 [&_rt]:text-[0.75em]" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(g.formula) }} />
                     </div>
                   )}
-                  {g.explanation && <div className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3" dangerouslySetInnerHTML={{ __html: g.explanation }} />}
+                  {g.explanation && <div className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(g.explanation) }} />}
                   <div className="space-y-3 mt-4">
                     {g.examples && g.examples.map((ex: any, index: number) => (
                       <div key={index} className="bg-[#121110]/50 rounded-lg p-4 text-sm border border-[#33312E]/50">
-                        <div className="text-[#EAE6DD] text-lg md:text-2xl font-mincho leading-[2.8] pt-2 tracking-wide mb-1 [&_rt]:text-[0.5em]" dangerouslySetInnerHTML={{ __html: ex.kanji }} />
+                        <JapaneseReading
+                          html={ex.kanji}
+                          contentClassName="text-[#EAE6DD] text-lg md:text-2xl font-mincho leading-[2.8] pt-2 tracking-wide mb-1 [&_rt]:text-[0.5em]"
+                          kanaClassName="mt-1 font-mincho text-sm md:text-base leading-relaxed text-[#D6AD4F]"
+                          showRomaji={false}
+                        />
                         <p className="text-sm text-[#B8860B] mb-3 italic tracking-wide">{getRomaji(ex.kanji, babData.bab)}</p>
                         <div className="text-[#A3A099] border-t border-[#333132]/50 pt-3" dangerouslySetInnerHTML={{ __html: ex.id }} />
                       </div>
