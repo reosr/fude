@@ -167,7 +167,7 @@ export default function IrodoriElementaryOneLessonTenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#91B99A]/[0.08]">教</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#9CC5A3]">IRODORI • ELEMENTARY 1 A2 • LESSON 10</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I would like to take a Japanese-language class.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya ingin mengikuti kelas bahasa Jepang.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9CDB0]">日本語のクラスに参加したいんですが。</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Berlatih membaca informasi kelas komunitas, menanyakan jadwal dan isi pelajaran, membicarakan kelas bahasa Jepang, serta menjelaskan pengalaman dan tujuan belajar.
