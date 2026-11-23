@@ -14,7 +14,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
 import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
@@ -23,18 +23,18 @@ import {
 } from "@/lib/irodori-progress";
 import type { IrodoriRating } from "@/lib/irodori-progress";
 
-const speakers = [IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota];
+const tokohs = [IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota];
 
 const morningGreetings: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>おはようございます。</>,
     romaji: "Ohayou gozaimasu.",
     translation: "Selamat pagi (sopan).",
     audioFileName: "irodori-starter-01-a01-l01.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>おはようございます。</>,
     romaji: "Ohayou gozaimasu.",
     translation: "Selamat pagi (sopan).",
@@ -44,14 +44,14 @@ const morningGreetings: IrodoriUtterance[] = [
 
 const casualMorningGreetings: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>おはよう。</>,
     romaji: "Ohayou.",
     translation: "Pagi! (akrab).",
     audioFileName: "irodori-starter-01-a01-l03.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>おはよう。</>,
     romaji: "Ohayou.",
     translation: "Pagi! (akrab).",
@@ -61,14 +61,14 @@ const casualMorningGreetings: IrodoriUtterance[] = [
 
 const daytimeGreetings: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>こんにちは。</>,
     romaji: "Konnichiwa.",
     translation: "Halo. / Selamat siang.",
     audioFileName: "irodori-starter-01-a01-l05.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>こんにちは。</>,
     romaji: "Konnichiwa.",
     translation: "Halo. / Selamat siang.",
@@ -78,14 +78,14 @@ const daytimeGreetings: IrodoriUtterance[] = [
 
 const eveningGreetings: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>こんばんは。</>,
     romaji: "Konbanwa.",
     translation: "Selamat malam (sapaan saat bertemu).",
     audioFileName: "irodori-starter-01-a01-l07.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>こんばんは。</>,
     romaji: "Konbanwa.",
     translation: "Selamat malam (sapaan saat bertemu).",
@@ -95,14 +95,14 @@ const eveningGreetings: IrodoriUtterance[] = [
 
 const leavingConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。</>,
     romaji: "Osaki ni shitsurei shimasu.",
     translation: "Permisi, saya pamit lebih dahulu.",
     audioFileName: "irodori-starter-01-a02-l01.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした。</>,
     romaji: "Otsukaresama deshita.",
     translation: "Terima kasih atas kerja keras hari ini.",
@@ -112,14 +112,14 @@ const leavingConversation: IrodoriUtterance[] = [
 
 const friendFarewellConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>じゃあ、また。</>,
     romaji: "Jaa, mata.",
     translation: "Kalau begitu, sampai jumpa lagi.",
     audioFileName: "irodori-starter-01-a02-l03.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>またね。</>,
     romaji: "Mata ne.",
     translation: "Sampai jumpa, ya.",
@@ -129,14 +129,14 @@ const friendFarewellConversation: IrodoriUtterance[] = [
 
 const nightFarewellConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>おやすみなさい。</>,
     romaji: "Oyasuminasai.",
     translation: "Selamat malam (sebelum tidur).",
     audioFileName: "irodori-starter-01-a02-l05.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>おやすみなさい。</>,
     romaji: "Oyasuminasai.",
     translation: "Selamat tidur.",
@@ -146,21 +146,21 @@ const nightFarewellConversation: IrodoriUtterance[] = [
 
 const thanksConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>これ、どうぞ。</>,
     romaji: "Kore, douzo.",
     translation: "Ini, silakan.",
     audioFileName: "irodori-starter-01-a03-l01.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>あ、ありがとうございます。</>,
     romaji: "A, arigatou gozaimasu.",
     translation: "Oh, terima kasih.",
     audioFileName: "irodori-starter-01-a03-l02.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>いえいえ。</>,
     romaji: "Ie ie.",
     translation: "Tidak apa-apa. / Sama-sama.",
@@ -170,21 +170,21 @@ const thanksConversation: IrodoriUtterance[] = [
 
 const thanksWithSumimasenConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>どうぞ。</>,
     romaji: "Douzo.",
     translation: "Silakan.",
     audioFileName: "irodori-starter-01-a03-l04.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>すみません。ありがとうございます。</>,
     romaji: "Sumimasen. Arigatou gozaimasu.",
     translation: "Wah, terima kasih. (Ungkapan sopan saat menerima bantuan.)",
     audioFileName: "irodori-starter-01-a03-l05.mp3",
   },
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>いえいえ。</>,
     romaji: "Ie ie.",
     translation: "Tidak apa-apa. / Sama-sama.",
@@ -194,14 +194,14 @@ const thanksWithSumimasenConversation: IrodoriUtterance[] = [
 
 const apologyConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>あっ、すみません。</>,
     romaji: "A, sumimasen.",
     translation: "Ah, maaf.",
     audioFileName: "irodori-starter-01-a03-l07.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <><ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。</>,
     romaji: "Daijoubu desu yo.",
     translation: "Tidak apa-apa.",
@@ -211,14 +211,14 @@ const apologyConversation: IrodoriUtterance[] = [
 
 const casualApologyConversation: IrodoriUtterance[] = [
   {
-    speakerId: "yui",
+    tokohId: "yui",
     japanese: <>ごめんね。</>,
     romaji: "Gomen ne.",
     translation: "Maaf, ya. (Akrab.)",
     audioFileName: "irodori-starter-01-a03-l09.mp3",
   },
   {
-    speakerId: "sota",
+    tokohId: "sota",
     japanese: <>ううん、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>。</>,
     romaji: "Uun, daijoubu.",
     translation: "Tidak, tidak apa-apa. (Akrab.)",
@@ -399,7 +399,7 @@ const hiraganaWords = [
   { word: "おやすみなさい", romaji: "Oyasuminasai", meaning: "Selamat tidur" },
 ];
 
-export default function IrodoriStarterLessonOnePage() {
+export default function IrodoriPemulaLessonOnePage() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
   const [situationAnswers, setSituationAnswers] = useState<Record<number, string>>({});
@@ -463,10 +463,10 @@ export default function IrodoriStarterLessonOnePage() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
-              4 target Can-do
+              4 target target komunikasi
             </span>
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
-              Dialog dengan 2 speaker
+              Dialog dengan 2 tokoh
             </span>
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
               Kuis pemahaman
@@ -506,7 +506,7 @@ export default function IrodoriStarterLessonOnePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 01
+              KEGIATAN 01
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Menyapa saat bertemu
@@ -521,22 +521,22 @@ export default function IrodoriStarterLessonOnePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Pagi hari (sopan)"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={morningGreetings}
         />
         <IrodoriConversation
           title="Scene B · Pagi hari (akrab)"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={casualMorningGreetings}
         />
         <IrodoriConversation
           title="Scene C · Bertemu pada siang hari"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={daytimeGreetings}
         />
         <IrodoriConversation
           title="Scene D · Bertemu pada malam hari"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={eveningGreetings}
         />
         <div className="grid gap-2 sm:grid-cols-3">
@@ -565,7 +565,7 @@ export default function IrodoriStarterLessonOnePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 02
+              KEGIATAN 02
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Berpamitan saat pulang
@@ -580,17 +580,17 @@ export default function IrodoriStarterLessonOnePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Pulang lebih dahulu dari tempat kerja"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={leavingConversation}
         />
         <IrodoriConversation
           title="Scene B · Berpisah dengan teman"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={friendFarewellConversation}
         />
         <IrodoriConversation
           title="Scene C · Sebelum tidur"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={nightFarewellConversation}
         />
         <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
@@ -611,7 +611,7 @@ export default function IrodoriStarterLessonOnePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 03
+              KEGIATAN 03
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Berterima kasih dan meminta maaf
@@ -626,22 +626,22 @@ export default function IrodoriStarterLessonOnePage() {
         </p>
         <IrodoriConversation
           title="Scene A · Menerima sesuatu"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={thanksConversation}
         />
         <IrodoriConversation
           title="Scene B · Menerima bantuan dengan sopan"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={thanksWithSumimasenConversation}
         />
         <IrodoriConversation
           title="Scene C · Meminta maaf dengan sopan"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={apologyConversation}
         />
         <IrodoriConversation
           title="Scene D · Meminta maaf kepada teman"
-          speakers={speakers}
+          tokohs={tokohs}
           utterances={casualApologyConversation}
         />
       </section>
@@ -653,7 +653,7 @@ export default function IrodoriStarterLessonOnePage() {
           </span>
           <div>
             <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-              ACTIVITY 04
+              KEGIATAN 04
             </p>
             <h2 className="text-lg font-black text-[#EAE6DD]">
               Memahami stiker pesan
@@ -1070,7 +1070,7 @@ export default function IrodoriStarterLessonOnePage() {
         {!quizSubmitted && (
           <p className="mt-2 text-[10px] text-[#817A73]">
             Selesaikan kuis stiker dan latihan situasi, lalu isi penilaian
-            Can-do untuk menyelesaikan pelajaran.
+            target komunikasi untuk menyelesaikan pelajaran.
           </p>
         )}
       </section>
