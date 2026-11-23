@@ -886,6 +886,7 @@ export default function IrodoriStarterLessonOnePage() {
               }`}
             >
               <JapaneseReading
+                allowIndexFallback
                 romaji={item.romaji}
                 translation={item.meaning}
                 contentClassName="font-mincho text-base font-bold leading-relaxed text-[#EAE6DD]"
