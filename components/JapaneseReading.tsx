@@ -14,6 +14,7 @@ interface Props {
   showKana?: boolean;
   showRomaji?: boolean;
   showKanaForKanaOnly?: boolean;
+  allowIndexFallback?: boolean;
 }
 
 export default function JapaneseReading({
@@ -25,8 +26,11 @@ export default function JapaneseReading({
   showKana = true,
   showRomaji = true,
   showKanaForKanaOnly = false,
+  allowIndexFallback = false,
 }: Props) {
-  const reading = html !== undefined ? extractKanaFromRubyHtml(html) : extractKanaFromReactNode(children);
+  const reading = html !== undefined
+    ? extractKanaFromRubyHtml(html, allowIndexFallback)
+    : extractKanaFromReactNode(children, allowIndexFallback);
   const showKanaLine = Boolean(reading && showKana && (reading.hasKanji || showKanaForKanaOnly));
   const romaji = reading && showRomaji ? toRomaji(reading.kana) : "";
 
