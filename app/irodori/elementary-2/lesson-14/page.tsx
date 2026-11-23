@@ -33,34 +33,34 @@ const friendKenji = { ...speakers.kenji, name: "Kenji", role: "Teman" };
 const lessonId = "elementary2-14";
 
 const dryCleaningConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>このズボンをクリーニングに出したいんですが。</>, romaji: "Kono zubon o kuriiningu ni dashitai n desu ga.", translation: "Saya ingin menyerahkan celana ini untuk dicuci di penatu.", audioFileName: "irodori-elementary2-14-a01-l01.mp3" },
-  { speakerId: "akiko", japanese: <>こちらにシミがありますね。シミ抜きもしますか。</>, romaji: "Kochira ni shimi ga arimasu ne. Shimi nuki mo shimasu ka?", translation: "Ada noda di bagian ini. Apakah ingin sekalian dilakukan penghilangan noda?", audioFileName: "irodori-elementary2-14-a01-l02.mp3" },
+  { speakerId: "yui", japanese: <>このズボンをクリーニングに出したいんですが。</>, romaji: "Kono zubon o kuriiningu ni dashitai n desu ga.", translation: "Saya ingin menggunakan jasa laundry untuk celana ini.", audioFileName: "irodori-elementary2-14-a01-l01.mp3" },
+  { speakerId: "akiko", japanese: <>こちらにシミがありますね。シミ抜きもしますか。</>, romaji: "Kochira ni shimi ga arimasu ne. Shimi nuki mo shimasu ka?", translation: "Ada noda di bagian ini. Mau sekalian dibersihkan nodanya?", audioFileName: "irodori-elementary2-14-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>はい。別料金はいくらですか。</>, romaji: "Hai. Betsu ryoukin wa ikura desu ka?", translation: "Ya. Berapa biaya tambahannya?", audioFileName: "irodori-elementary2-14-a01-l03.mp3" },
-  { speakerId: "akiko", japanese: <>この店では三百円です。仕上がりは三日後です。</>, romaji: "Kono mise de wa sanbyaku en desu. Shiagari wa mikka go desu.", translation: "Di toko ini biayanya 300 yen. Pakaian selesai tiga hari lagi.", audioFileName: "irodori-elementary2-14-a01-l04.mp3" },
+  { speakerId: "akiko", japanese: <>この店では三百円です。仕上がりは三日後です。</>, romaji: "Kono mise de wa sanbyaku en desu. Shiagari wa mikka go desu.", translation: "Di toko ini biaya tambahannya 300 yen. Pakaian bisa diambil tiga hari lagi.", audioFileName: "irodori-elementary2-14-a01-l04.mp3" },
 ];
 const bicycleServiceConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>すみません、自転車のタイヤに空気を入れてもらえますか。</>, romaji: "Sumimasen, jitensha no taiya ni kuuki o irete moraemasu ka?", translation: "Permisi, bisakah Anda membantu mengisi angin ban sepeda saya?", audioFileName: "irodori-elementary2-14-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>はい。こちらへどうぞ。</>, romaji: "Hai. Kochira e douzo.", translation: "Tentu. Silakan ke sini.", audioFileName: "irodori-elementary2-14-a02-l02.mp3" },
   { speakerId: "sota", japanese: <>料金はかかりますか。</>, romaji: "Ryoukin wa kakarimasu ka?", translation: "Apakah ada biayanya?", audioFileName: "irodori-elementary2-14-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>空気入れは無料です。必要なら、タイヤも確認します。</>, romaji: "Kuuki ire wa muryou desu. Hitsuyou nara, taiya mo kakunin shimasu.", translation: "Pompa angin dapat digunakan gratis. Bila perlu, kami juga akan memeriksa ban.", audioFileName: "irodori-elementary2-14-a02-l04.mp3" },
+  { speakerId: "kenji", japanese: <>空気入れは無料です。必要なら、タイヤも確認します。</>, romaji: "Kuuki ire wa muryou desu. Hitsuyou nara, taiya mo kakunin shimasu.", translation: "Pengisian angin gratis. Kalau perlu, kami juga bisa memeriksa bannya.", audioFileName: "irodori-elementary2-14-a02-l04.mp3" },
 ];
 const parcelDeliveryConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>荷物を送りたいんですが、元払いでお願いします。</>, romaji: "Nimotsu o okuritai n desu ga, moto barai de onegai shimasu.", translation: "Saya ingin mengirim paket. Saya akan membayar ongkos kirim di sini.", audioFileName: "irodori-elementary2-14-a03-l01.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。こちらの伝票に、お届け先を書いてください。</>, romaji: "Wakarimashita. Kochira no denpyou ni, otodokesaki o kaite kudasai.", translation: "Baik. Silakan tulis alamat tujuan pada formulir ini.", audioFileName: "irodori-elementary2-14-a03-l02.mp3" },
+  { speakerId: "akiko", japanese: <>荷物を送りたいんですが、元払いでお願いします。</>, romaji: "Nimotsu o okuritai n desu ga, moto barai de onegai shimasu.", translation: "Saya ingin mengirim paket ini. Ongkos kirimnya saya bayar di sini.", audioFileName: "irodori-elementary2-14-a03-l01.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。こちらの伝票に、お届け先を書いてください。</>, romaji: "Wakarimashita. Kochira no denpyou ni, otodokesaki o kaite kudasai.", translation: "Baik. Silakan tulis alamat penerima di formulir ini.", audioFileName: "irodori-elementary2-14-a03-l02.mp3" },
   { speakerId: "akiko", japanese: <>配達日は、明日でもいいですか。</>, romaji: "Haitatsubi wa, ashita demo ii desu ka?", translation: "Apakah paketnya bisa dikirim besok?", audioFileName: "irodori-elementary2-14-a03-l03.mp3" },
-  { speakerId: "kenji", japanese: <>はい。希望の時間帯も選べます。</>, romaji: "Hai. Kibou no jikantai mo erabemasu.", translation: "Bisa. Anda juga dapat memilih rentang waktu yang diinginkan.", audioFileName: "irodori-elementary2-14-a03-l04.mp3" },
+  { speakerId: "kenji", japanese: <>はい。希望の時間帯も選べます。</>, romaji: "Hai. Kibou no jikantai mo erabemasu.", translation: "Bisa. Anda juga bisa memilih waktu pengiriman.", audioFileName: "irodori-elementary2-14-a03-l04.mp3" },
 ];
 const hairSalonConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>前髪を少し短くしてください。</>, romaji: "Maegami o sukoshi mijikaku shite kudasai.", translation: "Tolong potong poni saya sedikit lebih pendek.", audioFileName: "irodori-elementary2-14-a04-l01.mp3" },
-  { speakerId: "sota", japanese: <>どのぐらい切りますか。</>, romaji: "Dono gurai kirimasu ka?", translation: "Ingin dipotong seberapa panjang?", audioFileName: "irodori-elementary2-14-a04-l02.mp3" },
-  { speakerId: "yui", japanese: <>一センチぐらい切ってください。全体は長く残してください。</>, romaji: "Issenti gurai kitte kudasai. Zentai wa nagaku nokoshite kudasai.", translation: "Tolong potong sekitar satu sentimeter. Bagian lainnya biarkan tetap panjang.", audioFileName: "irodori-elementary2-14-a04-l03.mp3" },
-  { speakerId: "sota", japanese: <>わかりました。最後に鏡で確認してください。</>, romaji: "Wakarimashita. Saigo ni kagami de kakunin shite kudasai.", translation: "Baik. Silakan periksa hasilnya dengan cermin pada akhir layanan.", audioFileName: "irodori-elementary2-14-a04-l04.mp3" },
+  { speakerId: "sota", japanese: <>どのぐらい切りますか。</>, romaji: "Dono gurai kirimasu ka?", translation: "Mau dipotong seberapa pendek?", audioFileName: "irodori-elementary2-14-a04-l02.mp3" },
+  { speakerId: "yui", japanese: <>一センチぐらい切ってください。全体は長く残してください。</>, romaji: "Issenti gurai kitte kudasai. Zentai wa nagaku nokoshite kudasai.", translation: "Tolong potong sekitar satu sentimeter. Bagian lainnya biarkan tetap panjang, ya.", audioFileName: "irodori-elementary2-14-a04-l03.mp3" },
+  { speakerId: "sota", japanese: <>わかりました。最後に鏡で確認してください。</>, romaji: "Wakarimashita. Saigo ni kagami de kakunin shite kudasai.", translation: "Baik. Terakhir, silakan periksa hasil potongannya di cermin.", audioFileName: "irodori-elementary2-14-a04-l04.mp3" },
 ];
 const internationalSupportConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>この相談窓口では、どんなサービスがありますか。</>, romaji: "Kono soudan madoguchi de wa, donna saabisu ga arimasu ka?", translation: "Layanan apa saja yang tersedia di loket konsultasi ini?", audioFileName: "irodori-elementary2-14-a05-l01.mp3" },
-  { speakerId: "akiko", japanese: <>外国の方のために、生活相談や通訳のサービスがあります。</>, romaji: "Gaikoku no kata no tame ni, seikatsu soudan ya tsuuyaku no saabisu ga arimasu.", translation: "Ada layanan konsultasi kehidupan dan penerjemah lisan untuk warga dari luar negeri.", audioFileName: "irodori-elementary2-14-a05-l02.mp3" },
+  { speakerId: "akiko", japanese: <>外国の方のために、生活相談や通訳のサービスがあります。</>, romaji: "Gaikoku no kata no tame ni, seikatsu soudan ya tsuuyaku no saabisu ga arimasu.", translation: "Ada layanan konsultasi kehidupan sehari-hari dan juru bahasa untuk warga asing.", audioFileName: "irodori-elementary2-14-a05-l02.mp3" },
   { speakerId: "kenji", japanese: <>英語以外の言葉でも相談できますか。</>, romaji: "Eigo igai no kotoba demo soudan dekimasu ka?", translation: "Apakah saya bisa berkonsultasi dalam bahasa selain bahasa Inggris?", audioFileName: "irodori-elementary2-14-a05-l03.mp3" },
-  { speakerId: "akiko", japanese: <>はい。使える言語と時間を受付で確認してください。</>, romaji: "Hai. Tsukaeru gengo to jikan o uketsuke de kakunin shite kudasai.", translation: "Bisa. Silakan periksa bahasa yang tersedia dan waktunya di resepsionis.", audioFileName: "irodori-elementary2-14-a05-l04.mp3" },
+  { speakerId: "akiko", japanese: <>はい。使える言語と時間を受付で確認してください。</>, romaji: "Hai. Tsukaeru gengo to jikan o uketsuke de kakunin shite kudasai.", translation: "Bisa. Tanyakan bahasa dan jam layanan yang tersedia di meja penerimaan.", audioFileName: "irodori-elementary2-14-a05-l04.mp3" },
 ];
 
 const canDos = [
@@ -137,7 +137,7 @@ const kanjiWords = [
 ];
 
 const serviceExamples = [
-  { title: "クリーニング店 · Penatu", body: "服を預けるとき、シミ抜きが必要か、別料金はいくらか、いつ受け取れるかを確認します。", meaning: "Saat menyerahkan pakaian, tanyakan apakah perlu penghilangan noda, berapa biaya tambahannya, dan kapan pakaian dapat diambil." },
+  { title: "クリーニング店 · Penatu", body: "服を預けるとき、シミ抜きが必要か、別料金はいくらか、いつ受け取れるかを確認します。", meaning: "Saat menyerahkan pakaian, tanyakan apakah noda perlu dibersihkan, berapa biaya tambahannya, dan kapan pakaian bisa diambil." },
   { title: "宅配便 · Pengiriman paket", body: "元払いか着払いかを確認して、伝票に必要な情報を書きます。配達日や希望時間帯も確認できます。", meaning: "Pastikan apakah ongkos kirim dibayar pengirim atau penerima, lalu isi informasi yang diperlukan pada formulir. Tanggal dan rentang waktu pengantaran juga dapat diperiksa." },
   { title: "自転車店 · Toko sepeda", body: "自転車の空気を入れたいとき、店の人にサービスの利用方法や料金を聞きます。", meaning: "Saat ingin menggunakan layanan pompa angin, tanyakan cara penggunaan dan biayanya kepada pegawai toko." },
   { title: "国際交流協会 · Pusat pertukaran internasional", body: "外国の方のために、生活相談、通訳、翻訳、生活ガイドブックなどのサービスがあります。", meaning: "Tersedia layanan konsultasi kehidupan, penerjemah lisan, terjemahan tertulis, dan buku panduan kehidupan untuk warga asing." },
