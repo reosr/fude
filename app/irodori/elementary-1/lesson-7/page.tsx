@@ -29,38 +29,38 @@ const lessonId = "elementary1-07";
 
 const askingMeetingDetailsConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>明日のイベント、何時にどこで会いますか。</>, romaji: "Ashita no ibento, nanji ni doko de aimasu ka?", translation: "Untuk acara besok, kita bertemu jam berapa dan di mana?", audioFileName: "irodori-elementary1-07-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>午前九時はどうですか。待ち合わせ場所は駅の東口にしましょう。</>, romaji: "Gozen kuji wa dou desu ka? Machiawase basho wa eki no higashiguchi ni shimashou.", translation: "Bagaimana kalau pukul sembilan pagi? Mari tentukan pintu keluar timur stasiun sebagai tempat bertemu.", audioFileName: "irodori-elementary1-07-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>午前九時はどうですか。待ち合わせ場所は駅の東口にしましょう。</>, romaji: "Gozen kuji wa dou desu ka? Machiawase basho wa eki no higashiguchi ni shimashou.", translation: "Bagaimana kalau pukul sembilan pagi? Kita bertemu di pintu keluar timur stasiun saja.", audioFileName: "irodori-elementary1-07-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>九時ですね。駅の東口ですね。</>, romaji: "Kuji desu ne. Eki no higashiguchi desu ne.", translation: "Pukul sembilan, ya. Di pintu keluar timur stasiun.", audioFileName: "irodori-elementary1-07-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。わかりやすいですよ。</>, romaji: "Hai. Wakariyasui desu yo.", translation: "Iya. Tempatnya mudah ditemukan.", audioFileName: "irodori-elementary1-07-a01-l04.mp3" },
-  { speakerId: "yui", japanese: <>わかりました。では、明日。</>, romaji: "Wakarimashita. Dewa, ashita.", translation: "Baik, mengerti. Sampai besok.", audioFileName: "irodori-elementary1-07-a01-l05.mp3" },
+  { speakerId: "yui", japanese: <>わかりました。では、明日。</>, romaji: "Wakarimashita. Dewa, ashita.", translation: "Oke, sampai besok.", audioFileName: "irodori-elementary1-07-a01-l05.mp3" },
 ];
 
 const decidingMeetingTimeConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>土曜日の待ち合わせは、午後二時はどうですか。</>, romaji: "Doyoubi no machiawase wa, gogo niji wa dou desu ka?", translation: "Bagaimana kalau kita bertemu hari Sabtu pukul dua siang?", audioFileName: "irodori-elementary1-07-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>二時は少し早いです。三時でもいいですか。</>, romaji: "Niji wa sukoshi hayai desu. Sanji demo ii desu ka?", translation: "Pukul dua agak terlalu awal. Bolehkah pukul tiga?", audioFileName: "irodori-elementary1-07-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>はい、大丈夫です。場所はカフェの前はどうですか。</>, romaji: "Hai, daijoubu desu. Basho wa kafe no mae wa dou desu ka?", translation: "Ya, tidak masalah. Bagaimana kalau tempatnya di depan kafe?", audioFileName: "irodori-elementary1-07-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>いいですね。三時にカフェの前ですね。</>, romaji: "Ii desu ne. Sanji ni kafe no mae desu ne.", translation: "Bagus. Pukul tiga di depan kafe, ya.", audioFileName: "irodori-elementary1-07-a02-l04.mp3" },
+  { speakerId: "akiko", japanese: <>はい、大丈夫です。場所はカフェの前はどうですか。</>, romaji: "Hai, daijoubu desu. Basho wa kafe no mae wa dou desu ka?", translation: "Ya, tidak masalah. Bagaimana kalau kita bertemu di depan kafe?", audioFileName: "irodori-elementary1-07-a02-l03.mp3" },
+  { speakerId: "kenji", japanese: <>いいですね。三時にカフェの前ですね。</>, romaji: "Ii desu ne. Sanji ni kafe no mae desu ne.", translation: "Oke. Jadi, pukul tiga di depan kafe, ya.", audioFileName: "irodori-elementary1-07-a02-l04.mp3" },
 ];
 
 const readingLateMessageConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>友だちからメッセージが来ました。</>, romaji: "Tomodachi kara messeeji ga kimashita.", translation: "Ada pesan dari teman.", audioFileName: "irodori-elementary1-07-a03-l01.mp3" },
-  { speakerId: "yui", japanese: <>「電車が止まっていて、十五分ぐらい遅れます」と書いてあります。</>, romaji: "Densha ga tomatte ite, juugofun gurai okuremasu to kaite arimasu.", translation: "Tertulis, “Kereta sedang berhenti, jadi saya akan terlambat sekitar lima belas menit.”", audioFileName: "irodori-elementary1-07-a03-l02.mp3" },
+  { speakerId: "yui", japanese: <>「電車が止まっていて、十五分ぐらい遅れます」と書いてあります。</>, romaji: "Densha ga tomatte ite, juugofun gurai okuremasu to kaite arimasu.", translation: "Tertulis, “Kereta berhenti, jadi saya akan terlambat sekitar 15 menit.”", audioFileName: "irodori-elementary1-07-a03-l02.mp3" },
   { speakerId: "sota", japanese: <>電車のことで遅れるんですね。</>, romaji: "Densha no koto de okurerun desu ne.", translation: "Jadi, dia terlambat karena masalah kereta, ya.", audioFileName: "irodori-elementary1-07-a03-l03.mp3" },
-  { speakerId: "yui", japanese: <>はい。先に着いたら、連絡しましょう。</>, romaji: "Hai. Saki ni tsuitara, renraku shimashou.", translation: "Iya. Kalau kita sampai lebih dahulu, mari beri kabar.", audioFileName: "irodori-elementary1-07-a03-l04.mp3" },
+  { speakerId: "yui", japanese: <>はい。先に着いたら、連絡しましょう。</>, romaji: "Hai. Saki ni tsuitara, renraku shimashou.", translation: "Iya. Kalau kita sampai duluan, kita kabari dia.", audioFileName: "irodori-elementary1-07-a03-l04.mp3" },
 ];
 
 const sendingDelayMessageConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>待ち合わせに遅れそうです。</>, romaji: "Machiawase ni okuresou desu.", translation: "Sepertinya saya akan terlambat untuk janji bertemu.", audioFileName: "irodori-elementary1-07-a04-l01.mp3" },
+  { speakerId: "akiko", japanese: <>待ち合わせに遅れそうです。</>, romaji: "Machiawase ni okuresou desu.", translation: "Sepertinya saya akan terlambat datang ke tempat janjian.", audioFileName: "irodori-elementary1-07-a04-l01.mp3" },
   { speakerId: "kenji", japanese: <>どうしましたか。</>, romaji: "Dou shimashita ka?", translation: "Ada apa?", audioFileName: "irodori-elementary1-07-a04-l02.mp3" },
   { speakerId: "akiko", japanese: <>道に迷って、十分ぐらい遅れます。すみません。</>, romaji: "Michi ni mayotte, juppun gurai okuremasu. Sumimasen.", translation: "Saya tersesat, jadi akan terlambat sekitar sepuluh menit. Maaf.", audioFileName: "irodori-elementary1-07-a04-l03.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。気をつけて来てください。</>, romaji: "Wakarimashita. Ki o tsukete kite kudasai.", translation: "Baik, saya mengerti. Hati-hati saat datang.", audioFileName: "irodori-elementary1-07-a04-l04.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。気をつけて来てください。</>, romaji: "Wakarimashita. Ki o tsukete kite kudasai.", translation: "Oke, hati-hati di jalan.", audioFileName: "irodori-elementary1-07-a04-l04.mp3" },
 ];
 
 const replyingToMessageConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>「少し遅れます」というメッセージが来ました。</>, romaji: "\"Sukoshi okuremasu\" to iu messeeji ga kimashita.", translation: "Saya menerima pesan yang mengatakan, “Saya akan sedikit terlambat.”", audioFileName: "irodori-elementary1-07-a05-l01.mp3" },
+  { speakerId: "yui", japanese: <>「少し遅れます」というメッセージが来ました。</>, romaji: "\"Sukoshi okuremasu\" to iu messeeji ga kimashita.", translation: "Ada pesan masuk: “Saya akan sedikit terlambat.”", audioFileName: "irodori-elementary1-07-a05-l01.mp3" },
   { speakerId: "sota", japanese: <>どんな返事を送りますか。</>, romaji: "Donna henji o okurimasu ka?", translation: "Balasan seperti apa yang akan kamu kirim?", audioFileName: "irodori-elementary1-07-a05-l02.mp3" },
-  { speakerId: "yui", japanese: <>「大丈夫です。カフェで待っています」と送りましょう。</>, romaji: "\"Daijoubu desu. Kafe de matte imasu\" to okurimashou.", translation: "Mari kirim, “Tidak apa-apa. Saya menunggu di kafe.”", audioFileName: "irodori-elementary1-07-a05-l03.mp3" },
-  { speakerId: "sota", japanese: <>そうですね。先に着いたことも伝えます。</>, romaji: "Sou desu ne. Saki ni tsuita koto mo tsutaemasu.", translation: "Betul. Kita juga beri tahu bahwa kita sudah sampai lebih dahulu.", audioFileName: "irodori-elementary1-07-a05-l04.mp3" },
+  { speakerId: "yui", japanese: <>「大丈夫です。カフェで待っています」と送りましょう。</>, romaji: "\"Daijoubu desu. Kafe de matte imasu\" to okurimashou.", translation: "Kita balas, “Tidak apa-apa. Saya tunggu di kafe.”", audioFileName: "irodori-elementary1-07-a05-l03.mp3" },
+  { speakerId: "sota", japanese: <>そうですね。先に着いたことも伝えます。</>, romaji: "Sou desu ne. Saki ni tsuita koto mo tsutaemasu.", translation: "Iya. Kita beri tahu juga kalau kita sudah sampai duluan.", audioFileName: "irodori-elementary1-07-a05-l04.mp3" },
 ];
 
 const canDos = [
@@ -78,7 +78,7 @@ const delayMessages = [
     time: "09:12",
     japanese: "すみません。電車が止まっていて、十五分ぐらい遅れます。",
     romaji: "Sumimasen. Densha ga tomatte ite, juugofun gurai okuremasu.",
-    translation: "Maaf. Kereta sedang berhenti, jadi saya akan terlambat sekitar lima belas menit.",
+    translation: "Maaf. Kereta berhenti, jadi saya akan terlambat sekitar 15 menit.",
     reason: "Alasan: layanan kereta sedang berhenti.",
     reply: "大丈夫です。駅の中で待っています。",
     replyMeaning: "Tidak apa-apa. Saya menunggu di dalam stasiun.",
@@ -89,7 +89,7 @@ const delayMessages = [
     time: "13:25",
     japanese: "道に迷ってしまいました。十分ぐらい遅れそうです。",
     romaji: "Michi ni mayotte shimaimashita. Juppun gurai okuresou desu.",
-    translation: "Saya tersesat. Sepertinya akan terlambat sekitar sepuluh menit.",
+    translation: "Saya tersesat. Sepertinya saya akan terlambat sekitar 10 menit.",
     reason: "Alasan: pengirim salah jalan dan sedang mencari lokasi.",
     reply: "わかりました。あわてなくても大丈夫ですよ。",
     replyMeaning: "Saya mengerti. Tidak perlu terburu-buru.",
@@ -100,7 +100,7 @@ const delayMessages = [
     time: "08:05",
     japanese: "すみません。寝坊して、今から急ぎます。",
     romaji: "Sumimasen. Nebou shite, ima kara isogimasu.",
-    translation: "Maaf. Saya kesiangan dan sekarang akan segera berangkat.",
+    translation: "Maaf, saya kesiangan. Saya segera berangkat sekarang.",
     reason: "Alasan: pengirim bangun kesiangan.",
     reply: "連絡ありがとう。着いたら教えてください。",
     replyMeaning: "Terima kasih sudah memberi kabar. Beri tahu saya saat sudah sampai.",
