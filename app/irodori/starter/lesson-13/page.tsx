@@ -454,7 +454,7 @@ export default function IrodoriStarterLessonThirteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">街</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • STARTER A1 • LESSON 13</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Does this bus go to the airport?</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Apakah bus ini menuju bandara?</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]"><ruby>街<rt>まち</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>く · Berjalan-jalan di kota</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Pelajari cara memastikan tujuan bus atau kereta, memahami pengumuman stasiun, menjelaskan lama perjalanan, meminta petunjuk arah, dan membaca papan informasi transportasi.
