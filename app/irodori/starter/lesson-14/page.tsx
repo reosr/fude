@@ -511,7 +511,7 @@ export default function IrodoriPemulaLessonFourteenPage() {
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">CAN-DO 0{index + 1}</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">TARGET KOMUNIKASI 0{index + 1}</p>
               <p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p>
             </div>
           ))}
