@@ -40,13 +40,13 @@ const facilityTourConversation: IrodoriUtterance[] = [
 ];
 const gymRulesConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>すみません、スポーツジムを初めて利用するんですが。</>, romaji: "Sumimasen, supootsu jimu o hajimete riyou suru n desu ga.", translation: "Permisi, saya baru pertama kali menggunakan gym.", audioFileName: "irodori-elementary2-13-a02-l01.mp3" },
-  { speakerId: "kenji", japanese: <>受付で登録してください。室内用のシューズが必要です。</>, romaji: "Uketsuke de touroku shite kudasai. Shitsunaiyou no shuuzu ga hitsuyou desu.", translation: "Silakan mendaftar di resepsionis. Sepatu khusus dalam ruangan diperlukan.", audioFileName: "irodori-elementary2-13-a02-l02.mp3" },
+  { speakerId: "kenji", japanese: <>受付で登録してください。室内用のシューズが必要です。</>, romaji: "Uketsuke de touroku shite kudasai. Shitsunaiyou no shuuzu ga hitsuyou desu.", translation: "Silakan mendaftar di loket. Kamu perlu memakai sepatu khusus untuk di dalam ruangan.", audioFileName: "irodori-elementary2-13-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>マシンの使い方は、教えてもらえますか。</>, romaji: "Mashin no tsukaikata wa, oshiete moraemasu ka?", translation: "Bisa tolong ajari saya cara menggunakan alatnya?", audioFileName: "irodori-elementary2-13-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>はい。初めての方には、スタッフが説明します。</>, romaji: "Hai. Hajimete no kata ni wa, sutaffu ga setsumei shimasu.", translation: "Tentu. Staf akan menjelaskan cara penggunaannya kepada pengunjung baru.", audioFileName: "irodori-elementary2-13-a02-l04.mp3" },
 ];
 const libraryCardConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>図書館を使いたいんですが、利用カードが必要ですか。</>, romaji: "Toshokan o tsukaitai n desu ga, riyou kaado ga hitsuyou desu ka?", translation: "Saya ingin menggunakan perpustakaan. Apakah perlu kartu anggota?", audioFileName: "irodori-elementary2-13-a03-l01.mp3" },
-  { speakerId: "akiko", japanese: <>はい。初めに、受付で利用カードを作ってください。</>, romaji: "Hai. Hajime ni, uketsuke de riyou kaado o tsukutte kudasai.", translation: "Ya. Pertama, silakan buat kartu perpustakaan di loket.", audioFileName: "irodori-elementary2-13-a03-l02.mp3" },
+  { speakerId: "akiko", japanese: <>はい。初めに、受付で利用カードを作ってください。</>, romaji: "Hai. Hajime ni, uketsuke de riyou kaado o tsukutte kudasai.", translation: "Ya. Pertama, buat kartu anggota perpustakaan di loket.", audioFileName: "irodori-elementary2-13-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>本は何冊まで借りられますか。</>, romaji: "Hon wa nansatsu made kariraremasu ka?", translation: "Berapa buku maksimal yang bisa dipinjam?", audioFileName: "irodori-elementary2-13-a03-l03.mp3" },
   { speakerId: "akiko", japanese: <>一人八冊まで、二週間借りられます。</>, romaji: "Hitori hassatsu made, nishuukan kariraremasu.", translation: "Setiap orang bisa meminjam maksimal delapan buku selama dua minggu.", audioFileName: "irodori-elementary2-13-a03-l04.mp3" },
 ];
