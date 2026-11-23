@@ -37,7 +37,7 @@ const lessonId = "elementary2-12";
 
 
 const askPurchaseAdviceConversation: IrodoriUtterance[] = [
- { speakerId:"yui", japanese:<>新しいイヤホンがほしいんですけど、何がいいですか。</>, romaji:"Atarashii iyahon ga hoshii n desu kedo, nani ga ii desu ka?", translation:"Saya ingin membeli earphone baru. Model seperti apa yang bagus?", audioFileName:"irodori-elementary2-12-a01-l01.mp3" },
+ { speakerId:"yui", japanese:<>新しいイヤホンがほしいんですけど、何がいいですか。</>, romaji:"Atarashii iyahon ga hoshii n desu kedo, nani ga ii desu ka?", translation:"Saya ingin earphone baru. Model seperti apa yang bagus?", audioFileName:"irodori-elementary2-12-a01-l01.mp3" },
  { speakerId:"sota", japanese:<>音がよくて、耳が痛くなりにくいものがいいと思います。</>, romaji:"Oto ga yokute, mimi ga itaku nari nikui mono ga ii to omoimasu.", translation:"Menurut saya, pilih earphone yang suaranya bagus dan nyaman dipakai di telinga.", audioFileName:"irodori-elementary2-12-a01-l02.mp3" },
  { speakerId:"yui", japanese:<>どこで買ったらいいですか。</>, romaji:"Doko de kattara ii desu ka?", translation:"Sebaiknya saya membeli di mana?", audioFileName:"irodori-elementary2-12-a01-l03.mp3" },
  { speakerId:"sota", japanese:<>駅の近くに電気屋があります。店員さんに相談できますよ。</>, romaji:"Eki no chikaku ni denkiya ga arimasu. Ten'in-san ni soudan dekimasu yo.", translation:"Ada toko elektronik dekat stasiun. Kamu bisa berkonsultasi dengan pegawainya.", audioFileName:"irodori-elementary2-12-a01-l04.mp3" },
