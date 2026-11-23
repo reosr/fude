@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
 import { typeBadgeClass, typeAccentClass } from "../../components/verbType";
 import JapaneseReading from "@/components/JapaneseReading";
+import { formatGrammarNotation } from "@/lib/japanese-text";
 
 let wanakanaModule: typeof import("wanakana") | null = null;
 
@@ -942,7 +943,7 @@ return (
                         {form.example && (
                           <p className="text-[10px] md:text-xs text-[#EAE6DD] bg-[#121110]/60 p-2 md:p-2.5 mt-2 rounded-lg border border-[#33312E]/50 leading-relaxed">
                             <span className="text-[#817A73] block text-[9px] md:text-[10px] uppercase mb-1">Contoh pemakaian</span>
-                            {form.example}
+                            <JapaneseReading allowIndexFallback>{form.example}</JapaneseReading>
                           </p>
                         )}
                       </div>
@@ -1007,12 +1008,12 @@ return (
                         {selectedVerb.usagePatterns.map((pattern: NonNullable<VerbData["usagePatterns"]>[number], index: number) => (
                           <div key={`${pattern.particle}-${pattern.role}-${index}`} className="rounded-lg border border-[#33312E] bg-[#1E1D1B] p-3">
                             <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
-                              <span className="text-sm font-bold text-[#EAE6DD]">{pattern.pattern || `N ${pattern.particle} V`}</span>
+                              <span className="text-sm font-bold text-[#EAE6DD]">{formatGrammarNotation(pattern.pattern || `N ${pattern.particle} V`)}</span>
                               <span className="text-[10px] text-[#C93438] font-bold">{pattern.particle}</span>
                             </div>
                             <p className="text-[11px] text-[#B9B3A9]">{pattern.role}</p>
                             {pattern.example && (
-                              <p className="text-xs text-[#EAE6DD] mt-2">Contoh: <span className="font-mincho">{pattern.example}</span></p>
+                              <p className="text-xs text-[#EAE6DD] mt-2">Contoh: <JapaneseReading allowIndexFallback>{pattern.example}</JapaneseReading></p>
                             )}
                             {pattern.note && <p className="text-[10px] text-[#8F8981] mt-1 leading-relaxed">{pattern.note}</p>}
                           </div>
