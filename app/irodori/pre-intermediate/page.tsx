@@ -6,24 +6,24 @@ import { useIrodoriProgress } from "@/lib/irodori-progress";
 
 const implementedLessons = [1];
 const lessons = [
-  { number: 1, topic: "Hal yang disukai dan kegiatan favorit", title: "Futsal itu apa, ya?", description: "Memahami komentar tentang olahraga favorit, mengundang teman ke acara, dan menulis pesan pembatalan." },
-  { number: 2, topic: "Hal yang disukai dan kegiatan favorit", title: "Saya paling suka menonton drama televisi.", description: "Membaca ulasan, membicarakan film atau drama, dan menjelaskan hal yang disukai beserta alasannya." },
+  { number: 1, topic: "Hal yang disukai dan kegiatan favorit", title: "Futsal itu apa, ya?", description: "Memahami komentar tentang olahraga favorit, mengundang teman ke acara, dan menulis pesan untuk membatalkan rencana." },
+  { number: 2, topic: "Hal yang disukai dan kegiatan favorit", title: "Saya paling suka menonton drama.", description: "Membaca ulasan, membicarakan film atau drama, dan menjelaskan apa yang disukai beserta alasannya." },
   { number: 3, topic: "Di mana kamu akan tinggal?", title: "Bagaimana persiapan pindahanmu?", description: "Mencari informasi tempat tinggal, memahami rekomendasi lokasi, dan meminta bantuan pindahan." },
   { number: 4, topic: "Di mana kamu akan tinggal?", title: "Sepertinya AC-nya rusak...", description: "Melaporkan masalah tempat tinggal, menyampaikan keluhan, dan menjelaskan kondisi lingkungan rumah." },
-  { number: 5, topic: "Makanan sehari-hari", title: "Restoran seperti apa yang bagus?", description: "Memesan makanan, merekomendasikan restoran, dan memahami penjelasan makanan khas." },
+  { number: 5, topic: "Makanan sehari-hari", title: "Restoran seperti apa yang bagus?", description: "Memesan makanan, merekomendasikan restoran, dan memahami penjelasan tentang makanan khas." },
   { number: 6, topic: "Makanan sehari-hari", title: "Saya memasak sendiri setiap hari.", description: "Membicarakan belanja bahan makanan, kebiasaan makan, dan cara mengatur menu sehari-hari." },
-  { number: 7, topic: "Berkenalan dengan orang", title: "Saya berharap bisa berteman dengan banyak orang.", description: "Memahami saran untuk berkenalan, mencari informasi klub, dan memperkenalkan diri dengan lebih lengkap." },
+  { number: 7, topic: "Berkenalan dengan orang", title: "Saya berharap bisa berteman dengan banyak orang.", description: "Memahami saran tentang cara berkenalan, mencari informasi klub, dan memperkenalkan diri dengan lebih lengkap." },
   { number: 8, topic: "Berkenalan dengan orang", title: "Bolehkah saya duduk di sebelahmu?", description: "Memulai percakapan dengan orang baru, merespons obrolan ringan, dan memahami artikel tentang kesan pertama." },
   { number: 9, topic: "Bahasa Jepang dan diriku", title: "Apa yang membuatmu tertarik belajar bahasa Jepang?", description: "Menyampaikan tujuan belajar, bertanya tentang dialek, serta menceritakan pengalaman belajar bahasa Jepang." },
-  { number: 10, topic: "Bahasa Jepang dan diriku", title: "Bagaimana caramu belajar bahasa Jepang?", description: "Memilih sumber belajar, bertukar metode belajar, dan menulis profil untuk mencari teman tandem." },
-  { number: 11, topic: "Apa yang kamu lakukan dalam situasi seperti ini?", title: "Ini email penipuan.", description: "Mengenali pesan mencurigakan, memahami aturan, dan merespons permintaan konfirmasi identitas." },
-  { number: 12, topic: "Apa yang kamu lakukan dalam situasi seperti ini?", title: "Saya membutuhkan ambulans.", description: "Menawarkan bantuan, menyampaikan informasi darurat, dan menjelaskan pengalaman sulit dengan runtut." },
-  { number: 13, topic: "Hubungan dengan orang lain", title: "Selamat atas pernikahanmu.", description: "Mengucapkan selamat, bertukar kabar, memberi saran hadiah, dan memahami pidato acara." },
+  { number: 10, topic: "Bahasa Jepang dan diriku", title: "Bagaimana caramu belajar bahasa Jepang?", description: "Memilih sumber belajar, bertukar cara belajar, dan menulis profil untuk mencari teman bertukar bahasa." },
+  { number: 11, topic: "Apa yang kamu lakukan dalam situasi seperti ini?", title: "Ini email penipuan.", description: "Mengenali pesan mencurigakan, memahami aturan, dan menanggapi permintaan untuk mengonfirmasi identitas." },
+  { number: 12, topic: "Apa yang kamu lakukan dalam situasi seperti ini?", title: "Saya membutuhkan ambulans.", description: "Menawarkan bantuan, menyampaikan informasi darurat, dan menceritakan pengalaman sulit secara runtut." },
+  { number: 13, topic: "Hubungan dengan orang lain", title: "Selamat atas pernikahanmu.", description: "Mengucapkan selamat, bertukar kabar, meminta saran tentang hadiah, dan memahami sambutan dalam sebuah acara." },
   { number: 14, topic: "Hubungan dengan orang lain", title: "Saya sedang menghadapi masalah dengan teman.", description: "Mendengarkan masalah pertemanan, menggambarkan karakter, dan menyampaikan saran yang spesifik." },
   { number: 15, topic: "Serunya bepergian", title: "Saya ingin melihat Sakurajima.", description: "Memahami video dan artikel wisata, lalu menjelaskan tempat yang ingin dikunjungi." },
-  { number: 16, topic: "Serunya bepergian", title: "Saya berhasil mengambil banyak foto bagus.", description: "Mengirim kabar dari perjalanan, meminta penyesuaian layanan, dan menceritakan pengalaman wisata." },
-  { number: 17, topic: "Bekerja di Jepang", title: "Saya akan menjelaskan pekerjaan staf layanan lantai.", description: "Memberi instruksi kerja, memahami aturan tempat kerja, dan menyampaikan permintaan atau masalah." },
-  { number: 18, topic: "Bekerja di Jepang", title: "Saya akan senang jika diberi kesempatan bekerja di sana.", description: "Memahami laporan pekerjaan, membaca informasi lowongan, dan menjelaskan kemampuan saat wawancara." },
+  { number: 16, topic: "Serunya bepergian", title: "Saya berhasil mengambil banyak foto bagus.", description: "Mengirim kabar selama perjalanan, meminta penyesuaian layanan, dan menceritakan pengalaman berwisata." },
+  { number: 17, topic: "Bekerja di Jepang", title: "Saya akan menjelaskan tugas staf di area layanan.", description: "Memberi instruksi saat bekerja, memahami aturan di tempat kerja, dan menyampaikan permintaan atau masalah." },
+  { number: 18, topic: "Bekerja di Jepang", title: "Saya senang sekali kalau bisa bekerja di sana.", description: "Memahami laporan tentang pekerjaan, membaca informasi lowongan kerja, dan menjelaskan kemampuan saat wawancara." },
 ];
 
 export default function IrodoriPreIntermediatePage() {
