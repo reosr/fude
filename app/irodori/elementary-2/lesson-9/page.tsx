@@ -45,14 +45,14 @@ const explainComingOfAgeConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>大人になる人をお祝いする日です。地域で式が行われることがあります。</>,
     romaji: "Otona ni naru hito o oiwai suru hi desu. Chiiki de shiki ga okonawareru koto ga arimasu.",
-    translation: "Itu hari untuk merayakan orang yang memasuki masa dewasa. Di daerah setempat, upacara dapat diadakan.",
+    translation: "Hari itu untuk merayakan orang-orang yang memasuki usia dewasa. Biasanya ada upacara di daerah masing-masing.",
     audioFileName: "irodori-elementary2-09-a01-l02.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>式では、どんなことをするんですか。</>,
     romaji: "Shiki de wa, donna koto o surun desu ka?",
-    translation: "Apa yang dilakukan dalam upacara itu?",
+    translation: "Apa saja yang dilakukan dalam upacara itu?",
     audioFileName: "irodori-elementary2-09-a01-l03.mp3",
   },
   {
@@ -69,14 +69,14 @@ const talkNewYearHolidayConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>お正月休みは、どうでしたか。</>,
     romaji: "Oshougatsu yasumi wa, dou deshita ka?",
-    translation: "Bagaimana liburan Tahun Barumu?",
+    translation: "Bagaimana liburan Tahun Barumu kemarin?",
     audioFileName: "irodori-elementary2-09-a02-l01.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>家族と親戚の家に行きました。二日だけでしたが、楽しかったです。</>,
     romaji: "Kazoku to shinseki no ie ni ikimashita. Futsuka dake deshita ga, tanoshikatta desu.",
-    translation: "Saya pergi ke rumah kerabat bersama keluarga. Hanya dua hari, tetapi menyenangkan.",
+    translation: "Saya menghabiskan dua hari bersama keluarga di rumah kerabat. Seru juga.",
     audioFileName: "irodori-elementary2-09-a02-l02.mp3",
   },
   {
@@ -90,7 +90,7 @@ const talkNewYearHolidayConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>みんなで料理を食べたり、昔の写真を見たりして、ゆっくり過ごしました。</>,
     romaji: "Minna de ryouri o tabetari, mukashi no shashin o mitari shite, yukkuri sugoshimashita.",
-    translation: "Kami makan bersama dan melihat foto-foto lama, lalu menghabiskan waktu dengan santai.",
+    translation: "Kami makan bersama, melihat foto-foto lama, lalu bersantai.",
     audioFileName: "irodori-elementary2-09-a02-l04.mp3",
   },
 ];
@@ -107,21 +107,21 @@ const introduceHomeCountryEventConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>独立記念日があります。毎年、八月十七日です。</>,
     romaji: "Dokuritsu kinenbi ga arimasu. Maitoshi, hachigatsu juunananoka desu.",
-    translation: "Ada Hari Kemerdekaan. Setiap tahun, tanggal 17 Agustus.",
+    translation: "Salah satunya Hari Kemerdekaan, yang dirayakan setiap 17 Agustus.",
     audioFileName: "irodori-elementary2-09-a03-l02.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>どんなことをするんですか。</>,
     romaji: "Donna koto o surun desu ka?",
-    translation: "Kegiatan apa yang dilakukan?",
+    translation: "Kegiatan apa saja yang diadakan?",
     audioFileName: "irodori-elementary2-09-a03-l03.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>地域によって違いますが、飾りを作ったり、ゲームをしたりします。</>,
     romaji: "Chiiki ni yotte chigaimasu ga, kazari o tsukuttari, geemu o shitari shimasu.",
-    translation: "Berbeda-beda menurut daerah, tetapi orang-orang membuat hiasan dan bermain permainan bersama.",
+    translation: "Kegiatannya berbeda-beda di tiap daerah. Ada yang membuat hiasan dan bermain bersama.",
     audioFileName: "irodori-elementary2-09-a03-l04.mp3",
   },
 ];
@@ -138,7 +138,7 @@ const readLocalEventArticleConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>はい。音楽やダンスの発表があったそうです。</>,
     romaji: "Hai. Ongaku ya dansu no happyou ga atta sou desu.",
-    translation: "Ya. Katanya ada pertunjukan musik dan tari.",
+    translation: "Ya. Katanya ada pertunjukan musik dan tarian.",
     audioFileName: "irodori-elementary2-09-a04-l02.mp3",
   },
   {
@@ -152,7 +152,7 @@ const readLocalEventArticleConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>音楽を聞いたり、地域の料理を紹介したりして、楽しんだそうです。</>,
     romaji: "Ongaku o kiitari, chiiki no ryouri o shoukai shitari shite, tanoshinda sou desu.",
-    translation: "Katanya mereka menikmati acara dengan mendengarkan musik dan memperkenalkan makanan daerah.",
+    translation: "Katanya mereka menikmati acara sambil mendengarkan musik dan memperkenalkan makanan khas daerah.",
     audioFileName: "irodori-elementary2-09-a04-l04.mp3",
   },
 ];
@@ -169,7 +169,7 @@ const sendNewYearGreetingConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>はい。友だちと先生に送りました。</>,
     romaji: "Hai. Tomodachi to sensei ni okurimashita.",
-    translation: "Ya. Saya mengirimkannya kepada teman dan guru.",
+    translation: "Ya. Saya mengirimkannya ke teman-teman dan guru.",
     audioFileName: "irodori-elementary2-09-a05-l02.mp3",
   },
   {
@@ -183,7 +183,7 @@ const sendNewYearGreetingConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>「あけましておめでとうございます。今年もよろしくお願いします」と書きました。</>,
     romaji: "Akemashite omedetou gozaimasu. Kotoshi mo yoroshiku onegaishimasu to kakimashita.",
-    translation: "Saya menulis, “Selamat Tahun Baru. Mohon kerja samanya juga tahun ini.”",
+    translation: "Saya menulis, “Selamat Tahun Baru. Semoga kita bisa terus berhubungan baik tahun ini.”",
     audioFileName: "irodori-elementary2-09-a05-l04.mp3",
   },
 ];
@@ -299,13 +299,13 @@ const japaneseAnnualEvents = [
     title: "ひな祭り · Festival Hinamatsuri",
     date: "3月3日",
     activities: "ひな人形を飾ったり、特別な料理を食べたりします。",
-    translation: "Orang-orang memasang boneka hina dan menikmati hidangan khusus.",
+    translation: "Orang-orang memajang boneka hina dan menikmati hidangan khusus.",
   },
   {
     title: "こどもの日 · Hari Anak",
     date: "5月5日",
     activities: "こいのぼりを飾ったり、家族で過ごしたりします。",
-    translation: "Orang-orang memasang hiasan ikan koi dan menghabiskan waktu bersama keluarga.",
+    translation: "Orang-orang memasang koinobori (hiasan berbentuk ikan koi) dan menghabiskan waktu bersama keluarga.",
   },
 ];
 
@@ -315,7 +315,7 @@ const eventArticle = {
   venue: "町の中央広場",
   body: "先週、町の中央広場で春の文化フェスティバルが開かれました。会場では、地域の音楽グループが演奏したり、学生が絵を展示したりしました。食べ物のコーナーでは、町の特別な料理も紹介されました。家族や友だちと来た人が多く、会場はとてもにぎやかでした。私は友だちと音楽を聞きながら、いろいろな展示を見ました。初めて参加しましたが、とてもいい思い出になりました。",
   reading: "Senshuu, machi no chuou hiroba de haru no bunka fesutibaru ga hirakaremashita. Kaijou de wa, chiiki no ongaku guruupu ga ensou shitari, gakusei ga e o tenji shitari shimashita. Tabemono no koonaa de wa, machi no tokubetsu na ryouri mo shoukai saremashita. Kazoku ya tomodachi to kita hito ga ooku, kaijou wa totemo nigiyaka deshita. Watashi wa tomodachi to ongaku o kikinagara, iroiro na tenji o mimashita. Hajimete sanka shimashita ga, totemo ii omoide ni narimashita.",
-  translation: "Minggu lalu, festival budaya musim semi diadakan di alun-alun pusat kota. Grup musik daerah tampil dan para pelajar memamerkan lukisan. Di area makanan, hidangan khas kota juga diperkenalkan. Banyak orang datang bersama keluarga atau teman sehingga tempat acara sangat ramai. Saya melihat berbagai pameran sambil mendengarkan musik bersama teman. Ini pertama kalinya saya ikut, dan menjadi kenangan yang sangat baik.",
+  translation: "Minggu lalu, festival budaya musim semi diadakan di alun-alun pusat kota. Kelompok musik tradisional tampil dan para pelajar memamerkan lukisan. Stan makanan juga menyajikan hidangan khas kota. Banyak keluarga dan teman datang sehingga lokasi festival ramai sekali. Saya melihat berbagai pameran sambil mendengarkan musik bersama teman. Ini pertama kalinya saya ikut festival itu dan menjadi pengalaman yang berkesan.",
 };
 
 const newYearMessageExamples = [
