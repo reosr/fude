@@ -2,7 +2,7 @@
 
 import { toHiragana, toRomaji } from "wanakana";
 import type { ReactNode } from "react";
-import { extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
+import { addRubyFromParentheticalReadings, extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
 
 interface Props {
   html?: string;
@@ -42,8 +42,13 @@ export default function JapaneseReading({
   showKanaForKanaOnly = false,
   allowIndexFallback = false,
 }: Props) {
-  const extractedReading = html !== undefined
-    ? extractKanaFromRubyHtml(html, allowIndexFallback)
+  // Bacaan eksplisit dalam tanda kurung seperti 分（ふん／ぷん）
+  // dirender sebagai ruby sebelum bacaan lengkap dihitung.
+  const displayHtml = html !== undefined
+    ? addRubyFromParentheticalReadings(html)
+    : undefined;
+  const extractedReading = displayHtml !== undefined
+    ? extractKanaFromRubyHtml(displayHtml, allowIndexFallback)
     : extractKanaFromReactNode(children, allowIndexFallback);
 
   const rawKana = explicitKana?.trim() || extractedReading?.kana || "";
@@ -63,7 +68,7 @@ export default function JapaneseReading({
         html !== undefined ? (
           <span
             className={hasReading ? contentClassName : undefined}
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: displayHtml ?? html }}
           />
         ) : (
           <span className={hasReading ? contentClassName : undefined}>{children}</span>
