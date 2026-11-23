@@ -1048,7 +1048,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
                         : "border-white/[0.07] bg-black/15 text-[#A9A398]"
                     )}
                   >
-                    <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
+                    <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                   </button>
                 ))}
               </div>
