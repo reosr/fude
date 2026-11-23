@@ -759,16 +759,22 @@ export default function IrodoriStarterLessonSevenPage() {
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <p className="font-mincho text-lg font-bold text-[#F1EBDD]">
-                    <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
-                  </p>
-                  <p className="text-[10px] italic text-[#B8860B]">{item.reading}</p>
+                  <JapaneseReading
+                    allowIndexFallback
+                    romaji={item.reading}
+                    translation={item.meaning}
+                    contentClassName="font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]"
+                    kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]"
+                    romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
+                    translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+                  >
+                    {item.jp}
+                  </JapaneseReading>
                 </div>
                 <span className="rounded-md border border-white/[0.08] bg-black/15 px-2 py-1 text-[8px] font-bold text-[#A9A398]">
                   {item.type}
                 </span>
               </div>
-              <p className="mt-2 text-xs text-[#A9A398]">{item.meaning}</p>
               <p className="mt-2 border-t border-white/[0.06] pt-2 text-[10px] text-[#817A73]">
                 Lawan kata: <span className="font-mincho text-sm text-[#D9B66D]">{item.opposite}</span>
               </p>
