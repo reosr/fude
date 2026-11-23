@@ -1028,7 +1028,7 @@ export default function IrodoriPemulaLessonOnePage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]"
                       }`}
                     >
-                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
+                      <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
