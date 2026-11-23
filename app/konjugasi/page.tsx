@@ -1106,6 +1106,7 @@ return (
                           return (
                             <div key={`${example.sourceId || "example"}-${index}`} className="rounded-lg border border-[#33312E] bg-[#1E1D1B] p-3">
                               <JapaneseReading
+                                allowIndexFallback
                                 html={furiganaToSafeHtml(example.furigana || example.ja)}
                                 romaji={romajiText}
                                 translation={example.translation}
