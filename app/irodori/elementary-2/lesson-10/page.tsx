@@ -69,7 +69,7 @@ const canDos = [
   { id: "ask-about-event-manners", source: "CAN-DO 43", text: "Menanyakan kebiasaan dan etiket dalam acara pernikahan atau pemakaman di Jepang, lalu memahami penjelasan yang diberikan." },
   { id: "compare-customs", source: "CAN-DO 44", text: "Menanyakan dan mengomentari perbedaan kebiasaan antara Jepang dan negara sendiri." },
   { id: "talk-intercultural-experience", source: "CAN-DO 45", text: "Menceritakan secara sederhana pengalaman atau kejadian yang berkaitan dengan perbedaan budaya." },
-  { id: "read-online-customs-post", source: "CAN-DO 46", text: "Membaca unggahan online tentang perbedaan etiket dan kebiasaan, lalu memahami garis besar isinya." },
+  { id: "read-daring-customs-post", source: "CAN-DO 46", text: "Membaca unggahan daring tentang perbedaan etiket dan kebiasaan, lalu memahami garis besar isinya." },
 ];
 
 const vocabRows = [
@@ -341,13 +341,13 @@ export default function IrodoriElementaryTwoLessonTenPage() {
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
       <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#D79C72]/40 hover:text-[#EAE6DD]">
-        <ArrowLeft size={15} /> Kembali ke Elementary 2
+        <ArrowLeft size={15} /> Kembali ke Dasar 2
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#486C91]/35 bg-gradient-to-br from-[#20364C] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A9C9E8]/[0.08]">服</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • ELEMENTARY 2 A2 • LESSON 09</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • DASAR 2 A2 • PELAJARAN 09</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pakaian seperti apa yang sebaiknya saya kenakan?</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9C9E8]">どんな服を着て行けばいいですか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar menanyakan etiket acara, membandingkan kebiasaan antarnegara, menceritakan pengalaman lintas budaya, dan memahami unggahan tentang kebiasaan.</p>
@@ -362,9 +362,9 @@ export default function IrodoriElementaryTwoLessonTenPage() {
       <section className="rounded-2xl border border-[#486C91]/20 bg-[#1D2A37]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#A9C9E8]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai Can-do 43–46 pada Irodori Elementary 2 Lesson 10.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai target komunikasi 43–46 pada Irodori Dasar 2 Lesson 10.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -381,7 +381,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
           <h2 className="text-sm font-bold text-[#EAE6DD]">Catatan budaya: kebiasaan dapat berbeda</h2>
         </div>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Etiket tidak selalu sama di setiap tempat. Kebiasaan rumah, aturan rumah sakit, dan ketentuan tempat acara dapat berbeda menurut keluarga, wilayah, atau penyelenggara. Perhatikan papan informasi, baca undangan, dan tanyakan dengan sopan jika belum yakin.</p>
-        <p className="mt-2 text-[10px] leading-5 text-[#887F74]">Contoh dalam lesson ini merupakan latihan bahasa. Untuk situasi nyata, ikuti petunjuk resmi dari tempat atau penyelenggara.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#887F74]">Contoh dalam pelajaran ini merupakan latihan bahasa. Untuk situasi nyata, ikuti petunjuk resmi dari tempat atau penyelenggara.</p>
       </section>
 
       
@@ -389,7 +389,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">DIALOG 01–05</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Membahas pakaian, etiket, dan perbedaan kebiasaan</h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi pelajaran ini.</p>
         </div>
         <div className="space-y-4">
           <IrodoriConversation title="Bertanya tentang pakaian untuk acara" speakers={[friendYui, friendSota]} utterances={askFormalEventConversation} />
@@ -450,7 +450,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
         <article className="rounded-2xl border border-[#486C91]/25 bg-[#1B2632] p-4 md:p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-dashed border-[#486C91]/30 pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#A9C9E8]">ONLINE POST · CUSTOMS</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#A9C9E8]">UNGGAHAN DARING · KEBIASAAN</p>
               <h3 className="mt-1 text-sm font-bold text-[#F1EBDD]">{eventArticle.title}</h3>
             </div>
             <FileText size={21} className="text-[#A9C9E8]" />
@@ -775,7 +775,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
       <section className="space-y-4 rounded-2xl border border-[#486C91]/20 bg-[#1D2A37]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-[#A9C9E8]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi Can-do</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi target komunikasi</h2>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">
           Nilai kemampuanmu setelah kelima simulasi benar, keenam latihan praktik benar, dan kuis dikumpulkan. Pilih penilaian yang paling sesuai untuk setiap target.
@@ -815,7 +815,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
             {isCompleted
               ? "Lesson 10 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target Can-do sudah dinilai."
+                ? "Semua target target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
@@ -833,7 +833,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
         <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-[#A9A398] hover:text-[#EAE6DD]">
           <ArrowLeft size={14} /> Daftar pelajaran
         </Link>
-        <span className="text-[10px] font-semibold text-[#817A73]">Elementary 2 · 10 / 18</span>
+        <span className="text-[10px] font-semibold text-[#817A73]">Dasar 2 · 10 / 18</span>
       </div>
     </main>
   );
