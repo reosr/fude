@@ -652,7 +652,7 @@ export default function IrodoriElementaryTwoLessonNinePage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#E2B08D]/[0.08]">正</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#E2B08D]">IRODORI • ELEMENTARY 2 A2 • LESSON 09</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">What do people do on Coming-of-Age Day?</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Apa yang dilakukan orang pada Hari Kedewasaan?</h1>
           <p className="mt-2 text-sm font-semibold text-[#E2B08D]">成人の日は、何をするんですか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami perayaan tahunan Jepang, menceritakan liburan, memperkenalkan festival negara sendiri, membaca artikel acara, dan menulis ucapan Tahun Baru.</p>
           <div className="mt-5 flex flex-wrap gap-2">
