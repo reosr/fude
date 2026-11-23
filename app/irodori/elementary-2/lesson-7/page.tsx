@@ -658,7 +658,7 @@ export default function IrodoriElementaryTwoLessonSevenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#E0A7A7]/[0.08]">祭</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#E0A7A7]">IRODORI • ELEMENTARY 2 A2 • LESSON 07</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">If it rains, it will be held at the hall.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Kalau hujan, acara akan diadakan di aula.</h1>
           <p className="mt-2 text-sm font-semibold text-[#E0A7A7]">雨が降ったら、ホールでやります</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar membaca pengumuman lingkungan, menanyakan isi pemberitahuan, memahami siaran komunitas, dan bertanya tentang acara lokal.</p>
           <div className="mt-5 flex flex-wrap gap-2">
