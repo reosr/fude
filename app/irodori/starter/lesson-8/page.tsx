@@ -532,7 +532,7 @@ export default function IrodoriPemulaLessonEightPage() {
           “Rapat dilakukan di sini”.
         </p>
         <IrodoriConversation
-          title="Adegan A · Tur gedung contoh"
+          title="Percakapan A · Tur gedung contoh"
           speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={workplaceTourConversation}
         />
@@ -589,7 +589,7 @@ export default function IrodoriPemulaLessonEightPage() {
           tidak ada, gunakan 「いません」 atau 「いないです」.
         </p>
         <IrodoriConversation
-          title="Adegan B · Mencari rekan di gedung"
+          title="Percakapan B · Mencari rekan di gedung"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={personLocationConversation}
         />
@@ -680,7 +680,7 @@ export default function IrodoriPemulaLessonEightPage() {
           spesifik bisa dijelaskan dengan 「Nの上・下・中・横」.
         </p>
         <IrodoriConversation
-          title="Adegan C · Mencari perlengkapan kantor"
+          title="Percakapan C · Mencari perlengkapan kantor"
           speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={equipmentLocationConversation}
         />
@@ -781,7 +781,7 @@ export default function IrodoriPemulaLessonEightPage() {
           yang dituju tanpa harus membaca kalimat panjang.
         </p>
         <IrodoriConversation
-          title="Adegan D · Memastikan tulisan di pintu"
+          title="Percakapan D · Memastikan tulisan di pintu"
           speakers={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.akiko]}
           utterances={roomSignConversation}
         />
