@@ -19,6 +19,7 @@ import IrodoriConversation, {
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
@@ -603,17 +604,14 @@ export default function IrodoriStarterLessonNinePage() {
                 {word.icon}
               </span>
               <div className="min-w-0">
-<JapaneseReading
-                  allowIndexFallback
-                  romaji={word.reading}
-                  translation={word.meaning}
+<JapaneseVocabularyReading reading={word.reading} meaning={word.meaning}
                   contentClassName="font-mincho text-base font-bold leading-relaxed text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 text-sm italic text-[#B8860B]"
                   translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
                 >
                   {word.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
               </div>
             </article>
           ))}
