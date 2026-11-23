@@ -66,7 +66,7 @@ function canShowAutomaticReadingHint(sectionId: string, question: string): boole
   // Hilangkan tag dan isi rt sebelum mendeteksi jenis soal agar target kanji
   // tetap terlindungi setelah furigana ditambahkan ke teks pendamping.
   const plainQuestion = question
-    .replace(/<rt\\b[^>]*>[\\s\\S]*?<\\/rt>/gi, "")
+    .replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/gi, "")
     .replace(/<[^>]*>/g, "");
   const asksKanjiReading = /読み方はどれですか|何と読みますか/.test(plainQuestion);
   const asksKanjiSpelling = sectionId === "vocab" &&
