@@ -344,7 +344,7 @@ export default function IrodoriElementaryTwoLessonSixteenPage() {
         <p className="text-xs leading-6 text-[#A9A398]">Daftar fiktif ini membantu mengenali kosakata benda dan informasi yang mungkin disebut dalam brosur.</p>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {preparednessItems.map((item) => (
-            <article key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading> className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
+            <article key={item.jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
               <p className="font-mincho text-base font-bold text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p>
               <p className="mt-1 text-[9px] text-[#B2D7CB]">{item.reading}</p>
               <p className="mt-1 text-xs text-[#A9A398]">{item.meaning}</p>
