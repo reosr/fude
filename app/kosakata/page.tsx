@@ -252,7 +252,7 @@ export default function Kosakata() {
                     {getVocabSourceLabel(v)}
                   </span>
                   
-                  <JapaneseReading
+                  <JapaneseReading allowIndexFallback
                     showOriginal={false}
                     kana={v.kana}
                     romaji={v.romaji}
@@ -315,7 +315,7 @@ export default function Kosakata() {
               </div>
 
               <div className="relative z-10 w-full">
-                <JapaneseReading
+                <JapaneseReading allowIndexFallback
                   kana={selectedWord.kana}
                   romaji={selectedWord.romaji}
                   translation={selectedWord.meaning}
