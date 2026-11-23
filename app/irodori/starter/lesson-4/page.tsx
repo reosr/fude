@@ -222,7 +222,7 @@ const quizQuestions: {
     prompt: "Seorang tokoh fiktif berusia 20 tahun. Bagaimana menyebut usianya?",
     options: ["二十歳（はたち）", "二十歳（にじゅっさい）", "二十日（はつか）"],
     answer: "二十歳（はたち）",
-    explanation: "Usia 20 tahun memiliki bacaan khusus, yaitu はたち (hatachi).",
+    explanation: "Usia 20 tahun memiliki bacaan khusus, yaitu はたち.",
   },
   {
     prompt: "Kamu ingin bertanya tempat tinggal seseorang. Kalimat mana yang tepat?",
