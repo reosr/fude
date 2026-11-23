@@ -14996,7 +14996,7 @@
         "id": "b45-g5",
         "type": "grammar",
         "question": "Pilih bentuk negatif kata kerja yang tepat sebelum <ruby>場合は<rt>ばあいは</rt></ruby>.",
-        "sentence": "<ruby>今日<rt>きょう</rt></ruby>来（ ___ ）<ruby>場合は<rt>ばあいは</rt></ruby>、<ruby>電話<rt>でんわ</rt></ruby>してください。",
+        "sentence": "<ruby>今日<rt>きょう</rt></ruby><ruby>来<rt>く</rt></ruby>（ ___ ）<ruby>場合は<rt>ばあいは</rt></ruby>、<ruby>電話<rt>でんわ</rt></ruby>してください。",
         "answer": "られない",
         "options": [
           "られません",
