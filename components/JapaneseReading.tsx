@@ -33,9 +33,9 @@ export default function JapaneseReading({
   return (
     <span className="block min-w-0">
       {html !== undefined ? (
-        <span className={contentClassName} dangerouslySetInnerHTML={{ __html: html }} />
+        <span className={reading ? contentClassName : undefined} dangerouslySetInnerHTML={{ __html: html }} />
       ) : (
-        <span className={contentClassName}>{children}</span>
+        <span className={reading ? contentClassName : undefined}>{children}</span>
       )}
       {showKanaLine && reading && <span className={kanaClassName + " block"}>（{reading.kana}）</span>}
       {romaji && <span className={romajiClassName + " block"}>{romaji}</span>}
