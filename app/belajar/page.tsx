@@ -12,7 +12,7 @@ import { ChevronLeft, ChevronRight, CheckCircle2, Lock, BookOpen, ArrowLeft, X, 
 import dynamic from "next/dynamic";
 import { syncNewCollectionUnlocks } from "../../lib/profile-collections";
 import JapaneseReading from "@/components/JapaneseReading";
-import { formatGrammarNotation } from "@/lib/japanese-text";
+import { addRubyFromParentheticalReadings, formatGrammarNotation } from "@/lib/japanese-text";
 
 let wanakanaModule: typeof import("wanakana") | null = null;
 let wanakanaPromise: Promise<typeof import("wanakana")> | null = null;
@@ -766,7 +766,13 @@ const findWordAt = (index: number): string | null => {
           {babData.tips && (
             <div className="bg-[#B8860B]/10 border border-[#B8860B]/30 rounded-xl p-4 shadow-sm mt-4">
               <div className="flex items-center gap-2 mb-2"><span className="text-lg">💡</span><span className="text-sm font-bold text-[#B8860B]">Tips dan Nuansa Penting</span></div>
-              <div className="text-sm text-[#EAE6DD] leading-relaxed whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(babData.tips) }} />
+              <JapaneseReading
+                html={addRubyFromParentheticalReadings(formatGrammarNotation(babData.tips))}
+                allowIndexFallback
+                contentClassName="text-sm leading-relaxed text-[#EAE6DD] whitespace-pre-wrap [&_rt]:text-[0.55em] [&_rt]:text-[#D6AD4F]"
+                kanaClassName="mt-3 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+                romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]"
+              />
             </div>
           )}
 
