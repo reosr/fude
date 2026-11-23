@@ -63,14 +63,14 @@ const demonstrativeConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>すみません。あのノートはいくらですか？</>,
     romaji: "Sumimasen. Ano nooto wa ikura desu ka?",
-    translation: "Permisi. Buku catatan yang di sana itu berapa harganya?",
+    translation: "Permisi. Berapa harga buku catatan yang di sana?",
     audioFileName: "irodori-starter-16-a02-l01.mp3",
   },
   {
     speakerId: "akiko",
     japanese: <>あちらのノートですね。420<ruby>円<rt>えん</rt></ruby>です。</>,
     romaji: "Achira no nooto desu ne. Yonhyaku nijuu en desu.",
-    translation: "Buku catatan yang di sana, ya. Harganya 420 yen.",
+    translation: "Yang di sana, ya? Harganya 420 yen.",
     audioFileName: "irodori-starter-16-a02-l02.mp3",
   },
   {
@@ -115,7 +115,7 @@ const quantityConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>それから、チョコレートケーキとチーズケーキを2<ruby>個<rt>こ</rt></ruby>ずつお願いします。</>,
     romaji: "Sore kara, chokoreeto keeki to chiizu keeki o niko zutsu onegaishimasu.",
-    translation: "Lalu, masing-masing dua potong kue cokelat dan kue keju.",
+    translation: "Lalu, dua kue cokelat dan dua kue keju, ya.",
     audioFileName: "irodori-starter-16-a03-l04.mp3",
   },
   {
@@ -661,7 +661,7 @@ export default function IrodoriPemulaLessonSixteenPage() {
           {discountSigns.map((item) => (
             <article key={item.id} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
               <p className="text-xs font-bold text-[#EAE6DD]">{item.title}</p>
-              <p className="mt-3 text-[9px] font-black tracking-[0.15em] text-[#B8860B]">DISCOUNT SIGN</p>
+              <p className="mt-3 text-[9px] font-black tracking-[0.15em] text-[#B8860B]">TANDA DISKON</p>
               <p className="mt-1 font-mincho text-xl font-bold text-[#E7D2A1]">{item.sign}</p>
               <p className="mt-3 text-[10px] text-[#A9A398]">Harga awal: {item.original.toLocaleString("id-ID")} yen</p>
               <p className="mt-1 text-xs font-bold text-emerald-300">Harga akhir: {item.result.toLocaleString("id-ID")} yen</p>
@@ -758,7 +758,7 @@ export default function IrodoriPemulaLessonSixteenPage() {
       <section className="space-y-4 rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4 md:p-5">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 04 · DISKON</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Hitung harga setelah potongan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sebuah barang berharga 500 yen dan mendapat diskon 20%. Berapa harga akhirnya?</p></div>
         <div className="rounded-xl border border-[#D6AD4F]/25 bg-[#27231D] p-4 text-center">
-          <p className="text-[9px] font-bold tracking-[0.15em] text-[#D9B66D]">SALE</p>
+          <p className="text-[9px] font-bold tracking-[0.15em] text-[#D9B66D]">DISKON</p>
           <p className="mt-2 font-mincho text-2xl font-bold text-[#F1EBDD]">500円</p>
           <p className="mt-1 inline-flex rounded-lg bg-[#C93438]/15 px-3 py-1 text-sm font-black text-[#F0AAAA]">20％引き</p>
         </div>
