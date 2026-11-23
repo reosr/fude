@@ -32,28 +32,28 @@ const baseballExperienceConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>はい。学校で一度したことがあります。</>, romaji: "Hai. Gakkou de ichido shita koto ga arimasu.", translation: "Ya. Saya pernah bermain sekali di sekolah.", audioFileName: "irodori-elementary1-08-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>そうですか。野球が好きですか。</>, romaji: "Sou desu ka. Yakyuu ga suki desu ka?", translation: "Begitu, ya. Apakah kamu suka bisbol?", audioFileName: "irodori-elementary1-08-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい、好きです。</>, romaji: "Hai, suki desu.", translation: "Ya, saya suka.", audioFileName: "irodori-elementary1-08-a01-l04.mp3" },
-  { speakerId: "yui", japanese: <>じゃあ、今度いっしょに試合を見に行きませんか。</>, romaji: "Jaa, kondo issho ni shiai o mi ni ikimasen ka?", translation: "Kalau begitu, maukah kita menonton pertandingan bersama lain kali?", audioFileName: "irodori-elementary1-08-a01-l05.mp3" },
+  { speakerId: "yui", japanese: <>じゃあ、今度いっしょに試合を見に行きませんか。</>, romaji: "Jaa, kondo issho ni shiai o mi ni ikimasen ka?", translation: "Kalau begitu, bagaimana kalau kita menonton pertandingan bersama lain kali?", audioFileName: "irodori-elementary1-08-a01-l05.mp3" },
 ];
 
 const checkingPopularPlaceConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>新しい博物館、もう行きましたか。</>, romaji: "Atarashii hakubutsukan, mou ikimashita ka?", translation: "Apakah kamu sudah pergi ke museum yang baru?", audioFileName: "irodori-elementary1-08-a02-l01.mp3" },
+  { speakerId: "akiko", japanese: <>新しい博物館、もう行きましたか。</>, romaji: "Atarashii hakubutsukan, mou ikimashita ka?", translation: "Kamu sudah ke museum baru itu?", audioFileName: "irodori-elementary1-08-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>いいえ、まだです。行きたいです。</>, romaji: "Iie, mada desu. Ikitai desu.", translation: "Belum. Saya ingin pergi.", audioFileName: "irodori-elementary1-08-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>土曜日にいっしょに行きませんか。</>, romaji: "Doyoubi ni issho ni ikimasen ka?", translation: "Maukah kita pergi bersama hari Sabtu?", audioFileName: "irodori-elementary1-08-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>いいですね。楽しみです。</>, romaji: "Ii desu ne. Tanoshimi desu.", translation: "Boleh juga. Saya menantikannya.", audioFileName: "irodori-elementary1-08-a02-l04.mp3" },
+  { speakerId: "akiko", japanese: <>土曜日にいっしょに行きませんか。</>, romaji: "Doyoubi ni issho ni ikimasen ka?", translation: "Bagaimana kalau kita pergi bersama hari Sabtu?", audioFileName: "irodori-elementary1-08-a02-l03.mp3" },
+  { speakerId: "kenji", japanese: <>いいですね。楽しみです。</>, romaji: "Ii desu ne. Tanoshimi desu.", translation: "Boleh juga. Saya jadi tidak sabar.", audioFileName: "irodori-elementary1-08-a02-l04.mp3" },
 ];
 
 const decidingNextActivityConversation: IrodoriUtterance[] = [
-  { speakerId: "sota", japanese: <>このあと、どうしますか。</>, romaji: "Kono ato, dou shimasu ka?", translation: "Setelah ini, bagaimana?", audioFileName: "irodori-elementary1-08-a03-l01.mp3" },
-  { speakerId: "yui", japanese: <>食事のあとで、動物園に行きませんか。</>, romaji: "Shokuji no ato de, doubutsuen ni ikimasen ka?", translation: "Setelah makan, maukah kita pergi ke kebun binatang?", audioFileName: "irodori-elementary1-08-a03-l02.mp3" },
-  { speakerId: "sota", japanese: <>いいですね。動物園の前に、切符を買いましょう。</>, romaji: "Ii desu ne. Doubutsuen no mae ni, kippu o kaimashou.", translation: "Boleh juga. Sebelum ke kebun binatang, mari membeli tiket.", audioFileName: "irodori-elementary1-08-a03-l03.mp3" },
+  { speakerId: "sota", japanese: <>このあと、どうしますか。</>, romaji: "Kono ato, dou shimasu ka?", translation: "Setelah ini, kita mau apa?", audioFileName: "irodori-elementary1-08-a03-l01.mp3" },
+  { speakerId: "yui", japanese: <>食事のあとで、動物園に行きませんか。</>, romaji: "Shokuji no ato de, doubutsuen ni ikimasen ka?", translation: "Setelah makan, bagaimana kalau kita pergi ke kebun binatang?", audioFileName: "irodori-elementary1-08-a03-l02.mp3" },
+  { speakerId: "sota", japanese: <>いいですね。動物園の前に、切符を買いましょう。</>, romaji: "Ii desu ne. Doubutsuen no mae ni, kippu o kaimashou.", translation: "Boleh juga. Kita beli tiket dulu sebelum ke kebun binatang.", audioFileName: "irodori-elementary1-08-a03-l03.mp3" },
   { speakerId: "yui", japanese: <>わかりました。入口で会いましょう。</>, romaji: "Wakarimashita. Iriguchi de aimashou.", translation: "Baik. Mari bertemu di pintu masuk.", audioFileName: "irodori-elementary1-08-a03-l04.mp3" },
 ];
 
 const sharingEventImpressionsConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>今日の動物園はどうでしたか。</>, romaji: "Kyou no doubutsuen wa dou deshita ka?", translation: "Bagaimana kebun binatang hari ini?", audioFileName: "irodori-elementary1-08-a04-l01.mp3" },
-  { speakerId: "akiko", japanese: <>とても楽しかったです。パンダがかわいかったです。</>, romaji: "Totemo tanoshikatta desu. Panda ga kawaikatta desu.", translation: "Sangat menyenangkan. Panda-nya lucu.", audioFileName: "irodori-elementary1-08-a04-l02.mp3" },
-  { speakerId: "kenji", japanese: <>そうですね。写真もたくさん撮りました。</>, romaji: "Sou desu ne. Shashin mo takusan torimashita.", translation: "Betul. Saya juga mengambil banyak foto.", audioFileName: "irodori-elementary1-08-a04-l03.mp3" },
-  { speakerId: "akiko", japanese: <>またいっしょに行きたいですね。</>, romaji: "Mata issho ni ikitai desu ne.", translation: "Lain kali kita pergi bersama lagi, ya.", audioFileName: "irodori-elementary1-08-a04-l04.mp3" },
+  { speakerId: "kenji", japanese: <>今日の動物園はどうでしたか。</>, romaji: "Kyou no doubutsuen wa dou deshita ka?", translation: "Bagaimana tadi di kebun binatang?", audioFileName: "irodori-elementary1-08-a04-l01.mp3" },
+  { speakerId: "akiko", japanese: <>とても楽しかったです。パンダがかわいかったです。</>, romaji: "Totemo tanoshikatta desu. Panda ga kawaikatta desu.", translation: "Seru sekali. Panda-nya lucu.", audioFileName: "irodori-elementary1-08-a04-l02.mp3" },
+  { speakerId: "kenji", japanese: <>そうですね。写真もたくさん撮りました。</>, romaji: "Sou desu ne. Shashin mo takusan torimashita.", translation: "Benar. Saya juga mengambil banyak foto.", audioFileName: "irodori-elementary1-08-a04-l03.mp3" },
+  { speakerId: "akiko", japanese: <>またいっしょに行きたいですね。</>, romaji: "Mata issho ni ikitai desu ne.", translation: "Kita pergi bersama lagi lain kali, ya.", audioFileName: "irodori-elementary1-08-a04-l04.mp3" },
 ];
 
 const askingAtSportsShopConversation: IrodoriUtterance[] = [
@@ -245,7 +245,7 @@ const simulations = [
     heading: "Memakai もうV-ましたか",
     prompt: "Kamu ingin mengetahui apakah teman sudah mengunjungi museum yang baru dibuka.",
     japanese: <>新しい博物館に行きましたか。</>,
-    translation: "Apakah kamu sudah pergi ke museum yang baru?",
+    translation: "Kamu sudah ke museum baru itu?",
     options: [
       { key: "already", label: "もう行きましたか。", meaning: "Apakah sudah pergi?" },
       { key: "experience", label: "行ったことがありますか。", meaning: "Apakah pernah pergi?" },
@@ -259,7 +259,7 @@ const simulations = [
     heading: "Menyusun urutan kegiatan",
     prompt: "Kalian sudah makan dan ingin menentukan kegiatan berikutnya.",
     japanese: <>食事のあとで、どうしますか。</>,
-    translation: "Setelah makan, bagaimana?",
+    translation: "Setelah makan, kita mau apa?",
     options: [
       { key: "zoo", label: "動物園に行きませんか。", meaning: "Maukah kita pergi ke kebun binatang?" },
       { key: "before", label: "食事の前に、駅で会いました。", meaning: "Sebelum makan, kami bertemu di stasiun." },
@@ -273,7 +273,7 @@ const simulations = [
     heading: "Menggunakan bentuk lampau",
     prompt: "Setelah mengunjungi kebun binatang, Kenji bertanya tentang pengalaman Akiko.",
     japanese: <>パンダはどうでしたか。</>,
-    translation: "Bagaimana panda-nya?",
+    translation: "Bagaimana tadi pandanya?",
     options: [
       { key: "impression", label: "とてもかわいかったです。", meaning: "Sangat lucu." },
       { key: "future", label: "いっしょに行きませんか。", meaning: "Maukah pergi bersama?" },
