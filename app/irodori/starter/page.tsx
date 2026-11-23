@@ -43,7 +43,7 @@ export default function IrodoriStarterPage() {
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Mulai dari ungkapan paling dasar untuk berkomunikasi dalam
-            kehidupan sehari-hari. Pelajari setiap tujuan Can-do melalui
+            kehidupan sehari-hari. Pelajari setiap target komunikasi melalui
             contoh, dialog, dan latihan.
           </p>
           <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
