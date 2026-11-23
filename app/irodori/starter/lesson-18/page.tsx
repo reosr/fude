@@ -556,13 +556,13 @@ export default function IrodoriStarterLessonEighteenPage() {
             title: "01 · Kata kerja bentuk ～たいです",
             pattern: "V-ます → buang ます + たいです",
             example: <><ruby>温泉<rt>おんせん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>りたいです。／ <ruby>雪<rt>ゆき</rt></ruby>が<ruby>見<rt>み</rt></ruby>たいです。</>,
-            note: "Pola ～たいです digunakan untuk menyatakan keinginan sendiri. Ambil bentuk masu, lepaskan ます, lalu tambahkan たいです: <ruby>行<rt>い</rt></ruby>きます → <ruby>行<rt>い</rt></ruby>きたいです; <ruby>食<rt>た</rt></ruby>べます → <ruby>食<rt>た</rt></ruby>べたいです. Partikel を yang menandai objek sering berubah menjadi が pada pola ini, misalnya お<ruby>菓子<rt>かし</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです.",
+            note: <>Pola ～たいです digunakan untuk menyatakan keinginan sendiri. Ambil bentuk masu, lepaskan ます, lalu tambahkan たいです: <ruby>行<rt>い</rt></ruby>きます → <ruby>行<rt>い</rt></ruby>きたいです; <ruby>食<rt>た</rt></ruby>べます → <ruby>食<rt>た</rt></ruby>べたいです. Partikel を yang menandai objek sering berubah menjadi が pada pola ini, misalnya お<ruby>菓子<rt>かし</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです.</>,
           },
           {
             title: "02 · どこか untuk tempat yang belum ditentukan",
             pattern: "どこか + V-ます / V-たいです",
             example: <>どこか<ruby>旅行<rt>りょこう</rt></ruby>したいです。／ <ruby>休<rt>やす</rt></ruby>みの日、どこか<ruby>行<rt>い</rt></ruby>きませんか？</>,
-            note: "どこか berarti somewhere atau suatu tempat yang belum ditentukan. Bedakan dengan どこ (di mana) dan どこにも yang biasanya dipakai bersama bentuk negatif, misalnya どこにも<ruby>行<rt>い</rt></ruby>きません.",
+            note: <>どこか berarti somewhere atau suatu tempat yang belum ditentukan. Bedakan dengan どこ (di mana) dan どこにも yang biasanya dipakai bersama bentuk negatif, misalnya どこにも<ruby>行<rt>い</rt></ruby>きません.</>,
           },
           {
             title: "03 · Partikel へ dan に untuk arah / tujuan",
