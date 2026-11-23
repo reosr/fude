@@ -70,28 +70,28 @@ const askEventTimeAndPlaceConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>すみません。料理の紹介コーナーは、どこですか。</>,
     romaji: "Sumimasen. Ryouri no shoukai koonaa wa, doko desu ka?",
-    translation: "Permisi. Di mana area perkenalan makanan?",
+    translation: "Permisi, di mana area pengenalan makanan?",
     audioFileName: "irodori-elementary2-08-a02-l01.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>あちらのテントのとなりです。</>,
     romaji: "Achira no tento no tonari desu.",
-    translation: "Di sebelah tenda yang di sana.",
+    translation: "Di sebelah tenda itu.",
     audioFileName: "irodori-elementary2-08-a02-l02.mp3",
   },
   {
     speakerId: "akiko",
     japanese: <>子どもの工作は、何時からか、わかりますか。</>,
     romaji: "Kodomo no kousaku wa, nanji kara ka, wakarimasu ka?",
-    translation: "Apakah kamu tahu kegiatan prakarya anak mulai pukul berapa?",
+    translation: "Kamu tahu lokakarya anak-anak mulai pukul berapa?",
     audioFileName: "irodori-elementary2-08-a02-l03.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>午後一時からだと思います。案内でも確認できますよ。</>,
     romaji: "Gogo ichiji kara da to omoimasu. Annai demo kakunin dekimasu yo.",
-    translation: "Sepertinya mulai pukul satu siang. Kamu juga bisa memastikannya di meja informasi.",
+    translation: "Katanya mulai pukul satu siang. Kamu juga bisa memastikannya di meja informasi.",
     audioFileName: "irodori-elementary2-08-a02-l04.mp3",
   },
 ];
@@ -122,7 +122,7 @@ const askParticipationRequirementsConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>小学生以上なら、だれでも参加できます。</>,
     romaji: "Shougakusei ijou nara, dare demo sanka dekimasu.",
-    translation: "Siapa pun yang duduk di bangku sekolah dasar atau lebih tinggi boleh ikut.",
+    translation: "Siswa SD atau yang lebih tinggi boleh ikut.",
     audioFileName: "irodori-elementary2-08-a03-l04.mp3",
   },
 ];
@@ -139,21 +139,21 @@ const understandVenueAnnouncementConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>はい。ホールの中では、食べ物を食べないでくださいと言っていました。</>,
     romaji: "Hai. Hooru no naka de wa, tabemono o tabenaide kudasai to itte imashita.",
-    translation: "Ya. Katanya kita diminta untuk tidak makan di dalam aula.",
+    translation: "Ya. Ada pengumuman bahwa kita tidak boleh makan di dalam aula.",
     audioFileName: "irodori-elementary2-08-a04-l02.mp3",
   },
   {
     speakerId: "akiko",
     japanese: <>飲み物もだめですか。</>,
     romaji: "Nomimono mo dame desu ka?",
-    translation: "Apakah minuman juga tidak boleh?",
+    translation: "Kalau minum, juga tidak boleh?",
     audioFileName: "irodori-elementary2-08-a04-l03.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>はい。飲食は、外の休憩コーナーでお願いします。</>,
     romaji: "Hai. Inshoku wa, soto no kyuukei koonaa de onegaishimasu.",
-    translation: "Ya. Silakan makan dan minum di area istirahat luar.",
+    translation: "Ya. Makan dan minum diperbolehkan di area istirahat luar.",
     audioFileName: "irodori-elementary2-08-a04-l04.mp3",
   },
 ];
@@ -163,14 +163,14 @@ const shareFestivalExperienceConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>先週の国際交流フェスティバルに行きましたか。</>,
     romaji: "Senshuu no kokusai kouryuu fesutibaru ni ikimashita ka?",
-    translation: "Apakah kamu pergi ke festival pertukaran internasional minggu lalu?",
+    translation: "Minggu lalu, kamu pergi ke festival pertukaran budaya internasional?",
     audioFileName: "irodori-elementary2-08-a05-l01.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>はい。友だちと行きました。いろいろな国の音楽を聞きました。</>,
     romaji: "Hai. Tomodachi to ikimashita. Iroiro na kuni no ongaku o kikimashita.",
-    translation: "Ya. Saya pergi bersama teman. Saya mendengarkan musik dari berbagai negara.",
+    translation: "Ya. Saya pergi bersama seorang teman dan mendengarkan musik dari berbagai negara.",
     audioFileName: "irodori-elementary2-08-a05-l02.mp3",
   },
   {
@@ -184,7 +184,7 @@ const shareFestivalExperienceConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>とてもおいしかったです。また来年も行きたいです。</>,
     romaji: "Totemo oishikatta desu. Mata rainen mo ikitai desu.",
-    translation: "Sangat enak. Saya ingin pergi lagi tahun depan.",
+    translation: "Makanannya enak sekali. Saya ingin datang lagi tahun depan.",
     audioFileName: "irodori-elementary2-08-a05-l04.mp3",
   },
 ];
@@ -350,7 +350,7 @@ const festivalSocialPost = {
   date: "6月22日",
   japanese: "日曜日に、友だちと国際交流フェスティバルに行きました。ステージで世界のダンスを見たり、太鼓の音楽を聞いたりしました。折り紙のワークショップにも参加しました。初めてでしたが、とても楽しかったです。屋台の料理もおいしかったです。また来年も行きたいです。",
   reading: "Nichiyoubi ni, tomodachi to kokusai kouryuu fesutibaru ni ikimashita. Suteeji de sekai no dansu o mitari, taiko no ongaku o kiitari shimashita. Origami no waakushoppu ni mo sanka shimashita. Hajimete deshita ga, totemo tanoshikatta desu. Yatai no ryouri mo oishikatta desu. Mata rainen mo ikitai desu.",
-  translation: "Pada hari Minggu, saya pergi ke festival pertukaran internasional bersama teman. Saya menonton tarian dari berbagai negara dan mendengarkan musik taiko di panggung. Saya juga ikut lokakarya origami. Ini pengalaman pertama saya, tetapi sangat menyenangkan. Makanan di kios festival juga enak. Saya ingin pergi lagi tahun depan.",
+  translation: "Hari Minggu, saya pergi ke festival pertukaran budaya internasional bersama seorang teman. Saya menonton tarian dari berbagai negara dan mendengarkan musik taiko di panggung. Saya juga ikut lokakarya origami. Ini pengalaman pertama saya, tetapi seru sekali. Makanan di stan-stan festival juga enak. Saya ingin datang lagi tahun depan.",
 };
 
 const ratingOptions: { value: IrodoriRating; label: string }[] = [
@@ -439,7 +439,7 @@ const simulations: Simulation[] = [
     heading: "Menemukan kegiatan yang diikuti",
     prompt: "Mika menulis bahwa ia melihat tarian, mendengarkan taiko, dan mengikuti lokakarya origami. Kegiatan mana yang ia ikuti sendiri?",
     japanese: <>折り紙のワークショップにも参加しました。</>,
-    translation: "Saya juga mengikuti lokakarya origami.",
+    translation: "Saya juga ikut lokakarya origami.",
     options: [
       { key: "a", label: "Pertunjukan tarian di panggung.", meaning: "Dalam unggahan, Mika mengatakan ia menonton tarian." },
       { key: "b", label: "Penampilan musik taiko.", meaning: "Mika mengatakan ia mendengarkan musik taiko." },
