@@ -520,22 +520,22 @@ export default function IrodoriPemulaLessonOnePage() {
           hari saat bertemu gunakan こんばんは.
         </p>
         <IrodoriConversation
-          title="Scene A · Pagi hari (sopan)"
+          title="Adegan A · Pagi hari (sopan)"
           speakers={speakers}
           utterances={morningGreetings}
         />
         <IrodoriConversation
-          title="Scene B · Pagi hari (akrab)"
+          title="Adegan B · Pagi hari (akrab)"
           speakers={speakers}
           utterances={casualMorningGreetings}
         />
         <IrodoriConversation
-          title="Scene C · Bertemu pada siang hari"
+          title="Adegan C · Bertemu pada siang hari"
           speakers={speakers}
           utterances={daytimeGreetings}
         />
         <IrodoriConversation
-          title="Scene D · Bertemu pada malam hari"
+          title="Adegan D · Bertemu pada malam hari"
           speakers={speakers}
           utterances={eveningGreetings}
         />
@@ -579,17 +579,17 @@ export default function IrodoriPemulaLessonOnePage() {
           お<ruby>疲<rt>つか</rt></ruby>れさまでした.
         </p>
         <IrodoriConversation
-          title="Scene A · Pulang lebih dahulu dari tempat kerja"
+          title="Adegan A · Pulang lebih dahulu dari tempat kerja"
           speakers={speakers}
           utterances={leavingConversation}
         />
         <IrodoriConversation
-          title="Scene B · Berpisah dengan teman"
+          title="Adegan B · Berpisah dengan teman"
           speakers={speakers}
           utterances={friendFarewellConversation}
         />
         <IrodoriConversation
-          title="Scene C · Sebelum tidur"
+          title="Adegan C · Sebelum tidur"
           speakers={speakers}
           utterances={nightFarewellConversation}
         />
@@ -625,22 +625,22 @@ export default function IrodoriPemulaLessonOnePage() {
           dan digunakan kepada orang yang dekat.
         </p>
         <IrodoriConversation
-          title="Scene A · Menerima sesuatu"
+          title="Adegan A · Menerima sesuatu"
           speakers={speakers}
           utterances={thanksConversation}
         />
         <IrodoriConversation
-          title="Scene B · Menerima bantuan dengan sopan"
+          title="Adegan B · Menerima bantuan dengan sopan"
           speakers={speakers}
           utterances={thanksWithSumimasenConversation}
         />
         <IrodoriConversation
-          title="Scene C · Meminta maaf dengan sopan"
+          title="Adegan C · Meminta maaf dengan sopan"
           speakers={speakers}
           utterances={apologyConversation}
         />
         <IrodoriConversation
-          title="Scene D · Meminta maaf kepada teman"
+          title="Adegan D · Meminta maaf kepada teman"
           speakers={speakers}
           utterances={casualApologyConversation}
         />
