@@ -17,6 +17,7 @@ import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -533,7 +534,7 @@ export default function IrodoriStarterLessonSixPage() {
               <div className="grid gap-2 sm:grid-cols-2">
                 {menuBurgers.map((item) => (
                   <article
-                    key={item.jp}
+                    key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                     className="rounded-xl border border-white/[0.07] bg-black/15 p-3"
                   >
                     <div className="flex items-center gap-2">
@@ -542,7 +543,7 @@ export default function IrodoriStarterLessonSixPage() {
                       </span>
                       <div className="min-w-0">
                         <p className="font-mincho text-sm font-bold text-[#F1EBDD]">
-                          {item.jp}
+                          <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                         </p>
                         <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
                       </div>
@@ -568,7 +569,7 @@ export default function IrodoriStarterLessonSixPage() {
                 <div className="space-y-2">
                   {sideMenu.map((item) => (
                     <div
-                      key={item.jp}
+                      key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                       className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-black/15 p-3"
                     >
                       <span className="text-2xl">{item.icon}</span>
@@ -593,13 +594,13 @@ export default function IrodoriStarterLessonSixPage() {
                 <div className="space-y-2">
                   {drinkMenu.map((item) => (
                     <div
-                      key={item.jp}
+                      key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                       className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-black/15 p-3"
                     >
                       <span className="text-xl">{item.icon}</span>
                       <div className="min-w-0 flex-1">
                         <p className="font-mincho text-sm font-bold text-[#F1EBDD]">
-                          {item.jp}
+                          <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                         </p>
                         <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
                         <p className="text-[10px] text-[#A9A398]">{item.meaning}</p>
@@ -695,7 +696,7 @@ export default function IrodoriStarterLessonSixPage() {
                 className="w-full rounded-xl border border-white/[0.1] bg-[#24221F] px-3 py-3 text-sm text-[#F1EBDD] outline-none focus:border-[#B8860B]/50"
               >
                 {menuBurgers.map((item) => (
-                  <option key={item.jp} value={item.jp}>
+                  <option key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading> value=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>>
                     {item.jp === "水" ? "水（みず）" : item.jp}
                   </option>
                 ))}
@@ -714,8 +715,8 @@ export default function IrodoriStarterLessonSixPage() {
                 className="w-full rounded-xl border border-white/[0.1] bg-[#24221F] px-3 py-3 text-sm text-[#F1EBDD] outline-none focus:border-[#B8860B]/50"
               >
                 {drinkMenu.map((item) => (
-                  <option key={item.jp} value={item.jp}>
-                    {item.jp}
+                  <option key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading> value=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>>
+                    <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                   </option>
                 ))}
               </select>
@@ -818,19 +819,19 @@ export default function IrodoriStarterLessonSixPage() {
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {mealChoices.map((item) => (
             <article
-              key={item.jp}
+              key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"
             >
               <div className="flex h-16 items-center justify-center rounded-lg bg-black/15 text-3xl">
                 {item.icon}
               </div>
               <p className="mt-3 font-mincho text-lg font-bold text-[#F1EBDD]">
-                {item.jp}
+                <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
               </p>
               <p className="text-[10px] italic text-[#B8860B]">{item.reading}</p>
               <p className="mt-1 text-xs text-[#A9A398]">{item.meaning}</p>
               <p className="mt-3 rounded-lg bg-black/15 px-2 py-2 font-mincho text-sm text-[#D9B66D]">
-                {item.jp}にします。
+                <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>にします。
               </p>
             </article>
           ))}
@@ -940,7 +941,7 @@ export default function IrodoriStarterLessonSixPage() {
                 className="flex items-center justify-between gap-3 rounded-lg bg-black/15 px-3 py-2"
               >
                 <div>
-                  <p className="font-mincho text-sm text-[#F1EBDD]">{item.jp}</p>
+                  <p className="font-mincho text-sm text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p>
                   <p className="text-[9px] text-[#B8860B]">{item.reading}</p>
                 </div>
                 <span className="text-xs text-[#A9A398]">{item.meaning}</span>
@@ -1095,7 +1096,7 @@ export default function IrodoriStarterLessonSixPage() {
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
               <p className="font-mincho text-2xl font-bold text-[#F1EBDD]">
-                {item.jp}
+                <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
               </p>
               <p className="mt-1 text-[10px] italic text-[#B8860B]">
                 {item.reading}
@@ -1182,10 +1183,10 @@ export default function IrodoriStarterLessonSixPage() {
                 className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
               >
                 <p className="text-[9px] font-black tracking-[0.16em] text-[#B8860B]">
-                  QUESTION {String(index + 1).padStart(2, "0")}
+                  SOAL {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                  {question.prompt}
+                  <JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
                 </h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => {
@@ -1220,7 +1221,7 @@ export default function IrodoriStarterLessonSixPage() {
                           {quizSubmitted && correct ? "✓" : selected ? "●" : "○"}
                         </span>
                         <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
-                          {option.label}
+                          <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                         </span>
                       </button>
                     );
@@ -1236,7 +1237,7 @@ export default function IrodoriStarterLessonSixPage() {
                     >
                       {isCorrect ? "Benar." : "Belum tepat."}
                     </span>
-                    {question.explanation}
+                    <JapaneseReading allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -1322,7 +1323,7 @@ export default function IrodoriStarterLessonSixPage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]")
                       }
                     >
-                      {option.label}
+                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
