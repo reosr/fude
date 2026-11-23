@@ -12,7 +12,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
@@ -26,63 +26,63 @@ const akikoAndKenji = [IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji];
 
 const repeatConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>すみません。よくわかりません。</>,
     romaji: "Sumimasen. Yoku wakarimasen.",
     translation: "Maaf, saya kurang mengerti.",
     audioFileName: "irodori-starter-02-a01-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。</>,
     romaji: "Hai.",
     translation: "Ya.",
     audioFileName: "irodori-starter-02-a01-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>もういちど、お願いします。</>,
     romaji: "Mou ichido, onegaishimasu.",
     translation: "Tolong ulangi sekali lagi.",
     audioFileName: "irodori-starter-02-a01-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。ゆっくり<ruby>言<rt>い</rt></ruby>います。</>,
     romaji: "Hai. Yukkuri iimasu.",
     translation: "Baik. Saya akan mengatakannya pelan-pelan.",
     audioFileName: "irodori-starter-02-a01-l04.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>バスは３<ruby>時<rt>じ</rt></ruby>に<ruby>来<rt>き</rt></ruby>ます。</>,
     romaji: "Basu wa sanji ni kimasu.",
     translation: "Bus datang pukul tiga.",
     audioFileName: "irodori-starter-02-a01-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>バスは３<ruby>時<rt>じ</rt></ruby>ですね。</>,
     romaji: "Basu wa sanji desu ne.",
     translation: "Bus-nya pukul tiga, ya.",
     audioFileName: "irodori-starter-02-a01-l06.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。わかりましたか？</>,
     romaji: "Hai. Wakarimashita ka?",
     translation: "Ya. Apakah sekarang sudah mengerti?",
     audioFileName: "irodori-starter-02-a01-l07.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>はい、わかりました。</>,
     romaji: "Hai, wakarimashita.",
     translation: "Ya, saya mengerti.",
     audioFileName: "irodori-starter-02-a01-l08.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>ありがとうございます。</>,
     romaji: "Arigatou gozaimasu.",
     translation: "Terima kasih.",
@@ -92,42 +92,42 @@ const repeatConversation: IrodoriUtterance[] = [
 
 const languageConversation: IrodoriUtterance[] = [
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <><ruby>日本語<rt>にほんご</rt></ruby>、できますか？</>,
     romaji: "Nihongo, dekimasu ka?",
     translation: "Apakah kamu bisa berbahasa Jepang?",
     audioFileName: "irodori-starter-02-a02-l01.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>はい、<ruby>少<rt>すこ</rt></ruby>しできます。</>,
     romaji: "Hai, sukoshi dekimasu.",
     translation: "Ya, bisa sedikit.",
     audioFileName: "irodori-starter-02-a02-l02.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <><ruby>英語<rt>えいご</rt></ruby>、できますか？</>,
     romaji: "Eigo, dekimasu ka?",
     translation: "Apakah kamu bisa berbahasa Inggris?",
     audioFileName: "irodori-starter-02-a02-l03.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>はい、できます。</>,
     romaji: "Hai, dekimasu.",
     translation: "Ya, bisa.",
     audioFileName: "irodori-starter-02-a02-l04.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>インドネシア<ruby>語<rt>ご</rt></ruby>、できますか？</>,
     romaji: "Indoneshia-go, dekimasu ka?",
     translation: "Apakah kamu bisa berbahasa Indonesia?",
     audioFileName: "irodori-starter-02-a02-l05.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>いいえ、あまりできません。</>,
     romaji: "Iie, amari dekimasen.",
     translation: "Tidak, saya tidak begitu bisa.",
@@ -137,42 +137,42 @@ const languageConversation: IrodoriUtterance[] = [
 
 const wordingConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>これは<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>何<rt>なん</rt></ruby>と<ruby>言<rt>い</rt></ruby>いますか？</>,
     romaji: "Kore wa nihongo de nan to iimasu ka?",
     translation: "Bagaimana mengatakan ini dalam bahasa Jepang?",
     audioFileName: "irodori-starter-02-a03-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>「water」は<ruby>日本語<rt>にほんご</rt></ruby>で「<ruby>水<rt>みず</rt></ruby>」です。</>,
     romaji: "Water wa nihongo de mizu desu.",
     translation: "Kata “water” dalam bahasa Jepang adalah “mizu”.",
     audioFileName: "irodori-starter-02-a03-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>ああ、<ruby>水<rt>みず</rt></ruby>ですね。</>,
     romaji: "Aa, mizu desu ne.",
     translation: "Oh, mizu, ya.",
     audioFileName: "irodori-starter-02-a03-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>では、「apple」は？</>,
     romaji: "Dewa, apple wa?",
     translation: "Kalau begitu, bagaimana dengan “apple”?",
     audioFileName: "irodori-starter-02-a03-l04.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>「apple」は<ruby>日本語<rt>にほんご</rt></ruby>で「りんご」です。</>,
     romaji: "Apple wa nihongo de ringo desu.",
     translation: "Kata “apple” dalam bahasa Jepang adalah “ringo”.",
     audioFileName: "irodori-starter-02-a03-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>りんご。わかりました。</>,
     romaji: "Ringo. Wakarimashita.",
     translation: "Ringo. Saya mengerti.",
@@ -395,7 +395,7 @@ export default function IrodoriPemulaLessonTwoPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Meminta pengulangan"
-          tokohs={yuiAndSota}
+          speakers={yuiAndSota}
           utterances={repeatConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2">
@@ -442,7 +442,7 @@ export default function IrodoriPemulaLessonTwoPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Bertanya tentang bahasa"
-          tokohs={akikoAndKenji}
+          speakers={akikoAndKenji}
           utterances={languageConversation}
         />
         <div className="grid gap-2 sm:grid-cols-3">
@@ -506,7 +506,7 @@ export default function IrodoriPemulaLessonTwoPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Bertanya nama benda"
-          tokohs={yuiAndSota}
+          speakers={yuiAndSota}
           utterances={wordingConversation}
         />
         <div className="rounded-xl border border-[#B8860B]/20 bg-gradient-to-br from-[#2B2118] to-[#191817] p-4">
