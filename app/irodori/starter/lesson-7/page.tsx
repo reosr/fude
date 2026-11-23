@@ -247,7 +247,7 @@ const rooms = [
   { jp: <ruby>居間<rt>いま</rt></ruby>, reading: "ima", meaning: "Ruang keluarga", icon: "🛋️" },
   { jp: <ruby>食堂<rt>しょくどう</rt></ruby>, reading: "shokudou", meaning: "Ruang makan", icon: "🍽️" },
   { jp: <ruby>部屋<rt>へや</rt></ruby>, reading: "heya", meaning: "Kamar / ruangan", icon: "🛏️" },
-  { jp: <ruby>風呂<rt>ふろ</rt></ruby>, reading: "furo", meaning: "Kamar mandi / bath", icon: "🛁" },
+  { jp: <ruby>風呂<rt>ふろ</rt></ruby>, reading: "furo", meaning: "Kamar mandi / bak mandi", icon: "🛁" },
   { jp: "トイレ", reading: "toire", meaning: "Toilet", icon: "🚻" },
   { jp: <ruby>階段<rt>かいだん</rt></ruby>, reading: "kaidan", meaning: "Tangga", icon: "🪜" },
   { jp: <ruby>庭<rt>にわ</rt></ruby>, reading: "niwa", meaning: "Taman", icon: "🌿" },
@@ -256,11 +256,11 @@ const rooms = [
 const appliances = [
   { jp: "エアコン", reading: "eakon", meaning: "AC", icon: "❄️" },
   { jp: <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>, reading: "reizouko", meaning: "Kulkas", icon: "🧊" },
-  { jp: <><ruby>電子<rt>でんし</rt></ruby>レンジ</>, reading: "denshi renji", meaning: "Microwave", icon: "♨️" },
-  { jp: <ruby>炊飯器<rt>すいはんき</rt></ruby>, reading: "suihanki", meaning: "Rice cooker", icon: "🍚" },
-  { jp: "トースター", reading: "toosutaa", meaning: "Toaster", icon: "🍞" },
+  { jp: <><ruby>電子<rt>でんし</rt></ruby>レンジ</>, reading: "denshi renji", meaning: "Oven microwave", icon: "♨️" },
+  { jp: <ruby>炊飯器<rt>すいはんき</rt></ruby>, reading: "suihanki", meaning: "Penanak nasi", icon: "🍚" },
+  { jp: "トースター", reading: "toosutaa", meaning: "Pemanggang roti", icon: "🍞" },
   { jp: "ベッド", reading: "beddo", meaning: "Tempat tidur", icon: "🛏️" },
-  { jp: "ふとん", reading: "futon", meaning: "Futon", icon: "🛌" },
+  { jp: "ふとん", reading: "futon", meaning: "Kasur tradisional Jepang (futon)", icon: "🛌" },
   { jp: "テーブル", reading: "teeburu", meaning: "Meja", icon: "🪑" },
   { jp: "いす", reading: "isu", meaning: "Kursi", icon: "🪑" },
   { jp: <ruby>洗濯機<rt>せんたくき</rt></ruby>, reading: "sentakuki", meaning: "Mesin cuci", icon: "🧺" },
@@ -383,7 +383,7 @@ const quizQuestions: {
       { key: "c", label: "Mengubah mode." },
     ],
     answer: "b",
-    explanation: <>「<ruby>入<rt>いり</rt></ruby>」 berarti ON / nyala, sedangkan 「<ruby>切<rt>きり</rt></ruby>」 berarti OFF / mati.</>,
+    explanation: <>「<ruby>入<rt>いり</rt></ruby>」 berarti NYALA, sedangkan 「<ruby>切<rt>きり</rt></ruby>」 berarti MATI.</>,
   },
   {
     prompt: <>Jika ruangan terasa panas dan ingin menyalakan AC untuk mendinginkan ruangan, tombol yang dipilih adalah…</>,
@@ -527,7 +527,7 @@ export default function IrodoriPemulaLessonSevenPage() {
           menjelaskan apa yang ada di suatu tempat.
         </p>
         <IrodoriConversation
-          title="Scene A · Tur rumah contoh"
+          title="Adegan A · Tur rumah contoh"
           speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={houseTourConversation}
         />
@@ -673,7 +673,7 @@ export default function IrodoriPemulaLessonSevenPage() {
           atau 「ありません／ないです」 jika tidak ada.
         </p>
         <IrodoriConversation
-          title="Scene B · Mengecek fasilitas kamar"
+          title="Adegan B · Mengecek fasilitas kamar"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={equipmentConversation}
         />
@@ -742,7 +742,7 @@ export default function IrodoriPemulaLessonSevenPage() {
           「とても」 berarti sangat.
         </p>
         <IrodoriConversation
-          title="Scene C · Bercerita tentang rumah fiktif"
+          title="Adegan C · Bercerita tentang rumah fiktif"
           speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.yui]}
           utterances={describeHouseConversation}
         />
@@ -816,7 +816,7 @@ export default function IrodoriPemulaLessonSevenPage() {
           mewah seperti arti mansion dalam bahasa Inggris.
         </p>
         <IrodoriConversation
-          title="Scene D · Membicarakan jenis hunian"
+          title="Adegan D · Membicarakan jenis hunian"
           speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.sota]}
           utterances={residenceConversation}
         />
@@ -889,13 +889,13 @@ export default function IrodoriPemulaLessonSevenPage() {
             </div>
             <div className="grid grid-cols-2 gap-2 p-4">
               {[
-                { jp: "入", reading: "いり · ON", meaning: "Daya nyala", detail: "Menyalakan mesin" },
-                { jp: "切", reading: "きり · OFF", meaning: "Daya mati", detail: "Mematikan mesin" },
+                { jp: "入", reading: "いり · NYALA", meaning: "Daya nyala", detail: "Menyalakan mesin" },
+                { jp: "切", reading: "きり · MATI", meaning: "Daya mati", detail: "Mematikan mesin" },
                 { jp: "スタート", reading: "sutaato", meaning: "Mulai", detail: "Memulai proses mencuci" },
                 { jp: "一時停止", reading: "いちじていし", meaning: "Jeda", detail: "Menghentikan sementara" },
                 { jp: "コース", reading: "koosu", meaning: "Mode", detail: "Memilih jenis cucian" },
                 { jp: "水量", reading: "すいりょう", meaning: "Jumlah air", detail: "Mengatur air" },
-                { jp: "予約", reading: "よやく", meaning: "Timer", detail: "Mengatur waktu mulai" },
+                { jp: "予約", reading: "よやく", meaning: "Pengatur waktu", detail: "Mengatur waktu mulai" },
               ].map((item) => (
                 <div
                   key={item.jp}
@@ -917,10 +917,10 @@ export default function IrodoriPemulaLessonSevenPage() {
           <article className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
             <div className="border-b border-white/[0.07] bg-[#2B2118] p-4">
               <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">
-                AIR CONDITIONER REMOTE
+                REMOT AC
               </p>
               <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
-                エアコン · Remote AC
+                エアコン · remot AC
               </h3>
             </div>
             <div className="grid grid-cols-2 gap-2 p-4">
@@ -976,9 +976,9 @@ export default function IrodoriPemulaLessonSevenPage() {
                 }}
                 className="mt-2 w-full rounded-lg border border-white/[0.1] bg-[#24221F] px-3 py-2.5 text-sm text-[#F1EBDD] outline-none focus:border-[#B8860B]/50"
               >
-                <option value="入">入 · ON</option>
-                <option value="切">切 · OFF</option>
-                <option value="予約">予約 · Timer</option>
+                <option value="入">入 · NYALA</option>
+                <option value="切">切 · MATI</option>
+                <option value="予約">予約 · Pengatur waktu</option>
               </select>
             </label>
             <label className="block rounded-xl border border-white/[0.07] bg-black/15 p-3">
@@ -1066,7 +1066,7 @@ export default function IrodoriPemulaLessonSevenPage() {
               <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">
                 {appliancePracticeCorrect
                   ? "Kamu sudah mengenali tombol ON, mulai, pendingin, dan pemanas."
-                  : <>Ingat: <ruby>入<rt>いり</rt></ruby> = ON, スタート = mulai, <ruby>冷房<rt>れいぼう</rt></ruby> = pendingin, dan <ruby>暖房<rt>だんぼう</rt></ruby> = pemanas. Ubah pilihan lalu periksa lagi.</>}
+                  : <>Ingat: <ruby>入<rt>いり</rt></ruby> = nyala, スタート = mulai, <ruby>冷房<rt>れいぼう</rt></ruby> = pendingin, dan <ruby>暖房<rt>だんぼう</rt></ruby> = pemanas. Ubah pilihan lalu periksa lagi.</>}
               </p>
             </div>
           )}
@@ -1240,9 +1240,9 @@ export default function IrodoriPemulaLessonSevenPage() {
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-            <h3 className="text-xs font-bold text-[#E7D2A1]">Futon</h3>
+            <h3 className="text-xs font-bold text-[#E7D2A1]">Kasur futon</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Futon dapat dibentangkan di lantai untuk tidur dan disimpan
+              Kasur futon dapat dibentangkan di lantai untuk tidur dan disimpan
               kembali setelah digunakan. Menjemur atau mengeringkannya secara
               berkala membantu menjaga alas tidur tetap nyaman.
             </p>
