@@ -269,7 +269,7 @@ export default function IrodoriElementaryTwoLessonFifteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#B2D7CB]/[0.08]">環</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#B2D7CB]">IRODORI • ELEMENTARY 2 A2 • LESSON 15</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">The lights in the meeting room were left on.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Lampu ruang rapat dibiarkan menyala.</h1>
           <p className="mt-2 text-sm font-semibold text-[#B2D7CB]">会議室の電気がついたままでした。</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami poster ramah lingkungan, membicarakan kebiasaan hemat energi dan air, membaca panduan pemilahan sampah, serta bertanya tentang cara membuang sampah.</p>
           <div className="mt-5 flex flex-wrap gap-2">
