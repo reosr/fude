@@ -100,11 +100,24 @@ export default function JapaneseReading({
   // String biasa juga dapat diberi ruby, tetapi hanya saat fallback bacaan
   // diizinkan. Soal yang menguji bacaan/penulisan kanji tetap menampilkan target
   // tanpa petunjuk otomatis agar jawabannya tidak bocor.
+  // Kosakata yang seluruh karakter utamanya berupa kanji dapat memakai
+  // bacaan eksplisit dari data kosakata. Ini menjaga variasi kontekstual
+  // seperti 何（なに／なん）agar furigana mengikuti entri yang sedang dibaca.
+  const explicitWordHtml =
+    html === undefined &&
+    typeof children === "string" &&
+    Boolean(explicitKana?.trim()) &&
+    /[\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]/.test(children) &&
+    !/[ぁ-ゖァ-ヺー]/.test(children)
+      ? `<ruby>${escapeHtmlText(children)}<rt>${escapeHtmlText(explicitKana!.trim())}</rt></ruby>`
+      : undefined;
+
   const sourceHtml = html !== undefined
     ? html
-    : allowIndexFallback && (typeof children === "string" || typeof children === "number")
-      ? escapeHtmlText(String(children))
-      : undefined;
+    : explicitWordHtml ??
+      (allowIndexFallback && (typeof children === "string" || typeof children === "number")
+        ? escapeHtmlText(String(children))
+        : undefined);
   const displayHtml = sourceHtml !== undefined && allowIndexFallback
     ? addRubyFromReadingIndex(addRubyFromParentheticalReadings(sourceHtml))
     : sourceHtml;
