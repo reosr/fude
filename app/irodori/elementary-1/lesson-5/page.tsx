@@ -29,7 +29,7 @@ const lessonId = "elementary1-05";
 
 const townImpressionConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>この町はどうですか。</>, romaji: "Kono machi wa dou desu ka?", translation: "Bagaimana menurutmu kota ini?", audioFileName: "irodori-elementary1-05-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>とてもにぎやかで、便利です。</>, romaji: "Totemo nigiyaka de, benri desu.", translation: "Ramai dan fasilitasnya lengkap.", audioFileName: "irodori-elementary1-05-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>とてもにぎやかで、便利です。</>, romaji: "Totemo nigiyaka de, benri desu.", translation: "Ramai dan segala kebutuhan mudah didapat.", audioFileName: "irodori-elementary1-05-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>そうですか。店も多いですね。</>, romaji: "Sou desu ka. Mise mo ooi desu ne.", translation: "Begitu, ya. Tokonya juga banyak.", audioFileName: "irodori-elementary1-05-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。でも、駅の近くは人が多いです。</>, romaji: "Hai. Demo, eki no chikaku wa hito ga ooi desu.", translation: "Iya. Tetapi, di dekat stasiun banyak orang.", audioFileName: "irodori-elementary1-05-a01-l04.mp3" },
   { speakerId: "yui", japanese: <>そうですね。でも、住みやすい町ですね。</>, romaji: "Sou desu ne. Demo, sumiyasui machi desu ne.", translation: "Betul. Tetapi, kota ini nyaman untuk ditinggali, ya.", audioFileName: "irodori-elementary1-05-a01-l05.mp3" },
@@ -37,7 +37,7 @@ const townImpressionConversation: IrodoriUtterance[] = [
 
 const recommendedPlaceConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>この近くに、おすすめの場所がありますか。</>, romaji: "Kono chikaku ni, osusume no basho ga arimasu ka?", translation: "Ada tempat yang kamu rekomendasikan di dekat sini?", audioFileName: "irodori-elementary1-05-a02-l01.mp3" },
-  { speakerId: "kenji", japanese: <>はい。桜公園がおすすめです。</>, romaji: "Hai. Sakura Kouen ga osusume desu.", translation: "Ada. Saya merekomendasikan Taman Sakura.", audioFileName: "irodori-elementary1-05-a02-l02.mp3" },
+  { speakerId: "kenji", japanese: <>はい。桜公園がおすすめです。</>, romaji: "Hai. Sakura Kouen ga osusume desu.", translation: "Ada. Saya sarankan Taman Sakura.", audioFileName: "irodori-elementary1-05-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>どんなところですか。</>, romaji: "Donna tokoro desu ka?", translation: "Tempat seperti apa itu?", audioFileName: "irodori-elementary1-05-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>駅から遠いけど、静かで、きれいですよ。</>, romaji: "Eki kara tooi kedo, shizuka de, kirei desu yo.", translation: "Memang jauh dari stasiun, tetapi tenang dan indah.", audioFileName: "irodori-elementary1-05-a02-l04.mp3" },
 ];
