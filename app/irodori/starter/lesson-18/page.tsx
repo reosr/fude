@@ -260,7 +260,7 @@ const practiceTasks: Task[] = [
       { key: "c", label: "Saya sedang mencari alamat." },
     ],
     answer: "b",
-    explanation: <>どこか berarti suatu tempat atau tempat yang belum ditentukan, yaitu tempat yang belum ditentukan.</>,
+    explanation: <>どこか berarti suatu tempat yang belum ditentukan.</>,
   },
   {
     prompt: <>Pilih partikel penunjuk arah yang dibaca “e”.</>,
@@ -323,7 +323,7 @@ const quizQuestions: Task[] = [
       { key: "c", label: "Saya tidak pergi ke mana pun." },
     ],
     answer: "a",
-    explanation: <>どこか berarti tempat yang belum ditentukan, lokasi yang belum ditentukan.</>,
+    explanation: <>どこか berarti suatu tempat yang belum ditentukan.</>,
   },
   {
     prompt: <>Kalimat yang benar untuk “Saya ingin pergi ke Kyoto” adalah …</>,
@@ -565,7 +565,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
             title: "02 · どこか untuk tempat yang belum ditentukan",
             pattern: "どこか + V-ます / V-たいです",
             example: <>どこか<ruby>旅行<rt>りょこう</rt></ruby>したいです。／ <ruby>休<rt>やす</rt></ruby>みの日、どこか<ruby>行<rt>い</rt></ruby>きませんか？</>,
-            note: <>どこか berarti tempat yang belum ditentukan atau suatu tempat yang belum ditentukan. Bedakan dengan どこ (di mana) dan どこにも yang biasanya dipakai bersama bentuk negatif, misalnya どこにも<ruby>行<rt>い</rt></ruby>きません.</>,
+            note: <>どこか berarti suatu tempat yang belum ditentukan. Bedakan dengan どこ (di mana) dan どこにも yang biasanya dipakai bersama bentuk negatif, misalnya どこにも<ruby>行<rt>い</rt></ruby>きません.</>,
           },
           {
             title: "03 · Partikel へ dan に untuk arah / tujuan",
