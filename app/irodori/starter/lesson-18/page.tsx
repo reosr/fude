@@ -491,7 +491,7 @@ export default function IrodoriStarterLessonEighteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">休</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • STARTER A1 • LESSON 18</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I want to go to a hot spring.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya ingin pergi ke pemandian air panas.</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]"><ruby>温泉<rt>おんせん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>りたいです</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Belajar menceritakan rencana hari libur, menyampaikan hal yang ingin dilakukan di Jepang, menulis unggahan sederhana, serta berbagi urutan kegiatan dan kesan perjalanan.
