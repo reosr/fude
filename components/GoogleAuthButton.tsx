@@ -266,7 +266,7 @@ export default function GoogleAuthButton() {
           >
             <div className="flex items-center justify-between">
               <span className="text-[10px] font-black tracking-[0.2em] text-[#B8860B]">
-                FUDE ACCOUNT
+                AKUN FUDE
               </span>
 
               <button
