@@ -127,7 +127,40 @@ export default function JapaneseReading({
 
   const rawKana = explicitKana?.trim() || extractedReading?.kana || "";
   const normalizedKana = rawKana ? toHiragana(rawKana) : "";
-  const romanization = explicitRomaji?.trim() || (normalizedKana ? toRomaji(normalizedKana) : "");
+
+  // WanaKana membaca kana secara harfiah. Untuk romaji kalimat, sesuaikan
+  // partikel は・へ・を yang dapat dikenali dari batas ruby dan pola umum.
+  // Teks Jepang yang ditampilkan tidak diubah; penyesuaian hanya untuk romaji.
+  const kanaForRomaji = (() => {
+    let sourceKana = normalizedKana;
+
+    if (displayHtml !== undefined) {
+      const particleAwareHtml = displayHtml
+        .replace(/<\\/ruby>(\\s*)は/g, "</ruby>$1わ")
+        .replace(/<\\/ruby>(\\s*)へ/g, "</ruby>$1え")
+        .replace(/こんにちは/g, "こんにちわ")
+        .replace(/こんばんは/g, "こんばんわ")
+        .replace(/を/g, "お");
+
+      sourceKana =
+        extractKanaFromRubyHtml(particleAwareHtml, allowIndexFallback)?.kana ||
+        sourceKana;
+    }
+
+    return sourceKana
+      .replace(/こんにちは/g, "こんにちわ")
+      .replace(/こんばんは/g, "こんばんわ")
+      .replace(
+        /(これ|それ|あれ|どれ|ここ|そこ|あそこ|どこ|わたし|わたしたち|わたくし|ぼく|ぼくたち|かれ|かれら|かのじょ|みんな|みなさん|あなた|おまえ|なに|きょう|あした|きのう)は/g,
+        "$1わ"
+      )
+      .replace(/(で|に|と|から|まで|より|の|だけ|しか|さえ|て)は/g, "$1わ")
+      .replace(/(ここ|そこ|あそこ|どこ)へ/g, "$1え")
+      .replace(/を/g, "お");
+  })();
+
+  const romanization =
+    explicitRomaji?.trim() || (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
   const showKanaLine = Boolean(
     showKana &&
     normalizedKana &&
