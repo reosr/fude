@@ -811,7 +811,7 @@ export default function IrodoriStarterLessonThreePage() {
         <div className="grid gap-3 sm:grid-cols-2">
           {quizQuestions.map((question, index) => (
             <article
-              key=<JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
+              key={index}
               className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
               <p className="text-[9px] font-black tracking-widest text-[#B8860B]">
