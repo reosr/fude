@@ -637,7 +637,7 @@ export default function IrodoriPemulaLessonFourteenPage() {
             { key: "impression", label: "大きなトイレですね。", meaning: "Toiletnya besar, ya." },
           ].map((item) => (
             <button key={item.key} type="button" disabled={facilitySubmitted} aria-pressed={facilityChoice === item.key} onClick={() => setFacilityChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (facilitySubmitted && item.key === "toilet" ? "border-emerald-500/50 bg-emerald-500/10" : facilitySubmitted && facilityChoice === item.key ? "border-red-400/50 bg-red-400/10" : facilityChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
@@ -661,7 +661,7 @@ export default function IrodoriPemulaLessonFourteenPage() {
             { key: "above", label: "コンビニの上にいます。", meaning: "Saya berada di atas minimarket." },
           ].map((item) => (
             <button key={item.key} type="button" disabled={locationSubmitted} aria-pressed={locationChoice === item.key} onClick={() => setLocationChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (locationSubmitted && item.key === "inside" ? "border-emerald-500/50 bg-emerald-500/10" : locationSubmitted && locationChoice === item.key ? "border-red-400/50 bg-red-400/10" : locationChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
@@ -685,7 +685,7 @@ export default function IrodoriPemulaLessonFourteenPage() {
             { key: "high", label: "高いビルですね。", meaning: "Gedungnya tinggi, ya." },
           ].map((item) => (
             <button key={item.key} type="button" disabled={impressionSubmitted} aria-pressed={impressionChoice === item.key} onClick={() => setImpressionChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (impressionSubmitted && item.key === "quiet" ? "border-emerald-500/50 bg-emerald-500/10" : impressionSubmitted && impressionChoice === item.key ? "border-red-400/50 bg-red-400/10" : impressionChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
