@@ -775,14 +775,14 @@ const findWordAt = (index: number): string | null => {
               <h4 className="font-bold text-lg text-[#EAE6DD]">Pola Tata Bahasa</h4>
               {babData.grammar.map((g: any, i: number) => (
                 <div key={i} className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-xl p-5 shadow-xl">
-                  <div className="font-bold text-xl text-[#EAE6DD] font-mincho leading-[2] pt-3 mb-1 [&_rt]:text-[0.45em]" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(g.pattern) }} />
+                  <JapaneseReading html={formatGrammarNotation(g.pattern)} allowIndexFallback contentClassName="font-bold text-xl text-[#EAE6DD] font-mincho leading-[2] pt-3 mb-1 [&_rt]:text-[0.55em]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]" />
                   {g.formula && (
                     <div className="bg-[#262523] border border-[#44413D] rounded-lg p-3 my-3">
                       <p className="text-xs font-bold text-[#B8860B] mb-1">RUMUS / PERUBAHAN</p>
-                      <div className="text-base font-mono text-[#EAE6DD] whitespace-pre-wrap leading-[2.4] pt-2 [&_rt]:text-[0.75em]" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(g.formula) }} />
+                      <JapaneseReading html={formatGrammarNotation(g.formula)} allowIndexFallback contentClassName="text-base font-mono text-[#EAE6DD] whitespace-pre-wrap leading-[2.4] pt-2 [&_rt]:text-[0.75em]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]" />
                     </div>
                   )}
-                  {g.explanation && <div className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(g.explanation) }} />}
+                  {g.explanation && <div className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3"><JapaneseReading html={formatGrammarNotation(g.explanation)} allowIndexFallback contentClassName="text-sm text-[#A3A099] leading-relaxed" kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]" showRomaji={false} /></div>}
                   <div className="space-y-3 mt-4">
                     {g.examples && g.examples.map((ex: any, index: number) => (
                       <div key={index} className="bg-[#121110]/50 rounded-lg p-4 text-sm border border-[#33312E]/50">
