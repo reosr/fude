@@ -290,14 +290,14 @@ export default function IrodoriConversation({
                     {utterance.japanese}
                   </div>
                   {kanaReading && (
-                    <p className="mt-1 font-mincho text-sm leading-relaxed text-[#D6AD4F]">
+                    <p className="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]">
                       （{kanaReading}）
                     </p>
                   )}
-                  <p className="mt-1 text-xs italic text-[#B8860B]">
+                  <p className="mt-1 text-sm italic text-[#B8860B]">
                     {utterance.romaji}
                   </p>
-                  <p className="mt-1 text-xs leading-5 text-[#A3A099]">
+                  <p className="mt-2 text-sm leading-6 text-[#A3A099]">
                     {utterance.translation}
                   </p>
                   {!utterance.audioSrc && availableAudioCount > 0 && (
