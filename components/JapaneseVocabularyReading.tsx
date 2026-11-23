@@ -12,6 +12,7 @@ interface Props {
   translationClassName?: string;
   contentClassName?: string;
   wrapperClassName?: string;
+  allowIndexFallback?: boolean;
 }
 
 export default function JapaneseVocabularyReading({
@@ -23,6 +24,7 @@ export default function JapaneseVocabularyReading({
   translationClassName = "mt-2 text-sm leading-6 text-[#A9A398]",
   contentClassName = "font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]",
   wrapperClassName = "",
+  allowIndexFallback = true,
 }: Props) {
   const parts = reading.split(/\s*[·•]\s*/);
   const firstPart = (parts[0] ?? "").trim();
@@ -57,6 +59,7 @@ export default function JapaneseVocabularyReading({
         kanaClassName={kanaClassName}
         romajiClassName={romajiClassName}
         translationClassName={translationClassName}
+        allowIndexFallback={allowIndexFallback}
       >
         {children}
       </JapaneseReading>
