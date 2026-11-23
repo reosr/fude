@@ -254,7 +254,8 @@ export default function IrodoriConversation({
             (candidate) => candidate.id === utterance.speakerId
           );
           const isActive = activeIndex === index;
-          const kanaReading = toHiragana(utterance.romaji) || extractKanaFromReactNode(utterance.japanese)?.kana || "";
+          // Utamakan furigana dan indeks bacaan dari teks Jepang; romaji menjadi cadangan terakhir.
+          const kanaReading = extractKanaFromReactNode(utterance.japanese, true)?.kana || toHiragana(utterance.romaji) || "";
 
           return (
             <article
