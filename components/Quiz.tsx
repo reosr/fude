@@ -555,10 +555,11 @@ export default function Quiz({
       </div>
 
       <div className="text-center mb-6">
-        <div className="text-sm text-[#A3A099] mb-2 leading-relaxed" dangerouslySetInnerHTML={{ __html: currentQ.question }} />
+        <JapaneseReading html={currentQ.question} allowIndexFallback contentClassName="text-sm text-[#A3A099] mb-2 leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#A9A398]" />
 
         <JapaneseReading
           html={currentQ.sentence}
+          allowIndexFallback
           contentClassName="text-2xl font-bold text-[#EAE6DD] font-mincho leading-[2.5] [&_rt]:text-[0.5em] break-words"
           kanaClassName="mt-1 font-mincho text-base leading-relaxed text-[#D6AD4F]"
           romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]"
@@ -592,6 +593,7 @@ export default function Quiz({
             >
               <JapaneseReading
                  html={opt}
+                  allowIndexFallback
                  contentClassName="font-mincho text-lg leading-[2] [&_rt]:text-[0.55em]"
                  kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
                  romajiClassName="mt-1 text-xs italic text-[#A9A398]"
@@ -608,7 +610,7 @@ export default function Quiz({
               ? "Benar! "
               : `Jawaban yang benar: ${currentQ.correctAnswer}. `}
 
-            <span className="block mt-2 text-[#A3A099] not-italic leading-relaxed" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(currentQ.explanation) }} />
+            <span className="block mt-2 text-[#A3A099] not-italic leading-relaxed"><JapaneseReading html={formatGrammarNotation(currentQ.explanation)} allowIndexFallback contentClassName="text-sm text-[#A3A099] leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" showRomaji={false} /></span>
           </div>
 
           <div className="flex justify-end">
