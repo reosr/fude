@@ -7,6 +7,7 @@ const courses = [
     number: "01",
     title: "Pemula",
     level: "A1",
+    lessonSummary: "18 pelajaran",
     description: "Mulai dari ungkapan sederhana, perkenalan, dan kebutuhan sehari-hari.",
     status: "Mulai belajar",
     statusTone: "border-[#D6AD4F]/35 bg-[#D6AD4F]/10 text-[#E5C77D]",
@@ -17,6 +18,7 @@ const courses = [
     number: "02",
     title: "Dasar 1",
     level: "A2",
+    lessonSummary: "18 pelajaran",
     description: "Mengembangkan percakapan sehari-hari dan menceritakan keadaan terkini.",
     status: "Mulai belajar",
     statusTone: "border-[#8EAE93]/35 bg-[#476C51]/15 text-[#CFE4D2]",
@@ -27,6 +29,7 @@ const courses = [
     number: "03",
     title: "Dasar 2",
     level: "A2",
+    lessonSummary: "18 pelajaran",
     description: "Memperluas kemampuan berkomunikasi dalam beragam aktivitas harian.",
     status: "Mulai belajar",
     statusTone: "border-[#86A9D0]/35 bg-[#486C91]/15 text-[#D8E8F8]",
@@ -37,6 +40,7 @@ const courses = [
     number: "04",
     title: "Pra-Menengah",
     level: "A2/B1",
+    lessonSummary: "1 dari 18 tersedia",
     description: "Berlatih menyampaikan informasi dan pengalaman dengan lebih mandiri.",
     status: "Mulai belajar",
     statusTone: "border-[#B79ADE]/35 bg-[#80619B]/15 text-[#E3D5F6]",
@@ -111,7 +115,7 @@ export default function IrodoriPage() {
             </h2>
           </div>
           <span className="text-[10px] font-semibold text-[#817A73]">
-            4 tahap • 18 pelajaran per tahap
+            4 tahap • materi tersedia bertahap
           </span>
         </div>
 
@@ -143,7 +147,7 @@ export default function IrodoriPage() {
                   <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
                     <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#A3A099]">
                       <BookOpen size={13} />
-                      18 pelajaran
+                      {course.lessonSummary}
                     </span>
                     <span className={`rounded-full border px-2.5 py-1 text-[9px] font-bold ${course.statusTone}`}>
                       {course.status}
@@ -173,8 +177,8 @@ export default function IrodoriPage() {
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
           adalah pemilih jalur. Pemula A1 dan Dasar 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
-          Dasar 2 A2 sudah memiliki 18 pelajaran. Jalur Pra-Menengah A2/B1
-          kini dapat dimulai, dengan pelajaran berikutnya terbuka secara berurutan.
+          Dasar 2 A2 sudah memiliki 18 pelajaran. Pra-Menengah A2/B1
+          memiliki 18 rencana pelajaran, dan saat ini satu pelajaran sudah tersedia.
         </p>
       </div>
     </main>
