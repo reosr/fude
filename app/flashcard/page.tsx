@@ -7,6 +7,7 @@ import { getMemorizedKanji, saveMemorizedKanji } from "../../lib/memorized";
 import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
+import JapaneseReading from "../../components/JapaneseReading";
 import verbTypeData from "../../data/verb-type-index.json";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
@@ -398,13 +399,15 @@ useEffect(() => {
                           {verbType}
                         </span>
                       )}
-                      <div className="mb-0.5 md:mb-1">
-                        <FitText maxSize={24} minSize={12} className="text-[#EAE6DD] font-mincho drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-                          {card.kana}
-                        </FitText>
-                      </div>
-                      <p className="text-xs md:text-sm text-[#A3A099] mb-1 md:mb-2 break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">({card.romaji})</p>
-                      <p className="text-xl sm:text-3xl font-bold text-[#C93438] mt-1 md:mt-2 break-words leading-snug drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]">{card.meaning}</p>
+                      <JapaneseReading
+                        showOriginal={false}
+                        kana={card.kana}
+                        romaji={card.romaji}
+                        translation={card.meaning}
+                        kanaClassName="mt-1 font-mincho text-xl md:text-2xl leading-relaxed text-[#EAE6DD] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
+                        romajiClassName="mt-1 text-xs md:text-sm text-[#A3A099] break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
+                        translationClassName="mt-2 text-xl sm:text-3xl font-bold text-[#C93438] leading-snug break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]"
+                      />
                     </div>
 
                     {/* Area stroke: di HP mengisi sisa ruang & mengecil otomatis, di desktop tetap seperti semula */}
@@ -532,8 +535,15 @@ useEffect(() => {
                       </button>
                       <div className="relative z-10 w-full mt-2">
                         <p className="font-bold text-2xl text-[#EAE6DD] mb-1 font-mincho">{v.kanji}</p>
-                        <p className="text-[10px] text-[#A3A099] mb-2">{v.kana} ({v.romaji})</p>
-                        <p className="text-xs font-semibold text-[#C93438]">{v.meaning}</p>
+                        <JapaneseReading
+                          showOriginal={false}
+                          kana={v.kana}
+                          romaji={v.romaji}
+                          translation={v.meaning}
+                          kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                          romajiClassName="mt-1 text-[10px] text-[#A3A099]"
+                          translationClassName="mt-2 text-xs font-semibold text-[#C93438]"
+                        />
                       </div>
                     </div>
                   );
