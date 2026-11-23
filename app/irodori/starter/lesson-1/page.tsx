@@ -448,7 +448,7 @@ export default function IrodoriPemulaLessonOnePage() {
         </div>
         <div className="relative z-10 max-w-2xl">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            TOPIC 01 • STARTING TO SPEAK JAPANESE
+            TOPIK 01 • MULAI BERBICARA BAHASA JEPANG
           </p>
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 1
