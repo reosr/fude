@@ -29,8 +29,8 @@ const congratulationsConversation: IrodoriUtterance[] = [
 const choosingGiftConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>来月、アナさんが別の町に引っ越すそうですね。</>,romaji:"Raigetsu, Ana-san ga betsu no machi ni hikkosu sou desu ne.",translation:"Saya dengar bulan depan Ana akan pindah ke kota lain.",audioFileName:"irodori-elementary1-18-a02-l01.mp3"},
 {speakerId:"kenji",japanese:<>そうですね。みんなで送別会をしませんか。</>,romaji:"Sou desu ne. Minna de soubetsukai o shimasen ka?",translation:"Iya. Bagaimana kalau kita adakan acara perpisahan untuk Ana?",audioFileName:"irodori-elementary1-18-a02-l02.mp3"},
-{speakerId:"sota",japanese:<>いいですね。アナさん、前に写真が好きだと言っていました。</>,romaji:"Ii desu ne. Ana-san, mae ni shashin ga suki da to itte imashita.",translation:"Ide bagus. Ana pernah bilang bahwa dia suka fotografi.",audioFileName:"irodori-elementary1-18-a02-l03.mp3"},
-{speakerId:"kenji",japanese:<>じゃあ、みんなの写真を入れたフォトフレームをあげませんか。思い出に残ると思います。</>,romaji:"Jaa, minna no shashin o ireta fotofureemu o agemasen ka? Omoide ni nokoru to omoimasu.",translation:"Bagaimana kalau kita beri dia bingkai foto yang berisi foto kita semua? Menurutku, hadiah itu akan jadi kenangan yang berharga.",audioFileName:"irodori-elementary1-18-a02-l04.mp3"},
+{speakerId:"sota",japanese:<>いいですね。アナさん、前に写真が好きだと言っていました。</>,romaji:"Ii desu ne. Ana-san, mae ni shashin ga suki da to itte imashita.",translation:"Ide bagus. Ana pernah bilang bahwa dia suka foto.",audioFileName:"irodori-elementary1-18-a02-l03.mp3"},
+{speakerId:"kenji",japanese:<>じゃあ、みんなの写真を入れたフォトフレームをあげませんか。思い出に残ると思います。</>,romaji:"Jaa, minna no shashin o ireta fotofureemu o agemasen ka? Omoide ni nokoru to omoimasu.",translation:"Bagaimana kalau kita beri dia bingkai foto berisi foto kita semua? Menurutku, hadiah itu akan jadi kenangan yang berkesan.",audioFileName:"irodori-elementary1-18-a02-l04.mp3"},
 ];
 
 const thankingGiftConversation: IrodoriUtterance[] = [
@@ -43,7 +43,7 @@ const thankingGiftConversation: IrodoriUtterance[] = [
 const birthdayPostConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>ケンジさんの誕生日の投稿を見ましたか。</>,romaji:"Kenji-san no tanjoubi no toukou o mimashita ka?",translation:"Apakah kamu melihat unggahan ulang tahun Kenji?",audioFileName:"irodori-elementary1-18-a04-l01.mp3"},
 {speakerId:"yui",japanese:<>はい。友達からメッセージをたくさんもらったそうですね。</>,romaji:"Hai. Tomodachi kara messeeji o takusan moratta sou desu ne.",translation:"Ya. Saya dengar dia menerima banyak pesan dari teman-temannya.",audioFileName:"irodori-elementary1-18-a04-l02.mp3"},
-{speakerId:"akiko",japanese:<>写真もありましたね。とても楽しそうでした。</>,romaji:"Shashin mo arimashita ne. Totemo tanoshisou deshita.",translation:"Ada fotonya juga. Kelihatannya menyenangkan.",audioFileName:"irodori-elementary1-18-a04-l03.mp3"},
+{speakerId:"akiko",japanese:<>写真もありましたね。とても楽しそうでした。</>,romaji:"Shashin mo arimashita ne. Totemo tanoshisou deshita.",translation:"Ada foto-fotonya juga. Kelihatannya seru sekali.",audioFileName:"irodori-elementary1-18-a04-l03.mp3"},
 {speakerId:"yui",japanese:<>私も「お誕生日おめでとう」とコメントしました。</>,romaji:"Watashi mo 'Otanjoubi omedetou' to komento shimashita.",translation:"Saya juga berkomentar, 'Selamat ulang tahun'.",audioFileName:"irodori-elementary1-18-a04-l04.mp3"},
 ];
 
