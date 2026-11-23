@@ -34,19 +34,19 @@ const lessonId = "elementary2-17";
 
 const talkAboutDailyChangesConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>日本での生活には、もう慣れましたか。</>, romaji: "Nihon de no seikatsu ni wa, mou naremashita ka?", translation: "Kamu sudah mulai terbiasa tinggal di Jepang?", audioFileName: "irodori-elementary2-17-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。最初は駅の案内がよくわかりませんでしたが、今は簡単な案内なら聞き取れるようになりました。</>, romaji: "Hai. Saisho wa eki no annai ga yoku wakarimasen deshita ga, ima wa kantan na annai nara kikitoreru you ni narimashita.", translation: "Ya. Awalnya saya sulit memahami petunjuk di stasiun, tetapi sekarang saya sudah bisa memahami petunjuk sederhana.", audioFileName: "irodori-elementary2-17-a01-l02.mp3" },
-  { speakerId: "yui", japanese: <>それはよかったですね。休みの日は何をしていますか。</>, romaji: "Sore wa yokatta desu ne. Yasumi no hi wa nani o shite imasu ka?", translation: "Wah, bagus sekali. Biasanya kamu melakukan apa saat hari libur?", audioFileName: "irodori-elementary2-17-a01-l03.mp3" },
+  { speakerId: "sota", japanese: <>はい。最初は駅の案内がよくわかりませんでしたが、今は簡単な案内なら聞き取れるようになりました。</>, romaji: "Hai. Saisho wa eki no annai ga yoku wakarimasen deshita ga, ima wa kantan na annai nara kikitoreru you ni narimashita.", translation: "Ya. Awalnya saya kesulitan memahami petunjuk di stasiun, tetapi sekarang saya sudah bisa menangkap petunjuk sederhana.", audioFileName: "irodori-elementary2-17-a01-l02.mp3" },
+  { speakerId: "yui", japanese: <>それはよかったですね。休みの日は何をしていますか。</>, romaji: "Sore wa yokatta desu ne. Yasumi no hi wa nani o shite imasu ka?", translation: "Wah, bagus, ya. Biasanya kamu melakukan apa saat libur?", audioFileName: "irodori-elementary2-17-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>最近は友達と町を歩いたり、写真を撮ったりしています。</>, romaji: "Saikin wa tomodachi to machi o aruitari, shashin o tottari shite imasu.", translation: "Belakangan ini saya berjalan-jalan di kota dan mengambil foto bersama teman-teman.", audioFileName: "irodori-elementary2-17-a01-l04.mp3" },
 ];
 const talkAboutWorkProgressConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>最近、仕事はどうですか。</>, romaji: "Saikin, shigoto wa dou desu ka?", translation: "Bagaimana pekerjaanmu belakangan ini?", audioFileName: "irodori-elementary2-17-a02-l01.mp3" },
-  { speakerId: "kenji", japanese: <>最初は報告書の書き方が難しかったですが、今は一人でまとめられるようになりました。</>, romaji: "Saisho wa houkokusho no kakikata ga muzukashikatta desu ga, ima wa hitori de matomerareru you ni narimashita.", translation: "Awalnya cara menulis laporan sulit, tetapi sekarang saya sudah bisa menyusunnya sendiri.", audioFileName: "irodori-elementary2-17-a02-l02.mp3" },
+  { speakerId: "kenji", japanese: <>最初は報告書の書き方が難しかったですが、今は一人でまとめられるようになりました。</>, romaji: "Saisho wa houkokusho no kakikata ga muzukashikatta desu ga, ima wa hitori de matomerareru you ni narimashita.", translation: "Awalnya saya kesulitan menulis laporan, tetapi sekarang saya sudah bisa menyusunnya sendiri.", audioFileName: "irodori-elementary2-17-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>それはすごいですね。何か困ったことはありませんか。</>, romaji: "Sore wa sugoi desu ne. Nanika komatta koto wa arimasen ka?", translation: "Hebat sekali. Apakah ada sesuatu yang masih menyulitkan?", audioFileName: "irodori-elementary2-17-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>わからない言葉があったら、同僚に質問するようにしています。</>, romaji: "Wakaranai kotoba ga attara, douryou ni shitsumon suru you ni shite imasu.", translation: "Kalau ada kata yang tidak saya pahami, saya membiasakan diri untuk bertanya kepada rekan kerja.", audioFileName: "irodori-elementary2-17-a02-l04.mp3" },
 ];
 const talkAboutJapaneseProgressConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>日本語の勉強はどうですか。</>, romaji: "Nihongo no benkyou wa dou desu ka?", translation: "Bagaimana perkembangan belajarmu dalam bahasa Jepang?", audioFileName: "irodori-elementary2-17-a03-l01.mp3" },
-  { speakerId: "akiko", japanese: <>前よりも、短いニュースならだいたい読めるようになりました。</>, romaji: "Mae yori mo, mijikai nyuusu nara daitai yomeru you ni narimashita.", translation: "Dibandingkan sebelumnya, sekarang saya sudah bisa membaca berita pendek dengan cukup baik.", audioFileName: "irodori-elementary2-17-a03-l02.mp3" },
+  { speakerId: "akiko", japanese: <>前よりも、短いニュースならだいたい読めるようになりました。</>, romaji: "Mae yori mo, mijikai nyuusu nara daitai yomeru you ni narimashita.", translation: "Dibandingkan sebelumnya, sekarang saya sudah bisa membaca berita pendek dan memahami isinya secara umum.", audioFileName: "irodori-elementary2-17-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>毎日、練習しているんですか。</>, romaji: "Mainichi, renshuu shite iru n desu ka?", translation: "Apakah kamu berlatih setiap hari?", audioFileName: "irodori-elementary2-17-a03-l03.mp3" },
   { speakerId: "akiko", japanese: <>はい。授業で習った言葉を、家でも使うようにしています。</>, romaji: "Hai. Jugyou de naratta kotoba o, ie demo tsukau you ni shite imasu.", translation: "Ya. Saya berusaha memakai kata-kata yang dipelajari di kelas saat di rumah juga.", audioFileName: "irodori-elementary2-17-a03-l04.mp3" },
 ];
@@ -60,7 +60,7 @@ const shareLifeChangesConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>最近、生活で何か変わったことがありますか。</>, romaji: "Saikin, seikatsu de nanika kawatta koto ga arimasu ka?", translation: "Belakangan ini, ada perubahan dalam kehidupanmu?", audioFileName: "irodori-elementary2-17-a05-l01.mp3" },
   { speakerId: "yui", japanese: <>前は家で本を読むだけでしたが、今は友達と出かけるようになりました。</>, romaji: "Mae wa ie de hon o yomu dake deshita ga, ima wa tomodachi to dekakeru you ni narimashita.", translation: "Dulu saya hanya membaca buku di rumah, tetapi sekarang saya mulai pergi bersama teman-teman.", audioFileName: "irodori-elementary2-17-a05-l02.mp3" },
   { speakerId: "akiko", japanese: <>生活が楽しくなりましたね。</>, romaji: "Seikatsu ga tanoshiku narimashita ne.", translation: "Kehidupanmu jadi lebih menyenangkan, ya.", audioFileName: "irodori-elementary2-17-a05-l03.mp3" },
-  { speakerId: "yui", japanese: <>はい。新しい友達も増えて、前ほど心配しなくなりました。</>, romaji: "Hai. Atarashii tomodachi mo fuete, mae hodo shinpai shinaku narimashita.", translation: "Ya. Teman saya bertambah, dan sekarang saya tidak terlalu khawatir seperti dulu.", audioFileName: "irodori-elementary2-17-a05-l04.mp3" },
+  { speakerId: "yui", japanese: <>はい。新しい友達も増えて、前ほど心配しなくなりました。</>, romaji: "Hai. Atarashii tomodachi mo fuete, mae hodo shinpai shinaku narimashita.", translation: "Ya. Saya juga punya lebih banyak teman baru, dan sekarang tidak terlalu khawatir seperti dulu.", audioFileName: "irodori-elementary2-17-a05-l04.mp3" },
 ];
 
 const canDos = [
