@@ -518,7 +518,7 @@ export default function IrodoriPemulaLessonNinePage() {
         </div>
         <div className="relative z-10 max-w-2xl">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            TOPIC 05 • DAILY LIFE
+            TOPIK 05 • KEHIDUPAN SEHARI-HARI
           </p>
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 9
@@ -794,7 +794,7 @@ export default function IrodoriPemulaLessonNinePage() {
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div>
                 <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">
-                  STAFF BOARD · FIKTIF
+                  PAPAN INFORMASI PEGAWAI · FIKTIF
                 </p>
                 <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
                   <ruby>行動予定表<rt>こうどうよていひょう</rt></ruby>
