@@ -624,7 +624,7 @@ export default function IrodoriPemulaLessonSixPage() {
           </div>
           <div className="border-t border-white/[0.07] bg-black/15 px-4 py-3">
             <p className="text-[10px] leading-5 text-[#817A73]">
-              Catatan: set biasanya berisi burger, kentang, dan satu minuman.
+              Catatan: paket biasanya berisi burger, kentang, dan satu minuman.
               Periksa keterangan menu untuk mengetahui isi paketnya.
             </p>
           </div>
@@ -639,7 +639,7 @@ export default function IrodoriPemulaLessonSixPage() {
                 <ruby>単品<rt>たんぴん</rt></ruby>
               </p>
               <p className="mt-1 text-xs text-[#A9A398]">
-                Satuan: membeli satu item tanpa paket.
+                Satuan: membeli satu makanan tanpa paket.
               </p>
             </div>
             <div className="rounded-lg bg-black/15 p-3">
@@ -647,7 +647,7 @@ export default function IrodoriPemulaLessonSixPage() {
                 セット
               </p>
               <p className="mt-1 text-xs text-[#A9A398]">
-                Paket: beberapa item yang dijual bersama.
+                Paket: beberapa menu yang dijual bersama.
               </p>
             </div>
           </div>
