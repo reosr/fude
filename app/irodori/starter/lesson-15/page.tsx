@@ -633,7 +633,7 @@ export default function IrodoriPemulaLessonFifteenPage() {
             note: "Pilih pertanyaan sesuai informasi yang diperlukan: tempat secara umum, lokasi barang, atau lantai tempat barang dijual. Staf dapat menjawab secara sopan dengan 2階でございます atau ご案内します.",
           },
           {
-            title: "04 · Memberi komentar dengan adjective",
+            title: "04 · Memberi komentar dengan kata sifat",
             pattern: "ナA-ですね ／ イA-いですね ／ ナA！ ／ イA-い！",
             example: <>このバッグ、かっこいいですね。／ この<ruby>店<rt>みせ</rt></ruby>、きれいですね。／ かわいい！</>,
             note: "kata sifat -i memakai bentuk い sebelum ですね, misalnya 安いですね. kata sifat -na memakai な sebelum kata benda, misalnya きれいな店. Saat berkomentar singkat, bentuk ですね dapat dihilangkan: かわいい！ atau すてき！.",
