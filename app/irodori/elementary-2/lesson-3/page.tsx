@@ -621,7 +621,7 @@ export default function IrodoriElementaryTwoLessonThreePage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A8D5B5]/[0.08]">食</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#A8D5B5]">IRODORI • ELEMENTARY 2 A2 • LESSON 03</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I cannot eat it because of an allergy.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya tidak bisa memakannya karena alergi.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A8D5B5]">アレルギーがあるので、食べられないんです</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar membaca menu dan harga, menjelaskan makanan yang tidak bisa dimakan, meminta pilihan tempat duduk dan pesanan, membuat reservasi lewat telepon, serta memahami kupon restoran.</p>
           <div className="mt-5 flex flex-wrap gap-2">
