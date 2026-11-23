@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { RotateCcw, X } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
 import { addRubyFromParentheticalReadings, formatGrammarNotation } from "@/lib/japanese-text";
@@ -378,7 +378,10 @@ export default function Quiz({
   onPass: () => void;
   onClose: () => void;
 }) {
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions, setQuestions] = useState<Question[]>(() => {
+    const questionPool = buildQuestionsFromBank(grammarQuestions || []);
+    return pickQuestionsForAttempt(questionPool, babNumber);
+  });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
@@ -406,10 +409,6 @@ export default function Quiz({
     setIsAnswered(false);
     setIsFinished(false);
   };
-
-  useEffect(() => {
-  resetQuiz();
-  }, [grammarQuestions, babNumber]);
 
   // ---------------------------------------------------
   // ANSWER
