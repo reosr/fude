@@ -417,7 +417,7 @@ const signWords = [
 const shopSigns = [
   {
     id: "aoba",
-    name: "Aoba Market",
+    name: "Pasar Aoba",
     hours: "毎日 9:00–21:00",
     reading: "Mainichi kuji kara nijuuichi-ji",
     meaning: "Setiap hari pukul 09.00–21.00",
@@ -426,7 +426,7 @@ const shopSigns = [
   },
   {
     id: "hana",
-    name: "Hana Café",
+    name: "Kafe Hana",
     hours: "火〜日 10:00–18:00",
     reading: "Kayou kara nichiyou, juu-ji kara juuhachi-ji",
     meaning: "Selasa–Minggu pukul 10.00–18.00",
@@ -435,7 +435,7 @@ const shopSigns = [
   },
   {
     id: "mori",
-    name: "Mori Information Center",
+    name: "Pusat Informasi Mori",
     hours: "毎日 9:00–17:00",
     reading: "Mainichi ku-ji kara juu-shichi-ji",
     meaning: "Setiap hari pukul 09.00–17.00",
@@ -704,9 +704,9 @@ export default function IrodoriPemulaLessonFourteenPage() {
         </div>
         <div className="grid gap-2 sm:grid-cols-3">
           {[
-            { key: "aoba", label: "Aoba Market", detail: "Setiap hari · 09.00–21.00" },
-            { key: "hana", label: "Hana Café", detail: "Selasa–Minggu · 10.00–18.00" },
-            { key: "mori", label: "Mori Information Center", detail: "Setiap hari · 09.00–17.00" },
+            { key: "aoba", label: "Pasar Aoba", detail: "Setiap hari · 09.00–21.00" },
+            { key: "hana", label: "Kafe Hana", detail: "Selasa–Minggu · 10.00–18.00" },
+            { key: "mori", label: "Pusat Informasi Mori", detail: "Setiap hari · 09.00–17.00" },
           ].map((item) => (
             <button key={item.key} type="button" disabled={signSubmitted} aria-pressed={signChoice === item.key} onClick={() => setSignChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (signSubmitted && item.key === "aoba" ? "border-emerald-500/50 bg-emerald-500/10" : signSubmitted && signChoice === item.key ? "border-red-400/50 bg-red-400/10" : signChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
               <p className="text-xs font-bold text-[#F1EBDD]">{item.label}</p><p className="mt-1 text-[9px] leading-4 text-[#A9A398]">{item.detail}</p>
