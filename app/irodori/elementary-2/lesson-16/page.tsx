@@ -33,34 +33,34 @@ const friendKenji = { ...speakers.kenji, name: "Kenji", role: "Teman" };
 const lessonId = "elementary2-16";
 
 const emergencyNewsConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>ニュースで、台風が近づいていると言っていましたね。</>, romaji: "Nyuusu de, taifuu ga chikazuite iru to itte imashita ne.", translation: "Di berita tadi dikatakan bahwa topan sedang mendekat, ya.", audioFileName: "irodori-elementary2-16-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。大雨のおそれがあるそうです。</>, romaji: "Hai. Ooame no osore ga aru sou desu.", translation: "Ya. Katanya ada kemungkinan hujan lebat.", audioFileName: "irodori-elementary2-16-a01-l02.mp3" },
+  { speakerId: "yui", japanese: <>ニュースで、台風が近づいていると言っていましたね。</>, romaji: "Nyuusu de, taifuu ga chikazuite iru to itte imashita ne.", translation: "Tadi diberitakan bahwa topan sedang mendekat, ya.", audioFileName: "irodori-elementary2-16-a01-l01.mp3" },
+  { speakerId: "sota", japanese: <>はい。大雨のおそれがあるそうです。</>, romaji: "Hai. Ooame no osore ga aru sou desu.", translation: "Ya. Katanya ada kemungkinan hujan deras.", audioFileName: "irodori-elementary2-16-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>何を確認したらいいですか。</>, romaji: "Nani o kakunin shitara ii desu ka?", translation: "Apa yang sebaiknya diperiksa?", audioFileName: "irodori-elementary2-16-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>市のアナウンスを聞いて、最新の情報を確認してください。</>, romaji: "Shi no anaunsu o kiite, saishin no jouhou o kakunin shite kudasai.", translation: "Dengarkan pengumuman kota dan periksa informasi terbaru.", audioFileName: "irodori-elementary2-16-a01-l04.mp3" },
 ];
 const evacuationDrillConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>これから、学校の避難訓練が始まります。</>, romaji: "Kore kara, gakkou no hinan kunren ga hajimarimasu.", translation: "Sebentar lagi latihan evakuasi sekolah dimulai.", audioFileName: "irodori-elementary2-16-a02-l01.mp3" },
-  { speakerId: "kenji", japanese: <>先生の説明を聞けばいいですか。</>, romaji: "Sensei no setsumei o kikeba ii desu ka?", translation: "Apakah saya perlu mendengarkan penjelasan guru?", audioFileName: "irodori-elementary2-16-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>はい。係の人の指示に従って、落ち着いて行動してください。</>, romaji: "Hai. Kakari no hito no shiji ni shitagatte, ochitsuite koudou shite kudasai.", translation: "Ya. Ikuti instruksi petugas dan bertindaklah dengan tenang.", audioFileName: "irodori-elementary2-16-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。勝手に動かないようにします。</>, romaji: "Wakarimashita. Katte ni ugokanai you ni shimasu.", translation: "Baik. Saya akan berusaha untuk tidak bergerak sendiri tanpa arahan.", audioFileName: "irodori-elementary2-16-a02-l04.mp3" },
+  { speakerId: "kenji", japanese: <>先生の説明を聞けばいいですか。</>, romaji: "Sensei no setsumei o kikeba ii desu ka?", translation: "Saya perlu mendengarkan penjelasan guru?", audioFileName: "irodori-elementary2-16-a02-l02.mp3" },
+  { speakerId: "akiko", japanese: <>はい。係の人の指示に従って、落ち着いて行動してください。</>, romaji: "Hai. Kakari no hito no shiji ni shitagatte, ochitsuite koudou shite kudasai.", translation: "Ya. Ikuti arahan petugas dan tetap tenang.", audioFileName: "irodori-elementary2-16-a02-l03.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。勝手に動かないようにします。</>, romaji: "Wakarimashita. Katte ni ugokanai you ni shimasu.", translation: "Baik. Saya tidak akan bergerak sendiri tanpa arahan.", audioFileName: "irodori-elementary2-16-a02-l04.mp3" },
 ];
 const earthquakeExplanationConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>地震の説明会で、何を聞きましたか。</>, romaji: "Jishin no setsumeikai de, nani o kikimashita ka?", translation: "Apa yang kamu dengar pada sesi penjelasan tentang gempa?", audioFileName: "irodori-elementary2-16-a03-l01.mp3" },
-  { speakerId: "akiko", japanese: <>揺れを感じたときは、まず身を守ることが大切だと聞きました。</>, romaji: "Yure o kanjita toki wa, mazu mi o mamoru koto ga taisetsu da to kikimashita.", translation: "Saya mendengar bahwa saat merasakan guncangan, yang penting adalah melindungi diri terlebih dahulu.", audioFileName: "irodori-elementary2-16-a03-l02.mp3" },
-  { speakerId: "yui", japanese: <>大きな地震が来ても、あわてないことですね。</>, romaji: "Ookina jishin ga kite mo, awatenai koto desu ne.", translation: "Jadi, meskipun gempa besar terjadi, kita tidak perlu panik, ya.", audioFileName: "irodori-elementary2-16-a03-l03.mp3" },
-  { speakerId: "akiko", japanese: <>はい。無理をしないで、係の人の案内を聞いてください。</>, romaji: "Hai. Muri o shinaide, kakari no hito no annai o kiite kudasai.", translation: "Ya. Jangan memaksakan diri dan dengarkan arahan petugas.", audioFileName: "irodori-elementary2-16-a03-l04.mp3" },
+  { speakerId: "yui", japanese: <>地震の説明会で、何を聞きましたか。</>, romaji: "Jishin no setsumeikai de, nani o kikimashita ka?", translation: "Apa yang kamu dengar saat pengarahan tentang gempa?", audioFileName: "irodori-elementary2-16-a03-l01.mp3" },
+  { speakerId: "akiko", japanese: <>揺れを感じたときは、まず身を守ることが大切だと聞きました。</>, romaji: "Yure o kanjita toki wa, mazu mi o mamoru koto ga taisetsu da to kikimashita.", translation: "Katanya, saat merasakan gempa, yang terpenting adalah melindungi diri terlebih dahulu.", audioFileName: "irodori-elementary2-16-a03-l02.mp3" },
+  { speakerId: "yui", japanese: <>大きな地震が来ても、あわてないことですね。</>, romaji: "Ookina jishin ga kite mo, awatenai koto desu ne.", translation: "Jadi, kalau terjadi gempa besar pun, kita tidak boleh panik, ya.", audioFileName: "irodori-elementary2-16-a03-l03.mp3" },
+  { speakerId: "akiko", japanese: <>はい。無理をしないで、係の人の案内を聞いてください。</>, romaji: "Hai. Muri o shinaide, kakari no hito no annai o kiite kudasai.", translation: "Ya. Jangan memaksakan diri dan ikuti arahan petugas.", audioFileName: "irodori-elementary2-16-a03-l04.mp3" },
 ];
 const askShelterInformationConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>この近くの避難所がどこか、知っていますか。</>, romaji: "Kono chikaku no hinanjo ga doko ka, shitte imasu ka?", translation: "Apakah kamu tahu di mana tempat pengungsian di dekat sini?", audioFileName: "irodori-elementary2-16-a04-l01.mp3" },
-  { speakerId: "sota", japanese: <>市の案内によると、北小学校の体育館だそうです。</>, romaji: "Shi no annai ni yoru to, Kita shougakkou no taiikukan da sou desu.", translation: "Menurut informasi kota, tempatnya di gedung olahraga SD Kita.", audioFileName: "irodori-elementary2-16-a04-l02.mp3" },
-  { speakerId: "kenji", japanese: <>今、開いているかどうか、どこで確認できますか。</>, romaji: "Ima, aite iru ka dou ka, doko de kakunin dekimasu ka?", translation: "Di mana saya bisa memeriksa apakah tempat itu sedang dibuka?", audioFileName: "irodori-elementary2-16-a04-l03.mp3" },
-  { speakerId: "sota", japanese: <>市の公式情報で確認できます。先生や家族にも聞いてください。</>, romaji: "Shi no koushiki jouhou de kakunin dekimasu. Sensei ya kazoku ni mo kiite kudasai.", translation: "Kamu bisa memeriksanya melalui informasi resmi kota. Tanyakan juga kepada guru atau keluarga.", audioFileName: "irodori-elementary2-16-a04-l04.mp3" },
+  { speakerId: "kenji", japanese: <>この近くの避難所がどこか、知っていますか。</>, romaji: "Kono chikaku no hinanjo ga doko ka, shitte imasu ka?", translation: "Kamu tahu di mana tempat pengungsian terdekat?", audioFileName: "irodori-elementary2-16-a04-l01.mp3" },
+  { speakerId: "sota", japanese: <>市の案内によると、北小学校の体育館だそうです。</>, romaji: "Shi no annai ni yoru to, Kita shougakkou no taiikukan da sou desu.", translation: "Menurut informasi dari pemerintah kota, tempat pengungsiannya di gedung olahraga SD Kita.", audioFileName: "irodori-elementary2-16-a04-l02.mp3" },
+  { speakerId: "kenji", japanese: <>今、開いているかどうか、どこで確認できますか。</>, romaji: "Ima, aite iru ka dou ka, doko de kakunin dekimasu ka?", translation: "Di mana saya bisa mengecek apakah tempat itu sedang dibuka?", audioFileName: "irodori-elementary2-16-a04-l03.mp3" },
+  { speakerId: "sota", japanese: <>市の公式情報で確認できます。先生や家族にも聞いてください。</>, romaji: "Shi no koushiki jouhou de kakunin dekimasu. Sensei ya kazoku ni mo kiite kudasai.", translation: "Cek informasi resmi dari pemerintah kota. Kamu juga bisa bertanya kepada guru atau keluarga.", audioFileName: "irodori-elementary2-16-a04-l04.mp3" },
 ];
 const readPreparednessPamphletConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>この防災パンフレットには、何が書いてありますか。</>, romaji: "Kono bousai pamphlet ni wa, nani ga kaite arimasu ka?", translation: "Apa yang tertulis dalam brosur kesiapsiagaan bencana ini?", audioFileName: "irodori-elementary2-16-a05-l01.mp3" },
+  { speakerId: "akiko", japanese: <>この防災パンフレットには、何が書いてありますか。</>, romaji: "Kono bousai pamphlet ni wa, nani ga kaite arimasu ka?", translation: "Apa isi brosur kesiapsiagaan menghadapi bencana ini?", audioFileName: "irodori-elementary2-16-a05-l01.mp3" },
   { speakerId: "kenji", japanese: <>非常用の品物や、連絡先を確認することが書いてあります。</>, romaji: "Hijouyou no shinamono ya, renrakusaki o kakunin suru koto ga kaite arimasu.", translation: "Tertulis tentang memeriksa barang-barang darurat dan kontak penting.", audioFileName: "irodori-elementary2-16-a05-l02.mp3" },
-  { speakerId: "akiko", japanese: <>どんな品物が紹介されていますか。</>, romaji: "Donna shinamono ga shoukai sarete imasu ka?", translation: "Barang-barang apa yang diperkenalkan?", audioFileName: "irodori-elementary2-16-a05-l03.mp3" },
-  { speakerId: "kenji", japanese: <>水やライト、ラジオなどです。地域の案内も読んでおくといいそうです。</>, romaji: "Mizu ya raito, rajio nado desu. Chiiki no annai mo yonde oku to ii sou desu.", translation: "Seperti air, lampu, dan radio. Katanya, sebaiknya kita juga membaca informasi wilayah setempat.", audioFileName: "irodori-elementary2-16-a05-l04.mp3" },
+  { speakerId: "akiko", japanese: <>どんな品物が紹介されていますか。</>, romaji: "Donna shinamono ga shoukai sarete imasu ka?", translation: "Barang apa saja yang disebutkan?", audioFileName: "irodori-elementary2-16-a05-l03.mp3" },
+  { speakerId: "kenji", japanese: <>水やライト、ラジオなどです。地域の案内も読んでおくといいそうです。</>, romaji: "Mizu ya raito, rajio nado desu. Chiiki no annai mo yonde oku to ii sou desu.", translation: "Seperti air minum, senter, dan radio. Kita juga sebaiknya membaca panduan dari wilayah setempat.", audioFileName: "irodori-elementary2-16-a05-l04.mp3" },
 ];
 
 const canDos = [
@@ -140,7 +140,7 @@ const announcementCards = [
   { title: "台風のお知らせ", body: "台風が近づいています。最新の情報を確認してください。", meaning: "Topan sedang mendekat. Silakan periksa informasi terbaru.", note: "Kata kunci: 台風, 近づく, 最新の情報." },
   { title: "地震に関する速報", body: "強い揺れに注意してください。落ち着いて放送を聞いてください。", meaning: "Harap waspada terhadap guncangan kuat. Dengarkan siaran dengan tenang.", note: "Kata kunci: 揺れ, 注意する, 放送." },
   { title: "施設からのお知らせ", body: "係員の指示に従ってください。", meaning: "Silakan mengikuti arahan petugas.", note: "Kata kunci: 係員, 指示, 従う." },
-  { title: "避難所の情報", body: "避難所が開いているかどうか、市の公式情報で確認してください。", meaning: "Periksa melalui informasi resmi kota apakah tempat pengungsian sedang dibuka.", note: "Pola: V普通形＋かどうか." },
+  { title: "避難所の情報", body: "避難所が開いているかどうか、市の公式情報で確認してください。", meaning: "Cek informasi resmi dari pemerintah kota untuk memastikan apakah tempat pengungsian sedang dibuka.", note: "Pola: V普通形＋かどうか." },
 ];
 
 const preparednessItems = [
