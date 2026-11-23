@@ -50,7 +50,7 @@ const noticeConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>どこですか？</>,
     romaji: "Doko desu ka?",
-    translation: "Di mana tempatnya?",
+    translation: "Di mana acaranya?",
     audioFileName: "irodori-starter-12-a01-l04.mp3",
   },
   {
@@ -67,7 +67,7 @@ const attendanceConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>ユイさん、5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>のイベントに<ruby>行<rt>い</rt></ruby>きますか？</>,
     romaji: "Yui-san, konshuu no nichiyoubi, hon no ibento ni ikimasu ka?",
-    translation: "Yui, hari Minggu minggu ini kamu akan pergi ke acara buku?",
+    translation: "Yui, kamu akan pergi ke acara buku hari Minggu ini?",
     audioFileName: "irodori-starter-12-a02-l01.mp3",
   },
   {
@@ -88,7 +88,7 @@ const attendanceConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>じゃあ、<ruby>会場<rt>かいじょう</rt></ruby>で<ruby>会<rt>あ</rt></ruby>いましょう。</>,
     romaji: "Jaa, kaijou de aimashou.",
-    translation: "Kalau begitu, mari bertemu di lokasi acara.",
+    translation: "Kalau begitu, kita bertemu di lokasi acara, ya.",
     audioFileName: "irodori-starter-12-a02-l04.mp3",
   },
 ];
@@ -150,7 +150,7 @@ const messageConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>もし<ruby>行<rt>い</rt></ruby>けないときは、どう<ruby>返事<rt>へんじ</rt></ruby>しますか？</>,
     romaji: "Moshi ikenai toki wa, dou henji shimasu ka?",
-    translation: "Kalau tidak bisa pergi, bagaimana membalasnya?",
+    translation: "Kalau tidak bisa ikut, bagaimana cara membalasnya?",
     audioFileName: "irodori-starter-12-a04-l03.mp3",
   },
   {
