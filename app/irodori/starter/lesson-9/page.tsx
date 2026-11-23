@@ -522,9 +522,7 @@ export default function IrodoriStarterLessonNinePage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 9
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            Lunch is from noon to 1 o’clock.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Makan siang pukul 12.00 sampai 13.00.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             12<ruby>時<rt>じ</rt></ruby>から1<ruby>時<rt>じ</rt></ruby>まで<ruby>昼休<rt>ひるやす</rt></ruby>みです
           </p>
