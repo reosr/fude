@@ -5457,10 +5457,10 @@
         "sentence": "<ruby>日本<rt>にほん</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>についてどう（ ___ ）か。",
         "answer": "<ruby>思<rt>おも</rt></ruby>います",
         "options": [
-          "<ruby>あります",
+          "あります",
           "<ruby>思<rt>おも</rt></ruby>います",
           "<ruby>言<rt>い</rt></ruby>います",
-          "<ruby>なります"
+          "なります"
         ],
         "explanation": "Pertanyaan pendapat menggunakan pola Nについてどう<ruby>思います<rt>おもいます</rt></ruby>か. <ruby>思います<rt>おもいます</rt></ruby> menanyakan bagaimana seseorang memandang suatu topik."
       },
@@ -5471,8 +5471,8 @@
         "sentence": "この<ruby>映画<rt>えいが</rt></ruby>はおもしろいと（ ___ ）。",
         "answer": "<ruby>思<rt>おも</rt></ruby>います",
         "options": [
-          "<ruby>あります",
-          "<ruby>なります",
+          "あります",
+          "なります",
           "<ruby>思<rt>おも</rt></ruby>います",
           "<ruby>言<rt>い</rt></ruby>います"
         ],
@@ -7967,7 +7967,7 @@
         "id": "b28-g6",
         "type": "grammar",
         "question": "Pilih bentuk yang tepat untuk meminta seseorang tidak berbicara melalui telepon sambil berjalan.",
-        "sentence": "<ruby>（___）ながら、<ruby>電話<rt>でんわ</rt></ruby>で<ruby>話<rt>はな</rt></ruby>さないでください。",
+        "sentence": "（___）ながら、<ruby>電話<rt>でんわ</rt></ruby>で<ruby>話<rt>はな</rt></ruby>さないでください。",
         "answer": "<ruby>歩<rt>ある</rt></ruby>き",
         "options": [
           "<ruby>歩<rt>ある</rt></ruby>き",
@@ -14429,7 +14429,7 @@
         "sentence": "ちょっと <ruby>飲<rt>の</rt></ruby>み<ruby>物<rt>もの</rt></ruby>を <ruby>買<rt>か</rt></ruby>って（ ___ ）。",
         "answer": "<ruby>来<rt>き</rt></ruby>ます",
         "options": [
-          "<ruby>います",
+          "います",
           "<ruby>行<rt>い</rt></ruby>ます",
           "<ruby>帰<rt>かえ</rt></ruby>ます",
           "<ruby>来<rt>き</rt></ruby>ます"
@@ -14445,7 +14445,7 @@
         "options": [
           "<ruby>行<rt>い</rt></ruby>きました",
           "<ruby>来<rt>き</rt></ruby>ました",
-          "<ruby>います",
+          "います",
           "<ruby>帰<rt>かえ</rt></ruby>りました"
         ],
         "explanation": "<ruby>買<rt>か</rt></ruby>って<ruby>来ました<rt>きました</rt></ruby> berarti sudah pergi membeli koran dan kembali. Bentuk lampau <ruby>来ます<rt>きます</rt></ruby> adalah <ruby>来ました<rt>きました</rt></ruby>."
@@ -14460,7 +14460,7 @@
           "<ruby>来<rt>き</rt></ruby>ます",
           "<ruby>帰<rt>かえ</rt></ruby>ます",
           "<ruby>行<rt>い</rt></ruby>ます",
-          "<ruby>います"
+          "います"
         ],
         "explanation": "<ruby>洗<rt>あら</rt></ruby>って<ruby>来ます<rt>きます</rt></ruby> menyatakan pergi mencuci tangan lalu kembali ke tempat pembicara."
       },
@@ -14472,7 +14472,7 @@
         "answer": "<ruby>来<rt>き</rt></ruby>ます",
         "options": [
           "<ruby>帰<rt>かえ</rt></ruby>ます",
-          "<ruby>います",
+          "います",
           "<ruby>来<rt>き</rt></ruby>ます",
           "<ruby>行<rt>い</rt></ruby>ます"
         ],
@@ -14487,7 +14487,7 @@
         "options": [
           "<ruby>来<rt>き</rt></ruby>て",
           "<ruby>行<rt>い</rt></ruby>って",
-          "<ruby>いて",
+          "いて",
           "<ruby>帰<rt>かえ</rt></ruby>って"
         ],
         "explanation": "Vて<ruby>来て<rt>きて</rt></ruby>ください meminta seseorang pergi melakukan kegiatan lalu kembali. Bentuknya <ruby>来ます<rt>きます</rt></ruby> → <ruby>来て<rt>きて</rt></ruby>."
