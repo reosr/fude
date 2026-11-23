@@ -42,27 +42,27 @@ const askFormalEventConversation: IrodoriUtterance[] = [
 ];
 const hospitalVisitConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>友だちのお見舞いに行くんです。面会時間はどこで確認すればいいですか。</>, romaji: "Tomodachi no omimai ni ikun desu. Menkai jikan wa doko de kakunin sureba ii desu ka?", translation: "Saya akan menjenguk teman. Di mana saya bisa memeriksa jam kunjungan?", audioFileName: "irodori-elementary2-10-a02-l01.mp3" },
-  { speakerId: "kenji", japanese: <>受付や病院の案内で確認できますよ。</>, romaji: "Uketsuke ya byouin no annai de kakunin dekimasu yo.", translation: "Kamu bisa memeriksanya di bagian resepsionis atau petunjuk rumah sakit.", audioFileName: "irodori-elementary2-10-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>病室では、どんなことに気をつければいいですか。</>, romaji: "Byoushitsu de wa, donna koto ni ki o tsukereba ii desu ka?", translation: "Apa yang perlu diperhatikan di ruang pasien?", audioFileName: "irodori-elementary2-10-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>静かに話して、長くならないようにするといいですよ。</>, romaji: "Shizuka ni hanashite, nagaku naranai you ni suru to ii desu yo.", translation: "Sebaiknya berbicara pelan dan tidak berkunjung terlalu lama.", audioFileName: "irodori-elementary2-10-a02-l04.mp3" },
+  { speakerId: "kenji", japanese: <>受付や病院の案内で確認できますよ。</>, romaji: "Uketsuke ya byouin no annai de kakunin dekimasu yo.", translation: "Kamu bisa menanyakannya di loket atau melihat informasi dari rumah sakit.", audioFileName: "irodori-elementary2-10-a02-l02.mp3" },
+  { speakerId: "akiko", japanese: <>病室では、どんなことに気をつければいいですか。</>, romaji: "Byoushitsu de wa, donna koto ni ki o tsukereba ii desu ka?", translation: "Apa yang perlu diperhatikan saat berada di ruang rawat inap?", audioFileName: "irodori-elementary2-10-a02-l03.mp3" },
+  { speakerId: "kenji", japanese: <>静かに話して、長くならないようにするといいですよ。</>, romaji: "Shizuka ni hanashite, nagaku naranai you ni suru to ii desu yo.", translation: "Bicaralah dengan suara pelan dan jangan menjenguk terlalu lama.", audioFileName: "irodori-elementary2-10-a02-l04.mp3" },
 ];
 const foodCourtMannersConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>食器は自分で片付けるんですか。</>, romaji: "Shokki wa jibun de katazukeru n desu ka?", translation: "Apakah kita harus membereskan peralatan makan sendiri?", audioFileName: "irodori-elementary2-10-a03-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。使った食器は返却口に持って行かなくちゃ。</>, romaji: "Hai. Tsukatta shokki wa henkyaku-guchi ni motte ikanakucha.", translation: "Ya. Peralatan makan yang sudah dipakai harus dibawa ke tempat pengembalian.", audioFileName: "irodori-elementary2-10-a03-l02.mp3" },
+  { speakerId: "sota", japanese: <>はい。使った食器は返却口に持って行かなくちゃ。</>, romaji: "Hai. Tsukatta shokki wa henkyaku-guchi ni motte ikanakucha.", translation: "Ya. Alat makan yang sudah dipakai harus dibawa ke tempat pengembalian.", audioFileName: "irodori-elementary2-10-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>どうしてですか。</>, romaji: "Doushite desu ka?", translation: "Mengapa begitu?", audioFileName: "irodori-elementary2-10-a03-l03.mp3" },
-  { speakerId: "sota", japanese: <>次の人がすぐに使えるように、テーブルをきれいにするんです。</>, romaji: "Tsugi no hito ga sugu ni tsukaeru you ni, teeburu o kirei ni suru n desu.", translation: "Agar orang berikutnya bisa langsung menggunakannya, meja dirapikan.", audioFileName: "irodori-elementary2-10-a03-l04.mp3" },
+  { speakerId: "sota", japanese: <>次の人がすぐに使えるように、テーブルをきれいにするんです。</>, romaji: "Tsugi no hito ga sugu ni tsukaeru you ni, teeburu o kirei ni suru n desu.", translation: "Mejanya harus dirapikan supaya orang berikutnya bisa langsung menggunakannya.", audioFileName: "irodori-elementary2-10-a03-l04.mp3" },
 ];
 const homeCustomDifferenceConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>日本の家に入るとき、靴を脱がなくちゃいけませんか。</>, romaji: "Nihon no ie ni hairu toki, kutsu o nuganakucha ikemasen ka?", translation: "Saat masuk ke rumah di Jepang, apakah kita harus melepas sepatu?", audioFileName: "irodori-elementary2-10-a04-l01.mp3" },
   { speakerId: "kenji", japanese: <>はい。玄関で靴を脱ぎます。靴のまま入っちゃだめですよ。</>, romaji: "Hai. Genkan de kutsu o nugimasu. Kutsu no mama haitcha dame desu yo.", translation: "Ya. Sepatu dilepas di area pintu masuk. Jangan masuk ke dalam rumah dengan sepatu.", audioFileName: "irodori-elementary2-10-a04-l02.mp3" },
-  { speakerId: "akiko", japanese: <>私の国でも、家によって習慣が違います。</>, romaji: "Watashi no kuni demo, ie ni yotte shuukan ga chigaimasu.", translation: "Di negara saya juga, kebiasaan berbeda-beda menurut rumah.", audioFileName: "irodori-elementary2-10-a04-l03.mp3" },
+  { speakerId: "akiko", japanese: <>私の国でも、家によって習慣が違います。</>, romaji: "Watashi no kuni demo, ie ni yotte shuukan ga chigaimasu.", translation: "Di negara saya juga, kebiasaan tiap rumah berbeda.", audioFileName: "irodori-elementary2-10-a04-l03.mp3" },
   { speakerId: "kenji", japanese: <>そうですね。わからないときは、家の人に聞けばいいですよ。</>, romaji: "Sou desu ne. Wakaranai toki wa, ie no hito ni kikeba ii desu yo.", translation: "Betul. Kalau tidak tahu, sebaiknya tanyakan kepada penghuni rumah.", audioFileName: "irodori-elementary2-10-a04-l04.mp3" },
 ];
 const photoPermissionConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>どうしたの。</>, romaji: "Doushita no?", translation: "Ada apa?", audioFileName: "irodori-elementary2-10-a05-l01.mp3" },
-  { speakerId: "sota", japanese: <>写真を撮る前に、許可をもらわなかったんです。</>, romaji: "Shashin o toru mae ni, kyoka o morawanakatta n desu.", translation: "Saya tadi belum meminta izin sebelum mengambil foto.", audioFileName: "irodori-elementary2-10-a05-l02.mp3" },
-  { speakerId: "yui", japanese: <>会場では、先に係の人に聞かなきゃ。</>, romaji: "Kaijou de wa, saki ni kakari no hito ni kikanakya.", translation: "Di tempat acara, kamu harus bertanya kepada petugas terlebih dahulu.", audioFileName: "irodori-elementary2-10-a05-l03.mp3" },
-  { speakerId: "sota", japanese: <>はい。友だちにマナーを説明されました。次から気をつけます。</>, romaji: "Hai. Tomodachi ni manaa o setsumei saremashita. Tsugi kara ki o tsukemasu.", translation: "Ya. Teman saya menjelaskan etiketnya. Lain kali saya akan lebih berhati-hati.", audioFileName: "irodori-elementary2-10-a05-l04.mp3" },
+  { speakerId: "sota", japanese: <>写真を撮る前に、許可をもらわなかったんです。</>, romaji: "Shashin o toru mae ni, kyoka o morawanakatta n desu.", translation: "Saya belum minta izin sebelum mengambil foto.", audioFileName: "irodori-elementary2-10-a05-l02.mp3" },
+  { speakerId: "yui", japanese: <>会場では、先に係の人に聞かなきゃ。</>, romaji: "Kaijou de wa, saki ni kakari no hito ni kikanakya.", translation: "Kalau di tempat acara, sebaiknya kamu bertanya dulu kepada petugas.", audioFileName: "irodori-elementary2-10-a05-l03.mp3" },
+  { speakerId: "sota", japanese: <>はい。友だちにマナーを説明されました。次から気をつけます。</>, romaji: "Hai. Tomodachi ni manaa o setsumei saremashita. Tsugi kara ki o tsukemasu.", translation: "Ya. Teman saya menjelaskan tata kramanya. Lain kali saya akan lebih berhati-hati.", audioFileName: "irodori-elementary2-10-a05-l04.mp3" },
 ];
 
 const canDos = [
@@ -157,7 +157,7 @@ const eventArticle = {
   venue: "テーマ：玄関での靴のマナー",
   body: "日本の友だちの家に行ったとき、玄関で靴を脱ぐように教えてもらいました。私は最初、どうすればいいのかわかりませんでした。友だちに「ここでは靴を脱ぐんだよ」と説明されました。靴を履いたまま部屋に入ってはいけません。脱いだ靴は、次の人が通れるようにそろえます。国によって家の習慣は違いますね。わからないときは、家の人に聞けばいいと思います。",
   reading: "Nihon no tomodachi no ie ni itta toki, genkan de kutsu o nugu you ni oshiete moraimashita. Watashi wa saisho, dou sureba ii no ka wakarimasen deshita. Tomodachi ni koko de wa kutsu o nugu n da yo to setsumei saremashita. Kutsu o haita mama heya ni haitte wa ikemasen. Nuida kutsu wa, tsugi no hito ga tooreru you ni soroemasu. Kuni ni yotte ie no shuukan wa chigaimasu ne. Wakaranai toki wa, ie no hito ni kikeba ii to omoimasu.",
-  translation: "Saat pergi ke rumah teman di Jepang, saya diajari untuk melepas sepatu di area pintu masuk. Awalnya saya tidak tahu harus bagaimana. Teman saya menjelaskan bahwa sepatu dilepas di sana. Kita tidak boleh masuk ke kamar dengan tetap memakai sepatu. Sepatu yang dilepas dirapikan agar orang berikutnya bisa lewat. Kebiasaan rumah berbeda-beda menurut negara. Kalau tidak tahu, sebaiknya bertanya kepada penghuni rumah.",
+  translation: "Saat berkunjung ke rumah teman di Jepang, saya diajari untuk melepas sepatu di area pintu masuk. Awalnya saya bingung harus bagaimana. Teman saya menjelaskan bahwa sepatu memang harus dilepas di sana. Kita tidak boleh masuk ke dalam rumah dengan memakai sepatu. Sepatu yang dilepas juga perlu dirapikan agar orang lain bisa lewat. Kebiasaan di setiap rumah bisa berbeda, tergantung negaranya. Kalau tidak tahu, sebaiknya tanyakan kepada penghuni rumah.",
 };
 
 const mannersPhraseExamples = [
