@@ -178,7 +178,7 @@ const quizQuestions: Task[] = [
  {prompt:<>Pola 「白と黒と、どちらがいいですか」 digunakan untuk apa?</>,options:[{key:"a",label:"Menanyakan pilihan antara dua warna."},{key:"b",label:"Menanyakan waktu pengiriman."},{key:"c",label:"Menyatakan harga sebelum pajak."}],answer:"a",explanation:<>どちら digunakan untuk menanyakan pilihan di antara dua hal.</>},
  {prompt:<>Apa makna 「BのほうがAより軽いです」?</>,options:[{key:"a",label:"A lebih ringan daripada B."},{key:"b",label:"B lebih ringan daripada A."},{key:"c",label:"A dan B sama berat."}],answer:"b",explanation:<>N2 のほうが N1 より～ menyatakan bahwa N2 memiliki sifat tersebut dibanding N1.</>},
  {prompt:<>Apa arti 「送料込み」?</>,options:[{key:"a",label:"Harga termasuk ongkos kirim."},{key:"b",label:"Harga belum termasuk pajak."},{key:"c",label:"Barang tanpa buku petunjuk."}],answer:"a",explanation:<>込み berarti sudah termasuk sesuatu; 送料込み berarti ongkos kirim sudah termasuk.</>},
- {prompt:<>Apa yang perlu diperiksa pada iklan barang bekas?</>,options:[{key:"a",label:"Hanya warna barang."},{key:"b",label:"Kondisi, kelengkapan, harga, dan ongkos kirim."},{key:"c",label:"Hanya nama penjual."}],answer:"b",explanation:<>Periksa keterangan barang secara menyeluruh dan diskusikan pembelian online dengan orang tua atau wali.</>},
+ {prompt:<>Apa yang perlu diperiksa pada iklan barang bekas?</>,options:[{key:"a",label:"Hanya warna barang."},{key:"b",label:"Kondisi, kelengkapan, harga, dan ongkos kirim."},{key:"c",label:"Hanya nama penjual."}],answer:"b",explanation:<>Periksa keterangan barang secara menyeluruh dan diskusikan pembelian daring dengan orang tua atau wali.</>},
  {prompt:<>Apa arti 「消費税」?</>,options:[{key:"a",label:"Pajak konsumsi."},{key:"b",label:"Biaya pengiriman."},{key:"c",label:"Diskon."}],answer:"a",explanation:<>消費税 berarti pajak konsumsi.</>},
  {prompt:<>Ungkapan 「これ、安くなりますか」 digunakan untuk apa?</>,options:[{key:"a",label:"Meminta penjelasan tentang warna."},{key:"b",label:"Menanyakan apakah harga dapat dikurangi."},{key:"c",label:"Menanyakan kapan barang tiba."}],answer:"b",explanation:<>Ungkapan ini digunakan untuk menanyakan kemungkinan potongan harga secara sopan.</>},
 ];
@@ -229,13 +229,13 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
       <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#D79C72]/40 hover:text-[#EAE6DD]">
-        <ArrowLeft size={15} /> Kembali ke Elementary 2
+        <ArrowLeft size={15} /> Kembali ke Dasar 2
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#4B796C]/35 bg-gradient-to-br from-[#203A35] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#B2D7CB]/[0.08]">家</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#B2D7CB]">IRODORI • ELEMENTARY 2 A2 • LESSON 12</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#B2D7CB]">IRODORI • DASAR 2 A2 • PELAJARAN 12</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Penyedot debu ini ringan dan mudah dipindahkan.</h1>
           <p className="mt-2 text-sm font-semibold text-[#B2D7CB]">この掃除機は軽くて動かしやすいですよ。</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar meminta saran membeli barang elektronik, membaca informasi produk, membandingkan spesifikasi dan harga, serta bertanya kepada pegawai toko.</p>
@@ -250,9 +250,9 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
       <section className="rounded-2xl border border-[#4B796C]/20 bg-[#1D302C]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#B2D7CB]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai Can-do 51–54 pada Irodori Elementary 2 Lesson 12.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai target komunikasi 51–54 pada Irodori Dasar 2 Lesson 12.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -266,10 +266,10 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
       <section className="rounded-2xl border border-[#4B796C]/20 bg-[#192A26] p-4 md:p-5">
         <div className="flex items-center gap-2">
           <Sparkles size={16} className="text-[#B2D7CB]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Catatan budaya: informasi produk dan pembelian online</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Catatan budaya: informasi produk dan pembelian daring</h2>
         </div>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Spesifikasi dan kelengkapan produk dapat berbeda menurut produsen. Baca deskripsi dan periksa kondisi barang, harga, pajak, serta ongkos kirim sebelum membuat keputusan.</p>
-        <p className="mt-2 text-[10px] leading-5 text-[#887F74]">Contoh pasar barang bekas di halaman ini bersifat fiktif. Untuk pembelian atau pembayaran online yang sebenarnya, diskusikan terlebih dahulu dengan orang tua atau wali.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#887F74]">Contoh pasar barang bekas di halaman ini bersifat fiktif. Untuk pembelian atau pembayaran daring yang sebenarnya, diskusikan terlebih dahulu dengan orang tua atau wali.</p>
       </section>
 
       
@@ -277,7 +277,7 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#B2D7CB]">DIALOG 01–05</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Meminta saran, membandingkan produk, dan berbelanja</h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi pelajaran ini.</p>
         </div>
         <div className="space-y-4">
           <IrodoriConversation title="Meminta saran tentang earphone" speakers={[friendYui, friendSota]} utterances={askPurchaseAdviceConversation} />
@@ -339,7 +339,7 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
         <article className="rounded-2xl border border-[#4B796C]/25 bg-[#192A26] p-4 md:p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-dashed border-[#4B796C]/30 pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#B2D7CB]">FICTIONAL PRODUCT LISTING</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#B2D7CB]">DAFTAR PRODUK FIKTIF</p>
               <h3 className="mt-1 text-sm font-bold text-[#F1EBDD]">{eventArticle.title}</h3>
             </div>
             <FileText size={21} className="text-[#B2D7CB]" />
@@ -667,7 +667,7 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
       <section className="space-y-4 rounded-2xl border border-[#4B796C]/20 bg-[#1D302C]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-[#B2D7CB]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi Can-do</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi target komunikasi</h2>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">
           Nilai kemampuanmu setelah kelima simulasi benar, keenam latihan praktik benar, dan kuis dikumpulkan. Pilih penilaian yang paling sesuai untuk setiap target.
@@ -707,7 +707,7 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
             {isCompleted
               ? "Lesson 12 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target Can-do sudah dinilai."
+                ? "Semua target target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
@@ -725,7 +725,7 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
         <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-[#A9A398] hover:text-[#EAE6DD]">
           <ArrowLeft size={14} /> Daftar pelajaran
         </Link>
-        <span className="text-[10px] font-semibold text-[#817A73]">Elementary 2 · 12 / 18</span>
+        <span className="text-[10px] font-semibold text-[#817A73]">Dasar 2 · 12 / 18</span>
       </div>
     </main>
   );
