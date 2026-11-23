@@ -723,7 +723,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
             { key: "sleep", label: "毎日、学校へ行きます。", meaning: "Pergi ke sekolah setiap hari." },
           ].map((item) => (
             <button key={item.key} type="button" disabled={activitySubmitted} aria-pressed={activityChoice === item.key} onClick={() => setActivityChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (activitySubmitted && item.key === "movie" ? "border-emerald-500/50 bg-emerald-500/10" : activitySubmitted && activityChoice === item.key ? "border-red-400/50 bg-red-400/10" : activityChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
@@ -746,7 +746,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
             { key: "rain", label: "雨でした。", meaning: "Hujan." },
           ].map((item) => (
             <button key={item.key} type="button" disabled={impressionSubmitted} aria-pressed={impressionChoice === item.key} onClick={() => setImpressionChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (impressionSubmitted && item.key === "fun" ? "border-emerald-500/50 bg-emerald-500/10" : impressionSubmitted && impressionChoice === item.key ? "border-red-400/50 bg-red-400/10" : impressionChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
@@ -774,7 +774,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
             { key: "cinema", label: "映画館", meaning: "Bioskop" },
           ].map((item) => (
             <button key={item.key} type="button" disabled={postSubmitted} aria-pressed={postChoice === item.key} onClick={() => setPostChoice(item.key)} className={"rounded-xl border p-3 text-center transition-colors " + (postSubmitted && item.key === "aquarium" ? "border-emerald-500/50 bg-emerald-500/10" : postSubmitted && postChoice === item.key ? "border-red-400/50 bg-red-400/10" : postChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-lg leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-lg leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
@@ -832,7 +832,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
             { key: "price", label: "チケットはいくらですか？", meaning: "Tiketnya berapa?" },
           ].map((item) => (
             <button key={item.key} type="button" disabled={messageSubmitted} aria-pressed={messageChoice === item.key} onClick={() => setMessageChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (messageSubmitted && item.key === "thank-you" ? "border-emerald-500/50 bg-emerald-500/10" : messageSubmitted && messageChoice === item.key ? "border-red-400/50 bg-red-400/10" : messageChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-6 text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="font-mincho text-sm leading-6 text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
