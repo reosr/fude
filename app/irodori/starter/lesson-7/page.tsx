@@ -18,6 +18,7 @@ import IrodoriConversation, {
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -621,17 +622,14 @@ export default function IrodoriStarterLessonSevenPage() {
                 {item.icon}
               </span>
               <div className="min-w-0">
-                <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+                <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="font-mincho text-base font-bold text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
                   translationClassName="mt-2 text-xs text-[#A9A398]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
               </div>
             </article>
           ))}
@@ -689,17 +687,14 @@ export default function IrodoriStarterLessonSevenPage() {
                 {item.icon}
               </span>
               <div className="min-w-0">
-                <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+                <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="font-mincho text-base font-bold text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
                   translationClassName="mt-2 text-xs text-[#A9A398]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
               </div>
             </article>
           ))}
@@ -759,17 +754,14 @@ export default function IrodoriStarterLessonSevenPage() {
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <JapaneseReading
-                    allowIndexFallback
-                    romaji={item.reading}
-                    translation={item.meaning}
+                  <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                     contentClassName="font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]"
                     kanaClassName="mt-2 font-mincho text-base text-[#D6AD4F]"
                     romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
                     translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
                   >
                     {item.jp}
-                  </JapaneseReading>
+                  </JapaneseVocabularyReading>
                 </div>
                 <span className="rounded-md border border-white/[0.08] bg-black/15 px-2 py-1 text-[8px] font-bold text-[#A9A398]">
                   {item.type}
@@ -837,17 +829,14 @@ export default function IrodoriStarterLessonSevenPage() {
               <div className="flex h-16 items-center justify-center rounded-lg bg-black/15 text-3xl">
                 {item.icon}
               </div>
-              <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+              <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="mt-3 font-mincho text-lg font-bold text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
                   translationClassName="mt-2 mt-1 text-xs leading-5 text-[#A9A398]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
@@ -912,17 +901,14 @@ export default function IrodoriStarterLessonSevenPage() {
                   key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                   className="rounded-lg border border-white/[0.07] bg-black/15 p-3"
                 >
-                  <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+                  <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="text-center font-mincho text-xl font-black text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 mt-1 text-center text-[9px] text-[#B8860B]"
                   translationClassName="mt-2 mt-2 text-center text-xs font-bold text-[#D9B66D]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
                   <p className="mt-1 text-center text-[9px] leading-4 text-[#817A73]">{item.detail}</p>
                 </div>
               ))}
@@ -1213,17 +1199,14 @@ export default function IrodoriStarterLessonSevenPage() {
               key={item.reading}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
-              <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+              <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="font-mincho text-2xl font-bold text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 mt-1 text-[10px] italic text-[#B8860B]"
                   translationClassName="mt-2 mt-2 text-xs text-[#A9A398]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
