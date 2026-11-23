@@ -353,9 +353,9 @@ const quizQuestions: Task[] = [
   {
     prompt: "Bacaan yang benar untuk 「4月」 adalah…",
     options: [
-      { key: "a", label: "よんがつ (yongatsu)" },
-      { key: "b", label: "しがつ (shigatsu)" },
-      { key: "c", label: "よがつ (yogatsu)" },
+      { key: "a", label: "よんがつ" },
+      { key: "b", label: "しがつ" },
+      { key: "c", label: "よがつ" },
     ],
     answer: "b",
     explanation: <>Bulan April dibaca 「しがつ」, bukan よんがつ.</>,
@@ -363,9 +363,9 @@ const quizQuestions: Task[] = [
   {
     prompt: "Bacaan yang benar untuk 「20日」 adalah…",
     options: [
-      { key: "a", label: "にじゅうにち (nijuu nichi)" },
-      { key: "b", label: "はつか (hatsuka)" },
-      { key: "c", label: "にじゅうよっか (nijuyokka)" },
+      { key: "a", label: "にじゅうにち" },
+      { key: "b", label: "はつか" },
+      { key: "c", label: "にじゅうよっか" },
     ],
     answer: "b",
     explanation: <>Tanggal 20 memiliki bacaan khusus yaitu 「はつか」.</>,
