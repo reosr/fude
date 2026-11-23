@@ -368,7 +368,7 @@
         "pattern": "今 ～時 ～分です — Sekarang pukul ...",
         "formula": "今（いま）+ [angka jam] + 時（じ）+ [angka menit] + 分（ふん／ぷん）+ です。<br>Setengah jam: [angka jam] + 時半（じはん）+ です。<br>Pertanyaan: 今、何時ですか。",
         "meaning": "Sekarang pukul ...",
-        "explanation": "時 menandai jam dan 分 menandai menit. Bacaan 分 berubah menurut angka, misalnya 1分 いっぷん, 2分 にふん, 3分 さんぷん, 4分 よんぷん, 5分 ごふん, 6分 ろっぷん, 7分 ななふん, 8分 はっぷん, 9分 きゅうふん, 10分 じゅっぷん. Untuk setengah jam gunakan 半（はん）setelah jam; jangan tambahkan 分 setelah 半.",
+        "explanation": "時 menandai jam dan 分（ふん／ぷん）menandai menit. Bacaan 分（ふん／ぷん）berubah menurut angka, misalnya 1分 いっぷん, 2分 にふん, 3分 さんぷん, 4分 よんぷん, 5分 ごふん, 6分 ろっぷん, 7分 ななふん, 8分 はっぷん, 9分 きゅうふん, 10分 じゅっぷん. Untuk setengah jam gunakan 半（はん）setelah jam; jangan tambahkan 分（ふん／ぷん）setelah 半.",
         "examples": [
           {
             "kanji": "<ruby>今<rt>いま</rt></ruby> <ruby>七時半<rt>しちじはん</rt></ruby>です。",
@@ -555,9 +555,9 @@
       },
       {
         "pattern": "誕生日は ～月 ～日です — Ulang tahun adalah tanggal ... / Kapan ulang tahun ...?",
-        "formula": "Pertanyaan: [Orang] + の + <ruby>誕生日<rt>たんじょうび</rt></ruby> + は + 何月何日（なんがつなんにち）+ ですか。<br>Jawaban: [Orang] + の誕生日 + は + [bulan] + 月 + [tanggal] + 日 + です。",
+        "formula": "Pertanyaan: [Orang] + の + <ruby>誕生日<rt>たんじょうび</rt></ruby> + は + 何月何日（なんがつなんにち）+ ですか。<br>Jawaban: [Orang] + の誕生日 + は + [bulan] + 月（がつ）+ [tanggal] + 日（にち）+ です。",
         "meaning": "Ulang tahun adalah tanggal ... / Kapan ulang tahun ...?",
-        "explanation": "月 menyatakan bulan dan 日 menyatakan tanggal. Bacaan bulan yang perlu diperhatikan: 4月 しがつ, 7月 しちがつ, 9月 くがつ. Tanggal memiliki banyak bacaan khusus: 1日 ついたち; 2日 ふつか; 3日 みっか; 4日 よっか; 5日 いつか; 6日 むいか; 7日 なのか; 8日 ようか; 9日 ここのか; 10日 とおか; 14日 じゅうよっか; 20日 はつか; 24日 にじゅうよっか. Sebagian besar tanggal lainnya memakai angka + にち. 何日 dibaca なんにち.",
+        "explanation": "月（つき）menyatakan bulan dan 日（ひ）menyatakan tanggal. Bacaan bulan yang perlu diperhatikan: 4月 しがつ, 7月 しちがつ, 9月 くがつ. Tanggal memiliki banyak bacaan khusus: 1日 ついたち; 2日 ふつか; 3日 みっか; 4日 よっか; 5日 いつか; 6日 むいか; 7日 なのか; 8日 ようか; 9日 ここのか; 10日 とおか; 14日 じゅうよっか; 20日 はつか; 24日 にじゅうよっか. Sebagian besar tanggal lainnya memakai angka + にち. 何日 dibaca なんにち.",
         "examples": [
           {
             "kanji": "<ruby>誕生日<rt>たんじょうび</rt></ruby>は <ruby>五月五日<rt>ごがついつか</rt></ruby>です。",
@@ -1728,7 +1728,7 @@
     "grammar": [
       {
         "pattern": "Cara mengubah Vます menjadi bentuk て (3 golongan) — Panduan mengubah kata kerja bentuk sopan ます menjadi bentuk sambung て.",
-        "formula": "<b>Langkah awal:</b> Kenali golongan kata kerjanya, lalu hilangkan ます untuk mendapatkan pangkal bentuk ます. Setelah itu, ikuti aturan golongannya berikut ini.<br><br><b>1. Kelompok I（五段動詞／godan）</b><br>Perhatikan kana terakhir pada pangkal setelah ます dihilangkan:<br>• い・ち・り → って：買います → 買い → 買って／待ちます → 待ち → 待って／帰ります → 帰り → 帰って。<br>• み・び・に → んで：飲みます → 飲み → 飲んで／遊びます → 遊び → 遊んで／死にます → 死に → 死んで。<br>• き → いて：書きます → 書き → 書いて。<br>• ぎ → いで：泳ぎます → 泳ぎ → 泳いで。<br>• し → して：話します → 話し → 話して。<br><b>Pengecualian penting:</b> 行きます → 行き → 行って (bukan 行いて).<br><br><b>2. Kelompok II（一段動詞／ichidan）</b><br>Hilangkan ます, lalu tambahkan て pada pangkalnya. Contoh: 食べます → 食べ → 食べて; 見ます → 見 → 見て。<br><br><b>3. Kelompok III（不規則動詞／tidak beraturan）</b><br>Bentuknya khusus dan perlu dihafalkan:<br>• します → して。<br>• 来ます（きます）→ 来て（きて）。<br>• Kata benda + します mengikuti aturan yang sama: 勉強します → 勉強して。<br><br><b>Catatan mengenali golongan:</b> Kelompok II umumnya memiliki bentuk kamus berakhiran る dengan bunyi い／え sebelum る, tetapi ada pengecualian yang termasuk Kelompok I, misalnya 帰ります、入ります、走ります、知ります、切ります、要ります. Karena itu, pastikan golongan kata kerja diketahui; jangan menentukannya hanya dari bunyi pangkal bentuk ます.",
+        "formula": "<b>Langkah awal:</b> Kenali golongan kata kerjanya, lalu hilangkan ます untuk mendapatkan pangkal bentuk ます. Setelah itu, ikuti aturan golongannya berikut ini.<br><br><b>1. Kelompok I（五段動詞／godan）</b><br>Perhatikan kana terakhir pada pangkal setelah ます dihilangkan:<br>• い・ち・り → って：買います → 買い → 買って／待ちます → 待ち → 待って／帰ります → 帰り → 帰って。<br>• み・び・に → んで：飲みます → 飲み → 飲んで／遊びます → 遊び → 遊んで／死にます → 死に → 死んで。<br>• き → いて：書きます → 書き → 書いて。<br>• ぎ → いで：泳ぎます → 泳ぎ → 泳いで。<br>• し → して：話します → 話し → 話して。<br><b>Pengecualian penting:</b> 行きます → 行き → 行って (bukan <ruby>行<rt>い</rt></ruby>いて).<br><br><b>2. Kelompok II（一段動詞／ichidan）</b><br>Hilangkan ます, lalu tambahkan て pada pangkalnya. Contoh: 食べます → 食べ → 食べて; 見ます → 見 → 見て。<br><br><b>3. Kelompok III（不規則動詞／tidak beraturan）</b><br>Bentuknya khusus dan perlu dihafalkan:<br>• します → して。<br>• 来ます（きます）→ 来て（きて）。<br>• Kata benda + します mengikuti aturan yang sama: 勉強します → 勉強して。<br><br><b>Catatan mengenali golongan:</b> Kelompok II umumnya memiliki bentuk kamus berakhiran る dengan bunyi い／え sebelum る, tetapi ada pengecualian yang termasuk Kelompok I, misalnya 帰ります、入ります、走ります、知ります、切ります、要ります. Karena itu, pastikan golongan kata kerja diketahui; jangan menentukannya hanya dari bunyi pangkal bentuk ます.",
         "meaning": "Panduan mengubah kata kerja bentuk sopan ます menjadi bentuk sambung て.",
         "explanation": "Bentuk て bukan dibentuk dengan sekadar mengganti ます menjadi て untuk semua kata kerja. Pertama, tentukan apakah kata kerja termasuk Kelompok I, II, atau III. Pada Kelompok I, bunyi akhir pangkal bentuk ます menentukan perubahan: ada yang menjadi って, んで, いて, いで, atau して. Kelompok II lebih sederhana karena pangkalnya langsung diikuti て. Kelompok III memiliki perubahan khusus. Bentuk て ini kemudian dipakai dalam pola seperti てください, てもいいです, てはいけません, dan ています. Pelajari tabel perubahan terlebih dahulu sebelum menerapkan pola-pola tersebut.",
         "examples": [
