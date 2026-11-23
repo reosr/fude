@@ -29,7 +29,7 @@ const lessonId = "elementary1-06";
 
 const askingBusStopConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>すみません。バス停はどこですか。</>, romaji: "Sumimasen. Basutei wa doko desu ka?", translation: "Permisi. Di mana halte bus?", audioFileName: "irodori-elementary1-06-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>この道をまっすぐ行ってください。</>, romaji: "Kono michi o massugu itte kudasai.", translation: "Silakan jalan lurus melalui jalan ini.", audioFileName: "irodori-elementary1-06-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>この道をまっすぐ行ってください。</>, romaji: "Kono michi o massugu itte kudasai.", translation: "Ikuti jalan ini lurus saja.", audioFileName: "irodori-elementary1-06-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>信号の近くですか。</>, romaji: "Shingou no chikaku desu ka?", translation: "Apakah dekat lampu lalu lintas?", audioFileName: "irodori-elementary1-06-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。公園の前にあります。</>, romaji: "Hai. Kouen no mae ni arimasu.", translation: "Iya. Letaknya di depan taman.", audioFileName: "irodori-elementary1-06-a01-l04.mp3" },
   { speakerId: "yui", japanese: <>わかりました。ありがとうございます。</>, romaji: "Wakarimashita. Arigatou gozaimasu.", translation: "Baik, saya mengerti. Terima kasih.", audioFileName: "irodori-elementary1-06-a01-l05.mp3" },
@@ -43,10 +43,10 @@ const askingByPhoneConversation: IrodoriUtterance[] = [
 ];
 
 const postOfficeDirectionsConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>そのあと、どうしますか。</>, romaji: "Sono ato, dou shimasu ka?", translation: "Setelah itu, bagaimana?", audioFileName: "irodori-elementary1-06-a03-l01.mp3" },
-  { speakerId: "kenji", japanese: <>まっすぐ行って、銀行の前を通ってください。</>, romaji: "Massugu itte, ginkou no mae o tootte kudasai.", translation: "Jalan lurus, lalu lewati bagian depan bank.", audioFileName: "irodori-elementary1-06-a03-l02.mp3" },
+  { speakerId: "akiko", japanese: <>そのあと、どうしますか。</>, romaji: "Sono ato, dou shimasu ka?", translation: "Setelah itu, harus bagaimana?", audioFileName: "irodori-elementary1-06-a03-l01.mp3" },
+  { speakerId: "kenji", japanese: <>まっすぐ行って、銀行の前を通ってください。</>, romaji: "Massugu itte, ginkou no mae o tootte kudasai.", translation: "Jalan lurus, lalu lewat di depan bank.", audioFileName: "irodori-elementary1-06-a03-l02.mp3" },
   { speakerId: "akiko", japanese: <>郵便局はどこにありますか。</>, romaji: "Yuubinkyoku wa doko ni arimasu ka?", translation: "Di mana kantor posnya?", audioFileName: "irodori-elementary1-06-a03-l03.mp3" },
-  { speakerId: "kenji", japanese: <>二つ目の信号の左側にありますよ。</>, romaji: "Futatsume no shingou no hidari gawa ni arimasu yo.", translation: "Letaknya di sisi kiri lampu lalu lintas yang kedua.", audioFileName: "irodori-elementary1-06-a03-l04.mp3" },
+  { speakerId: "kenji", japanese: <>二つ目の信号の左側にありますよ。</>, romaji: "Futatsume no shingou no hidari gawa ni arimasu yo.", translation: "Letaknya di sebelah kiri lampu lalu lintas kedua.", audioFileName: "irodori-elementary1-06-a03-l04.mp3" },
 ];
 
 const givingDirectionsByCarConversation: IrodoriUtterance[] = [
@@ -57,9 +57,9 @@ const givingDirectionsByCarConversation: IrodoriUtterance[] = [
 ];
 
 const correctingDirectionsConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>この道をまっすぐですね。</>, romaji: "Kono michi o massugu desu ne.", translation: "Jalan lurus melalui jalan ini, ya.", audioFileName: "irodori-elementary1-06-a05-l01.mp3" },
-  { speakerId: "akiko", japanese: <>はい。でも、1つ目の角じゃなくて、2つ目です。</>, romaji: "Hai. Demo, hitotsume no kado ja nakute, futatsume desu.", translation: "Iya. Tetapi bukan sudut yang pertama, melainkan yang kedua.", audioFileName: "irodori-elementary1-06-a05-l02.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。2つ目を左ですね。</>, romaji: "Wakarimashita. Futatsume o hidari desu ne.", translation: "Saya mengerti. Belok kiri di sudut kedua, ya.", audioFileName: "irodori-elementary1-06-a05-l03.mp3" },
+  { speakerId: "kenji", japanese: <>この道をまっすぐですね。</>, romaji: "Kono michi o massugu desu ne.", translation: "Ikuti jalan ini lurus, ya.", audioFileName: "irodori-elementary1-06-a05-l01.mp3" },
+  { speakerId: "akiko", japanese: <>はい。でも、1つ目の角じゃなくて、2つ目です。</>, romaji: "Hai. Demo, hitotsume no kado ja nakute, futatsume desu.", translation: "Ya, tetapi bukan belokan pertama. Belokannya di belokan kedua.", audioFileName: "irodori-elementary1-06-a05-l02.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。2つ目を左ですね。</>, romaji: "Wakarimashita. Futatsume o hidari desu ne.", translation: "Baik, belok kiri di belokan kedua, ya.", audioFileName: "irodori-elementary1-06-a05-l03.mp3" },
   { speakerId: "akiko", japanese: <>そうです。ありがとうございます。</>, romaji: "Sou desu. Arigatou gozaimasu.", translation: "Betul. Terima kasih.", audioFileName: "irodori-elementary1-06-a05-l04.mp3" },
 ];
 
@@ -174,7 +174,7 @@ const quizQuestions: Task[] = [
   },
   {
     prompt: <>Apa arti 「この道をまっすぐ行ってください」?</>,
-    options: [{ key: "a", label: "Silakan jalan lurus melalui jalan ini." }, { key: "b", label: "Silakan belok kiri di jalan ini." }, { key: "c", label: "Silakan kembali ke stasiun." }],
+    options: [{ key: "a", label: "Ikuti jalan ini lurus saja." }, { key: "b", label: "Silakan belok kiri di jalan ini." }, { key: "c", label: "Silakan kembali ke stasiun." }],
     answer: "a",
     explanation: <>まっすぐ berarti lurus, dan 行ってください merupakan bentuk permintaan sopan dari 行く.</>,
   },
@@ -230,7 +230,7 @@ const simulations = [
     japanese: <>すみません。バス停はどこですか。</>,
     translation: "Permisi. Di mana halte bus?",
     options: [
-      { key: "straight", label: "この道をまっすぐ行ってください。", meaning: "Jalan lurus melalui jalan ini." },
+      { key: "straight", label: "この道をまっすぐ行ってください。", meaning: "Ikuti jalan ini lurus saja." },
       { key: "past", label: "昨日は雨でした。", meaning: "Kemarin hujan." },
       { key: "phone", label: "もしもし。元気ですか。", meaning: "Halo. Apa kabar?" },
     ],
@@ -309,7 +309,7 @@ const vocabulary = [
   ["郵便局", "ゆうびんきょく · yuubinkyoku", "Kantor pos"],
   ["バス停", "バスてい · basutei", "Halte bus"],
   ["信号", "しんごう · shingou", "Lampu lalu lintas"],
-  ["角", "かど · kado", "Sudut jalan"],
+  ["角", "かど · kado", "Tikungan / sudut jalan"],
   ["交差点", "こうさてん · kousaten", "Persimpangan"],
   ["まっすぐ", "まっすぐ · massugu", "Lurus"],
   ["曲がる", "まがる · magaru", "Berbelok"],
