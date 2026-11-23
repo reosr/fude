@@ -34,7 +34,7 @@ const lessonId = "elementary2-18";
 
 const dreamConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>将来、どんなことをしたいと思っていますか。</>, romaji: "Shourai, donna koto o shitai to omotte imasu ka?", translation: "Apa yang ingin kamu lakukan di masa depan?", audioFileName: "irodori-elementary2-18-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>いろいろな人の役に立つ仕事をしようと思っています。</>, romaji: "Iroiro na hito no yaku ni tatsu shigoto o shiyou to omotte imasu.", translation: "Saya berencana melakukan pekerjaan yang bermanfaat bagi banyak orang.", audioFileName: "irodori-elementary2-18-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>いろいろな人の役に立つ仕事をしようと思っています。</>, romaji: "Iroiro na hito no yaku ni tatsu shigoto o shiyou to omotte imasu.", translation: "Saya berencana bekerja di bidang yang bisa bermanfaat bagi banyak orang.", audioFileName: "irodori-elementary2-18-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>そのために、今、何をしていますか。</>, romaji: "Sono tame ni, ima, nani o shite imasu ka?", translation: "Untuk mencapainya, apa yang kamu lakukan sekarang?", audioFileName: "irodori-elementary2-18-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>いろいろな本を読んで、外国語も勉強しようと思います。</>, romaji: "Iroiro na hon o yonde, gaikokugo mo benkyou shiyou to omoimasu.", translation: "Saya berencana membaca berbagai buku dan juga belajar bahasa asing.", audioFileName: "irodori-elementary2-18-a01-l04.mp3" },
 ];
@@ -47,18 +47,18 @@ const experienceConversation: IrodoriUtterance[] = [
 const adviceConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>日本で生活するとき、何が大切だと思いますか。</>, romaji: "Nihon de seikatsu suru toki, nani ga taisetsu da to omoimasu ka?", translation: "Apa yang penting ketika tinggal di Jepang?", audioFileName: "irodori-elementary2-18-a03-l01.mp3" },
   { speakerId: "akiko", japanese: <>一人で悩まないで、周りの人に相談するといいと思います。</>, romaji: "Hitori de nayamanaide, mawari no hito ni soudan suru to ii to omoimasu.", translation: "Menurut saya, jangan hadapi masalah sendirian. Coba bicarakan dengan orang-orang di sekitar.", audioFileName: "irodori-elementary2-18-a03-l02.mp3" },
-  { speakerId: "yui", japanese: <>私も、いろいろな人と知り合いたいです。</>, romaji: "Watashi mo, iroiro na hito to shiriaitai desu.", translation: "Saya juga ingin berkenalan dengan berbagai orang.", audioFileName: "irodori-elementary2-18-a03-l03.mp3" },
+  { speakerId: "yui", japanese: <>私も、いろいろな人と知り合いたいです。</>, romaji: "Watashi mo, iroiro na hito to shiriaitai desu.", translation: "Saya juga ingin mengenal banyak orang.", audioFileName: "irodori-elementary2-18-a03-l03.mp3" },
   { speakerId: "akiko", japanese: <>そのために、地域のイベントに参加してみたらどうですか。</>, romaji: "Sono tame ni, chiiki no ibento ni sanka shite mitara dou desu ka?", translation: "Kalau begitu, bagaimana kalau ikut acara di lingkungan sekitar?", audioFileName: "irodori-elementary2-18-a03-l04.mp3" },
 ];
 const farewellConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>日本語コースの最後の日に、みんなの前であいさつをします。</>, romaji: "Nihongo koosu no saigo no hi ni, minna no mae de aisatsu o shimasu.", translation: "Pada hari terakhir kursus bahasa Jepang, saya akan menyampaikan sambutan di depan semua orang.", audioFileName: "irodori-elementary2-18-a04-l01.mp3" },
   { speakerId: "sota", japanese: <>まず、どんなことを話しますか。</>, romaji: "Mazu, donna koto o hanashimasu ka?", translation: "Apa yang ingin kamu sampaikan lebih dulu?", audioFileName: "irodori-elementary2-18-a04-l02.mp3" },
   { speakerId: "kenji", japanese: <>一緒に勉強した思い出と、手伝ってもらったことへの感謝を話そうと思います。</>, romaji: "Issho ni benkyou shita omoide to, tetsudatte moratta koto e no kansha o hanasou to omoimasu.", translation: "Saya ingin menceritakan kenangan belajar bersama dan mengucapkan terima kasih atas bantuan yang pernah saya terima.", audioFileName: "irodori-elementary2-18-a04-l03.mp3" },
-  { speakerId: "sota", japanese: <>最後に、これからの目標も話すといいですね。</>, romaji: "Saigo ni, kore kara no mokuhyou mo hanasu to ii desu ne.", translation: "Di bagian akhir, kamu juga bisa menyampaikan tujuanmu ke depan.", audioFileName: "irodori-elementary2-18-a04-l04.mp3" },
+  { speakerId: "sota", japanese: <>最後に、これからの目標も話すといいですね。</>, romaji: "Saigo ni, kore kara no mokuhyou mo hanasu to ii desu ne.", translation: "Di bagian akhir, kamu juga bisa menyampaikan tujuanmu ke depannya.", audioFileName: "irodori-elementary2-18-a04-l04.mp3" },
 ];
 const helpConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>この前、ユイさんに発表の練習を手伝ってもらいました。</>, romaji: "Kono mae, Yui-san ni happyou no renshuu o tetsudatte moraimashita.", translation: "Beberapa waktu lalu, Yui membantu saya berlatih presentasi.", audioFileName: "irodori-elementary2-18-a05-l01.mp3" },
-  { speakerId: "yui", japanese: <>私も、アキコさんに資料を見せてもらいました。</>, romaji: "Watashi mo, Akiko-san ni shiryou o misete moraimashita.", translation: "Akiko juga menunjukkan materinya kepada saya.", audioFileName: "irodori-elementary2-18-a05-l02.mp3" },
+  { speakerId: "yui", japanese: <>私も、アキコさんに資料を見せてもらいました。</>, romaji: "Watashi mo, Akiko-san ni shiryou o misete moraimashita.", translation: "Saya juga sempat melihat materi yang ditunjukkan Akiko.", audioFileName: "irodori-elementary2-18-a05-l02.mp3" },
   { speakerId: "akiko", japanese: <>ソウタさんが、発表のあとで写真を撮ってくれましたね。</>, romaji: "Souta-san ga, happyou no ato de shashin o totte kuremashita ne.", translation: "Sota juga mengambil foto setelah presentasi, ya.", audioFileName: "irodori-elementary2-18-a05-l03.mp3" },
   { speakerId: "yui", japanese: <>はい。みんなが手伝ってくれて、本当にうれしかったです。</>, romaji: "Hai. Minna ga tetsudatte kurete, hontou ni ureshikatta desu.", translation: "Ya. Saya senang sekali karena semua orang sudah membantu saya.", audioFileName: "irodori-elementary2-18-a05-l04.mp3" },
 ];
