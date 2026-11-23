@@ -176,25 +176,12 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
 
   if (!allowIndexFallback) return null;
 
-  let kana = "";
-  let index = 0;
+  // Gunakan aturan segmentasi yang sama dengan renderer ruby agar baris kana
+  // tidak memakai bacaan satu-kanji yang berbeda atau keliru di kata majemuk.
+  const segments = segmentTextByReadingIndex(japaneseOnly);
+  if (segments.some((segment) => KANJI_RE.test(segment.text))) return null;
 
-  while (index < japaneseOnly.length) {
-    const match = READING_ENTRIES.find(([word]) => japaneseOnly.startsWith(word, index));
-
-    if (match) {
-      kana += match[1];
-      index += match[0].length;
-      continue;
-    }
-
-    const char = japaneseOnly[index];
-    if (KANJI_RE.test(char)) return null;
-
-    kana += char;
-    index++;
-  }
-
+  const kana = segments.map((segment) => segment.reading ?? segment.text).join("");
   const normalized = kana.replace(/\s+/g, " ").trim();
   return normalized ? { kana: normalized, hasKanji: true } : null;
 }
