@@ -25,8 +25,14 @@ export default function JapaneseVocabularyReading({
   wrapperClassName = "",
 }: Props) {
   const parts = reading.split(/\s*[·•]\s*/);
-  const kana = (parts[0] ?? "").trim();
-  const romaji = parts.slice(1).join(" · ").trim();
+  const firstPart = (parts[0] ?? "").trim();
+  const hasKana = /[ぁ-ゖァ-ヺ]/.test(firstPart);
+  const kana = hasKana ? firstPart : "";
+  const romaji = parts.length > 1
+    ? parts.slice(1).join(" · ").trim()
+    : hasKana
+      ? ""
+      : firstPart;
   const hasKanji = typeof children === "string"
     ? /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/.test(children)
     : Boolean(children);
