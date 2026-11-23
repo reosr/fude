@@ -402,7 +402,7 @@ const stationSigns = [
   { jp: "出口", reading: "でぐち · deguchi", meaning: "Pintu keluar", symbol: "↗" },
   { jp: "入口", reading: "いりぐち · iriguchi", meaning: "Pintu masuk", symbol: "↙" },
   { jp: "改札口", reading: "かいさつぐち · kaisatsuguchi", meaning: "Gerbang tiket", symbol: "▥" },
-  { jp: "乗り換え", reading: "のりかえ · norikae", meaning: "Transit / pindah jalur", symbol: "⇄" },
+  { jp: "乗り換え", reading: "のりかえ · norikae", meaning: "Pindah kendaraan atau jalur", symbol: "⇄" },
   { jp: "案内所", reading: "あんないじょ · annaijo", meaning: "Pusat informasi", symbol: "i" },
   { jp: "ホーム", reading: "hoomu", meaning: "Peron", symbol: "▤" },
 ];
