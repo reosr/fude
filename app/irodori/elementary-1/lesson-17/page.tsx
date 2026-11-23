@@ -20,27 +20,27 @@ const lessonId = "elementary1-17";
 
 const visitingHomeConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>ごめんください。</>,romaji:"Gomen kudasai.",translation:"Permisi, apakah ada orang di rumah?",audioFileName:"irodori-elementary1-17-a01-l01.mp3"},
-{speakerId:"yui",japanese:<>はい。あ、ソウタさん。いらっしゃい。</>,romaji:"Hai. A, Souta-san. Irasshai.",translation:"Ya. Oh, Sota. Selamat datang.",audioFileName:"irodori-elementary1-17-a01-l02.mp3"},
-{speakerId:"sota",japanese:<>こんにちは。おじゃまします。</>,romaji:"Konnichiwa. Ojamashimasu.",translation:"Selamat siang. Permisi, saya masuk.",audioFileName:"irodori-elementary1-17-a01-l03.mp3"},
+{speakerId:"yui",japanese:<>はい。あ、ソウタさん。いらっしゃい。</>,romaji:"Hai. A, Souta-san. Irasshai.",translation:"Oh, Sota. Ayo, masuk.",audioFileName:"irodori-elementary1-17-a01-l02.mp3"},
+{speakerId:"sota",japanese:<>こんにちは。おじゃまします。</>,romaji:"Konnichiwa. Ojamashimasu.",translation:"Selamat siang. Permisi, saya masuk, ya.",audioFileName:"irodori-elementary1-17-a01-l03.mp3"},
 {speakerId:"yui",japanese:<>どうぞ、こちらへ。くつはここで脱いでください。</>,romaji:"Douzo, kochira e. Kutsu wa koko de nuide kudasai.",translation:"Silakan lewat sini. Tolong lepas sepatu di sini.",audioFileName:"irodori-elementary1-17-a01-l04.mp3"},
 ];
 
 const givingSouvenirConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>これ、お土産です。京都で買ったお菓子です。</>,romaji:"Kore, omiyage desu. Kyouto de katta okashi desu.",translation:"Ini oleh-oleh. Ini kue yang saya beli di Kyoto.",audioFileName:"irodori-elementary1-17-a02-l01.mp3"},
+{speakerId:"yui",japanese:<>これ、お土産です。京都で買ったお菓子です。</>,romaji:"Kore, omiyage desu. Kyouto de katta okashi desu.",translation:"Ini oleh-oleh. Kue ini saya beli di Kyoto.",audioFileName:"irodori-elementary1-17-a02-l01.mp3"},
 {speakerId:"sota",japanese:<>わあ、ありがとうございます。京都のお菓子なんですね。</>,romaji:"Waa, arigatou gozaimasu. Kyouto no okashi nan desu ne.",translation:"Wah, terima kasih. Jadi ini kue dari Kyoto, ya.",audioFileName:"irodori-elementary1-17-a02-l02.mp3"},
-{speakerId:"yui",japanese:<>はい。よかったら、食べてください。</>,romaji:"Hai. Yokattara, tabete kudasai.",translation:"Ya. Silakan dicoba kalau berkenan.",audioFileName:"irodori-elementary1-17-a02-l03.mp3"},
-{speakerId:"sota",japanese:<>いただきます。楽しみです。</>,romaji:"Itadakimasu. Tanoshimi desu.",translation:"Terima kasih, saya akan menikmatinya. Saya tidak sabar ingin mencoba.",audioFileName:"irodori-elementary1-17-a02-l04.mp3"},
+{speakerId:"yui",japanese:<>はい。よかったら、食べてください。</>,romaji:"Hai. Yokattara, tabete kudasai.",translation:"Ya. Kalau mau, silakan dicoba.",audioFileName:"irodori-elementary1-17-a02-l03.mp3"},
+{speakerId:"sota",japanese:<>いただきます。楽しみです。</>,romaji:"Itadakimasu. Tanoshimi desu.",translation:"Terima kasih. Saya jadi tidak sabar ingin mencicipinya.",audioFileName:"irodori-elementary1-17-a02-l04.mp3"},
 ];
 
 const explainingKeepsakeConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>それは何ですか。かわいいですね。</>,romaji:"Sore wa nan desu ka? Kawaii desu ne.",translation:"Itu apa? Lucu, ya.",audioFileName:"irodori-elementary1-17-a03-l01.mp3"},
-{speakerId:"yui",japanese:<>これは、兄がくれたお守りです。</>,romaji:"Kore wa, ani ga kureta omamori desu.",translation:"Ini adalah omamori yang diberikan kakak laki-laki saya.",audioFileName:"irodori-elementary1-17-a03-l02.mp3"},
-{speakerId:"akiko",japanese:<>そうなんですね。いつも持っているんですか。</>,romaji:"Sou nan desu ne. Itsumo motte iru n desu ka?",translation:"Oh, begitu. Apakah selalu dibawa?",audioFileName:"irodori-elementary1-17-a03-l03.mp3"},
-{speakerId:"yui",japanese:<>はい。旅行のときに、兄にもらったんです。</>,romaji:"Hai. Ryokou no toki ni, ani ni moratta n desu.",translation:"Ya. Saya menerimanya dari kakak saat bepergian.",audioFileName:"irodori-elementary1-17-a03-l04.mp3"},
+{speakerId:"yui",japanese:<>これは、兄がくれたお守りです。</>,romaji:"Kore wa, ani ga kureta omamori desu.",translation:"Ini omamori pemberian kakak laki-laki saya.",audioFileName:"irodori-elementary1-17-a03-l02.mp3"},
+{speakerId:"akiko",japanese:<>そうなんですね。いつも持っているんですか。</>,romaji:"Sou nan desu ne. Itsumo motte iru n desu ka?",translation:"Oh, begitu. Kamu selalu membawanya?",audioFileName:"irodori-elementary1-17-a03-l03.mp3"},
+{speakerId:"yui",japanese:<>はい。旅行のときに、兄にもらったんです。</>,romaji:"Hai. Ryokou no toki ni, ani ni moratta n desu.",translation:"Ya. Saya mendapatkannya dari kakak saat sedang bepergian.",audioFileName:"irodori-elementary1-17-a03-l04.mp3"},
 ];
 
 const askingAboutBelongingsConversation: IrodoriUtterance[] = [
-{speakerId:"sota",japanese:<>そのかばん、すてきですね。どこで買ったんですか。</>,romaji:"Sono kaban, suteki desu ne. Doko de katta n desu ka?",translation:"Tas itu bagus. Di mana kamu membelinya?",audioFileName:"irodori-elementary1-17-a04-l01.mp3"},
+{speakerId:"sota",japanese:<>そのかばん、すてきですね。どこで買ったんですか。</>,romaji:"Sono kaban, suteki desu ne. Doko de katta n desu ka?",translation:"Tas itu bagus sekali. Kamu beli di mana?",audioFileName:"irodori-elementary1-17-a04-l01.mp3"},
 {speakerId:"yui",japanese:<>これは、駅の近くの店で買ったかばんです。</>,romaji:"Kore wa, eki no chikaku no mise de katta kaban desu.",translation:"Ini tas yang saya beli di toko dekat stasiun.",audioFileName:"irodori-elementary1-17-a04-l02.mp3"},
 {speakerId:"sota",japanese:<>そうですか。色もいいですね。</>,romaji:"Sou desu ka. Iro mo ii desu ne.",translation:"Begitu, ya. Warnanya juga bagus.",audioFileName:"irodori-elementary1-17-a04-l03.mp3"},
 {speakerId:"yui",japanese:<>ありがとうございます。毎日使っています。</>,romaji:"Arigatou gozaimasu. Mainichi tsukatte imasu.",translation:"Terima kasih. Saya menggunakannya setiap hari.",audioFileName:"irodori-elementary1-17-a04-l04.mp3"},
@@ -48,9 +48,9 @@ const askingAboutBelongingsConversation: IrodoriUtterance[] = [
 
 const thankYouEmailConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>昨日は来てくれて、ありがとうございました。</>,romaji:"Kinou wa kite kurete, arigatou gozaimashita.",translation:"Terima kasih sudah datang kemarin.",audioFileName:"irodori-elementary1-17-a05-l01.mp3"},
-{speakerId:"yui",japanese:<>こちらこそ、ごちそうさまでした。とても楽しかったです。</>,romaji:"Kochira koso, gochisousama deshita. Totemo tanoshikatta desu.",translation:"Saya juga berterima kasih atas jamuannya. Saya sangat senang.",audioFileName:"irodori-elementary1-17-a05-l02.mp3"},
+{speakerId:"yui",japanese:<>こちらこそ、ごちそうさまでした。とても楽しかったです。</>,romaji:"Kochira koso, gochisousama deshita. Totemo tanoshikatta desu.",translation:"Sama-sama. Terima kasih atas jamuannya. Saya senang sekali.",audioFileName:"irodori-elementary1-17-a05-l02.mp3"},
 {speakerId:"sota",japanese:<>また遊びに来てください。</>,romaji:"Mata asobi ni kite kudasai.",translation:"Silakan berkunjung lagi.",audioFileName:"irodori-elementary1-17-a05-l03.mp3"},
-{speakerId:"yui",japanese:<>はい。ぜひ。また連絡します。</>,romaji:"Hai. Zehi. Mata renraku shimasu.",translation:"Tentu. Dengan senang hati. Saya akan menghubungi lagi.",audioFileName:"irodori-elementary1-17-a05-l04.mp3"},
+{speakerId:"yui",japanese:<>はい。ぜひ。また連絡します。</>,romaji:"Hai. Zehi. Mata renraku shimasu.",translation:"Iya, tentu. Nanti saya hubungi lagi.",audioFileName:"irodori-elementary1-17-a05-l04.mp3"},
 ];
 
 const canDos=[
@@ -63,7 +63,7 @@ const canDos=[
 
 const vocabRows=[
 ["お土産","おみやげ · omiyage","Oleh-oleh"],
-["お守り","おまもり · omamori","Omamori / benda kenangan pembawa keberuntungan"],
+["お守り","おまもり · omamori","Omamori (jimat keberuntungan khas Jepang)"],
 ["飾り","かざり · kazari","Hiasan"],
 ["置物","おきもの · okimono","Benda pajangan"],
 ["人形","にんぎょう · ningyou","Boneka"],
