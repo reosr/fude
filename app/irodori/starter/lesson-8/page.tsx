@@ -17,6 +17,7 @@ import IrodoriConversation, {
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -693,17 +694,14 @@ export default function IrodoriStarterLessonEightPage() {
                 {item.icon}
               </span>
               <div className="min-w-0">
-                <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+                <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="font-mincho text-base font-bold text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
                   translationClassName="mt-2 text-xs text-[#A9A398]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
               </div>
             </article>
           ))}
@@ -940,17 +938,14 @@ export default function IrodoriStarterLessonEightPage() {
               key={item.reading}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
-              <JapaneseReading
-                  allowIndexFallback
-                  romaji={item.reading}
-                  translation={item.meaning}
+              <JapaneseVocabularyReading reading={item.reading} meaning={item.meaning}
                   contentClassName="font-mincho text-3xl font-bold text-[#F1EBDD]"
                   kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
                   romajiClassName="mt-1 mt-1 text-[10px] italic text-[#B8860B]"
                   translationClassName="mt-2 mt-2 text-xs text-[#A9A398]"
                 >
                   {item.jp}
-                </JapaneseReading>
+                </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
