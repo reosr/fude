@@ -727,11 +727,16 @@ export default function IrodoriStarterLessonEightPage() {
                 className="rounded-xl border border-white/[0.06] bg-black/15 p-3 text-center"
               >
                 <span className="text-2xl">{word.icon}</span>
-                <p className="mt-1 font-mincho text-xl font-bold text-[#F1EBDD]">
+                <JapaneseVocabularyReading
+                  reading={word.reading}
+                  meaning={word.meaning}
+                  contentClassName="mt-1 font-mincho text-xl font-bold leading-relaxed text-[#F1EBDD]"
+                  kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+                  romajiClassName="mt-1 text-sm italic text-[#B8860B]"
+                  translationClassName="mt-2 text-xs text-[#A9A398]"
+                >
                   {word.jp}
-                </p>
-                <p className="text-[10px] italic text-[#B8860B]">{word.reading}</p>
-                <p className="mt-1 text-xs text-[#A9A398]">{word.meaning}</p>
+                </JapaneseVocabularyReading>
               </div>
             ))}
           </div>
