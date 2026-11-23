@@ -14,7 +14,7 @@
           "で",
           "に"
         ],
-        "explanation": "は digunakan untuk menandai topik pembicaraan. <ruby>私<rt>わたし</rt></ruby>は berarti 'kalau saya'."
+        "explanation": "Partikel は digunakan untuk menandai topik pembicaraan. <ruby>私<rt>わたし</rt></ruby>は berarti “saya” sebagai topik kalimat."
       },
       {
         "id": "b1-g2",
@@ -28,7 +28,7 @@
           "に",
           "で"
         ],
-        "explanation": "は menandai <ruby>私<rt>わたし</rt></ruby>sebagai topik kalimat."
+        "explanation": "は menandai <ruby>私<rt>わたし</rt></ruby> sebagai topik kalimat."
       },
       {
         "id": "b1-g3",
@@ -112,7 +112,7 @@
           "の",
           "を"
         ],
-        "explanation": "IMCの<ruby>社員<rt>しゃいん</rt></ruby>berarti karyawan IMC. の menghubungkan organisasi dengan status keanggotaan."
+        "explanation": "IMCの<ruby>社員<rt>しゃいん</rt></ruby> berarti karyawan IMC. の menghubungkan nama organisasi dengan status atau keanggotaan."
       },
       {
         "id": "b1-g9",
@@ -154,7 +154,7 @@
           "<ruby>十人<rt>じゅうにん</rt></ruby>",
           "<ruby>十歳<rt>じゅっさい</rt></ruby>"
         ],
-        "explanation": "<ruby>歳<rt>さい</rt></ruby>merupakan satuan untuk menyatakan umur. <ruby>十歳<rt>じゅっさい</rt></ruby>berarti sepuluh tahun."
+        "explanation": "<ruby>歳<rt>さい</rt></ruby> merupakan satuan untuk menyatakan umur. <ruby>十歳<rt>じゅっさい</rt></ruby> berarti sepuluh tahun."
       },
       {
         "id": "b1-g12",
@@ -168,7 +168,7 @@
           "<ruby>時<rt>じ</rt></ruby>",
           "<ruby>人<rt>にん</rt></ruby>"
         ],
-        "explanation": "<ruby>何歳<rt>なんさい</rt></ruby>digunakan untuk menanyakan umur seseorang."
+        "explanation": "<ruby>何歳<rt>なんさい</rt></ruby> digunakan untuk menanyakan umur seseorang."
       }
     ]
   },
