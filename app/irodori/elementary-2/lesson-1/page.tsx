@@ -569,7 +569,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A9C9E8]/[0.08]">人</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • ELEMENTARY 2 A2 • LESSON 01</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I just came to Japan last week.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya baru datang ke Jepang minggu lalu.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9C9E8]">先週、日本に来たばかりです</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami peran orang di lingkungan baru, memperkenalkan diri dengan lebih lengkap, menceritakan kota asal, dan menulis profil singkat pada komunitas daring.</p>
           <div className="mt-5 flex flex-wrap gap-2">
