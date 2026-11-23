@@ -32,9 +32,7 @@ export default function IrodoriStarterPage() {
           </p>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-                Starter
-              </h1>
+              <h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pemula</h1>
               <p className="mt-1 text-sm font-semibold text-[#D9B66D]">
                 Tingkat A1 · 18 Pelajaran
               </p>
@@ -83,40 +81,40 @@ export default function IrodoriStarterPage() {
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle =
               lesson === 1
-                ? "Good morning!"
+                ? "Selamat pagi!"
                 : lesson === 2
-                  ? "I'm sorry, I don't really understand."
+                  ? "Maaf, saya kurang mengerti."
                   : lesson === 3
-                    ? "Nice to meet you."
+                    ? "Senang berkenalan dengan Anda."
                     : lesson === 4
-                    ? "I live in Tokyo."
+                    ? "Saya tinggal di Tokyo."
                     : lesson === 5
-                      ? "I like udon."
+                      ? "Saya suka udon."
                       : lesson === 6
-                        ? "Cheeseburger, please."
+                        ? "Saya pesan cheeseburger."
                         : lesson === 7
-                          ? "There are four rooms."
+                          ? "Ada empat kamar."
                           : lesson === 8
-                            ? "Where is Yamada-san?"
+                            ? "Yamada ada di mana?"
                             : lesson === 9
-                              ? "Lunch is from noon to 1 o’clock."
+                              ? "Makan siang pukul 12.00 sampai 13.00."
                               : lesson === 10
-                              ? "Please lend me the stapler."
+                              ? "Tolong pinjamkan stapler."
                               : lesson === 11
-                              ? "What kind of manga do you like?"
+                              ? "Kamu suka manga seperti apa?"
                               : lesson === 12
-                                ? "Shall we go together?"
+                                ? "Bagaimana kalau kita pergi bersama?"
                                 : lesson === 13
-                                  ? "Does this bus go to the airport?"
+                                  ? "Apakah bus ini menuju bandara?"
                                   : lesson === 14
-                                    ? "It’s a big building, isn’t it?"
+                                    ? "Gedungnya besar, ya."
                                     : lesson === 15
-                                      ? "I need some batteries."
+                                      ? "Saya perlu baterai."
                                       : lesson === 16
-                                        ? "How much is this?"
+                                        ? "Berapa harga barang ini?"
                                         : lesson === 17
-                                          ? "I went to see a movie."
-                                          : "I want to go to a hot spring.";
+                                          ? "Saya pergi menonton film."
+                                          : "Saya ingin pergi ke pemandian air panas.";
             const lessonDescription =
               lesson === 1
                 ? "Sapaan, berpamitan, ucapan terima kasih, dan permintaan maaf."
@@ -157,7 +155,7 @@ export default function IrodoriStarterPage() {
               <>
                 <div className="flex items-center justify-between gap-3">
                   <span className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-                    LESSON {String(lesson).padStart(2, "0")}
+                    PELAJARAN {String(lesson).padStart(2, "0")}
                   </span>
                   {isAvailable ? (
                     <CheckCircle2 size={17} className={isCompleted ? "text-emerald-300" : "text-[#D9B66D]"} />
