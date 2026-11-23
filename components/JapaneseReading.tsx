@@ -1,4 +1,3 @@
-
 "use client";
 
 import { toHiragana, toRomaji } from "wanakana";
@@ -8,11 +7,20 @@ import { extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanes
 interface Props {
   html?: string;
   children?: ReactNode;
+  /** Bacaan hiragana eksplisit dari data kosakata atau materi. */
+  kana?: string;
+  /** Romaji eksplisit; jika tidak diberikan, dibuat dari hiragana. */
+  romaji?: string;
+  /** Arti atau terjemahan bahasa Indonesia. */
+  translation?: ReactNode;
   contentClassName?: string;
   kanaClassName?: string;
   romajiClassName?: string;
+  translationClassName?: string;
+  showOriginal?: boolean;
   showKana?: boolean;
   showRomaji?: boolean;
+  showTranslation?: boolean;
   showKanaForKanaOnly?: boolean;
   allowIndexFallback?: boolean;
 }
@@ -20,30 +28,56 @@ interface Props {
 export default function JapaneseReading({
   html,
   children,
+  kana: explicitKana,
+  romaji: explicitRomaji,
+  translation,
   contentClassName = "font-mincho text-lg leading-[2.2] text-[#F1EBDD]",
-  kanaClassName = "mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]",
-  romajiClassName = "mt-1 text-sm italic leading-relaxed text-[#A9A398]",
+  kanaClassName = "mt-2 font-mincho text-lg leading-relaxed text-[#D6AD4F]",
+  romajiClassName = "mt-1 text-base italic leading-relaxed text-[#A9A398]",
+  translationClassName = "mt-3 text-base leading-7 text-[#A3A099]",
+  showOriginal = true,
   showKana = true,
   showRomaji = true,
+  showTranslation = true,
   showKanaForKanaOnly = false,
   allowIndexFallback = false,
 }: Props) {
-  const reading = html !== undefined
+  const extractedReading = html !== undefined
     ? extractKanaFromRubyHtml(html, allowIndexFallback)
     : extractKanaFromReactNode(children, allowIndexFallback);
-  const kana = reading ? toHiragana(reading.kana) : "";
-  const showKanaLine = Boolean(reading && showKana && (reading.hasKanji || showKanaForKanaOnly));
-  const romaji = kana && showRomaji ? toRomaji(kana) : "";
+
+  const rawKana = explicitKana?.trim() || extractedReading?.kana || "";
+  const normalizedKana = rawKana ? toHiragana(rawKana) : "";
+  const romanization = explicitRomaji?.trim() || (normalizedKana ? toRomaji(normalizedKana) : "");
+  const hasReading = Boolean(normalizedKana);
+  const showKanaLine = Boolean(
+    showKana &&
+    normalizedKana &&
+    (explicitKana?.trim() || extractedReading?.hasKanji || showKanaForKanaOnly)
+  );
+  const hasTranslation = translation !== undefined && translation !== null && translation !== "";
 
   return (
     <span className="block min-w-0">
-      {html !== undefined ? (
-        <span className={reading ? contentClassName : undefined} dangerouslySetInnerHTML={{ __html: html }} />
-      ) : (
-        <span className={reading ? contentClassName : undefined}>{children}</span>
+      {showOriginal && (
+        html !== undefined ? (
+          <span
+            className={hasReading ? contentClassName : undefined}
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        ) : (
+          <span className={hasReading ? contentClassName : undefined}>{children}</span>
+        )
       )}
-      {showKanaLine && reading && <span className={kanaClassName + " block"}>（{kana}）</span>}
-      {romaji && <span className={romajiClassName + " block"}>{romaji}</span>}
+      {showKanaLine && (
+        <span className={kanaClassName + " block"}>（{normalizedKana}）</span>
+      )}
+      {showRomaji && romanization && (
+        <span className={romajiClassName + " block"}>{romanization}</span>
+      )}
+      {showTranslation && hasTranslation && (
+        <span className={translationClassName + " block"}>{translation}</span>
+      )}
     </span>
   );
 }
