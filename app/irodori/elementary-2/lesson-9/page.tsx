@@ -76,7 +76,7 @@ const talkNewYearHolidayConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>家族と親戚の家に行きました。二日だけでしたが、楽しかったです。</>,
     romaji: "Kazoku to shinseki no ie ni ikimashita. Futsuka dake deshita ga, tanoshikatta desu.",
-    translation: "Saya menghabiskan dua hari bersama keluarga di rumah kerabat. Seru juga.",
+    translation: "Saya menghabiskan dua hari bersama keluarga di rumah saudara. Seru juga.",
     audioFileName: "irodori-elementary2-09-a02-l02.mp3",
   },
   {
