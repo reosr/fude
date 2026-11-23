@@ -187,7 +187,7 @@ const canDos = [
   { id: "read-floor-guide", text: "Membaca panduan lantai toko untuk menemukan bagian tempat barang yang dicari." },
   { id: "ask-store-staff", text: "Menanyakan lokasi barang kepada staf pusat perbelanjaan dan memahami petunjuknya." },
   { id: "comment-on-products", text: "Bertukar komentar sederhana tentang produk saat berbelanja bersama teman." },
-  { id: "understand-store-signs", text: "Memahami arti papan tanda yang umum ditemui di toserba atau pusat perbelanjaan." },
+  { id: "understand-store-signs", text: "Memahami arti papan tanda yang umum ditemui di department store atau pusat perbelanjaan." },
 ];
 
 const ratingOptions: { value: IrodoriRating; label: string }[] = [
@@ -328,7 +328,7 @@ const quizQuestions: Task[] = [
     explanation: <>「でございます」 merupakan bentuk yang lebih sopan dari 「です」.</>,
   },
   {
-    prompt: <>Pilih bentuk na-adjective yang benar untuk menyampaikan kesan tentang toko yang indah.</>,
+    prompt: <>Pilih bentuk kata sifat -na yang benar untuk menyampaikan kesan tentang toko yang indah.</>,
     options: [
       { key: "a", label: "きれいな店ですね。" },
       { key: "b", label: "きれいい店ですね。" },
@@ -376,7 +376,7 @@ const storeTypes = [
   ["ホームセンター", "hoomu sentaa", "Toko perlengkapan rumah"],
   ["文房具店", "ぶんぼうぐてん · bunbougu-ten", "Toko alat tulis"],
   ["家電量販店", "かでんりょうはんてん · kaden ryouhanten", "Toko elektronik"],
-  ["デパート", "depaato", "Toserba"],
+  ["デパート", "depaato", "Department store"],
   ["ショッピングセンター", "shoppingu sentaa", "Pusat perbelanjaan"],
 ];
 
