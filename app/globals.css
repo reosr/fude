@@ -190,3 +190,30 @@ input, textarea, .selectable-text {
     animation: none !important;
   }
 }
+
+
+/* Irodori vocabulary cards: improve Japanese text readability and spacing. */
+main section > div.grid:has(> article > p.font-mincho.text-base) {
+  gap: 0.75rem;
+}
+
+main section > div.grid:has(> article > p.font-mincho.text-base) > article {
+  padding: 1rem;
+}
+
+main section > div.grid:has(> article > p.font-mincho.text-base) > article > p.font-mincho.text-base {
+  font-size: 1.25rem;
+  line-height: 1.55;
+}
+
+main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:nth-child(2),
+main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:nth-child(3) {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  main section > div.grid:has(> article > p.font-mincho.text-base) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
