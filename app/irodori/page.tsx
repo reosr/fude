@@ -52,7 +52,7 @@ export default function IrodoriPage() {
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
       >
         <ArrowLeft size={15} />
-        Kembali ke Home
+        Kembali ke Beranda
       </Link>
 
       <section className="relative isolate overflow-hidden rounded-[28px] border border-[#79602F]/45 bg-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
@@ -78,7 +78,7 @@ export default function IrodoriPage() {
           </div>
 
           <p className="max-w-xl text-sm leading-7 text-[#B6B0A5]">
-            Belajar melalui situasi nyata dan tujuan komunikasi (Can-do).
+            Belajar melalui situasi nyata dan target komunikasi.
             Pilih tahap sesuai kemampuanmu. Progres Irodori berdiri sendiri,
             terpisah dari Minna no Nihongo dan JLPT.
           </p>
@@ -90,7 +90,7 @@ export default function IrodoriPage() {
             </span>
             <span className="inline-flex items-center gap-2 rounded-xl border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
               <Headphones size={14} className="text-[#D6AD4F]" />
-              Listening & dialog
+              Menyimak & dialog
             </span>
             <span className="inline-flex items-center gap-2 rounded-xl border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
               <Compass size={14} className="text-[#D6AD4F]" />
