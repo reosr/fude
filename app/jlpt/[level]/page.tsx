@@ -253,7 +253,7 @@ export default function JLPTLevelPage() {
           href="/"
           className="text-[#C93438] hover:underline"
         >
-          Kembali ke Home
+          Kembali ke Beranda
         </Link>
       </div>
     );
@@ -277,7 +277,7 @@ export default function JLPTLevelPage() {
         className="flex items-center gap-2 text-sm font-bold text-[#A3A099] hover:text-[#EAE6DD] transition-colors mb-4"
       >
         <ArrowLeft size={16} />
-        Kembali ke Home
+        Kembali ke Beranda
       </button>
 
       {/* Header */}
@@ -292,7 +292,7 @@ export default function JLPTLevelPage() {
 
         <p className="text-[#A3A099] text-sm">
           Pilih set ujian di bawah ini. Setiap set terdiri dari
-          Kosakata, Grammar, Membaca, dan Mendengar.
+          Kosakata, Tata Bahasa, Membaca, dan Mendengar.
         </p>
 
         {sets.length > 0 && (
@@ -379,15 +379,15 @@ export default function JLPTLevelPage() {
                       </span>
 
                       <span className="bg-[#262523] px-2 py-1 rounded">
-                        {set.sections?.grammar?.length || 0} Grammar
+                        {set.sections?.grammar?.length || 0} Tata Bahasa
                       </span>
 
                       <span className="bg-[#262523] px-2 py-1 rounded">
-                        {set.sections?.reading?.length || 0} Reading
+                        {set.sections?.reading?.length || 0} Membaca
                       </span>
 
                       <span className="bg-[#262523] px-2 py-1 rounded">
-                        {set.sections?.listening?.length || 0} Listening
+                        {set.sections?.listening?.length || 0} Mendengar
                       </span>
                     </div>
 
