@@ -10918,5 +10918,364 @@
         "imageQuery": "確認する Japanese disaster preparedness vocabulary"
       }
     ]
+  },
+  {
+    "lessonId": "elementary2-17",
+    "courseId": "elementary2",
+    "courseLabel": "Irodori Elementary 2",
+    "lessonNumber": 17,
+    "lessonTitle": "I can speak Japanese better than before.",
+    "vocab": [
+      {
+        "kanji": "最近",
+        "kana": "さいきん",
+        "romaji": "saikin",
+        "meaning": "Belakangan ini",
+        "imageQuery": "最近 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "この間",
+        "kana": "このあいだ",
+        "romaji": "kono aida",
+        "meaning": "Beberapa waktu lalu",
+        "imageQuery": "この間 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "前",
+        "kana": "まえ",
+        "romaji": "mae",
+        "meaning": "Sebelumnya atau dahulu",
+        "imageQuery": "前 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "今",
+        "kana": "いま",
+        "romaji": "ima",
+        "meaning": "Sekarang",
+        "imageQuery": "今 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "生活",
+        "kana": "せいかつ",
+        "romaji": "seikatsu",
+        "meaning": "Kehidupan sehari-hari",
+        "imageQuery": "生活 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "変化",
+        "kana": "へんか",
+        "romaji": "henka",
+        "meaning": "Perubahan",
+        "imageQuery": "変化 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "日本語",
+        "kana": "にほんご",
+        "romaji": "nihongo",
+        "meaning": "Bahasa Jepang",
+        "imageQuery": "日本語 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "会話",
+        "kana": "かいわ",
+        "romaji": "kaiwa",
+        "meaning": "Percakapan",
+        "imageQuery": "会話 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "話す",
+        "kana": "はなす",
+        "romaji": "hanasu",
+        "meaning": "Berbicara",
+        "imageQuery": "話す everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "話せる",
+        "kana": "はなせる",
+        "romaji": "hanaseru",
+        "meaning": "Bisa berbicara",
+        "imageQuery": "話せる everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "聞く",
+        "kana": "きく",
+        "romaji": "kiku",
+        "meaning": "Mendengar atau bertanya",
+        "imageQuery": "聞く everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "聞き取る",
+        "kana": "ききとる",
+        "romaji": "kikitoru",
+        "meaning": "Menangkap atau memahami yang didengar",
+        "imageQuery": "聞き取る everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "読む",
+        "kana": "よむ",
+        "romaji": "yomu",
+        "meaning": "Membaca",
+        "imageQuery": "読む everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "書く",
+        "kana": "かく",
+        "romaji": "kaku",
+        "meaning": "Menulis",
+        "imageQuery": "書く everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "教える",
+        "kana": "おしえる",
+        "romaji": "oshieru",
+        "meaning": "Mengajar atau memberi tahu",
+        "imageQuery": "教える everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "教わる",
+        "kana": "おそわる",
+        "romaji": "osowaru",
+        "meaning": "Belajar dari seseorang",
+        "imageQuery": "教わる everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "授業",
+        "kana": "じゅぎょう",
+        "romaji": "jugyou",
+        "meaning": "Pelajaran atau kelas",
+        "imageQuery": "授業 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "先生",
+        "kana": "せんせい",
+        "romaji": "sensei",
+        "meaning": "Guru",
+        "imageQuery": "先生 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "言葉",
+        "kana": "ことば",
+        "romaji": "kotoba",
+        "meaning": "Kata atau bahasa",
+        "imageQuery": "言葉 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "意味",
+        "kana": "いみ",
+        "romaji": "imi",
+        "meaning": "Arti atau makna",
+        "imageQuery": "意味 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "質問",
+        "kana": "しつもん",
+        "romaji": "shitsumon",
+        "meaning": "Pertanyaan",
+        "imageQuery": "質問 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "問題",
+        "kana": "もんだい",
+        "romaji": "mondai",
+        "meaning": "Masalah atau soal",
+        "imageQuery": "問題 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "大変",
+        "kana": "たいへん",
+        "romaji": "taihen",
+        "meaning": "Sulit atau berat",
+        "imageQuery": "大変 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "困る",
+        "kana": "こまる",
+        "romaji": "komaru",
+        "meaning": "Kesulitan atau kebingungan",
+        "imageQuery": "困る everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "違う",
+        "kana": "ちがう",
+        "romaji": "chigau",
+        "meaning": "Berbeda",
+        "imageQuery": "違う everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "慣れる",
+        "kana": "なれる",
+        "romaji": "nareru",
+        "meaning": "Menjadi terbiasa",
+        "imageQuery": "慣れる everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "増える",
+        "kana": "ふえる",
+        "romaji": "fueru",
+        "meaning": "Bertambah",
+        "imageQuery": "増える everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "減る",
+        "kana": "へる",
+        "romaji": "heru",
+        "meaning": "Berkurang",
+        "imageQuery": "減る everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "笑う",
+        "kana": "わらう",
+        "romaji": "warau",
+        "meaning": "Tertawa",
+        "imageQuery": "笑う everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "苦労する",
+        "kana": "くろうする",
+        "romaji": "kurou suru",
+        "meaning": "Mengalami kesulitan atau berjuang",
+        "imageQuery": "苦労する everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "仕事",
+        "kana": "しごと",
+        "romaji": "shigoto",
+        "meaning": "Pekerjaan",
+        "imageQuery": "仕事 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "職場",
+        "kana": "しょくば",
+        "romaji": "shokuba",
+        "meaning": "Tempat kerja",
+        "imageQuery": "職場 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "同僚",
+        "kana": "どうりょう",
+        "romaji": "douryou",
+        "meaning": "Rekan kerja",
+        "imageQuery": "同僚 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "やり方",
+        "kana": "やりかた",
+        "romaji": "yarikata",
+        "meaning": "Cara atau metode",
+        "imageQuery": "やり方 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman",
+        "imageQuery": "経験 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "趣味",
+        "kana": "しゅみ",
+        "romaji": "shumi",
+        "meaning": "Hobi",
+        "imageQuery": "趣味 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "サークル",
+        "kana": "サークル",
+        "romaji": "saakuru",
+        "meaning": "Klub atau kelompok kegiatan",
+        "imageQuery": "サークル everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Berpartisipasi",
+        "imageQuery": "参加する everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "誘う",
+        "kana": "さそう",
+        "romaji": "sasou",
+        "meaning": "Mengajak",
+        "imageQuery": "誘う everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "友達",
+        "kana": "ともだち",
+        "romaji": "tomodachi",
+        "meaning": "Teman",
+        "imageQuery": "友達 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi",
+        "imageQuery": "連絡する everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "近況",
+        "kana": "きんきょう",
+        "romaji": "kinkyou",
+        "meaning": "Kabar atau keadaan terkini",
+        "imageQuery": "近況 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "近況報告",
+        "kana": "きんきょうほうこく",
+        "romaji": "kinkyou houkoku",
+        "meaning": "Laporan kabar terbaru",
+        "imageQuery": "近況報告 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "メッセージ",
+        "kana": "メッセージ",
+        "romaji": "messeeji",
+        "meaning": "Pesan",
+        "imageQuery": "メッセージ everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "おかげで",
+        "kana": "おかげで",
+        "romaji": "okage de",
+        "meaning": "Berkat atau berkat bantuan",
+        "imageQuery": "おかげで everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "前より",
+        "kana": "まえより",
+        "romaji": "mae yori",
+        "meaning": "Dibandingkan sebelumnya",
+        "imageQuery": "前より everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "できる",
+        "kana": "できる",
+        "romaji": "dekiru",
+        "meaning": "Bisa atau mampu",
+        "imageQuery": "できる everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "上手になる",
+        "kana": "じょうずになる",
+        "romaji": "jouzu ni naru",
+        "meaning": "Menjadi mahir",
+        "imageQuery": "上手になる everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "便利",
+        "kana": "べんり",
+        "romaji": "benri",
+        "meaning": "Praktis atau nyaman",
+        "imageQuery": "便利 everyday life Japanese vocabulary"
+      },
+      {
+        "kanji": "続ける",
+        "kana": "つづける",
+        "romaji": "tsuzukeru",
+        "meaning": "Melanjutkan atau terus melakukan",
+        "imageQuery": "続ける everyday life Japanese vocabulary"
+      }
+    ]
   }
 ]
