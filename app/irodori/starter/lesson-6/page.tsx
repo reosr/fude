@@ -45,7 +45,7 @@ const menuConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>ハンバーガーのセットはありますか？</>,
     romaji: "Hanbaagaa no setto wa arimasu ka?",
-    translation: "Apakah ada paket hamburger?",
+    translation: "Apakah ada paket burger?",
     audioFileName: "irodori-starter-06-a01-l03.mp3",
   },
   {
