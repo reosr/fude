@@ -15,7 +15,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
 import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
@@ -27,42 +27,42 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const workplaceTourConversation: IrodoriUtterance[] = [
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>こちらへどうぞ。<ruby>部屋<rt>へや</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>します。</>,
     romaji: "Kochira e douzo. Heya o annai shimasu.",
     translation: "Silakan lewat sini. Saya akan menunjukkan ruangan.",
     audioFileName: "irodori-starter-08-a01-l01.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>ありがとうございます。</>,
     romaji: "Arigatou gozaimasu.",
     translation: "Terima kasih.",
     audioFileName: "irodori-starter-08-a01-l02.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ここは<ruby>会議室<rt>かいぎしつ</rt></ruby>です。ここで<ruby>会議<rt>かいぎ</rt></ruby>をします。</>,
     romaji: "Koko wa kaigishitsu desu. Koko de kaigi o shimasu.",
     translation: "Ini ruang rapat. Rapat dilakukan di sini.",
     audioFileName: "irodori-starter-08-a01-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>あちらは<ruby>何<rt>なん</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>ですか？</>,
     romaji: "Achira wa nan no heya desu ka?",
     translation: "Ruangan yang di sana itu ruangan apa?",
     audioFileName: "irodori-starter-08-a01-l04.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>あそこは<ruby>休憩室<rt>きゅうけいしつ</rt></ruby>です。ここで<ruby>休<rt>やす</rt></ruby>みます。</>,
     romaji: "Asoko wa kyuukeishitsu desu. Koko de yasumimasu.",
     translation: "Itu ruang istirahat. Kita beristirahat di sini.",
     audioFileName: "irodori-starter-08-a01-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>わかりました。ありがとうございます。</>,
     romaji: "Wakarimashita. Arigatou gozaimasu.",
     translation: "Saya mengerti. Terima kasih.",
@@ -72,35 +72,35 @@ const workplaceTourConversation: IrodoriUtterance[] = [
 
 const personLocationConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>すみません。<ruby>山田<rt>やまだ</rt></ruby>さんは、どこにいますか？</>,
     romaji: "Sumimasen. Yamada-san wa, doko ni imasu ka?",
     translation: "Permisi. Yamada ada di mana?",
     audioFileName: "irodori-starter-08-a02-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <><ruby>食堂<rt>しょくどう</rt></ruby>にいますよ。</>,
     romaji: "Shokudou ni imasu yo.",
     translation: "Ada di kantin.",
     audioFileName: "irodori-starter-08-a02-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <><ruby>佐藤<rt>さとう</rt></ruby>さんは、いますか？</>,
     romaji: "Satou-san wa, imasu ka?",
     translation: "Apakah Sato ada?",
     audioFileName: "irodori-starter-08-a02-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>すみません。<ruby>今<rt>いま</rt></ruby>、いません。たぶん<ruby>会議室<rt>かいぎしつ</rt></ruby>です。</>,
     romaji: "Sumimasen. Ima, imasen. Tabun kaigishitsu desu.",
     translation: "Maaf, sekarang tidak ada di sini. Mungkin di ruang rapat.",
     audioFileName: "irodori-starter-08-a02-l04.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>そうですか。ありがとうございます。</>,
     romaji: "Sou desu ka. Arigatou gozaimasu.",
     translation: "Begitu ya. Terima kasih.",
@@ -110,42 +110,42 @@ const personLocationConversation: IrodoriUtterance[] = [
 
 const equipmentLocationConversation: IrodoriUtterance[] = [
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>あのう、はさみはどこにありますか？</>,
     romaji: "Anou, hasami wa doko ni arimasu ka?",
     translation: "Permisi, gunting ada di mana?",
     audioFileName: "irodori-starter-08-a03-l01.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ここにあります。<ruby>机<rt>つくえ</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>です。</>,
     romaji: "Koko ni arimasu. Tsukue no ue desu.",
     translation: "Ada di sini. Di atas meja.",
     audioFileName: "irodori-starter-08-a03-l02.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>のりは、どこですか？</>,
     romaji: "Nori wa, doko desu ka?",
     translation: "Kalau lem, ada di mana?",
     audioFileName: "irodori-starter-08-a03-l03.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <><ruby>引<rt>ひ</rt></ruby>き<ruby>出<rt>だ</rt></ruby>しの<ruby>中<rt>なか</rt></ruby>にあります。</>,
     romaji: "Hikidashi no naka ni arimasu.",
     translation: "Ada di dalam laci.",
     audioFileName: "irodori-starter-08-a03-l04.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ごみ<ruby>箱<rt>ばこ</rt></ruby>は、どこですか？</>,
     romaji: "Gomibako wa, doko desu ka?",
     translation: "Tempat sampah ada di mana?",
     audioFileName: "irodori-starter-08-a03-l05.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>あそこです。<ruby>机<rt>つくえ</rt></ruby>の<ruby>下<rt>した</rt></ruby>にあります。</>,
     romaji: "Asoko desu. Tsukue no shita ni arimasu.",
     translation: "Di sana. Ada di bawah meja.",
@@ -155,35 +155,35 @@ const equipmentLocationConversation: IrodoriUtterance[] = [
 
 const roomSignConversation: IrodoriUtterance[] = [
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>この<ruby>表示<rt>ひょうじ</rt></ruby>は、<ruby>何<rt>なん</rt></ruby>ですか？</>,
     romaji: "Kono hyouji wa, nan desu ka?",
     translation: "Tulisan penanda ini artinya apa?",
     audioFileName: "irodori-starter-08-a04-l01.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>「<ruby>事務室<rt>じむしつ</rt></ruby>」です。</>,
     romaji: "Jimushitsu desu.",
     translation: "Itu “ruang kantor”.",
     audioFileName: "irodori-starter-08-a04-l02.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>ここで<ruby>何<rt>なに</rt></ruby>をしますか？</>,
     romaji: "Koko de nani o shimasu ka?",
     translation: "Apa yang dilakukan di sini?",
     audioFileName: "irodori-starter-08-a04-l03.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ここで<ruby>仕事<rt>しごと</rt></ruby>をします。</>,
     romaji: "Koko de shigoto o shimasu.",
     translation: "Orang bekerja di sini.",
     audioFileName: "irodori-starter-08-a04-l04.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>わかりました。ありがとうございます。</>,
     romaji: "Wakarimashita. Arigatou gozaimasu.",
     translation: "Saya mengerti. Terima kasih.",
@@ -533,7 +533,7 @@ export default function IrodoriPemulaLessonEightPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Tur gedung contoh"
-          tokohs={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
+          speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={workplaceTourConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -590,7 +590,7 @@ export default function IrodoriPemulaLessonEightPage() {
         </p>
         <IrodoriConversation
           title="Scene B · Mencari rekan di gedung"
-          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={personLocationConversation}
         />
         <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
@@ -681,7 +681,7 @@ export default function IrodoriPemulaLessonEightPage() {
         </p>
         <IrodoriConversation
           title="Scene C · Mencari perlengkapan kantor"
-          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
+          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={equipmentLocationConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -782,7 +782,7 @@ export default function IrodoriPemulaLessonEightPage() {
         </p>
         <IrodoriConversation
           title="Scene D · Memastikan tulisan di pintu"
-          tokohs={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.akiko]}
+          speakers={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.akiko]}
           utterances={roomSignConversation}
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
