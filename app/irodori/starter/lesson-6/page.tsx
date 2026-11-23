@@ -913,6 +913,7 @@ export default function IrodoriPemulaLessonSixPage() {
                 >
                   {item.num}
                 </JapaneseVocabularyReading>
+              </div>
             </article>
           ))}
         </div>
