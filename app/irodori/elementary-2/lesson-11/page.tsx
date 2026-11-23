@@ -59,8 +59,8 @@ const forgotPointCardConversation: IrodoriUtterance[] = [
 const lostBottleConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>すみません。水筒を忘れてしまったんですが、届いていませんか。</>, romaji: "Sumimasen. Suitou o wasurete shimattan desu ga, todoite imasen ka?", translation: "Permisi, sepertinya botol minum saya tertinggal. Apakah ada yang menyerahkannya ke sini?", audioFileName: "irodori-elementary2-11-a04-l01.mp3" },
   { speakerId: "kenji", japanese: <>どんな水筒ですか。特徴を教えてください。</>, romaji: "Donna suitou desu ka? Tokuchou o oshiete kudasai.", translation: "Botol minum seperti apa? Bisa jelaskan ciri-cirinya?", audioFileName: "irodori-elementary2-11-a04-l02.mp3" },
-  { speakerId: "akiko", japanese: <>青い水筒で、白い星のシールがついています。</>, romaji: "Aoi suitou de, shiroi hoshi no shiiru ga tsuite imasu.", translation: "Botolnya berwarna biru dan ada stiker bintang putih.", audioFileName: "irodori-elementary2-11-a04-l03.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin tadi botol itu ada di food court sekitar tengah hari.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
+  { speakerId: "akiko", japanese: <>青い水筒で、白い星のシールがついています。</>, romaji: "Aoi suitou de, shiroi hoshi no shiiru ga tsuite imasu.", translation: "Botol minumnya berwarna biru, dengan stiker bintang putih.", audioFileName: "irodori-elementary2-11-a04-l03.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin botol itu tertinggal di food court sekitar tengah hari.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
 ];
 
 const mallAnnouncementConversation: IrodoriUtterance[] = [
@@ -498,7 +498,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
         </div>
         <div className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
           <p className="font-mincho text-sm leading-7 text-[#F1EBDD]">青い水筒です。白い星のシールがついています。お昼ごろ、フードコートに置いたかもしれません。</p>
-          <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">Botol minumnya berwarna biru. Ada stiker bintang putih. Mungkin saya meletakkannya di area makan sekitar siang tadi.</p>
+          <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">Botol minumnya berwarna biru. Ada stiker bintang putih. Mungkin saya meninggalkannya di food court sekitar tengah hari.</p>
         </div>
         <label htmlFor="lost-item-description-draft" className="block text-xs font-semibold text-[#A9C9E8]">Tulis penjelasan dalam bahasa Jepang</label>
         <textarea
