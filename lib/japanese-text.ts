@@ -343,7 +343,7 @@ const VERB_NOTATION_FORMS: Array<[string, string]> = [
   ["ます-stem", "pangkal"],
   ["stem", "pangkal"],
   ["form", "bentuk ます"],
-  ["kan", "(kata kerja)"],
+  ["kan", "yang dikenai tindakan"],
   ["ませんでした", "bentuk negatif lampau ます"],
   ["なければなりません", "bentuk ない + ければなりません"],
   ["なければいけません", "bentuk ない + ければいけません"],
@@ -359,6 +359,7 @@ const VERB_NOTATION_FORMS: Array<[string, string]> = [
   ["てくださいます", "bentuk て + くださいます"],
   ["てみてください", "bentuk て + みてください"],
   ["ないでください", "bentuk ないで + ください"],
+  ["ない形", "bentuk ない"],
   ["てはいけません", "bentuk て + はいけません"],
   ["てしまいます", "bentuk て + しまいます"],
   ["ておきました", "bentuk て + おきました"],
@@ -438,6 +439,10 @@ const VERB_NOTATION_PATTERN = new RegExp(
  */
 export function formatGrammarNotation(value: string): string {
   let formatted = value.replace(
+    /(^|[^A-Za-z0-9])di-V-kan(?=$|[^A-Za-z0-9])/g,
+    (_match, prefix: string) => prefix + "dikenai tindakan"
+  );
+  formatted = formatted.replace(
     VERB_NOTATION_PATTERN,
     (match, prefix: string, number: string, suffix: string) => {
       const description = VERB_NOTATION_FORMS.find(([key]) => key === suffix)?.[1] ?? suffix;
