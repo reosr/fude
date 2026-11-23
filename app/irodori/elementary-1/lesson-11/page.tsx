@@ -29,7 +29,7 @@ const lessonId = "elementary1-11";
 
 const planningFoodConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>来週の集まり、何を持って行きますか。</>,romaji:"Raishuu no atsumari, nani o motte ikimasu ka?",translation:"Kita perlu bawa apa untuk acara minggu depan?",audioFileName:"irodori-elementary1-11-a01-l01.mp3"},
-{speakerId:"sota",japanese:<>肉と野菜は、私が買って行きますよ。</>,romaji:"Niku to yasai wa, watashi ga katte ikimasu yo.",translation:"Daging dan sayurannya saya yang beli dan bawa.",audioFileName:"irodori-elementary1-11-a01-l02.mp3"},
+{speakerId:"sota",japanese:<>肉と野菜は、私が買って行きますよ。</>,romaji:"Niku to yasai wa, watashi ga katte ikimasu yo.",translation:"Daging dan sayuran biar saya yang beli dan bawa.",audioFileName:"irodori-elementary1-11-a01-l02.mp3"},
 {speakerId:"akiko",japanese:<>じゃあ、私はおにぎりを作って持って行きますね。</>,romaji:"Jaa, watashi wa onigiri o tsukutte motte ikimasu ne.",translation:"Kalau begitu, saya buat onigiri dan bawa ke sana, ya.",audioFileName:"irodori-elementary1-11-a01-l03.mp3"},
 {speakerId:"kenji",japanese:<>私はお茶と果物を持って行きます。</>,romaji:"Watashi wa ocha to kudamono o motte ikimasu.",translation:"Saya akan membawa teh dan buah-buahan.",audioFileName:"irodori-elementary1-11-a01-l04.mp3"},
 ];
@@ -56,7 +56,7 @@ const bringingItemsConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>お皿とコップは、だれが持って行きますか。</>,romaji:"Osara to koppu wa, dare ga motte ikimasu ka?",translation:"Siapa yang akan membawa piring dan gelas?",audioFileName:"irodori-elementary1-11-a05-l01.mp3"},
 {speakerId:"yui",japanese:<>私が持って行きます。</>,romaji:"Watashi ga motte ikimasu.",translation:"Saya yang akan membawanya.",audioFileName:"irodori-elementary1-11-a05-l02.mp3"},
 {speakerId:"sota",japanese:<>ありがとうございます。飲み物は、もう買いましたか。</>,romaji:"Arigatou gozaimasu. Nomimono wa, mou kaimashita ka?",translation:"Terima kasih. Minumannya sudah kamu beli?",audioFileName:"irodori-elementary1-11-a05-l03.mp3"},
-{speakerId:"yui",japanese:<>はい、さっき買って来ました。</>,romaji:"Hai, sakki katte kimashita.",translation:"Ya, tadi saya sudah membeli dan membawanya ke sini.",audioFileName:"irodori-elementary1-11-a05-l04.mp3"},
+{speakerId:"yui",japanese:<>はい、さっき買って来ました。</>,romaji:"Hai, sakki katte kimashita.",translation:"Ya, tadi saya sudah membelinya dan membawanya ke sini.",audioFileName:"irodori-elementary1-11-a05-l04.mp3"},
 ];
 const canDos=[
 {id:"share-who-brings-what",text:"Membicarakan siapa yang akan menyiapkan atau membawa barang saat mengadakan acara makan bersama."},
@@ -74,7 +74,7 @@ const sharingPlan=[
 const foodLabels=[
 {id:"onigiri",name:"おにぎり · Onigiri",ingredients:"米（こめ）、のり、塩",reading:"Kome, nori, shio",meaning:"Beras, rumput laut, garam",allergens:"Contoh: tidak ada bahan alergen yang dicantumkan pada label latihan ini.",dateLabel:"消費期限",dateValue:"2026年12月10日"},
 {id:"sandwich",name:"サンドイッチ · Sandwich",ingredients:"パン、卵、レタス",reading:"Pan, tamago, retasu",meaning:"Roti, telur, selada",allergens:"Label latihan: mengandung telur dan gandum.",dateLabel:"消費期限",dateValue:"2026年12月11日"},
-{id:"cookies",name:"クッキー · Kukis",ingredients:"小麦粉、砂糖、バター",reading:"Komugiko, satou, bataa",meaning:"Tepung terigu, gula, mentega",allergens:"Label latihan: mengandung gandum dan susu.",dateLabel:"賞味期限",dateValue:"2026年12月20日"},
+{id:"cookies",name:"クッキー · Cookies",ingredients:"小麦粉、砂糖、バター",reading:"Komugiko, satou, bataa",meaning:"Tepung terigu, gula, mentega",allergens:"Label latihan: mengandung gandum dan susu.",dateLabel:"賞味期限",dateValue:"2026年12月20日"},
 ];
 
 const ratingOptions: { value: IrodoriRating; label: string }[] = [
