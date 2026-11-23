@@ -37,28 +37,28 @@ const readTrainTicketConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>この切符は、何時に出発しますか。</>,
     romaji: "Kono kippu wa, nanji ni shuppatsu shimasu ka?",
-    translation: "Kereta pada tiket ini berangkat pukul berapa?",
+    translation: "Kereta ini berangkat pukul berapa?",
     audioFileName: "irodori-elementary2-06-a01-l01.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>午前九時三十分に出発します。到着は十一時十五分です。</>,
     romaji: "Gozen kuji sanjuppun ni shuppatsu shimasu. Touchaku wa juuichiji juugofun desu.",
-    translation: "Berangkat pukul 09.30 pagi. Tiba pukul 11.15.",
+    translation: "Berangkat pukul 09.30 dan tiba pukul 11.15.",
     audioFileName: "irodori-elementary2-06-a01-l02.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>何番線から乗りますか。</>,
     romaji: "Nanbansen kara norimasu ka?",
-    translation: "Naik dari jalur nomor berapa?",
+    translation: "Berangkat dari jalur berapa?",
     audioFileName: "irodori-elementary2-06-a01-l03.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>三番線です。二号車の指定席ですよ。</>,
     romaji: "Sanbansen desu. Nigousha no shiteiseki desu yo.",
-    translation: "Jalur 3. Kursi yang dipesan ada di gerbong 2.",
+    translation: "Jalur 3. Kursi reservasi saya ada di gerbong 2.",
     audioFileName: "irodori-elementary2-06-a01-l04.mp3",
   },
 ];
@@ -137,7 +137,7 @@ const shareTravelImpressionsConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>海で泳げたし、きれいな夕日も見られたし、とても楽しかったです。</>,
     romaji: "Umi de oyogeta shi, kirei na yuuhi mo mirareta shi, totemo tanoshikatta desu.",
-    translation: "Saya bisa berenang di laut dan melihat matahari terbenam yang indah. Sangat menyenangkan.",
+    translation: "Saya bisa berenang di laut dan menikmati matahari terbenam yang indah. Seru sekali.",
     audioFileName: "irodori-elementary2-06-a04-l02.mp3",
   },
   {
@@ -151,7 +151,7 @@ const shareTravelImpressionsConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>友だちとゆっくり話せたことです。</>,
     romaji: "Tomodachi to yukkuri hanaseta koto desu.",
-    translation: "Saya bisa mengobrol santai dengan teman.",
+    translation: "Saya bisa berbincang santai dengan teman.",
     audioFileName: "irodori-elementary2-06-a04-l04.mp3",
   },
 ];
@@ -168,7 +168,7 @@ const travelPostConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>はい。先週、友だちと二人で大阪へ行きました。</>,
     romaji: "Hai. Senshuu, tomodachi to futari de Oosaka e ikimashita.",
-    translation: "Ya. Minggu lalu, saya pergi ke Osaka berdua dengan teman.",
+    translation: "Ya. Minggu lalu, saya pergi ke Osaka bersama seorang teman.",
     audioFileName: "irodori-elementary2-06-a05-l02.mp3",
   },
   {
@@ -311,7 +311,7 @@ const travelPost = {
   heading: "週末の大阪旅行",
   japanese: "先週、友だちと二人で大阪へ行きました。大きな公園を歩いたり、町の景色を見たりしました。空が青くて、とても気持ちよかったです。また行きたいです。",
   reading: "せんしゅう、ともだちとふたりでおおさかへいきました。おおきなこうえんをあるいたり、まちのけしきをみたりしました。そらがあおくて、とてもきもちよかったです。またいきたいです。",
-  translation: "Minggu lalu, saya pergi ke Osaka berdua dengan teman. Kami berjalan-jalan di taman yang luas dan melihat pemandangan kota. Langitnya biru dan suasananya sangat menyenangkan. Saya ingin pergi lagi.",
+  translation: "Minggu lalu, saya pergi ke Osaka bersama seorang teman. Kami berjalan-jalan di taman yang luas dan menikmati pemandangan kota. Langitnya biru dan suasananya menyenangkan sekali. Saya ingin pergi lagi.",
 };
 
 const ratingOptions: { value: IrodoriRating; label: string }[] = [
@@ -400,7 +400,7 @@ const simulations: Simulation[] = [
     heading: "Menemukan pengalaman penulis",
     prompt: "Baca kalimat 「友だちと二人で大阪へ行きました。公園を歩いて、楽しかったです」. Apa pengalaman penulis?",
     japanese: <>友だちと二人で大阪へ行きました。公園を歩いて、楽しかったです。</>,
-    translation: "Saya pergi ke Osaka berdua dengan teman. Berjalan-jalan di taman dan merasa senang.",
+    translation: "Saya pergi ke Osaka bersama seorang teman. Kami berjalan-jalan di taman dan menikmati suasananya.",
     options: [
       { key: "a", label: "Pergi ke Osaka bersama teman dan berjalan di taman.", meaning: "Inilah dua informasi utama yang terdapat dalam unggahan." },
       { key: "b", label: "Pergi sendiri ke Tokyo untuk bekerja.", meaning: "Kalimat tidak menyebut Tokyo atau pekerjaan." },
