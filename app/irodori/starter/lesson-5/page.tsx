@@ -373,9 +373,9 @@ const japaneseFoods = [
   { jp: "すし", reading: "sushi", meaning: "Sushi (nasi berbumbu cuka dengan aneka lauk)", icon: "🍣" },
   { jp: <><ruby>天<rt>てん</rt></ruby>ぷら</>, reading: "tenpura", meaning: "Tempura (makanan berbalut tepung yang digoreng)", icon: "🍤" },
   { jp: "ラーメン", reading: "raamen", meaning: "Ramen (mi berkuah khas Jepang)", icon: "🍥" },
-  { jp: "カレー", reading: "karee", meaning: "Kari ala Jepang", icon: "🍛" },
-  { jp: <ruby>納豆<rt>なっとう</rt></ruby>, reading: "nattou", meaning: "Kedelai fermentasi", icon: "🫘" },
-  { jp: <ruby>梅干し<rt>うめぼし</rt></ruby>, reading: "umeboshi", meaning: "Acar ume bercita rasa asam", icon: "🍑" },
+  { jp: "カレー", reading: "karee", meaning: "Kare (kari khas Jepang)", icon: "🍛" },
+  { jp: <ruby>納豆<rt>なっとう</rt></ruby>, reading: "nattou", meaning: "Natto (kedelai fermentasi khas Jepang)", icon: "🫘" },
+  { jp: <ruby>梅干し<rt>うめぼし</rt></ruby>, reading: "umeboshi", meaning: "Umeboshi (buah ume yang diasinkan dan bercita rasa asam)", icon: "🍑" },
 ];
 
 const drinks = [
@@ -1076,8 +1076,8 @@ export default function IrodoriPemulaLessonFivePage() {
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             <h3 className="text-xs font-bold text-[#E7D2A1]">Udon dan soba</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Udon adalah mi tebal dari tepung terigu, sedangkan soba dibuat dari
-              tepung soba. Keduanya bisa disajikan
+              Udon adalah mi tebal berbahan dasar tepung terigu. Soba dibuat dari tepung biji tanaman
+              soba. Keduanya bisa disajikan
               berkuah hangat atau dingin dengan saus celup.
             </p>
           </article>
