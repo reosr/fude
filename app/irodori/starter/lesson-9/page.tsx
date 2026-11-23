@@ -239,7 +239,7 @@ const timeWords = [
   { jp: <><ruby>朝<rt>あさ</rt></ruby></>, reading: "asa", meaning: "Pagi", icon: "🌅" },
   { jp: <><ruby>昼<rt>ひる</rt></ruby></>, reading: "hiru", meaning: "Siang", icon: "☀️" },
   { jp: <><ruby>夜<rt>よる</rt></ruby></>, reading: "yoru", meaning: "Malam", icon: "🌙" },
-  { jp: <><ruby>午前<rt>ごぜん</rt></ruby></>, reading: "gozen", meaning: "Pagi (sebelum pukul 12 siang)", icon: "🌤️" },
+  { jp: <><ruby>午前<rt>ごぜん</rt></ruby></>, reading: "gozen", meaning: "Sebelum pukul 12 siang", icon: "🌤️" },
   { jp: <><ruby>午後<rt>ごご</rt></ruby></>, reading: "gogo", meaning: "Setelah pukul 12 siang", icon: "🌆" },
   { jp: <><ruby>毎朝<rt>まいあさ</rt></ruby></>, reading: "maiasa", meaning: "Setiap pagi", icon: "🔁" },
   { jp: <><ruby>毎晩<rt>まいばん</rt></ruby></>, reading: "maiban", meaning: "Setiap malam", icon: "🌙" },
