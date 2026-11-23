@@ -393,7 +393,7 @@ const quizQuestions: {
   },
 ];
 
-export default function IrodoriStarterLessonElevenPage() {
+export default function IrodoriPemulaLessonElevenPage() {
   const progress = useIrodoriProgress();
   const [practiceAnswers, setPracticeAnswers] = useState<Record<number, string>>({});
   const [practiceSubmitted, setPracticeSubmitted] = useState(false);
@@ -425,7 +425,7 @@ export default function IrodoriStarterLessonElevenPage() {
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
       >
         <ArrowLeft size={15} />
-        Kembali ke Starter
+        Kembali ke Pemula
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#79602F]/45 bg-gradient-to-br from-[#302319] via-[#1B1917] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
@@ -434,7 +434,7 @@ export default function IrodoriStarterLessonElevenPage() {
         </div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            IRODORI • STARTER A1 • LESSON 11
+            IRODORI • PEMULA A1 • PELAJARAN 11
           </p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Kamu suka manga seperti apa?</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]">
@@ -445,7 +445,7 @@ export default function IrodoriStarterLessonElevenPage() {
             menceritakan kegiatan saat hari libur, dan memahami profil sederhana.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["4 target Can-do", "4 dialog", "20 slot audio", "16 kosakata", "10 kuis"].map((item) => (
+            {["4 target target komunikasi", "4 dialog", "20 slot audio", "16 kosakata", "10 kuis"].map((item) => (
               <span
                 key={item}
                 className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]"
@@ -894,7 +894,7 @@ export default function IrodoriStarterLessonElevenPage() {
         {(!quizSubmitted || !practiceIsCorrect || !profileIsCorrect || !canDosRated) && (
           <p className="mt-2 text-[10px] leading-5 text-[#817A73]">
             Selesaikan kuis, jawab benar seluruh enam soal praktik, cocokkan profil,
-            lalu isi keempat penilaian Can-do.
+            lalu isi keempat penilaian target komunikasi.
           </p>
         )}
       </section>
