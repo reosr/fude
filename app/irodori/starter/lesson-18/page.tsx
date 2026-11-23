@@ -53,7 +53,7 @@ const holidayPlanConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <><ruby>山<rt>やま</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くへ<ruby>行<rt>い</rt></ruby>きたいです。ゆっくりしたいです。</>,
     romaji: "Yama no chikaku e ikitai desu. Yukkuri shitai desu.",
-    translation: "Saya ingin pergi ke dekat pegunungan. Saya ingin bersantai.",
+    translation: "Saya ingin pergi ke daerah pegunungan. Saya ingin bersantai.",
     audioFileName: "irodori-starter-18-a01-l04.mp3",
   },
 ];
@@ -84,7 +84,7 @@ const japanWishConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>おいしいお<ruby>菓子<rt>かし</rt></ruby>が<ruby>食<rt>た</rt></ruby>べたいです。あと、<ruby>雪<rt>ゆき</rt></ruby>も<ruby>見<rt>み</rt></ruby>たいです。</>,
     romaji: "Oishii okashi ga tabetai desu. Ato, yuki mo mitai desu.",
-    translation: "Saya ingin makan kue yang enak. Selain itu, saya juga ingin melihat salju.",
+    translation: "Saya ingin makan camilan yang enak. Selain itu, saya juga ingin melihat salju.",
     audioFileName: "irodori-starter-18-a02-l04.mp3",
   },
 ];
@@ -101,7 +101,7 @@ const tripConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <><ruby>海<rt>うみ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くへ<ruby>行<rt>い</rt></ruby>きました。</>,
     romaji: "Umi no chikaku e ikimashita.",
-    translation: "Saya pergi ke dekat laut.",
+    translation: "Saya pergi ke daerah dekat pantai.",
     audioFileName: "irodori-starter-18-a03-l02.mp3",
   },
   {
@@ -160,7 +160,7 @@ const socialPostConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>お<ruby>弁当<rt>べんとう</rt></ruby>を<ruby>食<rt>た</rt></ruby>べました。とてもおいしかったです。</>,
     romaji: "Obentou o tabemashita. Totemo oishikatta desu.",
-    translation: "Saya makan bekal. Rasanya sangat enak.",
+    translation: "Saya makan bento. Rasanya enak sekali.",
     audioFileName: "irodori-starter-18-a04-l04.mp3",
   },
   {
