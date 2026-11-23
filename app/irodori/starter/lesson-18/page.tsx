@@ -250,7 +250,7 @@ const practiceTasks: Task[] = [
       { key: "c", label: "で" },
     ],
     answer: "b",
-    explanation: <>Untuk kegiatan masuk ke onsen, 温泉に<ruby>入<rt>はい</rt></ruby>ります adalah pola yang dipakai. Partikel に menunjukkan tujuan / tempat masuk pada ungkapan ini.</>,
+    explanation: <>Untuk menyatakan kegiatan berendam di onsen, 温泉に<ruby>入<rt>はい</rt></ruby>ります adalah pola yang dipakai. Partikel に menunjukkan tujuan / tempat masuk pada ungkapan ini.</>,
   },
   {
     prompt: <>Apa arti 「どこか旅行したいです」?</>,
@@ -260,7 +260,7 @@ const practiceTasks: Task[] = [
       { key: "c", label: "Saya sedang mencari alamat." },
     ],
     answer: "b",
-    explanation: <>どこか berarti suatu tempat atau somewhere, yaitu tempat yang belum ditentukan.</>,
+    explanation: <>どこか berarti suatu tempat atau tempat yang belum ditentukan, yaitu tempat yang belum ditentukan.</>,
   },
   {
     prompt: <>Pilih partikel penunjuk arah yang dibaca “e”.</>,
@@ -323,7 +323,7 @@ const quizQuestions: Task[] = [
       { key: "c", label: "Saya tidak pergi ke mana pun." },
     ],
     answer: "a",
-    explanation: <>どこか berarti somewhere, lokasi yang belum ditentukan.</>,
+    explanation: <>どこか berarti tempat yang belum ditentukan, lokasi yang belum ditentukan.</>,
   },
   {
     prompt: <>Kalimat yang benar untuk “Saya ingin pergi ke Kyoto” adalah …</>,
@@ -411,7 +411,7 @@ const holidayWords = [
 ];
 
 const wishWords = [
-  ["温泉に入る", "おんせんにはいる", "Masuk / berendam di pemandian air panas"],
+  ["温泉に入る", "おんせんにはいる", "Berendam di onsen (pemandian air panas khas Jepang)"],
   ["雪を見る", "ゆきをみる", "Melihat salju"],
   ["新幹線に乗る", "しんかんせんにのる", "Naik Shinkansen"],
   ["富士山に登る", "ふじさんにのぼる", "Mendaki Gunung Fuji"],
@@ -431,7 +431,7 @@ const connectors = [
 ];
 
 const kanjiWords = [
-  ["温泉", "おんせん · onsen", "Pemandian air panas"],
+  ["温泉", "おんせん · onsen", "Onsen (pemandian air panas khas Jepang)"],
   ["旅行", "りょこう · ryokou", "Perjalanan"],
   ["家族", "かぞく · kazoku", "Keluarga"],
   ["友だち", "ともだち · tomodachi", "Teman"],
@@ -492,7 +492,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">休</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • PEMULA A1 • PELAJARAN 18</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya ingin pergi ke pemandian air panas.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya ingin berendam di onsen.</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]"><ruby>温泉<rt>おんせん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>りたいです</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Belajar menceritakan rencana hari libur, menyampaikan hal yang ingin dilakukan di Jepang, menulis unggahan sederhana, serta berbagi urutan kegiatan dan kesan perjalanan.
@@ -512,7 +512,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">{index < 3 ? "CAN-DO RESMI" : "LATIHAN PENGUATAN"} · 0{index + 1}</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">{index < 3 ? "TARGET RESMI" : "LATIHAN PENGUATAN"} · 0{index + 1}</p>
               <p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p>
             </div>
           ))}
@@ -565,7 +565,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
             title: "02 · どこか untuk tempat yang belum ditentukan",
             pattern: "どこか + V-ます / V-たいです",
             example: <>どこか<ruby>旅行<rt>りょこう</rt></ruby>したいです。／ <ruby>休<rt>やす</rt></ruby>みの日、どこか<ruby>行<rt>い</rt></ruby>きませんか？</>,
-            note: <>どこか berarti somewhere atau suatu tempat yang belum ditentukan. Bedakan dengan どこ (di mana) dan どこにも yang biasanya dipakai bersama bentuk negatif, misalnya どこにも<ruby>行<rt>い</rt></ruby>きません.</>,
+            note: <>どこか berarti tempat yang belum ditentukan atau suatu tempat yang belum ditentukan. Bedakan dengan どこ (di mana) dan どこにも yang biasanya dipakai bersama bentuk negatif, misalnya どこにも<ruby>行<rt>い</rt></ruby>きません.</>,
           },
           {
             title: "03 · Partikel へ dan に untuk arah / tujuan",
@@ -643,7 +643,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
       </section>
 
       <section className="space-y-4 rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4 md:p-5">
-        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 02 · KEINGINAN DI JEPANG</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Pilih hal yang ingin dilakukan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Akiko ingin mencoba pengalaman khas saat berkunjung ke Jepang. Ia ingin masuk ke pemandian air panas.</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 02 · KEINGINAN DI JEPANG</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Pilih hal yang ingin dilakukan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Akiko ingin mencoba pengalaman khas saat berkunjung ke Jepang. Ia ingin berendam di onsen.</p></div>
         <div className="rounded-xl border border-[#D6AD4F]/20 bg-[#27231D] p-4">
           <p className="font-mincho text-base text-[#F1EBDD]">日本で何がしたいですか？</p>
           <p className="mt-1 text-[10px] text-[#A9A398]">Apa yang ingin dilakukan di Jepang?</p>
@@ -651,7 +651,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
         <div className="grid gap-2">
           {[
             { key: "snow", label: "雪を見ました。", meaning: "Saya melihat salju (sudah terjadi)." },
-            { key: "hot-spring", label: "温泉に入りたいです。", meaning: "Saya ingin masuk ke pemandian air panas." },
+            { key: "hot-spring", label: "温泉に入りたいです。", meaning: "Saya ingin berendam di onsen." },
             { key: "home", label: "うちで休みました。", meaning: "Saya beristirahat di rumah (sudah terjadi)." },
           ].map((item) => (
             <button key={item.key} type="button" disabled={wishSubmitted} aria-pressed={wishChoice === item.key} onClick={() => setWishChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (wishSubmitted && item.key === "hot-spring" ? "border-emerald-500/50 bg-emerald-500/10" : wishSubmitted && wishChoice === item.key ? "border-red-400/50 bg-red-400/10" : wishChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
@@ -691,7 +691,7 @@ export default function IrodoriPemulaLessonEighteenPage() {
       <section className="space-y-4 rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4 md:p-5">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 04 · UNGGAHAN SINGKAT</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Pilih unggahan yang lengkap</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Yui ingin bercerita tentang hari liburnya. Unggahan yang baik menyebut tempat, kegiatan, kesan, dan keinginan berikutnya.</p></div>
         <div className="rounded-xl border border-white/[0.07] bg-black/15 p-4">
-          <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">POST YUI · 日曜日</p>
+          <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">UNGGAHAN YUI · 日曜日</p>
           <JapaneseReading
             allowIndexFallback
             translation="Hari Minggu pergi ke taman. Makan bekal. Sangat menyenangkan. Lain kali ingin pergi ke laut."
