@@ -458,9 +458,7 @@ export default function IrodoriStarterLessonSevenPage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 7
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            There are four rooms.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Ada empat kamar.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             <ruby>部屋<rt>へや</rt></ruby>が<ruby>四<rt>よっ</rt></ruby>つあります
           </p>
