@@ -565,9 +565,9 @@ setSelectedStory(story);
             >
               <div className="flex justify-between items-center w-full mb-3">
                 <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#C93438]/20 text-[#C93438]">
-                  Level {story.level}
+                  Tingkat {story.level}
                 </span>
-                {story.isNatural && (
+                {story.isBahasa alami && (
                   <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
                     Natural
                   </span>
@@ -623,7 +623,7 @@ setSelectedStory(story);
             <div className="flex items-center gap-3 mb-2">
                 {selectedStory.isNatural && (
                   <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
-                    Natural Speed
+                    Kecepatan alami
                   </span>
                 )}
             </div>
