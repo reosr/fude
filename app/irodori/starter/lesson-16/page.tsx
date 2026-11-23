@@ -246,7 +246,7 @@ const practiceTasks: Task[] = [
     explanation: <>それ digunakan untuk benda yang dekat dengan lawan bicara. これ dekat dengan pembicara, sedangkan あれ jauh dari keduanya.</>,
   },
   {
-    prompt: <>Bagaimana mengatakan membeli tiga buah roti melon?</>,
+    prompt: <>Bagaimana mengatakan membeli tiga melon pan?</>,
     options: [
       { key: "a", label: "メロンパンを三つください。" },
       { key: "b", label: "メロンパンを三人ください。" },
