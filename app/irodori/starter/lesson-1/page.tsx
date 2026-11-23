@@ -453,9 +453,7 @@ export default function IrodoriStarterLessonOnePage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 1
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            Good morning!
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Selamat pagi!</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             おはようございます
           </p>
