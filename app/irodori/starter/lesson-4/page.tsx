@@ -14,7 +14,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
@@ -26,42 +26,42 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const familyConversation: IrodoriUtterance[] = [
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>これは、<ruby>家族<rt>かぞく</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>です。</>,
     romaji: "Kore wa, kazoku no shashin desu.",
     translation: "Ini foto keluarga saya.",
     audioFileName: "irodori-starter-04-a01-l01.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>こちらは、どなたですか？</>,
     romaji: "Kochira wa, donata desu ka?",
     translation: "Siapa orang ini?",
     audioFileName: "irodori-starter-04-a01-l02.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <><ruby>父<rt>ちち</rt></ruby>と<ruby>母<rt>はは</rt></ruby>です。</>,
     romaji: "Chichi to haha desu.",
     translation: "Ayah dan ibu saya.",
     audioFileName: "irodori-starter-04-a01-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>こちらの<ruby>人<rt>ひと</rt></ruby>は？</>,
     romaji: "Kochira no hito wa?",
     translation: "Kalau orang yang ini?",
     audioFileName: "irodori-starter-04-a01-l04.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <><ruby>妹<rt>いもうと</rt></ruby>です。<ruby>父<rt>ちち</rt></ruby>と<ruby>母<rt>はは</rt></ruby>と<ruby>妹<rt>いもうと</rt></ruby>です。</>,
     romaji: "Imouto desu. Chichi to haha to imouto desu.",
     translation: "Adik perempuan saya. Ini ayah, ibu, dan adik perempuan saya.",
     audioFileName: "irodori-starter-04-a01-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>そうですか。すてきな<ruby>写真<rt>しゃしん</rt></ruby>ですね。</>,
     romaji: "Sou desu ka. Sutekina shashin desu ne.",
     translation: "Oh, begitu. Foto yang bagus, ya.",
@@ -71,42 +71,42 @@ const familyConversation: IrodoriUtterance[] = [
 
 const ageResidenceConversation: IrodoriUtterance[] = [
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ミナさんは、<ruby>何歳<rt>なんさい</rt></ruby>ですか？</>,
     romaji: "Mina-san wa, nansai desu ka?",
     translation: "Mina, berapa usiamu?",
     audioFileName: "irodori-starter-04-a02-l01.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>２５<ruby>歳<rt>さい</rt></ruby>です。</>,
     romaji: "Nijuu-go sai desu.",
     translation: "Saya berusia 25 tahun.",
     audioFileName: "irodori-starter-04-a02-l02.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>そうですか。どこに<ruby>住<rt>す</rt></ruby>んでいますか？</>,
     romaji: "Sou desu ka. Doko ni sunde imasu ka?",
     translation: "Oh, begitu. Kamu tinggal di mana?",
     audioFileName: "irodori-starter-04-a02-l03.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <><ruby>名古屋<rt>なごや</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Nagoya ni sunde imasu.",
     translation: "Saya tinggal di Nagoya.",
     audioFileName: "irodori-starter-04-a02-l04.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ご<ruby>家族<rt>かぞく</rt></ruby>はどこに<ruby>住<rt>す</rt></ruby>んでいますか？</>,
     romaji: "Gokazoku wa doko ni sunde imasu ka?",
     translation: "Keluarga Anda tinggal di mana?",
     audioFileName: "irodori-starter-04-a02-l05.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <><ruby>家族<rt>かぞく</rt></ruby>は、インドネシアに<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Kazoku wa, Indonesia ni sunde imasu.",
     translation: "Keluarga saya tinggal di Indonesia.",
@@ -116,42 +116,42 @@ const ageResidenceConversation: IrodoriUtterance[] = [
 
 const photoConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>これ、だれですか？</>,
     romaji: "Kore, dare desu ka?",
     translation: "Ini siapa?",
     audioFileName: "irodori-starter-04-a03-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <><ruby>私<rt>わたし</rt></ruby>の<ruby>母<rt>はは</rt></ruby>です。</>,
     romaji: "Watashi no haha desu.",
     translation: "Ini ibu saya.",
     audioFileName: "irodori-starter-04-a03-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>こちらは？</>,
     romaji: "Kochira wa?",
     translation: "Kalau yang ini?",
     audioFileName: "irodori-starter-04-a03-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <><ruby>姉<rt>あね</rt></ruby>の<ruby>子<rt>こ</rt></ruby>どもです。</>,
     romaji: "Ane no kodomo desu.",
     translation: "Ini anak kakak perempuan saya.",
     audioFileName: "irodori-starter-04-a03-l04.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>かわいいですね。</>,
     romaji: "Kawaii desu ne.",
     translation: "Lucu, ya.",
     audioFileName: "irodori-starter-04-a03-l05.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。それから、ペットのジョンです。</>,
     romaji: "Hai. Sorekara, petto no Jon desu.",
     translation: "Iya. Lalu, ini hewan peliharaan saya, John.",
@@ -415,7 +415,7 @@ export default function IrodoriPemulaLessonFourPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Melihat foto keluarga"
-          tokohs={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.yui]}
+          speakers={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.yui]}
           utterances={familyConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -477,7 +477,7 @@ export default function IrodoriPemulaLessonFourPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Usia dan tempat tinggal"
-          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
+          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={ageResidenceConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2">
@@ -575,7 +575,7 @@ export default function IrodoriPemulaLessonFourPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Melihat foto"
-          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={photoConversation}
         />
         <div className="grid gap-3 sm:grid-cols-3">
