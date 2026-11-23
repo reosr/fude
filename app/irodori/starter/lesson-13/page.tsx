@@ -690,7 +690,7 @@ export default function IrodoriStarterLessonThirteenPage() {
             { jp: "東口", meaning: "Timur", reading: "Higashiguchi" },
             { jp: "北口", meaning: "Utara", reading: "Kitaguchi" },
           ].map((item) => (
-            <div key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading> className="rounded-xl border border-white/[0.07] bg-[#28251F] p-3 text-center">
+            <div key={item.jp} className="rounded-xl border border-white/[0.07] bg-[#28251F] p-3 text-center">
               <p className="font-mincho text-2xl font-bold text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p>
               <p className="mt-1 text-[9px] text-[#D9B66D]">{item.reading}</p>
               <p className="mt-1 text-[10px] text-[#A9A398]">{item.meaning}</p>
