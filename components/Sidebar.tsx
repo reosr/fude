@@ -141,7 +141,7 @@ export default function Sidebar() {
       <div
         className="w-full h-2 bg-[#121110] rounded-full overflow-hidden"
         role="progressbar"
-        aria-label="Experience menuju level berikutnya"
+        aria-label="EXP menuju level berikutnya"
         aria-valuenow={levelInfo.currentExp}
         aria-valuemin={0}
         aria-valuemax={levelInfo.requiredExp}
@@ -226,7 +226,7 @@ export default function Sidebar() {
         <div className="p-6 border-b border-[#33312E]/50 flex items-center gap-3">
           <Image
             src="/logo.webp"
-            alt="Fude Logo"
+            alt="Logo Fude"
             width={32}
             height={32}
             className="h-8 w-8 object-contain"
@@ -279,7 +279,7 @@ export default function Sidebar() {
                   {profile.name}
                 </p>
                 <p className="text-[11px] text-[#B8860B] font-semibold mt-0.5">
-                  {levelInfo.rank} · LVL {levelInfo.level}
+                  {levelInfo.rank} · LV. {levelInfo.level}
                 </p>
               </div>
             </div>
