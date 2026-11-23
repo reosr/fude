@@ -5,7 +5,7 @@ const courses = [
   {
     id: "starter",
     number: "01",
-    title: "Starter",
+    title: "Pemula",
     level: "A1",
     description: "Mulai dari ungkapan sederhana, perkenalan, dan kebutuhan sehari-hari.",
     status: "Mulai belajar",
@@ -15,7 +15,7 @@ const courses = [
   {
     id: "elementary-1",
     number: "02",
-    title: "Elementary 1",
+    title: "Dasar 1",
     level: "A2",
     description: "Mengembangkan percakapan sehari-hari dan menceritakan keadaan terkini.",
     status: "Mulai belajar",
@@ -25,7 +25,7 @@ const courses = [
   {
     id: "elementary-2",
     number: "03",
-    title: "Elementary 2",
+    title: "Dasar 2",
     level: "A2",
     description: "Memperluas kemampuan berkomunikasi dalam beragam aktivitas harian.",
     status: "Mulai belajar",
@@ -35,7 +35,7 @@ const courses = [
   {
     id: "pre-intermediate",
     number: "04",
-    title: "Pre-Intermediate",
+    title: "Pra-Menengah",
     level: "A2/B1",
     description: "Berlatih menyampaikan informasi dan pengalaman dengan lebih mandiri.",
     status: "Mulai belajar",
