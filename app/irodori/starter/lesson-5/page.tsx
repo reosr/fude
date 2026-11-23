@@ -19,6 +19,7 @@ import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import JapaneseReading from "@/components/JapaneseReading";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -529,7 +530,7 @@ export default function IrodoriStarterLessonFivePage() {
               </span>
               <div className="min-w-0">
                 <p className="font-mincho text-lg font-bold text-[#F1EBDD]">
-                  {item.jp}
+                  <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                 </p>
                 <p className="text-[10px] italic text-[#B8860B]">
                   {item.reading}
@@ -593,7 +594,7 @@ export default function IrodoriStarterLessonFivePage() {
                 {item.icon}
               </div>
               <p className="mt-3 font-mincho text-lg font-bold text-[#F1EBDD]">
-                {item.jp}
+                <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
               </p>
               <p className="text-[10px] italic text-[#B8860B]">{item.reading}</p>
               <p className="mt-1 text-xs leading-5 text-[#A9A398]">
@@ -658,7 +659,7 @@ export default function IrodoriStarterLessonFivePage() {
               </span>
               <div>
                 <p className="font-mincho text-lg font-bold text-[#F1EBDD]">
-                  {item.jp}
+                  <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                 </p>
                 <p className="text-[10px] text-[#B8860B]">{item.reading}</p>
                 <p className="text-xs text-[#A9A398]">{item.meaning}</p>
@@ -735,7 +736,7 @@ export default function IrodoriStarterLessonFivePage() {
               </span>
               <div className="min-w-0">
                 <p className="font-mincho text-base font-bold text-[#F1EBDD]">
-                  {item.jp}
+                  <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                 </p>
                 <p className="text-[10px] text-[#B8860B]">{item.reading}</p>
                 <p className="text-xs text-[#A9A398]">{item.meaning}</p>
@@ -1029,7 +1030,7 @@ export default function IrodoriStarterLessonFivePage() {
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
               <p className="font-mincho text-2xl font-bold text-[#F1EBDD]">
-                {item.jp}
+                <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
               </p>
               <p className="mt-1 text-[10px] italic text-[#B8860B]">
                 {item.reading}
@@ -1106,10 +1107,10 @@ export default function IrodoriStarterLessonFivePage() {
                 className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
               >
                 <p className="text-[9px] font-black tracking-[0.16em] text-[#B8860B]">
-                  QUESTION {String(index + 1).padStart(2, "0")}
+                  SOAL {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                  {question.prompt}
+                  <JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
                 </h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => {
@@ -1144,7 +1145,7 @@ export default function IrodoriStarterLessonFivePage() {
                           {quizSubmitted && correct ? "✓" : selected ? "●" : "○"}
                         </span>
                         <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
-                          {option.label}
+                          <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                         </span>
                       </button>
                     );
@@ -1160,7 +1161,7 @@ export default function IrodoriStarterLessonFivePage() {
                     >
                       {isCorrect ? "Benar." : "Belum tepat."}
                     </span>
-                    {question.explanation}
+                    <JapaneseReading allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -1245,7 +1246,7 @@ export default function IrodoriStarterLessonFivePage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]")
                       }
                     >
-                      {option.label}
+                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
