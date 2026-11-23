@@ -183,7 +183,7 @@ export default function IrodoriElementaryOneLessonFourteenPage() {
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D08A7D]/[0.08]">休</div>
    <div className="relative z-10">
     <p className="text-[9px] font-black tracking-[0.24em] text-[#D6A39A]">IRODORI • ELEMENTARY 1 A2 • LESSON 14</p>
-    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">May I take a day off?</h1>
+    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Bolehkah saya izin tidak masuk sehari?</h1>
     <p className="mt-2 text-sm font-semibold text-[#D6A39A]">休みを取ってもいいでしょうか？</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memberi kabar saat terlambat atau tidak masuk, meminta izin singkat kepada rekan kerja, mengajukan cuti kepada atasan, dan memahami formulir permohonan cuti.</p>
     <div className="mt-5 flex flex-wrap gap-2">
