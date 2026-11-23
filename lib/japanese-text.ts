@@ -153,8 +153,15 @@ const GRAMMAR_LABELS: Record<string, string> = {
 
 export function formatGrammarNotation(value: string): string {
   return value.replace(
-    /(^|[^\p{L}\p{N}])([NVAS])(\d*)(?=$|[^\p{L}\p{N}])/gu,
-    (_match, prefix: string, symbol: string, number: string) =>
-      prefix + GRAMMAR_LABELS[symbol] + (number ? " " + number : "")
+    /(^|[^\\p{L}\\p{N}])([NVAS])(\\d*)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヶ一-龯々])/gu,
+    (_match, prefix: string, symbol: string, number: string, offset: number, whole: string) => {
+      const nextChar = whole[offset + prefix.length + symbol.length + number.length] ?? "";
+      const isJapaneseSuffix = /[ぁ-ゖァ-ヶ一-龯々]/.test(nextChar);
+      const label = GRAMMAR_LABELS[symbol];
+      const formatted = isJapaneseSuffix && !number
+        ? (symbol === "V" ? "bentuk kata kerja" : symbol === "A" ? "bentuk kata sifat" : label)
+        : label + (number ? " " + number : "");
+      return prefix + formatted + (isJapaneseSuffix ? " " : "");
+    }
   );
 }
