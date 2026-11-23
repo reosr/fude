@@ -473,7 +473,7 @@ export function formatGrammarNotation(value: string): string {
 
   // Notasi kata benda dan kalimat, termasuk N1, N2, S1, serta N2-nya.
   formatted = formatted.replace(
-    /(^|[^A-Za-z0-9])([NAS])(\\d*)(-nya)?(?=$|[^A-Za-z0-9])/g,
+    /(^|[^A-Za-z0-9])([NAS])([0-9]*)(-nya)?(?=$|[^A-Za-z0-9])/g,
     (match, prefix: string, symbol: string, number: string, suffix: string | undefined, offset: number, whole: string) => {
       const tail = whole.slice(offset + match.length);
       const needsSpace = /^[\u3040-\u30ff\u3400-\u9fff々〆ヵヶ]/.test(tail);
