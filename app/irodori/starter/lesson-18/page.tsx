@@ -101,7 +101,7 @@ const tripConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <><ruby>海<rt>うみ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くへ<ruby>行<rt>い</rt></ruby>きました。</>,
     romaji: "Umi no chikaku e ikimashita.",
-    translation: "Saya pergi ke daerah dekat pantai.",
+    translation: "Saya pergi ke kawasan pantai.",
     audioFileName: "irodori-starter-18-a03-l02.mp3",
   },
   {
@@ -167,7 +167,7 @@ const socialPostConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>いいですね。<ruby>次<rt>つぎ</rt></ruby>は、<ruby>何<rt>なに</rt></ruby>をしたいですか？</>,
     romaji: "Ii desu ne. Tsugi wa, nani o shitai desu ka?",
-    translation: "Wah, menyenangkan. Berikutnya, apa yang ingin kamu lakukan?",
+    translation: "Wah, seru, ya. Lain kali, kamu ingin melakukan apa?",
     audioFileName: "irodori-starter-18-a04-l05.mp3",
   },
   {
@@ -205,7 +205,7 @@ const invitationConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>いいですね。いっしょに<ruby>行<rt>い</rt></ruby>きましょう。</>,
     romaji: "Ii desu ne. Issho ni ikimashou.",
-    translation: "Bagus. Ayo pergi bersama.",
+    translation: "Boleh juga. Ayo kita pergi bersama.",
     audioFileName: "irodori-starter-18-a05-l04.mp3",
   },
 ];
