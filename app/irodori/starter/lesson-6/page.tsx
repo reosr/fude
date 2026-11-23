@@ -518,7 +518,7 @@ export default function IrodoriPemulaLessonSixPage() {
                 FUDE BURGER
               </p>
               <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
-                メニュー · Menu
+                メニュー · DAFTAR MENU
               </h3>
             </div>
             <span className="rounded-lg border border-[#D6AD4F]/20 bg-black/20 px-3 py-2 text-[10px] font-bold text-[#D9B66D]">
@@ -594,7 +594,7 @@ export default function IrodoriPemulaLessonSixPage() {
               </div>
               <div>
                 <p className="mb-3 text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-                  DRINK
+                  MINUMAN
                 </p>
                 <div className="space-y-2">
                   {drinkMenu.map((item) => (
