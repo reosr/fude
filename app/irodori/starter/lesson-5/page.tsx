@@ -439,7 +439,7 @@ export default function IrodoriPemulaLessonFivePage() {
         </div>
         <div className="relative z-10 max-w-2xl">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            TOPIC 03 • MY FAVORITE FOODS
+            TOPIK 03 • MAKANAN KESUKAAN
           </p>
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 5
@@ -1092,7 +1092,7 @@ export default function IrodoriPemulaLessonFivePage() {
             <h3 className="text-xs font-bold text-[#E7D2A1]">Tempura</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
               Sayuran atau bahan laut dibalut adonan tepung lalu digoreng.
-              Tempura juga sering dijadikan topping untuk mi atau nasi.
+              Tempura juga sering dijadikan pelengkap mi atau nasi.
             </p>
           </article>
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
