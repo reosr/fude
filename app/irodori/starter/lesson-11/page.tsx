@@ -195,7 +195,7 @@ const hobbyVocabulary: { jp: ReactNode; reading: string; meaning: string }[] = [
   { jp: <ruby>映画<rt>えいが</rt></ruby>, reading: "eiga", meaning: "Film" },
   { jp: <><ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby></>, reading: "kaimono", meaning: "Belanja" },
   { jp: <ruby>料理<rt>りょうり</rt></ruby>, reading: "ryouri", meaning: "Memasak" },
-  { jp: "ゲーム", reading: "geemu", meaning: "Permainan" },
+  { jp: "ゲーム", reading: "geemu", meaning: "Game" },
   { jp: "スポーツ", reading: "supootsu", meaning: "Olahraga" },
   { jp: <ruby>散歩<rt>さんぽ</rt></ruby>, reading: "sanpo", meaning: "Jalan santai" },
   { jp: <ruby>掃除<rt>そうじ</rt></ruby>, reading: "souji", meaning: "Membersihkan" },
