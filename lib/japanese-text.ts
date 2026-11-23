@@ -40,6 +40,63 @@ export function addRubyFromParentheticalReadings(value: string): string {
   );
 }
 
+const READINGS_BY_INITIAL = READING_ENTRIES.reduce((map, entry) => {
+  const initial = entry[0][0];
+  const current = map.get(initial) ?? [];
+  current.push(entry);
+  map.set(initial, current);
+  return map;
+}, new Map<string, Array<[string, string]>>());
+
+function escapeRubyText(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  })[char] ?? char);
+}
+
+/**
+ * Tambahkan furigana dari indeks bacaan terverifikasi pada bagian teks yang
+ * belum memiliki ruby. Tag HTML dan ruby yang sudah ditulis di data tetap utuh.
+ */
+export function addRubyFromReadingIndex(value: string): string {
+  const fragments = value.split(/(<[^>]+>)/g);
+  let rubyDepth = 0;
+
+  return fragments.map((fragment) => {
+    if (fragment.startsWith("<") && fragment.endsWith(">")) {
+      const tag = /^<\s*(\/?)\s*([a-z][a-z0-9-]*)/i.exec(fragment);
+      if (tag?.[2].toLowerCase() === "ruby") {
+        rubyDepth = tag[1] ? Math.max(0, rubyDepth - 1) : rubyDepth + 1;
+      }
+      return fragment;
+    }
+
+    if (rubyDepth > 0) return fragment;
+
+    let output = "";
+    let cursor = 0;
+
+    while (cursor < fragment.length) {
+      const candidates = READINGS_BY_INITIAL.get(fragment[cursor]);
+      const matched = candidates?.find(([word]) => fragment.startsWith(word, cursor));
+
+      if (matched) {
+        output += `<ruby>${escapeRubyText(matched[0])}<rt>${escapeRubyText(matched[1])}</rt></ruby>`;
+        cursor += matched[0].length;
+      } else {
+        output += fragment[cursor];
+        cursor += 1;
+      }
+    }
+
+    return output;
+  }).join("");
+}
+
 function preserveKanaOnly(value: string): string {
   return Array.from(value).filter((char) => !KANJI_RE.test(char)).join("");
 }
