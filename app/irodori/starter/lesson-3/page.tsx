@@ -43,7 +43,7 @@ const introductionConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>インドネシアから<ruby>来<rt>き</rt></ruby>ました。</>,
     romaji: "Indonesia kara kimashita.",
-    translation: "Saya datang dari Indonesia.",
+    translation: "Saya berasal dari Indonesia.",
     audioFileName: "irodori-starter-03-a01-l03.mp3",
   },
   {
