@@ -12,7 +12,7 @@ import { ChevronLeft, ChevronRight, CheckCircle2, Lock, BookOpen, ArrowLeft, X, 
 import dynamic from "next/dynamic";
 import { syncNewCollectionUnlocks } from "../../lib/profile-collections";
 import JapaneseReading from "@/components/JapaneseReading";
-import { addRubyFromParentheticalReadings, formatGrammarNotation } from "@/lib/japanese-text";
+import { addRubyFromParentheticalReadings, addRubyFromReadingIndex, formatGrammarNotation } from "@/lib/japanese-text";
 
 let wanakanaModule: typeof import("wanakana") | null = null;
 let wanakanaPromise: Promise<typeof import("wanakana")> | null = null;
@@ -795,7 +795,7 @@ const findWordAt = (index: number): string | null => {
                         <JapaneseReading
                           html={ex.kanji}
                           romaji={getRomaji(ex.kanji, babData.bab)}
-                          translation={<span dangerouslySetInnerHTML={{ __html: ex.id }} />}
+                          translation={<span dangerouslySetInnerHTML={{ __html: addRubyFromReadingIndex(ex.id) }} />}
                           contentClassName="text-[#EAE6DD] text-lg md:text-2xl font-mincho leading-[2.8] pt-2 tracking-wide mb-1 [&_rt]:text-[0.5em]"
                           kanaClassName="mt-2 font-mincho text-base md:text-lg leading-relaxed text-[#D6AD4F]"
                           romajiClassName="mt-1 text-sm md:text-base italic tracking-wide text-[#B8860B]"
