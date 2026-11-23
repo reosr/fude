@@ -144,7 +144,7 @@ const quizQuestions:Task[]=[
 {prompt:<>Pilih pola untuk meminta izin kepada rekan kerja.</>,options:[{key:"a",label:"V-てもいいですか。"},{key:"b",label:"V-なければなりません。"},{key:"c",label:"V-ると。"}],answer:"a",explanation:<>V-てもいいですか digunakan untuk meminta izin melakukan sesuatu.</>},
 {prompt:<>Apa perbedaan umum 「てもいいですか」 dan 「てもいいでしょうか」?</>,options:[{key:"a",label:"てもいいでしょうか lebih sopan."},{key:"b",label:"てもいいでしょうか adalah bentuk lampau."},{key:"c",label:"Keduanya berarti larangan."}],answer:"a",explanation:<>てもいいでしょうか adalah cara yang lebih sopan untuk meminta izin.</>},
 {prompt:<>Kalimat 「休まなければなりません」 berarti …</>,options:[{key:"a",label:"Harus beristirahat / harus tidak masuk."},{key:"b",label:"Boleh beristirahat."},{key:"c",label:"Sudah beristirahat."}],answer:"a",explanation:<>なければなりません menyatakan kewajiban atau keharusan.</>},
-{prompt:<>Pilih kalimat yang menyatakan sebab dengan kata sifat-i.</>,options:[{key:"a",label:"道が混んでいて、遅れます。"},{key:"b",label:"道が混みますと、遅れます。"},{key:"c",label:"道が混んだでしょうか。"}],answer:"a",explanation:<>I-adjective 混んでいる dapat berubah menjadi 混んでいて untuk menghubungkan alasan.</>},
+{prompt:<>Pilih kalimat yang menyatakan sebab dengan kata sifat-i.</>,options:[{key:"a",label:"道が混んでいて、遅れます。"},{key:"b",label:"道が混みますと、遅れます。"},{key:"c",label:"道が混んだでしょうか。"}],answer:"a",explanation:<>kata sifat -i 混んでいる dapat berubah menjadi 混んでいて untuk menghubungkan alasan.</>},
 {prompt:<>Apa arti 「それで」?</>,options:[{key:"a",label:"Karena itu / jadi."},{key:"b",label:"Namun demikian."},{key:"c",label:"Sebelum itu."}],answer:"a",explanation:<>それで menghubungkan alasan dengan akibat yang dijelaskan setelahnya.</>},
 {prompt:<>Pada formulir cuti, bagian 「期間」 menunjukkan …</>,options:[{key:"a",label:"Periode tanggal cuti."},{key:"b",label:"Nama lengkap."},{key:"c",label:"Kontak darurat."}],answer:"a",explanation:<>期間 berarti rentang waktu atau periode.</>},
 {prompt:<>Apa arti 「みなさんに伝えてください」?</>,options:[{key:"a",label:"Tolong sampaikan kepada semuanya."},{key:"b",label:"Tolong pulang lebih awal."},{key:"c",label:"Tolong isi nama tim."}],answer:"a",explanation:<>伝えてください adalah bentuk permintaan dari 伝える, menyampaikan atau memberitahu.</>},
@@ -179,11 +179,11 @@ export default function IrodoriElementaryOneLessonFourteenPage() {
 
  return (
  <main className="mx-auto max-w-5xl space-y-7 pb-12">
-  <Link href="/irodori/elementary-1" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"><ArrowLeft size={15}/> Kembali ke Elementary 1</Link>
+  <Link href="/irodori/elementary-1" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"><ArrowLeft size={15}/> Kembali ke Dasar 1</Link>
   <header className="relative isolate overflow-hidden rounded-[28px] border border-[#8D514B]/35 bg-gradient-to-br from-[#382725] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D08A7D]/[0.08]">休</div>
    <div className="relative z-10">
-    <p className="text-[9px] font-black tracking-[0.24em] text-[#D6A39A]">IRODORI • ELEMENTARY 1 A2 • LESSON 14</p>
+    <p className="text-[9px] font-black tracking-[0.24em] text-[#D6A39A]">IRODORI • DASAR 1 A2 • PELAJARAN 14</p>
     <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Bolehkah saya izin tidak masuk sehari?</h1>
     <p className="mt-2 text-sm font-semibold text-[#D6A39A]">休みを取ってもいいでしょうか？</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memberi kabar saat terlambat atau tidak masuk, meminta izin singkat kepada rekan kerja, mengajukan cuti kepada atasan, dan memahami formulir permohonan cuti.</p>
@@ -196,8 +196,8 @@ export default function IrodoriElementaryOneLessonFourteenPage() {
   </header>
 
   <section className="rounded-2xl border border-[#8D514B]/20 bg-[#241D1C]/80 p-4 md:p-5">
-   <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#D6A39A]"/><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2></div>
-   <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target pertama mengikuti Can-do resmi Irodori. Target terakhir merupakan latihan penguatan Fude.</p>
+   <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#D6A39A]"/><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2></div>
+   <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target pertama mengikuti target komunikasi resmi Irodori. Target terakhir merupakan latihan penguatan Fude.</p>
    <div className="mt-3 grid gap-2 sm:grid-cols-2">{canDos.map((item,index)=><article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3"><p className="text-[9px] font-black tracking-[0.15em] text-[#D6A39A]">{index<4?"CAN-DO UTAMA":"LATIHAN PENGUATAN"} · 0{index+1}</p><p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p></article>)}</div>
   </section>
 
@@ -285,12 +285,12 @@ export default function IrodoriElementaryOneLessonFourteenPage() {
   <section className="rounded-2xl border border-[#8D514B]/25 bg-gradient-to-br from-[#2B211F] to-[#191817] p-5 md:p-6">
    <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#E8B6AC]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#E8B6AC]">CAN-DO CHECK</p></div>
    <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
-   <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Elementary 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
+   <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Dasar 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
    <div className="mt-4 space-y-3">{canDos.map((item,index)=><div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3"><p className="text-xs font-semibold leading-5 text-[#EAE6DD]"><span className="mr-2 text-[#E8B6AC]">{String(index+1).padStart(2,"0")}</span>{item.text}</p><div className="mt-3 flex flex-wrap gap-2">{ratingOptions.map(option=><button key={option.value} type="button" disabled={!quizSubmitted||!practiceIsCorrect||!simulationsComplete} aria-pressed={visibleRatings[item.id]===option.value} onClick={()=>{const next={...visibleRatings,[item.id]:option.value};setRatings(next);saveIrodoriSelfEvaluation(lessonId,next);}} className={"rounded-lg border px-3 py-2 text-[10px] font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-40 "+(visibleRatings[item.id]===option.value?"border-[#C98E84]/60 bg-[#8D514B]/20 text-[#F2CDC5]":"border-white/[0.08] bg-[#24221F] text-[#A3A099]")}><JapaneseReading allowIndexFallback>{option.label}</JapaneseReading></button>)}</div></div>)}</div>
    <div className="mt-5 flex flex-wrap items-center justify-between gap-3">{isCompleted?<span className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-xs font-bold text-emerald-200"><CheckCircle2 size={15}/> Pelajaran selesai</span>:<button type="button" onClick={()=>completeIrodoriLesson(lessonId)} disabled={!quizSubmitted||!practiceIsCorrect||!simulationsComplete||!canDosRated} className="inline-flex items-center gap-2 rounded-xl bg-[#8D514B] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#75413C] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"><CheckCircle2 size={15}/> Tandai pelajaran selesai</button>}
     <Link href="/irodori/elementary-1" className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-xs font-bold text-[#C7C1B5] transition-colors hover:border-[#C98E84]/40 hover:text-[#EAE6DD]">Daftar pelajaran <ArrowLeft size={15} className="rotate-180"/></Link>
    </div>
-   {(!quizSubmitted||!practiceIsCorrect||!simulationsComplete||!canDosRated)&&<p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian Can-do.</p>}
+   {(!quizSubmitted||!practiceIsCorrect||!simulationsComplete||!canDosRated)&&<p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian target komunikasi.</p>}
   </section>
   <p className="text-center text-[10px] leading-5 text-[#746F65]">Dialog, formulir contoh, dan situasi latihan dibuat orisinal oleh Fude untuk melatih komunikasi tentang keterlambatan, izin, dan cuti.</p>
  </main>
