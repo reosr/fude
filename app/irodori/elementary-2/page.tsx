@@ -240,8 +240,8 @@ export default function IrodoriElementaryTwoPage() {
       </section>
 
       <p className="rounded-2xl border border-[#486C91]/20 bg-[#202A35]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        <span className="font-bold text-[#A9C9E8]">Catatan:</span> Elementary 2
-        adalah jalur A2 tersendiri setelah Elementary 1. Progres pelajaran di
+        <span className="font-bold text-[#A9C9E8]">Catatan:</span> Dasar 2
+        adalah jalur A2 tersendiri setelah Dasar 1. Progres pelajaran di
         jalur ini tidak mengubah progres Minna no Nihongo atau JLPT.
       </p>
     </main>
