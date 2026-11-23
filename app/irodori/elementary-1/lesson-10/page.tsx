@@ -28,34 +28,34 @@ const speakers = IRODORI_SPEAKERS;
 const lessonId = "elementary1-10";
 
 const classScheduleConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>この日本語クラスは、いつですか。</>,romaji:"Kono nihongo kurasu wa, itsu desu ka?",translation:"Kelas bahasa Jepang ini kapan?",audioFileName:"irodori-elementary1-10-a01-l01.mp3"},
+{speakerId:"yui",japanese:<>この日本語クラスは、いつですか。</>,romaji:"Kono nihongo kurasu wa, itsu desu ka?",translation:"Kelas bahasa Jepang ini diadakan kapan?",audioFileName:"irodori-elementary1-10-a01-l01.mp3"},
 {speakerId:"sota",japanese:<>火曜日と木曜日です。午前10時からです。</>,romaji:"Kayoubi to mokuyoubi desu. Gozen juuji kara desu.",translation:"Hari Selasa dan Kamis. Mulai pukul 10 pagi.",audioFileName:"irodori-elementary1-10-a01-l02.mp3"},
 {speakerId:"yui",japanese:<>場所はどこですか。</>,romaji:"Basho wa doko desu ka?",translation:"Tempatnya di mana?",audioFileName:"irodori-elementary1-10-a01-l03.mp3"},
-{speakerId:"sota",japanese:<>市民センターの2階です。</>,romaji:"Shimin sentaa no nikai desu.",translation:"Di lantai dua pusat komunitas.",audioFileName:"irodori-elementary1-10-a01-l04.mp3"},
+{speakerId:"sota",japanese:<>市民センターの2階です。</>,romaji:"Shimin sentaa no nikai desu.",translation:"Di lantai dua pusat kegiatan masyarakat.",audioFileName:"irodori-elementary1-10-a01-l04.mp3"},
 {speakerId:"yui",japanese:<>ありがとうございます。</>,romaji:"Arigatou gozaimasu.",translation:"Terima kasih.",audioFileName:"irodori-elementary1-10-a01-l05.mp3"},
 ];
 const askingAtCommunityCenterConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>すみません。書道教室に参加してみたいんですが…。</>,romaji:"Sumimasen. Shodou kyoushitsu ni sanka shite mitai n desu ga...",translation:"Permisi. Saya ingin mencoba ikut kelas kaligrafi Jepang…",audioFileName:"irodori-elementary1-10-a02-l01.mp3"},
 {speakerId:"kenji",japanese:<>はい。毎週水曜日の午後2時からです。</>,romaji:"Hai. Maishuu suiyoubi no gogo niji kara desu.",translation:"Baik. Setiap Rabu mulai pukul 2 siang.",audioFileName:"irodori-elementary1-10-a02-l02.mp3"},
 {speakerId:"akiko",japanese:<>道具は自分で用意しますか。</>,romaji:"Dougu wa jibun de youi shimasu ka?",translation:"Apakah saya harus menyiapkan alat sendiri?",audioFileName:"irodori-elementary1-10-a02-l03.mp3"},
-{speakerId:"kenji",japanese:<>いいえ。最初の道具は教室にあります。</>,romaji:"Iie. Saisho no dougu wa kyoushitsu ni arimasu.",translation:"Tidak. Peralatan awal tersedia di kelas.",audioFileName:"irodori-elementary1-10-a02-l04.mp3"},
+{speakerId:"kenji",japanese:<>いいえ。最初の道具は教室にあります。</>,romaji:"Iie. Saisho no dougu wa kyoushitsu ni arimasu.",translation:"Tidak. Peralatan sudah disediakan di kelas.",audioFileName:"irodori-elementary1-10-a02-l04.mp3"},
 ];
 const talkingAboutJapaneseClassConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>地域の日本語クラスはどうですか。</>,romaji:"Chiiki no nihongo kurasu wa dou desu ka?",translation:"Bagaimana kelas bahasa Jepang di lingkungan ini?",audioFileName:"irodori-elementary1-10-a03-l01.mp3"},
+{speakerId:"yui",japanese:<>地域の日本語クラスはどうですか。</>,romaji:"Chiiki no nihongo kurasu wa dou desu ka?",translation:"Bagaimana kelas bahasa Jepang di sekitar sini?",audioFileName:"irodori-elementary1-10-a03-l01.mp3"},
 {speakerId:"sota",japanese:<>とてもいいですよ。週に1回、勉強します。</>,romaji:"Totemo ii desu yo. Shuu ni ikkai, benkyou shimasu.",translation:"Bagus sekali. Kami belajar sekali seminggu.",audioFileName:"irodori-elementary1-10-a03-l02.mp3"},
 {speakerId:"yui",japanese:<>先生は親切ですか。</>,romaji:"Sensei wa shinsetsu desu ka?",translation:"Apakah gurunya ramah?",audioFileName:"irodori-elementary1-10-a03-l03.mp3"},
-{speakerId:"sota",japanese:<>はい。ゆっくり話してくれます。</>,romaji:"Hai. Yukkuri hanashite kuremasu.",translation:"Ya. Beliau berbicara dengan perlahan.",audioFileName:"irodori-elementary1-10-a03-l04.mp3"},
+{speakerId:"sota",japanese:<>はい。ゆっくり話してくれます。</>,romaji:"Hai. Yukkuri hanashite kuremasu.",translation:"Ya. Beliau berbicara pelan-pelan.",audioFileName:"irodori-elementary1-10-a03-l04.mp3"},
 ];
 const sharingLearningGoalsConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>日本語をどのくらい勉強しましたか。</>,romaji:"Nihongo o dono kurai benkyou shimashita ka?",translation:"Sudah berapa lama kamu belajar bahasa Jepang?",audioFileName:"irodori-elementary1-10-a04-l01.mp3"},
 {speakerId:"yui",japanese:<>高校のとき、少し勉強しました。</>,romaji:"Koukou no toki, sukoshi benkyou shimashita.",translation:"Waktu SMA, saya belajar sedikit.",audioFileName:"irodori-elementary1-10-a04-l02.mp3"},
 {speakerId:"akiko",japanese:<>どうしてクラスに参加したいですか。</>,romaji:"Doushite kurasu ni sanka shitai desu ka?",translation:"Mengapa kamu ingin ikut kelas?",audioFileName:"irodori-elementary1-10-a04-l03.mp3"},
-{speakerId:"yui",japanese:<>日本語で友だちと話したいです。</>,romaji:"Nihongo de tomodachi to hanashitai desu.",translation:"Saya ingin berbicara dengan teman menggunakan bahasa Jepang.",audioFileName:"irodori-elementary1-10-a04-l04.mp3"},
+{speakerId:"yui",japanese:<>日本語で友だちと話したいです。</>,romaji:"Nihongo de tomodachi to hanashitai desu.",translation:"Saya ingin berbicara dengan teman-teman dalam bahasa Jepang.",audioFileName:"irodori-elementary1-10-a04-l04.mp3"},
 ];
 const clarifyingClassDetailsConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>このクラスは月に何回ありますか。</>,romaji:"Kono kurasu wa tsuki ni nankai arimasu ka?",translation:"Berapa kali kelas ini diadakan dalam sebulan?",audioFileName:"irodori-elementary1-10-a05-l01.mp3"},
 {speakerId:"kenji",japanese:<>月に4回です。</>,romaji:"Tsuki ni yonkai desu.",translation:"Empat kali sebulan.",audioFileName:"irodori-elementary1-10-a05-l02.mp3"},
-{speakerId:"sota",japanese:<>すみません。「初級」は、どういう意味ですか。</>,romaji:"Sumimasen. 'Shokyuu' wa, dou iu imi desu ka?",translation:"Maaf. Apa arti 'shokyuu' (tingkat pemula)?",audioFileName:"irodori-elementary1-10-a05-l03.mp3"},
+{speakerId:"sota",japanese:<>すみません。「初級」は、どういう意味ですか。</>,romaji:"Sumimasen. 'Shokyuu' wa, dou iu imi desu ka?",translation:"Permisi, apa arti 'shokyuu' (tingkat pemula)?",audioFileName:"irodori-elementary1-10-a05-l03.mp3"},
 {speakerId:"kenji",japanese:<>初めて勉強する人のクラスです。</>,romaji:"Hajimete benkyou suru hito no kurasu desu.",translation:"Itu kelas untuk orang yang baru mulai belajar.",audioFileName:"irodori-elementary1-10-a05-l04.mp3"},
 ];
 const canDos=[
