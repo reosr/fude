@@ -394,7 +394,7 @@ export default function IrodoriPemulaLessonTwoPage() {
           Kamu juga bisa meminta lawan bicara berbicara lebih pelan.
         </p>
         <IrodoriConversation
-          title="Adegan A · Meminta pengulangan"
+          title="Percakapan A · Meminta pengulangan"
           speakers={yuiAndSota}
           utterances={repeatConversation}
         />
@@ -441,7 +441,7 @@ export default function IrodoriPemulaLessonTwoPage() {
           apakah lawan bicara bisa menggunakan suatu bahasa.
         </p>
         <IrodoriConversation
-          title="Adegan A · Bertanya tentang bahasa"
+          title="Percakapan A · Bertanya tentang bahasa"
           speakers={akikoAndKenji}
           utterances={languageConversation}
         />
@@ -505,7 +505,7 @@ export default function IrodoriPemulaLessonTwoPage() {
           yang baru kamu pelajari.
         </p>
         <IrodoriConversation
-          title="Adegan A · Bertanya nama benda"
+          title="Percakapan A · Bertanya nama benda"
           speakers={yuiAndSota}
           utterances={wordingConversation}
         />
