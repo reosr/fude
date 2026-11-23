@@ -46,7 +46,7 @@ export default function IrodoriElementaryTwoPage() {
         </div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">
-            IRODORI • ELEMENTARY 2
+            IRODORI • DASAR 2
           </p>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -66,7 +66,7 @@ export default function IrodoriElementaryTwoPage() {
           </p>
           <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
             <div className="flex items-center justify-between text-[10px]">
-              <span className="font-semibold text-[#A3A099]">Progres Irodori Elementary 2</span>
+              <span className="font-semibold text-[#A3A099]">Progres Irodori Dasar 2</span>
               <span className="font-bold text-[#D8E8F8]">{completedCount}/18 selesai</span>
             </div>
             <div className="mt-2 h-2 overflow-hidden rounded-full bg-[#302D29]">
@@ -76,7 +76,7 @@ export default function IrodoriElementaryTwoPage() {
               />
             </div>
             <p className="mt-2 text-[9px] text-[#817A73]">
-              Progres tersimpan terpisah dari Starter, Elementary 1, EXP, dan JLPT.
+              Progres tersimpan terpisah dari Pemula, Dasar 1, EXP, dan JLPT.
             </p>
           </div>
         </div>
@@ -85,14 +85,14 @@ export default function IrodoriElementaryTwoPage() {
       <section className="space-y-4">
         <div>
           <p className="text-[9px] font-black tracking-[0.22em] text-[#A9C9E8]">
-            MATERI ELEMENTARY 2 A2
+            MATERI DASAR 2 A2
           </p>
           <h2 className="mt-1 text-xl font-black text-[#EAE6DD]">
             Daftar pelajaran
           </h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">
-            Lesson 1–18 tersedia secara berurutan. Setiap lesson baru terbuka
-            setelah lesson sebelumnya selesai.
+            Pelajaran 1–18 tersedia secara berurutan. Setiap pelajaran baru terbuka
+            setelah pelajaran sebelumnya selesai.
           </p>
         </div>
 
@@ -191,7 +191,7 @@ export default function IrodoriElementaryTwoPage() {
                                             ? "Menceritakan perubahan kehidupan, membicarakan perkembangan pekerjaan belakangan ini, menjelaskan kemampuan yang meningkat, serta menulis pesan kabar terbaru kepada guru."
                                             : lesson === 18
                                               ? "Membicarakan impian dan rencana masa depan, memahami pengalaman serta saran, menjelaskan tujuan, dan menyampaikan ucapan terima kasih dalam pidato perpisahan."
-                                              : "Materi akan tersedia setelah lesson sebelumnya selesai.";
+                                              : "Materi akan tersedia setelah pelajaran sebelumnya selesai.";
 
             const card = (
               <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (
