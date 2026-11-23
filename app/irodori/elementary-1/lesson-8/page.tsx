@@ -378,13 +378,13 @@ export default function IrodoriElementaryOneLessonEightPage() {
         href="/irodori/elementary-1"
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
       >
-        <ArrowLeft size={15} /> Kembali ke Elementary 1
+        <ArrowLeft size={15} /> Kembali ke Dasar 1
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#476C51]/45 bg-gradient-to-br from-[#203428] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#91B99A]/[0.08]">野</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#9CC5A3]">IRODORI • ELEMENTARY 1 A2 • LESSON 08</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#9CC5A3]">IRODORI • DASAR 1 A2 • PELAJARAN 08</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pernah bermain bisbol?</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9CDB0]">野球、したことありますか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -401,9 +401,9 @@ export default function IrodoriElementaryOneLessonEightPage() {
       <section className="rounded-2xl border border-[#6E9A75]/20 bg-[#1B201C]/80 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#A9CDB0]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Tiga target pertama mengikuti Can-do resmi. Dua target terakhir merupakan latihan penguatan Fude.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Tiga target pertama mengikuti target komunikasi resmi. Dua target terakhir merupakan latihan penguatan Fude.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -785,7 +785,7 @@ export default function IrodoriElementaryOneLessonEightPage() {
           <p className="text-[9px] font-black tracking-[0.2em] text-[#A9CDB0]">CAN-DO CHECK</p>
         </div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
-        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Elementary 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
+        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Dasar 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
         <div className="mt-4 space-y-3">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3">
@@ -842,7 +842,7 @@ export default function IrodoriElementaryOneLessonEightPage() {
         </div>
         {(!quizSubmitted || !practiceIsCorrect || !simulationsComplete || !canDosRated) && (
           <p className="mt-2 text-[10px] leading-5 text-[#817A73]">
-            Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian Can-do.
+            Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian target komunikasi.
           </p>
         )}
       </section>
