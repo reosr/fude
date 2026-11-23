@@ -3,6 +3,8 @@
 
 import { useState, useEffect } from "react";
 import { RotateCcw, X } from "lucide-react";
+import JapaneseReading from "@/components/JapaneseReading";
+import { formatGrammarNotation } from "@/lib/japanese-text";
 
 // =====================================================
 // TYPES
@@ -557,11 +559,11 @@ export default function Quiz({
           {currentQ.question}
         </p>
 
-        <h3
-          className="text-2xl font-bold text-[#EAE6DD] font-mincho leading-[2.5] [&_rt]:text-[0.5em] break-words"
-          dangerouslySetInnerHTML={{
-            __html: currentQ.sentence,
-          }}
+        <JapaneseReading
+          html={currentQ.sentence}
+          contentClassName="text-2xl font-bold text-[#EAE6DD] font-mincho leading-[2.5] [&_rt]:text-[0.5em] break-words"
+          kanaClassName="mt-1 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+          romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]"
         />
       </div>
 
@@ -590,7 +592,12 @@ export default function Quiz({
               disabled={isAnswered}
               className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${btnClass}`}
             >
-              <span dangerouslySetInnerHTML={{ __html: opt }} />
+              <JapaneseReading
+                 html={opt}
+                 contentClassName="font-mincho text-lg leading-[2] [&_rt]:text-[0.55em]"
+                 kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                 romajiClassName="mt-1 text-xs italic text-[#A9A398]"
+               />
             </button>
           );
         })}
@@ -604,7 +611,7 @@ export default function Quiz({
               : `Jawaban yang benar: ${currentQ.correctAnswer}. `}
 
             <span className="block mt-2 text-[#A3A099] not-italic leading-relaxed">
-              {currentQ.explanation}
+              {formatGrammarNotation(currentQ.explanation)}
             </span>
           </div>
 
