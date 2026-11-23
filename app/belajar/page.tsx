@@ -842,6 +842,7 @@ const findWordAt = (index: number): string | null => {
                 {babData.vocab.map((v: any, i: number) => (
                   <div key={v.kanji || i} className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-xl p-4 shadow-xl">
                     <JapaneseReading
+                      allowIndexFallback
                       kana={v.kana}
                       romaji={v.romaji}
                       translation={v.meaning}
