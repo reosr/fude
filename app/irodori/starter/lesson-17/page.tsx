@@ -714,7 +714,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
         <div className="rounded-xl border border-[#D6AD4F]/20 bg-[#27231D] p-4">
           <p className="text-[9px] font-bold tracking-[0.15em] text-[#D9B66D]">PERTANYAAN</p>
           <p className="mt-2 font-mincho text-lg text-[#F1EBDD]">週末は何をしましたか？</p>
-          <p className="mt-1 text-[10px] text-[#A9A398]">Apa yang kamu lakukan akhir pekan?</p>
+          <p className="mt-1 text-[10px] text-[#A9A398]">Apa yang kamu lakukan akhir pekan kemarin?</p>
         </div>
         <div className="grid gap-2">
           {[
@@ -734,7 +734,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
       </section>
 
       <section className="space-y-4 rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4 md:p-5">
-        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 02 · KESAN PENGALAMAN</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Pilih jawaban yang cocok</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Seseorang bertanya bagaimana film yang kamu tonton. Filmnya sangat menyenangkan.</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 02 · KESAN PENGALAMAN</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Pilih jawaban yang cocok</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Seseorang bertanya bagaimana film yang kamu tonton. Filmnya seru sekali.</p></div>
         <div className="rounded-xl border border-[#D6AD4F]/20 bg-[#27231D] p-4">
           <p className="font-mincho text-base text-[#F1EBDD]">映画はどうでしたか？</p>
           <p className="mt-1 text-[10px] text-[#A9A398]">Bagaimana filmnya?</p>
