@@ -830,7 +830,7 @@ export default function JLPTQuiz({
 
                           {question.passage && (
                             <div className="bg-[#121110]/50 border-l-4 border-[#33312E] rounded-r-lg mb-3">
-                              <JapaneseReading allowIndexFallback
+                              <JapaneseReading allowIndexFallback={showReadingHint}
                                 html={question.passage}
                                 contentClassName="p-4 max-h-[200px] overflow-y-auto text-sm text-[#EAE6DD] leading-relaxed font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] text-left"
                                 kanaClassName="px-4 pb-2 font-mincho text-sm text-[#D6AD4F]"
