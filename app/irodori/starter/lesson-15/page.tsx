@@ -570,9 +570,8 @@ export default function IrodoriStarterLessonFifteenPage() {
             <article key={floor.floor} className="flex flex-col gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3 sm:flex-row sm:items-center">
               <div className="flex size-14 shrink-0 items-center justify-center rounded-lg border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 font-mincho text-xl font-bold text-[#E7D2A1]">{floor.floor}</div>
               <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-2"><p className="font-mincho text-base font-bold text-[#F1EBDD]">{floor.name}</p><span className="text-[9px] text-[#D9B66D]">{floor.reading}</span></div>
-                <p className="mt-1 text-[10px] text-[#A9A398]">{floor.meaning}</p>
-                <p className="mt-1 font-mincho text-xs leading-6 text-[#CFC8BA]">{floor.items}</p>
+                <JapaneseReading allowIndexFallback translation={floor.meaning} contentClassName="font-mincho text-base font-bold leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-5 text-[#A9A398]">{floor.name}</JapaneseReading>
+                <JapaneseReading allowIndexFallback contentClassName="mt-2 font-mincho text-xs leading-6 text-[#CFC8BA]" kanaClassName="mt-1 font-mincho text-xs text-[#D6AD4F]" romajiClassName="mt-1 text-[10px] italic text-[#D9B66D]">{floor.items}</JapaneseReading>
               </div>
             </article>
           ))}
@@ -593,7 +592,7 @@ export default function IrodoriStarterLessonFifteenPage() {
               ["10階", "じゅっかい"],
             ].map(([jp, reading]) => (
               <div key={jp} className="rounded-lg border border-white/[0.06] bg-black/15 p-2 text-center">
-                <p className="font-mincho text-sm text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#D9B66D]">{reading}</p>
+                <JapaneseVocabularyReading reading={reading} contentClassName="font-mincho text-sm leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]">{jp}</JapaneseVocabularyReading>
               </div>
             ))}
           </div>
@@ -690,7 +689,7 @@ export default function IrodoriStarterLessonFifteenPage() {
             { key: "stationery", label: "みどり文房具店", meaning: "Toko alat tulis · buku dan pulpen" },
           ].map((item) => (
             <button key={item.key} type="button" disabled={storeSubmitted} aria-pressed={storeChoice === item.key} onClick={() => setStoreChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (storeSubmitted && item.key === "convenience" ? "border-emerald-500/50 bg-emerald-500/10" : storeSubmitted && storeChoice === item.key ? "border-red-400/50 bg-red-400/10" : storeChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <p className="text-sm font-bold text-[#F1EBDD]">{item.label}</p><p className="mt-1 text-[10px] text-[#A9A398]">{item.meaning}</p>
+              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="text-sm font-bold leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
