@@ -2621,7 +2621,7 @@
         ]
       },
       {
-        "pattern": "Kata benda 普通形（bentuk biasa） — Menyatakan identitas atau status dengan gaya biasa",
+        "pattern": "Kata benda 普通形（ふつうけい／bentuk biasa） — Menyatakan identitas atau status dengan gaya biasa",
         "formula": "<b>Nonlampau positif:</b> N + だ。<br><b>Nonlampau negatif:</b> N + じゃない。<br><b>Lampau positif:</b> N + だった。<br><b>Lampau negatif:</b> N + じゃなかった。<br>Bentuk lebih formal/tertulis untuk negatif: N + ではない／ではなかった.",
         "meaning": "Menyatakan identitas atau status dengan gaya biasa",
         "explanation": "Kata benda memakai pola akhir yang sama dengan な-adjektiva. Pada kalimat biasa, positif nonlampau menggunakan だ; negatif menggunakan じゃない; lampau positif だった; dan lampau negatif じゃなかった. Dalam gaya sopan, bentuk-bentuk itu berpadanan dengan です／じゃありません／でした／じゃありませんでした. Jangan menambahkan だ setelah kata kerja atau い-adjektiva.",
@@ -2645,7 +2645,7 @@
         ]
       },
       {
-        "pattern": "普通体 dalam percakapan akrab（perbedaan dengan 丁寧体） — Berbicara dengan gaya biasa kepada teman atau orang yang akrab",
+        "pattern": "普通体（ふつうたい） dalam percakapan akrab（perbedaan dengan 丁寧体（ていねいたい）） — Berbicara dengan gaya biasa kepada teman atau orang yang akrab",
         "formula": "<b>丁寧体:</b> ～です／～ます。<br><b>普通体:</b> gunakan bentuk biasa dari kata kerja, い-adjektiva, な-adjektiva, dan kata benda. Dalam pertanyaan akrab, か sering dihilangkan dan intonasi naik dipakai.<br>Pilih gaya berdasarkan hubungan dengan lawan bicara; gunakan 丁寧体 kepada orang yang belum akrab atau dalam situasi formal.",
         "meaning": "Berbicara dengan gaya biasa kepada teman atau orang yang akrab",
         "explanation": "普通体 adalah gaya kalimat yang menggunakan bentuk biasa. Gaya ini lazim dipakai dengan teman dekat, keluarga, atau orang yang sudah akrab. 丁寧体 dengan です／ます lebih aman untuk situasi sopan. Dalam pertanyaan percakapan akrab, partikel か sering tidak diucapkan; intonasi naik membantu menunjukkan bahwa kalimat tersebut pertanyaan. Jangan memakai 普通体 kepada semua orang tanpa mempertimbangkan hubungan sosial.",
@@ -3712,7 +3712,7 @@
     "tips": "Bentuk potensial menyatakan kemampuan atau kemungkinan melakukan tindakan; objek sering berubah dari を menjadi が. 見えます／聞こえます menyatakan sesuatu tertangkap oleh indra secara alami, sedangkan 見られます／聞けます menekankan kemampuan atau kesempatan. できます pada Bab 27 juga berarti sesuatu baru selesai dibuat/terbentuk, bukan hanya “bisa”.",
     "grammar": [
       {
-        "pattern": "可能形（bentuk potensial）: cara membentuk dari kata kerja — Bisa/dapat melakukan V",
+        "pattern": "可能形（かのうけい／bentuk potensial）: cara membentuk dari kata kerja — Bisa/dapat melakukan V",
         "formula": "<b>Kelompok I (五段動詞):</b> ubah bunyi akhir baris う ke baris え + る。<br>• か<strong>き</strong>ます → か<strong>け</strong>る (書く → 書ける)<br>• およ<strong>ぎ</strong>ます → およ<strong>げ</strong>る (泳ぐ → 泳げる)<br>• はな<strong>し</strong>ます → はな<strong>せ</strong>る (話す → 話せる)<br>• ま<strong>ち</strong>ます → ま<strong>て</strong>る (待つ → 待てる)<br>• の<strong>み</strong>ます → の<strong>め</strong>る (飲む → 飲める)<br>• あそ<strong>び</strong>ます → あそ<strong>べ</strong>る (遊ぶ → 遊べる)<br>• し<strong>に</strong>ます → し<strong>ね</strong>る (死ぬ → 死ねる)<br>• かえ<strong>り</strong>ます → かえ<strong>れ</strong>る (帰る → 帰れる)<br><br><b>Kelompok II (一段動詞):</b> hilangkan る + られる。<br>食べる → 食べられる／見る → 見られる。<br><br><b>Kelompok III (不規則):</b> する → できる; 来る（くる）→ 来られる（こられる）。<br><br>Setelah menjadi bentuk potensial, kata kerja berperilaku seperti kata kerja kelompok II: bentuk sopan dibuat dengan mengganti る menjadi ます (書けます／食べられます／できます).",
         "meaning": "Bisa/dapat melakukan V",
         "explanation": "Bentuk potensial mengubah kata kerja menjadi arti “mampu melakukan” atau “dapat dilakukan”. Cara membentuknya bergantung pada kelompok kata kerja, jadi kenali kelompok terlebih dahulu.<br><br><b>Langkah:</b> 1. Tentukan kelompok kata kerja; 2. ubah sesuai rumus di atas; 3. gunakan bentuk kamus potensial atau ubah menjadi ます untuk kalimat sopan; 4. atur partikel objek sesuai fokus kalimat.<br><br>Dalam banyak kalimat potensial, objek langsung yang sebelumnya memakai を dapat memakai が: 日本語を話します → 日本語が話せます. Namun を kadang tetap muncul, terutama jika ada fokus lain atau pada kebiasaan tertentu; untuk pola dasar pembelajaran ini, gunakan が terlebih dahulu agar hubungan kemampuan terlihat jelas.",
@@ -4150,7 +4150,7 @@
         ]
       },
       {
-        "pattern": "【Penjelasan pendukung】Transitif dan intransitif (他動詞・自動詞) — Membedakan tindakan yang dilakukan pada objek dan perubahan yang terjadi pada subjek",
+        "pattern": "【Penjelasan pendukung】Transitif dan intransitif (他動詞（たどうし）・自動詞（じどうし）) — Membedakan tindakan yang dilakukan pada objek dan perubahan yang terjadi pada subjek",
         "formula": "Transitif (他動詞): pelaku + は + benda + を + verba transitif。<br>Intransitif (自動詞): benda yang berubah + が + verba intransitif。<br>Pasangan harus dipelajari per kata; jangan mengira semua pasangan selalu memiliki perubahan bentuk yang sama.",
         "meaning": "Membedakan tindakan yang dilakukan pada objek dan perubahan yang terjadi pada subjek",
         "explanation": "Kata kerja transitif menyatakan tindakan pelaku terhadap objek, sehingga objek umumnya memakai を. Kata kerja intransitif menyatakan perubahan atau keadaan pada subjek, sehingga benda yang berubah sering memakai が. Ini membantu memahami mengapa “seseorang membuka pintu” dan “pintu terbuka” memiliki struktur berbeda.<br><br>Bagian ini adalah penjelasan pendukung untuk memahami 自動詞 + ています, bukan daftar konjugasi universal. Pasangan kata kerja tidak selalu dapat ditebak dan harus dipelajari bersama.",
@@ -4340,7 +4340,7 @@
     "tips": "<b>Urutan materi inti pelajaran:</b><br>1) Bentuk volisional (～よう／～おう) untuk ajakan atau keputusan spontan; 2) bentuk volisional + と思っています untuk niat yang sudah dipikirkan; 3) まだ + Vていません untuk sesuatu yang belum dilakukan; 4) V kamus／Vない + つもりです untuk niat pribadi; 5) V kamus／Nの + 予定です untuk jadwal atau rencana yang telah ditetapkan.<br>Ungkapan V意向形 + か dari JSON awal dipertahankan sebagai ungkapan pendukung untuk mengajukan usul atau tawaran secara akrab.<br><br><b>Jangan tertukar:</b> つもりです lebih menonjolkan niat orang, sedangkan 予定です dapat merujuk jadwal yang sudah ditentukan oleh orang lain, organisasi, atau agenda.",
     "grammar": [
       {
-        "pattern": "【文型1】V意向形（bentuk volisional） — Ayo ...! / Mari ...! / Saya akan ... (keputusan spontan)",
+        "pattern": "【文型1】V意向形（いこうけい／bentuk volisional） — Ayo ...! / Mari ...! / Saya akan ... (keputusan spontan)",
         "formula": "<b>Kelompok I:</b> dari bentuk ます, ubah bunyi sebelum ます dari baris い ke baris お, lalu tambahkan う。<br>例: 書きます → 書こう、飲みます → 飲もう、買います → 買おう、話します → 話そう。<br><br><b>Kelompok II:</b> hilangkan ます, lalu tambahkan よう。<br>食べます → 食べよう、見ます → 見よう。<br><br><b>Kelompok III:</b> します → しよう、来ます（きます）→ 来よう（こよう）。<br><br><b>Pemakaian:</b> dapat berdiri sendiri untuk mengajak teman/kelompok secara akrab (“Ayo ...”) atau menyatakan keputusan spontan (“Saya akan ...”). Bentuk ini bukan bentuk sopan; bentuk sopan yang sepadan antara lain ～ましょう。",
         "meaning": "Ayo ...! / Mari ...! / Saya akan ... (keputusan spontan)",
         "explanation": "<b>Fungsi 1 — ajakan akrab:</b> pembicara mengajak lawan bicara melakukan sesuatu bersama. Biasanya digunakan kepada teman, keluarga, atau orang yang sudah akrab.<br><br><b>Fungsi 2 — keputusan saat berbicara:</b> pembicara memutuskan tindakan pada saat itu, misalnya “Saya akan pulang sekarang.” Dalam fungsi ini subjek sering dihilangkan karena sudah jelas dari konteks.<br><br><b>Cara membentuknya:</b><br>1. Kenali kelompok kata kerja (I, II, atau III).<br>2. Ubah pangkal ます sesuai kelompoknya menggunakan rumus di atas.<br>3. Gunakan sebagai predikat akhir kalimat. Jangan menambahkan ます setelah bentuk volisional.<br><br><b>Nuansa:</b> ～よう／～おう lebih akrab dan langsung daripada ～ましょう. Untuk menyarankan sesuatu dengan sopan, gunakan bentuk sopan yang sudah dipelajari.",
@@ -4726,7 +4726,7 @@
     "tips": "<b>Perhatian:</b> bentuk perintah dan larangan langsung sangat tegas. Biasanya muncul dalam keadaan darurat, instruksi tertentu, atau tulisan larangan; jangan dipakai sembarangan kepada orang yang perlu dihormati.<br><br>Urutan bahasan mengikuti pelajaran: bentuk perintah/larangan → membaca tulisan → menjelaskan makna → menyampaikan ucapan dan pesan orang lain.",
     "grammar": [
       {
-        "pattern": "【文型1】V命令形（bentuk perintah） — Lakukan ...! / ...-lah! (perintah tegas)",
+        "pattern": "【文型1】V命令形（めいれいけい／bentuk perintah） — Lakukan ...! / ...-lah! (perintah tegas)",
         "formula": "<b>Kelompok I:</b> ubah bunyi akhir bentuk kamus dari baris う ke baris え: 書く→書け、飲む→飲め、話す→話せ、買う→買え。<br><b>Kelompok II:</b> ganti る menjadi ろ: 食べる→食べろ、見る→見ろ。<br><b>Kelompok III:</b> する→しろ、来る（くる）→来い（こい）。<br><br>Bentuk ini merupakan perubahan dari bentuk kamus, bukan dari bentuk ます. Contoh lain: 行きます→行く→行け。",
         "meaning": "Lakukan ...! / ...-lah! (perintah tegas)",
         "explanation": "<b>Fungsi:</b> memberi perintah langsung. Biasanya digunakan dalam keadaan mendesak, instruksi latihan/olahraga, komando, atau hubungan yang sangat akrab/atasan ke bawahan dalam konteks tertentu.<br><br><b>Rumus perubahan:</b><br>1. Pastikan bentuk kamus dan kelompok kata kerja.<br>2. Kelompok I mengubah vokal akhir menjadi bunyi e.<br>3. Kelompok II mengganti る menjadi ろ.<br>4. Kelompok III memiliki bentuk khusus しろ dan 来い.<br><br><b>Kesopanan:</b> bentuk ini terdengar keras. Dalam percakapan biasa, perintah yang lebih aman adalah ～てください atau ungkapan permintaan lain. Jangan menyebut bentuk perintah ini “bentuk sopan”.",
@@ -7049,7 +7049,7 @@
     "tips": "<b>使役形</b> dibentuk dari tiga kelompok kata kerja. Maknanya dapat berupa menyuruh/memaksa atau mengizinkan/membiarkan. Untuk verba intransitif, orang yang disuruh sering ditandai を; untuk verba transitif, orang yang disuruh umumnya に sementara objek tetap を. Bentuk kausatif-pasif disediakan sebagai pengayaan lanjutan.",
     "grammar": [
       {
-        "pattern": "使役形（V kausatif）— cara pembentukan tiga kelompok — Bentuk kausatif: menyuruh atau mengizinkan seseorang melakukan V",
+        "pattern": "使役形（しえきけい／V kausatif）— cara pembentukan tiga kelompok — Bentuk kausatif: menyuruh atau mengizinkan seseorang melakukan V",
         "formula": "<b>Kelompok I (五段):</b> ubah bunyi akhir bentuk kamus dari baris う ke baris あ + せる。Contoh: 書く→書かせる、読む→読ませる、買う→買わせる (う berubah menjadi わ). Bentuk sopan: 書かせます。<br><b>Kelompok II (一段):</b> buang る + させる。食べる→食べさせる、見る→見させる。<br><b>Kelompok III (tidak beraturan):</b> する→させる、来る（くる）→来させる（こさせる）。<br><b>Langkah dari bentuk ます:</b> kelompok I: hilangkan ます lalu ubah i-row ke a-row + せます (読みます→読ませます); kelompok II: hilangkan ます + させます (食べます→食べさせます); kelompok III: します→させます／来ます→来させます。",
         "meaning": "Bentuk kausatif: menyuruh atau mengizinkan seseorang melakukan V",
         "explanation": "<b>Fungsi:</b> Bentuk kausatif menunjukkan bahwa subjek menyebabkan orang lain melakukan suatu tindakan. Maknanya dapat berupa <b>menyuruh/memaksa</b> atau <b>mengizinkan/membiarkan</b>, bergantung pada hubungan antarorang dan konteks.<br><br><b>Langkah mengenali kelompok kata kerja:</b><br>• Kelompok I: bentuk kamus berakhir dengan bunyi u dan berubah melalui baris あ (書く→書かせる, 話す→話させる).<br>• Kelompok II: sebagian besar berakhir dengan る dan sebelum る ada bunyi i/e (食べる→食べさせる, 起きる→起きさせる).<br>• Kelompok III: hanya する dan 来る beserta gabungannya (勉強する→勉強させる, 持って来る→持って来させる).<br><br><b>Partikel orang yang disuruh:</b> untuk kata kerja intransitif, orang yang melakukan tindakan sering ditandai を: 子どもを行かせる／立たせる. Untuk kata kerja transitif, orang itu umumnya ditandai に, sedangkan objek tetap を: 子どもに野菜を食べさせる. Perhatikan agar dua fungsi partikel tidak tertukar.<br><br><b>Makna izin vs perintah:</b> 母は子どもを遊ばせました dapat berarti ibu membiarkan anak bermain; 先生は学生に本を読ませました berarti guru menyuruh murid membaca buku. Konteks menentukan nuansa.",
@@ -7121,7 +7121,7 @@
         ]
       },
       {
-        "pattern": "使役受身形（kausatif-pasif／pengayaan lanjutan） — Dipaksa/terpaksa melakukan V oleh pihak lain",
+        "pattern": "使役受身形（しえきうけみけい／kausatif-pasif／pengayaan lanjutan） — Dipaksa/terpaksa melakukan V oleh pihak lain",
         "formula": "<b>Kelompok I:</b> bentuk a-row + せられる; banyak kata kerja juga memiliki bentuk singkat a-row + される. Contoh: 書く→書かせられる／書かされる、読む→読ませられる／読まされる。<br><b>Kelompok II:</b> る → させられる。食べる→食べさせられる。<br><b>Kelompok III:</b> する→させられる、来る→来させられる（こさせられる）。",
         "meaning": "Dipaksa/terpaksa melakukan V oleh pihak lain",
         "explanation": "<b>Status:</b> Pengayaan lanjutan. Bentuk kausatif-pasif bukan pola inti yang tercantum pada pelajaran 48 Minna no Nihongo, tetapi dipertahankan dari JSON asli agar materi tidak hilang. Materi ini dibahas setelah pembelajar memahami bentuk kausatif dan pasif.<br><br><b>Fungsi:</b> Menunjukkan bahwa subjek terpaksa melakukan tindakan karena orang lain menyuruh atau memaksanya. Sering membawa nuansa tidak suka, keberatan, atau tidak punya pilihan.<br><br><b>Pembentukan:</b> gabungkan ide kausatif dan pasif. Kelompok I memiliki bentuk panjang ～せられる dan bentuk pendek ～される (kecuali beberapa verba yang bentuk pendeknya perlu diwaspadai). Kelompok II menggunakan ～させられる; kelompok III memiliki bentuk khusus させられる／来させられる.<br><br><b>Partikel:</b> orang yang memaksa/menyuruh umumnya ditandai に; pelaku yang terpaksa menjadi topik は. Objek kata kerja transitif tetap memakai を.<br><br><b>Catatan pemula:</b> jangan campur dengan bentuk kausatif biasa. 書かせる = menyuruh seseorang menulis; 書かされる = dipaksa menulis.",
@@ -7158,7 +7158,7 @@
     "tips": "<b>尊敬語／Sonkeigo</b> digunakan untuk tindakan orang yang dihormati. Cara pembentukan: bentuk pasif kehormatan, お／ご～になります, kata kerja khusus, dan permintaan お／ご～ください. Jangan gunakan sonkeigo untuk tindakan diri sendiri/kelompok sendiri.",
     "grammar": [
       {
-        "pattern": "尊敬語（sonkeigo）— fungsi dan pemilihan bentuk — Bahasa hormat untuk meninggikan tindakan orang lain",
+        "pattern": "尊敬語（そんけいご／sonkeigo）— fungsi dan pemilihan bentuk — Bahasa hormat untuk meninggikan tindakan orang lain",
         "formula": "Pakai 尊敬語 untuk tindakan <b>orang yang dihormati</b> (guru, atasan, pelanggan, tamu). Pilih salah satu bentuk berikut sesuai kata kerja:<br>1. bentuk pasif kehormatan dari kata kerja: Vれる／られる。<br>2. お／ご + Vます-stem + になります。<br>3. Kata kerja hormat khusus (いらっしゃる, 召し上がる, おっしゃる, dll.).<br>4. Permintaan hormat: お／ご + Vます-stem + ください。",
         "meaning": "Bahasa hormat untuk meninggikan tindakan orang lain",
         "explanation": "<b>Konsep utama:</b> Sonkeigo (尊敬語) digunakan ketika menyebut tindakan orang yang dihormati. Yang ditinggikan adalah orang yang melakukan tindakan, bukan pembicara. Karena itu, jangan menggunakan sonkeigo untuk tindakan diri sendiri atau kelompok internal ketika berbicara kepada pihak luar.<br><br><b>Tiga cara utama:</b><br>• Bentuk pasif kehormatan: relatif sederhana, misalnya 読まれます／来られます.<br>• Pola お／ご～になります: bentuk sopan yang produktif untuk banyak kata kerja, misalnya お帰りになります／ご利用になります.<br>• Kata kerja khusus: digunakan untuk kata kerja tertentu dan perlu dihafal, misalnya いらっしゃいます, 召し上がります.<br><br><b>Permintaan:</b> お待ちください／ご確認ください adalah bentuk hormat yang lazim untuk meminta seseorang melakukan sesuatu.<br><br><b>Jangan mencampur:</b> sonkeigo mengangkat tindakan orang lain; kenjougo (Bab 50) merendahkan tindakan diri sendiri. Pemilihan bentuk bergantung pada siapa pelaku tindakan dan hubungan sosialnya.",
@@ -7331,7 +7331,7 @@
     "tips": "<b>謙譲語／Kenjougo</b> digunakan untuk tindakan diri sendiri/kelompok sendiri demi menghormati pihak lain. <b>丁寧語／Teineigo</b> seperti ございます／でございます membuat ujaran lebih sopan. Jangan tertukar: sonkeigo meninggikan pelaku yang dihormati, kenjougo merendahkan tindakan kelompok pembicara.",
     "grammar": [
       {
-        "pattern": "謙譲語（kenjougo）— fungsi dan pemilihan bentuk — Bahasa rendah hati untuk menghormati lawan bicara melalui tindakan diri sendiri",
+        "pattern": "謙譲語（けんじょうご／kenjougo）— fungsi dan pemilihan bentuk — Bahasa rendah hati untuk menghormati lawan bicara melalui tindakan diri sendiri",
         "formula": "Gunakan 謙譲語 untuk tindakan <b>pembicara/kelompok pembicara</b> yang berhubungan dengan orang yang dihormati.<br>1. お + Vます-stem + します／いたします。<br>2. ご + kata benda verbal + します／いたします。<br>3. Kata kerja rendah hati khusus (参ります, 伺います, 拝見します, dll.).",
         "meaning": "Bahasa rendah hati untuk menghormati lawan bicara melalui tindakan diri sendiri",
         "explanation": "<b>Konsep:</b> Kenjougo (謙譲語) merendahkan tindakan diri sendiri atau kelompok sendiri untuk menunjukkan rasa hormat kepada pihak yang menjadi lawan bicara/tujuan tindakan. Bentuk ini sering dipakai saat melayani pelanggan, berbicara kepada atasan, memperkenalkan diri dalam situasi formal, atau menjelaskan tindakan kepada pihak luar.<br><br><b>Prinsip penting:</b> bukan berarti pembicara merendahkan harga dirinya; yang direndahkan adalah tindakan kelompok sendiri agar pihak yang dihormati ditinggikan secara tidak langsung.<br><br><b>Bandingkan dengan sonkeigo:</b><br>• Sonkeigo: 先生がいらっしゃいます (guru datang/berada di sini).<br>• Kenjougo: 私が参ります (saya yang datang).<br><br><b>Subjek internal:</b> ketika berbicara kepada pelanggan, tindakan bos/atasan yang termasuk kelompok perusahaan sendiri umumnya tidak ditinggikan dengan sonkeigo; gunakan bentuk netral atau rendah hati sesuai konteks. Jangan menggunakan kenjougo untuk tindakan orang yang sedang dihormati.",
