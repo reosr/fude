@@ -672,6 +672,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#486C91]/35 bg-[#486C91]/10 text-[10px] font-black text-[#A9C9E8]">{String(index + 1).padStart(2, "0")}</span>
               <div className="min-w-0">
                 <JapaneseReading
+                  allowIndexFallback
                   romaji={reading}
                   translation={meaning}
                   contentClassName="font-mincho text-sm leading-7 text-[#F1EBDD]"
