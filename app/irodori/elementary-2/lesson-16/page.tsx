@@ -266,7 +266,7 @@ export default function IrodoriElementaryTwoLessonSixteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#B2D7CB]/[0.08]">災</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#B2D7CB]">IRODORI • ELEMENTARY 2 A2 • LESSON 16</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Do not panic in case of an earthquake.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Jangan panik jika terjadi gempa.</h1>
           <p className="mt-2 text-sm font-semibold text-[#B2D7CB]">地震が来ても、あわてて動かないでください</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami pengumuman bencana, instruksi latihan kesiapsiagaan, penjelasan tentang gempa, informasi tempat pengungsian, dan brosur pencegahan bencana.</p>
           <div className="mt-5 flex flex-wrap gap-2">
