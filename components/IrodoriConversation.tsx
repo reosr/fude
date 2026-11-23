@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
+import { extractKanaFromReactNode } from "@/lib/japanese-text";
 import { Gauge, Play, Square, User, Volume2 } from "lucide-react";
 
 export interface IrodoriSpeaker {
@@ -179,7 +180,7 @@ export default function IrodoriConversation({
       <div className="flex flex-col gap-3 border-b border-white/[0.06] p-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">
-            CONVERSATION PRACTICE
+            LATIHAN PERCAKAPAN
           </p>
           <h4 className="mt-1 text-sm font-bold text-[#EAE6DD]">{title}</h4>
           <p className="mt-1 text-[10px] text-[#817A73]">
@@ -251,6 +252,7 @@ export default function IrodoriConversation({
             (candidate) => candidate.id === utterance.speakerId
           );
           const isActive = activeIndex === index;
+          const kanaReading = extractKanaFromReactNode(utterance.japanese);
 
           return (
             <article
@@ -286,7 +288,12 @@ export default function IrodoriConversation({
                   >
                     {utterance.japanese}
                   </div>
-                  <p className="mt-0.5 text-xs italic text-[#B8860B]">
+                  {kanaReading?.hasKanji && (
+                    <p className="mt-1 font-mincho text-sm leading-relaxed text-[#D6AD4F]">
+                      （{kanaReading.kana}）
+                    </p>
+                  )}
+                  <p className="mt-1 text-xs italic text-[#B8860B]">
                     {utterance.romaji}
                   </p>
                   <p className="mt-1 text-xs leading-5 text-[#A3A099]">
