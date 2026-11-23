@@ -240,7 +240,7 @@ export default function IrodoriElementaryTwoLessonEighteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#E5A9C4]/[0.08]">夢</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#E5A9C4]">IRODORI • ELEMENTARY 2 A2 • LESSON 18</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I am thinking about starting my own company in the future.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya berpikir untuk mendirikan perusahaan sendiri di masa depan.</h1>
           <p className="mt-2 text-sm font-semibold text-[#E5A9C4]">将来、自分の会社を作ろうと思います</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar membicarakan impian masa depan, memahami pengalaman dan saran, menjelaskan tujuan, serta menyampaikan ucapan terima kasih dalam pidato perpisahan.</p>
           <div className="mt-5 flex flex-wrap gap-2">
