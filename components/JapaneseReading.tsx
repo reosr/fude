@@ -1,7 +1,7 @@
 
 "use client";
 
-import { toRomaji } from "wanakana";
+import { toHiragana, toRomaji } from "wanakana";
 import type { ReactNode } from "react";
 import { extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
 
@@ -31,8 +31,9 @@ export default function JapaneseReading({
   const reading = html !== undefined
     ? extractKanaFromRubyHtml(html, allowIndexFallback)
     : extractKanaFromReactNode(children, allowIndexFallback);
+  const kana = reading ? toHiragana(reading.kana) : "";
   const showKanaLine = Boolean(reading && showKana && (reading.hasKanji || showKanaForKanaOnly));
-  const romaji = reading && showRomaji ? toRomaji(reading.kana) : "";
+  const romaji = kana && showRomaji ? toRomaji(kana) : "";
 
   return (
     <span className="block min-w-0">
@@ -41,7 +42,7 @@ export default function JapaneseReading({
       ) : (
         <span className={reading ? contentClassName : undefined}>{children}</span>
       )}
-      {showKanaLine && reading && <span className={kanaClassName + " block"}>（{reading.kana}）</span>}
+      {showKanaLine && reading && <span className={kanaClassName + " block"}>（{kana}）</span>}
       {romaji && <span className={romajiClassName + " block"}>{romaji}</span>}
     </span>
   );
