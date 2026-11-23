@@ -454,7 +454,7 @@ export default function IrodoriPemulaLessonSevenPage() {
         </div>
         <div className="relative z-10 max-w-2xl">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            TOPIC 04 • HOMES AND WORKPLACES
+            TOPIK 04 • RUMAH DAN TEMPAT KERJA
           </p>
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 7
@@ -881,7 +881,7 @@ export default function IrodoriPemulaLessonSevenPage() {
           <article className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
             <div className="border-b border-white/[0.07] bg-[#2B2118] p-4">
               <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">
-                WASHING MACHINE
+                MESIN CUCI
               </p>
               <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
                 <ruby>洗濯機<rt>せんたくき</rt></ruby> · Mesin cuci
