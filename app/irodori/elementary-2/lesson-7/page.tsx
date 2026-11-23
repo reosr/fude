@@ -17,6 +17,7 @@ import {
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
@@ -793,9 +794,14 @@ export default function IrodoriElementaryTwoLessonSevenPage() {
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
           {vocabRows.map(([jp, reading, meaning]) => (
             <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
-              <p className="font-mincho text-base text-[#F1EBDD]">{jp}</p>
-              <p className="mt-1 text-[9px] text-[#E0A7A7]">{reading}</p>
-              <p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p>
+              <JapaneseVocabularyReading reading={reading} meaning={meaning}
+                contentClassName="font-mincho text-base leading-relaxed text-[#F1EBDD]"
+                kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#E0A7A7]"
+                romajiClassName="mt-1 text-sm italic text-[#A9A398]"
+                translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+              >
+                {jp}
+              </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
@@ -810,9 +816,14 @@ export default function IrodoriElementaryTwoLessonSevenPage() {
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
           {kanjiWords.map(([jp, reading, meaning]) => (
             <article key={jp} className="rounded-xl border border-[#8B4B4B]/20 bg-[#211A1B] p-3">
-              <p className="font-mincho text-lg font-bold text-[#F1EBDD]">{jp}</p>
-              <p className="mt-1 text-[9px] text-[#E0A7A7]">{reading}</p>
-              <p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p>
+              <JapaneseVocabularyReading reading={reading} meaning={meaning}
+                contentClassName="font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]"
+                kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#E0A7A7]"
+                romajiClassName="mt-1 text-sm italic text-[#A9A398]"
+                translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+              >
+                {jp}
+              </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
