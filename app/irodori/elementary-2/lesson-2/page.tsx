@@ -604,13 +604,13 @@ export default function IrodoriElementaryTwoLessonTwoPage() {
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#86A9D0]/40 hover:text-[#EAE6DD]"
       >
         <ArrowLeft size={15} />
-        Kembali ke Elementary 2
+        Kembali ke Dasar 2
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#486C91]/35 bg-gradient-to-br from-[#20364C] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A9C9E8]/[0.08]">人</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • ELEMENTARY 2 A2 • LESSON 02</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • DASAR 2 A2 • PELAJARAN 02</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Dia tampak seperti orang yang serius.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9C9E8]">まじめそうな人ですね</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar mengenali seseorang dari ciri yang terlihat, mendeskripsikan sifat orang lain, menceritakan figur publik favorit dan alasannya, serta memahami artikel wawancara sederhana.</p>
@@ -626,9 +626,9 @@ export default function IrodoriElementaryTwoLessonTwoPage() {
       <section className="rounded-2xl border border-[#486C91]/20 bg-[#202A35]/80 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#A9C9E8]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target ini mengikuti Can-do resmi Irodori Elementary 2 Lesson 2.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target ini mengikuti target komunikasi resmi Irodori Dasar 2 Lesson 2.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -808,8 +808,8 @@ export default function IrodoriElementaryTwoLessonTwoPage() {
 
       <section className="space-y-4">
         <div>
-          <p className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">KANJI WORDS</p>
-          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Kosakata kanji pada lesson ini</h2>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">KOSAKATA KANJI</p>
+          <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Kosakata kanji pada pelajaran ini</h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">Perhatikan cara baca dan makna kanji yang digunakan untuk menjelaskan orang, kegiatan, dan kesukaan.</p>
         </div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -1102,7 +1102,7 @@ export default function IrodoriElementaryTwoLessonTwoPage() {
       <section className="space-y-4 rounded-2xl border border-[#486C91]/20 bg-[#202A35]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-[#A9C9E8]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi Can-do</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi target komunikasi</h2>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">
           Nilai kemampuanmu setelah kelima simulasi benar, seluruh latihan praktik benar, dan kuis dikumpulkan. Pilih penilaian yang paling sesuai untuk setiap target.
@@ -1142,7 +1142,7 @@ export default function IrodoriElementaryTwoLessonTwoPage() {
             {isCompleted
               ? "Lesson 2 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target Can-do sudah dinilai."
+                ? "Semua target target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
@@ -1160,7 +1160,7 @@ export default function IrodoriElementaryTwoLessonTwoPage() {
         <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-[#A9A398] hover:text-[#EAE6DD]">
           <ArrowLeft size={14} /> Daftar pelajaran
         </Link>
-        <span className="text-[10px] font-semibold text-[#817A73]">Elementary 2 · 02 / 18</span>
+        <span className="text-[10px] font-semibold text-[#817A73]">Dasar 2 · 02 / 18</span>
       </div>
     </main>
   );
