@@ -16,7 +16,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
 import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
@@ -28,63 +28,63 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const houseTourConversation: IrodoriUtterance[] = [
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>どうぞ。<ruby>入<rt>はい</rt></ruby>ってください。</>,
     romaji: "Douzo. Haitte kudasai.",
     translation: "Silakan masuk.",
     audioFileName: "irodori-starter-07-a01-l01.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>ありがとうございます。</>,
     romaji: "Arigatou gozaimasu.",
     translation: "Terima kasih.",
     audioFileName: "irodori-starter-07-a01-l02.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ここは<ruby>玄関<rt>げんかん</rt></ruby>です。くつを<ruby>脱<rt>ぬ</rt></ruby>いでください。</>,
     romaji: "Koko wa genkan desu. Kutsu o nuide kudasai.",
     translation: "Ini area pintu masuk. Silakan lepas sepatu.",
     audioFileName: "irodori-starter-07-a01-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>はい、わかりました。</>,
     romaji: "Hai, wakarimashita.",
     translation: "Baik, saya mengerti.",
     audioFileName: "irodori-starter-07-a01-l04.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ここは<ruby>台所<rt>だいどころ</rt></ruby>です。<ruby>一階<rt>いっかい</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>が<ruby>四<rt>よっ</rt></ruby>つあります。</>,
     romaji: "Koko wa daidokoro desu. Ikkai ni heya ga yottsu arimasu.",
     translation: "Ini dapur. Di lantai satu ada empat ruangan.",
     audioFileName: "irodori-starter-07-a01-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>あそこは<ruby>何<rt>なん</rt></ruby>ですか？</>,
     romaji: "Asoko wa nan desu ka?",
     translation: "Tempat di sana itu apa?",
     audioFileName: "irodori-starter-07-a01-l06.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>あそこは<ruby>居間<rt>いま</rt></ruby>です。ここに<ruby>階段<rt>かいだん</rt></ruby>があります。</>,
     romaji: "Asoko wa shokudou desu. Koko ni kaidan ga arimasu.",
     translation: "Itu ruang keluarga. Di sini ada tangga.",
     audioFileName: "irodori-starter-07-a01-l07.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <><ruby>二階<rt>にかい</rt></ruby>には<ruby>何<rt>なに</rt></ruby>がありますか？</>,
     romaji: "Nikai ni nani ga arimasu ka?",
     translation: "Apa yang ada di lantai dua?",
     audioFileName: "irodori-starter-07-a01-l08.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <><ruby>二階<rt>にかい</rt></ruby>に<ruby>部屋<rt>へや</rt></ruby>が<ruby>二<rt>ふた</rt></ruby>つあります。</>,
     romaji: "Nikai ni heya ga futatsu arimasu.",
     translation: "Di lantai dua ada dua kamar.",
@@ -94,42 +94,42 @@ const houseTourConversation: IrodoriUtterance[] = [
 
 const equipmentConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>すみません。<ruby>電子<rt>でんし</rt></ruby>レンジはありますか？</>,
     romaji: "Sumimasen. Denshi renji wa arimasu ka?",
     translation: "Permisi. Apakah ada microwave?",
     audioFileName: "irodori-starter-07-a02-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい、あります。<ruby>台所<rt>だいどころ</rt></ruby>にあります。</>,
     romaji: "Hai, arimasu. Daidokoro ni arimasu.",
     translation: "Ya, ada. Ada di dapur.",
     audioFileName: "irodori-starter-07-a02-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>トースターはありますか？</>,
     romaji: "Toosutaa wa arimasu ka?",
     translation: "Apakah ada toaster?",
     audioFileName: "irodori-starter-07-a02-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>トースターはありません。</>,
     romaji: "Toosutaa wa arimasen.",
     translation: "Toaster tidak ada.",
     audioFileName: "irodori-starter-07-a02-l04.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>Wi-Fiはありますか？</>,
     romaji: "Waifai wa arimasu ka?",
     translation: "Apakah ada Wi-Fi?",
     audioFileName: "irodori-starter-07-a02-l05.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい、ありますよ。</>,
     romaji: "Hai, arimasu yo.",
     translation: "Ya, ada.",
@@ -139,42 +139,42 @@ const equipmentConversation: IrodoriUtterance[] = [
 
 const describeHouseConversation: IrodoriUtterance[] = [
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ユイさんは、どこに<ruby>住<rt>す</rt></ruby>んでいますか？</>,
     romaji: "Yui-san wa, doko ni sunde imasu ka?",
     translation: "Yui, kamu tinggal di mana?",
     audioFileName: "irodori-starter-07-a03-l01.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>あおば<ruby>町<rt>まち</rt></ruby>のアパートに<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Aoba-machi no apaato ni sunde imasu.",
     translation: "Saya tinggal di apartemen di daerah Aoba.",
     audioFileName: "irodori-starter-07-a03-l02.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <><ruby>家<rt>いえ</rt></ruby>はどうですか？</>,
     romaji: "Ie wa dou desu ka?",
     translation: "Bagaimana rumahnya?",
     audioFileName: "irodori-starter-07-a03-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>ちょっとせまいです。でも、きれいです。</>,
     romaji: "Chotto semai desu. Demo, kirei desu.",
     translation: "Agak sempit. Tetapi, bersih.",
     audioFileName: "irodori-starter-07-a03-l04.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>そうですか。<ruby>静<rt>しず</rt></ruby>かですか？</>,
     romaji: "Sou desu ka. Shizuka desu ka?",
     translation: "Begitu ya. Apakah tenang?",
     audioFileName: "irodori-starter-07-a03-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>いいえ、あまり<ruby>静<rt>しず</rt></ruby>かじゃないです。<ruby>近<rt>ちか</rt></ruby>くに<ruby>学校<rt>がっこう</rt></ruby>があります。</>,
     romaji: "Iie, amari shizuka janai desu. Chikaku ni gakkou ga arimasu.",
     translation: "Tidak, tidak terlalu tenang. Di dekatnya ada sekolah.",
@@ -184,42 +184,42 @@ const describeHouseConversation: IrodoriUtterance[] = [
 
 const residenceConversation: IrodoriUtterance[] = [
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ソウタさんは、どんな<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいますか？</>,
     romaji: "Souta-san wa, donna ie ni sunde imasu ka?",
     translation: "Sota, kamu tinggal di rumah seperti apa?",
     audioFileName: "irodori-starter-07-a04-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <><ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>寮<rt>りょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます。</>,
     romaji: "Kaisha no ryou ni sunde imasu.",
     translation: "Saya tinggal di asrama perusahaan.",
     audioFileName: "irodori-starter-07-a04-l02.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <><ruby>広<rt>ひろ</rt></ruby>いですか？</>,
     romaji: "Hiroi desu ka?",
     translation: "Apakah luas?",
     audioFileName: "irodori-starter-07-a04-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>いいえ、<ruby>広<rt>ひろ</rt></ruby>くないです。でも、とても<ruby>静<rt>しず</rt></ruby>かです。</>,
     romaji: "Iie, hirokunai desu. Demo, totemo shizuka desu.",
     translation: "Tidak, tidak luas. Tetapi sangat tenang.",
     audioFileName: "irodori-starter-07-a04-l04.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>そうですか。<ruby>近<rt>ちか</rt></ruby>くに<ruby>公園<rt>こうえん</rt></ruby>がありますか？</>,
     romaji: "Sou desu ka. Chikaku ni kouen ga arimasu ka?",
     translation: "Begitu ya. Apakah ada taman di dekatnya?",
     audioFileName: "irodori-starter-07-a04-l05.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい、あります。</>,
     romaji: "Hai, arimasu.",
     translation: "Ya, ada.",
@@ -528,7 +528,7 @@ export default function IrodoriPemulaLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Tur rumah contoh"
-          tokohs={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
+          speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={houseTourConversation}
         />
         <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
@@ -674,7 +674,7 @@ export default function IrodoriPemulaLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene B · Mengecek fasilitas kamar"
-          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={equipmentConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -743,7 +743,7 @@ export default function IrodoriPemulaLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene C · Bercerita tentang rumah fiktif"
-          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.yui]}
+          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.yui]}
           utterances={describeHouseConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -817,7 +817,7 @@ export default function IrodoriPemulaLessonSevenPage() {
         </p>
         <IrodoriConversation
           title="Scene D · Membicarakan jenis hunian"
-          tokohs={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.sota]}
+          speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.sota]}
           utterances={residenceConversation}
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
