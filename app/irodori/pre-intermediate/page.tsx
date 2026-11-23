@@ -46,14 +46,14 @@ export default function IrodoriPreIntermediatePage() {
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Mengembangkan kemampuan untuk memahami informasi yang lebih panjang, bertukar pendapat, menjelaskan pengalaman, membaca teks praktis, dan menyampaikan pesan dengan lebih terstruktur.</p>
           <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
-            <div className="flex items-center justify-between text-[10px]"><span className="font-semibold text-[#A3A099]">Progres Irodori Pre-Intermediate</span><span className="font-bold text-[#E3D5F6]">{completedCount}/18 selesai</span></div>
+            <div className="flex items-center justify-between text-[10px]"><span className="font-semibold text-[#A3A099]">Progres Irodori Pra-Menengah</span><span className="font-bold text-[#E3D5F6]">{completedCount}/18 selesai</span></div>
             <div className="mt-2 h-2 overflow-hidden rounded-full bg-[#302D29]"><div className="h-full rounded-full bg-gradient-to-r from-[#80619B] to-[#C8A9EA] transition-all" style={{ width: (completedCount / 18) * 100 + "%" }} /></div>
             <p className="mt-2 text-[9px] text-[#817A73]">Progres jalur ini tersimpan terpisah dari Starter, Elementary, EXP, dan JLPT.</p>
           </div>
         </div>
       </header>
       <section className="space-y-4">
-        <div><p className="text-[9px] font-black tracking-[0.22em] text-[#C8A9EA]">MATERI PRE-INTERMEDIATE A2/B1</p><h2 className="mt-1 text-xl font-black text-[#EAE6DD]">Daftar pelajaran</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sembilan topik dengan delapan belas lesson. Pelajaran yang sudah dibuat akan terbuka berurutan setelah lesson sebelumnya selesai.</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.22em] text-[#C8A9EA]">MATERI PRE-INTERMEDIATE A2/B1</p><h2 className="mt-1 text-xl font-black text-[#EAE6DD]">Daftar pelajaran</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sembilan topik dengan delapan belas pelajaran. Pelajaran yang sudah dibuat akan terbuka berurutan setelah pelajaran sebelumnya selesai.</p></div>
         <div className="space-y-5">
           {topics.map((topic) => (
             <section key={topic} className="space-y-3">
@@ -78,7 +78,7 @@ export default function IrodoriPreIntermediatePage() {
           ))}
         </div>
       </section>
-      <p className="rounded-2xl border border-[#80619B]/25 bg-[#2A2333]/70 p-4 text-xs leading-6 text-[#A9A398]"><span className="font-bold text-[#C8A9EA]">Catatan:</span> Pre-Intermediate merupakan jalur A2/B1 tersendiri setelah materi Elementary. Tingkat bahasa pada aktivitas dapat berbeda antara A2 dan B1 sesuai target Can-do di tiap lesson.</p>
+      <p className="rounded-2xl border border-[#80619B]/25 bg-[#2A2333]/70 p-4 text-xs leading-6 text-[#A9A398]"><span className="font-bold text-[#C8A9EA]">Catatan:</span> Pre-Intermediate merupakan jalur A2/B1 tersendiri setelah materi Elementary. Tingkat bahasa pada aktivitas dapat berbeda antara A2 dan B1 sesuai target komunikasi di setiap pelajaran.</p>
     </main>
   );
 }
