@@ -8,8 +8,8 @@ import { BookOpen, Languages, Layers, Home, BookA } from "lucide-react";
 const tabs = [
   { href: "/belajar", label: "Belajar", icon: BookOpen },
   { href: "/kosakata", label: "Kosakata", icon: Languages },
-  { href: "/", label: "Home", icon: Home, isCenter: true },
-  { href: "/flashcard", label: "Flashcard", icon: Layers },
+  { href: "/", label: "Beranda", icon: Home, isCenter: true },
+  { href: "/flashcard", label: "Kartu Hafalan", icon: Layers },
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
 ];
 
