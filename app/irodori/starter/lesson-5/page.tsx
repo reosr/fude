@@ -105,14 +105,14 @@ const japaneseFoodConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <><ruby>納豆<rt>なっとう</rt></ruby>は、だいじょうぶですか？</>,
     romaji: "Nattou wa, daijoubu desu ka?",
-    translation: "Bagaimana dengan natto, kamu bisa memakannya?",
+    translation: "Kamu tidak keberatan makan natto?",
     audioFileName: "irodori-starter-05-a02-l05.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>あ、<ruby>納豆<rt>なっとう</rt></ruby>は、ちょっと……。</>,
     romaji: "A, nattou wa, chotto...",
-    translation: "Ah, kalau natto, agak kurang cocok untuk saya…",
+    translation: "Ah, kalau natto, sepertinya saya kurang cocok…",
     audioFileName: "irodori-starter-05-a02-l06.mp3",
   },
 ];
