@@ -21,13 +21,13 @@ const lessonId = "elementary1-15";
 
 const symptomConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>今日はどうしましたか。</>,romaji:"Kyou wa dou shimashita ka?",translation:"Ada keluhan apa hari ini?",audioFileName:"irodori-elementary1-15-a01-l01.mp3"},
-{speakerId:"yui",japanese:<>昨日から熱があって、のどが痛いんです。</>,romaji:"Kinou kara netsu ga atte, nodo ga itai n desu.",translation:"Sejak kemarin saya demam dan tenggorokan saya sakit.",audioFileName:"irodori-elementary1-15-a01-l02.mp3"},
-{speakerId:"akiko",japanese:<>いつからですか。せきも出ますか。</>,romaji:"Itsu kara desu ka? Seki mo demasu ka?",translation:"Sejak kapan? Apakah juga batuk?",audioFileName:"irodori-elementary1-15-a01-l03.mp3"},
+{speakerId:"yui",japanese:<>昨日から熱があって、のどが痛いんです。</>,romaji:"Kinou kara netsu ga atte, nodo ga itai n desu.",translation:"Sejak kemarin saya demam dan sakit tenggorokan.",audioFileName:"irodori-elementary1-15-a01-l02.mp3"},
+{speakerId:"akiko",japanese:<>いつからですか。せきも出ますか。</>,romaji:"Itsu kara desu ka? Seki mo demasu ka?",translation:"Sejak kapan? Apakah kamu juga batuk?",audioFileName:"irodori-elementary1-15-a01-l03.mp3"},
 {speakerId:"yui",japanese:<>昨日の夜からです。せきも少し出るんです。</>,romaji:"Kinou no yoru kara desu. Seki mo sukoshi deru n desu.",translation:"Sejak tadi malam. Saya juga sedikit batuk.",audioFileName:"irodori-elementary1-15-a01-l04.mp3"},
 ];
 
 const stomachConversation: IrodoriUtterance[] = [
-{speakerId:"akiko",japanese:<>ほかに、気になることがありますか。</>,romaji:"Hoka ni, ki ni naru koto ga arimasu ka?",translation:"Apakah ada hal lain yang dirasakan?",audioFileName:"irodori-elementary1-15-a02-l01.mp3"},
+{speakerId:"akiko",japanese:<>ほかに、気になることがありますか。</>,romaji:"Hoka ni, ki ni naru koto ga arimasu ka?",translation:"Ada keluhan lain?",audioFileName:"irodori-elementary1-15-a02-l01.mp3"},
 {speakerId:"sota",japanese:<>お腹が痛くて、吐き気がするんです。</>,romaji:"Onaka ga itakute, hakike ga suru n desu.",translation:"Perut saya sakit dan saya merasa mual.",audioFileName:"irodori-elementary1-15-a02-l02.mp3"},
 {speakerId:"akiko",japanese:<>いつからですか。</>,romaji:"Itsu kara desu ka?",translation:"Sejak kapan?",audioFileName:"irodori-elementary1-15-a02-l03.mp3"},
 {speakerId:"sota",japanese:<>おとといからです。</>,romaji:"Ototoi kara desu.",translation:"Sejak dua hari yang lalu.",audioFileName:"irodori-elementary1-15-a02-l04.mp3"},
@@ -35,15 +35,15 @@ const stomachConversation: IrodoriUtterance[] = [
 
 const receptionConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>すみません。初めて来ました。どうしたらいいですか。</>,romaji:"Sumimasen. Hajimete kimashita. Dou shitara ii desu ka?",translation:"Permisi. Ini pertama kalinya saya datang. Apa yang harus saya lakukan?",audioFileName:"irodori-elementary1-15-a03-l01.mp3"},
-{speakerId:"kenji",japanese:<>こちらに名前を書いてください。問診票もお願いします。</>,romaji:"Kochira ni namae o kaite kudasai. Monshinhyou mo onegaishimasu.",translation:"Silakan tulis nama di sini. Tolong isi juga formulir pertanyaan.",audioFileName:"irodori-elementary1-15-a03-l02.mp3"},
-{speakerId:"yui",japanese:<>はい。書いたあと、こちらに出せばいいですか。</>,romaji:"Hai. Kaita ato, kochira ni daseba ii desu ka?",translation:"Baik. Setelah selesai menulis, apakah saya serahkan ke sini?",audioFileName:"irodori-elementary1-15-a03-l03.mp3"},
+{speakerId:"kenji",japanese:<>こちらに名前を書いてください。問診票もお願いします。</>,romaji:"Kochira ni namae o kaite kudasai. Monshinhyou mo onegaishimasu.",translation:"Silakan tulis nama di sini. Tolong isi juga formulir riwayat kesehatan.",audioFileName:"irodori-elementary1-15-a03-l02.mp3"},
+{speakerId:"yui",japanese:<>はい。書いたあと、こちらに出せばいいですか。</>,romaji:"Hai. Kaita ato, kochira ni daseba ii desu ka?",translation:"Baik. Setelah selesai mengisi, apakah formulirnya saya serahkan di sini?",audioFileName:"irodori-elementary1-15-a03-l03.mp3"},
 {speakerId:"kenji",japanese:<>はい、そうです。ありがとうございます。</>,romaji:"Hai, sou desu. Arigatou gozaimasu.",translation:"Ya, benar. Terima kasih.",audioFileName:"irodori-elementary1-15-a03-l04.mp3"},
 ];
 
 const waitingConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>診察の前に、こちらに座ってください。</>,romaji:"Shinsatsu no mae ni, kochira ni suwatte kudasai.",translation:"Sebelum pemeriksaan, silakan duduk di sini.",audioFileName:"irodori-elementary1-15-a04-l01.mp3"},
 {speakerId:"sota",japanese:<>はい。</>,romaji:"Hai.",translation:"Baik.",audioFileName:"irodori-elementary1-15-a04-l02.mp3"},
-{speakerId:"akiko",japanese:<>問診票を見せてください。わからないことはありますか。</>,romaji:"Monshinhyou o misete kudasai. Wakaranai koto wa arimasu ka?",translation:"Tolong tunjukkan formulir pertanyaan. Apakah ada hal yang belum dipahami?",audioFileName:"irodori-elementary1-15-a04-l03.mp3"},
+{speakerId:"akiko",japanese:<>問診票を見せてください。わからないことはありますか。</>,romaji:"Monshinhyou o misete kudasai. Wakaranai koto wa arimasu ka?",translation:"Tolong tunjukkan formulir riwayat kesehatan. Apakah ada hal yang belum dipahami?",audioFileName:"irodori-elementary1-15-a04-l03.mp3"},
 {speakerId:"sota",japanese:<>ここに名前を書けばいいですか。</>,romaji:"Koko ni namae o kakeba ii desu ka?",translation:"Apakah saya harus menulis nama di sini?",audioFileName:"irodori-elementary1-15-a04-l04.mp3"},
 {speakerId:"akiko",japanese:<>はい、そうです。</>,romaji:"Hai, sou desu.",translation:"Ya, benar.",audioFileName:"irodori-elementary1-15-a04-l05.mp3"},
 ];
@@ -83,7 +83,7 @@ const vocabRows=[
 ["お腹","おなか · onaka","Perut"],
 ["熱","ねつ · netsu","Demam"],
 ["せき","せき · seki","Batuk"],
-["鼻水","はなみず · hanamizu","Cairan hidung"],
+["鼻水","はなみず · hanamizu","Ingus / hidung berair"],
 ["吐き気","はきけ · hakike","Rasa mual"],
 ["食欲","しょくよく · shokuyoku","Nafsu makan"],
 ["目","め · me","Mata"],
@@ -99,7 +99,7 @@ const vocabRows=[
 ["病院","びょういん · byouin","Rumah sakit"],
 ["医者","いしゃ · isha","Dokter"],
 ["受付","うけつけ · uketsuke","Meja pendaftaran"],
-["問診票","もんしんひょう · monshinhyou","Formulir pertanyaan medis"],
+["問診票","もんしんひょう · monshinhyou","Formulir riwayat kesehatan"],
 ["待合室","まちあいしつ · machiaishitsu","Ruang tunggu"],
 ["記入する","きにゅうする · kinyuu suru","Mengisi / menuliskan"],
 ];
@@ -146,7 +146,7 @@ const quizQuestions:Task[]=[
 {prompt:<>Pilih ungkapan untuk mengatakan bahwa tenggorokan terasa sakit.</>,options:[{key:"a",label:"のどが痛いんです。"},{key:"b",label:"目がかゆいんです。"},{key:"c",label:"足をくじいたんです。"}],answer:"a",explanation:<>のどが痛いんです berarti tenggorokan saya sakit.</>},
 {prompt:<>Apa arti 「おとといからです」?</>,options:[{key:"a",label:"Sejak dua hari yang lalu."},{key:"b",label:"Sejak besok."},{key:"c",label:"Selama dua minggu."}],answer:"a",explanation:<>おととい adalah dua hari yang lalu dan から berarti sejak.</>},
 {prompt:<>Pilih kalimat untuk menjelaskan demam dan sakit tenggorokan sekaligus.</>,options:[{key:"a",label:"熱があって、のどが痛いんです。"},{key:"b",label:"熱の前に、のどです。"},{key:"c",label:"熱をのどにします。"}],answer:"a",explanation:<>あって adalah bentuk て dari ある, yang menghubungkan dua keadaan.</>},
-{prompt:<>Apa arti 「問診票」?</>,options:[{key:"a",label:"Formulir pertanyaan medis."},{key:"b",label:"Ruang pemeriksaan."},{key:"c",label:"Kartu nama."}],answer:"a",explanation:<>問診票（もんしんひょう）adalah formulir berisi pertanyaan yang diisi sebelum konsultasi.</>},
+{prompt:<>Apa arti 「問診票」?</>,options:[{key:"a",label:"Formulir riwayat kesehatan."},{key:"b",label:"Ruang pemeriksaan."},{key:"c",label:"Kartu nama."}],answer:"a",explanation:<>問診票（もんしんひょう）adalah formulir berisi pertanyaan yang diisi sebelum konsultasi.</>},
 {prompt:<>Arti 「待合室」 adalah …</>,options:[{key:"a",label:"Ruang tunggu."},{key:"b",label:"Ruang kelas."},{key:"c",label:"Ruang makan."}],answer:"a",explanation:<>待合室（まちあいしつ）adalah tempat untuk menunggu giliran.</>},
 {prompt:<>Lengkapi: 「ここで写真を撮ら＿＿でください。」</>,options:[{key:"a",label:"ない"},{key:"b",label:"ます"},{key:"c",label:"て"}],answer:"a",explanation:<>撮る → 撮らない, lalu ないでください untuk meminta seseorang tidak mengambil foto.</>},
 {prompt:<>Pilih bentuk yang benar untuk mengatakan “sebelum mengisi formulir”.</>,options:[{key:"a",label:"問診票を書く前に"},{key:"b",label:"問診票を書いたあとに"},{key:"c",label:"問診票を書かないとき"}],answer:"a",explanation:<>V-る前に memakai bentuk kamus: 書く前に.</>},
@@ -155,7 +155,7 @@ const quizQuestions:Task[]=[
 ];
 
 const simulations=[
-{title:"01 · Menjelaskan gejala",heading:"Berbicara kepada dokter",prompt:"Dokter menanyakan keluhan. Kamu ingin menjelaskan bahwa sejak kemarin demam dan tenggorokan terasa sakit.",japanese:<>昨日から熱があって、のどが痛いんです。</>,translation:"Sejak kemarin saya demam dan tenggorokan saya sakit.",options:[{key:"a",label:"昨日から熱があって、のどが痛いんです。",meaning:"Menjelaskan dua gejala dan kapan gejala muncul."},{key:"b",label:"昨日から病院を書きます。",meaning:"Susunan kata tidak tepat untuk menjelaskan gejala."},{key:"c",label:"のどの前に熱です。",meaning:"Tidak menyampaikan keluhan dengan jelas."}],answer:"a",explanation:"Gunakan bentuk て untuk menghubungkan beberapa keadaan, lalu んです untuk menjelaskan situasi."},
+{title:"01 · Menjelaskan gejala",heading:"Berbicara kepada dokter",prompt:"Dokter menanyakan keluhan. Kamu ingin menjelaskan bahwa sejak kemarin demam dan tenggorokan terasa sakit.",japanese:<>昨日から熱があって、のどが痛いんです。</>,translation:"Sejak kemarin saya demam dan sakit tenggorokan.",options:[{key:"a",label:"昨日から熱があって、のどが痛いんです。",meaning:"Menjelaskan dua gejala dan kapan gejala muncul."},{key:"b",label:"昨日から病院を書きます。",meaning:"Susunan kata tidak tepat untuk menjelaskan gejala."},{key:"c",label:"のどの前に熱です。",meaning:"Tidak menyampaikan keluhan dengan jelas."}],answer:"a",explanation:"Gunakan bentuk て untuk menghubungkan beberapa keadaan, lalu んです untuk menjelaskan situasi."},
 {title:"02 · Menyebutkan waktu",heading:"Menjawab pertanyaan sejak kapan",prompt:"Petugas bertanya 「いつからですか」. Gejala mulai terasa dua hari yang lalu.",japanese:<>おとといからです。</>,translation:"Sejak dua hari yang lalu.",options:[{key:"a",label:"おとといからです。",meaning:"Menjawab kapan gejala mulai muncul."},{key:"b",label:"おとといまでです。",meaning:"Berarti sampai dua hari yang lalu."},{key:"c",label:"おとといの前です。",meaning:"Tidak menjawab secara alami."}],answer:"a",explanation:"から berarti sejak dan dapat diikuti keterangan waktu seperti 昨日 atau おととい."},
 {title:"03 · Mengisi formulir",heading:"Memahami instruksi petugas",prompt:"Petugas meminta kamu menulis nama dan mengisi formulir pertanyaan. Pilih tanggapan yang sesuai.",japanese:<>問診票を書いたあと、受付に出してください。</>,translation:"Setelah mengisi formulir, serahkan ke meja pendaftaran.",options:[{key:"a",label:"はい。書いたあと、受付に出します。",meaning:"Mengulang urutan instruksi dengan tepat."},{key:"b",label:"いいえ。受付を食べます。",meaning:"Tidak sesuai konteks."},{key:"c",label:"書く前に、帰りました。",meaning:"Mengatakan sudah pulang sebelum mengisi."}],answer:"a",explanation:"V-たあと menunjukkan tindakan yang dilakukan setelah mengisi formulir selesai."},
 {title:"04 · Menunggu giliran",heading:"Memahami arahan di ruang tunggu",prompt:"Petugas memberi tahu tempat menunggu. Pilih tindakan yang sesuai dengan instruksi.",japanese:<>こちらの待合室でお待ちください。</>,translation:"Silakan menunggu di ruang tunggu ini.",options:[{key:"a",label:"待合室で待ちます。",meaning:"Menunggu di ruang tunggu."},{key:"b",label:"受付で寝ます。",meaning:"Tidur di meja pendaftaran."},{key:"c",label:"病院の外で走ります。",meaning:"Berlari di luar rumah sakit."}],answer:"a",explanation:"待合室 adalah ruang tunggu. Perhatikan lokasi yang disebutkan petugas."},
