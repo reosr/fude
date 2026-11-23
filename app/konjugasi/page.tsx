@@ -1005,6 +1005,7 @@ return (
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div className="min-w-0">
                         <JapaneseReading
+                          allowIndexFallback
                           kana={selectedPair.kana}
                           romaji={selectedPair.romaji}
                           translation={selectedPair.meaning}
