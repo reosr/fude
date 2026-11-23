@@ -15,7 +15,7 @@ const speakers = IRODORI_SPEAKERS;
 const lessonId = "elementary1-14";
 
 const phoneCallConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>おはようございます。ユイです。電車が遅れていて、15分ぐらい遅れます。</>,romaji:"Ohayou gozaimasu. Yui desu. Densha ga okurete ite, juugo-fun gurai okuremasu.",translation:"Selamat pagi. Saya Yui. Kereta terlambat, jadi saya juga akan terlambat sekitar 15 menit.",audioFileName:"irodori-elementary1-14-a01-l01.mp3"},
+{speakerId:"yui",japanese:<>おはようございます。ユイです。電車が遅れていて、15分ぐらい遅れます。</>,romaji:"Ohayou gozaimasu. Yui desu. Densha ga okurete ite, juugo-fun gurai okuremasu.",translation:"Selamat pagi. Saya Yui. Kereta terlambat, jadi saya akan terlambat sekitar 15 menit.",audioFileName:"irodori-elementary1-14-a01-l01.mp3"},
 {speakerId:"kenji",japanese:<>わかりました。気をつけて来てください。</>,romaji:"Wakarimashita. Ki o tsukete kite kudasai.",translation:"Baik, saya mengerti. Hati-hati di jalan.",audioFileName:"irodori-elementary1-14-a01-l02.mp3"},
 {speakerId:"yui",japanese:<>すみません。みなさんに伝えていただけますか。</>,romaji:"Sumimasen. Minasan ni tsutaete itadakemasu ka?",translation:"Maaf. Bisa tolong sampaikan ke semua orang?",audioFileName:"irodori-elementary1-14-a01-l03.mp3"},
 {speakerId:"kenji",japanese:<>はい、伝えておきます。</>,romaji:"Hai, tsutaete okimasu.",translation:"Ya, akan saya sampaikan.",audioFileName:"irodori-elementary1-14-a01-l04.mp3"},
