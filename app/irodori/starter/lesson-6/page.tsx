@@ -260,8 +260,8 @@ const drinkMenu = [
 
 const mealChoices = [
   { jp: "カレー", reading: "karee", meaning: "Kari Jepang", icon: "🍛" },
-  { jp: "うどん", reading: "udon", meaning: "Mi udon", icon: "🍜" },
-  { jp: "そば", reading: "soba", meaning: "Mi soba", icon: "🥢" },
+  { jp: "うどん", reading: "udon", meaning: "Udon", icon: "🍜" },
+  { jp: "そば", reading: "soba", meaning: "Soba", icon: "🥢" },
   { jp: "すし", reading: "sushi", meaning: "Sushi", icon: "🍣" },
 ];
 
