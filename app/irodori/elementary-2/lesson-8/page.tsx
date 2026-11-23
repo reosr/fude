@@ -797,7 +797,7 @@ export default function IrodoriElementaryTwoLessonEightPage() {
         <article className="rounded-2xl border border-[#A36D3D]/25 bg-[#211B16] p-4 md:p-5">
           <div className="flex items-center justify-between gap-3 border-b border-white/[0.07] pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#E7BE8E]">FESTIVAL POST · {festivalSocialPost.date}</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#E7BE8E]">UNGGAHAN FESTIVAL · {festivalSocialPost.date}</p>
               <h3 className="mt-1 text-sm font-bold text-[#F1EBDD]">{festivalSocialPost.author}</h3>
             </div>
             <FileText size={20} className="text-[#E7BE8E]" />
