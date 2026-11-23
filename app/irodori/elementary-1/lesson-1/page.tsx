@@ -39,14 +39,14 @@ const greetingConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>はい、<ruby>元気<rt>げんき</rt></ruby>です。ユイさんもお<ruby>元気<rt>げんき</rt></ruby>ですか？</>,
     romaji: "Hai, genki desu. Yui-san mo ogenki desu ka?",
-    translation: "Ya, saya baik. Yui juga apa kabar?",
+    translation: "Ya, saya baik. Bagaimana dengan Yui?",
     audioFileName: "irodori-elementary1-01-a01-l02.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>はい、おかげさまで。</>,
     romaji: "Hai, okagesama de.",
-    translation: "Ya, berkat doa semuanya saya baik.",
+    translation: "Ya, saya baik-baik saja, terima kasih.",
     audioFileName: "irodori-elementary1-01-a01-l03.mp3",
   },
 ];
@@ -80,7 +80,7 @@ const recentLifeConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>ソウタさん、<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>て、どのぐらいになりますか？</>,
     romaji: "Souta-san, Nihon ni kite, dono gurai ni narimasu ka?",
-    translation: "Sota, sudah berapa lama sejak datang ke Jepang?",
+    translation: "Sota, sudah berapa lama kamu di Jepang?",
     audioFileName: "irodori-elementary1-01-a03-l01.mp3",
   },
   {
@@ -94,14 +94,14 @@ const recentLifeConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>そうですか。<ruby>日本<rt>にほん</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>に<ruby>慣<rt>な</rt></ruby>れましたか？</>,
     romaji: "Sou desu ka. Nihon no seikatsu ni naremashita ka?",
-    translation: "Begitu, ya. Apakah sudah terbiasa dengan kehidupan di Jepang?",
+    translation: "Oh, begitu. Kamu sudah mulai terbiasa dengan kehidupan di Jepang?",
     audioFileName: "irodori-elementary1-01-a03-l03.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>はい、だいぶ<ruby>慣<rt>な</rt></ruby>れました。</>,
     romaji: "Hai, daibu naremashita.",
-    translation: "Ya, sekarang sudah cukup terbiasa.",
+    translation: "Ya, sekarang saya sudah cukup terbiasa.",
     audioFileName: "irodori-elementary1-01-a03-l04.mp3",
   },
 ];
@@ -111,7 +111,7 @@ const arrivalConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>アキコさんは、いつ<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>ましたか？</>,
     romaji: "Akiko-san wa, itsu Nihon ni kimashita ka?",
-    translation: "Akiko, kapan datang ke Jepang?",
+    translation: "Akiko, kapan kamu datang ke Jepang?",
     audioFileName: "irodori-elementary1-01-a04-l01.mp3",
   },
   {
@@ -125,14 +125,14 @@ const arrivalConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>そうですか。もう<ruby>慣<rt>な</rt></ruby>れましたか？</>,
     romaji: "Sou desu ka. Mou naremashita ka?",
-    translation: "Begitu, ya. Apakah sudah terbiasa?",
+    translation: "Oh, begitu. Kamu sudah terbiasa?",
     audioFileName: "irodori-elementary1-01-a04-l03.mp3",
   },
   {
     speakerId: "akiko",
     japanese: <>はい、なんとか。</>,
     romaji: "Hai, nantoka.",
-    translation: "Ya, sedikit demi sedikit.",
+    translation: "Ya, sejauh ini saya bisa menyesuaikan diri.",
     audioFileName: "irodori-elementary1-01-a04-l04.mp3",
   },
 ];
@@ -142,7 +142,7 @@ const activityConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>ユイさん、<ruby>日本<rt>にほん</rt></ruby>では<ruby>何<rt>なに</rt></ruby>をしていますか？</>,
     romaji: "Yui-san, Nihon dewa nani o shite imasu ka?",
-    translation: "Yui, sekarang melakukan kegiatan apa di Jepang?",
+    translation: "Yui, sekarang kamu sedang melakukan apa di Jepang?",
     audioFileName: "irodori-elementary1-01-a05-l01.mp3",
   },
   {
@@ -156,21 +156,21 @@ const activityConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>そうですか。<ruby>仕事<rt>しごと</rt></ruby>はどうですか？</>,
     romaji: "Sou desu ka. Shigoto wa dou desu ka?",
-    translation: "Begitu, ya. Bagaimana pekerjaannya?",
+    translation: "Begitu, ya. Bagaimana pekerjaanmu?",
     audioFileName: "irodori-elementary1-01-a05-l03.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>とても<ruby>忙<rt>いそが</rt></ruby>しいです。でも、みんな<ruby>親切<rt>しんせつ</rt></ruby>です。</>,
     romaji: "Totemo isogashii desu. Demo, minna shinsetsu desu.",
-    translation: "Sangat sibuk. Tetapi, semua orang baik hati.",
+    translation: "Pekerjaannya sibuk sekali, tetapi orang-orangnya baik hati.",
     audioFileName: "irodori-elementary1-01-a05-l04.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>それはよかったですね。</>,
     romaji: "Sore wa yokatta desu ne.",
-    translation: "Syukurlah kalau begitu.",
+    translation: "Wah, syukurlah kalau begitu.",
     audioFileName: "irodori-elementary1-01-a05-l05.mp3",
   },
 ];
@@ -333,7 +333,7 @@ const quizQuestions: Task[] = [
   {
     prompt: <>Pertanyaan 「仕事はどうですか？」 menanyakan …</>,
     options: [
-      { key: "a", label: "Bagaimana pekerjaannya?" },
+      { key: "a", label: "Bagaimana pekerjaanmu?" },
       { key: "b", label: "Di mana tempat kerjanya?" },
       { key: "c", label: "Kapan mulai bekerja?" },
     ],
@@ -382,7 +382,7 @@ const simulations = [
     heading: "Sudah berapa lama?",
     prompt: "Akiko bertanya berapa lama Sota sudah tinggal di Jepang. Sota sudah tinggal tepat enam bulan.",
     japanese: <>日本に<ruby>来<rt>き</rt></ruby>て、どのぐらいになりますか？</>,
-    translation: "Sudah berapa lama sejak datang ke Jepang?",
+    translation: "Sudah berapa lama kamu di Jepang?",
     options: [
       { key: "duration", label: "ちょうど半年です。", meaning: "Tepat enam bulan." },
       { key: "arrival", label: "先月、来ました。", meaning: "Saya datang bulan lalu." },
@@ -396,7 +396,7 @@ const simulations = [
     heading: "Kapan datang?",
     prompt: "Yui ingin mengatakan bahwa ia datang ke Jepang tahun lalu.",
     japanese: <>いつ<ruby>日本<rt>にほん</rt></ruby>に<ruby>来<rt>き</rt></ruby>ましたか？</>,
-    translation: "Kapan datang ke Jepang?",
+    translation: "Kapan kamu datang ke Jepang?",
     options: [
       { key: "lastyear", label: "去年、来ました。", meaning: "Saya datang tahun lalu." },
       { key: "wrongparticle", label: "去年に来ました。", meaning: "Partikel に tidak diperlukan pada contoh ini." },
@@ -410,7 +410,7 @@ const simulations = [
     heading: "Apa yang dilakukan sekarang?",
     prompt: "Sota menjelaskan bahwa sekarang ia belajar bahasa Jepang di sekolah bahasa.",
     japanese: <>日本では、<ruby>何<rt>なに</rt></ruby>をしていますか？</>,
-    translation: "Sekarang melakukan kegiatan apa di Jepang?",
+    translation: "Sekarang kamu sedang melakukan apa di Jepang?",
     options: [
       { key: "teiru", label: "日本語学校に通っています。", meaning: "Saya bersekolah di sekolah bahasa Jepang." },
       { key: "past", label: "日本語学校に通いました。", meaning: "Saya pernah bersekolah di sekolah bahasa Jepang." },
@@ -421,10 +421,10 @@ const simulations = [
   },
   {
     title: "05 · Menyampaikan kesan",
-    heading: "Bagaimana pekerjaannya?",
+    heading: "Bagaimana pekerjaanmu?",
     prompt: "Yui mengatakan bahwa pekerjaannya sibuk, tetapi rekan-rekannya baik hati.",
     japanese: <><ruby>仕事<rt>しごと</rt></ruby>はどうですか？</>,
-    translation: "Bagaimana pekerjaannya?",
+    translation: "Bagaimana pekerjaanmu?",
     options: [
       { key: "impression", label: "忙しいです。でも、みんな親切です。", meaning: "Sibuk, tetapi semua orang baik hati." },
       { key: "sequence", label: "忙しいです。それから、駅です。", meaning: "Tidak sesuai konteks." },
