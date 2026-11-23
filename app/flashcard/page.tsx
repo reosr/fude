@@ -399,7 +399,7 @@ useEffect(() => {
                           {verbType}
                         </span>
                       )}
-                      <JapaneseReading
+                      <JapaneseReading allowIndexFallback
                         showOriginal={false}
                         kana={card.kana}
                         romaji={card.romaji}
@@ -535,7 +535,7 @@ useEffect(() => {
                       </button>
                       <div className="relative z-10 w-full mt-2">
                         <p className="font-bold text-2xl text-[#EAE6DD] mb-1 font-mincho">{v.kanji}</p>
-                        <JapaneseReading
+                        <JapaneseReading allowIndexFallback
                           showOriginal={false}
                           kana={v.kana}
                           romaji={v.romaji}
