@@ -692,8 +692,16 @@ export default function IrodoriStarterLessonEighteenPage() {
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 04 · UNGGAHAN SINGKAT</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Pilih unggahan yang lengkap</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Yui ingin bercerita tentang hari liburnya. Unggahan yang baik menyebut tempat, kegiatan, kesan, dan keinginan berikutnya.</p></div>
         <div className="rounded-xl border border-white/[0.07] bg-black/15 p-4">
           <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">POST YUI · 日曜日</p>
-          <p className="mt-2 font-mincho text-sm leading-7 text-[#F1EBDD]">日曜日、公園へ行きました。お弁当を食べました。とても楽しかったです。こんどは、海へ行きたいです。</p>
-          <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Hari Minggu pergi ke taman. Makan bekal. Sangat menyenangkan. Lain kali ingin pergi ke laut.</p>
+          <JapaneseReading
+            allowIndexFallback
+            translation="Hari Minggu pergi ke taman. Makan bekal. Sangat menyenangkan. Lain kali ingin pergi ke laut."
+            contentClassName="mt-2 font-mincho text-sm leading-7 text-[#F1EBDD]"
+            kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]"
+            romajiClassName="mt-1 text-xs italic text-[#A9A398]"
+            translationClassName="mt-2 text-[10px] leading-5 text-[#A9A398]"
+          >
+            日曜日、公園へ行きました。お弁当を食べました。とても楽しかったです。こんどは、海へ行きたいです。
+          </JapaneseReading>
         </div>
         <p className="text-xs font-semibold text-[#EAE6DD]">Apa saja informasi yang muncul dalam unggahan?</p>
         <div className="grid gap-2">
