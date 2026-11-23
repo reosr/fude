@@ -189,7 +189,7 @@ const ratingOptions: { value: IrodoriRating; label: string }[] = [
 
 const hobbyVocabulary: { jp: ReactNode; reading: string; meaning: string }[] = [
   { jp: <ruby>趣味<rt>しゅみ</rt></ruby>, reading: "shumi", meaning: "Hobi" },
-  { jp: "マンガ", reading: "manga", meaning: "Manga / komik" },
+  { jp: "マンガ", reading: "manga", meaning: "Manga (komik Jepang)" },
   { jp: <ruby>読書<rt>どくしょ</rt></ruby>, reading: "dokusho", meaning: "Membaca buku" },
   { jp: <ruby>音楽<rt>おんがく</rt></ruby>, reading: "ongaku", meaning: "Musik" },
   { jp: <ruby>映画<rt>えいが</rt></ruby>, reading: "eiga", meaning: "Film" },
