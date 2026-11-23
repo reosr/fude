@@ -429,7 +429,7 @@ export default function IrodoriPemulaLessonFivePage() {
           Daftar Pelajaran
         </Link>
         <span className="rounded-full border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-1.5 text-[10px] font-bold tracking-wider text-[#E7D2A1]">
-          STARTER • A1
+          PEMULA • A1
         </span>
       </div>
 
@@ -455,7 +455,7 @@ export default function IrodoriPemulaLessonFivePage() {
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
-              5 target target komunikasi
+              5 target komunikasi
             </span>
             <span className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">
               4 dialog orisinal
@@ -1223,7 +1223,7 @@ export default function IrodoriPemulaLessonFivePage() {
         <div className="flex items-center gap-2">
           <CheckCircle2 size={18} className="text-[#D9B66D]" />
           <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">
-            CAN-DO CHECK
+            CEK TARGET KOMUNIKASI
           </p>
         </div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">
