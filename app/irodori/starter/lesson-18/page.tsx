@@ -600,7 +600,7 @@ export default function IrodoriStarterLessonEighteenPage() {
         <div className="grid gap-2 sm:grid-cols-2">
           {connectors.map(([word, meaning, note]) => (
             <article key={word} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
-              <JapaneseReading translation={meaning} contentClassName="font-mincho text-lg leading-relaxed text-[#F1EBDD]" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-1 text-xs font-bold text-[#D9B66D]">{word}</JapaneseReading>
+              <JapaneseReading allowIndexFallback translation={meaning} contentClassName="font-mincho text-lg leading-relaxed text-[#F1EBDD]" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-1 text-xs font-bold text-[#D9B66D]">{word}</JapaneseReading>
               <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{note}</p>
             </article>
           ))}
