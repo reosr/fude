@@ -36,29 +36,40 @@ function preserveKanaOnly(value: string): string {
 }
 
 function readPlainText(value: string, allowIndexFallback: boolean): JapaneseReadingResult | null {
-  const text = stripHtml(value).normalize("NFC");
-  const hasKanji = KANJI_RE.test(text);
+  const original = stripHtml(value).normalize("NFC");
+  const hasKanji = KANJI_RE.test(original);
 
   if (!hasKanji) {
-    if (/[A-Za-z]{3,}/.test(text)) return null;
-    const normalized = text.replace(/\s+/g, " ").trim();
+    if (/[A-Za-z]{3,}/.test(original)) return null;
+    const normalized = original.replace(/\s+/g, " ").trim();
     return normalized && KANA_RE.test(normalized)
       ? { kana: normalized, hasKanji: false }
       : null;
   }
 
-  if (!allowIndexFallback) return null;
+  // Terima format bacaan dalam kurung, misalnya 来（き） atau 十歳（じゅっさい）.
+  // Ini juga dipakai pada penjelasan yang tidak seluruhnya ditulis dengan tag ruby.
+  const withExplicitReadings = original.replace(
+    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+)[（(]([ぁ-ゖァ-ヶー]+)[）)]/g,
+    "$2"
+  );
 
-  // Ketika teks mencampur bahasa Indonesia dan Jepang, baca bagian Jepang saja.
-  const japaneseText = text
+  const japaneseOnly = withExplicitReadings
     .replace(/[A-Za-z][A-Za-z0-9._'-]*/g, " ")
     .replace(/[0-9０-９]+/g, " ");
+
+  if (!KANJI_RE.test(japaneseOnly)) {
+    const normalized = japaneseOnly.replace(/\s+/g, " ").trim();
+    return normalized ? { kana: normalized, hasKanji: true } : null;
+  }
+
+  if (!allowIndexFallback) return null;
 
   let kana = "";
   let index = 0;
 
-  while (index < japaneseText.length) {
-    const match = READING_ENTRIES.find(([word]) => japaneseText.startsWith(word, index));
+  while (index < japaneseOnly.length) {
+    const match = READING_ENTRIES.find(([word]) => japaneseOnly.startsWith(word, index));
 
     if (match) {
       kana += match[1];
@@ -66,7 +77,7 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
       continue;
     }
 
-    const char = japaneseText[index];
+    const char = japaneseOnly[index];
     if (KANJI_RE.test(char)) return null;
 
     kana += char;
