@@ -435,9 +435,7 @@ export default function IrodoriStarterLessonElevenPage() {
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
             IRODORI • STARTER A1 • LESSON 11
           </p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            What kind of manga do you like?
-          </h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Kamu suka manga seperti apa?</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]">
             どんなマンガが好きですか？
           </p>
