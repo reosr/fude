@@ -154,7 +154,7 @@ export default function IrodoriElementaryTwoPage() {
                                             ? "Sekarang saya bisa berbicara bahasa Jepang lebih baik daripada sebelumnya."
                                             : lesson === 18
                                               ? "Saya berpikir untuk mendirikan perusahaan sendiri di masa depan."
-                                              : "Lesson " + String(lesson).padStart(2, "0");
+                                              : "Pelajaran " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
               : lesson === 2
