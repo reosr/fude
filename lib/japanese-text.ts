@@ -339,6 +339,32 @@ const GRAMMAR_LABELS: Record<string, string> = {
   S: "kalimat",
 };
 
+const POLITE_VERB_FORMS: Record<string, string> = {
+  "ませんでした": "bentuk negatif lampau ます",
+  "ません": "bentuk negatif ます",
+  "ました": "bentuk lampau ます",
+  "ます": "bentuk ます",
+};
+
+const VOICE_VERB_FORMS: Record<string, string> = {
+  "受身形": "bentuk pasif",
+  "受身": "bentuk pasif",
+  "使役形": "bentuk kausatif",
+  "使役": "bentuk kausatif",
+  "可能形": "bentuk potensial",
+  "可能": "bentuk potensial",
+};
+
+const VERB_FORM_SUFFIXES: Record<string, string> = {
+  "てから": "bentuk て + から",
+  "ないで": "bentuk ないで",
+  "て": "bentuk て",
+  "た": "bentuk た",
+  "る": "bentuk kamus",
+  "ない": "bentuk ない",
+  "たり": "bentuk たり",
+};
+
 /**
  * Ubah notasi ringkas Minna menjadi istilah bahasa Indonesia yang mudah
  * dipahami. Urutan aturan penting: bentuk khusus harus diproses sebelum
@@ -374,12 +400,7 @@ export function formatGrammarNotation(value: string): string {
   formatted = formatted.replace(
     /(^|[^\\p{L}\\p{N}])V(\\d*)-?(ませんでした|ません|ました|ます)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
     (_match, prefix: string, number: string, suffix: string) => {
-      const form = {
-        "ませんでした": "bentuk negatif lampau ます",
-        "ません": "bentuk negatif ます",
-        "ました": "bentuk lampau ます",
-        "ます": "bentuk ます",
-      }[suffix];
+      const form = POLITE_VERB_FORMS[suffix];
       return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
     }
   );
@@ -395,14 +416,7 @@ export function formatGrammarNotation(value: string): string {
   formatted = formatted.replace(
     /(^|[^\\p{L}\\p{N}])V(\\d*)-?(受身形|受身|使役形|使役|可能形|可能)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
     (_match, prefix: string, number: string, suffix: string) => {
-      const form = {
-        "受身形": "bentuk pasif",
-        "受身": "bentuk pasif",
-        "使役形": "bentuk kausatif",
-        "使役": "bentuk kausatif",
-        "可能形": "bentuk potensial",
-        "可能": "bentuk potensial",
-      }[suffix];
+      const form = VOICE_VERB_FORMS[suffix];
       return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
     }
   );
@@ -411,15 +425,7 @@ export function formatGrammarNotation(value: string): string {
   formatted = formatted.replace(
     /(^|[^\\p{L}\\p{N}])V(\\d*)-?(てから|ないで|て|た|る|ない|たり)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヺ])/gu,
     (_match, prefix: string, number: string, suffix: string) => {
-      const form = {
-        "てから": "bentuk て + から",
-        "ないで": "bentuk ないで",
-        "て": "bentuk て",
-        "た": "bentuk た",
-        "る": "bentuk kamus",
-        "ない": "bentuk ない",
-        "たり": "bentuk たり",
-      }[suffix];
+      const form = VERB_FORM_SUFFIXES[suffix];
       return prefix + `kata kerja${number ? ` ${number}` : ""} ${form}`;
     }
   );
