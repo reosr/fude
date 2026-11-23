@@ -157,7 +157,7 @@ export default function IrodoriPage() {
               <Link
                 key={course.id}
                 href={course.id === "starter" ? "/irodori/starter" : course.id === "elementary-1" ? "/irodori/elementary-1" : course.id === "elementary-2" ? "/irodori/elementary-2" : "/irodori/pre-intermediate"}
-                aria-label={course.id === "starter" ? "Buka Irodori Starter A1" : course.id === "elementary-1" ? "Buka Irodori Elementary 1 A2" : course.id === "elementary-2" ? "Buka Irodori Elementary 2 A2" : "Buka Irodori Pre-Intermediate A2/B1"}
+                aria-label={course.id === "starter" ? "Buka Irodori Pemula A1" : course.id === "elementary-1" ? "Buka Irodori Dasar 1 A2" : course.id === "elementary-2" ? "Buka Irodori Dasar 2 A2" : "Buka Irodori Pra-Menengah A2/B1"}
                 className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D6AD4F]"
               >
                 {card}
@@ -173,7 +173,7 @@ export default function IrodoriPage() {
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
           adalah pemilih jalur. Starter A1 dan Elementary 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
-          Elementary 2 A2 sudah memiliki 18 lesson. Jalur Pre-Intermediate A2/B1
+          Dasar 2 A2 sudah memiliki 18 pelajaran. Jalur Pra-Menengah A2/B1
           kini dapat dimulai, dengan pelajaran berikutnya terbuka secara berurutan.
         </p>
       </div>
