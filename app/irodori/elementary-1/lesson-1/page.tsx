@@ -537,7 +537,7 @@ export default function IrodoriElementaryOneLessonOnePage() {
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#A9CDB0]">{index < 3 ? "CAN-DO UTAMA" : "LATIHAN PENGUATAN"} · 0{index + 1}</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#A9CDB0]">{index < 3 ? "TARGET KOMUNIKASI UTAMA" : "LATIHAN PENGUATAN"} · 0{index + 1}</p>
               <p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p>
             </article>
           ))}
