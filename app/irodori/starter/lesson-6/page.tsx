@@ -83,7 +83,7 @@ const fastFoodConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>チーズバーガーのセット、お<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Chiizubaagaa no setto, onegaishimasu.",
-    translation: "Paket cheeseburger, tolong.",
+    translation: "Paket burger keju, tolong.",
     audioFileName: "irodori-starter-06-a02-l02.mp3",
   },
   {
@@ -236,8 +236,8 @@ const ratingOptions: { value: IrodoriRating; label: string }[] = [
 ];
 
 const menuBurgers = [
-  { jp: "ハンバーガー", reading: "hanbaagaa", meaning: "Hamburger", single: "¥210", set: "¥510", icon: "🍔" },
-  { jp: "チーズバーガー", reading: "chiizubaagaa", meaning: "Cheeseburger", single: "¥260", set: "¥560", icon: "🧀" },
+  { jp: "ハンバーガー", reading: "hanbaagaa", meaning: "Burger", single: "¥210", set: "¥510", icon: "🍔" },
+  { jp: "チーズバーガー", reading: "chiizubaagaa", meaning: "Burger keju", single: "¥260", set: "¥560", icon: "🧀" },
   { jp: "てりやきバーガー", reading: "teriyaki baagaa", meaning: "Burger teriyaki", single: "¥350", set: "¥650", icon: "🥬" },
   { jp: "フィッシュバーガー", reading: "fisshu baagaa", meaning: "Burger ikan", single: "¥310", set: "¥610", icon: "🐟" },
   { jp: "チキンバーガー", reading: "chikin baagaa", meaning: "Burger ayam", single: "¥310", set: "¥610", icon: "🍗" },
@@ -281,14 +281,14 @@ const quizQuestions: {
   explanation: ReactNode;
 }[] = [
   {
-    prompt: "Kamu membaca menu dan ingin membeli cheeseburger. Tulisan mana yang harus dicari?",
+    prompt: "Kamu membaca menu dan ingin membeli burger keju. Tulisan mana yang harus dicari?",
     options: [
       { key: "a", label: "チーズバーガー" },
       { key: "b", label: "フライドポテト" },
       { key: "c", label: "アップルパイ" },
     ],
     answer: "a",
-    explanation: <>チーズバーガー berarti cheeseburger. フライドポテト adalah kentang goreng dan アップルパイ adalah pai apel.</>,
+    explanation: <>チーズバーガー berarti burger keju. フライドポテト adalah kentang goreng dan アップルパイ adalah pai apel.</>,
   },
   {
     prompt: "Kalimat mana yang paling tepat untuk memesan minuman dengan sopan?",
@@ -439,7 +439,7 @@ export default function IrodoriPemulaLessonSixPage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 6
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya pesan cheeseburger.</h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya memesan burger keju.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             チーズバーガー、ください
           </p>
@@ -506,7 +506,7 @@ export default function IrodoriPemulaLessonSixPage() {
           latihan membaca informasi.
         </p>
         <IrodoriConversation
-          title="Scene A · Melihat menu bersama teman"
+          title="Adegan A · Melihat menu bersama teman"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={menuConversation}
         />
@@ -556,7 +556,7 @@ export default function IrodoriPemulaLessonSixPage() {
                       <span className="font-bold text-[#E7D2A1]">{item.single}</span>
                     </div>
                     <div className="mt-1 flex justify-between gap-2 text-[10px]">
-                      <span className="text-[#A9A398]">Set</span>
+                      <span className="text-[#A9A398]">Paket</span>
                       <span className="font-bold text-[#D9B66D]">{item.set}</span>
                     </div>
                   </article>
@@ -674,7 +674,7 @@ export default function IrodoriPemulaLessonSixPage() {
           mungkin bertanya apakah kamu makan di tempat atau membawa pulang.
         </p>
         <IrodoriConversation
-          title="Scene B · Memesan cheeseburger"
+          title="Adegan B · Memesan burger keju"
           speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={fastFoodConversation}
         />
@@ -820,7 +820,7 @@ export default function IrodoriPemulaLessonSixPage() {
           tentukan. Pertanyaan 「<ruby>何<rt>なに</rt></ruby>にしますか？」 berarti “Mau pilih yang mana?”. 
         </p>
         <IrodoriConversation
-          title="Scene C · Memilih makan siang"
+          title="Adegan C · Memilih makan siang"
           speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={chooseMealConversation}
         />
@@ -881,7 +881,7 @@ export default function IrodoriPemulaLessonSixPage() {
           dibutuhkan tersedia dengan pola Nはありますか？
         </p>
         <IrodoriConversation
-          title="Scene D · Memesan tambahan"
+          title="Adegan D · Memesan tambahan"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.kenji]}
           utterances={quantityConversation}
         />
