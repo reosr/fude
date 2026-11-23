@@ -689,7 +689,7 @@ export default function IrodoriPemulaLessonFifteenPage() {
             { key: "stationery", label: "みどり文房具店", meaning: "Toko alat tulis · buku dan pulpen" },
           ].map((item) => (
             <button key={item.key} type="button" disabled={storeSubmitted} aria-pressed={storeChoice === item.key} onClick={() => setStoreChoice(item.key)} className={"rounded-xl border p-3 text-left transition-colors " + (storeSubmitted && item.key === "convenience" ? "border-emerald-500/50 bg-emerald-500/10" : storeSubmitted && storeChoice === item.key ? "border-red-400/50 bg-red-400/10" : storeChoice === item.key ? "border-[#D6AD4F]/60 bg-[#B8860B]/10" : "border-white/[0.07] bg-black/10")}>
-              <JapaneseReading allowIndexFallback translation={item.meaning} contentClassName="text-sm font-bold leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
+              <JapaneseReading showRomaji={false} allowIndexFallback translation={item.meaning} contentClassName="text-sm font-bold leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic text-[#D9B66D]" translationClassName="mt-1 text-[10px] leading-4 text-[#A9A398]">{item.label}</JapaneseReading>
             </button>
           ))}
         </div>
