@@ -646,13 +646,13 @@ export default function IrodoriElementaryTwoLessonNinePage() {
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
       <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#D79C72]/40 hover:text-[#EAE6DD]">
-        <ArrowLeft size={15} /> Kembali ke Elementary 2
+        <ArrowLeft size={15} /> Kembali ke Dasar 2
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#9A5E46]/35 bg-gradient-to-br from-[#452B2B] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#E2B08D]/[0.08]">正</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#E2B08D]">IRODORI • ELEMENTARY 2 A2 • LESSON 09</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#E2B08D]">IRODORI • DASAR 2 A2 • PELAJARAN 09</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Apa yang dilakukan orang pada Hari Kedewasaan?</h1>
           <p className="mt-2 text-sm font-semibold text-[#E2B08D]">成人の日は、何をするんですか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami perayaan tahunan Jepang, menceritakan liburan, memperkenalkan festival negara sendiri, membaca artikel acara, dan menulis ucapan Tahun Baru.</p>
@@ -667,9 +667,9 @@ export default function IrodoriElementaryTwoLessonNinePage() {
       <section className="rounded-2xl border border-[#9A5E46]/20 bg-[#302322]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#E2B08D]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Lima target berikut sesuai Can-do 38–42 pada Irodori Elementary 2 Lesson 9.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Lima target berikut sesuai target komunikasi 38–42 pada Irodori Dasar 2 Lesson 9.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -686,14 +686,14 @@ export default function IrodoriElementaryTwoLessonNinePage() {
           <h2 className="text-sm font-bold text-[#EAE6DD]">Catatan budaya: 成人の日</h2>
         </div>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Materi Irodori memberi contoh upacara untuk orang yang berusia 20 tahun. Di Jepang, usia dewasa menurut hukum berubah menjadi 18 tahun sejak 1 April 2022. Namun, banyak pemerintah daerah tetap mengadakan upacara lokal untuk orang yang berusia 20 tahun. Pelaksanaan dan format acara dapat berbeda menurut daerah.</p>
-        <p className="mt-2 text-[10px] leading-5 text-[#887F74]">Di lesson ini, kita mempelajari bahasa dan kebiasaan budaya, bukan ketentuan hukum.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#887F74]">Di pelajaran ini, kita mempelajari bahasa dan kebiasaan budaya, bukan ketentuan hukum.</p>
       </section>
 
       <section className="space-y-4">
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#E2B08D]">DIALOG 01–05</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Memahami perayaan dan berbagi pengalaman</h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi pelajaran ini.</p>
         </div>
         <div className="space-y-4">
           <IrodoriConversation title="Membicarakan Hari Kedewasaan" speakers={[friendYui, friendSota]} utterances={explainComingOfAgeConversation} />
@@ -733,7 +733,7 @@ export default function IrodoriElementaryTwoLessonNinePage() {
         <article className="rounded-2xl border border-[#9A5E46]/25 bg-[#211A19] p-4 md:p-5">
           <div className="flex items-center justify-between gap-3 border-b border-white/[0.07] pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#E2B08D]">ANNUAL EVENT</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#E2B08D]">PERAYAAN TAHUNAN</p>
               <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">独立記念日 · Hari Kemerdekaan</h3>
             </div>
             <Star size={22} className="text-[#E2B08D]" />
@@ -769,7 +769,7 @@ export default function IrodoriElementaryTwoLessonNinePage() {
         <article className="rounded-2xl border border-[#9A5E46]/25 bg-[#211A19] p-4 md:p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-dashed border-[#9A5E46]/30 pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#E2B08D]">LOCAL EVENT ARTICLE</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#E2B08D]">ARTIKEL ACARA LOKAL</p>
               <h3 className="mt-1 text-sm font-bold text-[#F1EBDD]">{eventArticle.title}</h3>
             </div>
             <FileText size={21} className="text-[#E2B08D]" />
@@ -1148,7 +1148,7 @@ export default function IrodoriElementaryTwoLessonNinePage() {
       <section className="space-y-4 rounded-2xl border border-[#9A5E46]/20 bg-[#302322]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-[#E2B08D]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi Can-do</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi target komunikasi</h2>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">
           Nilai kemampuanmu setelah kelima simulasi benar, keenam latihan praktik benar, dan kuis dikumpulkan. Pilih penilaian yang paling sesuai untuk setiap target.
@@ -1188,7 +1188,7 @@ export default function IrodoriElementaryTwoLessonNinePage() {
             {isCompleted
               ? "Lesson 9 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target Can-do sudah dinilai."
+                ? "Semua target target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
@@ -1206,7 +1206,7 @@ export default function IrodoriElementaryTwoLessonNinePage() {
         <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-[#A9A398] hover:text-[#EAE6DD]">
           <ArrowLeft size={14} /> Daftar pelajaran
         </Link>
-        <span className="text-[10px] font-semibold text-[#817A73]">Elementary 2 · 09 / 18</span>
+        <span className="text-[10px] font-semibold text-[#817A73]">Dasar 2 · 09 / 18</span>
       </div>
     </main>
   );
