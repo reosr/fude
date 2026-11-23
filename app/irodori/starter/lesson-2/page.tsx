@@ -675,6 +675,7 @@ export default function IrodoriStarterLessonTwoPage() {
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
 <JapaneseReading
+                allowIndexFallback
                 romaji={item.romaji}
                 translation={item.meaning}
                 contentClassName="font-mincho text-2xl font-bold leading-relaxed text-[#F1EBDD]"
