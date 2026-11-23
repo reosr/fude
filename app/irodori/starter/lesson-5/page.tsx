@@ -369,8 +369,8 @@ const favoriteFoods = [
 
 const japaneseFoods = [
   { jp: "うどん", reading: "udon", meaning: "Mi tebal dari tepung terigu", icon: "🍜" },
-  { jp: "そば", reading: "soba", meaning: "Mi Jepang yang dibuat dari tepung soba", icon: "🥢" },
-  { jp: "すし", reading: "sushi", meaning: "Nasi berbumbu dengan aneka topping", icon: "🍣" },
+  { jp: "そば", reading: "soba", meaning: "Mi khas Jepang dari tepung soba", icon: "🥢" },
+  { jp: "すし", reading: "sushi", meaning: "Nasi berbumbu cuka dengan aneka lauk", icon: "🍣" },
   { jp: <><ruby>天<rt>てん</rt></ruby>ぷら</>, reading: "tenpura", meaning: "Bahan makanan berbalut tepung lalu digoreng", icon: "🍤" },
   { jp: "ラーメン", reading: "raamen", meaning: "Mi kuah khas Jepang", icon: "🍥" },
   { jp: "カレー", reading: "karee", meaning: "Kari ala Jepang", icon: "🍛" },
@@ -1076,8 +1076,8 @@ export default function IrodoriPemulaLessonFivePage() {
           <article className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             <h3 className="text-xs font-bold text-[#E7D2A1]">Udon dan soba</h3>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]">
-              Udon dibuat dari tepung terigu dan teksturnya tebal, sedangkan soba
-              umumnya dibuat dari tepung soba. Keduanya bisa disajikan
+              Udon adalah mi tebal dari tepung terigu, sedangkan soba dibuat dari
+              tepung soba. Keduanya bisa disajikan
               berkuah hangat atau dingin dengan saus celup.
             </p>
           </article>
