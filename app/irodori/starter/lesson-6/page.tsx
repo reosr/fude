@@ -1213,7 +1213,7 @@ export default function IrodoriPemulaLessonSixPage() {
                   SOAL {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                  <JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
+                  <JapaneseReading showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading>
                 </h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => {
@@ -1248,7 +1248,7 @@ export default function IrodoriPemulaLessonSixPage() {
                           {quizSubmitted && correct ? "✓" : selected ? "●" : "○"}
                         </span>
                         <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
-                          <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
+                          <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                         </span>
                       </button>
                     );
@@ -1264,7 +1264,7 @@ export default function IrodoriPemulaLessonSixPage() {
                     >
                       {isCorrect ? "Benar." : "Belum tepat."}
                     </span>
-                    <JapaneseReading allowIndexFallback>{question.explanation}</JapaneseReading>
+                    <JapaneseReading showRomaji={false} allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -1350,7 +1350,7 @@ export default function IrodoriPemulaLessonSixPage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]")
                       }
                     >
-                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
+                      <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
