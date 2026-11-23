@@ -76,6 +76,7 @@ type ConjugatedForm = FormDefinition & {
   romaji: string;
   meaning: string;
   example?: string;
+  exampleTranslation?: string;
 };
 
 type ConjugatedVerb = VerbData & {
@@ -285,7 +286,7 @@ function makeGrammarFormRuby(value: string): string {
   return `<ruby>${escapeHtml(value)}<rt>${escapeHtml(reading)}</rt></ruby>`;
 }
 
-// Kata dengan kanji yang terselip di tengah memerlukan pembacaan khusus.
+// Kata dengan beberapa kelompok kanji dan okurigana memerlukan pembacaan khusus.
 // Prefix ini menjaga okurigana tetap tampil sebagai kana biasa.
 const specialRubyPrefixes: Record<string, { reading: string; html: string }> = {
   "引っ越す": {
@@ -299,6 +300,54 @@ const specialRubyPrefixes: Record<string, { reading: string; html: string }> = {
   "付き合う": {
     reading: "つきあ",
     html: "<ruby>付<rt>つ</rt></ruby>き<ruby>合<rt>あ</rt></ruby>",
+  },
+  "お出でになる": {
+    reading: "おいでにな",
+    html: "お<ruby>出<rt>い</rt></ruby>でにな",
+  },
+  "思い出す": {
+    reading: "おもいだ",
+    html: "<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>",
+  },
+  "買い物する": {
+    reading: "かいもの",
+    html: "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>",
+  },
+  "ご覧になる": {
+    reading: "ごらんにな",
+    html: "ご<ruby>覧<rt>らん</rt></ruby>にな",
+  },
+  "差し上げる": {
+    reading: "さしあげ",
+    html: "<ruby>差<rt>さ</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げ",
+  },
+  "取り替える": {
+    reading: "とりかえ",
+    html: "<ruby>取<rt>と</rt></ruby>り<ruby>替<rt>か</rt></ruby>え",
+  },
+  "乗り換える": {
+    reading: "のりかえ",
+    html: "<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>え",
+  },
+  "引き出す": {
+    reading: "ひきだ",
+    html: "<ruby>引<rt>ひ</rt></ruby>き<ruby>出<rt>だ</rt></ruby>",
+  },
+  "降り出す": {
+    reading: "ふりだ",
+    html: "<ruby>降<rt>ふ</rt></ruby>り<ruby>出<rt>だ</rt></ruby>",
+  },
+  "召し上がる": {
+    reading: "めしあが",
+    html: "<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>が",
+  },
+  "申し上げる": {
+    reading: "もうしあげ",
+    html: "<ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げ",
+  },
+  "役に立つ": {
+    reading: "やくにた",
+    html: "<ruby>役<rt>やく</rt></ruby>に<ruby>立<rt>た</rt></ruby>",
   },
 };
 
@@ -389,9 +438,19 @@ function getFormMeaning(verb: VerbData, formId: string): string {
   }
 }
 
-function getFormExample(verb: VerbData, formId: string): string | undefined {
-  if (formId === "te-iru") return verb.teIruExample;
-  return undefined;
+function getFormExample(
+  verb: VerbData,
+  formId: string
+): { example?: string; exampleTranslation?: string } {
+  if (formId !== "te-iru" || !verb.teIruExample) return {};
+
+  const separatorIndex = verb.teIruExample.indexOf("—");
+  if (separatorIndex < 0) return { example: verb.teIruExample.trim() || undefined };
+
+  return {
+    example: verb.teIruExample.slice(0, separatorIndex).trim() || undefined,
+    exampleTranslation: verb.teIruExample.slice(separatorIndex + 1).trim() || undefined,
+  };
 }
 
 function conjugate(verb: VerbData): ConjugatedForm[] {
@@ -505,7 +564,7 @@ function conjugate(verb: VerbData): ConjugatedForm[] {
     { id: "ta", name: "Bentuk Lampau", jpName: "た形", kana: ta, desc: "Menyatakan lampau." },
     { id: "nai", name: "Bentuk Negatif", jpName: "ない形", kana: nai, desc: "Bentuk negatif." },
     { id: "potential", name: "Bentuk Potensial", jpName: "可能形", kana: potential, desc: "Menyatakan kemampuan melakukan sesuatu." },
-    { id: "volitional", name: "Bentuk Volisional", jpName: "意向形", kana: volitional, desc: "Menyatakan ajakan atau niat." },
+    { id: "volitional", name: "Bentuk Ajakan / Niat", jpName: "意向形", kana: volitional, desc: "Menyatakan ajakan atau niat." },
     { id: "conditional", name: "Bentuk Kondisional", jpName: "条件形", kana: conditional, desc: "Menyatakan kondisi dengan ば." },
     { id: "imperative", name: "Bentuk Perintah", jpName: "命令形", kana: imperative, desc: "Bentuk perintah langsung." },
     { id: "passive", name: "Bentuk Pasif", jpName: "受身形", kana: passive, desc: "Menyatakan dikenai suatu tindakan." },
@@ -518,7 +577,7 @@ function conjugate(verb: VerbData): ConjugatedForm[] {
     // Generate all forms from kana so DB typos in the romaji field do not leak into UI.
     romaji: romanizeFormWithSpacing(verb, form.kana, form.id),
     meaning: getFormMeaning(verb, form.id),
-    example: getFormExample(verb, form.id),
+    ...getFormExample(verb, form.id),
   }));
 }
 
@@ -982,7 +1041,9 @@ return (
                         {form.example && (
                           <p className="text-sm text-[#EAE6DD] bg-[#121110]/60 p-3 mt-2 rounded-lg border border-[#33312E]/50 leading-relaxed">
                             <span className="text-[#A3A099] block text-[10px] uppercase tracking-wide mb-1">Contoh pemakaian</span>
-                            <JapaneseReading allowIndexFallback>{form.example}</JapaneseReading>
+                            <JapaneseReading allowIndexFallback translation={form.exampleTranslation}>
+                              {form.example}
+                            </JapaneseReading>
                           </p>
                         )}
                       </div>
