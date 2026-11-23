@@ -184,7 +184,7 @@ export default function IrodoriElementaryOneLessonSixteenPage() {
    <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#91A6E8]/[0.08]">健</div>
    <div className="relative z-10">
     <p className="text-[9px] font-black tracking-[0.24em] text-[#AAB8E8]">IRODORI • ELEMENTARY 1 A2 • LESSON 16</p>
-    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I try not to eat too much.</h1>
+    <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya berusaha untuk tidak makan terlalu banyak.</h1>
     <p className="mt-2 text-sm font-semibold text-[#AAB8E8]">食べすぎないようにしています</p>
     <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memberi saran sederhana, menceritakan kebiasaan sehari-hari untuk menjaga kesehatan, memahami berita singkat, dan membaca poster pencegahan penyakit.</p>
     <div className="mt-5 flex flex-wrap gap-2">
