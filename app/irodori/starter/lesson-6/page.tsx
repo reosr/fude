@@ -533,7 +533,7 @@ export default function IrodoriStarterLessonSixPage() {
               <div className="grid gap-2 sm:grid-cols-2">
                 {menuBurgers.map((item) => (
                   <article
-                    key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
+                    key={item.jp}
                     className="rounded-xl border border-white/[0.07] bg-black/15 p-3"
                   >
                     <div className="flex items-center gap-2">
@@ -571,7 +571,7 @@ export default function IrodoriStarterLessonSixPage() {
                 <div className="space-y-2">
                   {sideMenu.map((item) => (
                     <div
-                      key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
+                      key={item.jp}
                       className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-black/15 p-3"
                     >
                       <span className="text-2xl">{item.icon}</span>
@@ -599,7 +599,7 @@ export default function IrodoriStarterLessonSixPage() {
                 <div className="space-y-2">
                   {drinkMenu.map((item) => (
                     <div
-                      key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
+                      key={item.jp}
                       className="flex items-center gap-3 rounded-xl border border-white/[0.07] bg-black/15 p-3"
                     >
                       <span className="text-xl">{item.icon}</span>
@@ -704,7 +704,7 @@ export default function IrodoriStarterLessonSixPage() {
                 className="w-full rounded-xl border border-white/[0.1] bg-[#24221F] px-3 py-3 text-sm text-[#F1EBDD] outline-none focus:border-[#B8860B]/50"
               >
                 {menuBurgers.map((item) => (
-                  <option key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading> value=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>>
+                  <option key={item.jp} value={item.jp}>
                     {item.jp === "水" ? "水（みず）" : item.jp}
                   </option>
                 ))}
@@ -723,7 +723,7 @@ export default function IrodoriStarterLessonSixPage() {
                 className="w-full rounded-xl border border-white/[0.1] bg-[#24221F] px-3 py-3 text-sm text-[#F1EBDD] outline-none focus:border-[#B8860B]/50"
               >
                 {drinkMenu.map((item) => (
-                  <option key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading> value=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>>
+                  <option key={item.jp} value={item.jp}>
                     <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                   </option>
                 ))}
@@ -827,7 +827,7 @@ export default function IrodoriStarterLessonSixPage() {
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {mealChoices.map((item) => (
             <article
-              key=<JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
+              key={item.jp}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"
             >
               <div className="flex h-16 items-center justify-center rounded-lg bg-black/15 text-3xl">
@@ -1010,10 +1010,16 @@ export default function IrodoriStarterLessonSixPage() {
                   </span>
                   <span className="text-xl">{item.icon}</span>
                 </div>
-                <p className="mt-2 font-mincho text-base font-bold text-[#F1EBDD]">
-                  {item.meaning}
-                </p>
-                <p className="mt-1 text-[10px] text-[#B8860B]">{item.reading}</p>
+                <JapaneseVocabularyReading
+                  reading={item.reading}
+                  meaning={item.meaning}
+                  contentClassName="mt-2 font-mincho text-base font-bold leading-relaxed text-[#F1EBDD]"
+                  kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+                  romajiClassName="mt-1 text-[10px] italic text-[#B8860B]"
+                  translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+                >
+                  {item.sign}
+                </JapaneseVocabularyReading>
                 <p className="mt-2 text-xs text-[#A9A398]">
                   Petunjuk: {item.clue}
                 </p>
