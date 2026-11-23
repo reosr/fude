@@ -18,7 +18,7 @@ export default function JLPTLevelPage() {
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold text-[#EAE6DD] mb-4">Level tidak ditemukan</h2>
-        <Link href="/" className="text-[#C93438] hover:underline">Kembali ke Home</Link>
+        <Link href="/" className="text-[#C93438] hover:underline">Kembali ke Beranda</Link>
       </div>
     );
   }
@@ -30,7 +30,7 @@ export default function JLPTLevelPage() {
         onClick={() => router.push("/")}
         className="flex items-center gap-2 text-sm font-bold text-[#A3A099] hover:text-[#EAE6DD] transition-colors mb-4"
       >
-        <ArrowLeft size={16} /> Kembali ke Home
+        <ArrowLeft size={16} /> Kembali ke Beranda
       </button>
 
       {/* Header */}
@@ -40,7 +40,7 @@ export default function JLPTLevelPage() {
           <h2 className="text-3xl font-bold text-[#EAE6DD]">Simulasi JLPT {level}</h2>
         </div>
         <p className="text-[#A3A099] text-sm">
-          Pilih set ujian di bawah ini. Setiap set terdiri dari Kosakata, Grammar, Membaca, dan Mendengar.
+          Pilih set ujian di bawah ini. Setiap set terdiri dari Kosakata, Tata Bahasa, Membaca, dan Mendengar.
         </p>
       </div>
 
@@ -59,9 +59,9 @@ export default function JLPTLevelPage() {
                 </h3>
                 <div className="flex flex-wrap gap-2 text-xs font-bold text-[#A3A099]">
                   <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.vocab?.length || 0} Vocab</span>
-                  <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.grammar?.length || 0} Grammar</span>
-                  <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.reading?.length || 0} Reading</span>
-                  <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.listening?.length || 0} Listening</span>
+                  <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.grammar?.length || 0} Tata Bahasa</span>
+                  <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.reading?.length || 0} Membaca</span>
+                  <span className="bg-[#262523] px-2 py-1 rounded">{set.sections?.listening?.length || 0} Mendengar</span>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-[#C93438] font-bold group-hover:translate-x-1 transition-transform">
