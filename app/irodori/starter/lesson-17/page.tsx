@@ -513,7 +513,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">CAN-DO 0{index + 1}</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">TARGET KOMUNIKASI 0{index + 1}</p>
               <p className="mt-1 text-xs leading-5 text-[#C8C2B8]">{item.text}</p>
             </div>
           ))}
@@ -647,7 +647,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
           <article className="overflow-hidden rounded-xl border border-white/[0.07] bg-[#1B1A18]">
             <div className="flex h-36 items-center justify-center bg-gradient-to-br from-[#263C4A] to-[#456B78] text-6xl">🎬 🍿</div>
             <div className="p-4">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">POST 01 · KENJI</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">UNGGAHAN 01 · KENJI</p>
               <p className="mt-2 font-mincho text-base leading-7 text-[#F1EBDD]">土曜日、友だちと映画を見に行きました。とてもおもしろかったです！</p>
               <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Hari Sabtu pergi menonton film bersama teman. Filmnya sangat menarik.</p>
             </div>
@@ -655,7 +655,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
           <article className="overflow-hidden rounded-xl border border-white/[0.07] bg-[#1B1A18]">
             <div className="flex h-36 items-center justify-center bg-gradient-to-br from-[#27564E] to-[#71A28A] text-6xl">🐧 🪼</div>
             <div className="p-4">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">POST 02 · AKIKO</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">UNGGAHAN 02 · AKIKO</p>
               <p className="mt-2 font-mincho text-base leading-7 text-[#F1EBDD]">家族で水族館に行きました。ペンギンがかわいかったです。</p>
               <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Pergi ke akuarium bersama keluarga. Penguin-nya lucu.</p>
             </div>
@@ -663,7 +663,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
           <article className="overflow-hidden rounded-xl border border-white/[0.07] bg-[#1B1A18]">
             <div className="flex h-36 items-center justify-center bg-gradient-to-br from-[#5B3D62] to-[#9A78A0] text-6xl">🎹 🎼</div>
             <div className="p-4">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">POST 03 · YUI</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">UNGGAHAN 03 · YUI</p>
               <p className="mt-2 font-mincho text-base leading-7 text-[#F1EBDD]">日曜日、コンサートに行きました。音楽はすばらしかったです。</p>
               <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Hari Minggu pergi ke konser. Musiknya luar biasa.</p>
             </div>
@@ -671,7 +671,7 @@ export default function IrodoriPemulaLessonSeventeenPage() {
           <article className="overflow-hidden rounded-xl border border-white/[0.07] bg-[#1B1A18]">
             <div className="flex h-36 items-center justify-center bg-gradient-to-br from-[#6E5935] to-[#B39B68] text-6xl">🌼 📷</div>
             <div className="p-4">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">POST 04 · SOTA</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#D9B66D]">UNGGAHAN 04 · SOTA</p>
               <p className="mt-2 font-mincho text-base leading-7 text-[#F1EBDD]">公園で花の写真を撮りました。天気がよかったです。</p>
               <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Mengambil foto bunga di taman. Cuacanya bagus.</p>
             </div>
