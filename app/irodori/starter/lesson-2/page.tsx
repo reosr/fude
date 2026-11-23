@@ -549,7 +549,7 @@ export default function IrodoriPemulaLessonTwoPage() {
                 SITUASI 0{index + 1}
               </p>
               <p className="mt-3 min-h-12 text-xs font-semibold leading-6 text-[#EAE6DD]">
-                <JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
+                <JapaneseReading showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading>
               </p>
               <div className="mt-3 space-y-2">
                 {question.options.map((option) => {
