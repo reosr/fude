@@ -347,7 +347,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A9C9E8]/[0.08]">服</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • ELEMENTARY 2 A2 • LESSON 09</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">What kind of clothes should I wear?</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pakaian seperti apa yang sebaiknya saya kenakan?</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9C9E8]">どんな服を着て行けばいいですか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar menanyakan etiket acara, membandingkan kebiasaan antarnegara, menceritakan pengalaman lintas budaya, dan memahami unggahan tentang kebiasaan.</p>
           <div className="mt-5 flex flex-wrap gap-2">
