@@ -239,8 +239,8 @@ const timeWords = [
   { jp: <><ruby>朝<rt>あさ</rt></ruby></>, reading: "asa", meaning: "Pagi", icon: "🌅" },
   { jp: <><ruby>昼<rt>ひる</rt></ruby></>, reading: "hiru", meaning: "Siang", icon: "☀️" },
   { jp: <><ruby>夜<rt>よる</rt></ruby></>, reading: "yoru", meaning: "Malam", icon: "🌙" },
-  { jp: <><ruby>午前<rt>ごぜん</rt></ruby></>, reading: "gozen", meaning: "AM / sebelum tengah hari", icon: "🌤️" },
-  { jp: <><ruby>午後<rt>ごご</rt></ruby></>, reading: "gogo", meaning: "PM / setelah tengah hari", icon: "🌆" },
+  { jp: <><ruby>午前<rt>ごぜん</rt></ruby></>, reading: "gozen", meaning: "Sebelum tengah hari", icon: "🌤️" },
+  { jp: <><ruby>午後<rt>ごご</rt></ruby></>, reading: "gogo", meaning: "Setelah tengah hari", icon: "🌆" },
   { jp: <><ruby>毎朝<rt>まいあさ</rt></ruby></>, reading: "maiasa", meaning: "Setiap pagi", icon: "🔁" },
   { jp: <><ruby>毎晩<rt>まいばん</rt></ruby></>, reading: "maiban", meaning: "Setiap malam", icon: "🌙" },
   { jp: <><ruby>毎日<rt>まいにち</rt></ruby></>, reading: "mainichi", meaning: "Setiap hari", icon: "📅" },
@@ -590,7 +590,7 @@ export default function IrodoriPemulaLessonNinePage() {
           Waktu yang pasti memakai に, sedangkan waktu perkiraan memakai ごろ.
         </p>
         <IrodoriConversation
-          title="Scene A · Rutinitas pagi dan malam"
+          title="Adegan A · Rutinitas pagi dan malam"
           speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.yui]}
           utterances={wakeSleepConversation}
         />
@@ -619,7 +619,7 @@ export default function IrodoriPemulaLessonNinePage() {
         <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
           <div className="border-b border-white/[0.07] bg-[#2B2118] p-4">
             <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">
-              CLOCK READING
+              CARA MEMBACA JAM
             </p>
             <h3 className="mt-1 font-mincho text-lg font-bold text-[#F1EBDD]">
               Contoh membaca jam
@@ -705,7 +705,7 @@ export default function IrodoriPemulaLessonNinePage() {
           menandakan istirahat atau kegiatan kerja.
         </p>
         <IrodoriConversation
-          title="Scene B · Penjelasan jadwal kantor fiktif"
+          title="Adegan B · Penjelasan jadwal kantor fiktif"
           speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.sota]}
           utterances={workScheduleConversation}
         />
@@ -785,7 +785,7 @@ export default function IrodoriPemulaLessonNinePage() {
           Perhatikan kolom status dan catatan waktunya.
         </p>
         <IrodoriConversation
-          title="Scene C · Memeriksa papan kehadiran"
+          title="Adegan C · Memeriksa papan kehadiran"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.akiko]}
           utterances={scheduleBoardConversation}
         />
@@ -901,7 +901,7 @@ export default function IrodoriPemulaLessonNinePage() {
           lalu mengusulkan pilihan lain.
         </p>
         <IrodoriConversation
-          title="Scene D · Menentukan hari menonton film"
+          title="Adegan D · Menentukan hari menonton film"
           speakers={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.yui]}
           utterances={availabilityConversation}
         />
