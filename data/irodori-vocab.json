@@ -11636,5 +11636,364 @@
         "imageQuery": "世話になる Japanese future plans vocabulary"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-01",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pre-Intermediate",
+    "lessonNumber": 1,
+    "lessonTitle": "What is futsal again?",
+    "vocab": [
+      {
+        "kanji": "フットサル",
+        "kana": "フットサル",
+        "romaji": "futtosaru",
+        "meaning": "Futsal",
+        "imageQuery": "フットサル Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "スポーツ",
+        "kana": "スポーツ",
+        "romaji": "supootsu",
+        "meaning": "Olahraga",
+        "imageQuery": "スポーツ Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "野球",
+        "kana": "やきゅう",
+        "romaji": "yakyuu",
+        "meaning": "Bisbol",
+        "imageQuery": "野球 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "相撲",
+        "kana": "すもう",
+        "romaji": "sumou",
+        "meaning": "Sumo",
+        "imageQuery": "相撲 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "登山",
+        "kana": "とざん",
+        "romaji": "tozan",
+        "meaning": "Mendaki gunung",
+        "imageQuery": "登山 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "サッカー",
+        "kana": "サッカー",
+        "romaji": "sakkaa",
+        "meaning": "Sepak bola",
+        "imageQuery": "サッカー Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "運動",
+        "kana": "うんどう",
+        "romaji": "undou",
+        "meaning": "Olahraga atau aktivitas fisik",
+        "imageQuery": "運動 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "試合",
+        "kana": "しあい",
+        "romaji": "shiai",
+        "meaning": "Pertandingan",
+        "imageQuery": "試合 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "チーム",
+        "kana": "チーム",
+        "romaji": "chiimu",
+        "meaning": "Tim",
+        "imageQuery": "チーム Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "選手",
+        "kana": "せんしゅ",
+        "romaji": "senshu",
+        "meaning": "Atlet atau pemain",
+        "imageQuery": "選手 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "応援",
+        "kana": "おうえん",
+        "romaji": "ouen",
+        "meaning": "Dukungan atau sorakan",
+        "imageQuery": "応援 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "観客",
+        "kana": "かんきゃく",
+        "romaji": "kankyaku",
+        "meaning": "Penonton",
+        "imageQuery": "観客 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "得意（な）",
+        "kana": "とくい（な）",
+        "romaji": "tokui (na)",
+        "meaning": "Mahir atau unggul",
+        "imageQuery": "得意（な） Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "苦手（な）",
+        "kana": "にがて（な）",
+        "romaji": "nigate (na)",
+        "meaning": "Kurang mahir atau tidak terlalu suka",
+        "imageQuery": "苦手（な） Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "伝統的（な）",
+        "kana": "でんとうてき（な）",
+        "romaji": "dentouteki (na)",
+        "meaning": "Tradisional",
+        "imageQuery": "伝統的（な） Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "強い",
+        "kana": "つよい",
+        "romaji": "tsuyoi",
+        "meaning": "Kuat",
+        "imageQuery": "強い Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "弱い",
+        "kana": "よわい",
+        "romaji": "yowai",
+        "meaning": "Lemah",
+        "imageQuery": "弱い Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "勝つ",
+        "kana": "かつ",
+        "romaji": "katsu",
+        "meaning": "Menang",
+        "imageQuery": "勝つ Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "負ける",
+        "kana": "まける",
+        "romaji": "makeru",
+        "meaning": "Kalah",
+        "imageQuery": "負ける Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "競争",
+        "kana": "きょうそう",
+        "romaji": "kyousou",
+        "meaning": "Persaingan",
+        "imageQuery": "競争 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "ルール",
+        "kana": "ルール",
+        "romaji": "ruuru",
+        "meaning": "Aturan",
+        "imageQuery": "ルール Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "コート",
+        "kana": "コート",
+        "romaji": "kooto",
+        "meaning": "Lapangan",
+        "imageQuery": "コート Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "人数",
+        "kana": "にんずう",
+        "romaji": "ninzuu",
+        "meaning": "Jumlah orang",
+        "imageQuery": "人数 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "ペース",
+        "kana": "ペース",
+        "romaji": "peesu",
+        "meaning": "Kecepatan atau tempo",
+        "imageQuery": "ペース Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "気軽（な）",
+        "kana": "きがる（な）",
+        "romaji": "kigaru (na)",
+        "meaning": "Santai atau tanpa beban",
+        "imageQuery": "気軽（な） Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "健康",
+        "kana": "けんこう",
+        "romaji": "kenkou",
+        "meaning": "Kesehatan",
+        "imageQuery": "健康 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan",
+        "imageQuery": "景色 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "山頂",
+        "kana": "さんちょう",
+        "romaji": "sanchou",
+        "meaning": "Puncak gunung",
+        "imageQuery": "山頂 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "興奮する",
+        "kana": "こうふんする",
+        "romaji": "koufun suru",
+        "meaning": "Merasa bersemangat",
+        "imageQuery": "興奮する Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "約束",
+        "kana": "やくそく",
+        "romaji": "yakusoku",
+        "meaning": "Janji",
+        "imageQuery": "約束 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "誘う",
+        "kana": "さそう",
+        "romaji": "sasou",
+        "meaning": "Mengajak",
+        "imageQuery": "誘う Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "誘われる",
+        "kana": "さそわれる",
+        "romaji": "sasowareru",
+        "meaning": "Diajak",
+        "imageQuery": "誘われる Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "イベント",
+        "kana": "イベント",
+        "romaji": "ibento",
+        "meaning": "Acara",
+        "imageQuery": "イベント Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "お祭り",
+        "kana": "おまつり",
+        "romaji": "omatsuri",
+        "meaning": "Festival",
+        "imageQuery": "お祭り Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "公園",
+        "kana": "こうえん",
+        "romaji": "kouen",
+        "meaning": "Taman",
+        "imageQuery": "公園 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "開催する",
+        "kana": "かいさいする",
+        "romaji": "kaisai suru",
+        "meaning": "Menyelenggarakan",
+        "imageQuery": "開催する Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Berpartisipasi",
+        "imageQuery": "参加する Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "見に行く",
+        "kana": "みにいく",
+        "romaji": "mi ni iku",
+        "meaning": "Pergi untuk menonton",
+        "imageQuery": "見に行く Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "予定",
+        "kana": "よてい",
+        "romaji": "yotei",
+        "meaning": "Rencana atau jadwal",
+        "imageQuery": "予定 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "決まる",
+        "kana": "きまる",
+        "romaji": "kimaru",
+        "meaning": "Diputuskan atau ditetapkan",
+        "imageQuery": "決まる Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "ことになる",
+        "kana": "ことになる",
+        "romaji": "koto ni naru",
+        "meaning": "Menjadi keputusan atau ketetapan",
+        "imageQuery": "ことになる Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "座る",
+        "kana": "すわる",
+        "romaji": "suwaru",
+        "meaning": "Duduk",
+        "imageQuery": "座る Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "落語",
+        "kana": "らくご",
+        "romaji": "rakugo",
+        "meaning": "Rakugo (seni bercerita tradisional)",
+        "imageQuery": "落語 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "演劇",
+        "kana": "えんげき",
+        "romaji": "engeki",
+        "meaning": "Drama atau teater",
+        "imageQuery": "演劇 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "舞踊",
+        "kana": "ぶよう",
+        "romaji": "buyou",
+        "meaning": "Tari atau seni tari",
+        "imageQuery": "舞踊 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi atau memberi kabar",
+        "imageQuery": "連絡する Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "都合",
+        "kana": "つごう",
+        "romaji": "tsugou",
+        "meaning": "Kecocokan waktu atau keadaan",
+        "imageQuery": "都合 Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "残念（な）",
+        "kana": "ざんねん（な）",
+        "romaji": "zannen (na)",
+        "meaning": "Disayangkan atau mengecewakan",
+        "imageQuery": "残念（な） Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "キャンセルする",
+        "kana": "キャンセルする",
+        "romaji": "kyanseru suru",
+        "meaning": "Membatalkan",
+        "imageQuery": "キャンセルする Japanese sports and event vocabulary"
+      },
+      {
+        "kanji": "理由",
+        "kana": "りゆう",
+        "romaji": "riyuu",
+        "meaning": "Alasan",
+        "imageQuery": "理由 Japanese sports and event vocabulary"
+      }
+    ]
   }
 ]
