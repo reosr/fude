@@ -425,7 +425,7 @@ const VERB_NOTATION_FORMS: Array<[string, string]> = [
 ].sort(([left], [right]) => right.length - left.length);
 
 const VERB_NOTATION_PATTERN = new RegExp(
-  "(^|[^A-Za-z0-9])V(\\\\d*)-?(" +
+  "(^|[^A-Za-z0-9])V([0-9]*)-?(" +
     VERB_NOTATION_FORMS.map(([suffix]) => suffix).join("|") +
     ")",
   "g"
@@ -487,7 +487,7 @@ export function formatGrammarNotation(value: string): string {
 
   // Notasi V tanpa akhiran khusus tetap diberi label yang mudah dipahami.
   formatted = formatted.replace(
-    /(^|[^A-Za-z0-9])V(\\d*)(?=$|[^A-Za-z0-9])/g,
+    /(^|[^A-Za-z0-9])V([0-9]*)(?=$|[^A-Za-z0-9])/g,
     (match, prefix: string, number: string, offset: number, whole: string) => {
       const tail = whole.slice(offset + match.length);
       const needsSpace = /^[\u3040-\u30ff\u3400-\u9fff々〆ヵヶ]/.test(tail);
