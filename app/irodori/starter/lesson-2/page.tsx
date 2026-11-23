@@ -216,10 +216,10 @@ const situationQuestions = [
     explanation: "これは日本語で何と言いますか？ menanyakan bagaimana mengatakan sesuatu dalam bahasa Jepang. これは何ですか？ hanya menanyakan benda itu apa.",
   },
   {
-    prompt: "Teman menjawab bahwa “water” dalam bahasa Jepang adalah “mizu”. Kata Jepang mana yang dimaksud?",
+    prompt: "Teman menjawab bahwa kata “air” dalam bahasa Jepang adalah みず. Tulisan Jepang mana yang dimaksud?",
     options: ["水", "りんご", "ノート"],
     answer: "水",
-    explanation: "水 dibaca みず (mizu), artinya air.",
+    explanation: "水 dibaca みず, artinya air.",
   },
 ];
 
@@ -610,7 +610,7 @@ export default function IrodoriPemulaLessonTwoPage() {
                     </>
                   ) : index === 5 ? (
                     <>
-                      <ruby>水<rt>みず</rt></ruby> dibaca mizu dan berarti air.
+                      <ruby>水<rt>みず</rt></ruby> berarti air.
                     </>
                   ) : (
                     question.explanation
