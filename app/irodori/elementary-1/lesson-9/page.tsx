@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import JapaneseReading from "@/components/JapaneseReading";
+import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -230,7 +232,7 @@ export default function IrodoriElementaryOneLessonNinePage() {
       <section className="space-y-4">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#8EAE93]">METODE BELAJAR</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Contoh rutinitas belajar sederhana</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Pilih latihan singkat yang bisa dilakukan secara rutin, lalu ulangi kosakata yang masih sulit.</p></div>
         <div className="grid gap-3 md:grid-cols-3">
-          {outingPlans.map((plan)=>(<article key={plan.id} className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="font-mincho text-base font-bold text-[#F1EBDD]">{plan.title}</p><p className="mt-1 text-[10px] text-[#A9CDB0]">{plan.subtitle}</p><p className="mt-3 inline-flex rounded-full border border-[#8EAE93]/25 bg-[#476C51]/15 px-2.5 py-1 text-[9px] font-bold text-[#CFE4D2]">{plan.time}</p><ol className="mt-4 space-y-3"><li className="rounded-lg bg-black/15 p-3"><p className="text-[8px] font-black tracking-[0.16em] text-[#8EAE93]">START · はじめに</p><p className="mt-1 font-mincho text-sm leading-6 text-[#F1EBDD]">{plan.before}</p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{plan.beforeMeaning}</p></li><li className="rounded-lg bg-[#263D2D]/60 p-3"><p className="text-[8px] font-black tracking-[0.16em] text-[#A9CDB0]">PRACTICE · 練習</p><p className="mt-1 font-mincho text-sm leading-6 text-[#F1EBDD]">{plan.activity}</p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{plan.activityMeaning}</p></li><li className="rounded-lg bg-black/15 p-3"><p className="text-[8px] font-black tracking-[0.16em] text-[#8EAE93]">REVIEW · 復習</p><p className="mt-1 font-mincho text-sm leading-6 text-[#F1EBDD]">{plan.after}</p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{plan.afterMeaning}</p></li></ol></article>))}
+          {outingPlans.map((plan)=>(<article key={plan.id} className="rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="font-mincho text-base font-bold text-[#F1EBDD]">{plan.title}</p><p className="mt-1 text-[10px] text-[#A9CDB0]">{plan.subtitle}</p><p className="mt-3 inline-flex rounded-full border border-[#8EAE93]/25 bg-[#476C51]/15 px-2.5 py-1 text-[9px] font-bold text-[#CFE4D2]">{plan.time}</p><ol className="mt-4 space-y-3"><li className="rounded-lg bg-black/15 p-3"><p className="text-[8px] font-black tracking-[0.16em] text-[#8EAE93]">START · はじめに</p><p className="mt-1 font-mincho text-sm leading-6 text-[#F1EBDD]">{plan.before}</p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{plan.beforeMeaning}</p></li><li className="rounded-lg bg-[#263D2D]/60 p-3"><p className="text-[8px] font-black tracking-[0.16em] text-[#A9CDB0]">LATIHAN · 練習</p><p className="mt-1 font-mincho text-sm leading-6 text-[#F1EBDD]">{plan.activity}</p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{plan.activityMeaning}</p></li><li className="rounded-lg bg-black/15 p-3"><p className="text-[8px] font-black tracking-[0.16em] text-[#8EAE93]">REVIEW · 復習</p><p className="mt-1 font-mincho text-sm leading-6 text-[#F1EBDD]">{plan.after}</p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{plan.afterMeaning}</p></li></ol></article>))}
         </div>
       </section>
 
@@ -250,7 +252,7 @@ export default function IrodoriElementaryOneLessonNinePage() {
           {title:"03 · Membandingkan dua hal",pattern:"N1 は ～。でも、N2 は ～。",example:<>日本語は読むのは少し難しいです。でも、会話は得意です。</>,note:"Pola ini membandingkan dua karakteristik. は menandai hal yang dibandingkan dan でも berarti tetapi. Contoh: ひらがなは好きです。でも、カタカナは苦手です。"},
           {title:"04 · Meminta bantuan dengan sopan",pattern:"V-て + もらえませんか？",example:<>この漢字の読み方を教えてもらえませんか。／ もう一度説明してもらえませんか。</>,note:"Ini merupakan permintaan yang lebih sopan. Hubungkan bentuk て kata kerja dengan もらえませんか: 教えます → 教えて, 貸します → 貸して, 説明します → 説明して."},
           {title:"05 · Menyatakan cara melakukan sesuatu",pattern:"V-ます (hapus ます) + 方（かた）",example:<>読みます → 読み方 ／ 書きます → 書き方 ／ 使います → 使い方</>,note:"方 menunjukkan cara atau metode melakukan sesuatu. Ambil bentuk ます, hilangkan ます, lalu tambahkan 方: 読みます → 読み方 (cara membaca)."},
-        ].map((item)=>(<article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-[9px] font-black tracking-[0.15em] text-[#8EAE93]">{item.title}</p><p className="mt-2 whitespace-pre-line font-mincho text-base leading-7 text-[#F1EBDD]">{item.pattern}</p><p className="mt-2 font-mincho text-base leading-7 text-[#A9CDB0]">{item.example}</p><p className="mt-2 text-xs leading-6 text-[#A9A398]">{item.note}</p></article>))}
+        ].map((item)=>(<article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-[9px] font-black tracking-[0.15em] text-[#8EAE93]">{item.title}</p><p className="mt-2 whitespace-pre-line font-mincho text-base leading-7 text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p><p className="mt-2 font-mincho text-base leading-7 text-[#A9CDB0]"><JapaneseReading allowIndexFallback>{item.example}</JapaneseReading></p><p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p></article>))}
       </section>
 
       <section className="space-y-4">
@@ -294,10 +296,10 @@ export default function IrodoriElementaryOneLessonNinePage() {
               <div>
                 <p className="text-[9px] font-black tracking-[0.18em] text-[#8EAE93]">{task.title}</p>
                 <h3 className="mt-1 text-base font-black text-[#EAE6DD]">{task.heading}</h3>
-                <p className="mt-1 text-xs leading-6 text-[#A9A398]">{task.prompt}</p>
+                <p className="mt-1 text-xs leading-6 text-[#A9A398]"><JapaneseReading allowIndexFallback>{task.prompt}</JapaneseReading></p>
               </div>
               <div className="rounded-xl border border-[#6E9A75]/20 bg-[#202720] p-4">
-                <p className="font-mincho text-base leading-7 text-[#F1EBDD]">{task.japanese}</p>
+                <p className="font-mincho text-base leading-7 text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{task.japanese}</JapaneseReading></p>
                 <p className="mt-1 text-[10px] text-[#A9CDB0]">{task.translation}</p>
               </div>
               <div className="grid gap-2">
@@ -321,7 +323,7 @@ export default function IrodoriElementaryOneLessonNinePage() {
                             : "border-white/[0.07] bg-black/10"
                     )}
                   >
-                    <p className="font-mincho text-sm text-[#F1EBDD]">{option.label}</p>
+                    <p className="font-mincho text-sm text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{option.label}</JapaneseReading></p>
                     <p className="mt-1 text-[10px] text-[#A9A398]">{option.meaning}</p>
                   </button>
                 ))}
@@ -360,8 +362,8 @@ export default function IrodoriElementaryOneLessonNinePage() {
             const isCorrect = selected === task.answer;
             return (
               <article key={index} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-                <p className="text-[9px] font-black tracking-[0.16em] text-[#8EAE93]">PRACTICE {String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">{task.prompt}</h3>
+                <p className="text-[9px] font-black tracking-[0.16em] text-[#8EAE93]">LATIHAN {String(index + 1).padStart(2, "0")}</p>
+                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]"><JapaneseReading allowIndexFallback>{task.prompt}</JapaneseReading></h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {task.options.map((option) => (
                     <button
@@ -380,14 +382,14 @@ export default function IrodoriElementaryOneLessonNinePage() {
                               : "border-white/[0.07] bg-black/15 text-[#A9A398]"
                       )}
                     >
-                      {option.label}
+                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   ))}
                 </div>
                 {practiceSubmitted && (
                   <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
                     <span className={isCorrect ? "font-bold text-emerald-300" : "font-bold text-[#E7A1A1]"}>{isCorrect ? "Benar. " : "Belum tepat. "}</span>
-                    {task.explanation}
+                    <JapaneseReading allowIndexFallback>{task.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -429,8 +431,8 @@ export default function IrodoriElementaryOneLessonNinePage() {
             const isCorrect = selected === question.answer;
             return (
               <article key={index} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-                <p className="text-[9px] font-black tracking-[0.16em] text-[#8EAE93]">QUESTION {String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">{question.prompt}</h3>
+                <p className="text-[9px] font-black tracking-[0.16em] text-[#8EAE93]">SOAL {String(index + 1).padStart(2, "0")}</p>
+                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]"><JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading></h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => (
                     <button
@@ -449,14 +451,14 @@ export default function IrodoriElementaryOneLessonNinePage() {
                               : "border-white/[0.07] bg-black/15 text-[#A9A398]"
                       )}
                     >
-                      {option.label}
+                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   ))}
                 </div>
                 {quizSubmitted && (
                   <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
                     <span className={isCorrect ? "font-bold text-emerald-300" : "font-bold text-[#E7A1A1]"}>{isCorrect ? "Benar. " : "Belum tepat. "}</span>
-                    {question.explanation}
+                    <JapaneseReading allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -518,7 +520,7 @@ export default function IrodoriElementaryOneLessonNinePage() {
                         : "border-white/[0.08] bg-[#24221F] text-[#A3A099]"
                     )}
                   >
-                    {option.label}
+                    <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                   </button>
                 ))}
               </div>
