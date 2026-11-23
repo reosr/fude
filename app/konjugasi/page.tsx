@@ -265,6 +265,27 @@ function furiganaToSafeHtml(source: string): string {
   }).join("");
 }
 
+const grammarFormReadings: Record<string, string> = {
+  "辞書形": "じしょけい",
+  "ます形": "ますけい",
+  "て形": "てけい",
+  "〜ている": "〜ている",
+  "た形": "たけい",
+  "ない形": "ないけい",
+  "可能形": "かのうけい",
+  "意向形": "いこうけい",
+  "条件形": "じょうけんけい",
+  "命令形": "めいれいけい",
+  "受身形": "うけみけい",
+  "使役形": "しえきけい",
+};
+
+function makeGrammarFormRuby(value: string): string {
+  const reading = grammarFormReadings[value];
+  if (!reading) return escapeHtml(value);
+  return `<ruby>${escapeHtml(value)}<rt>${escapeHtml(reading)}</rt></ruby>`;
+}
+
 // Kata dengan kanji yang terselip di tengah memerlukan pembacaan khusus.
 // Prefix ini menjaga okurigana tetap tampil sebagai kana biasa.
 const specialRubyPrefixes: Record<string, { reading: string; html: string }> = {
@@ -861,7 +882,7 @@ return (
                 <p className="text-sm font-bold text-[#EAE6DD] leading-snug line-clamp-2">{v.meaning}</p>
                 {matchingForm && (
                   <p className="mt-2 text-xs text-[#E7C46A] leading-relaxed">
-                    Bentuk cocok: <span className="font-mincho text-xs">{rubyToPlainText(matchingForm.ruby) || matchingForm.kana}</span>
+                    Bentuk cocok: <span className="font-mincho text-sm [&_rt]:text-[0.7em] [&_rt]:text-[#D6AD4F]" dangerouslySetInnerHTML={{ __html: matchingForm.ruby }} />
                     <span className="text-[#A3A099]"> · {matchingForm.name}</span>
                   </p>
                 )}
@@ -932,7 +953,7 @@ return (
                     <div key={form.id} className={`bg-[#1E1D1B]/90 backdrop-blur-sm border border-[#33312E] border-l-[3px] ${typeAccentClass(selectedVerb.type)} rounded-xl p-4 md:p-5 shadow-lg hover:border-[#C93438]/40 transition-colors flex flex-col h-full`}>
                       <div className="mb-2 md:mb-3">
                         <p className="text-sm md:text-base font-bold text-[#C93438]">{form.name}</p>
-                        <div className="mt-1 text-xs text-[#A3A099]"><JapaneseReading html={form.jpName} allowIndexFallback showKana showRomaji={false} contentClassName="text-xs text-[#A3A099] [&_rt]:text-[0.75em] [&_rt]:text-[#D6AD4F]" kanaClassName="mt-0.5 font-mincho text-xs text-[#D6AD4F]" /></div>
+                        <div className="mt-1 text-xs text-[#A3A099]"><JapaneseReading html={makeGrammarFormRuby(form.jpName)} showKana={false} showRomaji={false} contentClassName="text-xs text-[#A3A099] [&_rt]:text-[0.75em] [&_rt]:text-[#D6AD4F]" /></div>
                       </div>
                       <JapaneseReading
                         html={form.ruby}
