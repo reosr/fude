@@ -13,6 +13,7 @@ import {
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
@@ -509,18 +510,14 @@ export default function IrodoriStarterLessonElevenPage() {
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {hobbyVocabulary.map((word, index) => (
             <article key={index} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
-              <p className="font-mincho text-lg text-[#F1EBDD]">{word.jp}</p>
-              <p className="mt-1 text-[10px] text-[#D9B66D]">{word.reading}</p>
-              <p className="mt-1 text-xs text-[#A9A398]">{word.meaning}</p>
+              <JapaneseVocabularyReading reading={word.reading} meaning={word.meaning} contentClassName="font-mincho text-lg leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{word.jp}</JapaneseVocabularyReading>
             </article>
           ))}
         </div>
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {activityWords.map((word, index) => (
             <article key={index} className="rounded-xl border border-white/[0.07] bg-[#211E1A] p-3">
-              <p className="font-mincho text-base text-[#E7D2A1]">{word.jp}</p>
-              <p className="mt-1 text-[10px] text-[#D9B66D]">{word.reading}</p>
-              <p className="mt-1 text-xs text-[#A9A398]">{word.meaning}</p>
+              <JapaneseVocabularyReading reading={word.reading} meaning={word.meaning} contentClassName="font-mincho text-base leading-relaxed text-[#E7D2A1]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{word.jp}</JapaneseVocabularyReading>
             </article>
           ))}
         </div>
