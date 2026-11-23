@@ -1031,6 +1031,7 @@ return (
                   ) : selectedVerb.pairedVerb ? (
                     <div className="min-w-0">
                       <JapaneseReading
+                        allowIndexFallback
                         kana={selectedVerb.pairedVerb.kana}
                         translation="Pasangan ini belum tersedia di database konjugasi."
                         contentClassName="block text-xl font-mincho leading-relaxed text-[#EAE6DD]"
