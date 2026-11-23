@@ -414,7 +414,7 @@ export default function IrodoriPemulaLessonFourPage() {
           menghubungkan dua anggota keluarga dalam satu kalimat.
         </p>
         <IrodoriConversation
-          title="Scene A · Melihat foto keluarga"
+          title="Adegan A · Melihat foto keluarga"
           speakers={[IRODORI_SPEAKERS.sota, IRODORI_SPEAKERS.yui]}
           utterances={familyConversation}
         />
@@ -476,7 +476,7 @@ export default function IrodoriPemulaLessonFourPage() {
           どこに<ruby>住<rt>す</rt></ruby>んでいますか？ untuk menanyakan tempat tinggal.
         </p>
         <IrodoriConversation
-          title="Scene A · Usia dan tempat tinggal"
+          title="Adegan A · Usia dan tempat tinggal"
           speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={ageResidenceConversation}
         />
@@ -574,7 +574,7 @@ export default function IrodoriPemulaLessonFourPage() {
           pemilik foto.
         </p>
         <IrodoriConversation
-          title="Scene A · Melihat foto"
+          title="Adegan A · Melihat foto"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={photoConversation}
         />
