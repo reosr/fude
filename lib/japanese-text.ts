@@ -31,6 +31,15 @@ function stripHtml(value: string): string {
     .replace(/&gt;/g, ">");
 }
 
+// Ubah petunjuk bacaan dalam tanda kurung menjadi furigana di atas kanji.
+// Contoh: 来ます（きます） menjadi <ruby>来ます<rt>きます</rt></ruby>.
+export function addRubyFromParentheticalReadings(value: string): string {
+  return value.replace(
+    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー]+)[）)]/g,
+    (_match, base: string, reading: string) => `<ruby>${base}<rt>${reading}</rt></ruby>`
+  );
+}
+
 function preserveKanaOnly(value: string): string {
   return Array.from(value).filter((char) => !KANJI_RE.test(char)).join("");
 }

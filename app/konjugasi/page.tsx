@@ -265,6 +265,26 @@ function furiganaToSafeHtml(source: string): string {
   }).join("");
 }
 
+const grammarFormReadings: Record<string, string> = {
+  "辞書形": "じしょけい",
+  "ます形": "ますけい",
+  "て形": "てけい",
+  "た形": "たけい",
+  "ない形": "ないけい",
+  "可能形": "かのうけい",
+  "意向形": "いこうけい",
+  "条件形": "じょうけんけい",
+  "命令形": "めいれいけい",
+  "受身形": "うけみけい",
+  "使役形": "しえきけい",
+};
+
+function makeGrammarFormRuby(value: string): string {
+  const reading = grammarFormReadings[value];
+  if (!reading) return escapeHtml(value);
+  return `<ruby>${escapeHtml(value)}<rt>${escapeHtml(reading)}</rt></ruby>`;
+}
+
 // Kata dengan kanji yang terselip di tengah memerlukan pembacaan khusus.
 // Prefix ini menjaga okurigana tetap tampil sebagai kana biasa.
 const specialRubyPrefixes: Record<string, { reading: string; html: string }> = {
@@ -633,6 +653,13 @@ useEffect(() => {
 
   const verbTypes = Array.from(new Set(conjugationsData.map((v: ConjugatedVerb) => v.type)));
 
+  const verbTypeLabel = (type: string): string => {
+    if (type === "Godan") return "Godan · Kelompok I";
+    if (type === "Ichidan") return "Ichidan · Kelompok II";
+    if (type === "Irregular") return "Tidak beraturan · Kelompok III";
+    return type || "Belum diklasifikasikan";
+  };
+
   const getTransitivity = (verb: VerbData): string => {
     const value = (verb.transitivity || "unreviewed").toLowerCase();
     return ["transitive", "intransitive", "both"].includes(value) ? value : "unreviewed";
@@ -729,7 +756,7 @@ return (
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 className="text-3xl font-bold text-[#EAE6DD]">Kamus Konjugasi</h2>
-          <p className="text-[#A3A099] text-sm mt-1">Pelajari perubahan bentuk kata kerja (Godan, Ichidan, Irregular), termasuk pola 〜ている.</p>
+          <p className="text-[#A3A099] text-sm mt-1">Pelajari tiga kelompok kata kerja: Godan (kelompok I), Ichidan (kelompok II), dan kata kerja tidak beraturan (kelompok III), termasuk pola 〜ている.</p>
         </div>
       </div>
 
@@ -790,7 +817,7 @@ return (
               typeFilter === t ? `${typeBadgeClass(t)} ring-1 ring-current` : "bg-[#1E1D1B]/80 border-[#33312E] text-[#A3A099] hover:text-[#EAE6DD]"
             }`}
           >
-            {t} ({conjugationsData.filter((v: ConjugatedVerb) => v.type === t).length})
+            {verbTypeLabel(t)} ({conjugationsData.filter((v: ConjugatedVerb) => v.type === t).length})
           </button>
         ))}
       </div>
@@ -838,7 +865,7 @@ return (
                 {v.jlptLevel}
               </span>
               <span className={`absolute top-3 right-3 z-10 text-[10px] font-bold px-2 py-0.5 rounded-md border backdrop-blur-sm uppercase tracking-wider ${typeBadgeClass(v.type)}`}>
-                {v.type}
+                {verbTypeLabel(v.type)}
               </span>
               <div className="relative z-10 flex flex-col items-center justify-center w-full">
                 <div className="w-full mb-3">
@@ -846,15 +873,15 @@ return (
                     {v.kanji}
                   </FitText>
                 </div>
-                <p className="text-sm text-[#EAE6DD]/80 w-full truncate">{v.kana}</p>
-                <p className="text-[11px] text-[#A3A099] mb-2 w-full truncate">({v.romaji})</p>
-                <span className={`text-[9px] font-bold px-2 py-0.5 rounded-md border mb-2 ${transitivityClass(v)}`}>
+                <p className="text-sm text-[#EAE6DD]/90 w-full truncate">{v.kana}</p>
+                <p className="text-xs text-[#A3A099] mb-2 w-full truncate">({v.romaji})</p>
+                <span className={`text-[10px] font-bold px-2 py-1 rounded-md border mb-2 ${transitivityClass(v)}`}>
                   {transitivityLabel(v)}
                 </span>
                 <p className="text-sm font-bold text-[#EAE6DD] leading-snug line-clamp-2">{v.meaning}</p>
                 {matchingForm && (
-                  <p className="mt-2 text-[10px] text-[#E7C46A] leading-relaxed">
-                    Bentuk cocok: <span className="font-mincho text-xs">{rubyToPlainText(matchingForm.ruby) || matchingForm.kana}</span>
+                  <p className="mt-2 text-xs text-[#E7C46A] leading-relaxed">
+                    Bentuk cocok: <span className="font-mincho text-sm [&_rt]:text-[0.7em] [&_rt]:text-[#D6AD4F]" dangerouslySetInnerHTML={{ __html: matchingForm.ruby }} />
                     <span className="text-[#A3A099]"> · {matchingForm.name}</span>
                   </p>
                 )}
@@ -887,7 +914,7 @@ return (
             <div data-sheet-handle className="flex justify-between items-center gap-3 p-4 md:p-5 border-b border-[#33312E] bg-[#1A1918]/80 backdrop-blur-md relative z-20 shrink-0">
               <div className="flex items-center gap-2 min-w-0">
                 <span className="text-[10px] font-bold px-2 py-1 rounded-md border border-[#B8860B]/40 bg-[#B8860B]/10 text-[#E7C46A] shrink-0">{selectedVerb.jlptLevel}</span>
-                <span className={`text-xs font-bold px-2 py-1 rounded-md border uppercase shrink-0 ${typeBadgeClass(selectedVerb.type)}`}>{selectedVerb.type}</span>
+                <span className={`text-xs font-bold px-2 py-1 rounded-md border uppercase shrink-0 ${typeBadgeClass(selectedVerb.type)}`}>{verbTypeLabel(selectedVerb.type)}</span>
                 <span className="text-sm font-medium text-[#A3A099] truncate">{selectedVerb.meaning}</span>
               </div>
               <button onClick={() => setSelectedVerb(null)} className="text-[#A3A099] hover:text-[#EAE6DD] transition-colors p-1.5 bg-[#262523] rounded-full shrink-0">
@@ -924,8 +951,8 @@ return (
                   {selectedVerb.forms.map((form: ConjugatedForm) => (
                     <div key={form.id} className={`bg-[#1E1D1B]/90 backdrop-blur-sm border border-[#33312E] border-l-[3px] ${typeAccentClass(selectedVerb.type)} rounded-xl p-4 md:p-5 shadow-lg hover:border-[#C93438]/40 transition-colors flex flex-col h-full`}>
                       <div className="mb-2 md:mb-3">
-                        <p className="text-xs md:text-sm font-bold text-[#C93438]">{form.name}</p>
-                        <p className="text-[10px] md:text-xs text-[#A3A099]">{form.jpName}</p>
+                        <p className="text-sm md:text-base font-bold text-[#C93438]">{form.name}</p>
+                        <div className="mt-1 text-xs text-[#A3A099]"><JapaneseReading html={makeGrammarFormRuby(form.jpName)} showKana={false} showRomaji={false} contentClassName="text-xs text-[#A3A099] [&_rt]:text-[0.75em] [&_rt]:text-[#D6AD4F]" /></div>
                       </div>
                       <JapaneseReading
                         html={form.ruby}
@@ -933,16 +960,16 @@ return (
                         kanaClassName="mt-1 font-mincho text-sm md:text-base text-[#D6AD4F]"
                         showRomaji={false}
                       />
-                      <p className="text-xs md:text-sm text-[#B8860B] italic mb-3 md:mb-4 break-words">{form.romaji}</p>
+                      <p className="text-sm text-[#B8860B] italic mb-3 md:mb-4 break-words">{form.romaji}</p>
                       <div className="mt-auto">
-                        <p className="text-[10px] md:text-xs text-[#A3A099] mb-2 border-t border-[#33312E]/80 pt-2 md:pt-3">{form.desc}</p>
-                        <div className="text-[10px] md:text-xs text-[#EAE6DD] bg-[#121110]/60 p-2 md:p-2.5 rounded-lg border border-[#33312E]/50 leading-relaxed">
-                          <span className="text-[#817A73] block text-[9px] md:text-[10px] uppercase mb-1">Fungsi / makna bentuk</span>
+                        <p className="text-sm text-[#B9B3A9] mb-2 border-t border-[#33312E]/80 pt-3 leading-relaxed">{form.desc}</p>
+                        <div className="text-sm text-[#EAE6DD] bg-[#121110]/60 p-3 rounded-lg border border-[#33312E]/50 leading-relaxed">
+                          <span className="text-[#A3A099] block text-[10px] uppercase tracking-wide mb-1">Fungsi / makna bentuk</span>
                           {form.meaning}
                         </div>
                         {form.example && (
-                          <p className="text-[10px] md:text-xs text-[#EAE6DD] bg-[#121110]/60 p-2 md:p-2.5 mt-2 rounded-lg border border-[#33312E]/50 leading-relaxed">
-                            <span className="text-[#817A73] block text-[9px] md:text-[10px] uppercase mb-1">Contoh pemakaian</span>
+                          <p className="text-sm text-[#EAE6DD] bg-[#121110]/60 p-3 mt-2 rounded-lg border border-[#33312E]/50 leading-relaxed">
+                            <span className="text-[#A3A099] block text-[10px] uppercase tracking-wide mb-1">Contoh pemakaian</span>
                             <JapaneseReading allowIndexFallback>{form.example}</JapaneseReading>
                           </p>
                         )}
@@ -956,10 +983,10 @@ return (
                 <div className="mx-4 md:mx-8 mt-4 p-4 rounded-xl border border-[#33312E] bg-[#121110]/80 relative z-10">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                     <div>
-                      <p className="text-xs font-bold text-[#EAE6DD]">Pasangan Transitif / Intransitif</p>
-                      <p className="text-[10px] text-[#A3A099] mt-0.5">Umumnya, verba intransitif memakai partikel が, sedangkan verba transitif memakai を. Namun, partikel tetap bergantung pada pola kalimat dan konteks.</p>
+                      <p className="text-sm font-bold text-[#EAE6DD]">Pasangan Transitif / Intransitif</p>
+                      <p className="text-sm text-[#A3A099] mt-1 leading-relaxed">Umumnya, verba intransitif memakai partikel が, sedangkan verba transitif memakai を. Namun, partikel tetap bergantung pada pola kalimat dan konteks.</p>
                     </div>
-                    <span className={`text-[10px] font-bold px-2 py-1 rounded-md border ${transitivityClass(selectedVerb)}`}>
+                    <span className={`text-xs font-bold px-2 py-1 rounded-md border ${transitivityClass(selectedVerb)}`}>
                       {transitivityLabel(selectedVerb)}
                     </span>
                   </div>
@@ -968,8 +995,8 @@ return (
                       <div className="min-w-0">
                         <p className="text-2xl font-mincho text-[#EAE6DD]">{selectedPair.kanji}</p>
                         <p className="text-sm text-[#C93438]">{selectedPair.kana} <span className="text-[#A3A099]">({selectedPair.romaji})</span></p>
-                        <p className="text-xs text-[#A3A099] mt-1">{selectedPair.meaning}</p>
-                        <span className={`inline-flex mt-2 text-[9px] font-bold px-2 py-0.5 rounded-md border ${transitivityClass(selectedPair)}`}>
+                        <p className="text-sm text-[#A3A099] mt-1">{selectedPair.meaning}</p>
+                        <span className={`inline-flex mt-2 text-[10px] font-bold px-2 py-1 rounded-md border ${transitivityClass(selectedPair)}`}>
                           {transitivityLabel(selectedPair)}
                         </span>
                       </div>
@@ -987,7 +1014,7 @@ return (
                       <p className="text-xs text-[#A3A099]">{selectedVerb.pairedVerb.kana} · Belum tersedia di database.</p>
                     </div>
                   ) : (
-                    <p className="text-xs text-[#A3A099]">Pasangan belum ditambahkan atau belum diverifikasi.</p>
+                    <p className="text-sm text-[#A3A099]">Pasangan belum ditambahkan atau belum diverifikasi.</p>
                   )}
                 </div>
               )}
@@ -999,10 +1026,10 @@ return (
                     <>
                       <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                         <div>
-                          <p className="text-xs font-bold text-[#EAE6DD]">Pola Penggunaan</p>
-                          <p className="text-[10px] text-[#A3A099] mt-0.5">Pola inti untuk makna kata kerja ini. Partikel lain dapat muncul sesuai konteks.</p>
+                          <p className="text-sm font-bold text-[#EAE6DD]">Pola Penggunaan</p>
+                          <p className="text-sm text-[#A3A099] mt-1 leading-relaxed">Pola inti untuk makna kata kerja ini. Partikel lain dapat muncul sesuai konteks.</p>
                         </div>
-                        <span className="text-[9px] text-[#B8860B] border border-[#B8860B]/30 bg-[#B8860B]/10 rounded-md px-2 py-1">Pola umum</span>
+                        <span className="text-[10px] text-[#B8860B] border border-[#B8860B]/30 bg-[#B8860B]/10 rounded-md px-2 py-1">Pola umum</span>
                       </div>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {selectedVerb.usagePatterns.map((pattern: NonNullable<VerbData["usagePatterns"]>[number], index: number) => (
@@ -1011,16 +1038,16 @@ return (
                               <span className="text-sm font-bold text-[#EAE6DD]">{formatGrammarNotation(pattern.pattern || `N ${pattern.particle} V`)}</span>
                               <span className="text-[10px] text-[#C93438] font-bold">{pattern.particle}</span>
                             </div>
-                            <p className="text-[11px] text-[#B9B3A9]">{pattern.role}</p>
+                            <p className="text-sm text-[#B9B3A9] leading-relaxed">{pattern.role}</p>
                             {pattern.example && (
-                              <p className="text-xs text-[#EAE6DD] mt-2">Contoh: <JapaneseReading allowIndexFallback>{pattern.example}</JapaneseReading></p>
+                              <p className="text-sm text-[#EAE6DD] mt-2">Contoh: <JapaneseReading allowIndexFallback>{pattern.example}</JapaneseReading></p>
                             )}
-                            {pattern.note && <p className="text-[10px] text-[#8F8981] mt-1 leading-relaxed">{pattern.note}</p>}
+                            {pattern.note && <p className="text-xs text-[#A3A099] mt-1 leading-relaxed">{pattern.note}</p>}
                           </div>
                         ))}
                       </div>
                       {selectedVerb.usagePatternCaveat && (
-                        <p className="text-[10px] text-[#8F8981] mt-3 leading-relaxed">{selectedVerb.usagePatternCaveat}</p>
+                        <p className="text-xs text-[#A3A099] mt-3 leading-relaxed">{selectedVerb.usagePatternCaveat}</p>
                       )}
                     </>
                   ) : null}
@@ -1040,10 +1067,10 @@ return (
                                 kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
                                 showRomaji={false}
                               />
-                              {romajiText && <p className="text-[10px] text-[#B8860B] italic mt-1 break-words">{romajiText}</p>}
-                              <p className="text-xs text-[#D0CAC0] mt-2">{example.translation}</p>
+                              {romajiText && <p className="text-xs text-[#B8860B] italic mt-1 break-words">{romajiText}</p>}
+                              <p className="text-sm text-[#D0CAC0] mt-2">{example.translation}</p>
                               {example.sourceUrl && (
-                                <a href={example.sourceUrl} target="_blank" rel="noreferrer" className="inline-block text-[9px] text-[#A3A099] underline underline-offset-2 mt-2 hover:text-[#EAE6DD]">
+                                <a href={example.sourceUrl} target="_blank" rel="noreferrer" className="inline-block text-[10px] text-[#A3A099] underline underline-offset-2 mt-2 hover:text-[#EAE6DD]">
                                   Sumber kalimat: Tatoeba #{example.sourceId}
                                 </a>
                               )}
@@ -1053,7 +1080,7 @@ return (
                       </div>
                     </div>
                   ) : (
-                    <p className="text-[10px] text-[#8F8981] mt-3">Contoh kalimat bersumber untuk entri ini belum ditambahkan.</p>
+                    <p className="text-xs text-[#A3A099] mt-3">Contoh kalimat bersumber untuk entri ini belum ditambahkan.</p>
                   )}
                 </div>
               ) : null}

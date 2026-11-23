@@ -8306,7 +8306,7 @@
     "examples": [
       {
         "ja": "私のE-mailアドレスが変わりました。",
-        "furigana": null,
+        "furigana": "{私|わたし}のE-mailアドレスが{変|か}わりました。",
         "translation": "Alamat e-mail saya sudah berubah.",
         "translationNote": "Terjemahan Indonesia diadaptasi dari gloss bahasa Inggris pada dataset sumber; bukan terjemahan resmi Tatoeba.",
         "source": "Tatoeba via OpenJLPT",
