@@ -674,13 +674,15 @@ export default function IrodoriStarterLessonTwoPage() {
               key={item.word}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
-              <p className="font-mincho text-2xl font-bold text-[#F1EBDD]">
+<JapaneseReading
+                romaji={item.romaji}
+                translation={item.meaning}
+                contentClassName="font-mincho text-2xl font-bold leading-relaxed text-[#F1EBDD]"
+                romajiClassName="mt-1 text-sm italic text-[#B8860B]"
+                translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+              >
                 {item.word}
-              </p>
-              <p className="mt-1 text-[10px] italic text-[#B8860B]">
-                {item.romaji}
-              </p>
-              <p className="mt-2 text-xs text-[#A9A398]">{item.meaning}</p>
+              </JapaneseReading>
             </article>
           ))}
         </div>
