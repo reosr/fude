@@ -296,7 +296,7 @@ const practiceTasks: {
       { value: "c", label: "Rapat atau diskusi" },
     ],
     answer: "c",
-    explanation: "会議室 (kaigishitsu) berarti ruang rapat.",
+    explanation: "会議室 berarti ruang rapat."
   },
 ];
 
@@ -374,7 +374,7 @@ const quizQuestions: {
       { key: "c", label: "Di bawah meja." },
     ],
     answer: "c",
-    explanation: "Kata した (shita) berarti bagian bawah.",
+    explanation: "Kata した berarti bagian bawah."
   },
   {
     prompt: <>「<ruby>引<rt>ひ</rt></ruby>き<ruby>出<rt>だ</rt></ruby>しの<ruby>中<rt>なか</rt></ruby>にあります」 berarti…</>,
@@ -394,7 +394,7 @@ const quizQuestions: {
       { key: "c", label: "Gudang." },
     ],
     answer: "a",
-    explanation: "食堂 (shokudou) adalah tempat untuk makan.",
+    explanation: "食堂 adalah tempat untuk makan."
   },
   {
     prompt: <>Pasangan kata kerja yang benar untuk membedakan orang dan benda adalah…</>,
