@@ -16,6 +16,7 @@ import {
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
@@ -540,7 +541,7 @@ export default function IrodoriStarterLessonSixteenPage() {
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
           {currencyWords.map(([jp, reading, meaning]) => (
             <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3 text-center">
-              <p className="font-mincho text-xl font-bold text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#D9B66D]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p>
+              <JapaneseVocabularyReading reading={reading} meaning={meaning} contentClassName="font-mincho text-xl font-bold leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{jp}</JapaneseVocabularyReading>
             </article>
           ))}
         </div>
@@ -549,7 +550,7 @@ export default function IrodoriStarterLessonSixteenPage() {
           <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {numberWords.map(([number, reading]) => (
               <div key={number} className="rounded-lg border border-white/[0.06] bg-black/15 p-2 text-center">
-                <p className="font-mincho text-base text-[#F1EBDD]">{number}</p><p className="mt-1 text-[9px] text-[#D9B66D]">{reading}</p>
+                <JapaneseVocabularyReading reading={reading} contentClassName="font-mincho text-base leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]">{number}</JapaneseVocabularyReading>
               </div>
             ))}
           </div>
@@ -573,7 +574,7 @@ export default function IrodoriStarterLessonSixteenPage() {
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
           {itemWords.map(([jp, reading, meaning]) => (
             <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
-              <p className="font-mincho text-base text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#D9B66D]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p>
+              <JapaneseVocabularyReading reading={reading} meaning={meaning} contentClassName="font-mincho text-base leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{jp}</JapaneseVocabularyReading>
             </article>
           ))}
         </div>
@@ -584,7 +585,7 @@ export default function IrodoriStarterLessonSixteenPage() {
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
           {counterWords.map(([jp, reading]) => (
             <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3 text-center">
-              <p className="font-mincho text-xl text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#D9B66D]">{reading}</p>
+              <JapaneseVocabularyReading reading={reading} contentClassName="font-mincho text-xl leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#D9B66D]">{jp}</JapaneseVocabularyReading>
             </article>
           ))}
         </div>
