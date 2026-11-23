@@ -48,6 +48,64 @@ const norm = (s: string) =>
 export const vocabKey = (v: { kanji: string; kana: string }) =>
   `${norm(v.kanji)}-${norm(v.kana)}`;
 
+
+function normalizeMeaning(value: string): string {
+  return value
+    .normalize("NFKC")
+    .trim()
+    .toLocaleLowerCase("id")
+    .replace(/\s+/g, " ")
+    .replace(/[。.!?！？]+$/g, "");
+}
+
+function meaningParts(value: string): string[] {
+  return value
+    .split(/\s*[;；]\s*/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+}
+
+// Pertahankan arti tambahan dari bab/pelajaran lain saat kosakata yang sama
+// digabung. Ejaan berbeda kapitalisasi tidak dihitung sebagai arti baru.
+function mergeVocabularyMeanings(current: string, incoming: string): string {
+  const merged: string[] = [];
+
+  for (const candidate of [...meaningParts(current), ...meaningParts(incoming)]) {
+    const candidateTokens = candidate
+      .split(/\s*\/\s*/)
+      .map(normalizeMeaning)
+      .filter(Boolean);
+
+    if (
+      candidateTokens.length === 0 ||
+      merged.some((existing) => {
+        const existingTokens = existing
+          .split(/\s*\/\s*/)
+          .map(normalizeMeaning)
+          .filter(Boolean);
+        return candidateTokens.every((token) => existingTokens.includes(token));
+      })
+    ) {
+      continue;
+    }
+
+    for (let index = merged.length - 1; index >= 0; index -= 1) {
+      const existingTokens = merged[index]
+        .split(/\s*\/\s*/)
+        .map(normalizeMeaning)
+        .filter(Boolean);
+
+      if (existingTokens.every((token) => candidateTokens.includes(token))) {
+        merged.splice(index, 1);
+      }
+    }
+
+    merged.push(candidate);
+  }
+
+  return merged.join("; ");
+}
+
 async function loadKosakata(): Promise<MinnaVocabGroup[]> {
   if (!kosakataPromise) {
     kosakataPromise = import("../data/kosakata.json")
@@ -135,6 +193,7 @@ export async function getUnlockedVocab(
         const existing = itemByKey.get(key);
 
         if (existing) {
+          existing.meaning = mergeVocabularyMeanings(existing.meaning, vocab.meaning);
           addSource(existing, { type: "minna", bab: Number(group.bab) });
           return;
         }
@@ -167,6 +226,7 @@ export async function getUnlockedVocab(
       const existing = itemByKey.get(key);
 
       if (existing) {
+        existing.meaning = mergeVocabularyMeanings(existing.meaning, vocab.meaning);
         addSource(existing, source);
         return;
       }
