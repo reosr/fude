@@ -134,7 +134,7 @@ export default function JapaneseReading({
   const kanaForRomaji = (() => {
     let sourceKana = normalizedKana;
 
-    if (displayHtml !== undefined) {
+    if (displayHtml !== undefined && !explicitKana?.trim()) {
       const particleAwareHtml = displayHtml
         .replace(/<\/ruby>(\s*)は/g, "</ruby>$1わ")
         .replace(/<\/ruby>(\s*)へ/g, "</ruby>$1え")
