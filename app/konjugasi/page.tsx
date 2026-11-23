@@ -1027,9 +1027,17 @@ return (
                       </button>
                     </div>
                   ) : selectedVerb.pairedVerb ? (
-                    <div>
-                      <p className="text-xl font-mincho text-[#EAE6DD]">{selectedVerb.pairedVerb.kanji}</p>
-                      <p className="text-xs text-[#A3A099]">{selectedVerb.pairedVerb.kana} · Belum tersedia di database.</p>
+                    <div className="min-w-0">
+                      <JapaneseReading
+                        kana={selectedVerb.pairedVerb.kana}
+                        translation="Pasangan ini belum tersedia di database konjugasi."
+                        contentClassName="block text-xl font-mincho leading-relaxed text-[#EAE6DD]"
+                        kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                        romajiClassName="mt-1 text-xs italic text-[#A3A099]"
+                        translationClassName="mt-1 text-xs text-[#A3A099]"
+                      >
+                        {selectedVerb.pairedVerb.kanji}
+                      </JapaneseReading>
                     </div>
                   ) : (
                     <p className="text-sm text-[#A3A099]">Pasangan belum ditambahkan atau belum diverifikasi.</p>
