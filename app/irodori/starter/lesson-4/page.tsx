@@ -347,9 +347,7 @@ export default function IrodoriStarterLessonFourPage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 4
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            I live in Tokyo.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya tinggal di Tokyo.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいます
           </p>
