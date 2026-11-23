@@ -15,14 +15,15 @@ interface Props {
   showRomaji?: boolean;
   showKanaForKanaOnly?: boolean;
   allowIndexFallback?: boolean;
+  allowIndexFallback?: boolean;
 }
 
 export default function JapaneseReading({
   html,
   children,
   contentClassName = "font-mincho text-lg leading-[2.2] text-[#F1EBDD]",
-  kanaClassName = "mt-1 font-mincho text-sm leading-relaxed text-[#D6AD4F]",
-  romajiClassName = "mt-1 text-xs italic leading-relaxed text-[#A9A398]",
+  kanaClassName = "mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]",
+  romajiClassName = "mt-1 text-sm italic leading-relaxed text-[#A9A398]",
   showKana = true,
   showRomaji = true,
   showKanaForKanaOnly = false,
