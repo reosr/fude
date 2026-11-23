@@ -170,7 +170,7 @@ const signConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>「<ruby>押<rt>お</rt></ruby>す」と<ruby>書<rt>か</rt></ruby>いてあります。<ruby>押<rt>お</rt></ruby>してください。</>,
     romaji: "\"Osu\" to kaite arimasu. Oshite kudasai.",
-    translation: "Tertulis PUSH. Silakan dorong.",
+    translation: "Tertulis \"DORONG\". Silakan dorong.",
     audioFileName: "irodori-starter-15-a05-l03.mp3",
   },
   {
@@ -187,7 +187,7 @@ const canDos = [
   { id: "read-floor-guide", text: "Membaca panduan lantai toko untuk menemukan bagian tempat barang yang dicari." },
   { id: "ask-store-staff", text: "Menanyakan lokasi barang kepada staf pusat perbelanjaan dan memahami petunjuknya." },
   { id: "comment-on-products", text: "Bertukar komentar sederhana tentang produk saat berbelanja bersama teman." },
-  { id: "understand-store-signs", text: "Memahami arti papan tanda yang umum ditemui di department store atau pusat perbelanjaan." },
+  { id: "understand-store-signs", text: "Memahami arti papan tanda yang umum ditemui di toserba atau pusat perbelanjaan." },
 ];
 
 const ratingOptions: { value: IrodoriRating; label: string }[] = [
@@ -215,14 +215,14 @@ const practiceTasks: Task[] = [
     explanation: <>「<ruby>電池<rt>でんち</rt></ruby>がほしいんですが、どこで<ruby>買<rt>か</rt></ruby>えますか？」 digunakan untuk menyampaikan kebutuhan dan menanyakan tempat membeli barang.</>,
   },
   {
-    prompt: <>Jika panduan lantai menunjukkan buku dan alat tulis di 3F, ke lantai berapa kamu pergi untuk mencari buku catatan?</>,
+    prompt: <>Jika panduan lantai menunjukkan buku dan alat tulis di lantai 3, ke lantai berapa kamu pergi untuk mencari buku catatan?</>,
     options: [
       { key: "a", label: "1階（いっかい）" },
       { key: "b", label: "3階（さんがい）" },
       { key: "c", label: "4階（よんかい）" },
     ],
     answer: "b",
-    explanation: <>3F dibaca 「さんがい」 atau 「さんかい」. Pada panduan latihan, alat tulis berada di lantai tiga.</>,
+    explanation: <>Untuk lantai tiga, bacaannya adalah 「さんがい」 atau 「さんかい」. Pada panduan ini, alat tulis berada di lantai tiga.</>,
   },
   {
     prompt: <>Staf toko menjawab 「2階でございます」. Apa artinya?</>,
@@ -376,7 +376,7 @@ const storeTypes = [
   ["ホームセンター", "hoomu sentaa", "Toko perlengkapan rumah"],
   ["文房具店", "ぶんぼうぐてん · bunbougu-ten", "Toko alat tulis"],
   ["家電量販店", "かでんりょうはんてん · kaden ryouhanten", "Toko elektronik"],
-  ["デパート", "depaato", "Department store"],
+  ["デパート", "depaato", "Toserba"],
   ["ショッピングセンター", "shoppingu sentaa", "Pusat perbelanjaan"],
 ];
 
@@ -397,28 +397,28 @@ const itemWords = [
 
 const floorGuide = [
   {
-    floor: "4F",
+    floor: "Lantai 4",
     reading: "よんかい · yonkai",
     name: "家電・生活用品",
     meaning: "Elektronik rumah tangga dan perlengkapan sehari-hari",
     items: "電池・懐中電灯・延長コード・お弁当箱",
   },
   {
-    floor: "3F",
+    floor: "Lantai 3",
     reading: "さんがい · sangai",
     name: "本・文房具・ホビー",
     meaning: "Buku, alat tulis, dan hobi",
     items: "ノート・ボールペン・本・おもちゃ",
   },
   {
-    floor: "2F",
+    floor: "Lantai 2",
     reading: "にかい · nikai",
     name: "ファッション",
     meaning: "Pakaian dan aksesori",
     items: "傘・バッグ・帽子・くつ下",
   },
   {
-    floor: "1F",
+    floor: "Lantai 1",
     reading: "いっかい · ikkai",
     name: "食品・サービス",
     meaning: "Makanan dan layanan",
