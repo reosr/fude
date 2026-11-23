@@ -182,7 +182,7 @@ function buildQuizQuestions(
           item.explanation ||
           g.explanation ||
           g.meaning ||
-          "Pelajari kembali pola grammar ini.",
+          "Pelajari kembali pola tata bahasa ini.",
       });
     });
   });
