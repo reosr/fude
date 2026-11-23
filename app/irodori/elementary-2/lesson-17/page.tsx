@@ -252,7 +252,7 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#E5A9C4]/[0.08]">変</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#E5A9C4]">IRODORI • ELEMENTARY 2 A2 • LESSON 17</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">I can speak Japanese better than before.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Sekarang saya bisa berbicara bahasa Jepang lebih baik daripada sebelumnya.</h1>
           <p className="mt-2 text-sm font-semibold text-[#E5A9C4]">日本語が前より話せるようになりました</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar menceritakan perubahan kehidupan, membicarakan perkembangan pekerjaan belakangan ini, menjelaskan kemampuan yang meningkat, dan menulis pesan kabar terbaru kepada guru.</p>
           <div className="mt-5 flex flex-wrap gap-2">
