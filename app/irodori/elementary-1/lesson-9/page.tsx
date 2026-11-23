@@ -35,27 +35,27 @@ const studyExperienceConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>長いですね。</>,romaji:"Nagai desu ne.",translation:"Cukup lama, ya.",audioFileName:"irodori-elementary1-09-a01-l05.mp3"},
 ];
 const sharingLearningImpressionsConversation: IrodoriUtterance[] = [
-{speakerId:"akiko",japanese:<>日本語の勉強はどうですか。</>,romaji:"Nihongo no benkyou wa dou desu ka?",translation:"Bagaimana belajar bahasa Jepang?",audioFileName:"irodori-elementary1-09-a02-l01.mp3"},
+{speakerId:"akiko",japanese:<>日本語の勉強はどうですか。</>,romaji:"Nihongo no benkyou wa dou desu ka?",translation:"Bagaimana pengalaman belajar bahasa Jepang?",audioFileName:"irodori-elementary1-09-a02-l01.mp3"},
 {speakerId:"kenji",japanese:<>おもしろいです。でも、漢字を読むのが難しいです。</>,romaji:"Omoshiroi desu. Demo, kanji o yomu no ga muzukashii desu.",translation:"Menarik. Tetapi, membaca kanji itu sulit.",audioFileName:"irodori-elementary1-09-a02-l02.mp3"},
 {speakerId:"akiko",japanese:<>会話はどうですか。</>,romaji:"Kaiwa wa dou desu ka?",translation:"Bagaimana dengan percakapan?",audioFileName:"irodori-elementary1-09-a02-l03.mp3"},
-{speakerId:"kenji",japanese:<>会話はまあまあです。話すのは楽しいです。</>,romaji:"Kaiwa wa maa maa desu. Hanasu no wa tanoshii desu.",translation:"Percakapan lumayan. Berbicara itu menyenangkan.",audioFileName:"irodori-elementary1-09-a02-l04.mp3"},
+{speakerId:"kenji",japanese:<>会話はまあまあです。話すのは楽しいです。</>,romaji:"Kaiwa wa maa maa desu. Hanasu no wa tanoshii desu.",translation:"Percakapan saya lumayan. Saya senang berbicara.",audioFileName:"irodori-elementary1-09-a02-l04.mp3"},
 ];
 const comparingJapaneseSkillsConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>日本語の勉強はどうですか。</>,romaji:"Nihongo no benkyou wa dou desu ka?",translation:"Bagaimana belajar bahasa Jepang?",audioFileName:"irodori-elementary1-09-a03-l01.mp3"},
+{speakerId:"yui",japanese:<>日本語の勉強はどうですか。</>,romaji:"Nihongo no benkyou wa dou desu ka?",translation:"Bagaimana pengalaman belajar bahasa Jepang?",audioFileName:"irodori-elementary1-09-a03-l01.mp3"},
 {speakerId:"sota",japanese:<>読むのは少し難しいです。</>,romaji:"Yomu no wa sukoshi muzukashii desu.",translation:"Membaca agak sulit.",audioFileName:"irodori-elementary1-09-a03-l02.mp3"},
 {speakerId:"yui",japanese:<>会話はどうですか。</>,romaji:"Kaiwa wa dou desu ka?",translation:"Bagaimana dengan percakapan?",audioFileName:"irodori-elementary1-09-a03-l03.mp3"},
-{speakerId:"sota",japanese:<>会話は得意です。でも、漢字を書くのは苦手です。</>,romaji:"Kaiwa wa tokui desu. Demo, kanji o kaku no wa nigate desu.",translation:"Saya cukup mahir bercakap-cakap. Tetapi, saya kurang mahir menulis kanji.",audioFileName:"irodori-elementary1-09-a03-l04.mp3"},
+{speakerId:"sota",japanese:<>会話は得意です。でも、漢字を書くのは苦手です。</>,romaji:"Kaiwa wa tokui desu. Demo, kanji o kaku no wa nigate desu.",translation:"Saya cukup lancar berbicara, tetapi kurang mahir menulis kanji.",audioFileName:"irodori-elementary1-09-a03-l04.mp3"},
 ];
 const askingKanjiReadingConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>すみません。この漢字の読み方がわかりません。</>,romaji:"Sumimasen. Kono kanji no yomikata ga wakarimasen.",translation:"Permisi. Saya tidak tahu cara membaca kanji ini.",audioFileName:"irodori-elementary1-09-a04-l01.mp3"},
 {speakerId:"akiko",japanese:<>どの漢字ですか。</>,romaji:"Dono kanji desu ka?",translation:"Kanji yang mana?",audioFileName:"irodori-elementary1-09-a04-l02.mp3"},
-{speakerId:"yui",japanese:<>この「練習」です。読み方を教えてもらえませんか。</>,romaji:"Kono 'renshuu' desu. Yomikata o oshiete moraemasen ka?",translation:"Yang ini, 「練習」. Bisakah Anda memberi tahu cara membacanya?",audioFileName:"irodori-elementary1-09-a04-l03.mp3"},
+{speakerId:"yui",japanese:<>この「練習」です。読み方を教えてもらえませんか。</>,romaji:"Kono 'renshuu' desu. Yomikata o oshiete moraemasen ka?",translation:"Ini kanji 「練習」. Bisa beri tahu cara membacanya?",audioFileName:"irodori-elementary1-09-a04-l03.mp3"},
 {speakerId:"akiko",japanese:<>はい。「れんしゅう」です。</>,romaji:"Hai. 'Renshuu' desu.",translation:"Tentu. Dibaca 'renshuu'.",audioFileName:"irodori-elementary1-09-a04-l04.mp3"},
 ];
 const askingForStudyHelpConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>この文法の説明がよくわかりません。</>,romaji:"Kono bunpou no setsumei ga yoku wakarimasen.",translation:"Saya kurang memahami penjelasan tata bahasa ini.",audioFileName:"irodori-elementary1-09-a05-l01.mp3"},
 {speakerId:"kenji",japanese:<>どこがわかりませんか。</>,romaji:"Doko ga wakarimasen ka?",translation:"Bagian mana yang tidak kamu pahami?",audioFileName:"irodori-elementary1-09-a05-l02.mp3"},
-{speakerId:"sota",japanese:<>もう一度、簡単なことばで説明してもらえませんか。</>,romaji:"Mou ichido, kantan na kotoba de setsumei shite moraemasen ka?",translation:"Bisakah dijelaskan sekali lagi dengan kata-kata yang sederhana?",audioFileName:"irodori-elementary1-09-a05-l03.mp3"},
+{speakerId:"sota",japanese:<>もう一度、簡単なことばで説明してもらえませんか。</>,romaji:"Mou ichido, kantan na kotoba de setsumei shite moraemasen ka?",translation:"Bisa jelaskan sekali lagi dengan kata-kata yang lebih sederhana?",audioFileName:"irodori-elementary1-09-a05-l03.mp3"},
 {speakerId:"kenji",japanese:<>もちろんです。</>,romaji:"Mochiron desu.",translation:"Tentu saja.",audioFileName:"irodori-elementary1-09-a05-l04.mp3"},
 ];
 const canDos=[
