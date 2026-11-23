@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { toHiragana } from "wanakana";
 import type { ReactNode } from "react";
+import JapaneseReading from "@/components/JapaneseReading";
 import { extractKanaFromReactNode } from "@/lib/japanese-text";
 import { Gauge, Play, Square, User, Volume2 } from "lucide-react";
 
@@ -282,24 +283,19 @@ export default function IrodoriConversation({
                   <p className="text-[10px] font-bold text-[#D9B66D]">
                     {speaker?.name ?? utterance.speakerId}
                   </p>
-                  <div
-                    className={`mt-1 font-mincho text-xl leading-[2] text-[#F1EBDD] sm:text-2xl [&_rt]:text-[0.48em] [&_rt]:text-[#D6AD4F] ${
+                  <JapaneseReading
+                    kana={kanaReading}
+                    romaji={utterance.romaji}
+                    translation={utterance.translation}
+                    contentClassName={`mt-1 block font-mincho text-xl leading-[2] text-[#F1EBDD] sm:text-2xl [&_rt]:text-[0.48em] [&_rt]:text-[#D6AD4F] ${
                       isActive ? "text-white" : ""
                     }`}
+                    kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]"
+                    romajiClassName="mt-1 text-sm italic text-[#B8860B]"
+                    translationClassName="mt-2 text-sm leading-6 text-[#A3A099]"
                   >
                     {utterance.japanese}
-                  </div>
-                  {kanaReading && (
-                    <p className="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]">
-                      （{kanaReading}）
-                    </p>
-                  )}
-                  <p className="mt-1 text-sm italic text-[#B8860B]">
-                    {utterance.romaji}
-                  </p>
-                  <p className="mt-2 text-sm leading-6 text-[#A3A099]">
-                    {utterance.translation}
-                  </p>
+                  </JapaneseReading>
                   {!utterance.audioSrc && availableAudioCount > 0 && (
                     <p className="mt-2 text-[9px] text-[#746F65]">
                       Audio belum tersedia
