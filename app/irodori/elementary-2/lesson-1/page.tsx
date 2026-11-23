@@ -16,6 +16,7 @@ import {
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
@@ -670,9 +671,15 @@ export default function IrodoriElementaryTwoLessonOnePage() {
             <article key={jp} className="flex gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#486C91]/35 bg-[#486C91]/10 text-[10px] font-black text-[#A9C9E8]">{String(index + 1).padStart(2, "0")}</span>
               <div className="min-w-0">
-                <p className="font-mincho text-sm leading-7 text-[#F1EBDD]">{jp}</p>
-                <p className="text-[9px] text-[#A9C9E8]">{reading}</p>
-                <p className="mt-1 text-xs text-[#A9A398]">{meaning}</p>
+                <JapaneseReading
+                  romaji={reading}
+                  translation={meaning}
+                  contentClassName="font-mincho text-sm leading-7 text-[#F1EBDD]"
+                  romajiClassName="mt-1 text-xs italic text-[#A9C9E8]"
+                  translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+                >
+                  {jp}
+                </JapaneseReading>
               </div>
             </article>
           ))}
@@ -712,9 +719,16 @@ export default function IrodoriElementaryTwoLessonOnePage() {
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
           {kanjiWords.map(([jp, reading, meaning]) => (
             <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
-              <p className="font-mincho text-xl text-[#F1EBDD]">{jp}</p>
-              <p className="mt-1 text-[9px] text-[#A9C9E8]">{reading}</p>
-              <p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p>
+              <JapaneseVocabularyReading
+                reading={reading}
+                meaning={meaning}
+                contentClassName="font-mincho text-xl leading-relaxed text-[#F1EBDD]"
+                kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#A9C9E8]"
+                romajiClassName="mt-1 text-sm italic text-[#A9A398]"
+                translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+              >
+                {jp}
+              </JapaneseVocabularyReading>
             </article>
           ))}
         </div>
