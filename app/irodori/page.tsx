@@ -172,7 +172,7 @@ export default function IrodoriPage() {
       <div className="rounded-2xl border border-[#B8860B]/20 bg-[#1B1917]/80 p-4 md:p-5">
         <p className="text-xs leading-6 text-[#A9A398]">
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
-          adalah pemilih jalur. Starter A1 dan Elementary 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
+          adalah pemilih jalur. Pemula A1 dan Dasar 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
           Dasar 2 A2 sudah memiliki 18 pelajaran. Jalur Pra-Menengah A2/B1
           kini dapat dimulai, dengan pelajaran berikutnya terbuka secara berurutan.
         </p>
