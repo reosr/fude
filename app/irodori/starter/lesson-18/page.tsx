@@ -441,7 +441,7 @@ const kanjiWords = [
   ["景色", "けしき · keshiki", "Pemandangan"],
 ];
 
-export default function IrodoriStarterLessonEighteenPage() {
+export default function IrodoriPemulaLessonEighteenPage() {
   const progress = useIrodoriProgress();
   const [practiceAnswers, setPracticeAnswers] = useState<Record<number, string>>({});
   const [practiceSubmitted, setPracticeSubmitted] = useState(false);
@@ -485,13 +485,13 @@ export default function IrodoriStarterLessonEighteenPage() {
         href="/irodori/starter"
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
       >
-        <ArrowLeft size={15} /> Kembali ke Starter
+        <ArrowLeft size={15} /> Kembali ke Pemula
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#79602F]/45 bg-gradient-to-br from-[#302319] via-[#1B1917] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">休</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • STARTER A1 • LESSON 18</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • PEMULA A1 • PELAJARAN 18</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya ingin pergi ke pemandian air panas.</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]"><ruby>温泉<rt>おんせん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>りたいです</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -507,8 +507,8 @@ export default function IrodoriStarterLessonEighteenPage() {
       </header>
 
       <section className="rounded-2xl border border-[#B8860B]/20 bg-[#1B1917]/80 p-4 md:p-5">
-        <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#D9B66D]" /><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2></div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Tiga target pertama mengikuti Can-do utama pelajaran. Dua target terakhir adalah latihan penguatan Fude dari dialog perjalanan.</p>
+        <div className="flex items-center gap-2"><CalendarDays size={16} className="text-[#D9B66D]" /><h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2></div>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Tiga target pertama mengikuti target komunikasi utama pelajaran. Dua target terakhir adalah latihan penguatan Fude dari dialog perjalanan.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -817,7 +817,7 @@ export default function IrodoriStarterLessonEighteenPage() {
           {isCompleted ? <span className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-xs font-bold text-emerald-200"><CheckCircle2 size={15}/>Pelajaran selesai</span> : <button type="button" onClick={() => completeIrodoriLesson("starter-18")} disabled={!quizSubmitted || !practiceIsCorrect || !activitiesComplete || !canDosRated} className="inline-flex items-center gap-2 rounded-xl bg-[#C93438] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"><CheckCircle2 size={15}/>Tandai pelajaran selesai</button>}
           <Link href="/irodori/starter" className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-xs font-bold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]">Daftar pelajaran <ArrowLeft size={15} className="rotate-180"/></Link>
         </div>
-        {(!quizSubmitted || !practiceIsCorrect || !activitiesComplete || !canDosRated) && <p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian Can-do.</p>}
+        {(!quizSubmitted || !practiceIsCorrect || !activitiesComplete || !canDosRated) && <p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, selesaikan kelima simulasi dengan tepat, lalu isi kelima penilaian target komunikasi.</p>}
       </section>
 
       <p className="text-center text-[10px] leading-5 text-[#746F65]">Dialog, unggahan, dan aktivitas latihan dibuat orisinal oleh Fude. Semua nama, cerita, lokasi, dan situasi bersifat fiktif.</p>
