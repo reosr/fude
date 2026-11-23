@@ -1003,9 +1003,17 @@ return (
                   {selectedPair ? (
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                       <div className="min-w-0">
-                        <p className="text-2xl font-mincho text-[#EAE6DD]">{selectedPair.kanji}</p>
-                        <p className="text-sm text-[#C93438]">{selectedPair.kana} <span className="text-[#A3A099]">({selectedPair.romaji})</span></p>
-                        <p className="text-sm text-[#A3A099] mt-1">{selectedPair.meaning}</p>
+                        <JapaneseReading
+                          kana={selectedPair.kana}
+                          romaji={selectedPair.romaji}
+                          translation={selectedPair.meaning}
+                          contentClassName="block text-2xl font-mincho text-[#EAE6DD]"
+                          kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                          romajiClassName="mt-1 text-xs italic text-[#A3A099]"
+                          translationClassName="mt-1 text-sm text-[#A3A099]"
+                        >
+                          {selectedPair.kanji}
+                        </JapaneseReading>
                         <span className={`inline-flex mt-2 text-[10px] font-bold px-2 py-1 rounded-md border ${transitivityClass(selectedPair)}`}>
                           {transitivityLabel(selectedPair)}
                         </span>
@@ -1045,14 +1053,29 @@ return (
                         {selectedVerb.usagePatterns.map((pattern: NonNullable<VerbData["usagePatterns"]>[number], index: number) => (
                           <div key={`${pattern.particle}-${pattern.role}-${index}`} className="rounded-lg border border-[#33312E] bg-[#1E1D1B] p-3">
                             <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
-                              <span className="text-sm font-bold text-[#EAE6DD]">{formatGrammarNotation(pattern.pattern || `N ${pattern.particle} V`)}</span>
+                              <JapaneseReading
+                                html={formatGrammarNotation(pattern.pattern || `N ${pattern.particle} V`)}
+                                allowIndexFallback
+                                contentClassName="block text-sm font-bold text-[#EAE6DD] font-mincho leading-relaxed"
+                                kanaClassName="mt-1 font-mincho text-xs leading-relaxed text-[#D6AD4F]"
+                                romajiClassName="mt-1 text-[10px] italic text-[#A9A398]"
+                              />
                               <span className="text-[10px] text-[#C93438] font-bold">{pattern.particle}</span>
                             </div>
                             <p className="text-sm text-[#B9B3A9] leading-relaxed">{pattern.role}</p>
                             {pattern.example && (
                               <p className="text-sm text-[#EAE6DD] mt-2">Contoh: <JapaneseReading allowIndexFallback>{pattern.example}</JapaneseReading></p>
                             )}
-                            {pattern.note && <p className="text-xs text-[#A3A099] mt-1 leading-relaxed">{pattern.note}</p>}
+                            {pattern.note && (
+                              <JapaneseReading
+                                allowIndexFallback
+                                contentClassName="block text-xs text-[#A3A099] mt-1 leading-relaxed"
+                                kanaClassName="mt-1 font-mincho text-xs leading-relaxed text-[#D6AD4F]"
+                                romajiClassName="mt-1 text-[10px] italic text-[#A9A398]"
+                              >
+                                {formatGrammarNotation(pattern.note)}
+                              </JapaneseReading>
+                            )}
                           </div>
                         ))}
                       </div>
