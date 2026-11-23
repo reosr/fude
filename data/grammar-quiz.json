@@ -3182,7 +3182,7 @@
           "<ruby>何か<rt>なにか</rt></ruby>",
           "どこか"
         ],
-        "explanation": "<ruby>何か<rt>なにか</rt></ruby> berarti sesuatu. <ruby>何か<rt>なにか</rt></ruby><ruby>食べ<rt>べたべ</rt></ruby>たいです berarti ingin makan sesuatu."
+        "explanation": "<ruby>何か<rt>なにか</rt></ruby> berarti sesuatu. <ruby>何か<rt>なにか</rt></ruby><ruby>食べ<rt>たべ</rt></ruby>たいです berarti ingin makan sesuatu."
       },
       {
         "id": "b13-g18",
@@ -5345,7 +5345,7 @@
           "する",
           "します"
         ],
-        "explanation": "Dialog ini menggunakan <ruby>普通<rt>ふつう</rt></ruby><ruby>体<rt>からだ</rt></ruby> (gaya biasa) antara orang yang akrab. Bentuk pertanyaannya memakai する tanpa ます dan tanpa か."
+        "explanation": "Dialog ini menggunakan <ruby>普通<rt>ふつう</rt></ruby><ruby>体<rt>たい</rt></ruby> (gaya biasa) antara orang yang akrab. Bentuk pertanyaannya memakai する tanpa ます dan tanpa か."
       },
       {
         "id": "b20-g24",
@@ -12183,7 +12183,7 @@
           "のを<ruby>知<rt>し</rt></ruby>っています",
           "のを<ruby>忘<rt>わす</rt></ruby>れないでください"
         ],
-        "explanation": "V<ruby>辞書<rt>じしょ</rt></ruby><ruby>形<rt>けい</rt></ruby> + のを<ruby>忘れ<rt>れわすれ</rt></ruby>ないでください berarti tolong jangan lupa melakukan V. Tindakan mengumpulkan PR menjadi hal yang tidak boleh dilupakan."
+        "explanation": "V<ruby>辞書<rt>じしょ</rt></ruby><ruby>形<rt>けい</rt></ruby> + のを<ruby>忘れ<rt>わすれ</rt></ruby>ないでください berarti tolong jangan lupa melakukan V. Tindakan mengumpulkan PR menjadi hal yang tidak boleh dilupakan."
       },
       {
         "id": "b38-g17",
