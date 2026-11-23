@@ -1,8 +1,9 @@
 "use client";
 
 import { toHiragana, toRomaji } from "wanakana";
-import type { ReactNode } from "react";
-import { addRubyFromParentheticalReadings, addRubyFromReadingIndex, extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
+import { cloneElement, isValidElement } from "react";
+import type { ReactElement, ReactNode } from "react";
+import { addRubyFromParentheticalReadings, addRubyFromReadingIndex, extractKanaFromReactNode, extractKanaFromRubyHtml, segmentTextByReadingIndex } from "@/lib/japanese-text";
 
 interface Props {
   html?: string;
@@ -34,6 +35,49 @@ function escapeHtmlText(value: string): string {
     "'": "&#39;",
   };
   return value.replace(/[&<>"']/g, (char) => entities[char] ?? char);
+}
+
+function renderJapaneseNodeWithRuby(node: ReactNode, keyPrefix = "reading"): ReactNode {
+  if (typeof node === "string") {
+    const segments = segmentTextByReadingIndex(node);
+    if (!segments.some((segment) => segment.reading)) return node;
+
+    return segments.map((segment, index) =>
+      segment.reading ? (
+        <ruby key={keyPrefix + "-" + index}>
+          {segment.text}
+          <rt>{segment.reading}</rt>
+        </ruby>
+      ) : segment.text
+    );
+  }
+
+  if (Array.isArray(node)) {
+    return node.map((child, index) => renderJapaneseNodeWithRuby(child, keyPrefix + "-" + index));
+  }
+
+  if (!isValidElement(node)) return node;
+
+  const element = node as ReactElement<{
+    children?: ReactNode;
+    dangerouslySetInnerHTML?: unknown;
+  }>;
+
+  // Jangan mengubah ruby yang sudah disediakan data, elemen <rt>, atau HTML
+  // yang memang dikelola langsung oleh pemanggil.
+  if (
+    element.type === "ruby" ||
+    element.type === "rt" ||
+    element.props.dangerouslySetInnerHTML
+  ) {
+    return node;
+  }
+
+  return cloneElement(
+    element,
+    {},
+    renderJapaneseNodeWithRuby(element.props.children, keyPrefix)
+  );
 }
 
 export default function JapaneseReading({
@@ -81,13 +125,15 @@ export default function JapaneseReading({
   return (
     <span className="block min-w-0">
       {showOriginal && (
-        html !== undefined ? (
+        html !== undefined || displayHtml !== undefined ? (
           <span
             className={contentClassName}
-            dangerouslySetInnerHTML={{ __html: displayHtml ?? html }}
+            dangerouslySetInnerHTML={{ __html: displayHtml ?? html ?? "" }}
           />
         ) : (
-          <span className={contentClassName}>{children}</span>
+          <span className={contentClassName}>
+            {allowIndexFallback ? renderJapaneseNodeWithRuby(children) : children}
+          </span>
         )
       )}
       {showKanaLine && (
