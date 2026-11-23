@@ -459,7 +459,7 @@ export default function IrodoriPemulaLessonEightPage() {
         </div>
         <div className="relative z-10 max-w-2xl">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            TOPIC 04 • HOMES AND WORKPLACES
+            TOPIK 04 • RUMAH DAN TEMPAT KERJA
           </p>
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 8
@@ -793,7 +793,7 @@ export default function IrodoriPemulaLessonEightPage() {
             >
               <div className="border-b border-white/[0.07] bg-gradient-to-br from-[#3A3329] to-[#201D19] p-3">
                 <p className="text-[9px] font-black tracking-[0.18em] text-[#D9B66D]">
-                  ROOM SIGN · 0{index + 1}
+                  TANDA RUANGAN · 0{index + 1}
                 </p>
                 <div className="mt-3 flex min-h-20 items-center justify-center rounded-lg border-2 border-[#D9B66D]/50 bg-[#E8DFC9] px-2 text-center shadow-lg">
                   <span className="font-mincho text-2xl font-black text-[#352B20] [&_rt]:text-[0.55em]">
