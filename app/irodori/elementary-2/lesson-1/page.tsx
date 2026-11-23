@@ -44,7 +44,7 @@ const staffIntroductionConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>はじめまして。佐藤です。どうぞよろしくお願いします。</>,
     romaji: "Hajimemashite. Satou desu. Douzo yoroshiku onegaishimasu.",
-    translation: "Salam kenal. Saya Sato. Senang berkenalan dengan Anda.",
+    translation: "Salam kenal. Saya Sato. Senang bertemu dengan Anda.",
     audioFileName: "irodori-elementary2-01-a01-l02.mp3",
   },
   {
@@ -58,7 +58,7 @@ const staffIntroductionConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>わかりました。よろしくお願いします。</>,
     romaji: "Wakarimashita. Yoroshiku onegaishimasu.",
-    translation: "Baik, saya mengerti. Senang berkenalan dengan semuanya.",
+    translation: "Baik. Senang bisa berkenalan dengan kalian semua.",
     audioFileName: "irodori-elementary2-01-a01-l04.mp3",
   },
 ];
@@ -68,14 +68,14 @@ const detailedSelfIntroductionConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>はじめまして。ハナと申します。</>,
     romaji: "Hajimemashite. Hana to moushimasu.",
-    translation: "Salam kenal. Nama saya Hana.",
+    translation: "Salam kenal, nama saya Hana.",
     audioFileName: "irodori-elementary2-01-a02-l01.mp3",
   },
   {
     speakerId: "akiko",
     japanese: <>ハナと呼んでください。「花」という意味です。</>,
     romaji: "Hana to yonde kudasai. Hana to iu imi desu.",
-    translation: "Panggil saya Hana. Namanya berarti bunga.",
+    translation: "Panggil saja saya Hana. Nama Hana berarti bunga.",
     audioFileName: "irodori-elementary2-01-a02-l02.mp3",
   },
   {
@@ -106,7 +106,7 @@ const hometownConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>インドネシアのソロという町です。</>,
     romaji: "Indoneshia no Soro to iu machi desu.",
-    translation: "Saya berasal dari sebuah kota bernama Solo di Indonesia.",
+    translation: "Saya berasal dari Solo, sebuah kota di Indonesia.",
     audioFileName: "irodori-elementary2-01-a03-l02.mp3",
   },
   {
@@ -144,7 +144,7 @@ const pastExperienceConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>そうですか。日本語の勉強はどうでしたか。</>,
     romaji: "Sou desu ka. Nihongo no benkyou wa dou deshita ka?",
-    translation: "Begitu, ya. Bagaimana pengalaman belajar bahasa Jepangnya?",
+    translation: "Oh, begitu. Bagaimana pengalamanmu belajar bahasa Jepang?",
     audioFileName: "irodori-elementary2-01-a04-l03.mp3",
   },
   {
@@ -175,14 +175,14 @@ const snsIntroductionConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>いいですね。私もあとで読んでみます。</>,
     romaji: "Ii desu ne. Watashi mo ato de yonde mimasu.",
-    translation: "Bagus. Nanti saya juga akan membacanya.",
+    translation: "Bagus. Nanti saya baca juga, ya.",
     audioFileName: "irodori-elementary2-01-a05-l03.mp3",
   },
   {
     speakerId: "akiko",
     japanese: <>ありがとうございます。これから一生懸命がんばります。</>,
     romaji: "Arigatou gozaimasu. Kore kara isshoukenmei ganbarimasu.",
-    translation: "Terima kasih. Mulai sekarang saya akan berusaha dengan sungguh-sungguh.",
+    translation: "Terima kasih. Saya akan terus belajar dengan giat.",
     audioFileName: "irodori-elementary2-01-a05-l04.mp3",
   },
 ];
