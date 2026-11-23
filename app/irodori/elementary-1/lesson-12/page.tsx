@@ -22,7 +22,7 @@ const appearanceConversation: IrodoriUtterance[] = [
 const tasteAppearanceConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>わあ、それは辛そうな料理ですね。</>,romaji:"Waa, sore wa karasou na ryouri desu ne.",translation:"Wah, masakan itu kelihatannya pedas.",audioFileName:"irodori-elementary1-12-a02-l01.mp3"},
 {speakerId:"yui",japanese:<>これは野菜のカレーです。でも、あまり辛くないですよ。</>,romaji:"Kore wa yasai no karee desu. Demo, amari karakunai desu yo.",translation:"Ini kare sayuran. Rasanya tidak terlalu pedas, kok.",audioFileName:"irodori-elementary1-12-a02-l02.mp3"},
-{speakerId:"sota",japanese:<>そうですか。いいにおいですね。</>,romaji:"Sou desu ka. Ii nioi desu ne.",translation:"Oh, begitu. Wanginya enak, ya.",audioFileName:"irodori-elementary1-12-a02-l03.mp3"},
+{speakerId:"sota",japanese:<>そうですか。いいにおいですね。</>,romaji:"Sou desu ka. Ii nioi desu ne.",translation:"Oh, begitu. Aromanya enak, ya.",audioFileName:"irodori-elementary1-12-a02-l03.mp3"},
 {speakerId:"yui",japanese:<>よかったら、食べてみてください。</>,romaji:"Yokattara, tabete mite kudasai.",translation:"Kalau mau, silakan coba.",audioFileName:"irodori-elementary1-12-a02-l04.mp3"},
 ];
 const tryingFoodConversation: IrodoriUtterance[] = [
@@ -35,13 +35,13 @@ const tasteFeedbackConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>このサラダ、食べてみますか。</>,romaji:"Kono sarada, tabete mimasu ka?",translation:"Mau mencoba salad ini?",audioFileName:"irodori-elementary1-12-a04-l01.mp3"},
 {speakerId:"sota",japanese:<>はい。ありがとうございます。</>,romaji:"Hai. Arigatou gozaimasu.",translation:"Ya. Terima kasih.",audioFileName:"irodori-elementary1-12-a04-l02.mp3"},
 {speakerId:"yui",japanese:<>味はどうですか。</>,romaji:"Aji wa dou desu ka?",translation:"Bagaimana rasanya?",audioFileName:"irodori-elementary1-12-a04-l03.mp3"},
-{speakerId:"sota",japanese:<>すっぱくて、ちょっと苦手です。でも、新しい味ですね。</>,romaji:"Suppakute, chotto nigate desu. Demo, atarashii aji desu ne.",translation:"Rasanya agak terlalu asam buat saya, tapi ini rasa yang unik.",audioFileName:"irodori-elementary1-12-a04-l04.mp3"},
+{speakerId:"sota",japanese:<>すっぱくて、ちょっと苦手です。でも、新しい味ですね。</>,romaji:"Suppakute, chotto nigate desu. Demo, atarashii aji desu ne.",translation:"Rasanya asam dan agak kurang cocok buat saya. Tapi, rasanya unik juga.",audioFileName:"irodori-elementary1-12-a04-l04.mp3"},
 ];
 const ingredientsConversation: IrodoriUtterance[] = [
 {speakerId:"kenji",japanese:<>これは茶碗蒸しです。卵の料理ですよ。</>,romaji:"Kore wa chawanmushi desu. Tamago no ryouri desu yo.",translation:"Ini chawanmushi, hidangan berbahan telur.",audioFileName:"irodori-elementary1-12-a05-l01.mp3"},
 {speakerId:"yui",japanese:<>中に何が入っていますか。</>,romaji:"Naka ni nani ga haitte imasu ka?",translation:"Apa saja yang ada di dalamnya?",audioFileName:"irodori-elementary1-12-a05-l02.mp3"},
 {speakerId:"kenji",japanese:<>鶏肉と、きのこが入っています。だしも使います。</>,romaji:"Toriniku to, kinoko ga haitte imasu. Dashi mo tsukaimasu.",translation:"Isinya ayam dan jamur, ditambah kaldu dashi.",audioFileName:"irodori-elementary1-12-a05-l03.mp3"},
-{speakerId:"yui",japanese:<>いいにおいですね。いただきます。</>,romaji:"Ii nioi desu ne. Itadakimasu.",translation:"Wanginya enak, ya. Saya coba, ya.",audioFileName:"irodori-elementary1-12-a05-l04.mp3"},
+{speakerId:"yui",japanese:<>いいにおいですね。いただきます。</>,romaji:"Ii nioi desu ne. Itadakimasu.",translation:"Aromanya enak, ya. Saya coba, ya.",audioFileName:"irodori-elementary1-12-a05-l04.mp3"},
 {speakerId:"kenji",japanese:<>味は、うすくないですか。</>,romaji:"Aji wa, usukunai desu ka?",translation:"Rasanya tidak terlalu hambar, kan?",audioFileName:"irodori-elementary1-12-a05-l05.mp3"},
 {speakerId:"yui",japanese:<>いいえ、ちょうどいいです。おいしいですよ。</>,romaji:"Iie, choudo ii desu. Oishii desu yo.",translation:"Tidak, rasanya pas. Enak.",audioFileName:"irodori-elementary1-12-a05-l06.mp3"},
 ];
