@@ -555,9 +555,9 @@ export default function Quiz({
       </div>
 
       <div className="text-center mb-6">
-        <JapaneseReading html={addRubyFromParentheticalReadings(formatGrammarNotation(currentQ.question))} allowIndexFallback contentClassName="text-base text-[#C7C1B5] mb-3 leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" />
+        <JapaneseReading showRomaji={false} html={addRubyFromParentheticalReadings(formatGrammarNotation(currentQ.question))} allowIndexFallback contentClassName="text-base text-[#C7C1B5] mb-3 leading-relaxed" kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" />
 
-        <JapaneseReading
+        <JapaneseReading showRomaji={false}
           html={addRubyFromParentheticalReadings(formatGrammarNotation(currentQ.sentence))}
           allowIndexFallback
           contentClassName="text-2xl md:text-3xl font-bold text-[#EAE6DD] font-mincho leading-[2.3] [&_rt]:text-[0.55em] break-words"
@@ -591,7 +591,7 @@ export default function Quiz({
               disabled={isAnswered}
               className={`w-full text-left px-4 py-3 rounded-lg border transition-all ${btnClass}`}
             >
-              <JapaneseReading
+              <JapaneseReading showRomaji={false}
                  html={addRubyFromParentheticalReadings(formatGrammarNotation(opt))}
                   allowIndexFallback
                  contentClassName="font-mincho text-lg md:text-xl leading-[2] [&_rt]:text-[0.6em]"
@@ -611,7 +611,7 @@ export default function Quiz({
             ) : (
               <div className="rounded-xl border border-[#B8860B]/25 bg-[#B8860B]/[0.06] p-3">
                 <p className="mb-1 font-semibold text-[#D6AD4F]">Jawaban yang benar:</p>
-                <JapaneseReading
+                <JapaneseReading showRomaji={false}
                   html={addRubyFromParentheticalReadings(formatGrammarNotation(currentQ.correctAnswer))}
                   allowIndexFallback
                   contentClassName="font-mincho text-lg text-[#EAE6DD] leading-[2]"
@@ -622,7 +622,7 @@ export default function Quiz({
 
             <div className="rounded-xl border border-[#33312E] bg-[#121110]/70 p-3">
               <p className="mb-1 text-xs font-bold uppercase tracking-wide text-[#A3A099]">Pembahasan</p>
-              <JapaneseReading
+              <JapaneseReading showRomaji={false}
                 html={addRubyFromParentheticalReadings(formatGrammarNotation(currentQ.explanation))}
                 allowIndexFallback
                 contentClassName="text-base text-[#A3A099] leading-relaxed"
