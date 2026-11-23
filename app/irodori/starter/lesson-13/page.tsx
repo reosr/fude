@@ -31,7 +31,7 @@ const busConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>すみません。このバスは<ruby>水族館<rt>すいぞくかん</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか？</>,
     romaji: "Sumimasen. Kono basu wa suizokukan ni ikimasu ka?",
-    translation: "Permisi. Apakah bus ini pergi ke akuarium?",
+    translation: "Permisi. Apakah bus ini menuju akuarium?",
     audioFileName: "irodori-starter-13-a01-l01.mp3",
   },
   {
@@ -93,7 +93,7 @@ const commuteConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>ユイさんは、<ruby>学校<rt>がっこう</rt></ruby>までどうやって<ruby>来<rt>き</rt></ruby>ますか？</>,
     romaji: "Yui-san wa, gakkou made dou yatte kimasu ka?",
-    translation: "Yui, bagaimana kamu pergi ke sekolah?",
+    translation: "Yui, biasanya kamu ke sekolah naik apa?",
     audioFileName: "irodori-starter-13-a03-l01.mp3",
   },
   {
