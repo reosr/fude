@@ -31,14 +31,14 @@ export default function JapaneseReading({
   const romaji = reading && showRomaji ? toRomaji(reading.kana) : "";
 
   return (
-    <div className="min-w-0">
+    <span className="block min-w-0">
       {html !== undefined ? (
-        <div className={contentClassName} dangerouslySetInnerHTML={{ __html: html }} />
+        <span className={contentClassName} dangerouslySetInnerHTML={{ __html: html }} />
       ) : (
-        <div className={contentClassName}>{children}</div>
+        <span className={contentClassName}>{children}</span>
       )}
       {showKanaLine && reading && <p className={kanaClassName}>（{reading.kana}）</p>}
       {romaji && <p className={romajiClassName}>{romaji}</p>}
-    </div>
+    </span>
   );
 }
