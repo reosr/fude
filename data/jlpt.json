@@ -74,7 +74,7 @@
               "explanation": "せんせい ditulis 先生, artinya guru. Jangan tertukar dengan 学生 (がくせい), yang berarti pelajar atau mahasiswa."
             },
             {
-              "question": "「でんしゃで 会社へ いきます。」の「でんしゃ」は、どれですか。",
+              "question": "「でんしゃで <ruby>会社<rt>かいしゃ</rt></ruby>へ いきます。」の「でんしゃ」は、どれですか。",
               "options": [
                 "電車",
                 "電気",
@@ -85,7 +85,7 @@
               "explanation": "でんしゃ ditulis 電車, artinya kereta. 電気 (でんき) berarti listrik, sedangkan 自転車 (じてんしゃ) berarti sepeda."
             },
             {
-              "question": "「わたしの かぞくは 四人です。」の「かぞく」は、どれですか。",
+              "question": "「わたしの かぞくは <ruby>四人<rt>よにん</rt></ruby>です。」の「かぞく」は、どれですか。",
               "options": [
                 "家",
                 "家具",
