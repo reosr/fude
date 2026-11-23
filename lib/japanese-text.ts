@@ -254,7 +254,7 @@ export function formatGrammarNotation(value: string): string {
     (_match, prefix: string, symbol: string, number: string, suffix: string | undefined) => {
       if (number) return prefix + GRAMMAR_LABELS[symbol] + " " + number;
       if (suffix && (symbol === "V" || symbol === "A")) {
-        return prefix + (NOTATION_SUFFIXES[suffix] ?? GRAMMAR_LABELS[symbol]);
+        return prefix + (NOTATION_SUFFIXES[suffix] ?? GRAMMAR_LABELS[symbol]) + " + ";
       }
       return prefix + GRAMMAR_LABELS[symbol];
     }
