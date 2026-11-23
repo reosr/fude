@@ -26,17 +26,17 @@ const visitingHomeConversation: IrodoriUtterance[] = [
 ];
 
 const givingSouvenirConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>これ、お土産です。京都で買ったお菓子です。</>,romaji:"Kore, omiyage desu. Kyouto de katta okashi desu.",translation:"Ini oleh-oleh. Kue ini saya beli di Kyoto.",audioFileName:"irodori-elementary1-17-a02-l01.mp3"},
-{speakerId:"sota",japanese:<>わあ、ありがとうございます。京都のお菓子なんですね。</>,romaji:"Waa, arigatou gozaimasu. Kyouto no okashi nan desu ne.",translation:"Wah, terima kasih. Jadi ini kue dari Kyoto, ya.",audioFileName:"irodori-elementary1-17-a02-l02.mp3"},
+{speakerId:"yui",japanese:<>これ、お土産です。京都で買ったお菓子です。</>,romaji:"Kore, omiyage desu. Kyouto de katta okashi desu.",translation:"Ini oleh-oleh. Camilan ini saya beli di Kyoto.",audioFileName:"irodori-elementary1-17-a02-l01.mp3"},
+{speakerId:"sota",japanese:<>わあ、ありがとうございます。京都のお菓子なんですね。</>,romaji:"Waa, arigatou gozaimasu. Kyouto no okashi nan desu ne.",translation:"Wah, terima kasih. Oh, ini camilan dari Kyoto, ya.",audioFileName:"irodori-elementary1-17-a02-l02.mp3"},
 {speakerId:"yui",japanese:<>はい。よかったら、食べてください。</>,romaji:"Hai. Yokattara, tabete kudasai.",translation:"Ya. Kalau mau, silakan dicoba.",audioFileName:"irodori-elementary1-17-a02-l03.mp3"},
-{speakerId:"sota",japanese:<>いただきます。楽しみです。</>,romaji:"Itadakimasu. Tanoshimi desu.",translation:"Terima kasih. Saya jadi tidak sabar ingin mencicipinya.",audioFileName:"irodori-elementary1-17-a02-l04.mp3"},
+{speakerId:"sota",japanese:<>いただきます。楽しみです。</>,romaji:"Itadakimasu. Tanoshimi desu.",translation:"Terima kasih. Saya sudah tidak sabar mencicipinya.",audioFileName:"irodori-elementary1-17-a02-l04.mp3"},
 ];
 
 const explainingKeepsakeConversation: IrodoriUtterance[] = [
 {speakerId:"akiko",japanese:<>それは何ですか。かわいいですね。</>,romaji:"Sore wa nan desu ka? Kawaii desu ne.",translation:"Itu apa? Lucu, ya.",audioFileName:"irodori-elementary1-17-a03-l01.mp3"},
 {speakerId:"yui",japanese:<>これは、兄がくれたお守りです。</>,romaji:"Kore wa, ani ga kureta omamori desu.",translation:"Ini omamori pemberian kakak laki-laki saya.",audioFileName:"irodori-elementary1-17-a03-l02.mp3"},
 {speakerId:"akiko",japanese:<>そうなんですね。いつも持っているんですか。</>,romaji:"Sou nan desu ne. Itsumo motte iru n desu ka?",translation:"Oh, begitu. Kamu selalu membawanya?",audioFileName:"irodori-elementary1-17-a03-l03.mp3"},
-{speakerId:"yui",japanese:<>はい。旅行のときに、兄にもらったんです。</>,romaji:"Hai. Ryokou no toki ni, ani ni moratta n desu.",translation:"Ya. Saya mendapatkannya dari kakak saat sedang bepergian.",audioFileName:"irodori-elementary1-17-a03-l04.mp3"},
+{speakerId:"yui",japanese:<>はい。旅行のときに、兄にもらったんです。</>,romaji:"Hai. Ryokou no toki ni, ani ni moratta n desu.",translation:"Ya. Saya mendapatkannya dari kakak saat perjalanan.",audioFileName:"irodori-elementary1-17-a03-l04.mp3"},
 ];
 
 const askingAboutBelongingsConversation: IrodoriUtterance[] = [
