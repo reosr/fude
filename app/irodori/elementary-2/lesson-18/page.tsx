@@ -16,6 +16,7 @@ import {
 import IrodoriConversation, { type IrodoriUtterance } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
+import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
@@ -281,14 +282,14 @@ export default function IrodoriElementaryTwoLessonEighteenPage() {
       <section className="space-y-4">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#E5A9C4]">KOSAKATA KEHIDUPAN DAN MASA DEPAN</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Lima puluh kosakata penting</h2></div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
-          {vocabRows.map(([jp, reading, meaning]) => <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><p className="font-mincho text-base text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#E5A9C4]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p></article>)}
+          {vocabRows.map(([jp, reading, meaning]) => <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><JapaneseVocabularyReading reading={reading} meaning={meaning} contentClassName="font-mincho text-base leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#E5A9C4]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{jp}</JapaneseVocabularyReading></article>)}
         </div>
       </section>
 
       <section className="space-y-4">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#E5A9C4]">KANJI UTAMA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Sepuluh kata kanji pada materi resmi</h2></div>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
-          {kanjiWords.map(([jp, reading, meaning]) => <article key={jp} className="rounded-xl border border-[#A64C77]/20 bg-[#35232D]/50 p-3"><p className="font-mincho text-lg font-bold text-[#F1EBDD]">{jp}</p><p className="mt-1 text-[9px] text-[#E5A9C4]">{reading}</p><p className="mt-1 text-[10px] text-[#A9A398]">{meaning}</p></article>)}
+          {kanjiWords.map(([jp, reading, meaning]) => <article key={jp} className="rounded-xl border border-[#A64C77]/20 bg-[#35232D]/50 p-3"><JapaneseVocabularyReading reading={reading} meaning={meaning} contentClassName="font-mincho text-lg font-bold leading-relaxed text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#E5A9C4]" romajiClassName="mt-1 text-sm italic text-[#A9A398]" translationClassName="mt-2 text-xs leading-5 text-[#A9A398]">{jp}</JapaneseVocabularyReading></article>)}
         </div>
       </section>
 
