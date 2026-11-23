@@ -16,7 +16,7 @@ import {
 import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
-import { IRODORI_SPEAKERS } from "@/lib/irodori-tokohs";
+import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
 import JapaneseReading from "@/components/JapaneseReading";
 import JapaneseVocabularyReading from "@/components/JapaneseVocabularyReading";
 import {
@@ -28,42 +28,42 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 
 const menuConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>このメニュー、<ruby>見<rt>み</rt></ruby>てもいいですか？</>,
     romaji: "Kono menyuu, mite mo ii desu ka?",
     translation: "Boleh saya melihat menu ini?",
     audioFileName: "irodori-starter-06-a01-l01.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。どうぞ。</>,
     romaji: "Hai. Douzo.",
     translation: "Ya. Silakan.",
     audioFileName: "irodori-starter-06-a01-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>ハンバーガーのセットはありますか？</>,
     romaji: "Hanbaagaa no setto wa arimasu ka?",
     translation: "Apakah ada paket hamburger?",
     audioFileName: "irodori-starter-06-a01-l03.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。ポテトとドリンクがつきます。</>,
     romaji: "Hai. Poteto to dorinku ga tsukimasu.",
     translation: "Ada. Paketnya termasuk kentang dan minuman.",
     audioFileName: "irodori-starter-06-a01-l04.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>デザートもありますか？</>,
     romaji: "Dezaato mo arimasu ka?",
     translation: "Apakah ada hidangan penutup juga?",
     audioFileName: "irodori-starter-06-a01-l05.mp3",
   },
   {
-    tokohId: "sota",
+    speakerId: "sota",
     japanese: <>はい。アイスクリームとアップルパイがあります。</>,
     romaji: "Hai. Aisukuriimu to appurupai ga arimasu.",
     translation: "Ada. Tersedia es krim dan pai apel.",
@@ -73,42 +73,42 @@ const menuConversation: IrodoriUtterance[] = [
 
 const fastFoodConversation: IrodoriUtterance[] = [
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>いらっしゃいませ。ご<ruby>注文<rt>ちゅうもん</rt></ruby>は？</>,
     romaji: "Irasshaimase. Gochuumon wa?",
     translation: "Selamat datang. Mau pesan apa?",
     audioFileName: "irodori-starter-06-a02-l01.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>チーズバーガーのセット、お<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Chiizubaagaa no setto, onegaishimasu.",
     translation: "Paket cheeseburger, tolong.",
     audioFileName: "irodori-starter-06-a02-l02.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>ドリンクは<ruby>何<rt>なに</rt></ruby>になさいますか？</>,
     romaji: "Dorinku wa nani ni nasaimasu ka?",
     translation: "Untuk minumannya, pilih apa?",
     audioFileName: "irodori-starter-06-a02-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>オレンジジュースにします。</>,
     romaji: "Orenji juusu ni shimasu.",
     translation: "Saya pilih jus jeruk.",
     audioFileName: "irodori-starter-06-a02-l04.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>こちらでおめしあがりですか？</>,
     romaji: "Kochira de omeshiagari desu ka?",
     translation: "Mau makan di sini?",
     audioFileName: "irodori-starter-06-a02-l05.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>テイクアウトでお<ruby>願<rt>ねが</rt></ruby>いします。</>,
     romaji: "Teikuauto de onegaishimasu.",
     translation: "Dibungkus untuk dibawa pulang, ya.",
@@ -118,42 +118,42 @@ const fastFoodConversation: IrodoriUtterance[] = [
 
 const chooseMealConversation: IrodoriUtterance[] = [
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ケンジさん、<ruby>何<rt>なに</rt></ruby>にしますか？</>,
     romaji: "Kenji-san, nani ni shimasu ka?",
     translation: "Kenji, mau pilih yang mana?",
     audioFileName: "irodori-starter-06-a03-l01.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>うーん……。カレーにします。</>,
     romaji: "Uun... Karee ni shimasu.",
     translation: "Hmm… Saya pilih kari.",
     audioFileName: "irodori-starter-06-a03-l02.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>ユイさんは？</>,
     romaji: "Yui-san wa?",
     translation: "Kalau Yui?",
     audioFileName: "irodori-starter-06-a03-l03.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <><ruby>私<rt>わたし</rt></ruby>は、うどんにします。</>,
     romaji: "Watashi wa, udon ni shimasu.",
     translation: "Saya pilih udon.",
     audioFileName: "irodori-starter-06-a03-l04.mp3",
   },
   {
-    tokohId: "akiko",
+    speakerId: "akiko",
     japanese: <>じゃあ、<ruby>私<rt>わたし</rt></ruby>はそばにします。</>,
     romaji: "Jaa, watashi wa soba ni shimasu.",
     translation: "Kalau begitu, saya pilih soba.",
     audioFileName: "irodori-starter-06-a03-l05.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>いいですね。</>,
     romaji: "Ii desu ne.",
     translation: "Kedengarannya bagus.",
@@ -163,42 +163,42 @@ const chooseMealConversation: IrodoriUtterance[] = [
 
 const quantityConversation: IrodoriUtterance[] = [
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>すみません。</>,
     romaji: "Sumimasen.",
     translation: "Permisi.",
     audioFileName: "irodori-starter-06-a04-l01.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>はい。</>,
     romaji: "Hai.",
     translation: "Ya, ada yang bisa dibantu?",
     audioFileName: "irodori-starter-06-a04-l02.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <><ruby>唐揚<rt>からあ</rt></ruby>げ、ふたつください。</>,
     romaji: "Karaage, futatsu kudasai.",
     translation: "Karaage dua porsi, tolong.",
     audioFileName: "irodori-starter-06-a04-l03.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>はい。</>,
     romaji: "Hai.",
     translation: "Baik.",
     audioFileName: "irodori-starter-06-a04-l04.mp3",
   },
   {
-    tokohId: "yui",
+    speakerId: "yui",
     japanese: <>あと、<ruby>取<rt>と</rt></ruby>り<ruby>皿<rt>ざら</rt></ruby>、ありますか？</>,
     romaji: "Ato, torizara, arimasu ka?",
     translation: "Lalu, apakah ada piring kecil?",
     audioFileName: "irodori-starter-06-a04-l05.mp3",
   },
   {
-    tokohId: "kenji",
+    speakerId: "kenji",
     japanese: <>はい、お<ruby>持<rt>も</rt></ruby>ちします。</>,
     romaji: "Hai, omochi shimasu.",
     translation: "Baik, akan saya bawakan.",
@@ -507,7 +507,7 @@ export default function IrodoriPemulaLessonSixPage() {
         </p>
         <IrodoriConversation
           title="Scene A · Melihat menu bersama teman"
-          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
+          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={menuConversation}
         />
 
@@ -675,7 +675,7 @@ export default function IrodoriPemulaLessonSixPage() {
         </p>
         <IrodoriConversation
           title="Scene B · Memesan cheeseburger"
-          tokohs={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
+          speakers={[IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={fastFoodConversation}
         />
 
@@ -821,7 +821,7 @@ export default function IrodoriPemulaLessonSixPage() {
         </p>
         <IrodoriConversation
           title="Scene C · Memilih makan siang"
-          tokohs={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
+          speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji, IRODORI_SPEAKERS.yui]}
           utterances={chooseMealConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -882,7 +882,7 @@ export default function IrodoriPemulaLessonSixPage() {
         </p>
         <IrodoriConversation
           title="Scene D · Memesan tambahan"
-          tokohs={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.kenji]}
+          speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.kenji]}
           utterances={quantityConversation}
         />
         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
