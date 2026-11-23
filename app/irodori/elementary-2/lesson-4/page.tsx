@@ -37,21 +37,21 @@ const restaurantRecommendationConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>この近くに、おすすめの店はありますか。</>,
     romaji: "Kono chikaku ni, osusume no mise wa arimasu ka?",
-    translation: "Apakah ada tempat makan yang direkomendasikan di dekat sini?",
+    translation: "Ada rekomendasi tempat makan di dekat sini?",
     audioFileName: "irodori-elementary2-04-a01-l01.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>和食なら、「さくら食堂」がおすすめです。</>,
     romaji: "Washoku nara, 'Sakura Shokudou' ga osusume desu.",
-    translation: "Kalau mencari makanan Jepang, Sakura Shokudo saya rekomendasikan.",
+    translation: "Kalau ingin makan masakan Jepang, saya sarankan Sakura Shokudo.",
     audioFileName: "irodori-elementary2-04-a01-l02.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>どんな店ですか。</>,
     romaji: "Donna mise desu ka?",
-    translation: "Tempat makan seperti apa?",
+    translation: "Seperti apa tempatnya?",
     audioFileName: "irodori-elementary2-04-a01-l03.mp3",
   },
   {
@@ -68,7 +68,7 @@ const eatingInstructionsConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>お待たせしました。こちらは混ぜそばです。</>,
     romaji: "Omatase shimashita. Kochira wa mazesoba desu.",
-    translation: "Terima kasih sudah menunggu. Ini mazesoba.",
+    translation: "Maaf sudah menunggu. Ini mazesoba-nya.",
     audioFileName: "irodori-elementary2-04-a02-l01.mp3",
   },
   {
@@ -82,14 +82,14 @@ const eatingInstructionsConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>たれと具をよく混ぜて食べてください。</>,
     romaji: "Tare to gu o yoku mazete tabete kudasai.",
-    translation: "Silakan aduk saus dan isiannya dengan rata, lalu makan.",
+    translation: "Aduk saus dan semua bahannya sampai rata, lalu makan.",
     audioFileName: "irodori-elementary2-04-a02-l03.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>わかりました。こうやって混ぜるんですね。</>,
     romaji: "Wakarimashita. Kou yatte mazerun desu ne.",
-    translation: "Baik. Jadi, diaduk seperti ini, ya.",
+    translation: "Oh, jadi diaduk seperti ini, ya.",
     audioFileName: "irodori-elementary2-04-a02-l04.mp3",
   },
 ];
@@ -120,7 +120,7 @@ const askHowToEatConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>少しずつつけるといいですよ。塩で食べてもいいです。</>,
     romaji: "Sukoshi zutsu tsukeru to ii desu yo. Shio de tabete mo ii desu.",
-    translation: "Sebaiknya celupkan sedikit demi sedikit. Bisa juga dimakan dengan garam.",
+    translation: "Celupkan sedikit-sedikit saja. Bisa juga dimakan dengan garam.",
     audioFileName: "irodori-elementary2-04-a03-l04.mp3",
   },
 ];
@@ -151,7 +151,7 @@ const introduceIndonesianDishConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>ピーナッツソースをかけて食べます。甘くて、少し辛いです。</>,
     romaji: "Piinattsu soosu o kakete tabemasu. Amakute, sukoshi karai desu.",
-    translation: "Dimakan dengan saus kacang. Rasanya manis dan sedikit pedas.",
+    translation: "Gado-gado disajikan dengan saus kacang. Rasanya manis dan sedikit pedas.",
     audioFileName: "irodori-elementary2-04-a04-l04.mp3",
   },
 ];
@@ -168,7 +168,7 @@ const restaurantReviewConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>はい。料理はおいしいですが、お昼は少し混んでいるそうです。</>,
     romaji: "Hai. Ryouri wa oishii desu ga, ohiru wa sukoshi konde iru sou desu.",
-    translation: "Ya. Makanannya enak, tetapi katanya agak ramai saat siang.",
+    translation: "Ya. Katanya makanannya enak, tetapi saat siang agak ramai.",
     audioFileName: "irodori-elementary2-04-a05-l02.mp3",
   },
   {
@@ -182,7 +182,7 @@ const restaurantReviewConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>手ごろだし、量も多いそうですよ。</>,
     romaji: "Tegoro da shi, ryou mo ooi sou desu yo.",
-    translation: "Katanya harganya terjangkau dan porsinya juga banyak.",
+    translation: "Katanya harganya terjangkau dan porsinya besar.",
     audioFileName: "irodori-elementary2-04-a05-l04.mp3",
   },
 ];
@@ -696,7 +696,7 @@ export default function IrodoriElementaryTwoLessonFourPage() {
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
           {[
-            ["和食なら、「さくら食堂」がおすすめです。", "Washoku nara, 'Sakura Shokudou' ga osusume desu.", "Kalau mencari makanan Jepang, Sakura Shokudo saya rekomendasikan."],
+            ["和食なら、「さくら食堂」がおすすめです。", "Washoku nara, 'Sakura Shokudou' ga osusume desu.", "Kalau ingin makan masakan Jepang, saya sarankan Sakura Shokudo."],
             ["安い店なら、「こもれび」がいいですよ。", "Yasui mise nara, 'Komorebi' ga ii desu yo.", "Kalau mencari tempat yang murah, Komorebi bagus."],
             ["この近くなら、駅の前にあります。", "Kono chikaku nara, eki no mae ni arimasu.", "Kalau di sekitar sini, tempatnya ada di depan stasiun."],
             ["デザートなら、みどりカフェが人気です。", "Dezaato nara, Midori Kafe ga ninki desu.", "Kalau mencari makanan penutup, Midori Cafe populer."],
