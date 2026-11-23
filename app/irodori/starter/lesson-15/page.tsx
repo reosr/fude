@@ -39,7 +39,7 @@ const storeConversation: IrodoriUtterance[] = [
     speakerId: "kenji",
     japanese: <>コンビニで<ruby>買<rt>か</rt></ruby>えますよ。100<ruby>円<rt>えん</rt></ruby>ショップにもあります。</>,
     romaji: "Konbini de kaemasu yo. Hyaku-en shoppu ni mo arimasu.",
-    translation: "Bisa dibeli di minimarket. Ada juga di toko serba 100 yen.",
+    translation: "Bisa dibeli di minimarket. Ada juga di toko 100 yen.",
     audioFileName: "irodori-starter-15-a01-l02.mp3",
   },
   {
@@ -84,7 +84,7 @@ const floorGuideConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>4<ruby>階<rt>かい</rt></ruby>です。<ruby>家電<rt>かでん</rt></ruby>のフロアです。</>,
     romaji: "Yonkai desu. Kaden no furoa desu.",
-    translation: "Di lantai empat. Itu lantai peralatan elektronik rumah tangga.",
+    translation: "Di lantai empat, di bagian elektronik rumah tangga.",
     audioFileName: "irodori-starter-15-a02-l04.mp3",
   },
 ];
@@ -94,7 +94,7 @@ const staffConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>すみません。かさがほしいんですが、どこにありますか？</>,
     romaji: "Sumimasen. Kasa ga hoshii n desu ga, doko ni arimasu ka?",
-    translation: "Permisi. Saya ingin payung. Ada di mana?",
+    translation: "Permisi, saya mau membeli payung. Ada di mana?",
     audioFileName: "irodori-starter-15-a03-l01.mp3",
   },
   {
@@ -139,14 +139,14 @@ const productConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>それに、<ruby>軽<rt>かる</rt></ruby>いですね。</>,
     romaji: "Sore ni, karui desu ne.",
-    translation: "Selain itu, tasnya ringan, ya.",
+    translation: "Tasnya juga ringan, ya.",
     audioFileName: "irodori-starter-15-a04-l03.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>ほんとう！でも、ちょっと<ruby>高<rt>たか</rt></ruby>いですね。</>,
     romaji: "Hontou! Demo, chotto takai desu ne.",
-    translation: "Benar juga! Tetapi agak mahal, ya.",
+    translation: "Iya juga! Tapi agak mahal, ya.",
     audioFileName: "irodori-starter-15-a04-l04.mp3",
   },
 ];
