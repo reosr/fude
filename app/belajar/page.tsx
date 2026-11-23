@@ -889,6 +889,7 @@ const findWordAt = (index: number): string | null => {
         </div>
       ) : (
         <Quiz
+          key={Number(babData.bab)}
           grammarQuestions={
             grammarQuizData.find(
               (item) => Number(item.bab) === Number(babData.bab)
