@@ -638,7 +638,7 @@ export default function IrodoriElementaryTwoLessonFourPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A8D5B5]/[0.08]">食</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#A8D5B5]">IRODORI • ELEMENTARY 2 A2 • LESSON 04</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Please eat it without soy sauce.</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Silakan makan tanpa kecap asin.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A8D5B5]">しょうゆをつけないで食べてください</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami rekomendasi tempat makan, mengikuti petunjuk cara makan, bertanya tentang cara menikmati hidangan, memperkenalkan masakan Indonesia, dan membaca ulasan restoran.</p>
           <div className="mt-5 flex flex-wrap gap-2">
