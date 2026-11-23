@@ -643,7 +643,7 @@ export default function JLPTQuiz({
           {isPerfect && (
             <div className="mt-5 inline-flex items-center gap-2 bg-[#B8860B]/15 border border-[#B8860B]/40 text-[#D9AD42] px-4 py-2 rounded-full text-sm font-bold">
               <CheckCircle2 size={17} />
-              Perfect Completed
+              Selesai Sempurna
             </div>
           )}
 
