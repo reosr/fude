@@ -885,13 +885,15 @@ export default function IrodoriStarterLessonOnePage() {
                 index > 0 ? "border-t border-white/[0.05]" : ""
               }`}
             >
-              <div>
-                <p className="font-mincho text-base font-bold text-[#EAE6DD]">
-                  <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
-                </p>
-                <p className="text-[10px] italic text-[#B8860B]">{item.romaji}</p>
-              </div>
-              <p className="text-xs text-[#A9A398]">{item.meaning}</p>
+              <JapaneseReading
+                romaji={item.romaji}
+                translation={item.meaning}
+                contentClassName="font-mincho text-base font-bold leading-relaxed text-[#EAE6DD]"
+                romajiClassName="mt-1 text-sm italic leading-relaxed text-[#B8860B]"
+                translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+              >
+                {item.jp}
+              </JapaneseReading>
             </div>
           ))}
         </div>
@@ -921,13 +923,15 @@ export default function IrodoriStarterLessonOnePage() {
               key={item.word}
               className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
             >
-              <p className="font-mincho text-2xl font-bold text-[#F1EBDD]">
+              <JapaneseReading
+                romaji={item.romaji}
+                translation={item.meaning}
+                contentClassName="font-mincho text-2xl font-bold leading-relaxed text-[#F1EBDD]"
+                romajiClassName="mt-1 text-sm italic text-[#B8860B]"
+                translationClassName="mt-2 text-xs leading-5 text-[#A9A398]"
+              >
                 {item.word}
-              </p>
-              <p className="mt-1 text-[10px] italic text-[#B8860B]">
-                {item.romaji}
-              </p>
-              <p className="mt-2 text-xs text-[#A9A398]">{item.meaning}</p>
+              </JapaneseReading>
             </article>
           ))}
         </div>
