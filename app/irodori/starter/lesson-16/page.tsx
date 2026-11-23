@@ -509,7 +509,7 @@ export default function IrodoriStarterLessonSixteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">円</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • STARTER A1 • LESSON 16</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">How much is this?</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Berapa harga barang ini?</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]">これ、いくらですか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Belajar memahami harga, menanyakan harga barang, menyebutkan jumlah dan takaran, menjawab pertanyaan kasir, serta membaca papan diskon di toko.
