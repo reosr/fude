@@ -39,7 +39,7 @@ const checkingPopularPlaceConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>新しい博物館、もう行きましたか。</>, romaji: "Atarashii hakubutsukan, mou ikimashita ka?", translation: "Kamu sudah ke museum baru itu?", audioFileName: "irodori-elementary1-08-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>いいえ、まだです。行きたいです。</>, romaji: "Iie, mada desu. Ikitai desu.", translation: "Belum. Saya ingin pergi.", audioFileName: "irodori-elementary1-08-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>土曜日にいっしょに行きませんか。</>, romaji: "Doyoubi ni issho ni ikimasen ka?", translation: "Bagaimana kalau kita pergi bersama hari Sabtu?", audioFileName: "irodori-elementary1-08-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>いいですね。楽しみです。</>, romaji: "Ii desu ne. Tanoshimi desu.", translation: "Boleh juga. Saya jadi tidak sabar.", audioFileName: "irodori-elementary1-08-a02-l04.mp3" },
+  { speakerId: "kenji", japanese: <>いいですね。楽しみです。</>, romaji: "Ii desu ne. Tanoshimi desu.", translation: "Boleh juga. Saya sudah tidak sabar.", audioFileName: "irodori-elementary1-08-a02-l04.mp3" },
 ];
 
 const decidingNextActivityConversation: IrodoriUtterance[] = [
@@ -53,7 +53,7 @@ const sharingEventImpressionsConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>今日の動物園はどうでしたか。</>, romaji: "Kyou no doubutsuen wa dou deshita ka?", translation: "Bagaimana tadi di kebun binatang?", audioFileName: "irodori-elementary1-08-a04-l01.mp3" },
   { speakerId: "akiko", japanese: <>とても楽しかったです。パンダがかわいかったです。</>, romaji: "Totemo tanoshikatta desu. Panda ga kawaikatta desu.", translation: "Seru sekali. Panda-nya lucu.", audioFileName: "irodori-elementary1-08-a04-l02.mp3" },
   { speakerId: "kenji", japanese: <>そうですね。写真もたくさん撮りました。</>, romaji: "Sou desu ne. Shashin mo takusan torimashita.", translation: "Benar. Saya juga mengambil banyak foto.", audioFileName: "irodori-elementary1-08-a04-l03.mp3" },
-  { speakerId: "akiko", japanese: <>またいっしょに行きたいですね。</>, romaji: "Mata issho ni ikitai desu ne.", translation: "Kita pergi bersama lagi lain kali, ya.", audioFileName: "irodori-elementary1-08-a04-l04.mp3" },
+  { speakerId: "akiko", japanese: <>またいっしょに行きたいですね。</>, romaji: "Mata issho ni ikitai desu ne.", translation: "Lain kali, kita pergi bersama lagi, ya.", audioFileName: "irodori-elementary1-08-a04-l04.mp3" },
 ];
 
 const askingAtSportsShopConversation: IrodoriUtterance[] = [
