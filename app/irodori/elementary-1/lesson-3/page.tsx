@@ -30,7 +30,7 @@ const lessonId = "elementary1-03";
 
 
 const seasonOverviewConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>日<ruby>本<rt>ほん</rt></ruby>には、どんな<ruby>季節<rt>きせつ</rt></ruby>がありますか？</>, romaji: "Nihon ni wa, donna kisetsu ga arimasu ka?", translation: "Di Jepang ada musim apa saja?", audioFileName: "irodori-elementary1-03-a01-l01.mp3" },
+  { speakerId: "yui", japanese: <><ruby>日本<rt>にほん</rt></ruby>には、どんな<ruby>季節<rt>きせつ</rt></ruby>がありますか？</>, romaji: "Nihon ni wa, donna kisetsu ga arimasu ka?", translation: "Di Jepang ada musim apa saja?", audioFileName: "irodori-elementary1-03-a01-l01.mp3" },
   { speakerId: "sota", japanese: <>春、夏、秋、冬の<ruby>四季<rt>しき</rt></ruby>があります。</>, romaji: "Haru, natsu, aki, fuyu no shiki ga arimasu.", translation: "Ada empat musim: semi, panas, gugur, dan dingin.", audioFileName: "irodori-elementary1-03-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>春はどんな<ruby>季節<rt>きせつ</rt></ruby>ですか？</>, romaji: "Haru wa donna kisetsu desu ka?", translation: "Musim semi itu seperti apa?", audioFileName: "irodori-elementary1-03-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>暖かくなります。桜の花も<ruby>咲<rt>さ</rt></ruby>きます。</>, romaji: "Atatakaku narimasu. Sakura no hana mo sakimasu.", translation: "Cuaca mulai menghangat. Bunga sakura juga bermekaran.", audioFileName: "irodori-elementary1-03-a01-l04.mp3" },
