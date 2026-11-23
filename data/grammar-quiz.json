@@ -15547,7 +15547,7 @@
         "id": "b46-g14",
         "type": "grammar",
         "question": "Pilih pola yang tepat jika seseorang merasa masih baru bekerja meskipun sudah beberapa minggu.",
-        "sentence": "この<ruby>会社<rt>かいしゃ</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>き<始<rt>はじ</rt></ruby>めて<ruby>三週間<rt>さんしゅうかん</rt></ruby>ですが、まだ<ruby>慣<rt>な</rt></ruby>れていません。まだ<ruby>働<rt>はたら</rt></ruby>き<始<rt>はじ</rt></ruby>めた（ ___ ）です。",
+        "sentence": "この<ruby>会社<rt>かいしゃ</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>き<ruby>始<rt>はじ</rt></ruby>めて<ruby>三週間<rt>さんしゅうかん</rt></ruby>ですが、まだ<ruby>慣<rt>な</rt></ruby>れていません。まだ<ruby>働<rt>はたら</rt></ruby>き<ruby>始<rt>はじ</rt></ruby>めた（ ___ ）です。",
         "answer": "ばかり",
         "options": [
           "ところ",
