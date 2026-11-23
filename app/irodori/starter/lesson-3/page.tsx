@@ -378,7 +378,7 @@ export default function IrodoriPemulaLessonThreePage() {
           ungkapan sopan どうぞよろしくお願いします.
         </p>
         <IrodoriConversation
-          title="Adegan A · Berkenalan untuk pertama kali"
+          title="Percakapan A · Berkenalan untuk pertama kali"
           speakers={[IRODORI_SPEAKERS.yui, IRODORI_SPEAKERS.sota]}
           utterances={introductionConversation}
         />
@@ -573,7 +573,7 @@ export default function IrodoriPemulaLessonThreePage() {
           menanyakan tempat asal dengan sopan.
         </p>
         <IrodoriConversation
-          title="Adegan A · Bertanya tentang asal"
+          title="Percakapan A · Bertanya tentang asal"
           speakers={[IRODORI_SPEAKERS.akiko, IRODORI_SPEAKERS.kenji]}
           utterances={originConversation}
         />
