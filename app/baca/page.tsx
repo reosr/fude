@@ -642,7 +642,7 @@ setSelectedStory(story);
                 <option value={0.7} className="bg-[#1E1D1B] text-[#EAE6DD]">0.7x (Pemula)</option>
                 <option value={0.85} className="bg-[#1E1D1B] text-[#EAE6DD]">0.85x (Santai)</option>
                 <option value={1.0} className="bg-[#1E1D1B] text-[#EAE6DD]">1.0x (Normal)</option>
-                <option value={1.2} className="bg-[#1E1D1B] text-[#EAE6DD]">1.2x (Native)</option>
+                <option value={1.2} className="bg-[#1E1D1B] text-[#EAE6DD]">1.2x (Penutur Asli)</option>
               </select>
             </div>
 
