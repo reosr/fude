@@ -31,37 +31,37 @@ const lessonId = "elementary1-03";
 
 const seasonOverviewConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>日<ruby>本<rt>ほん</rt></ruby>には、どんな<ruby>季節<rt>きせつ</rt></ruby>がありますか？</>, romaji: "Nihon ni wa, donna kisetsu ga arimasu ka?", translation: "Di Jepang ada musim apa saja?", audioFileName: "irodori-elementary1-03-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>春、夏、秋、冬の<ruby>四季<rt>しき</rt></ruby>があります。</>, romaji: "Haru, natsu, aki, fuyu no shiki ga arimasu.", translation: "Ada empat musim: semi, panas, gugur, dan dingin.", audioFileName: "irodori-elementary1-03-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>春、夏、秋、冬の<ruby>四季<rt>しき</rt></ruby>があります。</>, romaji: "Haru, natsu, aki, fuyu no shiki ga arimasu.", translation: "Ada empat musim: musim semi, musim panas, musim gugur, dan musim dingin.", audioFileName: "irodori-elementary1-03-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>春はどんな<ruby>季節<rt>きせつ</rt></ruby>ですか？</>, romaji: "Haru wa donna kisetsu desu ka?", translation: "Musim semi itu seperti apa?", audioFileName: "irodori-elementary1-03-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>暖かくなります。桜の花も<ruby>咲<rt>さ</rt></ruby>きます。</>, romaji: "Atatakaku narimasu. Sakura no hana mo sakimasu.", translation: "Cuaca mulai menghangat. Bunga sakura juga bermekaran.", audioFileName: "irodori-elementary1-03-a01-l04.mp3" },
-  { speakerId: "yui", japanese: <>そうですか。冬はとても<ruby>寒<rt>さむ</rt></ruby>くなりますね。</>, romaji: "Sou desu ka. Fuyu wa totemo samuku narimasu ne.", translation: "Begitu, ya. Musim dingin menjadi sangat dingin, ya.", audioFileName: "irodori-elementary1-03-a01-l05.mp3" },
+  { speakerId: "yui", japanese: <>そうですか。冬はとても<ruby>寒<rt>さむ</rt></ruby>くなりますね。</>, romaji: "Sou desu ka. Fuyu wa totemo samuku narimasu ne.", translation: "Begitu, ya. Saat musim dingin, cuacanya menjadi sangat dingin, ya.", audioFileName: "irodori-elementary1-03-a01-l05.mp3" },
 ];
 
 const seasonsInIndonesiaConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>インドネシアには、どんな<ruby>季節<rt>きせつ</rt></ruby>がありますか？</>, romaji: "Indoneshia ni wa, donna kisetsu ga arimasu ka?", translation: "Di Indonesia ada musim apa saja?", audioFileName: "irodori-elementary1-03-a02-l01.mp3" },
   { speakerId: "yui", japanese: <>多くのところには、雨季と<ruby>乾季<rt>かんき</rt></ruby>があります。</>, romaji: "Ooku no tokoro ni wa, uki to kanki ga arimasu.", translation: "Di banyak wilayah ada musim hujan dan musim kemarau.", audioFileName: "irodori-elementary1-03-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>雨季はどんな天気ですか？</>, romaji: "Uki wa donna tenki desu ka?", translation: "Bagaimana cuaca pada musim hujan?", audioFileName: "irodori-elementary1-03-a02-l03.mp3" },
-  { speakerId: "yui", japanese: <>雨がたくさん<ruby>降<rt>ふ</rt></ruby>ります。ときどき、すずしくなります。</>, romaji: "Ame ga takusan furimasu. Tokidoki, suzushiku narimasu.", translation: "Hujan turun cukup sering. Kadang-kadang cuaca menjadi lebih sejuk.", audioFileName: "irodori-elementary1-03-a02-l04.mp3" },
+  { speakerId: "yui", japanese: <>雨がたくさん<ruby>降<rt>ふ</rt></ruby>ります。ときどき、すずしくなります。</>, romaji: "Ame ga takusan furimasu. Tokidoki, suzushiku narimasu.", translation: "Hujan sering turun. Kadang-kadang, udara terasa lebih sejuk.", audioFileName: "irodori-elementary1-03-a02-l04.mp3" },
 ];
 
 const weatherComparisonConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>ケンジさんの<ruby>国<rt>くに</rt></ruby>は、一年中暑いですか？</>, romaji: "Kenji-san no kuni wa, ichinenjuu atsui desu ka?", translation: "Apakah negara Kenji panas sepanjang tahun?", audioFileName: "irodori-elementary1-03-a03-l01.mp3" },
-  { speakerId: "kenji", japanese: <>いいえ。夏はとても暑いですが、冬は<ruby>寒<rt>さむ</rt></ruby>くなります。</>, romaji: "Iie. Natsu wa totemo atsui desu ga, fuyu wa samuku narimasu.", translation: "Tidak. Musim panas sangat panas, tetapi musim dingin menjadi dingin.", audioFileName: "irodori-elementary1-03-a03-l02.mp3" },
+  { speakerId: "kenji", japanese: <>いいえ。夏はとても暑いですが、冬は<ruby>寒<rt>さむ</rt></ruby>くなります。</>, romaji: "Iie. Natsu wa totemo atsui desu ga, fuyu wa samuku narimasu.", translation: "Tidak. Musim panas sangat panas, tetapi saat musim dingin, cuaca menjadi dingin.", audioFileName: "irodori-elementary1-03-a03-l02.mp3" },
   { speakerId: "akiko", japanese: <>雪も<ruby>降<rt>ふ</rt></ruby>りますか？</>, romaji: "Yuki mo furimasu ka?", translation: "Apakah salju juga turun?", audioFileName: "irodori-elementary1-03-a03-l03.mp3" },
-  { speakerId: "kenji", japanese: <>はい。北のほうでは、雪がたくさん降ります。</>, romaji: "Hai. Kita no hou de wa, yuki ga takusan furimasu.", translation: "Ya. Di wilayah utara, salju turun cukup banyak.", audioFileName: "irodori-elementary1-03-a03-l04.mp3" },
+  { speakerId: "kenji", japanese: <>はい。北のほうでは、雪がたくさん降ります。</>, romaji: "Hai. Kita no hou de wa, yuki ga takusan furimasu.", translation: "Ya. Di wilayah utara, salju turun cukup lebat.", audioFileName: "irodori-elementary1-03-a03-l04.mp3" },
 ];
 
 const rainySeasonConversation: IrodoriUtterance[] = [
-  { speakerId: "yui", japanese: <>日本の<ruby>梅雨<rt>つゆ</rt></ruby>は、いつごろですか？</>, romaji: "Nihon no tsuyu wa, itsu goro desu ka?", translation: "Kapan kira-kira musim hujan tsuyu di Jepang?", audioFileName: "irodori-elementary1-03-a04-l01.mp3" },
-  { speakerId: "akiko", japanese: <>だいたい六月ごろです。雨がたくさん降ります。</>, romaji: "Daitai rokugatsu goro desu. Ame ga takusan furimasu.", translation: "Kira-kira sekitar bulan Juni. Hujan turun cukup sering.", audioFileName: "irodori-elementary1-03-a04-l02.mp3" },
+  { speakerId: "yui", japanese: <>日本の<ruby>梅雨<rt>つゆ</rt></ruby>は、いつごろですか？</>, romaji: "Nihon no tsuyu wa, itsu goro desu ka?", translation: "Kapan musim tsuyu di Jepang?", audioFileName: "irodori-elementary1-03-a04-l01.mp3" },
+  { speakerId: "akiko", japanese: <>だいたい六月ごろです。雨がたくさん降ります。</>, romaji: "Daitai rokugatsu goro desu. Ame ga takusan furimasu.", translation: "Sekitar bulan Juni. Hujan sering turun.", audioFileName: "irodori-elementary1-03-a04-l02.mp3" },
   { speakerId: "yui", japanese: <>じめじめして、<ruby>蒸<rt>む</rt></ruby>し暑いですね。</>, romaji: "Jimejime shite, mushiatsui desu ne.", translation: "Udara terasa lembap dan gerah, ya.", audioFileName: "irodori-elementary1-03-a04-l03.mp3" },
-  { speakerId: "akiko", japanese: <>そうですね。でも、雨のあと、少しすずしくなる日もあります。</>, romaji: "Sou desu ne. Demo, ame no ato, sukoshi suzushiku naru hi mo arimasu.", translation: "Betul. Tetapi, setelah hujan, ada juga hari yang menjadi sedikit sejuk.", audioFileName: "irodori-elementary1-03-a04-l04.mp3" },
+  { speakerId: "akiko", japanese: <>そうですね。でも、雨のあと、少しすずしくなる日もあります。</>, romaji: "Sou desu ne. Demo, ame no ato, sukoshi suzushiku naru hi mo arimasu.", translation: "Benar. Setelah hujan, terkadang udara terasa sedikit lebih sejuk.", audioFileName: "irodori-elementary1-03-a04-l04.mp3" },
 ];
 
 const favoriteSeasonConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>ユイさんは、どの<ruby>季節<rt>きせつ</rt></ruby>がいちばん好きですか？</>, romaji: "Yui-san wa, dono kisetsu ga ichiban suki desu ka?", translation: "Yui paling suka musim apa?", audioFileName: "irodori-elementary1-03-a05-l01.mp3" },
+  { speakerId: "kenji", japanese: <>ユイさんは、どの<ruby>季節<rt>きせつ</rt></ruby>がいちばん好きですか？</>, romaji: "Yui-san wa, dono kisetsu ga ichiban suki desu ka?", translation: "Yui, kamu paling suka musim apa?", audioFileName: "irodori-elementary1-03-a05-l01.mp3" },
   { speakerId: "yui", japanese: <>春がいちばん好きです。暖かいですから。</>, romaji: "Haru ga ichiban suki desu. Atatakai desu kara.", translation: "Saya paling suka musim semi karena cuacanya hangat.", audioFileName: "irodori-elementary1-03-a05-l02.mp3" },
-  { speakerId: "kenji", japanese: <>私は秋が好きです。もみじの<ruby>景色<rt>けしき</rt></ruby>がきれいですから。</>, romaji: "Watashi wa aki ga suki desu. Momiji no keshiki ga kirei desu kara.", translation: "Saya suka musim gugur karena pemandangan daun momiji indah.", audioFileName: "irodori-elementary1-03-a05-l03.mp3" },
+  { speakerId: "kenji", japanese: <>私は秋が好きです。もみじの<ruby>景色<rt>けしき</rt></ruby>がきれいですから。</>, romaji: "Watashi wa aki ga suki desu. Momiji no keshiki ga kirei desu kara.", translation: "Saya suka musim gugur karena pemandangan daun momiji terlihat indah.", audioFileName: "irodori-elementary1-03-a05-l03.mp3" },
   { speakerId: "yui", japanese: <>秋は<ruby>果物<rt>くだもの</rt></ruby>もおいしいですよね。</>, romaji: "Aki wa kudamono mo oishii desu yo ne.", translation: "Buah-buahan pada musim gugur juga enak, ya.", audioFileName: "irodori-elementary1-03-a05-l04.mp3" },
 ];
 
@@ -200,9 +200,9 @@ const simulations = [
     heading: "Cuaca mulai menjadi dingin",
     prompt: "Akiko ingin mengatakan bahwa saat musim dingin, cuaca menjadi sangat dingin.",
     japanese: <>冬はどうなりますか？</>,
-    translation: "Bagaimana keadaan pada musim dingin?",
+    translation: "Bagaimana cuaca saat musim dingin?",
     options: [
-      { key: "change", label: "冬はとても寒くなります。", meaning: "Musim dingin menjadi sangat dingin." },
+      { key: "change", label: "冬はとても寒くなります。", meaning: "Saat musim dingin, cuacanya menjadi sangat dingin." },
       { key: "static", label: "冬はとても寒いにいます。", meaning: "Bentuk kalimat tidak tepat." },
       { key: "past", label: "冬はとても寒かったですか。", meaning: "Apakah musim dingin sangat dingin? (lampau)" },
     ],
@@ -228,7 +228,7 @@ const simulations = [
     heading: "Memilih musim yang paling disukai",
     prompt: "Sota ingin mengatakan bahwa ia paling suka musim semi.",
     japanese: <>どの季節がいちばん好きですか？</>,
-    translation: "Musim apa yang paling disukai?",
+    translation: "Musim apa yang paling kamu suka?",
     options: [
       { key: "best", label: "春がいちばん好きです。", meaning: "Saya paling suka musim semi." },
       { key: "least", label: "春がいちばん寒くなります。", meaning: "Musim semi menjadi paling dingin." },
@@ -242,7 +242,7 @@ const simulations = [
     heading: "Mengatakan mengapa menyukai musim",
     prompt: "Kenji suka musim gugur karena pemandangan daun momiji indah.",
     japanese: <>どうして秋が好きですか？</>,
-    translation: "Mengapa suka musim gugur?",
+    translation: "Kenapa kamu suka musim gugur?",
     options: [
       { key: "reason", label: "もみじの景色がきれいですから。", meaning: "Karena pemandangan momiji indah." },
       { key: "contrast", label: "もみじの景色がきれいです。でも。", meaning: "Penghubungnya tidak tepat untuk menyatakan alasan." },
@@ -256,9 +256,9 @@ const simulations = [
     heading: "Menyebut contoh cuaca atau kegiatan",
     prompt: "Yui ingin menyebut laut dan gunung sebagai contoh tempat bermain saat liburan.",
     japanese: <>どこで遊ぶのが好きですか？</>,
-    translation: "Di mana suka bermain?",
+    translation: "Kamu suka bermain di mana?",
     options: [
-      { key: "examples", label: "海や山で遊ぶのが好きです。", meaning: "Saya suka bermain di laut dan gunung, sebagai beberapa contoh." },
+      { key: "examples", label: "海や山で遊ぶのが好きです。", meaning: "Saya suka bermain di tempat seperti pantai dan gunung." },
       { key: "reason", label: "海から山が好きです。", meaning: "Partikel tidak tepat untuk maksud ini." },
       { key: "time", label: "海に山を遊びます。", meaning: "Susunan partikel tidak tepat." },
     ],
