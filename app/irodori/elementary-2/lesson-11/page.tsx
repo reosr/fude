@@ -60,7 +60,7 @@ const lostBottleConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>すみません。水筒を忘れてしまったんですが、届いていませんか。</>, romaji: "Sumimasen. Suitou o wasurete shimattan desu ga, todoite imasen ka?", translation: "Permisi, saya sepertinya tertinggal botol minum. Apakah ada yang menyerahkannya ke sini?", audioFileName: "irodori-elementary2-11-a04-l01.mp3" },
   { speakerId: "kenji", japanese: <>どんな水筒ですか。特徴を教えてください。</>, romaji: "Donna suitou desu ka? Tokuchou o oshiete kudasai.", translation: "Botol minum seperti apa? Tolong jelaskan ciri-cirinya.", audioFileName: "irodori-elementary2-11-a04-l02.mp3" },
   { speakerId: "akiko", japanese: <>青い水筒で、白い星のシールがついています。</>, romaji: "Aoi suitou de, shiroi hoshi no shiiru ga tsuite imasu.", translation: "Botolnya berwarna biru dan ada stiker bintang putih.", audioFileName: "irodori-elementary2-11-a04-l03.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin botol itu ada di area food court sekitar siang tadi.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin botol itu ada di area area makan sekitar siang tadi.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
 ];
 
 const mallAnnouncementConversation: IrodoriUtterance[] = [
@@ -250,9 +250,9 @@ const simulations: Simulation[] = [
   {
     title: "04 · Menjelaskan barang tertinggal",
     heading: "Memberi informasi kepada pusat informasi",
-    prompt: "Botol minummu tertinggal. Kamu ingat mungkin meninggalkannya di food court. Pilih kalimat yang menunjukkan perkiraan.",
+    prompt: "Botol minummu tertinggal. Kamu ingat mungkin meninggalkannya di area makan. Pilih kalimat yang menunjukkan perkiraan.",
     japanese: <>フードコートに忘れたかもしれません。</>,
-    translation: "Mungkin saya meninggalkannya di food court.",
+    translation: "Mungkin saya meninggalkannya di area makan.",
     options: [
       { key: "a", label: "フードコートに忘れました。", meaning: "Kalimat ini menyampaikan kepastian, bukan perkiraan." },
       { key: "b", label: "フードコートに忘れたかもしれません。", meaning: "Bentuk biasa + かもしれません menyatakan kemungkinan." },
@@ -293,7 +293,7 @@ const quizQuestions: Task[] = [
   { prompt: <>Dalam 「赤いのがいいです」, apa fungsi の?</>, options: [{ key: "a", label: "Menggantikan kata benda yang sudah diketahui." }, { key: "b", label: "Menandai waktu lampau." }, { key: "c", label: "Menyatakan kemungkinan." }], answer: "a", explanation: <>赤いの berarti barang yang berwarna merah.</> },
   { prompt: <>Apa arti 「次回」?</>, options: [{ key: "a", label: "Kemarin." }, { key: "b", label: "Lain kali." }, { key: "c", label: "Setiap hari." }], answer: "b", explanation: <>次回 berarti kesempatan atau kunjungan berikutnya.</> },
   { prompt: <>Kalimat 「私は友だちに水筒を使われました」 memakai bentuk apa?</>, options: [{ key: "a", label: "Bentuk pasif yang menunjukkan pihak terdampak." }, { key: "b", label: "Bentuk potensial." }, { key: "c", label: "Bentuk larangan." }], answer: "a", explanation: <>使われました adalah bentuk pasif dari 使う.</> },
-  { prompt: <>Apa arti 「フードコートに忘れたかもしれません」?</>, options: [{ key: "a", label: "Pasti saya tidak meninggalkannya di food court." }, { key: "b", label: "Mungkin saya meninggalkannya di food court." }, { key: "c", label: "Saya ingin pergi ke food court." }], answer: "b", explanation: <>Bentuk biasa + かもしれません menyatakan kemungkinan yang belum pasti.</> },
+  { prompt: <>Apa arti 「フードコートに忘れたかもしれません」?</>, options: [{ key: "a", label: "Pasti saya tidak meninggalkannya di area makan." }, { key: "b", label: "Mungkin saya meninggalkannya di area makan." }, { key: "c", label: "Saya ingin pergi ke area makan." }], answer: "b", explanation: <>Bentuk biasa + かもしれません menyatakan kemungkinan yang belum pasti.</> },
   { prompt: <>Apa fungsi 「忘れてしまいました」?</>, options: [{ key: "a", label: "Menunjukkan penyesalan atas sesuatu yang terjadi." }, { key: "b", label: "Meminta izin untuk mencoba." }, { key: "c", label: "Menyatakan ukuran barang." }], answer: "a", explanation: <>V-てしまいました dapat menyampaikan rasa menyesal atau kecewa.</> },
   { prompt: <>Apa arti 「営業時間」?</>, options: [{ key: "a", label: "Jam operasional." }, { key: "b", label: "Kartu poin." }, { key: "c", label: "Ruang pas." }], answer: "a", explanation: <>営業時間 berarti jam saat toko atau tempat usaha beroperasi.</> },
   { prompt: <>Jika pengumuman menyebut 「一階のインフォメーションカウンター」, ke mana kita harus pergi?</>, options: [{ key: "a", label: "Konter informasi lantai satu." }, { key: "b", label: "Area parkir lantai tiga." }, { key: "c", label: "Ruang pas di lantai dua." }], answer: "a", explanation: <>一階 berarti lantai satu dan インフォメーションカウンター berarti konter informasi.</> },
@@ -346,13 +346,13 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
       <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#D79C72]/40 hover:text-[#EAE6DD]">
-        <ArrowLeft size={15} /> Kembali ke Elementary 2
+        <ArrowLeft size={15} /> Kembali ke Dasar 2
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#486C91]/35 bg-gradient-to-br from-[#20364C] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A9C9E8]/[0.08]">買</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • ELEMENTARY 2 A2 • LESSON 11</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#A9C9E8]">IRODORI • DASAR 2 A2 • PELAJARAN 11</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Saya lupa membawa kartu poin.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A9C9E8]">ポイントカードを忘れてしまいました。</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar berbelanja pakaian, menjelaskan masalah sederhana, mencari barang tertinggal, dan memahami pengumuman pusat perbelanjaan.</p>
@@ -367,9 +367,9 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
       <section className="rounded-2xl border border-[#486C91]/20 bg-[#1D2A37]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#A9C9E8]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai Can-do 47–50 pada Irodori Elementary 2 Lesson 11.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai target komunikasi 47–50 pada Irodori Dasar 2 Lesson 11.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -394,7 +394,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">DIALOG 01–05</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Berbelanja, menyampaikan masalah, dan mencari informasi</h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Seluruh percakapan dibuat orisinal oleh Fude berdasarkan target komunikasi pelajaran ini.</p>
         </div>
         <div className="space-y-4">
           <IrodoriConversation title="Meminta izin mencoba sweater" speakers={[friendYui, friendSota]} utterances={shoppingTryOnConversation} />
@@ -456,7 +456,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
         <article className="rounded-2xl border border-[#486C91]/25 bg-[#1B2632] p-4 md:p-5">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-dashed border-[#486C91]/30 pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#A9C9E8]">SHOPPING CENTER ANNOUNCEMENT</p>
+              <p className="text-[9px] font-black tracking-[0.15em] text-[#A9C9E8]">PENGUMUMAN PUSAT PERBELANJAAN</p>
               <h3 className="mt-1 text-sm font-bold text-[#F1EBDD]">{eventArticle.title}</h3>
             </div>
             <FileText size={21} className="text-[#A9C9E8]" />
@@ -498,7 +498,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
         </div>
         <div className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
           <p className="font-mincho text-sm leading-7 text-[#F1EBDD]">青い水筒です。白い星のシールがついています。お昼ごろ、フードコートに置いたかもしれません。</p>
-          <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">Botol minumnya berwarna biru. Ada stiker bintang putih. Mungkin saya meletakkannya di food court sekitar siang tadi.</p>
+          <p className="mt-1 text-[10px] leading-5 text-[#A9A398]">Botol minumnya berwarna biru. Ada stiker bintang putih. Mungkin saya meletakkannya di area makan sekitar siang tadi.</p>
         </div>
         <label htmlFor="lost-item-description-draft" className="block text-xs font-semibold text-[#A9C9E8]">Tulis penjelasan dalam bahasa Jepang</label>
         <textarea
@@ -784,7 +784,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
       <section className="space-y-4 rounded-2xl border border-[#486C91]/20 bg-[#1D2A37]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-[#A9C9E8]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi Can-do</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi target komunikasi</h2>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">
           Nilai kemampuanmu setelah kelima simulasi benar, keenam latihan praktik benar, dan kuis dikumpulkan. Pilih penilaian yang paling sesuai untuk setiap target.
@@ -824,7 +824,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
             {isCompleted
               ? "Lesson 11 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target Can-do sudah dinilai."
+                ? "Semua target target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
@@ -842,7 +842,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
         <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-[#A9A398] hover:text-[#EAE6DD]">
           <ArrowLeft size={14} /> Daftar pelajaran
         </Link>
-        <span className="text-[10px] font-semibold text-[#817A73]">Elementary 2 · 11 / 18</span>
+        <span className="text-[10px] font-semibold text-[#817A73]">Dasar 2 · 11 / 18</span>
       </div>
     </main>
   );
