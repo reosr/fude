@@ -18,6 +18,8 @@ import IrodoriConversation, {
   type IrodoriUtterance,
 } from "@/components/IrodoriConversation";
 import { IRODORI_SPEAKERS } from "@/lib/irodori-speakers";
+import JapaneseReading from "@/components/JapaneseReading";
+import { formatGrammarNotation } from "@/lib/japanese-text";
 import {
   completeIrodoriLesson,
   saveIrodoriSelfEvaluation,
@@ -635,11 +637,11 @@ export default function IrodoriStarterLessonNinePage() {
                     {item.time}
                   </span>
                   <span className="font-mincho text-lg font-bold text-[#F1EBDD]">
-                    {item.jp}
+                    <JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading>
                   </span>
                 </div>
                 <p className="mt-1 text-[10px] italic text-[#B8860B]">{item.reading}</p>
-                <p className="mt-1 text-xs text-[#A9A398]">{item.note}</p>
+                <p className="mt-1 text-xs text-[#A9A398]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
               </article>
             ))}
           </div>
@@ -1122,10 +1124,10 @@ export default function IrodoriStarterLessonNinePage() {
                 className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
               >
                 <p className="text-[9px] font-black tracking-[0.16em] text-[#B8860B]">
-                  PRACTICE {String(index + 1).padStart(2, "0")}
+                  LATIHAN {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                  {task.prompt}
+                  <JapaneseReading allowIndexFallback>{task.prompt}</JapaneseReading>
                 </h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {task.options.map((option) => {
@@ -1160,7 +1162,7 @@ export default function IrodoriStarterLessonNinePage() {
                           {practiceSubmitted && correct ? "✓" : selected ? "●" : "○"}
                         </span>
                         <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
-                          {option.label}
+                          <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                         </span>
                       </button>
                     );
@@ -1176,7 +1178,7 @@ export default function IrodoriStarterLessonNinePage() {
                     >
                       {isCorrect ? "Benar." : "Belum tepat."}
                     </span>
-                    {task.explanation}
+                    <JapaneseReading allowIndexFallback>{task.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -1235,10 +1237,10 @@ export default function IrodoriStarterLessonNinePage() {
                 className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"
               >
                 <p className="text-[9px] font-black tracking-[0.16em] text-[#B8860B]">
-                  QUESTION {String(index + 1).padStart(2, "0")}
+                  SOAL {String(index + 1).padStart(2, "0")}
                 </p>
                 <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]">
-                  {question.prompt}
+                  <JapaneseReading allowIndexFallback>{question.prompt}</JapaneseReading>
                 </h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => {
@@ -1273,7 +1275,7 @@ export default function IrodoriStarterLessonNinePage() {
                           {quizSubmitted && correct ? "✓" : selected ? "●" : "○"}
                         </span>
                         <span className="font-mincho text-sm [&_rt]:text-[0.65em] [&_rt]:text-[#D6AD4F]">
-                          {option.label}
+                          <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                         </span>
                       </button>
                     );
@@ -1289,7 +1291,7 @@ export default function IrodoriStarterLessonNinePage() {
                     >
                       {isCorrect ? "Benar." : "Belum tepat."}
                     </span>
-                    {question.explanation}
+                    <JapaneseReading allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -1374,7 +1376,7 @@ export default function IrodoriStarterLessonNinePage() {
                           : "border-white/[0.08] bg-[#24221F] text-[#A3A099] hover:border-white/20 hover:text-[#EAE6DD]")
                       }
                     >
-                      {option.label}
+                      <JapaneseReading allowIndexFallback>{option.label}</JapaneseReading>
                     </button>
                   );
                 })}
