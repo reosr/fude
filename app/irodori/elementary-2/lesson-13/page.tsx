@@ -34,21 +34,21 @@ const lessonId = "elementary2-13";
 
 const facilityTourConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>この建物には、どんな施設がありますか。</>, romaji: "Kono tatemono ni wa, donna shisetsu ga arimasu ka?", translation: "Fasilitas apa saja yang ada di gedung ini?", audioFileName: "irodori-elementary2-13-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>図書館と市民ホール、それから美術展示室があります。</>, romaji: "Toshokan to shimin hooru, sorekara bijutsu tenjishitsu ga arimasu.", translation: "Ada perpustakaan, aula warga, dan ruang pameran seni.", audioFileName: "irodori-elementary2-13-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>図書館と市民ホール、それから美術展示室があります。</>, romaji: "Toshokan to shimin hooru, sorekara bijutsu tenjishitsu ga arimasu.", translation: "Ada perpustakaan, aula komunitas, dan ruang pameran seni.", audioFileName: "irodori-elementary2-13-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>ホールでは、どんなことができますか。</>, romaji: "Hooru de wa, donna koto ga dekimasu ka?", translation: "Kegiatan apa yang bisa dilakukan di aula?", audioFileName: "irodori-elementary2-13-a01-l03.mp3" },
-  { speakerId: "sota", japanese: <>音楽会や地域の行事に使われています。</>, romaji: "Ongakukai ya chiiki no gyouji ni tsukawarete imasu.", translation: "Aula itu digunakan untuk konser musik dan kegiatan masyarakat.", audioFileName: "irodori-elementary2-13-a01-l04.mp3" },
+  { speakerId: "sota", japanese: <>音楽会や地域の行事に使われています。</>, romaji: "Ongakukai ya chiiki no gyouji ni tsukawarete imasu.", translation: "Aula itu digunakan untuk konser dan berbagai kegiatan masyarakat.", audioFileName: "irodori-elementary2-13-a01-l04.mp3" },
 ];
 const gymRulesConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>すみません、スポーツジムを初めて利用するんですが。</>, romaji: "Sumimasen, supootsu jimu o hajimete riyou suru n desu ga.", translation: "Permisi, saya baru pertama kali menggunakan gym.", audioFileName: "irodori-elementary2-13-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>受付で登録してください。室内用のシューズが必要です。</>, romaji: "Uketsuke de touroku shite kudasai. Shitsunaiyou no shuuzu ga hitsuyou desu.", translation: "Silakan mendaftar di resepsionis. Sepatu khusus dalam ruangan diperlukan.", audioFileName: "irodori-elementary2-13-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>マシンの使い方は、教えてもらえますか。</>, romaji: "Mashin no tsukaikata wa, oshiete moraemasu ka?", translation: "Apakah saya bisa diajari cara menggunakan alatnya?", audioFileName: "irodori-elementary2-13-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>はい。初めての方には、スタッフが説明します。</>, romaji: "Hai. Hajimete no kata ni wa, sutaffu ga setsumei shimasu.", translation: "Tentu. Staf akan memberi penjelasan kepada pengguna baru.", audioFileName: "irodori-elementary2-13-a02-l04.mp3" },
+  { speakerId: "akiko", japanese: <>マシンの使い方は、教えてもらえますか。</>, romaji: "Mashin no tsukaikata wa, oshiete moraemasu ka?", translation: "Bisa tolong ajari saya cara menggunakan alatnya?", audioFileName: "irodori-elementary2-13-a02-l03.mp3" },
+  { speakerId: "kenji", japanese: <>はい。初めての方には、スタッフが説明します。</>, romaji: "Hai. Hajimete no kata ni wa, sutaffu ga setsumei shimasu.", translation: "Tentu. Staf akan menjelaskan cara penggunaannya kepada pengunjung baru.", audioFileName: "irodori-elementary2-13-a02-l04.mp3" },
 ];
 const libraryCardConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>図書館を使いたいんですが、利用カードが必要ですか。</>, romaji: "Toshokan o tsukaitai n desu ga, riyou kaado ga hitsuyou desu ka?", translation: "Saya ingin menggunakan perpustakaan. Apakah perlu kartu anggota?", audioFileName: "irodori-elementary2-13-a03-l01.mp3" },
-  { speakerId: "akiko", japanese: <>はい。初めに、受付で利用カードを作ってください。</>, romaji: "Hai. Hajime ni, uketsuke de riyou kaado o tsukutte kudasai.", translation: "Ya. Pertama, silakan membuat kartu anggota di resepsionis.", audioFileName: "irodori-elementary2-13-a03-l02.mp3" },
+  { speakerId: "akiko", japanese: <>はい。初めに、受付で利用カードを作ってください。</>, romaji: "Hai. Hajime ni, uketsuke de riyou kaado o tsukutte kudasai.", translation: "Ya. Pertama, silakan buat kartu perpustakaan di loket.", audioFileName: "irodori-elementary2-13-a03-l02.mp3" },
   { speakerId: "yui", japanese: <>本は何冊まで借りられますか。</>, romaji: "Hon wa nansatsu made kariraremasu ka?", translation: "Berapa buku maksimal yang bisa dipinjam?", audioFileName: "irodori-elementary2-13-a03-l03.mp3" },
-  { speakerId: "akiko", japanese: <>一人八冊まで、二週間借りられます。</>, romaji: "Hitori hassatsu made, nishuukan kariraremasu.", translation: "Setiap orang boleh meminjam maksimal delapan buku selama dua minggu.", audioFileName: "irodori-elementary2-13-a03-l04.mp3" },
+  { speakerId: "akiko", japanese: <>一人八冊まで、二週間借りられます。</>, romaji: "Hitori hassatsu made, nishuukan kariraremasu.", translation: "Setiap orang bisa meminjam maksimal delapan buku selama dua minggu.", audioFileName: "irodori-elementary2-13-a03-l04.mp3" },
 ];
 const libraryReturnConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>図書館が閉まっているとき、本を返すにはどうしますか。</>, romaji: "Toshokan ga shimatte iru toki, hon o kaesu ni wa dou shimasu ka?", translation: "Bagaimana cara mengembalikan buku saat perpustakaan tutup?", audioFileName: "irodori-elementary2-13-a04-l01.mp3" },
@@ -145,7 +145,7 @@ const libraryGuide = [
 ];
 
 const signExamples = [
-  { sign: "撮影禁止", meaning: "Dilarang mengambil foto atau merekam gambar.", note: "Jangan memotret di area tersebut." },
+  { sign: "撮影禁止", meaning: "Dilarang memotret atau merekam.", note: "Jangan memotret di area tersebut." },
   { sign: "関係者以外 立入禁止", meaning: "Selain petugas atau orang yang berkepentingan, dilarang masuk.", note: "Area tersebut hanya untuk orang yang berwenang." },
   { sign: "食べ物・飲み物の持ち込みはご遠慮ください", meaning: "Mohon tidak membawa makanan atau minuman dari luar.", note: "ご遠慮ください adalah permintaan sopan untuk tidak melakukan sesuatu." },
   { sign: "館内での通話はお控えください", meaning: "Mohon tidak melakukan panggilan telepon di dalam gedung.", note: "お控えください adalah ungkapan sopan untuk meminta seseorang menahan diri." },
@@ -174,12 +174,12 @@ const simulations: Simulation[] = [
     { key: "b", label: "Aula digunakan untuk kegiatan masyarakat.", meaning: "Pernyataan ini sesuai dengan penjelasan pemandu." },
     { key: "c", label: "Aula tidak dapat digunakan untuk acara.", meaning: "Pemandu menjelaskan bahwa aula digunakan untuk kegiatan." },
   ], answer: "b", explanation: "Dengarkan nama fasilitas dan kegiatan yang dilakukan di dalamnya." },
-  { title: "02 · Memahami aturan gym", heading: "Menangkap petunjuk penggunaan", prompt: "Staf menjelaskan bahwa sepatu khusus dalam ruangan diperlukan dan pengguna baru akan mendapat penjelasan dari staf. Apa yang harus disiapkan?", japanese: <>室内用のシューズが必要です。初めての方には、スタッフが説明します。</>, translation: "Sepatu dalam ruangan diperlukan. Staf akan memberi penjelasan kepada pengguna baru.", options: [
+  { title: "02 · Memahami aturan gym", heading: "Menangkap petunjuk penggunaan", prompt: "Staf menjelaskan bahwa sepatu khusus dalam ruangan diperlukan dan pengguna baru akan mendapat penjelasan dari staf. Apa yang harus disiapkan?", japanese: <>室内用のシューズが必要です。初めての方には、スタッフが説明します。</>, translation: "Diperlukan sepatu khusus untuk di dalam ruangan. Staf akan menjelaskan cara penggunaannya kepada pengunjung baru.", options: [
     { key: "a", label: "Sepatu khusus dalam ruangan.", meaning: "Staf secara jelas mengatakan 室内用のシューズが必要です." },
     { key: "b", label: "Kartu perpustakaan.", meaning: "Kartu perpustakaan tidak disebutkan dalam aturan gym." },
     { key: "c", label: "Buku yang akan dipinjam.", meaning: "Buku tidak berkaitan dengan penggunaan gym." },
   ], answer: "a", explanation: "必要です menyatakan bahwa sesuatu diperlukan. Perhatikan juga petunjuk khusus untuk pengguna baru." },
-  { title: "03 · Bertanya tentang peminjaman", heading: "Memahami jumlah dan lama pinjaman", prompt: "Petugas menjawab: 「本は一人八冊まで、二週間借りられます。」 Berapa jumlah buku maksimal dan lama peminjaman?", japanese: <>本は一人八冊まで、二週間借りられます。</>, translation: "Buku dapat dipinjam maksimal delapan buah per orang selama dua minggu.", options: [
+  { title: "03 · Bertanya tentang peminjaman", heading: "Memahami jumlah dan lama pinjaman", prompt: "Petugas menjawab: 「本は一人八冊まで、二週間借りられます。」 Berapa jumlah buku maksimal dan lama peminjaman?", japanese: <>本は一人八冊まで、二週間借りられます。</>, translation: "Setiap orang bisa meminjam maksimal delapan buku selama dua minggu.", options: [
     { key: "a", label: "Delapan buku selama dua hari.", meaning: "二週間 berarti dua minggu, bukan dua hari." },
     { key: "b", label: "Delapan buku selama dua minggu.", meaning: "八冊まで berarti maksimal delapan buku; 二週間 berarti dua minggu." },
     { key: "c", label: "Dua buku selama delapan minggu.", meaning: "Jumlah dan durasinya tertukar." },
@@ -189,7 +189,7 @@ const simulations: Simulation[] = [
     { key: "b", label: "Masukkan DVD ke kotak pengembalian.", meaning: "Panduan meminta DVD dikembalikan saat perpustakaan buka." },
     { key: "c", label: "Simpan semua buku selamanya.", meaning: "Panduan menjelaskan cara mengembalikan buku, bukan menyimpannya." },
   ], answer: "a", explanation: "Bedakan aturan untuk buku dan DVD. Tidak semua barang dapat dikembalikan melalui kotak." },
-  { title: "05 · Memahami tanda larangan", heading: "Mengartikan pemberitahuan di fasilitas", prompt: "Di ruang pamer tertulis 「撮影禁止」. Apa maksud tanda tersebut?", japanese: <>撮影禁止</>, translation: "Dilarang mengambil foto atau merekam gambar.", options: [
+  { title: "05 · Memahami tanda larangan", heading: "Mengartikan pemberitahuan di fasilitas", prompt: "Di ruang pamer tertulis 「撮影禁止」. Apa maksud tanda tersebut?", japanese: <>撮影禁止</>, translation: "Dilarang memotret atau merekam.", options: [
     { key: "a", label: "Silakan mengambil foto.", meaning: "禁止 menyatakan larangan, bukan izin." },
     { key: "b", label: "Dilarang mengambil foto.", meaning: "撮影 berarti fotografi atau pengambilan gambar; 禁止 berarti dilarang." },
     { key: "c", label: "Foto harus dikumpulkan di loket.", meaning: "Tanda ini tidak menyebut pengumpulan foto." },
