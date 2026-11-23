@@ -555,9 +555,7 @@ export default function Quiz({
       </div>
 
       <div className="text-center mb-6">
-        <p className="text-sm text-[#A3A099] mb-2">
-          {currentQ.question}
-        </p>
+        <div className="text-sm text-[#A3A099] mb-2 leading-relaxed" dangerouslySetInnerHTML={{ __html: currentQ.question }} />
 
         <JapaneseReading
           html={currentQ.sentence}
@@ -610,9 +608,7 @@ export default function Quiz({
               ? "Benar! "
               : `Jawaban yang benar: ${currentQ.correctAnswer}. `}
 
-            <span className="block mt-2 text-[#A3A099] not-italic leading-relaxed">
-              {formatGrammarNotation(currentQ.explanation)}
-            </span>
+            <span className="block mt-2 text-[#A3A099] not-italic leading-relaxed" dangerouslySetInnerHTML={{ __html: formatGrammarNotation(currentQ.explanation) }} />
           </div>
 
           <div className="flex justify-end">
