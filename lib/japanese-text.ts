@@ -1,6 +1,6 @@
-
 import { Children, isValidElement } from "react";
 import type { ReactElement, ReactNode } from "react";
+import readingIndex from "@/data/japanese-reading-index.json";
 
 export interface JapaneseReadingResult {
   kana: string;
@@ -9,6 +9,15 @@ export interface JapaneseReadingResult {
 
 const KANJI_RE = /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/;
 const KANA_RE = /[\u3040-\u30ff]/;
+const READING_ENTRIES = Object.entries(readingIndex as Record<string, string>)
+  .filter(([word, reading]) =>
+    word.length > 0 &&
+    KANJI_RE.test(word) &&
+    typeof reading === "string" &&
+    reading.length > 0 &&
+    !KANJI_RE.test(reading)
+  )
+  .sort(([a], [b]) => b.length - a.length);
 
 function stripHtml(value: string): string {
   return value
@@ -26,7 +35,50 @@ function preserveKanaOnly(value: string): string {
   return Array.from(value).filter((char) => !KANJI_RE.test(char)).join("");
 }
 
-export function extractKanaFromRubyHtml(html: string): JapaneseReadingResult | null {
+function readPlainText(value: string, allowIndexFallback: boolean): JapaneseReadingResult | null {
+  const text = stripHtml(value).normalize("NFC");
+  const hasKanji = KANJI_RE.test(text);
+
+  if (!hasKanji) {
+    const normalized = text.replace(/\s+/g, " ").trim();
+    return normalized && KANA_RE.test(normalized)
+      ? { kana: normalized, hasKanji: false }
+      : null;
+  }
+
+  if (!allowIndexFallback) return null;
+
+  if (/[A-Za-z]{3,}/.test(text.replace(/\b(?:IMC|JLPT|N[1-5])\b/g, ""))) {
+    return null;
+  }
+
+  let kana = "";
+  let index = 0;
+
+  while (index < text.length) {
+    const match = READING_ENTRIES.find(([word]) => text.startsWith(word, index));
+
+    if (match) {
+      kana += match[1];
+      index += match[0].length;
+      continue;
+    }
+
+    const char = text[index];
+    if (KANJI_RE.test(char)) return null;
+
+    kana += char;
+    index++;
+  }
+
+  const normalized = kana.replace(/\s+/g, " ").trim();
+  return normalized ? { kana: normalized, hasKanji: true } : null;
+}
+
+export function extractKanaFromRubyHtml(
+  html: string,
+  allowIndexFallback = false
+): JapaneseReadingResult | null {
   const rubyPattern = /<ruby\b[^>]*>([\s\S]*?)<\/ruby>/gi;
   let cursor = 0;
   let kana = "";
@@ -36,15 +88,19 @@ export function extractKanaFromRubyHtml(html: string): JapaneseReadingResult | n
 
   while ((match = rubyPattern.exec(html)) !== null) {
     const outside = stripHtml(html.slice(cursor, match.index));
-    if (KANJI_RE.test(outside)) complete = false;
-    if (outside) kana += outside;
+    const outsideReading = readPlainText(outside, allowIndexFallback);
+
+    if (KANJI_RE.test(outside) && !outsideReading) complete = false;
+    kana += outsideReading?.kana ?? outside;
 
     const body = match[1];
     const rtMatch = /<rt\b[^>]*>([\s\S]*?)<\/rt>/i.exec(body);
+
     if (!rtMatch) {
       const plain = stripHtml(body);
-      if (KANJI_RE.test(plain)) complete = false;
-      kana += plain;
+      const plainReading = readPlainText(plain, allowIndexFallback);
+      if (KANJI_RE.test(plain) && !plainReading) complete = false;
+      kana += plainReading?.kana ?? plain;
       cursor = rubyPattern.lastIndex;
       continue;
     }
@@ -52,23 +108,27 @@ export function extractKanaFromRubyHtml(html: string): JapaneseReadingResult | n
     const before = stripHtml(body.slice(0, rtMatch.index));
     const after = stripHtml(body.slice(rtMatch.index + rtMatch[0].length));
     hasKanji = hasKanji || KANJI_RE.test(before);
-    if (KANJI_RE.test(after)) complete = false;
+
+    const afterReading = readPlainText(after, allowIndexFallback);
+    if (KANJI_RE.test(after) && !afterReading) complete = false;
 
     kana += preserveKanaOnly(before);
     kana += stripHtml(rtMatch[1]);
-    kana += after;
+    kana += afterReading?.kana ?? after;
     cursor = rubyPattern.lastIndex;
   }
 
   const tail = stripHtml(html.slice(cursor));
-  if (KANJI_RE.test(tail)) complete = false;
-  kana += tail;
+  const tailReading = readPlainText(tail, allowIndexFallback);
+  if (KANJI_RE.test(tail) && !tailReading) complete = false;
+  kana += tailReading?.kana ?? tail;
 
   if (!complete) return null;
-  const normalized = kana.replace(/\s+/g, " ").trim();
-  if (!normalized || (!hasKanji && !KANA_RE.test(normalized))) return null;
 
-  return { kana: normalized, hasKanji };
+  const normalized = kana.replace(/\s+/g, " ").trim();
+  if (!normalized || (!hasKanji && !KANJI_RE.test(html) && !KANA_RE.test(normalized))) return null;
+
+  return { kana: normalized, hasKanji: hasKanji || KANJI_RE.test(html) };
 }
 
 interface NodeReading {
@@ -77,17 +137,24 @@ interface NodeReading {
   complete: boolean;
 }
 
-function readReactNode(node: ReactNode): NodeReading {
+function readReactNode(node: ReactNode, allowIndexFallback: boolean): NodeReading {
   if (node === null || node === undefined || typeof node === "boolean") {
     return { kana: "", hasKanji: false, complete: true };
   }
+
   if (typeof node === "string" || typeof node === "number") {
     const value = String(node);
-    return { kana: value, hasKanji: KANJI_RE.test(value), complete: !KANJI_RE.test(value) };
+    const reading = readPlainText(value, allowIndexFallback);
+    return {
+      kana: reading?.kana ?? preserveKanaOnly(value),
+      hasKanji: KANJI_RE.test(value),
+      complete: !KANJI_RE.test(value) || Boolean(reading),
+    };
   }
+
   if (Array.isArray(node)) {
     return node.reduce<NodeReading>((result, child) => {
-      const next = readReactNode(child);
+      const next = readReactNode(child, allowIndexFallback);
       return {
         kana: result.kana + next.kana,
         hasKanji: result.hasKanji || next.hasKanji,
@@ -95,18 +162,20 @@ function readReactNode(node: ReactNode): NodeReading {
       };
     }, { kana: "", hasKanji: false, complete: true });
   }
+
   if (!isValidElement(node)) return { kana: "", hasKanji: false, complete: true };
 
   const element = node as ReactElement<{ children?: ReactNode }>;
   const children = Children.toArray(element.props.children);
 
-  if (element.type === "rt") return readReactNode(element.props.children);
+  if (element.type === "rt") return readReactNode(element.props.children, allowIndexFallback);
 
   if (element.type === "ruby") {
     const rtIndex = children.findIndex((child) => isValidElement(child) && child.type === "rt");
+
     if (rtIndex < 0) {
       return children.reduce<NodeReading>((result, child) => {
-        const next = readReactNode(child);
+        const next = readReactNode(child, allowIndexFallback);
         return {
           kana: result.kana + next.kana,
           hasKanji: result.hasKanji || next.hasKanji,
@@ -115,10 +184,13 @@ function readReactNode(node: ReactNode): NodeReading {
       }, { kana: "", hasKanji: false, complete: true });
     }
 
-    const before = children.slice(0, rtIndex).map((child) => preserveKanaOnly(readReactNode(child).kana)).join("");
-    const rubyReading = readReactNode(children[rtIndex]);
+    const before = children
+      .slice(0, rtIndex)
+      .map((child) => preserveKanaOnly(readReactNode(child, allowIndexFallback).kana))
+      .join("");
+    const rubyReading = readReactNode(children[rtIndex], allowIndexFallback);
     const after = children.slice(rtIndex + 1).reduce<NodeReading>((result, child) => {
-      const next = readReactNode(child);
+      const next = readReactNode(child, allowIndexFallback);
       return {
         kana: result.kana + next.kana,
         hasKanji: result.hasKanji || next.hasKanji,
@@ -129,18 +201,23 @@ function readReactNode(node: ReactNode): NodeReading {
     return {
       kana: before + rubyReading.kana + after.kana,
       hasKanji: true,
-      complete: after.complete,
+      complete: rubyReading.complete && after.complete,
     };
   }
 
-  return readReactNode(element.props.children);
+  return readReactNode(element.props.children, allowIndexFallback);
 }
 
-export function extractKanaFromReactNode(node: ReactNode): JapaneseReadingResult | null {
-  const result = readReactNode(node);
+export function extractKanaFromReactNode(
+  node: ReactNode,
+  allowIndexFallback = false
+): JapaneseReadingResult | null {
+  const result = readReactNode(node, allowIndexFallback);
   if (!result.complete) return null;
+
   const kana = result.kana.replace(/\s+/g, " ").trim();
   if (!kana || (!result.hasKanji && !KANA_RE.test(kana))) return null;
+
   return { kana, hasKanji: result.hasKanji };
 }
 
@@ -151,17 +228,36 @@ const GRAMMAR_LABELS: Record<string, string> = {
   S: "kalimat",
 };
 
+const NOTATION_SUFFIXES: Record<string, string> = {
+  "て": "kata kerja bentuk て",
+  "た": "kata kerja bentuk た",
+  "る": "kata kerja bentuk kamus",
+  "ます": "kata kerja bentuk ます",
+  "ない": "kata kerja bentuk ない",
+  "（よ）う": "kata kerja bentuk volisional",
+  "(よ)う": "kata kerja bentuk volisional",
+  "（られ）る": "kata kerja bentuk potensial/pasif",
+  "(られ)る": "kata kerja bentuk potensial/pasif",
+  "い": "kata sifat -i",
+  "な": "kata sifat -na",
+  "可能形": "kata kerja bentuk potensial",
+  "受身形": "kata kerja bentuk pasif",
+  "使役形": "kata kerja bentuk kausatif",
+};
+
 export function formatGrammarNotation(value: string): string {
   return value.replace(
-    /(^|[^\\p{L}\\p{N}])([NVAS])(\\d*)(?=$|[^\\p{L}\\p{N}]|[ぁ-ゖァ-ヶ一-龯々])/gu,
-    (_match, prefix: string, symbol: string, number: string, offset: number, whole: string) => {
-      const nextChar = whole[offset + prefix.length + symbol.length + number.length] ?? "";
-      const isJapaneseSuffix = /[ぁ-ゖァ-ヶ一-龯々]/.test(nextChar);
-      const label = GRAMMAR_LABELS[symbol];
-      const formatted = isJapaneseSuffix && !number
-        ? (symbol === "V" ? "bentuk kata kerja" : symbol === "A" ? "bentuk kata sifat" : label)
-        : label + (number ? " " + number : "");
-      return prefix + formatted + (isJapaneseSuffix ? " " : "");
+    /(^|[^\p{L}\p{N}])([NVAS])(\d*)(?:-((?:（よ）う|\(よ\)う|（られ）る|\(られ\)る|ます|ない|て|た|る|い|な|可能形|受身形|使役形|kan)))?(?=$|[^\p{L}\p{N}]|[ぁ-ゖァ-ヶ一-龯々])/gu,
+    (_match, prefix: string, symbol: string, number: string, suffix: string | undefined) => {
+      if (number) {
+        return prefix + GRAMMAR_LABELS[symbol] + " " + number;
+      }
+
+      if (suffix) {
+        if (symbol === "V" || symbol === "A") return prefix + (NOTATION_SUFFIXES[suffix] ?? GRAMMAR_LABELS[symbol]);
+      }
+
+      return prefix + GRAMMAR_LABELS[symbol];
     }
   );
 }
