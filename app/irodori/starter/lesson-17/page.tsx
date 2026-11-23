@@ -422,7 +422,7 @@ const numberWords = [
 
 const facilityFees = [
   {
-    name: "Aoba Planetarium",
+    name: "Planetarium Aoba",
     jp: "あおばプラネタリウム",
     hours: "10:00–17:00",
     fees: [
@@ -432,7 +432,7 @@ const facilityFees = [
     ],
   },
   {
-    name: "Mori Aquarium",
+    name: "Akuarium Mori",
     jp: "もり水族館",
     hours: "9:30–18:00",
     fees: [
@@ -785,9 +785,9 @@ export default function IrodoriPemulaLessonSeventeenPage() {
       </section>
 
       <section className="space-y-4 rounded-2xl border border-white/[0.07] bg-[#1B1A18] p-4 md:p-5">
-        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 04 · DAFTAR TARIF</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Hitung jumlah tiket masuk</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Satu orang dewasa, satu siswa SMA, dan satu siswa SD/SMP akan masuk ke Aoba Planetarium. Berapa total biayanya?</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#B8860B]">SIMULASI 04 · DAFTAR TARIF</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Hitung jumlah tiket masuk</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Satu orang dewasa, satu siswa SMA, dan satu siswa SD/SMP akan masuk ke Planetarium Aoba. Berapa total biayanya?</p></div>
         <div className="overflow-hidden rounded-xl border border-white/[0.07]">
-          <div className="flex items-center justify-between bg-[#30271C] p-3"><div><p className="text-xs font-bold text-[#F1EBDD]">Aoba Planetarium</p><p className="mt-1 text-[9px] text-[#D9B66D]">あおばプラネタリウム · 料金表</p></div><Ticket size={17} className="text-[#D9B66D]"/></div>
+          <div className="flex items-center justify-between bg-[#30271C] p-3"><div><p className="text-xs font-bold text-[#F1EBDD]">Planetarium Aoba</p><p className="mt-1 text-[9px] text-[#D9B66D]">あおばプラネタリウム · 料金表</p></div><Ticket size={17} className="text-[#D9B66D]"/></div>
           <div className="space-y-2 bg-black/15 p-3">
             {[
               ["大人", "1人", "800円"],
