@@ -312,9 +312,7 @@ export default function IrodoriStarterLessonThreePage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 3
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            Nice to meet you.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Senang berkenalan dengan Anda.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             はじめまして
           </p>
