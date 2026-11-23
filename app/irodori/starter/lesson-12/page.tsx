@@ -412,7 +412,7 @@ const quizQuestions: Task[] = [
   },
 ];
 
-export default function IrodoriStarterLessonTwelvePage() {
+export default function IrodoriPemulaLessonTwelvePage() {
   const progress = useIrodoriProgress();
   const [practiceAnswers, setPracticeAnswers] = useState<Record<number, string>>({});
   const [practiceSubmitted, setPracticeSubmitted] = useState(false);
@@ -445,13 +445,13 @@ export default function IrodoriStarterLessonTwelvePage() {
         href="/irodori/starter"
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
       >
-        <ArrowLeft size={15} /> Kembali ke Starter
+        <ArrowLeft size={15} /> Kembali ke Pemula
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#79602F]/45 bg-gradient-to-br from-[#302319] via-[#1B1917] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">祭</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • STARTER A1 • LESSON 12</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • PEMULA A1 • PELAJARAN 12</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Bagaimana kalau kita pergi bersama?</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]">いっしょに行きませんか？</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -459,7 +459,7 @@ export default function IrodoriStarterLessonTwelvePage() {
             mengajak teman melakukan kegiatan, dan membalas undangan dengan sopan.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
-            {["4 target Can-do", "4 dialog", "18 slot audio", "26 kosakata tanggal", "10 kuis"].map((item) => (
+            {["4 target target komunikasi", "4 dialog", "18 slot audio", "26 kosakata tanggal", "10 kuis"].map((item) => (
               <span key={item} className="rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] font-semibold text-[#C9C3B8]">{item}</span>
             ))}
           </div>
@@ -505,7 +505,7 @@ export default function IrodoriStarterLessonTwelvePage() {
           {eventNotices.map((event, index) => (
             <article key={event.id} className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#1B1A18]">
               <div className="border-b border-white/[0.07] bg-gradient-to-r from-[#302319] to-[#211C18] p-4">
-                <p className="text-[9px] font-black tracking-[0.18em] text-[#D9B66D]">EVENT NOTICE 0{index + 1}</p>
+                <p className="text-[9px] font-black tracking-[0.18em] text-[#D9B66D]">PENGUMUMAN ACARA 01{index + 1}</p>
                 <h3 className="mt-2 text-sm font-bold text-[#F1EBDD]">{event.title}</h3>
                 <p className="mt-1 text-[10px] text-[#A9A398]">{event.description}</p>
               </div>
@@ -728,7 +728,7 @@ export default function IrodoriStarterLessonTwelvePage() {
           {isCompleted ? <span className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-xs font-bold text-emerald-200"><CheckCircle2 size={15}/>Pelajaran selesai</span> : <button type="button" onClick={()=>completeIrodoriLesson("starter-12")} disabled={!quizSubmitted||!practiceIsCorrect||!noticeIsCorrect||!replySubmitted||!canDosRated} className="inline-flex items-center gap-2 rounded-xl bg-[#C93438] px-4 py-3 text-xs font-bold text-white transition-colors hover:bg-[#B02A2E] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]"><CheckCircle2 size={15}/>Tandai pelajaran selesai</button>}
           <Link href="/irodori/starter" className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-4 py-3 text-xs font-bold text-[#C7C1B5] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]">Daftar pelajaran <ArrowLeft size={15} className="rotate-180"/></Link>
         </div>
-        {(!quizSubmitted||!practiceIsCorrect||!noticeIsCorrect||!replySubmitted||!canDosRated)&&<p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, periksa satu pengumuman dengan tepat, kirim balasan undangan, lalu isi keempat penilaian Can-do.</p>}
+        {(!quizSubmitted||!practiceIsCorrect||!noticeIsCorrect||!replySubmitted||!canDosRated)&&<p className="mt-2 text-[10px] leading-5 text-[#817A73]">Selesaikan kuis, jawab benar seluruh enam soal praktik, periksa satu pengumuman dengan tepat, kirim balasan undangan, lalu isi keempat penilaian target komunikasi.</p>}
       </section>
       <p className="text-center text-[10px] leading-5 text-[#746F65]">Dialog, pengumuman, tanggal, dan tempat disusun orisinal oleh Fude. Semua acara dan tokoh dalam latihan bersifat fiktif.</p>
     </main>
