@@ -58,7 +58,7 @@ const readTrainTicketConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>三番線です。二号車の指定席ですよ。</>,
     romaji: "Sanbansen desu. Nigousha no shiteiseki desu yo.",
-    translation: "Jalur 3. Kursi reservasi saya ada di gerbong 2.",
+    translation: "Jalur 3. Kursi yang saya pesan ada di gerbong nomor 2.",
     audioFileName: "irodori-elementary2-06-a01-l04.mp3",
   },
 ];
@@ -106,7 +106,7 @@ const askStationInformationConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>この電車は、東京まで行きますか。</>,
     romaji: "Kono densha wa, Toukyou made ikimasu ka?",
-    translation: "Apakah kereta ini pergi sampai Tokyo?",
+    translation: "Apakah kereta ini sampai ke Tokyo?",
     audioFileName: "irodori-elementary2-06-a03-l02.mp3",
   },
   {
@@ -144,7 +144,7 @@ const shareTravelImpressionsConversation: IrodoriUtterance[] = [
     speakerId: "akiko",
     japanese: <>いいですね。旅行で一番よかったことは何ですか。</>,
     romaji: "Ii desu ne. Ryokou de ichiban yokatta koto wa nan desu ka?",
-    translation: "Wah, bagus sekali. Apa hal terbaik dari perjalanan itu?",
+    translation: "Wah, seru, ya. Apa yang paling berkesan dari perjalanan itu?",
     audioFileName: "irodori-elementary2-06-a04-l03.mp3",
   },
   {
@@ -182,7 +182,7 @@ const travelPostConversation: IrodoriUtterance[] = [
     speakerId: "sota",
     japanese: <>大きな公園を歩いたことです。景色がきれいで、気持ちよかったです。</>,
     romaji: "Ookina kouen o aruita koto desu. Keshiki ga kirei de, kimochi yokatta desu.",
-    translation: "Berjalan-jalan di taman yang luas. Pemandangannya indah dan terasa menyenangkan.",
+    translation: "Jalan-jalan di taman yang luas. Pemandangannya indah dan suasananya menyenangkan.",
     audioFileName: "irodori-elementary2-06-a05-l04.mp3",
   },
 ];
