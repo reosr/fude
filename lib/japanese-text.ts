@@ -63,7 +63,15 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
     "$2"
   );
 
-  const japaneseOnly = withExplicitReadings
+  // Baca ekspresi angka + penghitung yang memiliki bacaan khusus
+  // sebelum angka dibuang dari jalur fallback (misalnya 1分、4月、3万円).
+  const withNumericReadings = READING_ENTRIES.reduce(
+    (text, [word, reading]) =>
+      /[0-9０-９]/.test(word) ? text.replaceAll(word, reading) : text,
+    withExplicitReadings
+  );
+
+  const japaneseOnly = withNumericReadings
     .replace(/[A-Za-z][A-Za-z0-9._'-]*/g, " ")
     .replace(/[0-9０-９]+/g, " ");
 
