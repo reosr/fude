@@ -824,7 +824,7 @@ export default function IrodoriElementaryTwoLessonElevenPage() {
             {isCompleted
               ? "Lesson 11 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target target komunikasi sudah dinilai."
+                ? "Semua target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
