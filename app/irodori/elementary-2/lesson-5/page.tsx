@@ -618,13 +618,13 @@ export default function IrodoriElementaryTwoLessonFivePage() {
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
       <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#1B1A18]/80 px-4 py-2 text-xs font-semibold text-[#C7C1B5] transition-colors hover:border-[#88C39D]/40 hover:text-[#EAE6DD]">
-        <ArrowLeft size={15} /> Kembali ke Elementary 2
+        <ArrowLeft size={15} /> Kembali ke Dasar 2
       </Link>
 
       <header className="relative isolate overflow-hidden rounded-[28px] border border-[#438A61]/35 bg-gradient-to-br from-[#1D3B2D] via-[#1B1A18] to-[#171615] p-6 shadow-[0_18px_60px_rgba(0,0,0,0.3)] md:p-9">
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#A8D5B5]/[0.08]">旅</div>
         <div className="relative z-10">
-          <p className="text-[9px] font-black tracking-[0.24em] text-[#A8D5B5]">IRODORI • ELEMENTARY 2 A2 • LESSON 05</p>
+          <p className="text-[9px] font-black tracking-[0.24em] text-[#A8D5B5]">IRODORI • DASAR 2 A2 • PELAJARAN 05</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Sebaiknya pesan tempat lebih awal.</h1>
           <p className="mt-2 text-sm font-semibold text-[#A8D5B5]">早く予約したほうがいいですよ</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Belajar memahami gambaran tempat wisata, membicarakan rencana perjalanan, meminta dan memberi saran, serta membaca ulasan perjalanan.</p>
@@ -639,9 +639,9 @@ export default function IrodoriElementaryTwoLessonFivePage() {
       <section className="rounded-2xl border border-[#438A61]/20 bg-[#1D3026]/80 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CalendarDays size={16} className="text-[#A8D5B5]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi (Can-do)</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Target komunikasi</h2>
         </div>
-        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai Can-do 19–22 pada Irodori Elementary 2 Lesson 5.</p>
+        <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">Empat target berikut sesuai target komunikasi 19–22 pada Irodori Dasar 2 Lesson 5.</p>
         <div className="mt-3 grid gap-2 sm:grid-cols-2">
           {canDos.map((item, index) => (
             <article key={item.id} className="rounded-xl border border-white/[0.06] bg-black/15 p-3">
@@ -806,8 +806,8 @@ export default function IrodoriElementaryTwoLessonFivePage() {
         <div className="flex items-center gap-2">
           <FileText size={16} className="text-[#A8D5B5]" />
           <div>
-            <p className="text-[9px] font-black tracking-[0.2em] text-[#A8D5B5]">KANJI WORDS</p>
-            <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Kosakata kanji pada lesson ini</h2>
+            <p className="text-[9px] font-black tracking-[0.2em] text-[#A8D5B5]">KOSAKATA KANJI</p>
+            <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Kosakata kanji pada pelajaran ini</h2>
           </div>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">Kenali kanji untuk alam, transportasi, rencana perjalanan, dan tempat menginap.</p>
@@ -831,7 +831,7 @@ export default function IrodoriElementaryTwoLessonFivePage() {
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#A8D5B5]">DIALOG 01–05</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Mengenal tempat dan menyusun perjalanan</h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Dialog dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Dialog dibuat orisinal oleh Fude berdasarkan target komunikasi pelajaran ini.</p>
         </div>
         <div className="space-y-4">
           <IrodoriConversation title="Mendengarkan gambaran destinasi wisata" speakers={[friendYui, friendSota]} utterances={destinationIntroductionConversation} />
@@ -846,7 +846,7 @@ export default function IrodoriElementaryTwoLessonFivePage() {
         <div>
           <p className="text-[9px] font-black tracking-[0.2em] text-[#A8D5B5]">DIALOG 01–05</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Bertanya, menjelaskan, dan berbagi rekomendasi</h2>
-          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Dialog dibuat orisinal oleh Fude berdasarkan target komunikasi lesson ini.</p>
+          <p className="mt-1 text-xs leading-6 text-[#A9A398]">Dialog dibuat orisinal oleh Fude berdasarkan target komunikasi pelajaran ini.</p>
         </div>
         <div className="space-y-4">
           <IrodoriConversation title="Meminta rekomendasi tempat makan" speakers={[friendYui, friendSota]} utterances={destinationIntroductionConversation} />
@@ -1125,7 +1125,7 @@ export default function IrodoriElementaryTwoLessonFivePage() {
       <section className="space-y-4 rounded-2xl border border-[#438A61]/20 bg-[#1D3026]/70 p-4 md:p-5">
         <div className="flex items-center gap-2">
           <CheckCircle2 size={16} className="text-[#A8D5B5]" />
-          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi Can-do</h2>
+          <h2 className="text-sm font-bold text-[#EAE6DD]">Evaluasi target komunikasi</h2>
         </div>
         <p className="text-xs leading-6 text-[#A9A398]">
           Nilai kemampuanmu setelah kelima simulasi benar, keenam latihan praktik benar, dan kuis dikumpulkan. Pilih penilaian yang paling sesuai untuk setiap target.
@@ -1165,7 +1165,7 @@ export default function IrodoriElementaryTwoLessonFivePage() {
             {isCompleted
               ? "Lesson 5 selesai. Progres tersimpan."
               : canDosRated
-                ? "Semua target Can-do sudah dinilai."
+                ? "Semua target target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button
@@ -1183,7 +1183,7 @@ export default function IrodoriElementaryTwoLessonFivePage() {
         <Link href="/irodori/elementary-2" className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-semibold text-[#A9A398] hover:text-[#EAE6DD]">
           <ArrowLeft size={14} /> Daftar pelajaran
         </Link>
-        <span className="text-[10px] font-semibold text-[#817A73]">Elementary 2 · 05 / 18</span>
+        <span className="text-[10px] font-semibold text-[#817A73]">Dasar 2 · 05 / 18</span>
       </div>
     </main>
   );
