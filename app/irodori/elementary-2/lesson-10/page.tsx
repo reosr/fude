@@ -443,7 +443,7 @@ export default function IrodoriElementaryTwoLessonTenPage() {
       
       <section className="space-y-4">
         <div>
-          <p className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">MEMBACA UNGGAHAN ONLINE</p>
+          <p className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">MEMBACA UNGGAHAN DARING</p>
           <h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Unggahan tentang kebiasaan melepas sepatu di rumah</h2>
           <p className="mt-1 text-xs leading-6 text-[#A9A398]">Unggahan ini fiktif dan dibuat sebagai latihan. Perhatikan kebiasaan yang dijelaskan dan alasan di baliknya.</p>
         </div>
