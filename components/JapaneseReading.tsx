@@ -107,7 +107,7 @@ export default function JapaneseReading({
     html === undefined &&
     typeof children === "string" &&
     Boolean(explicitKana?.trim()) &&
-    /[\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]/.test(children) &&
+    /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/.test(children) &&
     !/[ぁ-ゖァ-ヺー]/.test(children)
       ? `<ruby>${escapeHtmlText(children)}<rt>${escapeHtmlText(explicitKana!.trim())}</rt></ruby>`
       : undefined;
