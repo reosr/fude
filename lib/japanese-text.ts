@@ -425,9 +425,9 @@ const VERB_NOTATION_FORMS: Array<[string, string]> = [
 ].sort(([left], [right]) => right.length - left.length);
 
 const VERB_NOTATION_PATTERN = new RegExp(
-  \`(^|[^A-Za-z0-9])V(\\\\d*)-?(\${VERB_NOTATION_FORMS.map(([suffix]) =>
-    suffix.replace(/[.*+?^\${}()|[\\\\]\\\\]/g, "\\\\$&")
-  ).join("|")})\`,
+  "(^|[^A-Za-z0-9])V(\\\\d*)-?(" +
+    VERB_NOTATION_FORMS.map(([suffix]) => suffix).join("|") +
+    ")",
   "g"
 );
 
@@ -441,10 +441,11 @@ export function formatGrammarNotation(value: string): string {
     VERB_NOTATION_PATTERN,
     (match, prefix: string, number: string, suffix: string) => {
       const description = VERB_NOTATION_FORMS.find(([key]) => key === suffix)?.[1] ?? suffix;
+      const numberLabel = number ? " " + number : "";
       if (description === "pangkal") {
-        return prefix + \`pangkal kata kerja\${number ? \` \${number}\` : ""} bentuk ます\`;
+        return prefix + "pangkal kata kerja" + numberLabel + " bentuk ます";
       }
-      return prefix + \`kata kerja\${number ? \` \${number}\` : ""} \${description}\`;
+      return prefix + "kata kerja" + numberLabel + " " + description;
     }
   );
 
@@ -475,20 +476,22 @@ export function formatGrammarNotation(value: string): string {
     /(^|[^A-Za-z0-9])([NAS])(\\d*)(-nya)?(?=$|[^A-Za-z0-9])/g,
     (match, prefix: string, symbol: string, number: string, suffix: string | undefined, offset: number, whole: string) => {
       const tail = whole.slice(offset + match.length);
-      const needsSpace = /^[\\u3040-\\u30ff\\u3400-\\u9fff々〆ヵヶ]/.test(tail);
+      const needsSpace = /^[\u3040-\u30ff\u3400-\u9fff々〆ヵヶ]/.test(tail);
       return prefix +
-        \`\${GRAMMAR_LABELS[symbol]}\${number ? \` \${number}\` : ""}\${suffix ?? ""}\${needsSpace ? " " : ""}\`;
+        GRAMMAR_LABELS[symbol] +
+        (number ? " " + number : "") +
+        (suffix ?? "") +
+        (needsSpace ? " " : "");
     }
   );
 
-  // Notasi V yang tidak memiliki akhiran khusus tetap diberi label dan spasi
-  // agar tidak menempel pada partikel atau bentuk bahasa Jepang sesudahnya.
+  // Notasi V tanpa akhiran khusus tetap diberi label yang mudah dipahami.
   formatted = formatted.replace(
     /(^|[^A-Za-z0-9])V(\\d*)(?=$|[^A-Za-z0-9])/g,
     (match, prefix: string, number: string, offset: number, whole: string) => {
       const tail = whole.slice(offset + match.length);
-      const needsSpace = /^[\\u3040-\\u30ff\\u3400-\\u9fff々〆ヵヶ]/.test(tail);
-      return prefix + \`kata kerja\${number ? \` \${number}\` : ""}\${needsSpace ? " " : ""}\`;
+      const needsSpace = /^[\u3040-\u30ff\u3400-\u9fff々〆ヵヶ]/.test(tail);
+      return prefix + "kata kerja" + (number ? " " + number : "") + (needsSpace ? " " : "");
     }
   );
 
