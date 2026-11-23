@@ -95,6 +95,10 @@ jobs:
           app/irodori/pre-intermediate/lesson-1/page.tsx
           app/kosakata/page.tsx
           lib/vocab.ts
+          components/JapaneseReading.tsx
+          components/Quiz.tsx
+          lib/japanese-text.ts
+          data/japanese-reading-index.json
           components/IrodoriConversation.tsx
           lib/irodori-progress.ts
           lib/irodori-speakers.ts
