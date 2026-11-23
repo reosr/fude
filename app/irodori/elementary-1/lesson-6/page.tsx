@@ -29,7 +29,7 @@ const lessonId = "elementary1-06";
 
 const askingBusStopConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>すみません。バス停はどこですか。</>, romaji: "Sumimasen. Basutei wa doko desu ka?", translation: "Permisi. Di mana halte bus?", audioFileName: "irodori-elementary1-06-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>この道をまっすぐ行ってください。</>, romaji: "Kono michi o massugu itte kudasai.", translation: "Ikuti jalan ini lurus saja.", audioFileName: "irodori-elementary1-06-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>この道をまっすぐ行ってください。</>, romaji: "Kono michi o massugu itte kudasai.", translation: "Jalan lurus saja menyusuri jalan ini.", audioFileName: "irodori-elementary1-06-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>信号の近くですか。</>, romaji: "Shingou no chikaku desu ka?", translation: "Apakah dekat lampu lalu lintas?", audioFileName: "irodori-elementary1-06-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。公園の前にあります。</>, romaji: "Hai. Kouen no mae ni arimasu.", translation: "Iya. Letaknya di depan taman.", audioFileName: "irodori-elementary1-06-a01-l04.mp3" },
   { speakerId: "yui", japanese: <>わかりました。ありがとうございます。</>, romaji: "Wakarimashita. Arigatou gozaimasu.", translation: "Baik, saya mengerti. Terima kasih.", audioFileName: "irodori-elementary1-06-a01-l05.mp3" },
@@ -58,8 +58,8 @@ const givingDirectionsByCarConversation: IrodoriUtterance[] = [
 
 const correctingDirectionsConversation: IrodoriUtterance[] = [
   { speakerId: "kenji", japanese: <>この道をまっすぐですね。</>, romaji: "Kono michi o massugu desu ne.", translation: "Ikuti jalan ini lurus, ya.", audioFileName: "irodori-elementary1-06-a05-l01.mp3" },
-  { speakerId: "akiko", japanese: <>はい。でも、1つ目の角じゃなくて、2つ目です。</>, romaji: "Hai. Demo, hitotsume no kado ja nakute, futatsume desu.", translation: "Ya, tetapi bukan belokan pertama. Belokannya di belokan kedua.", audioFileName: "irodori-elementary1-06-a05-l02.mp3" },
-  { speakerId: "kenji", japanese: <>わかりました。2つ目を左ですね。</>, romaji: "Wakarimashita. Futatsume o hidari desu ne.", translation: "Baik, belok kiri di belokan kedua, ya.", audioFileName: "irodori-elementary1-06-a05-l03.mp3" },
+  { speakerId: "akiko", japanese: <>はい。でも、1つ目の角じゃなくて、2つ目です。</>, romaji: "Hai. Demo, hitotsume no kado ja nakute, futatsume desu.", translation: "Ya, tetapi bukan di belokan pertama, melainkan di belokan kedua.", audioFileName: "irodori-elementary1-06-a05-l02.mp3" },
+  { speakerId: "kenji", japanese: <>わかりました。2つ目を左ですね。</>, romaji: "Wakarimashita. Futatsume o hidari desu ne.", translation: "Oke, berarti belok kiri di belokan kedua, ya.", audioFileName: "irodori-elementary1-06-a05-l03.mp3" },
   { speakerId: "akiko", japanese: <>そうです。ありがとうございます。</>, romaji: "Sou desu. Arigatou gozaimasu.", translation: "Betul. Terima kasih.", audioFileName: "irodori-elementary1-06-a05-l04.mp3" },
 ];
 
