@@ -43,9 +43,9 @@ const explainFavoriteConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>一緒に見ると、もっと楽しいですよね。</>, romaji: "Issho ni miru to, motto tanoshii desu yo ne.", translation: "Kalau menonton bersama, rasanya lebih menyenangkan, ya.", audioFileName: "irodori-preintermediate-01-a02-l04.mp3" },
 ];
 const inviteToEventConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>来週の日曜日、町のスポーツイベントに行くことになったんです。</>, romaji: "Raishuu no nichiyoubi, machi no supootsu ibento ni iku koto ni natta n desu.", translation: "Minggu depan saya jadi pergi ke acara olahraga yang diadakan di kota.", audioFileName: "irodori-preintermediate-01-a03-l01.mp3" },
+  { speakerId: "kenji", japanese: <>来週の日曜日、町のスポーツイベントに行くことになったんです。</>, romaji: "Raishuu no nichiyoubi, machi no supootsu ibento ni iku koto ni natta n desu.", translation: "Minggu depan, saya jadi ikut acara olahraga di kota.", audioFileName: "irodori-preintermediate-01-a03-l01.mp3" },
   { speakerId: "yui", japanese: <>どこでありますか。</>, romaji: "Doko de arimasu ka?", translation: "Acaranya diadakan di mana?", audioFileName: "irodori-preintermediate-01-a03-l02.mp3" },
-  { speakerId: "kenji", japanese: <>中央公園です。いろいろなスポーツを見られるそうですよ。</>, romaji: "Chuuou kouen desu. Iroiro na supootsu o mirareru sou desu yo.", translation: "Di Taman Chuo. Katanya ada berbagai macam olahraga yang bisa ditonton.", audioFileName: "irodori-preintermediate-01-a03-l03.mp3" },
+  { speakerId: "kenji", japanese: <>中央公園です。いろいろなスポーツを見られるそうですよ。</>, romaji: "Chuuou kouen desu. Iroiro na supootsu o mirareru sou desu yo.", translation: "Di Taman Chuo. Katanya ada berbagai cabang olahraga yang bisa ditonton.", audioFileName: "irodori-preintermediate-01-a03-l03.mp3" },
   { speakerId: "yui", japanese: <>おもしろそうですね。よかったら、いっしょに行ってくれませんか。</>, romaji: "Omoshirosou desu ne. Yokattara, issho ni itte kuremasen ka?", translation: "Kedengarannya menarik. Kalau kamu tidak keberatan, mau pergi bersama saya?", audioFileName: "irodori-preintermediate-01-a03-l04.mp3" },
 ];
 const respondToInvitationConversation: IrodoriUtterance[] = [
@@ -57,7 +57,7 @@ const respondToInvitationConversation: IrodoriUtterance[] = [
 const cancelPlansConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>土曜日のイベントですが、行けなくなってしまいました。</>, romaji: "Doyoubi no ibento desu ga, ikenaku natte shimaimashita.", translation: "Soal acara hari Sabtu, ternyata saya tidak bisa datang.", audioFileName: "irodori-preintermediate-01-a05-l01.mp3" },
   { speakerId: "yui", japanese: <>そうなんですか。何か予定ができたんですか。</>, romaji: "Sou nan desu ka. Nanika yotei ga dekita n desu ka?", translation: "Oh, begitu. Ada rencana lain, ya?", audioFileName: "irodori-preintermediate-01-a05-l02.mp3" },
-  { speakerId: "akiko", japanese: <>家族と出かけることになったんです。直前に連絡して、ごめんなさい。</>, romaji: "Kazoku to dekakeru koto ni natta n desu. Chokuzen ni renraku shite, gomen nasai.", translation: "Saya jadi harus pergi bersama keluarga. Maaf baru memberi tahu menjelang hari acaranya.", audioFileName: "irodori-preintermediate-01-a05-l03.mp3" },
+  { speakerId: "akiko", japanese: <>家族と出かけることになったんです。直前に連絡して、ごめんなさい。</>, romaji: "Kazoku to dekakeru koto ni natta n desu. Chokuzen ni renraku shite, gomen nasai.", translation: "Saya jadi harus pergi bersama keluarga. Maaf baru memberi kabar mendadak seperti ini.", audioFileName: "irodori-preintermediate-01-a05-l03.mp3" },
   { speakerId: "yui", japanese: <>わかりました。また都合がいいときに行きましょう。</>, romaji: "Wakarimashita. Mata tsugou ga ii toki ni ikimashou.", translation: "Tidak apa-apa. Kita pergi lain kali saja, saat sama-sama ada waktu.", audioFileName: "irodori-preintermediate-01-a05-l04.mp3" },
 ];
 
