@@ -523,7 +523,7 @@
         "sentence": "これは（ ___ ）<ruby>車<rt>くるま</rt></ruby>です。",
         "answer": "<ruby>日本<rt>にほん</rt></ruby>の",
         "options": [
-          "<ruby>アメリカ</ruby>の",
+          "アメリカの",
           "<ruby>日本<rt>にほん</rt></ruby>の",
           "<ruby>中国<rt>ちゅうごく</rt></ruby>の",
           "<ruby>韓国<rt>かんこく</rt></ruby>の"
@@ -540,7 +540,7 @@
           "<ruby>中国<rt>ちゅうごく</rt></ruby>の",
           "<ruby>日本<rt>にほん</rt></ruby>の",
           "<ruby>韓国<rt>かんこく</rt></ruby>の",
-          "<ruby>アメリカ</ruby>の"
+          "アメリカの"
         ],
         "explanation": "<ruby>韓国<rt>かんこく</rt></ruby>のカメラ berarti kamera Korea. の menunjukkan hubungan asal negara dengan produk."
       },
@@ -9343,7 +9343,7 @@
         "sentence": "<ruby>来週<rt>らいしゅう</rt></ruby>は（ ___ ）。",
         "answer": "<ruby>会議<rt>かいぎ</rt></ruby>の<ruby>予定<rt>よてい</rt></ruby>です",
         "options": [
-          "<ruby>会議<rt>かいぎ</rt></ruby>が<ruby>つもり</ruby>です",
+          "<ruby>会議<rt>かいぎ</rt></ruby>がつもりです",
           "<ruby>会議<rt>かいぎ</rt></ruby>を<ruby>予定<rt>よてい</rt></ruby>です",
           "<ruby>会議<rt>かいぎ</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>です",
           "<ruby>会議<rt>かいぎ</rt></ruby>の<ruby>予定<rt>よてい</rt></ruby>です"
