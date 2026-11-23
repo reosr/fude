@@ -328,9 +328,7 @@ export default function IrodoriStarterLessonTwoPage() {
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 2
           </p>
-          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-            I&apos;m sorry, I don&apos;t really understand.
-          </h1>
+          <h1 className="mt-1 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Maaf, saya kurang mengerti.</h1>
           <p className="mt-2 font-mincho text-2xl text-[#D9B66D]">
             すみません、よくわかりません
           </p>
