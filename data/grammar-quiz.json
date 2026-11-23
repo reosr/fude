@@ -444,7 +444,7 @@
           "<ruby>四階<rt>よんかい</rt></ruby>",
           "<ruby>二階<rt>にかい</rt></ruby>"
         ],
-        "explanation": "<ruby>二階<rt>にかい</rt></ruby>berarti lantai dua. Nama tempat atau lantai dapat langsung digunakan setelah は untuk menyatakan lokasi."
+        "explanation": "<ruby>二階<rt>にかい</rt></ruby> berarti lantai dua. Nama tempat atau lantai dapat langsung digunakan setelah は untuk menyatakan lokasi."
       },
       {
         "id": "b3-g6",
@@ -570,7 +570,7 @@
           "<ruby>一万円<rt>いちまんえん</rt></ruby>",
           "<ruby>三千円<rt>さんぜんえん</rt></ruby>"
         ],
-        "explanation": "<ruby>三千円<rt>さんぜんえん</rt></ruby>berarti 3.000 yen. <ruby>円<rt>えん</rt></ruby>merupakan satuan mata uang Jepang."
+        "explanation": "<ruby>三千円<rt>さんぜんえん</rt></ruby> berarti 3.000 yen. <ruby>円<rt>えん</rt></ruby> merupakan satuan mata uang Jepang."
       }
     ]
   },
@@ -589,7 +589,7 @@
           "<ruby>七時十五分<rt>しちじじゅうごふん</rt></ruby>",
           "<ruby>七時半<rt>しちじはん</rt></ruby>"
         ],
-        "explanation": "<ruby>七時半<rt>しちじはん</rt></ruby>berarti pukul 07.30. <ruby>半<rt>はん</rt></ruby> digunakan untuk menyatakan setengah jam."
+        "explanation": "<ruby>七時半<rt>しちじはん</rt></ruby> berarti pukul 07.30. <ruby>半<rt>はん</rt></ruby> digunakan untuk menyatakan setengah jam."
       },
       {
         "id": "b4-g2",
@@ -631,7 +631,7 @@
           "<ruby>火曜日<rt>かようび</rt></ruby>",
           "<ruby>金曜日<rt>きんようび</rt></ruby>"
         ],
-        "explanation": "<ruby>月曜日<rt>げつようび</rt></ruby>berarti hari Senin."
+        "explanation": "<ruby>月曜日<rt>げつようび</rt></ruby> berarti hari Senin."
       },
       {
         "id": "b4-g5",
@@ -1028,7 +1028,7 @@
           "<ruby>大阪<rt>おおさか</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。",
           "バスで<ruby>行<rt>い</rt></ruby>きます。"
         ],
-        "explanation": "<ruby>何で<rt>なんで</rt></ruby>menanyakan sarana transportasi. バスで<ruby>行きます<rt>いきます</rt></ruby> berarti pergi menggunakan bus."
+        "explanation": "<ruby>何で<rt>なんで</rt></ruby> menanyakan sarana transportasi. バスで<ruby>行きます<rt>いきます</rt></ruby> berarti pergi menggunakan bus."
       },
       {
         "id": "b5-g17",
@@ -2131,7 +2131,7 @@
           "<ruby>誰<rt>だれ</rt></ruby>",
           "<ruby>何<rt>なに</rt></ruby>"
         ],
-        "explanation": "<ruby>何<rt>なに</rt></ruby>digunakan untuk menanyakan benda atau hal apa yang ada di suatu tempat."
+        "explanation": "<ruby>何<rt>なに</rt></ruby> digunakan untuk menanyakan benda atau hal apa yang ada di suatu tempat."
       },
       {
         "id": "b10-g6",
@@ -2145,7 +2145,7 @@
           "<ruby>後<rt>うし</rt></ruby>ろ",
           "<ruby>中<rt>なか</rt></ruby>"
         ],
-        "explanation": "<ruby>前<rt>まえ</rt></ruby>berarti depan. <ruby>駅<rt>えき</rt></ruby>の<ruby>前<rt>まえ</rt></ruby> berarti di depan stasiun."
+        "explanation": "<ruby>前<rt>まえ</rt></ruby> berarti depan. <ruby>駅<rt>えき</rt></ruby>の<ruby>前<rt>まえ</rt></ruby> berarti di depan stasiun."
       },
       {
         "id": "b10-g7",
@@ -2159,7 +2159,7 @@
           "<ruby>右<rt>みぎ</rt></ruby>",
           "<ruby>左<rt>ひだり</rt></ruby>"
         ],
-        "explanation": "<ruby>下<rt>した</rt></ruby>berarti bawah. <ruby>机<rt>つくえ</rt></ruby>の<ruby>下<rt>した</rt></ruby> berarti di bawah meja."
+        "explanation": "<ruby>下<rt>した</rt></ruby> berarti bawah. <ruby>机<rt>つくえ</rt></ruby>の<ruby>下<rt>した</rt></ruby> berarti di bawah meja."
       },
       {
         "id": "b10-g8",
@@ -2173,7 +2173,7 @@
           "<ruby>近<rt>ちか</rt></ruby>く",
           "<ruby>間<rt>あいだ</rt></ruby>"
         ],
-        "explanation": "<ruby>間<rt>あいだ</rt></ruby>berarti di antara. Untuk menyebut dua acuan, gunakan AとBの<ruby>間<rt>あいだ</rt></ruby>."
+        "explanation": "<ruby>間<rt>あいだ</rt></ruby> berarti di antara. Untuk menyebut dua acuan, gunakan AとBの<ruby>間<rt>あいだ</rt></ruby>."
       },
       {
         "id": "b10-g9",
@@ -2187,7 +2187,7 @@
           "<ruby>近<rt>ちか</rt></ruby>く",
           "<ruby>隣<rt>となり</rt></ruby>"
         ],
-        "explanation": "<ruby>隣<rt>となり</rt></ruby>berarti tepat di sebelah atau bersebelahan."
+        "explanation": "<ruby>隣<rt>となり</rt></ruby> berarti tepat di sebelah atau bersebelahan."
       },
       {
         "id": "b10-g10",
@@ -2201,7 +2201,7 @@
           "<ruby>左<rt>ひだり</rt></ruby>",
           "<ruby>前<rt>まえ</rt></ruby>"
         ],
-        "explanation": "<ruby>右<rt>みぎ</rt></ruby>berarti kanan. <ruby>郵便局<rt>ゆうびんきょく</rt></ruby>の<ruby>右<rt>みぎ</rt></ruby> berarti di sebelah kanan kantor pos."
+        "explanation": "<ruby>右<rt>みぎ</rt></ruby> berarti kanan. <ruby>郵便局<rt>ゆうびんきょく</rt></ruby>の<ruby>右<rt>みぎ</rt></ruby> berarti di sebelah kanan kantor pos."
       },
       {
         "id": "b10-g11",
@@ -2215,7 +2215,7 @@
           "<ruby>左<rt>ひだり</rt></ruby>",
           "<ruby>上<rt>うえ</rt></ruby>"
         ],
-        "explanation": "<ruby>左<rt>ひだり</rt></ruby>berarti kiri. <ruby>公園<rt>こうえん</rt></ruby>の<ruby>左<rt>ひだり</rt></ruby> berarti di sebelah kiri taman."
+        "explanation": "<ruby>左<rt>ひだり</rt></ruby> berarti kiri. <ruby>公園<rt>こうえん</rt></ruby>の<ruby>左<rt>ひだり</rt></ruby> berarti di sebelah kiri taman."
       },
       {
         "id": "b10-g12",
@@ -2229,7 +2229,7 @@
           "<ruby>下<rt>した</rt></ruby>",
           "<ruby>中<rt>なか</rt></ruby>"
         ],
-        "explanation": "<ruby>中<rt>なか</rt></ruby>berarti dalam. <ruby>箱<rt>はこ</rt></ruby>の<ruby>中<rt>なか</rt></ruby> berarti di dalam kotak."
+        "explanation": "<ruby>中<rt>なか</rt></ruby> berarti dalam. <ruby>箱<rt>はこ</rt></ruby>の<ruby>中<rt>なか</rt></ruby> berarti di dalam kotak."
       },
       {
         "id": "b10-g13",
@@ -2243,7 +2243,7 @@
           "<ruby>間<rt>あいだ</rt></ruby>",
           "<ruby>中<rt>なか</rt></ruby>"
         ],
-        "explanation": "<ruby>外<rt>そと</rt></ruby>berarti luar. <ruby>家の<rt>いえの</rt></ruby><ruby>外<rt>そと</rt></ruby> berarti di luar rumah."
+        "explanation": "<ruby>外<rt>そと</rt></ruby> berarti luar. <ruby>家の<rt>いえの</rt></ruby><ruby>外<rt>そと</rt></ruby> berarti di luar rumah."
       },
       {
         "id": "b10-g14",
@@ -2257,7 +2257,7 @@
           "<ruby>間<rt>あいだ</rt></ruby>",
           "<ruby>近<rt>ちか</rt></ruby>く"
         ],
-        "explanation": "<ruby>近く<rt>ちかく</rt></ruby>berarti dekat. Kata ini tidak harus menunjukkan posisi yang tepat bersebelahan."
+        "explanation": "<ruby>近く<rt>ちかく</rt></ruby> berarti dekat. Kata ini tidak harus menunjukkan posisi yang tepat bersebelahan."
       },
       {
         "id": "b10-g15",
@@ -2271,7 +2271,7 @@
           "<ruby>中<rt>なか</rt></ruby>",
           "<ruby>上<rt>うえ</rt></ruby>"
         ],
-        "explanation": "<ruby>後ろ<rt>うしろ</rt></ruby>berarti belakang. <ruby>家の<rt>いえの</rt></ruby><ruby>後ろ<rt>うしろ</rt></ruby> berarti di belakang rumah."
+        "explanation": "<ruby>後ろ<rt>うしろ</rt></ruby> berarti belakang. <ruby>家の<rt>いえの</rt></ruby><ruby>後ろ<rt>うしろ</rt></ruby> berarti di belakang rumah."
       },
       {
         "id": "b10-g16",
@@ -2360,7 +2360,7 @@
           "<ruby>三人<rt>さんにん</rt></ruby>",
           "<ruby>三つ<rt>みっつ</rt></ruby>"
         ],
-        "explanation": "〜つ merupakan penghitung umum untuk benda. <ruby>三つ<rt>みっつ</rt></ruby>berarti tiga buah."
+        "explanation": "〜つ merupakan penghitung umum untuk benda. <ruby>三つ<rt>みっつ</rt></ruby> berarti tiga buah."
       },
       {
         "id": "b11-g2",
