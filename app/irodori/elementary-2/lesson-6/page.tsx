@@ -682,7 +682,7 @@ export default function IrodoriElementaryTwoLessonSixPage() {
         <div className="rounded-2xl border border-[#9A7442]/25 bg-[#211D17] p-4 md:p-5">
           <div className="flex items-center justify-between border-b border-dashed border-[#9A7442]/35 pb-3">
             <div>
-              <p className="text-[9px] font-black tracking-[0.18em] text-[#E7C58C]">TRAIN TICKET · PRACTICE</p>
+              <p className="text-[9px] font-black tracking-[0.18em] text-[#E7C58C]">LATIHAN MEMBACA TIKET KERETA</p>
               <h3 className="mt-1 font-mincho text-xl font-bold text-[#F1EBDD]">東京行き</h3>
             </div>
             <Train size={30} className="text-[#E7C58C]" />
