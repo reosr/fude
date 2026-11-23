@@ -35,8 +35,8 @@ export default function JapaneseVocabularyReading({
     : hasKana
       ? ""
       : firstPart;
-  const hasKanji = typeof children === "string"
-    ? /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/.test(children)
+  const needsKana = typeof children === "string"
+    ? /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ0-9０-９]/.test(children)
     : Boolean(children);
 
   // Pertahankan bentuk lama bagi pemanggil yang hanya meminta baris bacaan.
@@ -52,7 +52,7 @@ export default function JapaneseVocabularyReading({
   return (
     <div className={"min-w-0 " + wrapperClassName}>
       <JapaneseReading
-        kana={hasKanji ? kana : undefined}
+        kana={needsKana ? kana : undefined}
         romaji={romaji || undefined}
         translation={meaning}
         contentClassName={contentClassName}
