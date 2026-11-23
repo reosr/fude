@@ -37,34 +37,34 @@ const lessonId = "elementary2-12";
 
 
 const askPurchaseAdviceConversation: IrodoriUtterance[] = [
- { speakerId:"yui", japanese:<>新しいイヤホンがほしいんですけど、何がいいですか。</>, romaji:"Atarashii iyahon ga hoshii n desu kedo, nani ga ii desu ka?", translation:"Saya ingin earphone baru. Yang mana yang bagus?", audioFileName:"irodori-elementary2-12-a01-l01.mp3" },
- { speakerId:"sota", japanese:<>音がよくて、耳が痛くなりにくいものがいいと思います。</>, romaji:"Oto ga yokute, mimi ga itaku nari nikui mono ga ii to omoimasu.", translation:"Menurut saya, pilih yang suaranya bagus dan tidak mudah membuat telinga sakit.", audioFileName:"irodori-elementary2-12-a01-l02.mp3" },
+ { speakerId:"yui", japanese:<>新しいイヤホンがほしいんですけど、何がいいですか。</>, romaji:"Atarashii iyahon ga hoshii n desu kedo, nani ga ii desu ka?", translation:"Saya ingin membeli earphone baru. Model seperti apa yang bagus?", audioFileName:"irodori-elementary2-12-a01-l01.mp3" },
+ { speakerId:"sota", japanese:<>音がよくて、耳が痛くなりにくいものがいいと思います。</>, romaji:"Oto ga yokute, mimi ga itaku nari nikui mono ga ii to omoimasu.", translation:"Menurut saya, pilih earphone yang suaranya bagus dan nyaman dipakai di telinga.", audioFileName:"irodori-elementary2-12-a01-l02.mp3" },
  { speakerId:"yui", japanese:<>どこで買ったらいいですか。</>, romaji:"Doko de kattara ii desu ka?", translation:"Sebaiknya saya membeli di mana?", audioFileName:"irodori-elementary2-12-a01-l03.mp3" },
  { speakerId:"sota", japanese:<>駅の近くに電気屋があります。店員さんに相談できますよ。</>, romaji:"Eki no chikaku ni denkiya ga arimasu. Ten'in-san ni soudan dekimasu yo.", translation:"Ada toko elektronik dekat stasiun. Kamu bisa berkonsultasi dengan pegawainya.", audioFileName:"irodori-elementary2-12-a01-l04.mp3" },
 ];
 const secondhandListingConversation: IrodoriUtterance[] = [
- { speakerId:"akiko", japanese:<>この炊飯器、中古ですが、説明書がついています。</>, romaji:"Kono suihanki, chuuko desu ga, setsumeisho ga tsuite imasu.", translation:"Penanak nasi ini bekas, tetapi dilengkapi buku petunjuk.", audioFileName:"irodori-elementary2-12-a02-l01.mp3" },
- { speakerId:"kenji", japanese:<>傷や汚れはありますか。</>, romaji:"Kizu ya yogore wa arimasu ka?", translation:"Apakah ada goresan atau kotoran?", audioFileName:"irodori-elementary2-12-a02-l02.mp3" },
+ { speakerId:"akiko", japanese:<>この炊飯器、中古ですが、説明書がついています。</>, romaji:"Kono suihanki, chuuko desu ga, setsumeisho ga tsuite imasu.", translation:"Rice cooker ini bekas, tetapi dilengkapi buku petunjuk.", audioFileName:"irodori-elementary2-12-a02-l01.mp3" },
+ { speakerId:"kenji", japanese:<>傷や汚れはありますか。</>, romaji:"Kizu ya yogore wa arimasu ka?", translation:"Apakah ada goresan atau noda?", audioFileName:"irodori-elementary2-12-a02-l02.mp3" },
  { speakerId:"akiko", japanese:<>少し傷があります。写真と説明をよく確認したほうがいいですね。</>, romaji:"Sukoshi kizu ga arimasu. Shashin to setsumei o yoku kakunin shita hou ga ii desu ne.", translation:"Ada sedikit goresan. Sebaiknya periksa foto dan deskripsinya dengan teliti.", audioFileName:"irodori-elementary2-12-a02-l03.mp3" },
- { speakerId:"kenji", japanese:<>そうですね。実際に買うときは、家の人と相談しましょう。</>, romaji:"Sou desu ne. Jissai ni kau toki wa, ie no hito to soudan shimashou.", translation:"Betul. Saat benar-benar akan membeli, mari berdiskusi dengan keluarga.", audioFileName:"irodori-elementary2-12-a02-l04.mp3" },
+ { speakerId:"kenji", japanese:<>そうですね。実際に買うときは、家の人と相談しましょう。</>, romaji:"Sou desu ne. Jissai ni kau toki wa, ie no hito to soudan shimashou.", translation:"Betul. Sebelum membeli, sebaiknya diskusikan dulu dengan keluarga.", audioFileName:"irodori-elementary2-12-a02-l04.mp3" },
 ];
 const compareVacuumModelsConversation: IrodoriUtterance[] = [
- { speakerId:"yui", japanese:<>この掃除機とあの掃除機と、どちらが軽いですか。</>, romaji:"Kono soujiki to ano soujiki to, dochira ga karui desu ka?", translation:"Di antara penyedot debu ini dan yang itu, mana yang lebih ringan?", audioFileName:"irodori-elementary2-12-a03-l01.mp3" },
+ { speakerId:"yui", japanese:<>この掃除機とあの掃除機と、どちらが軽いですか。</>, romaji:"Kono soujiki to ano soujiki to, dochira ga karui desu ka?", translation:"Mana yang lebih ringan, penyedot debu ini atau yang itu?", audioFileName:"irodori-elementary2-12-a03-l01.mp3" },
  { speakerId:"sota", japanese:<>こちらのほうが軽くて、動かしやすいですよ。</>, romaji:"Kochira no hou ga karukute, ugokashi yasui desu yo.", translation:"Yang ini lebih ringan dan mudah digerakkan.", audioFileName:"irodori-elementary2-12-a03-l02.mp3" },
- { speakerId:"yui", japanese:<>でも、長い時間使いたいです。</>, romaji:"Demo, nagai jikan tsukai tai desu.", translation:"Tetapi saya ingin menggunakannya dalam waktu lama.", audioFileName:"irodori-elementary2-12-a03-l03.mp3" },
- { speakerId:"sota", japanese:<>それなら、連続使用時間が長いモデルのほうがいいですね。</>, romaji:"Sore nara, renzoku shiyou jikan ga nagai moderu no hou ga ii desu ne.", translation:"Kalau begitu, model dengan waktu penggunaan terus-menerus yang lebih lama lebih cocok.", audioFileName:"irodori-elementary2-12-a03-l04.mp3" },
+ { speakerId:"yui", japanese:<>でも、長い時間使いたいです。</>, romaji:"Demo, nagai jikan tsukai tai desu.", translation:"Tapi saya ingin yang bisa dipakai lebih lama.", audioFileName:"irodori-elementary2-12-a03-l03.mp3" },
+ { speakerId:"sota", japanese:<>それなら、連続使用時間が長いモデルのほうがいいですね。</>, romaji:"Sore nara, renzoku shiyou jikan ga nagai moderu no hou ga ii desu ne.", translation:"Kalau begitu, lebih baik pilih model yang bisa dipakai lebih lama dalam sekali penggunaan.", audioFileName:"irodori-elementary2-12-a03-l04.mp3" },
 ];
 const readPriceTagConversation: IrodoriUtterance[] = [
- { speakerId:"akiko", japanese:<>この価格は、消費税込みですか。</>, romaji:"Kono kakaku wa, shouhizei komi desu ka?", translation:"Apakah harga ini sudah termasuk pajak konsumsi?", audioFileName:"irodori-elementary2-12-a04-l01.mp3" },
- { speakerId:"kenji", japanese:<>いいえ、税別です。レジで合計金額を確認してください。</>, romaji:"Iie, zeibetsu desu. Reji de goukei kingaku o kakunin shite kudasai.", translation:"Belum, harga sebelum pajak. Silakan periksa jumlah total di kasir.", audioFileName:"irodori-elementary2-12-a04-l02.mp3" },
+ { speakerId:"akiko", japanese:<>この価格は、消費税込みですか。</>, romaji:"Kono kakaku wa, shouhizei komi desu ka?", translation:"Apakah harga ini sudah termasuk pajak?", audioFileName:"irodori-elementary2-12-a04-l01.mp3" },
+ { speakerId:"kenji", japanese:<>いいえ、税別です。レジで合計金額を確認してください。</>, romaji:"Iie, zeibetsu desu. Reji de goukei kingaku o kakunin shite kudasai.", translation:"Belum, harga tersebut belum termasuk pajak. Silakan periksa totalnya di kasir.", audioFileName:"irodori-elementary2-12-a04-l02.mp3" },
  { speakerId:"akiko", japanese:<>この値段は、いつまでですか。</>, romaji:"Kono nedan wa, itsu made desu ka?", translation:"Harga ini berlaku sampai kapan?", audioFileName:"irodori-elementary2-12-a04-l03.mp3" },
  { speakerId:"kenji", japanese:<>今週の日曜日までです。</>, romaji:"Konshuu no nichiyoubi made desu.", translation:"Sampai hari Minggu minggu ini.", audioFileName:"irodori-elementary2-12-a04-l04.mp3" },
 ];
 const askForDiscountConversation: IrodoriUtterance[] = [
- { speakerId:"yui", japanese:<>この掃除機について、もう少し教えてください。</>, romaji:"Kono soujiki ni tsuite, mou sukoshi oshiete kudasai.", translation:"Tolong jelaskan sedikit lagi tentang penyedot debu ini.", audioFileName:"irodori-elementary2-12-a05-l01.mp3" },
+ { speakerId:"yui", japanese:<>この掃除機について、もう少し教えてください。</>, romaji:"Kono soujiki ni tsuite, mou sukoshi oshiete kudasai.", translation:"Bisa jelaskan sedikit lagi tentang penyedot debu ini?", audioFileName:"irodori-elementary2-12-a05-l01.mp3" },
  { speakerId:"sota", japanese:<>軽くて、使いやすいモデルです。お手入れも簡単ですよ。</>, romaji:"Karukute, tsukai yasui moderu desu. O-teire mo kantan desu yo.", translation:"Ini model yang ringan dan mudah digunakan. Perawatannya juga mudah.", audioFileName:"irodori-elementary2-12-a05-l02.mp3" },
  { speakerId:"yui", japanese:<>そうですか。これ、少し安くなりますか。</>, romaji:"Sou desu ka. Kore, sukoshi yasuku narimasu ka?", translation:"Begitu, ya. Apakah harganya bisa sedikit lebih murah?", audioFileName:"irodori-elementary2-12-a05-l03.mp3" },
- { speakerId:"sota", japanese:<>確認しますので、少々お待ちください。</>, romaji:"Kakunin shimasu node, shoushou omachi kudasai.", translation:"Saya akan memeriksanya, mohon tunggu sebentar.", audioFileName:"irodori-elementary2-12-a05-l04.mp3" },
+ { speakerId:"sota", japanese:<>確認しますので、少々お待ちください。</>, romaji:"Kakunin shimasu node, shoushou omachi kudasai.", translation:"Saya cek dulu. Mohon tunggu sebentar.", audioFileName:"irodori-elementary2-12-a05-l04.mp3" },
 ];
 const canDos = [
  { id:"ask-product-buying-advice", source:"CAN-DO 51", text:"Meminta saran tentang model barang dan tempat membelinya ketika ingin membeli sesuatu." },
@@ -75,7 +75,7 @@ const canDos = [
 const vocabRows = [
  ["家電","かでん · kaden","Peralatan rumah tangga elektronik"], ["電気製品","でんきせいひん · denki seihin","Produk elektronik"],
  ["冷蔵庫","れいぞうこ · reizouko","Kulkas"], ["洗濯機","せんたくき · sentakuki","Mesin cuci"],
- ["炊飯器","すいはんき · suihanki","Penanak nasi"], ["電子レンジ","でんしレンジ · denshi renji","Microwave"],
+ ["炊飯器","すいはんき · suihanki","Rice cooker"], ["電子レンジ","でんしレンジ · denshi renji","Microwave"],
  ["掃除機","そうじき · soujiki","Penyedot debu"], ["扇風機","せんぷうき · senpuuki","Kipas angin"],
  ["テレビ","テレビ · terebi","Televisi"], ["パソコン","パソコン · pasokon","Komputer pribadi"],
  ["タブレット","タブレット · taburetto","Tablet"], ["スマホ","スマホ · sumaho","Ponsel pintar"],
@@ -109,9 +109,9 @@ const kanjiWords = [
 ];
 const shoppingScenarios = [
  {title:"相談して選ぶ",date:"買う前に",activities:"ほしい機能や予算を考えて、どのモデルがいいか人に相談します。",translation:"Pikirkan fitur dan anggaran yang dibutuhkan, lalu mintalah saran tentang model yang sesuai."},
- {title:"中古品の説明を読む",date:"商品情報",activities:"新品か中古か、傷や汚れ、説明書や付属品、送料を確認します。",translation:"Periksa apakah barang baru atau bekas, goresan, noda, buku petunjuk, aksesori, dan ongkos kirim."},
- {title:"比較表を見る",date:"性能を比べる",activities:"重さ、連続使用時間、充電時間、機能などを比べて、自分に必要なものを選びます。",translation:"Bandingkan berat, waktu penggunaan, waktu pengisian, dan fitur untuk menentukan kebutuhan."},
- {title:"値札を確認する",date:"会計の前に",activities:"税込か税別か、割引の期間、配送について店員に確認します。",translation:"Pastikan apakah harga sudah termasuk pajak, periode diskon, dan informasi pengiriman kepada pegawai."},
+ {title:"中古品の説明を読む",date:"商品情報",activities:"新品か中古か、傷や汚れ、説明書や付属品、送料を確認します。",translation:"Periksa apakah barangnya baru atau bekas, apakah ada goresan atau noda, serta kelengkapan buku petunjuk, aksesori, dan ongkos kirim."},
+ {title:"比較表を見る",date:"性能を比べる",activities:"重さ、連続使用時間、充電時間、機能などを比べて、自分に必要なものを選びます。",translation:"Bandingkan berat, lama pemakaian, waktu pengisian daya, dan fitur sebelum memilih barang yang sesuai."},
+ {title:"値札を確認する",date:"会計の前に",activities:"税込か税別か、割引の期間、配送について店員に確認します。",translation:"Tanyakan kepada pegawai apakah harga sudah termasuk pajak, sampai kapan diskonnya berlaku, dan bagaimana pengirimannya."},
 ];
 const applianceComparisonTips = [
  {title:"軽さを重視する",japanese:"軽くて、持ち運びやすいものがほしいです。",meaning:"Saya ingin barang yang ringan dan mudah dibawa."},
@@ -167,7 +167,7 @@ const practiceTasks: Task[] = [
  {prompt:<>Bentuk yang tepat dari 「使います」 + やすい adalah apa?</>,options:[{key:"a",label:"使いますやすい"},{key:"b",label:"使いやすい"},{key:"c",label:"使うやすい"}],answer:"b",explanation:<>Ambil bentuk masu tanpa ます: 使います → 使い + やすい.</>},
  {prompt:<>Apa arti 「この掃除機は重くて、使いにくいです」?</>,options:[{key:"a",label:"Penyedot debu ini ringan dan mudah digunakan."},{key:"b",label:"Penyedot debu ini berat dan sulit digunakan."},{key:"c",label:"Penyedot debu ini mudah dibawa."}],answer:"b",explanation:<>～にくい menyatakan bahwa suatu tindakan sulit dilakukan.</>},
  {prompt:<>Lengkapi pola perbandingan: 「Aより、B＿＿＿ほうが軽いです。」</>,options:[{key:"a",label:"の"},{key:"b",label:"に"},{key:"c",label:"を"}],answer:"a",explanation:<>Pola yang benar adalah N2 のほうが～ untuk menyatakan bahwa pilihan kedua memiliki sifat tersebut.</>},
- {prompt:<>Kata 「税別」 pada label harga berarti apa?</>,options:[{key:"a",label:"Termasuk pajak."},{key:"b",label:"Belum termasuk pajak."},{key:"c",label:"Gratis ongkos kirim."}],answer:"b",explanation:<>税別 berarti harga belum termasuk pajak konsumsi.</>},
+ {prompt:<>Kata 「税別」 pada label harga berarti apa?</>,options:[{key:"a",label:"Termasuk pajak."},{key:"b",label:"Belum termasuk pajak."},{key:"c",label:"Gratis ongkos kirim."}],answer:"b",explanation:<>税別 berarti harga belum termasuk pajak.</>},
  {prompt:<>Jika ingin bertanya mana dari dua barang yang lebih mudah digunakan, pola mana yang tepat?</>,options:[{key:"a",label:"N1とN2、どちらが使いやすいですか。"},{key:"b",label:"N1まで使いますか。"},{key:"c",label:"N1の説明書ですか。"}],answer:"a",explanation:<>N1とN2、どちらが～か digunakan untuk membandingkan dua pilihan.</>},
 ];
 const quizQuestions: Task[] = [
@@ -179,7 +179,7 @@ const quizQuestions: Task[] = [
  {prompt:<>Apa makna 「BのほうがAより軽いです」?</>,options:[{key:"a",label:"A lebih ringan daripada B."},{key:"b",label:"B lebih ringan daripada A."},{key:"c",label:"A dan B sama berat."}],answer:"b",explanation:<>N2 のほうが N1 より～ menyatakan bahwa N2 memiliki sifat tersebut dibanding N1.</>},
  {prompt:<>Apa arti 「送料込み」?</>,options:[{key:"a",label:"Harga termasuk ongkos kirim."},{key:"b",label:"Harga belum termasuk pajak."},{key:"c",label:"Barang tanpa buku petunjuk."}],answer:"a",explanation:<>込み berarti sudah termasuk sesuatu; 送料込み berarti ongkos kirim sudah termasuk.</>},
  {prompt:<>Apa yang perlu diperiksa pada iklan barang bekas?</>,options:[{key:"a",label:"Hanya warna barang."},{key:"b",label:"Kondisi, kelengkapan, harga, dan ongkos kirim."},{key:"c",label:"Hanya nama penjual."}],answer:"b",explanation:<>Periksa keterangan barang secara menyeluruh dan diskusikan pembelian daring dengan orang tua atau wali.</>},
- {prompt:<>Apa arti 「消費税」?</>,options:[{key:"a",label:"Pajak konsumsi."},{key:"b",label:"Biaya pengiriman."},{key:"c",label:"Diskon."}],answer:"a",explanation:<>消費税 berarti pajak konsumsi.</>},
+ {prompt:<>Apa arti 「消費税」?</>,options:[{key:"a",label:"Pajak konsumsi."},{key:"b",label:"Biaya pengiriman."},{key:"c",label:"Diskon."}],answer:"a",explanation:<>消費税 berarti pajak.</>},
  {prompt:<>Ungkapan 「これ、安くなりますか」 digunakan untuk apa?</>,options:[{key:"a",label:"Meminta penjelasan tentang warna."},{key:"b",label:"Menanyakan apakah harga dapat dikurangi."},{key:"c",label:"Menanyakan kapan barang tiba."}],answer:"b",explanation:<>Ungkapan ini digunakan untuk menanyakan kemungkinan potongan harga secara sopan.</>},
 ];
 export default function IrodoriElementaryTwoLessonTwelvePage() {
