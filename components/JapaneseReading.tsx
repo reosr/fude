@@ -53,7 +53,6 @@ export default function JapaneseReading({
 
   const rawKana = explicitKana?.trim() || extractedReading?.kana || "";
   const normalizedKana = rawKana ? toHiragana(rawKana) : "";
-  const hasReading = Boolean(normalizedKana);
   const romanization = explicitRomaji?.trim() || (normalizedKana ? toRomaji(normalizedKana) : "");
   const showKanaLine = Boolean(
     showKana &&
@@ -67,11 +66,11 @@ export default function JapaneseReading({
       {showOriginal && (
         html !== undefined ? (
           <span
-            className={hasReading ? contentClassName : undefined}
+            className={contentClassName}
             dangerouslySetInnerHTML={{ __html: displayHtml ?? html }}
           />
         ) : (
-          <span className={hasReading ? contentClassName : undefined}>{children}</span>
+          <span className={contentClassName}>{children}</span>
         )
       )}
       {showKanaLine && (
