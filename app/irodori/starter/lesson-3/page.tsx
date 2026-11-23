@@ -307,7 +307,7 @@ export default function IrodoriPemulaLessonThreePage() {
         </div>
         <div className="relative z-10 max-w-2xl">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">
-            TOPIC 02 • ABOUT MYSELF
+            TOPIK 02 • TENTANG DIRI SENDIRI
           </p>
           <p className="mt-5 text-sm font-semibold text-[#B9A98B]">
             Pelajaran 3
