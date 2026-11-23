@@ -32,36 +32,36 @@ const lessonId = "elementary1-04";
 
 const weatherGreetingConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>今日はいい天気ですね。</>, romaji: "Kyou wa ii tenki desu ne.", translation: "Cuaca bagus hari ini, ya.", audioFileName: "irodori-elementary1-04-a01-l01.mp3" },
-  { speakerId: "sota", japanese: <>そうですね。朝は少し寒かったですが、今は暖かいですね。</>, romaji: "Sou desu ne. Asa wa sukoshi samukatta desu ga, ima wa atatakai desu ne.", translation: "Iya, ya. Tadi pagi agak dingin, tetapi sekarang hangat.", audioFileName: "irodori-elementary1-04-a01-l02.mp3" },
+  { speakerId: "sota", japanese: <>そうですね。朝は少し寒かったですが、今は暖かいですね。</>, romaji: "Sou desu ne. Asa wa sukoshi samukatta desu ga, ima wa atatakai desu ne.", translation: "Benar. Tadi pagi agak dingin, tetapi sekarang hangat.", audioFileName: "irodori-elementary1-04-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>昨日は雨でしたね。</>, romaji: "Kinou wa ame deshita ne.", translation: "Kemarin hujan, ya.", audioFileName: "irodori-elementary1-04-a01-l03.mp3" },
-  { speakerId: "sota", japanese: <>はい。でも、今日は晴れています。</>, romaji: "Hai. Demo, kyou wa harete imasu.", translation: "Iya. Tetapi, hari ini cerah.", audioFileName: "irodori-elementary1-04-a01-l04.mp3" },
+  { speakerId: "sota", japanese: <>はい。でも、今日は晴れています。</>, romaji: "Hai. Demo, kyou wa harete imasu.", translation: "Ya, tetapi hari ini cerah.", audioFileName: "irodori-elementary1-04-a01-l04.mp3" },
   { speakerId: "yui", japanese: <>気持ちがいいですね。</>, romaji: "Kimochi ga ii desu ne.", translation: "Rasanya menyenangkan, ya.", audioFileName: "irodori-elementary1-04-a01-l05.mp3" },
 ];
 
 const yesterdayRainConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>昨日はすごい雨でしたね。</>, romaji: "Kinou wa sugoi ame deshita ne.", translation: "Kemarin hujannya deras sekali, ya.", audioFileName: "irodori-elementary1-04-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>そうですね。夜まで雨が降っていました。</>, romaji: "Sou desu ne. Yoru made ame ga futte imashita.", translation: "Betul. Hujan turun sampai malam.", audioFileName: "irodori-elementary1-04-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>今も少し降っていますか？</>, romaji: "Ima mo sukoshi futte imasu ka?", translation: "Apakah sekarang masih turun sedikit?", audioFileName: "irodori-elementary1-04-a02-l03.mp3" },
+  { speakerId: "akiko", japanese: <>今も少し降っていますか？</>, romaji: "Ima mo sukoshi futte imasu ka?", translation: "Apakah hujannya masih turun sedikit?", audioFileName: "irodori-elementary1-04-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>いいえ、もうやみましたよ。</>, romaji: "Iie, mou yamimashita yo.", translation: "Tidak, hujannya sudah berhenti.", audioFileName: "irodori-elementary1-04-a02-l04.mp3" },
 ];
 
 const forecastConversation: IrodoriUtterance[] = [
-  { speakerId: "sota", japanese: <>天気予報を見ましたか？</>, romaji: "Tenki yohou o mimashita ka?", translation: "Apakah sudah melihat prakiraan cuaca?", audioFileName: "irodori-elementary1-04-a03-l01.mp3" },
+  { speakerId: "sota", japanese: <>天気予報を見ましたか？</>, romaji: "Tenki yohou o mimashita ka?", translation: "Kamu sudah melihat prakiraan cuaca?", audioFileName: "irodori-elementary1-04-a03-l01.mp3" },
   { speakerId: "yui", japanese: <>はい。明日は晴れるでしょう。</>, romaji: "Hai. Ashita wa hareru deshou.", translation: "Ya. Besok kemungkinan akan cerah.", audioFileName: "irodori-elementary1-04-a03-l02.mp3" },
   { speakerId: "sota", japanese: <>雨は降らないでしょうか？</>, romaji: "Ame wa furanai deshou ka?", translation: "Kira-kira hujan tidak akan turun?", audioFileName: "irodori-elementary1-04-a03-l03.mp3" },
-  { speakerId: "yui", japanese: <>午後は少し曇るでしょう。でも、雨は降らないでしょう。</>, romaji: "Gogo wa sukoshi kumoru deshou. Demo, ame wa furanai deshou.", translation: "Sore nanti mungkin sedikit berawan. Tetapi, sepertinya tidak akan hujan.", audioFileName: "irodori-elementary1-04-a03-l04.mp3" },
+  { speakerId: "yui", japanese: <>午後は少し曇るでしょう。でも、雨は降らないでしょう。</>, romaji: "Gogo wa sukoshi kumoru deshou. Demo, ame wa furanai deshou.", translation: "Sore nanti mungkin akan sedikit berawan, tetapi sepertinya tidak akan hujan.", audioFileName: "irodori-elementary1-04-a03-l04.mp3" },
 ];
 
 const weatherPostConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>この天気の書き込みを読みましたか？</>, romaji: "Kono tenki no kakikomi o yomimashita ka?", translation: "Apakah sudah membaca unggahan cuaca ini?", audioFileName: "irodori-elementary1-04-a04-l01.mp3" },
+  { speakerId: "kenji", japanese: <>この天気の書き込みを読みましたか？</>, romaji: "Kono tenki no kakikomi o yomimashita ka?", translation: "Kamu sudah membaca unggahan cuaca ini?", audioFileName: "irodori-elementary1-04-a04-l01.mp3" },
   { speakerId: "akiko", japanese: <>はい。「台風が近づいています」と書いてあります。</>, romaji: "Hai. 'Taifuu ga chikazuite imasu' to kaite arimasu.", translation: "Ya. Tertulis, “Angin topan sedang mendekat.”", audioFileName: "irodori-elementary1-04-a04-l02.mp3" },
-  { speakerId: "kenji", japanese: <>今夜から風が強くなるでしょうね。</>, romaji: "Konya kara kaze ga tsuyoku naru deshou ne.", translation: "Mulai malam ini anginnya mungkin akan menjadi kencang, ya.", audioFileName: "irodori-elementary1-04-a04-l03.mp3" },
+  { speakerId: "kenji", japanese: <>今夜から風が強くなるでしょうね。</>, romaji: "Konya kara kaze ga tsuyoku naru deshou ne.", translation: "Mulai malam ini, anginnya mungkin akan semakin kencang.", audioFileName: "irodori-elementary1-04-a04-l03.mp3" },
   { speakerId: "akiko", japanese: <>そうですね。今日は家で過ごしましょう。</>, romaji: "Sou desu ne. Kyou wa ie de sugoshimashou.", translation: "Betul. Hari ini sebaiknya kita di rumah saja.", audioFileName: "irodori-elementary1-04-a04-l04.mp3" },
 ];
 
 const changingWeatherConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>朝から風が強いですね。</>, romaji: "Asa kara kaze ga tsuyoi desu ne.", translation: "Sejak pagi anginnya kencang, ya.", audioFileName: "irodori-elementary1-04-a05-l01.mp3" },
-  { speakerId: "sota", japanese: <>はい。雨も降っています。</>, romaji: "Hai. Ame mo futte imasu.", translation: "Iya. Hujan juga sedang turun.", audioFileName: "irodori-elementary1-04-a05-l02.mp3" },
+  { speakerId: "sota", japanese: <>はい。雨も降っています。</>, romaji: "Hai. Ame mo futte imasu.", translation: "Iya, hujannya juga masih turun.", audioFileName: "irodori-elementary1-04-a05-l02.mp3" },
   { speakerId: "yui", japanese: <>午後も雨でしょうか？</>, romaji: "Gogo mo ame deshou ka?", translation: "Apakah nanti sore juga akan hujan?", audioFileName: "irodori-elementary1-04-a05-l03.mp3" },
   { speakerId: "sota", japanese: <>天気予報では、夕方にはやむでしょう。</>, romaji: "Tenki yohou de wa, yuugata ni wa yamu deshou.", translation: "Menurut prakiraan cuaca, hujan mungkin berhenti menjelang sore.", audioFileName: "irodori-elementary1-04-a05-l04.mp3" },
 ];
@@ -230,7 +230,7 @@ const simulations = [
     japanese: <>今日はいい天気ですね。</>,
     translation: "Cuaca bagus hari ini, ya.",
     options: [
-      { key: "agree", label: "そうですね。気持ちがいいですね。", meaning: "Iya, ya. Rasanya menyenangkan." },
+      { key: "agree", label: "そうですね。気持ちがいいですね。", meaning: "Benar. Udara terasa nyaman, ya." },
       { key: "past", label: "昨日は雨でした。", meaning: "Kemarin hujan." },
       { key: "forecast", label: "明日は雨でしょう。", meaning: "Besok mungkin hujan." },
     ],
