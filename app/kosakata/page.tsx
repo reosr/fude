@@ -7,6 +7,7 @@ import { getMemorizedKanji } from "../../lib/memorized";
 import { Search, X, Volume2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
+import JapaneseReading from "../../components/JapaneseReading";
 import verbTypeData from "../../data/verb-type-index.json";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
@@ -251,12 +252,15 @@ export default function Kosakata() {
                     {getVocabSourceLabel(v)}
                   </span>
                   
-                  <p className="text-xs text-[#EAE6DD]/80 mt-3 truncate">{v.kana}</p>
-                  <p className="text-[10px] text-[#A3A099] mb-1 truncate">({v.romaji})</p>
-                  
-                  <p className="text-sm font-bold text-[#EAE6DD] leading-snug line-clamp-2">
-                    {v.meaning}
-                  </p>
+                  <JapaneseReading
+                    showOriginal={false}
+                    kana={v.kana}
+                    romaji={v.romaji}
+                    translation={v.meaning}
+                    kanaClassName="mt-3 font-mincho text-sm leading-snug text-[#EAE6DD]/90 truncate"
+                    romajiClassName="mt-1 text-xs italic text-[#A3A099] truncate"
+                    translationClassName="mt-1 text-sm font-bold leading-snug text-[#EAE6DD] line-clamp-2"
+                  />
                 </div>
               </div>
             </div>
@@ -311,17 +315,19 @@ export default function Kosakata() {
               </div>
 
               <div className="relative z-10 w-full">
-                <h3 className="mb-3 px-6">
+                <JapaneseReading
+                  kana={selectedWord.kana}
+                  romaji={selectedWord.romaji}
+                  translation={selectedWord.meaning}
+                  contentClassName="mb-1 block px-6 text-center"
+                  kanaClassName="mt-2 font-mincho text-xl leading-relaxed text-[#D6AD4F]"
+                  romajiClassName="mt-1 text-base text-[#A3A099]"
+                  translationClassName="mt-5 mb-6 block rounded-xl border border-[#33312E]/50 bg-[#262523]/80 p-5 text-xl font-bold text-[#EAE6DD] shadow-inner backdrop-blur-sm"
+                >
                   <FitText maxSize={60} minSize={20} className="font-mincho text-[#EAE6DD]">
                     {selectedWord.kanji}
                   </FitText>
-                </h3>
-                <p className="text-xl text-[#A3A099] mb-1">{selectedWord.kana}</p>
-                <p className="text-base text-[#B8860B] font-medium mb-6">{selectedWord.romaji}</p>
-                
-                <div className="bg-[#262523]/80 backdrop-blur-sm rounded-xl p-5 mb-6 shadow-inner border border-[#33312E]/50">
-                  <p className="text-xl font-bold text-[#EAE6DD]">{selectedWord.meaning}</p>
-                </div>
+                </JapaneseReading>
 
                 <KanjiStroke kanji={selectedWord.kanji} />
                 <KanaStroke kana={selectedWord.kana} />
