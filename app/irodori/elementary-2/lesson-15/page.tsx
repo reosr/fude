@@ -35,32 +35,32 @@ const lessonId = "elementary2-15";
 const readEcoPosterConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>このポスターには、何と書いてありますか。</>, romaji: "Kono posutaa ni wa, nan to kaite arimasu ka?", translation: "Apa yang tertulis di poster ini?", audioFileName: "irodori-elementary2-15-a01-l01.mp3" },
   { speakerId: "sota", japanese: <>使い終わったら、電気を消してください、と書いてあります。</>, romaji: "Tsukai owattara, denki o keshite kudasai, to kaite arimasu.", translation: "Tertulis, 'Setelah selesai digunakan, silakan matikan lampu'.", audioFileName: "irodori-elementary2-15-a01-l02.mp3" },
-  { speakerId: "yui", japanese: <>電気を消すのを忘れないようにしたいですね。</>, romaji: "Denki o kesu no o wasurenai you ni shitai desu ne.", translation: "Kita sebaiknya berusaha agar tidak lupa mematikan lampu, ya.", audioFileName: "irodori-elementary2-15-a01-l03.mp3" },
+  { speakerId: "yui", japanese: <>電気を消すのを忘れないようにしたいですね。</>, romaji: "Denki o kesu no o wasurenai you ni shitai desu ne.", translation: "Kita usahakan agar tidak lupa mematikan lampu, ya.", audioFileName: "irodori-elementary2-15-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>そうですね。使っていない部屋の電気は消しましょう。</>, romaji: "Sou desu ne. Tsukatte inai heya no denki wa keshimashou.", translation: "Betul. Mari matikan lampu di ruangan yang tidak digunakan.", audioFileName: "irodori-elementary2-15-a01-l04.mp3" },
 ];
 const saveEnergyConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>会社では、節電のために何をしていますか。</>, romaji: "Kaisha de wa, setsuden no tame ni nani o shite imasu ka?", translation: "Di kantor, apa yang dilakukan untuk menghemat listrik?", audioFileName: "irodori-elementary2-15-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>使っていない部屋の電気を消すようにしています。</>, romaji: "Tsukatte inai heya no denki o kesu you ni shite imasu.", translation: "Kami berusaha mematikan lampu di ruangan yang tidak digunakan.", audioFileName: "irodori-elementary2-15-a02-l02.mp3" },
-  { speakerId: "akiko", japanese: <>会議の資料はどうしていますか。</>, romaji: "Kaigi no shiryou wa dou shite imasu ka?", translation: "Bagaimana dengan dokumen rapat?", audioFileName: "irodori-elementary2-15-a02-l03.mp3" },
-  { speakerId: "kenji", japanese: <>紙を節約するために、両面コピーにしています。</>, romaji: "Kami o setsuyaku suru tame ni, ryoumen kopii ni shite imasu.", translation: "Untuk menghemat kertas, kami menggunakan fotokopi dua sisi.", audioFileName: "irodori-elementary2-15-a02-l04.mp3" },
+  { speakerId: "akiko", japanese: <>会議の資料はどうしていますか。</>, romaji: "Kaigi no shiryou wa dou shite imasu ka?", translation: "Kalau dokumen rapat, bagaimana?", audioFileName: "irodori-elementary2-15-a02-l03.mp3" },
+  { speakerId: "kenji", japanese: <>紙を節約するために、両面コピーにしています。</>, romaji: "Kami o setsuyaku suru tame ni, ryoumen kopii ni shite imasu.", translation: "Untuk menghemat kertas, kami menggunakan fotokopi bolak-balik.", audioFileName: "irodori-elementary2-15-a02-l04.mp3" },
 ];
 const saveWaterConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>お皿を洗うとき、水を出したままにしていますか。</>, romaji: "Osara o arau toki, mizu o dashita mama ni shite imasu ka?", translation: "Saat mencuci piring, apakah air dibiarkan mengalir terus?", audioFileName: "irodori-elementary2-15-a03-l01.mp3" },
-  { speakerId: "akiko", japanese: <>いいえ。洗剤をつけるときは、水を止めています。</>, romaji: "Iie. Senzai o tsukeru toki wa, mizu o tomete imasu.", translation: "Tidak. Saat menggunakan sabun pencuci, saya mematikan air.", audioFileName: "irodori-elementary2-15-a03-l02.mp3" },
-  { speakerId: "yui", japanese: <>それは節水にいいですね。</>, romaji: "Sore wa sessui ni ii desu ne.", translation: "Itu baik untuk menghemat air, ya.", audioFileName: "irodori-elementary2-15-a03-l03.mp3" },
-  { speakerId: "akiko", japanese: <>はい。できることから続けるようにしています。</>, romaji: "Hai. Dekiru koto kara tsuzukeru you ni shite imasu.", translation: "Ya. Saya berusaha memulai dari hal yang bisa dilakukan.", audioFileName: "irodori-elementary2-15-a03-l04.mp3" },
+  { speakerId: "akiko", japanese: <>いいえ。洗剤をつけるときは、水を止めています。</>, romaji: "Iie. Senzai o tsukeru toki wa, mizu o tomete imasu.", translation: "Tidak. Saat memakai sabun, kerannya saya tutup.", audioFileName: "irodori-elementary2-15-a03-l02.mp3" },
+  { speakerId: "yui", japanese: <>それは節水にいいですね。</>, romaji: "Sore wa sessui ni ii desu ne.", translation: "Itu cara yang bagus untuk menghemat air, ya.", audioFileName: "irodori-elementary2-15-a03-l03.mp3" },
+  { speakerId: "akiko", japanese: <>はい。できることから続けるようにしています。</>, romaji: "Hai. Dekiru koto kara tsuzukeru you ni shite imasu.", translation: "Ya. Saya mulai dari hal-hal yang bisa saya lakukan.", audioFileName: "irodori-elementary2-15-a03-l04.mp3" },
 ];
 const readWasteGuideConversation: IrodoriUtterance[] = [
-  { speakerId: "kenji", japanese: <>この地域では、ごみを何種類に分けていますか。</>, romaji: "Kono chiiki de wa, gomi o nan shurui ni wakete imasu ka?", translation: "Di wilayah ini, sampah dibagi menjadi berapa jenis?", audioFileName: "irodori-elementary2-15-a04-l01.mp3" },
+  { speakerId: "kenji", japanese: <>この地域では、ごみを何種類に分けていますか。</>, romaji: "Kono chiiki de wa, gomi o nan shurui ni wakete imasu ka?", translation: "Di daerah ini, sampah dipilah menjadi berapa jenis?", audioFileName: "irodori-elementary2-15-a04-l01.mp3" },
   { speakerId: "sota", japanese: <>四種類です。資源ごみ、燃えるごみ、燃えないごみ、粗大ごみです。</>, romaji: "Yon shurui desu. Shigen gomi, moeru gomi, moenai gomi, sodai gomi desu.", translation: "Empat jenis: sampah daur ulang, sampah yang dapat dibakar, yang tidak dapat dibakar, dan sampah berukuran besar.", audioFileName: "irodori-elementary2-15-a04-l02.mp3" },
-  { speakerId: "kenji", japanese: <>種類によって、出す曜日が違いますか。</>, romaji: "Shurui ni yotte, dasu youbi ga chigaimasu ka?", translation: "Apakah hari pembuangannya berbeda menurut jenis sampah?", audioFileName: "irodori-elementary2-15-a04-l03.mp3" },
-  { speakerId: "sota", japanese: <>はい。説明の紙で、曜日と注意点を確認してください。</>, romaji: "Hai. Setsumei no kami de, youbi to chuuiten o kakunin shite kudasai.", translation: "Ya. Silakan periksa hari dan hal yang perlu diperhatikan pada lembar panduan.", audioFileName: "irodori-elementary2-15-a04-l04.mp3" },
+  { speakerId: "kenji", japanese: <>種類によって、出す曜日が違いますか。</>, romaji: "Shurui ni yotte, dasu youbi ga chigaimasu ka?", translation: "Apakah jadwal membuangnya berbeda-beda, tergantung jenis sampah?", audioFileName: "irodori-elementary2-15-a04-l03.mp3" },
+  { speakerId: "sota", japanese: <>はい。説明の紙で、曜日と注意点を確認してください。</>, romaji: "Hai. Setsumei no kami de, youbi to chuuiten o kakunin shite kudasai.", translation: "Ya. Cek jadwal dan hal-hal yang perlu diperhatikan di lembar panduan.", audioFileName: "irodori-elementary2-15-a04-l04.mp3" },
 ];
 const askWasteDisposalConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>このペットボトルは、どうやって捨てればいいですか。</>, romaji: "Kono petto botoru wa, dou yatte sutereba ii desu ka?", translation: "Bagaimana cara membuang botol plastik ini?", audioFileName: "irodori-elementary2-15-a05-l01.mp3" },
-  { speakerId: "kenji", japanese: <>この地域の案内では、資源ごみの日に出すことになっています。</>, romaji: "Kono chiiki no annai de wa, shigen gomi no hi ni dasu koto ni natte imasu.", translation: "Menurut panduan wilayah ini, botol tersebut dikeluarkan pada hari sampah daur ulang.", audioFileName: "irodori-elementary2-15-a05-l02.mp3" },
+  { speakerId: "kenji", japanese: <>この地域の案内では、資源ごみの日に出すことになっています。</>, romaji: "Kono chiiki no annai de wa, shigen gomi no hi ni dasu koto ni natte imasu.", translation: "Menurut panduan di daerah ini, botol plastik dibuang pada hari pengumpulan sampah daur ulang.", audioFileName: "irodori-elementary2-15-a05-l02.mp3" },
   { speakerId: "akiko", japanese: <>ほかに、気をつけることはありますか。</>, romaji: "Hoka ni, ki o tsukeru koto wa arimasu ka?", translation: "Apakah ada hal lain yang perlu diperhatikan?", audioFileName: "irodori-elementary2-15-a05-l03.mp3" },
-  { speakerId: "kenji", japanese: <>はい。ラベルなどの扱いも、地域の説明を確認してください。</>, romaji: "Hai. Raberu nado no atsukai mo, chiiki no setsumei o kakunin shite kudasai.", translation: "Ya. Periksa juga petunjuk wilayah setempat mengenai label dan bagian lainnya.", audioFileName: "irodori-elementary2-15-a05-l04.mp3" },
+  { speakerId: "kenji", japanese: <>はい。ラベルなどの扱いも、地域の説明を確認してください。</>, romaji: "Hai. Raberu nado no atsukai mo, chiiki no setsumei o kakunin shite kudasai.", translation: "Ya. Periksa juga aturan setempat tentang label dan bagian lainnya.", audioFileName: "irodori-elementary2-15-a05-l04.mp3" },
 ];
 
 const canDos = [
@@ -177,12 +177,12 @@ const simulations: Simulation[] = [
     { key: "b", label: "Mematikan lampu setelah selesai menggunakan ruangan.", meaning: "Ini sesuai dengan pesan poster." },
     { key: "c", label: "Membiarkan lampu tetap menyala.", meaning: "Pesan poster justru meminta lampu dimatikan." },
   ], answer: "b", explanation: "Cari kata kerja utama pada poster, lalu perhatikan kapan tindakan dilakukan." },
-  { title: "02 · Membicarakan kebiasaan menjaga lingkungan", heading: "Memahami tindakan dan tujuannya", prompt: "Seseorang berkata bahwa ia selalu membawa tas belanja pakai ulang agar mengurangi sampah. Apa kebiasaannya?", japanese: <>ごみを減らすために、マイバッグを持ち歩いています。</>, translation: "Untuk mengurangi sampah, saya membawa tas belanja pakai ulang.", options: [
+  { title: "02 · Membicarakan kebiasaan menjaga lingkungan", heading: "Memahami tindakan dan tujuannya", prompt: "Seseorang berkata bahwa ia selalu membawa tas belanja pakai ulang agar mengurangi sampah. Apa kebiasaannya?", japanese: <>ごみを減らすために、マイバッグを持ち歩いています。</>, translation: "Saya membawa tas belanja pakai ulang untuk mengurangi sampah.", options: [
     { key: "a", label: "Membawa tas belanja pakai ulang.", meaning: "マイバッグを持ち歩く berarti membawa tas belanja sendiri." },
     { key: "b", label: "Menggunakan lebih banyak kantong sekali pakai.", meaning: "Pernyataan itu bertujuan mengurangi sampah, bukan menambahnya." },
     { key: "c", label: "Membiarkan air mengalir.", meaning: "Air tidak disebutkan dalam kalimat." },
   ], answer: "a", explanation: "Pahami tindakan yang dilakukan dan tujuan lingkungan yang disebutkan." },
-  { title: "03 · Membaca panduan pemilahan sampah", heading: "Menemukan hari pengumpulan", prompt: "Pada panduan fiktif Fude, sampah daur ulang dikumpulkan pada hari Rabu. Kapan kaleng dan kertas bekas dikeluarkan jika keduanya termasuk kategori itu?", japanese: <>資源ごみは、水曜日に出してください。</>, translation: "Silakan mengeluarkan sampah daur ulang pada hari Rabu.", options: [
+  { title: "03 · Membaca panduan pemilahan sampah", heading: "Menemukan hari pengumpulan", prompt: "Pada panduan fiktif Fude, sampah daur ulang dikumpulkan pada hari Rabu. Kapan kaleng dan kertas bekas dikeluarkan jika keduanya termasuk kategori itu?", japanese: <>資源ごみは、水曜日に出してください。</>, translation: "Sampah daur ulang harus dibuang pada hari Rabu.", options: [
     { key: "a", label: "Hari Senin.", meaning: "Panduan contoh menyebut hari Rabu." },
     { key: "b", label: "Hari Rabu.", meaning: "Kertas bekas dan kaleng termasuk contoh kategori資源ごみ pada latihan ini." },
     { key: "c", label: "Setiap hari tanpa melihat panduan.", meaning: "Panduan memberikan hari pengumpulan tertentu." },
