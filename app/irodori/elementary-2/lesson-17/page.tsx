@@ -393,9 +393,9 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
             <article key={task.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
               <p className="text-[9px] font-black tracking-[0.16em] text-[#E5A9C4]">{task.title}</p>
               <h3 className="mt-2 text-sm font-bold text-[#EAE6DD]">{task.heading}</h3>
-              <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showRomaji={false} allowIndexFallback>{task.prompt}</JapaneseReading></p>
+              <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{task.prompt}</JapaneseReading></p>
               <div className="mt-3 rounded-xl border border-[#A64C77]/20 bg-[#35232D]/60 p-3">
-                <p className="font-mincho text-base leading-7 text-[#F1EBDD]"><JapaneseReading showRomaji={false} allowIndexFallback>{task.japanese}</JapaneseReading></p>
+                <p className="font-mincho text-base leading-7 text-[#F1EBDD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{task.japanese}</JapaneseReading></p>
                 <p className="mt-1 text-xs text-[#A9A398]">{task.translation}</p>
               </div>
               <div className="mt-3 grid gap-2">
@@ -410,7 +410,7 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
                         ? "border-[#E5A9C4]/60 bg-[#A64C77]/15 text-[#F1EBDD]"
                         : "border-white/[0.07] bg-black/15 text-[#A9A398]"
                   )}>
-                    <JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
+                    <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading>
                   </button>
                 ))}
               </div>
@@ -451,7 +451,7 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
             return (
               <article key={index} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
                 <p className="text-[9px] font-black tracking-[0.16em] text-[#E5A9C4]">LATIHAN {String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]"><JapaneseReading showRomaji={false} allowIndexFallback>{task.prompt}</JapaneseReading></h3>
+                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{task.prompt}</JapaneseReading></h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {task.options.map((option) => (
                     <button key={option.key} type="button" disabled={practiceSubmitted} aria-pressed={selected === option.key} onClick={() => setPracticeAnswers((current) => ({ ...current, [index]: option.key }))} className={"rounded-lg border px-3 py-2.5 text-left text-xs transition-colors " + (
@@ -462,13 +462,13 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
                           : selected === option.key
                             ? "border-[#E5A9C4]/60 bg-[#A64C77]/15 text-[#F1EBDD]"
                             : "border-white/[0.07] bg-black/15 text-[#A9A398]"
-                    )}><JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>
+                    )}><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>
                   ))}
                 </div>
                 {practiceSubmitted && (
                   <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
                     <span className={isCorrect ? "font-bold text-emerald-300" : "font-bold text-[#E7A1A1]"}>{isCorrect ? "Benar. " : "Belum tepat. "}</span>
-                    <JapaneseReading showRomaji={false} allowIndexFallback>{task.explanation}</JapaneseReading>
+                    <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{task.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -498,7 +498,7 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
             return (
               <article key={index} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
                 <p className="text-[9px] font-black tracking-[0.16em] text-[#E5A9C4]">SOAL {String(index + 1).padStart(2, "0")}</p>
-                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]"><JapaneseReading showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading></h3>
+                <h3 className="mt-2 text-sm font-semibold leading-6 text-[#EAE6DD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{question.prompt}</JapaneseReading></h3>
                 <div className="mt-3 grid gap-2 sm:grid-cols-3">
                   {question.options.map((option) => (
                     <button key={option.key} type="button" disabled={quizSubmitted} aria-pressed={selected === option.key} onClick={() => setAnswers((current) => ({ ...current, [index]: option.key }))} className={"rounded-lg border px-3 py-2.5 text-left text-xs transition-colors " + (
@@ -509,13 +509,13 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
                           : selected === option.key
                             ? "border-[#E5A9C4]/60 bg-[#A64C77]/15 text-[#F1EBDD]"
                             : "border-white/[0.07] bg-black/15 text-[#A9A398]"
-                    )}><JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>
+                    )}><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>
                   ))}
                 </div>
                 {quizSubmitted && (
                   <p className="mt-3 text-[10px] leading-5 text-[#A9A398]">
                     <span className={isCorrect ? "font-bold text-emerald-300" : "font-bold text-[#E7A1A1]"}>{isCorrect ? "Benar. " : "Belum tepat. "}</span>
-                    <JapaneseReading showRomaji={false} allowIndexFallback>{question.explanation}</JapaneseReading>
+                    <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{question.explanation}</JapaneseReading>
                   </p>
                 )}
               </article>
@@ -553,7 +553,7 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
                     visibleRatings[item.id] === option.value
                       ? "border-[#E5A9C4]/50 bg-[#A64C77]/20 text-[#F8EEDC]"
                       : "border-white/[0.07] bg-black/15 text-[#A9A398]"
-                  )}><JapaneseReading showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>
+                  )}><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>
                 ))}
               </div>
             </article>
