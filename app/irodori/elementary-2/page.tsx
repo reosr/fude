@@ -50,9 +50,7 @@ export default function IrodoriElementaryTwoPage() {
           </p>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">
-                Elementary 2
-              </h1>
+              <h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Dasar 2</h1>
               <p className="mt-1 text-sm font-semibold text-[#A9C9E8]">
                 Tingkat A2 · 18 Pelajaran
               </p>
@@ -121,41 +119,41 @@ export default function IrodoriElementaryTwoPage() {
               || (lesson === 18 && lessonSeventeenCompleted);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const title = lesson === 1
-              ? "I just came to Japan last week."
+              ? "Saya baru datang ke Jepang minggu lalu."
               : lesson === 2
-                ? "He looks a serious person."
+                ? "Dia tampak seperti orang yang serius."
                 : lesson === 3
-                  ? "I cannot eat it because of an allergy."
+                  ? "Saya tidak bisa memakannya karena alergi."
                   : lesson === 4
-                    ? "Please eat it without soy sauce."
+                    ? "Silakan makan tanpa kecap asin."
                     : lesson === 5
-                      ? "You should make a reservation early."
+                      ? "Sebaiknya pesan tempat lebih awal."
                       : lesson === 6
-                        ? "I am glad that I went to a lot of different places."
+                        ? "Saya senang bisa mengunjungi banyak tempat."
                         : lesson === 7
-                          ? "If it rains, it will be held at the hall."
+                          ? "Kalau hujan, acara akan diadakan di aula."
                           : lesson === 8
-                            ? "Do you know where the food stands are?"
+                            ? "Apakah kamu tahu di mana stan makanan?"
                             : lesson === 9
-                              ? "What do people do on Coming-of-Age Day?"
+                              ? "Apa yang dilakukan orang pada Hari Kedewasaan?"
                               : lesson === 10
-                                ? "What kind of clothes should I wear?"
+                                ? "Pakaian seperti apa yang sebaiknya saya kenakan?"
                                 : lesson === 11
-                                  ? "I forgot to bring my point card."
+                                  ? "Saya lupa membawa kartu poin."
                                   : lesson === 12
-                                    ? "This vacuum cleaner is light and easy to move around."
+                                    ? "Penyedot debu ini ringan dan mudah dipindahkan."
                                     : lesson === 13
-                                      ? "They display a lot of materials."
+                                      ? "Mereka memajang banyak bahan."
                                       : lesson === 14
-                                      ? "Will you cut my bangs a little shorter?"
+                                      ? "Bisakah poni saya dipotong sedikit lebih pendek?"
                                       : lesson === 15
-                                        ? "The lights in the meeting room were left on."
+                                        ? "Lampu ruang rapat dibiarkan menyala."
                                         : lesson === 16
-                                          ? "Do not panic in case of an earthquake."
+                                          ? "Jangan panik jika terjadi gempa."
                                           : lesson === 17
-                                            ? "I can speak Japanese better than before."
+                                            ? "Sekarang saya bisa berbicara bahasa Jepang lebih baik daripada sebelumnya."
                                             : lesson === 18
-                                              ? "I am thinking about starting my own company in the future."
+                                              ? "Saya berpikir untuk mendirikan perusahaan sendiri di masa depan."
                                               : "Lesson " + String(lesson).padStart(2, "0");
             const description = lesson === 1
               ? "Memahami peran anggota, memperkenalkan diri lebih lengkap, menceritakan kota asal, dan menulis profil singkat."
@@ -203,7 +201,7 @@ export default function IrodoriElementaryTwoPage() {
               )}>
                 <div className="flex items-center justify-between gap-3">
                   <span className="text-[9px] font-black tracking-[0.2em] text-[#A9C9E8]">
-                    LESSON {String(lesson).padStart(2, "0")}
+                    PELAJARAN {String(lesson).padStart(2, "0")}
                   </span>
                   {isAvailable ? (
                     <CheckCircle2 size={17} className={isCompleted ? "text-emerald-300" : "text-[#A9C9E8]"} />
