@@ -284,6 +284,7 @@ export default function IrodoriConversation({
                     {speaker?.name ?? utterance.speakerId}
                   </p>
                   <JapaneseReading
+                    allowIndexFallback
                     kana={kanaReading}
                     romaji={utterance.romaji}
                     translation={utterance.translation}
