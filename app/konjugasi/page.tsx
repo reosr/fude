@@ -5,6 +5,7 @@ import { Search, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
 import { typeBadgeClass, typeAccentClass } from "../../components/verbType";
+import JapaneseReading from "@/components/JapaneseReading";
 
 let wanakanaModule: typeof import("wanakana") | null = null;
 
@@ -925,7 +926,12 @@ return (
                         <p className="text-xs md:text-sm font-bold text-[#C93438]">{form.name}</p>
                         <p className="text-[10px] md:text-xs text-[#A3A099]">{form.jpName}</p>
                       </div>
-                      <div className="text-2xl md:text-3xl text-[#EAE6DD] font-mincho mb-1 leading-[2.2] break-words [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]" dangerouslySetInnerHTML={{ __html: form.ruby }} />
+                      <JapaneseReading
+                        html={form.ruby}
+                        contentClassName="text-2xl md:text-3xl text-[#EAE6DD] font-mincho mb-1 leading-[2.2] break-words [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
+                        kanaClassName="mt-1 font-mincho text-sm md:text-base text-[#D6AD4F]"
+                        showRomaji={false}
+                      />
                       <p className="text-xs md:text-sm text-[#B8860B] italic mb-3 md:mb-4 break-words">{form.romaji}</p>
                       <div className="mt-auto">
                         <p className="text-[10px] md:text-xs text-[#A3A099] mb-2 border-t border-[#33312E]/80 pt-2 md:pt-3">{form.desc}</p>
@@ -1027,7 +1033,12 @@ return (
                           const romajiText = example.romaji || (romajiSource ? romanizeExample(romajiSource) : "");
                           return (
                             <div key={`${example.sourceId || "example"}-${index}`} className="rounded-lg border border-[#33312E] bg-[#1E1D1B] p-3">
-                              <p className="text-base md:text-lg text-[#EAE6DD] font-mincho leading-relaxed" dangerouslySetInnerHTML={{ __html: furiganaToSafeHtml(example.furigana || example.ja) }} />
+                              <JapaneseReading
+                                html={furiganaToSafeHtml(example.furigana || example.ja)}
+                                contentClassName="text-base md:text-lg text-[#EAE6DD] font-mincho leading-relaxed"
+                                kanaClassName="mt-1 font-mincho text-sm text-[#D6AD4F]"
+                                showRomaji={false}
+                              />
                               {romajiText && <p className="text-[10px] text-[#B8860B] italic mt-1 break-words">{romajiText}</p>}
                               <p className="text-xs text-[#D0CAC0] mt-2">{example.translation}</p>
                               {example.sourceUrl && (
