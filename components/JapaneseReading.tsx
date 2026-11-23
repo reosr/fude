@@ -2,7 +2,7 @@
 
 import { toHiragana, toRomaji } from "wanakana";
 import type { ReactNode } from "react";
-import { addRubyFromParentheticalReadings, extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
+import { addRubyFromParentheticalReadings, addRubyFromReadingIndex, extractKanaFromReactNode, extractKanaFromRubyHtml } from "@/lib/japanese-text";
 
 interface Props {
   html?: string;
@@ -25,6 +25,16 @@ interface Props {
   allowIndexFallback?: boolean;
 }
 
+function escapeHtmlText(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  })[char] ?? char);
+}
+
 export default function JapaneseReading({
   html,
   children,
@@ -42,11 +52,17 @@ export default function JapaneseReading({
   showKanaForKanaOnly = false,
   allowIndexFallback = false,
 }: Props) {
-  // Bacaan eksplisit dalam tanda kurung seperti 分（ふん／ぷん）
-  // dirender sebagai ruby sebelum bacaan lengkap dihitung.
-  const displayHtml = html !== undefined
-    ? addRubyFromParentheticalReadings(html)
-    : undefined;
+  // String biasa juga dapat diberi ruby, tetapi hanya saat fallback bacaan
+  // diizinkan. Soal yang menguji bacaan/penulisan kanji tetap menampilkan target
+  // tanpa petunjuk otomatis agar jawabannya tidak bocor.
+  const sourceHtml = html !== undefined
+    ? html
+    : allowIndexFallback && (typeof children === "string" || typeof children === "number")
+      ? escapeHtmlText(String(children))
+      : undefined;
+  const displayHtml = sourceHtml !== undefined && allowIndexFallback
+    ? addRubyFromReadingIndex(addRubyFromParentheticalReadings(sourceHtml))
+    : sourceHtml;
   const extractedReading = displayHtml !== undefined
     ? extractKanaFromRubyHtml(displayHtml, allowIndexFallback)
     : extractKanaFromReactNode(children, allowIndexFallback);
