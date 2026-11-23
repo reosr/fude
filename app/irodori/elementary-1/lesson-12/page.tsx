@@ -14,35 +14,35 @@ import type { IrodoriRating } from "@/lib/irodori-progress";
 const speakers = IRODORI_SPEAKERS;
 const lessonId = "elementary1-12";
 const appearanceConversation: IrodoriUtterance[] = [
-{speakerId:"yui",japanese:<>そのお弁当、おいしそうですね。</>,romaji:"Sono obentou, oishisou desu ne.",translation:"Bekal itu kelihatannya enak sekali.",audioFileName:"irodori-elementary1-12-a01-l01.mp3"},
+{speakerId:"yui",japanese:<>そのお弁当、おいしそうですね。</>,romaji:"Sono obentou, oishisou desu ne.",translation:"Bento itu kelihatannya enak, ya.",audioFileName:"irodori-elementary1-12-a01-l01.mp3"},
 {speakerId:"akiko",japanese:<>ありがとうございます。朝、駅の近くで買いました。</>,romaji:"Arigatou gozaimasu. Asa, eki no chikaku de kaimashita.",translation:"Terima kasih. Tadi pagi saya membelinya di dekat stasiun.",audioFileName:"irodori-elementary1-12-a01-l02.mp3"},
 {speakerId:"yui",japanese:<>卵焼きも入っていますね。</>,romaji:"Tamagoyaki mo haitte imasu ne.",translation:"Ada tamagoyaki juga, ya.",audioFileName:"irodori-elementary1-12-a01-l03.mp3"},
 {speakerId:"akiko",japanese:<>はい。色もきれいで、おいしいですよ。</>,romaji:"Hai. Iro mo kirei de, oishii desu yo.",translation:"Ya. Warnanya juga cantik dan rasanya enak.",audioFileName:"irodori-elementary1-12-a01-l04.mp3"},
 ];
 const tasteAppearanceConversation: IrodoriUtterance[] = [
 {speakerId:"sota",japanese:<>わあ、それは辛そうな料理ですね。</>,romaji:"Waa, sore wa karasou na ryouri desu ne.",translation:"Wah, masakan itu kelihatannya pedas.",audioFileName:"irodori-elementary1-12-a02-l01.mp3"},
-{speakerId:"yui",japanese:<>これは野菜のカレーです。でも、あまり辛くないですよ。</>,romaji:"Kore wa yasai no karee desu. Demo, amari karakunai desu yo.",translation:"Ini kari sayuran. Tetapi, rasanya tidak terlalu pedas.",audioFileName:"irodori-elementary1-12-a02-l02.mp3"},
-{speakerId:"sota",japanese:<>そうですか。いいにおいですね。</>,romaji:"Sou desu ka. Ii nioi desu ne.",translation:"Oh begitu. Aromanya harum, ya.",audioFileName:"irodori-elementary1-12-a02-l03.mp3"},
-{speakerId:"yui",japanese:<>よかったら、食べてみてください。</>,romaji:"Yokattara, tabete mite kudasai.",translation:"Kalau berkenan, silakan coba.",audioFileName:"irodori-elementary1-12-a02-l04.mp3"},
+{speakerId:"yui",japanese:<>これは野菜のカレーです。でも、あまり辛くないですよ。</>,romaji:"Kore wa yasai no karee desu. Demo, amari karakunai desu yo.",translation:"Ini kare sayuran. Rasanya tidak terlalu pedas, kok.",audioFileName:"irodori-elementary1-12-a02-l02.mp3"},
+{speakerId:"sota",japanese:<>そうですか。いいにおいですね。</>,romaji:"Sou desu ka. Ii nioi desu ne.",translation:"Oh, begitu. Wanginya enak, ya.",audioFileName:"irodori-elementary1-12-a02-l03.mp3"},
+{speakerId:"yui",japanese:<>よかったら、食べてみてください。</>,romaji:"Yokattara, tabete mite kudasai.",translation:"Kalau mau, silakan coba.",audioFileName:"irodori-elementary1-12-a02-l04.mp3"},
 ];
 const tryingFoodConversation: IrodoriUtterance[] = [
-{speakerId:"akiko",japanese:<>よかったら、この卵焼き、食べてみてください。</>,romaji:"Yokattara, kono tamagoyaki, tabete mite kudasai.",translation:"Kalau berkenan, silakan coba tamagoyaki ini.",audioFileName:"irodori-elementary1-12-a03-l01.mp3"},
-{speakerId:"kenji",japanese:<>ありがとうございます。いただきます。</>,romaji:"Arigatou gozaimasu. Itadakimasu.",translation:"Terima kasih. Saya makan, ya.",audioFileName:"irodori-elementary1-12-a03-l02.mp3"},
+{speakerId:"akiko",japanese:<>よかったら、この卵焼き、食べてみてください。</>,romaji:"Yokattara, kono tamagoyaki, tabete mite kudasai.",translation:"Kalau mau, silakan coba tamagoyaki ini.",audioFileName:"irodori-elementary1-12-a03-l01.mp3"},
+{speakerId:"kenji",japanese:<>ありがとうございます。いただきます。</>,romaji:"Arigatou gozaimasu. Itadakimasu.",translation:"Terima kasih, saya coba ya.",audioFileName:"irodori-elementary1-12-a03-l02.mp3"},
 {speakerId:"akiko",japanese:<>どうですか。</>,romaji:"Dou desu ka?",translation:"Bagaimana rasanya?",audioFileName:"irodori-elementary1-12-a03-l03.mp3"},
-{speakerId:"kenji",japanese:<>甘くて、おいしいですね。もう一ついただきます。</>,romaji:"Amakute, oishii desu ne. Mou hitotsu itadakimasu.",translation:"Manis dan enak, ya. Saya ambil satu lagi.",audioFileName:"irodori-elementary1-12-a03-l04.mp3"},
+{speakerId:"kenji",japanese:<>甘くて、おいしいですね。もう一ついただきます。</>,romaji:"Amakute, oishii desu ne. Mou hitotsu itadakimasu.",translation:"Manis dan enak, ya. Saya ambil satu lagi, ya.",audioFileName:"irodori-elementary1-12-a03-l04.mp3"},
 ];
 const tasteFeedbackConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>このサラダ、食べてみますか。</>,romaji:"Kono sarada, tabete mimasu ka?",translation:"Mau mencoba salad ini?",audioFileName:"irodori-elementary1-12-a04-l01.mp3"},
 {speakerId:"sota",japanese:<>はい。ありがとうございます。</>,romaji:"Hai. Arigatou gozaimasu.",translation:"Ya. Terima kasih.",audioFileName:"irodori-elementary1-12-a04-l02.mp3"},
 {speakerId:"yui",japanese:<>味はどうですか。</>,romaji:"Aji wa dou desu ka?",translation:"Bagaimana rasanya?",audioFileName:"irodori-elementary1-12-a04-l03.mp3"},
-{speakerId:"sota",japanese:<>すっぱくて、ちょっと苦手です。でも、新しい味ですね。</>,romaji:"Suppakute, chotto nigate desu. Demo, atarashii aji desu ne.",translation:"Rasanya asam, jadi agak kurang cocok bagi saya. Tetapi ini rasa yang baru bagi saya.",audioFileName:"irodori-elementary1-12-a04-l04.mp3"},
+{speakerId:"sota",japanese:<>すっぱくて、ちょっと苦手です。でも、新しい味ですね。</>,romaji:"Suppakute, chotto nigate desu. Demo, atarashii aji desu ne.",translation:"Rasanya agak terlalu asam buat saya, tapi ini rasa yang unik.",audioFileName:"irodori-elementary1-12-a04-l04.mp3"},
 ];
 const ingredientsConversation: IrodoriUtterance[] = [
-{speakerId:"kenji",japanese:<>これは茶碗蒸しです。卵の料理ですよ。</>,romaji:"Kore wa chawanmushi desu. Tamago no ryouri desu yo.",translation:"Ini chawanmushi, masakan berbahan telur.",audioFileName:"irodori-elementary1-12-a05-l01.mp3"},
+{speakerId:"kenji",japanese:<>これは茶碗蒸しです。卵の料理ですよ。</>,romaji:"Kore wa chawanmushi desu. Tamago no ryouri desu yo.",translation:"Ini chawanmushi, hidangan berbahan telur.",audioFileName:"irodori-elementary1-12-a05-l01.mp3"},
 {speakerId:"yui",japanese:<>中に何が入っていますか。</>,romaji:"Naka ni nani ga haitte imasu ka?",translation:"Apa saja yang ada di dalamnya?",audioFileName:"irodori-elementary1-12-a05-l02.mp3"},
-{speakerId:"kenji",japanese:<>鶏肉と、きのこが入っています。だしも使います。</>,romaji:"Toriniku to, kinoko ga haitte imasu. Dashi mo tsukaimasu.",translation:"Di dalamnya ada ayam dan jamur. Kaldu dashi juga digunakan.",audioFileName:"irodori-elementary1-12-a05-l03.mp3"},
-{speakerId:"yui",japanese:<>いいにおいですね。いただきます。</>,romaji:"Ii nioi desu ne. Itadakimasu.",translation:"Aromanya harum, ya. Saya coba, ya.",audioFileName:"irodori-elementary1-12-a05-l04.mp3"},
-{speakerId:"kenji",japanese:<>味は、うすくないですか。</>,romaji:"Aji wa, usukunai desu ka?",translation:"Apakah rasanya tidak terlalu tawar?",audioFileName:"irodori-elementary1-12-a05-l05.mp3"},
+{speakerId:"kenji",japanese:<>鶏肉と、きのこが入っています。だしも使います。</>,romaji:"Toriniku to, kinoko ga haitte imasu. Dashi mo tsukaimasu.",translation:"Isinya ayam dan jamur, ditambah kaldu dashi.",audioFileName:"irodori-elementary1-12-a05-l03.mp3"},
+{speakerId:"yui",japanese:<>いいにおいですね。いただきます。</>,romaji:"Ii nioi desu ne. Itadakimasu.",translation:"Wanginya enak, ya. Saya coba, ya.",audioFileName:"irodori-elementary1-12-a05-l04.mp3"},
+{speakerId:"kenji",japanese:<>味は、うすくないですか。</>,romaji:"Aji wa, usukunai desu ka?",translation:"Rasanya tidak terlalu hambar, kan?",audioFileName:"irodori-elementary1-12-a05-l05.mp3"},
 {speakerId:"yui",japanese:<>いいえ、ちょうどいいです。おいしいですよ。</>,romaji:"Iie, choudo ii desu. Oishii desu yo.",translation:"Tidak, rasanya pas. Enak.",audioFileName:"irodori-elementary1-12-a05-l06.mp3"},
 ];
 const canDos=[
@@ -54,7 +54,7 @@ const canDos=[
 ];
 const impressionCards=[
 {id:"bento",name:"お弁当",reading:"Obentou · Bekal makan",appearance:"おいしそうですね。",translation:"Kelihatannya enak.",note:"そうです menyatakan kesan dari apa yang terlihat."},
-{id:"curry",name:"カレー",reading:"Karee · Kari",appearance:"辛そうな料理ですね。",translation:"Masakan yang kelihatannya pedas.",note:"そうな diletakkan sebelum kata benda."},
+{id:"curry",name:"カレー",reading:"Karee · Kare",appearance:"辛そうな料理ですね。",translation:"Masakan yang kelihatannya pedas.",note:"そうな diletakkan sebelum kata benda."},
 {id:"cake",name:"ケーキ",reading:"Keeki · Kue",appearance:"甘そうですね。",translation:"Kelihatannya manis.",note:"甘い → 甘そう (hilangkan い)."},
 {id:"orange",name:"みかん",reading:"Mikan · Jeruk",appearance:"すっぱそうですね。",translation:"Kelihatannya asam.",note:"Kesan dari tampilan belum tentu sama dengan rasa sebenarnya."},
 ];
@@ -68,9 +68,9 @@ const ingredientCards=[
 {name:"野菜スープ",reading:"Yasai suupu",description:"Sup sayuran sederhana.",contents:"にんじん、玉ねぎ、キャベツ",contentsMeaning:"Wortel, bawang bombai, dan kol",sentence:"玉ねぎを入れます。",note:"Bahan yang sengaja dimasukkan dijelaskan dengan を入れます。"},
 ];
 const packageWords=[
-{word:"調理方法",reading:"ちょうりほうほう · chouri houhou",meaning:"Petunjuk/cara penyiapan"},
+{word:"調理方法",reading:"ちょうりほうほう · chouri houhou",meaning:"Petunjuk cara menyiapkan makanan"},
 {word:"フタ",reading:"futa",meaning:"Tutup kemasan"},
-{word:"取り出す",reading:"とりだす · toridasu",meaning:"Mengeluarkan / mengambil keluar"},
+{word:"取り出す",reading:"とりだす · toridasu",meaning:"Mengeluarkan"},
 {word:"めん",reading:"men",meaning:"Mi"},
 {word:"お湯",reading:"おゆ · oyu",meaning:"Air panas"},
 {word:"注ぐ",reading:"そそぐ · sosogu",meaning:"Menuangkan"},
@@ -79,12 +79,12 @@ const packageWords=[
 ];
 const packageSequence=[
 {step:"01",label:"小袋を取り出す",reading:"Kobukuro o toridasu",meaning:"Mengeluarkan kantong kecil dari kemasan."},
-{step:"02",label:"調理方法を読む",reading:"Chouri houhou o yomu",meaning:"Membaca petunjuk penyiapan pada kemasan."},
+{step:"02",label:"調理方法を読む",reading:"Chouri houhou o yomu",meaning:"Membaca petunjuk cara menyiapkan makanan pada kemasan."},
 {step:"03",label:"表示された時間を確認する",reading:"Hyouji sareta jikan o kakunin suru",meaning:"Memeriksa waktu yang tertulis pada kemasan."},
 {step:"04",label:"よく混ぜる",reading:"Yoku mazeru",meaning:"Mencampur hingga merata sesuai petunjuk produk."},
 ];
 const vocabulary=[
-  ["お弁当","おべんとう · obentou","Bekal / kotak makan"],
+  ["お弁当","おべんとう · obentou","Bento (bekal dalam kotak)"],
   ["料理","りょうり · ryouri","Masakan"],
   ["卵","たまご · tamago","Telur"],
   ["卵焼き","たまごやき · tamagoyaki","Telur dadar gulung Jepang"],
@@ -102,10 +102,10 @@ const vocabulary=[
   ["入れる","いれる · ireru","Memasukkan"],
   ["食べてみる","たべてみる · tabete miru","Mencoba makan"],
   ["お湯","おゆ · oyu","Air panas"],
-  ["調理方法","ちょうりほうほう · chouri houhou","Petunjuk penyiapan"],
+  ["調理方法","ちょうりほうほう · chouri houhou","Petunjuk cara menyiapkan makanan"],
   ["少し","すこし · sukoshi","Sedikit"],
   ["フタ","フタ · futa","Tutup kemasan"],
-  ["取り出す","とりだす · toridasu","Mengeluarkan / mengambil keluar"],
+  ["取り出す","とりだす · toridasu","Mengeluarkan"],
   ["めん","めん · men","Mi"],
   ["注ぐ","そそぐ · sosogu","Menuangkan"],
   ["混ぜる","まぜる · mazeru","Mencampur"],
@@ -115,7 +115,7 @@ const kanjiWords=[
   ["卵","たまご · tamago","Telur"],
   ["料理","りょうり · ryouri","Masakan"],
   ["お湯","おゆ · oyu","Air panas"],
-  ["調理方法","ちょうりほうほう · chouri houhou","Petunjuk penyiapan"],
+  ["調理方法","ちょうりほうほう · chouri houhou","Petunjuk cara menyiapkan makanan"],
   ["少し","すこし · sukoshi","Sedikit"],
   ["味","あじ · aji","Rasa"],
   ["甘い","あまい · amai","Manis"],
@@ -139,23 +139,23 @@ const practiceTasks:Task[]=[
 {prompt:<>「味は、うすくないですか。」 biasanya digunakan untuk …</>,options:[{key:"a",label:"Memastikan apakah rasa makanan tidak terlalu tawar."},{key:"b",label:"Meminta daftar harga makanan."},{key:"c",label:"Menanyakan nama orang."}],answer:"a",explanation:<>～くないですか dapat dipakai untuk menunjukkan perhatian dan memastikan apakah sesuatu terasa baik-baik saja bagi lawan bicara.</>},
 ];
 const quizQuestions:Task[]=[
-{prompt:<>Apa arti 「お弁当」?</>,options:[{key:"a",label:"Bekal / kotak makan."},{key:"b",label:"Bahan masakan."},{key:"c",label:"Petunjuk arah."}],answer:"a",explanation:<>お弁当（おべんとう）adalah bekal atau makanan dalam kotak.</>},
+{prompt:<>Apa arti 「お弁当」?</>,options:[{key:"a",label:"Bento (bekal dalam kotak)."},{key:"b",label:"Bahan masakan."},{key:"c",label:"Petunjuk arah."}],answer:"a",explanation:<>お弁当（おべんとう）adalah bento, yaitu bekal makan dalam kotak.</>},
 {prompt:<>Bentuk ～そうです pada 「おいしそうです」 menyatakan …</>,options:[{key:"a",label:"Kesan berdasarkan penampilan."},{key:"b",label:"Pengalaman yang sudah terjadi."},{key:"c",label:"Perintah untuk makan."}],answer:"a",explanation:<>おいしい kehilangan い lalu menjadi おいしそうです.</>},
 {prompt:<>Pilih bentuk yang tepat dari 辛い + そうな + 料理.</>,options:[{key:"a",label:"辛そうな料理"},{key:"b",label:"辛いそうな料理"},{key:"c",label:"辛くそうな料理"}],answer:"a",explanation:<>Hilangkan い dari 辛い, lalu tambahkan そうな sebelum kata benda.</>},
 {prompt:<>Lengkapi: 「甘く___、おいしいです。」</>,options:[{key:"a",label:"なくて"},{key:"b",label:"ないで"},{key:"c",label:"そうで"}],answer:"a",explanation:<>Bentuk negatif penghubung i-adjective adalah ～くなくて.</>},
 {prompt:<>「よかったら、この料理を食べてみてください。」 adalah …</>,options:[{key:"a",label:"Ajakan sopan untuk mencoba makanan."},{key:"b",label:"Larangan makan."},{key:"c",label:"Pertanyaan tentang harga."}],answer:"a",explanation:<>食べてみてください adalah bentuk anjuran sopan dari V-てみる.</>},
 {prompt:<>Kalimat 「野菜が入っています」 berarti …</>,options:[{key:"a",label:"Sayuran terkandung di dalamnya."},{key:"b",label:"Saya memasukkan sayuran."},{key:"c",label:"Sayuran sedang dijual."}],answer:"a",explanation:<>入っています berfokus pada keadaan atau isi masakan.</>},
 {prompt:<>Kalimat 「野菜を入れます」 berarti …</>,options:[{key:"a",label:"Memasukkan sayuran."},{key:"b",label:"Sayuran sudah terkandung."},{key:"c",label:"Sayuran terlihat enak."}],answer:"a",explanation:<>入れます adalah kata kerja transitif yang menunjukkan tindakan memasukkan sesuatu.</>},
-{prompt:<>Apa arti 「苦手」?</>,options:[{key:"a",label:"Kurang cocok / tidak begitu menyukai atau tidak mahir."},{key:"b",label:"Sangat manis."},{key:"c",label:"Petunjuk penyiapan."}],answer:"a",explanation:<>苦手 dapat menyatakan sesuatu yang kurang disukai atau bidang yang tidak dikuasai.</>},
+{prompt:<>Apa arti 「苦手」?</>,options:[{key:"a",label:"Kurang cocok / tidak begitu menyukai atau tidak mahir."},{key:"b",label:"Sangat manis."},{key:"c",label:"Petunjuk cara menyiapkan makanan."}],answer:"a",explanation:<>苦手 dapat menyatakan sesuatu yang kurang disukai atau bidang yang tidak dikuasai.</>},
 {prompt:<>Pada kemasan, 「調理方法」 menunjukkan …</>,options:[{key:"a",label:"Petunjuk cara menyiapkan makanan."},{key:"b",label:"Nama toko."},{key:"c",label:"Warna kemasan."}],answer:"a",explanation:<>調理方法 adalah bagian yang memuat informasi cara penyiapan makanan.</>},
 {prompt:<>「少し」 berarti …</>,options:[{key:"a",label:"Sedikit."},{key:"b",label:"Sangat banyak."},{key:"c",label:"Setiap hari."}],answer:"a",explanation:<>少し（すこし）berarti sedikit atau sebentar, sesuai konteks.</>},
 ];
 const simulations=[
-{title:"01 · Kesan dari penampilan",heading:"Mengomentari bekal yang terlihat enak",prompt:"Kamu melihat bekal makan teman. Kamu ingin mengatakan bahwa bekalnya kelihatan enak.",japanese:<>お弁当、おいしそうですね。</>,translation:"Bekalnya kelihatan enak, ya.",options:[{key:"a",label:"お弁当、おいしそうですね。",meaning:"Menyampaikan kesan dari penampilan."},{key:"b",label:"お弁当、おいしくてですね。",meaning:"Bentuk ini tidak tepat untuk konteks tersebut."},{key:"c",label:"お弁当、おいしいみたい食べます。",meaning:"Susunan kalimat tidak tepat."}],answer:"a",explanation:"おいしい → おいしそうです. Hilangkan い lalu tambahkan そうです."},
+{title:"01 · Kesan dari penampilan",heading:"Mengomentari bento yang terlihat enak",prompt:"Kamu melihat bento milik teman. Kamu ingin mengatakan bahwa bento itu kelihatan enak.",japanese:<>お弁当、おいしそうですね。</>,translation:"Bentonya kelihatan enak, ya.",options:[{key:"a",label:"お弁当、おいしそうですね。",meaning:"Menyampaikan kesan dari penampilan."},{key:"b",label:"お弁当、おいしくてですね。",meaning:"Bentuk ini tidak tepat untuk konteks tersebut."},{key:"c",label:"お弁当、おいしいみたい食べます。",meaning:"Susunan kalimat tidak tepat."}],answer:"a",explanation:"おいしい → おいしそうです. Hilangkan い lalu tambahkan そうです."},
 {title:"02 · そうな + kata benda",heading:"Menggambarkan makanan yang tampak pedas",prompt:"Kamu melihat masakan berwarna merah dan ingin mengatakan, 'Itu masakan yang kelihatannya pedas.'",japanese:<>それは辛そうな料理ですね。</>,translation:"Itu masakan yang kelihatannya pedas.",options:[{key:"a",label:"それは辛そうな料理ですね。",meaning:"そうな menerangkan kata benda 料理."},{key:"b",label:"それは辛いそうな料理ですね。",meaning:"い tidak dipertahankan sebelum そうな."},{key:"c",label:"それは辛くて料理ですね。",meaning:"Pola ini tidak menyatakan kesan penampilan."}],answer:"a",explanation:"Untuk i-adjective, hilangkan い: 辛い → 辛そうな料理."},
 {title:"03 · Kesan setelah mencicipi",heading:"Menggabungkan dua kesan rasa",prompt:"Setelah mencoba tamagoyaki, kamu ingin mengatakan bahwa rasanya manis dan enak.",japanese:<>甘くて、おいしいです。</>,translation:"Rasanya manis dan enak.",options:[{key:"a",label:"甘くて、おいしいです。",meaning:"Menghubungkan dua sifat positif."},{key:"b",label:"甘いそう、おいしいです。",meaning:"Bentuk そう bukan bentuk penghubung ini."},{key:"c",label:"甘くない、おいしいです。",meaning:"Tidak menyatakan hubungan yang dimaksud."}],answer:"a",explanation:"甘い berubah menjadi 甘くて untuk menghubungkan dua sifat."},
 {title:"04 · Menjelaskan bahan",heading:"Menyebutkan isi masakan",prompt:"Teman bertanya apa yang ada di dalam sup. Sup tersebut mengandung wortel dan kol.",japanese:<>にんじんとキャベツが入っています。</>,translation:"Di dalamnya ada wortel dan kol.",options:[{key:"a",label:"にんじんとキャベツが入っています。",meaning:"Menjelaskan bahan yang terkandung."},{key:"b",label:"にんじんとキャベツを入っています。",meaning:"Partikel dan bentuk kata kerja tidak tepat."},{key:"c",label:"にんじんとキャベツが入れます。",meaning:"入れます membutuhkan pola objek を."}],answer:"a",explanation:"Gunakan Nが入っています untuk menjelaskan isi makanan. Nを入れます menjelaskan tindakan seseorang memasukkan bahan."},
-{title:"05 · Membaca kemasan",heading:"Menemukan bagian petunjuk",prompt:"Pada kemasan makanan, kamu mencari informasi tentang cara menyiapkannya. Bagian mana yang perlu dicari?",japanese:<>調理方法</>,translation:"Petunjuk / cara penyiapan makanan.",options:[{key:"a",label:"調理方法",meaning:"Bagian petunjuk cara menyiapkan makanan."},{key:"b",label:"商品名",meaning:"Nama produk."},{key:"c",label:"内容量",meaning:"Isi atau jumlah bersih produk."}],answer:"a",explanation:"調理方法 menandai bagian petunjuk penyiapan. Latihan ini berfokus membaca tulisan pada kemasan."},
+{title:"05 · Membaca kemasan",heading:"Menemukan bagian petunjuk",prompt:"Pada kemasan makanan, kamu mencari informasi tentang cara menyiapkannya. Bagian mana yang perlu dicari?",japanese:<>調理方法</>,translation:"Petunjuk cara menyiapkan makanan.",options:[{key:"a",label:"調理方法",meaning:"Bagian petunjuk cara menyiapkan makanan."},{key:"b",label:"商品名",meaning:"Nama produk."},{key:"c",label:"内容量",meaning:"Isi atau jumlah bersih produk."}],answer:"a",explanation:"調理方法 menandai bagian petunjuk penyiapan. Latihan ini berfokus membaca tulisan pada kemasan."},
 ];
 
 export default function IrodoriElementaryOneLessonTwelvePage() {
@@ -206,7 +206,7 @@ export default function IrodoriElementaryOneLessonTwelvePage() {
   <section className="space-y-4">
    <div><p className="text-[9px] font-black tracking-[0.2em] text-[#8EAE93]">DIALOG 01–05</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Melihat, mencoba, dan membicarakan makanan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Semua dialog ditulis orisinal oleh Fude. Perhatikan perbedaan kesan dari penampilan dan pendapat setelah makanan dicicipi.</p></div>
    <div className="space-y-4">
-    <IrodoriConversation title="Memberi kesan tentang bekal" speakers={[speakers.yui,speakers.akiko]} utterances={appearanceConversation}/>
+    <IrodoriConversation title="Memberi kesan tentang bento" speakers={[speakers.yui,speakers.akiko]} utterances={appearanceConversation}/>
     <IrodoriConversation title="Makanan yang kelihatannya pedas" speakers={[speakers.sota,speakers.yui]} utterances={tasteAppearanceConversation}/>
     <IrodoriConversation title="Mencoba makanan yang ditawarkan" speakers={[speakers.akiko,speakers.kenji]} utterances={tryingFoodConversation}/>
     <IrodoriConversation title="Menyampaikan kesan rasa" speakers={[speakers.yui,speakers.sota]} utterances={tasteFeedbackConversation}/>
@@ -220,7 +220,7 @@ export default function IrodoriElementaryOneLessonTwelvePage() {
   <section className="space-y-4">
    <div><p className="text-[9px] font-black tracking-[0.2em] text-[#8EAE93]">SETELAH MENCOBA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Menyampaikan kesan tentang rasa</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Saat seseorang menawarkan makanan, kamu bisa mencoba lalu menyampaikan pendapat dengan sopan. Kamu juga boleh mengatakan bahwa suatu rasa kurang cocok.</p></div>
    <div className="grid gap-3 sm:grid-cols-3">{tastingExamples.map(item=><article key={item.food} className="rounded-xl border border-[#6E9A75]/20 bg-[#1B201C]/80 p-4"><p className="font-mincho text-base font-bold text-[#F1EBDD]">{item.food}</p><p className="mt-1 text-[10px] text-[#A9A398]">{item.reading}</p><p className="mt-3 font-mincho text-sm leading-6 text-[#A9CDB0]">{item.sentence}</p><p className="mt-1 text-xs text-[#C8C2B8]">{item.meaning}</p></article>)}</div>
-   <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-[9px] font-black tracking-[0.16em] text-[#A9CDB0]">UNGKAPAN SOPAN</p><div className="mt-2 grid gap-3 sm:grid-cols-2"><div><p className="font-mincho text-sm text-[#F1EBDD]">よかったら、食べてみてください。</p><p className="mt-1 text-[10px] text-[#A9A398]">Kalau berkenan, silakan coba.</p></div><div><p className="font-mincho text-sm text-[#F1EBDD]">ありがとうございます。いただきます。</p><p className="mt-1 text-[10px] text-[#A9A398]">Terima kasih. Saya coba, ya.</p></div></div></div>
+   <div className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-[9px] font-black tracking-[0.16em] text-[#A9CDB0]">UNGKAPAN SOPAN</p><div className="mt-2 grid gap-3 sm:grid-cols-2"><div><p className="font-mincho text-sm text-[#F1EBDD]">よかったら、食べてみてください。</p><p className="mt-1 text-[10px] text-[#A9A398]">Kalau mau, silakan coba.</p></div><div><p className="font-mincho text-sm text-[#F1EBDD]">ありがとうございます。いただきます。</p><p className="mt-1 text-[10px] text-[#A9A398]">Terima kasih. Saya coba, ya.</p></div></div></div>
   </section>
   <section className="space-y-4">
    <div><p className="text-[9px] font-black tracking-[0.2em] text-[#8EAE93]">TATA BAHASA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Enam pola untuk membicarakan makanan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Pelajari bentuk kesan, penghubung kata sifat, ungkapan mencoba sesuatu, serta cara menjelaskan bahan masakan.</p></div>
