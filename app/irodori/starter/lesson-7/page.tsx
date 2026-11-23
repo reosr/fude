@@ -97,7 +97,7 @@ const equipmentConversation: IrodoriUtterance[] = [
     speakerId: "yui",
     japanese: <>すみません。<ruby>電子<rt>でんし</rt></ruby>レンジはありますか？</>,
     romaji: "Sumimasen. Denshi renji wa arimasu ka?",
-    translation: "Permisi. Apakah ada oven microwave?",
+    translation: "Permisi. Apakah ada oven gelombang mikro?",
     audioFileName: "irodori-starter-07-a02-l01.mp3",
   },
   {
@@ -256,7 +256,7 @@ const rooms = [
 const appliances = [
   { jp: "エアコン", reading: "eakon", meaning: "AC", icon: "❄️" },
   { jp: <ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>, reading: "reizouko", meaning: "Kulkas", icon: "🧊" },
-  { jp: <><ruby>電子<rt>でんし</rt></ruby>レンジ</>, reading: "denshi renji", meaning: "Oven oven microwave", icon: "♨️" },
+  { jp: <><ruby>電子<rt>でんし</rt></ruby>レンジ</>, reading: "denshi renji", meaning: "Oven oven gelombang mikro", icon: "♨️" },
   { jp: <ruby>炊飯器<rt>すいはんき</rt></ruby>, reading: "suihanki", meaning: "Penanak nasi", icon: "🍚" },
   { jp: "トースター", reading: "toosutaa", meaning: "Pemanggang roti", icon: "🍞" },
   { jp: "ベッド", reading: "beddo", meaning: "Tempat tidur", icon: "🛏️" },
@@ -316,7 +316,7 @@ const quizQuestions: {
     explanation: <>「Tempat に benda が jumlah あります」 menyatakan benda yang ada di suatu tempat dan jumlahnya.</>,
   },
   {
-    prompt: <>Bagaimana bertanya “Apakah ada oven microwave?”</>,
+    prompt: <>Bagaimana bertanya “Apakah ada oven gelombang mikro?”</>,
     options: [
       { key: "a", label: <><ruby>電子<rt>でんし</rt></ruby>レンジはありますか？</> },
       { key: "b", label: <><ruby>電子<rt>でんし</rt></ruby>レンジは<ruby>好<rt>す</rt></ruby>きですか？</> },
