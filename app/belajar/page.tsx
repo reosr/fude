@@ -788,7 +788,7 @@ const findWordAt = (index: number): string | null => {
                       <JapaneseReading html={formatGrammarNotation(g.formula)} allowIndexFallback contentClassName="text-base font-mono text-[#EAE6DD] whitespace-pre-wrap leading-[2.4] pt-2 [&_rt]:text-[0.75em]" kanaClassName="mt-2 font-mincho text-base leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-sm italic leading-relaxed text-[#A9A398]" />
                     </div>
                   )}
-                  {g.explanation && <div className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3"><JapaneseReading html={formatGrammarNotation(g.explanation)} allowIndexFallback contentClassName="text-sm text-[#A3A099] leading-relaxed" kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]" showRomaji={false} /></div>}
+                  {g.explanation && <div className="text-sm text-[#A3A099] leading-relaxed mb-4 border-l-2 border-[#33312E] pl-3"><JapaneseReading html={formatGrammarNotation(g.explanation)} allowIndexFallback contentClassName="text-sm text-[#A3A099] leading-relaxed" kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]" romajiClassName="mt-1 text-xs italic leading-relaxed text-[#A9A398]" /></div>}
                   <div className="space-y-3 mt-4">
                     {g.examples && g.examples.map((ex: any, index: number) => (
                       <div key={index} className="bg-[#121110]/50 rounded-lg p-4 text-sm border border-[#33312E]/50">
