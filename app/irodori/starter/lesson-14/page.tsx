@@ -491,7 +491,7 @@ export default function IrodoriStarterLessonFourteenPage() {
         <div className="pointer-events-none absolute -right-5 -top-10 select-none font-mincho text-[180px] leading-none text-[#D6AD4F]/[0.07]">街</div>
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#D6AD4F]">IRODORI • STARTER A1 • LESSON 14</p>
-          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">It’s a big building, isn’t it?</h1>
+          <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Gedungnya besar, ya.</h1>
           <p className="mt-2 text-sm font-semibold text-[#D9B66D]"><ruby>大<rt>おお</rt></ruby>きな<ruby>建物<rt>たてもの</rt></ruby>ですね</p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
             Belajar menanyakan letak fasilitas umum, menjelaskan posisi saat menelepon teman, menyampaikan kesan tentang tempat, dan membaca papan jam operasional.
