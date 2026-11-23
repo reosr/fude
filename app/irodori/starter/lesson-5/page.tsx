@@ -368,11 +368,11 @@ const favoriteFoods = [
 ];
 
 const japaneseFoods = [
-  { jp: "うどん", reading: "udon", meaning: "Mi tebal dari tepung terigu", icon: "🍜" },
-  { jp: "そば", reading: "soba", meaning: "Mi khas Jepang dari tepung soba", icon: "🥢" },
-  { jp: "すし", reading: "sushi", meaning: "Nasi berbumbu cuka dengan aneka lauk", icon: "🍣" },
-  { jp: <><ruby>天<rt>てん</rt></ruby>ぷら</>, reading: "tenpura", meaning: "Bahan makanan berbalut tepung lalu digoreng", icon: "🍤" },
-  { jp: "ラーメン", reading: "raamen", meaning: "Mi kuah khas Jepang", icon: "🍥" },
+  { jp: "うどん", reading: "udon", meaning: "Udon (mi tebal khas Jepang)", icon: "🍜" },
+  { jp: "そば", reading: "soba", meaning: "Soba (mi khas Jepang)", icon: "🥢" },
+  { jp: "すし", reading: "sushi", meaning: "Sushi (nasi berbumbu cuka dengan aneka lauk)", icon: "🍣" },
+  { jp: <><ruby>天<rt>てん</rt></ruby>ぷら</>, reading: "tenpura", meaning: "Tempura (makanan berbalut tepung yang digoreng)", icon: "🍤" },
+  { jp: "ラーメン", reading: "raamen", meaning: "Ramen (mi berkuah khas Jepang)", icon: "🍥" },
   { jp: "カレー", reading: "karee", meaning: "Kari ala Jepang", icon: "🍛" },
   { jp: <ruby>納豆<rt>なっとう</rt></ruby>, reading: "nattou", meaning: "Kedelai fermentasi", icon: "🫘" },
   { jp: <ruby>梅干し<rt>うめぼし</rt></ruby>, reading: "umeboshi", meaning: "Acar ume bercita rasa asam", icon: "🍑" },
