@@ -39,7 +39,7 @@ const shoppingTryOnConversation: IrodoriUtterance[] = [
   { speakerId: "yui", japanese: <>すみません。このセーター、着てみてもいいですか。</>, romaji: "Sumimasen. Kono seetaa, kite mite mo ii desu ka?", translation: "Permisi, bolehkah saya mencoba sweater ini?", audioFileName: "irodori-elementary2-11-a01-l01.mp3" },
   { speakerId: "sota", japanese: <>はい。試着室はこちらです。</>, romaji: "Hai. Shichakushitsu wa kochira desu.", translation: "Tentu. Ruang gantinya ada di sini.", audioFileName: "irodori-elementary2-11-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>ありがとうございます。少し大きすぎますね。</>, romaji: "Arigatou gozaimasu. Sukoshi ookisugimasu ne.", translation: "Terima kasih. Sepertinya agak kebesaran.", audioFileName: "irodori-elementary2-11-a01-l03.mp3" },
-  { speakerId: "sota", japanese: <>では、もう少し小さいのをお持ちします。</>, romaji: "Dewa, mou sukoshi chiisai no o omochi shimasu.", translation: "Kalau begitu, saya ambilkan yang sedikit lebih kecil.", audioFileName: "irodori-elementary2-11-a01-l04.mp3" },
+  { speakerId: "sota", japanese: <>では、もう少し小さいのをお持ちします。</>, romaji: "De wa, mou sukoshi chiisai no o omochi shimasu.", translation: "Kalau begitu, saya ambilkan yang sedikit lebih kecil.", audioFileName: "irodori-elementary2-11-a01-l04.mp3" },
 ];
 
 const chooseColorSizeConversation: IrodoriUtterance[] = [
@@ -57,7 +57,7 @@ const forgotPointCardConversation: IrodoriUtterance[] = [
 ];
 
 const lostBottleConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>すみません。水筒を忘れてしまったんですが、届いていませんか。</>, romaji: "Sumimasen. Suitou o wasurete shimattan desu ga, todoite imasen ka?", translation: "Permisi, sepertinya botol minum saya tertinggal. Apakah ada yang menyerahkannya ke sini?", audioFileName: "irodori-elementary2-11-a04-l01.mp3" },
+  { speakerId: "akiko", japanese: <>すみません。水筒を忘れてしまったんですが、届いていませんか。</>, romaji: "Sumimasen. Suitou o wasurete shimatta n desu ga, todoite imasen ka?", translation: "Permisi, sepertinya botol minum saya tertinggal. Apakah ada yang menyerahkannya ke sini?", audioFileName: "irodori-elementary2-11-a04-l01.mp3" },
   { speakerId: "kenji", japanese: <>どんな水筒ですか。特徴を教えてください。</>, romaji: "Donna suitou desu ka? Tokuchou o oshiete kudasai.", translation: "Botol minum seperti apa? Bisa jelaskan ciri-cirinya?", audioFileName: "irodori-elementary2-11-a04-l02.mp3" },
   { speakerId: "akiko", japanese: <>青い水筒で、白い星のシールがついています。</>, romaji: "Aoi suitou de, shiroi hoshi no shiiru ga tsuite imasu.", translation: "Botol minumnya berwarna biru, dengan stiker bintang putih.", audioFileName: "irodori-elementary2-11-a04-l03.mp3" },
   { speakerId: "kenji", japanese: <>わかりました。お昼ごろ、フードコートにあったかもしれませんね。</>, romaji: "Wakarimashita. Ohiru goro, fuudo kooto ni atta kamo shiremasen ne.", translation: "Baik. Mungkin botol itu tertinggal di food court sekitar tengah hari.", audioFileName: "irodori-elementary2-11-a04-l04.mp3" },
