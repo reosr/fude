@@ -404,10 +404,6 @@ const ROMAJI_PARTICLES = new Set([
   "から", "まで", "より", "しか", "だけ", "など", "って", "ので", "とか",
 ]);
 
-const ROMAJI_SUFFIXES = new Set([
-  "たい", "た", "ない", "なかった", "たら", "ても", "て", "で", "って", "んで",
-]);
-
 const ROMAJI_HONORIFICS = new Set(["さん", "ちゃん", "くん", "さま"]);
 
 function isRomajiPunctuation(value: string): boolean {
