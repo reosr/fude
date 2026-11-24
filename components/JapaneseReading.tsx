@@ -231,7 +231,7 @@ function appendRomajiPlainText(
   const plain = decodeRomajiHtmlText(value);
   if (!plain) return;
 
-  const segments = allowIndexFallback
+  const segments: Array<{ text: string; reading?: string }> = allowIndexFallback
     ? segmentTextByReadingIndex(plain)
     : [{ text: plain }];
 
