@@ -21,7 +21,7 @@ const tabs = [
   { href: "/", label: "Beranda", icon: Home },
   { href: "/belajar", label: "Belajar", icon: BookOpen },
   { href: "/kosakata", label: "Kosakata", icon: Languages },
-  { href: "/flashcard", label: "Kartu Hafalan", icon: Layers },
+  { href: "/flashcard", label: "Flashcard", icon: Layers },
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
 ];
 
