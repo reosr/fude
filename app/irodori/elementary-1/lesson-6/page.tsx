@@ -36,7 +36,7 @@ const askingBusStopConversation: IrodoriUtterance[] = [
 ];
 
 const askingByPhoneConversation: IrodoriUtterance[] = [
-  { speakerId: "akiko", japanese: <>もしもし。郵便局に行きたいんですが…。</>, romaji: "Moshi moshi. Yuubinkyoku ni ikitaindesuga...", translation: "Halo. Saya ingin pergi ke kantor pos…", audioFileName: "irodori-elementary1-06-a02-l01.mp3" },
+  { speakerId: "akiko", japanese: <>もしもし。郵便局に行きたいんですが…。</>, romaji: "Moshi moshi. Yuubinkyoku ni ikitai n desu ga...", translation: "Halo. Saya ingin pergi ke kantor pos…", audioFileName: "irodori-elementary1-06-a02-l01.mp3" },
   { speakerId: "kenji", japanese: <>はい。今、どちらにいますか。</>, romaji: "Hai. Ima, dochira ni imasu ka?", translation: "Baik. Sekarang Anda berada di mana?", audioFileName: "irodori-elementary1-06-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>駅の前にいます。どう行ったらいいですか。</>, romaji: "Eki no mae ni imasu. Dou ittara ii desu ka?", translation: "Saya berada di depan stasiun. Sebaiknya lewat mana?", audioFileName: "irodori-elementary1-06-a02-l03.mp3" },
   { speakerId: "kenji", japanese: <>駅を出て、右に曲がってください。</>, romaji: "Eki o dete, migi ni magatte kudasai.", translation: "Keluar dari stasiun, lalu belok ke kanan.", audioFileName: "irodori-elementary1-06-a02-l04.mp3" },
