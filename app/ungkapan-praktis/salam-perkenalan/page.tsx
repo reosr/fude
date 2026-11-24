@@ -218,7 +218,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Setelah berkenalan, mereka melanjutkan percakapan ringan.",
     lines: [
       { speaker: "ユイ", jp: "ご<ruby>出身<rt>しゅっしん</rt></ruby>はどちらですか。", romaji: "Goshusshin wa dochira desu ka.", id: "Kamu berasal dari mana?" },
-      { speaker: "アナ", jp: "インドネシアです。バンドンから<ruby>来<rt>き</rt></ruby>ました。", romaji: "Indoneshia desu. Bandung kara kimashita.", id: "Dari Indonesia. Saya berasal dari Bandung." },
+      { speaker: "アナ", jp: "インドネシアです。バンドンから<ruby>来<rt>き</rt></ruby>ました。", romaji: "Indoneshia desu. Bandon kara kimashita.", id: "Dari Indonesia. Saya berasal dari Bandung." },
       { speaker: "ユイ", jp: "<ruby>日本<rt>にほん</rt></ruby>は<ruby>初<rt>はじ</rt></ruby>めてですか。", romaji: "Nihon wa hajimete desu ka.", id: "Apakah ini pertama kalinya kamu ke Jepang?" },
       { speaker: "アナ", jp: "はい、<ruby>初<rt>はじ</rt></ruby>めてです。", romaji: "Hai, hajimete desu.", id: "Ya, ini pertama kali." },
       { speaker: "ユイ", jp: "そうなんですね。<ruby>日本<rt>にほん</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>でわからないことがあったら、<ruby>聞<rt>き</rt></ruby>いてくださいね。", romaji: "Sou nan desu ne. Nihon no seikatsu de wakaranai koto ga attara, kiite kudasai ne.", id: "Oh, begitu. Kalau ada yang belum kamu pahami tentang kehidupan di Jepang, tanyakan saja, ya." },
