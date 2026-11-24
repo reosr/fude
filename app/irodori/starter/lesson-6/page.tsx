@@ -82,7 +82,7 @@ const fastFoodConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>チーズバーガーのセット、お<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Chiizubaagaa no setto, onegaishimasu.",
+    romaji: "Chiizubaagaa no setto, onegai shimasu.",
     translation: "Saya pesan paket burger keju.",
     audioFileName: "irodori-starter-06-a02-l02.mp3",
   },
@@ -110,7 +110,7 @@ const fastFoodConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>テイクアウトでお<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Teikuauto de onegaishimasu.",
+    romaji: "Teikuauto de onegai shimasu.",
     translation: "Dibungkus untuk dibawa pulang, ya.",
     audioFileName: "irodori-starter-06-a02-l06.mp3",
   },
