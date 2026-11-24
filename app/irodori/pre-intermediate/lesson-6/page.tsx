@@ -66,7 +66,7 @@ const content: IrodoriLessonContent = {
   ],
   readingArticle: {
     title: "Tips praktis: Memasak sayuran dengan microwave",
-    lead: "Bacalah artikel pendek berikut. Perhatikan manfaat yang disebutkan, langkah umum yang dilakukan, dan alasan cara ini praktis untuk kehidupan sehari-hari.",
+    lead: "Artikel latihan orisinal Fude. Bacalah teks berikut, lalu perhatikan manfaat yang disebutkan, langkah umum yang dilakukan, dan alasan cara ini praktis untuk kehidupan sehari-hari.",
     paragraphs: [
       {
         japanese: <>電子レンジを使うと、火を使わなくても、野菜を簡単に調理できます。鍋を使うときより、洗い物が少なくなることもあります。忙しい日や、料理にあまり時間をかけたくないときに便利です。</>,
@@ -131,7 +131,7 @@ const content: IrodoriLessonContent = {
     ["デリバリー", "デリバリー · deribarii", "Layanan pesan antar"],
     ["コンビニ", "コンビニ · konbini", "Minimarket"],
     ["惣菜", "そうざい · souzai", "Lauk atau makanan siap santap"],
-    ["食べがち", "たべがち · tabegachi", "Cenderung makan (sesuatu)"],
+    ["買い置き", "かいおき · kaioki", "Persediaan barang atau bahan makanan yang sudah dibeli sebelumnya"],
     ["気をつける", "きをつける · ki o tsukeru", "Memperhatikan; berhati-hati"],
     ["できるだけ", "できるだけ · dekiru dake", "Sebisa mungkin"],
   ],
