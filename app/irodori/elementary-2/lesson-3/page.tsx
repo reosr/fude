@@ -688,7 +688,7 @@ export default function IrodoriElementaryTwoLessonThreePage() {
                 <div className="min-w-0">
                   <p className="font-mincho text-base text-[#F1EBDD]">{item.name}</p>
                   <p className="mt-0.5 text-[9px] text-[#A8D5B5]">{item.reading}</p>
-                  <p className="mt-1 text-[10px] text-[#A9A398]">{item.meaning} · <JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
+                  <p className="mt-1 text-[10px] text-[#A9A398]">{item.meaning} · <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
                 </div>
                 <p className="shrink-0 text-sm font-black tabular-nums text-[#E8D49C]">¥{item.price}</p>
               </div>
@@ -900,9 +900,9 @@ export default function IrodoriElementaryTwoLessonThreePage() {
         ].map((item) => (
           <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             <p className="text-[9px] font-black tracking-[0.15em] text-[#A8D5B5]">{item.title}</p>
-            <p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p>
+            <p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p>
             <p className="mt-2 font-mincho text-base leading-8 text-[#A8D5B5]"><JapaneseReading allowIndexFallback>{item.example}</JapaneseReading></p>
-            <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
+            <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
           </article>
         ))}
       </section>
