@@ -459,12 +459,12 @@ function getRomajiPartsForRubySpan(
   if (fixedParts) return fixedParts;
 
   const surfaceParts = Array.from(segmenter.segment(surface))
-    .filter((part) => /\\S/u.test(part.segment))
+    .filter((part) => /\S/u.test(part.segment))
     .map((part) => part.segment);
   if (surfaceParts.length <= 1) return null;
 
   const readingParts = Array.from(segmenter.segment(toHiragana(reading)))
-    .filter((part) => /\\S/u.test(part.segment))
+    .filter((part) => /\S/u.test(part.segment))
     .map((part) => part.segment);
 
   if (surfaceParts.length === readingParts.length) {
@@ -479,7 +479,7 @@ function getRomajiPartsForRubySpan(
   const indexedParts: RubyRomajiPart[] = [];
   for (const part of surfaceParts) {
     const readings = segmentTextByReadingIndex(part);
-    if (readings.some((item) => /[\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]/u.test(item.text) && !item.reading)) {
+    if (readings.some((item) => /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(item.text) && !item.reading)) {
       return null;
     }
     indexedParts.push({
