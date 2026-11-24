@@ -175,7 +175,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     items: [
       { jp: "お<ruby>名前<rt>なまえ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Onamae wa nan desu ka.", id: "Siapa nama Anda?", tone: "Sopan · dasar" },
       { jp: "ご<ruby>出身<rt>しゅっしん</rt></ruby>はどちらですか。", romaji: "Goshusshin wa dochira desu ka.", id: "Anda berasal dari mana?", tone: "Lebih sopan" },
-      { jp: "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しているんですか。", romaji: "Nihongo o benkyou shite iru n desu ka.", id: "Apakah Anda sedang belajar bahasa Jepang?", tone: "Percakapan alami" },
+      { jp: "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しているんですか。", romaji: "Nihongo o benkyou shite irun desu ka.", id: "Apakah Anda sedang belajar bahasa Jepang?", tone: "Percakapan alami" },
       { jp: "<ruby>趣味<rt>しゅみ</rt></ruby>は<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Shumi wa nan desu ka.", id: "Apa hobi Anda?", tone: "Sopan · dasar" },
     ],
   },
@@ -207,7 +207,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     lines: [
       { speaker: "ユイ", jp: "はじめまして。ユイです。", romaji: "Hajimemashite. Yui desu.", id: "Salam kenal. Saya Yui." },
       { speaker: "アナ", jp: "はじめまして。アナです。インドネシアから<ruby>来<rt>き</rt></ruby>ました。", romaji: "Hajimemashite. Ana desu. Indoneshia kara kimashita.", id: "Salam kenal. Saya Ana. Saya berasal dari Indonesia." },
-      { speaker: "ユイ", jp: "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しているんですか。", romaji: "Nihongo o benkyou shite iru n desu ka.", id: "Apakah kamu sedang belajar bahasa Jepang?" },
+      { speaker: "ユイ", jp: "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しているんですか。", romaji: "Nihongo o benkyou shite irun desu ka.", id: "Apakah kamu sedang belajar bahasa Jepang?" },
       { speaker: "アナ", jp: "はい。まだ<ruby>勉強<rt>べんきょう</rt></ruby>を<ruby>始<rt>はじ</rt></ruby>めたばかりです。", romaji: "Hai. Mada benkyou o hajimeta bakari desu.", id: "Iya. Saya baru mulai belajar." },
       { speaker: "ユイ", jp: "そうなんですね。どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Sou nan desu ne. Douzo yoroshiku onegaishimasu.", id: "Oh, begitu. Senang berkenalan denganmu." },
       { speaker: "アナ", jp: "こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kochira koso, yoroshiku onegaishimasu.", id: "Saya juga senang berkenalan denganmu." },
