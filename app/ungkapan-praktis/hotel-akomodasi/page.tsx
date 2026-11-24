@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -133,33 +137,33 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Kamu tiba di hotel dan ingin melakukan check-in menggunakan nama reservasi.",
     lines: [
       { speaker: "フロント", jp: "いらっしゃいませ。ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Irasshaimase. Goyoyaku no onamae o onegaishimasu.", id: "Selamat datang. Boleh tahu nama yang digunakan untuk reservasi?" },
-      { speaker: "お客様", jp: "<ruby>田中<rt>たなか</rt></ruby>です。<ruby>予約<rt>よやく</rt></ruby>しています。", romaji: "Tanaka desu. Yoyaku shite imasu.", id: "Atas nama Tanaka. Saya sudah membuat reservasi." },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "<ruby>田中<rt>たなか</rt></ruby>です。<ruby>予約<rt>よやく</rt></ruby>しています。", romaji: "Tanaka desu. Yoyaku shite imasu.", id: "Atas nama Tanaka. Saya sudah membuat reservasi." },
       { speaker: "フロント", jp: "ありがとうございます。こちらが<ruby>部屋<rt>へや</rt></ruby>のカードキーです。", romaji: "Arigatou gozaimasu. Kochira ga heya no kaado kii desu.", id: "Terima kasih. Ini kartu kunci kamar Anda." },
-      { speaker: "お客様", jp: "<ruby>朝食<rt>ちょうしょく</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか。", romaji: "Choushoku wa nanji kara desu ka.", id: "Sarapan mulai pukul berapa?" },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "<ruby>朝食<rt>ちょうしょく</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか。", romaji: "Choushoku wa nanji kara desu ka.", id: "Sarapan mulai pukul berapa?" },
       { speaker: "フロント", jp: "<ruby>朝<rt>あさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>からです。", romaji: "Asa shichi-ji kara desu.", id: "Mulai pukul tujuh pagi." },
-      { speaker: "お客様", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
   {
     title: "Percakapan 2 · Melaporkan masalah kamar",
     context: "Setelah masuk kamar, kamu mendapati AC tidak berfungsi dan menghubungi petugas hotel.",
     lines: [
-      { speaker: "お客様", jp: "すみません。エアコンが<ruby>動<rt>うご</rt></ruby>きません。", romaji: "Sumimasen. Eakon ga ugokimasen.", id: "Permisi. AC-nya tidak berfungsi." },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "すみません。エアコンが<ruby>動<rt>うご</rt></ruby>きません。", romaji: "Sumimasen. Eakon ga ugokimasen.", id: "Permisi. AC-nya tidak berfungsi." },
       { speaker: "フロント", jp: "ご<ruby>不便<rt>ふべん</rt></ruby>をおかけして<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません。すぐに<ruby>確認<rt>かくにん</rt></ruby>いたします。", romaji: "Gofuben o okake shite moushiwake gozaimasen. Sugu ni kakunin itashimasu.", id: "Mohon maaf atas ketidaknyamanannya. Kami akan segera memeriksanya." },
-      { speaker: "お客様", jp: "もし<ruby>直<rt>なお</rt></ruby>らない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>部屋<rt>へや</rt></ruby>を<ruby>変<rt>か</rt></ruby>えていただけますか。", romaji: "Moshi naoranai baai, heya o kaete itadakemasu ka.", id: "Jika tidak bisa diperbaiki, bisakah saya pindah kamar?" },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "もし<ruby>直<rt>なお</rt></ruby>らない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>部屋<rt>へや</rt></ruby>を<ruby>変<rt>か</rt></ruby>えていただけますか。", romaji: "Moshi naoranai baai, heya o kaete itadakemasu ka.", id: "Jika tidak bisa diperbaiki, bisakah saya pindah kamar?" },
       { speaker: "フロント", jp: "はい。<ruby>別<rt>べつ</rt></ruby>のお<ruby>部屋<rt>へや</rt></ruby>をご<ruby>用意<rt>ようい</rt></ruby>いたします。", romaji: "Hai. Betsu no oheya o go-youi itashimasu.", id: "Baik. Kami akan menyiapkan kamar lain." },
-      { speaker: "お客様", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
     ],
   },
   {
     title: "Percakapan 3 · Check-out dan meminta kuitansi",
     context: "Kamu sudah selesai menginap dan ingin menyelesaikan pembayaran sebelum pergi.",
     lines: [
-      { speaker: "お客様", jp: "チェックアウトをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Chekkuauto o onegaishimasu.", id: "Saya ingin check-out." },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "チェックアウトをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Chekkuauto o onegaishimasu.", id: "Saya ingin check-out." },
       { speaker: "フロント", jp: "かしこまりました。お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。", romaji: "Kashikomarimashita. Oshiharai wa kaado desu ka, genkin desu ka.", id: "Baik. Pembayarannya dengan kartu atau uang tunai?" },
-      { speaker: "お客様", jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>もいただけますか。", romaji: "Kaado de onegaishimasu. Ryoushuusho mo itadakemasu ka.", id: "Dengan kartu, ya. Bolehkah saya meminta kuitansinya juga?" },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>もいただけますか。", romaji: "Kaado de onegaishimasu. Ryoushuusho mo itadakemasu ka.", id: "Dengan kartu, ya. Bolehkah saya meminta kuitansinya juga?" },
       { speaker: "フロント", jp: "もちろんです。こちらが<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>です。", romaji: "Mochiron desu. Kochira ga ryoushuusho desu.", id: "Tentu. Ini kuitansinya." },
-      { speaker: "お客様", jp: "お<ruby>世話<rt>せわ</rt></ruby>になりました。", romaji: "Osewa ni narimashita.", id: "Terima kasih atas pelayanan dan bantuannya selama saya menginap." },
+      { speaker: "お<ruby>客様<rt>きゃくさま</rt></ruby>", jp: "お<ruby>世話<rt>せわ</rt></ruby>になりました。", romaji: "Osewa ni narimashita.", id: "Terima kasih atas pelayanan dan bantuannya selama saya menginap." },
     ],
   },
 ];
@@ -197,7 +201,7 @@ const quiz = [
     options: [
       { label: "<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>預<rt>あず</rt></ruby>かっていただけますか。", correct: false, feedback: "Kalimat ini meminta petugas untuk menyimpan bagasi." },
       { label: "タオルをもう<ruby>一枚<rt>いちまい</rt></ruby>いただけますか。", correct: false, feedback: "Kalimat ini meminta satu handuk tambahan." },
-      { label: "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>をいただけますか。", correct: true, feedback: "Benar. 領収書 berarti kuitansi atau bukti pembayaran." },
+      { label: "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>をいただけますか。", correct: true, feedback: "Benar. <ruby>領収書<rt>りょうしゅうしょ</rt></ruby> berarti kuitansi atau bukti pembayaran." },
     ],
   },
 ];
@@ -328,7 +332,7 @@ export default function HotelAkomodasiPage() {
           <li><span className="font-semibold text-[#EAE6DD]">Perhatikan jam layanan.</span> Jam sarapan dan check-out berbeda di setiap penginapan. Periksa informasi hotel atau tanyakan langsung kepada petugas.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Tanyakan layanan penitipan bagasi.</span> Sebagian hotel dapat menyimpan barang sebelum check-in atau setelah check-out, tetapi kebijakan dan waktunya berbeda-beda.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Laporkan masalah kamar kepada resepsionis.</span> Jelaskan fasilitas yang bermasalah dan nomor kamar. Petugas dapat membantu memeriksa atau menawarkan solusi sesuai kondisi hotel.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Simpan bukti pembayaran.</span> Jika memerlukan kuitansi, minta 領収書 saat pembayaran atau check-out. Pastikan nama dan informasi yang tercetak sudah sesuai kebutuhan.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Simpan bukti pembayaran.</span> Jika memerlukan kuitansi, minta <ruby>領収書<rt>りょうしゅうしょ</rt></ruby> saat pembayaran atau check-out. Pastikan nama dan informasi yang tercetak sudah sesuai kebutuhan.</li>
         </ul>
       </section>
 
@@ -359,7 +363,9 @@ export default function HotelAkomodasiPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -387,9 +393,13 @@ export default function HotelAkomodasiPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
