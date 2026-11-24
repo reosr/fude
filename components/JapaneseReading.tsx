@@ -10,8 +10,10 @@ interface Props {
   children?: ReactNode;
   /** Bacaan hiragana eksplisit dari data kosakata atau materi. */
   kana?: string;
-  /** Romaji eksplisit; jika tidak diberikan, dibuat dari hiragana. */
+  /** Romaji eksplisit; jika tidak diberikan, dibuat dari teks Jepang. */
   romaji?: string;
+  /** Utamakan romaji otomatis bila seluruh teks Jepang berhasil dibaca. */
+  preferAutomaticRomaji?: boolean;
   /** Arti atau terjemahan bahasa Indonesia. */
   translation?: ReactNode;
   contentClassName?: string;
@@ -759,6 +761,7 @@ export default function JapaneseReading({
   children,
   kana: explicitKana,
   romaji: explicitRomaji,
+  preferAutomaticRomaji = false,
   translation,
   contentClassName = "font-mincho text-lg leading-[2.2] text-[#F1EBDD]",
   kanaClassName = "mt-2 font-mincho text-lg leading-relaxed text-[#D6AD4F]",
@@ -842,10 +845,12 @@ export default function JapaneseReading({
           );
           return source;
         })();
+  const segmentedRomaji = romanizeJapaneseSource(romajiSource);
   const automaticRomaji =
-    romanizeJapaneseSource(romajiSource) ||
-    (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
-  const romanization = explicitRomaji?.trim() || automaticRomaji;
+    segmentedRomaji ?? (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
+  const romanization = preferAutomaticRomaji
+    ? segmentedRomaji || explicitRomaji?.trim() || automaticRomaji
+    : explicitRomaji?.trim() || automaticRomaji;
   const consistentRomajiClassName = [
     ...romajiClassName.split(" ").filter((className) => !className.startsWith("text-[#")),
     "text-[#D9B66D]",
