@@ -92,11 +92,11 @@ const categories = [
   {
     number: "09",
     title: "Hotel dan Akomodasi",
-    description: "Check-in, check-out, fasilitas, dan menyampaikan permintaan.",
+    description: "Reservasi, check-in, fasilitas kamar, bantuan, dan check-out.",
     icon: Hotel,
-    href: "",
-    available: false,
-    lessons: "Dalam persiapan",
+    href: "/ungkapan-praktis/hotel-akomodasi",
+    available: true,
+    lessons: "Materi kesembilan tersedia",
   },
   {
     number: "10",
@@ -134,14 +134,14 @@ export default function UngkapanPraktisPage() {
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-sm font-bold text-[#EAE6DD]">Jalur komunikasi praktis</p>
-            <p className="mt-1 text-xs text-[#A3A099]">10 kategori direncanakan · 8 kategori mulai tersedia</p>
+            <p className="mt-1 text-xs text-[#A3A099]">10 kategori direncanakan · 9 kategori mulai tersedia</p>
           </div>
           <span className="rounded-full border border-[#269B70]/30 bg-[#269B70]/10 px-3 py-1 text-xs font-bold text-[#66C49C]">
-            8 / 10
+            9 / 10
           </span>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#121110]">
-          <div className="h-full w-[80%] rounded-full bg-gradient-to-r from-[#B8860B] to-[#269B70]" />
+          <div className="h-full w-[90%] rounded-full bg-gradient-to-r from-[#B8860B] to-[#269B70]" />
         </div>
         <p className="mt-3 text-xs leading-relaxed text-[#817A73]">
           Materi ini melengkapi halaman Baca. Cerita dan latihan membaca yang sudah ada tetap berada di sana.
