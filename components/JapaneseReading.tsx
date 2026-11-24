@@ -156,6 +156,151 @@ function containsIndonesianProse(source: string): boolean {
   return isLongIndonesianExplanation || isShortMixedNotation;
 }
 
+const JAPANESE_INLINE_PATTERN = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶー]+/u;
+const JAPANESE_INLINE_SPLIT_PATTERN = /([\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶー]+)/gu;
+
+function renderMixedJapaneseText(
+  value: string,
+  keyPrefix: string,
+  allowIndexFallback: boolean
+): ReactNode[] {
+  return value.split(JAPANESE_INLINE_SPLIT_PATTERN).map((part, index) => {
+    if (!JAPANESE_INLINE_PATTERN.test(part)) return part;
+
+    const segments = allowIndexFallback
+      ? segmentTextByReadingIndex(part)
+      : [{ text: part }];
+
+    if (
+      allowIndexFallback &&
+      segments.some((segment) => Boolean(segment.reading))
+    ) {
+      return segments.map((segment, segmentIndex) =>
+        segment.reading ? (
+          <ruby
+            key={keyPrefix + "-" + index + "-" + segmentIndex}
+            className="irodori-mixed-japanese"
+            lang="ja"
+          >
+            {segment.text}
+            <rt>{segment.reading}</rt>
+          </ruby>
+        ) : JAPANESE_INLINE_PATTERN.test(segment.text) ? (
+          <span
+            key={keyPrefix + "-" + index + "-" + segmentIndex}
+            className="irodori-mixed-japanese"
+            lang="ja"
+          >
+            {segment.text}
+          </span>
+        ) : (
+          segment.text
+        )
+      );
+    }
+
+    return (
+      <span
+        key={keyPrefix + "-" + index}
+        className="irodori-mixed-japanese"
+        lang="ja"
+      >
+        {part}
+      </span>
+    );
+  });
+}
+
+function renderMixedLanguageNode(
+  node: ReactNode,
+  allowIndexFallback: boolean,
+  keyPrefix = "irodori-mixed"
+): ReactNode {
+  if (node === null || node === undefined || typeof node === "boolean") {
+    return node;
+  }
+
+  if (typeof node === "string" || typeof node === "number") {
+    return renderMixedJapaneseText(
+      String(node),
+      keyPrefix,
+      allowIndexFallback
+    );
+  }
+
+  if (Array.isArray(node)) {
+    return node.map((child, index) =>
+      renderMixedLanguageNode(
+        child,
+        allowIndexFallback,
+        keyPrefix + "-" + index
+      )
+    );
+  }
+
+  if (!isValidElement(node)) return node;
+
+  const element = node as ReactElement<{
+    children?: ReactNode;
+    className?: string;
+    dangerouslySetInnerHTML?: unknown;
+  }>;
+
+  if (element.type === "rt") return node;
+
+  const elementKey = element.key ?? keyPrefix;
+  const originalClassName = element.props.className ?? "";
+  const isRuby = element.type === "ruby";
+
+  if (element.props.dangerouslySetInnerHTML) {
+    return element.key === null
+      ? cloneElement(element, { key: elementKey })
+      : node;
+  }
+
+  return cloneElement(
+    element,
+    {
+      key: elementKey,
+      ...(isRuby
+        ? {
+            className: (originalClassName + " irodori-mixed-japanese").trim(),
+            lang: "ja",
+          }
+        : {}),
+    },
+    renderMixedLanguageNode(
+      element.props.children,
+      allowIndexFallback,
+      keyPrefix + "-child"
+    )
+  );
+}
+
+function decorateMixedJapaneseHtml(html: string): string {
+  let insideRubyText = false;
+  const tokens = html.match(/<\/?rt\b[^>]*>|<[^>]+>|[^<]+/gi) ?? [];
+
+  return tokens
+    .map((token) => {
+      if (/^<rt\b/i.test(token)) {
+        insideRubyText = true;
+        return token;
+      }
+      if (/^<\/rt\b/i.test(token)) {
+        insideRubyText = false;
+        return token;
+      }
+      if (token.startsWith("<") || insideRubyText) return token;
+
+      return token.replace(
+        JAPANESE_INLINE_SPLIT_PATTERN,
+        '<span class="irodori-mixed-japanese" lang="ja">$1</span>'
+      );
+    })
+    .join("");
+}
+
 function renderJapaneseNodeWithRuby(node: ReactNode, keyPrefix = "reading"): ReactNode {
   if (typeof node === "string") {
     const segments = segmentTextByReadingIndex(node);
@@ -1052,12 +1197,30 @@ export default function JapaneseReading({
       {showOriginal && (
         html !== undefined || displayHtml !== undefined ? (
           <span
-            className={contentClassName}
-            dangerouslySetInnerHTML={{ __html: displayHtml ?? html ?? "" }}
+            className={
+              hasMixedLanguageProse
+                ? contentClassName + " irodori-mixed-prose"
+                : contentClassName
+            }
+            dangerouslySetInnerHTML={{
+              __html: hasMixedLanguageProse
+                ? decorateMixedJapaneseHtml(displayHtml ?? html ?? "")
+                : displayHtml ?? html ?? "",
+            }}
           />
         ) : (
-          <span className={contentClassName}>
-            {allowIndexFallback ? renderJapaneseNodeWithRuby(children) : children}
+          <span
+            className={
+              hasMixedLanguageProse
+                ? contentClassName + " irodori-mixed-prose"
+                : contentClassName
+            }
+          >
+            {hasMixedLanguageProse
+              ? renderMixedLanguageNode(children, allowIndexFallback)
+              : allowIndexFallback
+                ? renderJapaneseNodeWithRuby(children)
+                : children}
           </span>
         )
       )}
