@@ -223,10 +223,10 @@ const simulation = [
     japanese: "<ruby>金曜日<rt>きんようび</rt></ruby>までに<ruby>提出<rt>ていしゅつ</rt></ruby>してください。",
     romaji: "Kinyoubi made ni teishutsu shite kudasai.",
     translation: "Silakan kumpulkan paling lambat hari Jumat.",
-    task: "Tanyakan kapan batas pengumpulan laporan.",
+    task: "Tanggapi informasi tenggat dan pastikan kamu memahami kapan laporan harus dikumpulkan.",
     options: [
       { label: "<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まりますか。", correct: false, feedback: "Kalimat ini menanyakan pukul berapa pelajaran dimulai." },
-      { label: "レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", correct: true, feedback: "Benar. Kamu menanyakan tenggat pengumpulan laporan." },
+      { label: "わかりました。<ruby>金曜日<rt>きんようび</rt></ruby>までに<ruby>提出<rt>ていしゅつ</rt></ruby>します。", correct: true, feedback: "Benar. Kamu memahami instruksi dan mengonfirmasi bahwa laporan akan dikumpulkan paling lambat hari Jumat." },
       { label: "トイレに<ruby>行<rt>い</rt></ruby>ってもいいですか。", correct: false, feedback: "Kalimat ini meminta izin pergi ke toilet." },
     ],
   },
