@@ -70,7 +70,9 @@ export default function Kosakata() {
     const progress = getProgress();
     const requestedCategory = new URLSearchParams(window.location.search).get("category");
 
-    if (requestedCategory) setCategoryFilter(requestedCategory);
+    if (requestedCategory && practicalVocabData.some((category) => category.id === requestedCategory)) {
+      setCategoryFilter(requestedCategory);
+    }
     setCurrentBab(progress);
 
     setMemorized(getMemorizedKanji());
@@ -184,12 +186,15 @@ export default function Kosakata() {
           <p className="text-[#A3A099] text-sm mt-1">
             {selectedPracticalCategory
               ? `${sourceFilteredVocab.length} kosakata dari Ungkapan Praktis · ${selectedPracticalCategory.label}.`
-              : `Total ${allVocab.length} kata dari Minna, Irodori, dan Ungkapan Praktis.`}
+              : `Total ${allVocab.length} kata dari ${currentBab} bab Minna yang sudah terbuka, Irodori, dan Ungkapan Praktis.`}
           </p>
           {categoryFilter && (
             <button
               type="button"
-              onClick={() => setCategoryFilter(null)}
+              onClick={() => {
+                setCategoryFilter(null);
+                window.history.replaceState(null, "", "/kosakata");
+              }}
               className="mt-2 text-xs font-semibold text-[#D9B66D] hover:text-[#F0D38A]"
             >
               Tampilkan semua kosakata
