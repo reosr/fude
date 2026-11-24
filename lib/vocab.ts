@@ -284,7 +284,7 @@ export async function getUnlockedVocab(
 
     category.vocab.forEach((entry) => {
       const kanji = entry.word
-        .replace(/<rt\\b[^>]*>[\\s\\S]*?<\\/rt>/gi, "")
+        .replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/gi, "")
         .replace(/<[^>]*>/g, "")
         .trim();
       const vocab = {
