@@ -237,7 +237,8 @@ main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:n
 .irodori-learning .font-mincho:not(.irodori-mixed-prose),
 .irodori-learning .irodori-mixed-japanese {
   font-family: 'MS Mincho', 'ＭＳ 明朝', 'MS PMincho', 'Noto Serif JP', 'Shippori Mincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif !important;
-  font-weight: 400;
+  font-weight: 500;
+  -webkit-text-stroke: 0.28px currentColor;
   -webkit-font-smoothing: auto;
   text-rendering: geometricPrecision;
 }
@@ -249,8 +250,13 @@ main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:n
   line-height: 1.8 !important;
 }
 
-.irodori-learning .irodori-mixed-japanese rt {
+.irodori-learning rt {
   font-family: 'Shippori Mincho', 'Yu Mincho', serif;
+  font-weight: 600;
+  -webkit-text-stroke: 0;
+}
+
+.irodori-learning .irodori-mixed-japanese rt {
   font-size: 0.48em;
   line-height: 1;
 }
