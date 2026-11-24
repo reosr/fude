@@ -6,11 +6,9 @@ import {
   ArrowLeft,
   ArrowRight,
   BookOpen,
-  CheckCircle2,
   Lightbulb,
   MessagesSquare,
   RotateCcw,
-  ShoppingBag,
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
@@ -151,7 +149,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "A. Menanyakan barang dan lokasinya",
     description: "Gunakan ungkapan ini saat mencari barang atau meminta bantuan pegawai toko.",
     items: [
-      { jp: "すみません、<ruby>商品<rt>しょうひん</rt></ruby>はどこにありますか。", romaji: "Sumimasen, shouhin wa doko ni arimasu ka.", id: "Permisi, barang ini ada di mana?", tone: "Sopan · bertanya lokasi" },
+      { jp: "すみません、<ruby>商品<rt>しょうひん</rt></ruby>はどこにありますか。", romaji: "Sumimasen, shouhin wa doko ni arimasu ka.", id: "Permisi, barangnya ada di mana?", tone: "Sopan · bertanya lokasi" },
       { jp: "<ruby>文房具売り場<rt>ぶんぼうぐうりば</rt></ruby>はどこですか。", romaji: "Bunbougu uriba wa doko desu ka.", id: "Bagian alat tulis ada di mana?", tone: "Menanyakan bagian toko" },
       { jp: "この<ruby>商品<rt>しょうひん</rt></ruby>はありますか。", romaji: "Kono shouhin wa arimasu ka.", id: "Apakah barang ini tersedia?", tone: "Menanyakan ketersediaan" },
       { jp: "<ruby>別<rt>べつ</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>はありますか。", romaji: "Betsu no iro wa arimasu ka.", id: "Apakah ada warna lain?", tone: "Meminta pilihan lain" },
