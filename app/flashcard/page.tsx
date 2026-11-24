@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
 import JapaneseReading from "../../components/JapaneseReading";
 import verbTypeData from "../../data/verb-type-index.json";
+import practicalVocabData from "@/data/practical-vocab.json";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
@@ -105,6 +106,7 @@ export default function Flashcard() {
   const [isLoaded, setIsLoaded] = useState(false);
   
   const [memorized, setMemorized] = useState<string[]>([]);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
@@ -126,6 +128,9 @@ useEffect(() => {
 
   const loadData = async () => {
     try {
+      const requestedCategory = new URLSearchParams(window.location.search).get("category");
+      if (requestedCategory && active) setCategoryFilter(requestedCategory);
+
       const savedMemorized = getMemorizedKanji();
 
       if (active) {
@@ -197,7 +202,13 @@ useEffect(() => {
     };
   }, []);
 
-  const filteredDeck = deck.filter(c => !memorized.includes(c.kanji));
+  const selectedPracticalCategory = practicalVocabData.find((category) => category.id === categoryFilter);
+  const filteredDeck = deck.filter((card) =>
+    !memorized.includes(card.kanji) &&
+    (!categoryFilter || card.sources?.some(
+      (source) => source.type === "practical" && source.categoryId === categoryFilter
+    ))
+  );
 
   useEffect(() => {
     setTimeLeft((isFlipped ? TIMER_BACK : TIMER_FRONT) * 20);
@@ -302,8 +313,19 @@ useEffect(() => {
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
           <p className="hidden sm:block text-[#A3A099] text-sm mt-1">
-            Latihan mengingat kosakata. Klik kartu untuk melihat arti.
+            {selectedPracticalCategory
+              ? `Latihan kosakata: ${selectedPracticalCategory.label}.`
+              : "Latihan mengingat kosakata. Klik kartu untuk melihat arti."}
           </p>
+          {categoryFilter && (
+            <button
+              type="button"
+              onClick={() => setCategoryFilter(null)}
+              className="mt-2 text-xs font-semibold text-[#D9B66D] hover:text-[#F0D38A]"
+            >
+              Kembali ke semua kartu
+            </button>
+          )}
         </div>
         
         {memorized.length > 0 && (
