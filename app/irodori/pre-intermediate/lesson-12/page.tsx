@@ -102,7 +102,7 @@ const content: IrodoriLessonContent = {
     },
   ],
   readingArticle: {
-    title: "困っている人を見かけたとき、緊急のとき",
+    title: "Saat melihat orang kesulitan dan menghadapi keadaan darurat",
     lead: "Bacalah cara menawarkan bantuan, informasi dasar nomor darurat di Jepang, dan cara menjelaskan pengalaman yang sulit. Materi ini untuk belajar bahasa, bukan pengganti petunjuk petugas darurat.",
     paragraphs: [
       { japanese: <>町や駅で困っている人を見かけたら、まず「だいじょうぶですか」「何かお困りですか」と短く声をかけることができます。相手が助けを必要としているようなら、「よかったら、案内しましょうか」「通訳しましょうか」など、できることを提案します。相手の希望を聞き、無理に手伝おうとしないことも大切です。</>, translation: "Jika melihat orang yang tampak kesulitan di kota atau stasiun, kamu bisa menyapa dengan singkat, seperti “Apakah Anda baik-baik saja?” atau “Apakah ada yang bisa saya bantu?”. Jika tampaknya membutuhkan bantuan, tawarkan hal yang bisa kamu lakukan, misalnya mengantar atau membantu menerjemahkan. Dengarkan juga keinginan orang tersebut dan jangan memaksakan bantuan." },
@@ -169,7 +169,7 @@ const content: IrodoriLessonContent = {
     {
       title: "01 · Menanyakan keadaan dengan sopan",
       pattern: "お + pangkal kata kerja bentuk ます + ですか",
-      example: <>何かお探しですか。<br />何かお困りですか。<br />お手伝いしましょうか。</>,
+      example: <>何かお探しですか。<br />何かお困りですか。<br />お急ぎですか。</>,
       note: "Awalan お pada ungkapan tertentu membuat pertanyaan terdengar lebih sopan. Contohnya お探しですか (sedang mencari sesuatu?) dan お困りですか (sedang mengalami kesulitan?). Untuk menawarkan tindakan diri sendiri, gunakan bentuk seperti お手伝いしましょうか (bolehkah saya membantu?).",
     },
     {
@@ -209,7 +209,7 @@ const content: IrodoriLessonContent = {
     exampleLabel: "CONTOH ORISINAL FUDE",
     exampleJapanese: <>先週、駅の階段で転んでしまいました。足が痛くて、しばらく動けませんでした。近くにいた人が駅員さんを呼んでくれました。病院で診てもらって、大きな問題はありませんでした。これからは階段で気をつけることにしました。</>,
     exampleTranslation: "Minggu lalu, saya terjatuh di tangga stasiun. Kaki saya sakit sehingga saya tidak bisa bergerak untuk sementara. Orang di dekat saya memanggil petugas stasiun. Saya diperiksa di rumah sakit dan ternyata tidak ada masalah besar. Mulai sekarang, saya memutuskan untuk lebih berhati-hati di tangga.",
-    placeholder: "先週、＿＿で＿＿てしまいました。そのとき、＿＿...",
+    placeholder: "せんしゅう、＿＿で＿＿てしまいました。そのとき、＿＿..."
   },
   simulations: [
     {
