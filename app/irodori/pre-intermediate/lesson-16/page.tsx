@@ -99,7 +99,6 @@ const content: IrodoriLessonContent = {
     ["写真", "しゃしん · shashin", "Foto"],
     ["撮る", "とる · toru", "Mengambil foto; memotret"],
     ["撮れる", "とれる · toreru", "Bisa diambil; berhasil memotret"],
-    ["撮影", "さつえい · satsuei", "Pemotretan; pengambilan gambar"],
     ["景色", "けしき · keshiki", "Pemandangan"],
     ["風景", "ふうけい · fuukei", "Lanskap; suasana pemandangan"],
     ["旅行先", "りょこうさき · ryokousaki", "Tempat tujuan perjalanan"],
@@ -150,8 +149,8 @@ const content: IrodoriLessonContent = {
   ],
   kanjiWords: [
     ["写真", "しゃしん · shashin", "Foto"],
-    ["撮影", "さつえい · satsuei", "Pemotretan; pengambilan gambar"],
     ["宿泊", "しゅくはく · shukuhaku", "Menginap; penginapan"],
+    ["高級", "こうきゅう · koukyuu", "Berkualitas tinggi; mewah"],
     ["和室", "わしつ · washitsu", "Kamar bergaya Jepang"],
     ["洋室", "ようしつ · youshitsu", "Kamar bergaya Barat"],
     ["追加", "ついか · tsuika", "Tambahan"],
@@ -189,7 +188,7 @@ const content: IrodoriLessonContent = {
     {
       title: "05 · Membuat ungkapan rendah hati dengan お／ご",
       pattern: "お + pangkal V-ます + する ／ ご + Nする",
-      example: <>お荷物をお預かりします。<br />ご予約の内容を確認します。</>,
+      example: <>お荷物をお預かりします。<br />ご予約のお部屋をご案内します。</>,
       note: "Bentuk ini digunakan untuk menyebut tindakan pihak pembicara dengan sopan. Hapus ます dari bentuk ます, lalu tambahkan お〜する: 預かります → お預かりする. Untuk sejumlah kata kerja suru yang berasal dari kata benda, gunakan ご: 案内する → ご案内する. Ada pengecualian dan bentuk yang lebih hormat seperti お預かりいたします. Jangan gunakan pola ini untuk semua kata kerja secara sembarangan.",
     },
     {
