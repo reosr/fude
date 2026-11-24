@@ -157,7 +157,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
       { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "すみません。<ruby>処方箋<rt>しょほうせん</rt></ruby>があります。", romaji: "Sumimasen. Shohousen ga arimasu.", id: "Permisi. Saya memiliki resep dokter." },
       { speaker: "<ruby>薬剤師<rt>やくざいし</rt></ruby>", jp: "かしこまりました。こちらがお<ruby>薬<rt>くすり</rt></ruby>です。", romaji: "Kashikomarimashita. Kochira ga okusuri desu.", id: "Baik. Ini obat Anda." },
       { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "<ruby>一日<rt>いちにち</rt></ruby>に<ruby>何回<rt>なんかい</rt></ruby><ruby>飲<rt>の</rt></ruby>めばいいですか。", romaji: "Ichinichi ni nankai nomeba ii desu ka.", id: "Dalam sehari, berapa kali obat ini perlu diminum?" },
-      { speaker: "<ruby>薬剤師<rt>やくざいし</rt></ruby>", jp: "<ruby>説明書<rt>せつめいしょ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してください。<ruby>食後<rt>しょくご</rt></ruby>に<ruby>飲<rt>の</rt></ruby>んでください。", romaji: "Setsumeisho o kakunin shite kudasai. Shokugo ni nonde kudasai.", id: "Silakan periksa petunjuknya. Minumlah setelah makan." },
+      { speaker: "<ruby>薬剤師<rt>やくざいし</rt></ruby>", jp: "<ruby>薬<rt>くすり</rt></ruby>によって<ruby>飲<rt>の</rt></ruby>み<ruby>方<rt>かた</rt></ruby>が<ruby>違<rt>ちが</rt></ruby>います。<ruby>説明書<rt>せつめいしょ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してください。", romaji: "Kusuri ni yotte nomikata ga chigaimasu. Setsumeisho o kakunin shite kudasai.", id: "Aturan minum berbeda-beda tergantung obatnya. Silakan periksa petunjuk penggunaan." },
       { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
@@ -226,7 +226,7 @@ const simulation = [
     ],
   },
   {
-    prompt: "Apoteker menunjukkan obat dan kamu ingin memahami cara meminumnya. Kamu bertanya:",
+    prompt: "Apoteker menunjukkan obat dan bertanya apakah ada hal yang ingin kamu tanyakan:",
     japanese: "<ruby>何<rt>なん</rt></ruby>か<ruby>質問<rt>しつもん</rt></ruby>はありますか。",
     romaji: "Nanika shitsumon wa arimasu ka.",
     translation: "Apakah ada pertanyaan?",
