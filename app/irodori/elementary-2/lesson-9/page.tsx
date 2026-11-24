@@ -182,7 +182,7 @@ const sendNewYearGreetingConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>「あけましておめでとうございます。今年もよろしくお願いします」と書きました。</>,
-    romaji: "Akemashite omedetou gozaimasu. Kotoshi mo yoroshiku onegaishimasu to kakimashita.",
+    romaji: "Akemashite omedetou gozaimasu. Kotoshi mo yoroshiku onegai shimasu to kakimashita.",
     translation: "Saya menulis, “Selamat Tahun Baru. Semoga kita bisa terus berhubungan baik tahun ini.”",
     audioFileName: "irodori-elementary2-09-a05-l04.mp3",
   },
@@ -255,7 +255,7 @@ const vocabRows = [
   ["新年", "しんねん · shinnen", "Tahun Baru"],
   ["あいさつ", "あいさつ · aisatsu", "Salam atau ucapan"],
   ["あけましておめでとうございます", "あけましておめでとうございます · akemashite omedetou gozaimasu", "Selamat Tahun Baru"],
-  ["今年もよろしくお願いします", "ことしもよろしくおねがいします · kotoshi mo yoroshiku onegaishimasu", "Mohon kerja samanya juga tahun ini"],
+  ["今年もよろしくお願いします", "ことしもよろしくおねがいします · kotoshi mo yoroshiku onegai shimasu", "Mohon kerja samanya juga tahun ini"],
   ["春節", "しゅんせつ · shunsetsu", "Tahun Baru Imlek"],
   ["ソンクラーン", "ソンクラーン · sonkuraan", "Songkran, perayaan Tahun Baru Thailand"],
   ["独立記念日", "どくりつきねんび · dokuritsu kinenbi", "Hari Kemerdekaan"],
