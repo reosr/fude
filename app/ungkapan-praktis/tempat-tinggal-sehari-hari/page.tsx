@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -166,16 +167,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>管理会社<rt>かんりがいしゃ</rt></ruby>", reading: "かんりがいしゃ", romaji: "kanri gaisha", meaning: "Perusahaan pengelola gedung" },
-  { word: "<ruby>管理人<rt>かんりにん</rt></ruby>", reading: "かんりにん", romaji: "kanrinin", meaning: "Pengelola / petugas gedung" },
-  { word: "<ruby>設備<rt>せつび</rt></ruby>", reading: "せつび", romaji: "setsubi", meaning: "Fasilitas / instalasi" },
-  { word: "<ruby>故障<rt>こしょう</rt></ruby>", reading: "こしょう", romaji: "koshou", meaning: "Kerusakan / tidak berfungsi" },
-  { word: "<ruby>分別<rt>ぶんべつ</rt></ruby>", reading: "ぶんべつ", romaji: "bunbetsu", meaning: "Pemilahan (sampah)" },
-  { word: "<ruby>燃<rt>も</rt></ruby>えるゴミ", reading: "もえるごみ", romaji: "moeru gomi", meaning: "Sampah yang dapat dibakar" },
-  { word: "<ruby>粗大<rt>そだい</rt></ruby>ゴミ", reading: "そだいごみ", romaji: "sodai gomi", meaning: "Sampah berukuran besar" },
-  { word: "<ruby>宅配便<rt>たくはいびん</rt></ruby>", reading: "たくはいびん", romaji: "takuhaibin", meaning: "Layanan pengiriman paket" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "tempat-tinggal-sehari-hari")?.vocab ?? [];
 
 const quiz = [
   {
