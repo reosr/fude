@@ -181,7 +181,7 @@ const quiz = [
   {
     question: "Air panas di apartemenmu tidak keluar. Apa yang sebaiknya kamu sampaikan kepada pengelola?",
     options: [
-      { label: "お<ruby>湯<rt>ゆ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ません。", correct: true, feedback: "Benar. お湯が出ません berarti air panas tidak keluar." },
+      { label: "お<ruby>湯<rt>ゆ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ません。", correct: true, feedback: "Benar. お<ruby>湯<rt>ゆ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ません berarti air panas tidak keluar." },
       { label: "<ruby>鍵<rt>かぎ</rt></ruby>をなくしました。", correct: false, feedback: "Kalimat ini berarti kehilangan kunci." },
       { label: "エレベーターはどこですか。", correct: false, feedback: "Kalimat ini menanyakan letak lift." },
     ],
@@ -198,7 +198,7 @@ const quiz = [
     question: "Petugas pengiriman tidak berhasil menyerahkan paket. Kamu ingin meminta pengantaran ulang. Apa yang kamu katakan?",
     options: [
       { label: "ゴミの<ruby>分<rt>わ</rt></ruby>け<ruby>方<rt>かた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>てください。", correct: false, feedback: "Kalimat ini meminta penjelasan cara memilah sampah." },
-      { label: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いできますか。", correct: true, feedback: "Benar. 再配達をお<ruby>願<rt>ねが</rt></ruby>いできますか digunakan untuk meminta pengantaran ulang." },
+      { label: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いできますか。", correct: true, feedback: "Benar. <ruby>再配達<rt>さいはいたつ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いできますか digunakan untuk meminta pengantaran ulang." },
       { label: "<ruby>洗濯機<rt>せんたくき</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>まで<ruby>使<rt>つか</rt></ruby>えますか。", correct: false, feedback: "Kalimat ini menanyakan batas waktu penggunaan mesin cuci." },
     ],
   },
