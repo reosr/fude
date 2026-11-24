@@ -123,7 +123,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     items: [
       { jp: "<ruby>私<rt>わたし</rt></ruby>はそう<ruby>思<rt>おも</rt></ruby>います。", romaji: "Watashi wa sou omoimasu.", id: "Saya juga berpikir begitu.", tone: "Menyatakan persetujuan" },
       { jp: "いい<ruby>考<rt>かんが</rt></ruby>えだと<ruby>思<rt>おも</rt></ruby>います。", romaji: "Ii kangae da to omoimasu.", id: "Menurut saya, itu ide yang bagus.", tone: "Memberi tanggapan positif" },
-      { jp: "<ruby>私<rt>わたし</rt></ruby>は<ruby>少<rt>すこ</rt></ruby>し<ruby>違<rt>ちが</rt></ruby>う<ruby>意見<rt>いけん</rt></ruby>があります。", romaji: "Watashi wa sukoshi chigau iken ga arimasu.", id: "Saya punya sedikit pendapat yang berbeda.", tone: "Menyampaikan perbedaan pendapat" },
+      { jp: "<ruby>私<rt>わたし</rt></ruby>は<ruby>少<rt>すこ</rt></ruby>し<ruby>違<rt>ちが</rt></ruby>う<ruby>意見<rt>いけん</rt></ruby>があります。", romaji: "Watashi wa sukoshi chigau iken ga arimasu.", id: "Saya punya pandangan yang sedikit berbeda.", tone: "Menyampaikan perbedaan pendapat" },
       { jp: "その<ruby>理由<rt>りゆう</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてもらえますか。", romaji: "Sono riyuu o oshiete moraemasu ka.", id: "Bisa jelaskan alasannya?", tone: "Meminta alasan" },
       { jp: "なるほど、そういう<ruby>考<rt>かんが</rt></ruby>え<ruby>方<rt>かた</rt></ruby>もありますね。", romaji: "Naruhodo, sou iu kangaekata mo arimasu ne.", id: "Oh begitu, ternyata ada juga cara pandang seperti itu.", tone: "Menanggapi dengan terbuka" },
       { jp: "<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>考<rt>かんが</rt></ruby>えてみましょう。", romaji: "Issho ni kangaete mimashou.", id: "Mari kita pikirkan bersama.", tone: "Mengajak mencari solusi" },
@@ -160,7 +160,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Kamu dan teman sedang membicarakan rencana kegiatan bersama dan memiliki pandangan yang berbeda.",
     lines: [
       { speaker: "ケン", jp: "<ruby>来週<rt>らいしゅう</rt></ruby>、みんなで<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くのはどうですか。", romaji: "Raishuu, minna de ryokou ni iku no wa dou desu ka.", id: "Bagaimana kalau minggu depan kita pergi berwisata bersama?" },
-      { speaker: "アキ", jp: "いい<ruby>考<rt>かんが</rt></ruby>えだと<ruby>思<rt>おも</rt></ruby>います。でも、<ruby>少<rt>すこ</rt></ruby>し<ruby>違<rt>ちが</rt></ruby>う<ruby>意見<rt>いけん</rt></ruby>があります。", romaji: "Ii kangae da to omoimasu. Demo, sukoshi chigau iken ga arimasu.", id: "Menurut saya itu ide yang bagus. Namun, saya punya sedikit pendapat berbeda." },
+      { speaker: "アキ", jp: "いい<ruby>考<rt>かんが</rt></ruby>えだと<ruby>思<rt>おも</rt></ruby>います。でも、<ruby>少<rt>すこ</rt></ruby>し<ruby>違<rt>ちが</rt></ruby>う<ruby>意見<rt>いけん</rt></ruby>があります。", romaji: "Ii kangae da to omoimasu. Demo, sukoshi chigau iken ga arimasu.", id: "Menurut saya idenya bagus. Namun, saya punya pandangan yang sedikit berbeda." },
       { speaker: "ケン", jp: "どんな<ruby>意見<rt>いけん</rt></ruby>ですか。", romaji: "Donna iken desu ka.", id: "Pendapat seperti apa?" },
       { speaker: "アキ", jp: "<ruby>来週<rt>らいしゅう</rt></ruby>は<ruby>忙<rt>いそが</rt></ruby>しい<ruby>人<rt>ひと</rt></ruby>もいるので、<ruby>再来週<rt>さらいしゅう</rt></ruby>はどうでしょうか。", romaji: "Raishuu wa isogashii hito mo iru node, saraishuu wa dou deshou ka.", id: "Karena ada yang sibuk minggu depan, bagaimana kalau dua minggu lagi?" },
       { speaker: "ケン", jp: "なるほど。それもいいですね。みんなに<ruby>聞<rt>き</rt></ruby>いてみましょう。", romaji: "Naruhodo. Sore mo ii desu ne. Minna ni kiite mimashou.", id: "Oh begitu. Itu juga ide bagus. Mari kita tanyakan kepada semuanya." },
