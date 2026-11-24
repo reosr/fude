@@ -147,7 +147,7 @@ const content: IrodoriLessonContent = {
     ["相談", "そうだん · soudan", "Konsultasi; meminta saran"],
     ["窓口", "まどぐち · madoguchi", "Loket; bagian layanan"],
     ["労働", "ろうどう · roudou", "Ketenagakerjaan; tenaga kerja"],
-    ["同意", "どうい · doui", "Persetujuan"],
+    ["手洗い", "てあらい · tearai", "Mencuci tangan"],
   ],
   kanjiWords: [
     ["給料", "きゅうりょう · kyuuryou", "Gaji"],
