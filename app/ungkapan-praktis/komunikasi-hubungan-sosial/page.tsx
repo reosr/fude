@@ -135,7 +135,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
       { speaker: "アキ", jp: "もしもし、<ruby>山田<rt>やまだ</rt></ruby>さんですか。", romaji: "Moshi moshi, Yamada-san desu ka.", id: "Halo, apakah ini Yamada?" },
       { speaker: "山田", jp: "はい、そうです。", romaji: "Hai, sou desu.", id: "Ya, benar." },
       { speaker: "アキ", jp: "<ruby>今<rt>いま</rt></ruby>、お<ruby>時間<rt>じかん</rt></ruby>よろしいですか。", romaji: "Ima, ojikan yoroshii desu ka.", id: "Apakah sekarang kamu punya waktu?" },
-      { speaker: "山田", jp: "はい、大丈夫ですよ。どうしましたか。", romaji: "Hai, daijoubu desu yo. Dou shimashita ka.", id: "Ya, tidak masalah. Ada apa?" },
+      { speaker: "山田", jp: "はい、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。どうしましたか。", romaji: "Hai, daijoubu desu yo. Dou shimashita ka.", id: "Ya, tidak masalah. Ada apa?" },
       { speaker: "アキ", jp: "<ruby>土曜日<rt>どようび</rt></ruby>に<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きませんか。", romaji: "Doyoubi ni issho ni eiga o mi ni ikimasen ka.", id: "Hari Sabtu, mau menonton film bersama?" },
       { speaker: "山田", jp: "いいですね。ぜひ<ruby>行<rt>い</rt></ruby>きましょう。", romaji: "Ii desu ne. Zehi ikimashou.", id: "Boleh juga. Ayo, kita pergi." },
     ],
@@ -229,8 +229,8 @@ const simulation = [
   },
   {
     prompt: "Kamu dan teman sedang menentukan rencana bersama. Teman bertanya:",
-    japanese: "あなたはどう<ruby>思<rt>おも</rt></ruby>いますか。",
-    romaji: "Anata wa dou omoimasu ka.",
+    japanese: "どう<ruby>思<rt>おも</rt></ruby>いますか。",
+    romaji: "Dou omoimasu ka.",
     translation: "Menurutmu bagaimana?",
     task: "Sampaikan bahwa kamu punya sedikit pendapat berbeda.",
     options: [
