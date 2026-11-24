@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -235,16 +236,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>", reading: "かいもの", romaji: "kaimono", meaning: "Belanja" },
-  { word: "<ruby>商品<rt>しょうひん</rt></ruby>", reading: "しょうひん", romaji: "shouhin", meaning: "Barang / produk" },
-  { word: "<ruby>値段<rt>ねだん</rt></ruby>", reading: "ねだん", romaji: "nedan", meaning: "Harga" },
-  { word: "<ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>", reading: "うりば", romaji: "uriba", meaning: "Bagian / area penjualan" },
-  { word: "<ruby>試着<rt>しちゃく</rt></ruby>", reading: "しちゃく", romaji: "shichaku", meaning: "Mencoba pakaian" },
-  { word: "<ruby>現金<rt>げんきん</rt></ruby>", reading: "げんきん", romaji: "genkin", meaning: "Uang tunai" },
-  { word: "<ruby>袋<rt>ふくろ</rt></ruby>", reading: "ふくろ", romaji: "fukuro", meaning: "Kantong" },
-  { word: "<ruby>会計<rt>かいけい</rt></ruby>", reading: "かいけい", romaji: "kaikei", meaning: "Pembayaran / kasir" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "belanja-minimarket")?.vocab ?? [];
 
 export default function BelanjaMinimarketPage() {
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
