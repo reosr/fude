@@ -854,7 +854,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
         token.surface === "ましょう" ||
         (token.surface === "ま" &&
           ["した", "せん", "しょう"].includes(next?.surface ?? "")) ||
-        ((token.surface === "した" || token.surface === "せん") &&
+        (["した", "せん", "しょう"].includes(token.surface) &&
           /ま$/u.test(previous.surface)))
     ) {
       mergeIntoPrevious(previous, token);
