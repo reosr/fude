@@ -80,11 +80,17 @@ function ScaleToFit({ children, className = "" }: { children: ReactNode; classNa
   }, []);
 
   return (
-    <div ref={boxRef} className={`flex items-center justify-center w-full min-h-0 ${className}`}>
+    <div
+      ref={boxRef}
+      className={`flex items-center justify-center w-full min-h-0 overflow-hidden ${className}`}
+    >
       <div
         ref={innerRef}
-        className="shrink-0 w-full flex justify-center"
-        style={{ transform: scale < 1 ? `scale(${scale})` : undefined }}
+        className="shrink-0 w-full flex flex-col items-center"
+        style={{
+          transform: scale < 1 ? `scale(${scale})` : undefined,
+          transformOrigin: "center center",
+        }}
       >
         {children}
       </div>
@@ -392,37 +398,41 @@ useEffect(() => {
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,25,24,0.75)_0%,rgba(26,25,24,0.45)_45%,transparent_75%)]"></div>
                   </div>
 
-                  <div className="relative z-10 flex flex-col items-center justify-start md:justify-center w-full h-full min-h-0">
-                    <div className="text-center w-full mb-1 md:mb-4 shrink-0">
-                      {verbType && (
-                        <span className={`inline-block mb-1.5 md:mb-3 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
-                          {verbType}
-                        </span>
-                      )}
-                      <JapaneseReading allowIndexFallback
-                        showOriginal={false}
-                        kana={card.kana}
-                        romaji={card.romaji}
-                        translation={card.meaning}
-                        kanaClassName="mt-1 font-mincho text-xl md:text-2xl leading-relaxed text-[#EAE6DD] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
-                        romajiClassName="mt-1 text-xs md:text-sm text-[#A3A099] break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
-                        translationClassName="mt-2 text-xl sm:text-3xl font-bold text-[#C93438] leading-snug break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]"
-                      />
-                    </div>
-
-                    {/* Area stroke: di HP mengisi sisa ruang & mengecil otomatis, di desktop tetap seperti semula */}
-                    <ScaleToFit className="flex-1 md:flex-none mb-1 md:mb-4">
-                      {isTop && isWindowFocused ? (
-                        <div className="flex w-full flex-col items-center gap-2">
-                          <KanjiStroke kanji={card.kanji} />
-                          <KanaStroke kana={card.kana} />
+                  <div className="relative z-10 flex h-full w-full min-h-0 flex-col items-center">
+                    {/* Seluruh isi sisi belakang diukur sebagai satu kelompok agar tidak terpotong saat kontennya tinggi. */}
+                    <ScaleToFit className="flex-1 min-h-0 py-1">
+                      <div className="flex w-full flex-col items-center">
+                        <div className="text-center w-full mb-1 md:mb-4">
+                          {verbType && (
+                            <span className={`inline-block mb-1.5 md:mb-3 text-[10px] font-bold px-2.5 py-1 rounded-md border uppercase tracking-wider backdrop-blur-sm ${typeBadgeClass(verbType)}`}>
+                              {verbType}
+                            </span>
+                          )}
+                          <JapaneseReading allowIndexFallback
+                            showOriginal={false}
+                            kana={card.kana}
+                            romaji={card.romaji}
+                            translation={card.meaning}
+                            kanaClassName="mt-1 font-mincho text-xl md:text-2xl leading-relaxed text-[#EAE6DD] drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
+                            romajiClassName="mt-1 text-xs md:text-sm text-[#A3A099] break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]"
+                            translationClassName="mt-2 text-xl sm:text-3xl font-bold text-[#C93438] leading-snug break-words drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]"
+                          />
                         </div>
-                      ) : <div className="h-[76px] md:h-[120px]"></div>}
-                    </ScaleToFit>
 
-                    <p className="text-[9px] md:text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-2 md:px-3 py-1 rounded-full mt-1 md:mt-2 border border-[#33312E] shrink-0">
-                      TEKAN DI LUAR KANJI UNTUK KEMBALI
-                    </p>
+                        <div className="mb-1 md:mb-4 flex w-full flex-col items-center gap-2">
+                          {isTop && isWindowFocused ? (
+                            <>
+                              <KanjiStroke kanji={card.kanji} />
+                              <KanaStroke kana={card.kana} />
+                            </>
+                          ) : <div className="h-[76px] md:h-[120px]"></div>}
+                        </div>
+
+                        <p className="text-[9px] md:text-[10px] font-bold text-[#A3A099] bg-[#33312E]/80 px-2 md:px-3 py-1 rounded-full mt-1 md:mt-2">
+                          TEKAN DI LUAR KANJI UNTUK KEMBALI
+                        </p>
+                      </div>
+                    </ScaleToFit>
                   </div>
                 </div>
 
