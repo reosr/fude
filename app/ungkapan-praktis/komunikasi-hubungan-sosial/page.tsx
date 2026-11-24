@@ -133,11 +133,11 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Kamu menelepon teman untuk memastikan apakah ia punya waktu berbicara dan mengatur pertemuan.",
     lines: [
       { speaker: "アキ", jp: "もしもし、<ruby>山田<rt>やまだ</rt></ruby>さんですか。", romaji: "Moshi moshi, Yamada-san desu ka.", id: "Halo, apakah ini Yamada?" },
-      { speaker: "山田", jp: "はい、そうです。", romaji: "Hai, sou desu.", id: "Ya, benar." },
+      { speaker: "Yamada", jp: "はい、そうです。", romaji: "Hai, sou desu.", id: "Ya, benar." },
       { speaker: "アキ", jp: "<ruby>今<rt>いま</rt></ruby>、お<ruby>時間<rt>じかん</rt></ruby>よろしいですか。", romaji: "Ima, ojikan yoroshii desu ka.", id: "Apakah sekarang kamu punya waktu?" },
-      { speaker: "山田", jp: "はい、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。どうしましたか。", romaji: "Hai, daijoubu desu yo. Dou shimashita ka.", id: "Ya, tidak masalah. Ada apa?" },
+      { speaker: "Yamada", jp: "はい、<ruby>大丈夫<rt>だいじょうぶ</rt></ruby>ですよ。どうしましたか。", romaji: "Hai, daijoubu desu yo. Dou shimashita ka.", id: "Ya, tidak masalah. Ada apa?" },
       { speaker: "アキ", jp: "<ruby>土曜日<rt>どようび</rt></ruby>に<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>きませんか。", romaji: "Doyoubi ni issho ni eiga o mi ni ikimasen ka.", id: "Hari Sabtu, mau menonton film bersama?" },
-      { speaker: "山田", jp: "いいですね。ぜひ<ruby>行<rt>い</rt></ruby>きましょう。", romaji: "Ii desu ne. Zehi ikimashou.", id: "Boleh juga. Ayo, kita pergi." },
+      { speaker: "Yamada", jp: "いいですね。ぜひ<ruby>行<rt>い</rt></ruby>きましょう。", romaji: "Ii desu ne. Zehi ikimashou.", id: "Boleh juga. Ayo, kita pergi." },
     ],
   },
   {
