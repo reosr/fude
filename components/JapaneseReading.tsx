@@ -275,6 +275,10 @@ export default function JapaneseReading({
   })();
   const romanization =
     explicitRomaji?.trim() || (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
+  const consistentRomajiClassName = romajiClassName.replace(
+    /text-\\[(?:#[0-9a-fA-F]{3,8}|rgba?\\([^)]*\\)|hsla?\\([^)]*\\))\\]/g,
+    "text-[#D9B66D]"
+  );
   const showKanaLine = Boolean(
     showKana &&
     !hasMixedLanguageProse &&
@@ -301,7 +305,7 @@ export default function JapaneseReading({
         <span className={kanaClassName + " block"}>（{normalizedKana}）</span>
       )}
       {showRomaji && !hasMixedLanguageProse && romanization && (
-        <span className={romajiClassName + " block"}>{romanization}</span>
+        <span className={consistentRomajiClassName + " block"}>{romanization}</span>
       )}
       {showTranslation && hasTranslation && (
         <span className={translationClassName + " block"}>{translation}</span>
