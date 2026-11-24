@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -168,16 +169,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>切符<rt>きっぷ</rt></ruby>", reading: "きっぷ", romaji: "kippu", meaning: "Tiket" },
-  { word: "<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>え", reading: "のりかえ", romaji: "norikae", meaning: "Pindah kendaraan / transit" },
-  { word: "<ruby>改札口<rt>かいさつぐち</rt></ruby>", reading: "かいさつぐち", romaji: "kaisatsuguchi", meaning: "Gerbang pemeriksaan tiket" },
-  { word: "<ruby>番線<rt>ばんせん</rt></ruby>", reading: "ばんせん", romaji: "bansen", meaning: "Nomor jalur / peron" },
-  { word: "<ruby>運賃<rt>うんちん</rt></ruby>", reading: "うんちん", romaji: "unchin", meaning: "Ongkos / tarif perjalanan" },
-  { word: "<ruby>出発<rt>しゅっぱつ</rt></ruby>", reading: "しゅっぱつ", romaji: "shuppatsu", meaning: "Keberangkatan" },
-  { word: "<ruby>到着<rt>とうちゃく</rt></ruby>", reading: "とうちゃく", romaji: "touchaku", meaning: "Kedatangan" },
-  { word: "<ruby>遅延<rt>ちえん</rt></ruby>", reading: "ちえん", romaji: "chien", meaning: "Keterlambatan" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "transportasi-perjalanan")?.vocab ?? [];
 
 const quiz = [
   {
