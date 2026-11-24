@@ -132,7 +132,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Meminta penjelasan kepada guru",
     context: "Kamu belum memahami salah satu bagian pelajaran dan ingin meminta penjelasan ulang.",
     lines: [
-      { speaker: "学生", jp: "先生、<ruby>質問<rt>しつもん</rt></ruby>してもいいですか。", romaji: "Sensei, shitsumon shite mo ii desu ka.", id: "Pak/Bu Guru, bolehkah saya bertanya?" },
+      { speaker: "学生", jp: "<ruby>先生<rt>せんせい</rt></ruby>、<ruby>質問<rt>しつもん</rt></ruby>してもいいですか。", romaji: "Sensei, shitsumon shite mo ii desu ka.", id: "Pak/Bu Guru, bolehkah saya bertanya?" },
       { speaker: "先生", jp: "はい、どうぞ。", romaji: "Hai, douzo.", id: "Ya, silakan." },
       { speaker: "学生", jp: "この<ruby>部分<rt>ぶぶん</rt></ruby>がよくわかりません。もう<ruby>一度<rt>いちど</rt></ruby><ruby>説明<rt>せつめい</rt></ruby>していただけますか。", romaji: "Kono bubun ga yoku wakarimasen. Mou ichido setsumei shite itadakemasu ka.", id: "Saya belum memahami bagian ini. Bisakah dijelaskan sekali lagi?" },
       { speaker: "先生", jp: "もちろんです。ゆっくり<ruby>説明<rt>せつめい</rt></ruby>しますね。", romaji: "Mochiron desu. Yukkuri setsumei shimasu ne.", id: "Tentu. Saya akan menjelaskannya pelan-pelan." },
@@ -143,7 +143,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 2 · Menanyakan batas pengumpulan tugas",
     context: "Kamu sedang mengerjakan laporan dan ingin memastikan kapan tugas harus dikumpulkan.",
     lines: [
-      { speaker: "学生", jp: "先生、レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", romaji: "Sensei, repooto no shimekiri wa itsu desu ka.", id: "Pak/Bu Guru, kapan batas pengumpulan laporan?" },
+      { speaker: "学生", jp: "<ruby>先生<rt>せんせい</rt></ruby>、レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", romaji: "Sensei, repooto no shimekiri wa itsu desu ka.", id: "Pak/Bu Guru, kapan batas pengumpulan laporan?" },
       { speaker: "先生", jp: "<ruby>金曜日<rt>きんようび</rt></ruby>までに<ruby>提出<rt>ていしゅつ</rt></ruby>してください。", romaji: "Kinyoubi made ni teishutsu shite kudasai.", id: "Silakan kumpulkan paling lambat hari Jumat." },
       { speaker: "学生", jp: "わかりました。もし<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わない<ruby>場合<rt>ばあい</rt></ruby>は、どうすればいいですか。", romaji: "Wakarimashita. Moshi maniawanai baai wa, dou sureba ii desu ka.", id: "Baik. Jika saya tidak sempat menyelesaikannya tepat waktu, apa yang sebaiknya saya lakukan?" },
       { speaker: "先生", jp: "<ruby>早<rt>はや</rt></ruby>めに<ruby>相談<rt>そうだん</rt></ruby>してください。", romaji: "Hayame ni soudan shite kudasai.", id: "Silakan bicarakan dengan saya lebih awal." },
@@ -323,9 +323,9 @@ export default function SekolahPendidikanPage() {
           <h2 className="text-lg font-bold text-[#EAE6DD]">Etika komunikasi di lingkungan belajar</h2>
         </div>
         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-[#C5C0B7]">
-          <li><span className="font-semibold text-[#EAE6DD]">Sapa guru dengan 先生.</span> Saat bertanya langsung kepada guru, memanggilnya 先生 (sensei) merupakan bentuk sapaan yang lazim. Dalam situasi formal, gunakan ungkapan sopan seperti いただけますか.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Sapa guru dengan <ruby>先生<rt>せんせい</rt></ruby>.</span> Saat bertanya langsung kepada guru, memanggilnya <ruby>先生<rt>せんせい</rt></ruby> (sensei) merupakan bentuk sapaan yang lazim. Dalam situasi formal, gunakan ungkapan sopan seperti いただけますか.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Akui jika belum memahami materi.</span> Kalimat ここがよくわかりません lebih jelas daripada hanya mengatakan わかりません. Kamu bisa menunjuk bagian yang ingin dijelaskan.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Perhatikan tenggat tugas.</span> Gunakan 締め切り untuk menyebut batas waktu. Jika mengalami kesulitan, sampaikan lebih awal dan tanyakan kemungkinan solusinya.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Perhatikan tenggat tugas.</span> Gunakan <ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>り untuk menyebut batas waktu. Jika mengalami kesulitan, sampaikan lebih awal dan tanyakan kemungkinan solusinya.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Bagi tugas dengan jelas.</span> Dalam kerja kelompok, jelaskan siapa yang mengerjakan tiap bagian dan sisakan waktu untuk memeriksa hasil bersama.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Sesuaikan bahasa dengan lawan bicara.</span> Bentuk sopan cocok untuk guru dan staf sekolah. Dengan teman akrab, bentuk yang lebih santai dapat digunakan sesuai hubungan.</li>
         </ul>
