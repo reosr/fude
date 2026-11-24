@@ -156,7 +156,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Kamu ingin naik bus menuju kantor balai kota dan memastikan cara membayar ongkos.",
     lines: [
       { speaker: "客", jp: "すみません、このバスは<ruby>市役所<rt>しやくしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", romaji: "Sumimasen, kono basu wa shiyakusho ni ikimasu ka.", id: "Permisi, apakah bus ini menuju kantor balai kota?" },
-      { speaker: "運転手", jp: "はい、<ruby>行<rt>い</rt></ruby>きます。<ruby>運賃<rt>うんちん</rt></ruby>は先<ruby>払<rt>ばら</rt></ruby>いです。", romaji: "Hai, ikimasu. Unchin wa sakibarai desu.", id: "Ya, menuju ke sana. Ongkos dibayar di muka." },
+      { speaker: "運転手", jp: "はい、<ruby>行<rt>い</rt></ruby>きます。<ruby>運賃<rt>うんちん</rt></ruby>は<ruby>先<rt>さき</rt></ruby><ruby>払<rt>ばら</rt></ruby>いです。", romaji: "Hai, ikimasu. Unchin wa sakibarai desu.", id: "Ya, menuju ke sana. Ongkos dibayar di muka." },
       { speaker: "客", jp: "<ruby>交通系<rt>こうつうけい</rt></ruby>ICカードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Koutsuukei ai shii kaado wa tsukaemasu ka.", id: "Apakah kartu IC transportasi bisa digunakan?" },
       { speaker: "運転手", jp: "はい、<ruby>使<rt>つか</rt></ruby>えます。<ruby>乗<rt>の</rt></ruby>るときにタッチしてください。", romaji: "Hai, tsukaemasu. Noru toki ni tacchi shite kudasai.", id: "Ya, bisa. Silakan tempelkan kartu saat naik." },
       { speaker: "客", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
@@ -229,7 +229,7 @@ const simulation = [
   },
   {
     prompt: "Kamu akan naik bus. Sopir memberi tahu:",
-    japanese: "<ruby>運賃<rt>うんちん</rt></ruby>は先<ruby>払<rt>ばら</rt></ruby>いです。",
+    japanese: "<ruby>運賃<rt>うんちん</rt></ruby>は<ruby>先<rt>さき</rt></ruby><ruby>払<rt>ばら</rt></ruby>いです。",
     romaji: "Unchin wa sakibarai desu.",
     translation: "Ongkos dibayar di muka.",
     task: "Tanyakan apakah kartu IC transportasi bisa digunakan.",
