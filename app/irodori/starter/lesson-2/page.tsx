@@ -160,7 +160,7 @@ const wordingConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>では、「apple」は？</>,
-    romaji: "Dewa, apple wa?",
+    romaji: "De wa, apple wa?",
     translation: "Kalau begitu, bagaimana dengan “apple”?",
     audioFileName: "irodori-starter-02-a03-l04.mp3",
   },
