@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -94,7 +98,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "B. Meminta menu dan rekomendasi",
     description: "Gunakan pertanyaan berikut saat ingin melihat menu, memilih hidangan, atau mengetahui isi makanan.",
     items: [
-      { jp: "メニューをお願いします。", romaji: "Menyuu o onegaishimasu.", id: "Tolong berikan menunya.", tone: "Meminta menu" },
+      { jp: "メニューをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Menyuu o onegaishimasu.", id: "Tolong berikan menunya.", tone: "Meminta menu" },
       { jp: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Osusume wa nan desu ka.", id: "Apa rekomendasinya?", tone: "Meminta rekomendasi" },
       { jp: "どれが<ruby>人気<rt>にんき</rt></ruby>ですか。", romaji: "Dore ga ninki desu ka.", id: "Yang mana yang populer?", tone: "Menanyakan menu populer" },
       { jp: "これは<ruby>何<rt>なに</rt></ruby>が<ruby>入<rt>はい</rt></ruby>っていますか。", romaji: "Kore wa nani ga haitte imasu ka.", id: "Apa saja yang ada di dalam makanan ini?", tone: "Menanyakan bahan makanan" },
@@ -106,9 +110,9 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     description: "Pilih ungkapan yang jelas dan sopan saat menyampaikan pesanan atau permintaan khusus.",
     items: [
       { jp: "ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか。", romaji: "Gochuumon wa okimari desu ka.", id: "Apakah Anda sudah menentukan pesanan?", tone: "Pegawai · menanyakan pesanan" },
-      { jp: "これを<ruby>一<rt>ひと</rt></ruby>つお願いします。", romaji: "Kore o hitotsu onegaishimasu.", id: "Saya pesan satu yang ini.", tone: "Memesan makanan" },
+      { jp: "これを<ruby>一<rt>ひと</rt></ruby>つお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kore o hitotsu onegaishimasu.", id: "Saya pesan satu yang ini.", tone: "Memesan makanan" },
       { jp: "じゃあ、それにします。", romaji: "Jaa, sore ni shimasu.", id: "Kalau begitu, saya pilih itu.", tone: "Menentukan pilihan" },
-      { jp: "お<ruby>水<rt>みず</rt></ruby>をお願いします。", romaji: "Omizu o onegaishimasu.", id: "Tolong air putihnya.", tone: "Meminta minum" },
+      { jp: "お<ruby>水<rt>みず</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Omizu o onegaishimasu.", id: "Tolong air putihnya.", tone: "Meminta minum" },
       { jp: "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>少<rt>すく</rt></ruby>なめにできますか。", romaji: "Gohan o sukuname ni dekimasu ka.", id: "Bisakah porsi nasinya dikurangi?", tone: "Meminta porsi lebih sedikit" },
       { jp: "<ruby>辛<rt>から</rt></ruby>くしないでください。", romaji: "Karaku shinaide kudasai.", id: "Tolong jangan dibuat pedas.", tone: "Meminta makanan tidak pedas" },
       { jp: "お<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>りできますか。", romaji: "Omochikaeri dekimasu ka.", id: "Apakah bisa dibawa pulang?", tone: "Menanyakan layanan bungkus" },
@@ -118,9 +122,9 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "D. Membayar dan mengakhiri makan",
     description: "Ungkapan untuk meminta tagihan, memilih cara pembayaran, dan mengucapkan terima kasih setelah makan.",
     items: [
-      { jp: "お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", romaji: "Okaikei o onegaishimasu.", id: "Minta tagihannya, ya.", tone: "Meminta tagihan" },
+      { jp: "お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Okaikei o onegaishimasu.", id: "Minta tagihannya, ya.", tone: "Meminta tagihan" },
       { jp: "カードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Kaado wa tsukaemasu ka.", id: "Apakah bisa membayar dengan kartu?", tone: "Menanyakan metode pembayaran" },
-      { jp: "カードでお願いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya.", tone: "Pembayaran" },
+      { jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya.", tone: "Pembayaran" },
       { jp: "<ruby>別々<rt>べつべつ</rt></ruby>に<ruby>払<rt>はら</rt></ruby>えますか。", romaji: "Betsubetsu ni haraemasu ka.", id: "Bisakah kami membayar secara terpisah?", tone: "Meminta pembayaran terpisah" },
       { jp: "ごちそうさまでした。", romaji: "Gochisousama deshita.", id: "Terima kasih atas makanannya.", tone: "Setelah selesai makan", note: "Ungkapan ini lazim diucapkan setelah makan sebagai bentuk penghargaan atas hidangan." },
     ],
@@ -132,36 +136,36 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Datang ke restoran",
     context: "Kamu datang bersama satu teman dan sudah membuat reservasi.",
     lines: [
-      { speaker: "店員", jp: "いらっしゃいませ。<ruby>何名様<rt>なんめいさま</rt></ruby>ですか。", romaji: "Irasshaimase. Nanmei-sama desu ka.", id: "Selamat datang. Untuk berapa orang?" },
-      { speaker: "客", jp: "<ruby>二人<rt>ふたり</rt></ruby>です。<ruby>予約<rt>よやく</rt></ruby>しています。", romaji: "Futari desu. Yoyaku shite imasu.", id: "Dua orang. Kami sudah membuat reservasi." },
-      { speaker: "店員", jp: "お<ruby>名前<rt>なまえ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してもよろしいですか。", romaji: "Onamae o kakunin shite mo yoroshii desu ka.", id: "Boleh saya memastikan nama reservasinya?" },
-      { speaker: "客", jp: "タナカです。", romaji: "Tanaka desu.", id: "Atas nama Tanaka." },
-      { speaker: "店員", jp: "ありがとうございます。こちらへどうぞ。", romaji: "Arigatou gozaimasu. Kochira e douzo.", id: "Terima kasih. Silakan lewat sini." },
-      { speaker: "客", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "いらっしゃいませ。<ruby>何名様<rt>なんめいさま</rt></ruby>ですか。", romaji: "Irasshaimase. Nanmei-sama desu ka.", id: "Selamat datang. Untuk berapa orang?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "<ruby>二人<rt>ふたり</rt></ruby>です。<ruby>予約<rt>よやく</rt></ruby>しています。", romaji: "Futari desu. Yoyaku shite imasu.", id: "Dua orang. Kami sudah membuat reservasi." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "お<ruby>名前<rt>なまえ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してもよろしいですか。", romaji: "Onamae o kakunin shite mo yoroshii desu ka.", id: "Boleh saya memastikan nama reservasinya?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "タナカです。", romaji: "Tanaka desu.", id: "Atas nama Tanaka." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "ありがとうございます。こちらへどうぞ。", romaji: "Arigatou gozaimasu. Kochira e douzo.", id: "Terima kasih. Silakan lewat sini." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
     ],
   },
   {
     title: "Percakapan 2 · Memesan makanan",
     context: "Setelah duduk dan membaca menu, kamu meminta rekomendasi sebelum memesan.",
     lines: [
-      { speaker: "店員", jp: "ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか。", romaji: "Gochuumon wa okimari desu ka.", id: "Apakah Anda sudah menentukan pesanan?" },
-      { speaker: "客", jp: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Osusume wa nan desu ka.", id: "Apa rekomendasinya?" },
-      { speaker: "店員", jp: "こちらの<ruby>魚<rt>さかな</rt></ruby>の<ruby>定食<rt>ていしょく</rt></ruby>が<ruby>人気<rt>にんき</rt></ruby>です。", romaji: "Kochira no sakana no teishoku ga ninki desu.", id: "Paket nasi dengan lauk ikan ini populer." },
-      { speaker: "客", jp: "じゃあ、それを<ruby>一<rt>ひと</rt></ruby>つお願いします。お<ruby>水<rt>みず</rt></ruby>もお願いします。", romaji: "Jaa, sore o hitotsu onegaishimasu. Omizu mo onegaishimasu.", id: "Kalau begitu, saya pesan satu yang itu. Air putih juga, ya." },
-      { speaker: "店員", jp: "かしこまりました。<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。", romaji: "Kashikomarimashita. Shoushou omachi kudasai.", id: "Baik. Mohon tunggu sebentar." },
-      { speaker: "客", jp: "はい。", romaji: "Hai.", id: "Baik." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか。", romaji: "Gochuumon wa okimari desu ka.", id: "Apakah Anda sudah menentukan pesanan?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Osusume wa nan desu ka.", id: "Apa rekomendasinya?" },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "こちらの<ruby>魚<rt>さかな</rt></ruby>の<ruby>定食<rt>ていしょく</rt></ruby>が<ruby>人気<rt>にんき</rt></ruby>です。", romaji: "Kochira no sakana no teishoku ga ninki desu.", id: "Paket nasi dengan lauk ikan ini populer." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "じゃあ、それを<ruby>一<rt>ひと</rt></ruby>つお<ruby>願<rt>ねが</rt></ruby>いします。お<ruby>水<rt>みず</rt></ruby>もお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Jaa, sore o hitotsu onegaishimasu. Omizu mo onegaishimasu.", id: "Kalau begitu, saya pesan satu yang itu. Air putih juga, ya." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "かしこまりました。<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。", romaji: "Kashikomarimashita. Shoushou omachi kudasai.", id: "Baik. Mohon tunggu sebentar." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "はい。", romaji: "Hai.", id: "Baik." },
     ],
   },
   {
     title: "Percakapan 3 · Membayar setelah makan",
     context: "Kamu sudah selesai makan dan ingin membayar menggunakan kartu.",
     lines: [
-      { speaker: "客", jp: "すみません、お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", romaji: "Sumimasen, okaikei o onegaishimasu.", id: "Permisi, tolong tagihannya." },
-      { speaker: "店員", jp: "<ruby>合計<rt>ごうけい</rt></ruby>は<ruby>千八百円<rt>せんはっぴゃくえん</rt></ruby>です。", romaji: "Goukei wa sen happyaku en desu.", id: "Totalnya 1.800 yen." },
-      { speaker: "店員", jp: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。", romaji: "Oshiharai wa kaado desu ka, genkin desu ka.", id: "Pembayarannya dengan kartu atau uang tunai?" },
-      { speaker: "客", jp: "カードでお願いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya." },
-      { speaker: "店員", jp: "かしこまりました。ありがとうございます。", romaji: "Kashikomarimashita. Arigatou gozaimasu.", id: "Baik. Terima kasih." },
-      { speaker: "客", jp: "ごちそうさまでした。", romaji: "Gochisousama deshita.", id: "Terima kasih atas makanannya." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "すみません、お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Sumimasen, okaikei o onegaishimasu.", id: "Permisi, tolong tagihannya." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "<ruby>合計<rt>ごうけい</rt></ruby>は<ruby>千八百円<rt>せんはっぴゃくえん</rt></ruby>です。", romaji: "Goukei wa sen happyaku en desu.", id: "Totalnya 1.800 yen." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。", romaji: "Oshiharai wa kaado desu ka, genkin desu ka.", id: "Pembayarannya dengan kartu atau uang tunai?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "かしこまりました。ありがとうございます。", romaji: "Kashikomarimashita. Arigatou gozaimasu.", id: "Baik. Terima kasih." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "ごちそうさまでした。", romaji: "Gochisousama deshita.", id: "Terima kasih atas makanannya." },
     ],
   },
 ];
@@ -179,17 +183,17 @@ const vocabulary = [
 
 const quiz = [
   {
-    question: "Pegawai restoran bertanya 「何名様ですか。」 Kamu datang berdua. Apa jawaban yang tepat?",
+    question: "Pegawai restoran bertanya 「<ruby>何名様<rt>なんめいさま</rt></ruby>ですか。」 Kamu datang berdua. Apa jawaban yang tepat?",
     options: [
-      { label: "<ruby>二人<rt>ふたり</rt></ruby>です。", correct: true, feedback: "Benar. 二人です digunakan untuk menyebutkan dua orang." },
-      { label: "<ruby>二階<rt>にかい</rt></ruby>です。", correct: false, feedback: "二階です berarti berada di lantai dua." },
-      { label: "<ruby>二<rt>ふた</rt></ruby>つください。", correct: false, feedback: "二つください berarti meminta dua buah barang." },
+      { label: "<ruby>二人<rt>ふたり</rt></ruby>です。", correct: true, feedback: "Benar. <ruby>二人<rt>ふたり</rt></ruby>です digunakan untuk menyebutkan dua orang." },
+      { label: "<ruby>二階<rt>にかい</rt></ruby>です。", correct: false, feedback: "<ruby>二階<rt>にかい</rt></ruby>です berarti berada di lantai dua." },
+      { label: "<ruby>二<rt>ふた</rt></ruby>つください。", correct: false, feedback: "<ruby>二<rt>ふた</rt></ruby>つください berarti meminta dua buah barang." },
     ],
   },
   {
     question: "Kamu ingin mengetahui bahan yang ada di dalam suatu hidangan. Apa yang sebaiknya ditanyakan?",
     options: [
-      { label: "お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", correct: false, feedback: "Ungkapan ini digunakan untuk meminta tagihan." },
+      { label: "お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Ungkapan ini digunakan untuk meminta tagihan." },
       { label: "これは<ruby>何<rt>なに</rt></ruby>が<ruby>入<rt>はい</rt></ruby>っていますか。", correct: true, feedback: "Kalimat ini menanyakan bahan atau isi makanan." },
       { label: "カードは<ruby>使<rt>つか</rt></ruby>えますか。", correct: false, feedback: "Kalimat ini menanyakan apakah kartu bisa digunakan untuk membayar." },
     ],
@@ -197,9 +201,9 @@ const quiz = [
   {
     question: "Kamu sudah selesai makan dan ingin meminta tagihan. Pilih ungkapan yang sesuai.",
     options: [
-      { label: "メニューをお願いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta menu." },
+      { label: "メニューをお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta menu." },
       { label: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", correct: false, feedback: "Kalimat ini meminta rekomendasi makanan." },
-      { label: "お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", correct: true, feedback: "Benar. お会計をお願いします digunakan untuk meminta tagihan." },
+      { label: "お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Benar. お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします digunakan untuk meminta tagihan." },
     ],
   },
 ];
@@ -212,9 +216,9 @@ const simulation = [
     translation: "Untuk berapa orang?",
     task: "Jawab bahwa kalian datang berdua.",
     options: [
-      { label: "<ruby>二人<rt>ふたり</rt></ruby>です。", correct: true, feedback: "Tepat. 二人です berarti dua orang." },
+      { label: "<ruby>二人<rt>ふたり</rt></ruby>です。", correct: true, feedback: "Tepat. <ruby>二人<rt>ふたり</rt></ruby>です berarti dua orang." },
       { label: "<ruby>予約<rt>よやく</rt></ruby>しています。", correct: false, feedback: "Kalimat ini berarti sudah membuat reservasi." },
-      { label: "<ruby>一人<rt>ひとり</rt></ruby>です。", correct: false, feedback: "一人です berarti satu orang." },
+      { label: "<ruby>一人<rt>ひとり</rt></ruby>です。", correct: false, feedback: "<ruby>一人<rt>ひとり</rt></ruby>です berarti satu orang." },
     ],
   },
   {
@@ -224,7 +228,7 @@ const simulation = [
     translation: "Apakah Anda sudah menentukan pesanan?",
     task: "Tanyakan apa rekomendasi restoran.",
     options: [
-      { label: "お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", correct: false, feedback: "Kalimat ini meminta tagihan, biasanya setelah selesai makan." },
+      { label: "お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini meminta tagihan, biasanya setelah selesai makan." },
       { label: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", correct: true, feedback: "Benar. Kamu meminta rekomendasi sebelum menentukan pesanan." },
       { label: "<ruby>予約<rt>よやく</rt></ruby>しています。", correct: false, feedback: "Kalimat ini menyampaikan bahwa kamu sudah memiliki reservasi." },
     ],
@@ -236,9 +240,9 @@ const simulation = [
     translation: "Pembayarannya dengan kartu atau uang tunai?",
     task: "Pilih jawaban bahwa kamu akan membayar dengan kartu.",
     options: [
-      { label: "カードでお願いします。", correct: true, feedback: "Tepat. Kamu memilih pembayaran menggunakan kartu." },
+      { label: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Tepat. Kamu memilih pembayaran menggunakan kartu." },
       { label: "ごちそうさまでした。", correct: false, feedback: "Ungkapan ini diucapkan setelah selesai makan, bukan untuk memilih metode pembayaran." },
-      { label: "メニューをお願いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta menu." },
+      { label: "メニューをお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta menu." },
     ],
   },
 ];
@@ -328,7 +332,7 @@ export default function RestoranMakananPage() {
         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-[#C5C0B7]">
           <li><span className="font-semibold text-[#EAE6DD]">Tunggu arahan tempat duduk.</span> Di banyak restoran, pegawai akan mengarahkan tamu ke meja. Sampaikan jumlah orang terlebih dahulu dan ikuti petunjuknya.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Panggil pegawai dengan sopan.</span> Jika perlu bantuan, すみません adalah cara yang wajar untuk menarik perhatian pegawai.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Periksa isi makanan.</span> Gunakan これは何が入っていますか untuk menanyakan bahan. Jika memiliki alergi atau pantangan, jelaskan dengan spesifik dan pastikan kembali kepada pegawai; jangan berasumsi semua permintaan bisa dipenuhi.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Periksa isi makanan.</span> Gunakan これは何が<ruby>入<rt>はい</rt></ruby>っていますか untuk menanyakan bahan. Jika memiliki alergi atau pantangan, jelaskan dengan spesifik dan pastikan kembali kepada pegawai; jangan berasumsi semua permintaan bisa dipenuhi.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Permintaan penyesuaian bergantung restoran.</span> Restoran mungkin bisa mengurangi porsi atau menyesuaikan tingkat pedas, tetapi tidak semua tempat menyediakan pilihan tersebut.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Ucapkan ごちそうさまでした.</span> Ungkapan ini lazim diucapkan setelah selesai makan sebagai bentuk penghargaan atas hidangan.</li>
         </ul>
@@ -361,7 +365,9 @@ export default function RestoranMakananPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -389,9 +395,13 @@ export default function RestoranMakananPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
