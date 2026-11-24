@@ -156,7 +156,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
       { speaker: "入居者", jp: "すみません。ゴミの<ruby>分<rt>わ</rt></ruby>け<ruby>方<rt>かた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えていただけますか。", romaji: "Sumimasen. Gomi no wakekata o oshiete itadakemasu ka.", id: "Permisi. Bisakah Anda menjelaskan cara memilah sampah?" },
       { speaker: "管理人", jp: "<ruby>燃<rt>も</rt></ruby>えるゴミは<ruby>月曜日<rt>げつようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>です。", romaji: "Moeru gomi wa getsuyoubi to mokuyoubi desu.", id: "Sampah yang bisa dibakar dijemput pada hari Senin dan Kamis." },
       { speaker: "入居者", jp: "<ruby>何時<rt>なんじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>せばいいですか。", romaji: "Nanji made ni daseba ii desu ka.", id: "Sampah harus dikeluarkan paling lambat pukul berapa?" },
-      { speaker: "管理人", jp: "<ruby>朝<rt>あさ</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>までにお願いします。", romaji: "Asa hachi-ji made ni onegaishimasu.", id: "Paling lambat pukul delapan pagi, ya." },
+      { speaker: "管理人", jp: "<ruby>朝<rt>あさ</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>してください。", romaji: "Asa hachi-ji made ni dashite kudasai.", id: "Silakan keluarkan sampah sebelum pukul delapan pagi." },
       { speaker: "入居者", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
