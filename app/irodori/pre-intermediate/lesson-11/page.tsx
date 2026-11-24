@@ -167,7 +167,7 @@ const content: IrodoriLessonContent = {
     {
       title: "02 · Menjelaskan aturan yang sudah ditetapkan",
       pattern: "N + になっている",
-      example: <>この会場は、カメラの持ち込みが禁止になっています。<br />この建物は、入口が一つになっています。</>,
+      example: <>この会場は、カメラの持ち込みが禁止になっています。<br />この図書館では、飲食禁止になっています。</>,
       note: "Pola ini menjelaskan aturan atau keadaan yang sudah ditetapkan, bukan keputusan yang baru dibuat oleh pembicara. Contoh: 持ち込み禁止になっています berarti membawa masuk sudah ditetapkan sebagai hal yang dilarang. Dalam pengumuman formal, ada juga bentuk N + となっています.",
     },
     {
