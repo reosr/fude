@@ -37,7 +37,7 @@ const explainComingOfAgeConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>成人の日は、何をするんですか。</>,
-    romaji: "Seijin no Hi wa, nani o surun desu ka?",
+    romaji: "Seijin no Hi wa, nani o suru n desu ka?",
     translation: "Apa yang dilakukan pada Hari Kedewasaan?",
     audioFileName: "irodori-elementary2-09-a01-l01.mp3",
   },
@@ -51,7 +51,7 @@ const explainComingOfAgeConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>式では、どんなことをするんですか。</>,
-    romaji: "Shiki de wa, donna koto o surun desu ka?",
+    romaji: "Shiki de wa, donna koto o suru n desu ka?",
     translation: "Apa saja yang dilakukan dalam upacara itu?",
     audioFileName: "irodori-elementary2-09-a01-l03.mp3",
   },
@@ -144,7 +144,7 @@ const readLocalEventArticleConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>参加した人は、何をしたんですか。</>,
-    romaji: "Sanka shita hito wa, nani o shitan desu ka?",
+    romaji: "Sanka shita hito wa, nani o shita n desu ka?",
     translation: "Apa yang dilakukan oleh orang-orang yang ikut?",
     audioFileName: "irodori-elementary2-09-a04-l03.mp3",
   },
