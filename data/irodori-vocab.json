@@ -13240,5 +13240,254 @@
         "meaning": "Denda"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-12",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 12,
+    "lessonTitle": "Saya membutuhkan ambulans.",
+    "vocab": [
+      {
+        "kanji": "困る",
+        "kana": "こまる",
+        "romaji": "komaru",
+        "meaning": "Mengalami kesulitan; kebingungan"
+      },
+      {
+        "kanji": "お困り",
+        "kana": "おこまり",
+        "romaji": "o-komari",
+        "meaning": "Kesulitan (bentuk sopan)"
+      },
+      {
+        "kanji": "迷う",
+        "kana": "まよう",
+        "romaji": "mayou",
+        "meaning": "Tersesat; kebingungan memilih"
+      },
+      {
+        "kanji": "道に迷う",
+        "kana": "みちにまよう",
+        "romaji": "michi ni mayou",
+        "meaning": "Tersesat di jalan"
+      },
+      {
+        "kanji": "案内する",
+        "kana": "あんないする",
+        "romaji": "annai suru",
+        "meaning": "Mengantar; memandu"
+      },
+      {
+        "kanji": "通訳する",
+        "kana": "つうやくする",
+        "romaji": "tsuuyaku suru",
+        "meaning": "Menerjemahkan secara lisan"
+      },
+      {
+        "kanji": "地図",
+        "kana": "ちず",
+        "romaji": "chizu",
+        "meaning": "Peta"
+      },
+      {
+        "kanji": "出口",
+        "kana": "でぐち",
+        "romaji": "deguchi",
+        "meaning": "Pintu keluar"
+      },
+      {
+        "kanji": "方向",
+        "kana": "ほうこう",
+        "romaji": "houkou",
+        "meaning": "Arah"
+      },
+      {
+        "kanji": "交差点",
+        "kana": "こうさてん",
+        "romaji": "kousaten",
+        "meaning": "Persimpangan"
+      },
+      {
+        "kanji": "警察",
+        "kana": "けいさつ",
+        "romaji": "keisatsu",
+        "meaning": "Polisi"
+      },
+      {
+        "kanji": "消防署",
+        "kana": "しょうぼうしょ",
+        "romaji": "shoubousho",
+        "meaning": "Kantor pemadam kebakaran"
+      },
+      {
+        "kanji": "救急車",
+        "kana": "きゅうきゅうしゃ",
+        "romaji": "kyuukyuusha",
+        "meaning": "Ambulans"
+      },
+      {
+        "kanji": "救急",
+        "kana": "きゅうきゅう",
+        "romaji": "kyuukyuu",
+        "meaning": "Keadaan medis darurat"
+      },
+      {
+        "kanji": "事件",
+        "kana": "じけん",
+        "romaji": "jiken",
+        "meaning": "Peristiwa kriminal; insiden"
+      },
+      {
+        "kanji": "事故",
+        "kana": "じこ",
+        "romaji": "jiko",
+        "meaning": "Kecelakaan"
+      },
+      {
+        "kanji": "火事",
+        "kana": "かじ",
+        "romaji": "kaji",
+        "meaning": "Kebakaran"
+      },
+      {
+        "kanji": "倒れる",
+        "kana": "たおれる",
+        "romaji": "taoreru",
+        "meaning": "Terjatuh; roboh"
+      },
+      {
+        "kanji": "意識",
+        "kana": "いしき",
+        "romaji": "ishiki",
+        "meaning": "Kesadaran"
+      },
+      {
+        "kanji": "呼吸",
+        "kana": "こきゅう",
+        "romaji": "kokyuu",
+        "meaning": "Pernapasan"
+      },
+      {
+        "kanji": "けが",
+        "kana": "けが",
+        "romaji": "kega",
+        "meaning": "Cedera"
+      },
+      {
+        "kanji": "痛がる",
+        "kana": "いたがる",
+        "romaji": "itagaru",
+        "meaning": "Menunjukkan rasa sakit"
+      },
+      {
+        "kanji": "転ぶ",
+        "kana": "ころぶ",
+        "romaji": "korobu",
+        "meaning": "Terjatuh; tersandung"
+      },
+      {
+        "kanji": "打つ",
+        "kana": "うつ",
+        "romaji": "utsu",
+        "meaning": "Terbentur; memukul"
+      },
+      {
+        "kanji": "向かう",
+        "kana": "むかう",
+        "romaji": "mukau",
+        "meaning": "Menuju ke suatu tempat"
+      },
+      {
+        "kanji": "到着する",
+        "kana": "とうちゃくする",
+        "romaji": "touchaku suru",
+        "meaning": "Tiba; sampai"
+      },
+      {
+        "kanji": "住所",
+        "kana": "じゅうしょ",
+        "romaji": "juusho",
+        "meaning": "Alamat"
+      },
+      {
+        "kanji": "目印",
+        "kana": "めじるし",
+        "romaji": "mejirushi",
+        "meaning": "Penanda tempat"
+      },
+      {
+        "kanji": "通報する",
+        "kana": "つうほうする",
+        "romaji": "tsuuhou suru",
+        "meaning": "Melapor ke layanan darurat"
+      },
+      {
+        "kanji": "運転手",
+        "kana": "うんてんしゅ",
+        "romaji": "untenshu",
+        "meaning": "Pengemudi"
+      },
+      {
+        "kanji": "車種",
+        "kana": "しゃしゅ",
+        "romaji": "shashu",
+        "meaning": "Jenis kendaraan"
+      },
+      {
+        "kanji": "ナンバー",
+        "kana": "ナンバー",
+        "romaji": "nanbaa",
+        "meaning": "Nomor kendaraan; pelat nomor"
+      },
+      {
+        "kanji": "ひき逃げ",
+        "kana": "ひきにげ",
+        "romaji": "hikinige",
+        "meaning": "Tabrak lari"
+      },
+      {
+        "kanji": "警報",
+        "kana": "けいほう",
+        "romaji": "keihou",
+        "meaning": "Peringatan bahaya"
+      },
+      {
+        "kanji": "大雨",
+        "kana": "おおあめ",
+        "romaji": "ooame",
+        "meaning": "Hujan lebat"
+      },
+      {
+        "kanji": "避難する",
+        "kana": "ひなんする",
+        "romaji": "hinan suru",
+        "meaning": "Mengungsi; melakukan evakuasi"
+      },
+      {
+        "kanji": "被害",
+        "kana": "ひがい",
+        "romaji": "higai",
+        "meaning": "Kerusakan; dampak buruk"
+      },
+      {
+        "kanji": "置き引き",
+        "kana": "おきびき",
+        "romaji": "okibiki",
+        "meaning": "Pencurian barang yang ditinggalkan"
+      },
+      {
+        "kanji": "届け出る",
+        "kana": "とどけでる",
+        "romaji": "todokederu",
+        "meaning": "Melapor secara resmi"
+      },
+      {
+        "kanji": "備える",
+        "kana": "そなえる",
+        "romaji": "sonaeru",
+        "meaning": "Bersiap; mengantisipasi"
+      }
+    ]
   }
 ]
