@@ -276,7 +276,7 @@ export default function JapaneseReading({
   const romanization =
     explicitRomaji?.trim() || (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
   const consistentRomajiClassName = romajiClassName.replace(
-    /text-\\[(?:#[0-9a-fA-F]{3,8}|rgba?\\([^)]*\\)|hsla?\\([^)]*\\))\\]/g,
+    /text-\[(?:#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\))\]/g,
     "text-[#D9B66D]"
   );
   const showKanaLine = Boolean(
