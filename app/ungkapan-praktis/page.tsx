@@ -74,11 +74,11 @@ const categories = [
   {
     number: "07",
     title: "Sekolah dan Pendidikan",
-    description: "Berbicara dengan guru, meminta izin, dan berdiskusi dengan teman.",
+    description: "Bertanya kepada guru, meminta izin, mengurus tugas, dan kerja kelompok.",
     icon: GraduationCap,
-    href: "",
-    available: false,
-    lessons: "Materi Baca terkait sudah ada",
+    href: "/ungkapan-praktis/sekolah-pendidikan",
+    available: true,
+    lessons: "Materi ketujuh tersedia",
   },
   {
     number: "08",
@@ -134,14 +134,14 @@ export default function UngkapanPraktisPage() {
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-sm font-bold text-[#EAE6DD]">Jalur komunikasi praktis</p>
-            <p className="mt-1 text-xs text-[#A3A099]">10 kategori direncanakan · 6 kategori mulai tersedia</p>
+            <p className="mt-1 text-xs text-[#A3A099]">10 kategori direncanakan · 7 kategori mulai tersedia</p>
           </div>
           <span className="rounded-full border border-[#269B70]/30 bg-[#269B70]/10 px-3 py-1 text-xs font-bold text-[#66C49C]">
-            6 / 10
+            7 / 10
           </span>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#121110]">
-          <div className="h-full w-[60%] rounded-full bg-gradient-to-r from-[#B8860B] to-[#269B70]" />
+          <div className="h-full w-[70%] rounded-full bg-gradient-to-r from-[#B8860B] to-[#269B70]" />
         </div>
         <p className="mt-3 text-xs leading-relaxed text-[#817A73]">
           Materi ini melengkapi halaman Baca. Cerita dan latihan membaca yang sudah ada tetap berada di sana.
