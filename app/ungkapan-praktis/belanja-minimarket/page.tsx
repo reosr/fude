@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -84,23 +88,23 @@ const quiz = [
     options: [
       { label: "ノートはどこにありますか。", correct: true, feedback: "どこにありますか digunakan untuk menanyakan lokasi barang." },
       { label: "ノートはいくらですか。", correct: false, feedback: "Kalimat ini menanyakan harga, bukan lokasi barang." },
-      { label: "ノートを温めてもらえますか。", correct: false, feedback: "温めてもらえますか digunakan untuk meminta makanan dipanaskan." },
+      { label: "ノートを<ruby>温<rt>あたた</rt></ruby>めてもらえますか。", correct: false, feedback: "<ruby>温<rt>あたた</rt></ruby>めてもらえますか digunakan untuk meminta makanan dipanaskan." },
     ],
   },
   {
     question: "Kasir menawarkan kantong belanja, tetapi kamu tidak membutuhkannya. Pilih jawaban yang tepat.",
     options: [
-      { label: "袋をお願いします。", correct: false, feedback: "Kalimat ini berarti kamu meminta kantong." },
-      { label: "袋はいりません。", correct: true, feedback: "いりません berarti tidak perlu atau tidak membutuhkan." },
-      { label: "袋はどこですか。", correct: false, feedback: "Kalimat ini menanyakan letak kantong." },
+      { label: "<ruby>袋<rt>ふくろ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini berarti kamu meminta kantong." },
+      { label: "<ruby>袋<rt>ふくろ</rt></ruby>はいりません。", correct: true, feedback: "いりません berarti tidak perlu atau tidak membutuhkan." },
+      { label: "<ruby>袋<rt>ふくろ</rt></ruby>はどこですか。", correct: false, feedback: "Kalimat ini menanyakan letak kantong." },
     ],
   },
   {
     question: "Kamu ingin membayar menggunakan kartu. Apa yang kamu katakan?",
     options: [
-      { label: "現金でお願いします。", correct: false, feedback: "現金 berarti uang tunai." },
-      { label: "レシートをお願いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta struk." },
-      { label: "カードでお願いします。", correct: true, feedback: "で menunjukkan cara pembayaran: menggunakan kartu." },
+      { label: "<ruby>現金<rt>げんきん</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "<ruby>現金<rt>げんきん</rt></ruby> berarti uang tunai." },
+      { label: "レシートをお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta struk." },
+      { label: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "で menunjukkan cara pembayaran: menggunakan kartu." },
     ],
   },
 ];
@@ -108,7 +112,7 @@ const quiz = [
 const simulation = [
   {
     prompt: "Kamu sedang mencari buku catatan di sebuah toko. Pegawai menghampirimu:",
-    japanese: "何かお探しですか。",
+    japanese: "<ruby>何<rt>なに</rt></ruby>かお<ruby>探<rt>さが</rt></ruby>しですか。",
     romaji: "Nanika osagashi desu ka.",
     translation: "Apakah ada sesuatu yang sedang Anda cari?",
     task: "Tanyakan lokasi buku catatan.",
@@ -120,26 +124,26 @@ const simulation = [
   },
   {
     prompt: "Kamu menemukan baju yang disukai, tetapi ingin mencoba ukurannya terlebih dahulu. Pegawai berkata:",
-    japanese: "こちらの試着室をご利用ください。",
+    japanese: "こちらの<ruby>試着室<rt>しちゃくしつ</rt></ruby>をご利用ください。",
     romaji: "Kochira no shichakushitsu o goriyou kudasai.",
     translation: "Silakan gunakan ruang ganti yang ini.",
     task: "Sebelum mencoba baju, apa yang bisa kamu tanyakan?",
     options: [
-      { label: "試着してもいいですか。", correct: true, feedback: "試着してもいいですか berarti meminta izin untuk mencoba pakaian." },
+      { label: "<ruby>試着<rt>しちゃく</rt></ruby>してもいいですか。", correct: true, feedback: "<ruby>試着<rt>しちゃく</rt></ruby>してもいいですか berarti meminta izin untuk mencoba pakaian." },
       { label: "いくらですか。", correct: false, feedback: "Kalimat ini menanyakan harga." },
-      { label: "カードは使えますか。", correct: false, feedback: "Kalimat ini menanyakan apakah kartu bisa digunakan untuk membayar." },
+      { label: "カードは<ruby>使<rt>つか</rt></ruby>えますか。", correct: false, feedback: "Kalimat ini menanyakan apakah kartu bisa digunakan untuk membayar." },
     ],
   },
   {
     prompt: "Setelah selesai memilih barang, kasir bertanya:",
-    japanese: "お支払いはカードですか、現金ですか。",
+    japanese: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。",
     romaji: "Oshiharai wa kaado desu ka, genkin desu ka.",
     translation: "Pembayarannya dengan kartu atau uang tunai?",
     task: "Kamu ingin membayar dengan kartu dan tidak membutuhkan kantong.",
     options: [
-      { label: "カードでお願いします。袋はいりません。", correct: true, feedback: "Tepat. Kamu menyebutkan metode pembayaran dan menolak kantong dengan sopan." },
-      { label: "現金でお願いします。袋をください。", correct: false, feedback: "Kalimat ini memilih uang tunai dan meminta kantong." },
-      { label: "レシートはどこですか。袋はありますか。", correct: false, feedback: "Kalimat ini menanyakan struk dan ketersediaan kantong, bukan menyampaikan pilihanmu." },
+      { label: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。<ruby>袋<rt>ふくろ</rt></ruby>はいりません。", correct: true, feedback: "Tepat. Kamu menyebutkan metode pembayaran dan menolak kantong dengan sopan." },
+      { label: "<ruby>現金<rt>げんきん</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。<ruby>袋<rt>ふくろ</rt></ruby>をください。", correct: false, feedback: "Kalimat ini memilih uang tunai dan meminta kantong." },
+      { label: "レシートはどこですか。<ruby>袋<rt>ふくろ</rt></ruby>はありますか。", correct: false, feedback: "Kalimat ini menanyakan struk dan ketersediaan kantong, bukan menyampaikan pilihanmu." },
     ],
   },
 ];
@@ -172,8 +176,8 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     items: [
       { jp: "<ruby>試着<rt>しちゃく</rt></ruby>してもいいですか。", romaji: "Shichaku shite mo ii desu ka.", id: "Bolehkah saya mencobanya?", tone: "Toko pakaian" },
       { jp: "これを<ruby>温<rt>あたた</rt></ruby>めてもらえますか。", romaji: "Kore o atatamete moraemasu ka.", id: "Bisakah ini dipanaskan?", tone: "Minimarket · makanan" },
-      { jp: "お<ruby>箸<rt>はし</rt></ruby>をお願いします。", romaji: "Ohashi o onegaishimasu.", id: "Tolong beri saya sumpit.", tone: "Minimarket · makanan" },
-      { jp: "<ruby>袋<rt>ふくろ</rt></ruby>をお願いします。", romaji: "Fukuro o onegaishimasu.", id: "Tolong beri saya kantong.", tone: "Meminta kantong" },
+      { jp: "お<ruby>箸<rt>はし</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Ohashi o onegaishimasu.", id: "Tolong beri saya sumpit.", tone: "Minimarket · makanan" },
+      { jp: "<ruby>袋<rt>ふくろ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Fukuro o onegaishimasu.", id: "Tolong beri saya kantong.", tone: "Meminta kantong" },
       { jp: "<ruby>袋<rt>ふくろ</rt></ruby>はいりません。", romaji: "Fukuro wa irimasen.", id: "Saya tidak perlu kantong.", tone: "Menolak dengan sopan" },
       { jp: "<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。", romaji: "Shoushou omachi kudasai.", id: "Mohon tunggu sebentar.", tone: "Ungkapan pegawai toko" },
     ],
@@ -183,9 +187,9 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     description: "Pahami ungkapan yang berkaitan dengan metode pembayaran, struk, dan kartu anggota.",
     items: [
       { jp: "カードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Kaado wa tsukaemasu ka.", id: "Apakah bisa menggunakan kartu?", tone: "Menanyakan metode pembayaran" },
-      { jp: "カードでお願いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya.", tone: "Pembayaran" },
-      { jp: "<ruby>現金<rt>げんきん</rt></ruby>でお願いします。", romaji: "Genkin de onegaishimasu.", id: "Dengan uang tunai, ya.", tone: "Pembayaran" },
-      { jp: "レシートをお願いします。", romaji: "Reshiito o onegaishimasu.", id: "Tolong berikan struknya.", tone: "Meminta struk" },
+      { jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya.", tone: "Pembayaran" },
+      { jp: "<ruby>現金<rt>げんきん</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Genkin de onegaishimasu.", id: "Dengan uang tunai, ya.", tone: "Pembayaran" },
+      { jp: "レシートをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Reshiito o onegaishimasu.", id: "Tolong berikan struknya.", tone: "Meminta struk" },
       { jp: "ポイントカードはお<ruby>持<rt>も</rt></ruby>ちですか。", romaji: "Pointo kaado wa omochi desu ka.", id: "Apakah Anda memiliki kartu poin?", tone: "Pertanyaan pegawai toko" },
       { jp: "<ruby>持<rt>も</rt></ruby>っていません。", romaji: "Motte imasen.", id: "Saya tidak punya.", tone: "Jawaban sederhana" },
     ],
@@ -197,36 +201,36 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Membeli makanan di minimarket",
     context: "Kamu membeli bekal dan meminta pegawai memanaskannya.",
     lines: [
-      { speaker: "店員", jp: "いらっしゃいませ。", romaji: "Irasshaimase.", id: "Selamat datang." },
-      { speaker: "客", jp: "すみません、このお<ruby>弁当<rt>べんとう</rt></ruby>を<ruby>温<rt>あたた</rt></ruby>めてもらえますか。", romaji: "Sumimasen, kono obentou o atatamete moraemasu ka.", id: "Permisi, bisakah bekal ini dipanaskan?" },
-      { speaker: "店員", jp: "はい。お<ruby>箸<rt>はし</rt></ruby>はおつけしますか。", romaji: "Hai. Ohashi wa otsuke shimasu ka.", id: "Baik. Apakah perlu saya sertakan sumpit?" },
-      { speaker: "客", jp: "はい、お願いします。", romaji: "Hai, onegaishimasu.", id: "Ya, tolong." },
-      { speaker: "店員", jp: "<ruby>袋<rt>ふくろ</rt></ruby>はご<ruby>利用<rt>りよう</rt></ruby>ですか。", romaji: "Fukuro wa goriyou desu ka.", id: "Apakah Anda perlu kantong?" },
-      { speaker: "客", jp: "いいえ、いりません。", romaji: "Iie, irimasen.", id: "Tidak, saya tidak perlu." },
-      { speaker: "店員", jp: "かしこまりました。", romaji: "Kashikomarimashita.", id: "Baik, dimengerti." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "いらっしゃいませ。", romaji: "Irasshaimase.", id: "Selamat datang." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "すみません、このお<ruby>弁当<rt>べんとう</rt></ruby>を<ruby>温<rt>あたた</rt></ruby>めてもらえますか。", romaji: "Sumimasen, kono obentou o atatamete moraemasu ka.", id: "Permisi, bisakah bekal ini dipanaskan?" },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "はい。お<ruby>箸<rt>はし</rt></ruby>はおつけしますか。", romaji: "Hai. Ohashi wa otsuke shimasu ka.", id: "Baik. Apakah perlu saya sertakan sumpit?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "はい、お<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Hai, onegaishimasu.", id: "Ya, tolong." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "<ruby>袋<rt>ふくろ</rt></ruby>はご<ruby>利用<rt>りよう</rt></ruby>ですか。", romaji: "Fukuro wa goriyou desu ka.", id: "Apakah Anda perlu kantong?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "いいえ、いりません。", romaji: "Iie, irimasen.", id: "Tidak, saya tidak perlu." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "かしこまりました。", romaji: "Kashikomarimashita.", id: "Baik, dimengerti." },
     ],
   },
   {
     title: "Percakapan 2 · Mencari barang di toko",
     context: "Kamu mencari alat tulis dan bertanya kepada pegawai tentang lokasinya.",
     lines: [
-      { speaker: "客", jp: "すみません、ノートはどこにありますか。", romaji: "Sumimasen, nooto wa doko ni arimasu ka.", id: "Permisi, buku catatan ada di mana?" },
-      { speaker: "店員", jp: "<ruby>文房具<rt>ぶんぼうぐ</rt></ruby><ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>は<ruby>二階<rt>にかい</rt></ruby>です。", romaji: "Bunbougu uriba wa nikai desu.", id: "Bagian alat tulis ada di lantai dua." },
-      { speaker: "客", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
-      { speaker: "店員", jp: "こちらのエスカレーターをご<ruby>利用<rt>りよう</rt></ruby>ください。", romaji: "Kochira no esukareetaa o goriyou kudasai.", id: "Silakan gunakan eskalator yang ini." },
-      { speaker: "客", jp: "わかりました。", romaji: "Wakarimashita.", id: "Baik, saya mengerti." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "すみません、ノートはどこにありますか。", romaji: "Sumimasen, nooto wa doko ni arimasu ka.", id: "Permisi, buku catatan ada di mana?" },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "<ruby>文房具<rt>ぶんぼうぐ</rt></ruby><ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>は<ruby>二階<rt>にかい</rt></ruby>です。", romaji: "Bunbougu uriba wa nikai desu.", id: "Bagian alat tulis ada di lantai dua." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "こちらのエスカレーターをご<ruby>利用<rt>りよう</rt></ruby>ください。", romaji: "Kochira no esukareetaa o goriyou kudasai.", id: "Silakan gunakan eskalator yang ini." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "わかりました。", romaji: "Wakarimashita.", id: "Baik, saya mengerti." },
     ],
   },
   {
     title: "Percakapan 3 · Membayar di kasir",
     context: "Kamu sudah memilih barang dan ingin membayar dengan kartu.",
     lines: [
-      { speaker: "店員", jp: "<ruby>合計<rt>ごうけい</rt></ruby>は<ruby>千二百円<rt>せんにひゃくえん</rt></ruby>です。", romaji: "Goukei wa sen nihyaku en desu.", id: "Totalnya 1.200 yen." },
-      { speaker: "店員", jp: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。", romaji: "Oshiharai wa kaado desu ka, genkin desu ka.", id: "Pembayarannya dengan kartu atau uang tunai?" },
-      { speaker: "客", jp: "カードでお願いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya." },
-      { speaker: "店員", jp: "ポイントカードはお<ruby>持<rt>も</rt></ruby>ちですか。", romaji: "Pointo kaado wa omochi desu ka.", id: "Apakah Anda memiliki kartu poin?" },
-      { speaker: "客", jp: "いいえ、<ruby>持<rt>も</rt></ruby>っていません。", romaji: "Iie, motte imasen.", id: "Tidak, saya tidak punya." },
-      { speaker: "店員", jp: "ありがとうございます。レシートです。", romaji: "Arigatou gozaimasu. Reshiito desu.", id: "Terima kasih. Ini struknya." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "<ruby>合計<rt>ごうけい</rt></ruby>は<ruby>千二百円<rt>せんにひゃくえん</rt></ruby>です。", romaji: "Goukei wa sen nihyaku en desu.", id: "Totalnya 1.200 yen." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。", romaji: "Oshiharai wa kaado desu ka, genkin desu ka.", id: "Pembayarannya dengan kartu atau uang tunai?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "ポイントカードはお<ruby>持<rt>も</rt></ruby>ちですか。", romaji: "Pointo kaado wa omochi desu ka.", id: "Apakah Anda memiliki kartu poin?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "いいえ、<ruby>持<rt>も</rt></ruby>っていません。", romaji: "Iie, motte imasen.", id: "Tidak, saya tidak punya." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "ありがとうございます。レシートです。", romaji: "Arigatou gozaimasu. Reshiito desu.", id: "Terima kasih. Ini struknya." },
     ],
   },
 ];
@@ -327,8 +331,8 @@ export default function BelanjaMinimarketPage() {
         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-[#C5C0B7]">
           <li><span className="font-semibold text-[#EAE6DD]">Awali dengan すみません.</span> Saat membutuhkan bantuan pegawai, ungkapan ini merupakan cara yang wajar untuk menarik perhatian dengan sopan.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Harga umumnya sudah ditetapkan.</span> Di minimarket dan sebagian besar toko biasa, menawar harga bukan kebiasaan umum. Lebih baik tanyakan apakah barang sedang diskon atau tersedia pilihan lain.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Kantong belanja.</span> Pegawai mungkin menanyakan apakah kamu memerlukan kantong. Jawab 袋をお願いします jika perlu, atau 袋はいりません jika tidak.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Pembayaran bisa berbeda-beda.</span> Tidak semua toko menerima setiap jenis kartu atau pembayaran digital. Perhatikan tanda di kasir atau tanyakan カードは使えますか.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Kantong belanja.</span> Pegawai mungkin menanyakan apakah kamu memerlukan kantong. Jawab <ruby>袋<rt>ふくろ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします jika perlu, atau <ruby>袋<rt>ふくろ</rt></ruby>はいりません jika tidak.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Pembayaran bisa berbeda-beda.</span> Tidak semua toko menerima setiap jenis kartu atau pembayaran digital. Perhatikan tanda di kasir atau tanyakan カードは<ruby>使<rt>つか</rt></ruby>えますか.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Jangan membuka makanan sebelum membayar.</span> Bawa barang ke kasir terlebih dahulu, lalu ikuti arahan pegawai saat pembayaran.</li>
         </ul>
       </section>
@@ -360,7 +364,9 @@ export default function BelanjaMinimarketPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -388,9 +394,13 @@ export default function BelanjaMinimarketPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
