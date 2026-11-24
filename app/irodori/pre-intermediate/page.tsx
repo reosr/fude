@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
 import { useIrodoriProgress } from "@/lib/irodori-progress";
 
-const implementedLessons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const implementedLessons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 const lessons = [
   { number: 1, topic: "Hal yang disukai dan kegiatan favorit", title: "Futsal itu apa, ya?", description: "Memahami komentar tentang olahraga favorit, mengundang teman ke acara, dan menulis pesan untuk membatalkan rencana." },
   { number: 2, topic: "Hal yang disukai dan kegiatan favorit", title: "Saya paling suka menonton drama.", description: "Membaca ulasan, membicarakan film atau drama, dan menjelaskan apa yang disukai beserta alasannya." },
@@ -41,8 +41,8 @@ export default function IrodoriPreIntermediatePage() {
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#C8A9EA]">IRODORI • PRA-MENENGAH</p>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
-            <div><h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pra-Menengah</h1><p className="mt-1 text-sm font-semibold text-[#C8A9EA]">Tingkat A2/B1 · 13 dari 18 tersedia</p></div>
-            <span className="rounded-xl border border-[#B79ADE]/25 bg-[#80619B]/20 px-3 py-2 text-[10px] font-bold text-[#E3D5F6]">9 topik • 13 tersedia</span>
+            <div><h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pra-Menengah</h1><p className="mt-1 text-sm font-semibold text-[#C8A9EA]">Tingkat A2/B1 · 14 dari 18 tersedia</p></div>
+            <span className="rounded-xl border border-[#B79ADE]/25 bg-[#80619B]/20 px-3 py-2 text-[10px] font-bold text-[#E3D5F6]">9 topik • 14 tersedia</span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Mengembangkan kemampuan untuk memahami informasi yang lebih panjang, bertukar pendapat, menjelaskan pengalaman, membaca teks praktis, dan menyampaikan pesan dengan lebih terstruktur.</p>
           <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
@@ -53,7 +53,7 @@ export default function IrodoriPreIntermediatePage() {
         </div>
       </header>
       <section className="space-y-4">
-        <div><p className="text-[9px] font-black tracking-[0.22em] text-[#C8A9EA]">MATERI PRA-MENENGAH A2/B1</p><h2 className="mt-1 text-xl font-black text-[#EAE6DD]">Daftar pelajaran</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sembilan topik dengan 18 rencana pelajaran. Saat ini, pelajaran 1–13 sudah tersedia; materi berikutnya akan dibuka setelah siap dan mengikuti urutan belajar.</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.22em] text-[#C8A9EA]">MATERI PRA-MENENGAH A2/B1</p><h2 className="mt-1 text-xl font-black text-[#EAE6DD]">Daftar pelajaran</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sembilan topik dengan 18 rencana pelajaran. Saat ini, pelajaran 1–14 sudah tersedia; materi berikutnya akan dibuka setelah siap dan mengikuti urutan belajar.</p></div>
         <div className="space-y-5">
           {topics.map((topic) => (
             <section key={topic} className="space-y-3">
