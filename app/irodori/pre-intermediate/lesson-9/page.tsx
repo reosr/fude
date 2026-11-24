@@ -25,7 +25,7 @@ const content: IrodoriLessonContent = {
   ],
   conversations: [
     {
-      title: "Membicarakan target belajar dengan pengajar",
+      title: "Membicarakan target belajar dengan rekan",
       speakers: [yui, kenji],
       utterances: [
         { speakerId: "kenji", japanese: <>日本語の勉強で、何か目標がありますか。</>, romaji: "Nihongo no benkyou de, nanika mokuhyou ga arimasu ka?", translation: "Apakah kamu punya target dalam belajar bahasa Jepang?", audioFileName: "" },
