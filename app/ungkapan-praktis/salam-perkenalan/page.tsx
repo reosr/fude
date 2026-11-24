@@ -108,7 +108,10 @@ const quiz = [
 
 const simulation = [
   {
-    prompt: "Kamu baru bertemu teman sekelas di kelas bahasa Jepang. Dia berkata: 「はじめまして。田中です。」",
+    prompt: "Kamu baru bertemu teman sekelas di kelas bahasa Jepang. Dia menyapa dan memperkenalkan diri:",
+    japanese: "はじめまして。<ruby>田中<rt>たなか</rt></ruby>です。",
+    romaji: "Hajimemashite. Tanaka desu.",
+    translation: "Salam kenal. Saya Tanaka.",
     task: "Pilih respons yang paling wajar.",
     options: [
       { label: "はじめまして。アナです。よろしくお願いします。", correct: true, feedback: "Kamu membalas salam perkenalan, menyebut nama, lalu menyampaikan よろしくお願いします." },
@@ -117,7 +120,10 @@ const simulation = [
     ],
   },
   {
-    prompt: "Setelah berkenalan, Tanaka bertanya: 「ご出身はどちらですか。」",
+    prompt: "Setelah berkenalan, Tanaka bertanya tentang tempat asalmu:",
+    japanese: "ご<ruby>出身<rt>しゅっしん</rt></ruby>はどちらですか。",
+    romaji: "Goshusshin wa dochira desu ka.",
+    translation: "Anda berasal dari mana?",
     task: "Kamu berasal dari Indonesia. Apa jawaban yang sesuai?",
     options: [
       { label: "インドネシアから<ruby>来<rt>き</rt></ruby>ました。", correct: true, feedback: "Jawaban ini menyampaikan bahwa kamu berasal dari Indonesia." },
@@ -126,7 +132,10 @@ const simulation = [
     ],
   },
   {
-    prompt: "Tanaka mengakhiri perkenalan dengan: 「どうぞよろしくお願いします。」",
+    prompt: "Tanaka menutup perkenalan dengan ungkapan sopan:",
+    japanese: "どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。",
+    romaji: "Douzo yoroshiku onegaishimasu.",
+    translation: "Senang berkenalan dengan Anda. / Mohon hubungan baiknya.",
     task: "Pilih balasan sopan yang sesuai.",
     options: [
       { label: "こちらこそ、よろしくお願いします。", correct: true, feedback: "こちらこそ menyampaikan 'saya juga', sehingga menjadi balasan yang wajar." },
