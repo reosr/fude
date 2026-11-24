@@ -195,7 +195,7 @@ const content: IrodoriLessonContent = {
     exampleLabel: "CONTOH ORISINAL FUDE",
     exampleJapanese: <>ご結婚おめでとうございます。大学のサークルでいっしょに活動したことを、今でも覚えています。いつもお互いを大切にしているお二人なら、明るく楽しい家庭を作っていけると思います。お二人の幸せを心からお祈りします。</>,
     exampleTranslation: "Selamat atas pernikahan kalian. Saya masih ingat saat kita aktif bersama di klub kampus. Saya yakin kalian yang selalu saling menghargai akan dapat membangun keluarga yang ceria dan menyenangkan. Saya mendoakan kebahagiaan kalian dari hati.",
-    placeholder: "ご結婚おめでとうございます。＿＿でいっしょに活動したことを覚えています。これからも＿＿...",
+    placeholder: "ごけっこんおめでとうございます。＿＿でいっしょにかつどうしたことをおぼえています。これからも＿＿...",
   },
   simulations: [
     {
