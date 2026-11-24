@@ -332,7 +332,7 @@ export default function RestoranMakananPage() {
         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-[#C5C0B7]">
           <li><span className="font-semibold text-[#EAE6DD]">Tunggu arahan tempat duduk.</span> Di banyak restoran, pegawai akan mengarahkan tamu ke meja. Sampaikan jumlah orang terlebih dahulu dan ikuti petunjuknya.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Panggil pegawai dengan sopan.</span> Jika perlu bantuan, すみません adalah cara yang wajar untuk menarik perhatian pegawai.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Periksa isi makanan.</span> Gunakan これは何が<ruby>入<rt>はい</rt></ruby>っていますか untuk menanyakan bahan. Jika memiliki alergi atau pantangan, jelaskan dengan spesifik dan pastikan kembali kepada pegawai; jangan berasumsi semua permintaan bisa dipenuhi.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Periksa isi makanan.</span> Gunakan これは<ruby>何<rt>なに</rt></ruby>が<ruby>入<rt>はい</rt></ruby>っていますか untuk menanyakan bahan. Jika memiliki alergi atau pantangan, jelaskan dengan spesifik dan pastikan kembali kepada pegawai; jangan berasumsi semua permintaan bisa dipenuhi.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Permintaan penyesuaian bergantung restoran.</span> Restoran mungkin bisa mengurangi porsi atau menyesuaikan tingkat pedas, tetapi tidak semua tempat menyediakan pilihan tersebut.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Ucapkan ごちそうさまでした.</span> Ungkapan ini lazim diucapkan setelah selesai makan sebagai bentuk penghargaan atas hidangan.</li>
         </ul>
