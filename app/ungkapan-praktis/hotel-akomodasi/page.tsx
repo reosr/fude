@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -168,16 +169,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>宿泊<rt>しゅくはく</rt></ruby>", reading: "しゅくはく", romaji: "shukuhaku", meaning: "Menginap" },
-  { word: "<ruby>予約<rt>よやく</rt></ruby>", reading: "よやく", romaji: "yoyaku", meaning: "Reservasi" },
-  { word: "<ruby>受付<rt>うけつけ</rt></ruby>", reading: "うけつけ", romaji: "uketsuke", meaning: "Resepsionis / pendaftaran" },
-  { word: "<ruby>客室<rt>きゃくしつ</rt></ruby>", reading: "きゃくしつ", romaji: "kyakushitsu", meaning: "Kamar tamu" },
-  { word: "<ruby>荷物<rt>にもつ</rt></ruby>", reading: "にもつ", romaji: "nimotsu", meaning: "Barang bawaan / bagasi" },
-  { word: "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>", reading: "りょうしゅうしょ", romaji: "ryoushuusho", meaning: "Kuitansi" },
-  { word: "<ruby>朝食<rt>ちょうしょく</rt></ruby>", reading: "ちょうしょく", romaji: "choushoku", meaning: "Sarapan" },
-  { word: "<ruby>鍵<rt>かぎ</rt></ruby>", reading: "かぎ", romaji: "kagi", meaning: "Kunci" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "hotel-akomodasi")?.vocab ?? [];
 
 const quiz = [
   {
