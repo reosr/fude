@@ -137,7 +137,7 @@ export default function UngkapanPraktisPage() {
             <p className="mt-1 text-xs text-[#A3A099]">10 kategori direncanakan · 3 kategori mulai tersedia</p>
           </div>
           <span className="rounded-full border border-[#269B70]/30 bg-[#269B70]/10 px-3 py-1 text-xs font-bold text-[#66C49C]">
-            2 / 10
+            3 / 10
           </span>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#121110]">
