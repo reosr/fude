@@ -234,7 +234,7 @@ const simulation = [
     ],
   },
   {
-    prompt: "Kamu sudah selesai makan dan pegawai menanyakan metode pembayaran:"
+    prompt: "Kamu sudah selesai makan dan pegawai menanyakan metode pembayaran:",
     japanese: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。",
     romaji: "Oshiharai wa kaado desu ka, genkin desu ka.",
     translation: "Pembayarannya dengan kartu atau uang tunai?",
