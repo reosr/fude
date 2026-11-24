@@ -182,19 +182,25 @@ function renderJapaneseNodeWithRuby(node: ReactNode, keyPrefix = "reading"): Rea
     dangerouslySetInnerHTML?: unknown;
   }>;
 
-  // Jangan mengubah ruby yang sudah disediakan data, elemen <rt>, atau HTML
-  // yang memang dikelola langsung oleh pemanggil.
+  // Elemen yang berasal dari array anak perlu key stabil. Array tersebut
+  // bisa berasal dari fragment JSX seperti contoh tata bahasa dengan <br />.
+  const elementKey = element.key ?? keyPrefix;
+
+  // Jangan mengubah isi ruby/rt atau HTML yang dikelola langsung pemanggil,
+  // tetapi tetap berikan key jika elemen ini merupakan anggota sebuah array.
   if (
     element.type === "ruby" ||
     element.type === "rt" ||
     element.props.dangerouslySetInnerHTML
   ) {
-    return node;
+    return element.key === null
+      ? cloneElement(element, { key: elementKey })
+      : node;
   }
 
   return cloneElement(
     element,
-    {},
+    { key: elementKey },
     renderJapaneseNodeWithRuby(element.props.children, keyPrefix)
   );
 }
@@ -850,8 +856,9 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
         token.surface === "ません" ||
         token.surface === "ましょう" ||
         (token.surface === "ま" &&
-          ["せん", "しょう"].includes(next?.surface ?? "")) ||
-        (token.surface === "せん" && /ま$/u.test(previous.surface)))
+          ["した", "せん", "しょう"].includes(next?.surface ?? "")) ||
+        (["した", "せん", "しょう"].includes(token.surface) &&
+          /ま$/u.test(previous.surface)))
     ) {
       mergeIntoPrevious(previous, token);
       continue;
