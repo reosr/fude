@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -116,7 +120,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
       { jp: "<ruby>食後<rt>しょくご</rt></ruby>に<ruby>飲<rt>の</rt></ruby>んでください。", romaji: "Shokugo ni nonde kudasai.", id: "Silakan minum setelah makan.", tone: "Instruksi apoteker" },
       { jp: "<ruby>処方箋<rt>しょほうせん</rt></ruby>があります。", romaji: "Shohousen ga arimasu.", id: "Saya memiliki resep dokter.", tone: "Menyerahkan resep" },
       { jp: "<ruby>薬局<rt>やっきょく</rt></ruby>はどこですか。", romaji: "Yakkyoku wa doko desu ka.", id: "Apotek ada di mana?", tone: "Mencari apotek" },
-      { jp: "<ruby>薬<rt>くすり</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>をお願いします。", romaji: "Kusuri no setsumei o onegaishimasu.", id: "Tolong jelaskan tentang obat ini.", tone: "Meminta penjelasan" },
+      { jp: "<ruby>薬<rt>くすり</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kusuri no setsumei o onegaishimasu.", id: "Tolong jelaskan tentang obat ini.", tone: "Meminta penjelasan" },
     ],
   },
   {
@@ -138,23 +142,23 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Mendaftar di klinik",
     context: "Kamu datang ke klinik karena merasa tidak enak badan dan belum pernah berkunjung ke sana.",
     lines: [
-      { speaker: "受付", jp: "こんにちは。<ruby>今日<rt>きょう</rt></ruby>はどうされましたか。", romaji: "Konnichiwa. Kyou wa dou saremashita ka.", id: "Selamat siang. Ada keluhan apa hari ini?" },
-      { speaker: "患者", jp: "<ruby>熱<rt>ねつ</rt></ruby>があります。のども<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Netsu ga arimasu. Nodo mo itai desu.", id: "Saya demam. Tenggorokan juga sakit." },
-      { speaker: "受付", jp: "いつからですか。", romaji: "Itsu kara desu ka.", id: "Sejak kapan?" },
-      { speaker: "患者", jp: "<ruby>昨日<rt>きのう</rt></ruby>からです。", romaji: "Kinou kara desu.", id: "Sejak kemarin." },
-      { speaker: "受付", jp: "<ruby>初<rt>はじ</rt></ruby>めての<ruby>受診<rt>じゅしん</rt></ruby>ですか。", romaji: "Hajimete no jushin desu ka.", id: "Apakah ini pertama kalinya Anda menjalani pemeriksaan di sini?" },
-      { speaker: "患者", jp: "はい、<ruby>初<rt>はじ</rt></ruby>めてです。", romaji: "Hai, hajimete desu.", id: "Ya, ini pertama kalinya." },
+      { speaker: "<ruby>受付<rt>うけつけ</rt></ruby>", jp: "こんにちは。<ruby>今日<rt>きょう</rt></ruby>はどうされましたか。", romaji: "Konnichiwa. Kyou wa dou saremashita ka.", id: "Selamat siang. Ada keluhan apa hari ini?" },
+      { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "<ruby>熱<rt>ねつ</rt></ruby>があります。のども<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Netsu ga arimasu. Nodo mo itai desu.", id: "Saya demam. Tenggorokan juga sakit." },
+      { speaker: "<ruby>受付<rt>うけつけ</rt></ruby>", jp: "いつからですか。", romaji: "Itsu kara desu ka.", id: "Sejak kapan?" },
+      { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "<ruby>昨日<rt>きのう</rt></ruby>からです。", romaji: "Kinou kara desu.", id: "Sejak kemarin." },
+      { speaker: "<ruby>受付<rt>うけつけ</rt></ruby>", jp: "<ruby>初<rt>はじ</rt></ruby>めての<ruby>受診<rt>じゅしん</rt></ruby>ですか。", romaji: "Hajimete no jushin desu ka.", id: "Apakah ini pertama kalinya Anda menjalani pemeriksaan di sini?" },
+      { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "はい、<ruby>初<rt>はじ</rt></ruby>めてです。", romaji: "Hai, hajimete desu.", id: "Ya, ini pertama kalinya." },
     ],
   },
   {
     title: "Percakapan 2 · Bertanya kepada apoteker",
     context: "Kamu membawa resep dan ingin memahami aturan penggunaan obat dari apoteker.",
     lines: [
-      { speaker: "患者", jp: "すみません。<ruby>処方箋<rt>しょほうせん</rt></ruby>があります。", romaji: "Sumimasen. Shohousen ga arimasu.", id: "Permisi. Saya memiliki resep dokter." },
-      { speaker: "薬剤師", jp: "かしこまりました。こちらがお<ruby>薬<rt>くすり</rt></ruby>です。", romaji: "Kashikomarimashita. Kochira ga okusuri desu.", id: "Baik. Ini obat Anda." },
-      { speaker: "患者", jp: "<ruby>一日<rt>いちにち</rt></ruby>に<ruby>何回<rt>なんかい</rt></ruby><ruby>飲<rt>の</rt></ruby>めばいいですか。", romaji: "Ichinichi ni nankai nomeba ii desu ka.", id: "Dalam sehari, berapa kali obat ini perlu diminum?" },
-      { speaker: "薬剤師", jp: "<ruby>説明書<rt>せつめいしょ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してください。<ruby>食後<rt>しょくご</rt></ruby>に<ruby>飲<rt>の</rt></ruby>んでください。", romaji: "Setsumeisho o kakunin shite kudasai. Shokugo ni nonde kudasai.", id: "Silakan periksa petunjuknya. Minumlah setelah makan." },
-      { speaker: "患者", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
+      { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "すみません。<ruby>処方箋<rt>しょほうせん</rt></ruby>があります。", romaji: "Sumimasen. Shohousen ga arimasu.", id: "Permisi. Saya memiliki resep dokter." },
+      { speaker: "<ruby>薬剤師<rt>やくざいし</rt></ruby>", jp: "かしこまりました。こちらがお<ruby>薬<rt>くすり</rt></ruby>です。", romaji: "Kashikomarimashita. Kochira ga okusuri desu.", id: "Baik. Ini obat Anda." },
+      { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "<ruby>一日<rt>いちにち</rt></ruby>に<ruby>何回<rt>なんかい</rt></ruby><ruby>飲<rt>の</rt></ruby>めばいいですか。", romaji: "Ichinichi ni nankai nomeba ii desu ka.", id: "Dalam sehari, berapa kali obat ini perlu diminum?" },
+      { speaker: "<ruby>薬剤師<rt>やくざいし</rt></ruby>", jp: "<ruby>説明書<rt>せつめいしょ</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してください。<ruby>食後<rt>しょくご</rt></ruby>に<ruby>飲<rt>の</rt></ruby>んでください。", romaji: "Setsumeisho o kakunin shite kudasai. Shokugo ni nonde kudasai.", id: "Silakan periksa petunjuknya. Minumlah setelah makan." },
+      { speaker: "<ruby>患者<rt>かんじゃ</rt></ruby>", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
   {
@@ -162,9 +166,9 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Kamu melihat seseorang membutuhkan bantuan medis segera dan meminta orang di sekitar untuk menolong.",
     lines: [
       { speaker: "あなた", jp: "すみません。<ruby>助<rt>たす</rt></ruby>けてください。", romaji: "Sumimasen. Tasukete kudasai.", id: "Permisi. Tolong bantu." },
-      { speaker: "通行人", jp: "どうしましたか。", romaji: "Dou shimashita ka.", id: "Ada apa?" },
+      { speaker: "<ruby>通行人<rt>つうこうにん</rt></ruby>", jp: "どうしましたか。", romaji: "Dou shimashita ka.", id: "Ada apa?" },
       { speaker: "あなた", jp: "<ruby>具合<rt>ぐあい</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>い<ruby>人<rt>ひと</rt></ruby>がいます。<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>んでください。", romaji: "Guai ga warui hito ga imasu. Kyuukyuusha o yonde kudasai.", id: "Ada seseorang yang kondisinya tidak baik. Tolong panggil ambulans." },
-      { speaker: "通行人", jp: "わかりました。119<ruby>番<rt>ばん</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>します。", romaji: "Wakarimashita. Hyaku juu kyuu ban ni denwa shimasu.", id: "Baik. Saya akan menelepon 119." },
+      { speaker: "<ruby>通行人<rt>つうこうにん</rt></ruby>", jp: "わかりました。119<ruby>番<rt>ばん</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>します。", romaji: "Wakarimashita. Hyaku juu kyuu ban ni denwa shimasu.", id: "Baik. Saya akan menelepon 119." },
       { speaker: "あなた", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
     ],
   },
@@ -183,7 +187,7 @@ const vocabulary = [
 
 const quiz = [
   {
-    question: "Petugas klinik bertanya 「今日はどうされましたか。」 Kamu ingin mengatakan bahwa tenggorokanmu sakit. Pilih jawaban yang tepat.",
+    question: "Petugas klinik bertanya 「<ruby>今日<rt>きょう</rt></ruby>はどうされましたか。」 Kamu ingin mengatakan bahwa tenggorokanmu sakit. Pilih jawaban yang tepat.",
     options: [
       { label: "のどが<ruby>痛<rt>いた</rt></ruby>いです。", correct: true, feedback: "Benar. のどが痛いです berarti tenggorokan saya sakit." },
       { label: "<ruby>薬局<rt>やっきょく</rt></ruby>はどこですか。", correct: false, feedback: "Kalimat ini menanyakan lokasi apotek." },
@@ -201,7 +205,7 @@ const quiz = [
   {
     question: "Dalam keadaan medis darurat, kamu ingin meminta seseorang memanggil ambulans. Pilih ungkapan yang sesuai.",
     options: [
-      { label: "<ruby>薬<rt>くすり</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>をお願いします。", correct: false, feedback: "Kalimat ini meminta penjelasan tentang obat." },
+      { label: "<ruby>薬<rt>くすり</rt></ruby>の<ruby>説明<rt>せつめい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini meminta penjelasan tentang obat." },
       { label: "<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>んでください。", correct: true, feedback: "Benar. Ungkapan ini berarti tolong panggil ambulans." },
       { label: "<ruby>予約<rt>よやく</rt></ruby>していません。", correct: false, feedback: "Kalimat ini menyampaikan bahwa kamu belum membuat janji." },
     ],
@@ -334,8 +338,8 @@ export default function KesehatanKeadaanDaruratPage() {
           <li><span className="font-semibold text-[#EAE6DD]">Jelaskan keluhan dengan sederhana.</span> Sebutkan bagian tubuh yang terasa sakit, gejala yang dialami, dan sejak kapan. Jika sulit menjelaskan, tunjukkan catatan atau terjemahan tertulis.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Sampaikan informasi penting.</span> Beri tahu petugas medis tentang alergi dan obat yang sedang digunakan. Jangan menebak aturan obat; tanyakan langsung kepada dokter atau apoteker.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Pahami peran apoteker.</span> Apoteker dapat menjelaskan kegunaan dan aturan penggunaan obat yang diberikan. Tanyakan kembali jika ada bagian yang belum jelas.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Nomor darurat medis di Jepang.</span> Untuk keadaan medis darurat yang membutuhkan ambulans, hubungi 119. Saat menjelaskan keperluan, ungkapan 救急です berarti “ini keadaan darurat medis”. Nomor 119 juga digunakan untuk kebakaran. <a href="https://www.jnto.go.jp/emergency/index.html" target="_blank" rel="noreferrer" className="font-semibold text-[#D9B66D] underline underline-offset-2">Panduan resmi JNTO</a>.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Minta bantuan bahasa bila perlu.</span> Kamu dapat mengatakan 日本語があまり話せません dan meminta lawan bicara berbicara lebih pelan. Ketersediaan dukungan bahasa bergantung pada fasilitas.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Nomor darurat medis di Jepang.</span> Untuk keadaan medis darurat yang membutuhkan ambulans, hubungi 119. Saat menjelaskan keperluan, ungkapan <ruby>救急<rt>きゅうきゅう</rt></ruby>です berarti “ini keadaan darurat medis”. Nomor 119 juga digunakan untuk kebakaran. <a href="https://www.jnto.go.jp/emergency/index.html" target="_blank" rel="noreferrer" className="font-semibold text-[#D9B66D] underline underline-offset-2">Panduan resmi JNTO</a>.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Minta bantuan bahasa bila perlu.</span> Kamu dapat mengatakan <ruby>日本語<rt>にほんご</rt></ruby>があまり<ruby>話<rt>はな</rt></ruby>せません dan meminta lawan bicara berbicara lebih pelan. Ketersediaan dukungan bahasa bergantung pada fasilitas.</li>
         </ul>
       </section>
 
@@ -366,7 +370,9 @@ export default function KesehatanKeadaanDaruratPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -394,9 +400,13 @@ export default function KesehatanKeadaanDaruratPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
