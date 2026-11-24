@@ -37,7 +37,7 @@ const askingMachineConversation: IrodoriUtterance[] = [
 ];
 
 const meetingPreparationConversation: IrodoriUtterance[] = [
-{speakerId:"kenji",japanese:<>会議の準備をお願いします。</>,romaji:"Kaigi no junbi o onegaishimasu.",translation:"Tolong siapkan keperluan rapat.",audioFileName:"irodori-elementary1-13-a04-l01.mp3"},
+{speakerId:"kenji",japanese:<>会議の準備をお願いします。</>,romaji:"Kaigi no junbi o onegai shimasu.",translation:"Tolong siapkan keperluan rapat.",audioFileName:"irodori-elementary1-13-a04-l01.mp3"},
 {speakerId:"yui",japanese:<>はい。机はどうしますか。</>,romaji:"Hai. Tsukue wa dou shimasu ka?",translation:"Baik. Bagaimana dengan mejanya?",audioFileName:"irodori-elementary1-13-a04-l02.mp3"},
 {speakerId:"kenji",japanese:<>机を三つ並べてください。いすはその前に置いてください。</>,romaji:"Tsukue o mittsu narabete kudasai. Isu wa sono mae ni oite kudasai.",translation:"Tolong susun tiga meja. Letakkan kursi di depannya.",audioFileName:"irodori-elementary1-13-a04-l03.mp3"},
 {speakerId:"yui",japanese:<>わかりました。資料も用意します。</>,romaji:"Wakarimashita. Shiryou mo youi shimasu.",translation:"Baik. Saya juga akan menyiapkan dokumennya.",audioFileName:"irodori-elementary1-13-a04-l04.mp3"},
@@ -95,7 +95,7 @@ const vocabRows=[
 ["動く","うごく · ugoku","Bergerak / berfungsi"],
 ["使う","つかう · tsukau","Menggunakan"],
 ["終わる","おわる · owaru","Selesai"],
-["お願いします","おねがいします · onegaishimasu","Mohon bantuan / tolong"],
+["お願いします","おねがいします · onegai shimasu","Mohon bantuan / tolong"],
 ["パソコン","パソコン · pasokon","Komputer"],
 ["会議室","かいぎしつ · kaigishitsu","Ruang rapat"],
 ["連絡する","れんらくする · renraku suru","Menghubungi / memberi kabar"],
@@ -123,7 +123,7 @@ const kanjiWords=[
 ["動く","うごく · ugoku","Bergerak / berfungsi"],
 ["使う","つかう · tsukau","Menggunakan"],
 ["終わる","おわる · owaru","Selesai"],
-["お願いします","おねがいします · onegaishimasu","Mohon bantuan / tolong"],
+["お願いします","おねがいします · onegai shimasu","Mohon bantuan / tolong"],
 ];
 
 const emailFields=[
