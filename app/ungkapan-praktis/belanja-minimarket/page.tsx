@@ -150,7 +150,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     description: "Gunakan ungkapan ini saat mencari barang atau meminta bantuan pegawai toko.",
     items: [
       { jp: "すみません、<ruby>商品<rt>しょうひん</rt></ruby>はどこにありますか。", romaji: "Sumimasen, shouhin wa doko ni arimasu ka.", id: "Permisi, barangnya ada di mana?", tone: "Sopan · bertanya lokasi" },
-      { jp: "<ruby>文房具売り場<rt>ぶんぼうぐうりば</rt></ruby>はどこですか。", romaji: "Bunbougu uriba wa doko desu ka.", id: "Bagian alat tulis ada di mana?", tone: "Menanyakan bagian toko" },
+      { jp: "<ruby>文房具<rt>ぶんぼうぐ</rt></ruby><ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>はどこですか。", romaji: "Bunbougu uriba wa doko desu ka.", id: "Bagian alat tulis ada di mana?", tone: "Menanyakan bagian toko" },
       { jp: "この<ruby>商品<rt>しょうひん</rt></ruby>はありますか。", romaji: "Kono shouhin wa arimasu ka.", id: "Apakah barang ini tersedia?", tone: "Menanyakan ketersediaan" },
       { jp: "<ruby>別<rt>べつ</rt></ruby>の<ruby>色<rt>いろ</rt></ruby>はありますか。", romaji: "Betsu no iro wa arimasu ka.", id: "Apakah ada warna lain?", tone: "Meminta pilihan lain" },
       { jp: "ほかのサイズはありますか。", romaji: "Hoka no saizu wa arimasu ka.", id: "Apakah ada ukuran lainnya?", tone: "Meminta pilihan ukuran" },
@@ -211,7 +211,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Kamu mencari alat tulis dan bertanya kepada pegawai tentang lokasinya.",
     lines: [
       { speaker: "客", jp: "すみません、ノートはどこにありますか。", romaji: "Sumimasen, nooto wa doko ni arimasu ka.", id: "Permisi, buku catatan ada di mana?" },
-      { speaker: "店員", jp: "<ruby>文房具売り場<rt>ぶんぼうぐうりば</rt></ruby>は<ruby>二階<rt>にかい</rt></ruby>です。", romaji: "Bunbougu uriba wa nikai desu.", id: "Bagian alat tulis ada di lantai dua." },
+      { speaker: "店員", jp: "<ruby>文房具<rt>ぶんぼうぐ</rt></ruby><ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>は<ruby>二階<rt>にかい</rt></ruby>です。", romaji: "Bunbougu uriba wa nikai desu.", id: "Bagian alat tulis ada di lantai dua." },
       { speaker: "客", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
       { speaker: "店員", jp: "こちらのエスカレーターをご<ruby>利用<rt>りよう</rt></ruby>ください。", romaji: "Kochira no esukareetaa o goriyou kudasai.", id: "Silakan gunakan eskalator yang ini." },
       { speaker: "客", jp: "わかりました。", romaji: "Wakarimashita.", id: "Baik, saya mengerti." },
@@ -235,7 +235,7 @@ const vocabulary = [
   { word: "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>", reading: "かいもの", romaji: "kaimono", meaning: "Belanja" },
   { word: "<ruby>商品<rt>しょうひん</rt></ruby>", reading: "しょうひん", romaji: "shouhin", meaning: "Barang / produk" },
   { word: "<ruby>値段<rt>ねだん</rt></ruby>", reading: "ねだん", romaji: "nedan", meaning: "Harga" },
-  { word: "<ruby>売り場<rt>うりば</rt></ruby>", reading: "うりば", romaji: "uriba", meaning: "Bagian / area penjualan" },
+  { word: "<ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>", reading: "うりば", romaji: "uriba", meaning: "Bagian / area penjualan" },
   { word: "<ruby>試着<rt>しちゃく</rt></ruby>", reading: "しちゃく", romaji: "shichaku", meaning: "Mencoba pakaian" },
   { word: "<ruby>現金<rt>げんきん</rt></ruby>", reading: "げんきん", romaji: "genkin", meaning: "Uang tunai" },
   { word: "<ruby>袋<rt>ふくろ</rt></ruby>", reading: "ふくろ", romaji: "fukuro", meaning: "Kantong" },
