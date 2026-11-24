@@ -43,7 +43,7 @@ const staffIntroductionConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>はじめまして。佐藤です。どうぞよろしくお願いします。</>,
-    romaji: "Hajimemashite. Satou desu. Douzo yoroshiku onegaishimasu.",
+    romaji: "Hajimemashite. Satou desu. Douzo yoroshiku onegai shimasu.",
     translation: "Salam kenal. Saya Sato. Senang bertemu dengan Anda.",
     audioFileName: "irodori-elementary2-01-a01-l02.mp3",
   },
@@ -57,7 +57,7 @@ const staffIntroductionConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>わかりました。よろしくお願いします。</>,
-    romaji: "Wakarimashita. Yoroshiku onegaishimasu.",
+    romaji: "Wakarimashita. Yoroshiku onegai shimasu.",
     translation: "Baik. Senang bisa berkenalan dengan kalian semua.",
     audioFileName: "irodori-elementary2-01-a01-l04.mp3",
   },
@@ -88,7 +88,7 @@ const detailedSelfIntroductionConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>来る前に、二年間日本語を勉強していました。どうぞよろしくお願いします。</>,
-    romaji: "Kuru mae ni, ninenkan Nihongo o benkyou shite imashita. Douzo yoroshiku onegaishimasu.",
+    romaji: "Kuru mae ni, ninenkan Nihongo o benkyou shite imashita. Douzo yoroshiku onegai shimasu.",
     translation: "Sebelum datang, saya sudah belajar bahasa Jepang selama dua tahun. Senang berkenalan dengan semuanya.",
     audioFileName: "irodori-elementary2-01-a02-l04.mp3",
   },
@@ -666,7 +666,7 @@ export default function IrodoriElementaryTwoLessonOnePage() {
             ["先週、日本に来たばかりです。", "Senshuu, Nihon ni kita bakari desu.", "Saya baru tiba di Jepang minggu lalu."],
             ["来る前に、二年間日本語を勉強していました。", "Kuru mae ni, ninenkan Nihongo o benkyou shite imashita.", "Sebelum datang, saya sudah belajar bahasa Jepang selama dua tahun."],
             ["趣味は写真を撮ることです。", "Shumi wa shashin o toru koto desu.", "Hobi saya adalah mengambil foto."],
-            ["どうぞよろしくお願いします。", "Douzo yoroshiku onegaishimasu.", "Senang berkenalan dengan semuanya."],
+            ["どうぞよろしくお願いします。", "Douzo yoroshiku onegai shimasu.", "Senang berkenalan dengan semuanya."],
           ].map(([jp, reading, meaning], index) => (
             <article key={jp} className="flex gap-3 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#486C91]/35 bg-[#486C91]/10 text-[10px] font-black text-[#A9C9E8]">{String(index + 1).padStart(2, "0")}</span>
