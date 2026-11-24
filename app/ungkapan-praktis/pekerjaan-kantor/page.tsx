@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -85,7 +89,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     items: [
       { jp: "おはようございます。", romaji: "Ohayou gozaimasu.", id: "Selamat pagi.", tone: "Salam saat datang bekerja" },
       { jp: "<ruby>今日<rt>きょう</rt></ruby>もよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kyou mo yoroshiku onegaishimasu.", id: "Mohon kerja samanya hari ini juga.", tone: "Sapaan kepada rekan kerja" },
-      { jp: "お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。", romaji: "Osaki ni shitsurei shimasu.", id: "Saya pamit pulang lebih dahulu.", tone: "Pulang lebih dahulu", note: "Rekan yang masih bekerja dapat menjawab お疲れさまでした." },
+      { jp: "お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。", romaji: "Osaki ni shitsurei shimasu.", id: "Saya pamit pulang lebih dahulu.", tone: "Pulang lebih dahulu", note: "Rekan yang masih bekerja dapat menjawab お<ruby>疲<rt>つか</rt></ruby>れさまでした." },
       { jp: "お<ruby>疲<rt>つか</rt></ruby>れさまでした。", romaji: "Otsukaresama deshita.", id: "Terima kasih atas kerja kerasnya hari ini.", tone: "Menanggapi rekan yang selesai bekerja" },
       { jp: "<ruby>少<rt>すこ</rt></ruby>しお<ruby>時間<rt>じかん</rt></ruby>よろしいですか。", romaji: "Sukoshi ojikan yoroshii desu ka.", id: "Apakah Anda punya sedikit waktu?", tone: "Memulai pembicaraan dengan sopan" },
       { jp: "<ruby>今<rt>いま</rt></ruby>、お<ruby>話<rt>はな</rt></ruby>ししてもよろしいですか。", romaji: "Ima, ohanashi shite mo yoroshii desu ka.", id: "Bolehkah saya berbicara dengan Anda sekarang?", tone: "Meminta waktu atasan atau rekan" },
@@ -132,32 +136,32 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Memastikan instruksi dari atasan",
     context: "Kamu menerima tugas baru dan ingin memastikan cara serta tenggat pengerjaannya.",
     lines: [
-      { speaker: "上司", jp: "この<ruby>資料<rt>しりょう</rt></ruby>をまとめてもらえますか。", romaji: "Kono shiryou o matomete moraemasu ka.", id: "Bisakah kamu merangkum bahan ini?" },
-      { speaker: "社員", jp: "はい。いつまでに<ruby>終<rt>お</rt></ruby>わらせればいいですか。", romaji: "Hai. Itsu made ni owarasereba ii desu ka.", id: "Baik. Kapan paling lambat harus selesai?" },
-      { speaker: "上司", jp: "<ruby>明日<rt>あした</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>までにお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Ashita no gogo made ni onegaishimasu.", id: "Tolong selesaikan paling lambat besok sore." },
-      { speaker: "社員", jp: "わかりました。<ruby>確認<rt>かくにん</rt></ruby>したいことがあれば、また<ruby>質問<rt>しつもん</rt></ruby>します。", romaji: "Wakarimashita. Kakunin shitai koto ga areba, mata shitsumon shimasu.", id: "Baik. Kalau ada yang ingin saya pastikan, saya akan bertanya lagi." },
-      { speaker: "上司", jp: "よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Yoroshiku onegaishimasu.", id: "Mohon dikerjakan dengan baik." },
+      { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "この<ruby>資料<rt>しりょう</rt></ruby>をまとめてもらえますか。", romaji: "Kono shiryou o matomete moraemasu ka.", id: "Bisakah kamu merangkum bahan ini?" },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "はい。いつまでに<ruby>終<rt>お</rt></ruby>わらせればいいですか。", romaji: "Hai. Itsu made ni owarasereba ii desu ka.", id: "Baik. Kapan paling lambat harus selesai?" },
+      { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "<ruby>明日<rt>あした</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>までにお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Ashita no gogo made ni onegaishimasu.", id: "Tolong selesaikan paling lambat besok sore." },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "わかりました。<ruby>確認<rt>かくにん</rt></ruby>したいことがあれば、また<ruby>質問<rt>しつもん</rt></ruby>します。", romaji: "Wakarimashita. Kakunin shitai koto ga areba, mata shitsumon shimasu.", id: "Baik. Kalau ada yang ingin saya pastikan, saya akan bertanya lagi." },
+      { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Yoroshiku onegaishimasu.", id: "Mohon dikerjakan dengan baik." },
     ],
   },
   {
     title: "Percakapan 2 · Melaporkan hasil pekerjaan",
     context: "Kamu sudah menyelesaikan tugas dan meminta atasan memeriksa hasilnya.",
     lines: [
-      { speaker: "社員", jp: "お<ruby>疲<rt>つか</rt></ruby>れさまです。<ruby>資料<rt>しりょう</rt></ruby>が<ruby>完成<rt>かんせい</rt></ruby>しました。", romaji: "Otsukaresama desu. Shiryou ga kansei shimashita.", id: "Halo, bahan presentasinya sudah selesai." },
-      { speaker: "上司", jp: "ありがとうございます。<ruby>少<rt>すこ</rt></ruby>し<ruby>確認<rt>かくにん</rt></ruby>します。", romaji: "Arigatou gozaimasu. Sukoshi kakunin shimasu.", id: "Terima kasih. Saya akan memeriksanya sebentar." },
-      { speaker: "上司", jp: "この<ruby>部分<rt>ぶぶん</rt></ruby>をもう<ruby>少<rt>すこ</rt></ruby>し<ruby>直<rt>なお</rt></ruby>してください。", romaji: "Kono bubun o mou sukoshi naoshite kudasai.", id: "Tolong perbaiki bagian ini sedikit lagi." },
-      { speaker: "社員", jp: "わかりました。<ruby>修正<rt>しゅうせい</rt></ruby>してから、もう<ruby>一度<rt>いちど</rt></ruby><ruby>提出<rt>ていしゅつ</rt></ruby>します。", romaji: "Wakarimashita. Shuusei shite kara, mou ichido teishutsu shimasu.", id: "Baik. Setelah diperbaiki, saya akan mengumpulkannya sekali lagi." },
-      { speaker: "上司", jp: "よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Yoroshiku onegaishimasu.", id: "Mohon dikerjakan." },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "お<ruby>疲<rt>つか</rt></ruby>れさまです。<ruby>資料<rt>しりょう</rt></ruby>が<ruby>完成<rt>かんせい</rt></ruby>しました。", romaji: "Otsukaresama desu. Shiryou ga kansei shimashita.", id: "Halo, bahan presentasinya sudah selesai." },
+      { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "ありがとうございます。<ruby>少<rt>すこ</rt></ruby>し<ruby>確認<rt>かくにん</rt></ruby>します。", romaji: "Arigatou gozaimasu. Sukoshi kakunin shimasu.", id: "Terima kasih. Saya akan memeriksanya sebentar." },
+      { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "この<ruby>部分<rt>ぶぶん</rt></ruby>をもう<ruby>少<rt>すこ</rt></ruby>し<ruby>直<rt>なお</rt></ruby>してください。", romaji: "Kono bubun o mou sukoshi naoshite kudasai.", id: "Tolong perbaiki bagian ini sedikit lagi." },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "わかりました。<ruby>修正<rt>しゅうせい</rt></ruby>してから、もう<ruby>一度<rt>いちど</rt></ruby><ruby>提出<rt>ていしゅつ</rt></ruby>します。", romaji: "Wakarimashita. Shuusei shite kara, mou ichido teishutsu shimasu.", id: "Baik. Setelah diperbaiki, saya akan mengumpulkannya sekali lagi." },
+      { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Yoroshiku onegaishimasu.", id: "Mohon dikerjakan." },
     ],
   },
   {
     title: "Percakapan 3 · Memberi kabar akan terlambat",
     context: "Dalam perjalanan ke kantor, kereta mengalami keterlambatan sehingga kamu mengabari rekan kerja.",
     lines: [
-      { speaker: "社員", jp: "おはようございます。<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れているため、<ruby>少<rt>すこ</rt></ruby>し<ruby>遅<rt>おく</rt></ruby>れます。", romaji: "Ohayou gozaimasu. Densha ga okurete iru tame, sukoshi okuremasu.", id: "Selamat pagi. Karena kereta terlambat, saya akan datang sedikit terlambat." },
-      { speaker: "同僚", jp: "わかりました。<ruby>気<rt>き</rt></ruby>をつけて<ruby>来<rt>き</rt></ruby>てください。", romaji: "Wakarimashita. Ki o tsukete kite kudasai.", id: "Baik. Hati-hati di jalan." },
-      { speaker: "社員", jp: "ありがとうございます。<ruby>着<rt>つ</rt></ruby>いたら、すぐに<ruby>連絡<rt>れんらく</rt></ruby>します。", romaji: "Arigatou gozaimasu. Tsuitara, sugu ni renraku shimasu.", id: "Terima kasih. Setelah sampai, saya akan segera menghubungi." },
-      { speaker: "同僚", jp: "はい、お<ruby>待<rt>ま</rt></ruby>ちしています。", romaji: "Hai, omachi shite imasu.", id: "Baik, kami tunggu." },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "おはようございます。<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れているため、<ruby>少<rt>すこ</rt></ruby>し<ruby>遅<rt>おく</rt></ruby>れます。", romaji: "Ohayou gozaimasu. Densha ga okurete iru tame, sukoshi okuremasu.", id: "Selamat pagi. Karena kereta terlambat, saya akan datang sedikit terlambat." },
+      { speaker: "<ruby>同僚<rt>どうりょう</rt></ruby>", jp: "わかりました。<ruby>気<rt>き</rt></ruby>をつけて<ruby>来<rt>き</rt></ruby>てください。", romaji: "Wakarimashita. Ki o tsukete kite kudasai.", id: "Baik. Hati-hati di jalan." },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "ありがとうございます。<ruby>着<rt>つ</rt></ruby>いたら、すぐに<ruby>連絡<rt>れんらく</rt></ruby>します。", romaji: "Arigatou gozaimasu. Tsuitara, sugu ni renraku shimasu.", id: "Terima kasih. Setelah sampai, saya akan segera menghubungi." },
+      { speaker: "<ruby>同僚<rt>どうりょう</rt></ruby>", jp: "はい、お<ruby>待<rt>ま</rt></ruby>ちしています。", romaji: "Hai, omachi shite imasu.", id: "Baik, kami tunggu." },
     ],
   },
 ];
@@ -325,7 +329,7 @@ export default function PekerjaanKantorPage() {
           <li><span className="font-semibold text-[#EAE6DD]">Gunakan bahasa sopan kepada atasan dan orang yang belum akrab.</span> Bentuk seperti いただけますか dan よろしいでしょうか terdengar lebih halus ketika meminta bantuan atau izin.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Pastikan instruksi sebelum mulai bekerja.</span> Ulangi poin penting seperti hasil yang diharapkan, tenggat, dan prioritas agar tidak terjadi salah paham.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Laporkan kendala lebih awal.</span> Jika tugas berpotensi terlambat atau ada masalah, sampaikan kondisinya dan langkah berikutnya secara jelas.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Pahami お疲れさまです dan お疲れさまでした.</span> Ungkapan ini sering digunakan untuk menyapa rekan kerja atau mengakui usaha mereka, bukan hanya berarti lelah secara harfiah.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Pahami お<ruby>疲<rt>つか</rt></ruby>れさまです dan お<ruby>疲<rt>つか</rt></ruby>れさまでした.</span> Ungkapan ini sering digunakan untuk menyapa rekan kerja atau mengakui usaha mereka, bukan hanya berarti lelah secara harfiah.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Ikuti aturan kantor untuk cuti dan izin.</span> Cara mengajukan cuti, melaporkan sakit, serta mengabari keterlambatan dapat berbeda di setiap tempat kerja.</li>
         </ul>
       </section>
@@ -357,7 +361,9 @@ export default function PekerjaanKantorPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -385,9 +391,13 @@ export default function PekerjaanKantorPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
