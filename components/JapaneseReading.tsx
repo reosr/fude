@@ -442,7 +442,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
   if (!source.surface.trim()) return "";
   if (typeof Intl === "undefined" || !("Segmenter" in Intl)) return null;
 
-  const segmenter = new Intl.Segmenter("ja", { granularity: "word" });
+  const segmenter = new (Intl as any).Segmenter("ja", { granularity: "word" });
   const rawSegments = Array.from(segmenter.segment(source.surface));
   const tokens: RomajiToken[] = [];
 
@@ -474,6 +474,33 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       tokens.push(
         { surface: "です", kana: "です", start, end: start + 2, punctuation: false },
         { surface: "が", kana: "が", start: start + 2, end, punctuation: false }
+      );
+      continue;
+    }
+
+    // Dalam bentuk progresif, てい／でい perlu menjadi dua bagian:
+    // してい + ます → shite imasu, bukan shiteimasu.
+    const progressiveSuffix = /^(?:てい|でい|いてい|ってい)$/u.test(surface);
+    if (progressiveSuffix) {
+      const splitAt = end - 1;
+      const firstKana = getRomajiReadingForRange(source, start, splitAt);
+      const lastKana = getRomajiReadingForRange(source, splitAt, end);
+      if (firstKana === null || lastKana === null) return null;
+      tokens.push(
+        {
+          surface: surface.slice(0, -1),
+          kana: toHiragana(firstKana),
+          start,
+          end: splitAt,
+          punctuation: false,
+        },
+        {
+          surface: "い",
+          kana: toHiragana(lastKana),
+          start: splitAt,
+          end,
+          punctuation: false,
+        }
       );
       continue;
     }
@@ -545,12 +572,14 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       continue;
     }
 
-    // Bentuk keinginan: 行き + たい → 行きたい.
-    // Segmenter juga dapat memecah したい／べたい menjadi ...た + い.
+    // Bentuk keinginan dan bentuk lampau/negatif melekat pada pangkal kata kerja.
     if (
       adjacent &&
       previous &&
       (token.surface === "たい" ||
+        token.surface === "た" ||
+        token.surface === "ない" ||
+        token.surface === "なかった" ||
         (token.surface === "い" &&
           /(?:した|べた|けた|めた|った|いた|みた|びた|りた|きた|えた)$/u.test(previous.surface)))
     ) {
