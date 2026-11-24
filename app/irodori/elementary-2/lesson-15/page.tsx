@@ -332,7 +332,7 @@ export default function IrodoriElementaryTwoLessonFifteenPage() {
             <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
               <p className="font-mincho text-base font-bold text-[#F1EBDD]">{item.title}</p>
               <p className="mt-2 text-xs leading-5 text-[#B2D7CB]">{item.meaning}</p>
-              <p className="mt-1 text-[10px] leading-5 text-[#A9A398]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
+              <p className="mt-1 text-[10px] leading-5 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
             </article>
           ))}
         </div>
@@ -421,9 +421,9 @@ export default function IrodoriElementaryTwoLessonFifteenPage() {
         {grammarNotes.map((item) => (
           <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             <p className="text-[9px] font-black tracking-[0.15em] text-[#B2D7CB]">{item.title}</p>
-            <p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p>
+            <p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p>
             <p className="mt-2 font-mincho text-base leading-8 text-[#B2D7CB]"><JapaneseReading allowIndexFallback>{item.example}</JapaneseReading></p>
-            <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
+            <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
           </article>
         ))}
         <article className="rounded-xl border border-[#4B796C]/20 bg-[#192A26] p-4">
