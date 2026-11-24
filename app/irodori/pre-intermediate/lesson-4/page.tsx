@@ -49,7 +49,7 @@ const content: IrodoriLessonContent = {
       utterances: [
         { speakerId: "akiko", japanese: <>修理の担当者が、明日の午後に伺いたいそうです。</>, romaji: "Shuuri no tantousha ga, ashita no gogo ni ukagaitai sou desu.", translation: "Petugas perbaikan ingin datang besok siang.", audioFileName: "" },
         { speakerId: "kenji", japanese: <>午後なら、三時以降が都合がいいです。</>, romaji: "Gogo nara, sanji ikou ga tsugou ga ii desu.", translation: "Kalau siang, saya bisa setelah pukul tiga.", audioFileName: "" },
-        { speakerId: "akiko", japanese: <>では、三時半ごろに伺うように伝えます。お電話番号を確認してもよろしいですか。</>, romaji: "Dewa, sanji han goro ni ukagau you ni tsutaemasu. O-denwa bangou o kakunin shite mo yoroshii desu ka?", translation: "Kalau begitu, saya sampaikan agar petugas datang sekitar pukul setengah empat. Boleh saya konfirmasi nomor telepon Anda?", audioFileName: "" },
+        { speakerId: "akiko", japanese: <>では、三時半ごろに伺うように伝えます。お電話番号を確認してもよろしいですか。</>, romaji: "De wa, sanji han goro ni ukagau you ni tsutaemasu. O-denwa bangou o kakunin shite mo yoroshii desu ka?", translation: "Kalau begitu, saya sampaikan agar petugas datang sekitar pukul setengah empat. Boleh saya konfirmasi nomor telepon Anda?", audioFileName: "" },
         { speakerId: "kenji", japanese: <>はい。090-1234-5678です。</>, romaji: "Hai. Zero-kyuu-zero, ichi-ni-san-yon, go-roku-nana-hachi desu.", translation: "Tentu. Nomor saya 090-1234-5678.", audioFileName: "" },
       ],
     },
