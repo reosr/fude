@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -174,16 +175,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>診察<rt>しんさつ</rt></ruby>", reading: "しんさつ", romaji: "shinsatsu", meaning: "Pemeriksaan medis" },
-  { word: "<ruby>症状<rt>しょうじょう</rt></ruby>", reading: "しょうじょう", romaji: "shoujou", meaning: "Gejala" },
-  { word: "<ruby>熱<rt>ねつ</rt></ruby>", reading: "ねつ", romaji: "netsu", meaning: "Demam" },
-  { word: "<ruby>薬<rt>くすり</rt></ruby>", reading: "くすり", romaji: "kusuri", meaning: "Obat" },
-  { word: "<ruby>処方箋<rt>しょほうせん</rt></ruby>", reading: "しょほうせん", romaji: "shohousen", meaning: "Resep dokter" },
-  { word: "<ruby>薬局<rt>やっきょく</rt></ruby>", reading: "やっきょく", romaji: "yakkyoku", meaning: "Apotek" },
-  { word: "<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>", reading: "きゅうきゅうしゃ", romaji: "kyuukyuusha", meaning: "Ambulans" },
-  { word: "<ruby>保険<rt>ほけん</rt></ruby>", reading: "ほけん", romaji: "hoken", meaning: "Asuransi" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "kesehatan-keadaan-darurat")?.vocab ?? [];
 
 const quiz = [
   {
