@@ -173,7 +173,7 @@ const vocabulary = [
   { word: "おすすめ", reading: "おすすめ", romaji: "osusume", meaning: "Rekomendasi" },
   { word: "<ruby>定食<rt>ていしょく</rt></ruby>", reading: "ていしょく", romaji: "teishoku", meaning: "Paket makanan" },
   { word: "<ruby>会計<rt>かいけい</rt></ruby>", reading: "かいけい", romaji: "kaikei", meaning: "Tagihan / pembayaran" },
-  { word: "<ruby>持ち帰り<rt>もちかえり</rt></ruby>", reading: "もちかえり", romaji: "mochikaeri", meaning: "Dibawa pulang / takeout" },
+  { word: "<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>り", reading: "もちかえり", romaji: "mochikaeri", meaning: "Dibawa pulang / takeout" },
   { word: "<ruby>辛<rt>から</rt></ruby>い", reading: "からい", romaji: "karai", meaning: "Pedas" },
 ];
 
