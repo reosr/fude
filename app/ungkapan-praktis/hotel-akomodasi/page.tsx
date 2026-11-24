@@ -169,7 +169,8 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = practicalVocabData.find((category) => category.id === "hotel-akomodasi")?.vocab ?? [];
+const practicalCategory = practicalVocabData.find((category) => category.id === "hotel-akomodasi")!;
+const vocabulary = practicalCategory.vocab;
 
 const quiz = [
   {
@@ -479,6 +480,47 @@ export default function HotelAkomodasiPage() {
                 )}
               </div>
             </div>
+          )}
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-[#B8860B]/30 bg-[#1E1D1B]/80 p-4 sm:p-5">
+        <div>
+          <h2 className="text-lg font-bold text-[#EAE6DD]">Lanjutkan latihan</h2>
+          <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">
+            Kosakata kategori ini juga tersedia di modul Kosakata dan Flashcard. Cerita terkait bisa dibaca kembali di Latihan Baca.
+          </p>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link
+            href={`/kosakata?category=${practicalCategory.id}`}
+            className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-3 py-2 text-xs font-bold text-[#D9B66D] transition-colors hover:bg-[#B8860B]/20"
+          >
+            Buka Kosakata
+          </Link>
+          <Link
+            href={`/flashcard?category=${practicalCategory.id}`}
+            className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-3 py-2 text-xs font-bold text-[#D9B66D] transition-colors hover:bg-[#B8860B]/20"
+          >
+            Latihan Flashcard
+          </Link>
+          {practicalCategory.relatedStories.length > 0 ? (
+            practicalCategory.relatedStories.map((story) => (
+              <Link
+                key={story.id}
+                href={`/baca?story=${story.id}`}
+                className="rounded-xl border border-[#33312E] px-3 py-2 text-xs font-semibold text-[#C5C0B7] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
+              >
+                Baca: {story.title}
+              </Link>
+            ))
+          ) : (
+            <Link
+              href="/baca"
+              className="rounded-xl border border-[#33312E] px-3 py-2 text-xs font-semibold text-[#C5C0B7] transition-colors hover:border-[#B8860B]/40 hover:text-[#EAE6DD]"
+            >
+              Buka Latihan Baca
+            </Link>
           )}
         </div>
       </section>
