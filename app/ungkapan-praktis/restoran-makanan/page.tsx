@@ -150,7 +150,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     lines: [
       { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか。", romaji: "Gochuumon wa okimari desu ka.", id: "Apakah Anda sudah menentukan pesanan?" },
       { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Osusume wa nan desu ka.", id: "Apa rekomendasinya?" },
-      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "こちらの<ruby>魚<rt>さかな</rt></ruby>の<ruby>定食<rt>ていしょく</rt></ruby>が<ruby>人気<rt>にんき</rt></ruby>です。", romaji: "Kochira no sakana no teishoku ga ninki desu.", id: "Paket nasi dengan lauk ikan ini populer." },
+      { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "こちらの<ruby>魚<rt>さかな</rt></ruby>の<ruby>定食<rt>ていしょく</rt></ruby>が<ruby>人気<rt>にんき</rt></ruby>です。", romaji: "Kochira no sakana no teishoku ga ninki desu.", id: "Menu paket ikan ini populer." },
       { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "じゃあ、それを<ruby>一<rt>ひと</rt></ruby>つお<ruby>願<rt>ねが</rt></ruby>いします。お<ruby>水<rt>みず</rt></ruby>もお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Jaa, sore o hitotsu onegaishimasu. Omizu mo onegaishimasu.", id: "Kalau begitu, saya pesan satu yang itu. Air putih juga, ya." },
       { speaker: "<ruby>店員<rt>てんいん</rt></ruby>", jp: "かしこまりました。<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。", romaji: "Kashikomarimashita. Shoushou omachi kudasai.", id: "Baik. Mohon tunggu sebentar." },
       { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "はい。", romaji: "Hai.", id: "Baik." },
@@ -234,7 +234,7 @@ const simulation = [
     ],
   },
   {
-    prompt: "Makanan sudah selesai dan pegawai menanyakan metode pembayaran:",
+    prompt: "Kamu sudah selesai makan dan pegawai menanyakan metode pembayaran:"
     japanese: "お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。",
     romaji: "Oshiharai wa kaado desu ka, genkin desu ka.",
     translation: "Pembayarannya dengan kartu atau uang tunai?",
