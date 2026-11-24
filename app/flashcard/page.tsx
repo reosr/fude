@@ -129,7 +129,9 @@ useEffect(() => {
   const loadData = async () => {
     try {
       const requestedCategory = new URLSearchParams(window.location.search).get("category");
-      if (requestedCategory && active) setCategoryFilter(requestedCategory);
+      if (requestedCategory && active && practicalVocabData.some((category) => category.id === requestedCategory)) {
+        setCategoryFilter(requestedCategory);
+      }
 
       const savedMemorized = getMemorizedKanji();
 
@@ -320,7 +322,10 @@ useEffect(() => {
           {categoryFilter && (
             <button
               type="button"
-              onClick={() => setCategoryFilter(null)}
+              onClick={() => {
+                setCategoryFilter(null);
+                window.history.replaceState(null, "", "/flashcard");
+              }}
               className="mt-2 text-xs font-semibold text-[#D9B66D] hover:text-[#F0D38A]"
             >
               Kembali ke semua kartu
