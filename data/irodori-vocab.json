@@ -12991,5 +12991,254 @@
         "meaning": "Satu sama lain"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-11",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 11,
+    "lessonTitle": "Ini email penipuan.",
+    "vocab": [
+      {
+        "kanji": "詐欺",
+        "kana": "さぎ",
+        "romaji": "sagi",
+        "meaning": "Penipuan"
+      },
+      {
+        "kanji": "詐欺メール",
+        "kana": "さぎメール",
+        "romaji": "sagi meeru",
+        "meaning": "Email penipuan"
+      },
+      {
+        "kanji": "怪しい",
+        "kana": "あやしい",
+        "romaji": "ayashii",
+        "meaning": "Mencurigakan; tidak meyakinkan"
+      },
+      {
+        "kanji": "差出人",
+        "kana": "さしだしにん",
+        "romaji": "sashidashinin",
+        "meaning": "Pengirim"
+      },
+      {
+        "kanji": "宛先",
+        "kana": "あてさき",
+        "romaji": "atesaki",
+        "meaning": "Penerima; alamat tujuan"
+      },
+      {
+        "kanji": "件名",
+        "kana": "けんめい",
+        "romaji": "kenmei",
+        "meaning": "Subjek email"
+      },
+      {
+        "kanji": "メールアドレス",
+        "kana": "メールアドレス",
+        "romaji": "meeru adoresu",
+        "meaning": "Alamat email"
+      },
+      {
+        "kanji": "ドメイン",
+        "kana": "ドメイン",
+        "romaji": "domein",
+        "meaning": "Domain"
+      },
+      {
+        "kanji": "至急",
+        "kana": "しきゅう",
+        "romaji": "shikyuu",
+        "meaning": "Segera; mendesak"
+      },
+      {
+        "kanji": "未払い",
+        "kana": "みはらい",
+        "romaji": "miharai",
+        "meaning": "Belum dibayar; tunggakan"
+      },
+      {
+        "kanji": "支払う",
+        "kana": "しはらう",
+        "romaji": "shiharau",
+        "meaning": "Membayar"
+      },
+      {
+        "kanji": "期限",
+        "kana": "きげん",
+        "romaji": "kigen",
+        "meaning": "Batas waktu; tenggat"
+      },
+      {
+        "kanji": "見分ける",
+        "kana": "みわける",
+        "romaji": "miwakeru",
+        "meaning": "Membedakan; mengenali perbedaan"
+      },
+      {
+        "kanji": "迷子",
+        "kana": "まいご",
+        "romaji": "maigo",
+        "meaning": "Anak yang tersesat"
+      },
+      {
+        "kanji": "落とし物",
+        "kana": "おとしもの",
+        "romaji": "otoshimono",
+        "meaning": "Barang yang jatuh atau ditemukan"
+      },
+      {
+        "kanji": "忘れ物",
+        "kana": "わすれもの",
+        "romaji": "wasuremono",
+        "meaning": "Barang yang tertinggal"
+      },
+      {
+        "kanji": "財布",
+        "kana": "さいふ",
+        "romaji": "saifu",
+        "meaning": "Dompet"
+      },
+      {
+        "kanji": "交番",
+        "kana": "こうばん",
+        "romaji": "kouban",
+        "meaning": "Pos polisi"
+      },
+      {
+        "kanji": "鉄道会社",
+        "kana": "てつどうがいしゃ",
+        "romaji": "tetsudou gaisha",
+        "meaning": "Perusahaan kereta"
+      },
+      {
+        "kanji": "忘れ物センター",
+        "kana": "わすれものセンター",
+        "romaji": "wasuremono sentaa",
+        "meaning": "Pusat barang tertinggal"
+      },
+      {
+        "kanji": "問い合わせる",
+        "kana": "といあわせる",
+        "romaji": "toiawaseru",
+        "meaning": "Menghubungi untuk bertanya; menanyakan informasi"
+      },
+      {
+        "kanji": "届ける",
+        "kana": "とどける",
+        "romaji": "todokeru",
+        "meaning": "Melaporkan; menyerahkan kepada pihak terkait"
+      },
+      {
+        "kanji": "手荷物検査",
+        "kana": "てにもつけんさ",
+        "romaji": "tenimotsu kensa",
+        "meaning": "Pemeriksaan barang bawaan"
+      },
+      {
+        "kanji": "持ち込み禁止",
+        "kana": "もちこみきんし",
+        "romaji": "mochikomi kinshi",
+        "meaning": "Larangan membawa masuk"
+      },
+      {
+        "kanji": "身分証明書",
+        "kana": "みぶんしょうめいしょ",
+        "romaji": "mibun shoumeisho",
+        "meaning": "Kartu atau dokumen identitas"
+      },
+      {
+        "kanji": "本人確認",
+        "kana": "ほんにんかくにん",
+        "romaji": "honnin kakunin",
+        "meaning": "Verifikasi identitas"
+      },
+      {
+        "kanji": "提示する",
+        "kana": "ていじする",
+        "romaji": "teiji suru",
+        "meaning": "Menunjukkan; memperlihatkan dokumen"
+      },
+      {
+        "kanji": "発券する",
+        "kana": "はっけんする",
+        "romaji": "hakken suru",
+        "meaning": "Menerbitkan tiket"
+      },
+      {
+        "kanji": "預ける",
+        "kana": "あずける",
+        "romaji": "azukeru",
+        "meaning": "Menitipkan"
+      },
+      {
+        "kanji": "返却する",
+        "kana": "へんきゃくする",
+        "romaji": "henkyaku suru",
+        "meaning": "Mengembalikan"
+      },
+      {
+        "kanji": "在留カード",
+        "kana": "ざいりゅうカード",
+        "romaji": "zairyuu kaado",
+        "meaning": "Kartu izin tinggal di Jepang"
+      },
+      {
+        "kanji": "在留資格",
+        "kana": "ざいりゅうしかく",
+        "romaji": "zairyuu shikaku",
+        "meaning": "Status izin tinggal"
+      },
+      {
+        "kanji": "在留期限",
+        "kana": "ざいりゅうきげん",
+        "romaji": "zairyuu kigen",
+        "meaning": "Masa berlaku izin tinggal"
+      },
+      {
+        "kanji": "携帯する",
+        "kana": "けいたいする",
+        "romaji": "keitai suru",
+        "meaning": "Membawa setiap saat"
+      },
+      {
+        "kanji": "義務",
+        "kana": "ぎむ",
+        "romaji": "gimu",
+        "meaning": "Kewajiban"
+      },
+      {
+        "kanji": "紛失する",
+        "kana": "ふんしつする",
+        "romaji": "funshitsu suru",
+        "meaning": "Kehilangan; kehilangan secara tidak sengaja"
+      },
+      {
+        "kanji": "再交付",
+        "kana": "さいこうふ",
+        "romaji": "saikoufu",
+        "meaning": "Penerbitan ulang"
+      },
+      {
+        "kanji": "申請する",
+        "kana": "しんせいする",
+        "romaji": "shinsei suru",
+        "meaning": "Mengajukan permohonan"
+      },
+      {
+        "kanji": "法律違反",
+        "kana": "ほうりついはん",
+        "romaji": "houritsu ihan",
+        "meaning": "Pelanggaran hukum"
+      },
+      {
+        "kanji": "罰金",
+        "kana": "ばっきん",
+        "romaji": "bakkin",
+        "meaning": "Denda"
+      }
+    ]
   }
 ]
