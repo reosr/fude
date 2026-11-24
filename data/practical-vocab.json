@@ -3,7 +3,6 @@
     "id": "salam-perkenalan",
     "label": "Salam dan Perkenalan",
     "href": "/ungkapan-praktis/salam-perkenalan",
-    "relatedStoryIds": [],
     "vocab": [
       {
         "word": "<ruby>挨拶<rt>あいさつ</rt></ruby>",
@@ -53,17 +52,13 @@
         "romaji": "hajimete",
         "meaning": "Untuk pertama kali"
       }
-    ]
+    ],
+    "relatedStories": []
   },
   {
     "id": "belanja-minimarket",
     "label": "Belanja dan Minimarket",
     "href": "/ungkapan-praktis/belanja-minimarket",
-    "relatedStoryIds": [
-      "n5-konbini",
-      "n5-ichiba",
-      "n4-vending-machine"
-    ],
     "vocab": [
       {
         "word": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>",
@@ -113,13 +108,26 @@
         "romaji": "kaikei",
         "meaning": "Pembayaran / kasir"
       }
+    ],
+    "relatedStories": [
+      {
+        "id": "n5-konbini",
+        "title": "Belanja di Konbini"
+      },
+      {
+        "id": "n5-ichiba",
+        "title": "Belanja di Pasar Tradisional"
+      },
+      {
+        "id": "n4-vending-machine",
+        "title": "Membeli Minuman di Vending Machine"
+      }
     ]
   },
   {
     "id": "restoran-makanan",
     "label": "Restoran dan Makanan",
     "href": "/ungkapan-praktis/restoran-makanan",
-    "relatedStoryIds": [],
     "vocab": [
       {
         "word": "<ruby>予約<rt>よやく</rt></ruby>",
@@ -169,15 +177,13 @@
         "romaji": "karai",
         "meaning": "Pedas"
       }
-    ]
+    ],
+    "relatedStories": []
   },
   {
     "id": "transportasi-perjalanan",
     "label": "Transportasi dan Perjalanan",
     "href": "/ungkapan-praktis/transportasi-perjalanan",
-    "relatedStoryIds": [
-      "n4-densha"
-    ],
     "vocab": [
       {
         "word": "<ruby>切符<rt>きっぷ</rt></ruby>",
@@ -227,16 +233,18 @@
         "romaji": "chien",
         "meaning": "Keterlambatan"
       }
+    ],
+    "relatedStories": [
+      {
+        "id": "n4-densha",
+        "title": "Naik Kereta dan Bertanya Arah"
+      }
     ]
   },
   {
     "id": "tempat-tinggal-sehari-hari",
     "label": "Tempat Tinggal dan Kehidupan Sehari-hari",
     "href": "/ungkapan-praktis/tempat-tinggal-sehari-hari",
-    "relatedStoryIds": [
-      "n4-gomi",
-      "n3-pindah-rumah"
-    ],
     "vocab": [
       {
         "word": "<ruby>管理会社<rt>かんりがいしゃ</rt></ruby>",
@@ -286,15 +294,22 @@
         "romaji": "takuhaibin",
         "meaning": "Layanan pengiriman paket"
       }
+    ],
+    "relatedStories": [
+      {
+        "id": "n4-gomi",
+        "title": "Memilah dan Membuang Sampah di Jepang"
+      },
+      {
+        "id": "n3-pindah-rumah",
+        "title": "Persiapan Pindah Rumah"
+      }
     ]
   },
   {
     "id": "kesehatan-keadaan-darurat",
     "label": "Kesehatan dan Keadaan Darurat",
     "href": "/ungkapan-praktis/kesehatan-keadaan-darurat",
-    "relatedStoryIds": [
-      "n4-apotek"
-    ],
     "vocab": [
       {
         "word": "<ruby>診察<rt>しんさつ</rt></ruby>",
@@ -344,15 +359,18 @@
         "romaji": "hoken",
         "meaning": "Asuransi"
       }
+    ],
+    "relatedStories": [
+      {
+        "id": "n4-apotek",
+        "title": "Membeli Obat di Apotek"
+      }
     ]
   },
   {
     "id": "sekolah-pendidikan",
     "label": "Sekolah dan Pendidikan",
     "href": "/ungkapan-praktis/sekolah-pendidikan",
-    "relatedStoryIds": [
-      "n4-perpustakaan"
-    ],
     "vocab": [
       {
         "word": "<ruby>授業<rt>じゅぎょう</rt></ruby>",
@@ -402,15 +420,18 @@
         "romaji": "shusseki",
         "meaning": "Kehadiran"
       }
+    ],
+    "relatedStories": [
+      {
+        "id": "n4-perpustakaan",
+        "title": "Meminjam Buku di Perpustakaan"
+      }
     ]
   },
   {
     "id": "pekerjaan-kantor",
     "label": "Pekerjaan dan Lingkungan Kantor",
     "href": "/ungkapan-praktis/pekerjaan-kantor",
-    "relatedStoryIds": [
-      "n4-pekerjaan"
-    ],
     "vocab": [
       {
         "word": "<ruby>仕事<rt>しごと</rt></ruby>",
@@ -460,13 +481,18 @@
         "romaji": "kyuuka",
         "meaning": "Cuti"
       }
+    ],
+    "relatedStories": [
+      {
+        "id": "n4-pekerjaan",
+        "title": "Wawancara Kerja Part-time"
+      }
     ]
   },
   {
     "id": "hotel-akomodasi",
     "label": "Hotel dan Akomodasi",
     "href": "/ungkapan-praktis/hotel-akomodasi",
-    "relatedStoryIds": [],
     "vocab": [
       {
         "word": "<ruby>宿泊<rt>しゅくはく</rt></ruby>",
@@ -516,13 +542,13 @@
         "romaji": "kagi",
         "meaning": "Kunci"
       }
-    ]
+    ],
+    "relatedStories": []
   },
   {
     "id": "komunikasi-hubungan-sosial",
     "label": "Komunikasi dan Hubungan Sosial",
     "href": "/ungkapan-praktis/komunikasi-hubungan-sosial",
-    "relatedStoryIds": [],
     "vocab": [
       {
         "word": "<ruby>連絡<rt>れんらく</rt></ruby>",
@@ -572,6 +598,7 @@
         "romaji": "saraishuu",
         "meaning": "Dua minggu lagi"
       }
-    ]
+    ],
+    "relatedStories": []
   }
 ]
