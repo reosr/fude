@@ -156,7 +156,7 @@ const messageConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>「ごめんなさい。<ruby>明日<rt>あした</rt></ruby>はちょっと……。また<ruby>今度<rt>こんど</rt></ruby>おねがいします。」</>,
-    romaji: "Gomennasai. Ashita wa chotto... Mata kondo onegaishimasu.",
+    romaji: "Gomennasai. Ashita wa chotto... Mata kondo onegai shimasu.",
     translation: "“Maaf, besok agak sulit. Lain kali, ya.”",
     audioFileName: "irodori-starter-12-a04-l04.mp3",
   },
