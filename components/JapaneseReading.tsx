@@ -192,7 +192,7 @@ export default function JapaneseReading({
         /(これ|それ|あれ|どれ|ここ|そこ|あそこ|どこ|わたし|わたしたち|わたくし|ぼく|ぼくたち|かれ|かれら|かのじょ|みんな|みなさん|あなた|おまえ|なに|きょう|あした|きのう)は/g,
         "$1わ"
       )
-      .replace(/(で|に|と|から|まで|より|の|だけ|しか|さえ|て)は/g, "$1わ")
+      // Jangan ubah rangkaian seperti に入る・と話す・の花 menjadi partikel は.
       .replace(/(ここ|そこ|あそこ|どこ)へ/g, "$1え")
       .replace(/を/g, "お");
   })();
