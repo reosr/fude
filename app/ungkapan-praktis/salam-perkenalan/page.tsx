@@ -91,15 +91,15 @@ const quiz = [
   {
     question: "Kamu ingin mengatakan bahwa kamu berasal dari Indonesia. Pilih kalimat yang sesuai.",
     options: [
-      { label: "インドネシアに住んでいます。", correct: false, feedback: "Kalimat ini berarti kamu tinggal di Indonesia sekarang, bukan menyatakan asal." },
-      { label: "インドネシアから来ました。", correct: true, feedback: "から来ました menyatakan tempat asal atau tempat kamu datang." },
-      { label: "インドネシアを勉強しています。", correct: false, feedback: "を勉強しています berarti sedang mempelajari Indonesia, bukan berasal dari sana." },
+      { label: "インドネシアに<ruby>住<rt>す</rt></ruby>んでいます。", correct: false, feedback: "Kalimat ini berarti kamu tinggal di Indonesia sekarang, bukan menyatakan asal." },
+      { label: "インドネシアから<ruby>来<rt>き</rt></ruby>ました。", correct: true, feedback: "から来ました menyatakan tempat asal atau tempat kamu datang." },
+      { label: "インドネシアを<ruby>勉強<rt>べんきょう</rt></ruby>しています。", correct: false, feedback: "を勉強しています berarti sedang mempelajari Indonesia, bukan berasal dari sana." },
     ],
   },
   {
     question: "Kamu memperkenalkan teman kepada guru. Ungkapan mana yang cocok untuk memulai?",
     options: [
-      { label: "こちらは友達のミラさんです。", correct: true, feedback: "こちらは ... さんです adalah cara sopan untuk memperkenalkan seseorang." },
+      { label: "こちらは<ruby>友達<rt>ともだち</rt></ruby>のミラさんです。", correct: true, feedback: "こちらは ... さんです adalah cara sopan untuk memperkenalkan seseorang." },
       { label: "ミラさんはいくらですか。", correct: false, feedback: "いくらですか digunakan untuk menanyakan harga." },
       { label: "ミラさんをください。", correct: false, feedback: "ください digunakan untuk meminta barang atau layanan, bukan memperkenalkan orang." },
     ],
@@ -112,7 +112,7 @@ const simulation = [
     task: "Pilih respons yang paling wajar.",
     options: [
       { label: "はじめまして。アナです。よろしくお願いします。", correct: true, feedback: "Kamu membalas salam perkenalan, menyebut nama, lalu menyampaikan よろしくお願いします." },
-      { label: "お先に失礼します。", correct: false, feedback: "Ungkapan ini digunakan saat meninggalkan tempat kerja sebelum orang lain." },
+      { label: "お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。", correct: false, feedback: "Ungkapan ini digunakan saat meninggalkan tempat kerja sebelum orang lain." },
       { label: "いくらですか。", correct: false, feedback: "Kalimat ini menanyakan harga dan tidak sesuai dengan situasi perkenalan." },
     ],
   },
@@ -120,9 +120,9 @@ const simulation = [
     prompt: "Setelah berkenalan, Tanaka bertanya: 「ご出身はどちらですか。」",
     task: "Kamu berasal dari Indonesia. Apa jawaban yang sesuai?",
     options: [
-      { label: "インドネシアから来ました。", correct: true, feedback: "Jawaban ini menyampaikan bahwa kamu berasal dari Indonesia." },
+      { label: "インドネシアから<ruby>来<rt>き</rt></ruby>ました。", correct: true, feedback: "Jawaban ini menyampaikan bahwa kamu berasal dari Indonesia." },
       { label: "インドネシアをください。", correct: false, feedback: "ください digunakan untuk meminta sesuatu, bukan menyebut asal." },
-      { label: "インドネシアに行きます。", correct: false, feedback: "Kalimat ini berarti akan pergi ke Indonesia." },
+      { label: "インドネシアに<ruby>行<rt>い</rt></ruby>きます。", correct: false, feedback: "Kalimat ini berarti akan pergi ke Indonesia." },
     ],
   },
   {
@@ -186,7 +186,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
       { jp: "じゃあ、また。", romaji: "Jaa, mata.", id: "Kalau begitu, sampai nanti.", tone: "Santai" },
       { jp: "では、また。", romaji: "Dewa, mata.", id: "Kalau begitu, sampai jumpa lagi.", tone: "Lebih sopan" },
       { jp: "<ruby>失礼<rt>しつれい</rt></ruby>します。", romaji: "Shitsurei shimasu.", id: "Permisi, saya pamit.", tone: "Sopan · meninggalkan tempat" },
-      { jp: "お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。", romaji: "Osaki ni shitsurei shimasu.", id: "Saya pamit pulang lebih dahulu.", tone: "Konteks tempat kerja", note: "Ungkapan ini digunakan ketika pulang lebih dahulu sementara rekan kerja masih ada. Rekan yang tinggal dapat menjawab お疲れさまでした。" },
+      { jp: "お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。", romaji: "Osaki ni shitsurei shimasu.", id: "Saya pamit pulang lebih dahulu.", tone: "Konteks tempat kerja", note: "Ungkapan ini digunakan ketika pulang lebih dahulu sementara rekan kerja masih ada. Rekan yang tinggal dapat menjawab お<ruby>疲<rt>つか</rt></ruby>れさまでした。" },
     ],
   },
 ];
@@ -334,7 +334,7 @@ export default function SalamPerkenalanPage() {
             <tbody className="divide-y divide-[#33312E] text-[#C5C0B7]">
               <tr><td className="px-3 py-3">Teman dekat</td><td className="px-3 py-3 font-mincho text-sm">よろしくね。</td><td className="px-3 py-3">Santai, untuk teman atau orang yang sudah akrab.</td></tr>
               <tr><td className="px-3 py-3">Perkenalan umum</td><td className="px-3 py-3 font-mincho text-sm">どうぞよろしくお願いします。</td><td className="px-3 py-3">Sopan dan cocok untuk perkenalan pertama.</td></tr>
-              <tr><td className="px-3 py-3">Situasi formal</td><td className="px-3 py-3 font-mincho text-sm">アナと申します。</td><td className="px-3 py-3">Bentuk rendah hati untuk menyebut nama sendiri.</td></tr>
+              <tr><td className="px-3 py-3">Situasi formal</td><td className="px-3 py-3 font-mincho text-sm">アナと<ruby>申<rt>もう</rt></ruby>します。</td><td className="px-3 py-3">Bentuk rendah hati untuk menyebut nama sendiri.</td></tr>
             </tbody>
           </table>
         </div>
@@ -398,7 +398,13 @@ export default function SalamPerkenalanPage() {
                           : "border-[#33312E] bg-[#121110]/60 text-[#EAE6DD] hover:border-[#B8860B]/60"
                       )}
                     >
-                      <span className="font-mincho text-base">{option.label}</span>
+                      <JapaneseReading
+                          html={option.label}
+                          showKana={false}
+                          showRomaji={false}
+                          showTranslation={false}
+                          contentClassName="font-mincho text-base leading-relaxed text-inherit"
+                        />
                     </button>
                   );
                 })}
@@ -432,6 +438,17 @@ export default function SalamPerkenalanPage() {
         <div className="mt-4 rounded-xl border border-[#49402E] bg-[#121110]/70 p-4">
           <p className="text-[10px] font-bold uppercase tracking-wider text-[#B8860B]">LANGKAH {simulationStep + 1} DARI {simulation.length}</p>
           <p className="mt-2 text-sm leading-relaxed text-[#EAE6DD]">{currentSimulation.prompt}</p>
+          <div className="mt-3 rounded-lg border border-[#33312E] bg-[#1E1D1B] p-3">
+            <JapaneseReading
+              html={currentSimulation.japanese}
+              romaji={currentSimulation.romaji}
+              translation={currentSimulation.translation}
+              contentClassName="font-mincho text-base leading-[2] text-[#EAE6DD]"
+              kanaClassName="mt-1 font-mincho text-xs text-[#D9B66D]"
+              romajiClassName="mt-1 text-[11px] italic text-[#A3A099]"
+              translationClassName="mt-2 text-xs text-[#A3A099]"
+            />
+          </div>
           <p className="mt-3 text-xs font-semibold text-[#D9B66D]">{currentSimulation.task}</p>
           <div className="mt-3 grid gap-2">
             {currentSimulation.options.map((option, index) => (
@@ -448,7 +465,13 @@ export default function SalamPerkenalanPage() {
                     : "border-[#33312E] bg-[#1E1D1B] text-[#EAE6DD] hover:border-[#B8860B]/60 disabled:opacity-60"
                 )}
               >
-                <span className="font-mincho text-base">{option.label}</span>
+                <JapaneseReading
+                          html={option.label}
+                          showKana={false}
+                          showRomaji={false}
+                          showTranslation={false}
+                          contentClassName="font-mincho text-base leading-relaxed text-inherit"
+                        />
               </button>
             ))}
           </div>
