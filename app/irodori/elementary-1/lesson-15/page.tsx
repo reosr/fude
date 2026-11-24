@@ -35,7 +35,7 @@ const stomachConversation: IrodoriUtterance[] = [
 
 const receptionConversation: IrodoriUtterance[] = [
 {speakerId:"yui",japanese:<>すみません。初めて来ました。どうしたらいいですか。</>,romaji:"Sumimasen. Hajimete kimashita. Dou shitara ii desu ka?",translation:"Permisi. Ini pertama kalinya saya datang. Apa yang harus saya lakukan?",audioFileName:"irodori-elementary1-15-a03-l01.mp3"},
-{speakerId:"kenji",japanese:<>こちらに名前を書いてください。問診票もお願いします。</>,romaji:"Kochira ni namae o kaite kudasai. Monshinhyou mo onegaishimasu.",translation:"Silakan tulis nama di sini. Tolong isi juga formulir riwayat kesehatan.",audioFileName:"irodori-elementary1-15-a03-l02.mp3"},
+{speakerId:"kenji",japanese:<>こちらに名前を書いてください。問診票もお願いします。</>,romaji:"Kochira ni namae o kaite kudasai. Monshinhyou mo onegai shimasu.",translation:"Silakan tulis nama di sini. Tolong isi juga formulir riwayat kesehatan.",audioFileName:"irodori-elementary1-15-a03-l02.mp3"},
 {speakerId:"yui",japanese:<>はい。書いたあと、こちらに出せばいいですか。</>,romaji:"Hai. Kaita ato, kochira ni daseba ii desu ka?",translation:"Baik. Setelah selesai mengisi, apakah formulirnya saya serahkan di sini?",audioFileName:"irodori-elementary1-15-a03-l03.mp3"},
 {speakerId:"kenji",japanese:<>はい、そうです。ありがとうございます。</>,romaji:"Hai, sou desu. Arigatou gozaimasu.",translation:"Ya, benar. Terima kasih.",audioFileName:"irodori-elementary1-15-a03-l04.mp3"},
 ];
