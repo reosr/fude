@@ -99,7 +99,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
       { jp: "タオルをもう<ruby>一枚<rt>いちまい</rt></ruby>いただけますか。", romaji: "Taoru o mou ichimai itadakemasu ka.", id: "Bolehkah saya meminta satu handuk lagi?", tone: "Meminta perlengkapan tambahan" },
       { jp: "<ruby>部屋<rt>へや</rt></ruby>に<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>はありますか。", romaji: "Heya ni reizouko wa arimasu ka.", id: "Apakah ada kulkas di kamar?", tone: "Menanyakan fasilitas kamar" },
       { jp: "エレベーターはどこですか。", romaji: "Erebeetaa wa doko desu ka.", id: "Lift ada di mana?", tone: "Mencari fasilitas hotel" },
-      { jp: "<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>預<rt>あず</rt></ruby>かっていただけますか。", romaji: "Nimotsu o azukatte itadakemasu ka.", id: "Bisakah Anda menitipkan barang bawaan saya?", tone: "Meminta penitipan bagasi" },
+      { jp: "<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>預<rt>あず</rt></ruby>かっていただけますか。", romaji: "Nimotsu o azukatte itadakemasu ka.", id: "Bisakah saya menitipkan barang bawaan?", tone: "Meminta penitipan bagasi" },
     ],
   },
   {
