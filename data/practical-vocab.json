@@ -1,0 +1,577 @@
+[
+  {
+    "id": "salam-perkenalan",
+    "label": "Salam dan Perkenalan",
+    "href": "/ungkapan-praktis/salam-perkenalan",
+    "relatedStoryIds": [],
+    "vocab": [
+      {
+        "word": "<ruby>挨拶<rt>あいさつ</rt></ruby>",
+        "reading": "あいさつ",
+        "romaji": "aisatsu",
+        "meaning": "Salam / sapaan"
+      },
+      {
+        "word": "<ruby>名前<rt>なまえ</rt></ruby>",
+        "reading": "なまえ",
+        "romaji": "namae",
+        "meaning": "Nama"
+      },
+      {
+        "word": "<ruby>出身<rt>しゅっしん</rt></ruby>",
+        "reading": "しゅっしん",
+        "romaji": "shusshin",
+        "meaning": "Asal daerah / tempat asal"
+      },
+      {
+        "word": "<ruby>紹介<rt>しょうかい</rt></ruby>",
+        "reading": "しょうかい",
+        "romaji": "shoukai",
+        "meaning": "Perkenalan / memperkenalkan"
+      },
+      {
+        "word": "<ruby>趣味<rt>しゅみ</rt></ruby>",
+        "reading": "しゅみ",
+        "romaji": "shumi",
+        "meaning": "Hobi"
+      },
+      {
+        "word": "<ruby>住<rt>す</rt></ruby>む",
+        "reading": "すむ",
+        "romaji": "sumu",
+        "meaning": "Tinggal / menetap"
+      },
+      {
+        "word": "<ruby>同<rt>おな</rt></ruby>じ",
+        "reading": "おなじ",
+        "romaji": "onaji",
+        "meaning": "Sama"
+      },
+      {
+        "word": "<ruby>初<rt>はじ</rt></ruby>めて",
+        "reading": "はじめて",
+        "romaji": "hajimete",
+        "meaning": "Untuk pertama kali"
+      }
+    ]
+  },
+  {
+    "id": "belanja-minimarket",
+    "label": "Belanja dan Minimarket",
+    "href": "/ungkapan-praktis/belanja-minimarket",
+    "relatedStoryIds": [
+      "n5-konbini",
+      "n5-ichiba",
+      "n4-vending-machine"
+    ],
+    "vocab": [
+      {
+        "word": "<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>",
+        "reading": "かいもの",
+        "romaji": "kaimono",
+        "meaning": "Belanja"
+      },
+      {
+        "word": "<ruby>商品<rt>しょうひん</rt></ruby>",
+        "reading": "しょうひん",
+        "romaji": "shouhin",
+        "meaning": "Barang / produk"
+      },
+      {
+        "word": "<ruby>値段<rt>ねだん</rt></ruby>",
+        "reading": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga"
+      },
+      {
+        "word": "<ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>",
+        "reading": "うりば",
+        "romaji": "uriba",
+        "meaning": "Bagian / area penjualan"
+      },
+      {
+        "word": "<ruby>試着<rt>しちゃく</rt></ruby>",
+        "reading": "しちゃく",
+        "romaji": "shichaku",
+        "meaning": "Mencoba pakaian"
+      },
+      {
+        "word": "<ruby>現金<rt>げんきん</rt></ruby>",
+        "reading": "げんきん",
+        "romaji": "genkin",
+        "meaning": "Uang tunai"
+      },
+      {
+        "word": "<ruby>袋<rt>ふくろ</rt></ruby>",
+        "reading": "ふくろ",
+        "romaji": "fukuro",
+        "meaning": "Kantong"
+      },
+      {
+        "word": "<ruby>会計<rt>かいけい</rt></ruby>",
+        "reading": "かいけい",
+        "romaji": "kaikei",
+        "meaning": "Pembayaran / kasir"
+      }
+    ]
+  },
+  {
+    "id": "restoran-makanan",
+    "label": "Restoran dan Makanan",
+    "href": "/ungkapan-praktis/restoran-makanan",
+    "relatedStoryIds": [],
+    "vocab": [
+      {
+        "word": "<ruby>予約<rt>よやく</rt></ruby>",
+        "reading": "よやく",
+        "romaji": "yoyaku",
+        "meaning": "Reservasi / pemesanan"
+      },
+      {
+        "word": "<ruby>注文<rt>ちゅうもん</rt></ruby>",
+        "reading": "ちゅうもん",
+        "romaji": "chuumon",
+        "meaning": "Pesanan / memesan"
+      },
+      {
+        "word": "<ruby>料理<rt>りょうり</rt></ruby>",
+        "reading": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan / hidangan"
+      },
+      {
+        "word": "おすすめ",
+        "reading": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi"
+      },
+      {
+        "word": "<ruby>定食<rt>ていしょく</rt></ruby>",
+        "reading": "ていしょく",
+        "romaji": "teishoku",
+        "meaning": "Paket makanan"
+      },
+      {
+        "word": "<ruby>会計<rt>かいけい</rt></ruby>",
+        "reading": "かいけい",
+        "romaji": "kaikei",
+        "meaning": "Tagihan / pembayaran"
+      },
+      {
+        "word": "<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>り",
+        "reading": "もちかえり",
+        "romaji": "mochikaeri",
+        "meaning": "Dibawa pulang / takeout"
+      },
+      {
+        "word": "<ruby>辛<rt>から</rt></ruby>い",
+        "reading": "からい",
+        "romaji": "karai",
+        "meaning": "Pedas"
+      }
+    ]
+  },
+  {
+    "id": "transportasi-perjalanan",
+    "label": "Transportasi dan Perjalanan",
+    "href": "/ungkapan-praktis/transportasi-perjalanan",
+    "relatedStoryIds": [
+      "n4-densha"
+    ],
+    "vocab": [
+      {
+        "word": "<ruby>切符<rt>きっぷ</rt></ruby>",
+        "reading": "きっぷ",
+        "romaji": "kippu",
+        "meaning": "Tiket"
+      },
+      {
+        "word": "<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>え",
+        "reading": "のりかえ",
+        "romaji": "norikae",
+        "meaning": "Pindah kendaraan / transit"
+      },
+      {
+        "word": "<ruby>改札口<rt>かいさつぐち</rt></ruby>",
+        "reading": "かいさつぐち",
+        "romaji": "kaisatsuguchi",
+        "meaning": "Gerbang pemeriksaan tiket"
+      },
+      {
+        "word": "<ruby>番線<rt>ばんせん</rt></ruby>",
+        "reading": "ばんせん",
+        "romaji": "bansen",
+        "meaning": "Nomor jalur / peron"
+      },
+      {
+        "word": "<ruby>運賃<rt>うんちん</rt></ruby>",
+        "reading": "うんちん",
+        "romaji": "unchin",
+        "meaning": "Ongkos / tarif perjalanan"
+      },
+      {
+        "word": "<ruby>出発<rt>しゅっぱつ</rt></ruby>",
+        "reading": "しゅっぱつ",
+        "romaji": "shuppatsu",
+        "meaning": "Keberangkatan"
+      },
+      {
+        "word": "<ruby>到着<rt>とうちゃく</rt></ruby>",
+        "reading": "とうちゃく",
+        "romaji": "touchaku",
+        "meaning": "Kedatangan"
+      },
+      {
+        "word": "<ruby>遅延<rt>ちえん</rt></ruby>",
+        "reading": "ちえん",
+        "romaji": "chien",
+        "meaning": "Keterlambatan"
+      }
+    ]
+  },
+  {
+    "id": "tempat-tinggal-sehari-hari",
+    "label": "Tempat Tinggal dan Kehidupan Sehari-hari",
+    "href": "/ungkapan-praktis/tempat-tinggal-sehari-hari",
+    "relatedStoryIds": [
+      "n4-gomi",
+      "n3-pindah-rumah"
+    ],
+    "vocab": [
+      {
+        "word": "<ruby>管理会社<rt>かんりがいしゃ</rt></ruby>",
+        "reading": "かんりがいしゃ",
+        "romaji": "kanri gaisha",
+        "meaning": "Perusahaan pengelola gedung"
+      },
+      {
+        "word": "<ruby>管理人<rt>かんりにん</rt></ruby>",
+        "reading": "かんりにん",
+        "romaji": "kanrinin",
+        "meaning": "Pengelola / petugas gedung"
+      },
+      {
+        "word": "<ruby>設備<rt>せつび</rt></ruby>",
+        "reading": "せつび",
+        "romaji": "setsubi",
+        "meaning": "Fasilitas / instalasi"
+      },
+      {
+        "word": "<ruby>故障<rt>こしょう</rt></ruby>",
+        "reading": "こしょう",
+        "romaji": "koshou",
+        "meaning": "Kerusakan / tidak berfungsi"
+      },
+      {
+        "word": "<ruby>分別<rt>ぶんべつ</rt></ruby>",
+        "reading": "ぶんべつ",
+        "romaji": "bunbetsu",
+        "meaning": "Pemilahan (sampah)"
+      },
+      {
+        "word": "<ruby>燃<rt>も</rt></ruby>えるゴミ",
+        "reading": "もえるごみ",
+        "romaji": "moeru gomi",
+        "meaning": "Sampah yang dapat dibakar"
+      },
+      {
+        "word": "<ruby>粗大<rt>そだい</rt></ruby>ゴミ",
+        "reading": "そだいごみ",
+        "romaji": "sodai gomi",
+        "meaning": "Sampah berukuran besar"
+      },
+      {
+        "word": "<ruby>宅配便<rt>たくはいびん</rt></ruby>",
+        "reading": "たくはいびん",
+        "romaji": "takuhaibin",
+        "meaning": "Layanan pengiriman paket"
+      }
+    ]
+  },
+  {
+    "id": "kesehatan-keadaan-darurat",
+    "label": "Kesehatan dan Keadaan Darurat",
+    "href": "/ungkapan-praktis/kesehatan-keadaan-darurat",
+    "relatedStoryIds": [
+      "n4-apotek"
+    ],
+    "vocab": [
+      {
+        "word": "<ruby>診察<rt>しんさつ</rt></ruby>",
+        "reading": "しんさつ",
+        "romaji": "shinsatsu",
+        "meaning": "Pemeriksaan medis"
+      },
+      {
+        "word": "<ruby>症状<rt>しょうじょう</rt></ruby>",
+        "reading": "しょうじょう",
+        "romaji": "shoujou",
+        "meaning": "Gejala"
+      },
+      {
+        "word": "<ruby>熱<rt>ねつ</rt></ruby>",
+        "reading": "ねつ",
+        "romaji": "netsu",
+        "meaning": "Demam"
+      },
+      {
+        "word": "<ruby>薬<rt>くすり</rt></ruby>",
+        "reading": "くすり",
+        "romaji": "kusuri",
+        "meaning": "Obat"
+      },
+      {
+        "word": "<ruby>処方箋<rt>しょほうせん</rt></ruby>",
+        "reading": "しょほうせん",
+        "romaji": "shohousen",
+        "meaning": "Resep dokter"
+      },
+      {
+        "word": "<ruby>薬局<rt>やっきょく</rt></ruby>",
+        "reading": "やっきょく",
+        "romaji": "yakkyoku",
+        "meaning": "Apotek"
+      },
+      {
+        "word": "<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>",
+        "reading": "きゅうきゅうしゃ",
+        "romaji": "kyuukyuusha",
+        "meaning": "Ambulans"
+      },
+      {
+        "word": "<ruby>保険<rt>ほけん</rt></ruby>",
+        "reading": "ほけん",
+        "romaji": "hoken",
+        "meaning": "Asuransi"
+      }
+    ]
+  },
+  {
+    "id": "sekolah-pendidikan",
+    "label": "Sekolah dan Pendidikan",
+    "href": "/ungkapan-praktis/sekolah-pendidikan",
+    "relatedStoryIds": [
+      "n4-perpustakaan"
+    ],
+    "vocab": [
+      {
+        "word": "<ruby>授業<rt>じゅぎょう</rt></ruby>",
+        "reading": "じゅぎょう",
+        "romaji": "jugyou",
+        "meaning": "Pelajaran / kelas"
+      },
+      {
+        "word": "<ruby>教科書<rt>きょうかしょ</rt></ruby>",
+        "reading": "きょうかしょ",
+        "romaji": "kyoukasho",
+        "meaning": "Buku pelajaran"
+      },
+      {
+        "word": "<ruby>宿題<rt>しゅくだい</rt></ruby>",
+        "reading": "しゅくだい",
+        "romaji": "shukudai",
+        "meaning": "Pekerjaan rumah / PR"
+      },
+      {
+        "word": "<ruby>提出<rt>ていしゅつ</rt></ruby>",
+        "reading": "ていしゅつ",
+        "romaji": "teishutsu",
+        "meaning": "Pengumpulan / menyerahkan"
+      },
+      {
+        "word": "<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>り",
+        "reading": "しめきり",
+        "romaji": "shimekiri",
+        "meaning": "Batas waktu / tenggat"
+      },
+      {
+        "word": "<ruby>発表<rt>はっぴょう</rt></ruby>",
+        "reading": "はっぴょう",
+        "romaji": "happyou",
+        "meaning": "Presentasi"
+      },
+      {
+        "word": "<ruby>質問<rt>しつもん</rt></ruby>",
+        "reading": "しつもん",
+        "romaji": "shitsumon",
+        "meaning": "Pertanyaan"
+      },
+      {
+        "word": "<ruby>出席<rt>しゅっせき</rt></ruby>",
+        "reading": "しゅっせき",
+        "romaji": "shusseki",
+        "meaning": "Kehadiran"
+      }
+    ]
+  },
+  {
+    "id": "pekerjaan-kantor",
+    "label": "Pekerjaan dan Lingkungan Kantor",
+    "href": "/ungkapan-praktis/pekerjaan-kantor",
+    "relatedStoryIds": [
+      "n4-pekerjaan"
+    ],
+    "vocab": [
+      {
+        "word": "<ruby>仕事<rt>しごと</rt></ruby>",
+        "reading": "しごと",
+        "romaji": "shigoto",
+        "meaning": "Pekerjaan"
+      },
+      {
+        "word": "<ruby>上司<rt>じょうし</rt></ruby>",
+        "reading": "じょうし",
+        "romaji": "joushi",
+        "meaning": "Atasan"
+      },
+      {
+        "word": "<ruby>同僚<rt>どうりょう</rt></ruby>",
+        "reading": "どうりょう",
+        "romaji": "douryou",
+        "meaning": "Rekan kerja"
+      },
+      {
+        "word": "<ruby>会議<rt>かいぎ</rt></ruby>",
+        "reading": "かいぎ",
+        "romaji": "kaigi",
+        "meaning": "Rapat"
+      },
+      {
+        "word": "<ruby>資料<rt>しりょう</rt></ruby>",
+        "reading": "しりょう",
+        "romaji": "shiryou",
+        "meaning": "Bahan / dokumen"
+      },
+      {
+        "word": "<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>り",
+        "reading": "しめきり",
+        "romaji": "shimekiri",
+        "meaning": "Tenggat waktu"
+      },
+      {
+        "word": "<ruby>報告<rt>ほうこく</rt></ruby>",
+        "reading": "ほうこく",
+        "romaji": "houkoku",
+        "meaning": "Laporan / melaporkan"
+      },
+      {
+        "word": "<ruby>休暇<rt>きゅうか</rt></ruby>",
+        "reading": "きゅうか",
+        "romaji": "kyuuka",
+        "meaning": "Cuti"
+      }
+    ]
+  },
+  {
+    "id": "hotel-akomodasi",
+    "label": "Hotel dan Akomodasi",
+    "href": "/ungkapan-praktis/hotel-akomodasi",
+    "relatedStoryIds": [],
+    "vocab": [
+      {
+        "word": "<ruby>宿泊<rt>しゅくはく</rt></ruby>",
+        "reading": "しゅくはく",
+        "romaji": "shukuhaku",
+        "meaning": "Menginap"
+      },
+      {
+        "word": "<ruby>予約<rt>よやく</rt></ruby>",
+        "reading": "よやく",
+        "romaji": "yoyaku",
+        "meaning": "Reservasi"
+      },
+      {
+        "word": "<ruby>受付<rt>うけつけ</rt></ruby>",
+        "reading": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Resepsionis / pendaftaran"
+      },
+      {
+        "word": "<ruby>客室<rt>きゃくしつ</rt></ruby>",
+        "reading": "きゃくしつ",
+        "romaji": "kyakushitsu",
+        "meaning": "Kamar tamu"
+      },
+      {
+        "word": "<ruby>荷物<rt>にもつ</rt></ruby>",
+        "reading": "にもつ",
+        "romaji": "nimotsu",
+        "meaning": "Barang bawaan / bagasi"
+      },
+      {
+        "word": "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>",
+        "reading": "りょうしゅうしょ",
+        "romaji": "ryoushuusho",
+        "meaning": "Kuitansi"
+      },
+      {
+        "word": "<ruby>朝食<rt>ちょうしょく</rt></ruby>",
+        "reading": "ちょうしょく",
+        "romaji": "choushoku",
+        "meaning": "Sarapan"
+      },
+      {
+        "word": "<ruby>鍵<rt>かぎ</rt></ruby>",
+        "reading": "かぎ",
+        "romaji": "kagi",
+        "meaning": "Kunci"
+      }
+    ]
+  },
+  {
+    "id": "komunikasi-hubungan-sosial",
+    "label": "Komunikasi dan Hubungan Sosial",
+    "href": "/ungkapan-praktis/komunikasi-hubungan-sosial",
+    "relatedStoryIds": [],
+    "vocab": [
+      {
+        "word": "<ruby>連絡<rt>れんらく</rt></ruby>",
+        "reading": "れんらく",
+        "romaji": "renraku",
+        "meaning": "Menghubungi / kabar"
+      },
+      {
+        "word": "<ruby>返信<rt>へんしん</rt></ruby>",
+        "reading": "へんしん",
+        "romaji": "henshin",
+        "meaning": "Balasan pesan"
+      },
+      {
+        "word": "<ruby>電波<rt>でんぱ</rt></ruby>",
+        "reading": "でんぱ",
+        "romaji": "denpa",
+        "meaning": "Sinyal"
+      },
+      {
+        "word": "<ruby>誘<rt>さそ</rt></ruby>う",
+        "reading": "さそう",
+        "romaji": "sasou",
+        "meaning": "Mengajak"
+      },
+      {
+        "word": "<ruby>都合<rt>つごう</rt></ruby>",
+        "reading": "つごう",
+        "romaji": "tsugou",
+        "meaning": "Kondisi / ketersediaan waktu"
+      },
+      {
+        "word": "<ruby>意見<rt>いけん</rt></ruby>",
+        "reading": "いけん",
+        "romaji": "iken",
+        "meaning": "Pendapat"
+      },
+      {
+        "word": "<ruby>理由<rt>りゆう</rt></ruby>",
+        "reading": "りゆう",
+        "romaji": "riyuu",
+        "meaning": "Alasan"
+      },
+      {
+        "word": "<ruby>再来週<rt>さらいしゅう</rt></ruby>",
+        "reading": "さらいしゅう",
+        "romaji": "saraishuu",
+        "meaning": "Dua minggu lagi"
+      }
+    ]
+  }
+]
