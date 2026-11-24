@@ -112,7 +112,7 @@ export default function IrodoriInteractiveLesson({ content }: { content: Irodori
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#C8A9EA]">IRODORI • PRA-MENENGAH A2/B1 • PELAJARAN {String(number).padStart(2, "0")}</p>
           <h1 className="mt-4 font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">{content.title}</h1>
-          <p className="mt-2 text-sm font-semibold text-[#C8A9EA]">{content.japaneseTitle}</p>
+          <p className="mt-2 text-sm font-semibold text-[#C8A9EA]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{content.japaneseTitle}</JapaneseReading></p>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">{content.description}</p>
           <div className="mt-5 flex flex-wrap gap-2">
             {content.tags.map((tag) => <span key={tag} className="rounded-lg border border-white/[0.07] bg-black/20 px-3 py-2 text-[10px] text-[#D6C9E6]">{tag}</span>)}
@@ -137,7 +137,7 @@ export default function IrodoriInteractiveLesson({ content }: { content: Irodori
 
       {content.readingArticle && (
         <section className="space-y-4 rounded-2xl border border-[#80619B]/25 bg-[#2A2333]/60 p-4 md:p-5">
-          <div><p className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">LATIHAN MEMBACA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">{content.readingArticle.title}</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">{content.readingArticle.lead}</p></div>
+          <div><p className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">LATIHAN MEMBACA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{content.readingArticle.title}</JapaneseReading></h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">{content.readingArticle.lead}</p></div>
           <article className="space-y-4 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
             {content.readingArticle.paragraphs.map((paragraph, index) => <div key={index} className="border-b border-white/[0.06] pb-4 last:border-0 last:pb-0"><JapaneseReading allowIndexFallback translation={paragraph.translation} contentClassName="font-mincho text-base leading-8 text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#C8A9EA]" romajiClassName="mt-1 text-xs italic text-[#A9A398]" translationClassName="mt-2 text-xs leading-6 text-[#A9A398]">{paragraph.japanese}</JapaneseReading></div>)}
           </article>
