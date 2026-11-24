@@ -148,6 +148,21 @@ export default function UngkapanPraktisPage() {
         </p>
       </div>
 
+      <div className="grid gap-3 sm:grid-cols-3">
+        <Link href="/kosakata" className="rounded-xl border border-[#33312E] bg-[#1E1D1B]/70 p-3 transition-colors hover:border-[#B8860B]/50">
+          <p className="text-xs font-bold text-[#EAE6DD]">Kosakata gabungan</p>
+          <p className="mt-1 text-[11px] leading-relaxed text-[#A3A099]">Temukan kata dari Minna, Irodori, dan Ungkapan Praktis.</p>
+        </Link>
+        <Link href="/flashcard" className="rounded-xl border border-[#33312E] bg-[#1E1D1B]/70 p-3 transition-colors hover:border-[#B8860B]/50">
+          <p className="text-xs font-bold text-[#EAE6DD]">Flashcard</p>
+          <p className="mt-1 text-[11px] leading-relaxed text-[#A3A099]">Latih ingatan kosakata dari seluruh sumber belajar.</p>
+        </Link>
+        <Link href="/baca" className="rounded-xl border border-[#33312E] bg-[#1E1D1B]/70 p-3 transition-colors hover:border-[#B8860B]/50">
+          <p className="text-xs font-bold text-[#EAE6DD]">Latihan Baca</p>
+          <p className="mt-1 text-[11px] leading-relaxed text-[#A3A099]">Baca cerita dan lanjutkan ke ungkapan yang relevan.</p>
+        </Link>
+      </div>
+
       <div className="grid gap-3 sm:grid-cols-2">
         {categories.map((category) => {
           const Icon = category.icon;
