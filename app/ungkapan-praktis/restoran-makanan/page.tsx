@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -170,16 +171,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>予約<rt>よやく</rt></ruby>", reading: "よやく", romaji: "yoyaku", meaning: "Reservasi / pemesanan" },
-  { word: "<ruby>注文<rt>ちゅうもん</rt></ruby>", reading: "ちゅうもん", romaji: "chuumon", meaning: "Pesanan / memesan" },
-  { word: "<ruby>料理<rt>りょうり</rt></ruby>", reading: "りょうり", romaji: "ryouri", meaning: "Masakan / hidangan" },
-  { word: "おすすめ", reading: "おすすめ", romaji: "osusume", meaning: "Rekomendasi" },
-  { word: "<ruby>定食<rt>ていしょく</rt></ruby>", reading: "ていしょく", romaji: "teishoku", meaning: "Paket makanan" },
-  { word: "<ruby>会計<rt>かいけい</rt></ruby>", reading: "かいけい", romaji: "kaikei", meaning: "Tagihan / pembayaran" },
-  { word: "<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>り", reading: "もちかえり", romaji: "mochikaeri", meaning: "Dibawa pulang / takeout" },
-  { word: "<ruby>辛<rt>から</rt></ruby>い", reading: "からい", romaji: "karai", meaning: "Pedas" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "restoran-makanan")?.vocab ?? [];
 
 const quiz = [
   {
