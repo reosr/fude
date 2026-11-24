@@ -137,7 +137,7 @@ const content: IrodoriLessonContent = {
     },
     {
       title: "02 · Memilih gaya bicara sopan dan biasa",
-      pattern: "丁寧体（です・ます）／普通体（だ・ bentuk biasa）",
+      pattern: "丁寧体（です・ます）／普通体（だ・辞書形など）",
       example: <>日本語の勉強は楽しいです。<br />日本語の勉強は楽しい。<br />昨日、学校で勉強しました。<br />昨日、学校で勉強した。</>,
       note: "丁寧体 biasanya dipakai kepada orang yang belum akrab, pengajar, atau dalam situasi formal. 普通体 lebih sering dipakai bersama teman dekat atau keluarga. Pilihan gaya bicara bergantung pada hubungan dan situasi, bukan sekadar tingkat kesopanan yang lebih tinggi atau rendah. Saat berpindah gaya, ubah bentuk kata benda, kata sifat, dan kata kerja secara konsisten.",
     },
