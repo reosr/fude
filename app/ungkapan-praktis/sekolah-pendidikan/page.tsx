@@ -12,6 +12,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -167,16 +168,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>授業<rt>じゅぎょう</rt></ruby>", reading: "じゅぎょう", romaji: "jugyou", meaning: "Pelajaran / kelas" },
-  { word: "<ruby>教科書<rt>きょうかしょ</rt></ruby>", reading: "きょうかしょ", romaji: "kyoukasho", meaning: "Buku pelajaran" },
-  { word: "<ruby>宿題<rt>しゅくだい</rt></ruby>", reading: "しゅくだい", romaji: "shukudai", meaning: "Pekerjaan rumah / PR" },
-  { word: "<ruby>提出<rt>ていしゅつ</rt></ruby>", reading: "ていしゅつ", romaji: "teishutsu", meaning: "Pengumpulan / menyerahkan" },
-  { word: "<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>り", reading: "しめきり", romaji: "shimekiri", meaning: "Batas waktu / tenggat" },
-  { word: "<ruby>発表<rt>はっぴょう</rt></ruby>", reading: "はっぴょう", romaji: "happyou", meaning: "Presentasi" },
-  { word: "<ruby>質問<rt>しつもん</rt></ruby>", reading: "しつもん", romaji: "shitsumon", meaning: "Pertanyaan" },
-  { word: "<ruby>出席<rt>しゅっせき</rt></ruby>", reading: "しゅっせき", romaji: "shusseki", meaning: "Kehadiran" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "sekolah-pendidikan")?.vocab ?? [];
 
 const quiz = [
   {
