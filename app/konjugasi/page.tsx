@@ -1128,6 +1128,8 @@ return (
                             <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
                               <JapaneseReading
                                 html={formatGrammarNotation(pattern.pattern || `N ${pattern.particle} V`)}
+                                showKana={false}
+                                showRomaji={false}
                                 allowIndexFallback
                                 contentClassName="block text-sm font-bold text-[#EAE6DD] font-mincho leading-relaxed"
                                 kanaClassName="mt-1 font-mincho text-xs leading-relaxed text-[#D6AD4F]"
@@ -1142,6 +1144,8 @@ return (
                             {pattern.note && (
                               <JapaneseReading
                                 allowIndexFallback
+                                showKana={false}
+                                showRomaji={false}
                                 contentClassName="block text-xs text-[#A3A099] mt-1 leading-relaxed"
                                 kanaClassName="mt-1 font-mincho text-xs leading-relaxed text-[#D6AD4F]"
                                 romajiClassName="mt-1 text-[10px] italic text-[#A9A398]"
