@@ -100,7 +100,7 @@ const askParticipationRequirementsConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>折り紙のワークショップに参加したいんですが、申し込みが必要ですか。</>,
-    romaji: "Origami no waakushoppu ni sanka shitain desu ga, moushikomi ga hitsuyou desu ka?",
+    romaji: "Origami no waakushoppu ni sanka shitai n desu ga, moushikomi ga hitsuyou desu ka?",
     translation: "Saya ingin ikut lokakarya origami. Apakah perlu mendaftar?",
     audioFileName: "irodori-elementary2-08-a03-l01.mp3",
   },
