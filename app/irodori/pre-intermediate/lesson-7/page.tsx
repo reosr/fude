@@ -37,7 +37,7 @@ const content: IrodoriLessonContent = {
       title: "Menanyakan informasi klub",
       speakers: [sota, kenji],
       utterances: [
-        { speakerId: "sota", japanese: <>市民センターの写真クラブについて聞きたいんですが、今もメンバーを募集していますか。</>, romaji: "Shimin sentaa no shashin kurabu ni tsuite kikitai n desu ga, ima mo menbaa o bosh 보 shuu shite imasu ka.", translation: "Saya ingin bertanya tentang klub fotografi di pusat kegiatan warga. Apakah sekarang masih menerima anggota?", audioFileName: "" },
+        { speakerId: "sota", japanese: <>市民センターの写真クラブについて聞きたいんですが、今もメンバーを募集していますか。</>, romaji: "Shimin sentaa no shashin kurabu ni tsuite kikitai n desu ga, ima mo menbaa o boshuu shite imasu ka.", translation: "Saya ingin bertanya tentang klub fotografi di pusat kegiatan warga. Apakah sekarang masih menerima anggota?", audioFileName: "" },
         { speakerId: "kenji", japanese: <>はい。初心者も参加できるそうですよ。</>, romaji: "Hai. Shoshinsha mo sanka dekiru sou desu yo.", translation: "Ya. Katanya, pemula juga boleh ikut.", audioFileName: "" },
         { speakerId: "sota", japanese: <>活動はいつですか。会費も必要ですか。</>, romaji: "Katsudou wa itsu desu ka. Kaihi mo hitsuyou desu ka.", translation: "Kegiatannya kapan? Apakah perlu membayar iuran anggota juga?", audioFileName: "" },
         { speakerId: "kenji", japanese: <>毎月第二土曜日です。会費はかかりませんが、材料費が必要なときもあるそうです。</>, romaji: "Maitsuki dai ni doyoubi desu. Kaihi wa kakarimasen ga, zairyouhi ga hitsuyou na toki mo aru sou desu.", translation: "Setiap Sabtu kedua setiap bulan. Tidak ada iuran anggota, tetapi katanya kadang-kadang ada biaya bahan.", audioFileName: "" },
