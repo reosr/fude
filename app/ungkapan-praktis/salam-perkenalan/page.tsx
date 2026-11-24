@@ -93,15 +93,15 @@ const quiz = [
     options: [
       { label: "インドネシアに<ruby>住<rt>す</rt></ruby>んでいます。", correct: false, feedback: "Kalimat ini berarti kamu tinggal di Indonesia sekarang, bukan menyatakan asal." },
       { label: "インドネシアから<ruby>来<rt>き</rt></ruby>ました。", correct: true, feedback: "から来ました menyatakan tempat asal atau tempat kamu datang." },
-      { label: "インドネシアを<ruby>勉強<rt>べんきょう</rt></ruby>しています。", correct: false, feedback: "を勉強しています berarti sedang mempelajari Indonesia, bukan berasal dari sana." },
+      { label: "インドネシアへ<ruby>行<rt>い</rt></ruby>きました。", correct: false, feedback: "へ行きました berarti sudah pergi ke Indonesia, bukan menyatakan bahwa kamu berasal dari sana." },
     ],
   },
   {
     question: "Kamu memperkenalkan teman kepada guru. Ungkapan mana yang cocok untuk memulai?",
     options: [
       { label: "こちらは<ruby>友達<rt>ともだち</rt></ruby>のミラさんです。", correct: true, feedback: "こちらは ... さんです adalah cara sopan untuk memperkenalkan seseorang." },
-      { label: "ミラさんはいくらですか。", correct: false, feedback: "いくらですか digunakan untuk menanyakan harga." },
-      { label: "ミラさんをください。", correct: false, feedback: "ください digunakan untuk meminta barang atau layanan, bukan memperkenalkan orang." },
+      { label: "ミラさんは<ruby>同<rt>おな</rt></ruby>じクラスですか。", correct: false, feedback: "Kalimat ini menanyakan apakah Mira berada di kelas yang sama, bukan memperkenalkannya." },
+      { label: "ミラさんはどちらから<ruby>来<rt>き</rt></ruby>ましたか。", correct: false, feedback: "Kalimat ini menanyakan asal Mira, bukan memperkenalkan Mira kepada orang lain." },
     ],
   },
 ];
