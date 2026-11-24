@@ -189,7 +189,7 @@ const quiz = [
   {
     question: "Petugas klinik bertanya 「<ruby>今日<rt>きょう</rt></ruby>はどうされましたか。」 Kamu ingin mengatakan bahwa tenggorokanmu sakit. Pilih jawaban yang tepat.",
     options: [
-      { label: "のどが<ruby>痛<rt>いた</rt></ruby>いです。", correct: true, feedback: "Benar. のどが痛いです berarti tenggorokan saya sakit." },
+      { label: "のどが<ruby>痛<rt>いた</rt></ruby>いです。", correct: true, feedback: "Benar. のどが<ruby>痛<rt>いた</rt></ruby>いです berarti tenggorokan saya sakit." },
       { label: "<ruby>薬局<rt>やっきょく</rt></ruby>はどこですか。", correct: false, feedback: "Kalimat ini menanyakan lokasi apotek." },
       { label: "<ruby>予約<rt>よやく</rt></ruby>しています。", correct: false, feedback: "Kalimat ini menyampaikan bahwa kamu sudah membuat janji." },
     ],
@@ -220,7 +220,7 @@ const simulation = [
     translation: "Ada keluhan apa hari ini?",
     task: "Sampaikan bahwa kamu demam.",
     options: [
-      { label: "<ruby>熱<rt>ねつ</rt></ruby>があります。", correct: true, feedback: "Tepat. 熱があります berarti saya demam." },
+      { label: "<ruby>熱<rt>ねつ</rt></ruby>があります。", correct: true, feedback: "Tepat. <ruby>熱<rt>ねつ</rt></ruby>があります berarti saya demam." },
       { label: "<ruby>薬局<rt>やっきょく</rt></ruby>はどこですか。", correct: false, feedback: "Kalimat ini menanyakan lokasi apotek." },
       { label: "<ruby>救急車<rt>きゅうきゅうしゃ</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>んでください。", correct: false, feedback: "Kalimat ini meminta seseorang memanggil ambulans." },
     ],
