@@ -32,7 +32,7 @@ const askingMeetingDetailsConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>午前九時はどうですか。待ち合わせ場所は駅の東口にしましょう。</>, romaji: "Gozen kuji wa dou desu ka? Machiawase basho wa eki no higashiguchi ni shimashou.", translation: "Bagaimana kalau pukul sembilan pagi? Kita bertemu di pintu keluar timur stasiun saja.", audioFileName: "irodori-elementary1-07-a01-l02.mp3" },
   { speakerId: "yui", japanese: <>九時ですね。駅の東口ですね。</>, romaji: "Kuji desu ne. Eki no higashiguchi desu ne.", translation: "Pukul sembilan, ya. Di pintu keluar timur stasiun.", audioFileName: "irodori-elementary1-07-a01-l03.mp3" },
   { speakerId: "sota", japanese: <>はい。わかりやすいですよ。</>, romaji: "Hai. Wakariyasui desu yo.", translation: "Iya. Tempatnya mudah ditemukan.", audioFileName: "irodori-elementary1-07-a01-l04.mp3" },
-  { speakerId: "yui", japanese: <>わかりました。では、明日。</>, romaji: "Wakarimashita. Dewa, ashita.", translation: "Oke, sampai besok.", audioFileName: "irodori-elementary1-07-a01-l05.mp3" },
+  { speakerId: "yui", japanese: <>わかりました。では、明日。</>, romaji: "Wakarimashita. De wa, ashita.", translation: "Oke, sampai besok.", audioFileName: "irodori-elementary1-07-a01-l05.mp3" },
 ];
 
 const decidingMeetingTimeConversation: IrodoriUtterance[] = [
@@ -45,7 +45,7 @@ const decidingMeetingTimeConversation: IrodoriUtterance[] = [
 const readingLateMessageConversation: IrodoriUtterance[] = [
   { speakerId: "sota", japanese: <>友だちからメッセージが来ました。</>, romaji: "Tomodachi kara messeeji ga kimashita.", translation: "Ada pesan dari teman.", audioFileName: "irodori-elementary1-07-a03-l01.mp3" },
   { speakerId: "yui", japanese: <>「電車が止まっていて、十五分ぐらい遅れます」と書いてあります。</>, romaji: "Densha ga tomatte ite, juugofun gurai okuremasu to kaite arimasu.", translation: "Tertulis, “Kereta berhenti, jadi saya akan terlambat sekitar 15 menit.”", audioFileName: "irodori-elementary1-07-a03-l02.mp3" },
-  { speakerId: "sota", japanese: <>電車のことで遅れるんですね。</>, romaji: "Densha no koto de okurerun desu ne.", translation: "Jadi, dia terlambat karena masalah kereta, ya.", audioFileName: "irodori-elementary1-07-a03-l03.mp3" },
+  { speakerId: "sota", japanese: <>電車のことで遅れるんですね。</>, romaji: "Densha no koto de okureru n desu ne.", translation: "Jadi, dia terlambat karena masalah kereta, ya.", audioFileName: "irodori-elementary1-07-a03-l03.mp3" },
   { speakerId: "yui", japanese: <>はい。先に着いたら、連絡しましょう。</>, romaji: "Hai. Saki ni tsuitara, renraku shimashou.", translation: "Iya. Kalau kita sampai duluan, kita kabari dia.", audioFileName: "irodori-elementary1-07-a03-l04.mp3" },
 ];
 
