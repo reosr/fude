@@ -232,7 +232,7 @@ const simulation = [
     ],
   },
   {
-    prompt: "Kamu dan teman sedang menentukan rencana bersama. Teman bertanya:",
+    prompt: "Teman mengusulkan sebuah rencana, lalu meminta pendapatmu:",
     japanese: "どう<ruby>思<rt>おも</rt></ruby>いますか。",
     romaji: "Dou omoimasu ka.",
     translation: "Menurutmu bagaimana?",
