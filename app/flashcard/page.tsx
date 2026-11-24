@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useLayoutEffect, type ReactNode } from "react";
-import { getUnlockedVocab } from "../../lib/vocab";
+import { getUnlockedVocab, type VocabItem } from "../../lib/vocab";
 import { getProgress } from "../../lib/progress";
 import { getMemorizedKanji, saveMemorizedKanji } from "../../lib/memorized";
 import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
@@ -100,7 +100,7 @@ function ScaleToFit({ children, className = "" }: { children: ReactNode; classNa
 }
 
 export default function Flashcard() {
-  const [deck, setDeck] = useState<any[]>([]);
+  const [deck, setDeck] = useState<(VocabItem & { uid: string })[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
