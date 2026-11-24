@@ -181,7 +181,7 @@ const vocabulary = [
 
 const quiz = [
   {
-    question: "Kamu ingin membeli tiket sekali jalan menuju Kyoto. Apa yang sebaiknya kamu katakan?",
+    question: "Kamu sudah menyebutkan tujuan Kyoto. Petugas lalu menanyakan apakah kamu ingin tiket sekali jalan atau pulang-pergi. Apa jawabanmu?",
     options: [
       { label: "<ruby>片道<rt>かたみち</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Benar. <ruby>片道<rt>かたみち</rt></ruby> berarti perjalanan satu arah atau sekali jalan." },
       { label: "<ruby>往復<rt>おうふく</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "<ruby>往復<rt>おうふく</rt></ruby> berarti perjalanan pulang-pergi." },
