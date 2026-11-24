@@ -142,7 +142,7 @@ const drinkConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <><ruby>水<rt>みず</rt></ruby>、お<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Mizu, onegaishimasu.",
+    romaji: "Mizu, onegai shimasu.",
     translation: "Air putih, tolong.",
     audioFileName: "irodori-starter-05-a03-l04.mp3",
   },
