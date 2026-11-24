@@ -275,7 +275,7 @@ export default function IrodoriElementaryTwoLessonEighteenPage() {
         <h2 className="text-sm font-bold text-[#EAE6DD]">Contoh impian dan tujuan</h2>
         <p className="text-xs leading-6 text-[#A9A398]">Impian setiap orang berbeda. Kamu boleh membicarakan tujuan belajar, hobi, kegiatan, atau pekerjaan yang ingin dijelajahi di masa depan.</p>
         <div className="grid gap-2 sm:grid-cols-2">
-          {dreamExamples.map((item) => <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><p className="text-[9px] font-black tracking-[0.15em] text-[#E5A9C4]">{item.title}</p><p className="mt-2 font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{item.meaning}</p></article>)}
+          {dreamExamples.map((item) => <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-3"><p className="text-sm font-bold tracking-[0.02em] text-[#E5A9C4]">{item.title}</p><p className="mt-2 font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading allowIndexFallback>{item.jp}</JapaneseReading></p><p className="mt-1 text-[10px] leading-5 text-[#A9A398]">{item.meaning}</p></article>)}
         </div>
       </section>
 
@@ -295,7 +295,7 @@ export default function IrodoriElementaryTwoLessonEighteenPage() {
 
       <section className="space-y-4">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#E5A9C4]">POLA TATA BAHASA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Lima pola untuk impian, tujuan, dan ungkapan bantuan</h2></div>
-        {grammarNotes.map((item) => <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-[9px] font-black tracking-[0.15em] text-[#E5A9C4]">{item.title}</p><p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p><p className="mt-2 font-mincho text-base leading-8 text-[#E5A9C4]"><JapaneseReading allowIndexFallback>{item.example}</JapaneseReading></p><p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p></article>)}
+        {grammarNotes.map((item) => <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4"><p className="text-sm font-bold tracking-[0.02em] text-[#E5A9C4]">{item.title}</p><p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p><p className="mt-2 font-mincho text-base leading-8 text-[#E5A9C4]"><JapaneseReading allowIndexFallback romajiClassName="mt-1 text-sm italic text-[#D9B66D]">{item.example}</JapaneseReading></p><p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p></article>)}
       </section>
 
       <section className="space-y-4 rounded-2xl border border-[#A64C77]/20 bg-[#35232D]/60 p-4 md:p-5">
