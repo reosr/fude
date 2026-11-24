@@ -644,6 +644,8 @@ export default function IrodoriPemulaLessonNinePage() {
                     meaning={
                       <JapaneseReading
                         allowIndexFallback
+                        showKana={false}
+                        showRomaji={false}
                         contentClassName="text-xs leading-5 text-[#A9A398]"
                         kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]"
                         showRomaji={false}
