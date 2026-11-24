@@ -536,7 +536,7 @@ export default function KesehatanKeadaanDaruratPage() {
         <Link href="/ungkapan-praktis" className="text-xs font-semibold text-[#A3A099] transition-colors hover:text-[#EAE6DD]">
           <ArrowLeft className="mr-1 inline" size={14} /> Daftar kategori
         </Link>
-        <p className="text-xs text-[#817A73]">Kategori berikutnya akan ditambahkan bertahap.</p>
+        <p className="text-xs text-[#817A73]">Seluruh 10 kategori Ungkapan Praktis sudah tersedia.</p>
       </div>
     </div>
   );
