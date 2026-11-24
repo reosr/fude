@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { Play, Square, ArrowLeft, Volume2, Gauge, User, BookOpen } from "lucide-react";
 import storyIndex from "../../data/story-index.json";
+import practicalVocabData from "@/data/practical-vocab.json";
 import { loadStory } from "../../data/story-loaders";
 import { getProgress } from "../../lib/progress";
 import JapaneseReading from "@/components/JapaneseReading";
@@ -479,6 +481,17 @@ setSelectedStory(story);
   }
 };
 
+  useEffect(() => {
+    const requestedStoryId = new URLSearchParams(window.location.search).get("story");
+    const isKnownStory = storyIndex.some((story: any) => story.id === requestedStoryId);
+
+    if (requestedStoryId && isKnownStory) {
+      void openStory(requestedStoryId);
+    }
+    // Hanya jalankan deep link sekali saat halaman dibuka.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const playOne = (url: string, index: number, rate: number) => {
     return new Promise<void>((resolve) => {
       if (!audioRef.current) return resolve();
@@ -587,6 +600,10 @@ setSelectedStory(story);
     );
   }
 
+  const relatedPracticalCategory = practicalVocabData.find((category) =>
+    category.relatedStories.some((story) => story.id === selectedStory.id)
+  );
+
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-10">
       
@@ -659,6 +676,26 @@ setSelectedStory(story);
             </button>
           </div>
         </div>
+
+        {relatedPracticalCategory && (
+          <div className="flex flex-col gap-3 rounded-2xl border border-[#B8860B]/30 bg-[#1E1D1B]/80 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#B8860B]">LATIHAN SITUASI NYATA</p>
+              <p className="mt-1 text-sm font-semibold text-[#EAE6DD]">
+                Lanjutkan dengan ungkapan: {relatedPracticalCategory.label}
+              </p>
+              <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">
+                Pelajari pilihan kalimat dan respons yang digunakan dalam situasi serupa.
+              </p>
+            </div>
+            <Link
+              href={relatedPracticalCategory.href}
+              className="inline-flex shrink-0 items-center justify-center rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-4 py-2.5 text-xs font-bold text-[#D9B66D] transition-colors hover:bg-[#B8860B]/20"
+            >
+              Buka Ungkapan Praktis
+            </Link>
+          </div>
+        )}
 
         <div className="bg-[#1E1D1B]/80 backdrop-blur-md border border-[#33312E] rounded-3xl p-2 md:p-4 shadow-xl">
           <div className="flex flex-col divide-y divide-[#33312E]/60">
