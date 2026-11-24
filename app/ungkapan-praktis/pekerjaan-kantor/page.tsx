@@ -147,7 +147,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 2 · Melaporkan hasil pekerjaan",
     context: "Kamu sudah menyelesaikan tugas dan meminta atasan memeriksa hasilnya.",
     lines: [
-      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "お<ruby>疲<rt>つか</rt></ruby>れさまです。<ruby>資料<rt>しりょう</rt></ruby>が<ruby>完成<rt>かんせい</rt></ruby>しました。", romaji: "Otsukaresama desu. Shiryou ga kansei shimashita.", id: "Halo, bahan presentasinya sudah selesai." },
+      { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "お<ruby>疲<rt>つか</rt></ruby>れさまです。<ruby>資料<rt>しりょう</rt></ruby>が<ruby>完成<rt>かんせい</rt></ruby>しました。", romaji: "Otsukaresama desu. Shiryou ga kansei shimashita.", id: "Halo, dokumen yang diminta sudah selesai." },
       { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "ありがとうございます。<ruby>少<rt>すこ</rt></ruby>し<ruby>確認<rt>かくにん</rt></ruby>します。", romaji: "Arigatou gozaimasu. Sukoshi kakunin shimasu.", id: "Terima kasih. Saya akan memeriksanya sebentar." },
       { speaker: "<ruby>上司<rt>じょうし</rt></ruby>", jp: "この<ruby>部分<rt>ぶぶん</rt></ruby>をもう<ruby>少<rt>すこ</rt></ruby>し<ruby>直<rt>なお</rt></ruby>してください。", romaji: "Kono bubun o mou sukoshi naoshite kudasai.", id: "Tolong perbaiki bagian ini sedikit lagi." },
       { speaker: "<ruby>社員<rt>しゃいん</rt></ruby>", jp: "わかりました。<ruby>修正<rt>しゅうせい</rt></ruby>してから、もう<ruby>一度<rt>いちど</rt></ruby><ruby>提出<rt>ていしゅつ</rt></ruby>します。", romaji: "Wakarimashita. Shuusei shite kara, mou ichido teishutsu shimasu.", id: "Baik. Setelah diperbaiki, saya akan mengumpulkannya sekali lagi." },
@@ -230,10 +230,10 @@ const simulation = [
     ],
   },
   {
-    prompt: "Kamu sedang menuju kantor, tetapi kereta terlambat. Rekan kerja bertanya:",
-    japanese: "<ruby>今<rt>いま</rt></ruby>どこですか。",
-    romaji: "Ima doko desu ka.",
-    translation: "Sekarang kamu ada di mana?",
+    prompt: "Kamu sedang menuju kantor, tetapi kereta terlambat. Rekan kerja menanyakan apakah kamu sudah dalam perjalanan:",
+    japanese: "もう<ruby>会社<rt>かいしゃ</rt></ruby>に<ruby>向<rt>む</rt></ruby>かっていますか。",
+    romaji: "Mou kaisha ni mukatte imasu ka.",
+    translation: "Kamu sudah dalam perjalanan ke kantor?",
     task: "Beri tahu bahwa kereta terlambat sehingga kamu akan datang sedikit terlambat.",
     options: [
       { label: "<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れているため、<ruby>少<rt>すこ</rt></ruby>し<ruby>遅<rt>おく</rt></ruby>れます。", correct: true, feedback: "Tepat. Kamu menjelaskan penyebab keterlambatan dan memberi kabar akan terlambat." },
