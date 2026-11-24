@@ -101,6 +101,7 @@ jobs:
           app/kosakata/page.tsx
           lib/vocab.ts
           components/JapaneseReading.tsx
+          components/JapaneseVocabularyReading.tsx
           components/Quiz.tsx
           lib/japanese-text.ts
           data/japanese-reading-index.json
