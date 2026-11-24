@@ -48,11 +48,11 @@ function getNodeText(node: ReactNode): string {
 
 function containsIndonesianProse(source: string): boolean {
   const plainText = source
-    .replace(/<rt\\b[^>]*>[\\s\\S]*?<\\/rt>/gi, "")
+    .replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/gi, "")
     .replace(/<[^>]*>/g, " ")
     .replace(/&(?:nbsp|amp|lt|gt|quot|#39);/g, " ");
   const latinLetters = (plainText.match(/[A-Za-z]/g) ?? []).length;
-  const japaneseCharacters = (plainText.match(/[\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]/g) ?? []).length;
+  const japaneseCharacters = (plainText.match(/[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/g) ?? []).length;
 
   // Teks penjelasan berbahasa Indonesia dapat menyisipkan contoh Jepang.
   // Jangan mengubah seluruh paragraf tersebut menjadi kana/romaji; furigana
