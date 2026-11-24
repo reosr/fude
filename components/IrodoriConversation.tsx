@@ -288,7 +288,6 @@ export default function IrodoriConversation({
                     allowIndexFallback
                     kana={kanaReading}
                     romaji={utterance.romaji}
-                    preferAutomaticRomaji
                     translation={utterance.translation}
                     contentClassName={`mt-1 block font-mincho text-xl leading-[2] text-[#F1EBDD] sm:text-2xl [&_rt]:text-[0.48em] [&_rt]:text-[#D6AD4F] ${
                       isActive ? "text-white" : ""
