@@ -648,7 +648,6 @@ export default function IrodoriPemulaLessonNinePage() {
                         showRomaji={false}
                         contentClassName="text-xs leading-5 text-[#A9A398]"
                         kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#D6AD4F]"
-                        showRomaji={false}
                       >
                         {formatGrammarNotation(item.note)}
                       </JapaneseReading>
