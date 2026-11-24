@@ -110,7 +110,7 @@ const content: IrodoriLessonContent = {
     ["組立", "くみたて · kumitate", "Perakitan"],
     ["検査", "けんさ · kensa", "Pemeriksaan; inspeksi"],
     ["求人", "きゅうじん · kyuujin", "Lowongan pekerjaan"],
-    ["募集", "ぼしゅう · boshū", "Perekrutan; membuka lowongan"],
+    ["募集", "ぼしゅう · boshuu", "Perekrutan; membuka lowongan"],
     ["応募", "おうぼ · oubo", "Melamar; pendaftaran"],
     ["採用", "さいよう · saiyou", "Penerimaan; perekrutan karyawan"],
     ["正社員", "せいしゃいん · seishain", "Pegawai tetap"],
