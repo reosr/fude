@@ -186,7 +186,7 @@ const quiz = [
     question: "Kamu sudah menyelesaikan pekerjaan dan ingin meminta atasan memeriksa hasilnya. Apa yang kamu katakan?",
     options: [
       { label: "<ruby>少<rt>すこ</rt></ruby>し<ruby>時間<rt>じかん</rt></ruby>がかかりそうです。", correct: false, feedback: "Kalimat ini menyampaikan bahwa pekerjaan masih membutuhkan waktu." },
-      { label: "<ruby>終<rt>お</rt></ruby>わりましたので、ご<ruby>確認<rt>かくにん</rt></ruby>をお願いします。", correct: true, feedback: "Tepat. Kamu memberi tahu bahwa pekerjaan selesai dan meminta hasilnya diperiksa." },
+      { label: "<ruby>終<rt>お</rt></ruby>わりましたので、ご<ruby>確認<rt>かくにん</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Tepat. Kamu memberi tahu bahwa pekerjaan selesai dan meminta hasilnya diperiksa." },
       { label: "<ruby>明日<rt>あした</rt></ruby>、<ruby>休暇<rt>きゅうか</rt></ruby>を<ruby>取<rt>と</rt></ruby>ってもよろしいでしょうか。", correct: false, feedback: "Kalimat ini digunakan untuk meminta izin cuti besok." },
     ],
   },
@@ -221,7 +221,7 @@ const simulation = [
     task: "Sampaikan bahwa pekerjaan sudah selesai dan minta diperiksa.",
     options: [
       { label: "<ruby>問題<rt>もんだい</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>しました。", correct: false, feedback: "Kalimat ini melaporkan bahwa ada masalah." },
-      { label: "<ruby>終<rt>お</rt></ruby>わりましたので、ご<ruby>確認<rt>かくにん</rt></ruby>をお願いします。", correct: true, feedback: "Benar. Kamu mengonfirmasi bahwa pekerjaan selesai dan meminta pemeriksaan." },
+      { label: "<ruby>終<rt>お</rt></ruby>わりましたので、ご<ruby>確認<rt>かくにん</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Benar. Kamu mengonfirmasi bahwa pekerjaan selesai dan meminta pemeriksaan." },
       { label: "<ruby>休暇<rt>きゅうか</rt></ruby>を<ruby>取<rt>と</rt></ruby>ってもよろしいでしょうか。", correct: false, feedback: "Kalimat ini meminta izin mengambil cuti." },
     ],
   },
