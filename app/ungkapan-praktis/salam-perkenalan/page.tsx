@@ -40,9 +40,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -60,7 +64,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -114,7 +118,7 @@ const simulation = [
     translation: "Salam kenal. Saya Tanaka.",
     task: "Pilih respons yang paling wajar.",
     options: [
-      { label: "はじめまして。アナです。よろしくお願いします。", correct: true, feedback: "Kamu membalas salam perkenalan, menyebut nama, lalu menyampaikan よろしくお願いします." },
+      { label: "はじめまして。アナです。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Kamu membalas salam perkenalan, menyebut nama, lalu menyampaikan よろしくお<ruby>願<rt>ねが</rt></ruby>いします." },
       { label: "お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します。", correct: false, feedback: "Ungkapan ini digunakan saat meninggalkan tempat kerja sebelum orang lain." },
       { label: "いくらですか。", correct: false, feedback: "Kalimat ini menanyakan harga dan tidak sesuai dengan situasi perkenalan." },
     ],
@@ -138,7 +142,7 @@ const simulation = [
     translation: "Senang berkenalan dengan Anda. / Mohon hubungan baiknya.",
     task: "Pilih balasan sopan yang sesuai.",
     options: [
-      { label: "こちらこそ、よろしくお願いします。", correct: true, feedback: "こちらこそ menyampaikan 'saya juga', sehingga menjadi balasan yang wajar." },
+      { label: "こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "こちらこそ menyampaikan 'saya juga', sehingga menjadi balasan yang wajar." },
       { label: "おはようございます。", correct: false, feedback: "Ini salam pagi dan tidak secara langsung membalas ungkapan perkenalan." },
       { label: "ごちそうさまでした。", correct: false, feedback: "Ungkapan ini digunakan setelah selesai makan." },
     ],
@@ -158,7 +162,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
   },
   {
     title: "B. Memperkenalkan diri",
-    description: "Kamu tidak harus selalu memulai dengan 私は. Dalam percakapan, menyebut nama diikuti です sudah terdengar alami.",
+    description: "Kamu tidak harus selalu menyebutkan subjek secara eksplisit. Dalam percakapan, menyebut nama diikuti です sudah terdengar alami.",
     items: [
       { jp: "アナです。", romaji: "Ana desu.", id: "Saya Ana.", tone: "Sederhana · netral" },
       { jp: "<ruby>私<rt>わたし</rt></ruby>はアナです。", romaji: "Watashi wa Ana desu.", id: "Saya Ana.", tone: "Lebih eksplisit" },
@@ -230,10 +234,10 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Yui memperkenalkan Ana kepada Tanaka sebelum kelas dimulai.",
     lines: [
       { speaker: "ユイ", jp: "<ruby>田中<rt>たなか</rt></ruby>さん、<ruby>紹介<rt>しょうかい</rt></ruby>します。こちらは<ruby>友達<rt>ともだち</rt></ruby>のアナさんです。", romaji: "Tanaka-san, shoukai shimasu. Kochira wa tomodachi no Ana-san desu.", id: "Pak Tanaka, saya ingin memperkenalkan. Ini teman saya, Ana." },
-      { speaker: "田中", jp: "はじめまして。<ruby>田中<rt>たなか</rt></ruby>です。どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Hajimemashite. Tanaka desu. Douzo yoroshiku onegaishimasu.", id: "Salam kenal. Saya Tanaka. Senang berkenalan dengan Anda." },
+      { speaker: "<ruby>田中<rt>たなか</rt></ruby>", jp: "はじめまして。<ruby>田中<rt>たなか</rt></ruby>です。どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Hajimemashite. Tanaka desu. Douzo yoroshiku onegaishimasu.", id: "Salam kenal. Saya Tanaka. Senang berkenalan dengan Anda." },
       { speaker: "アナ", jp: "はじめまして。アナです。こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Hajimemashite. Ana desu. Kochira koso, yoroshiku onegaishimasu.", id: "Salam kenal. Saya Ana. Saya juga senang berkenalan dengan Anda." },
-      { speaker: "田中", jp: "これから<ruby>同<rt>おな</rt></ruby>じクラスですね。", romaji: "Kore kara onaji kurasu desu ne.", id: "Mulai sekarang kita berada di kelas yang sama, ya." },
-      { speaker: "アナ", jp: "はい。よろしくお願いします。", romaji: "Hai. Yoroshiku onegaishimasu.", id: "Iya. Mohon kerja samanya." },
+      { speaker: "<ruby>田中<rt>たなか</rt></ruby>", jp: "これから<ruby>同<rt>おな</rt></ruby>じクラスですね。", romaji: "Kore kara onaji kurasu desu ne.", id: "Mulai sekarang kita berada di kelas yang sama, ya." },
+      { speaker: "アナ", jp: "はい。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Hai. Yoroshiku onegaishimasu.", id: "Iya. Mohon kerja samanya." },
     ],
   },
 ];
@@ -342,7 +346,7 @@ export default function SalamPerkenalanPage() {
             </thead>
             <tbody className="divide-y divide-[#33312E] text-[#C5C0B7]">
               <tr><td className="px-3 py-3">Teman dekat</td><td className="px-3 py-3 font-mincho text-sm">よろしくね。</td><td className="px-3 py-3">Santai, untuk teman atau orang yang sudah akrab.</td></tr>
-              <tr><td className="px-3 py-3">Perkenalan umum</td><td className="px-3 py-3 font-mincho text-sm">どうぞよろしくお願いします。</td><td className="px-3 py-3">Sopan dan cocok untuk perkenalan pertama.</td></tr>
+              <tr><td className="px-3 py-3">Perkenalan umum</td><td className="px-3 py-3 font-mincho text-sm">どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。</td><td className="px-3 py-3">Sopan dan cocok untuk perkenalan pertama.</td></tr>
               <tr><td className="px-3 py-3">Situasi formal</td><td className="px-3 py-3 font-mincho text-sm">アナと<ruby>申<rt>もう</rt></ruby>します。</td><td className="px-3 py-3">Bentuk rendah hati untuk menyebut nama sendiri.</td></tr>
             </tbody>
           </table>
@@ -376,7 +380,7 @@ export default function SalamPerkenalanPage() {
           <li><span className="font-semibold text-[#EAE6DD]">Pilih salam berdasarkan situasi.</span> おはようございます biasanya dipakai pada pagi hari; こんにちは pada siang atau sore; こんばんは pada malam hari. Batas waktunya tidak selalu kaku.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Gunakan nama + さん.</span> Dalam percakapan, orang Jepang sering memanggil lawan bicara dengan nama keluarga atau nama yang disepakati, diikuti さん. あなた tidak perlu dipakai terus-menerus untuk menyebut “Anda”.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Jangan memaksa pertanyaan pribadi.</span> Pertanyaan tentang asal atau hobi bisa membuka percakapan, tetapi tanyakan secara wajar dan hormati jika orang lain tidak ingin menjawab.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Pahami konteks お先に失礼します.</span> Ungkapan ini khususnya lazim ketika seseorang pulang lebih dahulu dari tempat kerja, bukan pengganti umum untuk semua salam perpisahan.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Pahami konteks お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します.</span> Ungkapan ini khususnya lazim ketika seseorang pulang lebih dahulu dari tempat kerja, bukan pengganti umum untuk semua salam perpisahan.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Membungkuk ringan.</span> Anggukan atau bungkukan kecil sering menyertai salam dan perkenalan. Tidak perlu dibuat berlebihan.</li>
         </ul>
       </section>
@@ -390,7 +394,9 @@ export default function SalamPerkenalanPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -419,9 +425,13 @@ export default function SalamPerkenalanPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
