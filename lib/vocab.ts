@@ -49,7 +49,7 @@ type PracticalVocabCategory = {
   id: string;
   label: string;
   href: string;
-  relatedStoryIds: string[];
+  relatedStories: { id: string; title: string }[];
   vocab: {
     word: string;
     reading: string;
