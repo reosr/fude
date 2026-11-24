@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -325,9 +329,9 @@ export default function KomunikasiHubunganSosialPage() {
         </div>
         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-[#C5C0B7]">
           <li><span className="font-semibold text-[#EAE6DD]">Awali telepon dengan もしもし.</span> Ungkapan ini lazim digunakan saat memulai percakapan telepon sehari-hari. Untuk urusan formal, perkenalkan diri dan tujuan panggilan dengan jelas.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Pastikan waktu lawan bicara.</span> Menanyakan お時間よろしいですか menunjukkan bahwa kamu menghargai kesibukan orang lain sebelum memulai pembicaraan.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Pastikan waktu lawan bicara.</span> Menanyakan お<ruby>時間<rt>じかん</rt></ruby>よろしいですか menunjukkan bahwa kamu menghargai kesibukan orang lain sebelum memulai pembicaraan.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Menolak ajakan tidak harus terlalu langsung.</span> Ucapkan terima kasih atas ajakan, jelaskan bahwa waktunya kurang cocok, lalu usulkan hari lain bila memungkinkan.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Sampaikan pendapat tanpa merendahkan.</span> Ungkapan seperti 少し違う意見があります membantu menyampaikan pandangan berbeda secara lebih halus. Dengarkan alasan lawan bicara juga.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Sampaikan pendapat tanpa merendahkan.</span> Ungkapan seperti <ruby>少<rt>すこ</rt></ruby>し<ruby>違<rt>ちが</rt></ruby>う<ruby>意見<rt>いけん</rt></ruby>があります membantu menyampaikan pandangan berbeda secara lebih halus. Dengarkan alasan lawan bicara juga.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Sesuaikan bahasa dengan hubungan.</span> Pilih bentuk sopan saat berbicara dengan orang yang belum akrab atau dalam situasi formal. Bentuk santai dapat digunakan dengan teman dekat sesuai konteks.</li>
         </ul>
       </section>
@@ -359,7 +363,9 @@ export default function KomunikasiHubunganSosialPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -387,9 +393,13 @@ export default function KomunikasiHubunganSosialPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
