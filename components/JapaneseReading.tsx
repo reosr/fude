@@ -552,7 +552,10 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
     }
     tokens.push({
       surface,
-      kana: toHiragana(reading),
+      // Jangan ubah ke hiragana di sini: toHiragana() mengubah オー menjadi おう
+      // (コーヒー → こうひい → "kouhii"). toRomaji() langsung pada katakana
+      // menghasilkan "koohii" sesuai gaya romaji di seluruh materi.
+      kana: reading,
       start,
       end,
       punctuation: isRomajiPunctuation(surface),
