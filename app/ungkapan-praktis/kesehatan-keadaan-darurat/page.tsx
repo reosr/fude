@@ -96,7 +96,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     description: "Gunakan kalimat sederhana untuk menyampaikan bagian tubuh yang terasa sakit atau gejala yang dialami.",
     items: [
       { jp: "<ruby>頭<rt>あたま</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Atama ga itai desu.", id: "Kepala saya sakit.", tone: "Keluhan" },
-      { jp: "<ruby>お腹<rt>おなか</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Onaka ga itai desu.", id: "Perut saya sakit.", tone: "Keluhan" },
+      { jp: "お<ruby>腹<rt>なか</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Onaka ga itai desu.", id: "Perut saya sakit.", tone: "Keluhan" },
       { jp: "<ruby>熱<rt>ねつ</rt></ruby>があります。", romaji: "Netsu ga arimasu.", id: "Saya demam.", tone: "Keluhan" },
       { jp: "<ruby>咳<rt>せき</rt></ruby>が<ruby>出<rt>で</rt></ruby>ます。", romaji: "Seki ga demasu.", id: "Saya batuk.", tone: "Keluhan" },
       { jp: "のどが<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Nodo ga itai desu.", id: "Tenggorokan saya sakit.", tone: "Keluhan" },
