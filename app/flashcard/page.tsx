@@ -300,7 +300,7 @@ useEffect(() => {
     <div className="space-y-2 md:space-y-6 pb-6 md:pb-10 flex flex-col items-center relative overflow-hidden">
       <div className="w-full flex flex-row justify-between items-center gap-3 relative z-20">
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-[#EAE6DD]">Kartu Hafalan</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#EAE6DD]">Flashcard</h2>
           <p className="hidden sm:block text-[#A3A099] text-sm mt-1">
             Latihan mengingat kosakata. Klik kartu untuk melihat arti.
           </p>
