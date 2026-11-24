@@ -49,14 +49,14 @@ const introductionConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>そうですか。どうぞよろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Sou desu ka. Douzo yoroshiku onegaishimasu.",
+    romaji: "Sou desu ka. Douzo yoroshiku onegai shimasu.",
     translation: "Oh, begitu. Senang berkenalan denganmu.",
     audioFileName: "irodori-starter-03-a01-l04.mp3",
   },
   {
     speakerId: "yui",
     japanese: <>こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Kochira koso, yoroshiku onegaishimasu.",
+    romaji: "Kochira koso, yoroshiku onegai shimasu.",
     translation: "Saya juga senang berkenalan denganmu.",
     audioFileName: "irodori-starter-03-a01-l05.mp3",
   },
@@ -94,14 +94,14 @@ const originConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>そうですか。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Sou desu ka. Yoroshiku onegaishimasu.",
+    romaji: "Sou desu ka. Yoroshiku onegai shimasu.",
     translation: "Oh, begitu. Senang berkenalan dengan Anda.",
     audioFileName: "irodori-starter-03-a03-l05.mp3",
   },
   {
     speakerId: "kenji",
     japanese: <>こちらこそ、よろしくお<ruby>願<rt>ねが</rt></ruby>いします。</>,
-    romaji: "Kochira koso, yoroshiku onegaishimasu.",
+    romaji: "Kochira koso, yoroshiku onegai shimasu.",
     translation: "Saya juga senang berkenalan dengan Anda.",
     audioFileName: "irodori-starter-03-a03-l06.mp3",
   },
