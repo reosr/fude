@@ -616,10 +616,23 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       currentIsKana &&
       !ROMAJI_PARTICLES.has(token.surface) &&
       !ROMAJI_HONORIFICS.has(token.surface) &&
+      token.surface !== "し" &&
       !["です", "でした", "ます", "ました", "ません", "ましょう", "でしょう", "ください"].includes(token.surface)
     ) {
       mergeIntoPrevious(previous, token);
       previous.fromRuby = false;
+      continue;
+    }
+
+    // Bentuk て setelah okurigana, misalnya 遅れ + て → okurete.
+    if (
+      adjacent &&
+      previous &&
+      token.surface === "て" &&
+      /[ぁ-ゖァ-ヺー]$/u.test(previous.surface) &&
+      !previousIsParticle
+    ) {
+      mergeIntoPrevious(previous, token);
       continue;
     }
 
