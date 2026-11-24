@@ -67,7 +67,7 @@ const wakeSleepConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>はい。<ruby>毎朝<rt>まいあさ</rt></ruby>ではありません。<ruby>土曜日<rt>どようび</rt></ruby>にします。</>,
-    romaji: "Hai. Maiasa dewa arimasen. Doyoubi ni shimasu.",
+    romaji: "Hai. Maiasa de wa arimasen. Doyoubi ni shimasu.",
     translation: "Ya. Tidak setiap pagi. Saya melakukannya pada hari Sabtu.",
     audioFileName: "irodori-starter-09-a01-l06.mp3",
   },
