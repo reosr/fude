@@ -114,7 +114,7 @@ const quantityConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>それから、チョコレートケーキとチーズケーキを2<ruby>個<rt>こ</rt></ruby>ずつお願いします。</>,
-    romaji: "Sore kara, chokoreeto keeki to chiizu keeki o niko zutsu onegaishimasu.",
+    romaji: "Sore kara, chokoreeto keeki to chiizu keeki o niko zutsu onegai shimasu.",
     translation: "Lalu, dua kue cokelat dan dua kue keju, ya.",
     audioFileName: "irodori-starter-16-a03-l04.mp3",
   },
@@ -138,7 +138,7 @@ const checkoutConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>はい、お願いします。</>,
-    romaji: "Hai, onegaishimasu.",
+    romaji: "Hai, onegai shimasu.",
     translation: "Ya, tolong hangatkan.",
     audioFileName: "irodori-starter-16-a04-l02.mp3",
   },
@@ -152,7 +152,7 @@ const checkoutConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>はい。1<ruby>膳<rt>ぜん</rt></ruby>お願いします。</>,
-    romaji: "Hai. Ichi-zen onegaishimasu.",
+    romaji: "Hai. Ichi-zen onegai shimasu.",
     translation: "Ya, satu pasang.",
     audioFileName: "irodori-starter-16-a04-l04.mp3",
   },
@@ -166,7 +166,7 @@ const checkoutConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>だいじょうぶです。カードでお願いします。</>,
-    romaji: "Daijoubu desu. Kaado de onegaishimasu.",
+    romaji: "Daijoubu desu. Kaado de onegai shimasu.",
     translation: "Tidak perlu, terima kasih. Saya bayar dengan kartu.",
     audioFileName: "irodori-starter-16-a04-l06.mp3",
   },
