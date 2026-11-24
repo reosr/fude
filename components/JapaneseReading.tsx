@@ -497,6 +497,13 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
         continue;
       }
 
+      // ですが terdiri dari bentuk です + partikel penghubung が.
+      if (surface === "ですが") {
+        pushToken("です", tokenStart, tokenStart + 2);
+        pushToken("が", tokenStart + 2, tokenEnd);
+        continue;
+      }
+
       // "ことに／ことが／ものを／ように" dan pola serupa merupakan
       // frasa + partikel, bukan satu kata panjang.
       const nominalParticle = /^(こと|もの|ため|とき|ところ|よう|はず|わけ)(から|まで|より|は|が|を|に|で|と|へ|も|か)$/u.exec(surface);
