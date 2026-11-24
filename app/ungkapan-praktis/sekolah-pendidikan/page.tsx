@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -132,22 +136,22 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Meminta penjelasan kepada guru",
     context: "Kamu belum memahami salah satu bagian pelajaran dan ingin meminta penjelasan ulang.",
     lines: [
-      { speaker: "学生", jp: "<ruby>先生<rt>せんせい</rt></ruby>、<ruby>質問<rt>しつもん</rt></ruby>してもいいですか。", romaji: "Sensei, shitsumon shite mo ii desu ka.", id: "Pak/Bu Guru, bolehkah saya bertanya?" },
-      { speaker: "先生", jp: "はい、どうぞ。", romaji: "Hai, douzo.", id: "Ya, silakan." },
-      { speaker: "学生", jp: "この<ruby>部分<rt>ぶぶん</rt></ruby>がよくわかりません。もう<ruby>一度<rt>いちど</rt></ruby><ruby>説明<rt>せつめい</rt></ruby>していただけますか。", romaji: "Kono bubun ga yoku wakarimasen. Mou ichido setsumei shite itadakemasu ka.", id: "Saya belum memahami bagian ini. Bisakah dijelaskan sekali lagi?" },
-      { speaker: "先生", jp: "もちろんです。ゆっくり<ruby>説明<rt>せつめい</rt></ruby>しますね。", romaji: "Mochiron desu. Yukkuri setsumei shimasu ne.", id: "Tentu. Saya akan menjelaskannya pelan-pelan." },
-      { speaker: "学生", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
+      { speaker: "<ruby>学生<rt>がくせい</rt></ruby>", jp: "<ruby>先生<rt>せんせい</rt></ruby>、<ruby>質問<rt>しつもん</rt></ruby>してもいいですか。", romaji: "Sensei, shitsumon shite mo ii desu ka.", id: "Pak/Bu Guru, bolehkah saya bertanya?" },
+      { speaker: "<ruby>先生<rt>せんせい</rt></ruby>", jp: "はい、どうぞ。", romaji: "Hai, douzo.", id: "Ya, silakan." },
+      { speaker: "<ruby>学生<rt>がくせい</rt></ruby>", jp: "この<ruby>部分<rt>ぶぶん</rt></ruby>がよくわかりません。もう<ruby>一度<rt>いちど</rt></ruby><ruby>説明<rt>せつめい</rt></ruby>していただけますか。", romaji: "Kono bubun ga yoku wakarimasen. Mou ichido setsumei shite itadakemasu ka.", id: "Saya belum memahami bagian ini. Bisakah dijelaskan sekali lagi?" },
+      { speaker: "<ruby>先生<rt>せんせい</rt></ruby>", jp: "もちろんです。ゆっくり<ruby>説明<rt>せつめい</rt></ruby>しますね。", romaji: "Mochiron desu. Yukkuri setsumei shimasu ne.", id: "Tentu. Saya akan menjelaskannya pelan-pelan." },
+      { speaker: "<ruby>学生<rt>がくせい</rt></ruby>", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
     ],
   },
   {
     title: "Percakapan 2 · Menanyakan batas pengumpulan tugas",
     context: "Kamu sedang mengerjakan laporan dan ingin memastikan kapan tugas harus dikumpulkan.",
     lines: [
-      { speaker: "学生", jp: "<ruby>先生<rt>せんせい</rt></ruby>、レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", romaji: "Sensei, repooto no shimekiri wa itsu desu ka.", id: "Pak/Bu Guru, kapan batas pengumpulan laporan?" },
-      { speaker: "先生", jp: "<ruby>金曜日<rt>きんようび</rt></ruby>までに<ruby>提出<rt>ていしゅつ</rt></ruby>してください。", romaji: "Kinyoubi made ni teishutsu shite kudasai.", id: "Silakan kumpulkan paling lambat hari Jumat." },
-      { speaker: "学生", jp: "わかりました。もし<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わない<ruby>場合<rt>ばあい</rt></ruby>は、どうすればいいですか。", romaji: "Wakarimashita. Moshi maniawanai baai wa, dou sureba ii desu ka.", id: "Baik. Jika saya tidak sempat menyelesaikannya tepat waktu, apa yang sebaiknya saya lakukan?" },
-      { speaker: "先生", jp: "<ruby>早<rt>はや</rt></ruby>めに<ruby>相談<rt>そうだん</rt></ruby>してください。", romaji: "Hayame ni soudan shite kudasai.", id: "Silakan bicarakan dengan saya lebih awal." },
-      { speaker: "学生", jp: "はい、ありがとうございます。", romaji: "Hai, arigatou gozaimasu.", id: "Baik, terima kasih." },
+      { speaker: "<ruby>学生<rt>がくせい</rt></ruby>", jp: "<ruby>先生<rt>せんせい</rt></ruby>、レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", romaji: "Sensei, repooto no shimekiri wa itsu desu ka.", id: "Pak/Bu Guru, kapan batas pengumpulan laporan?" },
+      { speaker: "<ruby>先生<rt>せんせい</rt></ruby>", jp: "<ruby>金曜日<rt>きんようび</rt></ruby>までに<ruby>提出<rt>ていしゅつ</rt></ruby>してください。", romaji: "Kinyoubi made ni teishutsu shite kudasai.", id: "Silakan kumpulkan paling lambat hari Jumat." },
+      { speaker: "<ruby>学生<rt>がくせい</rt></ruby>", jp: "わかりました。もし<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わない<ruby>場合<rt>ばあい</rt></ruby>は、どうすればいいですか。", romaji: "Wakarimashita. Moshi maniawanai baai wa, dou sureba ii desu ka.", id: "Baik. Jika saya tidak sempat menyelesaikannya tepat waktu, apa yang sebaiknya saya lakukan?" },
+      { speaker: "<ruby>先生<rt>せんせい</rt></ruby>", jp: "<ruby>早<rt>はや</rt></ruby>めに<ruby>相談<rt>そうだん</rt></ruby>してください。", romaji: "Hayame ni soudan shite kudasai.", id: "Silakan bicarakan dengan saya lebih awal." },
+      { speaker: "<ruby>学生<rt>がくせい</rt></ruby>", jp: "はい、ありがとうございます。", romaji: "Hai, arigatou gozaimasu.", id: "Baik, terima kasih." },
     ],
   },
   {
@@ -187,7 +191,7 @@ const quiz = [
     question: "Kamu ingin memastikan kapan laporan harus dikumpulkan. Pertanyaan mana yang tepat?",
     options: [
       { label: "テストは<ruby>何時<rt>なんじ</rt></ruby>からですか。", correct: false, feedback: "Kalimat ini menanyakan waktu mulai ujian." },
-      { label: "レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", correct: true, feedback: "Tepat. 締め切り berarti tenggat atau batas waktu." },
+      { label: "レポートの<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りはいつですか。", correct: true, feedback: "Tepat. <ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>り berarti tenggat atau batas waktu." },
       { label: "ここに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。", correct: false, feedback: "Kalimat ini merupakan instruksi untuk menulis nama." },
     ],
   },
@@ -358,7 +362,9 @@ export default function SekolahPendidikanPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -386,9 +392,13 @@ export default function SekolahPendidikanPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
