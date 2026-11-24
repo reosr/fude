@@ -123,11 +123,11 @@ const simulation = [
     ],
   },
   {
-    prompt: "Kamu menemukan baju yang disukai, tetapi ingin mencoba ukurannya terlebih dahulu. Pegawai berkata:",
-    japanese: "こちらの<ruby>試着室<rt>しちゃくしつ</rt></ruby>をご<ruby>利用<rt>りよう</rt></ruby>ください。",
-    romaji: "Kochira no shichakushitsu o goriyou kudasai.",
-    translation: "Silakan gunakan ruang ganti yang ini.",
-    task: "Sebelum mencoba baju, apa yang bisa kamu tanyakan?",
+    prompt: "Kamu menemukan pakaian yang disukai dan ingin meminta izin untuk mencobanya. Pegawai toko menyambutmu:",
+    japanese: "いらっしゃいませ。",
+    romaji: "Irasshaimase.",
+    translation: "Selamat datang.",
+    task: "Tanyakan izin untuk mencoba pakaian tersebut.",
     options: [
       { label: "<ruby>試着<rt>しちゃく</rt></ruby>してもいいですか。", correct: true, feedback: "<ruby>試着<rt>しちゃく</rt></ruby>してもいいですか berarti meminta izin untuk mencoba pakaian." },
       { label: "いくらですか。", correct: false, feedback: "Kalimat ini menanyakan harga." },
