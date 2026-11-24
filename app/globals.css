@@ -217,3 +217,32 @@ main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:n
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+
+
+/* Irodori: Japanese text should remain visually larger than Indonesian guidance. */
+.irodori-learning .font-mincho:not(.irodori-mixed-prose):not(h1):not(h2):not(h3) {
+  font-size: max(1.125rem, 1em) !important;
+}
+
+/* Mixed Indonesian explanations inherit the smaller surrounding prose size. */
+.irodori-learning .irodori-mixed-prose {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+
+/* Japanese words and examples embedded in explanations receive their own emphasis. */
+.irodori-learning .irodori-mixed-japanese {
+  color: inherit;
+  font-family: 'Shippori Mincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif !important;
+  font-size: 1.4em !important;
+  font-weight: 500;
+  line-height: 1.8 !important;
+}
+
+.irodori-learning .irodori-mixed-japanese rt {
+  font-size: 0.48em;
+  line-height: 1;
+}
