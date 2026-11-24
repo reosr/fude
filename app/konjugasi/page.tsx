@@ -127,7 +127,7 @@ function normalizeParticlePronunciation(source: string): string {
     .replace(/([ァ-ヺー])へ(?=[ぁ-ゖァ-ヺー一-龯{}、。！？]|$)/g, "$1え")
     // Pronomina/keterangan tempat yang lazim ditulis dengan kana.
     .replace(/(これ|それ|あれ|どれ|ここ|そこ|あそこ|どこ|わたし|わたしたち|わたくし|ぼく|ぼくたち|かれ|かれら|かのじょ|みんな|みなさん|あなた|おまえ|なに)は/g, "$1わ")
-    .replace(/(で|に|と|から|まで|より|の|だけ|しか|さえ|て)は/g, "$1わ")
+    // Hindari mengubah bacaan leksikal seperti に入る・と話す・の花.
     .replace(/(ここ|そこ|あそこ|どこ)へ/g, "$1え")
     // を sebagai partikel objek/jalur dilafalkan "o", bukan "wo".
     .replace(/を/g, "お")
