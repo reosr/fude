@@ -12742,5 +12742,254 @@
         "meaning": "Berkenalan; saling mengenal"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-10",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 10,
+    "lessonTitle": "Bagaimana caramu belajar bahasa Jepang?",
+    "vocab": [
+      {
+        "kanji": "登録",
+        "kana": "とうろく",
+        "romaji": "touroku",
+        "meaning": "Pendaftaran; registrasi"
+      },
+      {
+        "kanji": "対象",
+        "kana": "たいしょう",
+        "romaji": "taishou",
+        "meaning": "Sasaran; pihak atau tingkat yang dituju"
+      },
+      {
+        "kanji": "文章",
+        "kana": "ぶんしょう",
+        "romaji": "bunshou",
+        "meaning": "Teks; tulisan; paragraf"
+      },
+      {
+        "kanji": "表現",
+        "kana": "ひょうげん",
+        "romaji": "hyougen",
+        "meaning": "Ungkapan; cara menyatakan sesuatu"
+      },
+      {
+        "kanji": "字幕",
+        "kana": "じまく",
+        "romaji": "jimaku",
+        "meaning": "Takarir; subtitle"
+      },
+      {
+        "kanji": "〜在住",
+        "kana": "〜ざいじゅう",
+        "romaji": "~zaijuu",
+        "meaning": "Bertempat tinggal di suatu wilayah"
+      },
+      {
+        "kanji": "専門学校",
+        "kana": "せんもんがっこう",
+        "romaji": "senmon gakkou",
+        "meaning": "Sekolah kejuruan"
+      },
+      {
+        "kanji": "基礎的（な）",
+        "kana": "きそてき（な）",
+        "romaji": "kisoteki (na)",
+        "meaning": "Dasar; bersifat mendasar"
+      },
+      {
+        "kanji": "研究する",
+        "kana": "けんきゅうする",
+        "romaji": "kenkyuu suru",
+        "meaning": "Meneliti; mempelajari secara mendalam"
+      },
+      {
+        "kanji": "助かる",
+        "kana": "たすかる",
+        "romaji": "tasukaru",
+        "meaning": "Sangat membantu; merasa tertolong"
+      },
+      {
+        "kanji": "日本語学習",
+        "kana": "にほんごがくしゅう",
+        "romaji": "nihongo gakushuu",
+        "meaning": "Pembelajaran bahasa Jepang"
+      },
+      {
+        "kanji": "学習方法",
+        "kana": "がくしゅうほうほう",
+        "romaji": "gakushuu houhou",
+        "meaning": "Metode belajar"
+      },
+      {
+        "kanji": "学習者",
+        "kana": "がくしゅうしゃ",
+        "romaji": "gakushuusha",
+        "meaning": "Pembelajar"
+      },
+      {
+        "kanji": "教材",
+        "kana": "きょうざい",
+        "romaji": "kyouzai",
+        "meaning": "Bahan ajar"
+      },
+      {
+        "kanji": "講座",
+        "kana": "こうざ",
+        "romaji": "kouza",
+        "meaning": "Kursus; kelas pembelajaran"
+      },
+      {
+        "kanji": "オンライン",
+        "kana": "オンライン",
+        "romaji": "onrain",
+        "meaning": "Daring; online"
+      },
+      {
+        "kanji": "無料",
+        "kana": "むりょう",
+        "romaji": "muryou",
+        "meaning": "Gratis"
+      },
+      {
+        "kanji": "有料",
+        "kana": "ゆうりょう",
+        "romaji": "yuuryou",
+        "meaning": "Berbayar"
+      },
+      {
+        "kanji": "初級",
+        "kana": "しょきゅう",
+        "romaji": "shokyuu",
+        "meaning": "Tingkat pemula"
+      },
+      {
+        "kanji": "中級",
+        "kana": "ちゅうきゅう",
+        "romaji": "chuukyuu",
+        "meaning": "Tingkat menengah"
+      },
+      {
+        "kanji": "内容",
+        "kana": "ないよう",
+        "romaji": "naiyou",
+        "meaning": "Isi; konten"
+      },
+      {
+        "kanji": "目的",
+        "kana": "もくてき",
+        "romaji": "mokuteki",
+        "meaning": "Tujuan"
+      },
+      {
+        "kanji": "選ぶ",
+        "kana": "えらぶ",
+        "romaji": "erabu",
+        "meaning": "Memilih"
+      },
+      {
+        "kanji": "比べる",
+        "kana": "くらべる",
+        "romaji": "kuraberu",
+        "meaning": "Membandingkan"
+      },
+      {
+        "kanji": "検索する",
+        "kana": "けんさくする",
+        "romaji": "kensaku suru",
+        "meaning": "Mencari melalui fitur pencarian"
+      },
+      {
+        "kanji": "申し込む",
+        "kana": "もうしこむ",
+        "romaji": "moushikomu",
+        "meaning": "Mendaftar; mengajukan permohonan"
+      },
+      {
+        "kanji": "続ける",
+        "kana": "つづける",
+        "romaji": "tsuzukeru",
+        "meaning": "Melanjutkan; meneruskan"
+      },
+      {
+        "kanji": "復習する",
+        "kana": "ふくしゅうする",
+        "romaji": "fukushuu suru",
+        "meaning": "Mengulang pelajaran"
+      },
+      {
+        "kanji": "発音",
+        "kana": "はつおん",
+        "romaji": "hatsuon",
+        "meaning": "Pelafalan"
+      },
+      {
+        "kanji": "文法",
+        "kana": "ぶんぽう",
+        "romaji": "bunpou",
+        "meaning": "Tata bahasa"
+      },
+      {
+        "kanji": "語彙",
+        "kana": "ごい",
+        "romaji": "goi",
+        "meaning": "Kosakata"
+      },
+      {
+        "kanji": "添削する",
+        "kana": "てんさくする",
+        "romaji": "tensaku suru",
+        "meaning": "Memeriksa dan mengoreksi tulisan"
+      },
+      {
+        "kanji": "修正する",
+        "kana": "しゅうせいする",
+        "romaji": "shuusei suru",
+        "meaning": "Memperbaiki; merevisi"
+      },
+      {
+        "kanji": "正しい",
+        "kana": "ただしい",
+        "romaji": "tadashii",
+        "meaning": "Benar; tepat"
+      },
+      {
+        "kanji": "自然な",
+        "kana": "しぜんな",
+        "romaji": "shizen na",
+        "meaning": "Alami; terdengar wajar"
+      },
+      {
+        "kanji": "例文",
+        "kana": "れいぶん",
+        "romaji": "reibun",
+        "meaning": "Contoh kalimat"
+      },
+      {
+        "kanji": "相手",
+        "kana": "あいて",
+        "romaji": "aite",
+        "meaning": "Lawan bicara; teman berpasangan"
+      },
+      {
+        "kanji": "交換する",
+        "kana": "こうかんする",
+        "romaji": "koukan suru",
+        "meaning": "Bertukar"
+      },
+      {
+        "kanji": "希望",
+        "kana": "きぼう",
+        "romaji": "kibou",
+        "meaning": "Harapan; keinginan"
+      },
+      {
+        "kanji": "お互い",
+        "kana": "おたがい",
+        "romaji": "otagai",
+        "meaning": "Satu sama lain"
+      }
+    ]
   }
 ]
