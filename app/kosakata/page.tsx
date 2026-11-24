@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
 import JapaneseReading from "../../components/JapaneseReading";
 import verbTypeData from "../../data/verb-type-index.json";
+import practicalVocabData from "@/data/practical-vocab.json";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
@@ -58,6 +59,7 @@ export default function Kosakata() {
   const [selectedWord, setSelectedWord] = useState<VocabItem | null>(null);
   const [memorized, setMemorized] = useState<string[]>([]);
   const [memFilter, setMemFilter] = useState<"all" | "belum" | "sudah">("all");
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   const [imageMap, setImageMap] = useState<Record<string, string>>({});
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -66,7 +68,9 @@ export default function Kosakata() {
 
   const loadData = async () => {
     const progress = getProgress();
+    const requestedCategory = new URLSearchParams(window.location.search).get("category");
 
+    if (requestedCategory) setCategoryFilter(requestedCategory);
     setCurrentBab(progress);
 
     setMemorized(getMemorizedKanji());
@@ -129,16 +133,36 @@ export default function Kosakata() {
     }
     const audio = new Audio(`/audio/vocab/${encodeURIComponent(kana)}.mp3`);
     audioRef.current = audio;
-    audio.play().catch(() => {});
+
+    let usedSpeechFallback = false;
+    const speakFallback = () => {
+      if (usedSpeechFallback || !("speechSynthesis" in window)) return;
+      usedSpeechFallback = true;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(kana);
+      utterance.lang = "ja-JP";
+      window.speechSynthesis.speak(utterance);
+    };
+
+    audio.addEventListener("error", speakFallback, { once: true });
+    audio.play().catch(() => {
+      if (audio.error) speakFallback();
+    });
   };
 
   if (!isLoaded) return null;
 
 
-  const memorizedCount = allVocab.filter((v) => memorized.includes(v.kanji)).length;
-  const notMemorizedCount = allVocab.length - memorizedCount;
+  const selectedPracticalCategory = practicalVocabData.find((category) => category.id === categoryFilter);
+  const sourceFilteredVocab = categoryFilter
+    ? allVocab.filter((v) => v.sources?.some(
+        (source) => source.type === "practical" && source.categoryId === categoryFilter
+      ))
+    : allVocab;
+  const memorizedCount = sourceFilteredVocab.filter((v) => memorized.includes(v.kanji)).length;
+  const notMemorizedCount = sourceFilteredVocab.length - memorizedCount;
 
-  const filteredVocab = allVocab.filter(
+  const filteredVocab = sourceFilteredVocab.filter(
     (v) =>
       (memFilter === "all" ||
         (memFilter === "sudah" ? memorized.includes(v.kanji) : !memorized.includes(v.kanji))) &&
@@ -158,8 +182,19 @@ export default function Kosakata() {
         <div>
           <h2 className="text-3xl font-bold text-[#EAE6DD]">Daftar Kosakata</h2>
           <p className="text-[#A3A099] text-sm mt-1">
-            Total {allVocab.length} kata dari {currentBab} bab yang sudah kamu pelajari.
+            {selectedPracticalCategory
+              ? `${sourceFilteredVocab.length} kosakata dari Ungkapan Praktis · ${selectedPracticalCategory.label}.`
+              : `Total ${allVocab.length} kata dari Minna, Irodori, dan Ungkapan Praktis.`}
           </p>
+          {categoryFilter && (
+            <button
+              type="button"
+              onClick={() => setCategoryFilter(null)}
+              className="mt-2 text-xs font-semibold text-[#D9B66D] hover:text-[#F0D38A]"
+            >
+              Tampilkan semua kosakata
+            </button>
+          )}
         </div>
       </div>
 
