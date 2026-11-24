@@ -542,7 +542,7 @@ export default function IrodoriPemulaLessonFourPage() {
                   {item.reading}
                 </p>
                 <p className="mt-0.5 text-[9px] italic text-[#817A73]">
-                  <JapaneseReading allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading>
+                  <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading>
                 </p>
               </div>
             ))}
