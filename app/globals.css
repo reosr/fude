@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Yuji+Syuku&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Yuji+Syuku&family=Zen+Old+Mincho:wght@400;700;900&display=swap');
 @import "tailwindcss";
 
 body {
@@ -236,7 +236,7 @@ main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:n
 /* Irodori Japanese typography: expressive brush strokes with tapered terminals. */
 .irodori-learning .font-mincho:not(.irodori-mixed-prose),
 .irodori-learning .irodori-mixed-japanese {
-  font-family: 'Yuji Syuku', 'Shippori Mincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif !important;
+  font-family: 'Zen Old Mincho', 'Shippori Mincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif !important;
   font-weight: 400;
   -webkit-font-smoothing: auto;
   text-rendering: geometricPrecision;
