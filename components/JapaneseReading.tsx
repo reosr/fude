@@ -243,6 +243,7 @@ function renderMixedLanguageNode(
   const element = node as ReactElement<{
     children?: ReactNode;
     className?: string;
+    lang?: string;
     dangerouslySetInnerHTML?: unknown;
   }>;
 
@@ -258,17 +259,17 @@ function renderMixedLanguageNode(
       : node;
   }
 
+  if (isRuby) {
+    return cloneElement(element, {
+      key: elementKey,
+      className: (originalClassName + " irodori-mixed-japanese").trim(),
+      lang: "ja",
+    });
+  }
+
   return cloneElement(
     element,
-    {
-      key: elementKey,
-      ...(isRuby
-        ? {
-            className: (originalClassName + " irodori-mixed-japanese").trim(),
-            lang: "ja",
-          }
-        : {}),
-    },
+    { key: elementKey },
     renderMixedLanguageNode(
       element.props.children,
       allowIndexFallback,
