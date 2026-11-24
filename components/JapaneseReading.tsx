@@ -406,6 +406,94 @@ const ROMAJI_PARTICLES = new Set([
 
 const ROMAJI_HONORIFICS = new Set(["さん", "ちゃん", "くん", "さま"]);
 
+interface RubyRomajiPart {
+  surface: string;
+  reading: string;
+}
+
+const ROMAJI_FIXED_RUBY_PHRASES: Record<string, RubyRomajiPart[]> = {
+  "おやすみなさい": [
+    { surface: "おやすみ", reading: "おやすみ" },
+    { surface: "なさい", reading: "なさい" },
+  ],
+  "おはようございます": [
+    { surface: "おはよう", reading: "おはよう" },
+    { surface: "ございます", reading: "ございます" },
+  ],
+  "ありがとうございます": [
+    { surface: "ありがとう", reading: "ありがとう" },
+    { surface: "ございます", reading: "ございます" },
+  ],
+  "お願いします": [
+    { surface: "お願い", reading: "おねがい" },
+    { surface: "します", reading: "します" },
+  ],
+  "よろしくお願いします": [
+    { surface: "よろしく", reading: "よろしく" },
+    { surface: "お願い", reading: "おねがい" },
+    { surface: "します", reading: "します" },
+  ],
+  "どうぞよろしくお願いします": [
+    { surface: "どうぞ", reading: "どうぞ" },
+    { surface: "よろしく", reading: "よろしく" },
+    { surface: "お願い", reading: "おねがい" },
+    { surface: "します", reading: "します" },
+  ],
+  "お疲れさまでした": [
+    { surface: "お疲れさま", reading: "おつかれさま" },
+    { surface: "でした", reading: "でした" },
+  ],
+  "お先に失礼します": [
+    { surface: "お先に", reading: "おさきに" },
+    { surface: "失礼", reading: "しつれい" },
+    { surface: "します", reading: "します" },
+  ],
+};
+
+function getRomajiPartsForRubySpan(
+  surface: string,
+  reading: string,
+  segmenter: JapaneseIntlSegmenter
+): RubyRomajiPart[] | null {
+  const fixedParts = ROMAJI_FIXED_RUBY_PHRASES[surface];
+  if (fixedParts) return fixedParts;
+
+  const surfaceParts = Array.from(segmenter.segment(surface))
+    .filter((part) => /\\S/u.test(part.segment))
+    .map((part) => part.segment);
+  if (surfaceParts.length <= 1) return null;
+
+  const readingParts = Array.from(segmenter.segment(toHiragana(reading)))
+    .filter((part) => /\\S/u.test(part.segment))
+    .map((part) => part.segment);
+
+  if (surfaceParts.length === readingParts.length) {
+    const aligned = surfaceParts.map((part, index) => ({
+      surface: part,
+      reading: readingParts[index],
+    }));
+    const combinedReading = aligned.map((part) => part.reading).join("");
+    if (toHiragana(combinedReading) === toHiragana(reading)) return aligned;
+  }
+
+  const indexedParts: RubyRomajiPart[] = [];
+  for (const part of surfaceParts) {
+    const readings = segmentTextByReadingIndex(part);
+    if (readings.some((item) => /[\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]/u.test(item.text) && !item.reading)) {
+      return null;
+    }
+    indexedParts.push({
+      surface: part,
+      reading: readings.map((item) => item.reading ?? item.text).join(""),
+    });
+  }
+
+  const indexedReading = indexedParts.map((part) => part.reading).join("");
+  return toHiragana(indexedReading) === toHiragana(reading)
+    ? indexedParts
+    : null;
+}
+
 function isRomajiPunctuation(value: string): boolean {
   return /^[\s。、！？!?.,／/「」『』（）()「」・]+$/u.test(value);
 }
@@ -606,13 +694,40 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       // selalu masuk sebagai satu token, walaupun Segmenter ingin memecahnya.
       if (!pushGap(cursor, span.start)) return null;
 
-      pushToken(
-        source.surface.slice(span.start, span.end),
-        span.start,
-        span.end,
-        true,
-        span.reading
+      const spanSurface = source.surface.slice(span.start, span.end);
+      const phraseParts = getRomajiPartsForRubySpan(
+        spanSurface,
+        span.reading,
+        segmenter
       );
+
+      if (phraseParts && phraseParts.length > 1) {
+        let partStart = span.start;
+        for (const part of phraseParts) {
+          const partEnd = partStart + part.surface.length;
+          const compoundParticle = /^(から|まで|より|で|に|と)は$/u.exec(part.surface);
+          const nominalParticle = /^(こと|もの|ため|とき|ところ|よう|はず|わけ)(から|まで|より|は|が|を|に|で|と|へ|も|か)$/u.exec(part.surface);
+
+          if (compoundParticle) {
+            const first = compoundParticle[1];
+            pushToken(first, partStart, partStart + first.length, true, first);
+            pushToken("は", partStart + first.length, partEnd, true, "は");
+          } else if (part.surface === "ですが") {
+            pushToken("です", partStart, partStart + 2, true, "です");
+            pushToken("が", partStart + 2, partEnd, true, "が");
+          } else if (nominalParticle) {
+            const noun = nominalParticle[1];
+            const particle = part.surface.slice(noun.length);
+            pushToken(noun, partStart, partStart + noun.length, true, noun);
+            pushToken(particle, partStart + noun.length, partEnd, true, particle);
+          } else {
+            pushToken(part.surface, partStart, partEnd, true, part.reading);
+          }
+          partStart = partEnd;
+        }
+      } else {
+        pushToken(spanSurface, span.start, span.end, true, span.reading);
+      }
       cursor = span.end;
     }
 
