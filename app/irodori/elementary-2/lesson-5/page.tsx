@@ -98,7 +98,7 @@ const askTravelAdviceConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>来月、奈良へ行くんですけど、どこに泊まったらいいですか。</>,
-    romaji: "Raigetsu, Nara e ikun desu kedo, doko ni tomattara ii desu ka?",
+    romaji: "Raigetsu, Nara e iku n desu kedo, doko ni tomattara ii desu ka?",
     translation: "Bulan depan saya akan pergi ke Nara. Sebaiknya menginap di mana?",
     audioFileName: "irodori-elementary2-05-a03-l01.mp3",
   },
@@ -129,7 +129,7 @@ const travelPreparationConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>山の近くへ行くんですけど、何を持って行ったらいいですか。</>,
-    romaji: "Yama no chikaku e ikun desu kedo, nani o motte ittara ii desu ka?",
+    romaji: "Yama no chikaku e iku n desu kedo, nani o motte ittara ii desu ka?",
     translation: "Saya akan pergi ke daerah pegunungan. Apa yang sebaiknya saya bawa?",
     audioFileName: "irodori-elementary2-05-a04-l01.mp3",
   },
