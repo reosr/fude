@@ -14992,5 +14992,380 @@
         "meaning": "Mencuci tangan"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-18",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 18,
+    "lessonTitle": "Saya akan senang jika diberi kesempatan bekerja di sana.",
+    "vocab": [
+      {
+        "kanji": "職業",
+        "kana": "しょくぎょう",
+        "romaji": "shokugyou",
+        "meaning": "Pekerjaan; profesi"
+      },
+      {
+        "kanji": "職場",
+        "kana": "しょくば",
+        "romaji": "shokuba",
+        "meaning": "Tempat kerja"
+      },
+      {
+        "kanji": "職種",
+        "kana": "しょくしゅ",
+        "romaji": "shokushu",
+        "meaning": "Jenis pekerjaan"
+      },
+      {
+        "kanji": "会社員",
+        "kana": "かいしゃいん",
+        "romaji": "kaishain",
+        "meaning": "Pegawai perusahaan"
+      },
+      {
+        "kanji": "商社",
+        "kana": "しょうしゃ",
+        "romaji": "shousha",
+        "meaning": "Perusahaan perdagangan"
+      },
+      {
+        "kanji": "輸出",
+        "kana": "ゆしゅつ",
+        "romaji": "yushutsu",
+        "meaning": "Ekspor"
+      },
+      {
+        "kanji": "輸入",
+        "kana": "ゆにゅう",
+        "romaji": "yunyuu",
+        "meaning": "Impor"
+      },
+      {
+        "kanji": "接客",
+        "kana": "せっきゃく",
+        "romaji": "sekkyaku",
+        "meaning": "Pelayanan pelanggan"
+      },
+      {
+        "kanji": "清掃",
+        "kana": "せいそう",
+        "romaji": "seisou",
+        "meaning": "Pembersihan"
+      },
+      {
+        "kanji": "製造",
+        "kana": "せいぞう",
+        "romaji": "seizou",
+        "meaning": "Manufaktur; produksi"
+      },
+      {
+        "kanji": "組立",
+        "kana": "くみたて",
+        "romaji": "kumitate",
+        "meaning": "Perakitan"
+      },
+      {
+        "kanji": "検査",
+        "kana": "けんさ",
+        "romaji": "kensa",
+        "meaning": "Pemeriksaan; inspeksi"
+      },
+      {
+        "kanji": "求人",
+        "kana": "きゅうじん",
+        "romaji": "kyuujin",
+        "meaning": "Lowongan pekerjaan"
+      },
+      {
+        "kanji": "募集",
+        "kana": "ぼしゅう",
+        "romaji": "boshū",
+        "meaning": "Perekrutan; membuka lowongan"
+      },
+      {
+        "kanji": "応募",
+        "kana": "おうぼ",
+        "romaji": "oubo",
+        "meaning": "Melamar; pendaftaran"
+      },
+      {
+        "kanji": "採用",
+        "kana": "さいよう",
+        "romaji": "saiyou",
+        "meaning": "Penerimaan; perekrutan karyawan"
+      },
+      {
+        "kanji": "正社員",
+        "kana": "せいしゃいん",
+        "romaji": "seishain",
+        "meaning": "Pegawai tetap"
+      },
+      {
+        "kanji": "アルバイト",
+        "kana": "アルバイト",
+        "romaji": "arubaito",
+        "meaning": "Pekerjaan paruh waktu"
+      },
+      {
+        "kanji": "パート",
+        "kana": "パート",
+        "romaji": "paato",
+        "meaning": "Pekerjaan paruh waktu"
+      },
+      {
+        "kanji": "雇用形態",
+        "kana": "こようけいたい",
+        "romaji": "koyou keitai",
+        "meaning": "Bentuk hubungan kerja"
+      },
+      {
+        "kanji": "仕事内容",
+        "kana": "しごとないよう",
+        "romaji": "shigoto naiyou",
+        "meaning": "Isi atau tugas pekerjaan"
+      },
+      {
+        "kanji": "勤務場所",
+        "kana": "きんむばしょ",
+        "romaji": "kinmu basho",
+        "meaning": "Lokasi kerja"
+      },
+      {
+        "kanji": "勤務時間",
+        "kana": "きんむじかん",
+        "romaji": "kinmu jikan",
+        "meaning": "Jam kerja"
+      },
+      {
+        "kanji": "勤務条件",
+        "kana": "きんむじょうけん",
+        "romaji": "kinmu jouken",
+        "meaning": "Ketentuan kerja"
+      },
+      {
+        "kanji": "給与",
+        "kana": "きゅうよ",
+        "romaji": "kyuuyo",
+        "meaning": "Gaji; upah"
+      },
+      {
+        "kanji": "時給",
+        "kana": "じきゅう",
+        "romaji": "jikyu",
+        "meaning": "Upah per jam"
+      },
+      {
+        "kanji": "月給",
+        "kana": "げっきゅう",
+        "romaji": "gekkyuu",
+        "meaning": "Gaji bulanan"
+      },
+      {
+        "kanji": "賞与",
+        "kana": "しょうよ",
+        "romaji": "shouyo",
+        "meaning": "Bonus; tunjangan tahunan"
+      },
+      {
+        "kanji": "休日",
+        "kana": "きゅうじつ",
+        "romaji": "kyuujitsu",
+        "meaning": "Hari libur"
+      },
+      {
+        "kanji": "交替制",
+        "kana": "こうたいせい",
+        "romaji": "koutaisei",
+        "meaning": "Sistem kerja bergiliran"
+      },
+      {
+        "kanji": "経験者",
+        "kana": "けいけんしゃ",
+        "romaji": "keikensha",
+        "meaning": "Orang yang berpengalaman"
+      },
+      {
+        "kanji": "未経験",
+        "kana": "みけいけん",
+        "romaji": "mikeiken",
+        "meaning": "Belum memiliki pengalaman"
+      },
+      {
+        "kanji": "優遇",
+        "kana": "ゆうぐう",
+        "romaji": "yuuguu",
+        "meaning": "Diprioritaskan; mendapat perlakuan khusus"
+      },
+      {
+        "kanji": "面接",
+        "kana": "めんせつ",
+        "romaji": "mensetsu",
+        "meaning": "Wawancara"
+      },
+      {
+        "kanji": "選考",
+        "kana": "せんこう",
+        "romaji": "senkou",
+        "meaning": "Proses seleksi"
+      },
+      {
+        "kanji": "履歴書",
+        "kana": "りれきしょ",
+        "romaji": "rirekisho",
+        "meaning": "Riwayat hidup; CV"
+      },
+      {
+        "kanji": "筆記用具",
+        "kana": "ひっきようぐ",
+        "romaji": "hikki yougu",
+        "meaning": "Alat tulis"
+      },
+      {
+        "kanji": "持参する",
+        "kana": "じさんする",
+        "romaji": "jisan suru",
+        "meaning": "Membawa serta"
+      },
+      {
+        "kanji": "私服",
+        "kana": "しふく",
+        "romaji": "shifuku",
+        "meaning": "Pakaian pribadi; bukan seragam"
+      },
+      {
+        "kanji": "資格",
+        "kana": "しかく",
+        "romaji": "shikaku",
+        "meaning": "Kualifikasi; sertifikat keahlian"
+      },
+      {
+        "kanji": "能力",
+        "kana": "のうりょく",
+        "romaji": "nouryoku",
+        "meaning": "Kemampuan"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman"
+      },
+      {
+        "kanji": "活かす",
+        "kana": "いかす",
+        "romaji": "ikasu",
+        "meaning": "Memanfaatkan pengalaman atau kemampuan"
+      },
+      {
+        "kanji": "向いている",
+        "kana": "むいている",
+        "romaji": "muite iru",
+        "meaning": "Cocok; sesuai dengan diri seseorang"
+      },
+      {
+        "kanji": "得意",
+        "kana": "とくい",
+        "romaji": "tokui",
+        "meaning": "Pandai; hal yang dikuasai"
+      },
+      {
+        "kanji": "苦手",
+        "kana": "にがて",
+        "romaji": "nigate",
+        "meaning": "Kurang mahir; tidak terlalu suka"
+      },
+      {
+        "kanji": "やりがい",
+        "kana": "やりがい",
+        "romaji": "yarigai",
+        "meaning": "Kepuasan atau makna dari pekerjaan"
+      },
+      {
+        "kanji": "充実する",
+        "kana": "じゅうじつする",
+        "romaji": "juujitsu suru",
+        "meaning": "Merasa puas; terasa bermakna"
+      },
+      {
+        "kanji": "順調",
+        "kana": "じゅんちょう",
+        "romaji": "junchou",
+        "meaning": "Berjalan lancar"
+      },
+      {
+        "kanji": "進捗",
+        "kana": "しんちょく",
+        "romaji": "shinchoku",
+        "meaning": "Perkembangan; kemajuan"
+      },
+      {
+        "kanji": "納品",
+        "kana": "のうひん",
+        "romaji": "nouhin",
+        "meaning": "Penyerahan hasil atau produk"
+      },
+      {
+        "kanji": "締め切り",
+        "kana": "しめきり",
+        "romaji": "shimekiri",
+        "meaning": "Tenggat waktu"
+      },
+      {
+        "kanji": "報告",
+        "kana": "ほうこく",
+        "romaji": "houkoku",
+        "meaning": "Laporan; melaporkan"
+      },
+      {
+        "kanji": "連絡",
+        "kana": "れんらく",
+        "romaji": "renraku",
+        "meaning": "Pemberitahuan; menghubungi"
+      },
+      {
+        "kanji": "相談",
+        "kana": "そうだん",
+        "romaji": "soudan",
+        "meaning": "Konsultasi; meminta saran"
+      },
+      {
+        "kanji": "努力",
+        "kana": "どりょく",
+        "romaji": "doryoku",
+        "meaning": "Usaha; upaya"
+      },
+      {
+        "kanji": "成果",
+        "kana": "せいか",
+        "romaji": "seika",
+        "meaning": "Hasil; pencapaian"
+      },
+      {
+        "kanji": "非常に",
+        "kana": "ひじょうに",
+        "romaji": "hijou ni",
+        "meaning": "Sangat; luar biasa"
+      },
+      {
+        "kanji": "答える",
+        "kana": "こたえる",
+        "romaji": "kotaeru",
+        "meaning": "Menjawab"
+      },
+      {
+        "kanji": "採用担当",
+        "kana": "さいようたんとう",
+        "romaji": "saiyou tantou",
+        "meaning": "Petugas perekrutan"
+      },
+      {
+        "kanji": "福利厚生",
+        "kana": "ふくりこうせい",
+        "romaji": "fukuri kousei",
+        "meaning": "Fasilitas dan tunjangan karyawan"
+      }
+    ]
   }
 ]
