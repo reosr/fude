@@ -14326,5 +14326,320 @@
         "meaning": "Mekarnya bunga"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-16",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 16,
+    "lessonTitle": "Saya berhasil mengambil banyak foto bagus.",
+    "vocab": [
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto"
+      },
+      {
+        "kanji": "撮る",
+        "kana": "とる",
+        "romaji": "toru",
+        "meaning": "Mengambil foto; memotret"
+      },
+      {
+        "kanji": "撮れる",
+        "kana": "とれる",
+        "romaji": "toreru",
+        "meaning": "Bisa diambil; berhasil memotret"
+      },
+      {
+        "kanji": "撮影",
+        "kana": "さつえい",
+        "romaji": "satsuei",
+        "meaning": "Pemotretan; pengambilan gambar"
+      },
+      {
+        "kanji": "景色",
+        "kana": "けしき",
+        "romaji": "keshiki",
+        "meaning": "Pemandangan"
+      },
+      {
+        "kanji": "風景",
+        "kana": "ふうけい",
+        "romaji": "fuukei",
+        "meaning": "Lanskap; suasana pemandangan"
+      },
+      {
+        "kanji": "旅行先",
+        "kana": "りょこうさき",
+        "romaji": "ryokousaki",
+        "meaning": "Tempat tujuan perjalanan"
+      },
+      {
+        "kanji": "旅行中",
+        "kana": "りょこうちゅう",
+        "romaji": "ryokouchuu",
+        "meaning": "Selama perjalanan"
+      },
+      {
+        "kanji": "旅館",
+        "kana": "りょかん",
+        "romaji": "ryokan",
+        "meaning": "Penginapan bergaya Jepang"
+      },
+      {
+        "kanji": "宿泊",
+        "kana": "しゅくはく",
+        "romaji": "shukuhaku",
+        "meaning": "Menginap; penginapan"
+      },
+      {
+        "kanji": "予約",
+        "kana": "よやく",
+        "romaji": "yoyaku",
+        "meaning": "Reservasi; pemesanan"
+      },
+      {
+        "kanji": "予約内容",
+        "kana": "よやくないよう",
+        "romaji": "yoyaku naiyou",
+        "meaning": "Detail reservasi"
+      },
+      {
+        "kanji": "部屋",
+        "kana": "へや",
+        "romaji": "heya",
+        "meaning": "Kamar"
+      },
+      {
+        "kanji": "和室",
+        "kana": "わしつ",
+        "romaji": "washitsu",
+        "meaning": "Kamar bergaya Jepang"
+      },
+      {
+        "kanji": "洋室",
+        "kana": "ようしつ",
+        "romaji": "youshitsu",
+        "meaning": "Kamar bergaya Barat"
+      },
+      {
+        "kanji": "和洋室",
+        "kana": "わようしつ",
+        "romaji": "wayoushitsu",
+        "meaning": "Kamar bergaya Jepang-Barat"
+      },
+      {
+        "kanji": "畳",
+        "kana": "たたみ",
+        "romaji": "tatami",
+        "meaning": "Tikar tatami"
+      },
+      {
+        "kanji": "布団",
+        "kana": "ふとん",
+        "romaji": "futon",
+        "meaning": "Futon; alas tidur Jepang"
+      },
+      {
+        "kanji": "満室",
+        "kana": "まんしつ",
+        "romaji": "manshitsu",
+        "meaning": "Kamar penuh"
+      },
+      {
+        "kanji": "空き",
+        "kana": "あき",
+        "romaji": "aki",
+        "meaning": "Kamar kosong; ketersediaan"
+      },
+      {
+        "kanji": "変更",
+        "kana": "へんこう",
+        "romaji": "henkou",
+        "meaning": "Perubahan"
+      },
+      {
+        "kanji": "追加料金",
+        "kana": "ついかりょうきん",
+        "romaji": "tsuika ryoukin",
+        "meaning": "Biaya tambahan"
+      },
+      {
+        "kanji": "食事内容",
+        "kana": "しょくじないよう",
+        "romaji": "shokuji naiyou",
+        "meaning": "Isi atau menu makanan"
+      },
+      {
+        "kanji": "夕食",
+        "kana": "ゆうしょく",
+        "romaji": "yuushoku",
+        "meaning": "Makan malam"
+      },
+      {
+        "kanji": "刺身",
+        "kana": "さしみ",
+        "romaji": "sashimi",
+        "meaning": "Sashimi"
+      },
+      {
+        "kanji": "苦手",
+        "kana": "にがて",
+        "romaji": "nigate",
+        "meaning": "Kurang suka; tidak mahir"
+      },
+      {
+        "kanji": "代わり",
+        "kana": "かわり",
+        "romaji": "kawari",
+        "meaning": "Pengganti; sebagai gantinya"
+      },
+      {
+        "kanji": "荷物",
+        "kana": "にもつ",
+        "romaji": "nimotsu",
+        "meaning": "Barang bawaan"
+      },
+      {
+        "kanji": "預かる",
+        "kana": "あずかる",
+        "romaji": "azukaru",
+        "meaning": "Menitipkan; menyimpan sementara"
+      },
+      {
+        "kanji": "受付",
+        "kana": "うけつけ",
+        "romaji": "uketsuke",
+        "meaning": "Resepsionis; bagian penerima"
+      },
+      {
+        "kanji": "確認",
+        "kana": "かくにん",
+        "romaji": "kakunin",
+        "meaning": "Pemeriksaan; konfirmasi"
+      },
+      {
+        "kanji": "伺う",
+        "kana": "うかがう",
+        "romaji": "ukagau",
+        "meaning": "Bertanya atau berkunjung (bentuk rendah hati)"
+      },
+      {
+        "kanji": "参る",
+        "kana": "まいる",
+        "romaji": "mairu",
+        "meaning": "Datang atau pergi (bentuk rendah hati)"
+      },
+      {
+        "kanji": "いただく",
+        "kana": "いただく",
+        "romaji": "itadaku",
+        "meaning": "Menerima (bentuk rendah hati)"
+      },
+      {
+        "kanji": "遅れる",
+        "kana": "おくれる",
+        "romaji": "okureru",
+        "meaning": "Terlambat"
+      },
+      {
+        "kanji": "待たされる",
+        "kana": "またされる",
+        "romaji": "matasareru",
+        "meaning": "Terpaksa disuruh menunggu"
+      },
+      {
+        "kanji": "重量",
+        "kana": "じゅうりょう",
+        "romaji": "juuryou",
+        "meaning": "Berat; bobot"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman"
+      },
+      {
+        "kanji": "印象",
+        "kana": "いんしょう",
+        "romaji": "inshou",
+        "meaning": "Kesan"
+      },
+      {
+        "kanji": "思い出",
+        "kana": "おもいで",
+        "romaji": "omoide",
+        "meaning": "Kenangan"
+      },
+      {
+        "kanji": "忘れられない",
+        "kana": "わすれられない",
+        "romaji": "wasurerarenai",
+        "meaning": "Tidak bisa dilupakan"
+      },
+      {
+        "kanji": "大満足",
+        "kana": "だいまんぞく",
+        "romaji": "daimanzoku",
+        "meaning": "Sangat puas"
+      },
+      {
+        "kanji": "意見",
+        "kana": "いけん",
+        "romaji": "iken",
+        "meaning": "Pendapat"
+      },
+      {
+        "kanji": "砂丘",
+        "kana": "さきゅう",
+        "romaji": "sakyuu",
+        "meaning": "Bukit pasir"
+      },
+      {
+        "kanji": "お土産",
+        "kana": "おみやげ",
+        "romaji": "omiyage",
+        "meaning": "Oleh-oleh"
+      },
+      {
+        "kanji": "新幹線",
+        "kana": "しんかんせん",
+        "romaji": "shinkansen",
+        "meaning": "Shinkansen; kereta cepat Jepang"
+      },
+      {
+        "kanji": "飛行機",
+        "kana": "ひこうき",
+        "romaji": "hikouki",
+        "meaning": "Pesawat terbang"
+      },
+      {
+        "kanji": "美術館",
+        "kana": "びじゅつかん",
+        "romaji": "bijutsukan",
+        "meaning": "Museum seni"
+      },
+      {
+        "kanji": "疲れる",
+        "kana": "つかれる",
+        "romaji": "tsukareru",
+        "meaning": "Merasa lelah"
+      },
+      {
+        "kanji": "たまたま",
+        "kana": "たまたま",
+        "romaji": "tamatama",
+        "meaning": "Kebetulan"
+      },
+      {
+        "kanji": "せっかく",
+        "kana": "せっかく",
+        "romaji": "sekkaku",
+        "meaning": "Sudah bersusah payah; mumpung ada kesempatan"
+      }
+    ]
   }
 ]
