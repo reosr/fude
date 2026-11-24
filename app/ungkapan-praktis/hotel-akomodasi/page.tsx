@@ -83,10 +83,10 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "A. Reservasi dan check-in",
     description: "Ungkapan untuk menyampaikan reservasi, menyebutkan nama, dan menanyakan waktu layanan hotel.",
     items: [
-      { jp: "チェックインをお願いします。", romaji: "Chekkuin o onegaishimasu.", id: "Saya ingin check-in.", tone: "Tamu · check-in" },
+      { jp: "チェックインをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Chekkuin o onegaishimasu.", id: "Saya ingin check-in.", tone: "Tamu · check-in" },
       { jp: "<ruby>予約<rt>よやく</rt></ruby>しています。", romaji: "Yoyaku shite imasu.", id: "Saya sudah membuat reservasi.", tone: "Tamu · dengan reservasi" },
       { jp: "<ruby>予約<rt>よやく</rt></ruby>していません。", romaji: "Yoyaku shite imasen.", id: "Saya tidak membuat reservasi.", tone: "Tamu · tanpa reservasi" },
-      { jp: "ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお願いします。", romaji: "Go-yoyaku no onamae o onegaishimasu.", id: "Boleh tahu nama yang digunakan untuk reservasi?", tone: "Petugas · memastikan nama" },
+      { jp: "ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Goyoyaku no onamae o onegaishimasu.", id: "Boleh tahu nama yang digunakan untuk reservasi?", tone: "Petugas · memastikan nama" },
       { jp: "<ruby>朝食<rt>ちょうしょく</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか。", romaji: "Choushoku wa nanji kara desu ka.", id: "Sarapan mulai pukul berapa?", tone: "Menanyakan fasilitas makan" },
       { jp: "チェックアウトは<ruby>何時<rt>なんじ</rt></ruby>ですか。", romaji: "Chekkuauto wa nanji desu ka.", id: "Check-out pukul berapa?", tone: "Menanyakan waktu check-out" },
     ],
@@ -118,7 +118,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "D. Check-out dan mengurus bagasi",
     description: "Ungkapan untuk menyelesaikan pembayaran, meminta bukti pembayaran, dan mengatur perjalanan setelah menginap.",
     items: [
-      { jp: "チェックアウトをお願いします。", romaji: "Chekkuauto o onegaishimasu.", id: "Saya ingin check-out.", tone: "Menyelesaikan masa menginap" },
+      { jp: "チェックアウトをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Chekkuauto o onegaishimasu.", id: "Saya ingin check-out.", tone: "Menyelesaikan masa menginap" },
       { jp: "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>をいただけますか。", romaji: "Ryoushuusho o itadakemasu ka.", id: "Bolehkah saya meminta kuitansi?", tone: "Meminta bukti pembayaran" },
       { jp: "<ruby>別々<rt>べつべつ</rt></ruby>に<ruby>払<rt>はら</rt></ruby>えますか。", romaji: "Betsubetsu ni haraemasu ka.", id: "Bisakah kami membayar secara terpisah?", tone: "Pembayaran terpisah" },
       { jp: "タクシーを<ruby>呼<rt>よ</rt></ruby>んでいただけますか。", romaji: "Takushii o yonde itadakemasu ka.", id: "Bisakah Anda memanggilkan taksi?", tone: "Meminta bantuan transportasi" },
@@ -132,11 +132,11 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Check-in dengan reservasi",
     context: "Kamu tiba di hotel dan ingin melakukan check-in menggunakan nama reservasi.",
     lines: [
-      { speaker: "フロント", jp: "いらっしゃいませ。ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお願いします。", romaji: "Irasshaimase. Go-yoyaku no onamae o onegaishimasu.", id: "Selamat datang. Boleh tahu nama yang digunakan untuk reservasi?" },
+      { speaker: "フロント", jp: "いらっしゃいませ。ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Irasshaimase. Goyoyaku no onamae o onegaishimasu.", id: "Selamat datang. Boleh tahu nama yang digunakan untuk reservasi?" },
       { speaker: "お客様", jp: "<ruby>田中<rt>たなか</rt></ruby>です。<ruby>予約<rt>よやく</rt></ruby>しています。", romaji: "Tanaka desu. Yoyaku shite imasu.", id: "Atas nama Tanaka. Saya sudah membuat reservasi." },
       { speaker: "フロント", jp: "ありがとうございます。こちらが<ruby>部屋<rt>へや</rt></ruby>のカードキーです。", romaji: "Arigatou gozaimasu. Kochira ga heya no kaado kii desu.", id: "Terima kasih. Ini kartu kunci kamar Anda." },
       { speaker: "お客様", jp: "<ruby>朝食<rt>ちょうしょく</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか。", romaji: "Choushoku wa nanji kara desu ka.", id: "Sarapan mulai pukul berapa?" },
-      { speaker: "フロント", jp: "<ruby>朝<rt>あさ</rt></ruby>七時からです。", romaji: "Asa shichi-ji kara desu.", id: "Mulai pukul tujuh pagi." },
+      { speaker: "フロント", jp: "<ruby>朝<rt>あさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>からです。", romaji: "Asa shichi-ji kara desu.", id: "Mulai pukul tujuh pagi." },
       { speaker: "お客様", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
@@ -145,7 +145,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     context: "Setelah masuk kamar, kamu mendapati AC tidak berfungsi dan menghubungi petugas hotel.",
     lines: [
       { speaker: "お客様", jp: "すみません。エアコンが<ruby>動<rt>うご</rt></ruby>きません。", romaji: "Sumimasen. Eakon ga ugokimasen.", id: "Permisi. AC-nya tidak berfungsi." },
-      { speaker: "フロント", jp: "ご<ruby>不便<rt>ふべん</rt></ruby>をおかけして<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません。すぐに<ruby>確認<rt>かくにん</rt></ruby>いたします。", romaji: "Go-fuben o okake shite moushiwake gozaimasen. Sugu ni kakunin itashimasu.", id: "Mohon maaf atas ketidaknyamanannya. Kami akan segera memeriksanya." },
+      { speaker: "フロント", jp: "ご<ruby>不便<rt>ふべん</rt></ruby>をおかけして<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ございません。すぐに<ruby>確認<rt>かくにん</rt></ruby>いたします。", romaji: "Gofuben o okake shite moushiwake gozaimasen. Sugu ni kakunin itashimasu.", id: "Mohon maaf atas ketidaknyamanannya. Kami akan segera memeriksanya." },
       { speaker: "お客様", jp: "もし<ruby>直<rt>なお</rt></ruby>らない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>部屋<rt>へや</rt></ruby>を<ruby>変<rt>か</rt></ruby>えていただけますか。", romaji: "Moshi naoranai baai, heya o kaete itadakemasu ka.", id: "Jika tidak bisa diperbaiki, bisakah saya pindah kamar?" },
       { speaker: "フロント", jp: "はい。<ruby>別<rt>べつ</rt></ruby>のお<ruby>部屋<rt>へや</rt></ruby>をご<ruby>用意<rt>ようい</rt></ruby>いたします。", romaji: "Hai. Betsu no oheya o go-youi itashimasu.", id: "Baik. Kami akan menyiapkan kamar lain." },
       { speaker: "お客様", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
@@ -155,9 +155,9 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 3 · Check-out dan meminta kuitansi",
     context: "Kamu sudah selesai menginap dan ingin menyelesaikan pembayaran sebelum pergi.",
     lines: [
-      { speaker: "お客様", jp: "チェックアウトをお願いします。", romaji: "Chekkuauto o onegaishimasu.", id: "Saya ingin check-out." },
+      { speaker: "お客様", jp: "チェックアウトをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Chekkuauto o onegaishimasu.", id: "Saya ingin check-out." },
       { speaker: "フロント", jp: "かしこまりました。お<ruby>支払<rt>しはら</rt></ruby>いはカードですか、<ruby>現金<rt>げんきん</rt></ruby>ですか。", romaji: "Kashikomarimashita. Oshiharai wa kaado desu ka, genkin desu ka.", id: "Baik. Pembayarannya dengan kartu atau uang tunai?" },
-      { speaker: "お客様", jp: "カードでお願いします。<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>もいただけますか。", romaji: "Kaado de onegaishimasu. Ryoushuusho mo itadakemasu ka.", id: "Dengan kartu, ya. Bolehkah saya meminta kuitansinya juga?" },
+      { speaker: "お客様", jp: "カードでお<ruby>願<rt>ねが</rt></ruby>いします。<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>もいただけますか。", romaji: "Kaado de onegaishimasu. Ryoushuusho mo itadakemasu ka.", id: "Dengan kartu, ya. Bolehkah saya meminta kuitansinya juga?" },
       { speaker: "フロント", jp: "もちろんです。こちらが<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>です。", romaji: "Mochiron desu. Kochira ga ryoushuusho desu.", id: "Tentu. Ini kuitansinya." },
       { speaker: "お客様", jp: "お<ruby>世話<rt>せわ</rt></ruby>になりました。", romaji: "Osewa ni narimashita.", id: "Terima kasih atas pelayanan dan bantuannya selama saya menginap." },
     ],
@@ -189,7 +189,7 @@ const quiz = [
     options: [
       { label: "<ruby>朝食<rt>ちょうしょく</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>からですか。", correct: false, feedback: "Kalimat ini menanyakan waktu mulai sarapan." },
       { label: "エアコンが<ruby>動<rt>うご</rt></ruby>きません。", correct: true, feedback: "Tepat. Kalimat ini menyampaikan bahwa AC tidak berfungsi." },
-      { label: "チェックアウトをお願いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta check-out." },
+      { label: "チェックアウトをお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta check-out." },
     ],
   },
   {
@@ -205,8 +205,8 @@ const quiz = [
 const simulation = [
   {
     prompt: "Kamu baru tiba di hotel. Petugas menyambutmu dan bertanya:",
-    japanese: "ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお願いします。",
-    romaji: "Go-yoyaku no onamae o onegaishimasu.",
+    japanese: "ご<ruby>予約<rt>よやく</rt></ruby>のお<ruby>名前<rt>なまえ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。",
+    romaji: "Goyoyaku no onamae o onegaishimasu.",
     translation: "Boleh tahu nama yang digunakan untuk reservasi?",
     task: "Jawab bahwa namamu Tanaka dan kamu sudah membuat reservasi.",
     options: [
