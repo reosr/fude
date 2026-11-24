@@ -13768,5 +13768,284 @@
         "meaning": "Mengingat; masih ingat"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-14",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 14,
+    "lessonTitle": "Saya sedang menghadapi masalah dengan teman.",
+    "vocab": [
+      {
+        "kanji": "悩む",
+        "kana": "なやむ",
+        "romaji": "nayamu",
+        "meaning": "Merasa punya masalah; sedang memikirkan sesuatu"
+      },
+      {
+        "kanji": "悩み",
+        "kana": "なやみ",
+        "romaji": "nayami",
+        "meaning": "Masalah; kekhawatiran"
+      },
+      {
+        "kanji": "困る",
+        "kana": "こまる",
+        "romaji": "komaru",
+        "meaning": "Mengalami kesulitan"
+      },
+      {
+        "kanji": "困り事",
+        "kana": "こまりごと",
+        "romaji": "komarigoto",
+        "meaning": "Hal yang menjadi masalah"
+      },
+      {
+        "kanji": "相談する",
+        "kana": "そうだんする",
+        "romaji": "soudan suru",
+        "meaning": "Berkonsultasi"
+      },
+      {
+        "kanji": "相談相手",
+        "kana": "そうだんあいて",
+        "romaji": "soudan aite",
+        "meaning": "Orang tempat berkonsultasi"
+      },
+      {
+        "kanji": "愚痴",
+        "kana": "ぐち",
+        "romaji": "guchi",
+        "meaning": "Keluhan; curhat"
+      },
+      {
+        "kanji": "不満",
+        "kana": "ふまん",
+        "romaji": "fuman",
+        "meaning": "Ketidakpuasan"
+      },
+      {
+        "kanji": "仲良し",
+        "kana": "なかよし",
+        "romaji": "nakayoshi",
+        "meaning": "Akrab; teman dekat"
+      },
+      {
+        "kanji": "親友",
+        "kana": "しんゆう",
+        "romaji": "shinyuu",
+        "meaning": "Sahabat dekat"
+      },
+      {
+        "kanji": "友人",
+        "kana": "ゆうじん",
+        "romaji": "yuujin",
+        "meaning": "Teman; kawan"
+      },
+      {
+        "kanji": "知り合う",
+        "kana": "しりあう",
+        "romaji": "shiria(u)",
+        "meaning": "Berkenalan"
+      },
+      {
+        "kanji": "気が合う",
+        "kana": "きがあう",
+        "romaji": "ki ga au",
+        "meaning": "Cocok; nyambung"
+      },
+      {
+        "kanji": "信頼する",
+        "kana": "しんらいする",
+        "romaji": "shinrai suru",
+        "meaning": "Memercayai"
+      },
+      {
+        "kanji": "性格",
+        "kana": "せいかく",
+        "romaji": "seikaku",
+        "meaning": "Kepribadian; sifat"
+      },
+      {
+        "kanji": "人柄",
+        "kana": "ひとがら",
+        "romaji": "hitogara",
+        "meaning": "Karakter seseorang"
+      },
+      {
+        "kanji": "社交的",
+        "kana": "しゃこうてき",
+        "romaji": "shakouteki",
+        "meaning": "Mudah bergaul"
+      },
+      {
+        "kanji": "親切",
+        "kana": "しんせつ",
+        "romaji": "shinsetsu",
+        "meaning": "Baik hati; suka menolong"
+      },
+      {
+        "kanji": "真面目",
+        "kana": "まじめ",
+        "romaji": "majime",
+        "meaning": "Serius; tekun"
+      },
+      {
+        "kanji": "几帳面",
+        "kana": "きちょうめん",
+        "romaji": "kichoumen",
+        "meaning": "Teliti; rapi"
+      },
+      {
+        "kanji": "好奇心",
+        "kana": "こうきしん",
+        "romaji": "koukishin",
+        "meaning": "Rasa ingin tahu"
+      },
+      {
+        "kanji": "積極的",
+        "kana": "せっきょくてき",
+        "romaji": "sekkyokuteki",
+        "meaning": "Aktif; proaktif"
+      },
+      {
+        "kanji": "頑固",
+        "kana": "がんこ",
+        "romaji": "ganko",
+        "meaning": "Keras kepala"
+      },
+      {
+        "kanji": "飽きっぽい",
+        "kana": "あきっぽい",
+        "romaji": "akippoi",
+        "meaning": "Mudah bosan"
+      },
+      {
+        "kanji": "自分勝手",
+        "kana": "じぶんかって",
+        "romaji": "jibunkatte",
+        "meaning": "Egois; hanya memikirkan diri sendiri"
+      },
+      {
+        "kanji": "優柔不断",
+        "kana": "ゆうじゅうふだん",
+        "romaji": "yuujufudan",
+        "meaning": "Ragu-ragu; sulit mengambil keputusan"
+      },
+      {
+        "kanji": "せっかち",
+        "kana": "せっかち",
+        "romaji": "sekkachi",
+        "meaning": "Tidak sabaran; terburu-buru"
+      },
+      {
+        "kanji": "人見知り",
+        "kana": "ひとみしり",
+        "romaji": "hitomishiri",
+        "meaning": "Canggung dengan orang yang baru dikenal"
+      },
+      {
+        "kanji": "頼りになる",
+        "kana": "たよりになる",
+        "romaji": "tayori ni naru",
+        "meaning": "Bisa diandalkan"
+      },
+      {
+        "kanji": "放っておく",
+        "kana": "ほうっておく",
+        "romaji": "houtte oku",
+        "meaning": "Membiarkan; tidak ikut campur"
+      },
+      {
+        "kanji": "口出しする",
+        "kana": "くちだしする",
+        "romaji": "kuchidashi suru",
+        "meaning": "Ikut campur"
+      },
+      {
+        "kanji": "我慢する",
+        "kana": "がまんする",
+        "romaji": "gaman suru",
+        "meaning": "Bersabar; menahan diri"
+      },
+      {
+        "kanji": "はっきり",
+        "kana": "はっきり",
+        "romaji": "hakkiri",
+        "meaning": "Dengan jelas; terus terang"
+      },
+      {
+        "kanji": "金銭感覚",
+        "kana": "きんせんかんかく",
+        "romaji": "kinsenkankaku",
+        "meaning": "Cara memandang dan mengatur uang"
+      },
+      {
+        "kanji": "割り勘",
+        "kana": "わりかん",
+        "romaji": "warikan",
+        "meaning": "Patungan; bayar masing-masing"
+      },
+      {
+        "kanji": "共有スペース",
+        "kana": "きょうゆうスペース",
+        "romaji": "kyouyuu supeesu",
+        "meaning": "Area bersama"
+      },
+      {
+        "kanji": "ルームシェア",
+        "kana": "ルームシェア",
+        "romaji": "ruumu shea",
+        "meaning": "Berbagi tempat tinggal"
+      },
+      {
+        "kanji": "生活習慣",
+        "kana": "せいかつしゅうかん",
+        "romaji": "seikatsu shuukan",
+        "meaning": "Kebiasaan hidup sehari-hari"
+      },
+      {
+        "kanji": "家事",
+        "kana": "かじ",
+        "romaji": "kaji",
+        "meaning": "Pekerjaan rumah"
+      },
+      {
+        "kanji": "分担する",
+        "kana": "ぶんたんする",
+        "romaji": "buntan suru",
+        "meaning": "Membagi tugas atau tanggung jawab"
+      },
+      {
+        "kanji": "担当",
+        "kana": "たんとう",
+        "romaji": "tantou",
+        "meaning": "Penanggung jawab"
+      },
+      {
+        "kanji": "掲示板",
+        "kana": "けいじばん",
+        "romaji": "keijiban",
+        "meaning": "Papan diskusi; forum"
+      },
+      {
+        "kanji": "投稿する",
+        "kana": "とうこうする",
+        "romaji": "toukou suru",
+        "meaning": "Mengirim tulisan; mengunggah"
+      },
+      {
+        "kanji": "回答",
+        "kana": "かいとう",
+        "romaji": "kaitou",
+        "meaning": "Jawaban; tanggapan"
+      },
+      {
+        "kanji": "具体的",
+        "kana": "ぐたいてき",
+        "romaji": "gutaiteki",
+        "meaning": "Konkret; spesifik"
+      }
+    ]
   }
 ]
