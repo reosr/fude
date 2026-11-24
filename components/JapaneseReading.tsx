@@ -57,7 +57,16 @@ function containsIndonesianProse(source: string): boolean {
   // Teks penjelasan berbahasa Indonesia dapat menyisipkan contoh Jepang.
   // Jangan mengubah seluruh paragraf tersebut menjadi kana/romaji; furigana
   // pada bagian Jepang tetap ditangani oleh indeks bacaan.
-  return latinLetters >= 20 && latinLetters > japaneseCharacters * 1.1;
+  const isLongIndonesianExplanation =
+    latinLetters >= 20 && latinLetters > japaneseCharacters * 1.1;
+  const isShortMixedNotation =
+    latinLetters >= 5 &&
+    japaneseCharacters > 0 &&
+    latinLetters / (latinLetters + japaneseCharacters) >= 0.35;
+
+  // Notasi pendek seperti "V-ます → buang ます + たいです" juga merupakan
+  // teks campuran. Baris kana/romaji untuk teks semacam ini akan menyesatkan.
+  return isLongIndonesianExplanation || isShortMixedNotation;
 }
 
 function renderJapaneseNodeWithRuby(node: ReactNode, keyPrefix = "reading"): ReactNode {
