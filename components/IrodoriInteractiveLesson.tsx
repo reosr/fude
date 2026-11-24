@@ -50,6 +50,7 @@ export type IrodoriLessonContent = {
   tags: string[];
   canDos: { id: string; source: string; text: string }[];
   conversations: { title: string; speakers: IrodoriSpeaker[]; utterances: IrodoriUtterance[] }[];
+  readingArticle?: { title: string; lead: string; paragraphs: { japanese: ReactNode; translation: string }[] };
   vocabRows: [string, string, string][];
   kanjiWords: [string, string, string][];
   grammarNotes: { title: string; pattern: string; example: ReactNode; note: string }[];
@@ -133,6 +134,15 @@ export default function IrodoriInteractiveLesson({ content }: { content: Irodori
           {content.conversations.map((conversation) => <IrodoriConversation key={conversation.title} title={conversation.title} speakers={conversation.speakers} utterances={conversation.utterances} />)}
         </div>
       </section>
+
+      {content.readingArticle && (
+        <section className="space-y-4 rounded-2xl border border-[#80619B]/25 bg-[#2A2333]/60 p-4 md:p-5">
+          <div><p className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">LATIHAN MEMBACA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">{content.readingArticle.title}</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">{content.readingArticle.lead}</p></div>
+          <article className="space-y-4 rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
+            {content.readingArticle.paragraphs.map((paragraph, index) => <div key={index} className="border-b border-white/[0.06] pb-4 last:border-0 last:pb-0"><JapaneseReading allowIndexFallback translation={paragraph.translation} contentClassName="font-mincho text-base leading-8 text-[#F1EBDD]" kanaClassName="mt-2 font-mincho text-sm leading-relaxed text-[#C8A9EA]" romajiClassName="mt-1 text-xs italic text-[#A9A398]" translationClassName="mt-2 text-xs leading-6 text-[#A9A398]">{paragraph.japanese}</JapaneseReading></div>)}
+          </article>
+        </section>
+      )}
 
       <section className="space-y-4">
         <div><p className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">KOSAKATA</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">{content.vocabRows.length} kosakata pilihan</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Pelajari arti dan cara baca setiap kata. Istilah yang lazim dipakai dalam bahasa Indonesia tetap dipertahankan agar terjemahannya terasa alami.</p></div>
