@@ -379,6 +379,17 @@ function appendRomajiReactNode(
   );
 }
 
+interface JapaneseIntlSegmenter {
+  segment(input: string): Iterable<{ segment: string; index: number }>;
+}
+
+interface JapaneseIntlWithSegmenter {
+  Segmenter: new (
+    locale: string,
+    options: { granularity: "word" }
+  ) => JapaneseIntlSegmenter;
+}
+
 interface RomajiToken {
   surface: string;
   kana: string;
@@ -442,7 +453,8 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
   if (!source.surface.trim()) return "";
   if (typeof Intl === "undefined" || !("Segmenter" in Intl)) return null;
 
-  const segmenter = new (Intl as any).Segmenter("ja", { granularity: "word" });
+  const Segmenter = (Intl as unknown as JapaneseIntlWithSegmenter).Segmenter;
+  const segmenter = new Segmenter("ja", { granularity: "word" });
   const rawSegments = Array.from(segmenter.segment(source.surface));
   const tokens: RomajiToken[] = [];
 
