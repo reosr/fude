@@ -37,6 +37,29 @@ function escapeHtmlText(value: string): string {
   return value.replace(/[&<>"']/g, (char) => entities[char] ?? char);
 }
 
+function getNodeText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(getNodeText).join(" ");
+  if (!isValidElement(node)) return "";
+
+  const element = node as ReactElement<{ children?: ReactNode }>;
+  return getNodeText(element.props.children);
+}
+
+function containsIndonesianProse(source: string): boolean {
+  const plainText = source
+    .replace(/<rt\\b[^>]*>[\\s\\S]*?<\\/rt>/gi, "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&(?:nbsp|amp|lt|gt|quot|#39);/g, " ");
+  const latinLetters = (plainText.match(/[A-Za-z]/g) ?? []).length;
+  const japaneseCharacters = (plainText.match(/[\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff々〆ヵヶ]/g) ?? []).length;
+
+  // Teks penjelasan berbahasa Indonesia dapat menyisipkan contoh Jepang.
+  // Jangan mengubah seluruh paragraf tersebut menjadi kana/romaji; furigana
+  // pada bagian Jepang tetap ditangani oleh indeks bacaan.
+  return latinLetters >= 20 && latinLetters > japaneseCharacters * 1.1;
+}
+
 function renderJapaneseNodeWithRuby(node: ReactNode, keyPrefix = "reading"): ReactNode {
   if (typeof node === "string") {
     const segments = segmentTextByReadingIndex(node);
@@ -125,6 +148,12 @@ export default function JapaneseReading({
     ? extractKanaFromRubyHtml(displayHtml, allowIndexFallback)
     : extractKanaFromReactNode(children, allowIndexFallback);
 
+  const sourceTextForReadingCheck =
+    html !== undefined
+      ? html
+      : getNodeText(children);
+  const hasMixedLanguageProse = containsIndonesianProse(sourceTextForReadingCheck);
+
   const rawKana = explicitKana?.trim() || extractedReading?.kana || "";
   const normalizedKana = rawKana ? toHiragana(rawKana) : "";
 
@@ -163,6 +192,7 @@ export default function JapaneseReading({
     explicitRomaji?.trim() || (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
   const showKanaLine = Boolean(
     showKana &&
+    !hasMixedLanguageProse &&
     normalizedKana &&
     (explicitKana?.trim() || extractedReading?.hasKanji || showKanaForKanaOnly)
   );
@@ -185,7 +215,7 @@ export default function JapaneseReading({
       {showKanaLine && (
         <span className={kanaClassName + " block"}>（{normalizedKana}）</span>
       )}
-      {showRomaji && romanization && (
+      {showRomaji && !hasMixedLanguageProse && romanization && (
         <span className={romajiClassName + " block"}>{romanization}</span>
       )}
       {showTranslation && hasTranslation && (
