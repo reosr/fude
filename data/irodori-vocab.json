@@ -14047,5 +14047,284 @@
         "meaning": "Konkret; spesifik"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-15",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 15,
+    "lessonTitle": "Saya ingin melihat Sakurajima.",
+    "vocab": [
+      {
+        "kanji": "旅行先",
+        "kana": "りょこうさき",
+        "romaji": "ryokousaki",
+        "meaning": "Tujuan perjalanan"
+      },
+      {
+        "kanji": "観光地",
+        "kana": "かんこうち",
+        "romaji": "kankouchi",
+        "meaning": "Tempat wisata"
+      },
+      {
+        "kanji": "名所",
+        "kana": "めいしょ",
+        "romaji": "meisho",
+        "meaning": "Tempat terkenal; objek wisata"
+      },
+      {
+        "kanji": "名物",
+        "kana": "めいぶつ",
+        "romaji": "meibutsu",
+        "meaning": "Makanan atau produk khas suatu daerah"
+      },
+      {
+        "kanji": "旅",
+        "kana": "たび",
+        "romaji": "tabi",
+        "meaning": "Perjalanan"
+      },
+      {
+        "kanji": "目的地",
+        "kana": "もくてきち",
+        "romaji": "mokutekichi",
+        "meaning": "Tempat tujuan"
+      },
+      {
+        "kanji": "アクセス",
+        "kana": "アクセス",
+        "romaji": "akusesu",
+        "meaning": "Akses; cara menuju tempat"
+      },
+      {
+        "kanji": "見どころ",
+        "kana": "みどころ",
+        "romaji": "midokoro",
+        "meaning": "Hal menarik yang patut dilihat"
+      },
+      {
+        "kanji": "現地",
+        "kana": "げんち",
+        "romaji": "genchi",
+        "meaning": "Tempat setempat; lokasi tujuan"
+      },
+      {
+        "kanji": "観光客",
+        "kana": "かんこうきゃく",
+        "romaji": "kankoukyaku",
+        "meaning": "Wisatawan"
+      },
+      {
+        "kanji": "火山",
+        "kana": "かざん",
+        "romaji": "kazan",
+        "meaning": "Gunung berapi"
+      },
+      {
+        "kanji": "噴煙",
+        "kana": "ふんえん",
+        "romaji": "fun'en",
+        "meaning": "Asap atau kepulan dari gunung berapi"
+      },
+      {
+        "kanji": "桜島",
+        "kana": "さくらじま",
+        "romaji": "Sakurajima",
+        "meaning": "Sakurajima"
+      },
+      {
+        "kanji": "湾",
+        "kana": "わん",
+        "romaji": "wan",
+        "meaning": "Teluk"
+      },
+      {
+        "kanji": "港",
+        "kana": "みなと",
+        "romaji": "minato",
+        "meaning": "Pelabuhan"
+      },
+      {
+        "kanji": "フェリー",
+        "kana": "フェリー",
+        "romaji": "ferii",
+        "meaning": "Feri"
+      },
+      {
+        "kanji": "展望台",
+        "kana": "てんぼうだい",
+        "romaji": "tenboudai",
+        "meaning": "Dek observasi; gardu pandang"
+      },
+      {
+        "kanji": "絶景",
+        "kana": "ぜっけい",
+        "romaji": "zekkei",
+        "meaning": "Pemandangan yang sangat indah"
+      },
+      {
+        "kanji": "風景",
+        "kana": "ふうけい",
+        "romaji": "fuukei",
+        "meaning": "Pemandangan; lanskap"
+      },
+      {
+        "kanji": "眺める",
+        "kana": "ながめる",
+        "romaji": "nagameru",
+        "meaning": "Memandang; menikmati pemandangan"
+      },
+      {
+        "kanji": "訪れる",
+        "kana": "おとずれる",
+        "romaji": "otozureru",
+        "meaning": "Mengunjungi"
+      },
+      {
+        "kanji": "各地",
+        "kana": "かくち",
+        "romaji": "kakuchi",
+        "meaning": "Berbagai daerah"
+      },
+      {
+        "kanji": "緑",
+        "kana": "みどり",
+        "romaji": "midori",
+        "meaning": "Warna hijau"
+      },
+      {
+        "kanji": "黄色",
+        "kana": "きいろ",
+        "romaji": "kiiro",
+        "meaning": "Warna kuning"
+      },
+      {
+        "kanji": "湖",
+        "kana": "みずうみ",
+        "romaji": "mizuumi",
+        "meaning": "Danau"
+      },
+      {
+        "kanji": "雲",
+        "kana": "くも",
+        "romaji": "kumo",
+        "meaning": "Awan"
+      },
+      {
+        "kanji": "空港",
+        "kana": "くうこう",
+        "romaji": "kuukou",
+        "meaning": "Bandara"
+      },
+      {
+        "kanji": "昔",
+        "kana": "むかし",
+        "romaji": "mukashi",
+        "meaning": "Dahulu; zaman dulu"
+      },
+      {
+        "kanji": "石炭",
+        "kana": "せきたん",
+        "romaji": "sekitan",
+        "meaning": "Batu bara"
+      },
+      {
+        "kanji": "暖かい",
+        "kana": "あたたかい",
+        "romaji": "atatakai",
+        "meaning": "Hangat"
+      },
+      {
+        "kanji": "かき氷",
+        "kana": "かきごおり",
+        "romaji": "kakigoori",
+        "meaning": "Es serut"
+      },
+      {
+        "kanji": "しろくま",
+        "kana": "しろくま",
+        "romaji": "shirokuma",
+        "meaning": "Es serut khas Kagoshima dengan susu dan buah"
+      },
+      {
+        "kanji": "砂風呂",
+        "kana": "すなぶろ",
+        "romaji": "sunaburo",
+        "meaning": "Pemandian pasir hangat"
+      },
+      {
+        "kanji": "体験する",
+        "kana": "たいけんする",
+        "romaji": "taiken suru",
+        "meaning": "Mencoba; mengalami secara langsung"
+      },
+      {
+        "kanji": "挑戦する",
+        "kana": "ちょうせんする",
+        "romaji": "chousen suru",
+        "meaning": "Mencoba tantangan"
+      },
+      {
+        "kanji": "興味",
+        "kana": "きょうみ",
+        "romaji": "kyoumi",
+        "meaning": "Minat; ketertarikan"
+      },
+      {
+        "kanji": "日帰り",
+        "kana": "ひがえり",
+        "romaji": "higaeri",
+        "meaning": "Pergi dan pulang pada hari yang sama"
+      },
+      {
+        "kanji": "上旬",
+        "kana": "じょうじゅん",
+        "romaji": "joujun",
+        "meaning": "Awal bulan"
+      },
+      {
+        "kanji": "下旬",
+        "kana": "げじゅん",
+        "romaji": "gejun",
+        "meaning": "Akhir bulan"
+      },
+      {
+        "kanji": "見ごろ",
+        "kana": "みごろ",
+        "romaji": "migoro",
+        "meaning": "Waktu terbaik untuk melihat sesuatu"
+      },
+      {
+        "kanji": "季節",
+        "kana": "きせつ",
+        "romaji": "kisetsu",
+        "meaning": "Musim"
+      },
+      {
+        "kanji": "写真映え",
+        "kana": "しゃしんばえ",
+        "romaji": "shashinbae",
+        "meaning": "Bagus untuk difoto; fotogenik"
+      },
+      {
+        "kanji": "移動する",
+        "kana": "いどうする",
+        "romaji": "idou suru",
+        "meaning": "Berpindah; melakukan perjalanan"
+      },
+      {
+        "kanji": "予約する",
+        "kana": "よやくする",
+        "romaji": "yoyaku suru",
+        "meaning": "Memesan; melakukan reservasi"
+      },
+      {
+        "kanji": "開花",
+        "kana": "かいか",
+        "romaji": "kaika",
+        "meaning": "Mekarnya bunga"
+      }
+    ]
   }
 ]
