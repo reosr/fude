@@ -613,7 +613,7 @@ setSelectedStory(story);
           
           <button 
             type="button"
-            onClick={() => { stopAudio(); setSelectedStory(null); window.scrollTo(0, 0); }}
+            onClick={() => { stopAudio(); setSelectedStory(null); window.history.replaceState(null, "", "/baca"); window.scrollTo(0, 0); }}
             className="group inline-flex min-h-11 items-center gap-2.5 rounded-xl px-1.5 py-1 text-left text-sm font-semibold text-[#EAE6DD] transition-all duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C93438] focus-visible:ring-offset-2 focus-visible:ring-offset-[#121110] active:scale-[0.98] pointer-events-auto"
           >
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#C93438]/40 bg-[#C93438]/15 text-[#F06A6E] transition-all duration-200 group-hover:border-[#E05256]/80 group-hover:bg-[#C93438] group-hover:text-white group-hover:shadow-[0_0_22px_rgba(201,52,56,0.28)]">
