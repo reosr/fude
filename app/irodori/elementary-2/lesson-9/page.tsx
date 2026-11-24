@@ -113,7 +113,7 @@ const introduceHomeCountryEventConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>どんなことをするんですか。</>,
-    romaji: "Donna koto o surun desu ka?",
+    romaji: "Donna koto o suru n desu ka?",
     translation: "Kegiatan apa saja yang diadakan?",
     audioFileName: "irodori-elementary2-09-a03-l03.mp3",
   },
