@@ -141,7 +141,7 @@ const activityConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>ユイさん、<ruby>日本<rt>にほん</rt></ruby>では<ruby>何<rt>なに</rt></ruby>をしていますか？</>,
-    romaji: "Yui-san, Nihon dewa nani o shite imasu ka?",
+    romaji: "Yui-san, Nihon de wa nani o shite imasu ka?",
     translation: "Yui, sekarang kamu sedang melakukan apa di Jepang?",
     audioFileName: "irodori-elementary1-01-a05-l01.mp3",
   },
