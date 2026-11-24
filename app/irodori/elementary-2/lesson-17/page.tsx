@@ -304,7 +304,7 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
         <div className="grid gap-3">
           {progressExamples.map((item) => (
             <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-              <p className="text-[9px] font-black tracking-[0.15em] text-[#E5A9C4]">{item.title}</p>
+              <p className="text-sm font-bold tracking-[0.02em] text-[#E5A9C4]">{item.title}</p>
               <p className="mt-2 font-mincho text-sm leading-7 text-[#B6B0A5]">{item.before}</p>
               <p className="mt-1 font-mincho text-sm leading-7 text-[#F1EBDD]">{item.after}</p>
               <p className="mt-2 text-[10px] leading-5 text-[#A9A398]">{item.meaning}</p>
@@ -351,9 +351,9 @@ export default function IrodoriElementaryTwoLessonSeventeenPage() {
         </div>
         {grammarNotes.map((item) => (
           <article key={item.title} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
-            <p className="text-[9px] font-black tracking-[0.15em] text-[#E5A9C4]">{item.title}</p>
+            <p className="text-sm font-bold tracking-[0.02em] text-[#E5A9C4]">{item.title}</p>
             <p className="mt-2 whitespace-pre-line font-mincho text-sm leading-7 text-[#F1EBDD]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.pattern)}</JapaneseReading></p>
-            <p className="mt-2 font-mincho text-base leading-8 text-[#E5A9C4]"><JapaneseReading allowIndexFallback>{item.example}</JapaneseReading></p>
+            <p className="mt-2 font-mincho text-base leading-8 text-[#E5A9C4]"><JapaneseReading allowIndexFallback romajiClassName="mt-1 text-sm italic text-[#D9B66D]">{item.example}</JapaneseReading></p>
             <p className="mt-2 text-xs leading-6 text-[#A9A398]"><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{formatGrammarNotation(item.note)}</JapaneseReading></p>
           </article>
         ))}
