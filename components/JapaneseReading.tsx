@@ -487,6 +487,38 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       const tokenStart = start + part.index;
       const tokenEnd = tokenStart + surface.length;
 
+      // Ungkapan sopan ini merupakan dua kata, meskipun Segmenter
+      // kadang mengembalikannya sebagai satu rangkaian.
+      if (surface === "おやすみなさい") {
+        pushToken("おやすみ", tokenStart, tokenStart + 4);
+        pushToken("なさい", tokenStart + 4, tokenEnd);
+        continue;
+      }
+
+      // ご + ざ + い + ます adalah satu kata bantu: gozaimasu.
+      if (
+        surface === "ご" &&
+        raw[index + 1]?.segment === "ざ" &&
+        raw[index + 2]?.segment === "い" &&
+        raw[index + 3]?.segment === "ます"
+      ) {
+        const last = raw[index + 3];
+        const gozaimasuEnd = start + last.index + last.segment.length;
+        pushToken("ございます", tokenStart, gozaimasuEnd);
+        index += 3;
+        continue;
+      }
+
+      // Segmenter memisahkan でした menjadi で + した dalam ungkapan
+      // seperti お疲れさまでした／ごちそうさまでした.
+      if (surface === "で" && raw[index + 1]?.segment === "した") {
+        const next = raw[index + 1];
+        const deshitaEnd = start + next.index + next.segment.length;
+        pushToken("でした", tokenStart, deshitaEnd);
+        index += 1;
+        continue;
+      }
+
       // Segmenter dapat menyatukan "で／に／と + は".
       // Pecah kembali agar partikel は dibaca "wa" dan memiliki jarak sendiri.
       const compoundParticle = /^(から|まで|より|で|に|と)は$/u.exec(surface);
@@ -634,6 +666,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       currentIsKana &&
       !ROMAJI_PARTICLES.has(token.surface) &&
       !ROMAJI_HONORIFICS.has(token.surface) &&
+      !(token.surface === "なさい" && /(?:おやすみ|お休み)$/u.test(previous.surface)) &&
       token.surface !== "し" &&
       !["です", "でした", "ます", "ました", "ません", "ましょう", "でしょう", "ください"].includes(token.surface)
     ) {
