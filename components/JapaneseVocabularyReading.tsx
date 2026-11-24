@@ -39,10 +39,10 @@ export default function JapaneseVocabularyReading({
     ? /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ0-9０-９]/.test(children)
     : Boolean(children);
 
-  const consistentRomajiClassName = romajiClassName.replace(
-    /text-\[(?:#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\))\]/g,
-    "text-[#D9B66D]"
-  );
+  const consistentRomajiClassName = [
+    ...romajiClassName.split(" ").filter((className) => !className.startsWith("text-[#")),
+    "text-[#D9B66D]",
+  ].join(" ");
 
   // Pertahankan bentuk lama bagi pemanggil yang hanya meminta baris bacaan.
   if (children === undefined && meaning === undefined) {
