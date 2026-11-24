@@ -74,7 +74,7 @@ const eatingInstructionsConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>どうやって食べるんですか。</>,
-    romaji: "Dou yatte taberun desu ka?",
+    romaji: "Dou yatte taberu n desu ka?",
     translation: "Bagaimana cara memakannya?",
     audioFileName: "irodori-elementary2-04-a02-l02.mp3",
   },
@@ -88,7 +88,7 @@ const eatingInstructionsConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>わかりました。こうやって混ぜるんですね。</>,
-    romaji: "Wakarimashita. Kou yatte mazerun desu ne.",
+    romaji: "Wakarimashita. Kou yatte mazeru n desu ne.",
     translation: "Oh, jadi diaduk seperti ini, ya.",
     audioFileName: "irodori-elementary2-04-a02-l04.mp3",
   },
