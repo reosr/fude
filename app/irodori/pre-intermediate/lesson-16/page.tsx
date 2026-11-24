@@ -81,7 +81,7 @@ const content: IrodoriLessonContent = {
         { speakerId: "yui", japanese: <>楽しかったですか。</>, romaji: "Tanoshikatta desu ka?", translation: "Apakah menyenangkan?", audioFileName: "" },
         { speakerId: "kenji", japanese: <>はい。でも、みんなの行きたい場所が違って、何度も相談することになりました。</>, romaji: "Hai. Demo, minna no ikitai basho ga chigatte, nando mo soudan suru koto ni narimashita.", translation: "Iya. Namun, semua orang ingin pergi ke tempat yang berbeda, jadi kami akhirnya harus berdiskusi berkali-kali.", audioFileName: "" },
         { speakerId: "yui", japanese: <>それで、どうなりましたか。</>, romaji: "Sore de, dou narimashita ka?", translation: "Lalu, bagaimana akhirnya?", audioFileName: "" },
-        { speakerId: "kenji", japanese: <>昼ご飯の店を決めるために、あちこち歩かされました。少し疲れましたが、最後に見た夕日は忘れられません。</>, romaji: "Hirugohan no mise o kimeru tame ni, achikochi arukasa remashita. Sukoshi tsukaremashita ga, saigo ni mita yuuhi wa wasureraremasen.", translation: "Aku dibuat berjalan ke sana kemari untuk menentukan restoran makan siang. Aku sedikit lelah, tetapi matahari terbenam yang kulihat terakhir kali tidak akan terlupakan.", audioFileName: "" },
+        { speakerId: "kenji", japanese: <>昼ご飯の店を決めるために、あちこち歩かされました。少し疲れましたが、最後に見た夕日は忘れられません。</>, romaji: "Hirugohan no mise o kimeru tame ni, achikochi arukasaremashita. Sukoshi tsukaremashita ga, saigo ni mita yuuhi wa wasureraremasen.", translation: "Aku dibuat berjalan ke sana kemari untuk menentukan restoran makan siang. Aku sedikit lelah, tetapi matahari terbenam yang kulihat terakhir kali tidak akan terlupakan.", audioFileName: "" },
       ],
     },
   ],
