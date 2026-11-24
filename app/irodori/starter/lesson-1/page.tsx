@@ -131,14 +131,14 @@ const nightFarewellConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>おやすみなさい。</>,
-    romaji: "Oyasuminasai.",
+    romaji: "Oyasumi nasai.",
     translation: "Selamat malam (sebelum tidur).",
     audioFileName: "irodori-starter-01-a02-l05.mp3",
   },
   {
     speakerId: "sota",
     japanese: <>おやすみなさい。</>,
-    romaji: "Oyasuminasai.",
+    romaji: "Oyasumi nasai.",
     translation: "Selamat tidur.",
     audioFileName: "irodori-starter-01-a02-l06.mp3",
   },
@@ -314,7 +314,7 @@ const stickerQuestions = [
   },
   {
     sticker: "おやすみなさい",
-    reading: "Oyasuminasai",
+    reading: "Oyasumi nasai",
     question: "Kapan stiker ini cocok dikirim?",
     options: [
       "Saat bertemu pada siang hari",
@@ -353,7 +353,7 @@ const vocabulary = [
   { jp: <>こんばんは</>, romaji: "Konbanwa", meaning: "Selamat malam (sapaan)" },
   { jp: <>じゃあ、また</>, romaji: "Jaa, mata", meaning: "Kalau begitu, sampai jumpa lagi" },
   { jp: <>またね</>, romaji: "Mata ne", meaning: "Sampai jumpa (akrab)" },
-  { jp: <>おやすみなさい</>, romaji: "Oyasuminasai", meaning: "Selamat tidur" },
+  { jp: <>おやすみなさい</>, romaji: "Oyasumi nasai", meaning: "Selamat tidur" },
   { jp: <>お<ruby>先<rt>さき</rt></ruby>に<ruby>失礼<rt>しつれい</rt></ruby>します</>, romaji: "Osaki ni shitsurei shimasu", meaning: "Permisi, saya pamit lebih dahulu" },
   { jp: <>お<ruby>疲<rt>つか</rt></ruby>れさまでした</>, romaji: "Otsukaresama deshita", meaning: "Terima kasih atas kerja keras hari ini" },
   { jp: <>ありがとうございます</>, romaji: "Arigatou gozaimasu", meaning: "Terima kasih (sopan)" },
@@ -396,7 +396,7 @@ const hiraganaWords = [
   { word: "またね", romaji: "Mata ne", meaning: "Sampai jumpa (akrab)" },
   { word: "こんにちは", romaji: "Konnichiwa", meaning: "Halo / selamat siang" },
   { word: "こんばんは", romaji: "Konbanwa", meaning: "Selamat malam (sapaan)" },
-  { word: "おやすみなさい", romaji: "Oyasuminasai", meaning: "Selamat tidur" },
+  { word: "おやすみなさい", romaji: "Oyasumi nasai", meaning: "Selamat tidur" },
 ];
 
 export default function IrodoriPemulaLessonOnePage() {
