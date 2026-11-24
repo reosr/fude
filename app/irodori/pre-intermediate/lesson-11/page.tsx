@@ -178,7 +178,7 @@ const content: IrodoriLessonContent = {
     },
     {
       title: "04 · Menggunakan bentuk hormat おVになる",
-      pattern: "Pangkal kata kerja bentuk ます + お + になる",
+      pattern: "お + pangkal kata kerja bentuk ます + になる",
       example: <>お飲みになりますか。<br />お荷物をお預けになりますか。<br />こちらで少しお待ちになりますか。</>,
       note: "Untuk kata kerja yang tidak memiliki bentuk hormat khusus, hapus ます dari bentuk ます lalu gunakan お〜になる. Bentuk ini menunjukkan rasa hormat kepada orang yang melakukan tindakan. Contoh: 飲みます → お飲みになる, 預けます → お預けになる, 待ちます → お待ちになる. Beberapa kata kerja memiliki bentuk hormat khusus sehingga tidak selalu memakai pola ini.",
     },
@@ -193,8 +193,8 @@ const content: IrodoriLessonContent = {
     title: "Menulis panduan singkat saat menghadapi masalah",
     instruction: "Pilih satu situasi: menerima email mencurigakan, kehilangan barang, atau menemukan barang milik orang lain. Tulislah panduan singkat dalam bahasa Jepang: jelaskan hal yang perlu diperiksa, tindakan yang sebaiknya dilakukan, dan pihak yang dapat dimintai bantuan. Jangan memasukkan alamat, nomor telepon, kata sandi, atau informasi pribadi ke dalam contoh tulisan.",
     exampleLabel: "CONTOH ORISINAL FUDE",
-    exampleJapanese: <>心当たりのないメールが届いたら、差出人と件名を確認します。メールに書かれたリンクはクリックしません。支払いについて心配なときは、公式サイトで確認します。わからないときは、信頼できる人に相談してほしいんですが、と伝えます。</>,
-    exampleTranslation: "Jika menerima email yang tidak dikenal, periksa pengirim dan subjeknya. Jangan klik tautan yang tercantum dalam email. Jika khawatir tentang pembayaran, periksa melalui situs resmi. Jika tidak yakin, sampaikan bahwa kamu ingin meminta saran dari orang yang tepercaya.",
+    exampleJapanese: <>心当たりのないメールが届いたら、差出人と件名を確認します。メールに書かれたリンクはクリックしません。支払いについて心配なときは、公式サイトで確認します。わからないときは、信頼できる人に相談します。</>,
+    exampleTranslation: "Jika menerima email yang tidak dikenal, periksa pengirim dan subjeknya. Jangan klik tautan yang tercantum dalam email. Jika khawatir tentang pembayaran, periksa melalui situs resmi. Jika tidak yakin, berkonsultasilah dengan orang yang tepercaya.",
     placeholder: "心当たりのないメールが届いたら、＿＿を確認します。リンクは＿＿...",
   },
   simulations: [
