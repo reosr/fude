@@ -115,12 +115,12 @@ function getKanaForRomajiFromNode(node: ReactNode, allowIndexFallback: boolean):
       if (!nextRubyStartsWithLexicalHa) {
         // は／へ yang berdiri setelah kata ber-furigana adalah partikel arah/topik.
         kana = kana.replace(
-          /^(\\s*(?:(?:さん|ちゃん|くん|さま))?)(は|へ)/,
+          /^(\s*(?:(?:さん|ちゃん|くん|さま))?)(は|へ)/,
           (_match, prefix: string, particle: string) => prefix + (particle === "は" ? "わ" : "え")
         );
         // Partikel majemuk seperti ではありません dan にはいます tetap dikenali.
         kana = kana.replace(
-          /^(\\s*(?:で|に|と|から|まで|より|の|だけ|しか|さえ|て))は/,
+          /^(\s*(?:で|に|と|から|まで|より|の|だけ|しか|さえ|て))は/,
           (_match, prefix: string) => prefix + "わ"
         );
       }
@@ -261,8 +261,8 @@ export default function JapaneseReading({
 
     if (displayHtml !== undefined) {
       const particleAwareHtml = displayHtml
-        .replace(/<\\/ruby>(\\s*)は/g, "</ruby>$1わ")
-        .replace(/<\\/ruby>(\\s*)へ/g, "</ruby>$1え")
+        .replace(/<\/ruby>(\s*)は/g, "</ruby>$1わ")
+        .replace(/<\/ruby>(\s*)へ/g, "</ruby>$1え")
         .replace(/こんにちは/g, "こんにちわ")
         .replace(/こんばんは/g, "こんばんわ")
         .replace(/を/g, "お");
