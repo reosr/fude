@@ -104,7 +104,7 @@ const restaurantOrderConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>テーブルでお願いします。</>,
-    romaji: "Teeburu de onegaishimasu.",
+    romaji: "Teeburu de onegai shimasu.",
     translation: "Saya pilih tempat duduk di meja.",
     audioFileName: "irodori-elementary2-03-a03-l02.mp3",
   },
@@ -149,7 +149,7 @@ const phoneReservationConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>はい。お名前をお願いします。</>,
-    romaji: "Hai. Onamae o onegaishimasu.",
+    romaji: "Hai. Onamae o onegai shimasu.",
     translation: "Baik. Mohon sebutkan nama Anda.",
     audioFileName: "irodori-elementary2-03-a04-l04.mp3",
   },
@@ -719,7 +719,7 @@ export default function IrodoriElementaryTwoLessonThreePage() {
         <div className="grid gap-2 sm:grid-cols-2">
           {[
             ["エビのアレルギーがあるので、食べられないんです。", "Ebi no arerugii ga aru node, taberarenai n desu.", "Karena saya alergi udang, saya tidak bisa memakannya."],
-            ["卵が苦手なので、卵抜きでお願いします。", "Tamago ga nigate na node, tamago o nuki de onegaishimasu.", "Karena saya kurang suka telur, tolong tanpa telur."],
+            ["卵が苦手なので、卵抜きでお願いします。", "Tamago ga nigate na node, tamago o nuki de onegai shimasu.", "Karena saya kurang suka telur, tolong tanpa telur."],
             ["この料理に牛乳は入っていますか。", "Kono ryouri ni gyuunyuu wa haitte imasu ka?", "Apakah hidangan ini mengandung susu?"],
             ["このソース、ナッツが入っていますよね。", "Kono soosu, nattsu ga haitte imasu yo ne.", "Saus ini mengandung kacang, ya?"],
             ["小麦のアレルギーがあるので、確認してください。", "Komugi no arerugii ga aru node, kakunin shite kudasai.", "Karena saya alergi gandum, mohon periksa terlebih dahulu."],
@@ -745,12 +745,12 @@ export default function IrodoriElementaryTwoLessonThreePage() {
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
           {[
-            ["テーブルでお願いします。", "Teeburu de onegaishimasu.", "Saya pilih meja."],
-            ["カウンターでお願いします。", "Kauntaa de onegaishimasu.", "Saya pilih tempat duduk konter."],
+            ["テーブルでお願いします。", "Teeburu de onegai shimasu.", "Saya pilih meja."],
+            ["カウンターでお願いします。", "Kauntaa de onegai shimasu.", "Saya pilih tempat duduk konter."],
             ["おすすめは何ですか。", "Osusume wa nan desu ka?", "Apa rekomendasinya?"],
             ["じゃあ、それにします。", "Jaa, sore ni shimasu.", "Kalau begitu, saya pilih itu."],
             ["ご飯は普通でだいじょうぶです。", "Gohan wa futsuu de daijoubu desu.", "Nasi porsi normal tidak apa-apa."],
-            ["別々でお願いします。", "Betsubetsu de onegaishimasu.", "Tolong pembayarannya terpisah."],
+            ["別々でお願いします。", "Betsubetsu de onegai shimasu.", "Tolong pembayarannya terpisah."],
           ].map(([jp, reading, meaning]) => (
             <article key={jp} className="rounded-xl border border-white/[0.07] bg-[#1B1A18] p-4">
               <p className="font-mincho text-base leading-7 text-[#F1EBDD]">{jp}</p>
