@@ -46,6 +46,93 @@ function getNodeText(node: ReactNode): string {
   return getNodeText(element.props.children);
 }
 
+interface KanaReadingChunk {
+  kana: string;
+  fromRuby: boolean;
+}
+
+function collectKanaReadingChunks(
+  node: ReactNode,
+  allowIndexFallback: boolean
+): KanaReadingChunk[] {
+  if (node === null || node === undefined || typeof node === "boolean") return [];
+
+  if (typeof node === "string" || typeof node === "number") {
+    const source = String(node);
+    const reading = extractKanaFromReactNode(source, allowIndexFallback);
+    return [{ kana: reading?.kana ?? source, fromRuby: false }];
+  }
+
+  if (Array.isArray(node)) {
+    return node.flatMap((child) => collectKanaReadingChunks(child, allowIndexFallback));
+  }
+
+  if (!isValidElement(node)) return [];
+
+  const element = node as ReactElement<{ children?: ReactNode }>;
+  if (element.type === "ruby") {
+    const reading = extractKanaFromReactNode(node, allowIndexFallback);
+    return [{ kana: reading?.kana ?? getNodeText(node), fromRuby: true }];
+  }
+  if (element.type === "rt") return [];
+
+  return collectKanaReadingChunks(element.props.children, allowIndexFallback);
+}
+
+function normalizeKanaForRomaji(source: string): string {
+  return source
+    .replace(/こんにちは/g, "こんにちわ")
+    .replace(/こんばんは/g, "こんばんわ")
+    .replace(
+      /(これ|それ|あれ|どれ|ここ|そこ|あそこ|どこ|わたし|わたしたち|わたくし|ぼく|ぼくたち|かれ|かれら|かのじょ|みんな|みなさん|あなた|おまえ|なに|きょう|あした|きのう)は/g,
+      "$1わ"
+    )
+    .replace(/(ここ|そこ|あそこ|どこ)へ/g, "$1え")
+    .replace(/を/g, "お");
+}
+
+function getKanaForRomajiFromNode(node: ReactNode, allowIndexFallback: boolean): string {
+  const readingNode = allowIndexFallback ? renderJapaneseNodeWithRuby(node) : node;
+  const chunks = collectKanaReadingChunks(readingNode, allowIndexFallback);
+  let result = "";
+  let previousWasRuby = false;
+
+  for (let index = 0; index < chunks.length; index++) {
+    const chunk = chunks[index];
+    if (chunk.fromRuby) {
+      result += chunk.kana;
+      previousWasRuby = true;
+      continue;
+    }
+
+    let kana = chunk.kana;
+    if (previousWasRuby) {
+      const nextChunk = chunks[index + 1];
+      const nextRubyStartsWithLexicalHa = Boolean(
+        nextChunk?.fromRuby && nextChunk.kana.startsWith("は")
+      );
+
+      if (!nextRubyStartsWithLexicalHa) {
+        // は／へ yang berdiri setelah kata ber-furigana adalah partikel arah/topik.
+        kana = kana.replace(
+          /^(\\s*(?:(?:さん|ちゃん|くん|さま))?)(は|へ)/,
+          (_match, prefix: string, particle: string) => prefix + (particle === "は" ? "わ" : "え")
+        );
+        // Partikel majemuk seperti ではありません dan にはいます tetap dikenali.
+        kana = kana.replace(
+          /^(\\s*(?:で|に|と|から|まで|より|の|だけ|しか|さえ|て))は/,
+          (_match, prefix: string) => prefix + "わ"
+        );
+      }
+    }
+
+    result += normalizeKanaForRomaji(kana);
+    if (kana.trim()) previousWasRuby = false;
+  }
+
+  return result;
+}
+
 function containsIndonesianProse(source: string): boolean {
   const plainText = source
     .replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/gi, "")
@@ -170,33 +257,22 @@ export default function JapaneseReading({
   // partikel は・へ・を yang dapat dikenali dari batas ruby dan pola umum.
   // Teks Jepang yang ditampilkan tidak diubah; penyesuaian hanya untuk romaji.
   const kanaForRomaji = (() => {
-    let sourceKana = normalizedKana;
+    if (explicitKana?.trim()) return normalizedKana;
 
-    if (displayHtml !== undefined && !explicitKana?.trim()) {
+    if (displayHtml !== undefined) {
       const particleAwareHtml = displayHtml
-        .replace(/<\/ruby>(\s*)は/g, "</ruby>$1わ")
-        .replace(/<\/ruby>(\s*)へ/g, "</ruby>$1え")
+        .replace(/<\\/ruby>(\\s*)は/g, "</ruby>$1わ")
+        .replace(/<\\/ruby>(\\s*)へ/g, "</ruby>$1え")
         .replace(/こんにちは/g, "こんにちわ")
         .replace(/こんばんは/g, "こんばんわ")
         .replace(/を/g, "お");
 
-      sourceKana =
-        extractKanaFromRubyHtml(particleAwareHtml, allowIndexFallback)?.kana ||
-        sourceKana;
+      return extractKanaFromRubyHtml(particleAwareHtml, allowIndexFallback)?.kana ||
+        normalizedKana;
     }
 
-    return sourceKana
-      .replace(/こんにちは/g, "こんにちわ")
-      .replace(/こんばんは/g, "こんばんわ")
-      .replace(
-        /(これ|それ|あれ|どれ|ここ|そこ|あそこ|どこ|わたし|わたしたち|わたくし|ぼく|ぼくたち|かれ|かれら|かのじょ|みんな|みなさん|あなた|おまえ|なに|きょう|あした|きのう)は/g,
-        "$1わ"
-      )
-      // Jangan ubah rangkaian seperti に入る・と話す・の花 menjadi partikel は.
-      .replace(/(ここ|そこ|あそこ|どこ)へ/g, "$1え")
-      .replace(/を/g, "お");
+    return getKanaForRomajiFromNode(children, allowIndexFallback) || normalizedKana;
   })();
-
   const romanization =
     explicitRomaji?.trim() || (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
   const showKanaLine = Boolean(
