@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -108,7 +112,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     description: "Ungkapan sederhana untuk menyapa tetangga, meminta pengertian, dan menjaga hubungan baik.",
     items: [
       { jp: "<ruby>隣<rt>となり</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>してきました。", romaji: "Tonari no heya ni hikkoshite kimashita.", id: "Saya baru pindah ke kamar sebelah.", tone: "Memperkenalkan diri" },
-      { jp: "これからよろしくお願いします。", romaji: "Kore kara yoroshiku onegaishimasu.", id: "Mohon hubungan baiknya mulai sekarang.", tone: "Salam kepada tetangga" },
+      { jp: "これからよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kore kara yoroshiku onegaishimasu.", id: "Mohon hubungan baiknya mulai sekarang.", tone: "Salam kepada tetangga" },
       { jp: "<ruby>少<rt>すこ</rt></ruby>し<ruby>音<rt>おと</rt></ruby>を<ruby>小<rt>ちい</rt></ruby>さくしていただけますか。", romaji: "Sukoshi oto o chiisaku shite itadakemasu ka.", id: "Bisakah suaranya sedikit dikecilkan?", tone: "Meminta dengan sopan" },
       { jp: "ご<ruby>迷惑<rt>めいわく</rt></ruby>をおかけしてすみません。", romaji: "Gomeiwaku o okake shite sumimasen.", id: "Maaf sudah merepotkan.", tone: "Meminta maaf" },
       { jp: "<ruby>何<rt>なに</rt></ruby>か<ruby>困<rt>こま</rt></ruby>ったことがあったら、<ruby>教<rt>おし</rt></ruby>えてください。", romaji: "Nanika komatta koto ga attara, oshiete kudasai.", id: "Kalau ada masalah atau kesulitan, beri tahu saya, ya.", tone: "Menawarkan bantuan" },
@@ -121,7 +125,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
       { jp: "<ruby>宅配便<rt>たくはいびん</rt></ruby>が<ruby>届<rt>とど</rt></ruby>いています。", romaji: "Takuhaibin ga todoite imasu.", id: "Ada paket yang sudah tiba.", tone: "Informasi kiriman" },
       { jp: "<ruby>宅配<rt>たくはい</rt></ruby>ボックスに<ruby>入<rt>い</rt></ruby>れてください。", romaji: "Takuhai bokkusu ni irete kudasai.", id: "Tolong letakkan di kotak paket.", tone: "Instruksi pengantaran" },
       { jp: "<ruby>荷物<rt>にもつ</rt></ruby>を<ruby>受<rt>う</rt></ruby>け<ruby>取<rt>と</rt></ruby>れませんでした。", romaji: "Nimotsu o uketoremasen deshita.", id: "Saya tidak berhasil menerima paketnya.", tone: "Paket tidak diterima" },
-      { jp: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお願いできますか。", romaji: "Saihaitatsu o onegaidekimasu ka.", id: "Bisakah paketnya diantarkan kembali?", tone: "Meminta pengantaran ulang" },
+      { jp: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いできますか。", romaji: "Saihaitatsu o onegaidekimasu ka.", id: "Bisakah paketnya diantarkan kembali?", tone: "Meminta pengantaran ulang" },
       { jp: "エレベーターはどこですか。", romaji: "Erebeetaa wa doko desu ka.", id: "Lift ada di mana?", tone: "Mencari fasilitas gedung" },
     ],
   },
@@ -132,32 +136,32 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Berkenalan dengan tetangga",
     context: "Kamu baru pindah ke apartemen dan bertemu tetangga di lorong.",
     lines: [
-      { speaker: "佐藤", jp: "こんにちは。<ruby>隣<rt>となり</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>してきた佐藤です。", romaji: "Konnichiwa. Tonari no heya ni hikkoshite kita Satou desu.", id: "Halo. Saya Sato, baru pindah ke kamar sebelah." },
-      { speaker: "隣人", jp: "そうなんですね。よろしくお願いします。", romaji: "Sou nan desu ne. Yoroshiku onegaishimasu.", id: "Oh, begitu. Senang berkenalan dengan Anda." },
-      { speaker: "佐藤", jp: "こちらこそ、これからよろしくお願いします。", romaji: "Kochira koso, kore kara yoroshiku onegaishimasu.", id: "Saya juga. Mohon hubungan baiknya mulai sekarang." },
-      { speaker: "隣人", jp: "<ruby>何<rt>なに</rt></ruby>か<ruby>困<rt>こま</rt></ruby>ったことがあったら、<ruby>教<rt>おし</rt></ruby>えてください。", romaji: "Nanika komatta koto ga attara, oshiete kudasai.", id: "Kalau ada kesulitan, beri tahu saya, ya." },
+      { speaker: "<ruby>佐藤<rt>さとう</rt></ruby>", jp: "こんにちは。<ruby>隣<rt>となり</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>してきた<ruby>佐藤<rt>さとう</rt></ruby>です。", romaji: "Konnichiwa. Tonari no heya ni hikkoshite kita Satou desu.", id: "Halo. Saya Sato, baru pindah ke kamar sebelah." },
+      { speaker: "<ruby>隣人<rt>りんじん</rt></ruby>", jp: "そうなんですね。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Sou nan desu ne. Yoroshiku onegaishimasu.", id: "Oh, begitu. Senang berkenalan dengan Anda." },
+      { speaker: "<ruby>佐藤<rt>さとう</rt></ruby>", jp: "こちらこそ、これからよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kochira koso, kore kara yoroshiku onegaishimasu.", id: "Saya juga. Mohon hubungan baiknya mulai sekarang." },
+      { speaker: "<ruby>隣人<rt>りんじん</rt></ruby>", jp: "<ruby>何<rt>なに</rt></ruby>か<ruby>困<rt>こま</rt></ruby>ったことがあったら、<ruby>教<rt>おし</rt></ruby>えてください。", romaji: "Nanika komatta koto ga attara, oshiete kudasai.", id: "Kalau ada kesulitan, beri tahu saya, ya." },
     ],
   },
   {
     title: "Percakapan 2 · Melaporkan masalah di apartemen",
     context: "Air panas di apartemenmu tidak keluar, jadi kamu menghubungi pengelola.",
     lines: [
-      { speaker: "入居者", jp: "すみません。<ruby>部屋<rt>へや</rt></ruby>のお<ruby>湯<rt>ゆ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ません。", romaji: "Sumimasen. Heya no oyu ga demasen.", id: "Permisi. Air panas di kamar saya tidak keluar." },
-      { speaker: "管理人", jp: "いつからですか。", romaji: "Itsu kara desu ka.", id: "Sejak kapan?" },
-      { speaker: "入居者", jp: "<ruby>今朝<rt>けさ</rt></ruby>からです。", romaji: "Kesa kara desu.", id: "Sejak pagi ini." },
-      { speaker: "管理人", jp: "わかりました。<ruby>確認<rt>かくにん</rt></ruby>に<ruby>伺<rt>うかが</rt></ruby>います。", romaji: "Wakarimashita. Kakunin ni ukagaimasu.", id: "Baik. Kami akan datang untuk memeriksanya." },
-      { speaker: "入居者", jp: "ありがとうございます。よろしくお願いします。", romaji: "Arigatou gozaimasu. Yoroshiku onegaishimasu.", id: "Terima kasih. Mohon bantuannya." },
+      { speaker: "<ruby>入居者<rt>にゅうきょしゃ</rt></ruby>", jp: "すみません。<ruby>部屋<rt>へや</rt></ruby>のお<ruby>湯<rt>ゆ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ません。", romaji: "Sumimasen. Heya no oyu ga demasen.", id: "Permisi. Air panas di kamar saya tidak keluar." },
+      { speaker: "<ruby>管理人<rt>かんりにん</rt></ruby>", jp: "いつからですか。", romaji: "Itsu kara desu ka.", id: "Sejak kapan?" },
+      { speaker: "<ruby>入居者<rt>にゅうきょしゃ</rt></ruby>", jp: "<ruby>今朝<rt>けさ</rt></ruby>からです。", romaji: "Kesa kara desu.", id: "Sejak pagi ini." },
+      { speaker: "<ruby>管理人<rt>かんりにん</rt></ruby>", jp: "わかりました。<ruby>確認<rt>かくにん</rt></ruby>に<ruby>伺<rt>うかが</rt></ruby>います。", romaji: "Wakarimashita. Kakunin ni ukagaimasu.", id: "Baik. Kami akan datang untuk memeriksanya." },
+      { speaker: "<ruby>入居者<rt>にゅうきょしゃ</rt></ruby>", jp: "ありがとうございます。よろしくお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Arigatou gozaimasu. Yoroshiku onegaishimasu.", id: "Terima kasih. Mohon bantuannya." },
     ],
   },
   {
     title: "Percakapan 3 · Menanyakan jadwal pembuangan sampah",
     context: "Kamu belum memahami aturan pemilahan sampah di lingkungan tempat tinggal.",
     lines: [
-      { speaker: "入居者", jp: "すみません。ゴミの<ruby>分<rt>わ</rt></ruby>け<ruby>方<rt>かた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えていただけますか。", romaji: "Sumimasen. Gomi no wakekata o oshiete itadakemasu ka.", id: "Permisi. Bisakah Anda menjelaskan cara memilah sampah?" },
-      { speaker: "管理人", jp: "<ruby>燃<rt>も</rt></ruby>えるゴミは<ruby>月曜日<rt>げつようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>です。", romaji: "Moeru gomi wa getsuyoubi to mokuyoubi desu.", id: "Sampah yang bisa dibakar dijemput pada hari Senin dan Kamis." },
-      { speaker: "入居者", jp: "<ruby>何時<rt>なんじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>せばいいですか。", romaji: "Nanji made ni daseba ii desu ka.", id: "Sampah harus dikeluarkan paling lambat pukul berapa?" },
-      { speaker: "管理人", jp: "<ruby>朝<rt>あさ</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>してください。", romaji: "Asa hachi-ji made ni dashite kudasai.", id: "Silakan keluarkan sampah sebelum pukul delapan pagi." },
-      { speaker: "入居者", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
+      { speaker: "<ruby>入居者<rt>にゅうきょしゃ</rt></ruby>", jp: "すみません。ゴミの<ruby>分<rt>わ</rt></ruby>け<ruby>方<rt>かた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えていただけますか。", romaji: "Sumimasen. Gomi no wakekata o oshiete itadakemasu ka.", id: "Permisi. Bisakah Anda menjelaskan cara memilah sampah?" },
+      { speaker: "<ruby>管理人<rt>かんりにん</rt></ruby>", jp: "<ruby>燃<rt>も</rt></ruby>えるゴミは<ruby>月曜日<rt>げつようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>です。", romaji: "Moeru gomi wa getsuyoubi to mokuyoubi desu.", id: "Sampah yang bisa dibakar dijemput pada hari Senin dan Kamis." },
+      { speaker: "<ruby>入居者<rt>にゅうきょしゃ</rt></ruby>", jp: "<ruby>何時<rt>なんじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>せばいいですか。", romaji: "Nanji made ni daseba ii desu ka.", id: "Sampah harus dikeluarkan paling lambat pukul berapa?" },
+      { speaker: "<ruby>管理人<rt>かんりにん</rt></ruby>", jp: "<ruby>朝<rt>あさ</rt></ruby><ruby>八時<rt>はちじ</rt></ruby>までに<ruby>出<rt>だ</rt></ruby>してください。", romaji: "Asa hachi-ji made ni dashite kudasai.", id: "Silakan keluarkan sampah sebelum pukul delapan pagi." },
+      { speaker: "<ruby>入居者<rt>にゅうきょしゃ</rt></ruby>", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
 ];
@@ -194,7 +198,7 @@ const quiz = [
     question: "Petugas pengiriman tidak berhasil menyerahkan paket. Kamu ingin meminta pengantaran ulang. Apa yang kamu katakan?",
     options: [
       { label: "ゴミの<ruby>分<rt>わ</rt></ruby>け<ruby>方<rt>かた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>てください。", correct: false, feedback: "Kalimat ini meminta penjelasan cara memilah sampah." },
-      { label: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお願いできますか。", correct: true, feedback: "Benar. 再配達をお願いできますか digunakan untuk meminta pengantaran ulang." },
+      { label: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いできますか。", correct: true, feedback: "Benar. 再配達をお<ruby>願<rt>ねが</rt></ruby>いできますか digunakan untuk meminta pengantaran ulang." },
       { label: "<ruby>洗濯機<rt>せんたくき</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>まで<ruby>使<rt>つか</rt></ruby>えますか。", correct: false, feedback: "Kalimat ini menanyakan batas waktu penggunaan mesin cuci." },
     ],
   },
@@ -210,7 +214,7 @@ const simulation = [
     options: [
       { label: "<ruby>隣<rt>となり</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>してきました。", correct: true, feedback: "Tepat. Kamu menjelaskan bahwa baru pindah ke kamar sebelah." },
       { label: "お<ruby>湯<rt>ゆ</rt></ruby>が<ruby>出<rt>で</rt></ruby>ません。", correct: false, feedback: "Kalimat ini melaporkan masalah air panas." },
-      { label: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお願いできますか。", correct: false, feedback: "Kalimat ini meminta pengantaran paket ulang." },
+      { label: "<ruby>再配達<rt>さいはいたつ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いできますか。", correct: false, feedback: "Kalimat ini meminta pengantaran paket ulang." },
     ],
   },
   {
@@ -222,7 +226,7 @@ const simulation = [
     options: [
       { label: "エアコンが<ruby>動<rt>うご</rt></ruby>きません。", correct: true, feedback: "Benar. Kamu menyampaikan bahwa AC tidak berfungsi." },
       { label: "<ruby>何曜日<rt>なんようび</rt></ruby>に<ruby>出<rt>だ</rt></ruby>せばいいですか。", correct: false, feedback: "Kalimat ini menanyakan hari untuk mengeluarkan sampah." },
-      { label: "これからよろしくお願いします。", correct: false, feedback: "Ungkapan ini digunakan saat berkenalan atau memulai hubungan baik." },
+      { label: "これからよろしくお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Ungkapan ini digunakan saat berkenalan atau memulai hubungan baik." },
     ],
   },
   {
@@ -357,7 +361,9 @@ export default function TempatTinggalSehariHariPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -385,9 +391,13 @@ export default function TempatTinggalSehariHariPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
