@@ -42,7 +42,7 @@ const repeatConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <>もういちど、お願いします。</>,
-    romaji: "Mou ichido, onegaishimasu.",
+    romaji: "Mou ichido, onegai shimasu.",
     translation: "Tolong ulangi sekali lagi.",
     audioFileName: "irodori-starter-02-a01-l03.mp3",
   },
