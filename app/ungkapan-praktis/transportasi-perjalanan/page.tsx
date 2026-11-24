@@ -114,7 +114,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
       { jp: "このバスは<ruby>市役所<rt>しやくしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", romaji: "Kono basu wa shiyakusho ni ikimasu ka.", id: "Apakah bus ini menuju kantor balai kota?", tone: "Memastikan rute bus" },
       { jp: "<ruby>次<rt>つぎ</rt></ruby>のバスは<ruby>何時<rt>なんじ</rt></ruby>ですか。", romaji: "Tsugi no basu wa nanji desu ka.", id: "Bus berikutnya pukul berapa?", tone: "Menanyakan jadwal bus" },
       { jp: "<ruby>次<rt>つぎ</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。", romaji: "Tsugi de orimasu.", id: "Saya turun di halte berikutnya.", tone: "Memberi tahu akan turun" },
-      { jp: "先に<ruby>運賃<rt>うんちん</rt></ruby>を<ruby>払<rt>はら</rt></ruby>いますか。", romaji: "Saki ni unchin o haraimasu ka.", id: "Apakah ongkos dibayar terlebih dahulu?", tone: "Menanyakan cara pembayaran" },
+      { jp: "<ruby>先<rt>さき</rt></ruby>に<ruby>運賃<rt>うんちん</rt></ruby>を<ruby>払<rt>はら</rt></ruby>いますか。", romaji: "Saki ni unchin o haraimasu ka.", id: "Apakah ongkos dibayar terlebih dahulu?", tone: "Menanyakan cara pembayaran" },
     ],
   },
   {
