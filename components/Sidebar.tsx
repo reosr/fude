@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BookOpen, Languages, Layers, Home, BookA, Sparkles } from "lucide-react";
+import { BookOpen, Languages, Layers, Home, BookA, Sparkles, MessagesSquare } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import ProfilePicture from "./ProfilePicture";
@@ -20,6 +20,7 @@ import {
 const tabs = [
   { href: "/", label: "Beranda", icon: Home },
   { href: "/belajar", label: "Belajar", icon: BookOpen },
+  { href: "/ungkapan-praktis", label: "Ungkapan Praktis", icon: MessagesSquare },
   { href: "/kosakata", label: "Kosakata", icon: Languages },
   { href: "/flashcard", label: "Flashcard", icon: Layers },
   { href: "/konjugasi", label: "Konjugasi", icon: BookA },
