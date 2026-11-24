@@ -98,7 +98,7 @@ const askHowToEatConversation: IrodoriUtterance[] = [
   {
     speakerId: "sota",
     japanese: <>この野菜の天ぷらは、どうやって食べるんですか。</>,
-    romaji: "Kono yasai no tenpura wa, dou yatte taberun desu ka?",
+    romaji: "Kono yasai no tenpura wa, dou yatte taberu n desu ka?",
     translation: "Bagaimana cara makan tempura sayuran ini?",
     audioFileName: "irodori-elementary2-04-a03-l01.mp3",
   },
@@ -742,7 +742,7 @@ export default function IrodoriElementaryTwoLessonFourPage() {
         </div>
         <div className="grid gap-2 sm:grid-cols-2">
           {[
-            ["どうやって食べるんですか。", "Dou yatte taberun desu ka?", "Bagaimana cara memakannya?"],
+            ["どうやって食べるんですか。", "Dou yatte taberu n desu ka?", "Bagaimana cara memakannya?"],
             ["たれは、どれがいいですか。", "Tare wa, dore ga ii desu ka?", "Saus yang mana yang bagus?"],
             ["ソースをかけてもいいですか。", "Soosu o kakete mo ii desu ka?", "Bolehkah saya menuangkan saus?"],
             ["よく混ぜてから食べます。", "Yoku mazete kara tabemasu.", "Setelah diaduk rata, baru dimakan."],
