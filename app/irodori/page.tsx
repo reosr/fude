@@ -40,7 +40,7 @@ const courses = [
     number: "04",
     title: "Pra-Menengah",
     level: "A2/B1",
-    lessonSummary: "15 dari 18 tersedia",
+    lessonSummary: "16 dari 18 tersedia",
     description: "Berlatih menyampaikan informasi dan pengalaman dengan lebih mandiri.",
     status: "Mulai belajar",
     statusTone: "border-[#B79ADE]/35 bg-[#80619B]/15 text-[#E3D5F6]",
