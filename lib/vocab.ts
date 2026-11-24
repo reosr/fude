@@ -2,6 +2,7 @@ import { getCompletedIrodoriLessons } from "./irodori-progress";
 
 let kosakataPromise: Promise<MinnaVocabGroup[]> | null = null;
 let irodoriVocabPromise: Promise<IrodoriVocabLesson[]> | null = null;
+let practicalVocabPromise: Promise<PracticalVocabCategory[]> | null = null;
 
 export type VocabSource =
   | { type: "minna"; bab: number }
@@ -12,6 +13,11 @@ export type VocabSource =
       lessonId: string;
       lessonNumber: number;
       lessonTitle: string;
+    }
+  | {
+      type: "practical";
+      categoryId: string;
+      categoryLabel: string;
     };
 
 export type VocabItem = {
@@ -37,6 +43,19 @@ type IrodoriVocabLesson = {
   lessonNumber: number;
   lessonTitle: string;
   vocab: Omit<VocabItem, "bab" | "sources">[];
+};
+
+type PracticalVocabCategory = {
+  id: string;
+  label: string;
+  href: string;
+  relatedStoryIds: string[];
+  vocab: {
+    word: string;
+    reading: string;
+    romaji: string;
+    meaning: string;
+  }[];
 };
 
 const norm = (s: string) =>
@@ -132,18 +151,29 @@ async function loadIrodoriVocab(): Promise<IrodoriVocabLesson[]> {
   return irodoriVocabPromise;
 }
 
+async function loadPracticalVocab(): Promise<PracticalVocabCategory[]> {
+  if (!practicalVocabPromise) {
+    practicalVocabPromise = import("../data/practical-vocab.json")
+      .then((module) => module.default as PracticalVocabCategory[])
+      .catch((error) => {
+        practicalVocabPromise = null;
+        throw error;
+      });
+  }
+
+  return practicalVocabPromise;
+}
+
+function getSourceKey(source: VocabSource): string {
+  if (source.type === "minna") return `minna:${source.bab}`;
+  if (source.type === "irodori") return `irodori:${source.courseId}:${source.lessonId}`;
+  return `practical:${source.categoryId}`;
+}
+
 function addSource(item: VocabItem, source: VocabSource): void {
   const sources = item.sources ?? [];
-  const sourceKey = source.type === "minna"
-    ? `minna:${source.bab}`
-    : `irodori:${source.courseId}:${source.lessonId}`;
-
-  const alreadyAdded = sources.some((existing) => {
-    const existingKey = existing.type === "minna"
-      ? `minna:${existing.bab}`
-      : `irodori:${existing.courseId}:${existing.lessonId}`;
-    return existingKey === sourceKey;
-  });
+  const sourceKey = getSourceKey(source);
+  const alreadyAdded = sources.some((existing) => getSourceKey(existing) === sourceKey);
 
   if (!alreadyAdded) {
     item.sources = [...sources, source];
@@ -159,6 +189,7 @@ export function getVocabSourceLabel(item: VocabItem): string {
 
   return sources.map((source) => {
     if (source.type === "minna") return `Bab ${source.bab}`;
+    if (source.type === "practical") return `Ungkapan Praktis · ${source.categoryLabel}`;
 
     const shortCourse = source.courseId === "elementary1"
       ? "E1"
@@ -176,9 +207,10 @@ export function getVocabSourceLabel(item: VocabItem): string {
 export async function getUnlockedVocab(
   currentBab: number
 ): Promise<VocabItem[]> {
-  const [allKosakata, allIrodoriVocab] = await Promise.all([
+  const [allKosakata, allIrodoriVocab, allPracticalVocab] = await Promise.all([
     loadKosakata(),
     loadIrodoriVocab(),
+    loadPracticalVocab(),
   ]);
 
   const result: VocabItem[] = [];
@@ -223,6 +255,45 @@ export async function getUnlockedVocab(
         lessonNumber: lesson.lessonNumber,
         lessonTitle: lesson.lessonTitle,
       };
+      const existing = itemByKey.get(key);
+
+      if (existing) {
+        existing.meaning = mergeVocabularyMeanings(existing.meaning, vocab.meaning);
+        addSource(existing, source);
+        return;
+      }
+
+      const item: VocabItem = {
+        ...vocab,
+        sources: [source],
+      };
+      itemByKey.set(key, item);
+      result.push(item);
+    });
+  });
+
+  // Kosakata Ungkapan Praktis selalu tersedia karena seluruh kategorinya
+  // sudah dibuka. Sumber kategori tetap disimpan ketika kata yang sama
+  // juga muncul di Minna atau Irodori.
+  allPracticalVocab.forEach((category) => {
+    const source: VocabSource = {
+      type: "practical",
+      categoryId: category.id,
+      categoryLabel: category.label,
+    };
+
+    category.vocab.forEach((entry) => {
+      const kanji = entry.word
+        .replace(/<rt\\b[^>]*>[\\s\\S]*?<\\/rt>/gi, "")
+        .replace(/<[^>]*>/g, "")
+        .trim();
+      const vocab = {
+        kanji,
+        kana: entry.reading,
+        romaji: entry.romaji,
+        meaning: entry.meaning,
+      };
+      const key = vocabKey(vocab);
       const existing = itemByKey.get(key);
 
       if (existing) {
