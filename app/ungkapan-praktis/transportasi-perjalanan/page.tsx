@@ -39,9 +39,13 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
         translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
       />
       {phrase.note && (
-        <p className="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]">
-          {phrase.note}
-        </p>
+        <JapaneseReading
+          html={phrase.note}
+          showKana={false}
+          showRomaji={false}
+          showTranslation={false}
+          contentClassName="mt-3 border-t border-[#33312E] pt-2 text-xs leading-relaxed text-[#A3A099]"
+        />
       )}
     </div>
   );
@@ -59,7 +63,7 @@ function Dialogue({ title, context, lines }: { title: string; context: string; l
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
-            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs">{line.speaker}</span>
+            <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
               <JapaneseReading
                 html={line.jp}
@@ -83,11 +87,11 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "A. Membeli tiket dan menggunakan kartu IC",
     description: "Ungkapan untuk membeli tiket, memilih perjalanan satu arah atau pulang-pergi, serta menggunakan kartu transportasi.",
     items: [
-      { jp: "<ruby>京都<rt>きょうと</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お願いします。", romaji: "Kyouto made no kippu o ichimai onegaishimasu.", id: "Tolong satu tiket sampai Kyoto.", tone: "Membeli tiket" },
-      { jp: "<ruby>片道<rt>かたみち</rt></ruby>でお願いします。", romaji: "Katamichi de onegaishimasu.", id: "Untuk sekali jalan, ya.", tone: "Tiket satu arah" },
-      { jp: "<ruby>往復<rt>おうふく</rt></ruby>でお願いします。", romaji: "Oufuku de onegaishimasu.", id: "Untuk pulang-pergi, ya.", tone: "Tiket pulang-pergi" },
+      { jp: "<ruby>京都<rt>きょうと</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kyouto made no kippu o ichimai onegaishimasu.", id: "Tolong satu tiket sampai Kyoto.", tone: "Membeli tiket" },
+      { jp: "<ruby>片道<rt>かたみち</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Katamichi de onegaishimasu.", id: "Untuk sekali jalan, ya.", tone: "Tiket satu arah" },
+      { jp: "<ruby>往復<rt>おうふく</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Oufuku de onegaishimasu.", id: "Untuk pulang-pergi, ya.", tone: "Tiket pulang-pergi" },
       { jp: "<ruby>交通系<rt>こうつうけい</rt></ruby>ICカードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Koutsuukei ai shii kaado wa tsukaemasu ka.", id: "Apakah kartu IC transportasi bisa digunakan?", tone: "Menanyakan pembayaran" },
-      { jp: "チャージをお願いします。", romaji: "Chaaji o onegaishimasu.", id: "Tolong isi saldo kartu saya.", tone: "Mengisi saldo kartu", note: "チャージ berarti menambahkan saldo ke kartu transportasi atau kartu prabayar." },
+      { jp: "チャージをお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Chaaji o onegaishimasu.", id: "Tolong isi saldo kartu saya.", tone: "Mengisi saldo kartu", note: "チャージ berarti menambahkan saldo ke kartu transportasi atau kartu prabayar." },
     ],
   },
   {
@@ -132,34 +136,34 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     title: "Percakapan 1 · Membeli tiket di loket",
     context: "Kamu ingin membeli tiket sekali jalan menuju Kyoto.",
     lines: [
-      { speaker: "駅員", jp: "どちらまでですか。", romaji: "Dochira made desu ka.", id: "Mau pergi sampai mana?" },
-      { speaker: "客", jp: "<ruby>京都<rt>きょうと</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お願いします。", romaji: "Kyouto made no kippu o ichimai onegaishimasu.", id: "Tolong satu tiket sampai Kyoto." },
-      { speaker: "駅員", jp: "<ruby>片道<rt>かたみち</rt></ruby>ですか、<ruby>往復<rt>おうふく</rt></ruby>ですか。", romaji: "Katamichi desu ka, oufuku desu ka.", id: "Sekali jalan atau pulang-pergi?" },
-      { speaker: "客", jp: "<ruby>片道<rt>かたみち</rt></ruby>でお願いします。", romaji: "Katamichi de onegaishimasu.", id: "Sekali jalan, ya." },
-      { speaker: "駅員", jp: "かしこまりました。こちらが<ruby>切符<rt>きっぷ</rt></ruby>です。", romaji: "Kashikomarimashita. Kochira ga kippu desu.", id: "Baik. Ini tiketnya." },
-      { speaker: "客", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
+      { speaker: "<ruby>駅員<rt>えきいん</rt></ruby>", jp: "どちらまでですか。", romaji: "Dochira made desu ka.", id: "Mau pergi sampai mana?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "<ruby>京都<rt>きょうと</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Kyouto made no kippu o ichimai onegaishimasu.", id: "Tolong satu tiket sampai Kyoto." },
+      { speaker: "<ruby>駅員<rt>えきいん</rt></ruby>", jp: "<ruby>片道<rt>かたみち</rt></ruby>ですか、<ruby>往復<rt>おうふく</rt></ruby>ですか。", romaji: "Katamichi desu ka, oufuku desu ka.", id: "Sekali jalan atau pulang-pergi?" },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "<ruby>片道<rt>かたみち</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", romaji: "Katamichi de onegaishimasu.", id: "Sekali jalan, ya." },
+      { speaker: "<ruby>駅員<rt>えきいん</rt></ruby>", jp: "かしこまりました。こちらが<ruby>切符<rt>きっぷ</rt></ruby>です。", romaji: "Kashikomarimashita. Kochira ga kippu desu.", id: "Baik. Ini tiketnya." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "ありがとうございます。", romaji: "Arigatou gozaimasu.", id: "Terima kasih." },
     ],
   },
   {
     title: "Percakapan 2 · Memastikan arah dan tempat transit",
     context: "Kamu berada di stasiun dan ingin memastikan kereta yang harus dinaiki.",
     lines: [
-      { speaker: "客", jp: "すみません、この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>新宿<rt>しんじゅく</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", romaji: "Sumimasen, kono densha wa Shinjuku ni ikimasu ka.", id: "Permisi, apakah kereta ini menuju Shinjuku?" },
-      { speaker: "駅員", jp: "はい、<ruby>行<rt>い</rt></ruby>きます。<ruby>三番線<rt>さんばんせん</rt></ruby>から<ruby>出<rt>で</rt></ruby>ます。", romaji: "Hai, ikimasu. Sanbansen kara demasu.", id: "Ya, menuju ke sana. Kereta berangkat dari peron nomor tiga." },
-      { speaker: "客", jp: "どこで<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えればいいですか。", romaji: "Doko de norikaereba ii desu ka.", id: "Di mana saya harus pindah kereta?" },
-      { speaker: "駅員", jp: "<ruby>次<rt>つぎ</rt></ruby>の<ruby>駅<rt>えき</rt></ruby>で<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えてください。", romaji: "Tsugi no eki de norikaete kudasai.", id: "Silakan pindah kereta di stasiun berikutnya." },
-      { speaker: "客", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "すみません、この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>新宿<rt>しんじゅく</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", romaji: "Sumimasen, kono densha wa Shinjuku ni ikimasu ka.", id: "Permisi, apakah kereta ini menuju Shinjuku?" },
+      { speaker: "<ruby>駅員<rt>えきいん</rt></ruby>", jp: "はい、<ruby>行<rt>い</rt></ruby>きます。<ruby>三番線<rt>さんばんせん</rt></ruby>から<ruby>出<rt>で</rt></ruby>ます。", romaji: "Hai, ikimasu. Sanbansen kara demasu.", id: "Ya, menuju ke sana. Kereta berangkat dari peron nomor tiga." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "どこで<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えればいいですか。", romaji: "Doko de norikaereba ii desu ka.", id: "Di mana saya harus pindah kereta?" },
+      { speaker: "<ruby>駅員<rt>えきいん</rt></ruby>", jp: "<ruby>次<rt>つぎ</rt></ruby>の<ruby>駅<rt>えき</rt></ruby>で<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えてください。", romaji: "Tsugi no eki de norikaete kudasai.", id: "Silakan pindah kereta di stasiun berikutnya." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
   {
     title: "Percakapan 3 · Memastikan rute dan pembayaran bus",
     context: "Kamu ingin naik bus menuju kantor balai kota dan memastikan cara membayar ongkos.",
     lines: [
-      { speaker: "客", jp: "すみません、このバスは<ruby>市役所<rt>しやくしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", romaji: "Sumimasen, kono basu wa shiyakusho ni ikimasu ka.", id: "Permisi, apakah bus ini menuju kantor balai kota?" },
-      { speaker: "運転手", jp: "はい、<ruby>行<rt>い</rt></ruby>きます。<ruby>運賃<rt>うんちん</rt></ruby>は<ruby>先<rt>さき</rt></ruby><ruby>払<rt>ばら</rt></ruby>いです。", romaji: "Hai, ikimasu. Unchin wa sakibarai desu.", id: "Ya, menuju ke sana. Ongkos dibayar di muka." },
-      { speaker: "客", jp: "<ruby>交通系<rt>こうつうけい</rt></ruby>ICカードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Koutsuukei ai shii kaado wa tsukaemasu ka.", id: "Apakah kartu IC transportasi bisa digunakan?" },
-      { speaker: "運転手", jp: "はい、<ruby>使<rt>つか</rt></ruby>えます。<ruby>乗<rt>の</rt></ruby>るときにタッチしてください。", romaji: "Hai, tsukaemasu. Noru toki ni tacchi shite kudasai.", id: "Ya, bisa. Silakan tempelkan kartu saat naik." },
-      { speaker: "客", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "すみません、このバスは<ruby>市役所<rt>しやくしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", romaji: "Sumimasen, kono basu wa shiyakusho ni ikimasu ka.", id: "Permisi, apakah bus ini menuju kantor balai kota?" },
+      { speaker: "<ruby>運転手<rt>うんてんしゅ</rt></ruby>", jp: "はい、<ruby>行<rt>い</rt></ruby>きます。<ruby>運賃<rt>うんちん</rt></ruby>は<ruby>先<rt>さき</rt></ruby><ruby>払<rt>ばら</rt></ruby>いです。", romaji: "Hai, ikimasu. Unchin wa sakibarai desu.", id: "Ya, menuju ke sana. Ongkos dibayar di muka." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "<ruby>交通系<rt>こうつうけい</rt></ruby>ICカードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Koutsuukei ai shii kaado wa tsukaemasu ka.", id: "Apakah kartu IC transportasi bisa digunakan?" },
+      { speaker: "<ruby>運転手<rt>うんてんしゅ</rt></ruby>", jp: "はい、<ruby>使<rt>つか</rt></ruby>えます。<ruby>乗<rt>の</rt></ruby>るときにタッチしてください。", romaji: "Hai, tsukaemasu. Noru toki ni tacchi shite kudasai.", id: "Ya, bisa. Silakan tempelkan kartu saat naik." },
+      { speaker: "<ruby>客<rt>きゃく</rt></ruby>", jp: "わかりました。ありがとうございます。", romaji: "Wakarimashita. Arigatou gozaimasu.", id: "Baik, saya mengerti. Terima kasih." },
     ],
   },
 ];
@@ -179,8 +183,8 @@ const quiz = [
   {
     question: "Kamu ingin membeli tiket sekali jalan menuju Kyoto. Apa yang sebaiknya kamu katakan?",
     options: [
-      { label: "<ruby>片道<rt>かたみち</rt></ruby>でお願いします。", correct: true, feedback: "Benar. 片道 berarti perjalanan satu arah atau sekali jalan." },
-      { label: "<ruby>往復<rt>おうふく</rt></ruby>でお願いします。", correct: false, feedback: "往復 berarti perjalanan pulang-pergi." },
+      { label: "<ruby>片道<rt>かたみち</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Benar. <ruby>片道<rt>かたみち</rt></ruby> berarti perjalanan satu arah atau sekali jalan." },
+      { label: "<ruby>往復<rt>おうふく</rt></ruby>でお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "<ruby>往復<rt>おうふく</rt></ruby> berarti perjalanan pulang-pergi." },
       { label: "<ruby>次<rt>つぎ</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。", correct: false, feedback: "Kalimat ini berarti akan turun di pemberhentian berikutnya." },
     ],
   },
@@ -189,7 +193,7 @@ const quiz = [
     options: [
       { label: "<ruby>何時<rt>なんじ</rt></ruby>に<ruby>着<rt>つ</rt></ruby>きますか。", correct: false, feedback: "Kalimat ini menanyakan pukul berapa kendaraan tiba." },
       { label: "どこで<ruby>乗<rt>の</rt></ruby>り<ruby>換<rt>か</rt></ruby>えればいいですか。", correct: true, feedback: "Tepat. Ungkapan ini menanyakan di mana harus melakukan transit." },
-      { label: "<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お願いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta satu tiket." },
+      { label: "<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini digunakan untuk meminta satu tiket." },
     ],
   },
   {
@@ -210,19 +214,19 @@ const simulation = [
     translation: "Mau pergi sampai mana?",
     task: "Katakan bahwa kamu ingin satu tiket sampai Kyoto.",
     options: [
-      { label: "<ruby>京都<rt>きょうと</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お願いします。", correct: true, feedback: "Tepat. Kamu menyebutkan tujuan dan jumlah tiket yang dibutuhkan." },
+      { label: "<ruby>京都<rt>きょうと</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>一枚<rt>いちまい</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします。", correct: true, feedback: "Tepat. Kamu menyebutkan tujuan dan jumlah tiket yang dibutuhkan." },
       { label: "<ruby>京都<rt>きょうと</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。", correct: false, feedback: "Kalimat ini berarti kamu turun di Kyoto, bukan meminta tiket." },
       { label: "<ruby>次<rt>つぎ</rt></ruby>のバスは<ruby>何時<rt>なんじ</rt></ruby>ですか。", correct: false, feedback: "Kalimat ini menanyakan jadwal bus berikutnya." },
     ],
   },
   {
     prompt: "Kamu sedang berada di stasiun dan ingin memastikan kereta yang akan dinaiki. Petugas bertanya:",
-    japanese: "何かお困りですか。",
+    japanese: "<ruby>何<rt>なに</rt></ruby>かお<ruby>困<rt>こま</rt></ruby>りですか。",
     romaji: "Nanika okomari desu ka.",
     translation: "Apakah ada yang bisa dibantu?",
     task: "Tanyakan apakah kereta ini menuju Shinjuku.",
     options: [
-      { label: "<ruby>新宿<rt>しんじゅく</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>をお願いします。", correct: false, feedback: "Kalimat ini meminta tiket menuju Shinjuku." },
+      { label: "<ruby>新宿<rt>しんじゅく</rt></ruby>までの<ruby>切符<rt>きっぷ</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします。", correct: false, feedback: "Kalimat ini meminta tiket menuju Shinjuku." },
       { label: "この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>新宿<rt>しんじゅく</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか。", correct: true, feedback: "Benar. Kamu memastikan tujuan kereta sebelum naik." },
       { label: "<ruby>次<rt>つぎ</rt></ruby>で<ruby>降<rt>お</rt></ruby>ります。", correct: false, feedback: "Kalimat ini berarti kamu akan turun di pemberhentian berikutnya." },
     ],
@@ -325,7 +329,7 @@ export default function TransportasiPerjalananPage() {
         </div>
         <ul className="mt-3 space-y-3 text-sm leading-relaxed text-[#C5C0B7]">
           <li><span className="font-semibold text-[#EAE6DD]">Periksa tujuan dan arah kereta.</span> Pastikan nama tujuan, jalur, dan arah perjalanan sebelum naik. Kereta yang melewati jalur sama belum tentu menuju tujuan yang kamu inginkan.</li>
-          <li><span className="font-semibold text-[#EAE6DD]">Pahami nomor peron.</span> 番線 menunjukkan nomor jalur atau peron keberangkatan. Cocokkan informasi di papan petunjuk dengan tiket atau aplikasi perjalanan.</li>
+          <li><span className="font-semibold text-[#EAE6DD]">Pahami nomor peron.</span> <ruby>番線<rt>ばんせん</rt></ruby> menunjukkan nomor jalur atau peron keberangkatan. Cocokkan informasi di papan petunjuk dengan tiket atau aplikasi perjalanan.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Kartu IC dan saldo.</span> Kartu transportasi prabayar dapat digunakan di banyak jaringan, tetapi tidak semua rute atau operator selalu menerima kartu yang sama. Pastikan saldo cukup sebelum melewati gerbang.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Cara naik bus dapat berbeda.</span> Ada bus yang meminta pembayaran saat naik dan ada yang dibayar saat turun. Perhatikan petunjuk di pintu, mesin, atau informasi dari pengemudi.</li>
           <li><span className="font-semibold text-[#EAE6DD]">Saat terjadi keterlambatan.</span> Dengarkan pengumuman dan periksa informasi keberangkatan berikutnya. Jika bingung, mintalah bantuan petugas dengan すみません.</li>
@@ -360,7 +364,9 @@ export default function TransportasiPerjalananPage() {
           const selected = quizAnswers[questionIndex];
           return (
             <div key={questionIndex} className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-              <p className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">{questionIndex + 1}. {item.question}</p>
+              <div className="text-sm font-semibold leading-relaxed text-[#EAE6DD]">
+                  {questionIndex + 1}. <JapaneseReading html={item.question} showKana={false} showRomaji={false} showTranslation={false} contentClassName="text-sm font-semibold leading-relaxed text-[#EAE6DD]" />
+                </div>
               <div className="mt-3 grid gap-2">
                 {item.options.map((option, optionIndex) => {
                   const isSelected = selected === optionIndex;
@@ -388,9 +394,13 @@ export default function TransportasiPerjalananPage() {
                 })}
               </div>
               {selected !== undefined && (
-                <p className={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}>
-                  {item.options[selected].feedback}
-                </p>
+                <JapaneseReading
+                  html={item.options[selected].feedback}
+                  showKana={false}
+                  showRomaji={false}
+                  showTranslation={false}
+                  contentClassName={"mt-3 text-xs leading-relaxed " + (item.options[selected].correct ? "text-[#8ED8B4]" : "text-[#F08B8E]")}
+                />
               )}
             </div>
           );
