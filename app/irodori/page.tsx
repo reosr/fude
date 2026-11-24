@@ -178,7 +178,7 @@ export default function IrodoriPage() {
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
           adalah pemilih jalur. Pemula A1 dan Dasar 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
           Dasar 2 A2 sudah memiliki 18 pelajaran. Pra-Menengah A2/B1
-          memiliki 18 rencana pelajaran, dan saat ini sebelas pelajaran sudah tersedia.
+          memiliki 18 rencana pelajaran, dan saat ini enam belas pelajaran sudah tersedia.
         </p>
       </div>
     </main>
