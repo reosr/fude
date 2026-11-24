@@ -233,16 +233,24 @@ main section > div.grid:has(> article > p.font-mincho.text-base) > article > p:n
   color: inherit !important;
 }
 
-/* Japanese words and examples embedded in explanations receive their own emphasis. */
+/* Irodori Japanese typography: expressive brush strokes with tapered terminals. */
+.irodori-learning .font-mincho:not(.irodori-mixed-prose),
+.irodori-learning .irodori-mixed-japanese {
+  font-family: 'Yuji Syuku', 'Shippori Mincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif !important;
+  font-weight: 400;
+  -webkit-font-smoothing: auto;
+  text-rendering: geometricPrecision;
+}
+
+/* Japanese words and examples embedded in explanations remain more prominent. */
 .irodori-learning .irodori-mixed-japanese {
   color: inherit;
-  font-family: 'Shippori Mincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', serif !important;
   font-size: 1.4em !important;
-  font-weight: 500;
   line-height: 1.8 !important;
 }
 
 .irodori-learning .irodori-mixed-japanese rt {
+  font-family: 'Shippori Mincho', 'Yu Mincho', serif;
   font-size: 0.48em;
   line-height: 1;
 }
