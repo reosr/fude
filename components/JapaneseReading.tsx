@@ -402,7 +402,7 @@ interface RomajiToken {
 }
 
 const ROMAJI_PARTICLES = new Set([
-  "は", "が", "を", "に", "で", "と", "へ", "も", "の", "か", "や", "ね", "よ",
+  "は", "が", "を", "に", "で", "と", "へ", "も", "の", "か", "や", "ね", "よ", "な",
   "から", "まで", "より", "しか", "だけ", "など", "って", "ので", "とか",
 ]);
 
@@ -612,6 +612,17 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
 
     if (token.punctuation) {
       merged.push(token);
+      continue;
+    }
+
+    // Awalan sopan お／ご melekat pada kata berikutnya: お名前 → onamae.
+    if (
+      adjacent &&
+      previous &&
+      ["お", "ご"].includes(previous.surface)
+    ) {
+      mergeIntoPrevious(previous, token);
+      previous.fromRuby = token.fromRuby;
       continue;
     }
 
