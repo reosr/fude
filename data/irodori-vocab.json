@@ -14647,5 +14647,350 @@
         "meaning": "Sudah bersusah payah; mumpung ada kesempatan"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-17",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 17,
+    "lessonTitle": "Saya akan menjelaskan tugas staf di area layanan.",
+    "vocab": [
+      {
+        "kanji": "職場",
+        "kana": "しょくば",
+        "romaji": "shokuba",
+        "meaning": "Tempat kerja"
+      },
+      {
+        "kanji": "仕事",
+        "kana": "しごと",
+        "romaji": "shigoto",
+        "meaning": "Pekerjaan"
+      },
+      {
+        "kanji": "従業員",
+        "kana": "じゅうぎょういん",
+        "romaji": "juugyouin",
+        "meaning": "Karyawan"
+      },
+      {
+        "kanji": "社員",
+        "kana": "しゃいん",
+        "romaji": "shain",
+        "meaning": "Pegawai perusahaan"
+      },
+      {
+        "kanji": "先輩",
+        "kana": "せんぱい",
+        "romaji": "senpai",
+        "meaning": "Senior; rekan yang lebih dahulu bekerja"
+      },
+      {
+        "kanji": "後輩",
+        "kana": "こうはい",
+        "romaji": "kouhai",
+        "meaning": "Junior; rekan yang lebih baru"
+      },
+      {
+        "kanji": "上司",
+        "kana": "じょうし",
+        "romaji": "joushi",
+        "meaning": "Atasan"
+      },
+      {
+        "kanji": "同僚",
+        "kana": "どうりょう",
+        "romaji": "douryou",
+        "meaning": "Rekan kerja"
+      },
+      {
+        "kanji": "指示",
+        "kana": "しじ",
+        "romaji": "shiji",
+        "meaning": "Instruksi; arahan"
+      },
+      {
+        "kanji": "説明",
+        "kana": "せつめい",
+        "romaji": "setsumei",
+        "meaning": "Penjelasan"
+      },
+      {
+        "kanji": "担当",
+        "kana": "たんとう",
+        "romaji": "tantou",
+        "meaning": "Penanggung jawab; tugas yang ditangani"
+      },
+      {
+        "kanji": "品出し",
+        "kana": "しなだし",
+        "romaji": "shinadashi",
+        "meaning": "Menyusun barang ke rak penjualan"
+      },
+      {
+        "kanji": "商品",
+        "kana": "しょうひん",
+        "romaji": "shouhin",
+        "meaning": "Barang dagangan; produk"
+      },
+      {
+        "kanji": "並べる",
+        "kana": "ならべる",
+        "romaji": "naraberu",
+        "meaning": "Menyusun; menata berjajar"
+      },
+      {
+        "kanji": "順番",
+        "kana": "じゅんばん",
+        "romaji": "junban",
+        "meaning": "Urutan; giliran"
+      },
+      {
+        "kanji": "ラベル",
+        "kana": "ラベル",
+        "romaji": "raberu",
+        "meaning": "Label"
+      },
+      {
+        "kanji": "賞味期限",
+        "kana": "しょうみきげん",
+        "romaji": "shoumikigen",
+        "meaning": "Batas waktu kualitas terbaik makanan"
+      },
+      {
+        "kanji": "提出",
+        "kana": "ていしゅつ",
+        "romaji": "teishutsu",
+        "meaning": "Penyerahan; mengumpulkan dokumen"
+      },
+      {
+        "kanji": "申請",
+        "kana": "しんせい",
+        "romaji": "shinsei",
+        "meaning": "Pengajuan; permohonan resmi"
+      },
+      {
+        "kanji": "遅刻",
+        "kana": "ちこく",
+        "romaji": "chikoku",
+        "meaning": "Keterlambatan"
+      },
+      {
+        "kanji": "遅延",
+        "kana": "ちえん",
+        "romaji": "chien",
+        "meaning": "Keterlambatan; penundaan"
+      },
+      {
+        "kanji": "欠勤",
+        "kana": "けっきん",
+        "romaji": "kekkin",
+        "meaning": "Tidak masuk kerja"
+      },
+      {
+        "kanji": "証明書",
+        "kana": "しょうめいしょ",
+        "romaji": "shoumeisho",
+        "meaning": "Surat keterangan; sertifikat"
+      },
+      {
+        "kanji": "受話器",
+        "kana": "じゅわき",
+        "romaji": "juwaki",
+        "meaning": "Gagang telepon"
+      },
+      {
+        "kanji": "失礼",
+        "kana": "しつれい",
+        "romaji": "shitsurei",
+        "meaning": "Tidak sopan; permisi"
+      },
+      {
+        "kanji": "印象",
+        "kana": "いんしょう",
+        "romaji": "inshou",
+        "meaning": "Kesan"
+      },
+      {
+        "kanji": "提供する",
+        "kana": "ていきょうする",
+        "romaji": "teikyou suru",
+        "meaning": "Menyediakan; menyajikan"
+      },
+      {
+        "kanji": "向き",
+        "kana": "むき",
+        "romaji": "muki",
+        "meaning": "Arah; posisi menghadap"
+      },
+      {
+        "kanji": "制服",
+        "kana": "せいふく",
+        "romaji": "seifuku",
+        "meaning": "Seragam"
+      },
+      {
+        "kanji": "着用する",
+        "kana": "ちゃくようする",
+        "romaji": "chakuyou suru",
+        "meaning": "Mengenakan (pakaian/seragam)"
+      },
+      {
+        "kanji": "清潔",
+        "kana": "せいけつ",
+        "romaji": "seiketsu",
+        "meaning": "Bersih; higienis"
+      },
+      {
+        "kanji": "衛生",
+        "kana": "えいせい",
+        "romaji": "eisei",
+        "meaning": "Kebersihan dan kesehatan"
+      },
+      {
+        "kanji": "身だしなみ",
+        "kana": "みだしなみ",
+        "romaji": "midashinami",
+        "meaning": "Kerapian dan penampilan diri"
+      },
+      {
+        "kanji": "髪型",
+        "kana": "かみがた",
+        "romaji": "kamigata",
+        "meaning": "Gaya rambut"
+      },
+      {
+        "kanji": "髪色",
+        "kana": "かみいろ",
+        "romaji": "kamiiro",
+        "meaning": "Warna rambut"
+      },
+      {
+        "kanji": "爪",
+        "kana": "つめ",
+        "romaji": "tsume",
+        "meaning": "Kuku"
+      },
+      {
+        "kanji": "化粧",
+        "kana": "けしょう",
+        "romaji": "keshou",
+        "meaning": "Riasan; tata rias"
+      },
+      {
+        "kanji": "香水",
+        "kana": "こうすい",
+        "romaji": "kousui",
+        "meaning": "Parfum"
+      },
+      {
+        "kanji": "整える",
+        "kana": "ととのえる",
+        "romaji": "totonoeru",
+        "meaning": "Merapikan; menata"
+      },
+      {
+        "kanji": "避ける",
+        "kana": "さける",
+        "romaji": "sakeru",
+        "meaning": "Menghindari"
+      },
+      {
+        "kanji": "勤務中",
+        "kana": "きんむちゅう",
+        "romaji": "kinmuchuu",
+        "meaning": "Selama jam kerja"
+      },
+      {
+        "kanji": "規則",
+        "kana": "きそく",
+        "romaji": "kisoku",
+        "meaning": "Peraturan"
+      },
+      {
+        "kanji": "不可",
+        "kana": "ふか",
+        "romaji": "fuka",
+        "meaning": "Tidak diperbolehkan"
+      },
+      {
+        "kanji": "給料",
+        "kana": "きゅうりょう",
+        "romaji": "kyuuryou",
+        "meaning": "Gaji"
+      },
+      {
+        "kanji": "残業",
+        "kana": "ざんぎょう",
+        "romaji": "zangyou",
+        "meaning": "Lembur"
+      },
+      {
+        "kanji": "勤務条件",
+        "kana": "きんむじょうけん",
+        "romaji": "kinmu jouken",
+        "meaning": "Kondisi atau ketentuan kerja"
+      },
+      {
+        "kanji": "面談",
+        "kana": "めんだん",
+        "romaji": "mendan",
+        "meaning": "Pertemuan atau wawancara pribadi"
+      },
+      {
+        "kanji": "要望",
+        "kana": "ようぼう",
+        "romaji": "youbou",
+        "meaning": "Permintaan; harapan"
+      },
+      {
+        "kanji": "不満",
+        "kana": "ふまん",
+        "romaji": "fuman",
+        "meaning": "Ketidakpuasan; keluhan"
+      },
+      {
+        "kanji": "改善",
+        "kana": "かいぜん",
+        "romaji": "kaizen",
+        "meaning": "Perbaikan"
+      },
+      {
+        "kanji": "連絡",
+        "kana": "れんらく",
+        "romaji": "renraku",
+        "meaning": "Kontak; pemberitahuan"
+      },
+      {
+        "kanji": "手書き",
+        "kana": "てがき",
+        "romaji": "tegaki",
+        "meaning": "Tulisan tangan"
+      },
+      {
+        "kanji": "相談",
+        "kana": "そうだん",
+        "romaji": "soudan",
+        "meaning": "Konsultasi; meminta saran"
+      },
+      {
+        "kanji": "窓口",
+        "kana": "まどぐち",
+        "romaji": "madoguchi",
+        "meaning": "Loket; bagian layanan"
+      },
+      {
+        "kanji": "労働",
+        "kana": "ろうどう",
+        "romaji": "roudou",
+        "meaning": "Ketenagakerjaan; tenaga kerja"
+      },
+      {
+        "kanji": "同意",
+        "kana": "どうい",
+        "romaji": "doui",
+        "meaning": "Persetujuan"
+      }
+    ]
   }
 ]
