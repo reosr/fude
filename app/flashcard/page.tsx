@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useRef, useLayoutEffect, type ReactNode } from "react";
 import { getUnlockedVocab, type VocabItem } from "../../lib/vocab";
 import { getProgress } from "../../lib/progress";
@@ -211,10 +212,13 @@ useEffect(() => {
       (source) => source.type === "practical" && source.categoryId === categoryFilter
     ))
   );
+  const safeCurrentIndex = filteredDeck.length > 0
+    ? currentIndex % filteredDeck.length
+    : 0;
 
   useEffect(() => {
     setTimeLeft((isFlipped ? TIMER_BACK : TIMER_FRONT) * 20);
-  }, [currentIndex, isFlipped]);
+  }, [safeCurrentIndex, filteredDeck.length, isFlipped]);
 
   useEffect(() => {
     if (!isAutoPlay || isHovered || !isWindowFocused || filteredDeck.length === 0 || isModalOpen || isAdvancing) return;
@@ -242,10 +246,34 @@ useEffect(() => {
 
   if (!isLoaded) return null;
   if (filteredDeck.length === 0) return (
-    <div className="text-center mt-10 text-[#A3A099]">
-      {deck.length === 0 ? "Belum ada kosakata." : "Semua kartu sudah kamu hafal! Hebat! 🎉"}
-      <br/>
-      <button onClick={() => setIsModalOpen(true)} className="mt-4 text-[#C93438] underline">Lihat Daftar Hafalan</button>
+    <div className="mx-auto mt-10 flex max-w-md flex-col items-center gap-4 rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-6 text-center">
+      <p className="text-sm leading-relaxed text-[#C5C0B7]">
+        {deck.length === 0
+          ? "Belum ada kosakata yang terbuka."
+          : selectedPracticalCategory
+            ? `Semua kartu dalam kategori ${selectedPracticalCategory.label} sudah kamu hafal. Hebat!`
+            : "Semua kartu sudah kamu hafal! Hebat!"}
+      </p>
+      <div className="flex flex-wrap items-center justify-center gap-2">
+        {categoryFilter && (
+          <button
+            type="button"
+            onClick={() => {
+              setCategoryFilter(null);
+              window.history.replaceState(null, "", "/flashcard");
+            }}
+            className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-3 py-2 text-xs font-bold text-[#D9B66D]"
+          >
+            Kembali ke semua kartu
+          </button>
+        )}
+        <Link
+          href="/kosakata"
+          className="rounded-xl border border-[#33312E] px-3 py-2 text-xs font-semibold text-[#C5C0B7] hover:text-[#EAE6DD]"
+        >
+          Buka Daftar Kosakata
+        </Link>
+      </div>
     </div>
   );
 
@@ -256,7 +284,7 @@ useEffect(() => {
     setIsAdvancing(true);
 
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % filteredDeck.length);
+      setCurrentIndex((safeCurrentIndex + 1) % filteredDeck.length);
       setIsAdvancing(false);
     }, 400);
   };
@@ -268,7 +296,7 @@ useEffect(() => {
     setIsAdvancing(true);
 
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev - 1 + filteredDeck.length) % filteredDeck.length);
+      setCurrentIndex((safeCurrentIndex - 1 + filteredDeck.length) % filteredDeck.length);
       setIsAdvancing(false);
       
       setIsRewinding(true);
@@ -277,7 +305,7 @@ useEffect(() => {
   };
 
   const toggleMemorized = () => {
-    const currentCard = filteredDeck[currentIndex];
+    const currentCard = filteredDeck[safeCurrentIndex];
     let newMemorized;
     if (memorized.includes(currentCard.kanji)) {
       newMemorized = memorized.filter(k => k !== currentCard.kanji);
@@ -287,7 +315,8 @@ useEffect(() => {
       newMemorized = Array.from(new Set([...memorized, currentCard.kanji]));
       setMemorized(newMemorized);
       saveMemorizedKanji(newMemorized);
-      handleNext(); 
+      // Item yang baru dihafal langsung keluar dari filteredDeck.
+      // Indeks yang sama otomatis menunjuk kartu berikutnya.
     }
   };
 
@@ -305,7 +334,7 @@ useEffect(() => {
   const stackCards = [];
   for (let i = 0; i < 3; i++) {
     if (filteredDeck.length > i) {
-      stackCards.push(filteredDeck[(currentIndex + i) % filteredDeck.length]);
+      stackCards.push(filteredDeck[(safeCurrentIndex + i) % filteredDeck.length]);
     }
   }
 
@@ -345,8 +374,8 @@ useEffect(() => {
       </div>
 
       <div className="w-full max-w-md flex justify-between items-center text-xs font-bold text-[#A3A099] mt-1 md:mt-4 relative z-20">
-        <span>KARTU {currentIndex + 1} DARI {filteredDeck.length}</span>
-        <span className="text-[#C93438]">{Math.round(((currentIndex + 1) / filteredDeck.length) * 100)}%</span>
+        <span>KARTU {safeCurrentIndex + 1} DARI {filteredDeck.length}</span>
+        <span className="text-[#C93438]">{Math.round(((safeCurrentIndex + 1) / filteredDeck.length) * 100)}%</span>
       </div>
 
       <div 
