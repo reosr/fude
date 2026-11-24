@@ -124,7 +124,7 @@ const simulation = [
   },
   {
     prompt: "Kamu menemukan baju yang disukai, tetapi ingin mencoba ukurannya terlebih dahulu. Pegawai berkata:",
-    japanese: "こちらの<ruby>試着室<rt>しちゃくしつ</rt></ruby>をご利用ください。",
+    japanese: "こちらの<ruby>試着室<rt>しちゃくしつ</rt></ruby>をご<ruby>利用<rt>りよう</rt></ruby>ください。",
     romaji: "Kochira no shichakushitsu o goriyou kudasai.",
     translation: "Silakan gunakan ruang ganti yang ini.",
     task: "Sebelum mencoba baju, apa yang bisa kamu tanyakan?",
