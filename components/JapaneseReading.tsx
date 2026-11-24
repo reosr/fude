@@ -396,6 +396,7 @@ interface RomajiToken {
   start: number;
   end: number;
   punctuation: boolean;
+  fromRuby: boolean;
 }
 
 const ROMAJI_PARTICLES = new Set([
@@ -403,14 +404,11 @@ const ROMAJI_PARTICLES = new Set([
   "から", "まで", "より", "しか", "だけ", "など", "って", "ので", "とか",
 ]);
 
-const ROMAJI_COMPOUND_PARTICLES: Record<string, string> = {
-  "では": "dewa",
-  "には": "niwa",
-  "とは": "towa",
-  "からは": "karawa",
-  "までは": "madewa",
-  "よりは": "yoriwa",
-};
+const ROMAJI_SUFFIXES = new Set([
+  "たい", "た", "ない", "なかった", "たら", "ても", "て", "で", "って", "んで",
+]);
+
+const ROMAJI_HONORIFICS = new Set(["さん", "ちゃん", "くん", "さま"]);
 
 function isRomajiPunctuation(value: string): boolean {
   return /^[\s。、！？!?.,／/「」『』（）()「」・]+$/u.test(value);
@@ -430,8 +428,7 @@ function getRomajiReadingForRange(
     );
 
     if (span) {
-      // Satu ruby harus tetap menjadi satu unit morfem agar bacaannya tidak terpotong.
-      if (span.start < start || span.end > end) return null;
+      if (span.start < cursor || span.end > end) return null;
       reading += span.reading;
       cursor = span.end;
       continue;
@@ -455,90 +452,147 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
 
   const Segmenter = (Intl as unknown as JapaneseIntlWithSegmenter).Segmenter;
   const segmenter = new Segmenter("ja", { granularity: "word" });
-  const rawSegments = Array.from(segmenter.segment(source.surface));
   const tokens: RomajiToken[] = [];
 
-  for (let index = 0; index < rawSegments.length; index++) {
-    const segment = rawSegments[index];
-    const surface = segment.segment;
-    const start = segment.index;
-    const end = start + surface.length;
-
-    if (/^\s+$/u.test(surface)) continue;
-
-    // Segmenter kadang menggabungkan partikel は ke awal います.
-    // Pisahkan hanya pada konteks partikel + います, bukan kata はい.
-    if (
-      surface === "はい" &&
-      tokens.length > 0 &&
-      ROMAJI_PARTICLES.has(tokens[tokens.length - 1].surface) &&
-      rawSegments[index + 1]?.segment === "ます"
-    ) {
-      tokens.push(
-        { surface: "は", kana: "は", start, end: start + 1, punctuation: false },
-        { surface: "い", kana: "い", start: start + 1, end, punctuation: false }
-      );
-      continue;
+  const pushToken = (
+    surface: string,
+    start: number,
+    end: number,
+    fromRuby = false,
+    knownReading?: string
+  ): void => {
+    if (!surface || /^\s+$/u.test(surface)) return;
+    const reading = knownReading ?? getRomajiReadingForRange(source, start, end);
+    if (reading === null) {
+      throw new Error("Missing furigana for romaji segment");
     }
-
-    // Pisahkan が dari です agar hasilnya terbaca "desu ga".
-    if (surface === "ですが") {
-      tokens.push(
-        { surface: "です", kana: "です", start, end: start + 2, punctuation: false },
-        { surface: "が", kana: "が", start: start + 2, end, punctuation: false }
-      );
-      continue;
-    }
-
-    // Dalam bentuk progresif, てい／でい perlu menjadi dua bagian:
-    // してい + ます → shite imasu, bukan shiteimasu.
-    const progressiveSuffix = /^(?:てい|でい|いてい|ってい)$/u.test(surface);
-    if (progressiveSuffix) {
-      const splitAt = end - 1;
-      const firstKana = getRomajiReadingForRange(source, start, splitAt);
-      const lastKana = getRomajiReadingForRange(source, splitAt, end);
-      if (firstKana === null || lastKana === null) return null;
-      tokens.push(
-        {
-          surface: surface.slice(0, -1),
-          kana: toHiragana(firstKana),
-          start,
-          end: splitAt,
-          punctuation: false,
-        },
-        {
-          surface: "い",
-          kana: toHiragana(lastKana),
-          start: splitAt,
-          end,
-          punctuation: false,
-        }
-      );
-      continue;
-    }
-
-    const kana = getRomajiReadingForRange(source, start, end);
-    if (kana === null) return null;
-
     tokens.push({
       surface,
-      kana: toHiragana(kana),
+      kana: toHiragana(reading),
       start,
       end,
       punctuation: isRomajiPunctuation(surface),
+      fromRuby,
     });
+  };
+
+  const pushGap = (start: number, end: number): boolean => {
+    if (end <= start) return true;
+    const gap = source.surface.slice(start, end);
+    const raw = Array.from(segmenter.segment(gap));
+
+    for (let index = 0; index < raw.length; index++) {
+      const part = raw[index];
+      const surface = part.segment;
+      if (/^\s+$/u.test(surface)) continue;
+
+      const tokenStart = start + part.index;
+      const tokenEnd = tokenStart + surface.length;
+
+      // Segmenter dapat menyatukan "で／に／と + は".
+      // Pecah kembali agar partikel は dibaca "wa" dan memiliki jarak sendiri.
+      const compoundParticle = /^(から|まで|より|で|に|と)は$/u.exec(surface);
+      if (compoundParticle) {
+        const first = compoundParticle[1];
+        pushToken(first, tokenStart, tokenStart + first.length);
+        pushToken("は", tokenStart + first.length, tokenEnd);
+        continue;
+      }
+
+      // "ことに／ことが／ものを／ように" dan pola serupa merupakan
+      // frasa + partikel, bukan satu kata panjang.
+      const nominalParticle = /^(こと|もの|ため|とき|ところ|よう|はず|わけ)(から|まで|より|は|が|を|に|で|と|へ|も|か)$/u.exec(surface);
+      if (nominalParticle) {
+        const noun = nominalParticle[1];
+        pushToken(noun, tokenStart, tokenStart + noun.length);
+        pushToken(
+          nominalParticle[2],
+          tokenStart + noun.length,
+          tokenEnd
+        );
+        continue;
+      }
+
+      // Pisahkan たん／だん dari ん ketika menjadi bentuk penjelas んです.
+      if (
+        (surface === "たん" || surface === "だん") &&
+        /^(?:です|ですが|ですよ|ですか)$/.test(raw[index + 1]?.segment ?? "")
+      ) {
+        pushToken(surface.slice(0, 1), tokenStart, tokenStart + 1);
+        pushToken("ん", tokenStart + 1, tokenEnd);
+        continue;
+      }
+
+      // ています／でいます／っています／んでいます menjadi
+      // bentuk て／で + います, bukan satu rentang yang menempel.
+      const progressive = /^(て|で|って|んで)(います|いました|いません|いる|いた|いない|いなかった)$/u.exec(surface);
+      if (progressive) {
+        const first = progressive[1];
+        pushToken(first, tokenStart, tokenStart + first.length);
+        pushToken(
+          progressive[2],
+          tokenStart + first.length,
+          tokenEnd
+        );
+        continue;
+      }
+
+      // Segmenter umumnya memecah てい + ます; satukan い + ます
+      // menjadi "います" agar hasil akhirnya "mite imasu".
+      if (
+        (surface === "てい" || surface === "でい" || surface === "ってい" || surface === "んでい") &&
+        raw[index + 1]?.segment === "ます"
+      ) {
+        const first = surface.slice(0, -1);
+        pushToken(first, tokenStart, tokenEnd - 1);
+        const next = raw[index + 1];
+        const nextStart = start + next.index;
+        pushToken("います", tokenEnd - 1, nextStart + next.segment.length);
+        index += 1;
+        continue;
+      }
+
+      pushToken(surface, tokenStart, tokenEnd);
+    }
+
+    return true;
+  };
+
+  try {
+    const spans = source.rubySpans
+      .filter((span) => span.start >= 0 && span.end <= source.surface.length && span.end > span.start)
+      .sort((a, b) => a.start - b.start);
+    let cursor = 0;
+
+    for (const span of spans) {
+      if (span.start < cursor) continue;
+
+      // Segmentasikan hanya teks di antara rentang ruby. Rentang furigana
+      // selalu masuk sebagai satu token, walaupun Segmenter ingin memecahnya.
+      if (!pushGap(cursor, span.start)) return null;
+
+      pushToken(
+        source.surface.slice(span.start, span.end),
+        span.start,
+        span.end,
+        true,
+        span.reading
+      );
+      cursor = span.end;
+    }
+
+    if (!pushGap(cursor, source.surface.length)) return null;
+  } catch {
+    return null;
   }
 
   const merged: RomajiToken[] = [];
-  const excludedSuffixes = new Set([
-    "です", "でした", "ます", "ません", "ました", "ましょう", "でしょう",
-    "ください", "たい", "ない", "なかった",
-  ]);
 
   const mergeIntoPrevious = (previous: RomajiToken, current: RomajiToken) => {
     previous.surface += current.surface;
     previous.kana += current.kana;
     previous.end = current.end;
+    previous.punctuation = false;
   };
 
   for (let index = 0; index < tokens.length; index++) {
@@ -547,13 +601,8 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
     const next = tokens[index + 1];
     const adjacent = Boolean(previous && previous.end === token.start);
     const previousIsParticle = previous
-      ? ROMAJI_PARTICLES.has(previous.surface) ||
-        Boolean(ROMAJI_COMPOUND_PARTICLES[previous.surface])
+      ? ROMAJI_PARTICLES.has(previous.surface)
       : false;
-    const previousEndsAtRuby = Boolean(
-      previous &&
-      source.rubySpans.some((span) => span.end === previous.end)
-    );
     const currentIsKana = /^[ぁ-ゖァ-ヺー]+$/u.test(token.surface);
 
     if (token.punctuation) {
@@ -561,30 +610,43 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       continue;
     }
 
-    // Gabungkan okurigana yang terpisah oleh segmenter dari kanji ber-furigana.
+    // Okurigana setelah ruby menempel ke kata dasarnya, kecuali partikel
+    // dan honorifik yang harus tetap menjadi unit terpisah.
     if (
       adjacent &&
-      previous &&
-      previousEndsAtRuby &&
+      previous?.fromRuby &&
       currentIsKana &&
       !ROMAJI_PARTICLES.has(token.surface) &&
-      !excludedSuffixes.has(token.surface)
+      !ROMAJI_HONORIFICS.has(token.surface) &&
+      !["です", "でした", "ます", "ました", "ません", "ましょう", "でしょう", "ください"].includes(token.surface)
     ) {
       mergeIntoPrevious(previous, token);
+      previous.fromRuby = false;
       continue;
     }
 
-    // Awalan sopan お／ご melekat pada kata yang mengikutinya.
+    // Bentuk sambung する: 勉強 + し + て → benkyou shite.
     if (
       adjacent &&
       previous &&
-      ["お", "ご"].includes(previous.surface)
+      previous.surface === "し" &&
+      (token.surface === "て" || token.surface === "てい")
     ) {
       mergeIntoPrevious(previous, token);
       continue;
     }
 
-    // Bentuk keinginan dan bentuk lampau/negatif melekat pada pangkal kata kerja.
+    // Bentuk しまった／しました: satukan し + まっ + た.
+    if (
+      adjacent &&
+      previous &&
+      previous.surface === "し" &&
+      (token.surface === "まっ" || token.surface === "ま")
+    ) {
+      mergeIntoPrevious(previous, token);
+      continue;
+    }
+
     if (
       adjacent &&
       previous &&
@@ -592,6 +654,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
         token.surface === "た" ||
         token.surface === "ない" ||
         token.surface === "なかった" ||
+        token.surface === "たら" ||
         (token.surface === "い" &&
           /(?:した|べた|けた|めた|った|いた|みた|びた|りた|きた|えた)$/u.test(previous.surface)))
     ) {
@@ -599,7 +662,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       continue;
     }
 
-    // Bentuk sopan kata kerja dan konjugasinya.
+    // Akhiran sopan melekat pada pangkal kata kerja: し + ます → shimasu.
     if (
       adjacent &&
       previous &&
@@ -616,7 +679,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       continue;
     }
 
-    // Segmenter memecah ください menjadi くだ + さい.
+    // ください kadang dibagi oleh Segmenter menjadi くだ + さい.
     if (
       adjacent &&
       previous &&
@@ -627,18 +690,18 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
       continue;
     }
 
-    // Bentuk sambung kata kerja: 読ん + で, 食べ + て.
+    // Bentuk sambung setelah bunyi ん: 読ん + で → yonde.
     if (
       adjacent &&
       previous &&
-      !previousIsParticle &&
-      (token.surface === "て" ||
-        (token.surface === "で" && /ん$/u.test(previous.surface)))
+      /ん$/u.test(previous.surface) &&
+      token.surface === "で"
     ) {
       mergeIntoPrevious(previous, token);
       continue;
     }
 
+    // Partikel は／へ／を ditulis sesuai cara bacanya dalam kalimat.
     merged.push({ ...token });
   }
 
@@ -668,13 +731,10 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
     }
 
     let romanized: string;
-
     if (token.surface === "こんにちは") {
       romanized = "konnichiwa";
     } else if (token.surface === "こんばんは") {
       romanized = "konbanwa";
-    } else if (ROMAJI_COMPOUND_PARTICLES[token.surface]) {
-      romanized = ROMAJI_COMPOUND_PARTICLES[token.surface];
     } else if (token.surface === "は") {
       romanized = "wa";
     } else if (token.surface === "へ") {
@@ -696,6 +756,7 @@ function romanizeJapaneseSource(source: RomajiSource): string | null {
     .replace(/\s+"/g, '"')
     .trim();
 }
+
 
 export default function JapaneseReading({
   html,
