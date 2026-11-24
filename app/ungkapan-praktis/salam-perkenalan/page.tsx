@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
   jp: string;
@@ -242,16 +243,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
   },
 ];
 
-const vocabulary = [
-  { word: "<ruby>挨拶<rt>あいさつ</rt></ruby>", reading: "あいさつ", romaji: "aisatsu", meaning: "Salam / sapaan" },
-  { word: "<ruby>名前<rt>なまえ</rt></ruby>", reading: "なまえ", romaji: "namae", meaning: "Nama" },
-  { word: "<ruby>出身<rt>しゅっしん</rt></ruby>", reading: "しゅっしん", romaji: "shusshin", meaning: "Asal daerah / tempat asal" },
-  { word: "<ruby>紹介<rt>しょうかい</rt></ruby>", reading: "しょうかい", romaji: "shoukai", meaning: "Perkenalan / memperkenalkan" },
-  { word: "<ruby>趣味<rt>しゅみ</rt></ruby>", reading: "しゅみ", romaji: "shumi", meaning: "Hobi" },
-  { word: "<ruby>住<rt>す</rt></ruby>む", reading: "すむ", romaji: "sumu", meaning: "Tinggal / menetap" },
-  { word: "<ruby>同<rt>おな</rt></ruby>じ", reading: "おなじ", romaji: "onaji", meaning: "Sama" },
-  { word: "<ruby>初<rt>はじ</rt></ruby>めて", reading: "はじめて", romaji: "hajimete", meaning: "Untuk pertama kali" },
-];
+const vocabulary = practicalVocabData.find((category) => category.id === "salam-perkenalan")?.vocab ?? [];
 
 export default function SalamPerkenalanPage() {
   const [quizAnswers, setQuizAnswers] = useState<Record<number, number>>({});
