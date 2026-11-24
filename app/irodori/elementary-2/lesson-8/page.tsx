@@ -152,7 +152,7 @@ const understandVenueAnnouncementConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>はい。飲食は、外の休憩コーナーでお願いします。</>,
-    romaji: "Hai. Inshoku wa, soto no kyuukei koonaa de onegaishimasu.",
+    romaji: "Hai. Inshoku wa, soto no kyuukei koonaa de onegai shimasu.",
     translation: "Ya. Makan dan minum diperbolehkan di area istirahat luar.",
     audioFileName: "irodori-elementary2-08-a04-l04.mp3",
   },
@@ -328,7 +328,7 @@ const venueAnnouncements = [
   {
     title: "撮影について · Tentang pengambilan gambar",
     japanese: "ステージの写真撮影はできますが、動画の撮影はご遠慮ください。周りの人の迷惑にならないようにお願いします。",
-    reading: "Suteeji no shashin satsuei wa dekimasu ga, douga no satsuei wa goenryo kudasai. Mawari no hito no meiwaku ni naranai you ni onegaishimasu.",
+    reading: "Suteeji no shashin satsuei wa dekimasu ga, douga no satsuei wa goenryo kudasai. Mawari no hito no meiwaku ni naranai you ni onegai shimasu.",
     meaning: "Foto panggung diperbolehkan, tetapi mohon tidak merekam video. Harap jangan mengganggu orang di sekitar.",
   },
   {
