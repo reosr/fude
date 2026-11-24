@@ -275,10 +275,10 @@ export default function JapaneseReading({
   })();
   const romanization =
     explicitRomaji?.trim() || (kanaForRomaji ? toRomaji(kanaForRomaji) : "");
-  const consistentRomajiClassName = romajiClassName.replace(
-    /text-\[(?:#[0-9a-fA-F]{3,8}|rgba?\([^)]*\)|hsla?\([^)]*\))\]/g,
-    "text-[#D9B66D]"
-  );
+  const consistentRomajiClassName = [
+    ...romajiClassName.split(" ").filter((className) => !className.startsWith("text-[#")),
+    "text-[#D9B66D]",
+  ].join(" ");
   const showKanaLine = Boolean(
     showKana &&
     !hasMixedLanguageProse &&
