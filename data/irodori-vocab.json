@@ -12244,5 +12244,254 @@
         "meaning": "Kalau berkenan; kalau tidak keberatan"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-08",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 8,
+    "lessonTitle": "Bolehkah saya duduk di sebelahmu?",
+    "vocab": [
+      {
+        "kanji": "初対面",
+        "kana": "はつたいめん",
+        "romaji": "hatsutaimen",
+        "meaning": "Pertemuan pertama; baru pertama kali bertemu"
+      },
+      {
+        "kanji": "隣",
+        "kana": "となり",
+        "romaji": "tonari",
+        "meaning": "Sebelah; sisi di samping"
+      },
+      {
+        "kanji": "座る",
+        "kana": "すわる",
+        "romaji": "suwaru",
+        "meaning": "Duduk"
+      },
+      {
+        "kanji": "席",
+        "kana": "せき",
+        "romaji": "seki",
+        "meaning": "Tempat duduk; kursi"
+      },
+      {
+        "kanji": "空く",
+        "kana": "あく",
+        "romaji": "aku",
+        "meaning": "Kosong; tersedia (tempat duduk)"
+      },
+      {
+        "kanji": "話しかける",
+        "kana": "はなしかける",
+        "romaji": "hanashikakeru",
+        "meaning": "Memulai percakapan dengan seseorang"
+      },
+      {
+        "kanji": "会話",
+        "kana": "かいわ",
+        "romaji": "kaiwa",
+        "meaning": "Percakapan"
+      },
+      {
+        "kanji": "話題",
+        "kana": "わだい",
+        "romaji": "wadai",
+        "meaning": "Topik pembicaraan"
+      },
+      {
+        "kanji": "質問",
+        "kana": "しつもん",
+        "romaji": "shitsumon",
+        "meaning": "Pertanyaan"
+      },
+      {
+        "kanji": "相手",
+        "kana": "あいて",
+        "romaji": "aite",
+        "meaning": "Lawan bicara; orang yang dihadapi"
+      },
+      {
+        "kanji": "答える",
+        "kana": "こたえる",
+        "romaji": "kotaeru",
+        "meaning": "Menjawab"
+      },
+      {
+        "kanji": "聞く",
+        "kana": "きく",
+        "romaji": "kiku",
+        "meaning": "Mendengar; bertanya"
+      },
+      {
+        "kanji": "趣味",
+        "kana": "しゅみ",
+        "romaji": "shumi",
+        "meaning": "Hobi"
+      },
+      {
+        "kanji": "共通点",
+        "kana": "きょうつうてん",
+        "romaji": "kyoutsuuten",
+        "meaning": "Kesamaan"
+      },
+      {
+        "kanji": "興味",
+        "kana": "きょうみ",
+        "romaji": "kyoumi",
+        "meaning": "Ketertarikan; minat"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman"
+      },
+      {
+        "kanji": "自己紹介",
+        "kana": "じこしょうかい",
+        "romaji": "jikoshoukai",
+        "meaning": "Perkenalan diri"
+      },
+      {
+        "kanji": "印象",
+        "kana": "いんしょう",
+        "romaji": "inshou",
+        "meaning": "Kesan"
+      },
+      {
+        "kanji": "雰囲気",
+        "kana": "ふんいき",
+        "romaji": "funiki",
+        "meaning": "Suasana"
+      },
+      {
+        "kanji": "遠慮する",
+        "kana": "えんりょする",
+        "romaji": "enryo suru",
+        "meaning": "Sungkan; menahan diri"
+      },
+      {
+        "kanji": "失礼",
+        "kana": "しつれい",
+        "romaji": "shitsurei",
+        "meaning": "Tidak sopan; permisi (sesuai konteks)"
+      },
+      {
+        "kanji": "近く",
+        "kana": "ちかく",
+        "romaji": "chikaku",
+        "meaning": "Dekat; di sekitar"
+      },
+      {
+        "kanji": "初めて",
+        "kana": "はじめて",
+        "romaji": "hajimete",
+        "meaning": "Pertama kali"
+      },
+      {
+        "kanji": "もちろん",
+        "kana": "もちろん",
+        "romaji": "mochiron",
+        "meaning": "Tentu saja"
+      },
+      {
+        "kanji": "よかったら",
+        "kana": "よかったら",
+        "romaji": "yokattara",
+        "meaning": "Kalau berkenan; kalau tidak keberatan"
+      },
+      {
+        "kanji": "話しやすい",
+        "kana": "はなしやすい",
+        "romaji": "hanashiyasui",
+        "meaning": "Mudah diajak bicara"
+      },
+      {
+        "kanji": "聞き上手",
+        "kana": "ききじょうず",
+        "romaji": "kikijouzu",
+        "meaning": "Pandai mendengarkan"
+      },
+      {
+        "kanji": "休日",
+        "kana": "きゅうじつ",
+        "romaji": "kyuujitsu",
+        "meaning": "Hari libur"
+      },
+      {
+        "kanji": "最近",
+        "kana": "さいきん",
+        "romaji": "saikin",
+        "meaning": "Akhir-akhir ini"
+      },
+      {
+        "kanji": "以前",
+        "kana": "いぜん",
+        "romaji": "izen",
+        "meaning": "Sebelumnya; dahulu"
+      },
+      {
+        "kanji": "引っ越す",
+        "kana": "ひっこす",
+        "romaji": "hikkosu",
+        "meaning": "Pindah tempat tinggal"
+      },
+      {
+        "kanji": "紹介する",
+        "kana": "しょうかいする",
+        "romaji": "shoukai suru",
+        "meaning": "Memperkenalkan; merekomendasikan"
+      },
+      {
+        "kanji": "見せる",
+        "kana": "みせる",
+        "romaji": "miseru",
+        "meaning": "Memperlihatkan"
+      },
+      {
+        "kanji": "参加する",
+        "kana": "さんかする",
+        "romaji": "sanka suru",
+        "meaning": "Ikut serta; berpartisipasi"
+      },
+      {
+        "kanji": "誘う",
+        "kana": "さそう",
+        "romaji": "sasou",
+        "meaning": "Mengajak"
+      },
+      {
+        "kanji": "集まる",
+        "kana": "あつまる",
+        "romaji": "atsumaru",
+        "meaning": "Berkumpul"
+      },
+      {
+        "kanji": "一緒に",
+        "kana": "いっしょに",
+        "romaji": "issho ni",
+        "meaning": "Bersama-sama"
+      },
+      {
+        "kanji": "思い出",
+        "kana": "おもいで",
+        "romaji": "omoide",
+        "meaning": "Kenangan"
+      },
+      {
+        "kanji": "同じ",
+        "kana": "おなじ",
+        "romaji": "onaji",
+        "meaning": "Sama"
+      },
+      {
+        "kanji": "だれでも",
+        "kana": "だれでも",
+        "romaji": "dare demo",
+        "meaning": "Siapa saja"
+      }
+    ]
   }
 ]
