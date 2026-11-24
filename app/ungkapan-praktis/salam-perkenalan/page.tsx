@@ -96,8 +96,8 @@ const quiz = [
     question: "Kamu ingin mengatakan bahwa kamu berasal dari Indonesia. Pilih kalimat yang sesuai.",
     options: [
       { label: "インドネシアに<ruby>住<rt>す</rt></ruby>んでいます。", correct: false, feedback: "Kalimat ini berarti kamu tinggal di Indonesia sekarang, bukan menyatakan asal." },
-      { label: "インドネシアから<ruby>来<rt>き</rt></ruby>ました。", correct: true, feedback: "から来ました menyatakan tempat asal atau tempat kamu datang." },
-      { label: "インドネシアへ<ruby>行<rt>い</rt></ruby>きました。", correct: false, feedback: "へ行きました berarti sudah pergi ke Indonesia, bukan menyatakan bahwa kamu berasal dari sana." },
+      { label: "インドネシアから<ruby>来<rt>き</rt></ruby>ました。", correct: true, feedback: "から<ruby>来<rt>き</rt></ruby>ました menyatakan tempat asal atau tempat kamu datang." },
+      { label: "インドネシアへ<ruby>行<rt>い</rt></ruby>きました。", correct: false, feedback: "へ<ruby>行<rt>い</rt></ruby>きました berarti sudah pergi ke Indonesia, bukan menyatakan bahwa kamu berasal dari sana." },
     ],
   },
   {
