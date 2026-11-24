@@ -142,7 +142,7 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
       { speaker: "患者", jp: "<ruby>熱<rt>ねつ</rt></ruby>があります。のども<ruby>痛<rt>いた</rt></ruby>いです。", romaji: "Netsu ga arimasu. Nodo mo itai desu.", id: "Saya demam. Tenggorokan juga sakit." },
       { speaker: "受付", jp: "いつからですか。", romaji: "Itsu kara desu ka.", id: "Sejak kapan?" },
       { speaker: "患者", jp: "<ruby>昨日<rt>きのう</rt></ruby>からです。", romaji: "Kinou kara desu.", id: "Sejak kemarin." },
-      { speaker: "受付", jp: "<ruby>初<rt>はじ</rt></ruby>めてのご<ruby>利用<rt>りよう</rt></ruby>ですか。", romaji: "Hajimete no goriyou desu ka.", id: "Apakah ini pertama kalinya Anda berkunjung?" },
+      { speaker: "受付", jp: "<ruby>初<rt>はじ</rt></ruby>めての<ruby>受診<rt>じゅしん</rt></ruby>ですか。", romaji: "Hajimete no jushin desu ka.", id: "Apakah ini pertama kalinya Anda menjalani pemeriksaan di sini?" },
       { speaker: "患者", jp: "はい、<ruby>初<rt>はじ</rt></ruby>めてです。", romaji: "Hai, hajimete desu.", id: "Ya, ini pertama kalinya." },
     ],
   },
