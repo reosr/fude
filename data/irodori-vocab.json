@@ -12493,5 +12493,254 @@
         "meaning": "Siapa saja"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-09",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 9,
+    "lessonTitle": "Apa yang membuatmu tertarik belajar bahasa Jepang?",
+    "vocab": [
+      {
+        "kanji": "きっかけ",
+        "kana": "きっかけ",
+        "romaji": "kikkake",
+        "meaning": "Pemicu; alasan awal"
+      },
+      {
+        "kanji": "目標",
+        "kana": "もくひょう",
+        "romaji": "mokuhyou",
+        "meaning": "Target; tujuan"
+      },
+      {
+        "kanji": "理由",
+        "kana": "りゆう",
+        "romaji": "riyuu",
+        "meaning": "Alasan"
+      },
+      {
+        "kanji": "背景",
+        "kana": "はいけい",
+        "romaji": "haikei",
+        "meaning": "Latar belakang"
+      },
+      {
+        "kanji": "経験",
+        "kana": "けいけん",
+        "romaji": "keiken",
+        "meaning": "Pengalaman"
+      },
+      {
+        "kanji": "方言",
+        "kana": "ほうげん",
+        "romaji": "hougen",
+        "meaning": "Dialek; bahasa daerah"
+      },
+      {
+        "kanji": "共通語",
+        "kana": "きょうつうご",
+        "romaji": "kyoutsuugo",
+        "meaning": "Bahasa umum yang dipahami bersama"
+      },
+      {
+        "kanji": "標準語",
+        "kana": "ひょうじゅんご",
+        "romaji": "hyoujungo",
+        "meaning": "Bahasa standar"
+      },
+      {
+        "kanji": "吹き替え",
+        "kana": "ふきかえ",
+        "romaji": "fukikae",
+        "meaning": "Sulih suara; dubbing"
+      },
+      {
+        "kanji": "字幕",
+        "kana": "じまく",
+        "romaji": "jimaku",
+        "meaning": "Takarir; subtitle"
+      },
+      {
+        "kanji": "セリフ",
+        "kana": "セリフ",
+        "romaji": "serifu",
+        "meaning": "Dialog; ucapan tokoh"
+      },
+      {
+        "kanji": "歌詞",
+        "kana": "かし",
+        "romaji": "kashi",
+        "meaning": "Lirik lagu"
+      },
+      {
+        "kanji": "理解する",
+        "kana": "りかいする",
+        "romaji": "rikai suru",
+        "meaning": "Memahami"
+      },
+      {
+        "kanji": "聞き取る",
+        "kana": "ききとる",
+        "romaji": "kikitoru",
+        "meaning": "Menangkap atau memahami ucapan yang didengar"
+      },
+      {
+        "kanji": "発音",
+        "kana": "はつおん",
+        "romaji": "hatsuon",
+        "meaning": "Pelafalan"
+      },
+      {
+        "kanji": "文字",
+        "kana": "もじ",
+        "romaji": "moji",
+        "meaning": "Huruf; karakter tulisan"
+      },
+      {
+        "kanji": "文法",
+        "kana": "ぶんぽう",
+        "romaji": "bunpou",
+        "meaning": "Tata bahasa"
+      },
+      {
+        "kanji": "会話",
+        "kana": "かいわ",
+        "romaji": "kaiwa",
+        "meaning": "Percakapan"
+      },
+      {
+        "kanji": "失敗する",
+        "kana": "しっぱいする",
+        "romaji": "shippai suru",
+        "meaning": "Melakukan kesalahan; gagal"
+      },
+      {
+        "kanji": "苦労する",
+        "kana": "くろうする",
+        "romaji": "kurou suru",
+        "meaning": "Mengalami kesulitan"
+      },
+      {
+        "kanji": "困る",
+        "kana": "こまる",
+        "romaji": "komaru",
+        "meaning": "Mengalami kesulitan; kebingungan"
+      },
+      {
+        "kanji": "緊張する",
+        "kana": "きんちょうする",
+        "romaji": "kinchou suru",
+        "meaning": "Merasa gugup; tegang"
+      },
+      {
+        "kanji": "恥ずかしい",
+        "kana": "はずかしい",
+        "romaji": "hazukashii",
+        "meaning": "Malu"
+      },
+      {
+        "kanji": "惜しい",
+        "kana": "おしい",
+        "romaji": "oshii",
+        "meaning": "Hampir berhasil; sedikit lagi"
+      },
+      {
+        "kanji": "足りる",
+        "kana": "たりる",
+        "romaji": "tariru",
+        "meaning": "Cukup; mencukupi"
+      },
+      {
+        "kanji": "合格する",
+        "kana": "ごうかくする",
+        "romaji": "goukaku suru",
+        "meaning": "Lulus ujian"
+      },
+      {
+        "kanji": "試験",
+        "kana": "しけん",
+        "romaji": "shiken",
+        "meaning": "Ujian"
+      },
+      {
+        "kanji": "最初",
+        "kana": "さいしょ",
+        "romaji": "saisho",
+        "meaning": "Awalnya; pertama-tama"
+      },
+      {
+        "kanji": "始める",
+        "kana": "はじめる",
+        "romaji": "hajimeru",
+        "meaning": "Memulai sesuatu"
+      },
+      {
+        "kanji": "通い始める",
+        "kana": "かよいはじめる",
+        "romaji": "kayoi hajimeru",
+        "meaning": "Mulai rutin pergi atau mengikuti (kelas/tempat)"
+      },
+      {
+        "kanji": "間に",
+        "kana": "あいだに",
+        "romaji": "aida ni",
+        "meaning": "Selama; dalam rentang waktu"
+      },
+      {
+        "kanji": "将来",
+        "kana": "しょうらい",
+        "romaji": "shourai",
+        "meaning": "Masa depan"
+      },
+      {
+        "kanji": "知識",
+        "kana": "ちしき",
+        "romaji": "chishiki",
+        "meaning": "Pengetahuan"
+      },
+      {
+        "kanji": "活かす",
+        "kana": "いかす",
+        "romaji": "ikasu",
+        "meaning": "Memanfaatkan; menerapkan"
+      },
+      {
+        "kanji": "伝える",
+        "kana": "つたえる",
+        "romaji": "tsutaeru",
+        "meaning": "Menyampaikan; meneruskan informasi"
+      },
+      {
+        "kanji": "介護",
+        "kana": "かいご",
+        "romaji": "kaigo",
+        "meaning": "Perawatan; pendampingan lansia atau orang yang membutuhkan bantuan"
+      },
+      {
+        "kanji": "悩み",
+        "kana": "なやみ",
+        "romaji": "nayami",
+        "meaning": "Masalah yang dipikirkan; kegelisahan"
+      },
+      {
+        "kanji": "手続き",
+        "kana": "てつづき",
+        "romaji": "tetsuzuki",
+        "meaning": "Prosedur; administrasi"
+      },
+      {
+        "kanji": "生活しやすい",
+        "kana": "せいかつしやすい",
+        "romaji": "seikatsu shiyasui",
+        "meaning": "Mudah untuk menjalani kehidupan"
+      },
+      {
+        "kanji": "知り合う",
+        "kana": "しりあう",
+        "romaji": "shiriau",
+        "meaning": "Berkenalan; saling mengenal"
+      }
+    ]
   }
 ]
