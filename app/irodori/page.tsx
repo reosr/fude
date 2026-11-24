@@ -40,7 +40,7 @@ const courses = [
     number: "04",
     title: "Pra-Menengah",
     level: "A2/B1",
-    lessonSummary: "17 dari 18 tersedia",
+    lessonSummary: "18 dari 18 tersedia",
     description: "Berlatih menyampaikan informasi dan pengalaman dengan lebih mandiri.",
     status: "Mulai belajar",
     statusTone: "border-[#B79ADE]/35 bg-[#80619B]/15 text-[#E3D5F6]",
@@ -178,7 +178,7 @@ export default function IrodoriPage() {
           <span className="font-bold text-[#D9B66D]">Catatan:</span> halaman ini
           adalah pemilih jalur. Pemula A1 dan Dasar 1 A2 sudah lengkap masing-masing delapan belas pelajaran.
           Dasar 2 A2 sudah memiliki 18 pelajaran. Pra-Menengah A2/B1
-          memiliki 18 rencana pelajaran, dan saat ini tujuh belas pelajaran sudah tersedia.
+          memiliki 18 rencana pelajaran, dan seluruh 18 pelajaran sudah tersedia.
         </p>
       </div>
     </main>
