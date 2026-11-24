@@ -65,6 +65,8 @@ const content: IrodoriLessonContent = {
       { japanese: <>たとえば、講座Aは初級の人を対象にしていて、基礎的な文法と語彙を学べます。短い説明と練習問題があり、自分のペースで勉強できます。講座Bは中級の人向けで、ニュースの文章を読んだり、表現を研究したりします。</>, translation: "Sebagai contoh, Kursus A ditujukan bagi pembelajar tingkat pemula dan mengajarkan tata bahasa serta kosakata dasar. Tersedia penjelasan singkat dan latihan sehingga peserta dapat belajar sesuai kecepatan sendiri. Kursus B ditujukan bagi tingkat menengah, dengan kegiatan membaca berita dan mempelajari ungkapan." },
       { japanese: <>アプリCでは、動画を見ながら会話を練習できます。字幕を表示したり、発音を聞き直したりする機能があります。無料で使える部分もありますが、すべての機能を使うには登録が必要な場合もあります。</>, translation: "Di Aplikasi C, pengguna dapat berlatih percakapan sambil menonton video. Ada fitur untuk menampilkan takarir dan mendengarkan kembali pelafalan. Sebagian fitur bisa digunakan gratis, tetapi untuk menggunakan semua fitur terkadang diperlukan pendaftaran." },
       { japanese: <>自分に合う教材を選ぶためには、何を勉強したいかを先に考えるといいでしょう。会話を練習したい人と、漢字を勉強したい人では、必要な教材が違います。紹介文をよく読んで、無理なく続けられる方法を選びましょう。</>, translation: "Untuk memilih bahan belajar yang sesuai, pikirkan terlebih dahulu hal yang ingin dipelajari. Bahan yang dibutuhkan orang yang ingin berlatih percakapan berbeda dari orang yang ingin belajar kanji. Bacalah deskripsi dengan teliti dan pilih cara belajar yang bisa dijalani secara konsisten." },
+      { japanese: <>国際交流基金が運営するウェブサイトには、学習者向けの教材やオンラインコースがあります。紹介文を読み、目的やレベルが自分に合うかを確認しましょう。</>, translation: "Situs yang dikelola Japan Foundation menyediakan bahan belajar dan kursus daring untuk pembelajar. Bacalah deskripsinya, lalu periksa apakah tujuan dan tingkatnya sesuai dengan kebutuhanmu." },
+      { japanese: <>知らないことばを日本語で言えないときは、知っている英語で説明してみる方法もあります。相手に意味が伝わったら、自然な日本語の表現を教えてもらいましょう。</>, translation: "Saat tidak bisa menyebutkan kata yang belum dikenal dalam bahasa Jepang, kamu juga bisa mencoba menjelaskannya dengan bahasa Inggris yang kamu ketahui. Setelah lawan bicara memahami maksudmu, mintalah ungkapan bahasa Jepang yang terdengar alami." },
     ],
   },
   vocabRows: [
@@ -153,7 +155,7 @@ const content: IrodoriLessonContent = {
     exampleLabel: "CONTOH ORISINAL FUDE",
     exampleJapanese: <>はじめまして。インドネシア在住で、日本語を勉強しています。今は中級の文法と会話を練習しています。日本の映画や料理に興味があります。週に一回、短い会話をしながら、お互いのことばを教え合いたいです。よろしくお願いします。</>,
     exampleTranslation: "Senang berkenalan. Saya tinggal di Indonesia dan sedang belajar bahasa Jepang. Saat ini saya berlatih tata bahasa tingkat menengah dan percakapan. Saya tertarik pada film dan masakan Jepang. Saya ingin saling mengajarkan bahasa melalui percakapan singkat seminggu sekali. Salam kenal.",
-    placeholder: "はじめまして。＿＿語を勉強しています。今は＿＿を練習しています。＿＿に興味があります。...",
+    placeholder: "はじめまして。＿＿をべんきょうしています。いまは＿＿をれんしゅうしています。＿＿にきょうみがあります。...",
   },
   simulations: [
     {
