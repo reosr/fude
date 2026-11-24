@@ -195,7 +195,7 @@ const quiz = [
   {
     question: "Kamu ingin memastikan apakah kartu IC transportasi dapat digunakan. Apa yang kamu tanyakan?",
     options: [
-      { label: "<ruby>運賃<rt>うんちん</rt></ruby>は先<ruby>払<rt>ばら</rt></ruby>いですか。", correct: false, feedback: "Kalimat ini menanyakan apakah ongkos dibayar terlebih dahulu." },
+      { label: "<ruby>運賃<rt>うんちん</rt></ruby>は<ruby>先<rt>さき</rt></ruby><ruby>払<rt>ばら</rt></ruby>いですか。", correct: false, feedback: "Kalimat ini menanyakan apakah ongkos dibayar terlebih dahulu." },
       { label: "<ruby>次<rt>つぎ</rt></ruby>のバスは<ruby>何時<rt>なんじ</rt></ruby>ですか。", correct: false, feedback: "Kalimat ini menanyakan jadwal bus berikutnya." },
       { label: "<ruby>交通系<rt>こうつうけい</rt></ruby>ICカードは<ruby>使<rt>つか</rt></ruby>えますか。", correct: true, feedback: "Benar. Ini menanyakan apakah kartu IC transportasi diterima." },
     ],
