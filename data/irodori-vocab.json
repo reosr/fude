@@ -13489,5 +13489,284 @@
         "meaning": "Bersiap; mengantisipasi"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-13",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 13,
+    "lessonTitle": "Selamat atas pernikahanmu.",
+    "vocab": [
+      {
+        "kanji": "誕生日",
+        "kana": "たんじょうび",
+        "romaji": "tanjoubi",
+        "meaning": "Ulang tahun"
+      },
+      {
+        "kanji": "お祝い",
+        "kana": "おいわい",
+        "romaji": "o-iwai",
+        "meaning": "Ucapan atau hadiah untuk merayakan sesuatu"
+      },
+      {
+        "kanji": "祝う",
+        "kana": "いわう",
+        "romaji": "iwau",
+        "meaning": "Merayakan; mengucapkan selamat"
+      },
+      {
+        "kanji": "おめでとう",
+        "kana": "おめでとう",
+        "romaji": "omedetou",
+        "meaning": "Selamat; ucapan selamat"
+      },
+      {
+        "kanji": "近況",
+        "kana": "きんきょう",
+        "romaji": "kinkyou",
+        "meaning": "Kabar atau keadaan terbaru"
+      },
+      {
+        "kanji": "久しぶり",
+        "kana": "ひさしぶり",
+        "romaji": "hisashiburi",
+        "meaning": "Sudah lama tidak bertemu"
+      },
+      {
+        "kanji": "返信",
+        "kana": "へんしん",
+        "romaji": "henshin",
+        "meaning": "Balasan pesan"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi"
+      },
+      {
+        "kanji": "誘う",
+        "kana": "さそう",
+        "romaji": "sasou",
+        "meaning": "Mengajak"
+      },
+      {
+        "kanji": "都合",
+        "kana": "つごう",
+        "romaji": "tsugou",
+        "meaning": "Waktu atau keadaan yang cocok"
+      },
+      {
+        "kanji": "約束",
+        "kana": "やくそく",
+        "romaji": "yakusoku",
+        "meaning": "Janji"
+      },
+      {
+        "kanji": "予定",
+        "kana": "よてい",
+        "romaji": "yotei",
+        "meaning": "Rencana; jadwal"
+      },
+      {
+        "kanji": "様子",
+        "kana": "ようす",
+        "romaji": "yousu",
+        "meaning": "Keadaan; kondisi"
+      },
+      {
+        "kanji": "飼う",
+        "kana": "かう",
+        "romaji": "kau",
+        "meaning": "Memelihara hewan"
+      },
+      {
+        "kanji": "保護猫",
+        "kana": "ほごねこ",
+        "romaji": "hogo-neko",
+        "meaning": "Kucing yang diselamatkan atau diadopsi"
+      },
+      {
+        "kanji": "世話",
+        "kana": "せわ",
+        "romaji": "sewa",
+        "meaning": "Perawatan; mengurus"
+      },
+      {
+        "kanji": "成長",
+        "kana": "せいちょう",
+        "romaji": "seichou",
+        "meaning": "Pertumbuhan; perkembangan"
+      },
+      {
+        "kanji": "驚く",
+        "kana": "おどろく",
+        "romaji": "odoroku",
+        "meaning": "Terkejut"
+      },
+      {
+        "kanji": "うらやましい",
+        "kana": "うらやましい",
+        "romaji": "urayamashii",
+        "meaning": "Iri dalam arti positif"
+      },
+      {
+        "kanji": "もったいない",
+        "kana": "もったいない",
+        "romaji": "mottainai",
+        "meaning": "Sayang sekali; mubazir"
+      },
+      {
+        "kanji": "記念日",
+        "kana": "きねんび",
+        "romaji": "kinenbi",
+        "meaning": "Hari peringatan; hari istimewa"
+      },
+      {
+        "kanji": "贈り物",
+        "kana": "おくりもの",
+        "romaji": "okurimono",
+        "meaning": "Hadiah; pemberian"
+      },
+      {
+        "kanji": "恋人",
+        "kana": "こいびと",
+        "romaji": "koibito",
+        "meaning": "Pasangan"
+      },
+      {
+        "kanji": "結婚",
+        "kana": "けっこん",
+        "romaji": "kekkon",
+        "meaning": "Pernikahan"
+      },
+      {
+        "kanji": "新郎",
+        "kana": "しんろう",
+        "romaji": "shinrou",
+        "meaning": "Pengantin pria"
+      },
+      {
+        "kanji": "新婦",
+        "kana": "しんぷ",
+        "romaji": "shinpu",
+        "meaning": "Pengantin wanita"
+      },
+      {
+        "kanji": "招待",
+        "kana": "しょうたい",
+        "romaji": "shoutai",
+        "meaning": "Undangan; mengundang"
+      },
+      {
+        "kanji": "披露宴",
+        "kana": "ひろうえん",
+        "romaji": "hirouen",
+        "meaning": "Resepsi pernikahan"
+      },
+      {
+        "kanji": "贈る",
+        "kana": "おくる",
+        "romaji": "okuru",
+        "meaning": "Memberikan sebagai hadiah"
+      },
+      {
+        "kanji": "記念品",
+        "kana": "きねんひん",
+        "romaji": "kinenhin",
+        "meaning": "Cendera mata"
+      },
+      {
+        "kanji": "予算",
+        "kana": "よさん",
+        "romaji": "yosan",
+        "meaning": "Anggaran"
+      },
+      {
+        "kanji": "好み",
+        "kana": "このみ",
+        "romaji": "konomi",
+        "meaning": "Selera; kesukaan"
+      },
+      {
+        "kanji": "代表",
+        "kana": "だいひょう",
+        "romaji": "daihyou",
+        "meaning": "Perwakilan"
+      },
+      {
+        "kanji": "お祝いの言葉",
+        "kana": "おいわいのことば",
+        "romaji": "o-iwai no kotoba",
+        "meaning": "Ucapan selamat"
+      },
+      {
+        "kanji": "スピーチ",
+        "kana": "スピーチ",
+        "romaji": "supiichi",
+        "meaning": "Sambutan; pidato singkat"
+      },
+      {
+        "kanji": "性格",
+        "kana": "せいかく",
+        "romaji": "seikaku",
+        "meaning": "Kepribadian"
+      },
+      {
+        "kanji": "人柄",
+        "kana": "ひとがら",
+        "romaji": "hitogara",
+        "meaning": "Karakter seseorang"
+      },
+      {
+        "kanji": "運命",
+        "kana": "うんめい",
+        "romaji": "unmei",
+        "meaning": "Takdir"
+      },
+      {
+        "kanji": "糸",
+        "kana": "いと",
+        "romaji": "ito",
+        "meaning": "Benang"
+      },
+      {
+        "kanji": "太陽",
+        "kana": "たいよう",
+        "romaji": "taiyou",
+        "meaning": "Matahari"
+      },
+      {
+        "kanji": "反対",
+        "kana": "はんたい",
+        "romaji": "hantai",
+        "meaning": "Kebalikan; berlawanan"
+      },
+      {
+        "kanji": "若い",
+        "kana": "わかい",
+        "romaji": "wakai",
+        "meaning": "Muda"
+      },
+      {
+        "kanji": "就職する",
+        "kana": "しゅうしょくする",
+        "romaji": "shuushoku suru",
+        "meaning": "Mulai bekerja; mendapat pekerjaan"
+      },
+      {
+        "kanji": "退職する",
+        "kana": "たいしょくする",
+        "romaji": "taishoku suru",
+        "meaning": "Berhenti bekerja; pensiun dari pekerjaan"
+      },
+      {
+        "kanji": "覚えている",
+        "kana": "おぼえている",
+        "romaji": "oboete iru",
+        "meaning": "Mengingat; masih ingat"
+      }
+    ]
   }
 ]
