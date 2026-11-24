@@ -106,10 +106,10 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     description: "Pilih ungkapan yang jelas dan sopan saat menyampaikan pesanan atau permintaan khusus.",
     items: [
       { jp: "ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか。", romaji: "Gochuumon wa okimari desu ka.", id: "Apakah Anda sudah menentukan pesanan?", tone: "Pegawai · menanyakan pesanan" },
-      { jp: "これを<ruby>一<rt>ひと</rt></ruby>つお願いします。", romaji: "Kore o hitotsu onegaishimasu.", id: "Tolong yang ini satu.", tone: "Memesan makanan" },
+      { jp: "これを<ruby>一<rt>ひと</rt></ruby>つお願いします。", romaji: "Kore o hitotsu onegaishimasu.", id: "Saya pesan satu yang ini.", tone: "Memesan makanan" },
       { jp: "じゃあ、それにします。", romaji: "Jaa, sore ni shimasu.", id: "Kalau begitu, saya pilih itu.", tone: "Menentukan pilihan" },
       { jp: "お<ruby>水<rt>みず</rt></ruby>をお願いします。", romaji: "Omizu o onegaishimasu.", id: "Tolong air putihnya.", tone: "Meminta minum" },
-      { jp: "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>少<rt>すく</rt></ruby>なめにできますか。", romaji: "Gohan o sukuname ni dekimasu ka.", id: "Bisakah porsi nasinya dibuat lebih sedikit?", tone: "Meminta porsi lebih sedikit" },
+      { jp: "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>少<rt>すく</rt></ruby>なめにできますか。", romaji: "Gohan o sukuname ni dekimasu ka.", id: "Bisakah porsi nasinya dikurangi?", tone: "Meminta porsi lebih sedikit" },
       { jp: "<ruby>辛<rt>から</rt></ruby>くしないでください。", romaji: "Karaku shinaide kudasai.", id: "Tolong jangan dibuat pedas.", tone: "Meminta makanan tidak pedas" },
       { jp: "お<ruby>持<rt>も</rt></ruby>ち<ruby>帰<rt>かえ</rt></ruby>りできますか。", romaji: "Omochikaeri dekimasu ka.", id: "Apakah bisa dibawa pulang?", tone: "Menanyakan layanan bungkus" },
     ],
@@ -118,7 +118,7 @@ const phrases: { title: string; description: string; items: Phrase[] }[] = [
     title: "D. Membayar dan mengakhiri makan",
     description: "Ungkapan untuk meminta tagihan, memilih cara pembayaran, dan mengucapkan terima kasih setelah makan.",
     items: [
-      { jp: "お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", romaji: "Okaikei o onegaishimasu.", id: "Tolong tagihannya.", tone: "Meminta tagihan" },
+      { jp: "お<ruby>会計<rt>かいけい</rt></ruby>をお願いします。", romaji: "Okaikei o onegaishimasu.", id: "Minta tagihannya, ya.", tone: "Meminta tagihan" },
       { jp: "カードは<ruby>使<rt>つか</rt></ruby>えますか。", romaji: "Kaado wa tsukaemasu ka.", id: "Apakah bisa membayar dengan kartu?", tone: "Menanyakan metode pembayaran" },
       { jp: "カードでお願いします。", romaji: "Kaado de onegaishimasu.", id: "Dengan kartu, ya.", tone: "Pembayaran" },
       { jp: "<ruby>別々<rt>べつべつ</rt></ruby>に<ruby>払<rt>はら</rt></ruby>えますか。", romaji: "Betsubetsu ni haraemasu ka.", id: "Bisakah kami membayar secara terpisah?", tone: "Meminta pembayaran terpisah" },
@@ -146,8 +146,8 @@ const dialogues: { title: string; context: string; lines: DialogueLine[] }[] = [
     lines: [
       { speaker: "店員", jp: "ご<ruby>注文<rt>ちゅうもん</rt></ruby>はお<ruby>決<rt>き</rt></ruby>まりですか。", romaji: "Gochuumon wa okimari desu ka.", id: "Apakah Anda sudah menentukan pesanan?" },
       { speaker: "客", jp: "おすすめは<ruby>何<rt>なん</rt></ruby>ですか。", romaji: "Osusume wa nan desu ka.", id: "Apa rekomendasinya?" },
-      { speaker: "店員", jp: "こちらの<ruby>魚<rt>さかな</rt></ruby>の<ruby>定食<rt>ていしょく</rt></ruby>が<ruby>人気<rt>にんき</rt></ruby>です。", romaji: "Kochira no sakana no teishoku ga ninki desu.", id: "Paket makanan ikan yang ini populer." },
-      { speaker: "客", jp: "じゃあ、それを<ruby>一<rt>ひと</rt></ruby>つお願いします。お<ruby>水<rt>みず</rt></ruby>もお願いします。", romaji: "Jaa, sore o hitotsu onegaishimasu. Omizu mo onegaishimasu.", id: "Kalau begitu, satu yang itu. Air putih juga, ya." },
+      { speaker: "店員", jp: "こちらの<ruby>魚<rt>さかな</rt></ruby>の<ruby>定食<rt>ていしょく</rt></ruby>が<ruby>人気<rt>にんき</rt></ruby>です。", romaji: "Kochira no sakana no teishoku ga ninki desu.", id: "Paket nasi dengan lauk ikan ini populer." },
+      { speaker: "客", jp: "じゃあ、それを<ruby>一<rt>ひと</rt></ruby>つお願いします。お<ruby>水<rt>みず</rt></ruby>もお願いします。", romaji: "Jaa, sore o hitotsu onegaishimasu. Omizu mo onegaishimasu.", id: "Kalau begitu, saya pesan satu yang itu. Air putih juga, ya." },
       { speaker: "店員", jp: "かしこまりました。<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください。", romaji: "Kashikomarimashita. Shoushou omachi kudasai.", id: "Baik. Mohon tunggu sebentar." },
       { speaker: "客", jp: "はい。", romaji: "Hai.", id: "Baik." },
     ],
