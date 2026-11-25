@@ -172,28 +172,94 @@ function stripHtml(value: string): string {
     .replace(/&gt;/g, ">");
 }
 
+function getParentheticalWord(
+  textBeforeReading: string,
+  reading: string
+): { start: number; segments: JapaneseReadingSegment[] } | null {
+  const normalizedReading = normalizeKanaForAlignment(reading);
+
+  // Utamakan kata lengkap dari indeks agar konteks kalimat tidak membuat
+  // kecocokan parsial, misalnya 方 di dalam 読み方.
+  const indexedEntry = READING_ENTRIES.find(([word, indexedReading]) =>
+    textBeforeReading.endsWith(word) &&
+    normalizeKanaForAlignment(indexedReading) === normalizedReading
+  );
+
+  if (indexedEntry) {
+    const segments = splitWordByReading(indexedEntry[0], reading);
+    if (segments) {
+      return {
+        start: textBeforeReading.length - indexedEntry[0].length,
+        segments,
+      };
+    }
+  }
+
+  // Fallback untuk kata eksplisit yang belum ada di indeks, hanya jika batas
+  // katanya jelas. Jangan menganggap satu kanji terakhir sebagai seluruh kata.
+  const simpleWord = /([おご]?[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)$/u.exec(textBeforeReading);
+  if (!simpleWord) return null;
+
+  const start = textBeforeReading.length - simpleWord[1].length;
+  const previous = start > 0 ? textBeforeReading[start - 1] : "";
+  if (previous && /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
+    return null;
+  }
+
+  const segments = splitWordByReading(simpleWord[1], reading);
+  return segments ? { start, segments } : null;
+}
+
+function replaceParentheticalReadingsWithKana(value: string): string {
+  const pattern = /[（(]([ぁ-ゖァ-ヺー]+)[）)]/g;
+  let cursor = 0;
+  let result = "";
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(value)) !== null) {
+    const before = value.slice(cursor, match.index);
+    const resolved = getParentheticalWord(before, match[1]);
+
+    if (resolved) {
+      result += before.slice(0, resolved.start) + match[1];
+    } else {
+      result += before + match[0];
+    }
+
+    cursor = pattern.lastIndex;
+  }
+
+  return result + value.slice(cursor);
+}
+
 // Ubah petunjuk bacaan dalam tanda kurung menjadi furigana pada kanji saja.
 // Okurigana tetap berada di teks utama, misalnya 来ます（きます） menjadi
-// <ruby>来<rt>き</rt></ruby>ます. Jika batas katanya tidak jelas, biarkan apa adanya.
+// <ruby>来<rt>き</rt></ruby>ます.
 export function addRubyFromParentheticalReadings(value: string): string {
-  return value.replace(
-    /([おご]?[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー]+)[）)]/g,
-    (match, base: string, reading: string, offset: number, source: string) => {
-      const previous = offset > 0 ? source[offset - 1] : "";
-      if (previous && /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
-        return match;
-      }
+  const pattern = /[（(]([ぁ-ゖァ-ヺー]+)[）)]/g;
+  let cursor = 0;
+  let result = "";
+  let match: RegExpExecArray | null;
 
-      const segments = splitWordByReading(base, reading);
-      if (!segments) return match;
+  while ((match = pattern.exec(value)) !== null) {
+    const before = value.slice(cursor, match.index);
+    const resolved = getParentheticalWord(before, match[1]);
 
-      return segments.map((segment) =>
+    if (resolved) {
+      const ruby = resolved.segments.map((segment) =>
         segment.reading
           ? `<ruby>${escapeRubyText(segment.text)}<rt>${escapeRubyText(segment.reading)}</rt></ruby>`
           : segment.text
       ).join("");
+      result += before.slice(0, resolved.start) + ruby;
+    } else {
+      result += before + match[0];
     }
-  );
+
+    cursor = pattern.lastIndex;
+  }
+
+  return result + value.slice(cursor);
 }
 
 const READINGS_BY_INITIAL = READING_ENTRIES.reduce((map, entry) => {
@@ -304,16 +370,7 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
 
   // Terima format bacaan dalam kurung, misalnya 来（き） atau 十歳（じゅっさい）.
   // Ini juga dipakai pada penjelasan yang tidak seluruhnya ditulis dengan tag ruby.
-  const withExplicitReadings = original.replace(
-    /([おご]?[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー／/・、,]+)[）)]/g,
-    (match, _base: string, reading: string, offset: number, source: string) => {
-      const previous = offset > 0 ? source[offset - 1] : "";
-      if (previous && /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
-        return match;
-      }
-      return reading;
-    }
-  );
+  const withExplicitReadings = replaceParentheticalReadingsWithKana(original);
 
   // Baca ekspresi angka + penghitung yang memiliki bacaan khusus
   // sebelum angka dibuang dari jalur fallback (misalnya 1分、4月、3万円).
