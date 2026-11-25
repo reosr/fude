@@ -381,33 +381,71 @@ export function mergeFudeData(
     local.xpEvents.length > 0 ||
     local.jlptResults.length > 0;
 
+  const cloudTotalXp = safeNumber(cloudProgress?.total_xp, 0);
   const cloudXpBase = safeNumber(
     cloudProgress?.xp_base,
-    safeNumber(cloudProgress?.total_xp, 0)
+    cloudTotalXp
   );
+  const cloudXpEvents = cloudProgress?.xp_events ?? [];
+
+  // Migrasi versi lama hanya menyimpan total_xp; xp_base dan xp_events
+  // tertinggal pada nilai default. Kenali kondisi itu tanpa mengubah total.
+  const hasLegacyCloudXpLedger = Boolean(
+    cloudProgress &&
+    cloudXpBase === 0 &&
+    cloudXpEvents.length === 0 &&
+    cloudTotalXp > 0
+  );
+
+  const hasLocalXpLedger =
+    local.totalXp > 0 ||
+    local.xpBase > 0 ||
+    local.xpEvents.length > 0 ||
+    local.xpRewards.length > 0;
 
   if (
     cloudProgress &&
     hasLocalXpHistory &&
     local.xpBase !== cloudXpBase
   ) {
-    throw new Error(
-      "Saldo dasar EXP lokal berbeda dengan cloud. Data belum diubah; perlu pemeriksaan manual sebelum sinkronisasi."
-    );
+    const canReconcileLegacyLedger =
+      hasLegacyCloudXpLedger &&
+      hasLocalXpLedger &&
+      (
+        local.totalXp === cloudTotalXp ||
+        local.xpBase === cloudTotalXp
+      );
+
+    if (!canReconcileLegacyLedger) {
+      throw new Error(
+        "Saldo dasar EXP lokal berbeda dengan ledger cloud. Data belum diubah; perlu pemeriksaan manual sebelum sinkronisasi."
+      );
+    }
   }
 
-  const xpBase = cloudProgress
-    ? hasLocalXpHistory
-      ? local.xpBase
-      : cloudXpBase
-    : local.xpBase;
+  let xpBase: number;
+  let xpEvents: FudeXpEvent[];
 
-  const cloudXpEvents = cloudProgress?.xp_events ?? [];
-  const xpEvents = cloudProgress
-    ? hasLocalXpHistory
+  if (hasLegacyCloudXpLedger) {
+    if (!hasLocalXpLedger) {
+      // Perangkat baru: pertahankan total lama sebagai saldo dasar.
+      xpBase = cloudTotalXp;
+      xpEvents = [];
+    } else {
+      // Perangkat lokal memiliki ledger lengkap yang dapat direkonsiliasi
+      // dengan total lama cloud tanpa menggandakan EXP.
+      xpBase = local.xpBase;
+      xpEvents = mergeXpEvents(local.xpEvents, []);
+    }
+  } else if (cloudProgress) {
+    xpBase = hasLocalXpHistory ? local.xpBase : cloudXpBase;
+    xpEvents = hasLocalXpHistory
       ? mergeXpEvents(local.xpEvents, cloudXpEvents)
-      : mergeXpEvents([], cloudXpEvents)
-    : mergeXpEvents(local.xpEvents, []);
+      : mergeXpEvents([], cloudXpEvents);
+  } else {
+    xpBase = local.xpBase;
+    xpEvents = mergeXpEvents(local.xpEvents, []);
+  }
 
   const totalXp =
     xpBase + xpEvents.reduce((sum, event) => sum + event.amount, 0);
