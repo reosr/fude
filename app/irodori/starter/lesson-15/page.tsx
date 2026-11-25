@@ -100,7 +100,7 @@ const staffConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>2<ruby>階<rt>かい</rt></ruby>にございます。</>,
-    romaji: "Nikai de gozaimasu.",
+    romaji: "Nikai ni gozaimasu.",
     translation: "Ada di lantai dua.",
     audioFileName: "irodori-starter-15-a03-l02.mp3",
   },
@@ -225,14 +225,14 @@ const practiceTasks: Task[] = [
     explanation: <>Untuk lantai tiga, bacaannya adalah 「さんがい」 atau 「さんかい」. Pada panduan ini, alat tulis berada di lantai tiga.</>,
   },
   {
-    prompt: <>Staf toko menjawab 「2階でございます」. Apa artinya?</>,
+    prompt: <>Staf toko menjawab 「2階にございます」. Apa artinya?</>,
     options: [
       { key: "a", label: "Ada di lantai dua." },
       { key: "b", label: "Harganya dua yen." },
       { key: "c", label: "Toko tutup pukul dua." },
     ],
     answer: "a",
-    explanation: <>「でございます」 adalah bentuk sopan dari 「です」. 「2<ruby>階<rt>かい</rt></ruby>でございます」 berarti ada di lantai dua.</>,
+    explanation: <>「ございます」 adalah bentuk sangat sopan dari 「あります」. 「2<ruby>階<rt>かい</rt></ruby>にございます」 berarti barang tersebut berada di lantai dua.</>,
   },
   {
     prompt: <>Pilih komentar yang berarti tasnya keren.</>,
@@ -442,7 +442,7 @@ const productWords = [
 const signWords = [
   ["入口", "いりぐち · iriguchi", "Pintu masuk"],
   ["出口", "でぐち · deguchi", "Pintu keluar"],
-  ["お客様入口", "おきゃくさまいりぐち · okyakusama iriguchi", "Pintu masuk pengunjung"],
+  ["お客様用の入口", "おきゃくさまようのいりぐち · okyakusamayou no iriguchi", "Pintu masuk khusus pengunjung"],
   ["化粧室", "けしょうしつ · keshoushitsu", "Toilet"],
   ["非常口", "ひじょうぐち · hijouguchi", "Pintu keluar darurat"],
   ["押す", "おす · osu", "Dorong"],
@@ -630,7 +630,7 @@ export default function IrodoriPemulaLessonFifteenPage() {
             title: "03 · Menanyakan lokasi barang di toko",
             pattern: "N は どこですか？ ／ N は どこにありますか？ ／ N は 何階ですか？",
             example: <>カメラは<ruby>何階<rt>なんがい</rt></ruby>ですか？ ／ スマホケースはどこにありますか？</>,
-            note: "Pilih pertanyaan sesuai informasi yang diperlukan: tempat secara umum, lokasi barang, atau lantai tempat barang dijual. Staf dapat menjawab secara sopan dengan 2階でございます atau ご案内します.",
+            note: "Pilih pertanyaan sesuai informasi yang diperlukan: tempat secara umum, lokasi barang, atau lantai tempat barang dijual. Staf dapat menjawab secara sopan dengan 2階にございます atau ご案内します.",
           },
           {
             title: "04 · Memberi komentar dengan kata sifat",
