@@ -44,7 +44,7 @@ export default function IrodoriLessonAccessGate({ children }: { children: ReactN
         Selesaikan pelajaran sebelumnya terlebih dahulu. Setelah selesai, pelajaran ini akan terbuka otomatis.
       </p>
       <Link
-        href={\`/irodori/\${courseId}\`}
+        href={"/irodori/" + courseId}
         className="mt-6 rounded-xl border border-white/10 bg-[#1B1A18] px-4 py-2.5 text-xs font-bold text-[#EAE6DD] transition-colors hover:border-white/20"
       >
         Kembali ke daftar pelajaran
