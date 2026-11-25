@@ -1,4 +1,6 @@
 import { createClient } from "./client";
+import type { GachaSyncData } from "./sync";
+import type { IrodoriRating } from "../irodori-progress";
 
 export interface CloudJlptResult {
   set_id: string;
@@ -22,6 +24,17 @@ export interface CloudFudeData {
     updated_at: string;
   } | null;
   jlptResults: CloudJlptResult[];
+  irodoriProgress: {
+    completed_lessons: string[];
+    self_evaluations: Record<string, Record<string, IrodoriRating>>;
+    updated_at: string;
+  } | null;
+  studyProgress: {
+    completed_practical_categories: string[];
+    completed_stories: string[];
+    updated_at: string;
+  } | null;
+  gachaData: (GachaSyncData & { updated_at: string }) | null;
 }
 
 export async function readCloudFudeData(): Promise<CloudFudeData> {
@@ -40,8 +53,14 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
     throw new Error("Belum login ke akun Fude.");
   }
 
-  const [profileResult, progressResult, jlptResult] =
-    await Promise.all([
+  const [
+    profileResult,
+    progressResult,
+    jlptResult,
+    irodoriResult,
+    studyResult,
+    gachaResult,
+  ] = await Promise.all([
       supabase
         .from("fude_profiles")
         .select("profile, updated_at")
@@ -60,6 +79,24 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
         .from("fude_jlpt_results")
         .select("set_id, result, updated_at")
         .eq("user_id", user.id),
+
+      supabase
+        .from("fude_irodori_progress")
+        .select("completed_lessons, self_evaluations, updated_at")
+        .eq("user_id", user.id)
+        .maybeSingle(),
+
+      supabase
+        .from("fude_study_progress")
+        .select("completed_practical_categories, completed_stories, updated_at")
+        .eq("user_id", user.id)
+        .maybeSingle(),
+
+      supabase
+        .from("fude_gacha_data")
+        .select("inventory, history, updated_at")
+        .eq("user_id", user.id)
+        .maybeSingle(),
     ]);
 
   if (profileResult.error) {
@@ -80,6 +117,24 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
     );
   }
 
+  if (irodoriResult.error) {
+    throw new Error(
+      `Gagal membaca progres Irodori cloud: ${irodoriResult.error.message}`
+    );
+  }
+
+  if (studyResult.error) {
+    throw new Error(
+      `Gagal membaca progres belajar cloud: ${studyResult.error.message}`
+    );
+  }
+
+  if (gachaResult.error) {
+    throw new Error(
+      `Gagal membaca data Gacha cloud: ${gachaResult.error.message}`
+    );
+  }
+
   return {
     profile:
       profileResult.data?.profile as Record<string, unknown> | null,
@@ -88,5 +143,8 @@ export async function readCloudFudeData(): Promise<CloudFudeData> {
     progress: progressResult.data,
 
     jlptResults: jlptResult.data ?? [],
+    irodoriProgress: irodoriResult.data,
+    studyProgress: studyResult.data,
+    gachaData: gachaResult.data as CloudFudeData["gachaData"],
   };
 }
