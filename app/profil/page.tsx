@@ -21,6 +21,8 @@ import ProfilePhotoEditor, {
   type ProfilePhotoSettings,
 } from "@/components/ProfilePhotoEditor";
 import { getProgress } from "../../lib/progress";
+import practicalVocabData from "@/data/practical-vocab.json";
+import storyIndex from "@/data/story-index.json";
 import { getMemorizedKanji } from "../../lib/memorized";
 import { useIrodoriProgress } from "@/lib/irodori-progress";
 import { getCompletedJlptSetIds, useStudyProgress } from "@/lib/study-progress";
@@ -172,8 +174,16 @@ export default function Profil() {
       })
     )
   ).size;
-  const completedPractical = new Set(studyProgress.completedPracticalCategories).size;
-  const completedStories = new Set(studyProgress.completedStories).size;
+  const completedPractical = new Set(
+    studyProgress.completedPracticalCategories.filter((id) =>
+      practicalVocabData.some((category) => category.id === id)
+    )
+  ).size;
+  const completedStories = new Set(
+    studyProgress.completedStories.filter((id) =>
+      storyIndex.some((story) => story.id === id)
+    )
+  ).size;
 
   const levelInfo = getLevelInfo(totalXp);
   const unlockedBab = Math.min(50, currentBab);
@@ -590,14 +600,14 @@ export default function Profil() {
 
           <div className="relative overflow-hidden rounded-2xl border border-[#B8860B]/20 bg-gradient-to-br from-[#242019] to-[#171615] p-5">
             <MessageCircle size={21} className="mb-4 text-[#D0A74F]" />
-            <p className="text-3xl font-black text-[#F1EBDD]">{completedPractical}/10</p>
+            <p className="text-3xl font-black text-[#F1EBDD]">{completedPractical}/{practicalVocabData.length}</p>
             <p className="mt-1 text-xs text-[#A3A099]">Kategori ungkapan selesai</p>
             <p className="mt-2 text-[9px] tracking-widest text-[#B8860B]">KOMUNIKASI PRAKTIS</p>
           </div>
 
           <div className="relative overflow-hidden rounded-2xl border border-[#86A9D0]/20 bg-gradient-to-br from-[#20232A] to-[#171615] p-5">
             <BookText size={21} className="mb-4 text-[#8FB8E8]" />
-            <p className="text-3xl font-black text-[#F1EBDD]">{completedStories}/10</p>
+            <p className="text-3xl font-black text-[#F1EBDD]">{completedStories}/{storyIndex.length}</p>
             <p className="mt-1 text-xs text-[#A3A099]">Cerita selesai dibaca</p>
             <p className="mt-2 text-[9px] tracking-widest text-[#8FB8E8]">LATIHAN BACA</p>
           </div>
