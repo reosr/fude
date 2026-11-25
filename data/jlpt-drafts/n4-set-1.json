@@ -327,7 +327,7 @@
               "explanation": "もうすぐ berarti sebentar lagi. まもなく adalah ungkapan yang memiliki makna serupa."
             },
             {
-              "question": "「このかばんは<ruby>丈夫<rt>じょうぶ</rt></ruby>です。」の「丈夫」と<ruby>同<rt>おな</rt></ruby>じ<ruby>意味<rt>いみ</rt></ruby>のものはどれですか。",
+              "question": "「このかばんは<ruby>丈夫<rt>じょうぶ</rt></ruby>です。」の「<ruby>丈夫<rt>じょうぶ</rt></ruby>」と<ruby>同<rt>おな</rt></ruby>じ<ruby>意味<rt>いみ</rt></ruby>のものはどれですか。",
               "options": [
                 "<ruby>軽い<rt>かるい</rt></ruby>",
                 "きれい",
@@ -335,7 +335,7 @@
                 "<ruby>柔らかい<rt>やわらかい</rt></ruby>"
               ],
               "answer": 2,
-              "explanation": "丈夫 berarti kuat atau tidak mudah rusak. <ruby>壊れにくい<rt>こわれにくい</rt></ruby> berarti tidak mudah pecah atau rusak."
+              "explanation": "<ruby>丈夫<rt>じょうぶ</rt></ruby> berarti kuat atau tidak mudah rusak. <ruby>壊れにくい<rt>こわれにくい</rt></ruby> berarti tidak mudah pecah atau rusak."
             },
             {
               "question": "「<ruby>予約<rt>よやく</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>が<ruby>正しい<rt>ただしい</rt></ruby><ruby>文<rt>ぶん</rt></ruby>はどれですか。",
@@ -351,7 +351,7 @@
             {
               "question": "「<ruby>運転<rt>うんてん</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>が<ruby>正しい<rt>ただしい</rt></ruby><ruby>文<rt>ぶん</rt></ruby>はどれですか。",
               "options": [
-                "<ruby>父<rt>ちち</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby>車を<ruby>運転<rt>うんてん</rt></ruby>して<ruby>会社<rt>かいしゃ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。",
+                "<ruby>父<rt>ちち</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>車<rt>くるま</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>して<ruby>会社<rt>かいしゃ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。",
                 "<ruby>毎晩<rt>まいばん</rt></ruby>、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>します。",
                 "<ruby>先生<rt>せんせい</rt></ruby>は<ruby>日本語を<rt>にほんごを</rt></ruby><ruby>運転<rt>うんてん</rt></ruby>します。",
                 "<ruby>駅<rt>えき</rt></ruby>で<ruby>友達<rt>ともだち</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>しました。"
@@ -362,7 +362,7 @@
             {
               "question": "「<ruby>届ける<rt>とどける</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>が<ruby>正しい<rt>ただしい</rt></ruby><ruby>文<rt>ぶん</rt></ruby>はどれですか。",
               "options": [
-                "<ruby>忘<rt>わす</rt></ruby>れ物を<ruby>先生<rt>せんせい</rt></ruby>に<ruby>届けました<rt>とどけました</rt></ruby>。",
+                "<ruby>忘れ物<rt>わすれもの</rt></ruby>を<ruby>先生<rt>せんせい</rt></ruby>に<ruby>届けました<rt>とどけました</rt></ruby>。",
                 "<ruby>毎朝<rt>まいあさ</rt></ruby>、パンを<ruby>届けて<rt>とどけて</rt></ruby><ruby>食べます<rt>たべます</rt></ruby>。",
                 "<ruby>昨日<rt>きのう</rt></ruby>、<ruby>映画<rt>えいが</rt></ruby>を<ruby>届けました<rt>とどけました</rt></ruby>。",
                 "<ruby>駅<rt>えき</rt></ruby>で<ruby>電車<rt>でんしゃ</rt></ruby>を<ruby>届けました<rt>とどけました</rt></ruby>。"
@@ -1156,7 +1156,7 @@
               ],
               "question": "<ruby>男<rt>おとこ</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は<ruby>旅行<rt>りょこう</rt></ruby>で<ruby>何を<rt>なにを</rt></ruby>しましたか。",
               "options": [
-                "<ruby>山<rt>やま</rt></ruby>に登りました。",
+                "<ruby>山<rt>やま</rt></ruby>に<ruby>登りました<rt>のぼりました</rt></ruby>。",
                 "<ruby>海<rt>うみ</rt></ruby>で<ruby>泳ぎ<rt>およぎ</rt></ruby>ました。",
                 "<ruby>美術館<rt>びじゅつかん</rt></ruby>へ<ruby>行きました<rt>いきました</rt></ruby>。",
                 "<ruby>町<rt>まち</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>しました。"
