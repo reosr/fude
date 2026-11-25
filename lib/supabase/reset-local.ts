@@ -47,7 +47,7 @@ const ACCOUNT_LOCAL_KEYS = [
   ECONOMY_VERSION_KEY,
   "fude_sync_user_id",
   "fude_sync_pending",
-  "fude_sync_gacha_baseline",
+  "fude_sync_gacha_baseline_v1",
 ];
 
 let resetTask: Promise<void> | null = null;
