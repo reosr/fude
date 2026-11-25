@@ -70,7 +70,7 @@ const content: IrodoriLessonContent = {
     paragraphs: [
       { japanese: <>地域交流サークルでは、新しいメンバーを募集しています。近所に住んでいる人なら、だれでも参加できます。日本語を勉強している人も歓迎です。</>, translation: "Komunitas pertukaran warga sedang mencari anggota baru. Siapa pun yang tinggal di sekitar sini boleh ikut. Orang yang sedang belajar bahasa Jepang juga diterima." },
       { japanese: <>活動は毎月第二土曜日の午後二時から四時までです。市民センターの二階で、お茶を飲んだり、ゲームをしたり、いっしょに料理を作ったりします。</>, translation: "Kegiatan diadakan setiap Sabtu kedua setiap bulan, dari pukul dua sampai empat sore. Di lantai dua pusat kegiatan warga, peserta minum teh, bermain permainan, dan memasak bersama." },
-      { japanese: <>参加費は無料です。参加したい人は、金曜日までに受付で名前と電話番号を知らせてください。初めて参加する人は、友だちといっしょに来てもいいです。</>, translation: "Biaya keikutsertaan gratis. Orang yang ingin ikut diminta memberi tahu nama dan nomor telepon di meja penerimaan paling lambat hari Jumat. Peserta yang baru pertama kali datang boleh membawa teman." },
+      { japanese: <>参加費は無料です。参加したい人は、金曜日までに受付で名前を知らせてください。初めて参加する人は、友だちといっしょに来てもいいです。</>, translation: "Biaya keikutsertaan gratis. Jika ingin ikut, beri tahu nama di meja penerimaan paling lambat hari Jumat. Peserta yang baru pertama kali datang boleh membawa teman." },
     ],
   },
   vocabRows: [
@@ -148,9 +148,9 @@ const content: IrodoriLessonContent = {
     },
     {
       title: "04 · Menjelaskan perubahan kebiasaan atau kemampuan",
-      pattern: "V-る／V-ない + ようになりました",
+      pattern: "V（辞書形・ない形・可能形）＋ようになりました",
       example: <>最近、日本語で簡単な会話ができるようになりました。<br />週末に写真を撮りに出かけるようになりました。</>,
-      note: "ようになりました menyatakan perubahan yang terjadi secara bertahap, misalnya kemampuan yang mulai dimiliki atau kebiasaan baru yang mulai dilakukan. Gunakan bentuk kamus atau bentuk negatif sebelum ようになる. Untuk kemampuan, bentuk potensial seperti できる sering digunakan.",
+      note: "ようになりました menyatakan perubahan yang terjadi secara bertahap. Bentuk kamus dapat menunjukkan kebiasaan baru, bentuk negatif dapat menunjukkan perubahan menjadi tidak melakukan sesuatu, dan bentuk potensial dapat menunjukkan kemampuan yang mulai dimiliki. Contoh: 写真を撮るようになりました (mulai terbiasa memotret) dan 日本語で話せるようになりました (mulai bisa berbicara dalam bahasa Jepang).",
     },
   ],
   writingPractice: {
