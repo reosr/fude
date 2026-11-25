@@ -1,7 +1,7 @@
 import HomeOverview from "../components/HomeOverview";
 import LearningJourneyOverview from "../components/LearningJourneyOverview";
 import Link from "next/link";
-import { ArrowRightLeft, BookText, Award, Trophy, BookA, BookOpen, MessagesSquare, ArrowUpRight } from "lucide-react";
+import { ArrowRightLeft, BookText, Award, Trophy, BookA, BookOpen } from "lucide-react";
 import babIndex from "../data/bab-index.json";
 
 const JLPT_IMAGES: Record<string, string> = {
@@ -86,36 +86,6 @@ export default function Dashboard() {
             </div>
           </Link>
         </div>
-      </div>
-
-      {/* UNGKAPAN & PERCAKAPAN PRAKTIS */}
-      <div className="pt-1">
-        <Link
-          href="/ungkapan-praktis"
-          className="group relative flex min-h-[116px] items-center gap-4 overflow-hidden rounded-2xl border border-[#B8860B]/35 bg-gradient-to-r from-[#211B16] via-[#1E1D1B] to-[#17191D] p-4 transition-all hover:border-[#B8860B]/70 sm:p-5"
-        >
-          <div className="pointer-events-none absolute -right-8 -top-12 h-40 w-40 rounded-full bg-[#B8860B]/10 blur-2xl transition-all group-hover:bg-[#B8860B]/20" />
-          <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#B8860B]/35 bg-[#B8860B]/10 text-[#D9B66D]">
-            <MessagesSquare size={24} />
-          </div>
-          <div className="relative z-10 min-w-0 flex-1">
-            <div className="flex flex-wrap items-center gap-2">
-              <h3 className="font-bold text-[#EAE6DD] group-hover:text-[#D9B66D]">
-                Ungkapan &amp; Percakapan Praktis
-              </h3>
-              <span className="rounded-full border border-[#269B70]/30 bg-[#269B70]/10 px-2 py-0.5 text-[9px] font-bold text-[#66C49C]">
-                10 KATEGORI
-              </span>
-            </div>
-            <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">
-              Latihan ungkapan, respons, dan percakapan dalam situasi sehari-hari di Jepang.
-            </p>
-            <p className="mt-2 text-[10px] font-semibold text-[#B8860B]">
-              10 kategori tersedia · progres penyelesaian tersimpan
-            </p>
-          </div>
-          <ArrowUpRight className="relative z-10 shrink-0 text-[#A3A099] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#D9B66D]" size={20} />
-        </Link>
       </div>
 
       {/* LATIHAN SOAL JLPT */}
