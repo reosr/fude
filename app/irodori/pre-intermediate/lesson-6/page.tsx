@@ -73,8 +73,8 @@ const content: IrodoriLessonContent = {
         translation: "Dengan microwave, kita bisa memasak sayuran dengan mudah tanpa menggunakan kompor. Dibandingkan saat memakai panci, peralatan yang harus dicuci juga bisa lebih sedikit. Cara ini praktis pada hari sibuk atau saat tidak ingin menghabiskan banyak waktu untuk memasak.",
       },
       {
-        japanese: <>まず、野菜を食べやすい大きさに切ります。電子レンジに対応した皿に入れて、少し水を加えます。ふんわりラップをかけてから、様子を見ながら加熱します。材料の種類や量によって、必要な時間は違います。</>,
-        translation: "Pertama, potong sayuran menjadi ukuran yang mudah dimakan. Masukkan ke piring yang aman digunakan di microwave, lalu tambahkan sedikit air. Tutup dengan plastik wrap secara longgar, kemudian panaskan sambil memeriksa kondisinya. Waktu yang dibutuhkan berbeda-beda tergantung jenis dan jumlah bahan.",
+        japanese: <>まず、野菜を食べやすい大きさに切ります。電子レンジに対応した皿に入れて、少し水を加えます。電子レンジ対応のラップをふんわりかけてから、様子を見ながら加熱します。材料の種類や量によって、必要な時間は違います。</>,
+        translation: "Pertama, potong sayuran menjadi ukuran yang mudah dimakan. Masukkan ke piring yang aman digunakan di microwave, lalu tambahkan sedikit air. Tutup secara longgar menggunakan plastik wrap yang khusus untuk microwave, kemudian panaskan sambil memeriksa kondisinya. Waktu yang dibutuhkan berbeda-beda tergantung jenis dan jumlah bahan.",
       },
       {
         japanese: <>加熱した皿は熱くなっているので、取り出すときは気をつけましょう。できた野菜は、スープに入れたり、肉や魚といっしょに食べたりできます。時間があるときに下ごしらえをしておくと、毎日の食事の準備がもっと楽になります。</>,
