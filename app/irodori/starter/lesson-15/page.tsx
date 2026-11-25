@@ -155,7 +155,7 @@ const signConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>お<ruby>客様<rt>きゃくさま</rt></ruby><ruby>用<rt>よう</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>は、あちらです。</>,
-    romaji: "Okyakusama iriguchi wa, achira desu.",
+    romaji: "Okyakusama-you no iriguchi wa, achira desu.",
     translation: "Pintu masuk khusus pengunjung ada di sebelah sana.",
     audioFileName: "irodori-starter-15-a05-l01.mp3",
   },
@@ -596,7 +596,7 @@ export default function IrodoriPemulaLessonFifteenPage() {
               </div>
             ))}
           </div>
-          <p className="mt-2 text-[9px] leading-5 text-[#8F897F]">3階 juga dapat dibaca さんかい, 8階 dapat dibaca はちかい, dan 10階 dapat dibaca じっかい. Untuk latihan ini gunakan bacaan yang ditampilkan di kartu.</p>
+          <p className="mt-2 text-[9px] leading-5 text-[#8F897F]">3階 juga dapat dibaca さんかい, sedangkan 10階 juga dapat dibaca じっかい. Untuk 8階, bacaan yang umum digunakan adalah はっかい seperti pada kartu.</p>
         </div>
       </section>
 
