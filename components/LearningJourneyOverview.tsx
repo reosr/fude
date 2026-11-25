@@ -49,10 +49,6 @@ export default function LearningJourneyOverview() {
     const currentBab = Math.min(51, Math.max(1, getProgress()));
     setCompletedBab(Math.min(50, Math.max(0, currentBab - 1)));
     setCompletedJlpt(getCompletedJlptSetIds().length);
-    setFlashcardProgress((current) => ({
-      ...current,
-      memorized: current.memorized,
-    }));
   }, []);
 
   useEffect(() => {
