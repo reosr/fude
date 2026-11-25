@@ -79,6 +79,7 @@ export default function IrodoriElementaryOnePage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
+            const lessonId = `elementary1-${String(lesson).padStart(2, "0")}`;
             const isAvailable = isIrodoriLessonUnlocked("elementary-1", lesson, progress.completedLessons);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
