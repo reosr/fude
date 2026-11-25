@@ -6,6 +6,7 @@ import {
 } from "./gamification";
 import { getCompletedJlptLevels } from "./profile-collections";
 import { GACHA_BADGES, GACHA_BADGE_COUNTS, LEGACY_GACHA_BADGE_ID_MAP } from "../data/gacha-badges";
+import { notifyFudeLocalDataChanged } from "./supabase/events";
 
 // =====================================================
 // GACHA CONFIGURATION
@@ -246,6 +247,12 @@ function saveGachaInventory(inventory: GachaInventory): void {
       updatedAt: Date.now(),
     })
   );
+  notifyFudeLocalDataChanged(GACHA_INVENTORY_KEY);
+}
+
+function saveGachaHistory(history: GachaHistoryEntry[]): void {
+  localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(history));
+  notifyFudeLocalDataChanged(GACHA_HISTORY_KEY);
 }
 
 export function getGachaHistory(limit = 50): GachaHistoryEntry[] {
@@ -421,7 +428,7 @@ export function summonGacha(
     // Simpan hasil sementara, lalu catat spend dengan ID transaksi yang sama.
     // Jika langkah setelah spend gagal, hasil dikembalikan dan Token direfund.
     saveGachaInventory(nextInventory);
-    localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(nextHistory));
+    saveGachaHistory(nextHistory);
 
     spent = spendFudeTokensOnce(
       transactionId,
@@ -431,7 +438,7 @@ export function summonGacha(
 
     if (!spent) {
       saveGachaInventory(previousInventory);
-      localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(previousHistory));
+      saveGachaHistory(previousHistory);
       return { ok: false, reason: "insufficient-tokens" };
     }
 
@@ -475,7 +482,7 @@ export function summonGacha(
 
     try {
       saveGachaInventory(previousInventory);
-      localStorage.setItem(GACHA_HISTORY_KEY, JSON.stringify(previousHistory));
+      saveGachaHistory(previousHistory);
     } catch (rollbackError) {
       console.error("Gagal mengembalikan data Gacha:", rollbackError);
     }
