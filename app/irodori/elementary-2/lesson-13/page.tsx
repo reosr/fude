@@ -81,7 +81,7 @@ const vocabRows = [
   ["図書館", "としょかん · toshokan", "Perpustakaan"],
   ["美術館", "びじゅつかん · bijutsukan", "Museum seni"],
   ["博物館", "はくぶつかん · hakubutsukan", "Museum"],
-  ["民俗資料館", "みんぞくしりょうかん · minzoku shiryokan", "Museum sejarah dan budaya rakyat"],
+  ["民俗資料館", "みんぞくしりょうかん · minzoku shiryoukan", "Museum sejarah dan budaya rakyat"],
   ["体育館", "たいいくかん · taiikukan", "Gedung olahraga"],
   ["スポーツジム", "スポーツジム · supootsu jimu", "Pusat kebugaran"],
   ["プール", "プール · puuru", "Kolam renang"],
