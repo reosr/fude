@@ -202,7 +202,7 @@ function getParentheticalWord(
 
   const start = textBeforeReading.length - simpleWord[1].length;
   const previous = start > 0 ? textBeforeReading[start - 1] : "";
-  if (previous && /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
+  if (previous && /[A-Za-z0-9０-９〜～\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
     return null;
   }
 
