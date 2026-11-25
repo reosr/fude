@@ -59,11 +59,29 @@ const content: IrodoriLessonContent = {
       utterances: [
         { speakerId: "akiko", japanese: <>ソウタさんは、どんな音楽がいちばん好きですか。</>, romaji: "Souta-san wa, donna ongaku ga ichiban suki desu ka?", translation: "Sota, jenis musik apa yang paling kamu sukai?", audioFileName: "" },
         { speakerId: "sota", japanese: <>映画のサウンドトラックを聞くのが好きです。</>, romaji: "Eiga no saundotorakku o kiku no ga suki desu.", translation: "Saya suka mendengarkan soundtrack film.", audioFileName: "" },
-        { speakerId: "chi", japanese: <>どうしてですか。</>, romaji: "Doushite desu ka?", translation: "Kenapa?", audioFileName: "" },
+        { speakerId: "akiko", japanese: <>どうしてですか。</>, romaji: "Doushite desu ka?", translation: "Kenapa?", audioFileName: "" },
         { speakerId: "sota", japanese: <>聞くと、その映画の場面を思い出すし、気持ちも落ち着くんです。</>, romaji: "Kiku to, sono eiga no bamen o omoidasu shi, kimochi mo ochitsuku n desu.", translation: "Karena saat mendengarkannya, saya teringat adegan film itu dan perasaan saya juga menjadi lebih tenang.", audioFileName: "" },
       ],
     },
   ],
+  readingArticle: {
+    title: "Ulasan manga: Cerita yang membuat penasaran",
+    lead: "Baca ulasan singkat berikut. Perhatikan pendapat penulis, alasan yang diberikan, dan bagian yang paling berkesan.",
+    paragraphs: [
+      {
+        japanese: <>このマンガの主人公は、田舎の町に引っ越してきた高校生です。新しい学校で友達を作りながら、町で起きる小さな問題を解決していきます。</>,
+        translation: "Tokoh utama manga ini adalah seorang siswa SMA yang pindah ke sebuah kota kecil. Sambil mencari teman di sekolah barunya, ia menyelesaikan berbagai masalah kecil yang terjadi di kota itu.",
+      },
+      {
+        japanese: <>ストーリーに深みがあるし、登場人物の気持ちもよくわかります。絵もきれいで、特に季節の変化を表す場面が印象的でした。</>,
+        translation: "Ceritanya memiliki kedalaman dan perasaan para tokohnya juga mudah dipahami. Gambarnya indah, terutama adegan yang menggambarkan pergantian musim sangat berkesan.",
+      },
+      {
+        japanese: <>少しゆっくり進むところもありますが、最後まで読むと、主人公の成長に感動します。続きがとても楽しみです。</>,
+        translation: "Ada bagian yang alurnya sedikit lambat, tetapi setelah membacanya sampai akhir, perkembangan tokoh utamanya terasa mengharukan. Saya sangat menantikan kelanjutannya.",
+      },
+    ],
+  },
   vocabRows: [
     ["映画", "えいが · eiga", "Film"],
     ["ドラマ", "ドラマ · dorama", "Drama atau serial televisi"],
