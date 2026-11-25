@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useIrodoriProgress } from "@/lib/irodori-progress";
+import { setActiveIrodoriCourseId, type IrodoriCourseId } from "@/lib/vocab-preferences";
 import { ArrowLeft, BookOpen, Compass, Headphones, MessageCircle, Sparkles } from "lucide-react";
 
 const courses = [
@@ -197,6 +198,7 @@ export default function IrodoriPage() {
               <Link
                 key={course.id}
                 href={course.id === "starter" ? "/irodori/starter" : course.id === "elementary-1" ? "/irodori/elementary-1" : course.id === "elementary-2" ? "/irodori/elementary-2" : "/irodori/pre-intermediate"}
+                onClick={() => setActiveIrodoriCourseId(course.id as IrodoriCourseId)}
                 aria-label={course.id === "starter" ? "Buka Irodori Pemula A1" : course.id === "elementary-1" ? "Buka Irodori Dasar 1 A2" : course.id === "elementary-2" ? "Buka Irodori Dasar 2 A2" : "Buka Irodori Pra-Menengah A2/B1"}
                 className="group block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D6AD4F]"
               >

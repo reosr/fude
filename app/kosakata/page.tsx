@@ -10,6 +10,7 @@ import FitText from "../../components/FitText";
 import JapaneseReading from "../../components/JapaneseReading";
 import verbTypeData from "../../data/verb-type-index.json";
 import practicalVocabData from "@/data/practical-vocab.json";
+import { getActiveVocabularyTrack, setActiveVocabularyTrack, type VocabTrack } from "@/lib/vocab-preferences";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
@@ -60,6 +61,7 @@ export default function Kosakata() {
   const [memorized, setMemorized] = useState<string[]>([]);
   const [memFilter, setMemFilter] = useState<"all" | "belum" | "sudah">("all");
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [sourceFilter, setSourceFilter] = useState<VocabTrack | "practical">("minna");
   const [imageMap, setImageMap] = useState<Record<string, string>>({});
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -69,16 +71,22 @@ export default function Kosakata() {
   const loadData = async () => {
     const progress = getProgress();
     const requestedCategory = new URLSearchParams(window.location.search).get("category");
+    const practicalCategory = practicalVocabData.find((category) => category.id === requestedCategory);
 
-    if (requestedCategory && practicalVocabData.some((category) => category.id === requestedCategory)) {
-      setCategoryFilter(requestedCategory);
+    if (practicalCategory) {
+      setCategoryFilter(practicalCategory.id);
+      setSourceFilter("practical");
+    } else {
+      setSourceFilter(getActiveVocabularyTrack());
     }
     setCurrentBab(progress);
 
     setMemorized(getMemorizedKanji());
 
     try {
-      const rawVocab = await getUnlockedVocab(progress);
+      const rawVocab = await getUnlockedVocab(progress, {
+        practicalCategoryId: practicalCategory?.id,
+      });
 
       if (!active) return;
 
@@ -156,11 +164,23 @@ export default function Kosakata() {
 
 
   const selectedPracticalCategory = practicalVocabData.find((category) => category.id === categoryFilter);
-  const sourceFilteredVocab = categoryFilter
-    ? allVocab.filter((v) => v.sources?.some(
-        (source) => source.type === "practical" && source.categoryId === categoryFilter
-      ))
-    : allVocab;
+  const hasSource = (item: VocabItem, sourceType: "minna" | "irodori" | "practical") =>
+    item.sources?.some((source) => source.type === sourceType) ?? false;
+  const minnaCount = allVocab.filter((item) => hasSource(item, "minna")).length;
+  const irodoriCount = allVocab.filter((item) => hasSource(item, "irodori")).length;
+  const selectedIrodoriSource = allVocab
+    .flatMap((item) => item.sources ?? [])
+    .find((source) => source.type === "irodori");
+  const selectedIrodoriLabel = selectedIrodoriSource?.type === "irodori"
+    ? selectedIrodoriSource.courseLabel
+    : "Irodori";
+  const sourceFilteredVocab = sourceFilter === "minna"
+    ? allVocab.filter((item) => hasSource(item, "minna"))
+    : sourceFilter === "irodori"
+      ? allVocab.filter((item) => hasSource(item, "irodori"))
+      : allVocab.filter((item) => hasSource(item, "practical") && (!categoryFilter || item.sources?.some(
+          (source) => source.type === "practical" && source.categoryId === categoryFilter
+        )));
   const memorizedCount = sourceFilteredVocab.filter((v) => memorized.includes(v.kanji)).length;
   const notMemorizedCount = sourceFilteredVocab.length - memorizedCount;
 
@@ -186,13 +206,16 @@ export default function Kosakata() {
           <p className="text-[#A3A099] text-sm mt-1">
             {selectedPracticalCategory
               ? `${sourceFilteredVocab.length} kosakata dari Ungkapan Praktis · ${selectedPracticalCategory.label}.`
-              : `Total ${allVocab.length} kata dari ${currentBab} bab Minna yang sudah terbuka, Irodori, dan Ungkapan Praktis.`}
+              : sourceFilter === "minna"
+                ? `${sourceFilteredVocab.length} kosakata dari Minna no Nihongo (sampai Bab ${currentBab}).`
+                : `${sourceFilteredVocab.length} kosakata dari ${selectedIrodoriLabel}.`}
           </p>
           {categoryFilter && (
             <button
               type="button"
               onClick={() => {
                 setCategoryFilter(null);
+                setSourceFilter(getActiveVocabularyTrack());
                 window.history.replaceState(null, "", "/kosakata");
               }}
               className="mt-2 text-xs font-semibold text-[#D9B66D] hover:text-[#F0D38A]"
@@ -226,10 +249,36 @@ export default function Kosakata() {
         )}
       </div>
 
+      {!categoryFilter && (
+        <div className="flex flex-wrap gap-2">
+          {([
+            { key: "minna", label: "Minna no Nihongo", count: minnaCount },
+            { key: "irodori", label: selectedIrodoriLabel, count: irodoriCount },
+          ] as const).map((tab) => (
+            <button
+              key={tab.key}
+              type="button"
+              onClick={() => {
+                setSourceFilter(tab.key);
+                setActiveVocabularyTrack(tab.key);
+                setMemFilter("all");
+              }}
+              className={`rounded-xl border px-3 py-2 text-xs font-bold transition-colors ${
+                sourceFilter === tab.key
+                  ? "border-[#C93438] bg-[#C93438] text-white"
+                  : "border-[#33312E] bg-[#1E1D1B]/80 text-[#A3A099] hover:text-[#EAE6DD]"
+              }`}
+            >
+              {tab.label} ({tab.count})
+            </button>
+          ))}
+        </div>
+      )}
+
       {/* FILTER HAFALAN */}
       <div className="flex flex-wrap gap-2">
         {([
-          { key: "all", label: "Semua", count: allVocab.length },
+          { key: "all", label: "Semua", count: sourceFilteredVocab.length },
           { key: "belum", label: "Belum hafal", count: notMemorizedCount },
           { key: "sudah", label: "Sudah hafal", count: memorizedCount },
         ] as const).map((f) => (

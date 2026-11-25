@@ -1,4 +1,5 @@
 import { getCompletedIrodoriLessons, isIrodoriLessonUnlocked } from "./irodori-progress";
+import { getActiveIrodoriCourseId, normalizeIrodoriCourseId } from "./vocab-preferences";
 
 let kosakataPromise: Promise<MinnaVocabGroup[]> | null = null;
 let irodoriVocabPromise: Promise<IrodoriVocabLesson[]> | null = null;
@@ -205,7 +206,8 @@ export function getVocabSourceLabel(item: VocabItem): string {
 // Memuat kosakata Minna dan Irodori sesuai progres masing-masing jalur.
 // Kata yang sama hanya muncul sekali, tetapi semua sumber belajarnya dipertahankan.
 export async function getUnlockedVocab(
-  currentBab: number
+  currentBab: number,
+  options: { practicalCategoryId?: string | null } = {}
 ): Promise<VocabItem[]> {
   const [allKosakata, allIrodoriVocab, allPracticalVocab] = await Promise.all([
     loadKosakata(),
@@ -241,8 +243,10 @@ export async function getUnlockedVocab(
     });
 
   const completedLessons = new Set(getCompletedIrodoriLessons());
+  const activeCourseKey = normalizeIrodoriCourseId(getActiveIrodoriCourseId());
 
   allIrodoriVocab.forEach((lesson) => {
+    if (normalizeIrodoriCourseId(lesson.courseId) !== activeCourseKey) return;
     if (!isIrodoriLessonUnlocked(lesson.courseId, lesson.lessonNumber, [...completedLessons])) return;
 
     lesson.vocab.forEach((vocab) => {
@@ -272,10 +276,13 @@ export async function getUnlockedVocab(
     });
   });
 
-  // Kosakata Ungkapan Praktis selalu tersedia karena seluruh kategorinya
-  // sudah dibuka. Sumber kategori tetap disimpan ketika kata yang sama
-  // juga muncul di Minna atau Irodori.
-  allPracticalVocab.forEach((category) => {
+  // Ungkapan Praktis hanya dimasukkan ketika pengguna membuka kategori
+  // tertentu. Kategori lain tidak ikut menumpuk di daftar kosakata umum.
+  const practicalCategories = options.practicalCategoryId
+    ? allPracticalVocab.filter((category) => category.id === options.practicalCategoryId)
+    : [];
+
+  practicalCategories.forEach((category) => {
     const source: VocabSource = {
       type: "practical",
       categoryId: category.id,

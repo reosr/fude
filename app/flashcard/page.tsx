@@ -11,6 +11,7 @@ import FitText from "../../components/FitText";
 import JapaneseReading from "../../components/JapaneseReading";
 import verbTypeData from "../../data/verb-type-index.json";
 import practicalVocabData from "@/data/practical-vocab.json";
+import { getActiveVocabularyTrack, setActiveVocabularyTrack, type VocabTrack } from "@/lib/vocab-preferences";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
@@ -108,6 +109,7 @@ export default function Flashcard() {
   
   const [memorized, setMemorized] = useState<string[]>([]);
   const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+  const [sourceFilter, setSourceFilter] = useState<VocabTrack | "practical">("minna");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
@@ -130,8 +132,12 @@ useEffect(() => {
   const loadData = async () => {
     try {
       const requestedCategory = new URLSearchParams(window.location.search).get("category");
-      if (requestedCategory && active && practicalVocabData.some((category) => category.id === requestedCategory)) {
-        setCategoryFilter(requestedCategory);
+      const practicalCategory = practicalVocabData.find((category) => category.id === requestedCategory);
+      if (practicalCategory && active) {
+        setCategoryFilter(practicalCategory.id);
+        setSourceFilter("practical");
+      } else {
+        setSourceFilter(getActiveVocabularyTrack());
       }
 
       const savedMemorized = getMemorizedKanji();
@@ -140,7 +146,9 @@ useEffect(() => {
         setMemorized(savedMemorized);
       }
 
-      const allVocab = await getUnlockedVocab(getProgress());
+      const allVocab = await getUnlockedVocab(getProgress(), {
+        practicalCategoryId: practicalCategory?.id,
+      });
 
       if (!active) return;
 
@@ -206,12 +214,14 @@ useEffect(() => {
   }, []);
 
   const selectedPracticalCategory = practicalVocabData.find((category) => category.id === categoryFilter);
-  const filteredDeck = deck.filter((card) =>
-    !memorized.includes(card.kanji) &&
-    (!categoryFilter || card.sources?.some(
-      (source) => source.type === "practical" && source.categoryId === categoryFilter
-    ))
+  const sourceDeck = deck.filter((card) =>
+    sourceFilter === "minna"
+      ? card.sources?.some((source) => source.type === "minna")
+      : sourceFilter === "irodori"
+        ? card.sources?.some((source) => source.type === "irodori")
+        : card.sources?.some((source) => source.type === "practical" && (!categoryFilter || source.categoryId === categoryFilter))
   );
+  const filteredDeck = sourceDeck.filter((card) => !memorized.includes(card.kanji));
   const safeCurrentIndex = filteredDeck.length > 0
     ? currentIndex % filteredDeck.length
     : 0;
@@ -260,6 +270,7 @@ useEffect(() => {
             type="button"
             onClick={() => {
               setCategoryFilter(null);
+              setSourceFilter(getActiveVocabularyTrack());
               window.history.replaceState(null, "", "/flashcard");
             }}
             className="rounded-xl border border-[#B8860B]/40 bg-[#B8860B]/10 px-3 py-2 text-xs font-bold text-[#D9B66D]"
@@ -353,6 +364,7 @@ useEffect(() => {
               type="button"
               onClick={() => {
                 setCategoryFilter(null);
+                setSourceFilter(getActiveVocabularyTrack());
                 window.history.replaceState(null, "", "/flashcard");
               }}
               className="mt-2 text-xs font-semibold text-[#D9B66D] hover:text-[#F0D38A]"
@@ -373,10 +385,40 @@ useEffect(() => {
         )}
       </div>
 
+      {!categoryFilter && (
+        <div className="w-full max-w-md flex flex-wrap gap-2 relative z-20">
+          {([
+            { key: "minna", label: "Minna no Nihongo" },
+            { key: "irodori", label: "Irodori" },
+          ] as const).map((tab) => (
+            <button
+              key={tab.key}
+              type="button"
+              onClick={() => {
+                setSourceFilter(tab.key);
+                setActiveVocabularyTrack(tab.key);
+                setCurrentIndex(0);
+                setIsFlipped(false);
+              }}
+              className={`rounded-xl border px-3 py-2 text-xs font-bold transition-colors ${
+                sourceFilter === tab.key
+                  ? "border-[#C93438] bg-[#C93438] text-white"
+                  : "border-[#33312E] bg-[#1E1D1B]/80 text-[#A3A099] hover:text-[#EAE6DD]"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div className="w-full max-w-md flex justify-between items-center text-xs font-bold text-[#A3A099] mt-1 md:mt-4 relative z-20">
         <span>KARTU {safeCurrentIndex + 1} DARI {filteredDeck.length}</span>
         <span className="text-[#C93438]">{Math.round(((safeCurrentIndex + 1) / filteredDeck.length) * 100)}%</span>
       </div>
+      <p className="w-full max-w-md text-right text-[10px] font-semibold text-[#8F8980] -mt-1 relative z-20">
+        Belum hafal: {filteredDeck.length} dari {sourceDeck.length} kosakata
+      </p>
 
       <div 
         className="relative w-full max-w-md h-[clamp(260px,calc(100svh_-_376px),460px)] sm:h-[min(420px,52svh)] md:h-[500px] [perspective:1200px] mt-0 md:mt-4"

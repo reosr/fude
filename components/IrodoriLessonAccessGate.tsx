@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Lock } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 import { isIrodoriLessonUnlocked, useIrodoriProgress } from "@/lib/irodori-progress";
+import { setActiveIrodoriCourseId, type IrodoriCourseId } from "@/lib/vocab-preferences";
 
 export default function IrodoriLessonAccessGate({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -14,6 +15,16 @@ export default function IrodoriLessonAccessGate({ children }: { children: ReactN
   useEffect(() => {
     setHasHydrated(true);
   }, []);
+
+  useEffect(() => {
+    const routeCourseId = pathname.match(
+      /^\/irodori\/(starter|elementary-1|elementary-2|pre-intermediate)(?:\/|$)/
+    )?.[1];
+
+    if (routeCourseId) {
+      setActiveIrodoriCourseId(routeCourseId as IrodoriCourseId);
+    }
+  }, [pathname]);
 
   const match = pathname.match(
     /^\/irodori\/(starter|elementary-1|elementary-2|pre-intermediate)\/lesson-(\d+)\/?$/
