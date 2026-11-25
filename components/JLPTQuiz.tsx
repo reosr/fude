@@ -72,8 +72,10 @@ function canShowAutomaticReadingHint(sectionId: string, question: string): boole
     .replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/gi, "")
     .replace(/<[^>]*>/g, "");
   const asksKanjiReading = /読み方はどれですか|何と読みますか/.test(plainQuestion);
-  const asksKanjiSpelling = sectionId === "vocab" &&
-    /「[^」]+」の「[^」]+」は、どれですか/.test(plainQuestion);
+  const asksKanjiSpelling = sectionId === "vocab" && (
+    /正しい(?:漢字|書き方)(?:はどれですか|を選んでください)/.test(plainQuestion) ||
+    /「[^」]+」の「[^」]+」は、どれですか/.test(plainQuestion)
+  );
   return !asksKanjiReading && !asksKanjiSpelling;
 }
 
@@ -230,6 +232,7 @@ export default function JLPTQuiz({
   const [loadedStorageKey, setLoadedStorageKey] = useState<string | null>(null);
   const [showConfirm, setShowConfirm] = useState(false);
   const [storageError, setStorageError] = useState<string | null>(null);
+  const [audioUnavailableUrl, setAudioUnavailableUrl] = useState<string | null>(null);
 
   const storageKey = `jlpt_result_${testSet.id}`;
   const isLoaded = loadedStorageKey === storageKey;
@@ -522,6 +525,7 @@ export default function JLPTQuiz({
 
   const handleAnswer = (optIndex: number) => {
   if (isFinished || isPerfect) return;
+  if (currentQ?.audioUrl && audioUnavailableUrl === currentQ.audioUrl) return;
 
   const updatedAnswers = {
     ...userAnswers,
@@ -938,6 +942,9 @@ export default function JLPTQuiz({
   const showReadingHint = currentQ
     ? canShowAutomaticReadingHint(activeSection, currentQ.question)
     : false;
+  const audioUnavailable = Boolean(
+    currentQ?.audioUrl && audioUnavailableUrl === currentQ.audioUrl
+  );
 
   return (
     <>
@@ -1029,22 +1036,39 @@ export default function JLPTQuiz({
 
             {currentQ.audioUrl && (
               <div className="bg-[#121110] border border-[#33312E] p-6 rounded-xl mb-6 flex flex-col items-center justify-center gap-4 shadow-inner">
-                <Volume2
-                  size={40}
-                  className="text-[#B8860B] animate-pulse"
-                />
-
-                <audio
-                  key={currentQ.audioUrl}
-                  controls
-                  className="w-full max-w-md"
-                >
-                  <source
-                    src={currentQ.audioUrl}
-                    type="audio/mpeg"
-                  />
-                  Browser kamu tidak mendukung audio.
-                </audio>
+                {audioUnavailable ? (
+                  <>
+                    <AlertTriangle size={32} className="text-amber-400" />
+                    <div className="text-center">
+                      <p className="font-bold text-amber-200">
+                        Audio belum tersedia
+                      </p>
+                      <p className="mt-1 text-sm text-[#A3A099]">
+                        Bagian ini bisa dikerjakan setelah file audio dipublikasikan.
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <Volume2
+                      size={40}
+                      className="text-[#B8860B] animate-pulse"
+                    />
+                    <audio
+                      key={currentQ.audioUrl}
+                      controls
+                      preload="none"
+                      onError={() => setAudioUnavailableUrl(currentQ.audioUrl ?? null)}
+                      className="w-full max-w-md"
+                    >
+                      <source
+                        src={currentQ.audioUrl}
+                        type="audio/mpeg"
+                      />
+                      Browser kamu tidak mendukung audio.
+                    </audio>
+                  </>
+                )}
               </div>
             )}
 
@@ -1076,6 +1100,7 @@ export default function JLPTQuiz({
                       key={index}
                       type="button"
                       onClick={() => handleAnswer(index)}
+                      disabled={audioUnavailable}
                       aria-label={`Pilih potongan nomor ${index + 1}`}
                       className={`flex min-h-[68px] w-full items-center gap-3 rounded-xl border px-4 py-4 text-left transition-all ${isSelected
                         ? "border-[#C93438] bg-[#C93438] text-white shadow-lg shadow-[#C93438]/20"
@@ -1114,7 +1139,8 @@ export default function JLPTQuiz({
                     <button
                       key={index}
                       onClick={() => handleAnswer(index)}
-                      className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass}`}
+                      disabled={audioUnavailable}
+                      className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass} disabled:cursor-not-allowed disabled:opacity-50`}
                     >
                       <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint}
                         html={option}
@@ -1131,7 +1157,7 @@ export default function JLPTQuiz({
             <div className="mt-auto pt-6 border-t border-[#33312E]/50">
               <button
                 onClick={nextQuestion}
-                disabled={!isAnswered}
+                disabled={!isAnswered || audioUnavailable}
                 className={`w-full font-bold py-4 rounded-xl transition-all text-lg ${
                   isAnswered
                     ? "bg-[#B8860B] text-white hover:bg-[#9a7009] shadow-lg shadow-[#B8860B]/20"
