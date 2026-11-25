@@ -1,5 +1,8 @@
 import { createClient } from "./client";
-import { getLocalFudeSnapshot } from "./sync";
+import {
+  getLocalFudeSnapshot,
+  saveGachaSyncBaseline,
+} from "./sync";
 import { readCloudFudeData } from "./read-cloud";
 import { mergeFudeData } from "./merge";
 import { applyMergedDataToLocal } from "./apply-local";
@@ -218,6 +221,7 @@ async function performSync(
     );
   }
 
+  saveGachaSyncBaseline(merged.gachaData);
   clearPendingSyncChanges(pending);
 
   return {
