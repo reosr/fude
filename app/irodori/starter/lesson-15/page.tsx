@@ -99,7 +99,7 @@ const staffConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "kenji",
-    japanese: <>2<ruby>階<rt>かい</rt></ruby>でございます。</>,
+    japanese: <>2<ruby>階<rt>かい</rt></ruby>にございます。</>,
     romaji: "Nikai de gozaimasu.",
     translation: "Ada di lantai dua.",
     audioFileName: "irodori-starter-15-a03-l02.mp3",
@@ -154,9 +154,9 @@ const productConversation: IrodoriUtterance[] = [
 const signConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
-    japanese: <>お<ruby>客様<rt>きゃくさま</rt></ruby><ruby>入口<rt>いりぐち</rt></ruby>は、あちらです。</>,
+    japanese: <>お<ruby>客様<rt>きゃくさま</rt></ruby><ruby>用<rt>よう</rt></ruby>の<ruby>入口<rt>いりぐち</rt></ruby>は、あちらです。</>,
     romaji: "Okyakusama iriguchi wa, achira desu.",
-    translation: "Pintu masuk pengunjung ada di sebelah sana.",
+    translation: "Pintu masuk khusus pengunjung ada di sebelah sana.",
     audioFileName: "irodori-starter-15-a05-l01.mp3",
   },
   {
