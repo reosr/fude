@@ -127,6 +127,9 @@ const content: IrodoriLessonContent = {
     ["賞与", "しょうよ · shouyo", "Bonus; tunjangan tahunan"],
     ["休日", "きゅうじつ · kyuujitsu", "Hari libur"],
     ["交替制", "こうたいせい · koutaisei", "Sistem kerja bergiliran"],
+    ["シフト制", "シフトせい · shifuto sei", "Sistem kerja berdasarkan jadwal shift"],
+    ["実働", "じつどう · jitsudou", "Jam kerja efektif, tidak termasuk waktu istirahat"],
+    ["社員寮", "しゃいんりょう · shainryou", "Asrama untuk karyawan"],
     ["経験者", "けいけんしゃ · keikensha", "Orang yang berpengalaman"],
     ["未経験", "みけいけん · mikeiken", "Belum memiliki pengalaman"],
     ["優遇", "ゆうぐう · yuuguu", "Diprioritaskan; mendapat perlakuan khusus"],
@@ -181,7 +184,7 @@ const content: IrodoriLessonContent = {
     },
     {
       title: "02 · Menyampaikan dugaan kuat berdasarkan informasi",
-      pattern: "普通形 + はずです ／ N・ナA + の・な + はずです",
+      pattern: "V・イA（普通形）＋はずです／N＋のはずです／ナA＋なはずです",
       example: <>会議は午後三時から始まるはずです。<br />この仕事は、経験がある人に向いているはずです。</>,
       note: "〜はずです digunakan ketika pembicara memiliki alasan atau informasi yang membuatnya yakin bahwa sesuatu kemungkinan besar benar. Kata kerja dan kata sifat い menggunakan bentuk biasa: 来るはず、忙しいはず. Kata benda memakai のはず, sedangkan kata sifat な memakai なはず: 休みのはず、便利なはず. Ini adalah dugaan berdasarkan dasar tertentu, bukan kepastian mutlak.",
     },
