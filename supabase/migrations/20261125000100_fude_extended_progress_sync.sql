@@ -36,19 +36,6 @@ alter table public.fude_irodori_progress enable row level security;
 alter table public.fude_study_progress enable row level security;
 alter table public.fude_gacha_data enable row level security;
 
--- Backfill the XP ledger for users migrated by the original RPC.
--- The original function populated total_xp but left the newer ledger
--- columns at their defaults. Treat that existing total as the base balance;
--- total_xp itself is not changed.
-update public.fude_learning_progress
-set
-  xp_base = total_xp,
-  xp_events = '[]'::jsonb,
-  updated_at = now()
-where total_xp > 0
-  and xp_base = 0
-  and xp_events = '[]'::jsonb;
-
 drop policy if exists "Users can read own Irodori progress"
   on public.fude_irodori_progress;
 create policy "Users can read own Irodori progress"
