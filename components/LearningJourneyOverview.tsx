@@ -152,9 +152,9 @@ export default function LearningJourneyOverview() {
     {
       title: "Ungkapan Praktis",
       subtitle: "Situasi sehari-hari di Jepang",
-      detail: `${completedPractical}/10 kategori selesai`,
+      detail: `${completedPractical}/${practicalVocabData.length} kategori selesai`,
       current: completedPractical,
-      total: 10,
+      total: practicalVocabData.length,
       href: "/ungkapan-praktis",
       icon: MessageCircle,
       tone: "text-[#D9B66D]",
@@ -242,7 +242,7 @@ export default function LearningJourneyOverview() {
                 role="progressbar"
                 aria-label={`Progres ${card.title}`}
                 aria-valuemin={0}
-                aria-valuemax={card.total}
+                aria-valuemax={Math.max(1, card.total)}
                 aria-valuenow={Math.min(card.current, card.total)}
               >
                 <div
