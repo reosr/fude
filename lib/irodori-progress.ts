@@ -10,7 +10,7 @@ export interface IrodoriProgress {
   selfEvaluations: Record<string, Record<string, IrodoriRating>>;
 }
 
-export const IRODORI_PROGRESS_IRODORI_PROGRESS_STORAGE_KEY = "fude_irodori_progress_v1";
+export const IRODORI_PROGRESS_STORAGE_KEY = "fude_irodori_progress_v1";
 export const IRODORI_PROGRESS_UPDATED_EVENT = "fude:irodori-progress-updated";
 
 const EMPTY_PROGRESS: IrodoriProgress = {
