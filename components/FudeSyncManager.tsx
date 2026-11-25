@@ -2,16 +2,23 @@
 
 import { useEffect } from "react";
 import { createClient } from "@/lib/supabase/client";
-import { syncFudeNow } from "@/lib/supabase/sync-engine";
+import { connectAndSyncFudeNow } from "@/lib/supabase/sync-engine";
+import { resetFudeLocalAccountData } from "@/lib/supabase/reset-local";
 import { PROFILE_PHOTO_UPDATED_EVENT } from "@/lib/profile-photo";
-import {
-  FUDE_LOCAL_DATA_CHANGED_EVENT,
-} from "@/lib/supabase/events";
-
+import { FUDE_LOCAL_DATA_CHANGED_EVENT } from "@/lib/supabase/events";
 import {
   FUDE_SYNC_ACCOUNT_BOUND_EVENT,
   getFudeSyncAccount,
 } from "@/lib/supabase/account-guard";
+
+const REALTIME_TABLES = [
+  "fude_profiles",
+  "fude_learning_progress",
+  "fude_jlpt_results",
+  "fude_irodori_progress",
+  "fude_study_progress",
+  "fude_gacha_data",
+] as const;
 
 export default function FudeSyncManager() {
   useEffect(() => {
@@ -19,12 +26,65 @@ export default function FudeSyncManager() {
 
     let mounted = true;
     let timer: ReturnType<typeof setTimeout> | null = null;
+    let realtimeChannel: ReturnType<typeof supabase.channel> | null = null;
+    let realtimeUserId: string | null = null;
 
     function cancelScheduledSync() {
       if (timer !== null) {
         clearTimeout(timer);
         timer = null;
       }
+    }
+
+    function stopRealtimeChannel() {
+      if (!realtimeChannel) return;
+
+      const channel = realtimeChannel;
+      realtimeChannel = null;
+      realtimeUserId = null;
+      void supabase.removeChannel(channel);
+    }
+
+    function startRealtimeChannel(userId: string) {
+      if (
+        realtimeChannel &&
+        realtimeUserId === userId &&
+        getFudeSyncAccount() === userId
+      ) {
+        return;
+      }
+
+      stopRealtimeChannel();
+
+      if (getFudeSyncAccount() !== userId) return;
+
+      let channel = supabase.channel(`fude-sync-${userId}`);
+
+      for (const table of REALTIME_TABLES) {
+        channel = channel.on(
+          "postgres_changes",
+          {
+            event: "*",
+            schema: "public",
+            table,
+            filter: `user_id=eq.${userId}`,
+          },
+          () => scheduleSync(300)
+        );
+      }
+
+      realtimeChannel = channel;
+      realtimeUserId = userId;
+
+      channel.subscribe((status) => {
+        if (
+          mounted &&
+          status !== "SUBSCRIBED" &&
+          status !== "CLOSED"
+        ) {
+          console.warn("Status kanal Realtime Fude:", status);
+        }
+      });
     }
 
     function scheduleSync(delay = 800) {
@@ -44,18 +104,13 @@ export default function FudeSyncManager() {
 
             if (!mounted || error || !user) return;
 
-            const boundUserId = getFudeSyncAccount();
+            await connectAndSyncFudeNow(user.id);
 
-            // Jangan sinkronkan perangkat yang belum ditautkan
-            // atau yang terhubung ke akun berbeda.
-            if (!boundUserId || boundUserId !== user.id) return;
-
-            await syncFudeNow(user.id);
+            if (mounted && getFudeSyncAccount() === user.id) {
+              startRealtimeChannel(user.id);
+            }
           } catch (error) {
-            console.error(
-              "Sinkronisasi otomatis Fude gagal:",
-              error
-            );
+            console.error("Sinkronisasi otomatis Fude gagal:", error);
           }
         })();
       }, delay);
@@ -66,11 +121,22 @@ export default function FudeSyncManager() {
     }
 
     function handlePhotoChange() {
-        scheduleSync(900);
+      scheduleSync(900);
     }
 
     function handleAccountBound() {
-      scheduleSync(0);
+      void supabase.auth.getUser().then(({ data, error }) => {
+        if (
+          !mounted ||
+          error ||
+          !data.user ||
+          getFudeSyncAccount() !== data.user.id
+        ) {
+          return;
+        }
+
+        startRealtimeChannel(data.user.id);
+      });
     }
 
     function handleOnline() {
@@ -109,11 +175,17 @@ export default function FudeSyncManager() {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((event) => {
       if (event === "SIGNED_IN" || event === "INITIAL_SESSION") {
-        scheduleSync(500);
+        // Perangkat baru akan ditautkan otomatis jika penggabungan aman.
+        scheduleSync(0);
       }
 
       if (event === "SIGNED_OUT") {
         cancelScheduledSync();
+        stopRealtimeChannel();
+
+        if (getFudeSyncAccount()) {
+          void resetFudeLocalAccountData();
+        }
       }
     });
 
@@ -121,52 +193,40 @@ export default function FudeSyncManager() {
       FUDE_LOCAL_DATA_CHANGED_EVENT,
       handleLocalChange
     );
-
     window.addEventListener(
-        PROFILE_PHOTO_UPDATED_EVENT,
-        handlePhotoChange
+      PROFILE_PHOTO_UPDATED_EVENT,
+      handlePhotoChange
     );
-
     window.addEventListener(
       FUDE_SYNC_ACCOUNT_BOUND_EVENT,
       handleAccountBound
     );
-
     window.addEventListener("online", handleOnline);
     window.addEventListener("storage", handleStorage);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    document.addEventListener(
-      "visibilitychange",
-      handleVisibilityChange
-    );
-
-    // Periksa sinkronisasi saat komponen pertama kali aktif.
     scheduleSync(1000);
 
     return () => {
       mounted = false;
       cancelScheduledSync();
-
+      stopRealtimeChannel();
       subscription.unsubscribe();
 
       window.removeEventListener(
         PROFILE_PHOTO_UPDATED_EVENT,
         handlePhotoChange
-    );
-
+      );
       window.removeEventListener(
         FUDE_LOCAL_DATA_CHANGED_EVENT,
         handleLocalChange
       );
-
       window.removeEventListener(
         FUDE_SYNC_ACCOUNT_BOUND_EVENT,
         handleAccountBound
       );
-
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("storage", handleStorage);
-
       document.removeEventListener(
         "visibilitychange",
         handleVisibilityChange

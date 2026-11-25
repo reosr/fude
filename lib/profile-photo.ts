@@ -225,6 +225,20 @@ export async function deleteProfilePhotoFromCloudLocal(): Promise<void> {
   notifyProfilePhotoUpdated();
 }
 
+// Kosongkan salinan foto di perangkat saat logout tanpa menghapus foto cloud.
+export async function clearLocalProfilePhotoForLogout(): Promise<void> {
+  if (typeof window === "undefined") return;
+
+  try {
+    await writePhotoBlob(null);
+  } finally {
+    localStorage.removeItem(PHOTO_PENDING_KEY);
+    localStorage.removeItem(PHOTO_CLOUD_VERSION_KEY);
+    localStorage.removeItem(PHOTO_UPDATED_KEY);
+    window.dispatchEvent(new Event(PROFILE_PHOTO_UPDATED_EVENT));
+  }
+}
+
 // Dipanggil ketika pengguna menghapus fotonya sendiri.
 export async function deleteProfilePhoto(): Promise<void> {
   await writePhotoBlob(null);

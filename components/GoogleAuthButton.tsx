@@ -4,6 +4,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
+import { connectAndSyncFudeNow } from "@/lib/supabase/sync-engine";
+import { resetFudeLocalAccountData } from "@/lib/supabase/reset-local";
 import CloudSyncPreview from "@/components/CloudSyncPreview";
 
 export default function GoogleAuthButton() {
@@ -183,19 +185,30 @@ export default function GoogleAuthButton() {
   };
 
   const handleLogout = async () => {
+    if (!user) return;
+
     setBusy(true);
     setError("");
 
     try {
+      // Pastikan perubahan terakhir tersimpan di cloud sebelum cache lokal
+      // dikosongkan. Jika sinkronisasi gagal, sesi tetap dipertahankan.
+      await connectAndSyncFudeNow(user.id);
+
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
 
+      await resetFudeLocalAccountData();
       setUser(null);
       setModalOpen(false);
-      setNotice("Kamu sudah keluar dari akun Fude.");
+      setNotice(
+        "Kamu sudah keluar. Profil perangkat kembali ke kondisi awal; data akun tetap tersimpan di cloud."
+      );
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "Gagal logout."
+        err instanceof Error
+          ? err.message
+          : "Gagal logout. Data lokal tetap dipertahankan."
       );
     } finally {
       setBusy(false);
@@ -344,7 +357,7 @@ export default function GoogleAuthButton() {
             )}
 
             <p className="mt-5 text-center text-[10px] leading-5 text-[#68635D]">
-              Setelah login, periksa data lokal dan cloud melalui panel Sinkronisasi Cloud di halaman Profil.
+              Setelah login, data akun akan dimuat otomatis. Saat logout, profil perangkat kembali ke kondisi awal tanpa menghapus data cloud.
             </p>
           </section>
         </div>

@@ -34,6 +34,8 @@ import {
 import {
   getFudeSyncAccount,
   checkFudeSyncAccount,
+  bindFudeSyncAccount,
+  FUDE_SYNC_ACCOUNT_BOUND_EVENT,
 } from "./account-guard";
 
 export interface FudeSyncReport {
@@ -230,6 +232,62 @@ async function performSync(
     jlptSets: merged.jlptResults.length,
     syncedAt: new Date().toISOString(),
   };
+}
+
+/**
+ * Hubungkan perangkat saat login pertama kali ke akun ini.
+ * Pemeriksaan merge dijalankan tanpa menulis data sebelum perangkat diikat.
+ */
+export async function connectAndSyncFudeNow(
+  expectedUserId: string
+): Promise<FudeSyncReport> {
+  if (typeof window === "undefined") {
+    throw new Error("Sinkronisasi hanya bisa dilakukan di browser.");
+  }
+
+  const supabase = createClient();
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+
+  if (error) {
+    throw new Error(`Gagal memeriksa akun: ${error.message}`);
+  }
+
+  if (!user || user.id !== expectedUserId) {
+    throw new Error("Akun berubah. Penghubungan perangkat dibatalkan.");
+  }
+
+  checkFudeSyncAccount(user.id);
+
+  if (!getFudeSyncAccount()) {
+    // Dry-run menjaga data lokal jika ada konflik yang perlu diperiksa.
+    const [cloud, local] = await Promise.all([
+      readCloudFudeData(),
+      Promise.resolve(getLocalFudeSnapshot()),
+    ]);
+
+    mergeFudeData(local, cloud, getPendingSyncChanges());
+
+    const {
+      data: { user: currentUser },
+      error: currentAuthError,
+    } = await supabase.auth.getUser();
+
+    if (
+      currentAuthError ||
+      !currentUser ||
+      currentUser.id !== expectedUserId
+    ) {
+      throw new Error("Sesi berubah. Penghubungan perangkat dibatalkan.");
+    }
+
+    bindFudeSyncAccount(user.id, false);
+    window.dispatchEvent(new Event(FUDE_SYNC_ACCOUNT_BOUND_EVENT));
+  }
+
+  return syncFudeNow(user.id);
 }
 
 export async function syncFudeNow(

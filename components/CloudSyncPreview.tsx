@@ -7,12 +7,11 @@ import { mergeFudeData } from "@/lib/supabase/merge";
 import { getPendingSyncChanges } from "@/lib/supabase/events";
 import { migrateLocalFudeData } from "@/lib/supabase/migrate";
 import {
-  bindFudeSyncAccount,
   checkFudeSyncAccount,
   getFudeSyncAccount,
   FUDE_SYNC_ACCOUNT_BOUND_EVENT,
 } from "@/lib/supabase/account-guard";
-import { syncFudeNow } from "@/lib/supabase/sync-engine";
+import { connectAndSyncFudeNow } from "@/lib/supabase/sync-engine";
 
 type Props = {
   userId: string;
@@ -180,10 +179,8 @@ export default function CloudSyncPreview({ userId }: Props) {
 
       // Ikat perangkat hanya setelah migrasi awal berhasil.
       // Sinkronisasi dijalankan langsung agar status dan error dapat ditampilkan.
-      bindFudeSyncAccount(userId, false);
+      await connectAndSyncFudeNow(userId);
       setBoundState("bound");
-
-      await syncFudeNow(userId);
 
       setPreview(null);
       setNotice(
@@ -239,10 +236,8 @@ export default function CloudSyncPreview({ userId }: Props) {
         getPendingSyncChanges()
       );
 
-      bindFudeSyncAccount(userId, false);
+      await connectAndSyncFudeNow(userId);
       setBoundState("bound");
-
-      await syncFudeNow(userId);
 
       setPreview(null);
       setNotice(
@@ -262,7 +257,7 @@ export default function CloudSyncPreview({ userId }: Props) {
 
     try {
       checkFudeSyncAccount(userId);
-      await syncFudeNow(userId);
+      await connectAndSyncFudeNow(userId);
       setNotice("Sinkronisasi berhasil. Data perangkat dan cloud sudah diperbarui.");
     } catch (err) {
       setError(getErrorMessage(err));
