@@ -64,6 +64,24 @@ const content: IrodoriLessonContent = {
       ],
     },
   ],
+  readingArticle: {
+    title: "Informasi properti: Sakura Heights",
+    lead: "Baca informasi hunian berikut seperti saat mencari kamar melalui situs properti. Perhatikan harga sewa, denah, luas, akses, usia bangunan, dan fasilitas.",
+    paragraphs: [
+      {
+        japanese: <>サクラハイツ 203号室。家賃は月六万五千円で、間取りは1LDKです。広さは三十五平方メートルあります。</>,
+        translation: "Sakura Heights, kamar 203. Harga sewanya 65.000 yen per bulan, dengan denah 1LDK. Luasnya 35 meter persegi.",
+      },
+      {
+        japanese: <>駅から歩いて十分で、築五年の建物です。エアコンとバルコニーがあり、インターネットも使えます。</>,
+        translation: "Jaraknya sepuluh menit berjalan kaki dari stasiun dan bangunannya berusia lima tahun. Tersedia AC dan balkon, serta internet.",
+      },
+      {
+        japanese: <>静かな住宅地にありますが、近くにスーパーやコンビニもあるので、毎日の買い物に便利です。</>,
+        translation: "Hunian ini berada di kawasan perumahan yang tenang, tetapi ada supermarket dan minimarket di dekatnya sehingga praktis untuk belanja sehari-hari.",
+      },
+    ],
+  },
   vocabRows: [
     ["引っ越し", "ひっこし · hikkoshi", "Pindahan; pindah rumah"],
     ["物件", "ぶっけん · bukken", "Properti yang disewakan atau dijual"],
