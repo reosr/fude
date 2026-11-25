@@ -63,7 +63,7 @@ function KanaStrokeCharacter({ kana }: { kana: string }) {
   }, [loopKey, strokeAsset]);
 
   return (
-    <div className="flex h-14 w-14 shrink-0 items-center justify-center sm:h-16 sm:w-16">
+    <div className="flex aspect-square min-w-0 max-w-14 flex-1 items-center justify-center sm:max-w-16">
       {strokeAsset && svgMarkup && loadedKana === kana ? (
         <div
           key={`${kana}-${loopKey}`}
@@ -74,7 +74,7 @@ function KanaStrokeCharacter({ kana }: { kana: string }) {
           dangerouslySetInnerHTML={{ __html: svgMarkup }}
         />
       ) : (
-        <span className="font-mincho text-4xl text-[#EAE6DD]">{kana}</span>
+        <span className="font-mincho text-[clamp(1rem,5.5vw,2.25rem)] leading-none text-[#EAE6DD]">{kana}</span>
       )}
     </div>
   );
@@ -92,8 +92,8 @@ export default function KanaStroke({ kana }: { kana: string }) {
       <p className="mb-1 text-center text-[9px] font-bold uppercase tracking-wider text-[#C93438]">
         Urutan Goresan Kana
       </p>
-      <div className="w-full max-w-full overflow-x-auto">
-        <div className="flex w-max min-w-full items-center justify-center gap-1">
+      <div className="w-full min-w-0 overflow-hidden">
+        <div className="flex w-full min-w-0 items-center justify-center gap-1">
           {characters.map((character, index) => (
             <KanaStrokeCharacter key={`${character}-${index}`} kana={character} />
           ))}
