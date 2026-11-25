@@ -2,11 +2,12 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Play, Square, ArrowLeft, Volume2, Gauge, User, BookOpen } from "lucide-react";
+import { Play, Square, ArrowLeft, Volume2, Gauge, User, BookOpen, CheckCircle2 } from "lucide-react";
 import storyIndex from "../../data/story-index.json";
 import practicalVocabData from "@/data/practical-vocab.json";
 import { loadStory } from "../../data/story-loaders";
 import { getProgress } from "../../lib/progress";
+import { completeReadingStory, useStudyProgress } from "@/lib/study-progress";
 import JapaneseReading from "@/components/JapaneseReading";
 
 
@@ -211,6 +212,7 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
 };
 
 export default function Baca() {
+  const studyProgress = useStudyProgress();
   const [selectedStory, setSelectedStory] = useState<any | null>(null);
   const [isStoryLoading, setIsStoryLoading] = useState(false);
   const [storyLoadError, setStoryLoadError] = useState(false);
@@ -577,15 +579,22 @@ setSelectedStory(story);
               onClick={() => openStory(story.id)}
               className="relative flex flex-col items-start p-5 rounded-2xl border bg-[#1E1D1B] border-[#33312E] hover:border-[#C93438] transition-all text-left group h-full min-h-[160px]"
             >
-              <div className="flex justify-between items-center w-full mb-3">
+              <div className="flex flex-wrap justify-between items-center gap-2 w-full mb-3">
                 <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#C93438]/20 text-[#C93438]">
                   Tingkat {story.level}
                 </span>
-                {story.isNatural && (
-                  <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
-                    Alami
-                  </span>
-                )}
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {studyProgress.completedStories.includes(story.id) && (
+                    <span className="inline-flex items-center gap-1 text-[9px] font-bold text-[#8ED8B4]">
+                      <CheckCircle2 size={11} /> Selesai dibaca
+                    </span>
+                  )}
+                  {story.isNatural && (
+                    <span className="text-[10px] font-bold text-[#B8860B] bg-[#B8860B]/10 px-2 py-0.5 rounded border border-[#B8860B]/30">
+                      Alami
+                    </span>
+                  )}
+                </div>
               </div>
               <h3 className="font-bold text-lg text-[#EAE6DD] group-hover:text-[#C93438] transition-colors mb-2">
                 {story.title}
@@ -603,6 +612,7 @@ setSelectedStory(story);
   const relatedPracticalCategory = practicalVocabData.find((category) =>
     category.relatedStories.some((story) => story.id === selectedStory.id)
   );
+  const isStoryCompleted = studyProgress.completedStories.includes(selectedStory.id);
 
   return (
     <div className="max-w-5xl mx-auto space-y-8 pb-10">
@@ -738,6 +748,30 @@ setSelectedStory(story);
               );
             })}
           </div>
+        </div>
+
+        <div className="flex flex-col gap-3 rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+          <div>
+            <p className="text-sm font-bold text-[#EAE6DD]">
+              {isStoryCompleted ? "Cerita sudah selesai dibaca" : "Sudah selesai membaca cerita ini?"}
+            </p>
+            <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">
+              Tandai setelah selesai membaca seluruh isi cerita. Catatan ini hanya menyimpan progres membaca.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => completeReadingStory(selectedStory.id)}
+            disabled={isStoryCompleted}
+            className={"inline-flex shrink-0 items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-xs font-bold transition-colors " + (
+              isStoryCompleted
+                ? "cursor-default border-[#269B70]/30 bg-[#269B70]/10 text-[#8ED8B4]"
+                : "border-[#B8860B]/40 bg-[#B8860B]/10 text-[#D9B66D] hover:bg-[#B8860B]/20"
+            )}
+          >
+            <CheckCircle2 size={15} />
+            {isStoryCompleted ? "Sudah ditandai selesai" : "Tandai selesai dibaca"}
+          </button>
         </div>
       </div>
     </div>
