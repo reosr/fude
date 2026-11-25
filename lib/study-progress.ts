@@ -8,7 +8,7 @@ export interface StudyProgress {
   completedStories: string[];
 }
 
-export const STUDY_PROGRESS_STUDY_PROGRESS_STORAGE_KEY = "fude_learning_progress_v1";
+export const STUDY_PROGRESS_STORAGE_KEY = "fude_learning_progress_v1";
 export const STUDY_PROGRESS_UPDATED_EVENT = "fude:learning-progress-updated";
 
 const EMPTY_PROGRESS: StudyProgress = {
