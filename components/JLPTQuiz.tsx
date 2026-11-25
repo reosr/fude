@@ -317,11 +317,7 @@ export default function JLPTQuiz({
   const activeExamMinutes = isTimedExam
     ? EXAM_BLOCK_CONFIG[activeExamBlock].minutes[currentLevel as "N5" | "N4"]
     : 0;
-  const isActiveBlockExpired = isTimedExam && (
-    expiredExamBlocks.includes(activeExamBlock) ||
-    (typeof examDeadlines[activeExamBlock] === "number" &&
-      examDeadlines[activeExamBlock]! <= Date.now())
-  );
+  const isActiveBlockExpired = isTimedExam && expiredExamBlocks.includes(activeExamBlock);
 
   // Simpan posisi aktif dan posisi terakhir pada setiap bagian.
   const saveProgress = (
@@ -542,17 +538,14 @@ export default function JLPTQuiz({
     return () => {
       active = false;
     };
-  }, [storageKey, testSet, currentLevel, levelSetIds]);
+  }, [storageKey, testSet, currentLevel, levelSetIds, isTimedExam]);
 
   // Timer memakai deadline absolut agar tetap akurat setelah reload.
   // Grammar dan Reading berbagi satu deadline, sama seperti sesi resmi N5/N4.
   useEffect(() => {
     if (!isLoaded || !isTimedExam || isFinished || isPerfect) return;
 
-    if (expiredExamBlocks.includes(activeExamBlock)) {
-      setRemainingSeconds(0);
-      return;
-    }
+    if (expiredExamBlocks.includes(activeExamBlock)) return;
 
     let deadline = examDeadlines[activeExamBlock];
 
@@ -577,8 +570,6 @@ export default function JLPTQuiz({
       }
     }
 
-    let intervalId: number | undefined;
-
     const updateTimer = () => {
       const secondsLeft = Math.max(0, Math.ceil((deadline! - Date.now()) / 1000));
       setRemainingSeconds(secondsLeft);
@@ -602,16 +593,13 @@ export default function JLPTQuiz({
           console.error("Gagal menyimpan akhir waktu sesi JLPT:", error);
         }
 
-        if (intervalId !== undefined) window.clearInterval(intervalId);
       }
     };
 
+    const intervalId = window.setInterval(updateTimer, 1000);
     updateTimer();
-    intervalId = window.setInterval(updateTimer, 1000);
 
-    return () => {
-      if (intervalId !== undefined) window.clearInterval(intervalId);
-    };
+    return () => window.clearInterval(intervalId);
   }, [
     isLoaded,
     isTimedExam,
@@ -754,7 +742,10 @@ export default function JLPTQuiz({
   ]);
 
   const handleAnswer = (optIndex: number) => {
-  if (isFinished || isPerfect || isActiveBlockExpired) return;
+  const activeDeadlineReached =
+    typeof examDeadlines[activeExamBlock] === "number" &&
+    examDeadlines[activeExamBlock]! <= Date.now();
+  if (isFinished || isPerfect || isActiveBlockExpired || activeDeadlineReached) return;
   if (currentQ?.audioUrl && audioUnavailableUrl === currentQ.audioUrl) return;
 
   const updatedAnswers = {
