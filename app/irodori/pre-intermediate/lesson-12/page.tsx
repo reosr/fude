@@ -170,7 +170,7 @@ const content: IrodoriLessonContent = {
       title: "01 · Menanyakan keadaan dengan sopan",
       pattern: "お + pangkal kata kerja bentuk ます + ですか",
       example: <>何かお探しですか。<br />何かお困りですか。<br />お急ぎですか。</>,
-      note: "Awalan お pada ungkapan tertentu membuat pertanyaan terdengar lebih sopan. Contohnya お探しですか (sedang mencari sesuatu?) dan お困りですか (sedang mengalami kesulitan?). Untuk menawarkan tindakan diri sendiri, gunakan bentuk seperti お手伝いしましょうか (bolehkah saya membantu?).",
+      note: "Bentuk お〜ですか dalam ungkapan seperti お探しですか, お困りですか, dan お急ぎですか merupakan bentuk hormat (尊敬語) untuk menanyakan tindakan atau keadaan lawan bicara. Bentuk ini bukan sekadar membuat pertanyaan terdengar sopan dan digunakan pada ungkapan yang memang alami dalam bahasa Jepang. Untuk menawarkan tindakan diri sendiri, gunakan bentuk seperti お手伝いしましょうか (bolehkah saya membantu?).",
     },
     {
       title: "02 · Menyimpulkan keadaan dari apa yang terlihat",
