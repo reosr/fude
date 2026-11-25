@@ -129,7 +129,7 @@ export default function IrodoriInteractiveLesson({ content }: { content: Irodori
       </section>
 
       <section className="space-y-4">
-        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">DIALOG LATIHAN</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Dengarkan, baca, dan pahami konteks</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Percakapan berikut ditulis khusus untuk Fude. Audio belum tersedia, jadi gunakan teks, furigana, dan romaji untuk berlatih membaca.</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">DIALOG LATIHAN</p><h2 className="mt-1 text-lg font-black text-[#EAE6DD]">Dengarkan, baca, dan pahami konteks</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Dengarkan percakapan, uji pemahamanmu, lalu buka teks dialog dengan furigana dan romaji.</p></div>
         <div className="space-y-4">
           {content.conversations.map((conversation) => <IrodoriConversation key={conversation.title} title={conversation.title} speakers={conversation.speakers} utterances={conversation.utterances} />)}
         </div>

@@ -41,9 +41,41 @@ export default function IrodoriConversation({
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioError, setAudioError] = useState("");
+  const [listeningAnswer, setListeningAnswer] = useState<string | null>(null);
+  const [transcriptOpen, setTranscriptOpen] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playbackSessionRef = useRef(0);
   const pendingResolveRef = useRef<(() => void) | null>(null);
+
+  // File audio dibuat sekaligus melalui batch VOICEVOX.
+  const audioUtterances = utterances.map((utterance) => ({
+    ...utterance,
+    audioSrc: utterance.audioSrc ?? `/audio/irodori/${utterance.audioFileName}`,
+  }));
+
+  const listeningChoices = audioUtterances.reduce<
+    { index: number; speakerId: string; translation: string }[]
+  >((items, utterance, index) => {
+    const translation = utterance.translation.trim();
+    if (translation && !items.some((item) => item.translation === translation)) {
+      items.push({ index, speakerId: utterance.speakerId, translation });
+    }
+    return items;
+  }, []);
+
+  const listeningTarget = listeningChoices.length >= 2
+    ? listeningChoices[Math.floor(listeningChoices.length / 2)]
+    : null;
+  const rawListeningOptions = listeningTarget
+    ? [listeningTarget, ...listeningChoices.filter((item) => item.translation !== listeningTarget.translation).slice(0, 2)]
+    : [];
+  const listeningShift = listeningTarget && rawListeningOptions.length > 1
+    ? listeningTarget.index % rawListeningOptions.length
+    : 0;
+  const listeningOptions = [...rawListeningOptions.slice(listeningShift), ...rawListeningOptions.slice(0, listeningShift)];
+  const targetSpeaker = listeningTarget
+    ? speakers.find((speaker) => speaker.id === listeningTarget.speakerId)?.name ?? "penutur"
+    : "";
 
   useEffect(() => {
     const audio = new Audio();
@@ -83,7 +115,7 @@ export default function IrodoriConversation({
 
   const playUtterance = (index: number, session: number) =>
     new Promise<void>((resolve) => {
-      const utterance = utterances[index];
+      const utterance = audioUtterances[index];
       const audio = audioRef.current;
 
       if (!audio || !utterance?.audioSrc) {
@@ -128,7 +160,7 @@ export default function IrodoriConversation({
     });
 
   const playOne = async (index: number) => {
-    if (!utterances[index]?.audioSrc) return;
+    if (!audioUtterances[index]?.audioSrc) return;
 
     stopAudio();
     const session = playbackSessionRef.current;
@@ -150,7 +182,7 @@ export default function IrodoriConversation({
       return;
     }
 
-    const availableIndexes = utterances
+    const availableIndexes = audioUtterances
       .map((utterance, index) => (utterance.audioSrc ? index : -1))
       .filter((index) => index >= 0);
 
@@ -173,7 +205,7 @@ export default function IrodoriConversation({
     }
   };
 
-  const availableAudioCount = utterances.filter(
+  const availableAudioCount = audioUtterances.filter(
     (utterance) => Boolean(utterance.audioSrc)
   ).length;
 
@@ -187,7 +219,7 @@ export default function IrodoriConversation({
           <h4 className="mt-1 text-sm font-bold text-[#EAE6DD]">{title}</h4>
           <p className="mt-1 text-[10px] text-[#817A73]">
             {availableAudioCount > 0
-              ? `${availableAudioCount} dari ${utterances.length} audio tersedia`
+              ? `${availableAudioCount} baris dialog disiapkan untuk audio`
               : "Audio belum tersedia"}
           </p>
         </div>
@@ -227,6 +259,37 @@ export default function IrodoriConversation({
         )}
       </div>
 
+      {listeningTarget && (
+        <div className="border-b border-white/[0.06] bg-[#26211A]/60 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">LATIHAN MENYIMAK</p>
+              <p className="mt-1 text-xs leading-5 text-[#C5C0B7]">Dengarkan percakapan, lalu pilih arti ucapan {targetSpeaker}.</p>
+            </div>
+            <button type="button" onClick={() => { setListeningAnswer(null); void playAll(); }} className="inline-flex items-center gap-2 rounded-lg bg-[#C93438] px-3 py-2.5 text-[10px] font-bold text-white transition-colors hover:bg-[#B02A2E]">
+              {isPlaying ? <Square size={12} fill="currentColor" /> : <Play size={12} fill="currentColor" />}
+              {isPlaying ? "Hentikan" : "Dengarkan dialog"}
+            </button>
+          </div>
+          <p className="mt-3 text-xs font-semibold text-[#EAE6DD]">Apa maksud ucapan {targetSpeaker} dalam percakapan tadi?</p>
+          <div className="mt-2 grid gap-2 sm:grid-cols-2">
+            {listeningOptions.map((option) => {
+              const selected = listeningAnswer === option.translation;
+              const isCorrect = option.translation === listeningTarget.translation;
+              return (
+                <button key={option.translation} type="button" aria-pressed={selected} onClick={() => setListeningAnswer(option.translation)}
+                  className={"rounded-lg border px-3 py-2.5 text-left text-xs leading-5 transition-colors " + (selected && isCorrect ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-200" : selected ? "border-red-400/50 bg-red-400/10 text-red-200" : "border-white/[0.08] bg-black/15 text-[#D6D0C5] hover:border-[#D9B66D]/40")}>
+                  {option.translation}
+                </button>
+              );
+            })}
+          </div>
+          {listeningAnswer && <p role="status" className={"mt-2 text-[10px] " + (listeningAnswer === listeningTarget.translation ? "text-emerald-300" : "text-[#E7A1A1]")}>
+            {listeningAnswer === listeningTarget.translation ? "Benar. Kamu memahami maksud ucapan tersebut." : "Belum tepat. Dengarkan sekali lagi, lalu coba pilihan lain."}
+          </p>}
+        </div>
+      )}
+
       <div className="flex flex-wrap gap-2 border-b border-white/[0.05] px-4 py-3">
         {speakers.map((speaker) => (
           <div
@@ -248,8 +311,15 @@ export default function IrodoriConversation({
         ))}
       </div>
 
+      <div className="border-b border-white/[0.05] px-4 py-3">
+        <button type="button" onClick={() => setTranscriptOpen((open) => !open)} aria-expanded={transcriptOpen}
+          className="text-[10px] font-bold text-[#D9B66D] transition-colors hover:text-[#F1EBDD]">
+          {transcriptOpen ? "Sembunyikan teks dialog" : "Tampilkan teks dialog"}
+        </button>
+      </div>
+      {transcriptOpen && (
       <div className="divide-y divide-white/[0.05] p-2 sm:p-3">
-        {utterances.map((utterance, index) => {
+        {audioUtterances.map((utterance, index) => {
           const speaker = speakers.find(
             (candidate) => candidate.id === utterance.speakerId
           );
@@ -312,6 +382,7 @@ export default function IrodoriConversation({
           );
         })}
       </div>
+      )}
 
       {audioError && (
         <p role="status" className="border-t border-red-400/15 px-4 py-3 text-xs text-red-300">

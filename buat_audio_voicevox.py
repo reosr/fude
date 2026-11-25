@@ -65,6 +65,19 @@ counter = {"jadi": 0, "lewat": 0, "error": 0}
 seen_paths = set()
 characters = {}           # nama karakter -> [(nama_style, id), ...]
 global_speaker_map = {}   # nama tokoh cerita -> suara yang sudah dipilih
+irodori_voice_map = {}    # ID speaker Irodori -> suara yang konsisten
+practical_speaker_voices = {}  # nama speaker Ungkapan Praktis -> (karakter, role)
+
+IRODORI_SPEAKER_ROLES = {
+    "yui": "teen_female",
+    "sota": "teen_male",
+    "akiko": "adult_female",
+    "kenji": "adult_male",
+}
+
+PRACTICAL_SPEAKER_ROLE_ORDER = [
+    "teen_female", "teen_male", "adult_female", "adult_male"
+]
 role_pools = {}
 name_bank = {}
 
@@ -445,6 +458,204 @@ def process_jlpt(data):
                     log_relative("Jadi (Percakapan JLPT)", out_path)
 
 
+
+# ============================================================
+# IRODORI (TSX): audio per baris dialog dengan suara tokoh konsisten
+# ============================================================
+def process_irodori_pages():
+    root = os.path.join(ROOT, "app", "irodori")
+    if not os.path.isdir(root):
+        return
+
+    pattern = re.compile(
+        r"""\{\s*speakerId:\s*["']([^"']+)["']([\s\S]*?)audioFileName:\s*["']([^"']+)["'][\s\S]*?\}""",
+        re.MULTILINE,
+    )
+
+    for folder, dirs, files in os.walk(root):
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+        if "page.tsx" not in files:
+            continue
+
+        page_path = os.path.join(folder, "page.tsx")
+        try:
+            with open(page_path, "r", encoding="utf-8") as f:
+                source = f.read()
+        except Exception as exc:
+            print(f"ERROR membaca halaman Irodori {page_path}: {exc}")
+            continue
+
+        for match in pattern.finditer(source):
+            speaker_id = match.group(1).strip()
+            body = match.group(2)
+            filename = safe_name(match.group(3).strip())
+
+            japanese_match = re.search(
+                r"\bjapanese:\s*([\s\S]*?),\s*romaji:",
+                body,
+                re.MULTILINE,
+            )
+            if not japanese_match or not filename:
+                continue
+
+            japanese = clean_html(japanese_match.group(1).replace("<>", ""))
+            if not japanese:
+                continue
+
+            role = IRODORI_SPEAKER_ROLES.get(speaker_id, "adult_male")
+            character = irodori_voice_map.get(speaker_id)
+            if not character:
+                character = pick_voice(role)
+                irodori_voice_map[speaker_id] = character
+
+            save(
+                os.path.join(OUTPUT_AUDIO_DIR, "irodori", filename),
+                japanese,
+                STORY_SPEED,
+                character,
+                role,
+            )
+
+
+# ============================================================
+# UNGKAPAN PRAKTIS: frasa dan tiap baris percakapan
+# ============================================================
+def decode_js_string(literal):
+    try:
+        return json.loads(literal)
+    except Exception:
+        if len(literal) >= 2 and literal[0] in ('"', "'"):
+            return literal[1:-1].replace(r"\"", '"').replace(r"\'", "'")
+        return literal
+
+
+def get_practical_speaker_voice(speaker, position):
+    speaker = clean_html(speaker).strip()
+    if not speaker:
+        speaker = "Narator"
+
+    if speaker.lower() in NARRATOR_NAMES:
+        return DEFAULT_CHARACTER, "default"
+
+    if speaker not in practical_speaker_voices:
+        role = name_bank.get(speaker)
+        if not role:
+            if any(token in speaker for token in ("店員", "スタッフ", "受付", "先生")):
+                role = "adult_female"
+            elif any(token in speaker for token in ("店長", "男性", "男")):
+                role = "adult_male"
+            elif any(token in speaker for token in ("女性", "女")):
+                role = "adult_female"
+            else:
+                role = PRACTICAL_SPEAKER_ROLE_ORDER[position % len(PRACTICAL_SPEAKER_ROLE_ORDER)]
+
+        practical_speaker_voices[speaker] = (pick_voice(role), role)
+
+    return practical_speaker_voices[speaker]
+
+
+def process_practical_pages():
+    root = os.path.join(ROOT, "app", "ungkapan-praktis")
+    if not os.path.isdir(root):
+        return
+
+    phrase_string = re.compile(
+        r"""jp:\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')""",
+        re.MULTILINE,
+    )
+    dialogue_line = re.compile(
+        r"""\{\s*speaker:\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')\s*,\s*jp:\s*("(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*')""",
+        re.MULTILINE,
+    )
+
+    for folder, dirs, files in os.walk(root):
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+        if "page.tsx" not in files or folder == root:
+            continue
+
+        category_id = os.path.basename(folder)
+        page_path = os.path.join(folder, "page.tsx")
+        try:
+            with open(page_path, "r", encoding="utf-8") as f:
+                source = f.read()
+        except Exception as exc:
+            print(f"ERROR membaca halaman Ungkapan Praktis {page_path}: {exc}")
+            continue
+
+        phrase_section = re.search(
+            r"\bconst\s+phrases\b[\s\S]*?=\s*\[([\s\S]*?)\];\s*const\s+dialogues\b",
+            source,
+            re.MULTILINE,
+        )
+        if phrase_section:
+            groups = re.finditer(
+                r"\bitems:\s*\[([\s\S]*?)\]",
+                phrase_section.group(1),
+                re.MULTILINE,
+            )
+            for group_index, group_match in enumerate(groups, start=1):
+                for item_index, item_match in enumerate(
+                    phrase_string.finditer(group_match.group(1)),
+                    start=1,
+                ):
+                    japanese = clean_html(decode_js_string(item_match.group(1)))
+                    if not japanese:
+                        continue
+
+                    filename = (
+                        f"{category_id}-phrase-{group_index:02d}-{item_index:02d}.mp3"
+                    )
+                    save(
+                        os.path.join(OUTPUT_AUDIO_DIR, "praktis", filename),
+                        japanese,
+                        VOCAB_SPEED,
+                        DEFAULT_CHARACTER,
+                    )
+
+        dialogue_section = re.search(
+            r"\bconst\s+dialogues\b[\s\S]*?=\s*\[([\s\S]*?)\];\s*const\s+practicalCategory\b",
+            source,
+            re.MULTILINE,
+        )
+        if not dialogue_section:
+            continue
+
+        dialogue_blocks = re.finditer(
+            r"\blines:\s*\[([\s\S]*?)\]",
+            dialogue_section.group(1),
+            re.MULTILINE,
+        )
+
+        for dialogue_index, dialogue_match in enumerate(dialogue_blocks, start=1):
+            lines = list(dialogue_line.finditer(dialogue_match.group(1)))
+            speaker_positions = {}
+            for line_match in lines:
+                speaker = clean_html(decode_js_string(line_match.group(1))).strip()
+                if speaker not in speaker_positions:
+                    speaker_positions[speaker] = len(speaker_positions)
+
+            for line_index, line_match in enumerate(lines, start=1):
+                speaker = clean_html(decode_js_string(line_match.group(1))).strip()
+                japanese = clean_html(decode_js_string(line_match.group(2)))
+                if not japanese:
+                    continue
+
+                character, role = get_practical_speaker_voice(
+                    speaker,
+                    speaker_positions.get(speaker, 0),
+                )
+                filename = (
+                    f"{category_id}-dialogue-{dialogue_index:02d}-{line_index:02d}.mp3"
+                )
+                save(
+                    os.path.join(OUTPUT_AUDIO_DIR, "praktis", filename),
+                    japanese,
+                    STORY_SPEED,
+                    character,
+                    role,
+                )
+
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -508,6 +719,12 @@ def main():
         label, processor = PROCESSORS[kind]
         print(f"\nMemproses {label}: {os.path.basename(json_path)}")
         processor(data)
+
+    if not ONLY_KANA:
+        print("\nMemproses audio dialog Irodori...")
+        process_irodori_pages()
+        print("\nMemproses audio Ungkapan Praktis...")
+        process_practical_pages()
 
     if _missing_kana:
         print("\nHuruf kana tanpa kata contoh (dilewati, tambahkan di HIRAGANA_WORDS/KATAKANA_WORDS):",

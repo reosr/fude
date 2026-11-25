@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import JapaneseReading from "@/components/JapaneseReading";
+import PracticalAudioButton from "@/components/PracticalAudioButton";
 import practicalVocabData from "@/data/practical-vocab.json";
 
 type Phrase = {
@@ -23,7 +24,7 @@ type Phrase = {
   tone?: string;
 };
 
-function PhraseCard({ phrase }: { phrase: Phrase }) {
+function PhraseCard({ phrase, audioSrc }: { phrase: Phrase; audioSrc: string }) {
   return (
     <div className="rounded-xl border border-[#33312E] bg-[#191817]/90 p-3 sm:p-4">
       {phrase.tone && (
@@ -31,15 +32,20 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
           {phrase.tone}
         </p>
       )}
-      <JapaneseReading
-        html={phrase.jp}
-        romaji={phrase.romaji}
-        translation={phrase.id}
-        contentClassName="font-mincho text-lg leading-[2.1] text-[#EAE6DD] sm:text-xl"
-        kanaClassName="mt-1 font-mincho text-sm text-[#D9B66D]"
-        romajiClassName="mt-1 text-xs italic text-[#A3A099]"
-        translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
-      />
+      <div className="flex items-start gap-2">
+        <div className="min-w-0 flex-1">
+          <JapaneseReading
+            html={phrase.jp}
+            romaji={phrase.romaji}
+            translation={phrase.id}
+            contentClassName="font-mincho text-lg leading-[2.1] text-[#EAE6DD] sm:text-xl"
+            kanaClassName="mt-1 font-mincho text-sm text-[#D9B66D]"
+            romajiClassName="mt-1 text-xs italic text-[#A3A099]"
+            translationClassName="mt-2 text-sm leading-relaxed text-[#C5C0B7]"
+          />
+        </div>
+        <PracticalAudioButton src={audioSrc} label="Dengarkan" />
+      </div>
       {phrase.note && (
         <JapaneseReading
           html={phrase.note}
@@ -55,27 +61,35 @@ function PhraseCard({ phrase }: { phrase: Phrase }) {
 
 type DialogueLine = Phrase & { speaker: string };
 
-function Dialogue({ title, context, lines }: { title: string; context: string; lines: DialogueLine[] }) {
+function Dialogue({ title, context, lines, audioPrefix }: { title: string; context: string; lines: DialogueLine[]; audioPrefix: string }) {
   return (
     <section className="rounded-2xl border border-[#33312E] bg-[#1E1D1B]/80 p-4 sm:p-5">
-      <div className="mb-4">
-        <h3 className="font-bold text-[#EAE6DD]">{title}</h3>
-        <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">{context}</p>
+      <div className="mb-4 flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h3 className="font-bold text-[#EAE6DD]">{title}</h3>
+          <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">{context}</p>
+        </div>
+        <PracticalAudioButton sources={lines.map((_, index) => `${audioPrefix}-${String(index + 1).padStart(2, "0")}.mp3`)} label="Putar semua" />
       </div>
       <div className="space-y-3">
         {lines.map((line, index) => (
           <div key={title + "-" + index} className="grid grid-cols-[74px_minmax(0,1fr)] gap-2 sm:grid-cols-[92px_minmax(0,1fr)] sm:gap-3">
             <span className="pt-1 text-[10px] font-bold text-[#D9B66D] sm:text-xs" dangerouslySetInnerHTML={{ __html: line.speaker }} />
             <div className="min-w-0 rounded-xl border border-[#33312E]/80 bg-[#121110]/70 p-3">
-              <JapaneseReading
-                html={line.jp}
-                romaji={line.romaji}
-                translation={line.id}
-                contentClassName="font-mincho text-base leading-[2] text-[#EAE6DD] sm:text-lg"
-                kanaClassName="mt-1 font-mincho text-xs text-[#D9B66D]"
-                romajiClassName="mt-1 text-[11px] italic text-[#A3A099]"
-                translationClassName="mt-2 text-xs leading-relaxed text-[#A3A099]"
-              />
+              <div className="flex items-start gap-2">
+                <div className="min-w-0 flex-1">
+                  <JapaneseReading
+                    html={line.jp}
+                    romaji={line.romaji}
+                    translation={line.id}
+                    contentClassName="font-mincho text-base leading-[2] text-[#EAE6DD] sm:text-lg"
+                    kanaClassName="mt-1 font-mincho text-xs text-[#D9B66D]"
+                    romajiClassName="mt-1 text-[11px] italic text-[#A3A099]"
+                    translationClassName="mt-2 text-xs leading-relaxed text-[#A3A099]"
+                  />
+                </div>
+                <PracticalAudioButton src={`${audioPrefix}-${String(index + 1).padStart(2, "0")}.mp3`} label="Putar" />
+              </div>
             </div>
           </div>
         ))}
@@ -311,7 +325,7 @@ export default function HotelAkomodasiPage() {
           <h2 className="text-xl font-bold text-[#EAE6DD]">Ungkapan penting</h2>
           <p className="mt-1 text-xs text-[#A3A099]">Pelajari ungkapan yang bisa digunakan oleh tamu maupun petugas hotel.</p>
         </div>
-        {phrases.map((group) => (
+        {phrases.map((group, groupIndex) => (
           <div key={group.title} className="space-y-3">
             <div>
               <h3 className="font-bold text-[#D9B66D]">{group.title}</h3>
@@ -319,7 +333,7 @@ export default function HotelAkomodasiPage() {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {group.items.map((phrase, index) => (
-                <PhraseCard key={group.title + "-" + index} phrase={phrase} />
+                <PhraseCard key={group.title + "-" + index} phrase={phrase} audioSrc={`/audio/praktis/${practicalCategory.id}-phrase-${String(groupIndex + 1).padStart(2, "0")}-${String(index + 1).padStart(2, "0")}.mp3`} />
               ))}
             </div>
           </div>
@@ -331,8 +345,8 @@ export default function HotelAkomodasiPage() {
           <h2 className="text-xl font-bold text-[#EAE6DD]">Contoh percakapan</h2>
           <p className="mt-1 text-xs text-[#A3A099]">Dialog orisinal Fude tentang check-in, masalah kamar, dan check-out.</p>
         </div>
-        {dialogues.map((dialogue) => (
-          <Dialogue key={dialogue.title} {...dialogue} />
+        {dialogues.map((dialogue, dialogueIndex) => (
+          <Dialogue key={dialogue.title} {...dialogue} audioPrefix={`/audio/praktis/${practicalCategory.id}-dialogue-${String(dialogueIndex + 1).padStart(2, "0")}`} />
         ))}
       </section>
 
