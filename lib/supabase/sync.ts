@@ -8,7 +8,7 @@ import {
   type FudeProfile,
   type FudeXpEvent,
 } from "../gamification";
-import { getMemorizedKanji } from "../memorized";
+import { getMemorizedSyncState } from "../memorized";
 import {
   getIrodoriProgress,
   IRODORI_PROGRESS_STORAGE_KEY,
@@ -194,7 +194,7 @@ export function getLocalFudeSnapshot(): LocalFudeSnapshot {
     xpBase: xpSyncState.base,
     xpEvents: xpSyncState.events,
     xpRewards: readStringArray(XP_REWARDS_KEY),
-    memorizedKanji: getMemorizedKanji(),
+    memorizedKanji: getMemorizedSyncState(),
     jlptResults: readJlptResults(),
     irodoriProgress: getIrodoriProgress(),
     studyProgress: getStudyProgress(),

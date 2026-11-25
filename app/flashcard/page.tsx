@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef, useLayoutEffect, type ReactNode } from "react";
 import { getUnlockedVocab, type VocabItem } from "../../lib/vocab";
 import { getProgress } from "../../lib/progress";
-import { getMemorizedKanji, saveMemorizedKanji } from "../../lib/memorized";
+import { getMemorizedVocabKeys, saveMemorizedVocabKeys } from "../../lib/memorized";
+import { getMemorizedVocabKey } from "../../lib/vocab-identity";
 import { ArrowLeft, ArrowRight, RotateCcw, Play, Pause, CheckCircle2, Eye, EyeOff, X, BookOpen } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
@@ -140,17 +141,13 @@ useEffect(() => {
         setSourceFilter(getActiveVocabularyTrack());
       }
 
-      const savedMemorized = getMemorizedKanji();
-
-      if (active) {
-        setMemorized(savedMemorized);
-      }
-
       const allVocab = await getUnlockedVocab(getProgress(), {
         practicalCategoryId: practicalCategory?.id,
       });
 
       if (!active) return;
+
+      setMemorized(await getMemorizedVocabKeys(allVocab));
 
       const stableOrder = [...allVocab].sort(
         (a, b) => a.kanji.localeCompare(b.kanji)
@@ -221,7 +218,7 @@ useEffect(() => {
         ? card.sources?.some((source) => source.type === "irodori")
         : card.sources?.some((source) => source.type === "practical" && (!categoryFilter || source.categoryId === categoryFilter))
   );
-  const filteredDeck = sourceDeck.filter((card) => !memorized.includes(card.kanji));
+  const filteredDeck = sourceDeck.filter((card) => !memorized.includes(getMemorizedVocabKey(card)));
   const safeCurrentIndex = filteredDeck.length > 0
     ? currentIndex % filteredDeck.length
     : 0;
@@ -319,28 +316,28 @@ useEffect(() => {
 
   const toggleMemorized = () => {
     const currentCard = filteredDeck[safeCurrentIndex];
-    let newMemorized;
-    if (memorized.includes(currentCard.kanji)) {
-      newMemorized = memorized.filter(k => k !== currentCard.kanji);
-      setMemorized(newMemorized);
-      saveMemorizedKanji(newMemorized);
-    } else {
-      newMemorized = Array.from(new Set([...memorized, currentCard.kanji]));
-      setMemorized(newMemorized);
-      saveMemorizedKanji(newMemorized);
-      // Item yang baru dihafal langsung keluar dari filteredDeck.
-      // Indeks yang sama otomatis menunjuk kartu berikutnya.
-    }
-  };
+    if (!currentCard) return;
 
-  const removeFromMemorized = (kanji: string) => {
-    const newMemorized = memorized.filter(k => k !== kanji);
+    const currentKey = getMemorizedVocabKey(currentCard);
+    const newMemorized = memorized.includes(currentKey)
+      ? memorized.filter((key) => key !== currentKey)
+      : [...memorized, currentKey];
+
     setMemorized(newMemorized);
-    saveMemorizedKanji(newMemorized);
+    saveMemorizedVocabKeys(newMemorized);
   };
 
-  const currentCard = filteredDeck[currentIndex];
-  const isMemorized = memorized.includes(currentCard?.kanji);
+  const removeFromMemorized = (vocab: VocabItem) => {
+    const key = getMemorizedVocabKey(vocab);
+    const newMemorized = memorized.filter((item) => item !== key);
+    setMemorized(newMemorized);
+    saveMemorizedVocabKeys(newMemorized);
+  };
+
+  const currentCard = filteredDeck[safeCurrentIndex];
+  const isMemorized = currentCard
+    ? memorized.includes(getMemorizedVocabKey(currentCard))
+    : false;
   const maxTime = (isFlipped ? TIMER_BACK : TIMER_FRONT) * 20;
   const progressWidth = Math.max(0, (timeLeft / maxTime) * 100);
 
@@ -630,7 +627,10 @@ useEffect(() => {
 
             <div className="p-5 overflow-y-auto grid grid-cols-2 md:grid-cols-3 gap-3">
               {deck
-                .filter((v, i, self) => memorized.includes(v.kanji) && self.findIndex(t => t.kanji === v.kanji) === i)
+                .filter((v, i, self) => {
+                  const key = getMemorizedVocabKey(v);
+                  return memorized.includes(key) && self.findIndex((item) => getMemorizedVocabKey(item) === key) === i;
+                })
                 .map((v: any, i: number) => {
                   const modalImage = imageMap[`${v.kanji}-${v.kana}`] || bgImages[0];
                   return (
@@ -638,7 +638,7 @@ useEffect(() => {
                       <img src={modalImage} alt="Background" className="absolute inset-0 w-full h-full object-cover opacity-20" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#1E1D1B] via-[#1E1D1B]/80 to-transparent"></div>
                       <button 
-                        onClick={() => removeFromMemorized(v.kanji)}
+                        onClick={() => removeFromMemorized(v)}
                         className="absolute top-2 right-2 z-20 text-white bg-black/50 hover:bg-red-500 p-1.5 rounded-full transition-colors border border-white/20"
                       >
                         <X size={14} />

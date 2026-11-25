@@ -3,7 +3,8 @@
 import { getUnlockedVocab, getVocabSourceLabel, type VocabItem } from "../../lib/vocab";
 import { useState, useEffect, useRef } from "react";
 import { getProgress } from "../../lib/progress";
-import { getMemorizedKanji } from "../../lib/memorized";
+import { getMemorizedVocabKeys } from "../../lib/memorized";
+import { getMemorizedVocabKey } from "../../lib/vocab-identity";
 import { Search, X, Volume2 } from "lucide-react";
 import dynamic from "next/dynamic";
 import FitText from "../../components/FitText";
@@ -81,8 +82,6 @@ export default function Kosakata() {
     }
     setCurrentBab(progress);
 
-    setMemorized(getMemorizedKanji());
-
     try {
       const rawVocab = await getUnlockedVocab(progress, {
         practicalCategoryId: practicalCategory?.id,
@@ -91,6 +90,7 @@ export default function Kosakata() {
       if (!active) return;
 
       setAllVocab(rawVocab);
+      setMemorized(await getMemorizedVocabKeys(rawVocab));
 
       const stableOrder = [...rawVocab].sort(
         (a, b) => a.kanji.localeCompare(b.kanji)
@@ -181,13 +181,13 @@ export default function Kosakata() {
       : allVocab.filter((item) => hasSource(item, "practical") && (!categoryFilter || item.sources?.some(
           (source) => source.type === "practical" && source.categoryId === categoryFilter
         )));
-  const memorizedCount = sourceFilteredVocab.filter((v) => memorized.includes(v.kanji)).length;
+  const memorizedCount = sourceFilteredVocab.filter((v) => memorized.includes(getMemorizedVocabKey(v))).length;
   const notMemorizedCount = sourceFilteredVocab.length - memorizedCount;
 
   const filteredVocab = sourceFilteredVocab.filter(
     (v) =>
       (memFilter === "all" ||
-        (memFilter === "sudah" ? memorized.includes(v.kanji) : !memorized.includes(v.kanji))) &&
+        (memFilter === "sudah" ? memorized.includes(getMemorizedVocabKey(v)) : !memorized.includes(getMemorizedVocabKey(v)))) &&
       (v.kanji.includes(search) ||
         v.kana.includes(search) ||
         v.romaji.toLowerCase().includes(search.toLowerCase()) ||

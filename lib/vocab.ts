@@ -1,5 +1,6 @@
 import { getCompletedIrodoriLessons, isIrodoriLessonUnlocked } from "./irodori-progress";
 import { getActiveIrodoriCourseId, normalizeIrodoriCourseId } from "./vocab-preferences";
+import { getVocabIdentityKey, normalizeVocabIdentityPart } from "./vocab-identity";
 
 let kosakataPromise: Promise<MinnaVocabGroup[]> | null = null;
 let irodoriVocabPromise: Promise<IrodoriVocabLesson[]> | null = null;
@@ -59,14 +60,9 @@ type PracticalVocabCategory = {
   }[];
 };
 
-const norm = (s: string) =>
-  (s || "")
-    .normalize("NFKC")
-    .replace(/[\s\u3000]/g, "")
-    .replace(/[ã€œï½žâˆ¼]/g, "~");
+const norm = normalizeVocabIdentityPart;
 
-export const vocabKey = (v: { kanji: string; kana: string }) =>
-  `${norm(v.kanji)}-${norm(v.kana)}`;
+export const vocabKey = getVocabIdentityKey;
 
 
 function normalizeMeaning(value: string): string {

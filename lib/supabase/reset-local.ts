@@ -36,6 +36,7 @@ const ACCOUNT_LOCAL_KEYS = [
   XP_BASE_KEY,
   XP_EVENTS_KEY,
   "fude_memorized",
+  "fude_memorized_legacy_backup_v1",
   IRODORI_PROGRESS_STORAGE_KEY,
   STUDY_PROGRESS_STORAGE_KEY,
   GACHA_INVENTORY_KEY,

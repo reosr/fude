@@ -336,7 +336,7 @@ export default function CloudSyncPreview({ userId }: Props) {
                 <div className="mt-1 space-y-1 text-xs leading-5 text-[#B8B3AA]">
                   <p>Bab terbuka: Bab {preview.local.currentBab}</p>
                   <p>Total EXP: {preview.local.totalXp}</p>
-                  <p>Kanji dihafal: {preview.local.memorizedKanji.length}</p>
+                  <p>Kosakata dihafal: {preview.local.memorizedKanji.filter((key) => key.startsWith("v2:")).length}</p>
                   <p>Hasil JLPT: {preview.local.jlptResults.length} set</p>
                   <p>
                     Irodori: {preview.local.irodoriProgress.completedLessons.length} pelajaran selesai
