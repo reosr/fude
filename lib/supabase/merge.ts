@@ -117,7 +117,8 @@ function mergeProfile(
   local: FudeProfile,
   cloud: Record<string, unknown> | null,
   cloudUpdatedAt: string | null,
-  pending: PendingSyncChange[]
+  pending: PendingSyncChange[],
+  localWasStored: boolean
 ): FudeProfile {
   if (!cloud) return local;
 
@@ -162,14 +163,30 @@ function mergeProfile(
     photoZoom: local.photoZoom ?? 1,
   };
 
-  if (
-    sameJson(localProfile, cloudProfile) ||
-    !isLocalChangeNewer(pending, "fude_profile", cloudUpdatedAt)
-  ) {
+  if (sameJson(localProfile, cloudProfile)) {
     return {
       ...cloudProfile,
       photoDataUrl: local.photoDataUrl ?? null,
     };
+  }
+
+  if (!localWasStored) {
+    return {
+      ...cloudProfile,
+      photoDataUrl: local.photoDataUrl ?? null,
+    };
+  }
+
+  if (!pending.some((item) => item.key === "fude_profile")) {
+    throw new Error(
+      "Profil lokal dan cloud berbeda, tetapi perangkat ini tidak memiliki catatan perubahan untuk menentukan versi yang benar. Data profil tidak ditimpa."
+    );
+  }
+
+  if (!isLocalChangeNewer(pending, "fude_profile", cloudUpdatedAt)) {
+    throw new Error(
+      "Profil lokal dan cloud berubah pada waktu yang saling bertentangan. Data profil tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi."
+    );
   }
 
   return local;
@@ -246,13 +263,18 @@ function mergeIrodoriProgress(
           );
         }
 
-        mergedRatings[canDoId] = isLocalChangeNewer(
-          pending,
-          "fude_irodori_progress_v1",
-          cloud.updated_at
-        )
-          ? localRating
-          : cloudRating;
+        if (
+          !isLocalChangeNewer(
+            pending,
+            "fude_irodori_progress_v1",
+            cloud.updated_at
+          )
+        ) {
+          throw new Error(
+            `Penilaian Irodori untuk ${lessonId}/${canDoId} memiliki konflik versi. Data tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi.`
+          );
+        }
+        mergedRatings[canDoId] = localRating;
       } else if (localRating !== undefined || cloudRating !== undefined) {
         mergedRatings[canDoId] = localRating ?? cloudRating!;
       }
@@ -413,12 +435,18 @@ export function mergeFudeData(
       if (sameJson(localResult, cloudResult)) {
         result = cloudResult;
       } else {
-        const localIsNewer = isLocalChangeNewer(
-          pending,
-          `jlpt_result_${setId}`,
-          cloudEntry.updated_at
-        );
-        result = localIsNewer ? localResult : cloudResult;
+        const resultKey = `jlpt_result_${setId}`;
+        if (!pending.some((item) => item.key === resultKey)) {
+          throw new Error(
+            `Hasil JLPT ${setId} berbeda antara perangkat dan cloud tanpa catatan perubahan lokal. Data tidak ditimpa.`
+          );
+        }
+        if (!isLocalChangeNewer(pending, resultKey, cloudEntry.updated_at)) {
+          throw new Error(
+            `Hasil JLPT ${setId} memiliki konflik versi. Data tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi.`
+          );
+        }
+        result = localResult;
       }
     } else {
       result = cloudResult ?? localResult;
@@ -443,7 +471,8 @@ export function mergeFudeData(
       local.profile,
       cloud.profile,
       cloud.profileUpdatedAt,
-      pending
+      pending,
+      local.stored.profile
     ),
     currentBab,
     totalXp,
