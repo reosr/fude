@@ -34,7 +34,8 @@ interface Question {
   starPosition?: number;
   passage?: string;
   audioUrl?: string;
-  dialogue?: string;
+  dialogue?: { speaker: string; jp: string }[];
+  itemType?: string;
 }
 
 type SectionId = "vocab" | "grammar" | "reading" | "listening";
@@ -62,6 +63,8 @@ interface SavedQuizResult {
   isFinished?: boolean;
   isPerfect?: boolean;
   completedOnce?: boolean;
+  examDeadlines?: Partial<Record<ExamBlockId, number>>;
+  expiredExamBlocks?: ExamBlockId[];
 }
 
 // Jangan tampilkan bacaan otomatis pada soal yang sedang menguji bacaan
@@ -87,6 +90,36 @@ const SECTIONS = [
   { id: "reading", label: "Membaca (読解)" },
   { id: "listening", label: "Mendengar (聴解)" },
 ] as const;
+
+type ExamBlockId = "vocab" | "grammar-reading" | "listening";
+
+const EXAM_BLOCK_CONFIG = {
+  vocab: {
+    label: "Sesi 1 · Kosakata",
+    minutes: { N5: 20, N4: 25 },
+  },
+  "grammar-reading": {
+    label: "Sesi 2 · Tata Bahasa + Membaca",
+    minutes: { N5: 40, N4: 55 },
+  },
+  listening: {
+    label: "Sesi 3 · Mendengar",
+    minutes: { N5: 30, N4: 35 },
+  },
+} as const;
+
+function getExamBlockId(sectionId: SectionId): ExamBlockId {
+  if (sectionId === "grammar" || sectionId === "reading") {
+    return "grammar-reading";
+  }
+  return sectionId;
+}
+
+function formatExamTime(totalSeconds: number): string {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
 
 const createEmptyAnswers = () => ({
   vocab: {},
@@ -241,10 +274,23 @@ export default function JLPTQuiz({
   const [showConfirm, setShowConfirm] = useState(false);
   const [storageError, setStorageError] = useState<string | null>(null);
   const [audioUnavailableUrl, setAudioUnavailableUrl] = useState<string | null>(null);
+  const [examDeadlines, setExamDeadlines] = useState<Partial<Record<ExamBlockId, number>>>({});
+  const [expiredExamBlocks, setExpiredExamBlocks] = useState<ExamBlockId[]>([]);
+  const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
 
   const storageKey = `jlpt_result_${testSet.id}`;
   const isLoaded = loadedStorageKey === storageKey;
   const currentLevel = level || getJlptLevel(testSet);
+  const isTimedExam = currentLevel === "N5" || currentLevel === "N4";
+  const activeExamBlock = getExamBlockId(activeSection);
+  const activeExamMinutes = isTimedExam
+    ? EXAM_BLOCK_CONFIG[activeExamBlock].minutes[currentLevel as "N5" | "N4"]
+    : 0;
+  const isActiveBlockExpired = isTimedExam && (
+    expiredExamBlocks.includes(activeExamBlock) ||
+    (typeof examDeadlines[activeExamBlock] === "number" &&
+      examDeadlines[activeExamBlock]! <= Date.now())
+  );
 
   // Simpan posisi aktif dan posisi terakhir pada setiap bagian.
   const saveProgress = (
@@ -308,6 +354,8 @@ export default function JLPTQuiz({
           ...(parsed.answers || {}),
         };
 
+        setExamDeadlines(parsed.examDeadlines || {});
+        setExpiredExamBlocks(Array.isArray(parsed.expiredExamBlocks) ? parsed.expiredExamBlocks : []);
         setUserAnswers(savedAnswers);
 
         // Pulihkan posisi terakhir yang dibuka jika masih valid.
@@ -365,9 +413,9 @@ export default function JLPTQuiz({
         );
 
         // Status ujian hanya dianggap selesai jika semua soal benar-benar dijawab.
-        const wasFinished =
-          hasAllAnswers &&
-          (parsed.isFinished === true || parsed.isPerfect === true);
+        const wasFinished = isTimedExam
+          ? parsed.isFinished === true
+          : hasAllAnswers && (parsed.isFinished === true || parsed.isPerfect === true);
 
         const wasPerfect =
           hasAllAnswers && score.isPerfect;
@@ -434,6 +482,9 @@ export default function JLPTQuiz({
       setIsFinished(false);
       setIsPerfect(false);
       setCompletedOnce(false);
+      setExamDeadlines({});
+      setExpiredExamBlocks([]);
+      setRemainingSeconds(null);
       setSectionPositions({
         vocab: 0,
         grammar: 0,
@@ -460,6 +511,86 @@ export default function JLPTQuiz({
       active = false;
     };
   }, [storageKey, testSet, currentLevel, levelSetIds]);
+
+  // Timer memakai deadline absolut agar tetap akurat setelah reload.
+  // Grammar dan Reading berbagi satu deadline, sama seperti sesi resmi N5/N4.
+  useEffect(() => {
+    if (!isLoaded || !isTimedExam || isFinished || isPerfect) return;
+
+    if (expiredExamBlocks.includes(activeExamBlock)) {
+      setRemainingSeconds(0);
+      return;
+    }
+
+    let deadline = examDeadlines[activeExamBlock];
+
+    if (!deadline) {
+      deadline = Date.now() + activeExamMinutes * 60_000;
+      const updatedDeadlines = {
+        ...examDeadlines,
+        [activeExamBlock]: deadline,
+      };
+      setExamDeadlines(updatedDeadlines);
+
+      try {
+        const saved = localStorage.getItem(storageKey);
+        const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
+        persistQuizResult(storageKey, {
+          ...parsed,
+          examDeadlines: updatedDeadlines,
+          expiredExamBlocks,
+        });
+      } catch (error) {
+        console.error("Gagal menyimpan waktu sesi JLPT:", error);
+      }
+    }
+
+    let intervalId: number | undefined;
+
+    const updateTimer = () => {
+      const secondsLeft = Math.max(0, Math.ceil((deadline! - Date.now()) / 1000));
+      setRemainingSeconds(secondsLeft);
+
+      if (secondsLeft === 0 && !expiredExamBlocks.includes(activeExamBlock)) {
+        const updatedExpired = [...expiredExamBlocks, activeExamBlock];
+        setExpiredExamBlocks(updatedExpired);
+
+        try {
+          const saved = localStorage.getItem(storageKey);
+          const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
+          persistQuizResult(storageKey, {
+            ...parsed,
+            examDeadlines: {
+              ...examDeadlines,
+              [activeExamBlock]: deadline,
+            },
+            expiredExamBlocks: updatedExpired,
+          });
+        } catch (error) {
+          console.error("Gagal menyimpan akhir waktu sesi JLPT:", error);
+        }
+
+        if (intervalId !== undefined) window.clearInterval(intervalId);
+      }
+    };
+
+    updateTimer();
+    intervalId = window.setInterval(updateTimer, 1000);
+
+    return () => {
+      if (intervalId !== undefined) window.clearInterval(intervalId);
+    };
+  }, [
+    isLoaded,
+    isTimedExam,
+    isFinished,
+    isPerfect,
+    activeExamBlock,
+    activeExamMinutes,
+    examDeadlines,
+    expiredExamBlocks,
+    storageKey,
+  ]);
 
   // ==========================================
   // RESET / ULANGI UJIAN
@@ -516,6 +647,8 @@ export default function JLPTQuiz({
       isFinished: false,
       isPerfect: false,
       completedOnce: previouslyCompleted,
+      examDeadlines: {},
+      expiredExamBlocks: [],
     };
 
     if (!persistQuizResult(storageKey, resetResult)) {
@@ -528,6 +661,9 @@ export default function JLPTQuiz({
     setIsFinished(false);
     setIsPerfect(false);
     setCompletedOnce(previouslyCompleted);
+    setExamDeadlines({});
+    setExpiredExamBlocks([]);
+    setRemainingSeconds(null);
     setShowReview(false);
     setActiveSection("vocab");
     setCurrentIndex(0);
@@ -565,6 +701,8 @@ export default function JLPTQuiz({
         isFinished: false,
         isPerfect: false,
         completedOnce,
+        examDeadlines,
+        expiredExamBlocks,
       });
     } catch (error) {
       console.error("Gagal menyimpan posisi ujian JLPT:", error);
@@ -579,10 +717,12 @@ export default function JLPTQuiz({
     currentIndex,
     sectionPositions,
     completedOnce,
+    examDeadlines,
+    expiredExamBlocks,
   ]);
 
   const handleAnswer = (optIndex: number) => {
-  if (isFinished || isPerfect) return;
+  if (isFinished || isPerfect || isActiveBlockExpired) return;
   if (currentQ?.audioUrl && audioUnavailableUrl === currentQ.audioUrl) return;
 
   const updatedAnswers = {
@@ -718,6 +858,7 @@ export default function JLPTQuiz({
     totalQuestions,
     totalScorePercent,
   } = calculateQuizScore(userAnswers, testSet.sections);
+  const cannotFinish = (!isTimedExam && totalUnanswered > 0) || totalQuestions === 0;
 
   const answeredQuestions = Math.max(0, totalQuestions - totalUnanswered);
   const overallProgress = totalQuestions > 0
@@ -749,7 +890,7 @@ export default function JLPTQuiz({
           <div className="absolute top-0 right-0 w-24 h-24 bg-[#B8860B]/10 rounded-full blur-2xl -mr-5 -mt-5"></div>
 
           <p className="text-sm font-bold text-[#B8860B] uppercase tracking-wider mb-2">
-            Total Skor Akhir
+            Akurasi Jawaban Latihan
           </p>
 
           <div className="flex items-end justify-center gap-1">
@@ -764,6 +905,9 @@ export default function JLPTQuiz({
 
           <p className="text-sm text-[#A3A099] mt-2">
             {totalCorrect} Benar dari {totalQuestions} Soal
+          </p>
+          <p className="mt-2 text-xs text-[#A3A099]">
+            Persentase ini adalah hitungan benar Fude, bukan skor skala resmi JLPT.
           </p>
 
           {isPerfect && (
@@ -1099,6 +1243,32 @@ export default function JLPTQuiz({
           </div>
         </div>
 
+        {isTimedExam && (
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[#B8860B]/30 bg-[#B8860B]/5 p-4">
+            <div>
+              <p className="text-sm font-bold text-[#EAE6DD]">
+                {EXAM_BLOCK_CONFIG[activeExamBlock].label}
+              </p>
+              <p className="mt-1 text-xs text-[#A3A099]">
+                {activeExamBlock === "grammar-reading"
+                  ? "Tata bahasa dan membaca memakai satu alokasi waktu gabungan."
+                  : "Waktu sesi mulai berjalan saat bagian ini pertama kali dibuka."}
+              </p>
+            </div>
+            <span className={`rounded-lg px-3 py-2 text-sm font-black tabular-nums ${
+              isActiveBlockExpired
+                ? "bg-red-500/10 text-red-300"
+                : "bg-[#B8860B]/15 text-[#D9AD42]"
+            }`}>
+              {isActiveBlockExpired
+                ? "WAKTU HABIS"
+                : remainingSeconds === null
+                  ? "Menyiapkan timer..."
+                  : `Sisa waktu ${formatExamTime(remainingSeconds)}`}
+            </span>
+          </div>
+        )}
+
         <div className="flex overflow-x-auto gap-2 mb-8 pb-2 scrollbar-hide">
           {SECTIONS.map((section) => {
             const hasQuestions =
@@ -1300,7 +1470,7 @@ export default function JLPTQuiz({
                       key={index}
                       type="button"
                       onClick={() => handleAnswer(index)}
-                      disabled={audioUnavailable}
+                      disabled={audioUnavailable || isActiveBlockExpired}
                       aria-label={`Pilih potongan nomor ${index + 1}`}
                       className={`flex min-h-[68px] w-full items-center gap-3 rounded-xl border px-4 py-4 text-left transition-all ${isSelected
                         ? "border-[#C93438] bg-[#C93438] text-white shadow-lg shadow-[#C93438]/20"
@@ -1339,7 +1509,7 @@ export default function JLPTQuiz({
                     <button
                       key={index}
                       onClick={() => handleAnswer(index)}
-                      disabled={audioUnavailable}
+                      disabled={audioUnavailable || isActiveBlockExpired}
                       className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass} disabled:cursor-not-allowed disabled:opacity-50`}
                     >
                       <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint}
@@ -1367,9 +1537,9 @@ export default function JLPTQuiz({
 
               <button
                 onClick={nextQuestion}
-                disabled={!isAnswered || audioUnavailable}
+                disabled={(!isAnswered && !isActiveBlockExpired) || audioUnavailable}
                 className={`flex-1 rounded-xl py-4 text-lg font-bold transition-all ${
-                  isAnswered
+                  isAnswered || isActiveBlockExpired
                     ? "bg-[#B8860B] text-white hover:bg-[#9a7009] shadow-lg shadow-[#B8860B]/20"
                     : "bg-[#33312E] text-[#A3A099] cursor-not-allowed"
                 }`}
@@ -1412,8 +1582,9 @@ export default function JLPTQuiz({
                 </p>
               ) : totalUnanswered > 0 ? (
                 <p className="text-[#C93438] font-bold bg-[#C93438]/10 p-3 rounded-lg text-sm border border-[#C93438]/20">
-                  Perhatian: Masih ada {totalUnanswered} soal
-                  yang belum kamu jawab!
+                  {isTimedExam
+                    ? `Masih ada ${totalUnanswered} soal kosong. Jawaban kosong akan dihitung salah dalam hasil latihan.`
+                    : `Perhatian: Masih ada ${totalUnanswered} soal yang belum kamu jawab!`}
                 </p>
               ) : (
                 <p className="text-[#A3A099] text-sm">
@@ -1432,11 +1603,10 @@ export default function JLPTQuiz({
               </button>
 
               <button
-                disabled={totalUnanswered > 0 || totalQuestions === 0}
+                disabled={cannotFinish}
                 onClick={() => {
-                  // Pengaman tambahan: set kosong atau belum lengkap
-                  // tidak boleh diselesaikan maupun menerima reward.
-                  if (totalUnanswered > 0 || totalQuestions === 0) return;
+                  // Pada sesi bertimer, jawaban kosong diperbolehkan dan dinilai salah.
+                  if (cannotFinish) return;
 
                   const score = calculateQuizScore(
                     userAnswers,
@@ -1452,6 +1622,8 @@ export default function JLPTQuiz({
                     isFinished: true,
                     isPerfect: perfect,
                     completedOnce: true,
+                    examDeadlines,
+                    expiredExamBlocks,
                   };
 
                   if (!persistQuizResult(storageKey, savedResult)) {
