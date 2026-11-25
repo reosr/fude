@@ -1,4 +1,5 @@
 import HomeOverview from "../components/HomeOverview";
+import LearningJourneyOverview from "../components/LearningJourneyOverview";
 import Link from "next/link";
 import { ArrowRightLeft, BookText, Award, Trophy, BookA, BookOpen, MessagesSquare, ArrowUpRight } from "lucide-react";
 import babIndex from "../data/bab-index.json";
@@ -20,6 +21,7 @@ export default function Dashboard() {
   return (
     <div className="space-y-8 pb-10">
       <HomeOverview babTitles={babTitles} />
+      <LearningJourneyOverview />
 
       {/* MENU CEPAT */}
       <div>
