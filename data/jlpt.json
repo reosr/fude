@@ -2117,7 +2117,7 @@
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "このりんごを<ruby>三つ<rt>みっつ</rt></ruby>（　）ください。",
+              "question": "このりんごを<ruby>三つ<rt>みっつ</rt></ruby>（　）。",
               "options": [
                 "ください",
                 "あります",
@@ -2293,7 +2293,7 @@
                 "しか"
               ],
               "answer": 0,
-              "explanation": "<ruby>二つ<rt>ふたつ</rt></ruby>の<ruby>動作を<rt>どうさを</rt></ruby><ruby>同時<rt>どうじ</rt></ruby>に<ruby>行<rt>い</rt></ruby>う<ruby>表現<rt>ひょうげん</rt></ruby>は「～ながら」です。"
+              "explanation": "<ruby>二つ<rt>ふたつ</rt></ruby>の<ruby>動作を<rt>どうさを</rt></ruby><ruby>同時<rt>どうじ</rt></ruby>に<ruby>行<rt>い</rt></ruby>う<ruby>表現は<rt>ひょうげんは</rt></ruby>「～ながら」です。"
             }
           ],
           "reading": [
@@ -5128,7 +5128,7 @@
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話す<rt>はなす</rt></ruby>（　）になりたいです。",
+              "question": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話せる<rt>はなせる</rt></ruby>（　）になりたいです。",
               "options": [
                 "よう",
                 "そう",
@@ -5136,7 +5136,7 @@
                 "こと"
               ],
               "answer": 0,
-              "explanation": "<ruby>目標や<rt>もくひょうや</rt></ruby><ruby>状態の<rt>じょうたいの</rt></ruby><ruby>変化<rt>へんか</rt></ruby>は「～ようになる」で<ruby>表せます<rt>あらわせます</rt></ruby>。"
+              "explanation": "<ruby>能力の<rt>のうりょくの</rt></ruby><ruby>変化<rt>へんか</rt></ruby>や<ruby>目標<rt>もくひょう</rt></ruby>は「～ようになる」で<ruby>表せます<rt>あらわせます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
