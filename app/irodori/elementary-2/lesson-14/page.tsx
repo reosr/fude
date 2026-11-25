@@ -109,7 +109,7 @@ const vocabRows = [
   ["再配達", "さいはいたつ · sai haitatsu", "Pengiriman ulang"],
   ["不在", "ふざい · fuzai", "Tidak berada di tempat"],
   ["通知", "つうち · tsuuchi", "Pemberitahuan"],
-  ["受取人", "うけとりにん · uketorin nin", "Penerima"],
+  ["受取人", "うけとりにん · uketorinin", "Penerima"],
   ["保管期限", "ほかんきげん · hokan kigen", "Batas waktu penyimpanan"],
   ["郵便物", "ゆうびんぶつ · yuubinbutsu", "Kiriman pos"],
   ["希望時間帯", "きぼうじかんたい · kibou jikantai", "Rentang waktu yang diinginkan"],
