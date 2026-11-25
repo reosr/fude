@@ -103,7 +103,7 @@ export default function Terjemahan() {
         <div className="p-4 bg-[#121110]/50 min-h-[160px] relative">
           {result ? (
             <div className="animate-in fade-in duration-300">
-              <p className="text-xl font-medium text-[#EAE6DD] leading-relaxed">
+              <p className="selectable-text text-xl font-medium text-[#EAE6DD] leading-relaxed">
                 {result}
               </p>
               <div className="flex gap-3 mt-4">
