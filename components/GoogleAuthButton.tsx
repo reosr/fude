@@ -6,7 +6,6 @@ import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
 import { connectAndSyncFudeNow } from "@/lib/supabase/sync-engine";
 import { resetFudeLocalAccountData } from "@/lib/supabase/reset-local";
-import CloudSyncPreview from "@/components/CloudSyncPreview";
 
 export default function GoogleAuthButton() {
   const supabase = useMemo(() => createClient(), []);
@@ -34,8 +33,61 @@ export default function GoogleAuthButton() {
     return data.user;
   };
 
+  const mountedRef = useRef(false);
+
+  const completeLogin = async () => {
+    // postMessage dan popup watcher bisa aktif hampir bersamaan.
+    if (loginCompletionStartedRef.current) return;
+    loginCompletionStartedRef.current = true;
+
+    let currentUser: User | null = null;
+
+    try {
+      currentUser = await readUser();
+
+      if (!mountedRef.current) return;
+      if (!currentUser) {
+        throw new Error("Session belum berhasil dibaca. Coba login kembali.");
+      }
+
+      setUser(currentUser);
+      setModalOpen(false);
+
+      // Popup desktop tidak selalu memicu event auth pada halaman utama.
+      // Pulihkan data secara eksplisit setelah session berhasil dibaca.
+      await connectAndSyncFudeNow(currentUser.id);
+
+      if (!mountedRef.current) return;
+      setBusy(false);
+      setError("");
+      setNotice("Akun Google berhasil terhubung.");
+    } catch (err) {
+      if (!mountedRef.current) return;
+
+      setBusy(false);
+      setNotice("");
+
+      if (currentUser) {
+        setUser(currentUser);
+        setModalOpen(false);
+        setError(
+          `Login berhasil, tetapi data akun belum bisa dimuat: ${
+            err instanceof Error ? err.message : "Terjadi kesalahan."
+          }`
+        );
+      } else {
+        setError(
+          err instanceof Error
+            ? err.message
+            : "Gagal memeriksa session akun."
+        );
+      }
+    }
+  };
+
   useEffect(() => {
     let mounted = true;
+    mountedRef.current = true;
 
     void supabase.auth.getUser().then(({ data }) => {
       if (!mounted) return;
@@ -50,59 +102,6 @@ export default function GoogleAuthButton() {
       setUser(session?.user ?? null);
       setLoading(false);
     });
-
-    const completeLogin = async () => {
-      // Popup dapat memberi tahu lewat postMessage dan juga terdeteksi
-      // tertutup oleh watcher. Pastikan proses pemulihan hanya dimulai sekali.
-      if (loginCompletionStartedRef.current) return;
-      loginCompletionStartedRef.current = true;
-
-      let currentUser: User | null = null;
-
-      try {
-        currentUser = await readUser();
-
-        if (!mounted) return;
-        if (!currentUser) {
-          throw new Error("Session belum berhasil dibaca. Coba login kembali.");
-        }
-
-        setUser(currentUser);
-        setModalOpen(false);
-        setNotice("Login berhasil. Memulihkan data dari cloud...");
-
-        // Login desktop menggunakan popup. Perubahan session di popup
-        // tidak selalu memicu event auth di halaman utama, jadi sinkronisasi
-        // harus dipanggil langsung setelah session berhasil dibaca.
-        await connectAndSyncFudeNow(currentUser.id);
-
-        if (!mounted) return;
-        setBusy(false);
-        setError("");
-        setNotice("Akun Google terhubung. Data akun berhasil dipulihkan.");
-      } catch (err) {
-        if (!mounted) return;
-
-        setBusy(false);
-        setNotice("");
-
-        if (currentUser) {
-          setUser(currentUser);
-          setModalOpen(false);
-          setError(
-            `Login berhasil, tetapi pemulihan data gagal: ${
-              err instanceof Error ? err.message : "Terjadi kesalahan."
-            }`
-          );
-        } else {
-          setError(
-            err instanceof Error
-              ? err.message
-              : "Gagal memeriksa session akun."
-          );
-        }
-      }
-    };
 
     const handleMessage = (event: MessageEvent) => {
       if (event.origin !== window.location.origin) return;
@@ -123,6 +122,7 @@ export default function GoogleAuthButton() {
 
     return () => {
       mounted = false;
+      mountedRef.current = false;
       stopPopupWatcher();
       subscription.unsubscribe();
       window.removeEventListener("message", handleMessage);
@@ -287,7 +287,6 @@ export default function GoogleAuthButton() {
         )}
       </section>
 
-      {user && <CloudSyncPreview userId={user.id} />}
 
       {modalOpen && (
         <div
