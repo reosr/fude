@@ -23,7 +23,8 @@ import ProfilePhotoEditor, {
 import { getProgress } from "../../lib/progress";
 import practicalVocabData from "@/data/practical-vocab.json";
 import storyIndex from "@/data/story-index.json";
-import { getMemorizedKanji } from "../../lib/memorized";
+import { getMemorizedSyncState } from "../../lib/memorized";
+import { isMemorizedVocabKey } from "@/lib/vocab-identity";
 import { useIrodoriProgress } from "@/lib/irodori-progress";
 import { getCompletedJlptSetIds, useStudyProgress } from "@/lib/study-progress";
 import LevelBadge from "../../components/LevelBadge";
@@ -84,7 +85,7 @@ export default function Profil() {
     setCurrentBab(safeProgress);
     setCompletedBab(Math.min(50, Math.max(0, safeProgress - 1)));
     setCompletedJLPT(getCompletedJlptSetIds().length);
-    setMemorizedWords(getMemorizedKanji().length);
+    setMemorizedWords(getMemorizedSyncState().filter(isMemorizedVocabKey).length);
     setTotalXp(getFudeXp());
     setProfile(getFudeProfile());
   };

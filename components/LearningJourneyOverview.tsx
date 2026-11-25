@@ -14,7 +14,8 @@ import storyIndex from "@/data/story-index.json";
 import practicalVocabData from "@/data/practical-vocab.json";
 import { getProgress } from "@/lib/progress";
 import { getUnlockedVocab } from "@/lib/vocab";
-import { getMemorizedKanji } from "@/lib/memorized";
+import { getMemorizedVocabKeys } from "@/lib/memorized";
+import { getMemorizedVocabKey } from "@/lib/vocab-identity";
 import { useIrodoriProgress } from "@/lib/irodori-progress";
 import { getCompletedJlptSetIds, useStudyProgress } from "@/lib/study-progress";
 
@@ -61,14 +62,14 @@ export default function LearningJourneyOverview() {
         const vocab = await getUnlockedVocab(getProgress());
         if (!active) return;
 
-        const availableKanji = new Set(vocab.map((item) => item.kanji));
-        const memorizedKanji = new Set(
-          getMemorizedKanji().filter((kanji) => availableKanji.has(kanji))
+        const availableKeys = new Set(vocab.map(getMemorizedVocabKey));
+        const memorizedKeys = new Set(
+          (await getMemorizedVocabKeys(vocab)).filter((key) => availableKeys.has(key))
         );
 
         setFlashcardProgress({
-          memorized: memorizedKanji.size,
-          available: availableKanji.size,
+          memorized: memorizedKeys.size,
+          available: availableKeys.size,
         });
       } catch (error) {
         console.error("Gagal memuat ringkasan Flashcard:", error);
