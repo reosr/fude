@@ -9,6 +9,147 @@ export interface JapaneseReadingResult {
 
 const KANJI_RE = /[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/;
 const KANA_RE = /[\u3040-\u30ff]/;
+const KANA_ALIGNMENT_RE = /^[\u3040-\u309f\u30a0-\u30ffー]+$/u;
+
+export interface JapaneseReadingSegment {
+  text: string;
+  reading?: string;
+}
+
+function normalizeKanaForAlignment(value: string): string {
+  return Array.from(value, (character) => {
+    const code = character.codePointAt(0) ?? 0;
+    return code >= 0x30a1 && code <= 0x30f6
+      ? String.fromCodePoint(code - 0x60)
+      : character;
+  }).join("");
+}
+
+/**
+ * Pecah satu entri indeks menjadi ruby khusus kanji dan teks kana biasa.
+ * Jika posisi okurigana tidak bisa dipastikan secara unik, jangan membuat ruby.
+ */
+function splitWordByReading(
+  word: string,
+  reading: string
+): JapaneseReadingSegment[] | null {
+  if (!word || !reading || KANJI_RE.test(reading)) return null;
+
+  const parts: Array<{ type: "kanji" | "kana"; text: string; normalized: string }> = [];
+  for (const character of Array.from(word)) {
+    const type = KANJI_RE.test(character)
+      ? "kanji"
+      : KANA_ALIGNMENT_RE.test(character)
+        ? "kana"
+        : null;
+
+    if (!type) return null;
+
+    const normalized = type === "kana"
+      ? normalizeKanaForAlignment(character)
+      : character;
+    const previous = parts[parts.length - 1];
+
+    if (previous?.type === type) {
+      previous.text += character;
+      previous.normalized += normalized;
+    } else {
+      parts.push({ type, text: character, normalized });
+    }
+  }
+
+  if (!parts.some((part) => part.type === "kanji")) return null;
+
+  // Kata yang seluruhnya kanji tetap dapat memakai bacaan lengkap, termasuk
+  // entri yang menyediakan beberapa variasi bacaan.
+  if (parts.every((part) => part.type === "kanji")) {
+    return [{ text: word, reading }];
+  }
+
+  const normalizedReading = normalizeKanaForAlignment(reading);
+  if (!KANA_ALIGNMENT_RE.test(normalizedReading)) return null;
+
+  type AlignmentResult = {
+    count: number;
+    segments?: JapaneseReadingSegment[];
+  };
+  const memo = new Map<string, AlignmentResult>();
+
+  const solve = (partIndex: number, readingIndex: number): AlignmentResult => {
+    const key = partIndex + ":" + readingIndex;
+    const cached = memo.get(key);
+    if (cached) return cached;
+
+    if (partIndex >= parts.length) {
+      const result = readingIndex === normalizedReading.length
+        ? { count: 1, segments: [] }
+        : { count: 0 };
+      memo.set(key, result);
+      return result;
+    }
+
+    const part = parts[partIndex];
+
+    if (part.type === "kana") {
+      if (!normalizedReading.startsWith(part.normalized, readingIndex)) {
+        const result = { count: 0 };
+        memo.set(key, result);
+        return result;
+      }
+
+      const tail = solve(partIndex + 1, readingIndex + part.normalized.length);
+      const result = tail.count > 0
+        ? { count: tail.count, segments: [{ text: part.text }, ...(tail.segments ?? [])] }
+        : { count: 0 };
+      memo.set(key, result);
+      return result;
+    }
+
+    const nextPart = parts[partIndex + 1];
+    let boundaries: number[] = [];
+
+    if (!nextPart) {
+      boundaries = [normalizedReading.length];
+    } else if (nextPart.type === "kana") {
+      let position = normalizedReading.indexOf(nextPart.normalized, readingIndex + 1);
+      while (position >= 0) {
+        boundaries.push(position);
+        position = normalizedReading.indexOf(nextPart.normalized, position + 1);
+      }
+    }
+
+    let solutionCount = 0;
+    let uniqueSegments: JapaneseReadingSegment[] | undefined;
+
+    for (const boundary of boundaries) {
+      if (boundary <= readingIndex) continue;
+
+      const tail = solve(partIndex + 1, boundary);
+      if (tail.count === 0) continue;
+
+      solutionCount += tail.count;
+      if (solutionCount === 1) {
+        uniqueSegments = [
+          { text: part.text, reading: normalizedReading.slice(readingIndex, boundary) },
+          ...(tail.segments ?? []),
+        ];
+      } else {
+        // Lebih dari satu pembagian bacaan berarti ambigu; hindari ruby yang salah.
+        solutionCount = 2;
+        uniqueSegments = undefined;
+        break;
+      }
+    }
+
+    const result = { count: solutionCount, segments: uniqueSegments };
+    memo.set(key, result);
+    return result;
+  };
+
+  const aligned = solve(0, 0);
+  return aligned.count === 1 ? aligned.segments ?? null : null;
+}
+
 const READING_ENTRIES = Object.entries(readingIndex as Record<string, string>)
   .filter(([word, reading]) =>
     word.length > 0 &&
@@ -31,12 +172,27 @@ function stripHtml(value: string): string {
     .replace(/&gt;/g, ">");
 }
 
-// Ubah petunjuk bacaan dalam tanda kurung menjadi furigana di atas kanji.
-// Contoh: 来ます（きます） menjadi <ruby>来ます<rt>きます</rt></ruby>.
+// Ubah petunjuk bacaan dalam tanda kurung menjadi furigana pada kanji saja.
+// Okurigana tetap berada di teks utama, misalnya 来ます（きます） menjadi
+// <ruby>来<rt>き</rt></ruby>ます. Jika batas katanya tidak jelas, biarkan apa adanya.
 export function addRubyFromParentheticalReadings(value: string): string {
   return value.replace(
-    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー／/・、,]+)[）)]/g,
-    (_match, base: string, reading: string) => `<ruby>${base}<rt>${reading}</rt></ruby>`
+    /([おご]?[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー]+)[）)]/g,
+    (match, base: string, reading: string, offset: number, source: string) => {
+      const previous = offset > 0 ? source[offset - 1] : "";
+      if (previous && /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
+        return match;
+      }
+
+      const segments = splitWordByReading(base, reading);
+      if (!segments) return match;
+
+      return segments.map((segment) =>
+        segment.reading
+          ? `<ruby>${escapeRubyText(segment.text)}<rt>${escapeRubyText(segment.reading)}</rt></ruby>`
+          : segment.text
+      ).join("");
+    }
   );
 }
 
@@ -59,11 +215,6 @@ function escapeRubyText(value: string): string {
   return value.replace(/[&<>"']/g, (char) => entities[char] ?? char);
 }
 
-export interface JapaneseReadingSegment {
-  text: string;
-  reading?: string;
-}
-
 /** Pecah teks menjadi bagian biasa dan kata yang punya bacaan terverifikasi. */
 export function segmentTextByReadingIndex(value: string): JapaneseReadingSegment[] {
   const segments: JapaneseReadingSegment[] = [];
@@ -72,7 +223,7 @@ export function segmentTextByReadingIndex(value: string): JapaneseReadingSegment
 
   while (cursor < value.length) {
     const candidates = READINGS_BY_INITIAL.get(value[cursor]);
-    const matched = candidates?.find(([word]) => {
+    const matched = candidates?.find(([word, reading]) => {
       if (!value.startsWith(word, cursor)) return false;
 
       // Bacaan satu kanji sering berubah ketika menjadi bagian kata majemuk
@@ -87,7 +238,7 @@ export function segmentTextByReadingIndex(value: string): JapaneseReadingSegment
         if (isKanjiOrNumber(previous) || isKanjiOrNumber(next)) return false;
       }
 
-      return true;
+      return Boolean(splitWordByReading(word, reading));
     });
 
     if (matched) {
@@ -95,7 +246,8 @@ export function segmentTextByReadingIndex(value: string): JapaneseReadingSegment
         segments.push({ text: plain });
         plain = "";
       }
-      segments.push({ text: matched[0], reading: matched[1] });
+      const matchedSegments = splitWordByReading(matched[0], matched[1]);
+      if (matchedSegments) segments.push(...matchedSegments);
       cursor += matched[0].length;
     } else {
       plain += value[cursor];
@@ -153,8 +305,14 @@ function readPlainText(value: string, allowIndexFallback: boolean): JapaneseRead
   // Terima format bacaan dalam kurung, misalnya 来（き） atau 十歳（じゅっさい）.
   // Ini juga dipakai pada penjelasan yang tidak seluruhnya ditulis dengan tag ruby.
   const withExplicitReadings = original.replace(
-    /([\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+)[（(]([ぁ-ゖァ-ヺー／/・、,]+)[）)]/g,
-    "$2"
+    /([おご]?[\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]+[ぁ-ゖァ-ヺー]*)[（(]([ぁ-ゖァ-ヺー／/・、,]+)[）)]/g,
+    (match, _base: string, reading: string, offset: number, source: string) => {
+      const previous = offset > 0 ? source[offset - 1] : "";
+      if (previous && /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff々〆ヵヶ]/u.test(previous)) {
+        return match;
+      }
+      return reading;
+    }
   );
 
   // Baca ekspresi angka + penghitung yang memiliki bacaan khusus
