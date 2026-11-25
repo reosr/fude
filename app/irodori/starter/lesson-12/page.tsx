@@ -41,7 +41,7 @@ const noticeConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "yui",
-    japanese: <>5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>です。</>,
+    japanese: <>5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>、<ruby>日曜日<rt>にちようび</rt></ruby>です。</>,
     romaji: "Gogatsu juushichinichi, nichiyoubi desu.",
     translation: "Tanggal 17 Mei, hari Minggu.",
     audioFileName: "irodori-starter-12-a01-l03.mp3",
@@ -66,8 +66,8 @@ const attendanceConversation: IrodoriUtterance[] = [
   {
     speakerId: "akiko",
     japanese: <>ユイさん、5<ruby>月<rt>がつ</rt></ruby>17<ruby>日<rt>にち</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>のイベントに<ruby>行<rt>い</rt></ruby>きますか？</>,
-    romaji: "Yui-san, konshuu no nichiyoubi, hon no ibento ni ikimasu ka?",
-    translation: "Yui, kamu akan pergi ke acara buku hari Minggu ini?",
+    romaji: "Yui-san, gogatsu juushichinichi no hon no ibento ni ikimasu ka?",
+    translation: "Yui, apakah kamu akan pergi ke acara buku tanggal 17 Mei?",
     audioFileName: "irodori-starter-12-a02-l01.mp3",
   },
   {
