@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { completePracticalCategory } from "@/lib/study-progress";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -252,7 +253,27 @@ export default function SalamPerkenalanPage() {
   const [simulationAnswer, setSimulationAnswer] = useState<number | null>(null);
 
   const answerQuiz = (questionIndex: number, optionIndex: number) => {
-    setQuizAnswers((current) => ({ ...current, [questionIndex]: optionIndex }));
+    const nextAnswers = { ...quizAnswers, [questionIndex]: optionIndex };
+    setQuizAnswers(nextAnswers);
+
+    if (
+      Object.keys(nextAnswers).length >= quiz.length &&
+      simulationStep === simulation.length - 1 &&
+      simulationAnswer !== null
+    ) {
+      completePracticalCategory("salam-perkenalan");
+    }
+  };
+
+  const answerSimulation = (optionIndex: number) => {
+    setSimulationAnswer(optionIndex);
+
+    if (
+      Object.keys(quizAnswers).length >= quiz.length &&
+      simulationStep === simulation.length - 1
+    ) {
+      completePracticalCategory("salam-perkenalan");
+    }
   };
 
   const resetSimulation = () => {
@@ -468,7 +489,7 @@ export default function SalamPerkenalanPage() {
                 key={index}
                 type="button"
                 disabled={simulationAnswer !== null}
-                onClick={() => setSimulationAnswer(index)}
+                onClick={() => answerSimulation(index)}
                 className={"rounded-xl border px-3 py-3 text-left text-sm transition-colors " + (
                   simulationAnswer === index
                     ? option.correct
