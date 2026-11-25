@@ -140,11 +140,11 @@ export default function LearningJourneyOverview() {
     },
     {
       title: "Latihan JLPT",
-      subtitle: "Latihan per level dan set",
+      subtitle: "Pilih level N5–N1",
       detail: `${completedJlpt}/${JLPT_TOTAL_SETS} set selesai`,
       current: completedJlpt,
       total: JLPT_TOTAL_SETS,
-      href: "/jlpt/N5",
+      href: "/jlpt",
       icon: Trophy,
       tone: "text-[#D9B66D]",
       bar: "bg-[#B8860B]",
