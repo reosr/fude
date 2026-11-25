@@ -98,4 +98,59 @@ export async function writeCloudFudeData(
       );
     }
   }
+
+  const irodoriWrite = await supabase
+    .from("fude_irodori_progress")
+    .upsert(
+      {
+        user_id: user.id,
+        completed_lessons: data.irodoriProgress.completedLessons,
+        self_evaluations: data.irodoriProgress.selfEvaluations,
+        updated_at: now,
+      },
+      { onConflict: "user_id" }
+    );
+
+  if (irodoriWrite.error) {
+    throw new Error(
+      `Gagal menyimpan progres Irodori: ${irodoriWrite.error.message}`
+    );
+  }
+
+  const studyWrite = await supabase
+    .from("fude_study_progress")
+    .upsert(
+      {
+        user_id: user.id,
+        completed_practical_categories:
+          data.studyProgress.completedPracticalCategories,
+        completed_stories: data.studyProgress.completedStories,
+        updated_at: now,
+      },
+      { onConflict: "user_id" }
+    );
+
+  if (studyWrite.error) {
+    throw new Error(
+      `Gagal menyimpan progres belajar: ${studyWrite.error.message}`
+    );
+  }
+
+  const gachaWrite = await supabase
+    .from("fude_gacha_data")
+    .upsert(
+      {
+        user_id: user.id,
+        inventory: data.gachaData.inventory,
+        history: data.gachaData.history,
+        updated_at: now,
+      },
+      { onConflict: "user_id" }
+    );
+
+  if (gachaWrite.error) {
+    throw new Error(
+      `Gagal menyimpan data Gacha: ${gachaWrite.error.message}`
+    );
+  }
 }
