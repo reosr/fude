@@ -208,8 +208,7 @@ export default function IrodoriStarterPage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Seluruh 18 pelajaran Pemula A1 sudah tersedia. Progres dan evaluasi
-        setiap pelajaran tersimpan terpisah dari EXP dan JLPT.
+        Seluruh 18 pelajaran Pemula A1 sudah tersedia.
       </p>
     </main>
   );
