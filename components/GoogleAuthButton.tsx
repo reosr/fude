@@ -4,6 +4,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { User } from "@supabase/supabase-js";
 import { createClient } from "@/lib/supabase/client";
+import CloudSyncPreview from "@/components/CloudSyncPreview";
 
 export default function GoogleAuthButton() {
   const supabase = useMemo(() => createClient(), []);
@@ -252,6 +253,8 @@ export default function GoogleAuthButton() {
         )}
       </section>
 
+      {user && <CloudSyncPreview userId={user.id} />}
+
       {modalOpen && (
         <div
           className="fixed inset-0 z-[250] flex items-end justify-center bg-black/70 p-0 backdrop-blur-sm sm:items-center sm:p-4"
@@ -341,9 +344,7 @@ export default function GoogleAuthButton() {
             )}
 
             <p className="mt-5 text-center text-[10px] leading-5 text-[#68635D]">
-              Sinkronisasi progres antarperangkat belum aktif.
-              Data belajar lokal tetap dipertahankan selama tahap
-              persiapan akun.
+              Setelah login, periksa data lokal dan cloud melalui panel Sinkronisasi Cloud di halaman Profil.
             </p>
           </section>
         </div>
