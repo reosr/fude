@@ -89,8 +89,8 @@ const impressionConversation: IrodoriUtterance[] = [
   },
   {
     speakerId: "akiko",
-    japanese: <>いいえ、あまり<ruby>多<rt>おお</rt></ruby>くなかったです。</>,
-    romaji: "Iie, amari ooku nakatta desu.",
+    japanese: <>いいえ、あまり<ruby>混<rt>こ</rt></ruby>んでいませんでした。</>,
+    romaji: "Iie, amari konde imasen deshita.",
     translation: "Tidak, bioskopnya tidak terlalu ramai.",
     audioFileName: "irodori-starter-17-a02-l04.mp3",
   },
@@ -138,7 +138,7 @@ const feeConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
     japanese: <><ruby>高校生<rt>こうこうせい</rt></ruby>は、いくらですか？</>,
-    romaji: "Koukoosee wa, ikura desu ka?",
+    romaji: "Koukousei wa, ikura desu ka?",
     translation: "Berapa harga untuk siswa SMA?",
     audioFileName: "irodori-starter-17-a04-l02.mp3",
   },
