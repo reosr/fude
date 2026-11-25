@@ -17,14 +17,19 @@ export function checkFudeSyncAccount(userId: string): void {
   }
 }
 
-export function bindFudeSyncAccount(userId: string): void {
+export function bindFudeSyncAccount(
+  userId: string,
+  notifyManager = true
+): void {
   if (typeof window === "undefined") return;
 
   localStorage.setItem(SYNC_USER_KEY, userId);
 
-  window.dispatchEvent(
-    new Event(FUDE_SYNC_ACCOUNT_BOUND_EVENT)
-  );
+  if (notifyManager) {
+    window.dispatchEvent(
+      new Event(FUDE_SYNC_ACCOUNT_BOUND_EVENT)
+    );
+  }
 }
 
 export function getFudeSyncAccount(): string | null {
