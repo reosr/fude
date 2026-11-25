@@ -260,9 +260,11 @@ useEffect(() => {
       <p className="text-sm leading-relaxed text-[#C5C0B7]">
         {deck.length === 0
           ? "Belum ada kosakata yang terbuka."
-          : selectedPracticalCategory
-            ? `Semua kartu dalam kategori ${selectedPracticalCategory.label} sudah kamu hafal. Hebat!`
-            : "Semua kartu sudah kamu hafal! Hebat!"}
+          : sourceDeck.length === 0
+            ? "Belum ada kosakata yang terbuka untuk jalur ini. Coba pilih jalur lain atau buka materi terlebih dahulu."
+            : selectedPracticalCategory
+              ? `Semua kartu dalam kategori ${selectedPracticalCategory.label} sudah kamu hafal. Hebat!`
+              : "Semua kartu di jalur ini sudah kamu hafal! Hebat!"}
       </p>
       <div className="flex flex-wrap items-center justify-center gap-2">
         {categoryFilter && (
@@ -413,11 +415,11 @@ useEffect(() => {
       )}
 
       <div className="w-full max-w-md flex justify-between items-center text-xs font-bold text-[#A3A099] mt-1 md:mt-4 relative z-20">
-        <span>KARTU {safeCurrentIndex + 1} DARI {filteredDeck.length}</span>
+        <span>ANTRIAN {safeCurrentIndex + 1} DARI {filteredDeck.length} KARTU</span>
         <span className="text-[#C93438]">{Math.round(((safeCurrentIndex + 1) / filteredDeck.length) * 100)}%</span>
       </div>
       <p className="w-full max-w-md text-right text-[10px] font-semibold text-[#8F8980] -mt-1 relative z-20">
-        Belum hafal: {filteredDeck.length} dari {sourceDeck.length} kosakata
+        {filteredDeck.length} belum hafal dari {sourceDeck.length} kosakata di jalur ini. Kartu yang sudah ditandai hafal tidak masuk antrean.
       </p>
 
       <div 
