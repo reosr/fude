@@ -39,7 +39,7 @@ const seasonOverviewConversation: IrodoriUtterance[] = [
 
 const seasonsInIndonesiaConversation: IrodoriUtterance[] = [
   { speakerId: "akiko", japanese: <>インドネシアには、どんな<ruby>季節<rt>きせつ</rt></ruby>がありますか？</>, romaji: "Indoneshia ni wa, donna kisetsu ga arimasu ka?", translation: "Di Indonesia ada musim apa saja?", audioFileName: "irodori-elementary1-03-a02-l01.mp3" },
-  { speakerId: "yui", japanese: <>多くのところには、雨季と<ruby>乾季<rt>かんき</rt></ruby>があります。</>, romaji: "Ooku no tokoro ni wa, uki to kanki ga arimasu.", translation: "Di banyak wilayah ada musim hujan dan musim kemarau.", audioFileName: "irodori-elementary1-03-a02-l02.mp3" },
+  { speakerId: "yui", japanese: <>多くの<ruby>地域<rt>ちいき</rt></ruby>では、雨季と<ruby>乾季<rt>かんき</rt></ruby>があります。</>, romaji: "Ooku no chiiki de wa, uki to kanki ga arimasu.", translation: "Di banyak wilayah ada musim hujan dan musim kemarau.", audioFileName: "irodori-elementary1-03-a02-l02.mp3" },
   { speakerId: "akiko", japanese: <>雨季はどんな天気ですか？</>, romaji: "Uki wa donna tenki desu ka?", translation: "Bagaimana cuaca pada musim hujan?", audioFileName: "irodori-elementary1-03-a02-l03.mp3" },
   { speakerId: "yui", japanese: <>雨がたくさん<ruby>降<rt>ふ</rt></ruby>ります。ときどき、すずしくなります。</>, romaji: "Ame ga takusan furimasu. Tokidoki, suzushiku narimasu.", translation: "Hujan sering turun. Kadang-kadang, udara terasa lebih sejuk.", audioFileName: "irodori-elementary1-03-a02-l04.mp3" },
 ];
