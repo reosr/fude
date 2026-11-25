@@ -509,7 +509,7 @@ const quizQuestions: Task[] = [
       { key: "c", label: "好きになったきっかけは、映画に見てです。" },
     ],
     answer: "a",
-    explanation: <>Pola 「V-たことです」 dapat menyebutkan pengalaman yang menjadi alasan atau awal ketertarikan.</>,
+    explanation: <>Pola 「きっかけは、V-たことです」 digunakan untuk menjelaskan pengalaman yang menjadi awal ketertarikan.</>,
   },
   {
     prompt: <>Dalam konteks mencari seseorang, よ pada 「あそこで本を読んでいる人ですよ」 berfungsi untuk …</>,
