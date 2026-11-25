@@ -207,7 +207,7 @@ begin
   end if;
 
   select
-    pg_catalog.coalesce(pg_catalog.sum((e.value ->> 'amount')::numeric), 0),
+    coalesce(pg_catalog.sum((e.value ->> 'amount')::numeric), 0),
     pg_catalog.count(*),
     pg_catalog.count(distinct e.value ->> 'id')
   into v_xp_event_total, v_xp_event_count, v_xp_event_distinct_count
