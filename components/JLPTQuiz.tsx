@@ -46,6 +46,16 @@ interface JLPTTestSet {
   title: string;
   level?: string;
   sections?: JLPTSections;
+  examFormat?: {
+    format?: string;
+    timed?: boolean;
+    testSections?: {
+      id: string;
+      label: string;
+      minutes: number;
+      dataSections: SectionId[];
+    }[];
+  };
 }
 
 interface JLPTQuizProps {
@@ -119,6 +129,27 @@ function formatExamTime(totalSeconds: number): string {
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
   return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+function getItemTypeLabel(itemType?: string): string | null {
+  const labels: Record<string, string> = {
+    "kanji-reading": "Membaca kanji",
+    orthography: "Penulisan kanji",
+    "contextually-defined-expressions": "Kosakata sesuai konteks",
+    paraphrases: "Padanan makna",
+    usage: "Penggunaan kata",
+    "sentential-grammar-1": "Tata bahasa kalimat",
+    "sentential-grammar-2": "Penyusunan kalimat",
+    "text-grammar": "Tata bahasa dalam teks",
+    "short-passage": "Bacaan pendek",
+    "mid-size-passage": "Bacaan menengah",
+    "information-retrieval": "Mencari informasi",
+    "task-based-comprehension": "Memahami situasi dan tugas",
+    "key-point-comprehension": "Memahami informasi penting",
+    "verbal-expressions": "Ungkapan lisan",
+    "quick-response": "Respons cepat",
+  };
+  return itemType ? labels[itemType] || null : null;
 }
 
 const createEmptyAnswers = () => ({
@@ -280,7 +311,7 @@ export default function JLPTQuiz({
 
   const storageKey = `jlpt_result_${testSet.id}`;
   const isLoaded = loadedStorageKey === storageKey;
-  const currentLevel = level || getJlptLevel(testSet);
+  const currentLevel = (level || getJlptLevel(testSet)).toUpperCase();
   const isTimedExam = currentLevel === "N5" || currentLevel === "N4";
   const activeExamBlock = getExamBlockId(activeSection);
   const activeExamMinutes = isTimedExam
@@ -412,7 +443,8 @@ export default function JLPTQuiz({
           testSet.sections
         );
 
-        // Status ujian hanya dianggap selesai jika semua soal benar-benar dijawab.
+        // Pada mode bertimer, peserta boleh menyelesaikan ujian dengan jawaban kosong.
+        // Untuk level tanpa timer, semua soal tetap wajib dijawab sebelum selesai.
         const wasFinished = isTimedExam
           ? parsed.isFinished === true
           : hasAllAnswers && (parsed.isFinished === true || parsed.isPerfect === true);
@@ -742,6 +774,8 @@ export default function JLPTQuiz({
     isFinished: false,
     isPerfect: false,
     completedOnce,
+    examDeadlines,
+    expiredExamBlocks,
   });
 
   if (answerSaved) setStorageError(null);
@@ -1382,11 +1416,18 @@ export default function JLPTQuiz({
         {currentQ ? (
           <div className="flex-1 flex flex-col">
             <div className="flex justify-between items-center mb-4">
-              <span className="text-xs font-bold text-[#C93438] bg-[#C93438]/10 px-2 py-1 rounded-md uppercase tracking-wider">
-                {SECTIONS.find(
-                  (section) => section.id === activeSection
-                )?.label}
-              </span>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-bold text-[#C93438] bg-[#C93438]/10 px-2 py-1 rounded-md uppercase tracking-wider">
+                  {SECTIONS.find(
+                    (section) => section.id === activeSection
+                  )?.label}
+                </span>
+                {currentQ.itemType && getItemTypeLabel(currentQ.itemType) && (
+                  <span className="rounded-md border border-[#33312E] bg-[#262523] px-2 py-1 text-[11px] font-semibold text-[#D9AD42]">
+                    {getItemTypeLabel(currentQ.itemType)}
+                  </span>
+                )}
+              </div>
 
               <span className="text-xs font-bold text-[#A3A099]">
                 SOAL {currentIndex + 1} / {totalQuestionsInSection}
@@ -1439,6 +1480,12 @@ export default function JLPTQuiz({
                     </audio>
                   </>
                 )}
+              </div>
+            )}
+
+            {isActiveBlockExpired && (
+              <div className="mb-5 rounded-xl border border-red-500/30 bg-red-500/5 p-3 text-sm text-red-200">
+                Waktu sesi ini sudah habis. Jawaban baru tidak dapat ditambahkan, tetapi kamu masih bisa berpindah ke sesi berikutnya.
               </div>
             )}
 
@@ -1624,6 +1671,9 @@ export default function JLPTQuiz({
                     completedOnce: true,
                     examDeadlines,
                     expiredExamBlocks,
+                    activeSection,
+                    currentIndex,
+                    sectionPositions,
                   };
 
                   if (!persistQuizResult(storageKey, savedResult)) {
