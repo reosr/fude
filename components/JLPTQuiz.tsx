@@ -28,6 +28,9 @@ interface Question {
   options: string[];
   answer: number;
   explanation: string;
+  type?: "sentence-composition";
+  correctOrder?: number[];
+  starPosition?: number;
   passage?: string;
   audioUrl?: string;
   dialogue?: string;
@@ -850,7 +853,14 @@ export default function JLPTQuiz({
                             <p className="text-[#A3A099]">
                               Jawaban kamu:{" "}
                               <span className={isUnanswered ? "text-yellow-500" : isCorrect ? "text-green-500 font-bold" : "text-red-500 font-bold"}>
-                                {isUnanswered ? "Tidak dijawab" : <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint} html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />}
+                                {isUnanswered ? "Tidak dijawab" : question.type === "sentence-composition" ? (
+                              <span className="inline-flex items-center gap-2">
+                                <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-md bg-[#B8860B]/15 px-1.5 text-xs font-bold text-[#D9AD42]">
+                                  {userAnswer + 1}
+                                </span>
+                                <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint} html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />
+                              </span>
+                            ) : <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint} html={question.options[userAnswer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />}
                               </span>
                             </p>
 
@@ -858,6 +868,9 @@ export default function JLPTQuiz({
                               <p className="text-[#A3A099]">
                                 Jawaban benar:{" "}
                                 <span className="text-green-500 font-bold">
+                                  {question.type === "sentence-composition" && (
+                                    <span className="mr-2 text-xs">Nomor {question.answer + 1}:</span>
+                                  )}
                                   <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint} html={question.options[question.answer]} contentClassName="inline font-mincho" kanaClassName="text-xs font-mincho text-[#D6AD4F]" romajiClassName="text-[10px] italic text-[#A9A398]" />
                                 </span>
                               </p>
@@ -868,6 +881,12 @@ export default function JLPTQuiz({
                             <p className="text-xs font-bold text-[#B8860B] mb-1">
                               PENJELASAN
                             </p>
+
+                            {question.type === "sentence-composition" && question.correctOrder && (
+                              <p className="mb-2 text-xs font-bold text-[#D9AD42]">
+                                Urutan lengkap: {question.correctOrder.join(" → ")}
+                              </p>
+                            )}
 
                             <JapaneseReading showKana={false} showRomaji={false}
                               html={question.explanation}
@@ -1029,6 +1048,17 @@ export default function JLPTQuiz({
               </div>
             )}
 
+            {currentQ.type === "sentence-composition" && (
+              <div className="mb-5 rounded-xl border border-[#B8860B]/25 bg-[#B8860B]/5 p-4">
+                <p className="mb-1 text-xs font-bold tracking-wide text-[#D9AD42]">
+                  文の組み立て · PENYUSUNAN KALIMAT
+                </p>
+                <p className="text-sm leading-relaxed text-[#C9C2B5]">
+                  Susun keempat potongan menjadi kalimat yang benar, lalu pilih nomor potongan yang berada di posisi ★.
+                </p>
+              </div>
+            )}
+
             <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint}
               html={currentQ.question}
               contentClassName="text-xl md:text-2xl font-bold text-[#EAE6DD] mb-2 text-center leading-[2] font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
@@ -1036,34 +1066,67 @@ export default function JLPTQuiz({
               romajiClassName="mt-1 text-xs italic text-[#A9A398] text-center mb-6"
             />
 
-            <div className="space-y-3 mb-8">
-              {currentQ.options.map((option, index) => {
-                const isSelected = selectedAnswer === index;
+            {currentQ.type === "sentence-composition" ? (
+              <div className="mb-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {currentQ.options.map((option, index) => {
+                  const isSelected = selectedAnswer === index;
 
-                let buttonClass =
-                  "bg-[#262523] border-[#33312E] text-[#EAE6DD] hover:border-[#C93438]";
+                  return (
+                    <button
+                      key={index}
+                      type="button"
+                      onClick={() => handleAnswer(index)}
+                      aria-label={`Pilih potongan nomor ${index + 1}`}
+                      className={`flex min-h-[68px] w-full items-center gap-3 rounded-xl border px-4 py-4 text-left transition-all ${isSelected
+                        ? "border-[#C93438] bg-[#C93438] text-white shadow-lg shadow-[#C93438]/20"
+                        : "border-[#33312E] bg-[#262523] text-[#EAE6DD] hover:border-[#C93438]"
+                      }`}
+                    >
+                      <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-sm font-black ${isSelected ? "bg-white/15 text-white" : "bg-[#B8860B]/15 text-[#D9AD42]"}`}>
+                        {index + 1}
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint}
+                          html={option}
+                          contentClassName="font-mincho text-base md:text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
+                          kanaClassName="mt-1 font-mincho text-sm text-[#F4DFA7]"
+                          romajiClassName="mt-1 text-xs italic text-white/75"
+                        />
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="space-y-3 mb-8">
+                {currentQ.options.map((option, index) => {
+                  const isSelected = selectedAnswer === index;
 
-                if (isSelected) {
-                  buttonClass =
-                    "bg-[#C93438] border-[#C93438] text-white shadow-lg shadow-[#C93438]/20";
-                }
+                  let buttonClass =
+                    "bg-[#262523] border-[#33312E] text-[#EAE6DD] hover:border-[#C93438]";
 
-                return (
-                  <button
-                    key={index}
-                    onClick={() => handleAnswer(index)}
-                    className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass}`}
-                  >
-                    <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint}
-                      html={option}
-                      contentClassName="font-mincho text-base md:text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
-                      kanaClassName="mt-1 font-mincho text-sm text-[#F4DFA7]"
-                      romajiClassName="mt-1 text-xs italic text-white/75"
-                    />
-                  </button>
-                );
-              })}
-            </div>
+                  if (isSelected) {
+                    buttonClass =
+                      "bg-[#C93438] border-[#C93438] text-white shadow-lg shadow-[#C93438]/20";
+                  }
+
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => handleAnswer(index)}
+                      className={`w-full text-left px-5 py-4 rounded-xl border transition-all text-base md:text-lg font-mincho [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B] ${buttonClass}`}
+                    >
+                      <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback={showReadingHint}
+                        html={option}
+                        contentClassName="font-mincho text-base md:text-lg [&_rt]:text-[0.5em] [&_rt]:text-[#B8860B]"
+                        kanaClassName="mt-1 font-mincho text-sm text-[#F4DFA7]"
+                        romajiClassName="mt-1 text-xs italic text-white/75"
+                      />
+                    </button>
+                  );
+                })}
+              </div>
+            )}
 
             <div className="mt-auto pt-6 border-t border-[#33312E]/50">
               <button
