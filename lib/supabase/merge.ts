@@ -240,6 +240,12 @@ function mergeIrodoriProgress(
         cloudRating !== undefined &&
         localRating !== cloudRating
       ) {
+        if (!pending.some((item) => item.key === "fude_irodori_progress_v1")) {
+          throw new Error(
+            `Penilaian Irodori untuk ${lessonId}/${canDoId} berbeda antara perangkat dan cloud, tetapi tidak ada catatan perubahan lokal untuk menentukan versi terbaru. Data tidak ditimpa.`
+          );
+        }
+
         mergedRatings[canDoId] = isLocalChangeNewer(
           pending,
           "fude_irodori_progress_v1",
