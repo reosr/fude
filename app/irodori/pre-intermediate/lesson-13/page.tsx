@@ -117,7 +117,7 @@ const content: IrodoriLessonContent = {
     ["世話", "せわ · sewa", "Perawatan; mengurus"],
     ["成長", "せいちょう · seichou", "Pertumbuhan; perkembangan"],
     ["驚く", "おどろく · odoroku", "Terkejut"],
-    ["うらやましい", "うらやましい · urayamashii", "Iri dalam arti positif"],
+    ["うらやましい", "うらやましい · urayamashii", "Iri; ingin juga mengalami atau memiliki hal yang sama"],
     ["もったいない", "もったいない · mottainai", "Sayang sekali; mubazir"],
     ["記念日", "きねんび · kinenbi", "Hari peringatan; hari istimewa"],
     ["贈り物", "おくりもの · okurimono", "Hadiah; pemberian"],
