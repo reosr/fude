@@ -679,6 +679,101 @@
               ],
               "answer": 0,
               "explanation": "Urutan yang tepat adalah 毎朝 → 六時に → 起きます. Keterangan frekuensi dan waktu diletakkan sebelum kata kerja."
+            },
+            {
+              "type": "sentence-composition",
+              "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿ です。",
+              "options": [
+                "カメラ",
+                "あたらしい",
+                "が",
+                "ほしい"
+              ],
+              "correctOrder": [
+                2,
+                1,
+                3,
+                4
+              ],
+              "starPosition": 3,
+              "answer": 2,
+              "explanation": "Urutan yang benar adalah 2 → 1 → 3 → 4: あたらしい → カメラ → が → ほしい. Jadi, potongan nomor 3 (が) berada di posisi ★. Pola あたらしいカメラがほしいです berarti ingin kamera baru."
+            },
+            {
+              "type": "sentence-composition",
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>は ＿＿＿ ★ ＿＿＿ ＿＿＿。",
+              "options": [
+                "<ruby>友達<rt>ともだち</rt></ruby>と",
+                "<ruby>公園<rt>こうえん</rt></ruby>へ",
+                "<ruby>行<rt>い</rt></ruby>きます",
+                "よく"
+              ],
+              "correctOrder": [
+                4,
+                1,
+                2,
+                3
+              ],
+              "starPosition": 2,
+              "answer": 0,
+              "explanation": "Urutan yang benar adalah 4 → 1 → 2 → 3: よく → 友達と → 公園へ → 行きます. Jadi, potongan nomor 1 (友達と) berada di posisi ★. よく menunjukkan frekuensi, yaitu sering."
+            },
+            {
+              "type": "sentence-composition",
+              "question": "きのう わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "<ruby>公園<rt>こうえん</rt></ruby>で",
+                "あそびました",
+                "<ruby>友達<rt>ともだち</rt></ruby>と",
+                "いっしょに"
+              ],
+              "correctOrder": [
+                3,
+                4,
+                1,
+                2
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar adalah 3 → 4 → 1 → 2: 友達と → いっしょに → 公園で → あそびました. Jadi, potongan nomor 1 (公園で) berada di posisi ★. Keterangan orang dan tempat diletakkan sebelum kata kerja."
+            },
+            {
+              "type": "sentence-composition",
+              "question": "わたしは <ruby>毎朝<rt>まいあさ</rt></ruby> ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "<ruby>七時<rt>しちじ</rt></ruby>に",
+                "<ruby>家<rt>いえ</rt></ruby>で",
+                "<ruby>朝<rt>あさ</rt></ruby>ごはんを",
+                "<ruby>食<rt>た</rt></ruby>べます"
+              ],
+              "correctOrder": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "starPosition": 3,
+              "answer": 2,
+              "explanation": "Urutan yang benar adalah 1 → 2 → 3 → 4: 七時に → 家で → 朝ごはんを → 食べます. Jadi, potongan nomor 3 (朝ごはんを) berada di posisi ★. Keterangan waktu dan tempat diletakkan sebelum objek dan kata kerja."
+            },
+            {
+              "type": "sentence-composition",
+              "question": "つくえの <ruby>上<rt>うえ</rt></ruby>に ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "あります",
+                "<ruby>本<rt>ほん</rt></ruby>が",
+                "<ruby>二冊<rt>にさつ</rt></ruby>",
+                "<ruby>大<rt>おお</rt></ruby>きい"
+              ],
+              "correctOrder": [
+                4,
+                2,
+                3,
+                1
+              ],
+              "starPosition": 3,
+              "answer": 2,
+              "explanation": "Urutan yang benar adalah 4 → 2 → 3 → 1: 大きい → 本が → 二冊 → あります. Jadi, potongan nomor 3 (二冊) berada di posisi ★. Kata sifat menerangkan kata benda, lalu jumlah benda diletakkan sebelum あります."
             }
           ],
           "reading": [
