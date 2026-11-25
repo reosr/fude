@@ -13,11 +13,17 @@ import {
   X,
   Trash2,
   Award,
+  MessageCircle,
+  BookText,
+  Layers,
 } from "lucide-react";
 import ProfilePhotoEditor, {
   type ProfilePhotoSettings,
 } from "@/components/ProfilePhotoEditor";
 import { getProgress } from "../../lib/progress";
+import { getMemorizedKanji } from "../../lib/memorized";
+import { useIrodoriProgress } from "@/lib/irodori-progress";
+import { getCompletedJlptSetIds, useStudyProgress } from "@/lib/study-progress";
 import LevelBadge from "../../components/LevelBadge";
 import ProfilePicture from "../../components/ProfilePicture";
 import {
@@ -39,39 +45,16 @@ import {
 
 const PROFILE_DESCRIPTION = "Pelajar bahasa Jepang di Fude";
 
-function getCompletedJlptSetCount(): number {
-  if (typeof window === "undefined") return 0;
-
-  const completed = new Set<string>();
-  try {
-    for (let index = 0; index < localStorage.length; index += 1) {
-      const key = localStorage.key(index);
-      if (!key?.startsWith("jlpt_result_")) continue;
-
-      try {
-        const raw = localStorage.getItem(key);
-        const result = raw ? JSON.parse(raw) : null;
-        if (result?.completedOnce === true) {
-          completed.add(key.slice("jlpt_result_".length));
-        }
-      } catch {
-        // Lewati hasil JLPT lama yang tidak valid.
-      }
-    }
-  } catch (error) {
-    console.error("Gagal membaca progres JLPT:", error);
-  }
-
-  return completed.size;
-}
-
 export default function Profil() {
+  const irodoriProgress = useIrodoriProgress();
+  const studyProgress = useStudyProgress();
   const [photoEditorFile, setPhotoEditorFile] = useState<File | null>(null);
   const [profile, setProfile] = useState<FudeProfile>(DEFAULT_PROFILE);
   const [photoSrc, setPhotoSrc] = useState<string | null>(null);
   const [currentBab, setCurrentBab] = useState(1);
   const [completedBab, setCompletedBab] = useState(0);
   const [completedJLPT, setCompletedJLPT] = useState(0);
+  const [memorizedWords, setMemorizedWords] = useState(0);
   const [totalXp, setTotalXp] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -98,7 +81,8 @@ export default function Profil() {
 
     setCurrentBab(safeProgress);
     setCompletedBab(Math.min(50, Math.max(0, safeProgress - 1)));
-    setCompletedJLPT(getCompletedJlptSetCount());
+    setCompletedJLPT(getCompletedJlptSetIds().length);
+    setMemorizedWords(getMemorizedKanji().length);
     setTotalXp(getFudeXp());
     setProfile(getFudeProfile());
   };
@@ -177,6 +161,19 @@ export default function Profil() {
       document.body.style.overflow = previousBodyOverflow;
     };
   }, [isEditing]);
+
+  const irodoriPrefixes = ["starter-", "elementary1-", "elementary2-", "preintermediate-"];
+  const completedIrodori = new Set(
+    irodoriProgress.completedLessons.filter((id) =>
+      irodoriPrefixes.some((prefix) => {
+        if (!id.startsWith(prefix)) return false;
+        const lessonNumber = Number(id.slice(prefix.length));
+        return Number.isInteger(lessonNumber) && lessonNumber >= 1 && lessonNumber <= 18;
+      })
+    )
+  ).size;
+  const completedPractical = new Set(studyProgress.completedPracticalCategories).size;
+  const completedStories = new Set(studyProgress.completedStories).size;
 
   const levelInfo = getLevelInfo(totalXp);
   const unlockedBab = Math.min(50, currentBab);
@@ -568,7 +565,7 @@ export default function Profil() {
             </p>
           </div>
 
-          <div className="relative overflow-hidden rounded-2xl border border-[#B8860B]/20 bg-gradient-to-br from-[#222127] to-[#171615] p-5 col-span-2 md:col-span-1">
+          <div className="relative overflow-hidden rounded-2xl border border-[#B8860B]/20 bg-gradient-to-br from-[#222127] to-[#171615] p-5">
             <div className="absolute -right-3 -top-3 text-6xl text-[#B8860B]/10 font-serif">
               道
             </div>
@@ -582,6 +579,34 @@ export default function Profil() {
             <p className="text-[9px] text-[#B8860B] mt-2 tracking-widest">
               PERINGKAT PEMAIN
             </p>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-[#B8860B]/20 bg-gradient-to-br from-[#242019] to-[#171615] p-5">
+            <BookOpen size={21} className="mb-4 text-[#D0A74F]" />
+            <p className="text-3xl font-black text-[#F1EBDD]">{completedIrodori}/72</p>
+            <p className="mt-1 text-xs text-[#A3A099]">Pelajaran Irodori selesai</p>
+            <p className="mt-2 text-[9px] tracking-widest text-[#B8860B]">JALUR KOMUNIKASI</p>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-[#B8860B]/20 bg-gradient-to-br from-[#242019] to-[#171615] p-5">
+            <MessageCircle size={21} className="mb-4 text-[#D0A74F]" />
+            <p className="text-3xl font-black text-[#F1EBDD]">{completedPractical}/10</p>
+            <p className="mt-1 text-xs text-[#A3A099]">Kategori ungkapan selesai</p>
+            <p className="mt-2 text-[9px] tracking-widest text-[#B8860B]">KOMUNIKASI PRAKTIS</p>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-[#86A9D0]/20 bg-gradient-to-br from-[#20232A] to-[#171615] p-5">
+            <BookText size={21} className="mb-4 text-[#8FB8E8]" />
+            <p className="text-3xl font-black text-[#F1EBDD]">{completedStories}/10</p>
+            <p className="mt-1 text-xs text-[#A3A099]">Cerita selesai dibaca</p>
+            <p className="mt-2 text-[9px] tracking-widest text-[#8FB8E8]">LATIHAN BACA</p>
+          </div>
+
+          <div className="relative overflow-hidden rounded-2xl border border-[#269B70]/20 bg-gradient-to-br from-[#1D2923] to-[#171615] p-5">
+            <Layers size={21} className="mb-4 text-[#8ED8B4]" />
+            <p className="text-3xl font-black text-[#F1EBDD]">{memorizedWords}</p>
+            <p className="mt-1 text-xs text-[#A3A099]">Kata di daftar hafalan</p>
+            <p className="mt-2 text-[9px] tracking-widest text-[#8ED8B4]">FLASHCARD</p>
           </div>
         </div>
       </section>
