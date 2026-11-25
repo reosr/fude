@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { notifyFudeLocalDataChanged } from "./supabase/events";
 
 export type IrodoriRating = 1 | 2 | 3;
 
@@ -10,7 +11,7 @@ export interface IrodoriProgress {
 }
 
 const STORAGE_KEY = "fude_irodori_progress_v1";
-const CHANGE_EVENT = "fude:irodori-progress-updated";
+export const IRODORI_PROGRESS_UPDATED_EVENT = "fude:irodori-progress-updated";
 
 const EMPTY_PROGRESS: IrodoriProgress = {
   completedLessons: [],
@@ -85,11 +86,11 @@ function subscribe(callback: () => void): () => void {
     callback();
   };
 
-  window.addEventListener(CHANGE_EVENT, callback);
+  window.addEventListener(IRODORI_PROGRESS_UPDATED_EVENT, callback);
   window.addEventListener("storage", handleStorage);
 
   return () => {
-    window.removeEventListener(CHANGE_EVENT, callback);
+    window.removeEventListener(IRODORI_PROGRESS_UPDATED_EVENT, callback);
     window.removeEventListener("storage", handleStorage);
   };
 }
@@ -99,11 +100,12 @@ function writeProgress(next: IrodoriProgress): void {
 
   try {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    notifyFudeLocalDataChanged(STORAGE_KEY);
   } catch (error) {
     console.warn("Gagal menyimpan progres Irodori:", error);
   }
 
-  window.dispatchEvent(new Event(CHANGE_EVENT));
+  window.dispatchEvent(new Event(IRODORI_PROGRESS_UPDATED_EVENT));
 }
 
 export function saveIrodoriSelfEvaluation(
@@ -130,6 +132,19 @@ export function completeIrodoriLesson(lessonId: string): void {
     ...current,
     completedLessons: [...current.completedLessons, lessonId],
   });
+}
+
+export function getIrodoriProgress(): IrodoriProgress {
+  const current = getSnapshot();
+  return {
+    completedLessons: [...current.completedLessons],
+    selfEvaluations: Object.fromEntries(
+      Object.entries(current.selfEvaluations).map(([lessonId, ratings]) => [
+        lessonId,
+        { ...ratings },
+      ])
+    ),
+  };
 }
 
 export function getCompletedIrodoriLessons(): string[] {
