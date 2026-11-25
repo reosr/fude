@@ -273,11 +273,11 @@ export default function JLPTLevelPage() {
     <div className="max-w-4xl mx-auto space-y-6 pb-10">
       {/* Tombol Back */}
       <button
-        onClick={() => router.push("/")}
+        onClick={() => router.push("/jlpt")}
         className="flex items-center gap-2 text-sm font-bold text-[#A3A099] hover:text-[#EAE6DD] transition-colors mb-4"
       >
         <ArrowLeft size={16} />
-        Kembali ke Beranda
+        Kembali ke Pilihan Level
       </button>
 
       {/* Header */}
