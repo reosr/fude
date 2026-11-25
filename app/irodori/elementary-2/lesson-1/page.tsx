@@ -462,7 +462,7 @@ const quizQuestions: Task[] = [
     explanation: <>〜ていました menunjukkan kegiatan yang berlangsung atau menjadi kebiasaan pada masa lalu.</>,
   },
   {
-    prompt: <>Pada 「ホアは『花』という意味です」, apa fungsi という?</>,
+    prompt: <>Pada 「ハナは『花』という意味です」, apa fungsi という?</>,
     options: [
       { key: "a", label: "Memperkenalkan arti atau nama suatu istilah." },
       { key: "b", label: "Menandai penerima barang." },
