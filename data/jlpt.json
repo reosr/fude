@@ -1376,7 +1376,7 @@
                 "としゅかん"
               ],
               "answer": 0,
-              "explanation": "図書館は「としょかん」と読みます。意味は perpustakaan です。"
+              "explanation": "<ruby>図書館<rt>としょかん</rt></ruby>は「としょかん」と<ruby>読<rt>よ</rt></ruby>みます。意味は perpustakaan です。"
             },
             {
               "itemType": "kanji-reading",
@@ -1388,7 +1388,7 @@
                 "まいねん"
               ],
               "answer": 0,
-              "explanation": "去年は「きょねん」と読み、tahun lalu という意味です。"
+              "explanation": "<ruby>去年<rt>きょねん</rt></ruby>は「きょねん」と<ruby>読<rt>よ</rt></ruby>み、tahun lalu という意味です。"
             },
             {
               "itemType": "kanji-reading",
@@ -1400,11 +1400,11 @@
                 "のざい"
               ],
               "answer": 0,
-              "explanation": "野菜は「やさい」と読みます。意味は sayuran です。"
+              "explanation": "野菜は「やさい」と<ruby>読<rt>よ</rt></ruby>みます。意味は sayuran です。"
             },
             {
               "itemType": "orthography",
-              "question": "「きょう、こうえんへ行きます。」の「こうえん」はどれですか。",
+              "question": "「きょう、こうえんへ<ruby>行<rt>い</rt></ruby>きます。」の「こうえん」はどれですか。",
               "options": [
                 "公園",
                 "公演",
@@ -1412,11 +1412,11 @@
                 "高遠"
               ],
               "answer": 0,
-              "explanation": "この文の「こうえん」は、公園（こうえん）です。公園は tempat untuk bermain atau bersantai di luar."
+              "explanation": "この文の「こうえん」は、<ruby>公園<rt>こうえん</rt></ruby>（こうえん）です。<ruby>公園<rt>こうえん</rt></ruby>は tempat untuk bermain atau bersantai di luar."
             },
             {
               "itemType": "orthography",
-              "question": "「まいあさ、しんぶんを読みます。」の「しんぶん」はどれですか。",
+              "question": "「まいあさ、しんぶんを<ruby>読<rt>よ</rt></ruby>みます。」の「しんぶん」はどれですか。",
               "options": [
                 "新聞",
                 "新分",
@@ -1424,11 +1424,11 @@
                 "新文"
               ],
               "answer": 0,
-              "explanation": "「しんぶん」は新聞と書きます。Artinya surat kabar."
+              "explanation": "「しんぶん」は<ruby>新聞<rt>しんぶん</rt></ruby>と<ruby>書<rt>か</rt></ruby>きます。Artinya surat kabar."
             },
             {
               "itemType": "orthography",
-              "question": "「あした、でんしゃで行きます。」の「でんしゃ」はどれですか。",
+              "question": "「あした、でんしゃで<ruby>行<rt>い</rt></ruby>きます。」の「でんしゃ」はどれですか。",
               "options": [
                 "電車",
                 "電気",
@@ -1436,7 +1436,7 @@
                 "電社"
               ],
               "answer": 0,
-              "explanation": "「でんしゃ」は電車と書きます。Artinya kereta."
+              "explanation": "「でんしゃ」は<ruby>電車<rt>でんしゃ</rt></ruby>と<ruby>書<rt>か</rt></ruby>きます。Artinya kereta."
             },
             {
               "itemType": "contextually-defined-expressions",
@@ -1460,11 +1460,11 @@
                 "ねます"
               ],
               "answer": 0,
-              "explanation": "のどがかわきました berarti haus. Jadi, kita minum air: 水を飲みます。"
+              "explanation": "のどがかわきました berarti haus. Jadi, kita minum air: 水を<ruby>飲<rt>の</rt></ruby>みます。"
             },
             {
               "itemType": "contextually-defined-expressions",
-              "question": "バスが来ません。駅で（　）います。",
+              "question": "バスが<ruby>来<rt>き</rt></ruby>ません。<ruby>駅<rt>えき</rt></ruby>で（　）います。",
               "options": [
                 "まって",
                 "およいで",
@@ -1476,24 +1476,24 @@
             },
             {
               "itemType": "paraphrases",
-              "question": "「すぐ帰ります」と だいたい同じ意味のものはどれですか。",
+              "question": "「すぐ<ruby>帰<rt>かえ</rt></ruby>ります」と だいたい同じ意味のものはどれですか。",
               "options": [
-                "今、帰ります",
-                "あとで帰ります",
-                "毎日帰ります",
-                "ゆっくり帰ります"
+                "今、<ruby>帰<rt>かえ</rt></ruby>ります",
+                "あとで<ruby>帰<rt>かえ</rt></ruby>ります",
+                "<ruby>毎日<rt>まいにち</rt></ruby><ruby>帰<rt>かえ</rt></ruby>ります",
+                "ゆっくり<ruby>帰<rt>かえ</rt></ruby>ります"
               ],
               "answer": 0,
-              "explanation": "すぐ berarti segera. 今帰ります (pulang sekarang) paling dekat maknanya."
+              "explanation": "すぐ berarti segera. 今<ruby>帰<rt>かえ</rt></ruby>ります (pulang sekarang) paling dekat maknanya."
             },
             {
               "itemType": "paraphrases",
-              "question": "「たくさん食べました」と だいたい同じ意味のものはどれですか。",
+              "question": "「たくさん<ruby>食<rt>た</rt></ruby>べました」と だいたい同じ意味のものはどれですか。",
               "options": [
-                "少し食べました",
-                "いっぱい食べました",
-                "何も食べませんでした",
-                "早く食べました"
+                "<ruby>少<rt>すく</rt></ruby>し<ruby>食<rt>た</rt></ruby>べました",
+                "いっぱい<ruby>食<rt>た</rt></ruby>べました",
+                "<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べませんでした",
+                "<ruby>早<rt>はや</rt></ruby>く<ruby>食<rt>た</rt></ruby>べました"
               ],
               "answer": 1,
               "explanation": "たくさん dan いっぱい sama-sama berarti banyak."
@@ -1514,7 +1514,7 @@
           "grammar": [
             {
               "itemType": "sentential-grammar-1",
-              "question": "日曜日（　）友達と公園へ行きました。",
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>（　）<ruby>友達<rt>ともだち</rt></ruby>と<ruby>公園<rt>こうえん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。",
               "options": [
                 "に",
                 "を",
@@ -1522,11 +1522,11 @@
                 "で"
               ],
               "answer": 0,
-              "explanation": "Partikel に menandai waktu terjadinya kegiatan: 日曜日に行きました。"
+              "explanation": "Partikel に menandai waktu terjadinya kegiatan: <ruby>日曜日<rt>にちようび</rt></ruby>に<ruby>行<rt>い</rt></ruby>きました。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "この店（　）パンを買いました。",
+              "question": "この店（　）パンを<ruby>買<rt>か</rt></ruby>いました。",
               "options": [
                 "で",
                 "に",
@@ -1534,11 +1534,11 @@
                 "を"
               ],
               "answer": 0,
-              "explanation": "Partikel で menunjukkan tempat berlangsungnya kegiatan. パンを買いました dilakukan di toko."
+              "explanation": "Partikel で menunjukkan tempat berlangsungnya kegiatan. パンを<ruby>買<rt>か</rt></ruby>いました dilakukan di toko."
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "毎朝、六時（　）起きます。",
+              "question": "<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>六時<rt>ろくじ</rt></ruby>（　）<ruby>起きます<rt>おきます</rt></ruby>。",
               "options": [
                 "を",
                 "に",
@@ -1546,40 +1546,40 @@
                 "へ"
               ],
               "answer": 1,
-              "explanation": "Untuk waktu spesifik seperti pukul enam, gunakan に: 六時に起きます。"
+              "explanation": "Untuk waktu spesifik seperti pukul enam, gunakan に: <ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起きます<rt>おきます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "昨日は雨でしたから、どこへも（　）。",
+              "question": "<ruby>昨日<rt>きのう</rt></ruby>は雨でしたから、どこへも（　）。",
               "options": [
-                "行きませんでした",
-                "行きます",
-                "行きましょう",
-                "行っています"
+                "<ruby>行<rt>い</rt></ruby>きませんでした",
+                "<ruby>行<rt>い</rt></ruby>きます",
+                "<ruby>行<rt>い</rt></ruby>きましょう",
+                "<ruby>行<rt>い</rt></ruby>っています"
               ],
               "answer": 0,
-              "explanation": "Konteksnya adalah kemarin dan hujan, sehingga bentuk lampau negatif 行きませんでした sesuai."
+              "explanation": "Konteksnya adalah kemarin dan hujan, sehingga bentuk lampau negatif <ruby>行<rt>い</rt></ruby>きませんでした sesuai."
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "ここに名前を（　）ください。",
+              "question": "ここに<ruby>名前<rt>なまえ</rt></ruby>を（　）ください。",
               "options": [
-                "書いて",
-                "書きます",
-                "書く",
-                "書いた"
+                "<ruby>書いて<rt>かいて</rt></ruby>",
+                "<ruby>書<rt>か</rt></ruby>きます",
+                "<ruby>書<rt>か</rt></ruby>く",
+                "<ruby>書<rt>か</rt></ruby>いた"
               ],
               "answer": 0,
-              "explanation": "Pola ～てください digunakan untuk permintaan. 書いてください berarti silakan tulis."
+              "explanation": "Pola ～てください digunakan untuk permintaan. <ruby>書いて<rt>かいて</rt></ruby>ください berarti silakan tulis."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
               "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "日本語を",
-                "毎日",
-                "勉強します",
+                "<ruby>日本語<rt>にほんご</rt></ruby>を",
+                "<ruby>毎日<rt>まいにち</rt></ruby>",
+                "<ruby>勉強<rt>べんきょう</rt></ruby>します",
                 "家で"
               ],
               "correctOrder": [
@@ -1590,16 +1590,16 @@
               ],
               "starPosition": 3,
               "answer": 0,
-              "explanation": "Urutan yang benar: 毎日 → 家で → 日本語を → 勉強します. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: <ruby>毎日<rt>まいにち</rt></ruby> → 家で → <ruby>日本語<rt>にほんご</rt></ruby>を → <ruby>勉強<rt>べんきょう</rt></ruby>します. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
               "question": "きのう ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "映画を",
-                "友達と",
-                "見ました",
+                "<ruby>映画<rt>えいが</rt></ruby>を",
+                "<ruby>友達<rt>ともだち</rt></ruby>と",
+                "<ruby>見<rt>み</rt></ruby>ました",
                 "いっしょに"
               ],
               "correctOrder": [
@@ -1610,16 +1610,16 @@
               ],
               "starPosition": 3,
               "answer": 0,
-              "explanation": "Urutan yang benar: いっしょに → 友達と → 映画を → 見ました. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: いっしょに → <ruby>友達<rt>ともだち</rt></ruby>と → <ruby>映画<rt>えいが</rt></ruby>を → <ruby>見<rt>み</rt></ruby>ました. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
               "question": "あした ＿＿＿ ★ ＿＿＿ ＿＿＿。",
               "options": [
-                "学校へ",
-                "八時に",
-                "行きます",
+                "<ruby>学校<rt>がっこう</rt></ruby>へ",
+                "<ruby>八時<rt>はちじ</rt></ruby>に",
+                "<ruby>行<rt>い</rt></ruby>きます",
                 "わたしは"
               ],
               "correctOrder": [
@@ -1630,16 +1630,16 @@
               ],
               "starPosition": 2,
               "answer": 1,
-              "explanation": "Urutan yang benar: わたしは → 八時に → 学校へ → 行きます. Potongan nomor 2 berada pada posisi ★."
+              "explanation": "Urutan yang benar: わたしは → <ruby>八時<rt>はちじ</rt></ruby>に → <ruby>学校<rt>がっこう</rt></ruby>へ → <ruby>行<rt>い</rt></ruby>きます. Potongan nomor 2 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
               "question": "母は ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "料理を",
+                "<ruby>料理<rt>りょうり</rt></ruby>を",
                 "毎晩",
-                "作ります",
+                "<ruby>作<rt>つく</rt></ruby>ります",
                 "家で"
               ],
               "correctOrder": [
@@ -1650,7 +1650,7 @@
               ],
               "starPosition": 3,
               "answer": 0,
-              "explanation": "Urutan yang benar: 毎晩 → 家で → 料理を → 作ります. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: 毎晩 → 家で → <ruby>料理<rt>りょうり</rt></ruby>を → <ruby>作<rt>つく</rt></ruby>ります. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
@@ -1658,8 +1658,8 @@
               "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
                 "本を",
-                "図書館で",
-                "読みます",
+                "<ruby>図書館<rt>としょかん</rt></ruby>で",
+                "<ruby>読<rt>よ</rt></ruby>みます",
                 "よく"
               ],
               "correctOrder": [
@@ -1670,11 +1670,11 @@
               ],
               "starPosition": 3,
               "answer": 0,
-              "explanation": "Urutan yang benar: よく → 図書館で → 本を → 読みます. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: よく → <ruby>図書館<rt>としょかん</rt></ruby>で → 本を → <ruby>読<rt>よ</rt></ruby>みます. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "だから",
                 "でも",
@@ -1683,11 +1683,11 @@
               ],
               "answer": 0,
               "explanation": "Bagian pertama menjelaskan alasan, lalu bagian kedua menyebut akibatnya. だから berarti karena itu.",
-              "passage": "あしたは日曜日です。天気もいいです。（　）家族と公園へ行きます。"
+              "passage": "あしたは<ruby>日曜日<rt>にちようび</rt></ruby>です。<ruby>天気<rt>てんき</rt></ruby>もいいです。（　）<ruby>家族<rt>かぞく</rt></ruby>と<ruby>公園<rt>こうえん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "それから",
                 "しかし",
@@ -1696,11 +1696,11 @@
               ],
               "answer": 0,
               "explanation": "Setelah sarapan, kegiatan berikutnya adalah pergi ke sekolah. それから berarti setelah itu.",
-              "passage": "毎朝六時に起きます。朝ごはんを食べます。（　）学校へ行きます。"
+              "passage": "<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>起きます<rt>おきます</rt></ruby>。<ruby>朝<rt>あさ</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べます。（　）<ruby>学校<rt>がっこう</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "でも",
                 "それから",
@@ -1709,11 +1709,11 @@
               ],
               "answer": 0,
               "explanation": "Kalimat kedua menyatakan hal yang berlawanan dengan kalimat pertama. でも berarti tetapi.",
-              "passage": "この店のパンは少し高いです。（　）とてもおいしいです。"
+              "passage": "この店のパンは<ruby>少<rt>すく</rt></ruby>し<ruby>高い<rt>たかい</rt></ruby>です。（　）とてもおいしいです。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "そして",
                 "でも",
@@ -1722,11 +1722,11 @@
               ],
               "answer": 0,
               "explanation": "そして menghubungkan dua kegiatan yang berurutan: membeli buku, lalu pulang.",
-              "passage": "駅で本を買いました。（　）バスで家へ帰りました。"
+              "passage": "<ruby>駅<rt>えき</rt></ruby>で本を<ruby>買<rt>か</rt></ruby>いました。（　）バスで家へ<ruby>帰<rt>かえ</rt></ruby>りました。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "だから",
                 "しかし",
@@ -1735,87 +1735,87 @@
               ],
               "answer": 0,
               "explanation": "Karena sakit, ia tidak pergi ke sekolah. だから menunjukkan hubungan sebab-akibat.",
-              "passage": "きのうから頭が痛いです。（　）今日は学校を休みます。"
+              "passage": "きのうから<ruby>頭<rt>あたま</rt></ruby>が痛いです。（　）<ruby>今日<rt>きょう</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>を休みます。"
             }
           ],
           "reading": [
             {
               "itemType": "short-passage",
-              "question": "わたしはだれと<ruby>買<rt>か</rt></ruby>い物へ<ruby>行<rt>い</rt></ruby>きましたか。",
+              "question": "わたしはだれと<ruby>買い物<rt>かいもの</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きましたか。",
               "options": [
                 "父",
                 "母",
-                "友達",
-                "先生"
+                "<ruby>友達<rt>ともだち</rt></ruby>",
+                "<ruby>先生<rt>せんせい</rt></ruby>"
               ],
               "answer": 1,
-              "explanation": "Bacaan menyebutkan 母と買い物へ行きました, jadi ia pergi bersama ibu.",
-              "passage": "わたしは<ruby>土曜日<rt>どようび</rt></ruby>に<ruby>母<rt>はは</rt></ruby>と<ruby>買<rt>か</rt></ruby>い物へ<ruby>行<rt>い</rt></ruby>きました。スーパーで牛乳とパンを<ruby>買<rt>か</rt></ruby>いました。<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>友達<rt>ともだち</rt></ruby>に会いました。"
+              "explanation": "Bacaan menyebutkan 母と<ruby>買い物<rt>かいもの</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました, jadi ia pergi bersama ibu.",
+              "passage": "わたしは<ruby>土曜日<rt>どようび</rt></ruby>に母と<ruby>買い物<rt>かいもの</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。スーパーで<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>とパンを<ruby>買<rt>か</rt></ruby>いました。<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>友達<rt>ともだち</rt></ruby>に会いました。"
             },
             {
               "itemType": "short-passage",
-              "question": "スーパーで何を<ruby>買<rt>か</rt></ruby>いましたか。",
+              "question": "スーパーで<ruby>何を<rt>なにを</rt></ruby><ruby>買<rt>か</rt></ruby>いましたか。",
               "options": [
-                "牛乳とパン",
+                "<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>とパン",
                 "水と本",
-                "りんごと花",
+                "りんごと<ruby>花<rt>はな</rt></ruby>",
                 "肉と魚"
               ],
               "answer": 0,
-              "explanation": "Ia membeli 牛乳とパン, yaitu susu dan roti.",
-              "passage": "わたしは<ruby>土曜日<rt>どようび</rt></ruby>に<ruby>母<rt>はは</rt></ruby>と<ruby>買<rt>か</rt></ruby>い物へ<ruby>行<rt>い</rt></ruby>きました。スーパーで牛乳とパンを<ruby>買<rt>か</rt></ruby>いました。<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>友達<rt>ともだち</rt></ruby>に会いました。"
+              "explanation": "Ia membeli <ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>とパン, yaitu susu dan roti.",
+              "passage": "わたしは<ruby>土曜日<rt>どようび</rt></ruby>に母と<ruby>買い物<rt>かいもの</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きました。スーパーで<ruby>牛乳<rt>ぎゅうにゅう</rt></ruby>とパンを<ruby>買<rt>か</rt></ruby>いました。<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>友達<rt>ともだち</rt></ruby>に会いました。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "田中さんは<ruby>学校<rt>がっこう</rt></ruby>のあと、どこへ<ruby>行<rt>い</rt></ruby>きますか。",
+              "question": "<ruby>田中さん<rt>たなかさん</rt></ruby>は<ruby>学校<rt>がっこう</rt></ruby>のあと、どこへ<ruby>行<rt>い</rt></ruby>きますか。",
               "options": [
                 "家",
-                "公園",
-                "図書館",
-                "駅"
+                "<ruby>公園<rt>こうえん</rt></ruby>",
+                "<ruby>図書館<rt>としょかん</rt></ruby>",
+                "<ruby>駅<rt>えき</rt></ruby>"
               ],
               "answer": 2,
               "explanation": "Kalimat pertama menyebutkan bahwa setelah sekolah Tanaka pergi ke perpustakaan.",
-              "passage": "田中さんは<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>のあとで<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。そこで一<ruby>時間<rt>じかん</rt></ruby>ぐらい日<ruby>本<rt>ほん</rt></ruby>語を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます。二人で<ruby>宿題<rt>しゅくだい</rt></ruby>をしたあと、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。田中さんは静かな場所で<ruby>勉強<rt>べんきょう</rt></ruby>するのが好きです。"
+              "passage": "<ruby>田中さん<rt>たなかさん</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>のあとで<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。そこで<ruby>一時間<rt>いちじかん</rt></ruby>ぐらい<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます。<ruby>二人<rt>ふたり</rt></ruby>で<ruby>宿題<rt>しゅくだい</rt></ruby>をしたあと、本を<ruby>読<rt>よ</rt></ruby>みます。<ruby>田中さん<rt>たなかさん</rt></ruby>は静かな<ruby>場所<rt>ばしょ</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>するのが好きです。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>友達<rt>ともだち</rt></ruby>が<ruby>来<rt>き</rt></ruby>るのは何曜日ですか。",
+              "question": "<ruby>友達<rt>ともだち</rt></ruby>が<ruby>来<rt>き</rt></ruby>るのは<ruby>何曜日<rt>なんようび</rt></ruby>ですか。",
               "options": [
-                "月曜日と水曜日",
-                "火曜日と木曜日",
-                "金曜日と土曜日",
-                "土曜日と日曜日"
+                "<ruby>月曜日<rt>げつようび</rt></ruby>と<ruby>水曜日<rt>すいようび</rt></ruby>",
+                "<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>",
+                "<ruby>金曜日<rt>きんようび</rt></ruby>と<ruby>土曜日<rt>どようび</rt></ruby>",
+                "<ruby>土曜日<rt>どようび</rt></ruby>と<ruby>日曜日<rt>にちようび</rt></ruby>"
               ],
               "answer": 1,
-              "explanation": "Dalam bacaan tertulis 火曜日と木曜日は友達も来ます.",
-              "passage": "田中さんは<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>のあとで<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。そこで一<ruby>時間<rt>じかん</rt></ruby>ぐらい日<ruby>本<rt>ほん</rt></ruby>語を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます。二人で<ruby>宿題<rt>しゅくだい</rt></ruby>をしたあと、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。田中さんは静かな場所で<ruby>勉強<rt>べんきょう</rt></ruby>するのが好きです。"
+              "explanation": "Dalam bacaan tertulis <ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます.",
+              "passage": "<ruby>田中さん<rt>たなかさん</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>のあとで<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。そこで<ruby>一時間<rt>いちじかん</rt></ruby>ぐらい<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます。<ruby>二人<rt>ふたり</rt></ruby>で<ruby>宿題<rt>しゅくだい</rt></ruby>をしたあと、本を<ruby>読<rt>よ</rt></ruby>みます。<ruby>田中さん<rt>たなかさん</rt></ruby>は静かな<ruby>場所<rt>ばしょ</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>するのが好きです。"
             },
             {
               "itemType": "information-retrieval",
-              "question": "<ruby>図書館<rt>としょかん</rt></ruby>は<ruby>土曜日<rt>どようび</rt></ruby>、何時まで<ruby>開<rt>あ</rt></ruby>いていますか。",
+              "question": "<ruby>図書館<rt>としょかん</rt></ruby>は<ruby>土曜日<rt>どようび</rt></ruby>、<ruby>何時<rt>なんじ</rt></ruby>まで<ruby>開いて<rt>あいて</rt></ruby>いますか。",
               "options": [
-                "午後三時",
-                "午後四時",
-                "午後五時",
-                "午後六時"
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>三時<rt>さんじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby>四時",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>"
               ],
               "answer": 2,
-              "explanation": "Pengumuman menyebutkan 午前九時から午後五時まで, jadi perpustakaan buka sampai pukul lima sore.",
-              "passage": "<ruby>図書館<rt>としょかん</rt></ruby>のお知らせ\n今週の<ruby>土曜日<rt>どようび</rt></ruby>は、<ruby>午前<rt>ごぜん</rt></ruby>九時から<ruby>午後<rt>ごご</rt></ruby>五時まで<ruby>開<rt>あ</rt></ruby>いています。<ruby>日曜日<rt>にちようび</rt></ruby>は休みです。<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す人は、<ruby>入口<rt>いりぐち</rt></ruby>の箱に<ruby>入<rt>はい</rt></ruby>れてください。<ruby>新<rt>あたら</rt></ruby>しい<ruby>本<rt>ほん</rt></ruby>は一人二冊まで<ruby>借<rt>か</rt></ruby>りられます。"
+              "explanation": "Pengumuman menyebutkan <ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>まで, jadi perpustakaan buka sampai pukul lima sore.",
+              "passage": "<ruby>図書館<rt>としょかん</rt></ruby>のお知らせ\n<ruby>今週<rt>こんしゅう</rt></ruby>の<ruby>土曜日<rt>どようび</rt></ruby>は、<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>まで<ruby>開いて<rt>あいて</rt></ruby>います。<ruby>日曜日<rt>にちようび</rt></ruby>は休みです。本を<ruby>返す<rt>かえす</rt></ruby>人は、<ruby>入口<rt>いりぐち</rt></ruby>の<ruby>箱<rt>はこ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>れてください。<ruby>新しい<rt>あたらしい</rt></ruby>本は<ruby>一人<rt>ひとり</rt></ruby><ruby>二冊<rt>にさつ</rt></ruby>まで<ruby>借りられます<rt>かりられます</rt></ruby>。"
             },
             {
               "itemType": "information-retrieval",
-              "question": "<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す人は、どこに<ruby>本<rt>ほん</rt></ruby>を<ruby>入<rt>はい</rt></ruby>れますか。",
+              "question": "本を<ruby>返す<rt>かえす</rt></ruby>人は、どこに本を<ruby>入<rt>はい</rt></ruby>れますか。",
               "options": [
-                "入口の箱",
-                "受付の机",
-                "外の箱",
-                "二階の部屋"
+                "<ruby>入口<rt>いりぐち</rt></ruby>の<ruby>箱<rt>はこ</rt></ruby>",
+                "<ruby>受付<rt>うけつけ</rt></ruby>の机",
+                "外の<ruby>箱<rt>はこ</rt></ruby>",
+                "<ruby>二階<rt>にかい</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "Buku harus dimasukkan ke kotak di pintu masuk: 入口の箱.",
-              "passage": "<ruby>図書館<rt>としょかん</rt></ruby>のお知らせ\n今週の<ruby>土曜日<rt>どようび</rt></ruby>は、<ruby>午前<rt>ごぜん</rt></ruby>九時から<ruby>午後<rt>ごご</rt></ruby>五時まで<ruby>開<rt>あ</rt></ruby>いています。<ruby>日曜日<rt>にちようび</rt></ruby>は休みです。<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す人は、<ruby>入口<rt>いりぐち</rt></ruby>の箱に<ruby>入<rt>はい</rt></ruby>れてください。<ruby>新<rt>あたら</rt></ruby>しい<ruby>本<rt>ほん</rt></ruby>は一人二冊まで<ruby>借<rt>か</rt></ruby>りられます。"
+              "explanation": "Buku harus dimasukkan ke kotak di pintu masuk: <ruby>入口<rt>いりぐち</rt></ruby>の<ruby>箱<rt>はこ</rt></ruby>.",
+              "passage": "<ruby>図書館<rt>としょかん</rt></ruby>のお知らせ\n<ruby>今週<rt>こんしゅう</rt></ruby>の<ruby>土曜日<rt>どようび</rt></ruby>は、<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>から<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>まで<ruby>開いて<rt>あいて</rt></ruby>います。<ruby>日曜日<rt>にちようび</rt></ruby>は休みです。本を<ruby>返す<rt>かえす</rt></ruby>人は、<ruby>入口<rt>いりぐち</rt></ruby>の<ruby>箱<rt>はこ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>れてください。<ruby>新しい<rt>あたらしい</rt></ruby>本は<ruby>一人<rt>ひとり</rt></ruby><ruby>二冊<rt>にさつ</rt></ruby>まで<ruby>借りられます<rt>かりられます</rt></ruby>。"
             }
           ],
           "listening": [
@@ -1840,12 +1840,12 @@
                   "jp": "そうですね。すぐ戻ります。"
                 }
               ],
-              "question": "男の人は、まず何をしますか。",
+              "question": "<ruby>男の人<rt>おとこのひと</rt></ruby>は、まず<ruby>何を<rt>なにを</rt></ruby>しますか。",
               "options": [
-                "家へ帰ります",
-                "教室へ行きます",
-                "駅へ行きます",
-                "友達を待ちます"
+                "家へ<ruby>帰<rt>かえ</rt></ruby>ります",
+                "<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます",
+                "<ruby>駅<rt>えき</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます",
+                "<ruby>友達<rt>ともだち</rt></ruby>を<ruby>待<rt>ま</rt></ruby>ちます"
               ],
               "answer": 1,
               "explanation": "Pria itu lupa tasnya di kelas, jadi ia akan pergi mengambil tas terlebih dahulu."
@@ -1871,12 +1871,12 @@
                   "jp": "はい、スーパーへ行きます。"
                 }
               ],
-              "question": "女の人は、<ruby>昼<rt>ひる</rt></ruby>ごはんのあと、どこへ<ruby>行<rt>い</rt></ruby>きますか。",
+              "question": "<ruby>女の人<rt>おんなのひと</rt></ruby>は、<ruby>昼<rt>ひる</rt></ruby>ごはんのあと、どこへ<ruby>行<rt>い</rt></ruby>きますか。",
               "options": [
                 "スーパー",
-                "銀行",
-                "学校",
-                "図書館"
+                "<ruby>銀行<rt>ぎんこう</rt></ruby>",
+                "<ruby>学校<rt>がっこう</rt></ruby>",
+                "<ruby>図書館<rt>としょかん</rt></ruby>"
               ],
               "answer": 1,
               "explanation": "Wanita mengatakan bahwa setelah makan siang ia pergi ke bank untuk mengambil uang."
@@ -1902,15 +1902,15 @@
                   "jp": "わかりました。九時半に会いましょう。"
                 }
               ],
-              "question": "二人は何時に会いますか。",
+              "question": "<ruby>二人<rt>ふたり</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>に会いますか。",
               "options": [
-                "九時",
-                "九時半",
-                "十時",
-                "十時半"
+                "<ruby>九時<rt>くじ</rt></ruby>",
+                "<ruby>九時半<rt>くじはん</rt></ruby>",
+                "<ruby>十時<rt>じゅうじ</rt></ruby>",
+                "<ruby>十時<rt>じゅうじ</rt></ruby>半"
               ],
               "answer": 1,
-              "explanation": "Mereka menyepakati pukul 九時半 (setengah sepuluh)."
+              "explanation": "Mereka menyepakati pukul <ruby>九時半<rt>くじはん</rt></ruby> (setengah sepuluh)."
             },
             {
               "itemType": "key-point-comprehension",
@@ -1929,15 +1929,15 @@
                   "jp": "わかりました。"
                 }
               ],
-              "question": "<ruby>映画<rt>えいが</rt></ruby>は何時に<ruby>始<rt>はじ</rt></ruby>まりますか。",
+              "question": "<ruby>映画<rt>えいが</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>に始まりますか。",
               "options": [
-                "二時",
-                "二時半",
-                "三時",
-                "三時半"
+                "<ruby>二時<rt>にじ</rt></ruby>",
+                "<ruby>二時半<rt>にじはん</rt></ruby>",
+                "<ruby>三時<rt>さんじ</rt></ruby>",
+                "<ruby>三時<rt>さんじ</rt></ruby>半"
               ],
               "answer": 2,
-              "explanation": "Dialog menyebutkan bahwa film dimulai pukul 三時. Mereka bertemu lebih awal pada pukul dua setengah."
+              "explanation": "Dialog menyebutkan bahwa film dimulai pukul <ruby>三時<rt>さんじ</rt></ruby>. Mereka bertemu lebih awal pada pukul dua setengah."
             },
             {
               "itemType": "key-point-comprehension",
@@ -1958,10 +1958,10 @@
               ],
               "question": "りんごはいくらですか。",
               "options": [
-                "百円",
-                "二百円",
-                "三百円",
-                "四百円"
+                "<ruby>百円<rt>ひゃくえん</rt></ruby>",
+                "二<ruby>百円<rt>ひゃくえん</rt></ruby>",
+                "<ruby>三百円<rt>さんびゃくえん</rt></ruby>",
+                "四<ruby>百円<rt>ひゃくえん</rt></ruby>"
               ],
               "answer": 2,
               "explanation": "Satu apel 100 yen dan pria membeli tiga, jadi totalnya 300 yen."
@@ -1987,11 +1987,11 @@
               "options": [
                 "雨です",
                 "雪です",
-                "晴れです",
+                "<ruby>晴<rt>は</rt></ruby>れです",
                 "くもりです"
               ],
               "answer": 2,
-              "explanation": "Wanita mengatakan 午後は晴れます, artinya sore hari cerah."
+              "explanation": "Wanita mengatakan <ruby>午後<rt>ごご</rt></ruby>は<ruby>晴れます<rt>はれます</rt></ruby>, artinya sore hari cerah."
             },
             {
               "itemType": "verbal-expressions",
@@ -2002,7 +2002,7 @@
                   "jp": "友達の家に着きました。友達のお母さんが出てきました。"
                 }
               ],
-              "question": "このとき、何と言いますか。",
+              "question": "このとき、<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
                 "おじゃまします",
                 "いただきます",
@@ -2021,15 +2021,15 @@
                   "jp": "先生に、もう一度ゆっくり話してほしいです。"
                 }
               ],
-              "question": "<ruby>先生<rt>せんせい</rt></ruby>に何と言いますか。",
+              "question": "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
-                "もう一度お願いします",
+                "もう<ruby>一度<rt>いちど</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします",
                 "お先にどうぞ",
                 "ごちそうさまでした",
                 "いってらっしゃい"
               ],
               "answer": 0,
-              "explanation": "Meminta guru mengulang dengan sopan dapat diungkapkan dengan もう一度お願いします."
+              "explanation": "Meminta guru mengulang dengan sopan dapat diungkapkan dengan もう<ruby>一度<rt>いちど</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします."
             },
             {
               "itemType": "verbal-expressions",
@@ -2040,7 +2040,7 @@
                   "jp": "友達がプレゼントをくれました。"
                 }
               ],
-              "question": "プレゼントをもらったとき、何と言いますか。",
+              "question": "プレゼントをもらったとき、<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
                 "おめでとうございます",
                 "ありがとうございます",
@@ -2059,10 +2059,10 @@
                   "jp": "すみません、トイレはどこですか。"
                 }
               ],
-              "question": "男の人に何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>男の人<rt>おとこのひと</rt></ruby>に<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
                 "あそこです",
-                "三時です",
+                "<ruby>三時<rt>さんじ</rt></ruby>です",
                 "二つです",
                 "おいしいです"
               ],
@@ -2078,12 +2078,12 @@
                   "jp": "もう昼ごはんを食べましたか。"
                 }
               ],
-              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
                 "はい、まだです",
                 "いいえ、まだです",
-                "はい、食べません",
-                "いいえ、食べました"
+                "はい、<ruby>食<rt>た</rt></ruby>べません",
+                "いいえ、<ruby>食<rt>た</rt></ruby>べました"
               ],
               "answer": 1,
               "explanation": "Untuk menyatakan belum makan siang, jawaban yang tepat adalah いいえ、まだです."
@@ -2097,15 +2097,15 @@
                   "jp": "あした、いっしょに図書館へ行きませんか。"
                 }
               ],
-              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
-                "はい、行きましょう",
-                "いいえ、行きました",
-                "はい、行きませんでした",
-                "図書館は大きいです"
+                "はい、<ruby>行<rt>い</rt></ruby>きましょう",
+                "いいえ、<ruby>行<rt>い</rt></ruby>きました",
+                "はい、<ruby>行<rt>い</rt></ruby>きませんでした",
+                "<ruby>図書館<rt>としょかん</rt></ruby>は<ruby>大きい<rt>おおきい</rt></ruby>です"
               ],
               "answer": 0,
-              "explanation": "Ajakan dengan ～ませんか dapat diterima dengan jawaban positif 行きましょう."
+              "explanation": "Ajakan dengan ～ませんか dapat diterima dengan jawaban positif <ruby>行<rt>い</rt></ruby>きましょう."
             }
           ]
         },
@@ -3707,7 +3707,7 @@
                 "じゅんぴ"
               ],
               "answer": 0,
-              "explanation": "準備は「じゅんび」と読みます。Artinya persiapan."
+              "explanation": "<ruby>準備<rt>じゅんび</rt></ruby>は「じゅんび」と<ruby>読<rt>よ</rt></ruby>みます。Artinya persiapan."
             },
             {
               "itemType": "kanji-reading",
@@ -3719,7 +3719,7 @@
                 "れんろく"
               ],
               "answer": 0,
-              "explanation": "連絡は「れんらく」と読みます。Artinya menghubungi atau komunikasi."
+              "explanation": "<ruby>連絡<rt>れんらく</rt></ruby>は「れんらく」と<ruby>読<rt>よ</rt></ruby>みます。Artinya menghubungi atau komunikasi."
             },
             {
               "itemType": "kanji-reading",
@@ -3731,7 +3731,7 @@
                 "あんしん"
               ],
               "answer": 0,
-              "explanation": "安全は「あんぜん」と読みます。Artinya aman atau keselamatan."
+              "explanation": "<ruby>安全<rt>あんぜん</rt></ruby>は「あんぜん」と<ruby>読<rt>よ</rt></ruby>みます。Artinya aman atau keselamatan."
             },
             {
               "itemType": "kanji-reading",
@@ -3743,11 +3743,11 @@
                 "じゅしょ"
               ],
               "answer": 0,
-              "explanation": "住所は「じゅうしょ」と読みます。Artinya alamat."
+              "explanation": "<ruby>住所<rt>じゅうしょ</rt></ruby>は「じゅうしょ」と<ruby>読<rt>よ</rt></ruby>みます。Artinya alamat."
             },
             {
               "itemType": "orthography",
-              "question": "「しゅくだいを出してください。」の「しゅくだい」はどれですか。",
+              "question": "「しゅくだいを<ruby>出<rt>で</rt></ruby>してください。」の「しゅくだい」はどれですか。",
               "options": [
                 "宿題",
                 "祝台",
@@ -3755,11 +3755,11 @@
                 "縮題"
               ],
               "answer": 0,
-              "explanation": "「しゅくだい」は宿題と書きます。Artinya pekerjaan rumah."
+              "explanation": "「しゅくだい」は<ruby>宿題<rt>しゅくだい</rt></ruby>と<ruby>書<rt>か</rt></ruby>きます。Artinya pekerjaan rumah."
             },
             {
               "itemType": "orthography",
-              "question": "「じゅうしょを書いてください。」の「じゅうしょ」はどれですか。",
+              "question": "「じゅうしょを<ruby>書いて<rt>かいて</rt></ruby>ください。」の「じゅうしょ」はどれですか。",
               "options": [
                 "住所",
                 "住書",
@@ -3767,11 +3767,11 @@
                 "十所"
               ],
               "answer": 0,
-              "explanation": "「じゅうしょ」は住所と書きます。Artinya alamat."
+              "explanation": "「じゅうしょ」は<ruby>住所<rt>じゅうしょ</rt></ruby>と<ruby>書<rt>か</rt></ruby>きます。Artinya alamat."
             },
             {
               "itemType": "orthography",
-              "question": "「せつめいを聞きました。」の「せつめい」はどれですか。",
+              "question": "「せつめいを<ruby>聞<rt>き</rt></ruby>きました。」の「せつめい」はどれですか。",
               "options": [
                 "説明",
                 "設名",
@@ -3779,11 +3779,11 @@
                 "切明"
               ],
               "answer": 0,
-              "explanation": "「せつめい」は説明と書きます。Artinya penjelasan."
+              "explanation": "「せつめい」は<ruby>説明<rt>せつめい</rt></ruby>と<ruby>書<rt>か</rt></ruby>きます。Artinya penjelasan."
             },
             {
               "itemType": "orthography",
-              "question": "「しんぶんを読みました。」の「しんぶん」はどれですか。",
+              "question": "「しんぶんを<ruby>読<rt>よ</rt></ruby>みました。」の「しんぶん」はどれですか。",
               "options": [
                 "新聞",
                 "新分",
@@ -3791,27 +3791,27 @@
                 "親文"
               ],
               "answer": 0,
-              "explanation": "「しんぶん」は新聞と書きます. Artinya surat kabar."
+              "explanation": "「しんぶん」は新聞と書きます。Artinya surat kabar."
             },
             {
               "itemType": "contextually-defined-expressions",
-              "question": "道がわかりません。駅員に（　）しました。",
+              "question": "<ruby>道<rt>みち</rt></ruby>がわかりません。<ruby>駅員<rt>えきいん</rt></ruby>に（　）しました。",
               "options": [
-                "質問",
-                "返事",
-                "約束",
-                "説明"
+                "<ruby>質問<rt>しつもん</rt></ruby>",
+                "<ruby>返事<rt>へんじ</rt></ruby>",
+                "<ruby>約束<rt>やくそく</rt></ruby>",
+                "<ruby>説明<rt>せつめい</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "Karena tidak tahu jalan, ia bertanya kepada petugas stasiun: 質問しました."
+              "explanation": "Karena tidak tahu jalan, ia bertanya kepada petugas stasiun: <ruby>質問<rt>しつもん</rt></ruby>しました."
             },
             {
               "itemType": "contextually-defined-expressions",
-              "question": "会議は九時からです。五分前に（　）ください。",
+              "question": "<ruby>会議<rt>かいぎ</rt></ruby>は<ruby>九時<rt>くじ</rt></ruby>からです。五分前に（　）ください。",
               "options": [
-                "来て",
-                "返して",
-                "借りて",
+                "<ruby>来<rt>き</rt></ruby>て",
+                "<ruby>返して<rt>かえして</rt></ruby>",
+                "<ruby>借り<rt>かり</rt></ruby>て",
                 "閉めて"
               ],
               "answer": 0,
@@ -3819,23 +3819,23 @@
             },
             {
               "itemType": "contextually-defined-expressions",
-              "question": "この薬を飲んで、ゆっくり（　）ください。",
+              "question": "この薬を<ruby>飲<rt>の</rt></ruby>んで、ゆっくり（　）ください。",
               "options": [
-                "休んで",
-                "急いで",
+                "<ruby>休んで<rt>やすんで</rt></ruby>",
+                "<ruby>急<rt>いそ</rt></ruby>いで",
                 "集めて",
                 "運んで"
               ],
               "answer": 0,
-              "explanation": "Setelah minum obat, istirahatlah dengan tenang: 休んでください."
+              "explanation": "Setelah minum obat, istirahatlah dengan tenang: <ruby>休んで<rt>やすんで</rt></ruby>ください."
             },
             {
               "itemType": "contextually-defined-expressions",
-              "question": "旅行の前に、ホテルを（　）しました。",
+              "question": "<ruby>旅行<rt>りょこう</rt></ruby>の前に、ホテルを（　）しました。",
               "options": [
                 "予約",
                 "案内",
-                "連絡",
+                "<ruby>連絡<rt>れんらく</rt></ruby>",
                 "紹介"
               ],
               "answer": 0,
@@ -3843,117 +3843,117 @@
             },
             {
               "itemType": "paraphrases",
-              "question": "「急に雨が降りました」と だいたい同じ意味のものはどれですか。",
+              "question": "「<ruby>急<rt>いそ</rt></ruby>に雨が<ruby>降<rt>ふ</rt></ruby>りました」と だいたい同じ意味のものはどれですか。",
               "options": [
-                "突然雨が降りました",
-                "毎日雨が降りました",
-                "少し雨が降りました",
-                "長く雨が降りました"
+                "突然雨が<ruby>降<rt>ふ</rt></ruby>りました",
+                "<ruby>毎日<rt>まいにち</rt></ruby>雨が<ruby>降<rt>ふ</rt></ruby>りました",
+                "<ruby>少<rt>すく</rt></ruby>し雨が<ruby>降<rt>ふ</rt></ruby>りました",
+                "<ruby>長<rt>なが</rt></ruby>く雨が<ruby>降<rt>ふ</rt></ruby>りました"
               ],
               "answer": 0,
-              "explanation": "急に berarti tiba-tiba; makna yang paling dekat adalah 突然."
+              "explanation": "<ruby>急<rt>いそ</rt></ruby>に berarti tiba-tiba; makna yang paling dekat adalah 突然."
             },
             {
               "itemType": "paraphrases",
-              "question": "「十分に休んでください」と だいたい同じ意味のものはどれですか。",
+              "question": "「<ruby>十分に<rt>じゅうぶんに</rt></ruby><ruby>休んで<rt>やすんで</rt></ruby>ください」と だいたい同じ意味のものはどれですか。",
               "options": [
-                "よく休んでください",
-                "少し休んでください",
-                "早く休んでください",
-                "一人で休んでください"
+                "よく<ruby>休んで<rt>やすんで</rt></ruby>ください",
+                "<ruby>少<rt>すく</rt></ruby>し<ruby>休んで<rt>やすんで</rt></ruby>ください",
+                "<ruby>早<rt>はや</rt></ruby>く<ruby>休んで<rt>やすんで</rt></ruby>ください",
+                "<ruby>一人<rt>ひとり</rt></ruby>で<ruby>休んで<rt>やすんで</rt></ruby>ください"
               ],
               "answer": 0,
-              "explanation": "十分に dalam konteks ini berarti secukupnya atau dengan baik; よく休んでください paling dekat."
+              "explanation": "<ruby>十分に<rt>じゅうぶんに</rt></ruby> dalam konteks ini berarti secukupnya atau dengan baik; よく<ruby>休んで<rt>やすんで</rt></ruby>ください paling dekat."
             },
             {
               "itemType": "paraphrases",
-              "question": "「必要なものを持って来てください」と同じ意味に近いものはどれですか。",
+              "question": "「<ruby>必要<rt>ひつよう</rt></ruby>なものを<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください」と同じ意味に<ruby>近い<rt>ちかい</rt></ruby>ものはどれですか。",
               "options": [
-                "いるものを持って来てください",
-                "新しいものを持って来てください",
-                "大きいものを持って来てください",
-                "好きなものを持って来てください"
+                "いるものを<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください",
+                "<ruby>新しい<rt>あたらしい</rt></ruby>ものを<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください",
+                "<ruby>大きい<rt>おおきい</rt></ruby>ものを<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください",
+                "好きなものを<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください"
               ],
               "answer": 0,
-              "explanation": "必要なもの berarti barang yang diperlukan; いるもの memiliki makna yang dekat."
+              "explanation": "<ruby>必要<rt>ひつよう</rt></ruby>なもの berarti barang yang diperlukan; いるもの memiliki makna yang dekat."
             },
             {
               "itemType": "paraphrases",
-              "question": "「たいてい七時に起きます」と同じ意味に近いものはどれですか。",
+              "question": "「たいてい<ruby>七時<rt>しちじ</rt></ruby>に<ruby>起きます<rt>おきます</rt></ruby>」と同じ意味に<ruby>近い<rt>ちかい</rt></ruby>ものはどれですか。",
               "options": [
-                "ほとんどいつも七時に起きます",
-                "一度だけ七時に起きます",
-                "時々七時に起きます",
-                "毎日遅く起きます"
+                "ほとんどいつも<ruby>七時<rt>しちじ</rt></ruby>に<ruby>起きます<rt>おきます</rt></ruby>",
+                "<ruby>一度<rt>いちど</rt></ruby>だけ<ruby>七時<rt>しちじ</rt></ruby>に<ruby>起きます<rt>おきます</rt></ruby>",
+                "時々<ruby>七時<rt>しちじ</rt></ruby>に<ruby>起きます<rt>おきます</rt></ruby>",
+                "<ruby>毎日<rt>まいにち</rt></ruby><ruby>遅<rt>おそ</rt></ruby>く<ruby>起きます<rt>おきます</rt></ruby>"
               ],
               "answer": 0,
               "explanation": "たいてい berarti biasanya atau hampir selalu."
             },
             {
               "itemType": "usage",
-              "question": "「間に合う」の使い方として正しいものはどれですか。",
+              "question": "「<ruby>間に合う<rt>まにあう</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い方として正しいものはどれですか。",
               "options": [
-                "<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>間<rt>あいだ</rt></ruby>に合うように、<ruby>早<rt>はや</rt></ruby>く<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ました。",
-                "<ruby>水<rt>みず</rt></ruby>を<ruby>間<rt>あいだ</rt></ruby>に合って<ruby>飲<rt>の</rt></ruby>みました。",
-                "<ruby>本<rt>ほん</rt></ruby>を<ruby>間<rt>あいだ</rt></ruby>に合って<ruby>読<rt>よ</rt></ruby>みました。",
-                "<ruby>友達<rt>ともだち</rt></ruby>を<ruby>間<rt>あいだ</rt></ruby>に合って会いました。"
+                "<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>間に合う<rt>まにあう</rt></ruby>ように、<ruby>早<rt>はや</rt></ruby>く家を<ruby>出<rt>で</rt></ruby>ました。",
+                "水を間に合って<ruby>飲<rt>の</rt></ruby>みました。",
+                "本を間に合って<ruby>読<rt>よ</rt></ruby>みました。",
+                "<ruby>友達<rt>ともだち</rt></ruby>を間に合って会いました。"
               ],
               "answer": 0,
-              "explanation": "間に合う berarti tiba tepat waktu atau tidak terlambat. 電車に間に合うように digunakan secara alami."
+              "explanation": "<ruby>間に合う<rt>まにあう</rt></ruby> berarti tiba tepat waktu atau tidak terlambat. <ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>間に合う<rt>まにあう</rt></ruby>ように digunakan secara alami."
             },
             {
               "itemType": "usage",
-              "question": "「集める」の使い方として正しいものはどれですか。",
+              "question": "「<ruby>集める<rt>あつめる</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い方として正しいものはどれですか。",
               "options": [
-                "<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>集<rt>あつ</rt></ruby>めています。",
-                "<ruby>毎朝<rt>まいあさ</rt></ruby>七時を<ruby>集<rt>あつ</rt></ruby>めます。",
-                "<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いて<ruby>集<rt>あつ</rt></ruby>めます。",
-                "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>天気<rt>てんき</rt></ruby>を<ruby>集<rt>あつ</rt></ruby>めて<ruby>食<rt>た</rt></ruby>べました。"
+                "<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>を集めています。",
+                "<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>を集めます。",
+                "<ruby>駅<rt>えき</rt></ruby>まで歩いて集めます。",
+                "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>天気<rt>てんき</rt></ruby>を集めて<ruby>食<rt>た</rt></ruby>べました。"
               ],
               "answer": 0,
-              "explanation": "集める berarti mengumpulkan. Mengumpulkan foto perjalanan adalah penggunaan yang tepat."
+              "explanation": "<ruby>集める<rt>あつめる</rt></ruby> berarti mengumpulkan. Mengumpulkan foto perjalanan adalah penggunaan yang tepat."
             },
             {
               "itemType": "usage",
-              "question": "「続ける」の使い方として正しいものはどれですか。",
+              "question": "「<ruby>続ける<rt>つづける</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い方として正しいものはどれですか。",
               "options": [
-                "<ruby>毎日<rt>まいにち</rt></ruby><ruby>少<rt>すく</rt></ruby>しずつ日<ruby>本<rt>ほん</rt></ruby>語の<ruby>勉強<rt>べんきょう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けています。",
-                "<ruby>駅<rt>えき</rt></ruby>で切符を<ruby>続<rt>つづ</rt></ruby>けました。",
-                "かばんの中に<ruby>水<rt>みず</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けました。",
-                "<ruby>日曜日<rt>にちようび</rt></ruby>に<ruby>友達<rt>ともだち</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けました。"
+                "<ruby>毎日<rt>まいにち</rt></ruby><ruby>少<rt>すく</rt></ruby>しずつ<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>を続けています。",
+                "<ruby>駅<rt>えき</rt></ruby>で<ruby>切符<rt>きっぷ</rt></ruby>を続けました。",
+                "かばんの中に水を続けました。",
+                "<ruby>日曜日<rt>にちようび</rt></ruby>に<ruby>友達<rt>ともだち</rt></ruby>を続けました。"
               ],
               "answer": 0,
-              "explanation": "続ける berarti melanjutkan. 勉強を続ける adalah pasangan kata yang alami."
+              "explanation": "<ruby>続ける<rt>つづける</rt></ruby> berarti melanjutkan. <ruby>勉強<rt>べんきょう</rt></ruby>を<ruby>続ける<rt>つづける</rt></ruby> adalah pasangan kata yang alami."
             },
             {
               "itemType": "usage",
-              "question": "「しっかり」の使い方として正しいものはどれですか。",
+              "question": "「<ruby>しっかり<rt>しっかり</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い方として正しいものはどれですか。",
               "options": [
-                "<ruby>試験<rt>しけん</rt></ruby>の前に、しっかり<ruby>勉強<rt>べんきょう</rt></ruby>しました。",
-                "しっかり<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>お</rt></ruby>るので<ruby>傘<rt>かさ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。",
-                "りんごをしっかり三つ<ruby>食<rt>た</rt></ruby>べました。",
-                "<ruby>駅<rt>えき</rt></ruby>をしっかり<ruby>歩<rt>ある</rt></ruby>いて<ruby>家<rt>いえ</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>りました。"
+                "<ruby>試験<rt>しけん</rt></ruby>の前に、<ruby>しっかり<rt>しっかり</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しました。",
+                "<ruby>しっかり<rt>しっかり</rt></ruby>雨が<ruby>降<rt>ふ</rt></ruby>るので傘を<ruby>買<rt>か</rt></ruby>いました。",
+                "りんごを<ruby>しっかり<rt>しっかり</rt></ruby>三つ<ruby>食<rt>た</rt></ruby>べました。",
+                "<ruby>駅<rt>えき</rt></ruby>を<ruby>しっかり<rt>しっかり</rt></ruby>歩いて家へ<ruby>帰<rt>かえ</rt></ruby>りました。"
               ],
               "answer": 0,
-              "explanation": "しっかり勉強する berarti belajar dengan sungguh-sungguh."
+              "explanation": "<ruby>しっかり<rt>しっかり</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>する berarti belajar dengan sungguh-sungguh."
             }
           ],
           "grammar": [
             {
               "itemType": "sentential-grammar-1",
-              "question": "音楽を（　）ながら、料理をしています。",
+              "question": "<ruby>音楽<rt>おんがく</rt></ruby>を（　）ながら、<ruby>料理<rt>りょうり</rt></ruby>をしています。",
               "options": [
-                "聞き",
-                "聞く",
-                "聞いて",
-                "聞いた"
+                "<ruby>聞<rt>き</rt></ruby>き",
+                "<ruby>聞<rt>き</rt></ruby>く",
+                "<ruby>聞<rt>き</rt></ruby>いて",
+                "<ruby>聞<rt>き</rt></ruby>いた"
               ],
               "answer": 0,
-              "explanation": "Pola ～ながら memakai bentuk ます tanpa ます: 聞きながら."
+              "explanation": "Pola ～ながら memakai bentuk ます tanpa ます: <ruby>聞<rt>き</rt></ruby>きながら."
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "日本へ行ったことが（　）か。",
+              "question": "<ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>ったことが（　）か。",
               "options": [
                 "あります",
                 "います",
@@ -3965,7 +3965,7 @@
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "明日は試験ですから、今晩勉強し（　）なりません。",
+              "question": "<ruby>明日<rt>あした</rt></ruby>は<ruby>試験<rt>しけん</rt></ruby>ですから、今晩<ruby>勉強<rt>べんきょう</rt></ruby>し（　）なりません。",
               "options": [
                 "なくて",
                 "ないで",
@@ -3989,7 +3989,7 @@
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "宿題を家に忘れて（　）。",
+              "question": "<ruby>宿題<rt>しゅくだい</rt></ruby>を家に<ruby>忘れて<rt>わすれて</rt></ruby>（　）。",
               "options": [
                 "しまいました",
                 "おきました",
@@ -4004,9 +4004,9 @@
               "itemType": "sentential-grammar-2",
               "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "日本語を",
-                "毎日",
-                "勉強する",
+                "<ruby>日本語<rt>にほんご</rt></ruby>を",
+                "<ruby>毎日<rt>まいにち</rt></ruby>",
+                "<ruby>勉強<rt>べんきょう</rt></ruby>する",
                 "ようにしています"
               ],
               "correctOrder": [
@@ -4017,15 +4017,15 @@
               ],
               "starPosition": 2,
               "answer": 0,
-              "explanation": "Urutan yang benar: 毎日 → 日本語を → 勉強する → ようにしています. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: <ruby>毎日<rt>まいにち</rt></ruby> → <ruby>日本語<rt>にほんご</rt></ruby>を → <ruby>勉強<rt>べんきょう</rt></ruby>する → ようにしています. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
-              "question": "駅に着いたら ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "question": "<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたら ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "友達に",
-                "電話を",
+                "<ruby>友達<rt>ともだち</rt></ruby>に",
+                "<ruby>電話<rt>でんわ</rt></ruby>を",
                 "する",
                 "ことにします"
               ],
@@ -4037,16 +4037,16 @@
               ],
               "starPosition": 2,
               "answer": 1,
-              "explanation": "Urutan yang benar: 友達に → 電話を → する → ことにします. Potongan nomor 2 berada pada posisi ★."
+              "explanation": "Urutan yang benar: <ruby>友達<rt>ともだち</rt></ruby>に → <ruby>電話<rt>でんわ</rt></ruby>を → する → ことにします. Potongan nomor 2 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
-              "question": "雨が降りそうなので ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "question": "雨が<ruby>降<rt>ふ</rt></ruby>りそうなので ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "持って",
-                "行く",
-                "ことに",
+                "<ruby>持<rt>も</rt></ruby>って",
+                "<ruby>行<rt>い</rt></ruby>く",
+                "ことにします",
                 "傘を"
               ],
               "correctOrder": [
@@ -4057,17 +4057,17 @@
               ],
               "starPosition": 2,
               "answer": 0,
-              "explanation": "Urutan yang benar: 傘を → 持って → 行く → ことにします. Potongan nomor 2 berada pada posisi ★."
+              "explanation": "Urutan yang benar: 傘を → <ruby>持<rt>も</rt></ruby>って → <ruby>行<rt>い</rt></ruby>く → ことにします. Potongan nomor 2 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
-              "question": "日本へ来てから ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "question": "<ruby>日本<rt>にほん</rt></ruby>へ<ruby>来<rt>き</rt></ruby>てから ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "友達が",
+                "<ruby>友達<rt>ともだち</rt></ruby>が",
                 "たくさん",
                 "できました",
-                "日本で"
+                "<ruby>日本<rt>にほん</rt></ruby>で"
               ],
               "correctOrder": [
                 4,
@@ -4077,16 +4077,16 @@
               ],
               "starPosition": 3,
               "answer": 0,
-              "explanation": "Urutan yang benar: 日本で → たくさん → 友達が → できました. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: <ruby>日本<rt>にほん</rt></ruby>で → たくさん → <ruby>友達<rt>ともだち</rt></ruby>が → できました. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "type": "sentence-composition",
               "itemType": "sentential-grammar-2",
               "question": "この本は ＿＿＿ ＿＿＿ ★ ＿＿＿。",
               "options": [
-                "読みやすい",
-                "漢字が",
-                "少ないので",
+                "<ruby>読<rt>よ</rt></ruby>みやすい",
+                "<ruby>漢字<rt>かんじ</rt></ruby>が",
+                "<ruby>少ない<rt>すくない</rt></ruby>ので",
                 "です"
               ],
               "correctOrder": [
@@ -4097,11 +4097,11 @@
               ],
               "starPosition": 3,
               "answer": 0,
-              "explanation": "Urutan yang benar: 漢字が → 少ないので → 読みやすい → です. Potongan nomor 1 berada pada posisi ★."
+              "explanation": "Urutan yang benar: <ruby>漢字<rt>かんじ</rt></ruby>が → <ruby>少ない<rt>すくない</rt></ruby>ので → <ruby>読<rt>よ</rt></ruby>みやすい → です. Potongan nomor 1 berada pada posisi ★."
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "それで",
                 "ところで",
@@ -4110,11 +4110,11 @@
               ],
               "answer": 0,
               "explanation": "Bagian kedua adalah hasil dari persiapan sebelumnya, jadi それで (karena itu) sesuai.",
-              "passage": "昨日は早く寝ました。今朝は早く起きることができました。（　）、朝ごはんをゆっくり食べました。"
+              "passage": "<ruby>昨日<rt>きのう</rt></ruby>は<ruby>早<rt>はや</rt></ruby>く寝ました。今<ruby>朝<rt>あさ</rt></ruby>は<ruby>早<rt>はや</rt></ruby>く<ruby>起きる<rt>おきる</rt></ruby>ことができました。（　）、<ruby>朝<rt>あさ</rt></ruby>ごはんをゆっくり<ruby>食<rt>た</rt></ruby>べました。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "ところが",
                 "それに",
@@ -4123,11 +4123,11 @@
               ],
               "answer": 0,
               "explanation": "Kalimat kedua berlawanan dengan harapan dari kalimat pertama; ところが menyatakan hal yang ternyata berbeda.",
-              "passage": "天気予報では晴れると言っていました。（　）、午後から雨が降り始めました。"
+              "passage": "<ruby>天気予報<rt>てんきよほう</rt></ruby>では<ruby>晴<rt>は</rt></ruby>れると<ruby>言って<rt>いって</rt></ruby>いました。（　）、<ruby>午後<rt>ごご</rt></ruby>から雨が<ruby>降<rt>ふ</rt></ruby>り始めました。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "まず",
                 "しかし",
@@ -4136,11 +4136,11 @@
               ],
               "answer": 0,
               "explanation": "Urutan langkah dimulai dengan まず, lalu langkah berikutnya.",
-              "passage": "料理を作るときは、（　）野菜を洗います。それから、小さく切ります。"
+              "passage": "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>るときは、（　）野菜を洗います。それから、<ruby>小<rt>ちい</rt></ruby>さく切ります。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "そのため",
                 "ところで",
@@ -4149,11 +4149,11 @@
               ],
               "answer": 0,
               "explanation": "Tidur larut menjadi penyebab terlambat bangun; そのため berarti karena hal itu.",
-              "passage": "ゆうべは遅くまで起きていました。（　）、今朝は起きるのが遅くなりました。"
+              "passage": "ゆうべは<ruby>遅<rt>おそ</rt></ruby>くまで<ruby>起き<rt>おき</rt></ruby>ていました。（　）、今<ruby>朝<rt>あさ</rt></ruby>は<ruby>起きる<rt>おきる</rt></ruby>のが<ruby>遅<rt>おそ</rt></ruby>くなりました。"
             },
             {
               "itemType": "text-grammar",
-              "question": "（　）に入るものはどれですか。",
+              "question": "（　）に<ruby>入<rt>はい</rt></ruby>るものはどれですか。",
               "options": [
                 "それに",
                 "でも",
@@ -4162,78 +4162,78 @@
               ],
               "answer": 0,
               "explanation": "Kalimat kedua menambahkan alasan lain untuk pergi ke toko; それに berarti selain itu.",
-              "passage": "この店は駅から近いです。（　）、値段も安いので、よく利用しています。"
+              "passage": "この店は<ruby>駅<rt>えき</rt></ruby>から<ruby>近い<rt>ちかい</rt></ruby>です。（　）、<ruby>値段<rt>ねだん</rt></ruby>も<ruby>安い<rt>やすい</rt></ruby>ので、よく利用しています。"
             }
           ],
           "reading": [
             {
               "itemType": "short-passage",
-              "question": "<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>ってから、何が<ruby>便利<rt>べんり</rt></ruby>になりましたか。",
+              "question": "<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>ってから、<ruby>何<rt>なに</rt></ruby>が<ruby>便利<rt>べんり</rt></ruby>になりましたか。",
               "options": [
-                "駅まで行く時間",
-                "買い物の値段",
-                "図書館の場所",
-                "電車の本数"
+                "<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>く<ruby>時間<rt>じかん</rt></ruby>",
+                "<ruby>買い物<rt>かいもの</rt></ruby>の<ruby>値段<rt>ねだん</rt></ruby>",
+                "<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>",
+                "<ruby>電車<rt>でんしゃ</rt></ruby>の本数"
               ],
               "answer": 0,
               "explanation": "Ia sekarang pergi ke stasiun dengan sepeda, sehingga waktu perjalanan menjadi lebih singkat.",
-              "passage": "<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。前より<ruby>時間<rt>じかん</rt></ruby>がかからなくなって、とても<ruby>便利<rt>べんり</rt></ruby>です。"
+              "passage": "<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新しい<rt>あたらしい</rt></ruby><ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。前より<ruby>時間<rt>じかん</rt></ruby>がかからなくなって、とても<ruby>便利<rt>べんり</rt></ruby>です。"
             },
             {
               "itemType": "short-passage",
-              "question": "佐藤さんは<ruby>毎朝<rt>まいあさ</rt></ruby>どこへ<ruby>行<rt>い</rt></ruby>きますか。",
+              "question": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は<ruby>毎朝<rt>まいあさ</rt></ruby>どこへ<ruby>行<rt>い</rt></ruby>きますか。",
               "options": [
-                "学校",
-                "駅",
-                "会社",
-                "図書館"
+                "<ruby>学校<rt>がっこう</rt></ruby>",
+                "<ruby>駅<rt>えき</rt></ruby>",
+                "<ruby>会社<rt>かいしゃ</rt></ruby>",
+                "<ruby>図書館<rt>としょかん</rt></ruby>"
               ],
               "answer": 1,
-              "explanation": "Bacaan menyebutkan 毎朝それで駅まで行きます, jadi ia pergi ke stasiun.",
-              "passage": "<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。前より<ruby>時間<rt>じかん</rt></ruby>がかからなくなって、とても<ruby>便利<rt>べんり</rt></ruby>です。"
+              "explanation": "Bacaan menyebutkan <ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます, jadi ia pergi ke stasiun.",
+              "passage": "<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新しい<rt>あたらしい</rt></ruby><ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。前より<ruby>時間<rt>じかん</rt></ruby>がかからなくなって、とても<ruby>便利<rt>べんり</rt></ruby>です。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "佐藤さんは何を<ruby>手<rt>て</rt></ruby>伝っていますか。",
+              "question": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は<ruby>何を<rt>なにを</rt></ruby><ruby>手伝<rt>てつだ</rt></ruby>っていますか。",
               "options": [
-                "子どもの宿題",
-                "図書館の掃除",
-                "大会の準備",
+                "<ruby>子ども<rt>こども</rt></ruby>の<ruby>宿題<rt>しゅくだい</rt></ruby>",
+                "<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>掃除<rt>そうじ</rt></ruby>",
+                "<ruby>大会<rt>たいかい</rt></ruby>の<ruby>準備<rt>じゅんび</rt></ruby>",
                 "本の販売"
               ],
               "answer": 0,
-              "explanation": "Ia membantu anak-anak mengerjakan PR: 宿題を手伝ったりします.",
-              "passage": "佐藤さんは<ruby>去年<rt>きょねん</rt></ruby>から地域の<ruby>図書館<rt>としょかん</rt></ruby>でボランティアをしています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>土曜日<rt>どようび</rt></ruby>に子どもたちに<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手<rt>て</rt></ruby>伝ったりします。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>少<rt>すく</rt></ruby>し緊張しましたが、今では子どもたちと<ruby>話<rt>はな</rt></ruby>すのが楽しみになりました。"
+              "explanation": "Ia membantu anak-anak mengerjakan PR: <ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手伝ったり<rt>てつだったり</rt></ruby>します.",
+              "passage": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は<ruby>去年<rt>きょねん</rt></ruby>から<ruby>地域<rt>ちいき</rt></ruby>の<ruby>図書館<rt>としょかん</rt></ruby>でボランティアをしています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>土曜日<rt>どようび</rt></ruby>に<ruby>子ども<rt>こども</rt></ruby>たちに本を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手伝ったり<rt>てつだったり</rt></ruby>します。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>少<rt>すく</rt></ruby>し<ruby>緊張<rt>きんちょう</rt></ruby>しましたが、今では<ruby>子ども<rt>こども</rt></ruby>たちと<ruby>話<rt>はな</rt></ruby>すのが<ruby>楽しみ<rt>たのしみ</rt></ruby>になりました。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "佐藤さんは今、<ruby>土曜日<rt>どようび</rt></ruby>をどう<ruby>思<rt>おも</rt></ruby>っていますか。",
+              "question": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は今、<ruby>土曜日<rt>どようび</rt></ruby>をどう<ruby>思<rt>おも</rt></ruby>っていますか。",
               "options": [
                 "忙しくて嫌です",
-                "子どもたちと話すのが楽しみです",
+                "<ruby>子ども<rt>こども</rt></ruby>たちと<ruby>話<rt>はな</rt></ruby>すのが<ruby>楽しみ<rt>たのしみ</rt></ruby>です",
                 "家で休みたいです",
-                "図書館へ行きたくありません"
+                "<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きたくありません"
               ],
               "answer": 1,
               "explanation": "Di akhir bacaan, ia menikmati berbicara dengan anak-anak.",
-              "passage": "佐藤さんは<ruby>去年<rt>きょねん</rt></ruby>から地域の<ruby>図書館<rt>としょかん</rt></ruby>でボランティアをしています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>土曜日<rt>どようび</rt></ruby>に子どもたちに<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手<rt>て</rt></ruby>伝ったりします。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>少<rt>すく</rt></ruby>し緊張しましたが、今では子どもたちと<ruby>話<rt>はな</rt></ruby>すのが楽しみになりました。"
+              "passage": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は<ruby>去年<rt>きょねん</rt></ruby>から<ruby>地域<rt>ちいき</rt></ruby>の<ruby>図書館<rt>としょかん</rt></ruby>でボランティアをしています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>土曜日<rt>どようび</rt></ruby>に<ruby>子ども<rt>こども</rt></ruby>たちに本を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手伝ったり<rt>てつだったり</rt></ruby>します。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>少<rt>すく</rt></ruby>し<ruby>緊張<rt>きんちょう</rt></ruby>しましたが、今では<ruby>子ども<rt>こども</rt></ruby>たちと<ruby>話<rt>はな</rt></ruby>すのが<ruby>楽しみ<rt>たのしみ</rt></ruby>になりました。"
             },
             {
               "itemType": "information-retrieval",
-              "question": "発表する人は、何時までに会場へ<ruby>来<rt>き</rt></ruby>なければなりませんか。",
+              "question": "<ruby>発表する<rt>はっぴょうする</rt></ruby>人は、<ruby>何時<rt>なんじ</rt></ruby>までに<ruby>会場<rt>かいじょう</rt></ruby>へ<ruby>来<rt>き</rt></ruby>なければなりませんか。",
               "options": [
-                "午後12時",
-                "午後12時30分",
-                "午後1時",
-                "午後1時30分"
+                "<ruby>午後<rt>ごご</rt></ruby>12時",
+                "<ruby>午後<rt>ごご</rt></ruby>12時30分",
+                "<ruby>午後<rt>ごご</rt></ruby>1時",
+                "<ruby>午後<rt>ごご</rt></ruby>1時30分"
               ],
               "answer": 1,
               "explanation": "Pengumuman meminta peserta yang tampil tiba sebelum pukul 12.30.",
-              "passage": "日<ruby>本<rt>ほん</rt></ruby>語スピーチ<ruby>大<rt>おお</rt></ruby>会のお知らせ\n日時：6月15日（日）<ruby>午後<rt>ごご</rt></ruby>1時から\n場所：市民センターの2階\n参加する人は、6月10日までに<ruby>受付<rt>うけつけ</rt></ruby>で<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。発表する人は、<ruby>午後<rt>ごご</rt></ruby>12時30分までに会場へ<ruby>来<rt>き</rt></ruby>てください。<ruby>入<rt>はい</rt></ruby>場は無料です。"
+              "passage": "<ruby>日本語<rt>にほんご</rt></ruby>スピーチ<ruby>大会<rt>たいかい</rt></ruby>のお知らせ\n<ruby>日時<rt>にちじ</rt></ruby>：6月15日<ruby>午後<rt>ごご</rt></ruby>1時から\n<ruby>場所<rt>ばしょ</rt></ruby>：<ruby>市民センター<rt>しみんセンター</rt></ruby>の2<ruby>階<rt>かい</rt></ruby>\n<ruby>参加する<rt>さんかする</rt></ruby>人は、6月10日までに<ruby>受付<rt>うけつけ</rt></ruby>で<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書いて<rt>かいて</rt></ruby>ください。<ruby>発表する<rt>はっぴょうする</rt></ruby>人は、<ruby>午後<rt>ごご</rt></ruby>12時30分までに<ruby>会場<rt>かいじょう</rt></ruby>へ<ruby>来<rt>き</rt></ruby>てください。<ruby>入場<rt>にゅうじょう</rt></ruby>は<ruby>無料<rt>むりょう</rt></ruby>です。"
             },
             {
               "itemType": "information-retrieval",
-              "question": "<ruby>大<rt>おお</rt></ruby>会に参加する人は、いつまでに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>きますか。",
+              "question": "<ruby>大会<rt>たいかい</rt></ruby>に<ruby>参加する<rt>さんかする</rt></ruby>人は、いつまでに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>きますか。",
               "options": [
                 "6月5日まで",
                 "6月10日まで",
@@ -4242,7 +4242,7 @@
               ],
               "answer": 1,
               "explanation": "Nama harus ditulis di resepsionis paling lambat 10 Juni.",
-              "passage": "日<ruby>本<rt>ほん</rt></ruby>語スピーチ<ruby>大<rt>おお</rt></ruby>会のお知らせ\n日時：6月15日（日）<ruby>午後<rt>ごご</rt></ruby>1時から\n場所：市民センターの2階\n参加する人は、6月10日までに<ruby>受付<rt>うけつけ</rt></ruby>で<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。発表する人は、<ruby>午後<rt>ごご</rt></ruby>12時30分までに会場へ<ruby>来<rt>き</rt></ruby>てください。<ruby>入<rt>はい</rt></ruby>場は無料です。"
+              "passage": "<ruby>日本語<rt>にほんご</rt></ruby>スピーチ<ruby>大会<rt>たいかい</rt></ruby>のお知らせ\n<ruby>日時<rt>にちじ</rt></ruby>：6月15日<ruby>午後<rt>ごご</rt></ruby>1時から\n<ruby>場所<rt>ばしょ</rt></ruby>：<ruby>市民センター<rt>しみんセンター</rt></ruby>の2<ruby>階<rt>かい</rt></ruby>\n<ruby>参加する<rt>さんかする</rt></ruby>人は、6月10日までに<ruby>受付<rt>うけつけ</rt></ruby>で<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書いて<rt>かいて</rt></ruby>ください。<ruby>発表する<rt>はっぴょうする</rt></ruby>人は、<ruby>午後<rt>ごご</rt></ruby>12時30分までに<ruby>会場<rt>かいじょう</rt></ruby>へ<ruby>来<rt>き</rt></ruby>てください。<ruby>入場<rt>にゅうじょう</rt></ruby>は<ruby>無料<rt>むりょう</rt></ruby>です。"
             }
           ],
           "listening": [
@@ -4267,12 +4267,12 @@
                   "jp": "わかりました。すぐにお願いしてきます。"
                 }
               ],
-              "question": "男の人は、まず何をしますか。",
+              "question": "<ruby>男の人<rt>おとこのひと</rt></ruby>は、まず<ruby>何を<rt>なにを</rt></ruby>しますか。",
               "options": [
-                "資料を印刷する",
-                "部長に内容を確認してもらう",
-                "会議室を予約する",
-                "同僚に電話する"
+                "<ruby>資料<rt>しりょう</rt></ruby>を<ruby>印刷<rt>いんさつ</rt></ruby>する",
+                "<ruby>部長<rt>ぶちょう</rt></ruby>に<ruby>内容<rt>ないよう</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>してもらう",
+                "<ruby>会議室<rt>かいぎしつ</rt></ruby>を予約する",
+                "<ruby>同僚<rt>どうりょう</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>する"
               ],
               "answer": 1,
               "explanation": "Pria itu akan meminta atasannya memeriksa isi dokumen terlebih dahulu."
@@ -4294,12 +4294,12 @@
                   "jp": "そうですね。駅の近くにいい店があります。"
                 }
               ],
-              "question": "二人は<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたあと、まず何をしますか。",
+              "question": "<ruby>二人<rt>ふたり</rt></ruby>は<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたあと、まず<ruby>何を<rt>なにを</rt></ruby>しますか。",
               "options": [
-                "ホテルに入る",
-                "昼ごはんを食べる",
-                "買い物をする",
-                "電車に乗る"
+                "ホテルに<ruby>入<rt>はい</rt></ruby>る",
+                "<ruby>昼<rt>ひる</rt></ruby>ごはんを<ruby>食<rt>た</rt></ruby>べる",
+                "<ruby>買い物<rt>かいもの</rt></ruby>をする",
+                "<ruby>電車<rt>でんしゃ</rt></ruby>に乗る"
               ],
               "answer": 1,
               "explanation": "Check-in baru dimulai pukul tiga, jadi mereka akan makan siang lebih dahulu."
@@ -4325,12 +4325,12 @@
                   "jp": "わかりました。"
                 }
               ],
-              "question": "男の人は、どんな紙を<ruby>使<rt>つか</rt></ruby>いますか。",
+              "question": "<ruby>男の人<rt>おとこのひと</rt></ruby>は、どんな紙を<ruby>使<rt>つか</rt></ruby>いますか。",
               "options": [
-                "白い紙",
+                "<ruby>白い<rt>しろい</rt></ruby>紙",
                 "青い紙",
-                "少し厚い紙",
-                "小さい紙"
+                "<ruby>少<rt>すく</rt></ruby>し厚い紙",
+                "<ruby>小さい<rt>ちいさい</rt></ruby>紙"
               ],
               "answer": 2,
               "explanation": "Wanita meminta kertas yang sedikit tebal untuk rapat."
@@ -4352,12 +4352,12 @@
                   "jp": "わかりました。朝、天気を確認しましょう。"
                 }
               ],
-              "question": "<ruby>雨<rt>あめ</rt></ruby>が強い場合、二人はどうしますか。",
+              "question": "雨が<ruby>強い<rt>つよい</rt></ruby><ruby>場合<rt>ばあい</rt></ruby>、<ruby>二人<rt>ふたり</rt></ruby>はどうしますか。",
               "options": [
-                "旅行を中止する",
-                "予定どおり出かける",
-                "午後から出かける",
-                "別の町へ行く"
+                "<ruby>旅行<rt>りょこう</rt></ruby>を<ruby>中止<rt>ちゅうし</rt></ruby>する",
+                "<ruby>予定どおり<rt>よていどおり</rt></ruby><ruby>出かける<rt>でかける</rt></ruby>",
+                "<ruby>午後<rt>ごご</rt></ruby>から<ruby>出かける<rt>でかける</rt></ruby>",
+                "<ruby>別<rt>べつ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く"
               ],
               "answer": 0,
               "explanation": "Jika hujan deras, perjalanan dibatalkan."
@@ -4379,12 +4379,12 @@
                   "jp": "わかりました。"
                 }
               ],
-              "question": "バスは何時に<ruby>出<rt>で</rt></ruby>ますか。",
+              "question": "バスは<ruby>何時<rt>なんじ</rt></ruby>に<ruby>出<rt>で</rt></ruby>ますか。",
               "options": [
-                "九時",
-                "九時十分",
-                "九時半",
-                "十時"
+                "<ruby>九時<rt>くじ</rt></ruby>",
+                "<ruby>九時<rt>くじ</rt></ruby>十分",
+                "<ruby>九時半<rt>くじはん</rt></ruby>",
+                "<ruby>十時<rt>じゅうじ</rt></ruby>"
               ],
               "answer": 1,
               "explanation": "Bus terlambat sepuluh menit dari jadwal, jadi berangkat pukul 9.10."
@@ -4408,10 +4408,10 @@
               ],
               "question": "シャツはいくらで<ruby>買<rt>か</rt></ruby>えますか。",
               "options": [
-                "二千円",
-                "二千四百円",
-                "二千五百円",
-                "三千円"
+                "<ruby>二千円<rt>にせんえん</rt></ruby>",
+                "<ruby>二千四百円<rt>にせんよんひゃくえん</rt></ruby>",
+                "<ruby>二千五百円<rt>にせんごひゃくえん</rt></ruby>",
+                "<ruby>三千円<rt>さんぜんえん</rt></ruby>"
               ],
               "answer": 1,
               "explanation": "Harga 3.000 yen dengan diskon 20% menjadi 2.400 yen."
@@ -4429,7 +4429,7 @@
                   "jp": "まっすぐ歩いて十分ぐらいです。バスなら五分ですが、道が混んでいます。"
                 }
               ],
-              "question": "<ruby>歩<rt>ある</rt></ruby>いて会場までどのくらいかかりますか。",
+              "question": "歩いて<ruby>会場<rt>かいじょう</rt></ruby>までどのくらいかかりますか。",
               "options": [
                 "五分",
                 "十分",
@@ -4456,12 +4456,12 @@
                   "jp": "では、八時半ですね。"
                 }
               ],
-              "question": "二人は何時に<ruby>集<rt>あつ</rt></ruby>まりますか。",
+              "question": "<ruby>二人<rt>ふたり</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>に集まりますか。",
               "options": [
-                "七時半",
-                "八時",
-                "八時半",
-                "九時"
+                "<ruby>七時半<rt>しちじはん</rt></ruby>",
+                "<ruby>八時<rt>はちじ</rt></ruby>",
+                "<ruby>八時半<rt>はちじはん</rt></ruby>",
+                "<ruby>九時<rt>くじ</rt></ruby>"
               ],
               "answer": 2,
               "explanation": "Waktu berkumpul diubah dari pukul delapan menjadi terlambat 30 menit, yaitu 8.30."
@@ -4475,15 +4475,15 @@
                   "jp": "友達が引っ越しを手伝ってくれました。"
                 }
               ],
-              "question": "<ruby>友達<rt>ともだち</rt></ruby>に何と言いますか。",
+              "question": "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
-                "手伝ってくれてありがとう",
-                "お先に失礼します",
-                "どうぞお入りください",
-                "気をつけて行ってください"
+                "<ruby>手伝<rt>てつだ</rt></ruby>ってくれてありがとう",
+                "お先に<ruby>失礼<rt>しつれい</rt></ruby>します",
+                "どうぞお<ruby>入<rt>はい</rt></ruby>りください",
+                "気をつけて<ruby>行<rt>い</rt></ruby>ってください"
               ],
               "answer": 0,
-              "explanation": "Untuk berterima kasih atas bantuan teman, ungkapan yang sesuai adalah 手伝ってくれてありがとう."
+              "explanation": "Untuk berterima kasih atas bantuan teman, ungkapan yang sesuai adalah <ruby>手伝<rt>てつだ</rt></ruby>ってくれてありがとう."
             },
             {
               "itemType": "verbal-expressions",
@@ -4494,15 +4494,15 @@
                   "jp": "店で買った商品に問題があり、店員に交換をお願いしたいです。"
                 }
               ],
-              "question": "<ruby>店員<rt>てんいん</rt></ruby>に何と言いますか。",
+              "question": "<ruby>店員<rt>てんいん</rt></ruby>に<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
-                "これを交換していただけますか",
-                "これを食べてもいいですか",
-                "お会計をお願いします",
-                "少々お待ちください"
+                "これを<ruby>交換<rt>こうかん</rt></ruby>していただけますか",
+                "これを<ruby>食<rt>た</rt></ruby>べてもいいですか",
+                "お<ruby>会計<rt>かいけい</rt></ruby>をお<ruby>願<rt>ねが</rt></ruby>いします",
+                "<ruby>少々<rt>しょうしょう</rt></ruby>お<ruby>待<rt>ま</rt></ruby>ちください"
               ],
               "answer": 0,
-              "explanation": "Meminta pertukaran barang dengan sopan dapat memakai 交換していただけますか."
+              "explanation": "Meminta pertukaran barang dengan sopan dapat memakai <ruby>交換<rt>こうかん</rt></ruby>していただけますか."
             },
             {
               "itemType": "verbal-expressions",
@@ -4513,10 +4513,10 @@
                   "jp": "友達の家に招待されて、帰る時間になりました。"
                 }
               ],
-              "question": "<ruby>帰<rt>かえ</rt></ruby>るとき、何と言いますか。",
+              "question": "<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
-                "今日はありがとうございました",
-                "お待たせしました",
+                "<ruby>今日<rt>きょう</rt></ruby>はありがとうございました",
+                "お<ruby>待<rt>ま</rt></ruby>たせしました",
                 "いただきます",
                 "ごめんください"
               ],
@@ -4532,15 +4532,15 @@
                   "jp": "会議で自分の意見を言う前に、相手に話してもいいか聞きたいです。"
                 }
               ],
-              "question": "何と言いますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>言います<rt>いいます</rt></ruby>か。",
               "options": [
-                "ちょっと意見を言ってもいいですか",
-                "もう一度お願いします",
-                "何時に始まりますか",
+                "ちょっと<ruby>意見<rt>いけん</rt></ruby>を<ruby>言って<rt>いって</rt></ruby>もいいですか",
+                "もう<ruby>一度<rt>いちど</rt></ruby>お<ruby>願<rt>ねが</rt></ruby>いします",
+                "<ruby>何時<rt>なんじ</rt></ruby>に始まりますか",
                 "お先にどうぞ"
               ],
               "answer": 0,
-              "explanation": "Sebelum menyampaikan pendapat, minta izin dengan ちょっと意見を言ってもいいですか."
+              "explanation": "Sebelum menyampaikan pendapat, minta izin dengan ちょっと<ruby>意見<rt>いけん</rt></ruby>を<ruby>言って<rt>いって</rt></ruby>もいいですか."
             },
             {
               "itemType": "quick-response",
@@ -4551,12 +4551,12 @@
                   "jp": "この書類、今日中に出さなければなりませんか。"
                 }
               ],
-              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
-                "はい、今日の五時までにお願いします",
-                "いいえ、昨日出しました",
-                "はい、ここで食べます",
-                "明日は雨でしょう"
+                "はい、<ruby>今日<rt>きょう</rt></ruby>の<ruby>五時<rt>ごじ</rt></ruby>までにお<ruby>願<rt>ねが</rt></ruby>いします",
+                "いいえ、<ruby>昨日<rt>きのう</rt></ruby><ruby>出<rt>で</rt></ruby>しました",
+                "はい、ここで<ruby>食<rt>た</rt></ruby>べます",
+                "<ruby>明日<rt>あした</rt></ruby>は雨でしょう"
               ],
               "answer": 0,
               "explanation": "Pertanyaan menanyakan batas waktu dokumen; jawaban yang cocok menyebut hari ini pukul lima."
@@ -4570,12 +4570,12 @@
                   "jp": "駅までどうやって行けばいいですか。"
                 }
               ],
-              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
-                "この道をまっすぐ行ってください",
-                "駅は八時に閉まります",
-                "切符を二枚買いました",
-                "昨日行ったことがあります"
+                "この<ruby>道<rt>みち</rt></ruby>をまっすぐ<ruby>行<rt>い</rt></ruby>ってください",
+                "<ruby>駅<rt>えき</rt></ruby>は<ruby>八時<rt>はちじ</rt></ruby>に閉まります",
+                "<ruby>切符<rt>きっぷ</rt></ruby>を<ruby>二枚<rt>にまい</rt></ruby><ruby>買<rt>か</rt></ruby>いました",
+                "<ruby>昨日<rt>きのう</rt></ruby><ruby>行<rt>い</rt></ruby>ったことがあります"
               ],
               "answer": 0,
               "explanation": "Pertanyaan menanyakan cara menuju stasiun, jadi berikan petunjuk arah."
@@ -4589,12 +4589,12 @@
                   "jp": "すみません、もう少しゆっくり話していただけませんか。"
                 }
               ],
-              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
                 "はい、わかりました",
-                "いいえ、話しませんでした",
+                "いいえ、<ruby>話<rt>はな</rt></ruby>しませんでした",
                 "どういたしまして",
-                "お先に失礼します"
+                "お先に<ruby>失礼<rt>しつれい</rt></ruby>します"
               ],
               "answer": 0,
               "explanation": "Permintaan agar berbicara lebih pelan dijawab dengan persetujuan: はい、わかりました."
@@ -4608,12 +4608,12 @@
                   "jp": "週末、何か予定がありますか。"
                 }
               ],
-              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
-                "土曜日は友達と映画を見るつもりです",
-                "昨日は雨が降りました",
-                "駅はあそこにあります",
-                "この本は千円です"
+                "<ruby>土曜日<rt>どようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>と<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>るつもりです",
+                "<ruby>昨日<rt>きのう</rt></ruby>は雨が<ruby>降<rt>ふ</rt></ruby>りました",
+                "<ruby>駅<rt>えき</rt></ruby>はあそこにあります",
+                "この本は<ruby>千円<rt>せんえん</rt></ruby>です"
               ],
               "answer": 0,
               "explanation": "Pertanyaan menanyakan rencana akhir pekan; jawaban yang sesuai menjelaskan rencana."
