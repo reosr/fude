@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useStudyProgress } from "@/lib/study-progress";
 import {
   ArrowRight,
   BookOpen,
+  CheckCircle2,
   BriefcaseBusiness,
   HeartPulse,
   House,
@@ -19,6 +21,7 @@ import {
 const categories = [
   {
     number: "01",
+    id: "salam-perkenalan",
     title: "Salam dan Perkenalan",
     description: "Menyapa, memperkenalkan diri dan orang lain, serta membuka percakapan.",
     icon: Users,
@@ -28,6 +31,7 @@ const categories = [
   },
   {
     number: "02",
+    id: "belanja-minimarket",
     title: "Belanja dan Minimarket",
     description: "Bertanya barang, ukuran, harga, pembayaran, dan bantuan pegawai.",
     icon: ShoppingBag,
@@ -37,6 +41,7 @@ const categories = [
   },
   {
     number: "03",
+    id: "restoran-makanan",
     title: "Restoran dan Makanan",
     description: "Reservasi, memilih menu, memesan hidangan, dan membayar.",
     icon: Utensils,
@@ -46,6 +51,7 @@ const categories = [
   },
   {
     number: "04",
+    id: "transportasi-perjalanan",
     title: "Transportasi dan Perjalanan",
     description: "Tiket, peron, pindah kereta, bus, jadwal, dan kendala perjalanan.",
     icon: TrainFront,
@@ -55,6 +61,7 @@ const categories = [
   },
   {
     number: "05",
+    id: "tempat-tinggal-sehari-hari",
     title: "Tempat Tinggal dan Kehidupan Sehari-hari",
     description: "Masalah rumah, tetangga, aturan sampah, paket, dan fasilitas gedung.",
     icon: House,
@@ -64,6 +71,7 @@ const categories = [
   },
   {
     number: "06",
+    id: "kesehatan-keadaan-darurat",
     title: "Kesehatan dan Keadaan Darurat",
     description: "Mendaftar di klinik, menjelaskan gejala, bertanya tentang obat, dan meminta bantuan darurat.",
     icon: HeartPulse,
@@ -73,6 +81,7 @@ const categories = [
   },
   {
     number: "07",
+    id: "sekolah-pendidikan",
     title: "Sekolah dan Pendidikan",
     description: "Bertanya kepada guru, meminta izin, mengurus tugas, dan kerja kelompok.",
     icon: GraduationCap,
@@ -82,6 +91,7 @@ const categories = [
   },
   {
     number: "08",
+    id: "pekerjaan-kantor",
     title: "Pekerjaan dan Lingkungan Kantor",
     description: "Komunikasi dengan atasan, instruksi kerja, laporan, rapat, dan izin.",
     icon: BriefcaseBusiness,
@@ -91,6 +101,7 @@ const categories = [
   },
   {
     number: "09",
+    id: "hotel-akomodasi",
     title: "Hotel dan Akomodasi",
     description: "Reservasi, check-in, fasilitas kamar, bantuan, dan check-out.",
     icon: Hotel,
@@ -100,6 +111,7 @@ const categories = [
   },
   {
     number: "10",
+    id: "komunikasi-hubungan-sosial",
     title: "Komunikasi dan Hubungan Sosial",
     description: "Telepon, pesan, ajakan, penolakan sopan, dan menyampaikan pendapat.",
     icon: MessageCircle,
@@ -110,6 +122,12 @@ const categories = [
 ];
 
 export default function UngkapanPraktisPage() {
+  const progress = useStudyProgress();
+  const completedCount = categories.filter((category) =>
+    progress.completedPracticalCategories.includes(category.id)
+  ).length;
+  const completionPercent = Math.round((completedCount / categories.length) * 100);
+
   return (
     <div className="mx-auto max-w-5xl space-y-7 pb-10">
       <div className="flex items-start gap-3">
@@ -134,14 +152,17 @@ export default function UngkapanPraktisPage() {
         <div className="flex items-center justify-between gap-3">
           <div>
             <p className="text-sm font-bold text-[#EAE6DD]">Jalur komunikasi praktis</p>
-            <p className="mt-1 text-xs text-[#A3A099]">Seluruh 10 kategori sudah tersedia</p>
+            <p className="mt-1 text-xs text-[#A3A099]">10 kategori tersedia · progres penyelesaianmu</p>
           </div>
-          <span className="rounded-full border border-[#269B70]/30 bg-[#269B70]/10 px-3 py-1 text-xs font-bold text-[#66C49C]">
-            10 / 10
+          <span className="rounded-full border border-[#33312E] bg-[#121110]/60 px-3 py-1 text-xs font-bold text-[#D9B66D]">
+            {completedCount} / 10 selesai
           </span>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#121110]">
-          <div className="h-full w-full rounded-full bg-gradient-to-r from-[#B8860B] to-[#269B70]" />
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-[#B8860B] to-[#269B70] transition-all duration-500"
+            style={{ width: `${completionPercent}%` }}
+          />
         </div>
         <p className="mt-3 text-xs leading-relaxed text-[#817A73]">
           Materi ini melengkapi halaman Baca. Cerita dan latihan membaca yang sudah ada tetap berada di sana.
@@ -166,6 +187,7 @@ export default function UngkapanPraktisPage() {
       <div className="grid gap-3 sm:grid-cols-2">
         {categories.map((category) => {
           const Icon = category.icon;
+          const isCompleted = progress.completedPracticalCategories.includes(category.id);
           const content = (
             <>
               <div className="flex items-start justify-between gap-3">
@@ -185,8 +207,8 @@ export default function UngkapanPraktisPage() {
                 </p>
               </div>
               <div className="mt-4 flex items-center justify-between border-t border-[#33312E]/80 pt-3">
-                <span className={"text-[10px] font-semibold " + (category.available ? "text-[#66C49C]" : "text-[#817A73]")}>
-                  {category.lessons}
+                <span className={"inline-flex items-center gap-1 text-[10px] font-semibold " + (isCompleted ? "text-[#66C49C]" : category.available ? "text-[#A3A099]" : "text-[#817A73]")}>
+                  {isCompleted ? <><CheckCircle2 size={12} /> Selesai dipelajari</> : category.lessons}
                 </span>
                 {category.available ? (
                   <span className="flex items-center gap-1 text-xs font-bold text-[#D9B66D]">
