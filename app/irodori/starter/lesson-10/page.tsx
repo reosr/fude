@@ -20,7 +20,7 @@ const dialogs: {title:string;desc:string;data:IrodoriUtterance[]}[] = [
 {title:"02 · Mengonfirmasi jumlah dan waktu",desc:"Mengulang jumlah salinan dan memastikan waktu kedatangan.",data:[
 {speakerId:"kenji",japanese:<>コピーを30<ruby>枚<rt>まい</rt></ruby>、お願いします。</>,romaji:"Kopii o sanjuu-mai, onegai shimasu.",translation:"Tolong fotokopi 30 lembar.",audioFileName:"irodori-starter-10-a02-l01.mp3"},
 {speakerId:"sota",japanese:<>はい、30<ruby>枚<rt>まい</rt></ruby>ですね。</>,romaji:"Hai, sanjuu-mai desu ne.",translation:"Baik, 30 lembar, ya.",audioFileName:"irodori-starter-10-a02-l02.mp3"},
-{speakerId:"kenji",japanese:<>2<ruby>時<rt>じ</rt></ruby>までに<ruby>会議室<rt>かいぎしつ</rt></ruby>に<ruby>来<rt>き</rt></ruby>てください。</>,romaji:"Niji made ni kaigishitsu ni kite kudasai.",translation:"Tolong datang ke ruang rapat sebelum pukul dua.",audioFileName:"irodori-starter-10-a02-l03.mp3"},
+{speakerId:"kenji",japanese:<>2<ruby>時<rt>じ</rt></ruby>までに<ruby>会議室<rt>かいぎしつ</rt></ruby>に<ruby>来<rt>き</rt></ruby>てください。</>,romaji:"Niji made ni kaigishitsu ni kite kudasai.",translation:"Tolong datang ke ruang rapat paling lambat pukul dua.",audioFileName:"irodori-starter-10-a02-l03.mp3"},
 {speakerId:"sota",japanese:<>すみません。<ruby>何時<rt>なんじ</rt></ruby>ですか？</>,romaji:"Sumimasen. Nanji desu ka?",translation:"Maaf, pukul berapa?",audioFileName:"irodori-starter-10-a02-l04.mp3"},
 {speakerId:"kenji",japanese:<>2<ruby>時<rt>じ</rt></ruby>です。</>,romaji:"Niji desu.",translation:"Pukul dua.",audioFileName:"irodori-starter-10-a02-l05.mp3"}]},
 {title:"03 · Membaca memo kerja",desc:"Memahami pesan singkat tentang tindakan yang perlu dilakukan.",data:[
