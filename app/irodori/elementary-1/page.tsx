@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
-import { useIrodoriProgress } from "@/lib/irodori-progress";
+import { isIrodoriLessonUnlocked, useIrodoriProgress } from "@/lib/irodori-progress";
 
 const lessons = Array.from({ length: 18 }, (_, index) => index + 1);
 
@@ -11,24 +11,9 @@ export default function IrodoriElementaryOnePage() {
   const completedCount = progress.completedLessons.filter((id) =>
     id.startsWith("elementary1-")
   ).length;
-  const lessonOneCompleted = progress.completedLessons.includes("elementary1-01");
-  const lessonTwoCompleted = progress.completedLessons.includes("elementary1-02");
-  const lessonThreeCompleted = progress.completedLessons.includes("elementary1-03");
-  const lessonFourCompleted = progress.completedLessons.includes("elementary1-04");
-  const lessonFiveCompleted = progress.completedLessons.includes("elementary1-05");
-  const lessonSixCompleted = progress.completedLessons.includes("elementary1-06");
-  const lessonSevenCompleted = progress.completedLessons.includes("elementary1-07");
-  const lessonEightCompleted = progress.completedLessons.includes("elementary1-08");
-  const lessonNineCompleted = progress.completedLessons.includes("elementary1-09");
-  const lessonTenCompleted = progress.completedLessons.includes("elementary1-10");
-  const lessonElevenCompleted = progress.completedLessons.includes("elementary1-11");
-  const lessonTwelveCompleted = progress.completedLessons.includes("elementary1-12");
-  const lessonSeventeenCompleted = progress.completedLessons.includes("elementary1-17");
-  const lessonSixteenCompleted = progress.completedLessons.includes("elementary1-16");
-  const lessonFifteenCompleted = progress.completedLessons.includes("elementary1-15");
-  const lessonFourteenCompleted = progress.completedLessons.includes("elementary1-14");
-  const lessonThirteenCompleted = progress.completedLessons.includes("elementary1-13");
-  const availableCount = lessonSeventeenCompleted ? 18 : lessonSixteenCompleted ? 17 : lessonFifteenCompleted ? 16 : lessonFourteenCompleted ? 15 : lessonThirteenCompleted ? 14 : lessonTwelveCompleted ? 13 : lessonElevenCompleted ? 12 : lessonTenCompleted ? 11 : lessonNineCompleted ? 10 : lessonEightCompleted ? 9 : lessonSevenCompleted ? 8 : lessonSixCompleted ? 7 : lessonFiveCompleted ? 6 : lessonFourCompleted ? 5 : lessonThreeCompleted ? 4 : lessonTwoCompleted ? 3 : lessonOneCompleted ? 2 : 1;
+  const availableCount = lessons.filter((lesson) =>
+    isIrodoriLessonUnlocked("elementary-1", lesson, progress.completedLessons)
+  ).length;
 
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-12">
@@ -94,25 +79,7 @@ export default function IrodoriElementaryOnePage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson === 1
-              || (lesson === 2 && lessonOneCompleted)
-              || (lesson === 3 && lessonTwoCompleted)
-              || (lesson === 4 && lessonThreeCompleted)
-              || (lesson === 5 && lessonFourCompleted)
-              || (lesson === 6 && lessonFiveCompleted)
-              || (lesson === 7 && lessonSixCompleted)
-              || (lesson === 8 && lessonSevenCompleted)
-              || (lesson === 9 && lessonEightCompleted)
-              || (lesson === 10 && lessonNineCompleted)
-              || (lesson === 11 && lessonTenCompleted)
-              || (lesson === 12 && lessonElevenCompleted)
-              || (lesson === 13 && lessonTwelveCompleted)
-              || (lesson === 14 && lessonThirteenCompleted)
-              || (lesson === 15 && lessonFourteenCompleted)
-              || (lesson === 16 && lessonFifteenCompleted)
-              || (lesson === 17 && lessonSixteenCompleted)
-              || (lesson === 18 && lessonSeventeenCompleted);
-            const lessonId = "elementary1-" + String(lesson).padStart(2, "0");
+            const isAvailable = isIrodoriLessonUnlocked("elementary-1", lesson, progress.completedLessons);
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle = lesson === 1
               ? "Saya bekerja di restoran."

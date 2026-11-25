@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
-import { useIrodoriProgress } from "@/lib/irodori-progress";
+import { isIrodoriLessonUnlocked, useIrodoriProgress } from "@/lib/irodori-progress";
 
 const implementedLessons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 const lessons = [
@@ -29,6 +29,9 @@ const lessons = [
 export default function IrodoriPreIntermediatePage() {
   const progress = useIrodoriProgress();
   const completedCount = progress.completedLessons.filter((id) => id.startsWith("preintermediate-")).length;
+  const availableCount = lessons.filter((lesson) =>
+    isIrodoriLessonUnlocked("pre-intermediate", lesson.number, progress.completedLessons)
+  ).length;
   const topics = [...new Set(lessons.map((lesson) => lesson.topic))];
 
   return (
@@ -41,8 +44,8 @@ export default function IrodoriPreIntermediatePage() {
         <div className="relative z-10">
           <p className="text-[9px] font-black tracking-[0.24em] text-[#C8A9EA]">IRODORI • PRA-MENENGAH</p>
           <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
-            <div><h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pra-Menengah</h1><p className="mt-1 text-sm font-semibold text-[#C8A9EA]">Tingkat A2/B1 · 18 dari 18 tersedia</p></div>
-            <span className="rounded-xl border border-[#B79ADE]/25 bg-[#80619B]/20 px-3 py-2 text-[10px] font-bold text-[#E3D5F6]">9 topik • 18 tersedia</span>
+            <div><h1 className="font-mincho text-3xl font-bold text-[#F1EBDD] md:text-4xl">Pra-Menengah</h1><p className="mt-1 text-sm font-semibold text-[#C8A9EA]">Tingkat A2/B1 · {availableCount} dari 18 terbuka</p></div>
+            <span className="rounded-xl border border-[#B79ADE]/25 bg-[#80619B]/20 px-3 py-2 text-[10px] font-bold text-[#E3D5F6]">9 topik • {availableCount}/18 terbuka</span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">Mengembangkan kemampuan untuk memahami informasi yang lebih panjang, bertukar pendapat, menjelaskan pengalaman, membaca teks praktis, dan menyampaikan pesan dengan lebih terstruktur.</p>
           <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
@@ -53,7 +56,7 @@ export default function IrodoriPreIntermediatePage() {
         </div>
       </header>
       <section className="space-y-4">
-        <div><p className="text-[9px] font-black tracking-[0.22em] text-[#C8A9EA]">MATERI PRA-MENENGAH A2/B1</p><h2 className="mt-1 text-xl font-black text-[#EAE6DD]">Daftar pelajaran</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sembilan topik dengan 18 rencana pelajaran. Saat ini, seluruh 18 pelajaran sudah tersedia; materi berikutnya akan dibuka setelah siap dan mengikuti urutan belajar.</p></div>
+        <div><p className="text-[9px] font-black tracking-[0.22em] text-[#C8A9EA]">MATERI PRA-MENENGAH A2/B1</p><h2 className="mt-1 text-xl font-black text-[#EAE6DD]">Daftar pelajaran</h2><p className="mt-1 text-xs leading-6 text-[#A9A398]">Sembilan topik dengan 18 pelajaran. Pelajaran dibuka bertahap sesuai progresmu; selesaikan satu pelajaran untuk membuka pelajaran berikutnya.</p></div>
         <div className="space-y-5">
           {topics.map((topic) => (
             <section key={topic} className="space-y-3">
@@ -62,9 +65,8 @@ export default function IrodoriPreIntermediatePage() {
                 {lessons.filter((lesson) => lesson.topic === topic).map((lesson) => {
                   const lessonId = "preintermediate-" + String(lesson.number).padStart(2, "0");
                   const isImplemented = implementedLessons.includes(lesson.number);
-                  const previousCompleted = lesson.number === 1 || progress.completedLessons.includes("preintermediate-" + String(lesson.number - 1).padStart(2, "0"));
                   const isCompleted = progress.completedLessons.includes(lessonId);
-                  const isAvailable = isImplemented && (previousCompleted || isCompleted);
+                  const isAvailable = isImplemented && isIrodoriLessonUnlocked("pre-intermediate", lesson.number, progress.completedLessons);
                   const card = (
                     <div className={"relative isolate h-full overflow-hidden rounded-2xl border p-4 shadow-lg shadow-black/10 transition-all " + (isAvailable ? "border-[#80619B]/35 bg-gradient-to-br from-[#392B4D]/60 to-[#191817] group-hover:-translate-y-0.5 group-hover:border-[#C8A9EA]/55" : "border-white/[0.07] bg-[#191817]/80 opacity-75")}>
                       <div className="flex items-center justify-between gap-3"><span className="text-[9px] font-black tracking-[0.2em] text-[#C8A9EA]">PELAJARAN {String(lesson.number).padStart(2, "0")}</span><span className={"inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[9px] font-bold " + (isCompleted ? "border-emerald-500/25 bg-emerald-500/10 text-emerald-300" : isAvailable ? "border-[#B79ADE]/25 bg-[#80619B]/15 text-[#E3D5F6]" : "border-white/10 bg-white/[0.04] text-[#817A73]")}>{isCompleted ? <CheckCircle2 size={11} /> : isAvailable ? <BookOpen size={11} /> : <Lock size={11} />}{isCompleted ? "Selesai" : isAvailable ? "Bisa dipelajari" : "Terkunci"}</span></div>

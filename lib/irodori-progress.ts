@@ -13,6 +13,26 @@ export interface IrodoriProgress {
 export const IRODORI_PROGRESS_STORAGE_KEY = "fude_irodori_progress_v1";
 export const IRODORI_PROGRESS_UPDATED_EVENT = "fude:irodori-progress-updated";
 
+export function getIrodoriLessonId(courseId: string, lessonNumber: number): string {
+  const prefix = courseId.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return `${prefix}-${String(lessonNumber).padStart(2, "0")}`;
+}
+
+export function isIrodoriLessonUnlocked(
+  courseId: string,
+  lessonNumber: number,
+  completedLessons: string[]
+): boolean {
+  if (!Number.isInteger(lessonNumber) || lessonNumber < 1) return false;
+
+  const currentLessonId = getIrodoriLessonId(courseId, lessonNumber);
+  if (completedLessons.includes(currentLessonId)) return true;
+  if (lessonNumber === 1) return true;
+
+  const previousLessonId = getIrodoriLessonId(courseId, lessonNumber - 1);
+  return completedLessons.includes(previousLessonId);
+}
+
 const EMPTY_PROGRESS: IrodoriProgress = {
   completedLessons: [],
   selfEvaluations: {},

@@ -15367,5 +15367,1484 @@
         "meaning": "Fasilitas dan tunjangan karyawan"
       }
     ]
+  },
+  {
+    "lessonId": "preintermediate-02",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 2,
+    "lessonTitle": "Saya paling suka menonton drama.",
+    "vocab": [
+      {
+        "kanji": "映画",
+        "kana": "えいが",
+        "romaji": "eiga",
+        "meaning": "Film"
+      },
+      {
+        "kanji": "ドラマ",
+        "kana": "ドラマ",
+        "romaji": "dorama",
+        "meaning": "Drama atau serial televisi"
+      },
+      {
+        "kanji": "漫画",
+        "kana": "まんが",
+        "romaji": "manga",
+        "meaning": "Manga; komik Jepang"
+      },
+      {
+        "kanji": "小説",
+        "kana": "しょうせつ",
+        "romaji": "shousetsu",
+        "meaning": "Novel"
+      },
+      {
+        "kanji": "音楽",
+        "kana": "おんがく",
+        "romaji": "ongaku",
+        "meaning": "Musik"
+      },
+      {
+        "kanji": "読書",
+        "kana": "どくしょ",
+        "romaji": "dokusho",
+        "meaning": "Membaca buku"
+      },
+      {
+        "kanji": "ゲーム",
+        "kana": "ゲーム",
+        "romaji": "geemu",
+        "meaning": "Game"
+      },
+      {
+        "kanji": "ジャンル",
+        "kana": "ジャンル",
+        "romaji": "janru",
+        "meaning": "Genre"
+      },
+      {
+        "kanji": "主人公",
+        "kana": "しゅじんこう",
+        "romaji": "shujinkou",
+        "meaning": "Tokoh utama"
+      },
+      {
+        "kanji": "登場人物",
+        "kana": "とうじょうじんぶつ",
+        "romaji": "toujoujinbutsu",
+        "meaning": "Tokoh dalam cerita"
+      },
+      {
+        "kanji": "原作",
+        "kana": "げんさく",
+        "romaji": "gensaku",
+        "meaning": "Karya asli yang menjadi sumber adaptasi"
+      },
+      {
+        "kanji": "ストーリー",
+        "kana": "ストーリー",
+        "romaji": "sutoorii",
+        "meaning": "Alur cerita"
+      },
+      {
+        "kanji": "展開",
+        "kana": "てんかい",
+        "romaji": "tenkai",
+        "meaning": "Perkembangan atau alur cerita"
+      },
+      {
+        "kanji": "場面",
+        "kana": "ばめん",
+        "romaji": "bamen",
+        "meaning": "Adegan; situasi"
+      },
+      {
+        "kanji": "映像",
+        "kana": "えいぞう",
+        "romaji": "eizou",
+        "meaning": "Visual; gambar bergerak"
+      },
+      {
+        "kanji": "音声",
+        "kana": "おんせい",
+        "romaji": "onsei",
+        "meaning": "Audio; suara"
+      },
+      {
+        "kanji": "演技",
+        "kana": "えんぎ",
+        "romaji": "engi",
+        "meaning": "Akting"
+      },
+      {
+        "kanji": "俳優",
+        "kana": "はいゆう",
+        "romaji": "haiyuu",
+        "meaning": "Aktor"
+      },
+      {
+        "kanji": "声優",
+        "kana": "せいゆう",
+        "romaji": "seiyuu",
+        "meaning": "Pengisi suara"
+      },
+      {
+        "kanji": "監督",
+        "kana": "かんとく",
+        "romaji": "kantoku",
+        "meaning": "Sutradara"
+      },
+      {
+        "kanji": "作品",
+        "kana": "さくひん",
+        "romaji": "sakuhin",
+        "meaning": "Karya; film atau karya seni"
+      },
+      {
+        "kanji": "感想",
+        "kana": "かんそう",
+        "romaji": "kansou",
+        "meaning": "Kesan; pendapat setelah melihat atau mengalami sesuatu"
+      },
+      {
+        "kanji": "評価",
+        "kana": "ひょうか",
+        "romaji": "hyouka",
+        "meaning": "Penilaian"
+      },
+      {
+        "kanji": "口コミ",
+        "kana": "くちこみ",
+        "romaji": "kuchikomi",
+        "meaning": "Ulasan atau komentar pengguna"
+      },
+      {
+        "kanji": "コメント",
+        "kana": "コメント",
+        "romaji": "komento",
+        "meaning": "Komentar"
+      },
+      {
+        "kanji": "レビュー",
+        "kana": "レビュー",
+        "romaji": "rebyuu",
+        "meaning": "Review; ulasan"
+      },
+      {
+        "kanji": "迫力",
+        "kana": "はくりょく",
+        "romaji": "hakuryoku",
+        "meaning": "Kesan kuat; daya tarik yang terasa intens"
+      },
+      {
+        "kanji": "深み",
+        "kana": "ふかみ",
+        "romaji": "fukami",
+        "meaning": "Kedalaman; makna yang lebih dalam"
+      },
+      {
+        "kanji": "共感する",
+        "kana": "きょうかんする",
+        "romaji": "kyoukan suru",
+        "meaning": "Merasa sependapat atau ikut merasakan"
+      },
+      {
+        "kanji": "感動する",
+        "kana": "かんどうする",
+        "romaji": "kandou suru",
+        "meaning": "Terharu"
+      },
+      {
+        "kanji": "興奮する",
+        "kana": "こうふんする",
+        "romaji": "koufun suru",
+        "meaning": "Merasa sangat bersemangat"
+      },
+      {
+        "kanji": "退屈（な）",
+        "kana": "たいくつ（な）",
+        "romaji": "taikutsu (na)",
+        "meaning": "Membosankan"
+      },
+      {
+        "kanji": "物足りない",
+        "kana": "ものたりない",
+        "romaji": "monotarinai",
+        "meaning": "Terasa kurang; belum memuaskan"
+      },
+      {
+        "kanji": "印象的（な）",
+        "kana": "いんしょうてき（な）",
+        "romaji": "inshouteki (na)",
+        "meaning": "Berkesan"
+      },
+      {
+        "kanji": "すばらしい",
+        "kana": "すばらしい",
+        "romaji": "subarashii",
+        "meaning": "Luar biasa"
+      },
+      {
+        "kanji": "いまいち",
+        "kana": "いまいち",
+        "romaji": "imaichi",
+        "meaning": "Kurang memuaskan; biasa saja"
+      },
+      {
+        "kanji": "あっという間",
+        "kana": "あっというま",
+        "romaji": "atto iu ma",
+        "meaning": "Tidak terasa; dalam sekejap"
+      },
+      {
+        "kanji": "歌詞",
+        "kana": "かし",
+        "romaji": "kashi",
+        "meaning": "Lirik lagu"
+      },
+      {
+        "kanji": "曲",
+        "kana": "きょく",
+        "romaji": "kyoku",
+        "meaning": "Lagu; komposisi musik"
+      },
+      {
+        "kanji": "原作を読む",
+        "kana": "げんさくをよむ",
+        "romaji": "gensaku o yomu",
+        "meaning": "Membaca karya aslinya"
+      },
+      {
+        "kanji": "続き",
+        "kana": "つづき",
+        "romaji": "tsuzuki",
+        "meaning": "Kelanjutan"
+      },
+      {
+        "kanji": "気がする",
+        "kana": "きがする",
+        "romaji": "ki ga suru",
+        "meaning": "Merasa; punya kesan bahwa ..."
+      },
+      {
+        "kanji": "それに",
+        "kana": "それに",
+        "romaji": "sore ni",
+        "meaning": "Selain itu; ditambah lagi"
+      },
+      {
+        "kanji": "たしかに",
+        "kana": "たしかに",
+        "romaji": "tashika ni",
+        "meaning": "Memang; benar juga"
+      },
+      {
+        "kanji": "たとえば",
+        "kana": "たとえば",
+        "romaji": "tatoeba",
+        "meaning": "Misalnya"
+      }
+    ]
+  },
+  {
+    "lessonId": "preintermediate-03",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 3,
+    "lessonTitle": "Bagaimana persiapan pindahanmu?",
+    "vocab": [
+      {
+        "kanji": "引っ越し",
+        "kana": "ひっこし",
+        "romaji": "hikkoshi",
+        "meaning": "Pindahan; pindah rumah"
+      },
+      {
+        "kanji": "物件",
+        "kana": "ぶっけん",
+        "romaji": "bukken",
+        "meaning": "Properti yang disewakan atau dijual"
+      },
+      {
+        "kanji": "物件情報",
+        "kana": "ぶっけんじょうほう",
+        "romaji": "bukken jouhou",
+        "meaning": "Informasi properti"
+      },
+      {
+        "kanji": "家賃",
+        "kana": "やちん",
+        "romaji": "yachin",
+        "meaning": "Uang sewa rumah atau apartemen"
+      },
+      {
+        "kanji": "間取り",
+        "kana": "まどり",
+        "romaji": "madori",
+        "meaning": "Denah dan susunan ruang"
+      },
+      {
+        "kanji": "広さ",
+        "kana": "ひろさ",
+        "romaji": "hirosa",
+        "meaning": "Luas ruangan"
+      },
+      {
+        "kanji": "立地",
+        "kana": "りっち",
+        "romaji": "ricchi",
+        "meaning": "Lokasi; letak suatu tempat"
+      },
+      {
+        "kanji": "築～年",
+        "kana": "ちく～ねん",
+        "romaji": "chiku ~ nen",
+        "meaning": "Usia bangunan selama ... tahun"
+      },
+      {
+        "kanji": "住宅地",
+        "kana": "じゅうたくち",
+        "romaji": "juutakuchi",
+        "meaning": "Kawasan perumahan"
+      },
+      {
+        "kanji": "不動産屋",
+        "kana": "ふどうさんや",
+        "romaji": "fudousan-ya",
+        "meaning": "Agen properti"
+      },
+      {
+        "kanji": "不動産会社",
+        "kana": "ふどうさんがいしゃ",
+        "romaji": "fudousan gaisha",
+        "meaning": "Perusahaan properti"
+      },
+      {
+        "kanji": "アパート",
+        "kana": "アパート",
+        "romaji": "apaato",
+        "meaning": "Apartemen atau rumah susun sederhana"
+      },
+      {
+        "kanji": "マンション",
+        "kana": "マンション",
+        "romaji": "manshon",
+        "meaning": "Apartemen di Jepang"
+      },
+      {
+        "kanji": "一戸建て",
+        "kana": "いっこだて",
+        "romaji": "ikkodate",
+        "meaning": "Rumah tapak"
+      },
+      {
+        "kanji": "ワンルーム",
+        "kana": "ワンルーム",
+        "romaji": "wanruumu",
+        "meaning": "Studio; satu ruang utama"
+      },
+      {
+        "kanji": "階",
+        "kana": "かい",
+        "romaji": "kai",
+        "meaning": "Lantai bangunan"
+      },
+      {
+        "kanji": "設備",
+        "kana": "せつび",
+        "romaji": "setsubi",
+        "meaning": "Fasilitas atau perlengkapan"
+      },
+      {
+        "kanji": "冷蔵庫",
+        "kana": "れいぞうこ",
+        "romaji": "reizouko",
+        "meaning": "Kulkas"
+      },
+      {
+        "kanji": "電子レンジ",
+        "kana": "でんしレンジ",
+        "romaji": "denshi renji",
+        "meaning": "Microwave"
+      },
+      {
+        "kanji": "荷物",
+        "kana": "にもつ",
+        "romaji": "nimotsu",
+        "meaning": "Barang bawaan"
+      },
+      {
+        "kanji": "段ボール",
+        "kana": "だんボール",
+        "romaji": "danbooru",
+        "meaning": "Kardus"
+      },
+      {
+        "kanji": "運ぶ",
+        "kana": "はこぶ",
+        "romaji": "hakobu",
+        "meaning": "Mengangkut; membawa"
+      },
+      {
+        "kanji": "まとめる",
+        "kana": "まとめる",
+        "romaji": "matomeru",
+        "meaning": "Mengemas; merapikan menjadi satu"
+      },
+      {
+        "kanji": "掃除する",
+        "kana": "そうじする",
+        "romaji": "souji suru",
+        "meaning": "Membersihkan"
+      },
+      {
+        "kanji": "予約する",
+        "kana": "よやくする",
+        "romaji": "yoyaku suru",
+        "meaning": "Memesan; membuat reservasi"
+      },
+      {
+        "kanji": "駅から近い",
+        "kana": "えきからちかい",
+        "romaji": "eki kara chikai",
+        "meaning": "Dekat dari stasiun"
+      },
+      {
+        "kanji": "静か（な）",
+        "kana": "しずか（な）",
+        "romaji": "shizuka (na)",
+        "meaning": "Tenang"
+      },
+      {
+        "kanji": "にぎやか（な）",
+        "kana": "にぎやか（な）",
+        "romaji": "nigiyaka (na)",
+        "meaning": "Ramai"
+      },
+      {
+        "kanji": "住みやすい",
+        "kana": "すみやすい",
+        "romaji": "sumiyasui",
+        "meaning": "Nyaman untuk ditinggali"
+      },
+      {
+        "kanji": "便利（な）",
+        "kana": "べんり（な）",
+        "romaji": "benri (na)",
+        "meaning": "Praktis; mudah dijangkau"
+      },
+      {
+        "kanji": "不便（な）",
+        "kana": "ふべん（な）",
+        "romaji": "fuben (na)",
+        "meaning": "Kurang praktis; sulit dijangkau"
+      },
+      {
+        "kanji": "おすすめ",
+        "kana": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi"
+      },
+      {
+        "kanji": "あたり",
+        "kana": "あたり",
+        "romaji": "atari",
+        "meaning": "Sekitar; area"
+      },
+      {
+        "kanji": "郊外",
+        "kana": "こうがい",
+        "romaji": "kougai",
+        "meaning": "Daerah pinggiran kota"
+      },
+      {
+        "kanji": "下町",
+        "kana": "したまち",
+        "romaji": "shitamachi",
+        "meaning": "Kawasan kota lama yang bernuansa lokal"
+      },
+      {
+        "kanji": "雰囲気",
+        "kana": "ふんいき",
+        "romaji": "fun'iki",
+        "meaning": "Suasana; atmosfer"
+      },
+      {
+        "kanji": "商店街",
+        "kana": "しょうてんがい",
+        "romaji": "shoutengai",
+        "meaning": "Jalan atau kawasan pertokoan"
+      },
+      {
+        "kanji": "家電",
+        "kana": "かでん",
+        "romaji": "kaden",
+        "meaning": "Peralatan elektronik rumah tangga"
+      },
+      {
+        "kanji": "手伝う",
+        "kana": "てつだう",
+        "romaji": "tetsudau",
+        "meaning": "Membantu"
+      },
+      {
+        "kanji": "ありがたい",
+        "kana": "ありがたい",
+        "romaji": "arigatai",
+        "meaning": "Sangat berterima kasih; merasa terbantu"
+      },
+      {
+        "kanji": "助かる",
+        "kana": "たすかる",
+        "romaji": "tasukaru",
+        "meaning": "Terbantu; merasa tertolong"
+      },
+      {
+        "kanji": "もしよければ",
+        "kana": "もしよければ",
+        "romaji": "moshi yokereba",
+        "meaning": "Kalau tidak keberatan"
+      },
+      {
+        "kanji": "当日",
+        "kana": "とうじつ",
+        "romaji": "toujitsu",
+        "meaning": "Hari pelaksanaan; hari itu"
+      },
+      {
+        "kanji": "自分で",
+        "kana": "じぶんで",
+        "romaji": "jibun de",
+        "meaning": "Sendiri; tanpa bantuan orang lain"
+      },
+      {
+        "kanji": "迷う",
+        "kana": "まよう",
+        "romaji": "mayou",
+        "meaning": "Bimbang; bingung memilih"
+      }
+    ]
+  },
+  {
+    "lessonId": "preintermediate-04",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 4,
+    "lessonTitle": "Sepertinya AC-nya rusak...",
+    "vocab": [
+      {
+        "kanji": "エアコン",
+        "kana": "エアコン",
+        "romaji": "eakon",
+        "meaning": "AC"
+      },
+      {
+        "kanji": "壊れる",
+        "kana": "こわれる",
+        "romaji": "kowareru",
+        "meaning": "Rusak"
+      },
+      {
+        "kanji": "故障する",
+        "kana": "こしょうする",
+        "romaji": "koshou suru",
+        "meaning": "Mengalami kerusakan"
+      },
+      {
+        "kanji": "修理",
+        "kana": "しゅうり",
+        "romaji": "shuuri",
+        "meaning": "Perbaikan; servis"
+      },
+      {
+        "kanji": "修理会社",
+        "kana": "しゅうりがいしゃ",
+        "romaji": "shuuri gaisha",
+        "meaning": "Perusahaan servis atau perbaikan"
+      },
+      {
+        "kanji": "管理会社",
+        "kana": "かんりがいしゃ",
+        "romaji": "kanri gaisha",
+        "meaning": "Perusahaan pengelola gedung atau apartemen"
+      },
+      {
+        "kanji": "管理人",
+        "kana": "かんりにん",
+        "romaji": "kanrinin",
+        "meaning": "Pengelola gedung"
+      },
+      {
+        "kanji": "担当者",
+        "kana": "たんとうしゃ",
+        "romaji": "tantousha",
+        "meaning": "Petugas yang menangani suatu urusan"
+      },
+      {
+        "kanji": "連絡する",
+        "kana": "れんらくする",
+        "romaji": "renraku suru",
+        "meaning": "Menghubungi; memberi kabar"
+      },
+      {
+        "kanji": "状態",
+        "kana": "じょうたい",
+        "romaji": "joutai",
+        "meaning": "Kondisi"
+      },
+      {
+        "kanji": "電源",
+        "kana": "でんげん",
+        "romaji": "dengen",
+        "meaning": "Sumber daya listrik; tombol daya"
+      },
+      {
+        "kanji": "電源が入る",
+        "kana": "でんげんがはいる",
+        "romaji": "dengen ga hairu",
+        "meaning": "Perangkat menyala; daya berhasil diaktifkan"
+      },
+      {
+        "kanji": "冷たい風",
+        "kana": "つめたいかぜ",
+        "romaji": "tsumetai kaze",
+        "meaning": "Udara dingin"
+      },
+      {
+        "kanji": "暖房",
+        "kana": "だんぼう",
+        "romaji": "danbou",
+        "meaning": "Pemanas ruangan"
+      },
+      {
+        "kanji": "冷房",
+        "kana": "れいぼう",
+        "romaji": "reibou",
+        "meaning": "Pendingin ruangan"
+      },
+      {
+        "kanji": "換気扇",
+        "kana": "かんきせん",
+        "romaji": "kankisen",
+        "meaning": "Kipas ventilasi atau exhaust fan"
+      },
+      {
+        "kanji": "水道",
+        "kana": "すいどう",
+        "romaji": "suidou",
+        "meaning": "Saluran air; air ledeng"
+      },
+      {
+        "kanji": "蛇口",
+        "kana": "じゃぐち",
+        "romaji": "jaguchi",
+        "meaning": "Keran air"
+      },
+      {
+        "kanji": "水が漏れる",
+        "kana": "みずがもれる",
+        "romaji": "mizu ga moreru",
+        "meaning": "Air bocor"
+      },
+      {
+        "kanji": "水漏れ",
+        "kana": "みずもれ",
+        "romaji": "mizumore",
+        "meaning": "Kebocoran air"
+      },
+      {
+        "kanji": "排水口",
+        "kana": "はいすいこう",
+        "romaji": "haisuikou",
+        "meaning": "Saluran pembuangan air"
+      },
+      {
+        "kanji": "詰まる",
+        "kana": "つまる",
+        "romaji": "tsumaru",
+        "meaning": "Tersumbat"
+      },
+      {
+        "kanji": "トイレ",
+        "kana": "トイレ",
+        "romaji": "toire",
+        "meaning": "Toilet"
+      },
+      {
+        "kanji": "お湯",
+        "kana": "おゆ",
+        "romaji": "oyu",
+        "meaning": "Air panas"
+      },
+      {
+        "kanji": "電気",
+        "kana": "でんき",
+        "romaji": "denki",
+        "meaning": "Listrik"
+      },
+      {
+        "kanji": "停電",
+        "kana": "ていでん",
+        "romaji": "teiden",
+        "meaning": "Listrik padam"
+      },
+      {
+        "kanji": "鍵",
+        "kana": "かぎ",
+        "romaji": "kagi",
+        "meaning": "Kunci"
+      },
+      {
+        "kanji": "なくす",
+        "kana": "なくす",
+        "romaji": "nakusu",
+        "meaning": "Kehilangan sesuatu"
+      },
+      {
+        "kanji": "結露",
+        "kana": "けつろ",
+        "romaji": "ketsuro",
+        "meaning": "Embun atau kondensasi pada permukaan"
+      },
+      {
+        "kanji": "カビ",
+        "kana": "カビ",
+        "romaji": "kabi",
+        "meaning": "Jamur; lumut"
+      },
+      {
+        "kanji": "におい",
+        "kana": "におい",
+        "romaji": "nioi",
+        "meaning": "Bau"
+      },
+      {
+        "kanji": "音",
+        "kana": "おと",
+        "romaji": "oto",
+        "meaning": "Suara"
+      },
+      {
+        "kanji": "うるさい",
+        "kana": "うるさい",
+        "romaji": "urusai",
+        "meaning": "Berisik"
+      },
+      {
+        "kanji": "直す",
+        "kana": "なおす",
+        "romaji": "naosu",
+        "meaning": "Memperbaiki"
+      },
+      {
+        "kanji": "確認する",
+        "kana": "かくにんする",
+        "romaji": "kakunin suru",
+        "meaning": "Memastikan; memeriksa"
+      },
+      {
+        "kanji": "訪問する",
+        "kana": "ほうもんする",
+        "romaji": "houmon suru",
+        "meaning": "Mengunjungi"
+      },
+      {
+        "kanji": "伺う",
+        "kana": "うかがう",
+        "romaji": "ukagau",
+        "meaning": "Datang atau berkunjung (ungkapan hormat untuk tindakan sendiri)"
+      },
+      {
+        "kanji": "都合",
+        "kana": "つごう",
+        "romaji": "tsugou",
+        "meaning": "Waktu yang cocok; keadaan yang memungkinkan"
+      },
+      {
+        "kanji": "以降",
+        "kana": "いこう",
+        "romaji": "ikou",
+        "meaning": "Mulai dari waktu tersebut dan seterusnya"
+      },
+      {
+        "kanji": "予定",
+        "kana": "よてい",
+        "romaji": "yotei",
+        "meaning": "Rencana; jadwal"
+      },
+      {
+        "kanji": "連絡先",
+        "kana": "れんらくさき",
+        "romaji": "renrakusaki",
+        "meaning": "Informasi kontak"
+      },
+      {
+        "kanji": "お電話番号",
+        "kana": "おでんわばんごう",
+        "romaji": "o-denwa bangou",
+        "meaning": "Nomor telepon (ungkapan sopan)"
+      },
+      {
+        "kanji": "ご連絡",
+        "kana": "ごれんらく",
+        "romaji": "go-renraku",
+        "meaning": "Kontak atau pemberitahuan (ungkapan sopan)"
+      },
+      {
+        "kanji": "もし",
+        "kana": "もし",
+        "romaji": "moshi",
+        "meaning": "Kalau; seandainya"
+      },
+      {
+        "kanji": "念のため",
+        "kana": "ねんのため",
+        "romaji": "nen no tame",
+        "meaning": "Untuk berjaga-jaga"
+      },
+      {
+        "kanji": "困る",
+        "kana": "こまる",
+        "romaji": "komaru",
+        "meaning": "Kesulitan; kerepotan"
+      }
+    ]
+  },
+  {
+    "lessonId": "preintermediate-05",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 5,
+    "lessonTitle": "Restoran seperti apa yang bagus?",
+    "vocab": [
+      {
+        "kanji": "注文",
+        "kana": "ちゅうもん",
+        "romaji": "chuumon",
+        "meaning": "Pesanan; memesan makanan"
+      },
+      {
+        "kanji": "注文履歴",
+        "kana": "ちゅうもんりれき",
+        "romaji": "chuumon rireki",
+        "meaning": "Riwayat pesanan"
+      },
+      {
+        "kanji": "注文する",
+        "kana": "ちゅうもんする",
+        "romaji": "chuumon suru",
+        "meaning": "Memesan"
+      },
+      {
+        "kanji": "送信する",
+        "kana": "そうしんする",
+        "romaji": "soushin suru",
+        "meaning": "Mengirim; menekan tombol kirim"
+      },
+      {
+        "kanji": "取り消す",
+        "kana": "とりけす",
+        "romaji": "torikesu",
+        "meaning": "Membatalkan pesanan"
+      },
+      {
+        "kanji": "追加する",
+        "kana": "ついかする",
+        "romaji": "tsuika suru",
+        "meaning": "Menambahkan"
+      },
+      {
+        "kanji": "持ち帰り",
+        "kana": "もちかえり",
+        "romaji": "mochikaeri",
+        "meaning": "Dibawa pulang; take away"
+      },
+      {
+        "kanji": "店内",
+        "kana": "てんない",
+        "romaji": "tennai",
+        "meaning": "Makan di tempat; bagian dalam restoran"
+      },
+      {
+        "kanji": "税込",
+        "kana": "ぜいこみ",
+        "romaji": "zeikomi",
+        "meaning": "Termasuk pajak"
+      },
+      {
+        "kanji": "税抜",
+        "kana": "ぜいぬき",
+        "romaji": "zeinuki",
+        "meaning": "Belum termasuk pajak"
+      },
+      {
+        "kanji": "大盛り",
+        "kana": "おおもり",
+        "romaji": "oomori",
+        "meaning": "Porsi besar"
+      },
+      {
+        "kanji": "少なめ",
+        "kana": "すくなめ",
+        "romaji": "sukuname",
+        "meaning": "Porsi sedikit lebih kecil"
+      },
+      {
+        "kanji": "麺",
+        "kana": "めん",
+        "romaji": "men",
+        "meaning": "Mi"
+      },
+      {
+        "kanji": "スープ",
+        "kana": "スープ",
+        "romaji": "suupu",
+        "meaning": "Sup; kuah"
+      },
+      {
+        "kanji": "具",
+        "kana": "ぐ",
+        "romaji": "gu",
+        "meaning": "Isi; bahan pelengkap masakan"
+      },
+      {
+        "kanji": "料理",
+        "kana": "りょうり",
+        "romaji": "ryouri",
+        "meaning": "Masakan; hidangan"
+      },
+      {
+        "kanji": "サイウア",
+        "kana": "サイウア",
+        "romaji": "sai ua",
+        "meaning": "Sai ua; sosis herbal khas Thailand Utara"
+      },
+      {
+        "kanji": "飲食店",
+        "kana": "いんしょくてん",
+        "romaji": "inshokuten",
+        "meaning": "Tempat makan atau restoran"
+      },
+      {
+        "kanji": "定食",
+        "kana": "ていしょく",
+        "romaji": "teishoku",
+        "meaning": "Paket makanan lengkap ala Jepang"
+      },
+      {
+        "kanji": "名物",
+        "kana": "めいぶつ",
+        "romaji": "meibutsu",
+        "meaning": "Makanan atau produk khas suatu daerah"
+      },
+      {
+        "kanji": "郷土料理",
+        "kana": "きょうどりょうり",
+        "romaji": "kyoudoryouri",
+        "meaning": "Masakan khas daerah"
+      },
+      {
+        "kanji": "本場",
+        "kana": "ほんば",
+        "romaji": "honba",
+        "meaning": "Tempat asal sesuatu; tempat aslinya"
+      },
+      {
+        "kanji": "辛さ",
+        "kana": "からさ",
+        "romaji": "karasa",
+        "meaning": "Tingkat kepedasan"
+      },
+      {
+        "kanji": "甘さ",
+        "kana": "あまさ",
+        "romaji": "amasa",
+        "meaning": "Tingkat kemanisan"
+      },
+      {
+        "kanji": "量",
+        "kana": "りょう",
+        "romaji": "ryou",
+        "meaning": "Jumlah; porsi"
+      },
+      {
+        "kanji": "値段",
+        "kana": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga"
+      },
+      {
+        "kanji": "店員",
+        "kana": "てんいん",
+        "romaji": "ten'in",
+        "meaning": "Pegawai toko atau restoran"
+      },
+      {
+        "kanji": "親切（な）",
+        "kana": "しんせつ（な）",
+        "romaji": "shinsetsu (na)",
+        "meaning": "Ramah; baik hati"
+      },
+      {
+        "kanji": "おすすめ",
+        "kana": "おすすめ",
+        "romaji": "osusume",
+        "meaning": "Rekomendasi"
+      },
+      {
+        "kanji": "紹介する",
+        "kana": "しょうかいする",
+        "romaji": "shoukai suru",
+        "meaning": "Memperkenalkan"
+      },
+      {
+        "kanji": "感想",
+        "kana": "かんそう",
+        "romaji": "kansou",
+        "meaning": "Kesan; pendapat"
+      },
+      {
+        "kanji": "投稿する",
+        "kana": "とうこうする",
+        "romaji": "toukou suru",
+        "meaning": "Mengunggah; memposting"
+      },
+      {
+        "kanji": "写真",
+        "kana": "しゃしん",
+        "romaji": "shashin",
+        "meaning": "Foto"
+      },
+      {
+        "kanji": "おなかいっぱい",
+        "kana": "おなかいっぱい",
+        "romaji": "onaka ippai",
+        "meaning": "Kenyang"
+      },
+      {
+        "kanji": "満足する",
+        "kana": "まんぞくする",
+        "romaji": "manzoku suru",
+        "meaning": "Merasa puas"
+      },
+      {
+        "kanji": "材料",
+        "kana": "ざいりょう",
+        "romaji": "zairyou",
+        "meaning": "Bahan masakan"
+      },
+      {
+        "kanji": "作り方",
+        "kana": "つくりかた",
+        "romaji": "tsukurikata",
+        "meaning": "Cara membuat"
+      },
+      {
+        "kanji": "由来",
+        "kana": "ゆらい",
+        "romaji": "yurai",
+        "meaning": "Asal-usul"
+      },
+      {
+        "kanji": "焼く",
+        "kana": "やく",
+        "romaji": "yaku",
+        "meaning": "Memanggang; membakar"
+      },
+      {
+        "kanji": "煮る",
+        "kana": "にる",
+        "romaji": "niru",
+        "meaning": "Merebus atau memasak dengan kuah"
+      },
+      {
+        "kanji": "混ぜる",
+        "kana": "まぜる",
+        "romaji": "mazeru",
+        "meaning": "Mencampur"
+      },
+      {
+        "kanji": "丸める",
+        "kana": "まるめる",
+        "romaji": "marumeru",
+        "meaning": "Membulatkan"
+      },
+      {
+        "kanji": "固める",
+        "kana": "かためる",
+        "romaji": "katameru",
+        "meaning": "Memadatkan; membuat lebih kokoh"
+      },
+      {
+        "kanji": "揚げる",
+        "kana": "あげる",
+        "romaji": "ageru",
+        "meaning": "Menggoreng dengan minyak banyak"
+      },
+      {
+        "kanji": "蒸す",
+        "kana": "むす",
+        "romaji": "musu",
+        "meaning": "Mengukus"
+      },
+      {
+        "kanji": "つぶす",
+        "kana": "つぶす",
+        "romaji": "tsubusu",
+        "meaning": "Menumbuk; menghancurkan"
+      },
+      {
+        "kanji": "名物料理",
+        "kana": "めいぶつりょうり",
+        "romaji": "meibutsu ryouri",
+        "meaning": "Hidangan khas daerah"
+      },
+      {
+        "kanji": "味",
+        "kana": "あじ",
+        "romaji": "aji",
+        "meaning": "Rasa"
+      },
+      {
+        "kanji": "食感",
+        "kana": "しょっかん",
+        "romaji": "shokkan",
+        "meaning": "Tekstur makanan"
+      },
+      {
+        "kanji": "香り",
+        "kana": "かおり",
+        "romaji": "kaori",
+        "meaning": "Aroma"
+      },
+      {
+        "kanji": "おかわり",
+        "kana": "おかわり",
+        "romaji": "okawari",
+        "meaning": "Tambah porsi; tambah minum"
+      },
+      {
+        "kanji": "別々に",
+        "kana": "べつべつに",
+        "romaji": "betsubetsu ni",
+        "meaning": "Secara terpisah"
+      }
+    ]
+  },
+  {
+    "lessonId": "preintermediate-06",
+    "courseId": "pre-intermediate",
+    "courseLabel": "Irodori Pra-Menengah",
+    "lessonNumber": 6,
+    "lessonTitle": "Saya memasak sendiri setiap hari.",
+    "vocab": [
+      {
+        "kanji": "自炊する",
+        "kana": "じすいする",
+        "romaji": "jisui suru",
+        "meaning": "Memasak sendiri di rumah"
+      },
+      {
+        "kanji": "食生活",
+        "kana": "しょくせいかつ",
+        "romaji": "shokuseikatsu",
+        "meaning": "Pola atau kebiasaan makan"
+      },
+      {
+        "kanji": "食事",
+        "kana": "しょくじ",
+        "romaji": "shokuji",
+        "meaning": "Makan; waktu makan"
+      },
+      {
+        "kanji": "朝食",
+        "kana": "ちょうしょく",
+        "romaji": "choushoku",
+        "meaning": "Sarapan"
+      },
+      {
+        "kanji": "昼食",
+        "kana": "ちゅうしょく",
+        "romaji": "chuushoku",
+        "meaning": "Makan siang"
+      },
+      {
+        "kanji": "夕食",
+        "kana": "ゆうしょく",
+        "romaji": "yuushoku",
+        "meaning": "Makan malam"
+      },
+      {
+        "kanji": "栄養",
+        "kana": "えいよう",
+        "romaji": "eiyou",
+        "meaning": "Gizi; nutrisi"
+      },
+      {
+        "kanji": "栄養バランス",
+        "kana": "えいようバランス",
+        "romaji": "eiyou baransu",
+        "meaning": "Keseimbangan gizi"
+      },
+      {
+        "kanji": "健康",
+        "kana": "けんこう",
+        "romaji": "kenkou",
+        "meaning": "Kesehatan"
+      },
+      {
+        "kanji": "新鮮（な）",
+        "kana": "しんせん（な）",
+        "romaji": "shinsen (na)",
+        "meaning": "Segar"
+      },
+      {
+        "kanji": "農家",
+        "kana": "のうか",
+        "romaji": "nouka",
+        "meaning": "Petani; keluarga yang menjalankan usaha tani"
+      },
+      {
+        "kanji": "直売所",
+        "kana": "ちょくばいじょ",
+        "romaji": "chokubaijo",
+        "meaning": "Tempat penjualan langsung dari produsen"
+      },
+      {
+        "kanji": "道の駅",
+        "kana": "みちのえき",
+        "romaji": "michi no eki",
+        "meaning": "Rest area di Jepang yang sering menjual produk lokal"
+      },
+      {
+        "kanji": "業務用スーパー",
+        "kana": "ぎょうむようスーパー",
+        "romaji": "gyoumu-you suupaa",
+        "meaning": "Supermarket grosir"
+      },
+      {
+        "kanji": "冷凍食品",
+        "kana": "れいとうしょくひん",
+        "romaji": "reitou shokuhin",
+        "meaning": "Makanan beku"
+      },
+      {
+        "kanji": "果物",
+        "kana": "くだもの",
+        "romaji": "kudamono",
+        "meaning": "Buah-buahan"
+      },
+      {
+        "kanji": "野菜",
+        "kana": "やさい",
+        "romaji": "yasai",
+        "meaning": "Sayuran"
+      },
+      {
+        "kanji": "肉",
+        "kana": "にく",
+        "romaji": "niku",
+        "meaning": "Daging"
+      },
+      {
+        "kanji": "魚",
+        "kana": "さかな",
+        "romaji": "sakana",
+        "meaning": "Ikan"
+      },
+      {
+        "kanji": "卵",
+        "kana": "たまご",
+        "romaji": "tamago",
+        "meaning": "Telur"
+      },
+      {
+        "kanji": "豆腐",
+        "kana": "とうふ",
+        "romaji": "toufu",
+        "meaning": "Tahu"
+      },
+      {
+        "kanji": "鍋",
+        "kana": "なべ",
+        "romaji": "nabe",
+        "meaning": "Panci; hidangan hot pot"
+      },
+      {
+        "kanji": "調味料",
+        "kana": "ちょうみりょう",
+        "romaji": "choumiryou",
+        "meaning": "Bumbu masak"
+      },
+      {
+        "kanji": "食材",
+        "kana": "しょくざい",
+        "romaji": "shokuzai",
+        "meaning": "Bahan makanan"
+      },
+      {
+        "kanji": "電子レンジ",
+        "kana": "でんしレンジ",
+        "romaji": "denshi renji",
+        "meaning": "Microwave"
+      },
+      {
+        "kanji": "加熱する",
+        "kana": "かねつする",
+        "romaji": "kanetsu suru",
+        "meaning": "Memanaskan"
+      },
+      {
+        "kanji": "調理法",
+        "kana": "ちょうりほう",
+        "romaji": "chourihou",
+        "meaning": "Cara atau metode memasak"
+      },
+      {
+        "kanji": "調理する",
+        "kana": "ちょうりする",
+        "romaji": "chouri suru",
+        "meaning": "Memasak; mengolah bahan makanan"
+      },
+      {
+        "kanji": "下ごしらえ",
+        "kana": "したごしらえ",
+        "romaji": "shitagoshirae",
+        "meaning": "Persiapan awal bahan makanan"
+      },
+      {
+        "kanji": "作り置き",
+        "kana": "つくりおき",
+        "romaji": "tsukurioki",
+        "meaning": "Masakan yang disiapkan untuk dimakan nanti"
+      },
+      {
+        "kanji": "まとめ買い",
+        "kana": "まとめがい",
+        "romaji": "matomegai",
+        "meaning": "Membeli sekaligus dalam jumlah banyak"
+      },
+      {
+        "kanji": "冷凍する",
+        "kana": "れいとうする",
+        "romaji": "reitou suru",
+        "meaning": "Membekukan"
+      },
+      {
+        "kanji": "解凍する",
+        "kana": "かいとうする",
+        "romaji": "kaitou suru",
+        "meaning": "Mencairkan makanan beku"
+      },
+      {
+        "kanji": "保存する",
+        "kana": "ほぞんする",
+        "romaji": "hozon suru",
+        "meaning": "Menyimpan"
+      },
+      {
+        "kanji": "直接",
+        "kana": "ちょくせつ",
+        "romaji": "chokusetsu",
+        "meaning": "Secara langsung"
+      },
+      {
+        "kanji": "値段",
+        "kana": "ねだん",
+        "romaji": "nedan",
+        "meaning": "Harga"
+      },
+      {
+        "kanji": "種類",
+        "kana": "しゅるい",
+        "romaji": "shurui",
+        "meaning": "Jenis; macam"
+      },
+      {
+        "kanji": "量",
+        "kana": "りょう",
+        "romaji": "ryou",
+        "meaning": "Jumlah; takaran"
+      },
+      {
+        "kanji": "手間",
+        "kana": "てま",
+        "romaji": "tema",
+        "meaning": "Waktu dan tenaga yang diperlukan"
+      },
+      {
+        "kanji": "面倒（な）",
+        "kana": "めんどう（な）",
+        "romaji": "mendou (na)",
+        "meaning": "Merepotkan; membutuhkan usaha"
+      },
+      {
+        "kanji": "偏る",
+        "kana": "かたよる",
+        "romaji": "katayoru",
+        "meaning": "Tidak seimbang; condong ke satu sisi"
+      },
+      {
+        "kanji": "頼る",
+        "kana": "たよる",
+        "romaji": "tayoru",
+        "meaning": "Mengandalkan"
+      },
+      {
+        "kanji": "外食する",
+        "kana": "がいしょくする",
+        "romaji": "gaishoku suru",
+        "meaning": "Makan di luar"
+      },
+      {
+        "kanji": "注文する",
+        "kana": "ちゅうもんする",
+        "romaji": "chuumon suru",
+        "meaning": "Memesan"
+      },
+      {
+        "kanji": "配達",
+        "kana": "はいたつ",
+        "romaji": "haitatsu",
+        "meaning": "Pengantaran"
+      },
+      {
+        "kanji": "デリバリー",
+        "kana": "デリバリー",
+        "romaji": "deribarii",
+        "meaning": "Layanan pesan antar"
+      },
+      {
+        "kanji": "コンビニ",
+        "kana": "コンビニ",
+        "romaji": "konbini",
+        "meaning": "Minimarket"
+      },
+      {
+        "kanji": "惣菜",
+        "kana": "そうざい",
+        "romaji": "souzai",
+        "meaning": "Lauk atau makanan siap santap"
+      },
+      {
+        "kanji": "買い置き",
+        "kana": "かいおき",
+        "romaji": "kaioki",
+        "meaning": "Persediaan barang atau bahan makanan yang sudah dibeli sebelumnya"
+      },
+      {
+        "kanji": "気をつける",
+        "kana": "きをつける",
+        "romaji": "ki o tsukeru",
+        "meaning": "Memperhatikan; berhati-hati"
+      },
+      {
+        "kanji": "できるだけ",
+        "kana": "できるだけ",
+        "romaji": "dekiru dake",
+        "meaning": "Sebisa mungkin"
+      }
+    ]
   }
 ]

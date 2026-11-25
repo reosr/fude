@@ -1,4 +1,4 @@
-import { getCompletedIrodoriLessons } from "./irodori-progress";
+import { getCompletedIrodoriLessons, isIrodoriLessonUnlocked } from "./irodori-progress";
 
 let kosakataPromise: Promise<MinnaVocabGroup[]> | null = null;
 let irodoriVocabPromise: Promise<IrodoriVocabLesson[]> | null = null;
@@ -243,7 +243,7 @@ export async function getUnlockedVocab(
   const completedLessons = new Set(getCompletedIrodoriLessons());
 
   allIrodoriVocab.forEach((lesson) => {
-    if (!completedLessons.has(lesson.lessonId)) return;
+    if (!isIrodoriLessonUnlocked(lesson.courseId, lesson.lessonNumber, [...completedLessons])) return;
 
     lesson.vocab.forEach((vocab) => {
       const key = vocabKey(vocab);

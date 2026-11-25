@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
-import { useIrodoriProgress } from "@/lib/irodori-progress";
+import { isIrodoriLessonUnlocked, useIrodoriProgress } from "@/lib/irodori-progress";
 
 const lessons = Array.from({ length: 18 }, (_, index) => index + 1);
 
@@ -10,6 +10,9 @@ export default function IrodoriStarterPage() {
   const progress = useIrodoriProgress();
   const completedCount = progress.completedLessons.filter((id) =>
     id.startsWith("starter-")
+  ).length;
+  const availableCount = lessons.filter((lesson) =>
+    isIrodoriLessonUnlocked("starter", lesson, progress.completedLessons)
   ).length;
 
   return (
@@ -38,7 +41,7 @@ export default function IrodoriStarterPage() {
               </p>
             </div>
             <span className="rounded-xl border border-[#D6AD4F]/25 bg-[#D6AD4F]/10 px-3 py-2 text-[10px] font-bold text-[#E7D2A1]">
-              18 dari 18 materi tersedia
+              {availableCount} dari 18 materi terbuka
             </span>
           </div>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-[#B6B0A5]">
@@ -74,7 +77,7 @@ export default function IrodoriStarterPage() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
-            const isAvailable = lesson <= 18;
+            const isAvailable = isIrodoriLessonUnlocked("starter", lesson, progress.completedLessons);
             const lessonId = `starter-${String(lesson).padStart(2, "0")}`;
             const isCompleted = progress.completedLessons.includes(lessonId);
             const lessonTitle =
@@ -165,7 +168,7 @@ export default function IrodoriStarterPage() {
                   {isAvailable ? lessonTitle : `Pelajaran ${lesson}`}
                 </h3>
                 <p className="mt-1 text-xs leading-5 text-[#A3A099]">
-                  {isAvailable ? lessonDescription : "Materi sedang disiapkan."}
+                  {isAvailable ? lessonDescription : "Selesaikan pelajaran sebelumnya untuk membuka materi ini."}
                 </p>
                 <div className="mt-5 flex items-center justify-between gap-2">
                   <span
@@ -175,7 +178,7 @@ export default function IrodoriStarterPage() {
                         : "border-white/[0.07] bg-white/[0.03] text-[#817A73]"
                     }`}
                   >
-                    {isAvailable ? (isCompleted ? "Selesai" : "Bisa dipelajari") : "Segera hadir"}
+                    {isAvailable ? (isCompleted ? "Selesai" : "Bisa dipelajari") : "Terkunci"}
                   </span>
                   {isAvailable && (
                     <span className="inline-flex items-center gap-1 text-[10px] font-bold text-[#D9B66D]">
@@ -208,7 +211,7 @@ export default function IrodoriStarterPage() {
       </section>
 
       <p className="rounded-xl border border-white/[0.06] bg-[#1B1A18]/70 p-4 text-xs leading-6 text-[#A9A398]">
-        Seluruh 18 pelajaran Pemula A1 sudah tersedia.
+        Selesaikan satu pelajaran untuk membuka pelajaran berikutnya secara otomatis.
       </p>
     </main>
   );
