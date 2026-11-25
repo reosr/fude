@@ -10,7 +10,7 @@ export interface IrodoriProgress {
   selfEvaluations: Record<string, Record<string, IrodoriRating>>;
 }
 
-const STORAGE_KEY = "fude_irodori_progress_v1";
+export const IRODORI_PROGRESS_IRODORI_PROGRESS_STORAGE_KEY = "fude_irodori_progress_v1";
 export const IRODORI_PROGRESS_UPDATED_EVENT = "fude:irodori-progress-updated";
 
 const EMPTY_PROGRESS: IrodoriProgress = {
@@ -55,7 +55,7 @@ function readStoredProgress(): IrodoriProgress {
   if (typeof window === "undefined") return EMPTY_PROGRESS;
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(IRODORI_PROGRESS_STORAGE_KEY);
     return raw ? normalizeProgress(JSON.parse(raw)) : EMPTY_PROGRESS;
   } catch (error) {
     console.warn("Gagal membaca progres Irodori:", error);
@@ -81,7 +81,7 @@ function subscribe(callback: () => void): () => void {
   if (typeof window === "undefined") return () => undefined;
 
   const handleStorage = (event: StorageEvent) => {
-    if (event.key !== STORAGE_KEY && event.key !== null) return;
+    if (event.key !== IRODORI_PROGRESS_STORAGE_KEY && event.key !== null) return;
     cachedProgress = null;
     callback();
   };
@@ -99,8 +99,8 @@ function writeProgress(next: IrodoriProgress): void {
   cachedProgress = next;
 
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-    notifyFudeLocalDataChanged(STORAGE_KEY);
+    window.localStorage.setItem(IRODORI_PROGRESS_STORAGE_KEY, JSON.stringify(next));
+    notifyFudeLocalDataChanged(IRODORI_PROGRESS_STORAGE_KEY);
   } catch (error) {
     console.warn("Gagal menyimpan progres Irodori:", error);
   }
