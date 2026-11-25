@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useIrodoriProgress } from "@/lib/irodori-progress";
 import { ArrowLeft, BookOpen, Compass, Headphones, MessageCircle, Sparkles } from "lucide-react";
 
 const courses = [
   {
     id: "starter",
+    progressPrefix: "starter-",
     number: "01",
     title: "Pemula",
     level: "A1",
@@ -15,6 +19,7 @@ const courses = [
   },
   {
     id: "elementary-1",
+    progressPrefix: "elementary1-",
     number: "02",
     title: "Dasar 1",
     level: "A2",
@@ -26,6 +31,7 @@ const courses = [
   },
   {
     id: "elementary-2",
+    progressPrefix: "elementary2-",
     number: "03",
     title: "Dasar 2",
     level: "A2",
@@ -37,6 +43,7 @@ const courses = [
   },
   {
     id: "pre-intermediate",
+    progressPrefix: "preintermediate-",
     number: "04",
     title: "Pra-Menengah",
     level: "A2/B1",
@@ -49,6 +56,17 @@ const courses = [
 ];
 
 export default function IrodoriPage() {
+  const progress = useIrodoriProgress();
+  const completedLessonIds = new Set(progress.completedLessons);
+  const irodoriPrefixes = courses.map((course) => course.progressPrefix);
+  const totalCompleted = Array.from(completedLessonIds).filter((id) =>
+    irodoriPrefixes.some((prefix) => {
+      if (!id.startsWith(prefix)) return false;
+      const lessonNumber = Number(id.slice(prefix.length));
+      return Number.isInteger(lessonNumber) && lessonNumber >= 1 && lessonNumber <= 18;
+    })
+  ).length;
+
   return (
     <main className="mx-auto max-w-5xl space-y-7 pb-10">
       <Link
@@ -115,12 +133,24 @@ export default function IrodoriPage() {
             </h2>
           </div>
           <span className="text-[10px] font-semibold text-[#817A73]">
-            4 tahap • materi tersedia bertahap
+            {totalCompleted}/72 pelajaran selesai
           </span>
         </div>
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {courses.map((course) => {
+            const completedCount = Array.from(completedLessonIds).filter((id) =>
+              id.startsWith(course.progressPrefix) &&
+              Number.isInteger(Number(id.slice(course.progressPrefix.length))) &&
+              Number(id.slice(course.progressPrefix.length)) >= 1 &&
+              Number(id.slice(course.progressPrefix.length)) <= 18
+            ).length;
+            const progressPercent = Math.round((completedCount / 18) * 100);
+            const courseStatus = completedCount === 18
+              ? "Tuntas"
+              : completedCount > 0
+                ? "Sedang berjalan"
+                : "Mulai belajar";
             const card = (
               <div className={`relative isolate h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br ${course.accent} to-[#191817] p-5 shadow-lg shadow-black/10 transition-all ${(course.id === "starter" || course.id === "elementary-1" || course.id === "elementary-2" || course.id === "pre-intermediate") ? "group-hover:-translate-y-0.5 group-hover:border-[#B79ADE]/60" : "opacity-75"}`}>
                 <div className="pointer-events-none absolute -right-5 -top-8 select-none font-mincho text-[112px] font-bold leading-none text-white/[0.035]">
@@ -147,11 +177,17 @@ export default function IrodoriPage() {
                   <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
                     <span className="inline-flex items-center gap-1.5 text-[10px] font-semibold text-[#A3A099]">
                       <BookOpen size={13} />
-                      {course.lessonSummary}
+                      {completedCount}/18 selesai
                     </span>
                     <span className={`rounded-full border px-2.5 py-1 text-[9px] font-bold ${course.statusTone}`}>
-                      {course.status}
+                      {courseStatus}
                     </span>
+                  </div>
+                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-black/30">
+                    <div
+                      className="h-full rounded-full bg-[#D6AD4F] transition-all"
+                      style={{ width: `${progressPercent}%` }}
+                    />
                   </div>
                 </div>
               </div>
