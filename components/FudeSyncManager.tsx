@@ -95,6 +95,10 @@ export default function FudeSyncManager() {
         key === "fude_profile_photo_updated" ||
         key === "fude_xp_events" ||
         key === "fude_memorized" ||
+        key === "fude_irodori_progress_v1" ||
+        key === "fude_learning_progress_v1" ||
+        key === "fude_gacha_inventory_v1" ||
+        key === "fude_gacha_history_v1" ||
         key?.startsWith("jlpt_result_")
       ) {
         scheduleSync(900);
