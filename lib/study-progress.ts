@@ -9,7 +9,7 @@ export interface StudyProgress {
 }
 
 const STORAGE_KEY = "fude_learning_progress_v1";
-const CHANGE_EVENT = "fude:learning-progress-updated";
+export const STUDY_PROGRESS_UPDATED_EVENT = "fude:learning-progress-updated";
 
 const EMPTY_PROGRESS: StudyProgress = {
   completedPracticalCategories: [],
@@ -71,11 +71,11 @@ function subscribe(callback: () => void): () => void {
     callback();
   };
 
-  window.addEventListener(CHANGE_EVENT, callback);
+  window.addEventListener(STUDY_PROGRESS_UPDATED_EVENT, callback);
   window.addEventListener("storage", handleStorage);
 
   return () => {
-    window.removeEventListener(CHANGE_EVENT, callback);
+    window.removeEventListener(STUDY_PROGRESS_UPDATED_EVENT, callback);
     window.removeEventListener("storage", handleStorage);
   };
 }
@@ -106,7 +106,7 @@ function updateProgress(
     console.warn("Gagal menyimpan progres belajar:", error);
   }
 
-  window.dispatchEvent(new Event(CHANGE_EVENT));
+  window.dispatchEvent(new Event(STUDY_PROGRESS_UPDATED_EVENT));
 }
 
 export function completePracticalCategory(categoryId: string): void {
@@ -128,6 +128,14 @@ export function completeReadingStory(storyId: string): void {
     ...current,
     completedStories: [...current.completedStories, storyId],
   }));
+}
+
+export function getStudyProgress(): StudyProgress {
+  const current = getSnapshot();
+  return {
+    completedPracticalCategories: [...current.completedPracticalCategories],
+    completedStories: [...current.completedStories],
+  };
 }
 
 export function getCompletedJlptSetIds(): string[] {
