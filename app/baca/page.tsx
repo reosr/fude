@@ -600,7 +600,7 @@ setSelectedStory(story);
                 {story.title}
               </h3>
               <p className="text-xs text-[#A3A099] line-clamp-2 mt-auto">
-                {story.previewJP.replace(/<[^>]+>/g, '')}...
+                {story.previewId}
               </p>
             </button>
           ))}
