@@ -290,10 +290,18 @@ export default function JLPTLevelPage() {
           </h2>
         </div>
 
-        <p className="text-[#A3A099] text-sm">
-          Pilih set ujian di bawah ini. Setiap set terdiri dari
-          Kosakata, Tata Bahasa, Membaca, dan Mendengar.
+        <p className="text-[#A3A099] text-sm leading-relaxed">
+          Pilih set ujian di bawah ini. Soal dikelompokkan menjadi Kosakata,
+          Tata Bahasa, Membaca, dan Mendengar. Untuk N5 dan N4, timer mengikuti
+          tiga sesi JLPT: Kosakata, Tata Bahasa + Membaca, lalu Mendengar.
         </p>
+        {(level === "N5" || level === "N4") && (
+          <p className="mt-2 text-xs text-[#D9AD42]">
+            {level === "N5"
+              ? "Waktu sesi: 20 menit · 40 menit · 30 menit."
+              : "Waktu sesi: 25 menit · 55 menit · 35 menit."}
+          </p>
+        )}
 
         {sets.length > 0 && (
           <div className="mt-5 bg-[#1E1D1B] border border-[#33312E] rounded-xl p-4">
