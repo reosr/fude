@@ -82,6 +82,7 @@ const content: IrodoriLessonContent = {
     ["スープ", "スープ · suupu", "Sup; kuah"],
     ["具", "ぐ · gu", "Isi; bahan pelengkap masakan"],
     ["料理", "りょうり · ryouri", "Masakan; hidangan"],
+    ["サイウア", "サイウア · sai ua", "Sai ua; sosis herbal khas Thailand Utara"],
     ["飲食店", "いんしょくてん · inshokuten", "Tempat makan atau restoran"],
     ["定食", "ていしょく · teishoku", "Paket makanan lengkap ala Jepang"],
     ["名物", "めいぶつ · meibutsu", "Makanan atau produk khas suatu daerah"],
@@ -141,7 +142,7 @@ const content: IrodoriLessonContent = {
       title: "02 · Mengubah kata sifat menjadi kata benda yang menyatakan tingkat atau sifat",
       pattern: "ナA-さ／イA-さ",
       example: <>このカレーは、辛さを選べます。<br />この店は、料理のおいしさで人気があります。<br />本場の辛さにしてくれます。</>,
-      note: "さ ditambahkan pada kata sifat untuk membentuk kata benda yang menyatakan tingkat atau kualitas. Untuk kata sifat-i, hilangkan い lalu tambahkan さ, misalnya 辛い → 辛さ dan おいしい → おいしさ. Untuk kata sifat-na, tambahkan さ pada bentuk dasarnya, misalnya 静か → 静かさ. Maknanya sering setara dengan 'tingkat ...' atau 'kualitas ...'.",
+      note: "さ ditambahkan pada kata sifat untuk membentuk kata benda yang menyatakan tingkat atau kualitas. Untuk kata sifat-i, hilangkan い lalu tambahkan さ, misalnya 辛い → 辛さ dan おいしい → おいしさ. Untuk kata sifat-na, tambahkan さ pada bentuk dasarnya, misalnya 静か → 静かさ. Maknanya sering setara dengan 'tingkat ...' atau 'kualitas ...'. Untuk kata sifat-na, hilangkan な sebelum menambahkan さ, misalnya 静かな → 静かさ. Perlu diingat, いい merupakan pengecualian dan berubah menjadi よさ, bukan いさ.",
     },
     {
       title: "03 · Menjelaskan benda atau makanan dengan cara santai",
