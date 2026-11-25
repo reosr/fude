@@ -8,7 +8,7 @@ export interface StudyProgress {
   completedStories: string[];
 }
 
-const STORAGE_KEY = "fude_learning_progress_v1";
+export const STUDY_PROGRESS_STUDY_PROGRESS_STORAGE_KEY = "fude_learning_progress_v1";
 export const STUDY_PROGRESS_UPDATED_EVENT = "fude:learning-progress-updated";
 
 const EMPTY_PROGRESS: StudyProgress = {
@@ -44,7 +44,7 @@ function readStoredProgress(): StudyProgress {
   if (typeof window === "undefined") return EMPTY_PROGRESS;
 
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
+    const raw = window.localStorage.getItem(STUDY_PROGRESS_STORAGE_KEY);
     return raw ? normalizeProgress(JSON.parse(raw)) : EMPTY_PROGRESS;
   } catch (error) {
     console.warn("Gagal membaca progres belajar:", error);
@@ -66,7 +66,7 @@ function subscribe(callback: () => void): () => void {
   if (typeof window === "undefined") return () => undefined;
 
   const handleStorage = (event: StorageEvent) => {
-    if (event.key !== STORAGE_KEY && event.key !== null) return;
+    if (event.key !== STUDY_PROGRESS_STORAGE_KEY && event.key !== null) return;
     cachedProgress = null;
     callback();
   };
@@ -100,8 +100,8 @@ function updateProgress(
   cachedProgress = next;
 
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-    notifyFudeLocalDataChanged(STORAGE_KEY);
+    window.localStorage.setItem(STUDY_PROGRESS_STORAGE_KEY, JSON.stringify(next));
+    notifyFudeLocalDataChanged(STUDY_PROGRESS_STORAGE_KEY);
   } catch (error) {
     console.warn("Gagal menyimpan progres belajar:", error);
   }
