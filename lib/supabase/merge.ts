@@ -63,12 +63,6 @@ function sameJson(a: unknown, b: unknown): boolean {
   );
 }
 
-function hasPending(
-  pending: PendingSyncChange[],
-  key: string
-): boolean {
-  return pending.some((item) => item.key === key);
-}
 
 function isLocalChangeNewer(
   pending: PendingSyncChange[],
