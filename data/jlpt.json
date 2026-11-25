@@ -1328,6 +1328,817 @@
               "explanation": "いっしょに昼ごはんを食べませんか adalah ajakan untuk makan siang bersama. Respons positif yang alami adalah ええ、食べましょう (ya, ayo makan)."
             }
           ]
+        },
+        "examFormat": {
+          "format": "jlpt-official-structure",
+          "timed": true,
+          "testSections": [
+            {
+              "id": "vocab",
+              "label": "Language Knowledge (Vocabulary)",
+              "minutes": 20,
+              "dataSections": [
+                "vocab"
+              ]
+            },
+            {
+              "id": "grammar-reading",
+              "label": "Language Knowledge (Grammar)・Reading",
+              "minutes": 40,
+              "dataSections": [
+                "grammar",
+                "reading"
+              ]
+            },
+            {
+              "id": "listening",
+              "label": "Listening",
+              "minutes": 30,
+              "dataSections": [
+                "listening"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "n5-set-2",
+        "title": "Latihan JLPT N5 – Set Latihan 2",
+        "sections": {
+          "vocab": [
+            {
+              "itemType": "kanji-reading",
+              "question": "「図書館」の読み方はどれですか。",
+              "options": [
+                "としょかん",
+                "としょけん",
+                "としょうかん",
+                "としゅかん"
+              ],
+              "answer": 0,
+              "explanation": "図書館は「としょかん」と読みます。意味は perpustakaan です。"
+            },
+            {
+              "itemType": "kanji-reading",
+              "question": "「去年」の読み方はどれですか。",
+              "options": [
+                "きょねん",
+                "きょうねん",
+                "らいねん",
+                "まいねん"
+              ],
+              "answer": 0,
+              "explanation": "去年は「きょねん」と読み、tahun lalu という意味です。"
+            },
+            {
+              "itemType": "kanji-reading",
+              "question": "「野菜」の読み方はどれですか。",
+              "options": [
+                "やさい",
+                "やざい",
+                "のさい",
+                "のざい"
+              ],
+              "answer": 0,
+              "explanation": "野菜は「やさい」と読みます。意味は sayuran です。"
+            },
+            {
+              "itemType": "orthography",
+              "question": "「きょう、こうえんへ行きます。」の「こうえん」はどれですか。",
+              "options": [
+                "公園",
+                "公演",
+                "講演",
+                "高遠"
+              ],
+              "answer": 0,
+              "explanation": "この文の「こうえん」は、公園（こうえん）です。公園は tempat untuk bermain atau bersantai di luar."
+            },
+            {
+              "itemType": "orthography",
+              "question": "「まいあさ、しんぶんを読みます。」の「しんぶん」はどれですか。",
+              "options": [
+                "新聞",
+                "新分",
+                "親聞",
+                "新文"
+              ],
+              "answer": 0,
+              "explanation": "「しんぶん」は新聞と書きます。Artinya surat kabar."
+            },
+            {
+              "itemType": "orthography",
+              "question": "「あした、でんしゃで行きます。」の「でんしゃ」はどれですか。",
+              "options": [
+                "電車",
+                "電気",
+                "自転車",
+                "電社"
+              ],
+              "answer": 0,
+              "explanation": "「でんしゃ」は電車と書きます。Artinya kereta."
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "あついですね。まどを（　）ください。",
+              "options": [
+                "しめて",
+                "あけて",
+                "けして",
+                "つけて"
+              ],
+              "answer": 1,
+              "explanation": "Karena cuaca panas, tindakan yang masuk akal adalah membuka jendela: まどをあけてください。"
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "のどがかわきました。水を（　）。",
+              "options": [
+                "のみます",
+                "ききます",
+                "あそびます",
+                "ねます"
+              ],
+              "answer": 0,
+              "explanation": "のどがかわきました berarti haus. Jadi, kita minum air: 水を飲みます。"
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "バスが来ません。駅で（　）います。",
+              "options": [
+                "まって",
+                "およいで",
+                "つくって",
+                "うたって"
+              ],
+              "answer": 0,
+              "explanation": "Jika bus belum datang, kita menunggu di stasiun: まっています。"
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「すぐ帰ります」と だいたい同じ意味のものはどれですか。",
+              "options": [
+                "今、帰ります",
+                "あとで帰ります",
+                "毎日帰ります",
+                "ゆっくり帰ります"
+              ],
+              "answer": 0,
+              "explanation": "すぐ berarti segera. 今帰ります (pulang sekarang) paling dekat maknanya."
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「たくさん食べました」と だいたい同じ意味のものはどれですか。",
+              "options": [
+                "少し食べました",
+                "いっぱい食べました",
+                "何も食べませんでした",
+                "早く食べました"
+              ],
+              "answer": 1,
+              "explanation": "たくさん dan いっぱい sama-sama berarti banyak."
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「このへやは広いです」と反対の意味はどれですか。",
+              "options": [
+                "せまいです",
+                "あかるいです",
+                "きれいです",
+                "あたらしいです"
+              ],
+              "answer": 0,
+              "explanation": "広い berarti luas. Lawan katanya adalah せまい (sempit)."
+            }
+          ],
+          "grammar": [
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "日曜日（　）友達と公園へ行きました。",
+              "options": [
+                "に",
+                "を",
+                "が",
+                "で"
+              ],
+              "answer": 0,
+              "explanation": "Partikel に menandai waktu terjadinya kegiatan: 日曜日に行きました。"
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "この店（　）パンを買いました。",
+              "options": [
+                "で",
+                "に",
+                "へ",
+                "を"
+              ],
+              "answer": 0,
+              "explanation": "Partikel で menunjukkan tempat berlangsungnya kegiatan. パンを買いました dilakukan di toko."
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "毎朝、六時（　）起きます。",
+              "options": [
+                "を",
+                "に",
+                "で",
+                "へ"
+              ],
+              "answer": 1,
+              "explanation": "Untuk waktu spesifik seperti pukul enam, gunakan に: 六時に起きます。"
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "昨日は雨でしたから、どこへも（　）。",
+              "options": [
+                "行きませんでした",
+                "行きます",
+                "行きましょう",
+                "行っています"
+              ],
+              "answer": 0,
+              "explanation": "Konteksnya adalah kemarin dan hujan, sehingga bentuk lampau negatif 行きませんでした sesuai."
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "ここに名前を（　）ください。",
+              "options": [
+                "書いて",
+                "書きます",
+                "書く",
+                "書いた"
+              ],
+              "answer": 0,
+              "explanation": "Pola ～てください digunakan untuk permintaan. 書いてください berarti silakan tulis."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "日本語を",
+                "毎日",
+                "勉強します",
+                "家で"
+              ],
+              "correctOrder": [
+                2,
+                4,
+                1,
+                3
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar: 毎日 → 家で → 日本語を → 勉強します. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "きのう ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "映画を",
+                "友達と",
+                "見ました",
+                "いっしょに"
+              ],
+              "correctOrder": [
+                4,
+                2,
+                1,
+                3
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar: いっしょに → 友達と → 映画を → 見ました. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "あした ＿＿＿ ★ ＿＿＿ ＿＿＿。",
+              "options": [
+                "学校へ",
+                "八時に",
+                "行きます",
+                "わたしは"
+              ],
+              "correctOrder": [
+                4,
+                2,
+                1,
+                3
+              ],
+              "starPosition": 2,
+              "answer": 1,
+              "explanation": "Urutan yang benar: わたしは → 八時に → 学校へ → 行きます. Potongan nomor 2 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "母は ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "料理を",
+                "毎晩",
+                "作ります",
+                "家で"
+              ],
+              "correctOrder": [
+                2,
+                4,
+                1,
+                3
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar: 毎晩 → 家で → 料理を → 作ります. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "本を",
+                "図書館で",
+                "読みます",
+                "よく"
+              ],
+              "correctOrder": [
+                4,
+                2,
+                1,
+                3
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar: よく → 図書館で → 本を → 読みます. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "だから",
+                "でも",
+                "そして",
+                "それとも"
+              ],
+              "answer": 0,
+              "explanation": "Bagian pertama menjelaskan alasan, lalu bagian kedua menyebut akibatnya. だから berarti karena itu.",
+              "passage": "あしたは日曜日です。天気もいいです。（　）家族と公園へ行きます。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "それから",
+                "しかし",
+                "でも",
+                "だから"
+              ],
+              "answer": 0,
+              "explanation": "Setelah sarapan, kegiatan berikutnya adalah pergi ke sekolah. それから berarti setelah itu.",
+              "passage": "毎朝六時に起きます。朝ごはんを食べます。（　）学校へ行きます。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "でも",
+                "それから",
+                "だから",
+                "それでは"
+              ],
+              "answer": 0,
+              "explanation": "Kalimat kedua menyatakan hal yang berlawanan dengan kalimat pertama. でも berarti tetapi.",
+              "passage": "この店のパンは少し高いです。（　）とてもおいしいです。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "そして",
+                "でも",
+                "だから",
+                "それとも"
+              ],
+              "answer": 0,
+              "explanation": "そして menghubungkan dua kegiatan yang berurutan: membeli buku, lalu pulang.",
+              "passage": "駅で本を買いました。（　）バスで家へ帰りました。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "だから",
+                "しかし",
+                "それとも",
+                "でも"
+              ],
+              "answer": 0,
+              "explanation": "Karena sakit, ia tidak pergi ke sekolah. だから menunjukkan hubungan sebab-akibat.",
+              "passage": "きのうから頭が痛いです。（　）今日は学校を休みます。"
+            }
+          ],
+          "reading": [
+            {
+              "itemType": "short-passage",
+              "question": "わたしはだれと<ruby>買<rt>か</rt></ruby>い物へ<ruby>行<rt>い</rt></ruby>きましたか。",
+              "options": [
+                "父",
+                "母",
+                "友達",
+                "先生"
+              ],
+              "answer": 1,
+              "explanation": "Bacaan menyebutkan 母と買い物へ行きました, jadi ia pergi bersama ibu.",
+              "passage": "わたしは<ruby>土曜日<rt>どようび</rt></ruby>に<ruby>母<rt>はは</rt></ruby>と<ruby>買<rt>か</rt></ruby>い物へ<ruby>行<rt>い</rt></ruby>きました。スーパーで牛乳とパンを<ruby>買<rt>か</rt></ruby>いました。<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>友達<rt>ともだち</rt></ruby>に会いました。"
+            },
+            {
+              "itemType": "short-passage",
+              "question": "スーパーで何を<ruby>買<rt>か</rt></ruby>いましたか。",
+              "options": [
+                "牛乳とパン",
+                "水と本",
+                "りんごと花",
+                "肉と魚"
+              ],
+              "answer": 0,
+              "explanation": "Ia membeli 牛乳とパン, yaitu susu dan roti.",
+              "passage": "わたしは<ruby>土曜日<rt>どようび</rt></ruby>に<ruby>母<rt>はは</rt></ruby>と<ruby>買<rt>か</rt></ruby>い物へ<ruby>行<rt>い</rt></ruby>きました。スーパーで牛乳とパンを<ruby>買<rt>か</rt></ruby>いました。<ruby>帰<rt>かえ</rt></ruby>るとき、<ruby>友達<rt>ともだち</rt></ruby>に会いました。"
+            },
+            {
+              "itemType": "mid-size-passage",
+              "question": "田中さんは<ruby>学校<rt>がっこう</rt></ruby>のあと、どこへ<ruby>行<rt>い</rt></ruby>きますか。",
+              "options": [
+                "家",
+                "公園",
+                "図書館",
+                "駅"
+              ],
+              "answer": 2,
+              "explanation": "Kalimat pertama menyebutkan bahwa setelah sekolah Tanaka pergi ke perpustakaan.",
+              "passage": "田中さんは<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>のあとで<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。そこで一<ruby>時間<rt>じかん</rt></ruby>ぐらい日<ruby>本<rt>ほん</rt></ruby>語を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます。二人で<ruby>宿題<rt>しゅくだい</rt></ruby>をしたあと、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。田中さんは静かな場所で<ruby>勉強<rt>べんきょう</rt></ruby>するのが好きです。"
+            },
+            {
+              "itemType": "mid-size-passage",
+              "question": "<ruby>友達<rt>ともだち</rt></ruby>が<ruby>来<rt>き</rt></ruby>るのは何曜日ですか。",
+              "options": [
+                "月曜日と水曜日",
+                "火曜日と木曜日",
+                "金曜日と土曜日",
+                "土曜日と日曜日"
+              ],
+              "answer": 1,
+              "explanation": "Dalam bacaan tertulis 火曜日と木曜日は友達も来ます.",
+              "passage": "田中さんは<ruby>毎日<rt>まいにち</rt></ruby>、<ruby>学校<rt>がっこう</rt></ruby>のあとで<ruby>図書館<rt>としょかん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。そこで一<ruby>時間<rt>じかん</rt></ruby>ぐらい日<ruby>本<rt>ほん</rt></ruby>語を<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>火曜日<rt>かようび</rt></ruby>と<ruby>木曜日<rt>もくようび</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>も<ruby>来<rt>き</rt></ruby>ます。二人で<ruby>宿題<rt>しゅくだい</rt></ruby>をしたあと、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みます。田中さんは静かな場所で<ruby>勉強<rt>べんきょう</rt></ruby>するのが好きです。"
+            },
+            {
+              "itemType": "information-retrieval",
+              "question": "<ruby>図書館<rt>としょかん</rt></ruby>は<ruby>土曜日<rt>どようび</rt></ruby>、何時まで<ruby>開<rt>あ</rt></ruby>いていますか。",
+              "options": [
+                "午後三時",
+                "午後四時",
+                "午後五時",
+                "午後六時"
+              ],
+              "answer": 2,
+              "explanation": "Pengumuman menyebutkan 午前九時から午後五時まで, jadi perpustakaan buka sampai pukul lima sore.",
+              "passage": "<ruby>図書館<rt>としょかん</rt></ruby>のお知らせ\n今週の<ruby>土曜日<rt>どようび</rt></ruby>は、<ruby>午前<rt>ごぜん</rt></ruby>九時から<ruby>午後<rt>ごご</rt></ruby>五時まで<ruby>開<rt>あ</rt></ruby>いています。<ruby>日曜日<rt>にちようび</rt></ruby>は休みです。<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す人は、<ruby>入口<rt>いりぐち</rt></ruby>の箱に<ruby>入<rt>はい</rt></ruby>れてください。<ruby>新<rt>あたら</rt></ruby>しい<ruby>本<rt>ほん</rt></ruby>は一人二冊まで<ruby>借<rt>か</rt></ruby>りられます。"
+            },
+            {
+              "itemType": "information-retrieval",
+              "question": "<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す人は、どこに<ruby>本<rt>ほん</rt></ruby>を<ruby>入<rt>はい</rt></ruby>れますか。",
+              "options": [
+                "入口の箱",
+                "受付の机",
+                "外の箱",
+                "二階の部屋"
+              ],
+              "answer": 0,
+              "explanation": "Buku harus dimasukkan ke kotak di pintu masuk: 入口の箱.",
+              "passage": "<ruby>図書館<rt>としょかん</rt></ruby>のお知らせ\n今週の<ruby>土曜日<rt>どようび</rt></ruby>は、<ruby>午前<rt>ごぜん</rt></ruby>九時から<ruby>午後<rt>ごご</rt></ruby>五時まで<ruby>開<rt>あ</rt></ruby>いています。<ruby>日曜日<rt>にちようび</rt></ruby>は休みです。<ruby>本<rt>ほん</rt></ruby>を<ruby>返<rt>かえ</rt></ruby>す人は、<ruby>入口<rt>いりぐち</rt></ruby>の箱に<ruby>入<rt>はい</rt></ruby>れてください。<ruby>新<rt>あたら</rt></ruby>しい<ruby>本<rt>ほん</rt></ruby>は一人二冊まで<ruby>借<rt>か</rt></ruby>りられます。"
+            }
+          ],
+          "listening": [
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n5/set2-q01.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "田中さん、もう帰りますか。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "はい。でも、かばんを教室に忘れました。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "じゃあ、先に教室へ取りに行きましょう。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "そうですね。すぐ戻ります。"
+                }
+              ],
+              "question": "男の人は、まず何をしますか。",
+              "options": [
+                "家へ帰ります",
+                "教室へ行きます",
+                "駅へ行きます",
+                "友達を待ちます"
+              ],
+              "answer": 1,
+              "explanation": "Pria itu lupa tasnya di kelas, jadi ia akan pergi mengambil tas terlebih dahulu."
+            },
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n5/set2-q02.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "昼ごはんを食べたあと、どこへ行きますか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "銀行へ行きます。お金を下ろします。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "そのあと、買い物ですか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "はい、スーパーへ行きます。"
+                }
+              ],
+              "question": "女の人は、<ruby>昼<rt>ひる</rt></ruby>ごはんのあと、どこへ<ruby>行<rt>い</rt></ruby>きますか。",
+              "options": [
+                "スーパー",
+                "銀行",
+                "学校",
+                "図書館"
+              ],
+              "answer": 1,
+              "explanation": "Wanita mengatakan bahwa setelah makan siang ia pergi ke bank untuk mengambil uang."
+            },
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n5/set2-q03.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "あした、何時に駅で会いましょうか。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "九時はどうですか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "すみません。九時半なら大丈夫です。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "わかりました。九時半に会いましょう。"
+                }
+              ],
+              "question": "二人は何時に会いますか。",
+              "options": [
+                "九時",
+                "九時半",
+                "十時",
+                "十時半"
+              ],
+              "answer": 1,
+              "explanation": "Mereka menyepakati pukul 九時半 (setengah sepuluh)."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n5/set2-q04.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "映画は何時に始まりますか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "三時です。でも、二時半に映画館で会いましょう。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "わかりました。"
+                }
+              ],
+              "question": "<ruby>映画<rt>えいが</rt></ruby>は何時に<ruby>始<rt>はじ</rt></ruby>まりますか。",
+              "options": [
+                "二時",
+                "二時半",
+                "三時",
+                "三時半"
+              ],
+              "answer": 2,
+              "explanation": "Dialog menyebutkan bahwa film dimulai pukul 三時. Mereka bertemu lebih awal pada pukul dua setengah."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n5/set2-q05.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "このりんごは一つ百円です。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "では、三つください。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "はい、三百円です。"
+                }
+              ],
+              "question": "りんごはいくらですか。",
+              "options": [
+                "百円",
+                "二百円",
+                "三百円",
+                "四百円"
+              ],
+              "answer": 2,
+              "explanation": "Satu apel 100 yen dan pria membeli tiga, jadi totalnya 300 yen."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n5/set2-q06.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "日曜日の天気はどうですか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "午前は雨ですが、午後は晴れます。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "じゃあ、午後に公園へ行きましょう。"
+                }
+              ],
+              "question": "<ruby>日曜日<rt>にちようび</rt></ruby>の<ruby>午後<rt>ごご</rt></ruby>の<ruby>天気<rt>てんき</rt></ruby>はどうですか。",
+              "options": [
+                "雨です",
+                "雪です",
+                "晴れです",
+                "くもりです"
+              ],
+              "answer": 2,
+              "explanation": "Wanita mengatakan 午後は晴れます, artinya sore hari cerah."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n5/set2-q07.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "友達の家に着きました。友達のお母さんが出てきました。"
+                }
+              ],
+              "question": "このとき、何と言いますか。",
+              "options": [
+                "おじゃまします",
+                "いただきます",
+                "おやすみなさい",
+                "いってきます"
+              ],
+              "answer": 0,
+              "explanation": "Saat masuk ke rumah orang lain, ungkapan yang sesuai adalah おじゃまします."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n5/set2-q08.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "先生に、もう一度ゆっくり話してほしいです。"
+                }
+              ],
+              "question": "<ruby>先生<rt>せんせい</rt></ruby>に何と言いますか。",
+              "options": [
+                "もう一度お願いします",
+                "お先にどうぞ",
+                "ごちそうさまでした",
+                "いってらっしゃい"
+              ],
+              "answer": 0,
+              "explanation": "Meminta guru mengulang dengan sopan dapat diungkapkan dengan もう一度お願いします."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n5/set2-q09.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "友達がプレゼントをくれました。"
+                }
+              ],
+              "question": "プレゼントをもらったとき、何と言いますか。",
+              "options": [
+                "おめでとうございます",
+                "ありがとうございます",
+                "いらっしゃいませ",
+                "おかえりなさい"
+              ],
+              "answer": 1,
+              "explanation": "Saat menerima hadiah, ungkapan yang sesuai adalah ありがとうございます."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n5/set2-q10.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "すみません、トイレはどこですか。"
+                }
+              ],
+              "question": "男の人に何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "あそこです",
+                "三時です",
+                "二つです",
+                "おいしいです"
+              ],
+              "answer": 0,
+              "explanation": "Pertanyaan menanyakan lokasi toilet, jadi jawaban yang sesuai menunjukkan tempat: あそこです."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n5/set2-q11.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "もう昼ごはんを食べましたか。"
+                }
+              ],
+              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "はい、まだです",
+                "いいえ、まだです",
+                "はい、食べません",
+                "いいえ、食べました"
+              ],
+              "answer": 1,
+              "explanation": "Untuk menyatakan belum makan siang, jawaban yang tepat adalah いいえ、まだです."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n5/set2-q12.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "あした、いっしょに図書館へ行きませんか。"
+                }
+              ],
+              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "はい、行きましょう",
+                "いいえ、行きました",
+                "はい、行きませんでした",
+                "図書館は大きいです"
+              ],
+              "answer": 0,
+              "explanation": "Ajakan dengan ～ませんか dapat diterima dengan jawaban positif 行きましょう."
+            }
+          ]
+        },
+        "examFormat": {
+          "format": "jlpt-official-structure",
+          "timed": true,
+          "testSections": [
+            {
+              "id": "vocab",
+              "label": "Language Knowledge (Vocabulary)",
+              "minutes": 20,
+              "dataSections": [
+                "vocab"
+              ]
+            },
+            {
+              "id": "grammar-reading",
+              "label": "Language Knowledge (Grammar)・Reading",
+              "minutes": 40,
+              "dataSections": [
+                "grammar",
+                "reading"
+              ]
+            },
+            {
+              "id": "listening",
+              "label": "Listening",
+              "minutes": 30,
+              "dataSections": [
+                "listening"
+              ]
+            }
+          ]
         }
       }
     ]
@@ -2846,6 +3657,997 @@
               ],
               "answer": 0,
               "explanation": "Pertanyaan menanyakan apakah makan siang sudah dilakukan. Jawaban yang paling langsung adalah はい、さっき<ruby>食<rt>た</rt></ruby>べました."
+            }
+          ]
+        },
+        "examFormat": {
+          "format": "jlpt-official-structure",
+          "timed": true,
+          "testSections": [
+            {
+              "id": "vocab",
+              "label": "Language Knowledge (Vocabulary)",
+              "minutes": 25,
+              "dataSections": [
+                "vocab"
+              ]
+            },
+            {
+              "id": "grammar-reading",
+              "label": "Language Knowledge (Grammar)・Reading",
+              "minutes": 55,
+              "dataSections": [
+                "grammar",
+                "reading"
+              ]
+            },
+            {
+              "id": "listening",
+              "label": "Listening",
+              "minutes": 35,
+              "dataSections": [
+                "listening"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "n4-set-2",
+        "title": "Latihan JLPT N4 – Set Latihan 2",
+        "sections": {
+          "vocab": [
+            {
+              "itemType": "kanji-reading",
+              "question": "「準備」の読み方はどれですか。",
+              "options": [
+                "じゅんび",
+                "じゅびん",
+                "しゅんび",
+                "じゅんぴ"
+              ],
+              "answer": 0,
+              "explanation": "準備は「じゅんび」と読みます。Artinya persiapan."
+            },
+            {
+              "itemType": "kanji-reading",
+              "question": "「連絡」の読み方はどれですか。",
+              "options": [
+                "れんらく",
+                "れんがく",
+                "れいらく",
+                "れんろく"
+              ],
+              "answer": 0,
+              "explanation": "連絡は「れんらく」と読みます。Artinya menghubungi atau komunikasi."
+            },
+            {
+              "itemType": "kanji-reading",
+              "question": "「安全」の読み方はどれですか。",
+              "options": [
+                "あんぜん",
+                "あんせん",
+                "あんぜい",
+                "あんしん"
+              ],
+              "answer": 0,
+              "explanation": "安全は「あんぜん」と読みます。Artinya aman atau keselamatan."
+            },
+            {
+              "itemType": "kanji-reading",
+              "question": "「住所」の読み方はどれですか。",
+              "options": [
+                "じゅうしょ",
+                "じゅうじょ",
+                "じょうしょ",
+                "じゅしょ"
+              ],
+              "answer": 0,
+              "explanation": "住所は「じゅうしょ」と読みます。Artinya alamat."
+            },
+            {
+              "itemType": "orthography",
+              "question": "「しゅくだいを出してください。」の「しゅくだい」はどれですか。",
+              "options": [
+                "宿題",
+                "祝台",
+                "宿代",
+                "縮題"
+              ],
+              "answer": 0,
+              "explanation": "「しゅくだい」は宿題と書きます。Artinya pekerjaan rumah."
+            },
+            {
+              "itemType": "orthography",
+              "question": "「じゅうしょを書いてください。」の「じゅうしょ」はどれですか。",
+              "options": [
+                "住所",
+                "住書",
+                "重所",
+                "十所"
+              ],
+              "answer": 0,
+              "explanation": "「じゅうしょ」は住所と書きます。Artinya alamat."
+            },
+            {
+              "itemType": "orthography",
+              "question": "「せつめいを聞きました。」の「せつめい」はどれですか。",
+              "options": [
+                "説明",
+                "設名",
+                "説名",
+                "切明"
+              ],
+              "answer": 0,
+              "explanation": "「せつめい」は説明と書きます。Artinya penjelasan."
+            },
+            {
+              "itemType": "orthography",
+              "question": "「しんぶんを読みました。」の「しんぶん」はどれですか。",
+              "options": [
+                "新聞",
+                "新分",
+                "心聞",
+                "親文"
+              ],
+              "answer": 0,
+              "explanation": "「しんぶん」は新聞と書きます. Artinya surat kabar."
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "道がわかりません。駅員に（　）しました。",
+              "options": [
+                "質問",
+                "返事",
+                "約束",
+                "説明"
+              ],
+              "answer": 0,
+              "explanation": "Karena tidak tahu jalan, ia bertanya kepada petugas stasiun: 質問しました."
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "会議は九時からです。五分前に（　）ください。",
+              "options": [
+                "来て",
+                "返して",
+                "借りて",
+                "閉めて"
+              ],
+              "answer": 0,
+              "explanation": "Rapat dimulai pukul sembilan, jadi datanglah lima menit sebelumnya."
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "この薬を飲んで、ゆっくり（　）ください。",
+              "options": [
+                "休んで",
+                "急いで",
+                "集めて",
+                "運んで"
+              ],
+              "answer": 0,
+              "explanation": "Setelah minum obat, istirahatlah dengan tenang: 休んでください."
+            },
+            {
+              "itemType": "contextually-defined-expressions",
+              "question": "旅行の前に、ホテルを（　）しました。",
+              "options": [
+                "予約",
+                "案内",
+                "連絡",
+                "紹介"
+              ],
+              "answer": 0,
+              "explanation": "Sebelum bepergian, hotel dipesan terlebih dahulu: 予約しました."
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「急に雨が降りました」と だいたい同じ意味のものはどれですか。",
+              "options": [
+                "突然雨が降りました",
+                "毎日雨が降りました",
+                "少し雨が降りました",
+                "長く雨が降りました"
+              ],
+              "answer": 0,
+              "explanation": "急に berarti tiba-tiba; makna yang paling dekat adalah 突然."
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「十分に休んでください」と だいたい同じ意味のものはどれですか。",
+              "options": [
+                "よく休んでください",
+                "少し休んでください",
+                "早く休んでください",
+                "一人で休んでください"
+              ],
+              "answer": 0,
+              "explanation": "十分に dalam konteks ini berarti secukupnya atau dengan baik; よく休んでください paling dekat."
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「必要なものを持って来てください」と同じ意味に近いものはどれですか。",
+              "options": [
+                "いるものを持って来てください",
+                "新しいものを持って来てください",
+                "大きいものを持って来てください",
+                "好きなものを持って来てください"
+              ],
+              "answer": 0,
+              "explanation": "必要なもの berarti barang yang diperlukan; いるもの memiliki makna yang dekat."
+            },
+            {
+              "itemType": "paraphrases",
+              "question": "「たいてい七時に起きます」と同じ意味に近いものはどれですか。",
+              "options": [
+                "ほとんどいつも七時に起きます",
+                "一度だけ七時に起きます",
+                "時々七時に起きます",
+                "毎日遅く起きます"
+              ],
+              "answer": 0,
+              "explanation": "たいてい berarti biasanya atau hampir selalu."
+            },
+            {
+              "itemType": "usage",
+              "question": "「間に合う」の使い方として正しいものはどれですか。",
+              "options": [
+                "<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>間<rt>あいだ</rt></ruby>に合うように、<ruby>早<rt>はや</rt></ruby>く<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ました。",
+                "<ruby>水<rt>みず</rt></ruby>を<ruby>間<rt>あいだ</rt></ruby>に合って<ruby>飲<rt>の</rt></ruby>みました。",
+                "<ruby>本<rt>ほん</rt></ruby>を<ruby>間<rt>あいだ</rt></ruby>に合って<ruby>読<rt>よ</rt></ruby>みました。",
+                "<ruby>友達<rt>ともだち</rt></ruby>を<ruby>間<rt>あいだ</rt></ruby>に合って会いました。"
+              ],
+              "answer": 0,
+              "explanation": "間に合う berarti tiba tepat waktu atau tidak terlambat. 電車に間に合うように digunakan secara alami."
+            },
+            {
+              "itemType": "usage",
+              "question": "「集める」の使い方として正しいものはどれですか。",
+              "options": [
+                "<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>集<rt>あつ</rt></ruby>めています。",
+                "<ruby>毎朝<rt>まいあさ</rt></ruby>七時を<ruby>集<rt>あつ</rt></ruby>めます。",
+                "<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いて<ruby>集<rt>あつ</rt></ruby>めます。",
+                "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>天気<rt>てんき</rt></ruby>を<ruby>集<rt>あつ</rt></ruby>めて<ruby>食<rt>た</rt></ruby>べました。"
+              ],
+              "answer": 0,
+              "explanation": "集める berarti mengumpulkan. Mengumpulkan foto perjalanan adalah penggunaan yang tepat."
+            },
+            {
+              "itemType": "usage",
+              "question": "「続ける」の使い方として正しいものはどれですか。",
+              "options": [
+                "<ruby>毎日<rt>まいにち</rt></ruby><ruby>少<rt>すく</rt></ruby>しずつ日<ruby>本<rt>ほん</rt></ruby>語の<ruby>勉強<rt>べんきょう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けています。",
+                "<ruby>駅<rt>えき</rt></ruby>で切符を<ruby>続<rt>つづ</rt></ruby>けました。",
+                "かばんの中に<ruby>水<rt>みず</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けました。",
+                "<ruby>日曜日<rt>にちようび</rt></ruby>に<ruby>友達<rt>ともだち</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けました。"
+              ],
+              "answer": 0,
+              "explanation": "続ける berarti melanjutkan. 勉強を続ける adalah pasangan kata yang alami."
+            },
+            {
+              "itemType": "usage",
+              "question": "「しっかり」の使い方として正しいものはどれですか。",
+              "options": [
+                "<ruby>試験<rt>しけん</rt></ruby>の前に、しっかり<ruby>勉強<rt>べんきょう</rt></ruby>しました。",
+                "しっかり<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>お</rt></ruby>るので<ruby>傘<rt>かさ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。",
+                "りんごをしっかり三つ<ruby>食<rt>た</rt></ruby>べました。",
+                "<ruby>駅<rt>えき</rt></ruby>をしっかり<ruby>歩<rt>ある</rt></ruby>いて<ruby>家<rt>いえ</rt></ruby>へ<ruby>帰<rt>かえ</rt></ruby>りました。"
+              ],
+              "answer": 0,
+              "explanation": "しっかり勉強する berarti belajar dengan sungguh-sungguh."
+            }
+          ],
+          "grammar": [
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "音楽を（　）ながら、料理をしています。",
+              "options": [
+                "聞き",
+                "聞く",
+                "聞いて",
+                "聞いた"
+              ],
+              "answer": 0,
+              "explanation": "Pola ～ながら memakai bentuk ます tanpa ます: 聞きながら."
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "日本へ行ったことが（　）か。",
+              "options": [
+                "あります",
+                "います",
+                "します",
+                "なります"
+              ],
+              "answer": 0,
+              "explanation": "Pengalaman menggunakan pola ～たことがあります."
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "明日は試験ですから、今晩勉強し（　）なりません。",
+              "options": [
+                "なくて",
+                "ないで",
+                "なければ",
+                "なく"
+              ],
+              "answer": 2,
+              "explanation": "Kewajiban dinyatakan dengan ～なければなりません."
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "この店のケーキはおいし（　）です。",
+              "options": [
+                "そう",
+                "よう",
+                "らしい",
+                "みたい"
+              ],
+              "answer": 0,
+              "explanation": "～そうです dapat menyatakan kesan dari penampilan: おいしそうです."
+            },
+            {
+              "itemType": "sentential-grammar-1",
+              "question": "宿題を家に忘れて（　）。",
+              "options": [
+                "しまいました",
+                "おきました",
+                "みました",
+                "ありました"
+              ],
+              "answer": 0,
+              "explanation": "～てしまいました menyatakan sesuatu yang terlanjur atau disesalkan."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "わたしは ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "日本語を",
+                "毎日",
+                "勉強する",
+                "ようにしています"
+              ],
+              "correctOrder": [
+                2,
+                1,
+                3,
+                4
+              ],
+              "starPosition": 2,
+              "answer": 0,
+              "explanation": "Urutan yang benar: 毎日 → 日本語を → 勉強する → ようにしています. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "駅に着いたら ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "友達に",
+                "電話を",
+                "する",
+                "ことにします"
+              ],
+              "correctOrder": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "starPosition": 2,
+              "answer": 1,
+              "explanation": "Urutan yang benar: 友達に → 電話を → する → ことにします. Potongan nomor 2 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "雨が降りそうなので ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "持って",
+                "行く",
+                "ことに",
+                "傘を"
+              ],
+              "correctOrder": [
+                4,
+                1,
+                2,
+                3
+              ],
+              "starPosition": 2,
+              "answer": 0,
+              "explanation": "Urutan yang benar: 傘を → 持って → 行く → ことにします. Potongan nomor 2 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "日本へ来てから ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "友達が",
+                "たくさん",
+                "できました",
+                "日本で"
+              ],
+              "correctOrder": [
+                4,
+                2,
+                1,
+                3
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar: 日本で → たくさん → 友達が → できました. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "type": "sentence-composition",
+              "itemType": "sentential-grammar-2",
+              "question": "この本は ＿＿＿ ＿＿＿ ★ ＿＿＿。",
+              "options": [
+                "読みやすい",
+                "漢字が",
+                "少ないので",
+                "です"
+              ],
+              "correctOrder": [
+                2,
+                3,
+                1,
+                4
+              ],
+              "starPosition": 3,
+              "answer": 0,
+              "explanation": "Urutan yang benar: 漢字が → 少ないので → 読みやすい → です. Potongan nomor 1 berada pada posisi ★."
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "それで",
+                "ところで",
+                "しかし",
+                "それとも"
+              ],
+              "answer": 0,
+              "explanation": "Bagian kedua adalah hasil dari persiapan sebelumnya, jadi それで (karena itu) sesuai.",
+              "passage": "昨日は早く寝ました。今朝は早く起きることができました。（　）、朝ごはんをゆっくり食べました。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "ところが",
+                "それに",
+                "それで",
+                "それから"
+              ],
+              "answer": 0,
+              "explanation": "Kalimat kedua berlawanan dengan harapan dari kalimat pertama; ところが menyatakan hal yang ternyata berbeda.",
+              "passage": "天気予報では晴れると言っていました。（　）、午後から雨が降り始めました。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "まず",
+                "しかし",
+                "それに",
+                "つまり"
+              ],
+              "answer": 0,
+              "explanation": "Urutan langkah dimulai dengan まず, lalu langkah berikutnya.",
+              "passage": "料理を作るときは、（　）野菜を洗います。それから、小さく切ります。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "そのため",
+                "ところで",
+                "それとも",
+                "たとえば"
+              ],
+              "answer": 0,
+              "explanation": "Tidur larut menjadi penyebab terlambat bangun; そのため berarti karena hal itu.",
+              "passage": "ゆうべは遅くまで起きていました。（　）、今朝は起きるのが遅くなりました。"
+            },
+            {
+              "itemType": "text-grammar",
+              "question": "（　）に入るものはどれですか。",
+              "options": [
+                "それに",
+                "でも",
+                "だから",
+                "それでは"
+              ],
+              "answer": 0,
+              "explanation": "Kalimat kedua menambahkan alasan lain untuk pergi ke toko; それに berarti selain itu.",
+              "passage": "この店は駅から近いです。（　）、値段も安いので、よく利用しています。"
+            }
+          ],
+          "reading": [
+            {
+              "itemType": "short-passage",
+              "question": "<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>ってから、何が<ruby>便利<rt>べんり</rt></ruby>になりましたか。",
+              "options": [
+                "駅まで行く時間",
+                "買い物の値段",
+                "図書館の場所",
+                "電車の本数"
+              ],
+              "answer": 0,
+              "explanation": "Ia sekarang pergi ke stasiun dengan sepeda, sehingga waktu perjalanan menjadi lebih singkat.",
+              "passage": "<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。前より<ruby>時間<rt>じかん</rt></ruby>がかからなくなって、とても<ruby>便利<rt>べんり</rt></ruby>です。"
+            },
+            {
+              "itemType": "short-passage",
+              "question": "佐藤さんは<ruby>毎朝<rt>まいあさ</rt></ruby>どこへ<ruby>行<rt>い</rt></ruby>きますか。",
+              "options": [
+                "学校",
+                "駅",
+                "会社",
+                "図書館"
+              ],
+              "answer": 1,
+              "explanation": "Bacaan menyebutkan 毎朝それで駅まで行きます, jadi ia pergi ke stasiun.",
+              "passage": "<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>買<rt>か</rt></ruby>いました。<ruby>毎朝<rt>まいあさ</rt></ruby>それで<ruby>駅<rt>えき</rt></ruby>まで<ruby>行<rt>い</rt></ruby>きます。前より<ruby>時間<rt>じかん</rt></ruby>がかからなくなって、とても<ruby>便利<rt>べんり</rt></ruby>です。"
+            },
+            {
+              "itemType": "mid-size-passage",
+              "question": "佐藤さんは何を<ruby>手<rt>て</rt></ruby>伝っていますか。",
+              "options": [
+                "子どもの宿題",
+                "図書館の掃除",
+                "大会の準備",
+                "本の販売"
+              ],
+              "answer": 0,
+              "explanation": "Ia membantu anak-anak mengerjakan PR: 宿題を手伝ったりします.",
+              "passage": "佐藤さんは<ruby>去年<rt>きょねん</rt></ruby>から地域の<ruby>図書館<rt>としょかん</rt></ruby>でボランティアをしています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>土曜日<rt>どようび</rt></ruby>に子どもたちに<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手<rt>て</rt></ruby>伝ったりします。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>少<rt>すく</rt></ruby>し緊張しましたが、今では子どもたちと<ruby>話<rt>はな</rt></ruby>すのが楽しみになりました。"
+            },
+            {
+              "itemType": "mid-size-passage",
+              "question": "佐藤さんは今、<ruby>土曜日<rt>どようび</rt></ruby>をどう<ruby>思<rt>おも</rt></ruby>っていますか。",
+              "options": [
+                "忙しくて嫌です",
+                "子どもたちと話すのが楽しみです",
+                "家で休みたいです",
+                "図書館へ行きたくありません"
+              ],
+              "answer": 1,
+              "explanation": "Di akhir bacaan, ia menikmati berbicara dengan anak-anak.",
+              "passage": "佐藤さんは<ruby>去年<rt>きょねん</rt></ruby>から地域の<ruby>図書館<rt>としょかん</rt></ruby>でボランティアをしています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>土曜日<rt>どようび</rt></ruby>に子どもたちに<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだり、<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>手<rt>て</rt></ruby>伝ったりします。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>少<rt>すく</rt></ruby>し緊張しましたが、今では子どもたちと<ruby>話<rt>はな</rt></ruby>すのが楽しみになりました。"
+            },
+            {
+              "itemType": "information-retrieval",
+              "question": "発表する人は、何時までに会場へ<ruby>来<rt>き</rt></ruby>なければなりませんか。",
+              "options": [
+                "午後12時",
+                "午後12時30分",
+                "午後1時",
+                "午後1時30分"
+              ],
+              "answer": 1,
+              "explanation": "Pengumuman meminta peserta yang tampil tiba sebelum pukul 12.30.",
+              "passage": "日<ruby>本<rt>ほん</rt></ruby>語スピーチ<ruby>大<rt>おお</rt></ruby>会のお知らせ\n日時：6月15日（日）<ruby>午後<rt>ごご</rt></ruby>1時から\n場所：市民センターの2階\n参加する人は、6月10日までに<ruby>受付<rt>うけつけ</rt></ruby>で<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。発表する人は、<ruby>午後<rt>ごご</rt></ruby>12時30分までに会場へ<ruby>来<rt>き</rt></ruby>てください。<ruby>入<rt>はい</rt></ruby>場は無料です。"
+            },
+            {
+              "itemType": "information-retrieval",
+              "question": "<ruby>大<rt>おお</rt></ruby>会に参加する人は、いつまでに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>きますか。",
+              "options": [
+                "6月5日まで",
+                "6月10日まで",
+                "6月15日まで",
+                "6月20日まで"
+              ],
+              "answer": 1,
+              "explanation": "Nama harus ditulis di resepsionis paling lambat 10 Juni.",
+              "passage": "日<ruby>本<rt>ほん</rt></ruby>語スピーチ<ruby>大<rt>おお</rt></ruby>会のお知らせ\n日時：6月15日（日）<ruby>午後<rt>ごご</rt></ruby>1時から\n場所：市民センターの2階\n参加する人は、6月10日までに<ruby>受付<rt>うけつけ</rt></ruby>で<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてください。発表する人は、<ruby>午後<rt>ごご</rt></ruby>12時30分までに会場へ<ruby>来<rt>き</rt></ruby>てください。<ruby>入<rt>はい</rt></ruby>場は無料です。"
+            }
+          ],
+          "listening": [
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q01.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "田中さん、会議の資料はもう印刷しましたか。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "まだです。先に部長に内容を確認してもらいます。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "では、確認が終わったら印刷してください。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "わかりました。すぐにお願いしてきます。"
+                }
+              ],
+              "question": "男の人は、まず何をしますか。",
+              "options": [
+                "資料を印刷する",
+                "部長に内容を確認してもらう",
+                "会議室を予約する",
+                "同僚に電話する"
+              ],
+              "answer": 1,
+              "explanation": "Pria itu akan meminta atasannya memeriksa isi dokumen terlebih dahulu."
+            },
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q02.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "駅に着いたら、先にホテルへ行きますか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "いいえ。チェックインは三時からですから、先に昼ごはんを食べましょう。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "そうですね。駅の近くにいい店があります。"
+                }
+              ],
+              "question": "二人は<ruby>駅<rt>えき</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたあと、まず何をしますか。",
+              "options": [
+                "ホテルに入る",
+                "昼ごはんを食べる",
+                "買い物をする",
+                "電車に乗る"
+              ],
+              "answer": 1,
+              "explanation": "Check-in baru dimulai pukul tiga, jadi mereka akan makan siang lebih dahulu."
+            },
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q03.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "コピーを二十枚お願いします。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "はい。白い紙でいいですか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "いいえ、会議で使うので、少し厚い紙にしてください。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "わかりました。"
+                }
+              ],
+              "question": "男の人は、どんな紙を<ruby>使<rt>つか</rt></ruby>いますか。",
+              "options": [
+                "白い紙",
+                "青い紙",
+                "少し厚い紙",
+                "小さい紙"
+              ],
+              "answer": 2,
+              "explanation": "Wanita meminta kertas yang sedikit tebal untuk rapat."
+            },
+            {
+              "itemType": "task-based-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q04.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "土曜日の旅行ですが、雨ならどうしますか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "雨が強ければ中止します。でも、小雨なら予定どおり出かけます。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "わかりました。朝、天気を確認しましょう。"
+                }
+              ],
+              "question": "<ruby>雨<rt>あめ</rt></ruby>が強い場合、二人はどうしますか。",
+              "options": [
+                "旅行を中止する",
+                "予定どおり出かける",
+                "午後から出かける",
+                "別の町へ行く"
+              ],
+              "answer": 0,
+              "explanation": "Jika hujan deras, perjalanan dibatalkan."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q05.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "バスは何時に出ますか。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "予定では九時ですが、今日は十分遅れて九時十分に出ます。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "わかりました。"
+                }
+              ],
+              "question": "バスは何時に<ruby>出<rt>で</rt></ruby>ますか。",
+              "options": [
+                "九時",
+                "九時十分",
+                "九時半",
+                "十時"
+              ],
+              "answer": 1,
+              "explanation": "Bus terlambat sepuluh menit dari jadwal, jadi berangkat pukul 9.10."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q06.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "このシャツはいくらですか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "三千円ですが、今日は二割引きです。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "では、それをお願いします。"
+                }
+              ],
+              "question": "シャツはいくらで<ruby>買<rt>か</rt></ruby>えますか。",
+              "options": [
+                "二千円",
+                "二千四百円",
+                "二千五百円",
+                "三千円"
+              ],
+              "answer": 1,
+              "explanation": "Harga 3.000 yen dengan diskon 20% menjadi 2.400 yen."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q07.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "駅から会場まで、歩いてどのくらいですか。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "まっすぐ歩いて十分ぐらいです。バスなら五分ですが、道が混んでいます。"
+                }
+              ],
+              "question": "<ruby>歩<rt>ある</rt></ruby>いて会場までどのくらいかかりますか。",
+              "options": [
+                "五分",
+                "十分",
+                "十五分",
+                "二十分"
+              ],
+              "answer": 1,
+              "explanation": "Pria itu menyebutkan bahwa berjalan kaki memerlukan sekitar sepuluh menit."
+            },
+            {
+              "itemType": "key-point-comprehension",
+              "audioUrl": "/audio/jlpt/n4/set2-q08.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "明日の集合時間は何時ですか。"
+                },
+                {
+                  "speaker": "female",
+                  "jp": "最初は八時でしたが、三十分遅くなりました。"
+                },
+                {
+                  "speaker": "male",
+                  "jp": "では、八時半ですね。"
+                }
+              ],
+              "question": "二人は何時に<ruby>集<rt>あつ</rt></ruby>まりますか。",
+              "options": [
+                "七時半",
+                "八時",
+                "八時半",
+                "九時"
+              ],
+              "answer": 2,
+              "explanation": "Waktu berkumpul diubah dari pukul delapan menjadi terlambat 30 menit, yaitu 8.30."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n4/set2-q09.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "友達が引っ越しを手伝ってくれました。"
+                }
+              ],
+              "question": "<ruby>友達<rt>ともだち</rt></ruby>に何と言いますか。",
+              "options": [
+                "手伝ってくれてありがとう",
+                "お先に失礼します",
+                "どうぞお入りください",
+                "気をつけて行ってください"
+              ],
+              "answer": 0,
+              "explanation": "Untuk berterima kasih atas bantuan teman, ungkapan yang sesuai adalah 手伝ってくれてありがとう."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n4/set2-q10.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "店で買った商品に問題があり、店員に交換をお願いしたいです。"
+                }
+              ],
+              "question": "<ruby>店員<rt>てんいん</rt></ruby>に何と言いますか。",
+              "options": [
+                "これを交換していただけますか",
+                "これを食べてもいいですか",
+                "お会計をお願いします",
+                "少々お待ちください"
+              ],
+              "answer": 0,
+              "explanation": "Meminta pertukaran barang dengan sopan dapat memakai 交換していただけますか."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n4/set2-q11.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "友達の家に招待されて、帰る時間になりました。"
+                }
+              ],
+              "question": "<ruby>帰<rt>かえ</rt></ruby>るとき、何と言いますか。",
+              "options": [
+                "今日はありがとうございました",
+                "お待たせしました",
+                "いただきます",
+                "ごめんください"
+              ],
+              "answer": 0,
+              "explanation": "Saat berpamitan setelah bertamu, ungkapan terima kasih atas undangan cocok digunakan."
+            },
+            {
+              "itemType": "verbal-expressions",
+              "audioUrl": "/audio/jlpt/n4/set2-q12.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "会議で自分の意見を言う前に、相手に話してもいいか聞きたいです。"
+                }
+              ],
+              "question": "何と言いますか。",
+              "options": [
+                "ちょっと意見を言ってもいいですか",
+                "もう一度お願いします",
+                "何時に始まりますか",
+                "お先にどうぞ"
+              ],
+              "answer": 0,
+              "explanation": "Sebelum menyampaikan pendapat, minta izin dengan ちょっと意見を言ってもいいですか."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n4/set2-q13.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "この書類、今日中に出さなければなりませんか。"
+                }
+              ],
+              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "はい、今日の五時までにお願いします",
+                "いいえ、昨日出しました",
+                "はい、ここで食べます",
+                "明日は雨でしょう"
+              ],
+              "answer": 0,
+              "explanation": "Pertanyaan menanyakan batas waktu dokumen; jawaban yang cocok menyebut hari ini pukul lima."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n4/set2-q14.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "駅までどうやって行けばいいですか。"
+                }
+              ],
+              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "この道をまっすぐ行ってください",
+                "駅は八時に閉まります",
+                "切符を二枚買いました",
+                "昨日行ったことがあります"
+              ],
+              "answer": 0,
+              "explanation": "Pertanyaan menanyakan cara menuju stasiun, jadi berikan petunjuk arah."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n4/set2-q15.mp3",
+              "dialogue": [
+                {
+                  "speaker": "female",
+                  "jp": "すみません、もう少しゆっくり話していただけませんか。"
+                }
+              ],
+              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "はい、わかりました",
+                "いいえ、話しませんでした",
+                "どういたしまして",
+                "お先に失礼します"
+              ],
+              "answer": 0,
+              "explanation": "Permintaan agar berbicara lebih pelan dijawab dengan persetujuan: はい、わかりました."
+            },
+            {
+              "itemType": "quick-response",
+              "audioUrl": "/audio/jlpt/n4/set2-q16.mp3",
+              "dialogue": [
+                {
+                  "speaker": "male",
+                  "jp": "週末、何か予定がありますか。"
+                }
+              ],
+              "question": "何と<ruby>答<rt>こた</rt></ruby>えますか。",
+              "options": [
+                "土曜日は友達と映画を見るつもりです",
+                "昨日は雨が降りました",
+                "駅はあそこにあります",
+                "この本は千円です"
+              ],
+              "answer": 0,
+              "explanation": "Pertanyaan menanyakan rencana akhir pekan; jawaban yang sesuai menjelaskan rencana."
+            }
+          ]
+        },
+        "examFormat": {
+          "format": "jlpt-official-structure",
+          "timed": true,
+          "testSections": [
+            {
+              "id": "vocab",
+              "label": "Language Knowledge (Vocabulary)",
+              "minutes": 25,
+              "dataSections": [
+                "vocab"
+              ]
+            },
+            {
+              "id": "grammar-reading",
+              "label": "Language Knowledge (Grammar)・Reading",
+              "minutes": 55,
+              "dataSections": [
+                "grammar",
+                "reading"
+              ]
+            },
+            {
+              "id": "listening",
+              "label": "Listening",
+              "minutes": 35,
+              "dataSections": [
+                "listening"
+              ]
             }
           ]
         }
