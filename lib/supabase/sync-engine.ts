@@ -202,7 +202,7 @@ async function performSync(
   applyMergedDataToLocal(merged);
 
   // Kirim hasil merge ke akun yang sama.
-  await writeCloudFudeData(merged, user.id);
+  await writeCloudFudeData(merged, user.id, cloud);
   await syncProfilePhoto(user.id);
 
   // Jangan hapus penanda jika akun berubah.
