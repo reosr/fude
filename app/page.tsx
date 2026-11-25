@@ -104,14 +104,14 @@ export default function Dashboard() {
                 Ungkapan &amp; Percakapan Praktis
               </h3>
               <span className="rounded-full border border-[#269B70]/30 bg-[#269B70]/10 px-2 py-0.5 text-[9px] font-bold text-[#66C49C]">
-                BARU
+                10 KATEGORI
               </span>
             </div>
             <p className="mt-1 text-xs leading-relaxed text-[#A3A099]">
               Latihan ungkapan, respons, dan percakapan dalam situasi sehari-hari di Jepang.
             </p>
             <p className="mt-2 text-[10px] font-semibold text-[#B8860B]">
-              Kategori pertama sudah tersedia
+              10 kategori tersedia · progres penyelesaian tersimpan
             </p>
           </div>
           <ArrowUpRight className="relative z-10 shrink-0 text-[#A3A099] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#D9B66D]" size={20} />
