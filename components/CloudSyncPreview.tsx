@@ -115,6 +115,18 @@ export default function CloudSyncPreview() {
             <p>
               Hasil JLPT: {preview.local.jlptResults.length} set
             </p>
+            <p>
+              Irodori: {preview.local.irodoriProgress.completedLessons.length} pelajaran selesai
+            </p>
+            <p>
+              Ungkapan Praktis: {preview.local.studyProgress.completedPracticalCategories.length} kategori selesai
+            </p>
+            <p>
+              Cerita Baca: {preview.local.studyProgress.completedStories.length} cerita selesai
+            </p>
+            <p>
+              Koleksi Gacha: {Object.keys(preview.local.gachaData.inventory.badges).length} jenis badge, {preview.local.gachaData.history.length} riwayat summon tersimpan
+            </p>
           </div>
 
           <div>
@@ -133,6 +145,15 @@ export default function CloudSyncPreview() {
               {preview.cloud.hasLearningProgress ? "Ada" : "Belum ada"}
             </p>
             <p>Hasil JLPT: {preview.cloud.jlptSetCount} set</p>
+            <p>
+              Progres Irodori: {preview.cloud.hasIrodoriProgress ? "Ada" : "Belum ada"}
+            </p>
+            <p>
+              Ungkapan Praktis dan cerita: {preview.cloud.hasStudyProgress ? "Ada" : "Belum ada"}
+            </p>
+            <p>
+              Data Gacha: {preview.cloud.hasGachaData ? "Ada" : "Belum ada"}
+            </p>
           </div>
 
           {!preview.cloud.hasAnyData && (
