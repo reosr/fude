@@ -21,6 +21,7 @@ import {
   BookOpen,
   RotateCcw,
   AlertTriangle,
+  ChevronLeft,
 } from "lucide-react";
 
 interface Question {
@@ -57,6 +58,7 @@ interface SavedQuizResult {
   answers?: Record<string, Record<number, number>>;
   activeSection?: string;
   currentIndex?: number;
+  sectionPositions?: Partial<Record<SectionId, number>>;
   isFinished?: boolean;
   isPerfect?: boolean;
   completedOnce?: boolean;
@@ -219,6 +221,12 @@ export default function JLPTQuiz({
     useState<SectionId>("vocab");
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [sectionPositions, setSectionPositions] = useState<Record<SectionId, number>>({
+    vocab: 0,
+    grammar: 0,
+    reading: 0,
+    listening: 0,
+  });
 
   const [userAnswers, setUserAnswers] = useState<
     Record<string, Record<number, number>>
@@ -238,16 +246,21 @@ export default function JLPTQuiz({
   const isLoaded = loadedStorageKey === storageKey;
   const currentLevel = level || getJlptLevel(testSet);
 
-  // Simpan progress langsung saat navigasi, tidak hanya mengandalkan useEffect.
+  // Simpan posisi aktif dan posisi terakhir pada setiap bagian.
   const saveProgress = (
-    section: string,
+    section: SectionId,
     index: number,
     answers = userAnswers
   ) => {
     try {
       const saved = localStorage.getItem(storageKey);
       const parsed: SavedQuizResult = saved ? JSON.parse(saved) : {};
+      const updatedPositions: Record<SectionId, number> = {
+        ...sectionPositions,
+        [section]: index,
+      };
 
+      setSectionPositions(updatedPositions);
       localStorage.setItem(
         storageKey,
         JSON.stringify({
@@ -255,6 +268,7 @@ export default function JLPTQuiz({
           answers,
           activeSection: section,
           currentIndex: index,
+          sectionPositions: updatedPositions,
           isFinished: false,
           isPerfect: false,
           completedOnce,
@@ -313,8 +327,32 @@ export default function JLPTQuiz({
             ? parsed.currentIndex!
             : 0;
 
+        const restoredPositions: Record<SectionId, number> = {
+          vocab: 0,
+          grammar: 0,
+          reading: 0,
+          listening: 0,
+        };
+
+        SECTIONS.forEach((section) => {
+          const savedIndex = parsed.sectionPositions?.[section.id];
+          const sectionLength = (testSet.sections?.[section.id] || []).length;
+
+          if (
+            Number.isInteger(savedIndex) &&
+            savedIndex! >= 0 &&
+            savedIndex! < sectionLength
+          ) {
+            restoredPositions[section.id] = savedIndex!;
+          }
+        });
+
+        // Kompatibel dengan progress lama yang hanya menyimpan satu posisi aktif.
+        restoredPositions[restoredSection] = restoredIndex;
+
         setActiveSection(restoredSection);
         setCurrentIndex(restoredIndex);
+        setSectionPositions(restoredPositions);
 
         const score = calculateQuizScore(
           savedAnswers,
@@ -396,6 +434,12 @@ export default function JLPTQuiz({
       setIsFinished(false);
       setIsPerfect(false);
       setCompletedOnce(false);
+      setSectionPositions({
+        vocab: 0,
+        grammar: 0,
+        reading: 0,
+        listening: 0,
+      });
     }
 
     setShowReview(false);
@@ -463,6 +507,12 @@ export default function JLPTQuiz({
       answers: emptyAnswers,
       activeSection: "vocab",
       currentIndex: 0,
+      sectionPositions: {
+        vocab: 0,
+        grammar: 0,
+        reading: 0,
+        listening: 0,
+      },
       isFinished: false,
       isPerfect: false,
       completedOnce: previouslyCompleted,
@@ -481,6 +531,12 @@ export default function JLPTQuiz({
     setShowReview(false);
     setActiveSection("vocab");
     setCurrentIndex(0);
+    setSectionPositions({
+      vocab: 0,
+      grammar: 0,
+      reading: 0,
+      listening: 0,
+    });
     setShowConfirm(false);
   };
 
@@ -505,6 +561,7 @@ export default function JLPTQuiz({
         answers: userAnswers,
         activeSection,
         currentIndex,
+        sectionPositions,
         isFinished: false,
         isPerfect: false,
         completedOnce,
@@ -520,6 +577,7 @@ export default function JLPTQuiz({
     userAnswers,
     activeSection,
     currentIndex,
+    sectionPositions,
     completedOnce,
   ]);
 
@@ -568,6 +626,62 @@ export default function JLPTQuiz({
   // ==========================================
   // NAVIGASI SOAL
   // ==========================================
+  const goToSection = (sectionId: SectionId) => {
+    const questions = testSet.sections?.[sectionId] || [];
+    if (questions.length === 0) return;
+
+    const savedIndex = sectionPositions[sectionId] ?? 0;
+    const targetIndex = Math.min(
+      Math.max(savedIndex, 0),
+      questions.length - 1
+    );
+
+    saveProgress(sectionId, targetIndex);
+    setActiveSection(sectionId);
+    setCurrentIndex(targetIndex);
+  };
+
+  const hasPreviousQuestion = () => {
+    if (currentIndex > 0) return true;
+
+    const currentSectionIndex = SECTIONS.findIndex(
+      (section) => section.id === activeSection
+    );
+
+    return SECTIONS.slice(0, currentSectionIndex).some(
+      (section) => (testSet.sections?.[section.id] || []).length > 0
+    );
+  };
+
+  const previousQuestion = () => {
+    if (currentIndex > 0) {
+      const previousIndex = currentIndex - 1;
+      saveProgress(activeSection, previousIndex);
+      setCurrentIndex(previousIndex);
+      return;
+    }
+
+    const currentSectionIndex = SECTIONS.findIndex(
+      (section) => section.id === activeSection
+    );
+
+    const previousSection = SECTIONS
+      .slice(0, currentSectionIndex)
+      .reverse()
+      .find(
+        (section) =>
+          (testSet.sections?.[section.id] || []).length > 0
+      );
+
+    if (previousSection) {
+      const previousIndex =
+        (testSet.sections?.[previousSection.id] || []).length - 1;
+      saveProgress(previousSection.id, previousIndex);
+      setActiveSection(previousSection.id);
+      setCurrentIndex(previousIndex);
+    }
+  };
+
   const nextQuestion = () => {
     if (currentIndex < totalQuestionsInSection - 1) {
       const nextIndex = currentIndex + 1;
@@ -604,6 +718,11 @@ export default function JLPTQuiz({
     totalQuestions,
     totalScorePercent,
   } = calculateQuizScore(userAnswers, testSet.sections);
+
+  const answeredQuestions = Math.max(0, totalQuestions - totalUnanswered);
+  const overallProgress = totalQuestions > 0
+    ? Math.round((answeredQuestions / totalQuestions) * 100)
+    : 0;
 
   if (!isLoaded) return null;
 
@@ -988,25 +1107,106 @@ export default function JLPTQuiz({
             if (!hasQuestions) return null;
 
             const isActive = activeSection === section.id;
+            const sectionQuestions = testSet.sections?.[section.id] || [];
+            const sectionAnswered = sectionQuestions.reduce(
+              (count, _question, index) =>
+                count + (userAnswers[section.id]?.[index] !== undefined ? 1 : 0),
+              0
+            );
 
             return (
               <button
                 key={section.id}
-                onClick={() => {
-                  saveProgress(section.id, 0);
-                  setCurrentIndex(0);
-                  setActiveSection(section.id);
-                }}
-                className={`px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
+                onClick={() => goToSection(section.id)}
+                aria-current={isActive ? "step" : undefined}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
                   isActive
                     ? "bg-[#C93438] text-white shadow-lg"
                     : "bg-[#262523] border border-[#33312E] text-[#A3A099] hover:text-[#EAE6DD]"
                 }`}
               >
-                {section.label}
+                <span>{section.label}</span>
+                <span className={`rounded-md px-1.5 py-0.5 text-[10px] leading-none ${
+                  isActive ? "bg-white/15 text-white" : "bg-[#121110] text-[#A3A099]"
+                }`}>
+                  {sectionAnswered}/{sectionQuestions.length}
+                </span>
               </button>
             );
           })}
+        </div>
+
+        <div className="mb-6 rounded-xl border border-[#33312E] bg-[#262523] p-4">
+          <div className="mb-2 flex items-center justify-between gap-3 text-sm">
+            <span className="font-bold text-[#EAE6DD]">Progress keseluruhan</span>
+            <span className="shrink-0 font-bold tabular-nums text-[#D9AD42]">
+              {answeredQuestions}/{totalQuestions} soal
+            </span>
+          </div>
+          <div
+            role="progressbar"
+            aria-label="Progress keseluruhan ujian"
+            aria-valuemin={0}
+            aria-valuemax={totalQuestions}
+            aria-valuenow={answeredQuestions}
+            className="h-2 overflow-hidden rounded-full bg-[#121110]"
+          >
+            <div
+              className="h-full rounded-full bg-[#B8860B] transition-all duration-300"
+              style={{ width: `${overallProgress}%` }}
+            />
+          </div>
+          <p className="mt-2 text-xs text-[#A3A099]">
+            {totalUnanswered} soal belum dijawab
+          </p>
+        </div>
+
+        <div className="mb-6 rounded-xl border border-[#33312E] bg-[#1A1918] p-4">
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <span className="text-sm font-bold text-[#EAE6DD]">Navigasi nomor soal</span>
+            <span className="text-xs text-[#A3A099]">
+              {currentQuestions.filter((_question, index) => userAnswers[activeSection]?.[index] !== undefined).length}/{totalQuestionsInSection} dijawab
+            </span>
+          </div>
+          <div className="grid grid-cols-6 gap-2 sm:grid-cols-8 md:grid-cols-10">
+            {currentQuestions.map((_question, index) => {
+              const isCurrent = currentIndex === index;
+              const isQuestionAnswered = userAnswers[activeSection]?.[index] !== undefined;
+
+              return (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => {
+                    saveProgress(activeSection, index);
+                    setCurrentIndex(index);
+                  }}
+                  aria-label={`Buka soal ${index + 1}${isQuestionAnswered ? ", sudah dijawab" : ", belum dijawab"}`}
+                  aria-current={isCurrent ? "step" : undefined}
+                  title={`Soal ${index + 1}${isQuestionAnswered ? " · Sudah dijawab" : " · Belum dijawab"}`}
+                  className={`flex h-10 min-w-0 items-center justify-center rounded-lg border text-sm font-bold tabular-nums transition-colors ${
+                    isCurrent
+                      ? "border-[#C93438] bg-[#C93438] text-white shadow-md shadow-[#C93438]/20"
+                      : isQuestionAnswered
+                        ? "border-[#B8860B]/40 bg-[#B8860B]/10 text-[#D9AD42] hover:bg-[#B8860B]/20"
+                        : "border-[#33312E] bg-[#262523] text-[#A3A099] hover:border-[#777067] hover:text-[#EAE6DD]"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              );
+            })}
+          </div>
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-[#A3A099]">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="h-2 w-2 rounded-sm bg-[#B8860B]" />
+              Sudah dijawab
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="h-2 w-2 rounded-sm border border-[#777067] bg-[#262523]" />
+              Belum dijawab
+            </span>
+          </div>
         </div>
 
         {currentQ ? (
@@ -1027,7 +1227,7 @@ export default function JLPTQuiz({
               <div className="bg-[#1A1918] border-l-4 border-[#B8860B] rounded-r-xl mb-6 shadow-md">
                 <JapaneseReading showKana={false} showRomaji={false} allowIndexFallback
                   html={currentQ.passage}
-                  contentClassName="p-5 md:p-6 max-h-[300px] overflow-y-auto text-[#EAE6DD] text-base md:text-lg leading-[2] font-mincho [&_rt]:text-[0.55em] [&_rt]:text-[#B8860B] pr-2 custom-scrollbar text-left"
+                  contentClassName="p-5 md:p-6 text-[#EAE6DD] text-base md:text-lg leading-[2] font-mincho [&_rt]:text-[0.55em] [&_rt]:text-[#B8860B] text-left"
                   kanaClassName="px-5 md:px-6 pb-1 font-mincho text-sm md:text-base text-[#D6AD4F]"
                   romajiClassName="px-5 md:px-6 pb-3 text-xs italic text-[#A9A398]"
                 />
@@ -1154,11 +1354,21 @@ export default function JLPTQuiz({
               </div>
             )}
 
-            <div className="mt-auto pt-6 border-t border-[#33312E]/50">
+            <div className="mt-auto pt-6 border-t border-[#33312E]/50 flex flex-col gap-3 sm:flex-row">
+              <button
+                type="button"
+                onClick={previousQuestion}
+                disabled={!hasPreviousQuestion()}
+                className="flex items-center justify-center gap-2 rounded-xl border border-[#33312E] bg-[#262523] px-5 py-4 font-bold text-[#EAE6DD] transition-colors hover:border-[#777067] hover:bg-[#33312E] disabled:cursor-not-allowed disabled:opacity-40 sm:min-w-[190px]"
+              >
+                <ChevronLeft size={18} />
+                Soal Sebelumnya
+              </button>
+
               <button
                 onClick={nextQuestion}
                 disabled={!isAnswered || audioUnavailable}
-                className={`w-full font-bold py-4 rounded-xl transition-all text-lg ${
+                className={`flex-1 rounded-xl py-4 text-lg font-bold transition-all ${
                   isAnswered
                     ? "bg-[#B8860B] text-white hover:bg-[#9a7009] shadow-lg shadow-[#B8860B]/20"
                     : "bg-[#33312E] text-[#A3A099] cursor-not-allowed"
