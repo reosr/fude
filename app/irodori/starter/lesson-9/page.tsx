@@ -270,7 +270,7 @@ const scheduleBoard = [
   { name: "Mina", status: "不在", statusReading: "fuzai", note: "外出 · 銀行", detail: "Kembali sekitar 12.00", color: "text-amber-300" },
   { name: "Erik", status: "不在", statusReading: "fuzai", note: "休み", detail: "Libur hari ini", color: "text-[#A9A398]" },
   { name: "Kobayashi", status: "在", statusReading: "zai", note: "早退 · 16.00", detail: "Pulang lebih awal pukul 16.00", color: "text-emerald-300" },
-  { name: "Emma", status: "不在", statusReading: "fuzai", note: "遅刻 · 午後1時から", detail: "Datang mulai pukul 13.00", color: "text-amber-300" },
+  { name: "Emma", status: "不在", statusReading: "fuzai", note: "休み", detail: "Libur hari ini", color: "text-[#A9A398]" },
   { name: "Sato", status: "在", statusReading: "zai", note: "会議中 · 10.30–11.30", detail: "Sedang rapat sampai 11.30", color: "text-emerald-300" },
 ];
 
