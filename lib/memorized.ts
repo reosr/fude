@@ -9,6 +9,7 @@ import {
 const MEMORIZED_KEY = "fude_memorized";
 const LEGACY_BACKUP_KEY = "fude_memorized_legacy_backup_v1";
 const FORMAT_MARKER = "__fude_memorized_format_v2__";
+const PENDING_LEGACY_PREFIX = "__fude_memorized_legacy_pending_v2__:";
 
 type MinnaGroup = { vocab?: VocabIdentity[] };
 type IrodoriLesson = { vocab?: VocabIdentity[] };
@@ -114,17 +115,22 @@ export async function getMemorizedVocabKeys(
 
   const stored = readStoredMemorizedValues();
   const currentKeys = new Set(stored.filter(isMemorizedVocabKey));
-
-  if (stored.includes(FORMAT_MARKER)) {
-    return Array.from(currentKeys);
-  }
-
+  const pendingLegacy = stored.filter((value) => value.startsWith(PENDING_LEGACY_PREFIX));
+  // Unprefixed strings that arrive later from an older offline device are
+  // treated as fresh legacy values, even when this browser already has v2 data.
   const legacyValues = stored.filter(
-    (value) => value !== FORMAT_MARKER && !isMemorizedVocabKey(value)
+    (value) =>
+      value !== FORMAT_MARKER &&
+      !value.startsWith(PENDING_LEGACY_PREFIX) &&
+      !isMemorizedVocabKey(value)
   );
 
   if (legacyValues.length === 0) {
-    const migratedValues = [FORMAT_MARKER, ...currentKeys];
+    const migratedValues = [
+      FORMAT_MARKER,
+      ...pendingLegacy,
+      ...currentKeys,
+    ];
     if (
       stored.length !== migratedValues.length ||
       stored.some((value, index) => value !== migratedValues[index])
@@ -151,13 +157,14 @@ export async function getMemorizedVocabKeys(
     keysByKanji.set(kanji, candidates);
   }
 
-  const unresolvedLegacy: string[] = [];
+  const unresolvedLegacy: string[] = [...pendingLegacy];
   for (const legacyKanji of legacyValues) {
     const candidates = keysByKanji.get(normalizeVocabIdentityPart(legacyKanji));
     if (candidates?.size === 1) {
       currentKeys.add(Array.from(candidates)[0]);
     } else {
-      unresolvedLegacy.push(legacyKanji);
+      // Simpan sebagai data legacy nonaktif agar tidak menyamakan semua bacaan.
+      unresolvedLegacy.push(PENDING_LEGACY_PREFIX + encodeURIComponent(legacyKanji));
     }
   }
 
