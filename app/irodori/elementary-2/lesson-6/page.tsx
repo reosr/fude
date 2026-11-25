@@ -35,8 +35,8 @@ const lessonId = "elementary2-06";
 const readTrainTicketConversation: IrodoriUtterance[] = [
   {
     speakerId: "yui",
-    japanese: <>この切符は、何時に出発しますか。</>,
-    romaji: "Kono kippu wa, nanji ni shuppatsu shimasu ka?",
+    japanese: <>この<ruby>電車<rt>でんしゃ</rt></ruby>は、何時に出発しますか。</>,
+    romaji: "Kono densha wa, nanji ni shuppatsu shimasu ka?",
     translation: "Kereta ini berangkat pukul berapa?",
     audioFileName: "irodori-elementary2-06-a01-l01.mp3",
   },
