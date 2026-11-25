@@ -125,7 +125,7 @@ const content: IrodoriLessonContent = {
     ["苦手", "にがて · nigate", "Kurang suka; tidak mahir"],
     ["代わり", "かわり · kawari", "Pengganti; sebagai gantinya"],
     ["荷物", "にもつ · nimotsu", "Barang bawaan"],
-    ["預かる", "あずかる · azukaru", "Menitipkan; menyimpan sementara"],
+    ["預かる", "あずかる · azukaru", "Menerima titipan; menyimpan sementara untuk orang lain"],
     ["受付", "うけつけ · uketsuke", "Resepsionis; bagian penerima"],
     ["確認", "かくにん · kakunin", "Pemeriksaan; konfirmasi"],
     ["伺う", "うかがう · ukagau", "Bertanya atau berkunjung (bentuk rendah hati)"],
