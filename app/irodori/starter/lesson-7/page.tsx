@@ -72,7 +72,7 @@ const houseTourConversation: IrodoriUtterance[] = [
   {
     speakerId: "kenji",
     japanese: <>あそこは<ruby>居間<rt>いま</rt></ruby>です。ここに<ruby>階段<rt>かいだん</rt></ruby>があります。</>,
-    romaji: "Asoko wa shokudou desu. Koko ni kaidan ga arimasu.",
+    romaji: "Asoko wa ima desu. Koko ni kaidan ga arimasu.",
     translation: "Itu ruang keluarga. Di sini ada tangga.",
     audioFileName: "irodori-starter-07-a01-l07.mp3",
   },
