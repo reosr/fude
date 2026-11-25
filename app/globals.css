@@ -100,20 +100,26 @@ rt {
   animation: floatBreath 3s ease-in-out infinite;
 }
 
-/* Matikan seleksi teks secara global */
-body {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+/* Matikan seleksi teks di seluruh UI agar drag tidak menyorot kata/kalimat. */
+*,
+*::before,
+*::after {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
 }
 
-/* Kecuali di input, textarea, dan teks yang emang mau bisa di-copy */
-input, textarea, .selectable-text {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+/* Tetap izinkan pengeditan dan penyalinan pada kolom input serta teks terjemahan. */
+input,
+textarea,
+[contenteditable="true"],
+.selectable-text,
+.selectable-text * {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
 }
 
 /* Gacha gate and reveal animations */
