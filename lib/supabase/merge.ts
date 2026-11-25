@@ -434,8 +434,14 @@ export function mergeFudeData(
     // Tidak ada perubahan EXP lokal yang menunggu dikirim.
     // Jadikan Cloud sumber kebenaran agar ledger cache lama tidak
     // menghalangi pemulihan progres terbaru di perangkat ini.
-    xpBase = cloudXpBase;
-    xpEvents = mergeXpEvents([], cloudXpEvents);
+    if (hasLegacyCloudXpLedger) {
+      // Pertahankan kompatibilitas Cloud lama yang hanya menyimpan total EXP.
+      xpBase = cloudTotalXp;
+      xpEvents = [];
+    } else {
+      xpBase = cloudXpBase;
+      xpEvents = mergeXpEvents([], cloudXpEvents);
+    }
   } else if (hasLegacyCloudXpLedger) {
     if (!hasLocalXpLedger) {
       // Perangkat baru: pertahankan total lama sebagai saldo dasar.
