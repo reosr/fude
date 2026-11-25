@@ -178,9 +178,10 @@ function mergeProfile(
   }
 
   if (!pending.some((item) => item.key === "fude_profile")) {
-    throw new Error(
-      "Profil lokal dan cloud berbeda, tetapi perangkat ini tidak memiliki catatan perubahan untuk menentukan versi yang benar. Data profil tidak ditimpa."
-    );
+    return {
+      ...cloudProfile,
+      photoDataUrl: local.photoDataUrl ?? null,
+    };
   }
 
   if (!isLocalChangeNewer(pending, "fude_profile", cloudUpdatedAt)) {
@@ -257,24 +258,26 @@ function mergeIrodoriProgress(
         cloudRating !== undefined &&
         localRating !== cloudRating
       ) {
-        if (!pending.some((item) => item.key === "fude_irodori_progress_v1")) {
-          throw new Error(
-            `Penilaian Irodori untuk ${lessonId}/${canDoId} berbeda antara perangkat dan cloud, tetapi tidak ada catatan perubahan lokal untuk menentukan versi terbaru. Data tidak ditimpa.`
-          );
-        }
+        const hasLocalIrodoriChange = pending.some(
+          (item) => item.key === "fude_irodori_progress_v1"
+        );
 
-        if (
-          !isLocalChangeNewer(
-            pending,
-            "fude_irodori_progress_v1",
-            cloud.updated_at
-          )
-        ) {
-          throw new Error(
-            `Penilaian Irodori untuk ${lessonId}/${canDoId} memiliki konflik versi. Data tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi.`
-          );
+        if (!hasLocalIrodoriChange) {
+          mergedRatings[canDoId] = cloudRating;
+        } else {
+          if (
+            !isLocalChangeNewer(
+              pending,
+              "fude_irodori_progress_v1",
+              cloud.updated_at
+            )
+          ) {
+            throw new Error(
+              `Penilaian Irodori untuk ${lessonId}/${canDoId} memiliki konflik versi. Data tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi.`
+            );
+          }
+          mergedRatings[canDoId] = localRating;
         }
-        mergedRatings[canDoId] = localRating;
       } else if (localRating !== undefined || cloudRating !== undefined) {
         mergedRatings[canDoId] = localRating ?? cloudRating!;
       }
@@ -475,16 +478,15 @@ export function mergeFudeData(
       } else {
         const resultKey = `jlpt_result_${setId}`;
         if (!pending.some((item) => item.key === resultKey)) {
-          throw new Error(
-            `Hasil JLPT ${setId} berbeda antara perangkat dan cloud tanpa catatan perubahan lokal. Data tidak ditimpa.`
-          );
+          result = cloudResult;
+        } else {
+          if (!isLocalChangeNewer(pending, resultKey, cloudEntry.updated_at)) {
+            throw new Error(
+              `Hasil JLPT ${setId} memiliki konflik versi. Data tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi.`
+            );
+          }
+          result = localResult;
         }
-        if (!isLocalChangeNewer(pending, resultKey, cloudEntry.updated_at)) {
-          throw new Error(
-            `Hasil JLPT ${setId} memiliki konflik versi. Data tidak ditimpa; perlu pemeriksaan sebelum sinkronisasi.`
-          );
-        }
-        result = localResult;
       }
     } else {
       result = cloudResult ?? localResult;
