@@ -548,6 +548,7 @@ export default function JLPTQuiz({
     if (expiredExamBlocks.includes(activeExamBlock)) return;
 
     let deadline = examDeadlines[activeExamBlock];
+    let needsDeadlineState = false;
 
     if (!deadline) {
       deadline = Date.now() + activeExamMinutes * 60_000;
@@ -555,7 +556,7 @@ export default function JLPTQuiz({
         ...examDeadlines,
         [activeExamBlock]: deadline,
       };
-      setExamDeadlines(updatedDeadlines);
+      needsDeadlineState = true;
 
       try {
         const saved = localStorage.getItem(storageKey);
@@ -571,6 +572,14 @@ export default function JLPTQuiz({
     }
 
     const updateTimer = () => {
+      if (needsDeadlineState) {
+        needsDeadlineState = false;
+        setExamDeadlines({
+          ...examDeadlines,
+          [activeExamBlock]: deadline!,
+        });
+      }
+
       const secondsLeft = Math.max(0, Math.ceil((deadline! - Date.now()) / 1000));
       setRemainingSeconds(secondsLeft);
 
@@ -597,7 +606,6 @@ export default function JLPTQuiz({
     };
 
     const intervalId = window.setInterval(updateTimer, 1000);
-    updateTimer();
 
     return () => window.clearInterval(intervalId);
   }, [
@@ -742,10 +750,7 @@ export default function JLPTQuiz({
   ]);
 
   const handleAnswer = (optIndex: number) => {
-  const activeDeadlineReached =
-    typeof examDeadlines[activeExamBlock] === "number" &&
-    examDeadlines[activeExamBlock]! <= Date.now();
-  if (isFinished || isPerfect || isActiveBlockExpired || activeDeadlineReached) return;
+  if (isFinished || isPerfect || isActiveBlockExpired) return;
   if (currentQ?.audioUrl && audioUnavailableUrl === currentQ.audioUrl) return;
 
   const updatedAnswers = {
