@@ -80,17 +80,21 @@ function getServerSnapshot(): IrodoriProgress {
 function subscribe(callback: () => void): () => void {
   if (typeof window === "undefined") return () => undefined;
 
-  const handleStorage = (event: StorageEvent) => {
-    if (event.key !== IRODORI_PROGRESS_STORAGE_KEY && event.key !== null) return;
+  const handleProgressChange = () => {
     cachedProgress = null;
     callback();
   };
 
-  window.addEventListener(IRODORI_PROGRESS_UPDATED_EVENT, callback);
+  const handleStorage = (event: StorageEvent) => {
+    if (event.key !== IRODORI_PROGRESS_STORAGE_KEY && event.key !== null) return;
+    handleProgressChange();
+  };
+
+  window.addEventListener(IRODORI_PROGRESS_UPDATED_EVENT, handleProgressChange);
   window.addEventListener("storage", handleStorage);
 
   return () => {
-    window.removeEventListener(IRODORI_PROGRESS_UPDATED_EVENT, callback);
+    window.removeEventListener(IRODORI_PROGRESS_UPDATED_EVENT, handleProgressChange);
     window.removeEventListener("storage", handleStorage);
   };
 }
