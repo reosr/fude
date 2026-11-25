@@ -65,17 +65,21 @@ function getServerSnapshot(): StudyProgress {
 function subscribe(callback: () => void): () => void {
   if (typeof window === "undefined") return () => undefined;
 
-  const handleStorage = (event: StorageEvent) => {
-    if (event.key !== STUDY_PROGRESS_STORAGE_KEY && event.key !== null) return;
+  const handleProgressChange = () => {
     cachedProgress = null;
     callback();
   };
 
-  window.addEventListener(STUDY_PROGRESS_UPDATED_EVENT, callback);
+  const handleStorage = (event: StorageEvent) => {
+    if (event.key !== STUDY_PROGRESS_STORAGE_KEY && event.key !== null) return;
+    handleProgressChange();
+  };
+
+  window.addEventListener(STUDY_PROGRESS_UPDATED_EVENT, handleProgressChange);
   window.addEventListener("storage", handleStorage);
 
   return () => {
-    window.removeEventListener(STUDY_PROGRESS_UPDATED_EVENT, callback);
+    window.removeEventListener(STUDY_PROGRESS_UPDATED_EVENT, handleProgressChange);
     window.removeEventListener("storage", handleStorage);
   };
 }
