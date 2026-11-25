@@ -1610,7 +1610,7 @@
                 "かひ"
               ],
               "answer": 0,
-              "explanation": "「<ruby>花<rt>はな</rt></ruby>火」は「はなび」と<ruby>読みます<rt>よみます</rt></ruby>。"
+              "explanation": "「<ruby>花火<rt>はなび</rt></ruby>」は「はなび」と<ruby>読みます<rt>よみます</rt></ruby>。"
             },
             {
               "itemType": "kanji-reading",
@@ -1658,7 +1658,7 @@
                 "空"
               ],
               "answer": 0,
-              "explanation": "この<ruby>文<rt>ぶん</rt></ruby>の「はな」は植<ruby>物<rt>もの</rt></ruby>の「<ruby>花<rt>はな</rt></ruby>」です。"
+              "explanation": "この<ruby>文<rt>ぶん</rt></ruby>の「はな」は<ruby>植物<rt>しょくぶつ</rt></ruby>の「<ruby>花<rt>はな</rt></ruby>」です。"
             },
             {
               "itemType": "contextually-defined-expressions",
@@ -1689,9 +1689,9 @@
               "question": "「このかばんは<ruby>重い<rt>おもい</rt></ruby>です」と<ruby>反対<rt>はんたい</rt></ruby>の<ruby>意味<rt>いみ</rt></ruby>はどれですか。",
               "options": [
                 "<ruby>軽い<rt>かるい</rt></ruby>です",
-                "<ruby>長<rt>なが</rt></ruby>いです",
+                "<ruby>長い<rt>ながい</rt></ruby>です",
                 "<ruby>新しい<rt>あたらしい</rt></ruby>です",
-                "暗いです"
+                "<ruby>暗い<rt>くらい</rt></ruby>です"
               ],
               "answer": 0,
               "explanation": "「<ruby>重い<rt>おもい</rt></ruby>」の<ruby>反対<rt>はんたい</rt></ruby>の<ruby>意味<rt>いみ</rt></ruby>は「<ruby>軽い<rt>かるい</rt></ruby>」です。"
@@ -1933,7 +1933,7 @@
                 "で"
               ],
               "answer": 0,
-              "explanation": "「は」は<ruby>文<rt>ぶん</rt></ruby>の主題を示します。"
+              "explanation": "「は」は<ruby>文<rt>ぶん</rt></ruby>の<ruby>主題<rt>しゅだい</rt></ruby>を<ruby>示します<rt>しめします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -1945,7 +1945,7 @@
                 "へ"
               ],
               "answer": 0,
-              "explanation": "<ruby>人<rt>ひと</rt></ruby>や動<ruby>物<rt>もの</rt></ruby>がいる<ruby>場所<rt>ばしょ</rt></ruby>には「に」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>人や動物<rt>ひとやどうぶつ</rt></ruby>がいる<ruby>場所<rt>ばしょ</rt></ruby>には「に」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -1957,7 +1957,7 @@
                 "が"
               ],
               "answer": 0,
-              "explanation": "「<ruby>会います<rt>あいます</rt></ruby>」の相<ruby>手<rt>て</rt></ruby>には「に」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "「<ruby>会います<rt>あいます</rt></ruby>」の<ruby>相手には<rt>あいてには</rt></ruby>「に」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -1969,7 +1969,7 @@
                 "へ"
               ],
               "answer": 0,
-              "explanation": "動<ruby>作<rt>つく</rt></ruby>の対象を示す助詞は「を」です。"
+              "explanation": "<ruby>動作の<rt>どうさの</rt></ruby><ruby>対象<rt>たいしょう</rt></ruby>を<ruby>示す<rt>しめす</rt></ruby><ruby>助詞<rt>じょし</rt></ruby>は「を」です。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -1981,7 +1981,7 @@
                 "が"
               ],
               "answer": 0,
-              "explanation": "時刻を表す<ruby>言葉<rt>ことば</rt></ruby>の<ruby>後<rt>あと</rt></ruby>には「に」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>時刻<rt>じこく</rt></ruby>を<ruby>表す<rt>あらわす</rt></ruby><ruby>言葉<rt>ことば</rt></ruby>の<ruby>後<rt>あと</rt></ruby>には「に」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -1993,7 +1993,7 @@
                 "が"
               ],
               "answer": 0,
-              "explanation": "<ruby>人<rt>ひと</rt></ruby>に<ruby>会う<rt>あう</rt></ruby>という動<ruby>作<rt>つく</rt></ruby>が<ruby>行<rt>い</rt></ruby>われる<ruby>場所<rt>ばしょ</rt></ruby>には「で」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>人<rt>ひと</rt></ruby>に<ruby>会う<rt>あう</rt></ruby>という<ruby>動作<rt>どうさ</rt></ruby>が<ruby>行<rt>い</rt></ruby>われる<ruby>場所<rt>ばしょ</rt></ruby>には「で」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2005,7 +2005,7 @@
                 "を"
               ],
               "answer": 0,
-              "explanation": "「から」は<ruby>出<rt>だ</rt></ruby>発する<ruby>場所<rt>ばしょ</rt></ruby>を表します。"
+              "explanation": "「から」は<ruby>出発する<rt>しゅっぱつする</rt></ruby><ruby>場所<rt>ばしょ</rt></ruby>を<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2017,7 +2017,7 @@
                 "ない"
               ],
               "answer": 0,
-              "explanation": "許可をたずねる<ruby>とき<rt>とき</rt></ruby>は「～てもいいですか」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>許可<rt>きょか</rt></ruby>をたずねるときは「～てもいいですか」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2029,7 +2029,7 @@
                 "しか"
               ],
               "answer": 0,
-              "explanation": "「～てから」は、ある動<ruby>作<rt>つく</rt></ruby>の<ruby>後<rt>あと</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>の動<ruby>作<rt>つく</rt></ruby>をすることを表します。"
+              "explanation": "「～てから」は、ある<ruby>動作の<rt>どうさの</rt></ruby><ruby>後<rt>あと</rt></ruby>に<ruby>次<rt>つぎ</rt></ruby>の<ruby>動作を<rt>どうさを</rt></ruby>することを<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2041,7 +2041,7 @@
                 "でも"
               ],
               "answer": 0,
-              "explanation": "「から」は理由を表します。"
+              "explanation": "「から」は<ruby>理由<rt>りゆう</rt></ruby>を<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2053,7 +2053,7 @@
                 "おもしろくでした"
               ],
               "answer": 0,
-              "explanation": "「あまり」と否定形を組み<ruby>合<rt>あ</rt></ruby>わせて「それほど～ない」と表します。"
+              "explanation": "「あまり」と<ruby>否定形<rt>ひていけい</rt></ruby>を<ruby>組み合わせて<rt>くみあわせて</rt></ruby>「それほど～ない」と<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2065,7 +2065,7 @@
                 "します"
               ],
               "answer": 0,
-              "explanation": "能力を表す<ruby>とき<rt>とき</rt></ruby>は「ことができます」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>能力<rt>のうりょく</rt></ruby>を<ruby>表す<rt>あらわす</rt></ruby>ときは「ことができます」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2083,29 +2083,29 @@
               "itemType": "sentential-grammar-1",
               "question": "この<ruby>部屋<rt>へや</rt></ruby>でたばこを（　）ください。",
               "options": [
-                "吸わないで",
-                "吸って",
-                "吸う",
-                "吸います"
+                "<ruby>吸わないで<rt>すわないで</rt></ruby>",
+                "<ruby>吸って<rt>すって</rt></ruby>",
+                "<ruby>吸う<rt>すう</rt></ruby>",
+                "<ruby>吸います<rt>すいます</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "禁<ruby>止<rt>と</rt></ruby>や依頼には「～ないでください」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>禁止<rt>きんし</rt></ruby>や<ruby>依頼<rt>いらい</rt></ruby>には「～ないでください」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
               "question": "わたしは<ruby>毎晩<rt>まいばん</rt></ruby>、<ruby>本<rt>ほん</rt></ruby>を（　）から<ruby>寝ます<rt>ねます</rt></ruby>。",
               "options": [
-                "<ruby>読<rt>よ</rt></ruby>んで",
+                "<ruby>読んで<rt>よんで</rt></ruby>",
                 "<ruby>読み<rt>よみ</rt></ruby>",
-                "<ruby>読<rt>よ</rt></ruby>む",
+                "<ruby>読む<rt>よむ</rt></ruby>",
                 "<ruby>読んだ<rt>よんだ</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "「～てから」の<ruby>前<rt>まえ</rt></ruby>には動詞のて形を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "「～てから」の<ruby>前<rt>まえ</rt></ruby>には<ruby>動詞<rt>どうし</rt></ruby>の<ruby>て形<rt>てけい</rt></ruby>を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "きのうは<ruby>忙しかった<rt>いそがしかった</rt></ruby>（　）、テレビを<ruby>見ません<rt>みません</rt></ruby>でした。",
+              "question": "きのうは<ruby>忙しかった<rt>いそがしかった</rt></ruby>（　）、テレビを<ruby>見ませんでした<rt>みませんでした</rt></ruby>。",
               "options": [
                 "ので",
                 "まで",
@@ -2113,7 +2113,7 @@
                 "ながら"
               ],
               "answer": 0,
-              "explanation": "「ので」は理由を表します。"
+              "explanation": "「ので」は<ruby>理由<rt>りゆう</rt></ruby>を<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2125,7 +2125,7 @@
                 "します"
               ],
               "answer": 0,
-              "explanation": "数量を示して頼む<ruby>とき<rt>とき</rt></ruby>は「<ruby>三つ<rt>みっつ</rt></ruby>ください」と<ruby>言<rt>い</rt></ruby>います。"
+              "explanation": "<ruby>数量を<rt>すうりょうを</rt></ruby><ruby>示して<rt>しめして</rt></ruby><ruby>頼む<rt>たのむ</rt></ruby>ときは「<ruby>三つ<rt>みっつ</rt></ruby>ください」と<ruby>言<rt>い</rt></ruby>います。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2137,7 +2137,7 @@
                 "します"
               ],
               "answer": 0,
-              "explanation": "<ruby>経験<rt>けいけん</rt></ruby>は「～たことがあります」で表します。"
+              "explanation": "<ruby>経験<rt>けいけん</rt></ruby>は「～たことがあります」で<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2149,7 +2149,7 @@
                 "に"
               ],
               "answer": 2,
-              "explanation": "<ruby>好き<rt>すき</rt></ruby>なものを表す<ruby>とき<rt>とき</rt></ruby>は「～が<ruby>好き<rt>すき</rt></ruby>です」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>好き<rt>すき</rt></ruby>なものを<ruby>表す<rt>あらわす</rt></ruby>ときは「～が<ruby>好き<rt>すき</rt></ruby>です」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2161,7 +2161,7 @@
                 "しか"
               ],
               "answer": 0,
-              "explanation": "比較の基準には「より」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>比較の<rt>ひかくの</rt></ruby><ruby>基準には<rt>きじゅんには</rt></ruby>「より」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2177,7 +2177,7 @@
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "わたしは<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>む（　）が<ruby>好き<rt>すき</rt></ruby>です。",
+              "question": "わたしは<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>を<ruby>読む<rt>よむ</rt></ruby>（　）が<ruby>好き<rt>すき</rt></ruby>です。",
               "options": [
                 "こと",
                 "もの",
@@ -2185,7 +2185,7 @@
                 "ため"
               ],
               "answer": 0,
-              "explanation": "<ruby>趣味<rt>しゅみ</rt></ruby>や<ruby>好<rt>す</rt></ruby>みの動<ruby>作<rt>つく</rt></ruby>は「～ことが<ruby>好き<rt>すき</rt></ruby>です」と表せます。"
+              "explanation": "<ruby>趣味<rt>しゅみ</rt></ruby>や<ruby>好<rt>す</rt></ruby>みの<ruby>動作<rt>どうさ</rt></ruby>は「～ことが<ruby>好き<rt>すき</rt></ruby>です」と<ruby>表せます<rt>あらわせます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2197,11 +2197,11 @@
                 "まで"
               ],
               "answer": 0,
-              "explanation": "<ruby>食事<rt>しょくじ</rt></ruby>の<ruby>後<rt>あと</rt></ruby>なので「<ruby>食べた<rt>たべた</rt></ruby>あとで」が自然です。"
+              "explanation": "<ruby>食事<rt>しょくじ</rt></ruby>の<ruby>後<rt>あと</rt></ruby>なので「<ruby>食べた<rt>たべた</rt></ruby>あとで」が<ruby>自然です<rt>しぜんです</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "<ruby>出かける<rt>でかける</rt></ruby>（　）、<ruby>電気<rt>でんき</rt></ruby>を<ruby>消<rt>け</rt></ruby>してください。",
+              "question": "<ruby>出かける<rt>でかける</rt></ruby>（　）、<ruby>電気<rt>でんき</rt></ruby>を<ruby>消して<rt>けして</rt></ruby>ください。",
               "options": [
                 "<ruby>前<rt>まえ</rt></ruby>に",
                 "あとで",
@@ -2209,11 +2209,11 @@
                 "までに"
               ],
               "answer": 0,
-              "explanation": "「～<ruby>前<rt>まえ</rt></ruby>に」は、ある動<ruby>作<rt>つく</rt></ruby>より<ruby>先に<rt>さきに</rt></ruby><ruby>行<rt>い</rt></ruby>うことを表します。"
+              "explanation": "「～<ruby>前<rt>まえ</rt></ruby>に」は、ある<ruby>動作<rt>どうさ</rt></ruby>より<ruby>先に<rt>さきに</rt></ruby><ruby>行<rt>い</rt></ruby>うことを<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "あしたは<ruby>雨<rt>あめ</rt></ruby>が<ruby>降る<rt>ふる</rt></ruby>（　）<ruby>思<rt>おも</rt></ruby>います。",
+              "question": "あしたは<ruby>雨<rt>あめ</rt></ruby>が<ruby>降る<rt>ふる</rt></ruby>（　）<ruby>思います<rt>おもいます</rt></ruby>。",
               "options": [
                 "と",
                 "を",
@@ -2221,7 +2221,7 @@
                 "で"
               ],
               "answer": 0,
-              "explanation": "考えや予想の<ruby>内容<rt>ないよう</rt></ruby>には「～と<ruby>思<rt>おも</rt></ruby>います」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>考え<rt>かんがえ</rt></ruby>や<ruby>予想<rt>よそう</rt></ruby>の<ruby>内容<rt>ないよう</rt></ruby>には「～と<ruby>思います<rt>おもいます</rt></ruby>」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2233,19 +2233,19 @@
                 "あって"
               ],
               "answer": 0,
-              "explanation": "「～たら」は条件を表し、「<ruby>時間<rt>じかん</rt></ruby>があったら」が自然です。"
+              "explanation": "「～たら」は<ruby>条件<rt>じょうけん</rt></ruby>を<ruby>表し<rt>あらわし</rt></ruby>、「<ruby>時間<rt>じかん</rt></ruby>があったら」が<ruby>自然です<rt>しぜんです</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
               "question": "<ruby>窓<rt>まど</rt></ruby>を（　）ください。",
               "options": [
                 "<ruby>開けて<rt>あけて</rt></ruby>",
-                "<ruby>開<rt>あ</rt></ruby>けます",
+                "<ruby>開<rt>ひら</rt></ruby>けます",
                 "<ruby>開ける<rt>あける</rt></ruby>",
-                "<ruby>開<rt>あ</rt></ruby>けた"
+                "<ruby>開<rt>ひら</rt></ruby>けた"
               ],
               "answer": 0,
-              "explanation": "依頼の「～てください」には動詞のて形を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>依頼<rt>いらい</rt></ruby>の「～てください」には<ruby>動詞<rt>どうし</rt></ruby>の<ruby>て形<rt>てけい</rt></ruby>を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2253,11 +2253,11 @@
               "options": [
                 "<ruby>読みました<rt>よみました</rt></ruby>",
                 "<ruby>読みます<rt>よみます</rt></ruby>",
-                "<ruby>読<rt>よ</rt></ruby>む",
-                "<ruby>読<rt>よ</rt></ruby>んで"
+                "<ruby>読む<rt>よむ</rt></ruby>",
+                "<ruby>読んで<rt>よんで</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "「きのう<ruby>買った<rt>かった</rt></ruby>」と<ruby>過<rt>す</rt></ruby>去の<ruby>話<rt>はな</rt></ruby>なので「<ruby>読みました<rt>よみました</rt></ruby>」が自然です。"
+              "explanation": "「きのう<ruby>買った<rt>かった</rt></ruby>」と<ruby>過去の<rt>かこの</rt></ruby><ruby>話<rt>はな</rt></ruby>なので「<ruby>読みました<rt>よみました</rt></ruby>」が<ruby>自然です<rt>しぜんです</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -2269,11 +2269,11 @@
                 "<ruby>起きる<rt>おきる</rt></ruby>でした"
               ],
               "answer": 0,
-              "explanation": "習慣を表す現在形「<ruby>起きます<rt>おきます</rt></ruby>」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>習慣<rt>しゅうかん</rt></ruby>を<ruby>表す<rt>あらわす</rt></ruby><ruby>現在形<rt>げんざいけい</rt></ruby>「<ruby>起きます<rt>おきます</rt></ruby>」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上<rt>うえ</rt></ruby><ruby>手<rt>て</rt></ruby>に（　）ようになりました。",
+              "question": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>に（　）ようになりました。",
               "options": [
                 "<ruby>話せる<rt>はなせる</rt></ruby>",
                 "<ruby>話す<rt>はなす</rt></ruby>",
@@ -2281,11 +2281,11 @@
                 "<ruby>話<rt>はな</rt></ruby>した"
               ],
               "answer": 0,
-              "explanation": "能力の<ruby>変<rt>へん</rt></ruby>化は可能形を<ruby>使<rt>つか</rt></ruby>って「<ruby>話せる<rt>はなせる</rt></ruby>ようになりました」と表します。"
+              "explanation": "<ruby>能力の<rt>のうりょくの</rt></ruby><ruby>変化<rt>へんか</rt></ruby>は<ruby>可能形<rt>かのうけい</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って「<ruby>話せる<rt>はなせる</rt></ruby>ようになりました」と<ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "<ruby>母<rt>はは</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り（　）、<ruby>父<rt>ちち</rt></ruby>はテレビを<ruby>見<rt>み</rt></ruby>ています。",
+              "question": "<ruby>母<rt>はは</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作り<rt>つくり</rt></ruby>（　）、<ruby>父<rt>ちち</rt></ruby>はテレビを<ruby>見<rt>み</rt></ruby>ています。",
               "options": [
                 "ながら",
                 "から",
@@ -2293,7 +2293,7 @@
                 "しか"
               ],
               "answer": 0,
-              "explanation": "<ruby>二つ<rt>ふたつ</rt></ruby>の動<ruby>作<rt>つく</rt></ruby>を<ruby>同<rt>おな</rt></ruby>時に<ruby>行<rt>い</rt></ruby>う表現は「～ながら」です。"
+              "explanation": "<ruby>二つ<rt>ふたつ</rt></ruby>の<ruby>動作を<rt>どうさを</rt></ruby><ruby>同時<rt>どうじ</rt></ruby>に<ruby>行<rt>い</rt></ruby>う<ruby>表現<rt>ひょうげん</rt></ruby>は「～ながら」です。"
             }
           ],
           "reading": [
@@ -2377,7 +2377,7 @@
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>山本<rt>やまもと</rt></ruby>さんの<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まりますか。",
+              "question": "<ruby>山本<rt>やまもと</rt></ruby>さんの<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>に<ruby>始まります<rt>はじまります</rt></ruby>か。",
               "options": [
                 "<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>",
                 "<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>",
@@ -2386,11 +2386,11 @@
               ],
               "answer": 1,
               "explanation": "Kelas dimulai pukul enam sore.",
-              "passage": "<ruby>山本<rt>やまもと</rt></ruby>さんは<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>水曜日<rt>すいようび</rt></ruby>に<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まりますから、<ruby>仕事<rt>しごと</rt></ruby>のあとで<ruby>急<rt>いそ</rt></ruby>いで<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>授業<rt>じゅぎょう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>友達<rt>ともだち</rt></ruby>と<ruby>少<rt>すこ</rt></ruby>し<ruby>話<rt>はな</rt></ruby>します。<ruby>九時<rt>くじ</rt></ruby>に<ruby>授業<rt>じゅぎょう</rt></ruby>が<ruby>終<rt>お</rt></ruby>わったら、<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いて<ruby>帰<rt>かえ</rt></ruby>ります。"
+              "passage": "<ruby>山本<rt>やまもと</rt></ruby>さんは<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>水曜日<rt>すいようび</rt></ruby>に<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>始まります<rt>はじまります</rt></ruby>から、<ruby>仕事<rt>しごと</rt></ruby>のあとで<ruby>急いで<rt>いそいで</rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。<ruby>授業<rt>じゅぎょう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>友達<rt>ともだち</rt></ruby>と<ruby>少し<rt>すこし</rt></ruby><ruby>話<rt>はな</rt></ruby>します。<ruby>九時<rt>くじ</rt></ruby>に<ruby>授業<rt>じゅぎょう</rt></ruby>が<ruby>終<rt>お</rt></ruby>わったら、<ruby>駅まで<rt>えきまで</rt></ruby><ruby>歩いて<rt>あるいて</rt></ruby><ruby>帰ります<rt>かえります</rt></ruby>。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>山本<rt>やまもと</rt></ruby>さんは<ruby>授業<rt>じゅぎょう</rt></ruby>のあと、どうやって<ruby>帰<rt>かえ</rt></ruby>りますか。",
+              "question": "<ruby>山本<rt>やまもと</rt></ruby>さんは<ruby>授業<rt>じゅぎょう</rt></ruby>のあと、どうやって<ruby>帰ります<rt>かえります</rt></ruby>か。",
               "options": [
                 "バスで",
                 "<ruby>電車<rt>でんしゃ</rt></ruby>で",
@@ -2399,33 +2399,33 @@
               ],
               "answer": 2,
               "explanation": "Setelah kelas selesai, ia berjalan kaki sampai stasiun.",
-              "passage": "<ruby>山本<rt>やまもと</rt></ruby>さんは<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>水曜日<rt>すいようび</rt></ruby>に<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>始<rt>はじ</rt></ruby>まりますから、<ruby>仕事<rt>しごと</rt></ruby>のあとで<ruby>急<rt>いそ</rt></ruby>いで<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>授業<rt>じゅぎょう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>友達<rt>ともだち</rt></ruby>と<ruby>少<rt>すこ</rt></ruby>し<ruby>話<rt>はな</rt></ruby>します。<ruby>九時<rt>くじ</rt></ruby>に<ruby>授業<rt>じゅぎょう</rt></ruby>が<ruby>終<rt>お</rt></ruby>わったら、<ruby>駅<rt>えき</rt></ruby>まで<ruby>歩<rt>ある</rt></ruby>いて<ruby>帰<rt>かえ</rt></ruby>ります。"
+              "passage": "<ruby>山本<rt>やまもと</rt></ruby>さんは<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>水曜日<rt>すいようび</rt></ruby>に<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。<ruby>授業<rt>じゅぎょう</rt></ruby>は<ruby>午後<rt>ごご</rt></ruby><ruby>六時<rt>ろくじ</rt></ruby>に<ruby>始まります<rt>はじまります</rt></ruby>から、<ruby>仕事<rt>しごと</rt></ruby>のあとで<ruby>急いで<rt>いそいで</rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。<ruby>授業<rt>じゅぎょう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>友達<rt>ともだち</rt></ruby>と<ruby>少し<rt>すこし</rt></ruby><ruby>話<rt>はな</rt></ruby>します。<ruby>九時<rt>くじ</rt></ruby>に<ruby>授業<rt>じゅぎょう</rt></ruby>が<ruby>終<rt>お</rt></ruby>わったら、<ruby>駅まで<rt>えきまで</rt></ruby><ruby>歩いて<rt>あるいて</rt></ruby><ruby>帰ります<rt>かえります</rt></ruby>。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をしていますか。",
+              "question": "<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>休み<rt>やすみ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に<ruby>何を<rt>なにを</rt></ruby>していますか。",
               "options": [
                 "<ruby>庭<rt>にわ</rt></ruby>で<ruby>花<rt>はな</rt></ruby>を<ruby>育てています<rt>そだてています</rt></ruby>",
                 "<ruby>友達<rt>ともだち</rt></ruby>と<ruby>旅行<rt>りょこう</rt></ruby>しています",
-                "<ruby>本<rt>ほん</rt></ruby>を売っています",
+                "<ruby>本<rt>ほん</rt></ruby>を<ruby>売っています<rt>うっています</rt></ruby>",
                 "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作って<rt>つくって</rt></ruby>います"
               ],
               "answer": 0,
               "explanation": "Kimura menanam bunga di taman rumahnya.",
-              "passage": "<ruby>木村<rt>きむら</rt></ruby>さんの<ruby>家<rt>いえ</rt></ruby>には<ruby>小<rt>ちい</rt></ruby>さい<ruby>庭<rt>にわ</rt></ruby>があります。<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>に、<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>庭<rt>にわ</rt></ruby>で<ruby>花<rt>はな</rt></ruby>を<ruby>育<rt>そだ</rt></ruby>てています。<ruby>朝<rt>あさ</rt></ruby>に<ruby>水<rt>みず</rt></ruby>をやって、<ruby>草<rt>くさ</rt></ruby>を<ruby>取<rt>と</rt></ruby>ります。<ruby>春<rt>はる</rt></ruby>には<ruby>赤<rt>あか</rt></ruby>い<ruby>花<rt>はな</rt></ruby>がたくさん<ruby>咲<rt>さ</rt></ruby>きます。<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>花<rt>はな</rt></ruby>を<ruby>見<rt>み</rt></ruby>ると、<ruby>明<rt>あか</rt></ruby>るい<ruby>気持<rt>きも</rt></ruby>ちになります。"
+              "passage": "<ruby>木村<rt>きむら</rt></ruby>さんの<ruby>家<rt>いえ</rt></ruby>には<ruby>小さい<rt>ちいさい</rt></ruby><ruby>庭<rt>にわ</rt></ruby>があります。<ruby>休み<rt>やすみ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に、<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>庭<rt>にわ</rt></ruby>で<ruby>花<rt>はな</rt></ruby>を<ruby>育てています<rt>そだてています</rt></ruby>。<ruby>朝<rt>あさ</rt></ruby>に<ruby>水<rt>みず</rt></ruby>をやって、<ruby>草<rt>くさ</rt></ruby>を<ruby>取<rt>と</rt></ruby>ります。<ruby>春<rt>はる</rt></ruby>には<ruby>赤い<rt>あかい</rt></ruby><ruby>花<rt>はな</rt></ruby>がたくさん<ruby>咲<rt>さ</rt></ruby>きます。<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>花<rt>はな</rt></ruby>を<ruby>見る<rt>みる</rt></ruby>と、<ruby>明<rt>あか</rt></ruby>るい<ruby>気持<rt>きも</rt></ruby>ちになります。"
             },
             {
               "itemType": "mid-size-passage",
               "question": "<ruby>春<rt>はる</rt></ruby>には、どんな<ruby>花<rt>はな</rt></ruby>が<ruby>咲<rt>さ</rt></ruby>きますか。",
               "options": [
                 "<ruby>白い<rt>しろい</rt></ruby><ruby>花<rt>はな</rt></ruby>",
-                "黄色い<ruby>花<rt>はな</rt></ruby>",
+                "<ruby>黄色い<rt>きいろい</rt></ruby><ruby>花<rt>はな</rt></ruby>",
                 "<ruby>赤い<rt>あかい</rt></ruby><ruby>花<rt>はな</rt></ruby>",
                 "<ruby>青い<rt>あおい</rt></ruby><ruby>花<rt>はな</rt></ruby>"
               ],
               "answer": 2,
               "explanation": "Bunga merah bermekaran pada musim semi.",
-              "passage": "<ruby>木村<rt>きむら</rt></ruby>さんの<ruby>家<rt>いえ</rt></ruby>には<ruby>小<rt>ちい</rt></ruby>さい<ruby>庭<rt>にわ</rt></ruby>があります。<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>に、<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>庭<rt>にわ</rt></ruby>で<ruby>花<rt>はな</rt></ruby>を<ruby>育<rt>そだ</rt></ruby>てています。<ruby>朝<rt>あさ</rt></ruby>に<ruby>水<rt>みず</rt></ruby>をやって、<ruby>草<rt>くさ</rt></ruby>を<ruby>取<rt>と</rt></ruby>ります。<ruby>春<rt>はる</rt></ruby>には<ruby>赤<rt>あか</rt></ruby>い<ruby>花<rt>はな</rt></ruby>がたくさん<ruby>咲<rt>さ</rt></ruby>きます。<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>花<rt>はな</rt></ruby>を<ruby>見<rt>み</rt></ruby>ると、<ruby>明<rt>あか</rt></ruby>るい<ruby>気持<rt>きも</rt></ruby>ちになります。"
+              "passage": "<ruby>木村<rt>きむら</rt></ruby>さんの<ruby>家<rt>いえ</rt></ruby>には<ruby>小さい<rt>ちいさい</rt></ruby><ruby>庭<rt>にわ</rt></ruby>があります。<ruby>休み<rt>やすみ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に、<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>庭<rt>にわ</rt></ruby>で<ruby>花<rt>はな</rt></ruby>を<ruby>育てています<rt>そだてています</rt></ruby>。<ruby>朝<rt>あさ</rt></ruby>に<ruby>水<rt>みず</rt></ruby>をやって、<ruby>草<rt>くさ</rt></ruby>を<ruby>取<rt>と</rt></ruby>ります。<ruby>春<rt>はる</rt></ruby>には<ruby>赤い<rt>あかい</rt></ruby><ruby>花<rt>はな</rt></ruby>がたくさん<ruby>咲<rt>さ</rt></ruby>きます。<ruby>木村<rt>きむら</rt></ruby>さんは<ruby>花<rt>はな</rt></ruby>を<ruby>見る<rt>みる</rt></ruby>と、<ruby>明<rt>あか</rt></ruby>るい<ruby>気持<rt>きも</rt></ruby>ちになります。"
             },
             {
               "itemType": "information-retrieval",
@@ -2438,11 +2438,11 @@
               ],
               "answer": 1,
               "explanation": "Jadwal hari Minggu menyebutkan kolam renang tutup pukul lima sore.",
-              "passage": "<ruby>市民<rt>しみん</rt></ruby>プールのお<ruby>知<rt>し</rt></ruby>らせ\n<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>土曜日<rt>どようび</rt></ruby>まで：<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>\n<ruby>日曜日<rt>にちようび</rt></ruby>：<ruby>午前<rt>ごぜん</rt></ruby><ruby>十時<rt>じゅうじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>\n<ruby>水曜日<rt>すいようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みです。<ruby>タオル<rt>たおる</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください。"
+              "passage": "<ruby>市民<rt>しみん</rt></ruby>プールの<ruby>お知らせ<rt>おしらせ</rt></ruby>\n<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>土曜日<rt>どようび</rt></ruby>まで：<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>\n<ruby>日曜日<rt>にちようび</rt></ruby>：<ruby>午前<rt>ごぜん</rt></ruby><ruby>十時<rt>じゅうじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>\n<ruby>水曜日<rt>すいようび</rt></ruby>は<ruby>休み<rt>やすみ</rt></ruby>です。<ruby>タオル<rt>たおる</rt></ruby>を<ruby>持って<rt>もって</rt></ruby><ruby>来てください<rt>きてください</rt></ruby>。"
             },
             {
               "itemType": "information-retrieval",
-              "question": "プールへ<ruby>行<rt>い</rt></ruby>く<ruby>とき<rt>とき</rt></ruby>、<ruby>何<rt>なに</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>行<rt>い</rt></ruby>きますか。",
+              "question": "プールへ<ruby>行く<rt>いく</rt></ruby>とき、<ruby>何を<rt>なにを</rt></ruby><ruby>持って<rt>もって</rt></ruby><ruby>行きます<rt>いきます</rt></ruby>か。",
               "options": [
                 "<ruby>本<rt>ほん</rt></ruby>",
                 "<ruby>タオル<rt>たおる</rt></ruby>",
@@ -2451,7 +2451,7 @@
               ],
               "answer": 1,
               "explanation": "Pengumuman meminta pengunjung membawa handuk.",
-              "passage": "<ruby>市民<rt>しみん</rt></ruby>プールのお<ruby>知<rt>し</rt></ruby>らせ\n<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>土曜日<rt>どようび</rt></ruby>まで：<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>\n<ruby>日曜日<rt>にちようび</rt></ruby>：<ruby>午前<rt>ごぜん</rt></ruby><ruby>十時<rt>じゅうじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>\n<ruby>水曜日<rt>すいようび</rt></ruby>は<ruby>休<rt>やす</rt></ruby>みです。<ruby>タオル<rt>たおる</rt></ruby>を<ruby>持<rt>も</rt></ruby>って<ruby>来<rt>き</rt></ruby>てください。"
+              "passage": "<ruby>市民<rt>しみん</rt></ruby>プールの<ruby>お知らせ<rt>おしらせ</rt></ruby>\n<ruby>月曜日<rt>げつようび</rt></ruby>から<ruby>土曜日<rt>どようび</rt></ruby>まで：<ruby>午前<rt>ごぜん</rt></ruby><ruby>九時<rt>くじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>\n<ruby>日曜日<rt>にちようび</rt></ruby>：<ruby>午前<rt>ごぜん</rt></ruby><ruby>十時<rt>じゅうじ</rt></ruby>～<ruby>午後<rt>ごご</rt></ruby><ruby>五時<rt>ごじ</rt></ruby>\n<ruby>水曜日<rt>すいようび</rt></ruby>は<ruby>休み<rt>やすみ</rt></ruby>です。<ruby>タオル<rt>たおる</rt></ruby>を<ruby>持って<rt>もって</rt></ruby><ruby>来てください<rt>きてください</rt></ruby>。"
             }
           ],
           "listening": [
@@ -2659,13 +2659,13 @@
               ],
               "question": "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>何と言いますか<rt>なんといいますか</rt></ruby>。",
               "options": [
-                "もう<ruby>一度<rt>いちど</rt></ruby><ruby>お願い<rt>おねがい</rt></ruby>します",
+                "もう<ruby>一度<rt>いちど</rt></ruby><ruby>お願いします<rt>おねがいします</rt></ruby>",
                 "お<ruby>先に<rt>さきに</rt></ruby>どうぞ",
                 "ごちそうさまでした",
                 "いってらっしゃい"
               ],
               "answer": 0,
-              "explanation": "Meminta guru mengulang dengan sopan dapat diungkapkan dengan もう<ruby>一度<rt>いちど</rt></ruby><ruby>お願い<rt>おねがい</rt></ruby>します."
+              "explanation": "Meminta guru mengulang dengan sopan dapat diungkapkan dengan もう<ruby>一度<rt>いちど</rt></ruby><ruby>お願いします<rt>おねがいします</rt></ruby>."
             },
             {
               "itemType": "verbal-expressions",
@@ -4821,8 +4821,8 @@
               "options": [
                 "<ruby>調べ<rt>しらべ</rt></ruby>",
                 "<ruby>運<rt>はこ</rt></ruby>び",
-                "集め",
-                "<ruby>続<rt>つづ</rt></ruby>け"
+                "<ruby>集め<rt>あつめ</rt></ruby>",
+                "<ruby>続け<rt>つづけ</rt></ruby>"
               ],
               "answer": 0,
               "explanation": "Kata yang tidak diketahui dicari maknanya di kamus: <ruby>調べ<rt>しらべ</rt></ruby>ました。"
@@ -4837,19 +4837,19 @@
                 "この<ruby>店<rt>みせ</rt></ruby>はいつも<ruby>静か<rt>しずか</rt></ruby>です"
               ],
               "answer": 0,
-              "explanation": "「いつも<ruby>混んで<rt>こんで</rt></ruby>いる」は、たいてい<ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い状態を表します。"
+              "explanation": "「いつも<ruby>混んで<rt>こんで</rt></ruby>いる」は、たいてい<ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い<ruby>状態を<rt>じょうたいを</rt></ruby><ruby>表します<rt>あらわします</rt></ruby>。"
             },
             {
               "itemType": "usage",
               "question": "「<ruby>経験<rt>けいけん</rt></ruby>」の<ruby>使い方<rt>つかいかた</rt></ruby>として<ruby>正しい<rt>ただしい</rt></ruby><ruby>文<rt>ぶん</rt></ruby>はどれですか。",
               "options": [
-                "<ruby>日本<rt>にほん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>いた<ruby>経験<rt>けいけん</rt></ruby>があります。",
-                "<ruby>水<rt>みず</rt></ruby>を<ruby>経験<rt>けいけん</rt></ruby>して<ruby>飲<rt>の</rt></ruby>みました。",
-                "<ruby>駅<rt>えき</rt></ruby>まで<ruby>経験<rt>けいけん</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます。",
+                "<ruby>日本<rt>にほん</rt></ruby>で<ruby>働いた<rt>はたらいた</rt></ruby><ruby>経験<rt>けいけん</rt></ruby>があります。",
+                "<ruby>水<rt>みず</rt></ruby>を<ruby>経験<rt>けいけん</rt></ruby>して<ruby>飲みました<rt>のみました</rt></ruby>。",
+                "<ruby>駅まで<rt>えきまで</rt></ruby><ruby>経験<rt>けいけん</rt></ruby>を<ruby>歩<rt>ある</rt></ruby>きます。",
                 "<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>七時<rt>しちじ</rt></ruby>を<ruby>経験<rt>けいけん</rt></ruby>します。"
               ],
               "answer": 0,
-              "explanation": "「<ruby>経験<rt>けいけん</rt></ruby>がある」は、以<ruby>前<rt>まえ</rt></ruby>にしたことがあるという<ruby>意味<rt>いみ</rt></ruby>で<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "「<ruby>経験<rt>けいけん</rt></ruby>がある」は、<ruby>以前<rt>いぜん</rt></ruby>にしたことがあるという<ruby>意味<rt>いみ</rt></ruby>で<ruby>使います<rt>つかいます</rt></ruby>。"
             }
           ],
           "grammar": [
@@ -5088,7 +5088,7 @@
                 "いただき"
               ],
               "answer": 0,
-              "explanation": "相<ruby>手<rt>て</rt></ruby>に<ruby>手伝って<rt>てつだって</rt></ruby>もらったことを表すには「～てもらう」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>相手に<rt>あいてに</rt></ruby><ruby>手伝って<rt>てつだって</rt></ruby>もらったことを<ruby>表す<rt>あらわす</rt></ruby>には「～てもらう」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -5112,23 +5112,23 @@
                 "ため"
               ],
               "answer": 0,
-              "explanation": "予想に反する<ruby>内容<rt>ないよう</rt></ruby>なので「のに」が適切です。"
+              "explanation": "<ruby>予想<rt>よそう</rt></ruby>に<ruby>反する内容<rt>はんするないよう</rt></ruby>なので「のに」が<ruby>適切<rt>てきせつ</rt></ruby>です。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "この<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>めば、すぐ<ruby>元気<rt>げんき</rt></ruby>に（　）と<ruby>思<rt>おも</rt></ruby>います。",
+              "question": "この<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>めば、すぐ<ruby>元気<rt>げんき</rt></ruby>に（　）と<ruby>思います<rt>おもいます</rt></ruby>。",
               "options": [
-                "<ruby>なる<rt>なる</rt></ruby>",
+                "なる",
                 "なって",
                 "なった",
                 "なり"
               ],
               "answer": 0,
-              "explanation": "「～と<ruby>思<rt>おも</rt></ruby>います」の<ruby>前<rt>まえ</rt></ruby>には<ruby>普通<rt>ふつう</rt></ruby>形を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "「～と<ruby>思います<rt>おもいます</rt></ruby>」の<ruby>前<rt>まえ</rt></ruby>には<ruby>普通形<rt>ふつうけい</rt></ruby>を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話す<rt>はなす</rt></ruby>（　）に<ruby>なりたい<rt>なりたい</rt></ruby>です。",
+              "question": "<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話す<rt>はなす</rt></ruby>（　）になりたいです。",
               "options": [
                 "よう",
                 "そう",
@@ -5136,11 +5136,11 @@
                 "こと"
               ],
               "answer": 0,
-              "explanation": "<ruby>目<rt>め</rt></ruby>標や状態の<ruby>変<rt>へん</rt></ruby>化は「～ように<ruby>なる<rt>なる</rt></ruby>」で表せます。"
+              "explanation": "<ruby>目標や<rt>もくひょうや</rt></ruby><ruby>状態の<rt>じょうたいの</rt></ruby><ruby>変化<rt>へんか</rt></ruby>は「～ようになる」で<ruby>表せます<rt>あらわせます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
-              "question": "<ruby>窓<rt>まど</rt></ruby>が<ruby>開いて<rt>あいて</rt></ruby>（　）ので、寒いです。",
+              "question": "<ruby>窓<rt>まど</rt></ruby>が<ruby>開いて<rt>あいて</rt></ruby>（　）ので、<ruby>寒い<rt>さむい</rt></ruby>です。",
               "options": [
                 "います",
                 "あります",
@@ -5148,7 +5148,7 @@
                 "みます"
               ],
               "answer": 0,
-              "explanation": "<ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>あ</rt></ruby>いた状態を表す<ruby>とき<rt>とき</rt></ruby>は「<ruby>開いて<rt>あいて</rt></ruby>います」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>窓<rt>まど</rt></ruby>が<ruby>開<rt>ひら</rt></ruby>いた<ruby>状態を<rt>じょうたいを</rt></ruby><ruby>表す<rt>あらわす</rt></ruby>ときは「<ruby>開いて<rt>あいて</rt></ruby>います」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -5160,7 +5160,7 @@
                 "ことに"
               ],
               "answer": 0,
-              "explanation": "<ruby>目<rt>め</rt></ruby>的を表す「<ruby>忘れない<rt>わすれない</rt></ruby>ように」が自然です。"
+              "explanation": "<ruby>目的を<rt>もくてきを</rt></ruby><ruby>表す<rt>あらわす</rt></ruby>「<ruby>忘れない<rt>わすれない</rt></ruby>ように」が<ruby>自然です<rt>しぜんです</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
@@ -5172,31 +5172,31 @@
                 "が"
               ],
               "answer": 0,
-              "explanation": "<ruby>道<rt>みち</rt></ruby><ruby>案内<rt>あんない</rt></ruby>で結果や発<ruby>見<rt>み</rt></ruby>を表す<ruby>とき<rt>とき</rt></ruby>「～と」を<ruby>使います<rt>つかいます</rt></ruby>。"
+              "explanation": "<ruby>道<rt>みち</rt></ruby><ruby>案内<rt>あんない</rt></ruby>で<ruby>結果や<rt>けっかや</rt></ruby><ruby>発見<rt>はっけん</rt></ruby>を<ruby>表す<rt>あらわす</rt></ruby>とき「～と」を<ruby>使います<rt>つかいます</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
               "question": "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>会う<rt>あう</rt></ruby>（　）、<ruby>質問<rt>しつもん</rt></ruby>したいことがあります。",
               "options": [
-                "<ruby>とき<rt>とき</rt></ruby>",
+                "とき",
                 "ながら",
                 "あと",
                 "まで"
               ],
               "answer": 0,
-              "explanation": "<ruby>会う<rt>あう</rt></ruby>時点を表す「<ruby>会う<rt>あう</rt></ruby><ruby>とき<rt>とき</rt></ruby>」が自然です。"
+              "explanation": "<ruby>会う<rt>あう</rt></ruby><ruby>時点を<rt>じてんを</rt></ruby><ruby>表す<rt>あらわす</rt></ruby>「<ruby>会う<rt>あう</rt></ruby>とき」が<ruby>自然です<rt>しぜんです</rt></ruby>。"
             },
             {
               "itemType": "sentential-grammar-1",
               "question": "<ruby>今日<rt>きょう</rt></ruby>は<ruby>早く<rt>はやく</rt></ruby><ruby>帰って<rt>かえって</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>でゆっくり<ruby>休む<rt>やすむ</rt></ruby>（　）です。",
               "options": [
-                "<ruby>つもり<rt>つもり</rt></ruby>",
+                "つもり",
                 "はず",
                 "ところ",
                 "こと"
               ],
               "answer": 0,
-              "explanation": "自<ruby>分<rt>わ</rt></ruby>の<ruby>予定<rt>よてい</rt></ruby>や意志は「～<ruby>つもり<rt>つもり</rt></ruby>です」で表します。"
+              "explanation": "<ruby>自分の<rt>じぶんの</rt></ruby><ruby>予定<rt>よてい</rt></ruby>や<ruby>意志は<rt>いしは</rt></ruby>「～つもりです」で<ruby>表します<rt>あらわします</rt></ruby>。"
             }
           ],
           "reading": [
@@ -5228,7 +5228,7 @@
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は<ruby>何を<rt>なにを</rt></ruby><ruby>手伝<rt>てつだ</rt></ruby>っていますか。",
+              "question": "<ruby>佐藤さん<rt>さとうさん</rt></ruby>は<ruby>何を<rt>なにを</rt></ruby><ruby>手伝って<rt>てつだって</rt></ruby>いますか。",
               "options": [
                 "<ruby>子ども<rt>こども</rt></ruby>の<ruby>宿題<rt>しゅくだい</rt></ruby>",
                 "<ruby>図書館<rt>としょかん</rt></ruby>の<ruby>掃除<rt>そうじ</rt></ruby>",
@@ -5280,7 +5280,7 @@
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>中村<rt>なかむら</rt></ruby>さんはいつ<ruby>料理教室<rt>りょうりきょうしつ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きますか。",
+              "question": "<ruby>中村<rt>なかむら</rt></ruby>さんはいつ<ruby>料理教室<rt>りょうりきょうしつ</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>か。",
               "options": [
                 "<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>月曜日<rt>げつようび</rt></ruby>の<ruby>朝<rt>あさ</rt></ruby>",
                 "<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>",
@@ -5289,46 +5289,46 @@
               ],
               "answer": 1,
               "explanation": "Kelas berlangsung setiap Jumat malam.",
-              "passage": "<ruby>中村<rt>なかむら</rt></ruby>さんは<ruby>去年<rt>きょねん</rt></ruby>から<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くにある<ruby>料理教室<rt>りょうりきょうしつ</rt></ruby>へ<ruby>通<rt>かよ</rt></ruby>っています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>に、<ruby>先生<rt>せんせい</rt></ruby>から<ruby>日本料理<rt>にほんりょうり</rt></ruby>を<ruby>習<rt>なら</rt></ruby>います。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>魚<rt>さかな</rt></ruby>を<ruby>切<rt>き</rt></ruby>るのが<ruby>苦手<rt>にがて</rt></ruby>でしたが、<ruby>今<rt>いま</rt></ruby>は<ruby>一人<rt>ひとり</rt></ruby>で<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>れるようになりました。<ruby>習<rt>なら</rt></ruby>った<ruby>料理<rt>りょうり</rt></ruby>は<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>家族<rt>かぞく</rt></ruby>に<ruby>作<rt>つく</rt></ruby>ってあげます。"
+              "passage": "<ruby>中村<rt>なかむら</rt></ruby>さんは<ruby>去年<rt>きょねん</rt></ruby>から<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>近く<rt>ちかく</rt></ruby>にある<ruby>料理教室<rt>りょうりきょうしつ</rt></ruby>へ<ruby>通<rt>かよ</rt></ruby>っています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>に、<ruby>先生<rt>せんせい</rt></ruby>から<ruby>日本料理<rt>にほんりょうり</rt></ruby>を<ruby>習<rt>なら</rt></ruby>います。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>魚<rt>さかな</rt></ruby>を<ruby>切<rt>き</rt></ruby>るのが<ruby>苦手<rt>にがて</rt></ruby>でしたが、<ruby>今<rt>いま</rt></ruby>は<ruby>一人<rt>ひとり</rt></ruby>で<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>れるようになりました。<ruby>習<rt>なら</rt></ruby>った<ruby>料理<rt>りょうり</rt></ruby>は<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>家族<rt>かぞく</rt></ruby>に<ruby>作って<rt>つくって</rt></ruby>あげます。"
             },
             {
               "itemType": "mid-size-passage",
               "question": "<ruby>中村<rt>なかむら</rt></ruby>さんは<ruby>今<rt>いま</rt></ruby>、どんなことができるようになりましたか。",
               "options": [
                 "<ruby>魚<rt>さかな</rt></ruby>を<ruby>一人<rt>ひとり</rt></ruby>で<ruby>切<rt>き</rt></ruby>ること",
-                "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>一人<rt>ひとり</rt></ruby>で<ruby>作<rt>つく</rt></ruby>ること",
-                "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>なる<rt>なる</rt></ruby>こと",
+                "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>一人<rt>ひとり</rt></ruby>で<ruby>作る<rt>つくる</rt></ruby>こと",
+                "<ruby>先生<rt>せんせい</rt></ruby>になること",
                 "<ruby>店<rt>みせ</rt></ruby>を<ruby>開<rt>ひら</rt></ruby>くこと"
               ],
               "answer": 1,
               "explanation": "Ia sekarang sudah bisa memasak sendiri setelah berlatih.",
-              "passage": "<ruby>中村<rt>なかむら</rt></ruby>さんは<ruby>去年<rt>きょねん</rt></ruby>から<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くにある<ruby>料理教室<rt>りょうりきょうしつ</rt></ruby>へ<ruby>通<rt>かよ</rt></ruby>っています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>に、<ruby>先生<rt>せんせい</rt></ruby>から<ruby>日本料理<rt>にほんりょうり</rt></ruby>を<ruby>習<rt>なら</rt></ruby>います。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>魚<rt>さかな</rt></ruby>を<ruby>切<rt>き</rt></ruby>るのが<ruby>苦手<rt>にがて</rt></ruby>でしたが、<ruby>今<rt>いま</rt></ruby>は<ruby>一人<rt>ひとり</rt></ruby>で<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>れるようになりました。<ruby>習<rt>なら</rt></ruby>った<ruby>料理<rt>りょうり</rt></ruby>は<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>家族<rt>かぞく</rt></ruby>に<ruby>作<rt>つく</rt></ruby>ってあげます。"
+              "passage": "<ruby>中村<rt>なかむら</rt></ruby>さんは<ruby>去年<rt>きょねん</rt></ruby>から<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>近く<rt>ちかく</rt></ruby>にある<ruby>料理教室<rt>りょうりきょうしつ</rt></ruby>へ<ruby>通<rt>かよ</rt></ruby>っています。<ruby>毎週<rt>まいしゅう</rt></ruby><ruby>金曜日<rt>きんようび</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>に、<ruby>先生<rt>せんせい</rt></ruby>から<ruby>日本料理<rt>にほんりょうり</rt></ruby>を<ruby>習<rt>なら</rt></ruby>います。<ruby>最初<rt>さいしょ</rt></ruby>は<ruby>魚<rt>さかな</rt></ruby>を<ruby>切<rt>き</rt></ruby>るのが<ruby>苦手<rt>にがて</rt></ruby>でしたが、<ruby>今<rt>いま</rt></ruby>は<ruby>一人<rt>ひとり</rt></ruby>で<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>れるようになりました。<ruby>習<rt>なら</rt></ruby>った<ruby>料理<rt>りょうり</rt></ruby>は<ruby>週末<rt>しゅうまつ</rt></ruby>に<ruby>家族<rt>かぞく</rt></ruby>に<ruby>作って<rt>つくって</rt></ruby>あげます。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>鈴木<rt>すずき</rt></ruby>さんは<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>仕事<rt>しごと</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>前<rt>まえ</rt></ruby>に<ruby>何<rt>なに</rt></ruby>をしますか。",
+              "question": "<ruby>鈴木<rt>すずき</rt></ruby>さんは<ruby>毎朝<rt>まいあさ</rt></ruby>、<ruby>仕事<rt>しごと</rt></ruby>へ<ruby>行く<rt>いく</rt></ruby><ruby>前<rt>まえ</rt></ruby>に<ruby>何を<rt>なにを</rt></ruby>しますか。",
               "options": [
-                "<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借<rt>か</rt></ruby>ります",
+                "<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借り<rt>かり</rt></ruby>ます",
                 "<ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>します",
-                "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ります",
-                "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>会<rt>あ</rt></ruby>います"
+                "<ruby>料理<rt>りょうり</rt></ruby>を<ruby>作ります<rt>つくります</rt></ruby>",
+                "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>会います<rt>あいます</rt></ruby>"
               ],
               "answer": 1,
               "explanation": "Sebelum bekerja, Suzuki berjalan-jalan di taman.",
-              "passage": "<ruby>鈴木<rt>すずき</rt></ruby>さんは<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>町<rt>まち</rt></ruby>へ<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しました。<ruby>家<rt>いえ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>大<rt>おお</rt></ruby>きな<ruby>公園<rt>こうえん</rt></ruby>と<ruby>図書館<rt>としょかん</rt></ruby>があります。<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>してから<ruby>仕事<rt>しごと</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>には<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借<rt>か</rt></ruby>りています。<ruby>前<rt>まえ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>より<ruby>静<rt>しず</rt></ruby>かなので、<ruby>鈴木<rt>すずき</rt></ruby>さんはこの<ruby>町<rt>まち</rt></ruby>が<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っています。"
+              "passage": "<ruby>鈴木<rt>すずき</rt></ruby>さんは<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新しい<rt>あたらしい</rt></ruby><ruby>町<rt>まち</rt></ruby>へ<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しました。<ruby>家<rt>いえ</rt></ruby>の<ruby>近く<rt>ちかく</rt></ruby>には<ruby>大<rt>おお</rt></ruby>きな<ruby>公園<rt>こうえん</rt></ruby>と<ruby>図書館<rt>としょかん</rt></ruby>があります。<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>してから<ruby>仕事<rt>しごと</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。<ruby>休み<rt>やすみ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>には<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借り<rt>かり</rt></ruby>ています。<ruby>前<rt>まえ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>より<ruby>静かな<rt>しずかな</rt></ruby>ので、<ruby>鈴木<rt>すずき</rt></ruby>さんはこの<ruby>町<rt>まち</rt></ruby>が<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っています。"
             },
             {
               "itemType": "mid-size-passage",
-              "question": "<ruby>鈴木<rt>すずき</rt></ruby>さんはどうして<ruby>新<rt>あたら</rt></ruby>しい<ruby>町<rt>まち</rt></ruby>が<ruby>好<rt>す</rt></ruby>きですか。",
+              "question": "<ruby>鈴木<rt>すずき</rt></ruby>さんはどうして<ruby>新しい<rt>あたらしい</rt></ruby><ruby>町<rt>まち</rt></ruby>が<ruby>好き<rt>すき</rt></ruby>ですか。",
               "options": [
-                "<ruby>会社<rt>かいしゃ</rt></ruby>にとても<ruby>近<rt>ちか</rt></ruby>いから",
+                "<ruby>会社<rt>かいしゃ</rt></ruby>にとても<ruby>近い<rt>ちかい</rt></ruby>から",
                 "<ruby>友達<rt>ともだち</rt></ruby>がたくさんいるから",
-                "<ruby>前<rt>まえ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>より<ruby>静<rt>しず</rt></ruby>かだから",
+                "<ruby>前<rt>まえ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>より<ruby>静か<rt>しずか</rt></ruby>だから",
                 "<ruby>店<rt>みせ</rt></ruby>がたくさんあるから"
               ],
               "answer": 2,
               "explanation": "Kota barunya lebih tenang daripada kota sebelumnya.",
-              "passage": "<ruby>鈴木<rt>すずき</rt></ruby>さんは<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新<rt>あたら</rt></ruby>しい<ruby>町<rt>まち</rt></ruby>へ<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しました。<ruby>家<rt>いえ</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>大<rt>おお</rt></ruby>きな<ruby>公園<rt>こうえん</rt></ruby>と<ruby>図書館<rt>としょかん</rt></ruby>があります。<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>してから<ruby>仕事<rt>しごと</rt></ruby>へ<ruby>行<rt>い</rt></ruby>きます。<ruby>休<rt>やす</rt></ruby>みの<ruby>日<rt>ひ</rt></ruby>には<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借<rt>か</rt></ruby>りています。<ruby>前<rt>まえ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>より<ruby>静<rt>しず</rt></ruby>かなので、<ruby>鈴木<rt>すずき</rt></ruby>さんはこの<ruby>町<rt>まち</rt></ruby>が<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っています。"
+              "passage": "<ruby>鈴木<rt>すずき</rt></ruby>さんは<ruby>先月<rt>せんげつ</rt></ruby>、<ruby>新しい<rt>あたらしい</rt></ruby><ruby>町<rt>まち</rt></ruby>へ<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>しました。<ruby>家<rt>いえ</rt></ruby>の<ruby>近く<rt>ちかく</rt></ruby>には<ruby>大<rt>おお</rt></ruby>きな<ruby>公園<rt>こうえん</rt></ruby>と<ruby>図書館<rt>としょかん</rt></ruby>があります。<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>を<ruby>散歩<rt>さんぽ</rt></ruby>してから<ruby>仕事<rt>しごと</rt></ruby>へ<ruby>行きます<rt>いきます</rt></ruby>。<ruby>休み<rt>やすみ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>には<ruby>図書館<rt>としょかん</rt></ruby>で<ruby>本<rt>ほん</rt></ruby>を<ruby>借り<rt>かり</rt></ruby>ています。<ruby>前<rt>まえ</rt></ruby>の<ruby>町<rt>まち</rt></ruby>より<ruby>静かな<rt>しずかな</rt></ruby>ので、<ruby>鈴木<rt>すずき</rt></ruby>さんはこの<ruby>町<rt>まち</rt></ruby>が<ruby>気<rt>き</rt></ruby>に<ruby>入<rt>い</rt></ruby>っています。"
             }
           ],
           "listening": [
@@ -5563,13 +5563,13 @@
               ],
               "question": "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>何と言いますか<rt>なんといいますか</rt></ruby>。",
               "options": [
-                "<ruby>手伝<rt>てつだ</rt></ruby>ってくれてありがとう",
+                "<ruby>手伝って<rt>てつだって</rt></ruby>くれてありがとう",
                 "お<ruby>先に<rt>さきに</rt></ruby><ruby>失礼<rt>しつれい</rt></ruby>します",
                 "どうぞ<ruby>お入りください<rt>おはいりください</rt></ruby>",
                 "<ruby>気をつけて<rt>きをつけて</rt></ruby><ruby>行ってください<rt>いってください</rt></ruby>"
               ],
               "answer": 0,
-              "explanation": "Untuk berterima kasih atas bantuan teman, ungkapan yang sesuai adalah <ruby>手伝<rt>てつだ</rt></ruby>ってくれてありがとう."
+              "explanation": "Untuk berterima kasih atas bantuan teman, ungkapan yang sesuai adalah <ruby>手伝って<rt>てつだって</rt></ruby>くれてありがとう."
             },
             {
               "itemType": "verbal-expressions",
@@ -5584,7 +5584,7 @@
               "options": [
                 "これを<ruby>交換<rt>こうかん</rt></ruby>していただけますか",
                 "これを<ruby>食べて<rt>たべて</rt></ruby>もいいですか",
-                "お<ruby>会計<rt>かいけい</rt></ruby>を<ruby>お願い<rt>おねがい</rt></ruby>します",
+                "お<ruby>会計<rt>かいけい</rt></ruby>を<ruby>お願いします<rt>おねがいします</rt></ruby>",
                 "<ruby>少々<rt>しょうしょう</rt></ruby><ruby>お待ちください<rt>おまちください</rt></ruby>"
               ],
               "answer": 0,
@@ -5621,7 +5621,7 @@
               "question": "<ruby>何と言いますか<rt>なんといいますか</rt></ruby>。",
               "options": [
                 "ちょっと<ruby>意見<rt>いけん</rt></ruby>を<ruby>言って<rt>いって</rt></ruby>もいいですか",
-                "もう<ruby>一度<rt>いちど</rt></ruby><ruby>お願い<rt>おねがい</rt></ruby>します",
+                "もう<ruby>一度<rt>いちど</rt></ruby><ruby>お願いします<rt>おねがいします</rt></ruby>",
                 "<ruby>何時<rt>なんじ</rt></ruby>に<ruby>始まります<rt>はじまります</rt></ruby>か",
                 "お<ruby>先に<rt>さきに</rt></ruby>どうぞ"
               ],
@@ -5639,7 +5639,7 @@
               ],
               "question": "<ruby>何と<rt>なんと</rt></ruby><ruby>答えます<rt>こたえます</rt></ruby>か。",
               "options": [
-                "はい、<ruby>今日<rt>きょう</rt></ruby>の<ruby>五時<rt>ごじ</rt></ruby>までに<ruby>お願い<rt>おねがい</rt></ruby>します",
+                "はい、<ruby>今日<rt>きょう</rt></ruby>の<ruby>五時<rt>ごじ</rt></ruby>までに<ruby>お願いします<rt>おねがいします</rt></ruby>",
                 "いいえ、<ruby>昨日<rt>きのう</rt></ruby><ruby>出しました<rt>だしました</rt></ruby>",
                 "はい、ここで<ruby>食べます<rt>たべます</rt></ruby>",
                 "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>でしょう"
@@ -5844,12 +5844,12 @@
                   "jp": "いいえ、次の駅で乗り換えてください。空港行きは二番線です。"
                 }
               ],
-              "question": "<ruby>空港<rt>くうこう</rt></ruby>へ<ruby>行く<rt>いく</rt></ruby>には、どこで<ruby>乗<rt>の</rt></ruby>り換えますか。",
+              "question": "<ruby>空港<rt>くうこう</rt></ruby>へ<ruby>行く<rt>いく</rt></ruby>には、どこで<ruby>乗り換えます<rt>のりかえます</rt></ruby>か。",
               "options": [
                 "<ruby>次<rt>つぎ</rt></ruby>の<ruby>駅<rt>えき</rt></ruby>",
                 "<ruby>今<rt>いま</rt></ruby>の<ruby>駅<rt>えき</rt></ruby>",
                 "<ruby>空港<rt>くうこう</rt></ruby>",
-                "市役所"
+                "<ruby>市役所<rt>しやくしょ</rt></ruby>"
               ],
               "answer": 0,
               "explanation": "Penumpang harus berganti kereta di stasiun berikutnya."
@@ -5869,7 +5869,7 @@
               ],
               "question": "<ruby>薬<rt>くすり</rt></ruby>は<ruby>一日<rt>いちにち</rt></ruby>に<ruby>何回<rt>なんかい</rt></ruby><ruby>飲みます<rt>のみます</rt></ruby>か。",
               "options": [
-                "<ruby>一<rt>ひと</rt></ruby>回",
+                "<ruby>一回<rt>いっかい</rt></ruby>",
                 "<ruby>二回<rt>にかい</rt></ruby>",
                 "<ruby>三回<rt>さんかい</rt></ruby>",
                 "<ruby>四回<rt>よんかい</rt></ruby>"
@@ -5890,7 +5890,7 @@
                   "jp": "はい。でも、二枚買うと一枚二千五百円になります。"
                 }
               ],
-              "question": "<ruby>シャツ<rt>しゃつ</rt></ruby>を<ruby>二枚<rt>にまい</rt></ruby><ruby>買<rt>か</rt></ruby>うと、<ruby>一枚<rt>いちまい</rt></ruby>いくらですか。",
+              "question": "シャツを<ruby>二枚<rt>にまい</rt></ruby><ruby>買<rt>か</rt></ruby>うと、<ruby>一枚<rt>いちまい</rt></ruby>いくらですか。",
               "options": [
                 "<ruby>二千円<rt>にせんえん</rt></ruby>",
                 "<ruby>二千五百円<rt>にせんごひゃくえん</rt></ruby>",
