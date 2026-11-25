@@ -85,6 +85,16 @@ function meaningParts(value: string): string[] {
     .filter(Boolean);
 }
 
+
+// Kunci kedua menggabungkan variasi penulisan (kanji/kana) hanya jika
+// bacaannya dan arti Indonesianya sama. Homofon dengan arti berbeda tetap terpisah.
+function vocabularyMeaningKeys(vocab: { kana: string; meaning: string }): string[] {
+  const reading = norm(vocab.kana);
+  return meaningParts(vocab.meaning).map((part) => {
+    const meaning = normalizeMeaning(part).replace(/[.,!?！？。]/g, "").trim();
+    return `${reading}|${meaning}`;
+  }).filter((key) => !key.endsWith("|"));
+}
 // Pertahankan arti tambahan dari bab/pelajaran lain saat kosakata yang sama
 // digabung. Ejaan berbeda kapitalisasi tidak dihitung sebagai arti baru.
 function mergeVocabularyMeanings(current: string, incoming: string): string {
@@ -217,18 +227,38 @@ export async function getUnlockedVocab(
 
   const result: VocabItem[] = [];
   const itemByKey = new Map<string, VocabItem>();
+  const itemByMeaningKey = new Map<string, VocabItem>();
+
+  const findExistingVocab = (vocab: { kanji: string; kana: string; meaning: string }) => {
+    const exactMatch = itemByKey.get(vocabKey(vocab));
+    if (exactMatch) return exactMatch;
+
+    for (const meaningKey of vocabularyMeaningKeys(vocab)) {
+      const semanticMatch = itemByMeaningKey.get(meaningKey);
+      if (semanticMatch) return semanticMatch;
+    }
+
+    return undefined;
+  };
+
+  const registerVocab = (item: VocabItem) => {
+    itemByKey.set(vocabKey(item), item);
+    for (const meaningKey of vocabularyMeaningKeys(item)) {
+      itemByMeaningKey.set(meaningKey, item);
+    }
+  };
 
   allKosakata
     .filter((group) => Number(group.bab) <= Number(currentBab))
     .sort((a, b) => Number(a.bab) - Number(b.bab))
     .forEach((group) => {
       group.vocab.forEach((vocab) => {
-        const key = vocabKey(vocab);
-        const existing = itemByKey.get(key);
+        const existing = findExistingVocab(vocab);
 
         if (existing) {
           existing.meaning = mergeVocabularyMeanings(existing.meaning, vocab.meaning);
           addSource(existing, { type: "minna", bab: Number(group.bab) });
+          registerVocab(existing);
           return;
         }
 
@@ -237,7 +267,7 @@ export async function getUnlockedVocab(
           bab: Number(group.bab),
           sources: [{ type: "minna", bab: Number(group.bab) }],
         };
-        itemByKey.set(key, item);
+        registerVocab(item);
         result.push(item);
       });
     });
@@ -250,7 +280,6 @@ export async function getUnlockedVocab(
     if (!isIrodoriLessonUnlocked(lesson.courseId, lesson.lessonNumber, [...completedLessons])) return;
 
     lesson.vocab.forEach((vocab) => {
-      const key = vocabKey(vocab);
       const source: VocabSource = {
         type: "irodori",
         courseId: lesson.courseId,
@@ -259,11 +288,12 @@ export async function getUnlockedVocab(
         lessonNumber: lesson.lessonNumber,
         lessonTitle: lesson.lessonTitle,
       };
-      const existing = itemByKey.get(key);
+      const existing = findExistingVocab(vocab);
 
       if (existing) {
         existing.meaning = mergeVocabularyMeanings(existing.meaning, vocab.meaning);
         addSource(existing, source);
+        registerVocab(existing);
         return;
       }
 
@@ -271,7 +301,7 @@ export async function getUnlockedVocab(
         ...vocab,
         sources: [source],
       };
-      itemByKey.set(key, item);
+      registerVocab(item);
       result.push(item);
     });
   });
@@ -300,12 +330,12 @@ export async function getUnlockedVocab(
         romaji: entry.romaji,
         meaning: entry.meaning,
       };
-      const key = vocabKey(vocab);
-      const existing = itemByKey.get(key);
+      const existing = findExistingVocab(vocab);
 
       if (existing) {
         existing.meaning = mergeVocabularyMeanings(existing.meaning, vocab.meaning);
         addSource(existing, source);
+        registerVocab(existing);
         return;
       }
 
@@ -313,7 +343,7 @@ export async function getUnlockedVocab(
         ...vocab,
         sources: [source],
       };
-      itemByKey.set(key, item);
+      registerVocab(item);
       result.push(item);
     });
   });
