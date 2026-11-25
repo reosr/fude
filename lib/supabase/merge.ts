@@ -1,3 +1,4 @@
+import { XP_KEY } from "../gamification";
 import type {
   FudeProfile,
   FudeXpEvent,
@@ -377,12 +378,12 @@ export function mergeFudeData(
     cloudProgress?.memorized_kanji ?? []
   );
 
-  const hasLocalXpHistory =
-    local.currentBab > 1 ||
-    local.totalXp > 0 ||
-    local.xpRewards.length > 0 ||
-    local.xpEvents.length > 0 ||
-    local.jlptResults.length > 0;
+  // Hanya ledger EXP yang benar-benar berubah pada perangkat ini
+  // yang boleh ikut digabung. Cache lama tanpa penanda perubahan harus
+  // dipulihkan dari ledger cloud, bukan dianggap sebagai data baru.
+  const hasPendingLocalXpChange = pending.some(
+    (item) => item.key === XP_KEY
+  );
 
   const cloudTotalXp = safeNumber(cloudProgress?.total_xp, 0);
   const cloudXpBase = safeNumber(
@@ -408,7 +409,7 @@ export function mergeFudeData(
 
   if (
     cloudProgress &&
-    hasLocalXpHistory &&
+    hasPendingLocalXpChange &&
     local.xpBase !== cloudXpBase
   ) {
     const canReconcileLegacyLedger =
@@ -429,7 +430,13 @@ export function mergeFudeData(
   let xpBase: number;
   let xpEvents: FudeXpEvent[];
 
-  if (hasLegacyCloudXpLedger) {
+  if (cloudProgress && !hasPendingLocalXpChange) {
+    // Tidak ada perubahan EXP lokal yang menunggu dikirim.
+    // Jadikan Cloud sumber kebenaran agar ledger cache lama tidak
+    // menghalangi pemulihan progres terbaru di perangkat ini.
+    xpBase = cloudXpBase;
+    xpEvents = mergeXpEvents([], cloudXpEvents);
+  } else if (hasLegacyCloudXpLedger) {
     if (!hasLocalXpLedger) {
       // Perangkat baru: pertahankan total lama sebagai saldo dasar.
       xpBase = cloudTotalXp;
@@ -441,10 +448,10 @@ export function mergeFudeData(
       xpEvents = mergeXpEvents(local.xpEvents, []);
     }
   } else if (cloudProgress) {
-    xpBase = hasLocalXpHistory ? local.xpBase : cloudXpBase;
-    xpEvents = hasLocalXpHistory
-      ? mergeXpEvents(local.xpEvents, cloudXpEvents)
-      : mergeXpEvents([], cloudXpEvents);
+    // Ada perubahan EXP lokal yang belum tersinkron; pertahankan ledger
+    // lokal dan gabungkan event setelah pemeriksaan saldo dasar di atas.
+    xpBase = local.xpBase;
+    xpEvents = mergeXpEvents(local.xpEvents, cloudXpEvents);
   } else {
     xpBase = local.xpBase;
     xpEvents = mergeXpEvents(local.xpEvents, []);
