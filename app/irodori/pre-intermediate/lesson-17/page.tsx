@@ -30,7 +30,7 @@ const content: IrodoriLessonContent = {
       utterances: [
         { speakerId: "kenji", japanese: <>今日から売り場の仕事をお願いします。商品を並べるときは、ラベルを前に向けてください。</>, romaji: "Kyou kara uriba no shigoto o onegai shimasu. Shouhin o naraberu toki wa, raberu o mae ni mukete kudasai.", translation: "Mulai hari ini, kamu akan membantu pekerjaan di area penjualan. Saat menyusun barang, arahkan labelnya ke depan.", audioFileName: "" },
         { speakerId: "yui", japanese: <>わかりました。全部の商品を同じように並べますか。</>, romaji: "Wakarimashita. Zenbu no shouhin o onaji you ni narabemasu ka?", translation: "Baik. Apakah semua barang disusun dengan cara yang sama?", audioFileName: "" },
-        { speakerId: "kenji", japanese: <>はい。それから、古い商品は手前に、新しい商品は後ろに置いてください。</>, romaji: "Hai. Sore kara, furui shouhin wa temae ni, atarashii shouhin wa ushiro ni oite kudasai.", translation: "Iya. Selain itu, letakkan barang yang lebih lama di bagian depan dan barang yang baru di belakang.", audioFileName: "" },
+        { speakerId: "kenji", japanese: <>はい。それから、賞味期限が近い商品は手前に、新しい商品は後ろに置いてください。</>, romaji: "Hai. Sore kara, furui shouhin wa temae ni, atarashii shouhin wa ushiro ni oite kudasai.", translation: "Iya. Selain itu, letakkan produk yang tanggal baik dikonsumsinya lebih dekat di bagian depan dan produk yang baru di belakang.", audioFileName: "" },
         { speakerId: "yui", japanese: <>どうしてですか。</>, romaji: "Dou shite desu ka?", translation: "Mengapa begitu?", audioFileName: "" },
         { speakerId: "kenji", japanese: <>賞味期限が近い商品から買ってもらうためです。わからないことがあったら、いつでも聞いてください。</>, romaji: "Shoumi kigen ga chikai shouhin kara katte morau tame desu. Wakaranai koto ga attara, itsudemo kiite kudasai.", translation: "Supaya barang yang tanggal baik digunakan-nya lebih dekat bisa dibeli lebih dahulu. Kalau ada yang belum kamu pahami, tanyakan kapan saja.", audioFileName: "" },
       ],
@@ -108,7 +108,7 @@ const content: IrodoriLessonContent = {
     ["並べる", "ならべる · naraberu", "Menyusun; menata berjajar"],
     ["順番", "じゅんばん · junban", "Urutan; giliran"],
     ["ラベル", "ラベル · raberu", "Label"],
-    ["賞味期限", "しょうみきげん · shoumikigen", "Batas waktu kualitas terbaik makanan"],
+    ["賞味期限", "しょうみきげん · shoumikigen", "Tanggal baik dikonsumsi sebelum kualitasnya menurun (best-before)"],
     ["提出", "ていしゅつ · teishutsu", "Penyerahan; mengumpulkan dokumen"],
     ["申請", "しんせい · shinsei", "Pengajuan; permohonan resmi"],
     ["遅刻", "ちこく · chikoku", "Keterlambatan"],
