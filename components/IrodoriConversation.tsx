@@ -50,7 +50,7 @@ export default function IrodoriConversation({
   // File audio dibuat sekaligus melalui batch VOICEVOX.
   const audioUtterances = utterances.map((utterance) => ({
     ...utterance,
-    audioSrc: utterance.audioSrc ?? `/audio/irodori/${utterance.audioFileName}`,
+    audioSrc: utterance.audioSrc ?? (utterance.audioFileName ? `/audio/irodori/${utterance.audioFileName}` : null),
   }));
 
   const listeningChoices = audioUtterances.reduce<
@@ -259,7 +259,7 @@ export default function IrodoriConversation({
         )}
       </div>
 
-      {listeningTarget && (
+      {listeningTarget && availableAudioCount > 0 && (
         <div className="border-b border-white/[0.06] bg-[#26211A]/60 p-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
