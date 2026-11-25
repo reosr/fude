@@ -19,6 +19,7 @@ export default function GoogleAuthButton() {
   const [notice, setNotice] = useState("");
 
   const popupWatcherRef = useRef<number | null>(null);
+  const loginCompletionStartedRef = useRef(false);
 
   const stopPopupWatcher = () => {
     if (popupWatcherRef.current !== null) {
@@ -50,31 +51,65 @@ export default function GoogleAuthButton() {
       setLoading(false);
     });
 
+    const completeLogin = async () => {
+      // Popup dapat memberi tahu lewat postMessage dan juga terdeteksi
+      // tertutup oleh watcher. Pastikan proses pemulihan hanya dimulai sekali.
+      if (loginCompletionStartedRef.current) return;
+      loginCompletionStartedRef.current = true;
+
+      let currentUser: User | null = null;
+
+      try {
+        currentUser = await readUser();
+
+        if (!mounted) return;
+        if (!currentUser) {
+          throw new Error("Session belum berhasil dibaca. Coba login kembali.");
+        }
+
+        setUser(currentUser);
+        setModalOpen(false);
+        setNotice("Login berhasil. Memulihkan data dari cloud...");
+
+        // Login desktop menggunakan popup. Perubahan session di popup
+        // tidak selalu memicu event auth di halaman utama, jadi sinkronisasi
+        // harus dipanggil langsung setelah session berhasil dibaca.
+        await connectAndSyncFudeNow(currentUser.id);
+
+        if (!mounted) return;
+        setBusy(false);
+        setError("");
+        setNotice("Akun Google terhubung. Data akun berhasil dipulihkan.");
+      } catch (err) {
+        if (!mounted) return;
+
+        setBusy(false);
+        setNotice("");
+
+        if (currentUser) {
+          setUser(currentUser);
+          setModalOpen(false);
+          setError(
+            `Login berhasil, tetapi pemulihan data gagal: ${
+              err instanceof Error ? err.message : "Terjadi kesalahan."
+            }`
+          );
+        } else {
+          setError(
+            err instanceof Error
+              ? err.message
+              : "Gagal memeriksa session akun."
+          );
+        }
+      }
+    };
+
     const handleMessage = (event: MessageEvent) => {
       if (event.origin !== window.location.origin) return;
 
       if (event.data?.type === "fude-google-auth-success") {
         stopPopupWatcher();
-
-        void readUser()
-          .then((currentUser) => {
-            if (!mounted) return;
-
-            setUser(currentUser);
-            setBusy(false);
-
-            if (currentUser) {
-              setModalOpen(false);
-              setNotice("Akun Google berhasil terhubung.");
-            } else {
-              setError("Session belum berhasil dibaca. Coba refresh halaman.");
-            }
-          })
-          .catch(() => {
-            if (!mounted) return;
-            setBusy(false);
-            setError("Gagal memeriksa session akun.");
-          });
+        void completeLogin();
       }
 
       if (event.data?.type === "fude-google-auth-error") {
@@ -95,6 +130,7 @@ export default function GoogleAuthButton() {
   }, [supabase]);
 
   const handleGoogleLogin = async () => {
+    loginCompletionStartedRef.current = false;
     setBusy(true);
     setError("");
     setNotice("");
@@ -157,22 +193,7 @@ export default function GoogleAuthButton() {
 
         stopPopupWatcher();
 
-        void readUser()
-          .then((currentUser) => {
-            setUser(currentUser);
-            setBusy(false);
-
-            if (currentUser) {
-              setModalOpen(false);
-              setNotice("Akun Google berhasil terhubung.");
-            } else {
-              setError("Jendela login ditutup sebelum selesai.");
-            }
-          })
-          .catch(() => {
-            setBusy(false);
-            setError("Gagal memeriksa status login.");
-          });
+        void completeLogin();
       }, 500);
     } catch (err) {
       setBusy(false);
