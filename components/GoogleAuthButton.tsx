@@ -222,9 +222,7 @@ export default function GoogleAuthButton() {
       await resetFudeLocalAccountData();
       setUser(null);
       setModalOpen(false);
-      setNotice(
-        "Kamu sudah keluar. Profil perangkat kembali ke kondisi awal; data akun tetap tersimpan di cloud."
-      );
+      setNotice("");
     } catch (err) {
       setError(
         err instanceof Error
