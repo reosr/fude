@@ -988,8 +988,7 @@ export default function IrodoriPemulaLessonThreePage() {
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">
           Nilai kemampuanmu setelah mencoba dialog, kartu nama, dan formulir.
           ★☆☆ berarti sudah bisa tetapi masih perlu latihan, ★★☆ berarti
-          sudah bisa, dan ★★★ berarti bisa dengan baik. Penilaian ini tersimpan
-          khusus untuk Irodori, terpisah dari progres Minna no Nihongo dan JLPT.
+          sudah bisa, dan ★★★ berarti bisa dengan baik. Penilaian ini membantu melihat kemampuan komunikasi yang masih perlu dilatih.
         </p>
         <div className="mt-4 space-y-3">
           {canDos.map((canDo, index) => (

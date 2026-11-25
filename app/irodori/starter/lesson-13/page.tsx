@@ -761,7 +761,7 @@ export default function IrodoriPemulaLessonThirteenPage() {
       <section className="rounded-2xl border border-[#B8860B]/25 bg-gradient-to-br from-[#2B2118] to-[#191817] p-5 md:p-6">
         <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#D9B66D]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">CEK TARGET KOMUNIKASI</p></div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
-        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Nilai lima kemampuan setelah menyelesaikan praktik dan kuis. Progres Irodori tersimpan terpisah dari Minna no Nihongo dan JLPT.</p>
+        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Nilai lima kemampuan setelah menyelesaikan praktik dan kuis. </p>
         <div className="mt-4 space-y-3">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3">

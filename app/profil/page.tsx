@@ -231,9 +231,7 @@ export default function Profil() {
       setIsEditing(false);
     } catch (error) {
       setSaveError(
-        error instanceof Error
-          ? error.message
-          : "Gagal menyimpan profil."
+        "Profil belum bisa disimpan. Coba lagi."
       );
     } finally {
       setPhotoLoading(false);
@@ -258,9 +256,7 @@ export default function Profil() {
       setPhotoEditorFile(null);
     } catch (error) {
       setPhotoError(
-        error instanceof Error
-          ? error.message
-          : "Gagal menyimpan foto."
+        "Foto belum bisa disimpan. Coba lagi."
       );
 
       throw error;
@@ -302,9 +298,7 @@ export default function Profil() {
       await refreshPhoto();
     } catch (error) {
       setPhotoError(
-        error instanceof Error
-          ? error.message
-          : "Gagal menyimpan foto."
+        "Foto belum bisa disimpan. Coba lagi."
       );
     } finally {
       setPhotoLoading(false);
@@ -317,7 +311,7 @@ export default function Profil() {
       await refreshPhoto();
       setPhotoError("");
     } catch {
-      setPhotoError("Gagal menghapus foto.");
+      setPhotoError("Foto belum bisa dihapus. Coba lagi.");
     }
   };
 

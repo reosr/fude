@@ -40,7 +40,7 @@ export default function Terjemahan() {
         setResult(translatedText);
       } catch (error) {
         console.error(error);
-        setResult("Gagal menerjemahkan.");
+        setResult("Terjemahan belum tersedia. Coba lagi.");
       } finally {
         setIsLoading(false);
       }
@@ -124,7 +124,7 @@ export default function Terjemahan() {
             </div>
           ) : (
             <div className="flex items-center justify-center h-full text-[#A3A099] text-sm italic">
-              {isLoading ? "Menunggu ketikan selesai..." : "Hasil terjemahan akan muncul di sini..."}
+              {isLoading ? "Terjemahan sedang disiapkan..." : "Hasil terjemahan akan muncul di sini..."}
             </div>
           )}
         </div>

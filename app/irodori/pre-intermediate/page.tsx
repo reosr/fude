@@ -48,7 +48,7 @@ export default function IrodoriPreIntermediatePage() {
           <div className="mt-5 max-w-md rounded-xl border border-white/[0.07] bg-black/20 p-3">
             <div className="flex items-center justify-between text-[10px]"><span className="font-semibold text-[#A3A099]">Progres Irodori Pra-Menengah</span><span className="font-bold text-[#E3D5F6]">{completedCount}/18 selesai</span></div>
             <div className="mt-2 h-2 overflow-hidden rounded-full bg-[#302D29]"><div className="h-full rounded-full bg-gradient-to-r from-[#80619B] to-[#C8A9EA] transition-all" style={{ width: (completedCount / 18) * 100 + "%" }} /></div>
-            <p className="mt-2 text-[9px] text-[#817A73]">Progres jalur ini tersimpan terpisah dari Pemula, Dasar, EXP, dan JLPT.</p>
+            
           </div>
         </div>
       </header>

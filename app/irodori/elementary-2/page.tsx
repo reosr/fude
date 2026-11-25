@@ -76,7 +76,7 @@ export default function IrodoriElementaryTwoPage() {
               />
             </div>
             <p className="mt-2 text-[9px] text-[#817A73]">
-              Progres tersimpan terpisah dari Pemula, Dasar 1, EXP, dan JLPT.
+              
             </p>
           </div>
         </div>

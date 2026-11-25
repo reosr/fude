@@ -1358,8 +1358,7 @@ export default function IrodoriPemulaLessonNinePage() {
           Nilai kemampuanmu setelah mencoba rutinitas harian, jadwal kerja,
           papan kehadiran, dan menyepakati waktu bersama. ★☆☆ berarti sudah
           bisa tetapi masih perlu latihan, ★★☆ berarti sudah bisa, dan ★★★
-          berarti bisa dengan baik. Penilaian ini tersimpan khusus untuk
-          Irodori, terpisah dari progres Minna no Nihongo dan JLPT.
+          berarti bisa dengan baik. Penilaian ini membantu melihat kemampuan komunikasi yang masih perlu dilatih.
         </p>
         <div className="mt-4 space-y-3">
           {canDos.map((canDo, index) => (

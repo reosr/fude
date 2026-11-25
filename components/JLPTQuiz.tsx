@@ -294,7 +294,7 @@ export default function JLPTQuiz({
         saved = localStorage.getItem(storageKey);
       } catch (error) {
         console.error("Gagal membaca data ujian JLPT:", error);
-        setStorageError("Penyimpanan browser tidak dapat diakses. Progress ujian belum bisa dipulihkan.");
+        setStorageError("Progres ujian belum bisa dimuat. Coba muat ulang halaman.");
         setLoadedStorageKey(storageKey);
         return;
       }
@@ -395,7 +395,7 @@ export default function JLPTQuiz({
           };
 
           if (!persistQuizResult(storageKey, migratedResult)) {
-            setStorageError("Riwayat ujian tidak dapat diperbarui di penyimpanan browser.");
+            setStorageError("Riwayat ujian belum bisa diperbarui. Coba lagi.");
           }
         }
 
@@ -519,7 +519,7 @@ export default function JLPTQuiz({
     };
 
     if (!persistQuizResult(storageKey, resetResult)) {
-      setStorageError("Ujian belum bisa direset karena penyimpanan browser gagal.");
+      setStorageError("Ujian belum bisa diulang sekarang. Coba lagi.");
       return;
     }
 
@@ -605,7 +605,7 @@ export default function JLPTQuiz({
   });
 
   if (answerSaved) setStorageError(null);
-  else setStorageError("Jawaban tersimpan sementara di halaman ini, tetapi gagal disimpan ke browser.");
+  else setStorageError("Jawaban belum berhasil disimpan. Periksa penyimpanan perangkat, lalu coba lagi.");
 };
 
   // ==========================================
@@ -1455,7 +1455,7 @@ export default function JLPTQuiz({
                   };
 
                   if (!persistQuizResult(storageKey, savedResult)) {
-                    setStorageError("Ujian belum bisa diselesaikan karena hasilnya gagal disimpan. Coba lagi setelah ruang penyimpanan browser tersedia.");
+                    setStorageError("Hasil ujian belum berhasil disimpan. Periksa penyimpanan perangkat, lalu coba lagi.");
                     return;
                   }
 

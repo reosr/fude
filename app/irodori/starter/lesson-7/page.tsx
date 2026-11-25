@@ -1398,8 +1398,7 @@ export default function IrodoriPemulaLessonSevenPage() {
           Nilai kemampuanmu setelah mencoba tur rumah, dialog fasilitas,
           percakapan tempat tinggal, dan latihan tombol alat rumah tangga.
           ★☆☆ berarti sudah bisa tetapi masih perlu latihan, ★★☆ berarti
-          sudah bisa, dan ★★★ berarti bisa dengan baik. Penilaian ini tersimpan
-          khusus untuk Irodori, terpisah dari progres Minna no Nihongo dan JLPT.
+          sudah bisa, dan ★★★ berarti bisa dengan baik. Penilaian ini membantu melihat kemampuan komunikasi yang masih perlu dilatih.
         </p>
         <div className="mt-4 space-y-3">
           {canDos.map((canDo, index) => (

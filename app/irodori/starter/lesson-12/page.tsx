@@ -720,7 +720,7 @@ export default function IrodoriPemulaLessonTwelvePage() {
       <section className="rounded-2xl border border-[#B8860B]/25 bg-gradient-to-br from-[#2B2118] to-[#191817] p-5 md:p-6">
         <div className="flex items-center gap-2"><CheckCircle2 size={18} className="text-[#D9B66D]"/><p className="text-[9px] font-black tracking-[0.2em] text-[#D9B66D]">CEK TARGET KOMUNIKASI</p></div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
-        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Nilai empat kemampuan setelah menyelesaikan latihan. Progres tersimpan terpisah dari Minna no Nihongo dan JLPT.</p>
+        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Nilai empat kemampuan setelah menyelesaikan latihan. </p>
         <div className="mt-4 space-y-3">
           {canDos.map((item,index)=><div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3"><p className="text-xs font-semibold leading-5 text-[#EAE6DD]"><span className="mr-2 text-[#D9B66D]">0{index+1}</span>{item.text}</p><div className="mt-3 flex flex-wrap gap-2">{ratingOptions.map((option)=><button key={option.value} type="button" aria-pressed={ratings[item.id]===option.value} onClick={()=>{const next={...ratings,[item.id]:option.value};setRatings(next);saveIrodoriSelfEvaluation("starter-12",next);}} className={"rounded-lg border px-3 py-2 text-[10px] font-semibold transition-colors "+(ratings[item.id]===option.value?"border-[#D6AD4F]/60 bg-[#B8860B]/15 text-[#F0D99F]":"border-white/[0.08] bg-[#24221F] text-[#A3A099]")}><JapaneseReading showKana={false} showRomaji={false} allowIndexFallback>{option.label}</JapaneseReading></button>)}</div></div>)}
         </div>

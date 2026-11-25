@@ -839,8 +839,7 @@ export default function IrodoriPemulaLessonElevenPage() {
         </div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
         <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">
-          Nilai empat kemampuan setelah menyelesaikan latihan. Progres ini tersimpan
-          terpisah dari Minna no Nihongo dan JLPT.
+          Nilai empat kemampuan setelah menyelesaikan latihan. 
         </p>
         <div className="mt-4 space-y-3">
           {canDos.map((item, index) => (

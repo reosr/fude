@@ -705,7 +705,7 @@ export default function IrodoriElementaryTwoLessonTwelvePage() {
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.07] pt-4">
           <p className="text-xs text-[#A9A398]">
             {isCompleted
-              ? "Lesson 12 selesai. Progres tersimpan."
+              ? "Lesson 12 selesai."
               : canDosRated
                 ? "Semua target komunikasi sudah dinilai."
                 : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}

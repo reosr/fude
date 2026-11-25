@@ -785,7 +785,7 @@ export default function IrodoriElementaryOneLessonEightPage() {
           <p className="text-[9px] font-black tracking-[0.2em] text-[#A9CDB0]">CEK TARGET KOMUNIKASI</p>
         </div>
         <h2 className="mt-2 text-lg font-black text-[#F1EBDD]">Nilai kemampuanmu</h2>
-        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. Progres Dasar 1 tersimpan dalam jalur Irodori, terpisah dari Minna no Nihongo dan JLPT.</p>
+        <p className="mt-2 text-xs leading-6 text-[#B6B0A5]">Selesaikan praktik, lima simulasi, dan kuis sebelum menilai kemampuan. </p>
         <div className="mt-4 space-y-3">
           {canDos.map((item, index) => (
             <div key={item.id} className="rounded-xl border border-white/[0.07] bg-black/15 p-3">

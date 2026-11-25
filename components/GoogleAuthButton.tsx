@@ -19,6 +19,7 @@ export default function GoogleAuthButton() {
 
   const popupWatcherRef = useRef<number | null>(null);
   const loginCompletionStartedRef = useRef(false);
+  const noticeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stopPopupWatcher = () => {
     if (popupWatcherRef.current !== null) {
@@ -31,6 +32,22 @@ export default function GoogleAuthButton() {
     const { data, error } = await supabase.auth.getUser();
     if (error) throw error;
     return data.user;
+  };
+
+  const clearNoticeTimer = () => {
+    if (noticeTimerRef.current !== null) {
+      clearTimeout(noticeTimerRef.current);
+      noticeTimerRef.current = null;
+    }
+  };
+
+  const showTemporaryNotice = (message: string) => {
+    clearNoticeTimer();
+    setNotice(message);
+    noticeTimerRef.current = setTimeout(() => {
+      setNotice("");
+      noticeTimerRef.current = null;
+    }, 3000);
   };
 
   const mountedRef = useRef(false);
@@ -60,7 +77,7 @@ export default function GoogleAuthButton() {
       if (!mountedRef.current) return;
       setBusy(false);
       setError("");
-      setNotice("Akun Google berhasil terhubung.");
+      showTemporaryNotice("Akun Google berhasil terhubung.");
     } catch (err) {
       if (!mountedRef.current) return;
 
@@ -71,15 +88,13 @@ export default function GoogleAuthButton() {
         setUser(currentUser);
         setModalOpen(false);
         setError(
-          `Login berhasil, tetapi data akun belum bisa dimuat: ${
-            err instanceof Error ? err.message : "Terjadi kesalahan."
-          }`
+          "Login berhasil, tetapi data belum bisa dimuat. Periksa koneksi lalu coba lagi."
         );
       } else {
         setError(
           err instanceof Error
             ? err.message
-            : "Gagal memeriksa session akun."
+            : "Login belum dapat diselesaikan. Silakan coba lagi."
         );
       }
     }
@@ -124,6 +139,7 @@ export default function GoogleAuthButton() {
       mounted = false;
       mountedRef.current = false;
       stopPopupWatcher();
+      clearNoticeTimer();
       subscription.unsubscribe();
       window.removeEventListener("message", handleMessage);
     };
@@ -131,6 +147,8 @@ export default function GoogleAuthButton() {
 
   const handleGoogleLogin = async () => {
     loginCompletionStartedRef.current = false;
+    clearNoticeTimer();
+    setNotice("");
     setBusy(true);
     setError("");
     setNotice("");
@@ -200,7 +218,7 @@ export default function GoogleAuthButton() {
       setError(
         err instanceof Error
           ? err.message
-          : "Gagal memulai login Google."
+          : "Tidak dapat memulai login Google. Periksa koneksi lalu coba lagi."
       );
     }
   };
@@ -222,12 +240,13 @@ export default function GoogleAuthButton() {
       await resetFudeLocalAccountData();
       setUser(null);
       setModalOpen(false);
+      clearNoticeTimer();
       setNotice("");
     } catch (err) {
       setError(
         err instanceof Error
           ? err.message
-          : "Gagal logout. Data lokal tetap dipertahankan."
+          : "Belum bisa keluar dari akun. Periksa koneksi lalu coba lagi."
       );
     } finally {
       setBusy(false);

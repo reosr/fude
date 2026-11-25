@@ -38,7 +38,7 @@ const KanaStroke = dynamic(() => import("../../components/KanaStroke"), { ssr: f
 const Quiz = dynamic(() => import("../../components/Quiz"), {
   loading: () => (
     <div className="bg-[#1E1D1B] border border-[#33312E] rounded-2xl p-8 text-center text-[#A3A099]">
-      Memuat komponen kuis...
+      Menyiapkan kuis...
     </div>
   ),
 });

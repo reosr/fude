@@ -631,7 +631,7 @@ export default function IrodoriElementaryTwoLessonFifteenPage() {
         </div>
         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.07] pt-4">
           <p className="text-xs text-[#A9A398]">
-            {isCompleted ? "Lesson 15 selesai. Progres tersimpan." : canDosRated ? "Semua target komunikasi sudah dinilai." : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
+            {isCompleted ? "Lesson 15 selesai." : canDosRated ? "Semua target komunikasi sudah dinilai." : Object.keys(visibleRatings).filter((id) => canDos.some((item) => item.id === id)).length + " dari " + canDos.length + " target dinilai."}
           </p>
           <button type="button" onClick={finishLesson} disabled={!canComplete || isCompleted} className="rounded-xl bg-[#4B796C] px-5 py-2.5 text-xs font-black text-white transition-colors hover:bg-[#365B50] disabled:cursor-not-allowed disabled:bg-[#39342D] disabled:text-[#817A73]">
             {isCompleted ? "Lesson 15 selesai" : "Selesaikan Lesson 15"}

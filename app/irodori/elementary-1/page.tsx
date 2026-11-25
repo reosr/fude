@@ -76,7 +76,7 @@ export default function IrodoriElementaryOnePage() {
               />
             </div>
             <p className="mt-2 text-[9px] text-[#817A73]">
-              Progres ini tersimpan terpisah dari EXP dan JLPT.
+              
             </p>
           </div>
         </div>
