@@ -74,7 +74,7 @@ function KanaStrokeCharacter({ kana }: { kana: string }) {
           dangerouslySetInnerHTML={{ __html: svgMarkup }}
         />
       ) : (
-        <span className="font-mincho text-[clamp(1rem,5.5vw,2.25rem)] leading-none text-[#EAE6DD]">{kana}</span>
+        <span className="font-mincho text-[clamp(0.75rem,5.5vw,2.25rem)] leading-none text-[#EAE6DD]">{kana}</span>
       )}
     </div>
   );
