@@ -18,6 +18,8 @@ from pydub import AudioSegment
 #   python buat_audio_voicevox.py --force     -> timpa semua audio
 #   python buat_audio_voicevox.py --preview   -> keluarin ke public/audio-preview
 #   python buat_audio_voicevox.py --only-kana --force -> buat ulang audio hiragana/katakana saja
+#   python buat_audio_voicevox.py --only-default -> hanya audio yang memakai suara default
+#   python buat_audio_voicevox.py --only-default --force -> timpa audio default saja
 # ============================================================
 
 # ---------- PATH & ARGUMEN ----------
@@ -29,6 +31,7 @@ VOICES_JSON = os.path.join(ROOT, "data", "voices.json")
 PREVIEW = "--preview" in sys.argv
 FORCE = "--force" in sys.argv
 ONLY_KANA = "--only-kana" in sys.argv
+ONLY_DEFAULT = "--only-default" in sys.argv
 OUTPUT_AUDIO_DIR = os.path.join(PUBLIC, "audio-preview") if PREVIEW else AUDIO_DIR
 
 # ---------- VOICEVOX ----------
@@ -165,6 +168,11 @@ def synth_segment(text, speed, character, role="default"):
 
 def save(path_mp3, text, speed, character, role="default"):
     """Buat satu file MP3, kecuali sudah ada (kecuali --force)."""
+    # Mode --only-default hanya memproses audio yang memakai karakter default.
+    # Filter dilakukan sebelum pengecekan file agar --force tidak menyentuh audio lain.
+    if ONLY_DEFAULT and character != DEFAULT_CHARACTER:
+        return
+
     path_mp3 = os.path.abspath(path_mp3)
 
     if path_mp3 in seen_paths:
@@ -410,6 +418,11 @@ def pick_voice(role):
 
 
 def process_jlpt(data):
+    # Audio listening JLPT dirangkai dari voice pool pria/wanita, bukan suara default.
+    if ONLY_DEFAULT:
+        print("Lewati audio listening JLPT (menggunakan voice pool khusus).")
+        return
+
     for level_data in data:
         if not isinstance(level_data, dict) or "level" not in level_data:
             continue
@@ -704,6 +717,8 @@ def main():
 
     print("VOICEVOX engine:", version)
     print("Output:", OUTPUT_AUDIO_DIR)
+    if ONLY_DEFAULT:
+        print("Mode: hanya audio dengan suara default", DEFAULT_CHARACTER)
 
     for json_path in collect_json_files(ROOT):
         try:
