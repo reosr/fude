@@ -12,6 +12,7 @@ import { ChevronLeft, ChevronRight, CheckCircle2, Lock, BookOpen, ArrowLeft, X, 
 import dynamic from "next/dynamic";
 import { syncNewCollectionUnlocks } from "../../lib/profile-collections";
 import JapaneseReading from "@/components/JapaneseReading";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
 import { addRubyFromParentheticalReadings, addRubyFromReadingIndex, formatGrammarNotation } from "@/lib/japanese-text";
 
 let wanakanaModule: typeof import("wanakana") | null = null;
@@ -133,6 +134,7 @@ const levelGroups = [
 ];
 
 export default function Home() {
+  const { speed } = useAudioSpeed();
   const [currentBab, setCurrentBab] = useState<number>(1); 
   const [selectedBab, setSelectedBab] = useState<number>(1); 
   const [viewMode, setViewMode] = useState<"level-select" | "grid" | "detail">("level-select");
@@ -288,6 +290,8 @@ export default function Home() {
 
   const playAudio = () => {
     const audio = new Audio(`/audio/kana/${encodeURIComponent(activeKana.kanji)}.mp3`);
+    audio.playbackRate = speed;
+    audio.preservesPitch = true;
     audio.play().catch((err) => console.log("Audio belum ada:", err));
   };
 
