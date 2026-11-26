@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-26T18:46:12+00:00",
+  "finished_at": "2026-11-26T18:46:32+00:00",
+  "interrupted": false,
+  "requested_items": 1,
+  "completed_items": 0,
+  "failed_items": 1,
+  "failures": [
+    {
+      "id": "vocab:audio/vocab/にづくり.mp3",
+      "output": "audio/vocab/にづくり.mp3",
+      "error": "No acceptable take after 16 tries: take 14: too short (cut off?); take 15: too short (cut off?); take 16: too short (cut off?)"
+    }
+  ]
+}

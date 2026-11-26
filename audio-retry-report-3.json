@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-11-26T18:45:41+00:00",
+  "finished_at": "2026-11-26T18:45:45+00:00",
+  "interrupted": false,
+  "requested_items": 1,
+  "completed_items": 0,
+  "failed_items": 1,
+  "failures": [
+    {
+      "id": "irodori:audio/irodori/irodori-starter-10-a02-l05.mp3",
+      "output": "audio/irodori/irodori-starter-10-a02-l05.mp3",
+      "error": "No acceptable take after 16 tries: take 14: too short (cut off?); take 15: too short (cut off?); take 16: too short (cut off?)"
+    }
+  ]
+}
