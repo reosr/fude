@@ -144,6 +144,41 @@ def analyze_wav(wav_data: bytes) -> dict[str, Any] | None:
     }
 
 
+def cut_at_long_gap(wav_data: bytes, min_gap: float = 0.6) -> bytes:
+    """Keep only the audio before the first long silence that follows speech
+    (the model often says the word, pauses, then rambles)."""
+    with wave.open(io.BytesIO(wav_data), "rb") as handle:
+        params = handle.getparams()
+        frames = handle.readframes(handle.getnframes())
+    if params.sampwidth != 2:
+        return wav_data
+    samples = array("h")
+    samples.frombytes(frames)
+    mono = samples[::params.nchannels]
+    win = max(1, int(params.framerate * 0.01))
+    rms = [math.sqrt(sum(x * x for x in mono[i:i + win]) / win)
+           for i in range(0, len(mono) - win + 1, win)]
+    if not rms or max(rms) < 50:
+        return wav_data
+    threshold = max(max(rms) * 0.06, 20.0)
+    started = False
+    run = 0
+    for i, value in enumerate(rms):
+        if value > threshold:
+            started = True
+            run = 0
+            continue
+        run += 1
+        if started and run * win / params.framerate >= min_gap:
+            end = (i - run + 1) * win + int(params.framerate * EDGE_PAD)
+            out = io.BytesIO()
+            with wave.open(out, "wb") as writer:
+                writer.setparams(params)
+                writer.writeframes(frames[:end * params.nchannels * params.sampwidth])
+            return out.getvalue()
+    return wav_data
+
+
 def build_verifier(model_name: str):
     """Optional Whisper check: transcribe the take and compare it with the expected reading.
     Needs: pip install faster-whisper pykakasi"""
@@ -434,6 +469,8 @@ def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, A
             rejects.append(f"take {take}: {exc}")
             print(f"    take {take}/{takes}: API/duration error: {exc}")
             continue
+        if not pauses:
+            wav_data = cut_at_long_gap(wav_data)
         stats = analyze_wav(wav_data)
         similarity = None
         if stats is None:
