@@ -13,16 +13,16 @@
   },
   "llm": {
     "temperature": 0.8,
-    "top_p": 1.0,
+    "top_p": 1,
     "max_tokens": 700,
-    "repetition_penalty": 1.0,
-    "presence_penalty": 0.0,
-    "frequency_penalty": 0.0
+    "repetition_penalty": 1,
+    "presence_penalty": 0,
+    "frequency_penalty": 0
   },
   "best_of_n": {
     "enabled": false,
     "n": 1,
-    "language": "ja"
+    "language": "auto"
   },
   "mp3_bitrate": "192k",
   "timeout_seconds": 180
