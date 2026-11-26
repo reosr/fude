@@ -38,7 +38,6 @@ export default function IrodoriConversation({
 }: Props) {
   const { speed } = useAudioSpeed();
   const speedRef = useRef(speed);
-  speedRef.current = speed;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioError, setAudioError] = useState("");
@@ -96,6 +95,7 @@ export default function IrodoriConversation({
   }, []);
 
   useEffect(() => {
+    speedRef.current = speed;
     const audio = audioRef.current;
     if (audio) {
       audio.playbackRate = speed;
