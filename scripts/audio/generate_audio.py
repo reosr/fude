@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+import io
 import json
 import shutil
 import subprocess
@@ -19,6 +20,7 @@ import tempfile
 import time
 import urllib.error
 import urllib.request
+import wave
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -241,7 +243,28 @@ def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, A
                 raise RuntimeError("MioTTS returned invalid base64 audio data") from exc
             if len(wav_data) < 44 or wav_data[:4] != b"RIFF" or wav_data[8:12] != b"WAVE":
                 raise RuntimeError("MioTTS response was not a valid WAV file")
-            return wav_data
+            try:
+                with wave.open(io.BytesIO(wav_data), "rb") as wav_file:
+                    duration = wav_file.getnframes() / float(wav_file.getframerate())
+            except (wave.Error, ZeroDivisionError) as exc:
+                raise RuntimeError(f"Could not inspect MioTTS WAV duration: {exc}") from exc
+
+            # Reject extreme over-generation (e.g. a 4-kana phrase rendered as 28 seconds).
+            max_reasonable_seconds = max(8.0, len(spoken) * 0.75)
+            if duration > max_reasonable_seconds:
+                normalized = result.get("normalized_text")
+                raise RuntimeError(
+                    f"Suspiciously long TTS result: {duration:.1f}s for "
+                    f"{len(spoken)} input characters (limit {max_reasonable_seconds:.1f}s). "
+                    f"normalized_text={normalized!r}. Output was rejected, not saved."
+                )
+            diagnostics = {
+                "duration_seconds": round(duration, 3),
+                "normalized_text": result.get("normalized_text"),
+                "token_count": result.get("token_count"),
+                "timings": result.get("timings"),
+            }
+            return wav_data, diagnostics
         except Exception as exc:
             last_error = exc
             if attempt < retries:
@@ -310,27 +333,36 @@ def make_mp3(wav_paths: list[Path], segments: list[dict[str, Any]], destination:
 
 
 def synthesize_job(job: dict[str, Any], base_url: str, config: dict[str, Any],
-                   ffmpeg: str, timeout: float, retries: int, max_text_length: int) -> None:
+                   ffmpeg: str, timeout: float, retries: int, max_text_length: int) -> list[dict[str, Any]]:
     item = job["item"]
     segments = item_segments(item)
     if not segments:
         raise ValueError("Manifest item contains neither text nor usable segments")
 
+    diagnostics: list[dict[str, Any]] = []
     with tempfile.TemporaryDirectory(prefix="fude-audio-") as temp_dir_name:
         temp_dir = Path(temp_dir_name)
         wav_paths: list[Path] = []
         for index, segment in enumerate(segments, start=1):
             role = str(segment.get("voice_role") or item.get("voice_role") or DEFAULT_ROLE)
             preset = role_preset(role, config)
-            wav_data = synthesize_wav(
+            wav_data, info = synthesize_wav(
                 base_url, str(segment.get("text") or ""), preset, config,
                 timeout, retries, max_text_length,
+            )
+            info["input_text"] = str(segment.get("text") or "")
+            info["preset_id"] = preset
+            diagnostics.append(info)
+            print(
+                f"    segment {index}: {info['duration_seconds']:.2f}s "
+                f"| normalized={info.get('normalized_text')!r}"
             )
             wav_path = temp_dir / f"segment-{index:04d}.wav"
             wav_path.write_bytes(wav_data)
             wav_paths.append(wav_path)
         make_mp3(wav_paths, segments, job["destination"], ffmpeg,
                  str(config.get("mp3_bitrate", "192k")))
+    return diagnostics
 
 
 def parse_args() -> argparse.Namespace:
@@ -429,12 +461,15 @@ def main() -> int:
                 label = str(item.get("output") or item.get("id") or f"item-{index}")
                 print(f"[{index}/{len(jobs)}] {label}")
                 try:
-                    synthesize_job(job, base_url, config, ffmpeg, timeout,
-                                   args.retries, args.max_text_length)
+                    synthesis_info = synthesize_job(
+                        job, base_url, config, ffmpeg, timeout,
+                        args.retries, args.max_text_length
+                    )
                     state["items"][str(item.get("id"))] = {
                         "fingerprint": job["fingerprint"],
                         "output": item.get("output"),
                         "presets": sorted(set(job["preset_ids"])),
+                        "segments": synthesis_info,
                         "generated_at": utc_now(),
                         "generator": "scripts/audio/generate_audio.py",
                     }
