@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Play, Square, Volume2 } from "lucide-react";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
 
 interface Props {
   src?: string;
@@ -10,6 +11,9 @@ interface Props {
 }
 
 export default function PracticalAudioButton({ src, sources, label }: Props) {
+  const { speed } = useAudioSpeed();
+  const speedRef = useRef(speed);
+  speedRef.current = speed;
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playlistRef = useRef<string[]>([]);
   const activeIndexRef = useRef(0);
@@ -18,6 +22,8 @@ export default function PracticalAudioButton({ src, sources, label }: Props) {
 
   useEffect(() => {
     const audio = new Audio();
+    audio.playbackRate = speedRef.current;
+    audio.preservesPitch = true;
     audioRef.current = audio;
 
     const playNext = () => {
@@ -28,6 +34,8 @@ export default function PracticalAudioButton({ src, sources, label }: Props) {
         return;
       }
       activeIndexRef.current = nextIndex;
+      audio.playbackRate = speedRef.current;
+      audio.preservesPitch = true;
       audio.src = playlistRef.current[nextIndex];
       audio.play().catch(() => {
         playlistRef.current = [];
@@ -53,6 +61,13 @@ export default function PracticalAudioButton({ src, sources, label }: Props) {
     };
   }, []);
 
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.playbackRate = speed;
+      audioRef.current.preservesPitch = true;
+    }
+  }, [speed]);
+
   const handlePlayback = () => {
     const audio = audioRef.current;
     const playlist = src ? [src] : (sources ?? []).filter(Boolean);
@@ -69,6 +84,8 @@ export default function PracticalAudioButton({ src, sources, label }: Props) {
     setAudioError(false);
     playlistRef.current = playlist;
     activeIndexRef.current = 0;
+    audio.playbackRate = speedRef.current;
+    audio.preservesPitch = true;
     audio.src = playlist[0];
     audio.play()
       .then(() => setIsPlaying(true))
