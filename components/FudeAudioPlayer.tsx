@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, Volume2 } from "lucide-react";
-import { useAudioSpeed } from "@/components/AudioSpeedProvider";
+import { useAudioSpeed } from "@/components/audio-speed-context";
 import AudioSpeedControl from "@/components/AudioSpeedControl";
 
 interface FudeAudioPlayerProps {
