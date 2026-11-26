@@ -42,3 +42,9 @@ next-env.d.ts
 
 # Local dependency audit reports
 /npm-audit.json
+
+# Local Fude audio generation artifacts
+/audio-manifest.json
+/audio-generation-state.json
+/audio-generation-state.json.tmp
+/audio-generation-report.json
