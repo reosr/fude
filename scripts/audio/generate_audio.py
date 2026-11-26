@@ -221,13 +221,20 @@ def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, A
             f"Text has {len(spoken)} characters; configured MioTTS limit is {max_text_length}. "
             "Shorten/split the source text rather than truncating it automatically."
         )
+    # Mirror the official MioTTS WebUI request: output format is left at
+    # the API default, and Best-of-N is omitted unless explicitly enabled.
     payload = {
         "text": spoken,
         "reference": {"type": "preset", "preset_id": preset_id},
         "llm": config.get("llm", {}),
-        "output": {"format": "base64"},
-        "best_of_n": config.get("best_of_n", {"enabled": False, "n": 1, "language": "ja"}),
     }
+    best_of_n = config.get("best_of_n", {})
+    if best_of_n.get("enabled"):
+        payload["best_of_n"] = {
+            "enabled": True,
+            "n": int(best_of_n.get("n", 2)),
+            "language": str(best_of_n.get("language", "auto")),
+        }
     last_error: Exception | None = None
     for attempt in range(retries + 1):
         try:
