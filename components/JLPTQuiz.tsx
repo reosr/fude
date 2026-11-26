@@ -834,7 +834,9 @@ export default function JLPTQuiz({
     );
 
     return SECTIONS.slice(0, currentSectionIndex).some(
-      (section) => (testSet.sections?.[section.id] || []).length > 0
+      (section) =>
+        (testSet.sections?.[section.id] || []).length > 0 &&
+        !(isTimedExam && expiredExamBlocks.includes(getExamBlockId(section.id)))
     );
   };
 
@@ -855,7 +857,8 @@ export default function JLPTQuiz({
       .reverse()
       .find(
         (section) =>
-          (testSet.sections?.[section.id] || []).length > 0
+          (testSet.sections?.[section.id] || []).length > 0 &&
+          !(isTimedExam && expiredExamBlocks.includes(getExamBlockId(section.id)))
       );
 
     if (previousSection) {
@@ -885,7 +888,8 @@ export default function JLPTQuiz({
       .slice(currentSectionIndex + 1)
       .find(
         (section) =>
-          (testSet.sections?.[section.id] || []).length > 0
+          (testSet.sections?.[section.id] || []).length > 0 &&
+          !(isTimedExam && expiredExamBlocks.includes(getExamBlockId(section.id)))
       );
 
     if (nextSection) {
@@ -1422,7 +1426,7 @@ export default function JLPTQuiz({
                       : isQuestionAnswered
                         ? "border-[#B8860B]/40 bg-[#B8860B]/10 text-[#D9AD42] hover:bg-[#B8860B]/20"
                         : "border-[#33312E] bg-[#262523] text-[#A3A099] hover:border-[#777067] hover:text-[#EAE6DD]"
-                  }`}
+                  } disabled:cursor-not-allowed disabled:opacity-40`}
                 >
                   {index + 1}
                 </button>
