@@ -42,13 +42,11 @@ DEFAULT_CHARACTER = "東北ずん子"  # VOICEVOX style: ノーマル
 STYLE_PREFERENCE = ["ノーマル", "ふつう", "あまあま"]
 
 # ---------- PARAMETER SUARA ----------
-VOCAB_SPEED = 0.85      # lambat & jelas buat belajar kana/kosakata
-STORY_SPEED = 0.95
-INTONATION = 1.0
-PRE_SILENCE = 0.1
-POST_SILENCE = 0.3
-VOLUME_SCALE = 1.0      # gunakan level standar VOICEVOX agar tidak mudah clipping
-AUDIO_PEAK_HEADROOM_DB = 1.0  # sisakan headroom untuk ekspor MP3
+# Kecepatan, pitch, intonasi, dan jeda mengikuti nilai bawaan /audio_query VOICEVOX.
+# Argumen speed di pemroses lama tetap dipertahankan untuk kompatibilitas, tetapi tidak diterapkan.
+VOCAB_SPEED = 1.0
+STORY_SPEED = 1.0
+VOLUME_SCALE = 1.25     # sedikit lebih keras dari default tanpa mengubah karakter suara
 HTTP_RETRIES = 3        # ulangi request sementara yang gagal (maks. 4 percobaan)
 HTTP_RETRY_DELAY = 0.8  # jeda awal retry, lalu bertambah bertahap
 DIALOGUE_GAP_MS = 500   # jeda antar kalimat di percakapan JLPT
@@ -58,12 +56,6 @@ DIALOGUE_GAP_MS = 500   # jeda antar kalimat di percakapan JLPT
 # bareng kata contoh utuh, mis. "ア、あめ", dengan jalur yang sama persis seperti kosakata.
 KANA_CHARACTER = DEFAULT_CHARACTER   # ganti kalau mau suara lain khusus kana
 KANA_SPEED = VOCAB_SPEED
-
-ROLE_ADJUSTMENTS = {
-    "child": {"pitch": 0.15, "speed": 1.1},
-    "elderly_male": {"pitch": -0.05, "speed": 0.85},
-    "elderly_female": {"pitch": -0.02, "speed": 0.85},
-}
 
 NARRATOR_NAMES = {"narator", "narrator", "narasi", ""}
 MALE_LABELS = {"pria", "male", "otoko"}
@@ -174,33 +166,24 @@ def character_id(character):
     return styles[0][1]
 
 
-def synth(text, base_speed, sid, role="default"):
-    """Teks -> bytes WAV."""
+def synth(text, sid):
+    """Teks -> bytes WAV dengan parameter bawaan VOICEVOX, kecuali volume."""
     if len(text) <= 2:
         text += "、"  # teks sangat pendek sering terpotong
 
     query = json.loads(http("POST", "/audio_query", params={"text": text, "speaker": sid}))
-    adj = ROLE_ADJUSTMENTS.get(role, {})
-
-    query["speedScale"] = float(base_speed * adj.get("speed", 1.0))
-    query["pitchScale"] = float(adj.get("pitch", 0.0))
-    query["intonationScale"] = INTONATION
+    # Biarkan speedScale, pitchScale, intonationScale, dan panjang jeda
+    # tetap pada nilai yang diberikan VOICEVOX melalui /audio_query.
     query["volumeScale"] = VOLUME_SCALE
-    query["prePhonemeLength"] = PRE_SILENCE
-    query["postPhonemeLength"] = POST_SILENCE
 
     return http("POST", "/synthesis", params={"speaker": sid}, body=query)
 
 
 def synth_segment(text, speed, character, role="default"):
-    wav_bytes = synth(text, speed, character_id(character), role)
-    audio = AudioSegment.from_file(io.BytesIO(wav_bytes), format="wav")
-
-    # Turunkan hanya jika peak terlalu tinggi; jangan menaikkan audio yang memang pelan.
-    if audio.max_dBFS > -AUDIO_PEAK_HEADROOM_DB:
-        audio = audio.apply_gain(-AUDIO_PEAK_HEADROOM_DB - audio.max_dBFS)
-
-    return audio
+    # speed dan role dipertahankan agar pemanggil lama tidak perlu diubah.
+    # Parameter artikulasi audio sendiri mengikuti default VOICEVOX.
+    wav_bytes = synth(text, character_id(character))
+    return AudioSegment.from_file(io.BytesIO(wav_bytes), format="wav")
 
 
 def save(path_mp3, text, speed, character, role="default"):
