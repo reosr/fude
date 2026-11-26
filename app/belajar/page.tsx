@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import babsKana from "../../data/hira-kata.json";
 import babIndex from "../../data/bab-index.json"; 
 import { getProgress, setProgress } from "../../lib/progress";
@@ -135,6 +135,7 @@ const levelGroups = [
 
 export default function Home() {
   const { speed } = useAudioSpeed();
+  const kanaAudioRef = useRef<HTMLAudioElement | null>(null);
   const [currentBab, setCurrentBab] = useState<number>(1); 
   const [selectedBab, setSelectedBab] = useState<number>(1); 
   const [viewMode, setViewMode] = useState<"level-select" | "grid" | "detail">("level-select");
@@ -288,8 +289,19 @@ export default function Home() {
   window.scrollTo(0, 0);
 };
 
+  useEffect(() => {
+    if (kanaAudioRef.current) {
+      kanaAudioRef.current.playbackRate = speed;
+      kanaAudioRef.current.preservesPitch = true;
+    }
+  }, [speed]);
+
+  useEffect(() => () => kanaAudioRef.current?.pause(), []);
+
   const playAudio = () => {
+    kanaAudioRef.current?.pause();
     const audio = new Audio(`/audio/kana/${encodeURIComponent(activeKana.kanji)}.mp3`);
+    kanaAudioRef.current = audio;
     audio.playbackRate = speed;
     audio.preservesPitch = true;
     audio.play().catch((err) => console.log("Audio belum ada:", err));
