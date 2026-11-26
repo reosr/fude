@@ -5,7 +5,8 @@ import { toHiragana } from "wanakana";
 import type { ReactNode } from "react";
 import JapaneseReading from "@/components/JapaneseReading";
 import { extractKanaFromReactNode } from "@/lib/japanese-text";
-import { Gauge, Play, Square, User, Volume2 } from "lucide-react";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
+import { Play, Square, User, Volume2 } from "lucide-react";
 
 export interface IrodoriSpeaker {
   id: string;
@@ -30,14 +31,14 @@ interface Props {
   utterances: IrodoriUtterance[];
 }
 
-const SPEED_OPTIONS = [0.7, 0.85, 1, 1.2];
-
 export default function IrodoriConversation({
   title,
   speakers,
   utterances,
 }: Props) {
-  const [speed, setSpeed] = useState(1);
+  const { speed } = useAudioSpeed();
+  const speedRef = useRef(speed);
+  speedRef.current = speed;
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [audioError, setAudioError] = useState("");
@@ -94,6 +95,14 @@ export default function IrodoriConversation({
     };
   }, []);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.playbackRate = speed;
+      audio.preservesPitch = true;
+    }
+  }, [speed]);
+
   const stopAudio = () => {
     playbackSessionRef.current += 1;
 
@@ -137,7 +146,8 @@ export default function IrodoriConversation({
 
       pendingResolveRef.current = finish;
       audio.src = utterance.audioSrc;
-      audio.playbackRate = speed;
+      audio.playbackRate = speedRef.current;
+      audio.preservesPitch = true;
 
       if (session === playbackSessionRef.current) {
         setActiveIndex(index);
@@ -226,23 +236,6 @@ export default function IrodoriConversation({
 
 {availableAudioCount > 0 && (
           <div className="flex flex-wrap items-center gap-2">
-            <label className="inline-flex items-center gap-2 rounded-lg border border-white/[0.08] bg-black/20 px-3 py-2 text-[10px] text-[#A3A099]">
-              <Gauge size={14} />
-              <span className="sr-only">Kecepatan audio</span>
-              <select
-                aria-label="Kecepatan audio"
-                value={speed}
-                onChange={(event) => setSpeed(Number(event.target.value))}
-                className="cursor-pointer bg-transparent text-[#EAE6DD] outline-none"
-              >
-                {SPEED_OPTIONS.map((value) => (
-                  <option key={value} value={value} className="bg-[#1B1A18]">
-                    {value === 1 ? "1.0" : value.toString()}x
-                  </option>
-                ))}
-              </select>
-            </label>
-
             <button
               type="button"
               onClick={() => void playAll()}
