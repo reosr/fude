@@ -333,7 +333,7 @@ def check_server(base_url: str, timeout: float, required_presets: set[str]) -> N
 # Teks asli -> ejaan yang dikirim ke TTS (cuma ngaruh ke pengucapan).
 # Tambah kata lain di sini kalau ada yang salah baca.
 TTS_OVERRIDES = {
-    "ほうほう": "ほーほー",
+    "ほうほう": "方法",
 }
 
 
