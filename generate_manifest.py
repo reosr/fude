@@ -14,8 +14,10 @@ import urllib.request
 from pathlib import Path
 
 # ---------------------------------------------------------------- SETTINGS
-MANIFEST = Path("D:/MioTTS/audio-manifest.json")
-OUT_DIR = Path("D:/MioTTS/output")
+MANIFEST = Path("D:/fude/audio-manifest.json")
+# Manifest bilang audio_root = "public", jadi file mendarat di D:/fude/public/audio/...
+# Item yang file-nya sudah ada dilewati (tidak ditimpa).
+OUT_DIR = Path("D:/fude")
 API = "http://localhost:8001/v1/tts"
 
 # voice_role di manifest -> preset MioTTS.
