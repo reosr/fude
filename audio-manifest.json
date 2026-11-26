@@ -20970,23 +20970,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/あ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "あ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "あめ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "あ。あめ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -20997,23 +20982,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/い.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "い",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "いぬ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "い。いぬ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21024,23 +20994,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/う.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "う",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "うみ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "う。うみ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21051,23 +21006,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/え.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "え",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "えき",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "え。えき",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21078,23 +21018,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/お.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "お",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "おちゃ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "お。おちゃ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21105,23 +21030,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/か.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "か",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "かさ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "か。かさ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21132,23 +21042,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/き.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "き",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "きつね",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "き。きつね",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21159,23 +21054,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/く.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "く",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "くるま",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "く。くるま",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21186,23 +21066,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/け.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "け",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "けむり",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "け。けむり",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21213,23 +21078,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/こ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "こ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "こども",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "こ。こども",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21240,23 +21090,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/さ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "さ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "さかな",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "さ。さかな",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21267,23 +21102,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/し.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "し",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "しお",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "し。しお",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21294,23 +21114,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/す.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "す",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "すし",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "す。すし",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21321,23 +21126,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/せ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "せ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "せんせい",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "せ。せんせい",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21348,23 +21138,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/そ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "そ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "そら",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "そ。そら",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21375,23 +21150,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/た.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "た",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "たこ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "た。たこ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21402,23 +21162,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ち.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ち",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ちず",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ち。ちず",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21429,23 +21174,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/つ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "つ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "つき",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "つ。つき",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21456,23 +21186,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/て.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "て",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "てがみ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "て。てがみ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21483,23 +21198,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/と.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "と",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "とり",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "と。とり",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21510,23 +21210,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/な.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "な",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "なつ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "な。なつ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21537,23 +21222,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/に.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "に",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "にく",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "に。にく",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21564,23 +21234,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ぬ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ぬ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ぬの",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ぬ。ぬの",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21591,23 +21246,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ね.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ね",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ねこ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ね。ねこ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21618,23 +21258,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/の.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "の",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "のり",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "の。のり",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21645,23 +21270,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/は.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "は",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "はな",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "は。はな",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21672,23 +21282,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ひ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ひ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ひと",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ひ。ひと",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21699,23 +21294,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ふ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ふ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ふね",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ふ。ふね",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21726,23 +21306,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/へ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "へ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "へや",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "へ。へや",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21753,23 +21318,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ほ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ほ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ほし",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ほ。ほし",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21780,23 +21330,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ま.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ま",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "まど",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ま。まど",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21807,23 +21342,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/み.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "み",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "みず",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "み。みず",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21834,23 +21354,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/む.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "む",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "むし",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "む。むし",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21861,23 +21366,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/め.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "め",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "めがね",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "め。めがね",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21888,23 +21378,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/も.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "も",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "もも",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "も。もも",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21915,23 +21390,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/や.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "や",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "やま",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "や。やま",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21942,23 +21402,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ゆ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ゆ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ゆき",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ゆ。ゆき",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21969,23 +21414,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/よ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "よ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "よる",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "よ。よる",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -21996,23 +21426,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ら.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ら",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "らくだ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ら。らくだ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22023,23 +21438,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/り.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "り",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "りんご",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "り。りんご",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22050,23 +21450,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/る.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "る",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "るす",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "る。るす",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22077,23 +21462,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/れ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "れ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "れもん",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "れ。れもん",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22104,23 +21474,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ろ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ろ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ろうそく",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ろ。ろうそく",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22131,23 +21486,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/わ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "わ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "わに",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "わ。わに",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22158,23 +21498,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/を.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "を",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ごはんを",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "を。ごはんを",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22185,23 +21510,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ん.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ん",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ほん",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ん。ほん",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22212,23 +21522,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ア.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ア",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "アイス",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ア。アイス",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22239,23 +21534,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/イ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "イ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "インク",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "イ。インク",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22266,23 +21546,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ウ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ウ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ウイスキー",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ウ。ウイスキー",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22293,23 +21558,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/エ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "エ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "エアコン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "エ。エアコン",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22320,23 +21570,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/オ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "オ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "オレンジ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "オ。オレンジ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22347,23 +21582,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/カ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "カ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "カメラ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "カ。カメラ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22374,23 +21594,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/キ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "キ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "キウイ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "キ。キウイ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22401,23 +21606,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ク.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ク",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "クラス",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ク。クラス",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22428,23 +21618,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ケ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ケ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ケーキ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ケ。ケーキ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22455,23 +21630,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/コ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "コ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "コーヒー",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "コ。コーヒー",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22482,23 +21642,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/サ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "サ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "サラダ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "サ。サラダ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22509,23 +21654,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/シ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "シ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "シネマ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "シ。シネマ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22536,23 +21666,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ス.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ス",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "スープ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ス。スープ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22563,23 +21678,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/セ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "セ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "セーター",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "セ。セーター",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22590,23 +21690,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ソ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ソ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ソファ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ソ。ソファ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22617,23 +21702,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/タ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "タ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "タクシー",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "タ。タクシー",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22644,23 +21714,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/チ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "チ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "チーズ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "チ。チーズ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22671,23 +21726,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ツ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ツ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ツアー",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ツ。ツアー",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22698,23 +21738,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/テ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "テ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "テレビ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "テ。テレビ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22725,23 +21750,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ト.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ト",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "トマト",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ト。トマト",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22752,23 +21762,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ナ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ナ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ナイフ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ナ。ナイフ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22779,23 +21774,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ニ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ニ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ニット",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ニ。ニット",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22806,23 +21786,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ヌ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ヌ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ヌードル",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ヌ。ヌードル",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22833,23 +21798,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ネ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ネ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ネクタイ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ネ。ネクタイ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22860,23 +21810,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ノ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ノ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ノート",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ノ。ノート",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22887,23 +21822,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ハ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ハ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ハム",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ハ。ハム",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22914,23 +21834,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ヒ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ヒ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ヒーター",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ヒ。ヒーター",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22941,23 +21846,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/フ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "フ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "フルーツ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "フ。フルーツ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22968,23 +21858,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ヘ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ヘ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ヘリコプター",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ヘ。ヘリコプター",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -22995,23 +21870,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ホ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ホ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ホテル",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ホ。ホテル",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23022,23 +21882,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/マ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "マ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "マスク",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "マ。マスク",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23049,23 +21894,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ミ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ミ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ミルク",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ミ。ミルク",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23076,23 +21906,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ム.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ム",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ムービー",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ム。ムービー",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23103,23 +21918,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/メ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "メ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "メロン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "メ。メロン",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23130,23 +21930,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/モ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "モ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "モデル",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "モ。モデル",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23157,23 +21942,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ヤ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ヤ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ヤード",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ヤ。ヤード",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23184,23 +21954,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ユ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ユ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ユニフォーム",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ユ。ユニフォーム",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23211,23 +21966,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ヨ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ヨ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ヨーグルト",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ヨ。ヨーグルト",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23238,23 +21978,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ラ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ラ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ラジオ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ラ。ラジオ",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23265,23 +21990,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/リ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "リ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "リボン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "リ。リボン",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23292,23 +22002,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ル.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ル",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ルール",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ル。ルール",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23319,23 +22014,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/レ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "レ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "レモン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "レ。レモン",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23346,23 +22026,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ロ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ロ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ロボット",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ロ。ロボット",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23373,23 +22038,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ワ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ワ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ワイン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ワ。ワイン",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23400,23 +22050,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ヲ.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ヲ",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "ごはんを",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ヲ。ごはんを",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
@@ -23427,23 +22062,8 @@
       "category": "kana",
       "source": "data/hira-kata.json + app/belajar/page.tsx",
       "output": "audio/kana/ン.mp3",
-      "text": null,
-      "segments": [
-        {
-          "text": "ン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 600
-        },
-        {
-          "text": "パン",
-          "speaker": null,
-          "voice_role": "teen_female",
-          "voice_role_source": "fude-default",
-          "pause_after_ms": 0
-        }
-      ],
+      "text": "ン。パン",
+      "segments": null,
       "speaker": null,
       "voice_role": "teen_female",
       "voice_role_source": "fude-default",
