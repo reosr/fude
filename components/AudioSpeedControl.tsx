@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronDown, Gauge } from "lucide-react";
-import { AUDIO_SPEED_OPTIONS, useAudioSpeed } from "@/components/AudioSpeedProvider";
+import { AUDIO_SPEED_OPTIONS, useAudioSpeed } from "@/components/audio-speed-context";
 
 type AudioSpeedControlProps = {
   variant?: "global" | "compact";
