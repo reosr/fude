@@ -73,7 +73,7 @@ PAUSE_PUNCT = "、,。"
 SEC_PER_MORA = 0.17      # typical speech speed of the voice, seconds per mora
 MAX_RATIO = 1.5          # speech longer than expected*MAX_RATIO is treated as a repeat/ramble
 MIN_RATIO = 0.5          # shorter than expected*MIN_RATIO is treated as truncated
-MAX_INTERNAL_GAP = 0.30  # silence inside the word (seconds) that is NOT explained by punctuation
+MAX_INTERNAL_GAP = 0.15  # silence inside a word (seconds) not explained by punctuation / small tsu
 EDGE_PAD = 0.06          # silence kept around the trimmed speech (seconds)
 
 
@@ -410,7 +410,7 @@ def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, A
     threshold = float(quality.get("threshold", 0.8))
     pauses = sum(1 for ch in spoken if ch in PAUSE_PUNCT)
     expected = 0.1 + SEC_PER_MORA * mora_count(spoken) + 0.25 * pauses
-    allowed_gap = MAX_INTERNAL_GAP + 0.4 * pauses
+    allowed_gap = MAX_INTERNAL_GAP + 0.4 * pauses + 0.12 * sum(1 for ch in spoken if ch in "っッ")
 
     rejects: list[str] = []
     for take in range(1, takes + 1):
