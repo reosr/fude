@@ -33,7 +33,7 @@ OUTPUT_AUDIO_DIR = os.path.join(PUBLIC, "audio-preview") if PREVIEW else AUDIO_D
 
 # ---------- VOICEVOX ----------
 ENGINE = os.environ.get("VOICEVOX_URL", "http://127.0.0.1:50021")
-DEFAULT_CHARACTER = "雨晴はう"
+DEFAULT_CHARACTER = "東北ずん子"  # VOICEVOX style: ノーマル
 STYLE_PREFERENCE = ["ノーマル", "ふつう", "あまあま"]
 
 # ---------- PARAMETER SUARA ----------
