@@ -1,15 +1,15 @@
 {
   "api_base_url": "http://127.0.0.1:8001",
-  "default_preset": "jp_female",
+  "default_preset": "fude_teen_female",
   "preset_by_role": {
-    "child_female": "jp_female",
-    "child_male": "jp_male",
-    "teen_female": "jp_female",
-    "teen_male": "jp_male",
-    "adult_female": "jp_female",
-    "adult_male": "jp_male",
-    "elderly_female": "jp_female",
-    "elderly_male": "jp_male"
+    "child_female": "fude_child_female",
+    "child_male": "fude_child_male",
+    "teen_female": "fude_teen_female",
+    "teen_male": "fude_teen_male",
+    "adult_female": "fude_adult_female",
+    "adult_male": "fude_adult_male",
+    "elderly_female": "fude_elderly_female",
+    "elderly_male": "fude_elderly_male"
   },
   "best_of_n": {
     "enabled": false,
@@ -17,5 +17,21 @@
     "language": "auto"
   },
   "mp3_bitrate": "192k",
-  "timeout_seconds": 180
+  "timeout_seconds": 180,
+  "audio_processing": {
+    "silence_cleanup": {
+      "enabled": true,
+      "start_periods": 1,
+      "start_duration": 0.05,
+      "start_threshold_db": -55,
+      "start_silence": 0.05,
+      "stop_periods": -1,
+      "stop_duration": 0.25,
+      "stop_threshold_db": -40,
+      "stop_silence": 0.2
+    },
+    "speed_by_role": {
+      "teen_male": 1.12
+    }
+  }
 }
