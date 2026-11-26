@@ -2,6 +2,7 @@
 
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useMemo,
@@ -34,10 +35,16 @@ export function AudioSpeedProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const saved = Number(window.localStorage.getItem(AUDIO_SPEED_STORAGE_KEY));
-      if (isAudioSpeed(saved)) setSpeedState(saved);
+      if (isAudioSpeed(saved)) {
+        // Restore a persisted preference after the client has hydrated.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setSpeedState(saved);
+      }
     } catch {
       // Keep the default speed when browser storage is unavailable.
     } finally {
+      // Mark the client preference read as complete after hydration.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsInitialized(true);
     }
   }, []);
@@ -52,13 +59,13 @@ export function AudioSpeedProvider({ children }: { children: ReactNode }) {
     }
   }, [speed, isInitialized]);
 
-  const setSpeed = (nextSpeed: number) => {
+  const setSpeed = useCallback((nextSpeed: number) => {
     if (isAudioSpeed(nextSpeed)) setSpeedState(nextSpeed);
-  };
+  }, []);
 
   const contextValue = useMemo(
     () => ({ speed, setSpeed }),
-    [speed],
+    [speed, setSpeed],
   );
 
   return (
