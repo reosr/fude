@@ -13,6 +13,7 @@ import verbTypeData from "../../data/verb-type-index.json";
 import practicalVocabData from "@/data/practical-vocab.json";
 import { getActiveVocabularyTrack, setActiveVocabularyTrack, type VocabTrack } from "@/lib/vocab-preferences";
 import { buildVerbTypeMap, getVerbType, typeBadgeClass } from "../../components/verbType";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
 
 const KanjiStroke = dynamic(() => import("../../components/KanjiStroke"), { ssr: false });
 const KanaStroke = dynamic(() => import("../../components/KanaStroke"), { ssr: false });
@@ -54,6 +55,7 @@ const bgImages = [
 
 
 export default function Kosakata() {
+  const { speed } = useAudioSpeed();
   const [allVocab, setAllVocab] = useState<VocabItem[]>([]);
   const [currentBab, setCurrentBab] = useState<number>(1);
   const [search, setSearch] = useState("");
@@ -136,12 +138,21 @@ export default function Kosakata() {
     };
   }, []);
 
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.playbackRate = speed;
+      audioRef.current.preservesPitch = true;
+    }
+  }, [speed]);
+
   const playVocab = (kana: string) => {
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
     const audio = new Audio(`/audio/vocab/${encodeURIComponent(kana)}.mp3`);
+    audio.playbackRate = speed;
+    audio.preservesPitch = true;
     audioRef.current = audio;
 
     let usedSpeechFallback = false;
@@ -151,6 +162,7 @@ export default function Kosakata() {
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(kana);
       utterance.lang = "ja-JP";
+      utterance.rate = speed;
       window.speechSynthesis.speak(utterance);
     };
 
