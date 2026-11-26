@@ -13,6 +13,8 @@ import base64
 import hashlib
 import io
 import json
+import math
+import os
 import shutil
 import subprocess
 import sys
@@ -21,6 +23,8 @@ import time
 import urllib.error
 import urllib.request
 import wave
+import difflib
+from array import array
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -58,6 +62,122 @@ def write_json_atomic(path: Path, payload: Any) -> None:
 def stable_hash(value: Any) -> str:
     packed = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(packed.encode("utf-8")).hexdigest()
+
+
+# ---------------------------------------------------------------------------
+# Quality control for SHORT items (single words / kana). Tunable constants.
+# ---------------------------------------------------------------------------
+SMALL_KANA = set("ゃゅょゎぁぃぅぇぉャュョヮァィゥェォ")
+END_PUNCT = "。！？!?.…"
+PAUSE_PUNCT = "、,。"
+SEC_PER_MORA = 0.17      # typical speech speed of the voice, seconds per mora
+MAX_RATIO = 1.5          # speech longer than expected*MAX_RATIO is treated as a repeat/ramble
+MIN_RATIO = 0.5          # shorter than expected*MIN_RATIO is treated as truncated
+MAX_INTERNAL_GAP = 0.30  # silence inside the word (seconds) that is NOT explained by punctuation
+EDGE_PAD = 0.06          # silence kept around the trimmed speech (seconds)
+
+
+def spoken_text(item: dict[str, Any]) -> str:
+    """Text actually sent to TTS. For vocab, use the kana reading (the output file stem)
+    instead of kanji, so the model never has to guess the reading."""
+    text = str(item.get("text") or "").strip()
+    if item.get("category") == "vocab" and text:
+        stem = Path(str(item.get("output") or "")).stem
+        if stem and all(0x3041 <= ord(c) <= 0x30FF or c == "ー" for c in stem):
+            return stem
+    return text
+
+
+def mora_count(text: str) -> int:
+    count = 0
+    for ch in text:
+        if ch in SMALL_KANA:
+            continue
+        if 0x3041 <= ord(ch) <= 0x30FF:
+            count += 1
+        elif ch.isalnum():
+            count += 2  # kanji / latin: rough guess
+    return max(count, 1)
+
+
+def analyze_wav(wav_data: bytes) -> dict[str, Any] | None:
+    """Measure speech length and the longest silence inside the speech, and return a
+    copy trimmed to the speech (+EDGE_PAD). Returns None if the audio is silent."""
+    with wave.open(io.BytesIO(wav_data), "rb") as handle:
+        rate, channels, width = handle.getframerate(), handle.getnchannels(), handle.getsampwidth()
+        frames = handle.readframes(handle.getnframes())
+    if width != 2:
+        return None
+    samples = array("h")
+    samples.frombytes(frames)
+    if channels > 1:
+        samples = samples[::channels]
+    win = max(1, int(rate * 0.01))
+    rms = []
+    for i in range(0, len(samples) - win + 1, win):
+        chunk = samples[i:i + win]
+        rms.append(math.sqrt(sum(x * x for x in chunk) / win))
+    if not rms or max(rms) < 50:
+        return None
+    threshold = max(max(rms) * 0.06, 20.0)
+    voiced = [i for i, value in enumerate(rms) if value > threshold]
+    first, last = voiced[0], voiced[-1]
+    max_gap = run = 0
+    for value in rms[first:last + 1]:
+        if value <= threshold:
+            run += 1
+            max_gap = max(max_gap, run)
+        else:
+            run = 0
+    start = max(0, int((first * win / rate - EDGE_PAD) * rate))
+    end = min(len(samples), int(((last + 1) * win / rate + EDGE_PAD) * rate))
+    out = io.BytesIO()
+    with wave.open(out, "wb") as writer:
+        writer.setnchannels(1)
+        writer.setsampwidth(2)
+        writer.setframerate(rate)
+        writer.writeframes(samples[start:end].tobytes())
+    return {
+        "speech_seconds": (last - first + 1) * win / rate,
+        "max_gap_seconds": max_gap * win / rate,
+        "trimmed_wav": out.getvalue(),
+    }
+
+
+def build_verifier(model_name: str):
+    """Optional Whisper check: transcribe the take and compare it with the expected reading.
+    Needs: pip install faster-whisper pykakasi"""
+    try:
+        from faster_whisper import WhisperModel
+        import pykakasi
+    except ImportError as exc:
+        print(f"WARNING: --verify needs faster-whisper and pykakasi ({exc}). Continuing WITHOUT Whisper.")
+        return None
+    try:
+        model = WhisperModel(model_name, device="cuda", compute_type="float16")
+    except Exception as exc:  # noqa: BLE001
+        print(f"WARNING: Whisper on GPU failed ({exc}); using CPU (slower).")
+        model = WhisperModel(model_name, device="cpu", compute_type="int8")
+    kks = pykakasi.kakasi()
+
+    def to_hira(text: str) -> str:
+        text = "".join(ch for ch in text if ch.isalnum() or ch == "ー")
+        hira = "".join(part["hira"] for part in kks.convert(text))
+        return "".join(chr(ord(c) - 0x60) if 0x30A1 <= ord(c) <= 0x30F6 else c for c in hira)
+
+    def verify(wav_data: bytes, expected_text: str) -> float:
+        fd, name = tempfile.mkstemp(suffix=".wav")
+        os.close(fd)
+        try:
+            Path(name).write_bytes(wav_data)
+            segments, _ = model.transcribe(name, language="ja", beam_size=5,
+                                           condition_on_previous_text=False)
+            heard = "".join(seg.text for seg in segments)
+        finally:
+            Path(name).unlink(missing_ok=True)
+        return difflib.SequenceMatcher(None, to_hira(heard), to_hira(expected_text)).ratio()
+
+    return verify
 
 
 def http_json(url: str, *, method: str = "GET", payload: dict[str, Any] | None = None,
@@ -113,7 +233,7 @@ def item_segments(item: dict[str, Any]) -> list[dict[str, Any]]:
                 continue
             normalized.append(segment)
         return normalized
-    text = str(item.get("text") or "").strip()
+    text = spoken_text(item)
     if not text:
         return []
     return [{
@@ -210,8 +330,8 @@ def check_server(base_url: str, timeout: float, required_presets: set[str]) -> N
     print("Available presets: " + ", ".join(sorted(available)))
 
 
-def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, Any],
-                   timeout: float, retries: int, max_text_length: int) -> tuple[bytes, dict[str, Any]]:
+def synthesize_take(base_url: str, text: str, preset_id: str, config: dict[str, Any],
+                    timeout: float, retries: int, max_text_length: int) -> tuple[bytes, dict[str, Any]]:
     spoken = text.strip()
     if not spoken:
         raise ValueError("Cannot synthesize empty text")
@@ -272,6 +392,67 @@ def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, A
                 time.sleep(wait)
     assert last_error is not None
     raise last_error
+
+
+def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, Any],
+                   timeout: float, retries: int, max_text_length: int) -> tuple[bytes, dict[str, Any]]:
+    """Long text: one take, as before. Short text (<= short_len chars): generate up to
+    `takes` takes and return the first one that passes the automatic checks."""
+    quality = config.get("_quality") or {}
+    spoken = text.strip()
+    takes = int(quality.get("takes", 1))
+    if not spoken or takes <= 1 or len(spoken) > int(quality.get("short_len", 0)):
+        return synthesize_take(base_url, text, preset_id, config, timeout, retries, max_text_length)
+
+    suffix = str(quality.get("suffix") or "")
+    tts_text = spoken if (not suffix or spoken[-1] in END_PUNCT) else spoken + suffix
+    verifier = quality.get("verifier")
+    threshold = float(quality.get("threshold", 0.8))
+    pauses = sum(1 for ch in spoken if ch in PAUSE_PUNCT)
+    expected = 0.1 + SEC_PER_MORA * mora_count(spoken) + 0.25 * pauses
+    allowed_gap = MAX_INTERNAL_GAP + 0.4 * pauses
+
+    rejects: list[str] = []
+    for take in range(1, takes + 1):
+        try:
+            wav_data, info = synthesize_take(base_url, tts_text, preset_id, config,
+                                             timeout, retries, max_text_length)
+        except Exception as exc:  # noqa: BLE001
+            rejects.append(f"take {take}: {exc}")
+            print(f"    take {take}/{takes}: API/duration error: {exc}")
+            continue
+        stats = analyze_wav(wav_data)
+        similarity = None
+        if stats is None:
+            reason = "silent audio"
+        elif stats["speech_seconds"] > expected * MAX_RATIO + 0.15:
+            reason = "too long (repeat/ramble?)"
+        elif stats["speech_seconds"] < expected * MIN_RATIO:
+            reason = "too short (cut off?)"
+        elif stats["max_gap_seconds"] > allowed_gap:
+            reason = "pause in the middle"
+        else:
+            reason = ""
+            if verifier is not None:
+                similarity = verifier(stats["trimmed_wav"], spoken)
+                if similarity < threshold:
+                    reason = f"Whisper heard something else (similarity {similarity:.2f})"
+        if stats is not None:
+            print(f"    take {take}/{takes}: speech={stats['speech_seconds']:.2f}s "
+                  f"(expected ~{expected:.2f}s) gap={stats['max_gap_seconds']:.2f}s "
+                  f"| normalized={info.get('normalized_text')!r} -> {reason or 'OK'}")
+        else:
+            print(f"    take {take}/{takes}: {reason}")
+        if reason:
+            rejects.append(f"take {take}: {reason}")
+            continue
+        info["duration_seconds"] = round(stats["speech_seconds"], 3)
+        info["take"] = take
+        info["tts_text"] = tts_text
+        if similarity is not None:
+            info["verify_similarity"] = round(similarity, 3)
+        return stats["trimmed_wav"], info
+    raise RuntimeError(f"No acceptable take after {takes} tries: " + "; ".join(rejects[-3:]))
 
 
 def make_mp3(wav_paths: list[Path], segments: list[dict[str, Any]], destination: Path,
@@ -389,6 +570,16 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--timeout", type=float, default=None, help="HTTP timeout in seconds")
     parser.add_argument("--max-text-length", type=int, default=300,
                         help="Reject longer segments instead of silently truncating them")
+    parser.add_argument("--takes", type=int, default=8,
+                        help="Max takes per SHORT item; first take that passes the checks wins (1 = off)")
+    parser.add_argument("--short-len", type=int, default=8,
+                        help="Items whose text is at most this many characters use the best-of-N path")
+    parser.add_argument("--short-suffix", default="。",
+                        help="Appended to short text without end punctuation (stabilises the model); '' = off")
+    parser.add_argument("--verify", action="store_true",
+                        help="Also check each short take with Whisper (pip install faster-whisper pykakasi)")
+    parser.add_argument("--verify-threshold", type=float, default=0.8)
+    parser.add_argument("--whisper-model", default="medium")
     parser.add_argument("--ffmpeg", default="ffmpeg", help="FFmpeg executable name or full path")
     return parser.parse_args()
 
@@ -410,6 +601,14 @@ def main() -> int:
         ffmpeg = shutil.which(args.ffmpeg) if not Path(args.ffmpeg).is_file() else args.ffmpeg
         if not ffmpeg:
             raise RuntimeError("FFmpeg was not found. Install it or pass --ffmpeg with the full executable path.")
+
+        config["_quality"] = {
+            "takes": args.takes,
+            "short_len": args.short_len,
+            "suffix": args.short_suffix,
+            "threshold": args.verify_threshold,
+            "verifier": build_verifier(args.whisper_model) if (args.verify and args.execute) else None,
+        }
 
         categories = set(args.category) if args.category else None
         manifest_categories = {str(item.get("category")) for item in manifest["items"]}
