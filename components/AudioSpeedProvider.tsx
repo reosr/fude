@@ -1,28 +1,20 @@
 "use client";
 
 import {
-  createContext,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from "react";
 import AudioSpeedControl from "@/components/AudioSpeedControl";
+import {
+  AUDIO_SPEED_OPTIONS,
+  AudioSpeedContext,
+  type AudioSpeed,
+} from "@/components/audio-speed-context";
 
 const AUDIO_SPEED_STORAGE_KEY = "fude_audio_speed";
-
-export const AUDIO_SPEED_OPTIONS = [0.75, 0.85, 0.9, 1, 1.15] as const;
-
-type AudioSpeed = (typeof AUDIO_SPEED_OPTIONS)[number];
-
-interface AudioSpeedContextValue {
-  speed: AudioSpeed;
-  setSpeed: (speed: number) => void;
-}
-
-const AudioSpeedContext = createContext<AudioSpeedContextValue | null>(null);
 
 function isAudioSpeed(value: number): value is AudioSpeed {
   return AUDIO_SPEED_OPTIONS.some((option) => option === value);
@@ -78,12 +70,4 @@ export function AudioSpeedProvider({ children }: { children: ReactNode }) {
       </div>
     </AudioSpeedContext.Provider>
   );
-}
-
-export function useAudioSpeed(): AudioSpeedContextValue {
-  const context = useContext(AudioSpeedContext);
-  if (!context) {
-    throw new Error("useAudioSpeed harus digunakan di dalam AudioSpeedProvider.");
-  }
-  return context;
 }
