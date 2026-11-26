@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { Volume2, Copy, Check } from "lucide-react";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
 
 export default function Terjemahan() {
+  const { speed } = useAudioSpeed();
   const [input, setInput] = useState("");
   const [result, setResult] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -60,6 +62,7 @@ export default function Terjemahan() {
     if (!result) return;
     const utterance = new SpeechSynthesisUtterance(result);
     utterance.lang = hasJapanese(result) ? "ja-JP" : "id-ID";
+    utterance.rate = speed;
     window.speechSynthesis.speak(utterance);
   };
 
