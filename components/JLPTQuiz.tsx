@@ -10,12 +10,11 @@ import {
 } from "../lib/gamification";
 
 import { syncNewCollectionUnlocks } from "../lib/profile-collections";
-import { useState, useEffect, useRef } from "react";
-import { useAudioSpeed } from "@/components/AudioSpeedProvider";
+import { useState, useEffect } from "react";
+import FudeAudioPlayer from "@/components/FudeAudioPlayer";
 import JapaneseReading from "@/components/JapaneseReading";
 import {
   ArrowLeft,
-  Volume2,
   Trophy,
   CheckCircle2,
   XCircle,
@@ -103,6 +102,8 @@ const SECTIONS = [
 ] as const;
 
 type ExamBlockId = "vocab" | "grammar-reading" | "listening";
+
+const EXAM_BLOCK_ORDER: ExamBlockId[] = ["vocab", "grammar-reading", "listening"];
 
 const EXAM_BLOCK_CONFIG = {
   vocab: {
@@ -306,19 +307,9 @@ export default function JLPTQuiz({
   const [showConfirm, setShowConfirm] = useState(false);
   const [storageError, setStorageError] = useState<string | null>(null);
   const [audioUnavailableUrl, setAudioUnavailableUrl] = useState<string | null>(null);
-  const { speed } = useAudioSpeed();
-  const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const [examDeadlines, setExamDeadlines] = useState<Partial<Record<ExamBlockId, number>>>({});
   const [expiredExamBlocks, setExpiredExamBlocks] = useState<ExamBlockId[]>([]);
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
-
-  useEffect(() => {
-    const audio = audioElementRef.current;
-    if (audio) {
-      audio.playbackRate = speed;
-      audio.preservesPitch = true;
-    }
-  }, [speed]);
 
   const storageKey = `jlpt_result_${testSet.id}`;
   const isLoaded = loadedStorageKey === storageKey;
@@ -329,6 +320,17 @@ export default function JLPTQuiz({
     ? EXAM_BLOCK_CONFIG[activeExamBlock].minutes[currentLevel as "N5" | "N4"]
     : 0;
   const isActiveBlockExpired = isTimedExam && expiredExamBlocks.includes(activeExamBlock);
+  const activeExamBlockOrder = EXAM_BLOCK_ORDER.indexOf(activeExamBlock);
+  const nextTimedSectionAfterExpiry = isActiveBlockExpired
+    ? SECTIONS.find((section) => {
+        const hasQuestions = (testSet.sections?.[section.id] || []).length > 0;
+        const block = getExamBlockId(section.id);
+        return hasQuestions &&
+          EXAM_BLOCK_ORDER.indexOf(block) > activeExamBlockOrder &&
+          !expiredExamBlocks.includes(block);
+      })
+    : undefined;
+  const isFinalTimedBlockExpired = isTimedExam && isActiveBlockExpired && !nextTimedSectionAfterExpiry;
 
   // Simpan posisi aktif dan posisi terakhir pada setiap bagian.
   const saveProgress = (
@@ -808,6 +810,8 @@ export default function JLPTQuiz({
   // NAVIGASI SOAL
   // ==========================================
   const goToSection = (sectionId: SectionId) => {
+    if (isTimedExam && expiredExamBlocks.includes(getExamBlockId(sectionId))) return;
+
     const questions = testSet.sections?.[sectionId] || [];
     if (questions.length === 0) return;
 
@@ -864,6 +868,8 @@ export default function JLPTQuiz({
   };
 
   const nextQuestion = () => {
+    if (isActiveBlockExpired) return;
+
     if (currentIndex < totalQuestionsInSection - 1) {
       const nextIndex = currentIndex + 1;
       saveProgress(activeSection, nextIndex);
@@ -889,6 +895,19 @@ export default function JLPTQuiz({
     } else {
       setShowConfirm(true);
     }
+  };
+
+  const handlePrimaryExamAction = () => {
+    if (isActiveBlockExpired) {
+      if (nextTimedSectionAfterExpiry) {
+        goToSection(nextTimedSectionAfterExpiry.id);
+      } else {
+        setShowConfirm(true);
+      }
+      return;
+    }
+
+    nextQuestion();
   };
 
   // ==========================================
@@ -1329,12 +1348,13 @@ export default function JLPTQuiz({
               <button
                 key={section.id}
                 onClick={() => goToSection(section.id)}
+                disabled={isTimedExam && expiredExamBlocks.includes(getExamBlockId(section.id))}
                 aria-current={isActive ? "step" : undefined}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition-all ${
                   isActive
                     ? "bg-[#C93438] text-white shadow-lg"
                     : "bg-[#262523] border border-[#33312E] text-[#A3A099] hover:text-[#EAE6DD]"
-                }`}
+                } disabled:cursor-not-allowed disabled:opacity-40`}
               >
                 <span>{section.label}</span>
                 <span className={`rounded-md px-1.5 py-0.5 text-[10px] leading-none ${
@@ -1395,6 +1415,7 @@ export default function JLPTQuiz({
                   aria-label={`Buka soal ${index + 1}${isQuestionAnswered ? ", sudah dijawab" : ", belum dijawab"}`}
                   aria-current={isCurrent ? "step" : undefined}
                   title={`Soal ${index + 1}${isQuestionAnswered ? " · Sudah dijawab" : " · Belum dijawab"}`}
+                  disabled={isActiveBlockExpired}
                   className={`flex h-10 min-w-0 items-center justify-center rounded-lg border text-sm font-bold tabular-nums transition-colors ${
                     isCurrent
                       ? "border-[#C93438] bg-[#C93438] text-white shadow-md shadow-[#C93438]/20"
@@ -1467,37 +1488,20 @@ export default function JLPTQuiz({
                     </div>
                   </>
                 ) : (
-                  <>
-                    <Volume2
-                      size={40}
-                      className="text-[#B8860B] animate-pulse"
-                    />
-                    <audio
-                      ref={audioElementRef}
-                      key={currentQ.audioUrl}
-                      controls
-                      preload="none"
-                      onLoadedMetadata={(event) => {
-                        event.currentTarget.playbackRate = speed;
-                        event.currentTarget.preservesPitch = true;
-                      }}
-                      onError={() => setAudioUnavailableUrl(currentQ.audioUrl ?? null)}
-                      className="w-full max-w-md"
-                    >
-                      <source
-                        src={currentQ.audioUrl}
-                        type="audio/mpeg"
-                      />
-                      Browser kamu tidak mendukung audio.
-                    </audio>
-                  </>
+                  <FudeAudioPlayer
+                    key={currentQ.audioUrl}
+                    src={currentQ.audioUrl}
+                    onUnavailable={() => setAudioUnavailableUrl(currentQ.audioUrl ?? null)}
+                  />
                 )}
               </div>
             )}
 
             {isActiveBlockExpired && (
               <div className="mb-5 rounded-xl border border-red-500/30 bg-red-500/5 p-3 text-sm text-red-200">
-                Waktu sesi ini sudah habis. Jawaban baru tidak dapat ditambahkan, tetapi kamu masih bisa berpindah ke sesi berikutnya.
+                Waktu sesi ini sudah habis dan jawaban pada sesi ini dikunci. {nextTimedSectionAfterExpiry
+                  ? "Lanjutkan ke sesi berikutnya untuk mengerjakan bagian yang masih memiliki waktu."
+                  : "Waktu ujian sudah selesai. Kirim jawaban yang tersimpan untuk melihat hasil."}
               </div>
             )}
 
@@ -1587,7 +1591,7 @@ export default function JLPTQuiz({
               <button
                 type="button"
                 onClick={previousQuestion}
-                disabled={!hasPreviousQuestion()}
+                disabled={!hasPreviousQuestion() || isActiveBlockExpired}
                 className="flex items-center justify-center gap-2 rounded-xl border border-[#33312E] bg-[#262523] px-5 py-4 font-bold text-[#EAE6DD] transition-colors hover:border-[#777067] hover:bg-[#33312E] disabled:cursor-not-allowed disabled:opacity-40 sm:min-w-[190px]"
               >
                 <ChevronLeft size={18} />
@@ -1595,17 +1599,19 @@ export default function JLPTQuiz({
               </button>
 
               <button
-                onClick={nextQuestion}
-                disabled={(!isAnswered && !isActiveBlockExpired) || audioUnavailable}
+                onClick={handlePrimaryExamAction}
+                disabled={!isActiveBlockExpired && (!isAnswered || audioUnavailable)}
                 className={`flex-1 rounded-xl py-4 text-lg font-bold transition-all ${
                   isAnswered || isActiveBlockExpired
                     ? "bg-[#B8860B] text-white hover:bg-[#9a7009] shadow-lg shadow-[#B8860B]/20"
                     : "bg-[#33312E] text-[#A3A099] cursor-not-allowed"
                 }`}
               >
-                {currentIndex === totalQuestionsInSection - 1
-                  ? "Lanjut / Selesaikan Ujian"
-                  : "Soal Selanjutnya"}
+                {isActiveBlockExpired
+                  ? nextTimedSectionAfterExpiry ? "Lanjut ke Sesi Berikutnya" : "Kirim Hasil"
+                  : currentIndex === totalQuestionsInSection - 1
+                    ? "Lanjut / Selesaikan Ujian"
+                    : "Soal Selanjutnya"}
               </button>
             </div>
           </div>
@@ -1632,10 +1638,14 @@ export default function JLPTQuiz({
               </div>
 
               <h3 className="text-2xl font-bold text-[#EAE6DD] mb-2">
-                Selesaikan Ujian?
+                {isFinalTimedBlockExpired ? "Waktu Ujian Habis" : "Selesaikan Ujian?"}
               </h3>
 
-              {totalQuestions === 0 ? (
+              {isFinalTimedBlockExpired ? (
+                <p className="text-[#D9AD42] font-bold bg-[#B8860B]/10 p-3 rounded-lg text-sm border border-[#B8860B]/20">
+                  Waktu seluruh sesi ujian sudah habis. Jawaban yang tersimpan akan dikumpulkan dan soal kosong dihitung salah.
+                </p>
+              ) : totalQuestions === 0 ? (
                 <p className="text-[#C93438] font-bold bg-[#C93438]/10 p-3 rounded-lg text-sm border border-[#C93438]/20">
                   Set ini belum memiliki soal. Ujian belum bisa diselesaikan.
                 </p>
@@ -1724,12 +1734,12 @@ export default function JLPTQuiz({
                   );
                 }}
                 className={`flex-1 font-bold py-3 rounded-xl transition-colors shadow-lg ${
-                  totalUnanswered > 0 || totalQuestions === 0
+                  cannotFinish
                     ? "bg-[#33312E] text-[#817A73] cursor-not-allowed shadow-none"
                     : "bg-[#C93438] text-white hover:bg-[#B02A2E] shadow-[#C93438]/20"
                 }`}
               >
-                Ya, Selesaikan
+                {isFinalTimedBlockExpired ? "Kirim Hasil" : "Ya, Selesaikan"}
               </button>
             </div>
           </div>
