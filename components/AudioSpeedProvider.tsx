@@ -9,7 +9,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { Gauge } from "lucide-react";
+import AudioSpeedControl from "@/components/AudioSpeedControl";
 
 const AUDIO_SPEED_STORAGE_KEY = "fude_audio_speed";
 
@@ -72,23 +72,9 @@ export function AudioSpeedProvider({ children }: { children: ReactNode }) {
     <AudioSpeedContext.Provider value={contextValue}>
       {children}
       <div className="pointer-events-none fixed right-3 top-3 z-[55] md:right-6 md:top-4">
-        <label className="pointer-events-auto inline-flex h-9 items-center gap-1.5 rounded-full border border-[#B8860B]/35 bg-[#1A1918]/95 px-2.5 shadow-lg shadow-black/25 backdrop-blur-md transition-colors hover:border-[#B8860B]/60">
-          <Gauge size={14} className="shrink-0 text-[#D9B66D]" />
-          <span className="sr-only">Kecepatan audio</span>
-          <select
-            aria-label="Kecepatan audio"
-            title="Atur kecepatan semua audio"
-            value={speed}
-            onChange={(event) => setSpeed(Number(event.target.value))}
-            className="max-w-[4.1rem] cursor-pointer bg-transparent text-[11px] font-semibold tabular-nums text-[#EAE6DD] outline-none"
-          >
-            {AUDIO_SPEED_OPTIONS.map((option) => (
-              <option key={option} value={option} className="bg-[#1A1918]">
-                {option.toFixed(2).replace(/0$/, "")}x
-              </option>
-            ))}
-          </select>
-        </label>
+        <div className="pointer-events-auto">
+          <AudioSpeedControl variant="global" />
+        </div>
       </div>
     </AudioSpeedContext.Provider>
   );
