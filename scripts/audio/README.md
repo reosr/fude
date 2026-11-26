@@ -46,6 +46,8 @@ The launcher uses the Python 3.12 path previously configured on the Fude worksta
 
 The API default is `http://127.0.0.1:8001`. Start the MioTTS API server first. The generator checks `GET /health` and `GET /v1/presets` before synthesis.
 
+The manifest removes the Japanese grammar placeholder marks `〜` / `～` from speech text (for example, `〜かどうか` is sent as `かどうか`). Template items with multiple blank slots are excluded from automatic speech because they need an example sentence.
+
 ## 4. Batch options
 
 Examples:
@@ -74,6 +76,7 @@ Available manifest categories: `vocab`, `kana`, `stories`, `jlpt-listening`, `ir
 - After an item is generated, its text, voice preset, generation settings, and output path are fingerprinted in `audio-generation-state.json`.
 - If a Fude text or voice mapping changes later, the fingerprint changes and that generated item is queued again.
 - Failed items are not marked complete; running the same command again retries them.
+- The generator checks each WAV duration before writing MP3. Suspiciously long output for a short input is rejected instead of being saved.
 - Progress is saved after every successful output. Pressing Ctrl+C stops the batch safely; run the command again to continue with the remaining items.
 - Dialogues are synthesized one line at a time using each line's mapped speaker preset, then combined into one MP3 with the configured pauses.
 - A summary and any failures are written to `audio-generation-report.json`.
