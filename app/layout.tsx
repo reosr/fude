@@ -7,6 +7,7 @@ import Sidebar from "@/components/Sidebar";
 import DisableRightClick from "@/components/DisableRightClick";
 import { Shippori_Mincho } from "next/font/google"; // <-- Tambahin ini
 import FudeSyncManager from "@/components/FudeSyncManager";
+import { AudioSpeedProvider } from "@/components/AudioSpeedProvider";
 
 // Setup font-nya
 const shipporiMincho = Shippori_Mincho({
@@ -37,6 +38,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${inter.className} bg-[#121110] text-[#EAE6DD] overflow-x-hidden antialiased`}>
+        <AudioSpeedProvider>
         
         <DisableRightClick />
         <FudeSyncManager />
@@ -66,6 +68,7 @@ export default function RootLayout({
           </Suspense>
           
         </div>
+        </AudioSpeedProvider>
       </body>
     </html>
   );
