@@ -272,7 +272,9 @@ def add_kana(builder: ManifestBuilder) -> None:
             if not example:
                 builder.warn(f"Kana example missing for {char!r}; no audio item added.")
                 continue
-            spoken = f"{to_katakana(char)}、{to_katakana(example)}"
+            # Speak the example word only. The kana and romaji are already visible in the UI;
+            # repeating the target kana immediately before the example sounded like stuttering.
+            spoken = to_katakana(example)
             builder.add(
                 category="kana",
                 source="data/hira-kata.json + app/belajar/page.tsx",
