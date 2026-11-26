@@ -149,7 +149,7 @@ def item_fingerprint(item: dict[str, Any], config: dict[str, Any]) -> tuple[str,
         "output": item.get("output"),
         "parts": mapped,
         "llm": config.get("llm", {}),
-        "best_of_n": config.get("best_of_n", {"enabled": False, "n": 1, "language": "ja"}),
+        "best_of_n": config.get("best_of_n", {"enabled": False, "n": 1, "language": "auto"}),
         "mp3_bitrate": config.get("mp3_bitrate", "192k"),
     }
     return stable_hash(fingerprint_data), preset_ids
@@ -212,7 +212,7 @@ def check_server(base_url: str, timeout: float, required_presets: set[str]) -> N
 
 
 def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, Any],
-                   timeout: float, retries: int, max_text_length: int) -> bytes:
+                   timeout: float, retries: int, max_text_length: int) -> tuple[bytes, dict[str, Any]]:
     spoken = text.strip()
     if not spoken:
         raise ValueError("Cannot synthesize empty text")
@@ -379,6 +379,8 @@ def parse_args() -> argparse.Namespace:
                         help="Only process this category; repeat the option to include more than one")
     parser.add_argument("--limit", type=int, default=0,
                         help="Process at most N pending items (useful for a small test batch)")
+    parser.add_argument("--match", default="",
+                        help="Only process items whose ID, output path, or speech text contains this string")
     parser.add_argument("--show-items", action="store_true", help="Print every planned item")
     parser.add_argument("--execute", action="store_true",
                         help="Actually synthesize audio; without this flag, the script only previews")
@@ -418,6 +420,18 @@ def main() -> int:
                              + ". Available: " + ", ".join(sorted(manifest_categories)))
 
         jobs, counts = choose_jobs(manifest, state, config, categories, args.force)
+        if args.match:
+            needle = args.match.casefold()
+            jobs = [
+                job for job in jobs
+                if needle in " ".join([
+                    str(job["item"].get("id") or ""),
+                    str(job["item"].get("output") or ""),
+                    str(job["item"].get("text") or ""),
+                    " ".join(str(part.get("text") or "") for part in (job["item"].get("segments") or [])),
+                ]).casefold()
+            ]
+        counts["ready"] = len(jobs)
         if args.limit:
             jobs = jobs[:args.limit]
         print("Fude audio batch generator")
@@ -428,6 +442,8 @@ def main() -> int:
         print(f"Existing legacy audio protected from overwrite: {counts['skip_legacy']}")
         if categories:
             print("Categories: " + ", ".join(sorted(categories)))
+        if args.match:
+            print(f"Match filter: {args.match}")
         if args.limit:
             print(f"Limit: {args.limit}")
         print("Mode: EXECUTE" if args.execute else "Mode: DRY RUN (no API calls or audio writes)")
