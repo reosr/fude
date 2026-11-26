@@ -2,7 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Play, Square, ArrowLeft, Volume2, Gauge, User, BookOpen, CheckCircle2 } from "lucide-react";
+import { Play, Square, ArrowLeft, Volume2, User, BookOpen, CheckCircle2 } from "lucide-react";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
 import storyIndex from "../../data/story-index.json";
 import practicalVocabData from "@/data/practical-vocab.json";
 import { loadStory } from "../../data/story-loaders";
@@ -213,12 +214,14 @@ const getRomajiSegmented = (jpText: string, bab: number): string => {
 
 export default function Baca() {
   const studyProgress = useStudyProgress();
+  const { speed } = useAudioSpeed();
+  const speedRef = useRef(speed);
+  speedRef.current = speed;
   const [selectedStory, setSelectedStory] = useState<any | null>(null);
   const [isStoryLoading, setIsStoryLoading] = useState(false);
   const [storyLoadError, setStoryLoadError] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [speed, setSpeed] = useState<number>(1.0);
   const [currentBab, setCurrentBab] = useState<number>(1);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -234,6 +237,13 @@ export default function Baca() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.playbackRate = speed;
+      audioRef.current.preservesPitch = true;
+    }
+  }, [speed]);
 
   const getRomajiLegacy = (jpText: string, bab: number) => {
     const unlockedBabs = (vocabIndexCache ?? []).filter(
@@ -500,6 +510,7 @@ setSelectedStory(story);
       const audio = audioRef.current;
       audio.src = url;
       audio.playbackRate = rate;
+      audio.preservesPitch = true;
       setActiveIndex(index);
       audio.onended = () => resolve();
       audio.onerror = () => {
@@ -518,7 +529,7 @@ setSelectedStory(story);
     isPlayingRef.current = true;
     setIsPlaying(true);
     const url = `/audio/${storyId}-${index + 1}.mp3`;
-    await playOne(url, index, speed);
+    await playOne(url, index, speedRef.current);
     if (isPlayingRef.current) {
       setIsPlaying(false);
       setActiveIndex(null);
@@ -536,7 +547,7 @@ setSelectedStory(story);
     for (let i = 0; i < selectedStory.sentences.length; i++) {
       if (!isPlayingRef.current) break; 
       const url = `/audio/${selectedStory.id}-${i + 1}.mp3`;
-      await playOne(url, i, speed);
+      await playOne(url, i, speedRef.current);
     }
     if (isPlayingRef.current) {
       setIsPlaying(false);
@@ -659,20 +670,6 @@ setSelectedStory(story);
           </div>
           
           <div className="flex items-center gap-3 shrink-0">
-            <div className="relative flex items-center gap-2 bg-[#1E1D1B] border border-[#33312E] rounded-xl px-3 py-2">
-              <Gauge size={16} className="text-[#A3A099]" />
-              <select 
-                value={speed} 
-                onChange={(e) => setSpeed(parseFloat(e.target.value))}
-                className="bg-transparent text-sm text-[#EAE6DD] outline-none cursor-pointer appearance-none pr-4"
-              >
-                <option value={0.7} className="bg-[#1E1D1B] text-[#EAE6DD]">0.7x (Pemula)</option>
-                <option value={0.85} className="bg-[#1E1D1B] text-[#EAE6DD]">0.85x (Santai)</option>
-                <option value={1.0} className="bg-[#1E1D1B] text-[#EAE6DD]">1.0x (Normal)</option>
-                <option value={1.2} className="bg-[#1E1D1B] text-[#EAE6DD]">1.2x (Penutur Asli)</option>
-              </select>
-            </div>
-
             <button
               onClick={playAll}
               className={`flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold transition-all shadow-lg whitespace-nowrap ${
