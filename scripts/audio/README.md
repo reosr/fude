@@ -92,3 +92,9 @@ The upstream MioTTS README says its bundled default reference presets were gener
 ## Safety
 
 Keep current audio files until replacement files have been generated, listened to, checked, and uploaded successfully. Neither script deletes files.
+
+
+## Japanese vocabulary synthesis text
+
+- For ordinary vocabulary, the manifest uses the kanji spelling as synthesis input when available, giving Japanese TTS lexical context. The MP3 path is still based on the kana reading expected by Fude.
+- For grammar templates containing `〜` / `～`, the placeholder is not spoken; the kana reading is used after removing the placeholder (for example, `〜かどうか` becomes `かどうか`). Template items with multiple blank slots are excluded from automatic speech because they need an example sentence.
