@@ -330,9 +330,22 @@ def check_server(base_url: str, timeout: float, required_presets: set[str]) -> N
     print("Available presets: " + ", ".join(sorted(available)))
 
 
+# Teks asli -> ejaan yang dikirim ke TTS (cuma ngaruh ke pengucapan).
+# Tambah kata lain di sini kalau ada yang salah baca.
+TTS_OVERRIDES = {
+    "ほうほう": "ほーほー",
+}
+
+
+def apply_override(text: str) -> str:
+    core = text.rstrip(END_PUNCT)
+    suffix = text[len(core):]
+    return TTS_OVERRIDES.get(core, core) + suffix
+
+
 def synthesize_take(base_url: str, text: str, preset_id: str, config: dict[str, Any],
                     timeout: float, retries: int, max_text_length: int) -> tuple[bytes, dict[str, Any]]:
-    spoken = text.strip()
+    spoken = apply_override(text.strip())
     if not spoken:
         raise ValueError("Cannot synthesize empty text")
     if len(spoken) > max_text_length:
