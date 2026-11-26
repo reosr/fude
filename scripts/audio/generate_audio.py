@@ -303,6 +303,7 @@ def item_fingerprint(item: dict[str, Any], config: dict[str, Any]) -> tuple[str,
         "category": item.get("category"),
         "output": item.get("output"),
         "parts": mapped,
+        "audio_processing": config.get("audio_processing", {}),
         "best_of_n": config.get("best_of_n", {"enabled": False, "n": 1, "language": "auto"}),
         "mp3_bitrate": config.get("mp3_bitrate", "192k"),
     }
@@ -505,6 +506,91 @@ def synthesize_wav(base_url: str, text: str, preset_id: str, config: dict[str, A
     raise RuntimeError(f"No acceptable take after {takes} tries: " + "; ".join(rejects[-3:]))
 
 
+def postprocess_audio_wav(
+    wav_data: bytes,
+    ffmpeg: str,
+    role: str,
+    config: dict[str, Any],
+) -> tuple[bytes, dict[str, Any]]:
+    """Trim excessive leading/trailing silence, compress long gaps, and apply role tempo."""
+    settings = config.get("audio_processing") or {}
+    silence = settings.get("silence_cleanup") or {}
+    speed_map = settings.get("speed_by_role") or {}
+
+    speed = float(speed_map.get(role, 1.0))
+    if not math.isfinite(speed) or not 0.5 <= speed <= 2.0:
+        raise ValueError(f"Invalid tempo {speed!r} for role {role!r}")
+
+    with wave.open(io.BytesIO(wav_data), "rb") as handle:
+        input_duration = handle.getnframes() / float(handle.getframerate())
+
+    filters: list[str] = []
+    if silence.get("enabled", True):
+        start_duration = float(silence.get("start_duration", 0.05))
+        start_silence = float(silence.get("start_silence", 0.05))
+        stop_duration = float(silence.get("stop_duration", 0.25))
+        stop_silence = float(silence.get("stop_silence", 0.2))
+        if min(start_duration, start_silence, stop_duration, stop_silence) < 0:
+            raise ValueError("Audio silence durations cannot be negative")
+
+        filters.append(
+            "silenceremove="
+            f"start_periods={int(silence.get('start_periods', 1))}:"
+            f"start_duration={start_duration}:"
+            f"start_threshold={float(silence.get('start_threshold_db', -55))}dB:"
+            f"start_silence={start_silence}:"
+            f"stop_periods={int(silence.get('stop_periods', -1))}:"
+            f"stop_duration={stop_duration}:"
+            f"stop_threshold={float(silence.get('stop_threshold_db', -40))}dB:"
+            f"stop_silence={stop_silence}"
+        )
+
+    if abs(speed - 1.0) > 0.001:
+        filters.append(f"atempo={speed:.3f}")
+
+    if not filters:
+        return wav_data, {
+            "role": role,
+            "speed": speed,
+            "input_duration_seconds": round(input_duration, 3),
+            "output_duration_seconds": round(input_duration, 3),
+            "filters": [],
+        }
+
+    with tempfile.TemporaryDirectory(prefix="fude-audio-process-") as temp_dir_name:
+        temp_dir = Path(temp_dir_name)
+        source_path = temp_dir / "source.wav"
+        output_path = temp_dir / "processed.wav"
+        source_path.write_bytes(wav_data)
+
+        command = [
+            ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
+            "-i", str(source_path),
+            "-af", ",".join(filters),
+            "-c:a", "pcm_s16le",
+            str(output_path),
+        ]
+        completed = subprocess.run(command, capture_output=True, text=True, check=False)
+        if completed.returncode != 0 or not output_path.is_file():
+            detail = (completed.stderr or completed.stdout or "FFmpeg audio processing failed").strip()
+            raise RuntimeError(detail[-2000:])
+        processed = output_path.read_bytes()
+
+    if len(processed) < 44 or processed[:4] != b"RIFF" or processed[8:12] != b"WAVE":
+        raise RuntimeError("FFmpeg audio processing did not produce a valid WAV")
+
+    with wave.open(io.BytesIO(processed), "rb") as handle:
+        output_duration = handle.getnframes() / float(handle.getframerate())
+
+    return processed, {
+        "role": role,
+        "speed": speed,
+        "input_duration_seconds": round(input_duration, 3),
+        "output_duration_seconds": round(output_duration, 3),
+        "filters": filters,
+    }
+
+
 def make_mp3(wav_paths: list[Path], segments: list[dict[str, Any]], destination: Path,
              ffmpeg: str, bitrate: str) -> None:
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -580,6 +666,12 @@ def synthesize_job(job: dict[str, Any], base_url: str, config: dict[str, Any],
                 base_url, str(segment.get("text") or ""), preset, config,
                 timeout, retries, max_text_length,
             )
+            wav_data, processing_info = postprocess_audio_wav(
+                wav_data, ffmpeg, role, config
+            )
+            info["synthesis_duration_seconds"] = info.get("duration_seconds")
+            info["duration_seconds"] = processing_info["output_duration_seconds"]
+            info["audio_processing"] = processing_info
             info["input_text"] = str(segment.get("text") or "")
             info["preset_id"] = preset
             diagnostics.append(info)
