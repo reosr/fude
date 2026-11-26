@@ -13,7 +13,6 @@ interface Props {
 export default function PracticalAudioButton({ src, sources, label }: Props) {
   const { speed } = useAudioSpeed();
   const speedRef = useRef(speed);
-  speedRef.current = speed;
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const playlistRef = useRef<string[]>([]);
   const activeIndexRef = useRef(0);
@@ -62,6 +61,7 @@ export default function PracticalAudioButton({ src, sources, label }: Props) {
   }, []);
 
   useEffect(() => {
+    speedRef.current = speed;
     if (audioRef.current) {
       audioRef.current.playbackRate = speed;
       audioRef.current.preservesPitch = true;
