@@ -10,7 +10,8 @@ import {
 } from "../lib/gamification";
 
 import { syncNewCollectionUnlocks } from "../lib/profile-collections";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { useAudioSpeed } from "@/components/AudioSpeedProvider";
 import JapaneseReading from "@/components/JapaneseReading";
 import {
   ArrowLeft,
@@ -305,9 +306,19 @@ export default function JLPTQuiz({
   const [showConfirm, setShowConfirm] = useState(false);
   const [storageError, setStorageError] = useState<string | null>(null);
   const [audioUnavailableUrl, setAudioUnavailableUrl] = useState<string | null>(null);
+  const { speed } = useAudioSpeed();
+  const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const [examDeadlines, setExamDeadlines] = useState<Partial<Record<ExamBlockId, number>>>({});
   const [expiredExamBlocks, setExpiredExamBlocks] = useState<ExamBlockId[]>([]);
   const [remainingSeconds, setRemainingSeconds] = useState<number | null>(null);
+
+  useEffect(() => {
+    const audio = audioElementRef.current;
+    if (audio) {
+      audio.playbackRate = speed;
+      audio.preservesPitch = true;
+    }
+  }, [speed]);
 
   const storageKey = `jlpt_result_${testSet.id}`;
   const isLoaded = loadedStorageKey === storageKey;
@@ -1462,9 +1473,14 @@ export default function JLPTQuiz({
                       className="text-[#B8860B] animate-pulse"
                     />
                     <audio
+                      ref={audioElementRef}
                       key={currentQ.audioUrl}
                       controls
                       preload="none"
+                      onLoadedMetadata={(event) => {
+                        event.currentTarget.playbackRate = speed;
+                        event.currentTarget.preservesPitch = true;
+                      }}
                       onError={() => setAudioUnavailableUrl(currentQ.audioUrl ?? null)}
                       className="w-full max-w-md"
                     >
