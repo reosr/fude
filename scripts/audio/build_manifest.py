@@ -272,21 +272,21 @@ def add_kana(builder: ManifestBuilder) -> None:
             if not example:
                 builder.warn(f"Kana example missing for {char!r}; no audio item added.")
                 continue
-            # Speak the kana itself first, then its example word as a separate take.
-            # A real pause prevents the repeated starting syllable from sounding stuttered.
+            # Keep each item in its native script. Converting hiragana to katakana
+            # made isolated morae less natural with MioTTS.
             builder.add(
                 category="kana",
                 source="data/hira-kata.json + app/belajar/page.tsx",
                 output=f"audio/kana/{safe_filename(char)}.mp3",
                 segments=[
                     {
-                        "text": to_katakana(char),
+                        "text": char,
                         "voice_role": DEFAULT_ROLE,
                         "voice_role_source": "fude-default",
-                        "pause_after_ms": 450,
+                        "pause_after_ms": 600,
                     },
                     {
-                        "text": to_katakana(example),
+                        "text": example,
                         "voice_role": DEFAULT_ROLE,
                         "voice_role_source": "fude-default",
                         "pause_after_ms": 0,
