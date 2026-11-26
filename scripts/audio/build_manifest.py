@@ -233,7 +233,16 @@ def add_vocab(builder: ManifestBuilder) -> None:
             reading = str(vocab.get("kana") or "").strip()
             if not reading:
                 continue
-            spoken_text = prepare_vocab_pronunciation(reading)
+            kanji_form = clean_japanese(vocab.get("kanji") or "")
+            has_placeholder = any(mark in reading or mark in kanji_form for mark in ("〜", "～"))
+            if has_placeholder:
+                # Grammar slots must not be spoken. Use the kana field to preserve
+                # irregular readings such as ～君 -> くん.
+                spoken_text = prepare_vocab_pronunciation(reading)
+            else:
+                # A kanji spelling gives the Japanese TTS model lexical context.
+                # The audio URL remains keyed by kana, exactly as Fude expects.
+                spoken_text = kanji_form or prepare_vocab_pronunciation(reading)
             if not spoken_text:
                 builder.warn(
                     f"Skipped vocab audio for template with multiple placeholders: {reading!r}"
