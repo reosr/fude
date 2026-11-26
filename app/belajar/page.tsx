@@ -921,7 +921,7 @@ const findWordAt = (index: number): string | null => {
                 <span className="text-sm text-[#A3A099] block">{KANA_EXAMPLES[activeKana.kanji]?.meaning}</span>
               </div>
             </div>
-            <button onClick={playAudio} className="flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all bg-[#B8860B] text-white hover:bg-[#9A7009] active:scale-95 shadow-lg shadow-[#B8860B]/20 w-full justify-center"><Volume2 size={20} /> Dengarkan Contoh Kata</button>
+            <button onClick={playAudio} className="flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all bg-[#B8860B] text-white hover:bg-[#9A7009] active:scale-95 shadow-lg shadow-[#B8860B]/20 w-full justify-center"><Volume2 size={20} /> Dengarkan Bunyi & Contoh</button>
           </div>
         </div>
       )}
