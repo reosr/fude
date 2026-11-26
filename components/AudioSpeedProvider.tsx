@@ -14,6 +14,9 @@ import {
   type AudioSpeed,
 } from "@/components/audio-speed-context";
 
+// Keep the original import path working for existing audio components.
+export { useAudioSpeed } from "@/components/audio-speed-context";
+
 const AUDIO_SPEED_STORAGE_KEY = "fude_audio_speed";
 
 function isAudioSpeed(value: number): value is AudioSpeed {
