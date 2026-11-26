@@ -272,26 +272,14 @@ def add_kana(builder: ManifestBuilder) -> None:
             if not example:
                 builder.warn(f"Kana example missing for {char!r}; no audio item added.")
                 continue
-            # Keep each item in its native script. Converting hiragana to katakana
-            # made isolated morae less natural with MioTTS.
+            # Keep the native script and separate the kana from its example with
+            # a Japanese full stop so MioTTS makes a clear, natural pause.
+            spoken = f"{char}。{example}"
             builder.add(
                 category="kana",
                 source="data/hira-kata.json + app/belajar/page.tsx",
                 output=f"audio/kana/{safe_filename(char)}.mp3",
-                segments=[
-                    {
-                        "text": char,
-                        "voice_role": DEFAULT_ROLE,
-                        "voice_role_source": "fude-default",
-                        "pause_after_ms": 600,
-                    },
-                    {
-                        "text": example,
-                        "voice_role": DEFAULT_ROLE,
-                        "voice_role_source": "fude-default",
-                        "pause_after_ms": 0,
-                    },
-                ],
+                text=spoken,
                 voice_role=DEFAULT_ROLE,
                 voice_role_source="fude-default",
             )
