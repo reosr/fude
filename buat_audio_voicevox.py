@@ -5,6 +5,8 @@ import os
 import random
 import re
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -45,7 +47,10 @@ STORY_SPEED = 0.95
 INTONATION = 1.0
 PRE_SILENCE = 0.1
 POST_SILENCE = 0.3
-VOLUME_SCALE = 1.5      # anti pecah
+VOLUME_SCALE = 1.0      # gunakan level standar VOICEVOX agar tidak mudah clipping
+AUDIO_PEAK_HEADROOM_DB = 1.0  # sisakan headroom untuk ekspor MP3
+HTTP_RETRIES = 3        # ulangi request sementara yang gagal (maks. 4 percobaan)
+HTTP_RETRY_DELAY = 0.8  # jeda awal retry, lalu bertambah bertahap
 DIALOGUE_GAP_MS = 500   # jeda antar kalimat di percakapan JLPT
 
 # ---------- KHUSUS KANA ----------
@@ -119,10 +124,36 @@ def http(method, path, params=None, body=None):
         data = json.dumps(body).encode("utf-8")
     else:
         data = b"" if method == "POST" else None
-    req = urllib.request.Request(url, data=data, method=method,
-                                 headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        return resp.read()
+
+    retryable_http_codes = {408, 425, 429, 500, 502, 503, 504}
+    for attempt in range(HTTP_RETRIES + 1):
+        try:
+            # Buat ulang Request pada setiap percobaan agar POST aman diulang.
+            req = urllib.request.Request(
+                url,
+                data=data,
+                method=method,
+                headers={"Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code not in retryable_http_codes or attempt >= HTTP_RETRIES:
+                raise
+            error_message = f"HTTP {exc.code}"
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            if attempt >= HTTP_RETRIES:
+                raise
+            error_message = str(exc)
+
+        delay = min(HTTP_RETRY_DELAY * (2 ** attempt), 6.0)
+        print(
+            f"VOICEVOX request gagal ({error_message}); "
+            f"coba ulang {attempt + 1}/{HTTP_RETRIES} dalam {delay:.1f} detik..."
+        )
+        time.sleep(delay)
+
+    raise RuntimeError("VOICEVOX request gagal setelah seluruh percobaan.")
 
 
 def load_speakers():
@@ -163,7 +194,13 @@ def synth(text, base_speed, sid, role="default"):
 
 def synth_segment(text, speed, character, role="default"):
     wav_bytes = synth(text, speed, character_id(character), role)
-    return AudioSegment.from_file(io.BytesIO(wav_bytes), format="wav")
+    audio = AudioSegment.from_file(io.BytesIO(wav_bytes), format="wav")
+
+    # Turunkan hanya jika peak terlalu tinggi; jangan menaikkan audio yang memang pelan.
+    if audio.max_dBFS > -AUDIO_PEAK_HEADROOM_DB:
+        audio = audio.apply_gain(-AUDIO_PEAK_HEADROOM_DB - audio.max_dBFS)
+
+    return audio
 
 
 def save(path_mp3, text, speed, character, role="default"):
