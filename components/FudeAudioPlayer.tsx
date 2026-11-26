@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, Volume2 } from "lucide-react";
 import { useAudioSpeed } from "@/components/AudioSpeedProvider";
+import AudioSpeedControl from "@/components/AudioSpeedControl";
 
 interface FudeAudioPlayerProps {
   src: string;
@@ -122,9 +123,7 @@ export default function FudeAudioPlayer({
               <Volume2 size={13} />
               Audio soal
             </span>
-            <span className="shrink-0 text-[10px] font-medium tabular-nums text-[#A3A099]">
-              {speed.toFixed(2).replace(/0$/, "")}x
-            </span>
+            <AudioSpeedControl variant="compact" />
           </div>
 
           <input
