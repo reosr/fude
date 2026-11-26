@@ -151,6 +151,22 @@ def safe_filename(value: str) -> str:
     return re.sub(r'[\\/:*?"<>|]', "_", value)
 
 
+def prepare_vocab_pronunciation(reading: str) -> str | None:
+    """Remove Japanese grammar placeholders that are not spoken aloud.
+
+    A single placeholder marks an omitted word/slot (e.g. 〜かどうか -> かどうか).
+    Multiple slots cannot be read naturally without an example sentence, so omit
+    their audio item instead of sending an unpronounceable template to TTS.
+    """
+    placeholder_count = reading.count("〜") + reading.count("～")
+    if placeholder_count > 1:
+        return None
+    spoken = reading.replace("〜", "").replace("～", "").strip()
+    # Slash in the source represents alternative readings (e.g. ふん/ぷん).
+    spoken = re.sub(r"[/／]", "、", spoken)
+    return spoken or None
+
+
 def to_katakana(value: str) -> str:
     return "".join(
         chr(ord(char) + 0x60) if "\u3041" <= char <= "\u3096" else char
@@ -217,11 +233,17 @@ def add_vocab(builder: ManifestBuilder) -> None:
             reading = str(vocab.get("kana") or "").strip()
             if not reading:
                 continue
+            spoken_text = prepare_vocab_pronunciation(reading)
+            if not spoken_text:
+                builder.warn(
+                    f"Skipped vocab audio for template with multiple placeholders: {reading!r}"
+                )
+                continue
             builder.add(
                 category="vocab",
                 source="data/kosakata.json",
                 output=f"audio/vocab/{safe_filename(reading)}.mp3",
-                text=reading,
+                text=spoken_text,
                 voice_role=DEFAULT_ROLE,
                 voice_role_source="fude-default",
             )
