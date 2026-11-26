@@ -24,7 +24,7 @@ Edit `scripts/audio/voice-presets.json` to map Fude roles to preset IDs returned
 
 The current MioTTS built-in Japanese presets are `jp_female` and `jp_male`. For now, all female age roles point to `jp_female`, and all male age roles point to `jp_male`. This keeps the Fude role labels ready, but **does not create distinct child, teen, adult, and elderly voices yet**. To make age distinctions real, register separate reference-audio presets and map each role to its own preset ID.
 
-The default Fude role remains `teen_female`, currently mapped to `jp_female`.
+The default Fude role remains `teen_female`, currently mapped to `jp_female`. The generator deliberately leaves LLM sampling parameters to the MioTTS server defaults, matching the working `generate_manifest.py` script supplied for comparison.
 
 ## 3. Preview a batch
 
