@@ -453,7 +453,11 @@ def main() -> int:
         if args.show_items or not args.execute:
             for job in jobs[: (len(jobs) if args.show_items else 12)]:
                 item = job["item"]
-                print(f"  [{item.get('category')}] {item.get('output')}  presets={','.join(sorted(set(job['preset_ids'])))}")
+                preview_text = item.get("text") or f"{len(item.get('segments') or [])} dialogue segments"
+                print(
+                    f"  [{item.get('category')}] {item.get('output')}  "
+                    f"text={preview_text!r}  presets={','.join(sorted(set(job['preset_ids'])))}"
+                )
             if len(jobs) > 12 and not args.show_items:
                 print(f"  ... {len(jobs) - 12} more (use --show-items to list them)")
 
