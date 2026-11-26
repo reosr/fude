@@ -216,7 +216,6 @@ export default function Baca() {
   const studyProgress = useStudyProgress();
   const { speed } = useAudioSpeed();
   const speedRef = useRef(speed);
-  speedRef.current = speed;
   const [selectedStory, setSelectedStory] = useState<any | null>(null);
   const [isStoryLoading, setIsStoryLoading] = useState(false);
   const [storyLoadError, setStoryLoadError] = useState(false);
@@ -239,6 +238,7 @@ export default function Baca() {
   }, []);
 
   useEffect(() => {
+    speedRef.current = speed;
     if (audioRef.current) {
       audioRef.current.playbackRate = speed;
       audioRef.current.preservesPitch = true;
