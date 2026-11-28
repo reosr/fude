@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:45:42+00:00",
+  "updated_at": "2026-11-28T11:46:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -326,7 +326,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T19:52:06+00:00",
+      "generated_at": "2026-11-28T11:45:52+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a03-l04.mp3": {
@@ -363,7 +363,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T19:52:13+00:00",
+      "generated_at": "2026-11-28T11:45:59+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a04-l01.mp3": {
@@ -399,7 +399,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T19:52:26+00:00",
+      "generated_at": "2026-11-28T11:46:10+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a04-l02.mp3": {
@@ -435,7 +435,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T19:52:33+00:00",
+      "generated_at": "2026-11-28T11:46:16+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a04-l03.mp3": {
@@ -471,7 +471,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T19:52:43+00:00",
+      "generated_at": "2026-11-28T11:46:24+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a04-l04.mp3": {
@@ -486,7 +486,7 @@
       ],
       "segments": [
         {
-          "duration_seconds": 1.35,
+          "duration_seconds": 1.46,
           "sample_rate": 24000,
           "voice_id": "adult_female_c",
           "http_status": 200,
@@ -497,8 +497,8 @@
           "audio_processing": {
             "role": "adult_female",
             "speed": 1.0,
-            "input_duration_seconds": 1.35,
-            "output_duration_seconds": 1.35,
+            "input_duration_seconds": 1.46,
+            "output_duration_seconds": 1.46,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -507,7 +507,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T19:52:50+00:00",
+      "generated_at": "2026-11-28T11:46:30+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a05-l01.mp3": {
@@ -529,7 +529,7 @@
           "input_text": "ユイさん、日本では何をしていますか？",
           "take": 1,
           "tts_text": "ユイさん、日本では何をしていますか？",
-          "synthesis_duration_seconds": 2.78,
+          "synthesis_duration_seconds": 2.6,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
@@ -543,7 +543,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T19:53:01+00:00",
+      "generated_at": "2026-11-28T11:46:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a05-l02.mp3": {
@@ -579,7 +579,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T19:53:09+00:00",
+      "generated_at": "2026-11-28T11:46:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a05-l03.mp3": {
