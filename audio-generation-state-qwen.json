@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:23:42+00:00",
+  "updated_at": "2026-11-28T13:24:46+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -20828,6 +20828,260 @@
         }
       ],
       "generated_at": "2026-11-28T13:23:42+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a01-l02.mp3": {
+      "fingerprint": "22d50ff9d587f623eb58cb61b587d37ea8658954f617e53da5f16bc3f2d1ebc2",
+      "output": "audio/irodori/irodori-elementary2-11-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.579,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "はい。試着室はこちらです。",
+          "take": 1,
+          "tts_text": "はい。試着室はこちらです。",
+          "synthesis_duration_seconds": 2.25,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.91,
+            "output_duration_seconds": 2.579,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:23:50+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a01-l03.mp3": {
+      "fingerprint": "6ecf0abdcc98b8527468bc92fcfd4113076908da5c14875241297c4fac0148d0",
+      "output": "audio/irodori/irodori-elementary2-11-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "ありがとうございます。少し大きすぎますね。",
+          "take": 1,
+          "tts_text": "ありがとうございます。少し大きすぎますね。",
+          "synthesis_duration_seconds": 2.79,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:24:00+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a01-l04.mp3": {
+      "fingerprint": "a8cf8794fbaa252829999ad82dfcde2685ed8fcc6c9604f63a7c323388697b4a",
+      "output": "audio/irodori/irodori-elementary2-11-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.008,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "では、もう少し小さいのをお持ちします。",
+          "take": 1,
+          "tts_text": "では、もう少し小さいのをお持ちします。",
+          "synthesis_duration_seconds": 2.45,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.008,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:24:10+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a02-l01.mp3": {
+      "fingerprint": "d7cff9849012a2054cbed02e68f0179435537e5b646c84611490a9539dbf3f2c",
+      "output": "audio/irodori/irodori-elementary2-11-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.27,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "ほかの色もありますか。",
+          "take": 1,
+          "tts_text": "ほかの色もありますか。",
+          "synthesis_duration_seconds": 1.22,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.27,
+            "output_duration_seconds": 2.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:24:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a02-l02.mp3": {
+      "fingerprint": "c27e1689a91f595f197d27bd511e45756a80d177e06736b11e01b362d454d10d",
+      "output": "audio/irodori/irodori-elementary2-11-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "はい。青とグレーがございます。",
+          "take": 1,
+          "tts_text": "はい。青とグレーがございます。",
+          "synthesis_duration_seconds": 2.0,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:24:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a02-l03.mp3": {
+      "fingerprint": "31b3386fe57f32b441ddd080de6ef97d5bad58748586bccac201a50cbd4b1941",
+      "output": "audio/irodori/irodori-elementary2-11-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.99,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "この青いの、見せてもらえますか。",
+          "take": 1,
+          "tts_text": "この青いの、見せてもらえますか。",
+          "synthesis_duration_seconds": 2.22,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.99,
+            "output_duration_seconds": 2.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:24:32+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a02-l04.mp3": {
+      "fingerprint": "12b0b32b0d09ee66a7102d66b0991f9cc858be87bac2aa13bee003b2548fc298",
+      "output": "audio/irodori/irodori-elementary2-11-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "もちろんです。こちらです。お気に入りでしたら、こちらにしますか。",
+          "take": 1,
+          "tts_text": "もちろんです。こちらです。お気に入りでしたら、こちらにしますか。",
+          "synthesis_duration_seconds": 4.63,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:24:46+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
