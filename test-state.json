@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:18:50+00:00",
+  "updated_at": "2026-11-28T11:21:39+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -35,7 +35,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-28T11:18:29+00:00",
+      "generated_at": "2026-11-28T11:21:17+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a01-l02.mp3": {
@@ -71,7 +71,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-28T11:18:41+00:00",
+      "generated_at": "2026-11-28T11:21:29+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a01-l03.mp3": {
@@ -107,7 +107,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-28T11:18:50+00:00",
+      "generated_at": "2026-11-28T11:21:39+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-02-a01-l01.mp3": {
