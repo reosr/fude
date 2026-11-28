@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:34:49+00:00",
+  "updated_at": "2026-11-28T14:35:22+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -32893,6 +32893,76 @@
         }
       ],
       "generated_at": "2026-11-28T14:34:49+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u015.mp3": {
+      "fingerprint": "fc14f49a51d979d1091f1df4169eb6f4283c60377b4e36c730e5455605d47386",
+      "output": "audio/irodori/irodori-preintermediate-11-u015.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "道で財布を拾ったんですが、交番に持って行ったほうがいいですか。",
+          "take": 1,
+          "tts_text": "道で財布を拾ったんですが、交番に持って行ったほうがいいですか。",
+          "synthesis_duration_seconds": 4.39,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:35:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u016.mp3": {
+      "fingerprint": "5982f8fd0a5b480eacd68c64d3e93d60136b41d57b10cfccb007f21faed0b729",
+      "output": "audio/irodori/irodori-preintermediate-11-u016.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "そうですね。自分で持ち帰らず、近くの交番に届けたほうがいいですよ。",
+          "take": 1,
+          "tts_text": "そうですね。自分で持ち帰らず、近くの交番に届けたほうがいいですよ。",
+          "synthesis_duration_seconds": 5.03,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.95,
+            "output_duration_seconds": 5.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:35:22+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
