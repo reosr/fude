@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:44:48+00:00",
+  "updated_at": "2026-11-28T12:45:42+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -13319,6 +13319,151 @@
         }
       ],
       "generated_at": "2026-11-28T12:44:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a04-l02.mp3": {
+      "fingerprint": "38a3dc2273eb5256227538461c7cbbaae7d0fde50e96a9b06b99b89b76a02f2c",
+      "output": "audio/irodori/irodori-elementary1-18-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.75,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "はい。友達からメッセージをたくさんもらったそうですね。",
+          "take": 1,
+          "tts_text": "はい。友達からメッセージをたくさんもらったそうですね。",
+          "synthesis_duration_seconds": 3.57,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:45:01+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a04-l03.mp3": {
+      "fingerprint": "22af09e5e31b949fb99c41702d95a6978ab3595c8c3baec35b52a21a07cc761a",
+      "output": "audio/irodori/irodori-elementary1-18-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "写真もありましたね。とても楽しそうでした。",
+          "take": 1,
+          "tts_text": "写真もありましたね。とても楽しそうでした。",
+          "synthesis_duration_seconds": 3.55,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:45:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a04-l04.mp3": {
+      "fingerprint": "8b077c00cef1ebd60b32b9b0c3c34b6d149378b6c7e4c38e5fe5aebaf30051d2",
+      "output": "audio/irodori/irodori-elementary1-18-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "私も「お誕生日おめでとう」とコメントしました。",
+          "take": 1,
+          "tts_text": "私も「お誕生日おめでとう」とコメントしました。",
+          "synthesis_duration_seconds": 3.45,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:45:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a05-l01.mp3": {
+      "fingerprint": "19ee16456e4e9246c9426d5849da3d1b7e8a7f66bd37cea3897aef31a39318fc",
+      "output": "audio/irodori/irodori-elementary1-18-a05-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.079,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "来週、アナさんが引っ越しますね。みんなでカードを書きませんか。",
+          "take": 1,
+          "tts_text": "来週、アナさんが引っ越しますね。みんなでカードを書きませんか。",
+          "synthesis_duration_seconds": 4.85,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.71,
+            "output_duration_seconds": 5.079,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:45:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
