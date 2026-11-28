@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:55:49+00:00",
+  "updated_at": "2026-11-28T12:56:49+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -15346,6 +15346,224 @@
         }
       ],
       "generated_at": "2026-11-28T12:55:49+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a03-l02.mp3": {
+      "fingerprint": "2f46c428d892483e8f6b332b48e7de02d82f0ce04e0e5467dbd6df9fcfe1e2ce",
+      "output": "audio/irodori/irodori-elementary2-03-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.153,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "テーブルでお願いします。",
+          "take": 1,
+          "tts_text": "テーブルでお願いします。",
+          "synthesis_duration_seconds": 1.34,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.43,
+            "output_duration_seconds": 2.153,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:55:55+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a03-l03.mp3": {
+      "fingerprint": "9c6aa4e422a2f98ed39452baba26814c9c8785e71241b15a454ceb00fd228dc2",
+      "output": "audio/irodori/irodori-elementary2-03-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "ご注文はお決まりですか。",
+          "take": 1,
+          "tts_text": "ご注文はお決まりですか。",
+          "synthesis_duration_seconds": 1.8,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:56:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a03-l04.mp3": {
+      "fingerprint": "6612ed40f670c33bc103f41eb8ab3504f4e2f56751afd0d6df2f57096ca14515",
+      "output": "audio/irodori/irodori-elementary2-03-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.008,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "人気があるのは、チキン定食ですか。",
+          "take": 1,
+          "tts_text": "人気があるのは、チキン定食ですか。",
+          "synthesis_duration_seconds": 2.51,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.008,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:56:14+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a04-l01.mp3": {
+      "fingerprint": "8a4f00aa820347fa6a66e1ef5780d54d81fe5245524affa923d76e4b0a8786e1",
+      "output": "audio/irodori/irodori-elementary2-03-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "あのう、予約をしたいんですけど。",
+          "take": 1,
+          "tts_text": "あのう、予約をしたいんですけど。",
+          "synthesis_duration_seconds": 2.33,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:56:24+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a04-l02.mp3": {
+      "fingerprint": "f7e2179e5e48e69e0c1412620a47d5c6a2622b6e434911b36e67826c918a902c",
+      "output": "audio/irodori/irodori-elementary2-03-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "ありがとうございます。お日にちは、お決まりですか。",
+          "take": 1,
+          "tts_text": "ありがとうございます。お日にちは、お決まりですか。",
+          "synthesis_duration_seconds": 2.99,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:56:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a04-l03.mp3": {
+      "fingerprint": "695e865c5d7c04873e4107aac2d5499302757b3d4fc44e0b8ed82dd067c5d063",
+      "output": "audio/irodori/irodori-elementary2-03-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.07,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "来週の土曜日です。4人で、午後6時はだいじょうぶですか。",
+          "take": 1,
+          "tts_text": "来週の土曜日です。4人で、午後6時はだいじょうぶですか。",
+          "synthesis_duration_seconds": 4.12,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.07,
+            "output_duration_seconds": 5.07,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:56:49+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
