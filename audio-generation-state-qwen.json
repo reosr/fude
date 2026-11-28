@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:50:42+00:00",
+  "updated_at": "2026-11-28T12:51:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -14369,6 +14369,223 @@
         }
       ],
       "generated_at": "2026-11-28T12:50:42+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a01-l03.mp3": {
+      "fingerprint": "8038bed4db72893a0728e3159cae394f4400795938e2479281aea31af136fe7e",
+      "output": "audio/irodori/irodori-elementary2-02-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.19,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "あの、髪が長くて、青いシャツを着ている人ですね。",
+          "take": 1,
+          "tts_text": "あの、髪が長くて、青いシャツを着ている人ですね。",
+          "synthesis_duration_seconds": 3.39,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:50:54+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a01-l04.mp3": {
+      "fingerprint": "3bc45c30765eaf9bc35de50c57ab1b2be21d4748000c2c3c457729615f8214d9",
+      "output": "audio/irodori/irodori-elementary2-02-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.436,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "はい、そうです。となりにいる人は、アオイさんの友だちです。",
+          "take": 1,
+          "tts_text": "はい、そうです。となりにいる人は、アオイさんの友だちです。",
+          "synthesis_duration_seconds": 3.9,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.99,
+            "output_duration_seconds": 4.436,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:51:08+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a02-l01.mp3": {
+      "fingerprint": "a202b6bb5e67243da1d7227dfa13da675934188f325dd6643b8f72e71d8f5bdb",
+      "output": "audio/irodori/irodori-elementary2-02-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "ケンさんは、どの人ですか。",
+          "take": 1,
+          "tts_text": "ケンさんは、どの人ですか。",
+          "synthesis_duration_seconds": 1.81,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:51:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a02-l02.mp3": {
+      "fingerprint": "f02a833a93baf492f07c79832c164d4801a6dcd277953f883c16163297ad0100",
+      "output": "audio/irodori/irodori-elementary2-02-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.59,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "黒いめがねをかけている人です。",
+          "take": 1,
+          "tts_text": "黒いめがねをかけている人です。",
+          "synthesis_duration_seconds": 1.7,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.59,
+            "output_duration_seconds": 2.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:51:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a02-l03.mp3": {
+      "fingerprint": "012787439e3d2454075d5425d5a9cb5aba79779d9708f3fc9e1d4f2cf21a0662",
+      "output": "audio/irodori/irodori-elementary2-02-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.67,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "白いシャツを着て、いすに座っている人ですか。",
+          "take": 1,
+          "tts_text": "白いシャツを着て、いすに座っている人ですか。",
+          "synthesis_duration_seconds": 3.17,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.67,
+            "output_duration_seconds": 4.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:51:36+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a02-l04.mp3": {
+      "fingerprint": "1a164a3f407925eee67eb771f4157ae789cc3ef149ebd7dd3ff046c61af05f4f",
+      "output": "audio/irodori/irodori-elementary2-02-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "そうです。わかりやすいですね。",
+          "take": 1,
+          "tts_text": "そうです。わかりやすいですね。",
+          "synthesis_duration_seconds": 1.85,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:51:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
