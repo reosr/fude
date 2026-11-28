@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:13:45+00:00",
+  "updated_at": "2026-11-28T14:14:40+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -29823,6 +29823,76 @@
         }
       ],
       "generated_at": "2026-11-28T14:13:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-06-u008.mp3": {
+      "fingerprint": "65cd4ed375f0bdc5fd0f639e2f0340251e2aa41db863f02da6f40073e07a1567",
+      "output": "audio/irodori/irodori-preintermediate-06-u008.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.91,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "スープを多めに作っておきます。忙しい日は、温めるだけで食べられますよ。",
+          "take": 2,
+          "tts_text": "スープを多めに作っておきます。忙しい日は、温めるだけで食べられますよ。",
+          "synthesis_duration_seconds": 5.37,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.91,
+            "output_duration_seconds": 6.91,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:14:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-06-u009.mp3": {
+      "fingerprint": "335015cf007c9e27ed40caea9342b2498badb5a0c4108bc969923102707b5a08",
+      "output": "audio/irodori/irodori-preintermediate-06-u009.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.91,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "毎日の食事で、何か気をつけていることはありますか。",
+          "take": 1,
+          "tts_text": "毎日の食事で、何か気をつけていることはありますか。",
+          "synthesis_duration_seconds": 3.81,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.91,
+            "output_duration_seconds": 4.91,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:14:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
