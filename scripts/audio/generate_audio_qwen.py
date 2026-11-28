@@ -51,6 +51,8 @@ MAX_RATIO = 1.5
 MIN_RATIO = 0.5
 MAX_INTERNAL_GAP = 0.15
 EDGE_PAD = 0.06
+TAIL_RATIO = 0.01   # quieter threshold so soft endings (e.g. rising "ka") survive
+TAIL_PAD = 0.15
 
 
 def utc_now() -> str:
@@ -161,7 +163,11 @@ def analyze_wav(wav_data: bytes) -> dict[str, Any] | None:
         else:
             run = 0
     start = max(0, int((first * win / rate - EDGE_PAD) * rate))
-    end = min(len(samples), int(((last + 1) * win / rate + EDGE_PAD) * rate))
+    tail_threshold = max(max(rms) * TAIL_RATIO, 15.0)
+    tail_last = last
+    while tail_last + 1 < len(rms) and rms[tail_last + 1] > tail_threshold:
+        tail_last += 1
+    end = min(len(samples), int(((tail_last + 1) * win / rate + TAIL_PAD) * rate))
     out = io.BytesIO()
     with wave.open(out, "wb") as writer:
         writer.setnchannels(1)
@@ -192,7 +198,7 @@ def cut_at_long_gap(wav_data: bytes, min_gap: float = 0.6) -> bytes:
     ]
     if not rms or max(rms) < 50:
         return wav_data
-    threshold = max(max(rms) * 0.06, 20.0)
+    threshold = max(max(rms) * TAIL_RATIO, 15.0)
     started = False
     run = 0
     for i, value in enumerate(rms):
@@ -202,7 +208,7 @@ def cut_at_long_gap(wav_data: bytes, min_gap: float = 0.6) -> bytes:
             continue
         run += 1
         if started and run * win / params.framerate >= min_gap:
-            end = (i - run + 1) * win + int(params.framerate * EDGE_PAD)
+            end = (i - run + 1) * win + int(params.framerate * TAIL_PAD)
             out = io.BytesIO()
             with wave.open(out, "wb") as writer:
                 writer.setparams(params)
@@ -272,9 +278,10 @@ def http_json(url: str, *, method: str = "GET", payload: dict[str, Any] | None =
     return parsed
 
 
-def request_qwen_wav(base_url: str, text: str, voice_id: str, timeout: float) -> tuple[bytes, dict[str, Any]]:
+def request_qwen_wav(base_url: str, text: str, voice_id: str, timeout: float,
+                     seed_offset: int = 0) -> tuple[bytes, dict[str, Any]]:
     """POST UTF-8 JSON to Qwen and return the raw WAV response bytes."""
-    payload = {"voice": voice_id, "input": text}
+    payload = {"voice": voice_id, "input": text, "seed_offset": seed_offset}
     body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     request = urllib.request.Request(
         f"{base_url}/v1/audio/speech",
@@ -554,7 +561,9 @@ def synthesize_take(base_url: str, text: str, voice_id: str, config: dict[str, A
     last_error: Exception | None = None
     for attempt in range(retries + 1):
         try:
-            wav_data, info = request_qwen_wav(base_url, spoken, voice_id, timeout)
+            # Different offset per take/retry, otherwise the server repeats itself.
+            offset = int(config.get("_seed_offset", 0)) + attempt * 100
+            wav_data, info = request_qwen_wav(base_url, spoken, voice_id, timeout, offset)
             diagnostics = {
                 "duration_seconds": info["duration_seconds"],
                 "sample_rate": info["sample_rate"],
@@ -595,6 +604,7 @@ def synthesize_wav(base_url: str, text: str, voice_id: str, config: dict[str, An
 
     rejects: list[str] = []
     for take in range(1, takes + 1):
+        config["_seed_offset"] = take - 1
         try:
             wav_data, info = synthesize_take(
                 base_url, tts_text, voice_id, config, timeout, retries, max_text_length
@@ -658,7 +668,7 @@ def postprocess_audio_wav(wav_data: bytes, ffmpeg: str, role: str,
         input_duration = handle.getnframes() / float(handle.getframerate())
 
     filters: list[str] = []
-    if silence.get("enabled", True):
+    if silence.get("enabled", False):
         start_duration = float(silence.get("start_duration", 0.05))
         start_silence = float(silence.get("start_silence", 0.05))
         stop_duration = float(silence.get("stop_duration", 0.25))
