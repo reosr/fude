@@ -3,7 +3,7 @@
   "mode": "random_non_repeating",
   "scope": "conversation",
   "line_suffix_regex": "[-_]l\\d+$",
-  "updated_at": "2026-11-28T08:12:28+00:00",
+  "updated_at": "2026-11-28T08:34:47+00:00",
   "groups": {
     "audio/irodori/irodori-elementary1-01-a01": {
       "teen_female": "teen_female_c",
