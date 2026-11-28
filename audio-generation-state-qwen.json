@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:58:36+00:00",
+  "updated_at": "2026-11-28T11:59:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -3273,19 +3273,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 4.11,
+          "duration_seconds": 4.59,
           "sample_rate": 24000,
           "voice_id": "adult_male_b",
           "http_status": 200,
           "input_text": "駅から遠いけど、静かで、きれいですよ。",
           "take": 1,
           "tts_text": "駅から遠いけど、静かで、きれいですよ。",
-          "synthesis_duration_seconds": 3.21,
+          "synthesis_duration_seconds": 3.33,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 4.11,
-            "output_duration_seconds": 4.11,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.59,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -3294,7 +3294,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:05:36+00:00",
+      "generated_at": "2026-11-28T11:58:49+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-05-a03-l01.mp3": {
@@ -3331,7 +3331,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:05:44+00:00",
+      "generated_at": "2026-11-28T11:58:58+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-05-a03-l02.mp3": {
@@ -3367,7 +3367,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:05:57+00:00",
+      "generated_at": "2026-11-28T11:59:11+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-05-a03-l03.mp3": {
@@ -3382,7 +3382,7 @@
       ],
       "segments": [
         {
-          "duration_seconds": 0.944,
+          "duration_seconds": 1.061,
           "sample_rate": 24000,
           "voice_id": "teen_male_c",
           "http_status": 200,
@@ -3393,8 +3393,8 @@
           "audio_processing": {
             "role": "teen_male",
             "speed": 1.12,
-            "input_duration_seconds": 1.04,
-            "output_duration_seconds": 0.944,
+            "input_duration_seconds": 1.17,
+            "output_duration_seconds": 1.061,
             "filters": [
               "atempo=1.120",
               "loudnorm=I=-16:TP=-1.5:LRA=11",
@@ -3404,7 +3404,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:06:03+00:00",
+      "generated_at": "2026-11-28T11:59:17+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-05-a03-l04.mp3": {
@@ -3440,7 +3440,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:06:12+00:00",
+      "generated_at": "2026-11-28T11:59:26+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-05-a04-l02.mp3": {
@@ -3476,7 +3476,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:06:40+00:00",
+      "generated_at": "2026-11-28T11:59:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-05-a04-l03.mp3": {
@@ -10705,6 +10705,42 @@
         }
       ],
       "generated_at": "2026-11-27T20:38:02+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-05-a04-l01.mp3": {
+      "fingerprint": "bd6d9a42421423a7343adb28c3953f2502484047d13e76ee3e4806c286699aec",
+      "output": "audio/irodori/irodori-elementary1-05-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.67,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "この町の地図を見ていますか。",
+          "take": 2,
+          "tts_text": "この町の地図を見ていますか。",
+          "synthesis_duration_seconds": 1.6,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.67,
+            "output_duration_seconds": 2.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T11:59:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
