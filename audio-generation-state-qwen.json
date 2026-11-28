@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:51:44+00:00",
+  "updated_at": "2026-11-28T12:52:34+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -14586,6 +14586,187 @@
         }
       ],
       "generated_at": "2026-11-28T12:51:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a03-l01.mp3": {
+      "fingerprint": "f89e11cf4a8d46917462349a3dd2eb2e30a4302ebfe5b37043edfc2dbdc1248d",
+      "output": "audio/irodori/irodori-elementary2-02-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "この写真の人は、どんな人ですか。",
+          "take": 1,
+          "tts_text": "この写真の人は、どんな人ですか。",
+          "synthesis_duration_seconds": 2.33,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:51:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a03-l02.mp3": {
+      "fingerprint": "31b74b20431ea3f2db7f191ef6381a7884ae6f141f08cd29d353f5db8f360eb8",
+      "output": "audio/irodori/irodori-elementary2-02-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.63,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "最初は、まじめそうな人だと思いました。",
+          "take": 1,
+          "tts_text": "最初は、まじめそうな人だと思いました。",
+          "synthesis_duration_seconds": 2.54,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.63,
+            "output_duration_seconds": 3.63,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:52:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a03-l03.mp3": {
+      "fingerprint": "d57a3ce4e3ef3677e31aabe377a3ff02cb8712e28d495a38ab1d230bc28112f9",
+      "output": "audio/irodori/irodori-elementary2-02-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.11,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "本当はどうですか。",
+          "take": 1,
+          "tts_text": "本当はどうですか。",
+          "synthesis_duration_seconds": 1.15,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.11,
+            "output_duration_seconds": 2.11,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:52:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a03-l04.mp3": {
+      "fingerprint": "bde0ec19dcec08f123b1aebefb6571bea26f7fe8c712b083592a79a8fb6129df",
+      "output": "audio/irodori/irodori-elementary2-02-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "とてもやさしくて、おもしろい人ですよ。話すと楽しいです。",
+          "take": 1,
+          "tts_text": "とてもやさしくて、おもしろい人ですよ。話すと楽しいです。",
+          "synthesis_duration_seconds": 4.56,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.71,
+            "output_duration_seconds": 5.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:52:25+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a04-l01.mp3": {
+      "fingerprint": "2792c4a54b79df69d06bf77e20e69b91d1df00f87ed22a445fb95ea52562e042",
+      "output": "audio/irodori/irodori-elementary2-02-a04-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.866,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "好きな俳優がいますか。",
+          "take": 1,
+          "tts_text": "好きな俳優がいますか。",
+          "synthesis_duration_seconds": 1.32,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 2.866,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:52:34+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
