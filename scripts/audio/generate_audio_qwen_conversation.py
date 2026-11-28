@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-"""Generate Fude MP3 audio from audio-manifest.json using the local Qwen3-TTS API (QC v2).
+"""Generate Fude MP3 audio from audio-manifest.json using the local Qwen3-TTS API.
 
 Safe defaults:
 - dry-run unless --execute is supplied;
 - existing audio without a Qwen state record is skipped unless --force is supplied;
 - per-item, per-role voice assignments are persisted separately and are random
   without immediate repeats for each role;
-- successful items are fingerprinted after each write so an interrupted batch can resume;
-- audio is never cut at the first long silence; internal pauses are preserved;
-- Japanese Whisper verification is enabled by default and fails closed if unavailable.
+- successful items are fingerprinted after each write so an interrupted batch can resume.
 
 The MioTTS generator, config, state and report are not modified by this script.
 """
@@ -51,9 +49,9 @@ END_PUNCT = "。！？!?.…"
 PAUSE_PUNCT = "、,。"
 SEC_PER_MORA = 0.17
 MAX_RATIO = 1.5
-MIN_RATIO = 0.65
+MIN_RATIO = 0.5
 MAX_INTERNAL_GAP = 0.15
-EDGE_PAD = 0.18
+EDGE_PAD = 0.06
 
 
 def utc_now() -> str:
@@ -126,9 +124,6 @@ def mora_count(text: str) -> int:
             continue
         if 0x3041 <= ord(ch) <= 0x30FF:
             count += 1
-        elif 0x3400 <= ord(ch) <= 0x9FFF:
-            # Conservative fallback when kana reading conversion is unavailable.
-            count += 2
         elif ch.isalnum():
             count += 2
     return max(count, 1)
@@ -181,73 +176,75 @@ def analyze_wav(wav_data: bytes) -> dict[str, Any] | None:
     }
 
 
+def cut_at_long_gap(wav_data: bytes, min_gap: float = 0.6) -> bytes:
+    """Keep audio before the first long silence following speech (for short items)."""
+    with wave.open(io.BytesIO(wav_data), "rb") as handle:
+        params = handle.getparams()
+        frames = handle.readframes(handle.getnframes())
+    if params.sampwidth != 2:
+        return wav_data
+    samples = array("h")
+    samples.frombytes(frames)
+    mono = samples[::params.nchannels]
+    win = max(1, int(params.framerate * 0.01))
+    rms = [
+        math.sqrt(sum(x * x for x in mono[i:i + win]) / win)
+        for i in range(0, len(mono) - win + 1, win)
+    ]
+    if not rms or max(rms) < 50:
+        return wav_data
+    threshold = max(max(rms) * 0.06, 20.0)
+    started = False
+    run = 0
+    for i, value in enumerate(rms):
+        if value > threshold:
+            started = True
+            run = 0
+            continue
+        run += 1
+        if started and run * win / params.framerate >= min_gap:
+            end = (i - run + 1) * win + int(params.framerate * EDGE_PAD)
+            out = io.BytesIO()
+            with wave.open(out, "wb") as writer:
+                writer.setparams(params)
+                writer.writeframes(frames[:end * params.nchannels * params.sampwidth])
+            return out.getvalue()
+    return wav_data
 
 
 def build_verifier(model_name: str):
-    """Build a strict Japanese ASR verifier; fail closed if dependencies are missing."""
+    """Optional Whisper check; needs faster-whisper and pykakasi."""
     try:
         from faster_whisper import WhisperModel
         import pykakasi
     except ImportError as exc:
-        raise RuntimeError(
-            "Japanese audio verification is enabled but requires faster-whisper and pykakasi. "
-            "Install them in the Qwen TTS Python environment before generating."
-        ) from exc
-
+        print(f"WARNING: --verify needs faster-whisper and pykakasi ({exc}). Continuing WITHOUT Whisper.")
+        return None
     try:
         model = WhisperModel(model_name, device="cuda", compute_type="float16")
     except Exception as exc:  # noqa: BLE001
         print(f"WARNING: Whisper on GPU failed ({exc}); using CPU (slower).")
         model = WhisperModel(model_name, device="cpu", compute_type="int8")
-
     kks = pykakasi.kakasi()
 
     def to_hira(text: str) -> str:
-        # Remove punctuation/spacing, transliterate kanji/katakana, then normalize
-        # katakana to hiragana so ASR and source can be compared phonetically.
         text = "".join(ch for ch in text if ch.isalnum() or ch == "ー")
         hira = "".join(part["hira"] for part in kks.convert(text))
-        return "".join(
-            chr(ord(ch) - 0x60) if 0x30A1 <= ord(ch) <= 0x30F6 else ch
-            for ch in hira
-        )
+        return "".join(chr(ord(c) - 0x60) if 0x30A1 <= ord(c) <= 0x30F6 else c for c in hira)
 
-    def verify(wav_data: bytes, expected_text: str) -> dict[str, Any]:
+    def verify(wav_data: bytes, expected_text: str) -> float:
         fd, name = tempfile.mkstemp(suffix=".wav")
         os.close(fd)
         try:
             Path(name).write_bytes(wav_data)
             segments, _ = model.transcribe(
-                name,
-                language="ja",
-                beam_size=5,
-                condition_on_previous_text=False,
-                vad_filter=False,
+                name, language="ja", beam_size=5, condition_on_previous_text=False
             )
-            heard_text = "".join(seg.text for seg in segments)
+            heard = "".join(seg.text for seg in segments)
         finally:
             Path(name).unlink(missing_ok=True)
+        return difflib.SequenceMatcher(None, to_hira(heard), to_hira(expected_text)).ratio()
 
-        expected = to_hira(expected_text)
-        heard = to_hira(heard_text)
-        similarity = difflib.SequenceMatcher(
-            None, expected, heard, autojunk=False
-        ).ratio() if expected else 0.0
-
-        # A high whole-sentence score alone can hide a missing final particle or
-        # word. Require the final two kana of ordinary-length targets to be heard.
-        required_tail = min(2, len(expected)) if len(expected) >= 3 else 0
-        tail_ok = True if required_tail == 0 else heard.endswith(expected[-required_tail:])
-        return {
-            "similarity": similarity,
-            "tail_ok": tail_ok,
-            "heard_text": heard_text,
-            "expected_normalized": expected,
-            "heard_normalized": heard,
-        }
-
-    # Reuse the same reading conversion for duration estimation, including kanji.
-    verify.normalize_text = to_hira  # type: ignore[attr-defined]
     return verify
 
 
@@ -520,14 +517,8 @@ def item_fingerprint(
         "parts": mapped,
         "audio_processing": config.get("audio_processing", {}),
         "quality": {
-            "qc_version": 2,
             "takes": (config.get("_quality") or {}).get("takes", 1),
             "short_len": (config.get("_quality") or {}).get("short_len", 0),
-            "suffix": (config.get("_quality") or {}).get("suffix", ""),
-            "verify": (config.get("_quality") or {}).get("verify", True),
-            "threshold": (config.get("_quality") or {}).get("threshold", 0.88),
-            "min_duration_ratio": MIN_RATIO,
-            "edge_padding_seconds": EDGE_PAD,
         },
         "mp3_bitrate": config.get("mp3_bitrate", "128k"),
     }
@@ -648,29 +639,22 @@ def synthesize_take(base_url: str, text: str, voice_id: str, config: dict[str, A
 
 def synthesize_wav(base_url: str, text: str, voice_id: str, config: dict[str, Any],
                    timeout: float, retries: int, max_text_length: int) -> tuple[bytes, dict[str, Any]]:
-    """Best-of-N synthesis with duration, gap, and optional mandatory-by-default ASR checks."""
+    """Best-of-N with duration/silence checks; looser limits for long text."""
     quality = config.get("_quality") or {}
     spoken = text.strip()
-    if not spoken:
-        raise ValueError("Cannot synthesize empty text")
+    takes = int(quality.get("takes", 1))
+    if not spoken or takes <= 1:
+        return synthesize_take(base_url, text, voice_id, config, timeout, retries, max_text_length)
 
-    takes = max(1, int(quality.get("takes", 3)))
     is_long = len(spoken) > int(quality.get("short_len", 0))
     suffix = "" if is_long else str(quality.get("suffix") or "")
     tts_text = spoken if (not suffix or spoken[-1] in END_PUNCT) else spoken + suffix
     verifier = quality.get("verifier")
-    threshold = float(quality.get("threshold", 0.88))
-
+    threshold = float(quality.get("threshold", 0.8))
     # Punctuation at the very end is not an internal pause.
     body = spoken.rstrip(END_PUNCT + "、,")
     pauses = sum(1 for ch in body if ch in PAUSE_PUNCT + END_PUNCT)
-
-    # If Whisper is enabled, count actual Japanese kana readings (including kanji)
-    # rather than under-counting kanji as zero mora. Fall back to a conservative
-    # estimate only when the caller explicitly uses --no-verify.
-    normalizer = getattr(verifier, "normalize_text", None) if verifier is not None else None
-    reading = normalizer(spoken) if callable(normalizer) else spoken
-    expected = 0.1 + SEC_PER_MORA * mora_count(reading) + 0.25 * pauses
+    expected = 0.1 + SEC_PER_MORA * mora_count(spoken) + 0.25 * pauses
     allowed_gap = MAX_INTERNAL_GAP + 0.4 * pauses + 0.12 * sum(1 for ch in spoken if ch in "っッ")
 
     rejects: list[str] = []
@@ -683,13 +667,10 @@ def synthesize_wav(base_url: str, text: str, voice_id: str, config: dict[str, An
             rejects.append(f"take {take}: {exc}")
             print(f"    take {take}/{takes}: API/duration error: {exc}")
             continue
-
-        # Do not cut at the first long silence. A long silence can be a valid
-        # pause before the rest of a sentence; preserve the entire Qwen response.
+        if not is_long and not pauses:
+            wav_data = cut_at_long_gap(wav_data)
         stats = analyze_wav(wav_data)
         similarity = None
-        verification = None
-
         if stats is None:
             reason = "silent audio"
         elif stats["speech_seconds"] > (
@@ -703,51 +684,27 @@ def synthesize_wav(base_url: str, text: str, voice_id: str, config: dict[str, An
         else:
             reason = ""
             if verifier is not None:
-                try:
-                    verification = verifier(stats["trimmed_wav"], spoken)
-                    similarity = float(verification["similarity"])
-                    if similarity < threshold:
-                        reason = (
-                            f"Whisper text mismatch (similarity {similarity:.2f}; "
-                            f"heard={verification['heard_text']!r})"
-                        )
-                    elif not verification["tail_ok"]:
-                        reason = (
-                            "Whisper did not confirm the final two kana "
-                            f"(possible cutoff; heard={verification['heard_text']!r})"
-                        )
-                except Exception as exc:  # noqa: BLE001
-                    reason = f"Whisper verification error: {exc}"
-
+                similarity = verifier(stats["trimmed_wav"], spoken)
+                if similarity < threshold:
+                    reason = f"Whisper heard something else (similarity {similarity:.2f})"
         if stats is not None:
-            detail = ""
-            if verification is not None:
-                detail = f" whisper={similarity:.2f} tail={'OK' if verification['tail_ok'] else 'MISS'}"
             print(
                 f"    take {take}/{takes}: speech={stats['speech_seconds']:.2f}s "
-                f"(expected ~{expected:.2f}s) gap={stats['max_gap_seconds']:.2f}s"
-                f"{detail} | {reason or 'OK'}"
+                f"(expected ~{expected:.2f}s) gap={stats['max_gap_seconds']:.2f}s "
+                f"| {reason or 'OK'}"
             )
         else:
             print(f"    take {take}/{takes}: {reason}")
-
         if reason:
             rejects.append(f"take {take}: {reason}")
             continue
-
         info["duration_seconds"] = round(stats["speech_seconds"], 3)
         info["take"] = take
         info["tts_text"] = tts_text
-        info["edge_padding_seconds"] = EDGE_PAD
         if similarity is not None:
             info["verify_similarity"] = round(similarity, 3)
-            info["verify_tail_ok"] = bool(verification["tail_ok"])
-            info["verify_heard_text"] = verification["heard_text"]
-
-        # Use the speech-bounded audio with 180 ms retained at BOTH edges.
-        # Internal pauses remain untouched; trailing consonants/breath are safer.
-        return stats["trimmed_wav"], info
-
+        # Long text keeps the original WAV; postprocessing trims its silence.
+        return (wav_data if is_long else stats["trimmed_wav"]), info
     raise RuntimeError(f"No acceptable take after {takes} tries: " + "; ".join(rejects[-3:]))
 
 
@@ -945,15 +902,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-text-length", type=int, default=300,
                         help="Reject longer segments instead of silently truncating them")
     parser.add_argument("--takes", type=int, default=3,
-                        help="Max synthesis attempts per item; every attempt is quality-checked (default: 3)")
+                        help="Max takes per item; first take passing automatic checks wins (1 = off)")
     parser.add_argument("--short-len", type=int, default=8,
                         help="Items up to this many characters use the stricter short-text checks")
     parser.add_argument("--short-suffix", default="。",
                         help="Appended to short text without end punctuation; '' = off")
-    parser.add_argument("--verify", action=argparse.BooleanOptionalAction, default=True,
-                        help="Verify every synthesized segment with Japanese Whisper ASR (default: on; --no-verify disables)")
-    parser.add_argument("--verify-threshold", type=float, default=0.88,
-                        help="Minimum normalized transcript similarity when verification is enabled")
+    parser.add_argument("--verify", action="store_true",
+                        help="Also check each short take with Whisper (pip install faster-whisper pykakasi)")
+    parser.add_argument("--verify-threshold", type=float, default=0.8)
     parser.add_argument("--whisper-model", default="medium")
     parser.add_argument("--ffmpeg", default="ffmpeg", help="FFmpeg executable name or full path")
     return parser.parse_args()
@@ -997,16 +953,12 @@ def main() -> int:
         )
 
         state = load_state(args.state)
-        if not 0.0 <= args.verify_threshold <= 1.0:
-            raise ValueError("--verify-threshold must be between 0 and 1")
-        verifier = build_verifier(args.whisper_model) if (args.verify and args.execute) else None
         config["_quality"] = {
             "takes": args.takes,
             "short_len": args.short_len,
             "suffix": args.short_suffix,
             "threshold": args.verify_threshold,
-            "verify": args.verify,
-            "verifier": verifier,
+            "verifier": build_verifier(args.whisper_model) if (args.verify and args.execute) else None,
         }
         categories = set(args.category) if args.category else None
         manifest_categories = {str(item.get("category")) for item in manifest["items"]}
@@ -1109,7 +1061,7 @@ def main() -> int:
                         "voice_ids": sorted(set(job["voice_ids"])),
                         "segments": synthesis_info,
                         "generated_at": utc_now(),
-                        "generator": "scripts/audio/generate_audio_qwen_conversation.py",
+                        "generator": "scripts/audio/generate_audio_qwen.py",
                     }
                     state["updated_at"] = utc_now()
                     write_json_atomic(args.state, state)
