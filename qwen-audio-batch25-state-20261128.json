@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T08:15:47+00:00",
+  "updated_at": "2026-11-28T08:16:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -724,6 +724,188 @@
         }
       ],
       "generated_at": "2026-11-28T08:15:47+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-02-a01-l02.mp3": {
+      "fingerprint": "6dd485b581ee0ef593e66b7d1c793149215d42c175b00f1a764a57bd23209229",
+      "output": "audio/irodori/irodori-elementary1-02-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.08,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "音楽を聞くことです。よく電車で聞きます。",
+          "take": 1,
+          "tts_text": "音楽を聞くことです。よく電車で聞きます。",
+          "synthesis_duration_seconds": 2.69,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.08,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T08:15:58+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-02-a01-l03.mp3": {
+      "fingerprint": "71537bbec56f97957582d4fab2d6ee6cf924412973e4d82aa23a202975bbfb8e",
+      "output": "audio/irodori/irodori-elementary1-02-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.47,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "そうですか。私も音楽が好きです。",
+          "take": 1,
+          "tts_text": "そうですか。私も音楽が好きです。",
+          "synthesis_duration_seconds": 2.94,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.47,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T08:16:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-02-a01-l04.mp3": {
+      "fingerprint": "b338c93553e66c6064d12e002c6a331aab570c537efb7501adc21d5698d68136",
+      "output": "audio/irodori/irodori-elementary1-02-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.222,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "どんな音楽が好きですか？",
+          "take": 1,
+          "tts_text": "どんな音楽が好きですか？",
+          "synthesis_duration_seconds": 1.43,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.51,
+            "output_duration_seconds": 2.222,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T08:16:17+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-02-a02-l01.mp3": {
+      "fingerprint": "8c6bb083bd3745f2d09394d9850e29aa8695200bdf34163cf423ce6549a992ac",
+      "output": "audio/irodori/irodori-elementary1-02-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "ケンジさんは、休みの日に何をするのが好きですか？",
+          "take": 1,
+          "tts_text": "ケンジさんは、休みの日に何をするのが好きですか？",
+          "synthesis_duration_seconds": 3.54,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T08:16:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-02-a02-l02.mp3": {
+      "fingerprint": "9463c1446736c871a60a8edde12a12633d3135cbbca667e3130e8672dcf94921",
+      "output": "audio/irodori/irodori-elementary1-02-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "家で本を読むのが好きです。",
+          "take": 1,
+          "tts_text": "家で本を読むのが好きです。",
+          "synthesis_duration_seconds": 2.04,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T08:16:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
