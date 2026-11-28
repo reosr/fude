@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:52:41+00:00",
+  "updated_at": "2026-11-28T11:53:45+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -1897,19 +1897,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.87,
+          "duration_seconds": 3.79,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "はい。北のほうでは、雪がたくさん降ります。",
           "take": 1,
           "tts_text": "はい。北のほうでは、雪がたくさん降ります。",
-          "synthesis_duration_seconds": 3.0,
+          "synthesis_duration_seconds": 2.91,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.87,
-            "output_duration_seconds": 3.87,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -1918,7 +1918,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T19:59:44+00:00",
+      "generated_at": "2026-11-28T11:52:51+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a04-l01.mp3": {
@@ -1954,7 +1954,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T19:59:54+00:00",
+      "generated_at": "2026-11-28T11:53:00+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a04-l02.mp3": {
@@ -1990,7 +1990,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:00:04+00:00",
+      "generated_at": "2026-11-28T11:53:11+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a04-l03.mp3": {
@@ -2026,7 +2026,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:00:13+00:00",
+      "generated_at": "2026-11-28T11:53:19+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a04-l04.mp3": {
@@ -2062,7 +2062,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:00:29+00:00",
+      "generated_at": "2026-11-28T11:53:36+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a05-l01.mp3": {
@@ -2077,19 +2077,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.31,
+          "duration_seconds": 3.39,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "ユイさんは、どの季節がいちばん好きですか？",
           "take": 1,
           "tts_text": "ユイさんは、どの季節がいちばん好きですか？",
-          "synthesis_duration_seconds": 2.52,
+          "synthesis_duration_seconds": 2.65,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.31,
-            "output_duration_seconds": 3.31,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -2098,7 +2098,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:00:38+00:00",
+      "generated_at": "2026-11-28T11:53:45+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a05-l02.mp3": {
