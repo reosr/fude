@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:01:48+00:00",
+  "updated_at": "2026-11-28T12:02:41+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -3984,7 +3984,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:08:48+00:00",
+      "generated_at": "2026-11-28T12:01:59+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a02-l04.mp3": {
@@ -3999,19 +3999,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.87,
+          "duration_seconds": 2.75,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "駅を出て、右に曲がってください。",
           "take": 1,
           "tts_text": "駅を出て、右に曲がってください。",
-          "synthesis_duration_seconds": 2.11,
+          "synthesis_duration_seconds": 2.03,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.87,
-            "output_duration_seconds": 3.87,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -4020,7 +4020,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:08:59+00:00",
+      "generated_at": "2026-11-28T12:02:07+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a03-l01.mp3": {
@@ -4056,7 +4056,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:09:06+00:00",
+      "generated_at": "2026-11-28T12:02:14+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a03-l02.mp3": {
@@ -4071,19 +4071,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.71,
+          "duration_seconds": 3.63,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "まっすぐ行って、銀行の前を通ってください。",
           "take": 1,
           "tts_text": "まっすぐ行って、銀行の前を通ってください。",
-          "synthesis_duration_seconds": 2.5,
+          "synthesis_duration_seconds": 2.83,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.71,
-            "output_duration_seconds": 3.71,
+            "input_duration_seconds": 3.63,
+            "output_duration_seconds": 3.63,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -4092,7 +4092,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:09:16+00:00",
+      "generated_at": "2026-11-28T12:02:24+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a03-l03.mp3": {
@@ -4128,7 +4128,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:09:24+00:00",
+      "generated_at": "2026-11-28T12:02:32+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a03-l04.mp3": {
@@ -4143,19 +4143,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.71,
+          "duration_seconds": 3.07,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "二つ目の信号の左側にありますよ。",
           "take": 1,
           "tts_text": "二つ目の信号の左側にありますよ。",
-          "synthesis_duration_seconds": 2.56,
+          "synthesis_duration_seconds": 2.14,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.71,
-            "output_duration_seconds": 3.71,
+            "input_duration_seconds": 3.07,
+            "output_duration_seconds": 3.07,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -4164,7 +4164,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:09:34+00:00",
+      "generated_at": "2026-11-28T12:02:41+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a04-l01.mp3": {
