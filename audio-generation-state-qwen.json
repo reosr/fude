@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:57:47+00:00",
+  "updated_at": "2026-11-28T13:58:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -27063,6 +27063,187 @@
         }
       ],
       "generated_at": "2026-11-28T13:57:47+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a04-l02.mp3": {
+      "fingerprint": "217552e8da50b1b9696be51393cf6a1a100a321720e7be3163bb52ca9796f54f",
+      "output": "audio/irodori/irodori-preintermediate-01-a04-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "午後二時からですよ。入口の前で待ち合わせましょう。",
+          "take": 1,
+          "tts_text": "午後二時からですよ。入口の前で待ち合わせましょう。",
+          "synthesis_duration_seconds": 3.65,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:58:00+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a04-l03.mp3": {
+      "fingerprint": "f3a6319aa9f6f9c84d2dc5f1380cd8803f4f9ee28790af89a56666a4f56d2f51",
+      "output": "audio/irodori/irodori-preintermediate-01-a04-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.222,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "わかりました。日曜日は、家族と出かけないことになりました。",
+          "take": 1,
+          "tts_text": "わかりました。日曜日は、家族と出かけないことになりました。",
+          "synthesis_duration_seconds": 3.89,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.222,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:58:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a04-l04.mp3": {
+      "fingerprint": "76e9aba42c368032c935fb92549cf87b381606780194b41d06076b2f325670b2",
+      "output": "audio/irodori/irodori-preintermediate-01-a04-l04.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "それなら、いっしょに行けますね。",
+          "take": 1,
+          "tts_text": "それなら、いっしょに行けますね。",
+          "synthesis_duration_seconds": 1.93,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 3.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:58:22+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a05-l01.mp3": {
+      "fingerprint": "6df638ba6a57dba6f347d0b9f16378661a33d417f6688091e62f8c6b61a3c383",
+      "output": "audio/irodori/irodori-preintermediate-01-a05-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "土曜日のイベントですが、行けなくなってしまいました。",
+          "take": 1,
+          "tts_text": "土曜日のイベントですが、行けなくなってしまいました。",
+          "synthesis_duration_seconds": 3.03,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:58:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a05-l02.mp3": {
+      "fingerprint": "0c4e5969144e40bdb5169145caee33cf2c9c2b78a96c0faf92879ef74122e4e2",
+      "output": "audio/irodori/irodori-preintermediate-01-a05-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "そうなんですか。何か予定ができたんですか。",
+          "take": 1,
+          "tts_text": "そうなんですか。何か予定ができたんですか。",
+          "synthesis_duration_seconds": 3.25,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:58:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
