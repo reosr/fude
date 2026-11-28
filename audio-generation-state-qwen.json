@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:06:46+00:00",
+  "updated_at": "2026-11-28T13:07:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -17598,6 +17598,222 @@
         }
       ],
       "generated_at": "2026-11-28T13:06:46+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a03-l04.mp3": {
+      "fingerprint": "171bd5835fde7de242ab5abec723d24ff0a7c92dd95731a75465279f1ee02578",
+      "output": "audio/irodori/irodori-elementary2-06-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "ありがとうございます。乗り換えは必要ですか。",
+          "take": 1,
+          "tts_text": "ありがとうございます。乗り換えは必要ですか。",
+          "synthesis_duration_seconds": 3.25,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:06:57+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a04-l01.mp3": {
+      "fingerprint": "9d29a25689541c85b2827e2078dd164b3c57be2fa05283d9c5c5eeba2398644a",
+      "output": "audio/irodori/irodori-elementary2-06-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.91,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "週末の旅行はどうでしたか。",
+          "take": 1,
+          "tts_text": "週末の旅行はどうでしたか。",
+          "synthesis_duration_seconds": 1.86,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.91,
+            "output_duration_seconds": 2.91,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:07:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a04-l02.mp3": {
+      "fingerprint": "8812fbd15ce561e6b2098ec0bf971b48f9ec7928cf9ab9d7006d374049e08b2a",
+      "output": "audio/irodori/irodori-elementary2-06-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "海で泳げたし、きれいな夕日も見られたし、とても楽しかったです。",
+          "take": 1,
+          "tts_text": "海で泳げたし、きれいな夕日も見られたし、とても楽しかったです。",
+          "synthesis_duration_seconds": 4.06,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:07:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a04-l03.mp3": {
+      "fingerprint": "c851a8b5d387a8e8cfaf4cdc9669782bbf410352b04255cdddb01c05e72eced5",
+      "output": "audio/irodori/irodori-elementary2-06-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "いいですね。旅行で一番よかったことは何ですか。",
+          "take": 1,
+          "tts_text": "いいですね。旅行で一番よかったことは何ですか。",
+          "synthesis_duration_seconds": 3.16,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:07:30+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a04-l04.mp3": {
+      "fingerprint": "006e51f141e91e85078a3c629941dbadf6d34282dc6087791f1f47384c01bee2",
+      "output": "audio/irodori/irodori-elementary2-06-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.99,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "友だちとゆっくり話せたことです。",
+          "take": 1,
+          "tts_text": "友だちとゆっくり話せたことです。",
+          "synthesis_duration_seconds": 1.81,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.99,
+            "output_duration_seconds": 2.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:07:38+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a05-l01.mp3": {
+      "fingerprint": "4272c9859545c63d1d02266ab4f233d8e6e60989e03897c0c0c1974bc8a1097c",
+      "output": "audio/irodori/irodori-elementary2-06-a05-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "旅行の写真を投稿しましたか。",
+          "take": 1,
+          "tts_text": "旅行の写真を投稿しましたか。",
+          "synthesis_duration_seconds": 1.95,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:07:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
