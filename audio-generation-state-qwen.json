@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:26:45+00:00",
+  "updated_at": "2026-11-28T13:27:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -21481,6 +21481,189 @@
         }
       ],
       "generated_at": "2026-11-28T13:26:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-11-a05-l04.mp3": {
+      "fingerprint": "4812e230b58b225e5e2b5fc3cc7a883981c004472acc0da0811eda06d52ba3b6",
+      "output": "audio/irodori/irodori-elementary2-11-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.865,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "一階です。今日から日曜日までだそうですよ。",
+          "take": 1,
+          "tts_text": "一階です。今日から日曜日までだそうですよ。",
+          "synthesis_duration_seconds": 3.59,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 3.865,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:26:58+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a01-l01.mp3": {
+      "fingerprint": "a9da5cd329304941e3b49c6d7c3c79a1f7c442e040ac0c3998d44c3cbb92dc02",
+      "output": "audio/irodori/irodori-elementary2-12-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.19,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "新しいイヤホンがほしいんですけど、何がいいですか。",
+          "take": 1,
+          "tts_text": "新しいイヤホンがほしいんですけど、何がいいですか。",
+          "synthesis_duration_seconds": 3.37,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:27:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a01-l02.mp3": {
+      "fingerprint": "20ad0ba972d14e8b841569013569a2dba6d7d9a5268e9f9fe22e0a8ad6a21a63",
+      "output": "audio/irodori/irodori-elementary2-12-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.08,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "音がよくて、耳が痛くなりにくいものがいいと思います。",
+          "take": 1,
+          "tts_text": "音がよくて、耳が痛くなりにくいものがいいと思います。",
+          "synthesis_duration_seconds": 3.65,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.08,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:27:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a01-l03.mp3": {
+      "fingerprint": "ed8b015ba123a45c009c0c1ee669cea2004a6ef2d3192a02a8b64756ff091ae1",
+      "output": "audio/irodori/irodori-elementary2-12-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.19,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "どこで買ったらいいですか。",
+          "take": 1,
+          "tts_text": "どこで買ったらいいですか。",
+          "synthesis_duration_seconds": 1.24,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.19,
+            "output_duration_seconds": 2.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:27:28+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a01-l04.mp3": {
+      "fingerprint": "37f95f8319331e8ec089083c9dfcdef543e0cb6a6741c70d19d817c2d7608002",
+      "output": "audio/irodori/irodori-elementary2-12-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.01,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "駅の近くに電気屋があります。店員さんに相談できますよ。",
+          "take": 1,
+          "tts_text": "駅の近くに電気屋があります。店員さんに相談できますよ。",
+          "synthesis_duration_seconds": 4.32,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.63,
+            "output_duration_seconds": 5.01,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:27:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
