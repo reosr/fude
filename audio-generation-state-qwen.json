@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:35:22+00:00",
+  "updated_at": "2026-11-28T14:36:42+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -32963,6 +32963,146 @@
         }
       ],
       "generated_at": "2026-11-28T14:35:22+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u018.mp3": {
+      "fingerprint": "b9e87a3e42f6a60e0fdf001bcfb2263a3791c064f915be8d8faded8e2af35463",
+      "output": "audio/irodori/irodori-preintermediate-11-u018.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 9.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "はい。いつ、どこで拾ったかを伝えてください。緊急の事件でなければ、110番ではなく、交番で相談できます。",
+          "take": 1,
+          "tts_text": "はい。いつ、どこで拾ったかを伝えてください。緊急の事件でなければ、110番ではなく、交番で相談できます。",
+          "synthesis_duration_seconds": 8.24,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 9.15,
+            "output_duration_seconds": 9.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:35:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u019.mp3": {
+      "fingerprint": "6c43d8d156ab09a2888fae41cc26a322992905e2ff7a0b17b41c933ad5f4c060",
+      "output": "audio/irodori/irodori-preintermediate-11-u019.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.35,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "入場前に手荷物検査を行います。バッグの中を確認してもよろしいですか。",
+          "take": 1,
+          "tts_text": "入場前に手荷物検査を行います。バッグの中を確認してもよろしいですか。",
+          "synthesis_duration_seconds": 5.65,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.35,
+            "output_duration_seconds": 6.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:36:17+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u020.mp3": {
+      "fingerprint": "0e2d94da35dd231779278609ce2cfdc67cafa88af353c0a47040fff932b935cf",
+      "output": "audio/irodori/irodori-preintermediate-11-u020.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.2,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "はい、どうぞ。",
+          "take": 1,
+          "tts_text": "はい、どうぞ。",
+          "synthesis_duration_seconds": 0.98,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 1.2,
+            "output_duration_seconds": 1.2,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:36:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u021.mp3": {
+      "fingerprint": "5baba5002462485445be4e6ba5a2ab273fd4bbcf1bfdbeb0abd519582149ec52",
+      "output": "audio/irodori/irodori-preintermediate-11-u021.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.59,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "申し訳ありません。こちらの会場では、びんや缶の持ち込みは禁止になっています。",
+          "take": 1,
+          "tts_text": "申し訳ありません。こちらの会場では、びんや缶の持ち込みは禁止になっています。",
+          "synthesis_duration_seconds": 5.75,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.59,
+            "output_duration_seconds": 6.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:36:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
