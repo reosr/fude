@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:19:43+00:00",
+  "updated_at": "2026-11-28T14:20:49+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -30634,6 +30634,181 @@
         }
       ],
       "generated_at": "2026-11-28T14:19:43+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u015.mp3": {
+      "fingerprint": "7e443d0597fbf84de14be201085a3a0c0095bf4557d79ecf6ea544969c76b904",
+      "output": "audio/irodori/irodori-preintermediate-07-u015.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "すばらしいですね。ここでは料理やスポーツなど、いろいろな活動をしていますよ。",
+          "take": 1,
+          "tts_text": "すばらしいですね。ここでは料理やスポーツなど、いろいろな活動をしていますよ。",
+          "synthesis_duration_seconds": 5.05,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.87,
+            "output_duration_seconds": 5.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:20:00+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u016.mp3": {
+      "fingerprint": "73a0b2f05f68a014e1a4dc56d76e8de630c41fc5dd20e411f096d7988c808c2b",
+      "output": "audio/irodori/irodori-preintermediate-07-u016.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.79,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "料理にも興味があります。みなさんといっしょに新しいことを始めてみたいです。",
+          "take": 1,
+          "tts_text": "料理にも興味があります。みなさんといっしょに新しいことを始めてみたいです。",
+          "synthesis_duration_seconds": 4.64,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.79,
+            "output_duration_seconds": 5.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:20:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u001.mp3": {
+      "fingerprint": "2b1a3ef68a8b1f7fbc39d6d7cfe4ad781bbae6850cc7a227a40beaeac87fa17f",
+      "output": "audio/irodori/irodori-preintermediate-08-u001.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "すみません。隣に座ってもいいですか。",
+          "take": 1,
+          "tts_text": "すみません。隣に座ってもいいですか。",
+          "synthesis_duration_seconds": 2.75,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:20:27+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u002.mp3": {
+      "fingerprint": "bd61a5d6ab615642cc2faf128016248781a6804575654877df269ad23d4aca71",
+      "output": "audio/irodori/irodori-preintermediate-08-u002.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "もちろんです。どうぞ、座ってください。",
+          "take": 1,
+          "tts_text": "もちろんです。どうぞ、座ってください。",
+          "synthesis_duration_seconds": 2.51,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:20:37+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u003.mp3": {
+      "fingerprint": "e697c6f2e7afc65e84458a0eb8e04ce254077bab7d2382b0098c851af8eaf5ac",
+      "output": "audio/irodori/irodori-preintermediate-08-u003.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.11,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "ありがとうございます。ここに来るのは初めてなんです。",
+          "take": 1,
+          "tts_text": "ありがとうございます。ここに来るのは初めてなんです。",
+          "synthesis_duration_seconds": 3.33,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.11,
+            "output_duration_seconds": 4.11,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:20:49+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
