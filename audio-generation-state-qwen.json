@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:30:44+00:00",
+  "updated_at": "2026-11-28T13:31:37+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -22244,6 +22244,152 @@
         }
       ],
       "generated_at": "2026-11-28T13:30:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a01-l01.mp3": {
+      "fingerprint": "f7f9e8913aaaeafbfc4e4c7b9226824ebe986bb2eac79f236cd5ab4832aac535",
+      "output": "audio/irodori/irodori-elementary2-13-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "この建物には、どんな施設がありますか。",
+          "take": 1,
+          "tts_text": "この建物には、どんな施設がありますか。",
+          "synthesis_duration_seconds": 2.94,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:30:55+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a01-l02.mp3": {
+      "fingerprint": "1fce1958dc6cb29100e784732d4580336c20fe533dcca97f661ead23de0f01c7",
+      "output": "audio/irodori/irodori-elementary2-13-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.865,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "図書館と市民ホール、それから美術展示室があります。",
+          "take": 2,
+          "tts_text": "図書館と市民ホール、それから美術展示室があります。",
+          "synthesis_duration_seconds": 3.46,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 3.865,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:31:17+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a01-l03.mp3": {
+      "fingerprint": "b6bdf5906cdc2edfa28f1749d099bed285d27f90afc50bd7e2141c36487bccb4",
+      "output": "audio/irodori/irodori-elementary2-13-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "ホールでは、どんなことができますか。",
+          "take": 1,
+          "tts_text": "ホールでは、どんなことができますか。",
+          "synthesis_duration_seconds": 2.2,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:31:27+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a01-l04.mp3": {
+      "fingerprint": "2cff574ac096243d218aebcce86e07faf538cd9b1a1e3de4c60d649bc96d77bc",
+      "output": "audio/irodori/irodori-elementary2-13-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.152,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "音楽会や地域の行事に使われています。",
+          "take": 1,
+          "tts_text": "音楽会や地域の行事に使われています。",
+          "synthesis_duration_seconds": 2.66,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.152,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:31:37+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
