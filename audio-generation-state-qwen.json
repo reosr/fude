@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:32:39+00:00",
+  "updated_at": "2026-11-28T13:33:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -22570,6 +22570,223 @@
         }
       ],
       "generated_at": "2026-11-28T13:32:39+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a03-l02.mp3": {
+      "fingerprint": "29563f860a2a85d5e60dd4589a9142018aa7070b009f7cf30df7af5422e55b64",
+      "output": "audio/irodori/irodori-elementary2-13-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "はい。初めに、受付で利用カードを作ってください。",
+          "take": 1,
+          "tts_text": "はい。初めに、受付で利用カードを作ってください。",
+          "synthesis_duration_seconds": 4.11,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:32:54+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a03-l03.mp3": {
+      "fingerprint": "c9b73236982bece95414e640ef7d5ce60e358d714754ae1c0e8e3c76c92fa9a9",
+      "output": "audio/irodori/irodori-elementary2-13-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.91,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "本は何冊まで借りられますか。",
+          "take": 1,
+          "tts_text": "本は何冊まで借りられますか。",
+          "synthesis_duration_seconds": 1.93,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.91,
+            "output_duration_seconds": 2.91,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:33:02+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a03-l04.mp3": {
+      "fingerprint": "5eebdf9e843cb841b55876319a3b49199d80656fc7df35cfedd9733ccdbbbfe2",
+      "output": "audio/irodori/irodori-elementary2-13-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.59,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "一人八冊まで、二週間借りられます。",
+          "take": 1,
+          "tts_text": "一人八冊まで、二週間借りられます。",
+          "synthesis_duration_seconds": 2.68,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:33:15+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a04-l01.mp3": {
+      "fingerprint": "57e6764795f522850f3f4dbd87aec94921a7072144d6d0e9560d513d01b01796",
+      "output": "audio/irodori/irodori-elementary2-13-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.67,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "図書館が閉まっているとき、本を返すにはどうしますか。",
+          "take": 1,
+          "tts_text": "図書館が閉まっているとき、本を返すにはどうしますか。",
+          "synthesis_duration_seconds": 3.58,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.67,
+            "output_duration_seconds": 4.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:33:28+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a04-l02.mp3": {
+      "fingerprint": "9be2d78cdc27ce3705aa00ff9d3691ea465c92641e5c916e71fb2b05c43d5e7a",
+      "output": "audio/irodori/irodori-elementary2-13-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "入口の横にある返却ポストに入れてください。",
+          "take": 1,
+          "tts_text": "入口の横にある返却ポストに入れてください。",
+          "synthesis_duration_seconds": 2.75,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:33:38+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a04-l03.mp3": {
+      "fingerprint": "64f4d95a5237317eaa9a38316aa97ae2b8070e27c6d3db2c73cb6d119a8896e2",
+      "output": "audio/irodori/irodori-elementary2-13-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.07,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "DVDも返却ポストに入れていいですか。",
+          "take": 1,
+          "tts_text": "DVDも返却ポストに入れていいですか。",
+          "synthesis_duration_seconds": 2.39,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.07,
+            "output_duration_seconds": 3.07,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:33:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
