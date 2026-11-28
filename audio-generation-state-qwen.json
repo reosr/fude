@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:14:38+00:00",
+  "updated_at": "2026-11-28T12:15:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -6921,7 +6921,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:20:53+00:00",
+      "generated_at": "2026-11-28T12:14:50+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a02-l02.mp3": {
@@ -6936,19 +6936,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 4.03,
+          "duration_seconds": 4.19,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "はい。毎週水曜日の午後2時からです。",
           "take": 1,
           "tts_text": "はい。毎週水曜日の午後2時からです。",
-          "synthesis_duration_seconds": 3.14,
+          "synthesis_duration_seconds": 3.28,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 4.03,
-            "output_duration_seconds": 4.03,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -6957,7 +6957,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:21:04+00:00",
+      "generated_at": "2026-11-28T12:15:02+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a02-l03.mp3": {
@@ -6993,7 +6993,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:21:12+00:00",
+      "generated_at": "2026-11-28T12:15:10+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a02-l04.mp3": {
@@ -7008,19 +7008,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.39,
+          "duration_seconds": 3.79,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "いいえ。最初の道具は教室にあります。",
           "take": 1,
           "tts_text": "いいえ。最初の道具は教室にあります。",
-          "synthesis_duration_seconds": 2.52,
+          "synthesis_duration_seconds": 2.71,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.39,
-            "output_duration_seconds": 3.39,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -7029,7 +7029,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:21:22+00:00",
+      "generated_at": "2026-11-28T12:15:21+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a03-l01.mp3": {
@@ -7065,7 +7065,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:21:31+00:00",
+      "generated_at": "2026-11-28T12:15:30+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a03-l02.mp3": {
@@ -7102,7 +7102,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:21:41+00:00",
+      "generated_at": "2026-11-28T12:15:41+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a03-l03.mp3": {
@@ -7138,7 +7138,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:21:47+00:00",
+      "generated_at": "2026-11-28T12:15:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-10-a03-l04.mp3": {
