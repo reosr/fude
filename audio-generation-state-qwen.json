@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:29:45+00:00",
+  "updated_at": "2026-11-28T14:30:33+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -32150,6 +32150,147 @@
         }
       ],
       "generated_at": "2026-11-28T14:29:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u010.mp3": {
+      "fingerprint": "fbe2cb940cb680f0ed971962ba65127d1e346b380812d575ec4ba78b80216805",
+      "output": "audio/irodori/irodori-preintermediate-10-u010.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "なるほど。使い方を工夫すると、勉強に役立ちそうですね。",
+          "take": 1,
+          "tts_text": "なるほど。使い方を工夫すると、勉強に役立ちそうですね。",
+          "synthesis_duration_seconds": 4.35,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:29:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u011.mp3": {
+      "fingerprint": "00cdb92e27e9eb27815c28b185456b8259476319ad0174eadfb531469ab72e18",
+      "output": "audio/irodori/irodori-preintermediate-10-u011.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "タンデム学習の相手を探しているんだって？",
+          "take": 1,
+          "tts_text": "タンデム学習の相手を探しているんだって？",
+          "synthesis_duration_seconds": 2.56,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:30:10+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u012.mp3": {
+      "fingerprint": "27ee54b636fa6b3ff29d3d25308da866e9758b2b6d5937078a0ecc000bcd6049",
+      "output": "audio/irodori/irodori-preintermediate-10-u012.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.723,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "うん。日本語を勉強している人と、お互いのことばを教え合いたいんだ。",
+          "take": 1,
+          "tts_text": "うん。日本語を勉強している人と、お互いのことばを教え合いたいんだ。",
+          "synthesis_duration_seconds": 4.4,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.31,
+            "output_duration_seconds": 4.723,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:30:24+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u013.mp3": {
+      "fingerprint": "9a19633b5a0eb20940c88b6c063cdb0307da280db30e22fc4773156071adc659",
+      "output": "audio/irodori/irodori-preintermediate-10-u013.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "プロフィールには、どんなことを書いたの？",
+          "take": 1,
+          "tts_text": "プロフィールには、どんなことを書いたの？",
+          "synthesis_duration_seconds": 2.31,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:30:33+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
