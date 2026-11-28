@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:58:44+00:00",
+  "updated_at": "2026-11-28T13:59:40+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -27244,6 +27244,184 @@
         }
       ],
       "generated_at": "2026-11-28T13:58:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a05-l03.mp3": {
+      "fingerprint": "46e46303f92d4a1fb14772e34eee704acb6e83d40fbe599a0a01a05acb629570",
+      "output": "audio/irodori/irodori-preintermediate-01-a05-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "家族と出かけることになったんです。直前に連絡して、ごめんなさい。",
+          "take": 1,
+          "tts_text": "家族と出かけることになったんです。直前に連絡して、ごめんなさい。",
+          "synthesis_duration_seconds": 4.65,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.71,
+            "output_duration_seconds": 5.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:59:01+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a05-l04.mp3": {
+      "fingerprint": "13b94fab937f31c62e3ff0b905b7ca2b29aa871092c7ed4feabaa6f295afb604",
+      "output": "audio/irodori/irodori-preintermediate-01-a05-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "わかりました。また都合がいいときに行きましょう。",
+          "take": 1,
+          "tts_text": "わかりました。また都合がいいときに行きましょう。",
+          "synthesis_duration_seconds": 3.92,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:59:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u001.mp3": {
+      "fingerprint": "4c8eebc714b1a44a6bbd74861bff82045c8d98b44469a5c6171da986a35bd7ac",
+      "output": "audio/irodori/irodori-preintermediate-02-u001.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.91,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "このマンガのレビュー、読んだ？",
+          "take": 1,
+          "tts_text": "このマンガのレビュー、読んだ？",
+          "synthesis_duration_seconds": 1.87,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.91,
+            "output_duration_seconds": 2.91,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:59:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u002.mp3": {
+      "fingerprint": "77beb4fc53054fe3672cab1510f9728391578fa80963740fee4354fd4bddf8d3",
+      "output": "audio/irodori/irodori-preintermediate-02-u002.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.08,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "うん。「ストーリーに深みがある」って書いてあったよ。",
+          "take": 1,
+          "tts_text": "うん。「ストーリーに深みがある」って書いてあったよ。",
+          "synthesis_duration_seconds": 2.63,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.08,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:59:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u003.mp3": {
+      "fingerprint": "e39e536d7bdce39e6f4cec28ee913e19265a7fb0f1db2b2502d4c018537a5ffe",
+      "output": "audio/irodori/irodori-preintermediate-02-u003.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "ほかのコメントも、いい評価が多いね。",
+          "take": 1,
+          "tts_text": "ほかのコメントも、いい評価が多いね。",
+          "synthesis_duration_seconds": 2.56,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:59:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
