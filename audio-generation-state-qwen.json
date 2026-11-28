@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:00:46+00:00",
+  "updated_at": "2026-11-28T13:01:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -16399,6 +16399,225 @@
         }
       ],
       "generated_at": "2026-11-28T13:00:46+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a05-l03.mp3": {
+      "fingerprint": "d18aeb672651a081e0e078ff825abc37d110caeeceb017779c257a9e80eb604b",
+      "output": "audio/irodori/irodori-elementary2-04-a05-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.27,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "値段はどうですか。",
+          "take": 1,
+          "tts_text": "値段はどうですか。",
+          "synthesis_duration_seconds": 1.13,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.27,
+            "output_duration_seconds": 2.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:00:52+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a05-l04.mp3": {
+      "fingerprint": "0de292b28044a42b9ba24e819277f6e15b738d551ff028b0baef8a857dacd4ea",
+      "output": "audio/irodori/irodori-elementary2-04-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.008,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "手ごろだし、量も多いそうですよ。",
+          "take": 1,
+          "tts_text": "手ごろだし、量も多いそうですよ。",
+          "synthesis_duration_seconds": 2.22,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.008,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:01:02+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a01-l01.mp3": {
+      "fingerprint": "3dbbb550fced50f3aeaabb83bb03cb2fe9a6d6f30ad171757b6f4acea7cbd424",
+      "output": "audio/irodori/irodori-elementary2-05-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.47,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "北海道は、どんなところですか。",
+          "take": 1,
+          "tts_text": "北海道は、どんなところですか。",
+          "synthesis_duration_seconds": 2.17,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.47,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:01:12+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a01-l02.mp3": {
+      "fingerprint": "2735659aa9857e6d7564be31dcee57cb91d63739a9a51ba8a3023e8419cc1ea1",
+      "output": "audio/irodori/irodori-elementary2-05-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.509,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "自然が豊かで、食べ物がおいしいところですよ。",
+          "take": 1,
+          "tts_text": "自然が豊かで、食べ物がおいしいところですよ。",
+          "synthesis_duration_seconds": 3.0,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.509,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:01:24+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a01-l03.mp3": {
+      "fingerprint": "a719831e01103f700a11832b3e61b36238c36ec293302fb578e0350c5c682491",
+      "output": "audio/irodori/irodori-elementary2-05-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.33,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "何ができますか。",
+          "take": 1,
+          "tts_text": "何ができますか。",
+          "synthesis_duration_seconds": 1.08,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 1.33,
+            "output_duration_seconds": 1.33,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:01:30+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a01-l04.mp3": {
+      "fingerprint": "736beb9ad0b50ff18f1a9666a1778e742110ac7492280c786157a51807b604e9",
+      "output": "audio/irodori/irodori-elementary2-05-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.508,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "新鮮な魚が食べられますし、冬は雪の景色も見られます。",
+          "take": 1,
+          "tts_text": "新鮮な魚が食べられますし、冬は雪の景色も見られます。",
+          "synthesis_duration_seconds": 4.04,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.07,
+            "output_duration_seconds": 4.508,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:01:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
