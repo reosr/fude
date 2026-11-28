@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:54:48+00:00",
+  "updated_at": "2026-11-28T11:55:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -2352,7 +2352,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:01:50+00:00",
+      "generated_at": "2026-11-28T11:54:58+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a01-l05.mp3": {
@@ -2388,7 +2388,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:01:57+00:00",
+      "generated_at": "2026-11-28T11:55:05+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a02-l01.mp3": {
@@ -2424,7 +2424,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:02:05+00:00",
+      "generated_at": "2026-11-28T11:55:13+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a02-l02.mp3": {
@@ -2439,19 +2439,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.55,
+          "duration_seconds": 4.83,
           "sample_rate": 24000,
           "voice_id": "adult_male_b",
           "http_status": 200,
           "input_text": "そうですね。夜まで雨が降っていました。",
           "take": 1,
           "tts_text": "そうですね。夜まで雨が降っていました。",
-          "synthesis_duration_seconds": 2.74,
+          "synthesis_duration_seconds": 3.86,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.55,
-            "output_duration_seconds": 3.55,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -2460,7 +2460,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:02:15+00:00",
+      "generated_at": "2026-11-28T11:55:26+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a02-l03.mp3": {
@@ -2496,7 +2496,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:02:22+00:00",
+      "generated_at": "2026-11-28T11:55:34+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a02-l04.mp3": {
@@ -2518,7 +2518,7 @@
           "input_text": "いいえ、もうやみましたよ。",
           "take": 1,
           "tts_text": "いいえ、もうやみましたよ。",
-          "synthesis_duration_seconds": 2.14,
+          "synthesis_duration_seconds": 2.26,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
@@ -2532,7 +2532,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:02:30+00:00",
+      "generated_at": "2026-11-28T11:55:41+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a03-l01.mp3": {
@@ -2569,7 +2569,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:02:36+00:00",
+      "generated_at": "2026-11-28T11:55:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a03-l02.mp3": {
