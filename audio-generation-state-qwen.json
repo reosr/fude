@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:55:47+00:00",
+  "updated_at": "2026-11-28T11:56:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -2605,7 +2605,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:02:44+00:00",
+      "generated_at": "2026-11-28T11:55:56+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a03-l03.mp3": {
@@ -2642,7 +2642,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:02:50+00:00",
+      "generated_at": "2026-11-28T11:56:02+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a03-l04.mp3": {
@@ -2678,7 +2678,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:03:06+00:00",
+      "generated_at": "2026-11-28T11:56:18+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a04-l01.mp3": {
@@ -2693,19 +2693,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.71,
+          "duration_seconds": 2.83,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "この天気の書き込みを読みましたか？",
           "take": 1,
           "tts_text": "この天気の書き込みを読みましたか？",
-          "synthesis_duration_seconds": 2.14,
+          "synthesis_duration_seconds": 1.89,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.71,
-            "output_duration_seconds": 3.71,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -2714,7 +2714,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:03:16+00:00",
+      "generated_at": "2026-11-28T11:56:25+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a04-l02.mp3": {
@@ -2750,7 +2750,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:03:29+00:00",
+      "generated_at": "2026-11-28T11:56:38+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a04-l03.mp3": {
@@ -2765,19 +2765,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.31,
+          "duration_seconds": 3.47,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "今夜から風が強くなるでしょうね。",
           "take": 1,
           "tts_text": "今夜から風が強くなるでしょうね。",
-          "synthesis_duration_seconds": 2.25,
+          "synthesis_duration_seconds": 2.2,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.31,
-            "output_duration_seconds": 3.31,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.47,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -2786,7 +2786,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:03:38+00:00",
+      "generated_at": "2026-11-28T11:56:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-04-a04-l04.mp3": {
