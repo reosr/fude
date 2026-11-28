@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:48:40+00:00",
+  "updated_at": "2026-11-28T12:49:38+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -13970,6 +13970,188 @@
         }
       ],
       "generated_at": "2026-11-28T12:48:40+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a03-l04.mp3": {
+      "fingerprint": "c11a683506bf99ddcf82a3a7a7b5a2ccdf4dc182cde124f76df10b64d04e9ffa",
+      "output": "audio/irodori/irodori-elementary2-01-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.35,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "ジャワ島の中部にあります。町はにぎやかですが、近くに川や山もあります。",
+          "take": 1,
+          "tts_text": "ジャワ島の中部にあります。町はにぎやかですが、近くに川や山もあります。",
+          "synthesis_duration_seconds": 5.06,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.35,
+            "output_duration_seconds": 6.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:48:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a04-l01.mp3": {
+      "fingerprint": "ebb602503b7256e350ad846993c6f0e61952db6bab47922c051584d7d2ef57bf",
+      "output": "audio/irodori/irodori-elementary2-01-a04-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.08,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "日本に来る前は、何をしていましたか。",
+          "take": 1,
+          "tts_text": "日本に来る前は、何をしていましたか。",
+          "synthesis_duration_seconds": 2.55,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.08,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:49:08+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a04-l02.mp3": {
+      "fingerprint": "8247f8e2940d56cf37f46307286ef902e454ecf3c4abcf4a2a32e18d977d322f",
+      "output": "audio/irodori/irodori-elementary2-01-a04-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "学校で日本語を勉強していました。",
+          "take": 1,
+          "tts_text": "学校で日本語を勉強していました。",
+          "synthesis_duration_seconds": 1.95,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:49:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a04-l03.mp3": {
+      "fingerprint": "89037afd5b6e70918ebaf7598c9942753d14a90662ab73986f67e70f006388a4",
+      "output": "audio/irodori/irodori-elementary2-01-a04-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "そうですか。日本語の勉強はどうでしたか。",
+          "take": 1,
+          "tts_text": "そうですか。日本語の勉強はどうでしたか。",
+          "synthesis_duration_seconds": 2.42,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 2.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:49:25+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a04-l04.mp3": {
+      "fingerprint": "3c09687f61360dd02d7110ef035d30230235813d802ae93290903a7ab8f130e4",
+      "output": "audio/irodori/irodori-elementary2-01-a04-l04.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.59,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "楽しかったです。日本の文化についても勉強しました。",
+          "take": 1,
+          "tts_text": "楽しかったです。日本の文化についても勉強しました。",
+          "synthesis_duration_seconds": 3.68,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:49:38+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
