@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:15:44+00:00",
+  "updated_at": "2026-11-28T13:16:42+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -19340,6 +19340,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:15:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-09-a01-l01.mp3": {
+      "fingerprint": "9b39218a20a5b6f80abef3dbf74541a0b20dbb59d3701120c0822d80ddd3908f",
+      "output": "audio/irodori/irodori-elementary2-09-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "成人の日は、何をするんですか。",
+          "take": 1,
+          "tts_text": "成人の日は、何をするんですか。",
+          "synthesis_duration_seconds": 2.72,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:15:54+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-09-a01-l02.mp3": {
+      "fingerprint": "cc193750b2329bab3ac6725189e69ad3d45fc05992bc30591cb712c237e90da7",
+      "output": "audio/irodori/irodori-elementary2-09-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.508,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "大人になる人をお祝いする日です。地域で式が行われることがあります。",
+          "take": 1,
+          "tts_text": "大人になる人をお祝いする日です。地域で式が行われることがあります。",
+          "synthesis_duration_seconds": 5.32,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 6.19,
+            "output_duration_seconds": 5.508,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:16:12+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-09-a01-l03.mp3": {
+      "fingerprint": "2725d90ec73fc4ec74f1464663c7dc644c677f96d55bd7fe1c9bdddec7cf7a6a",
+      "output": "audio/irodori/irodori-elementary2-09-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "式では、どんなことをするんですか。",
+          "take": 1,
+          "tts_text": "式では、どんなことをするんですか。",
+          "synthesis_duration_seconds": 2.28,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:16:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-09-a01-l04.mp3": {
+      "fingerprint": "41c1deed1481a5f9748871a470441d151b4b4faf09241e5106cbb4898958af31",
+      "output": "audio/irodori/irodori-elementary2-09-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "お祝いの話を聞いたり、友だちと写真を撮ったりします。",
+          "take": 1,
+          "tts_text": "お祝いの話を聞いたり、友だちと写真を撮ったりします。",
+          "synthesis_duration_seconds": 3.32,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 3.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:16:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-09-a02-l01.mp3": {
+      "fingerprint": "3fd6e35ed2efcaf1d31282d37f7f248e6d8523bad1b27a2fd1e8a89cc613aed7",
+      "output": "audio/irodori/irodori-elementary2-09-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "お正月休みは、どうでしたか。",
+          "take": 1,
+          "tts_text": "お正月休みは、どうでしたか。",
+          "synthesis_duration_seconds": 2.18,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 3.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:16:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
