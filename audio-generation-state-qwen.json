@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:18:44+00:00",
+  "updated_at": "2026-11-28T14:19:43+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -30493,6 +30493,147 @@
         }
       ],
       "generated_at": "2026-11-28T14:18:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u011.mp3": {
+      "fingerprint": "021f5ab9950506ea82ad98592a56ed497d0ca51cfdcba31cee85bfed6c7767b6",
+      "output": "audio/irodori/irodori-preintermediate-07-u011.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 7.63,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "一年になります。子どものころから写真を撮るのが好きで、最近は町の景色も撮るようになりました。",
+          "take": 1,
+          "tts_text": "一年になります。子どものころから写真を撮るのが好きで、最近は町の景色も撮るようになりました。",
+          "synthesis_duration_seconds": 6.86,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 7.63,
+            "output_duration_seconds": 7.63,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:19:06+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u012.mp3": {
+      "fingerprint": "21ce22cff75a876939b221a842707c0cf364b0f86d0669dea67924e3f3924d83",
+      "output": "audio/irodori/irodori-preintermediate-07-u012.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "いいですね。今度、いっしょに写真を撮りに行きませんか。",
+          "take": 1,
+          "tts_text": "いいですね。今度、いっしょに写真を撮りに行きませんか。",
+          "synthesis_duration_seconds": 3.7,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 3.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:19:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u013.mp3": {
+      "fingerprint": "998855609e45504bd1c9d9242f5a84c66a628ba6fe65b4fbed260af07481dfb4",
+      "output": "audio/irodori/irodori-preintermediate-07-u013.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "どうしてこのサークルに参加したいと思ったんですか。",
+          "take": 1,
+          "tts_text": "どうしてこのサークルに参加したいと思ったんですか。",
+          "synthesis_duration_seconds": 2.53,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:19:30+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u014.mp3": {
+      "fingerprint": "da3560a0a9e3082a812c9f1b10df43c0f32da0af46c742ab64080e232725c5f9",
+      "output": "audio/irodori/irodori-preintermediate-07-u014.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.67,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "日本語を使って、いろいろな人と話せるようになりたいんです。",
+          "take": 1,
+          "tts_text": "日本語を使って、いろいろな人と話せるようになりたいんです。",
+          "synthesis_duration_seconds": 3.93,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.67,
+            "output_duration_seconds": 4.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:19:43+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
