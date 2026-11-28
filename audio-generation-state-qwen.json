@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:30:33+00:00",
+  "updated_at": "2026-11-28T14:31:41+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -32291,6 +32291,149 @@
         }
       ],
       "generated_at": "2026-11-28T14:30:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u014.mp3": {
+      "fingerprint": "d04a7a2127397941153c2ca6f200cd59e2813778526c0de0d537a867a71b002a",
+      "output": "audio/irodori/irodori-preintermediate-10-u014.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 7.508,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "勉強しているレベルや趣味、それから、どんな練習をしたいかを書いたよ。週に一回、短い会話をしたいんだ。",
+          "take": 1,
+          "tts_text": "勉強しているレベルや趣味、それから、どんな練習をしたいかを書いたよ。週に一回、短い会話をしたいんだ。",
+          "synthesis_duration_seconds": 7.55,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 8.43,
+            "output_duration_seconds": 7.508,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:30:56+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u015.mp3": {
+      "fingerprint": "7023407b5d485f1086278f8be90909c74412e4e959a05c14916cd8704715aa8c",
+      "output": "audio/irodori/irodori-preintermediate-10-u015.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 7.79,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "いい相手が見つかるといいね。プロフィールには、住所や電話番号などを書かないように気をつけてね。",
+          "take": 1,
+          "tts_text": "いい相手が見つかるといいね。プロフィールには、住所や電話番号などを書かないように気をつけてね。",
+          "synthesis_duration_seconds": 6.47,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 7.79,
+            "output_duration_seconds": 7.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:31:18+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u016.mp3": {
+      "fingerprint": "2e4f49bf57811e6b83fff36ebceef1eecd8b93aae49e6251545e5e441c67b7eb",
+      "output": "audio/irodori/irodori-preintermediate-10-u016.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "ありがとう。必要なことだけ、わかりやすく書くよ。",
+          "take": 1,
+          "tts_text": "ありがとう。必要なことだけ、わかりやすく書くよ。",
+          "synthesis_duration_seconds": 3.45,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 3.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:31:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u001.mp3": {
+      "fingerprint": "9214fcab85908e5aef4c7bbcc2cfe32a3905725cfc3a212c4ed9c26eb7e35978",
+      "output": "audio/irodori/irodori-preintermediate-11-u001.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "ユイさん、このメールを見てほしいんですが……。",
+          "take": 1,
+          "tts_text": "ユイさん、このメールを見てほしいんですが……。",
+          "synthesis_duration_seconds": 2.52,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:31:41+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
