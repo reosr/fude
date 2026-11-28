@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T08:07:39+00:00",
+  "updated_at": "2026-11-28T08:08:19+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -108,6 +108,114 @@
         }
       ],
       "generated_at": "2026-11-28T08:07:39+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a03-l01.mp3": {
+      "fingerprint": "905b146d5c7c10833968b865a03369db9c1580e6169623016d1ff5ad8dcf80f3",
+      "output": "audio/irodori/irodori-elementary1-01-a03-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.35,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "ソウタさん、日本に来て、どのぐらいになりますか？",
+          "take": 1,
+          "tts_text": "ソウタさん、日本に来て、どのぐらいになりますか？",
+          "synthesis_duration_seconds": 3.23,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 4.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T08:07:54+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a03-l03.mp3": {
+      "fingerprint": "f0f939314dd48b33223bd014960e7169f93bd7538d24d5a2db5e8af3c6f1fa52",
+      "output": "audio/irodori/irodori-elementary1-01-a03-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "そうですか。日本の生活に慣れましたか？",
+          "take": 1,
+          "tts_text": "そうですか。日本の生活に慣れましたか？",
+          "synthesis_duration_seconds": 2.71,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T08:08:06+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a04-l01.mp3": {
+      "fingerprint": "375338d711b5f34bd0fd1fad5e15c419a31da68d259da25c98201b4dd182ae61",
+      "output": "audio/irodori/irodori-elementary1-01-a04-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "アキコさんは、いつ日本に来ましたか？",
+          "take": 1,
+          "tts_text": "アキコさんは、いつ日本に来ましたか？",
+          "synthesis_duration_seconds": 2.96,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T08:08:19+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
