@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:38:47+00:00",
+  "updated_at": "2026-11-28T13:39:32+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -23730,6 +23730,152 @@
         }
       ],
       "generated_at": "2026-11-28T13:38:47+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a01-l02.mp3": {
+      "fingerprint": "28243a277174fb0ee1e330843d9406b647305f97d051921cade028f808f9f916",
+      "output": "audio/irodori/irodori-elementary2-15-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.651,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "使い終わったら、電気を消してください、と書いてあります。",
+          "take": 1,
+          "tts_text": "使い終わったら、電気を消してください、と書いてあります。",
+          "synthesis_duration_seconds": 3.41,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.11,
+            "output_duration_seconds": 3.651,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:38:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a01-l03.mp3": {
+      "fingerprint": "ac396bd5627a22f4255a2a8d2299bf7d2dc483653a4d7f5b3e557cccdba3665d",
+      "output": "audio/irodori/irodori-elementary2-15-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "電気を消すのを忘れないようにしたいですね。",
+          "take": 1,
+          "tts_text": "電気を消すのを忘れないようにしたいですね。",
+          "synthesis_duration_seconds": 2.53,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:39:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a01-l04.mp3": {
+      "fingerprint": "542e3e4a4ec0771966d9d4c0099b57667c63275d9538619f12a2f819ccf1c7cf",
+      "output": "audio/irodori/irodori-elementary2-15-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.581,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "そうですね。使っていない部屋の電気は消しましょう。",
+          "take": 1,
+          "tts_text": "そうですね。使っていない部屋の電気は消しましょう。",
+          "synthesis_duration_seconds": 3.21,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 3.581,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:39:20+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a02-l01.mp3": {
+      "fingerprint": "a4a3714678e13ee5a93e5cfe89dcbb070c7a9092d83018437efd7cb3daa4a204",
+      "output": "audio/irodori/irodori-elementary2-15-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "会社では、節電のために何をしていますか。",
+          "take": 1,
+          "tts_text": "会社では、節電のために何をしていますか。",
+          "synthesis_duration_seconds": 2.89,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:39:32+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
