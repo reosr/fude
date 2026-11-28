@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:12:43+00:00",
+  "updated_at": "2026-11-28T14:13:45+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -29682,6 +29682,147 @@
         }
       ],
       "generated_at": "2026-11-28T14:12:43+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-06-u004.mp3": {
+      "fingerprint": "4008c73dfe9cb27b02bf9ec5dc4d5d6b78c1ea4c976f311825b9394d0b074740",
+      "output": "audio/irodori/irodori-preintermediate-06-u004.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.795,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "少し遠いですが、農家の人が直接売っている直売所があります。新鮮で、値段も安いですよ。",
+          "take": 1,
+          "tts_text": "少し遠いですが、農家の人が直接売っている直売所があります。新鮮で、値段も安いですよ。",
+          "synthesis_duration_seconds": 6.71,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 7.63,
+            "output_duration_seconds": 6.795,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:13:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-06-u005.mp3": {
+      "fingerprint": "778e2fcec318c48c122611dfaa742d54930f46c6b6094e9975ed85e0b1a77fde",
+      "output": "audio/irodori/irodori-preintermediate-06-u005.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "仕事が忙しいと、料理をする時間がありませんね。",
+          "take": 1,
+          "tts_text": "仕事が忙しいと、料理をする時間がありませんね。",
+          "synthesis_duration_seconds": 3.42,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:13:18+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-06-u006.mp3": {
+      "fingerprint": "c5723c2cf80adfa15923dce8176c69e6eb405b385e6d044106c4683fda8f772e",
+      "output": "audio/irodori/irodori-preintermediate-06-u006.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "そうですね。私は休みの日に野菜を切って、冷凍しておくんです。",
+          "take": 1,
+          "tts_text": "そうですね。私は休みの日に野菜を切って、冷凍しておくんです。",
+          "synthesis_duration_seconds": 4.89,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.71,
+            "output_duration_seconds": 5.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:13:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-06-u007.mp3": {
+      "fingerprint": "0b4bb08d32674a550123f9e1c872cf3e007d0ac9fe7cbbd5732ab9f1ef851cae",
+      "output": "audio/irodori/irodori-preintermediate-06-u007.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "それは便利ですね。ほかにも何かしておきますか。",
+          "take": 1,
+          "tts_text": "それは便利ですね。ほかにも何かしておきますか。",
+          "synthesis_duration_seconds": 3.01,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:13:45+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
