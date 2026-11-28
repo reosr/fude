@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:44:40+00:00",
+  "updated_at": "2026-11-28T13:45:46+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -24816,6 +24816,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:44:40+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-16-a03-l04.mp3": {
+      "fingerprint": "6e18ecfab5dedfeb8e97d168202e2ab8fcc82dbb253a55a7918e6084a1357081",
+      "output": "audio/irodori/irodori-elementary2-16-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "はい。無理をしないで、係の人の案内を聞いてください。",
+          "take": 1,
+          "tts_text": "はい。無理をしないで、係の人の案内を聞いてください。",
+          "synthesis_duration_seconds": 4.26,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.71,
+            "output_duration_seconds": 5.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:44:57+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-16-a04-l01.mp3": {
+      "fingerprint": "c388004d975cef8057a1e4124d55eb3eab4216d888dc3bef4deb4699af5de31a",
+      "output": "audio/irodori/irodori-elementary2-16-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "この近くの避難所がどこか、知っていますか。",
+          "take": 1,
+          "tts_text": "この近くの避難所がどこか、知っていますか。",
+          "synthesis_duration_seconds": 3.2,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:45:08+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-16-a04-l02.mp3": {
+      "fingerprint": "8f285b0408e6ca6e25de94b93a0264cf13a075428775440b809ba7963abadd1f",
+      "output": "audio/irodori/irodori-elementary2-16-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "市の案内によると、北小学校の体育館だそうです。",
+          "take": 1,
+          "tts_text": "市の案内によると、北小学校の体育館だそうです。",
+          "synthesis_duration_seconds": 3.79,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 3.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:45:20+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-16-a04-l03.mp3": {
+      "fingerprint": "ae9ada47c989a28befaa79da2f147fb9b6740146553a0b25f52ba34bc467c325",
+      "output": "audio/irodori/irodori-elementary2-16-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.03,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "今、開いているかどうか、どこで確認できますか。",
+          "take": 1,
+          "tts_text": "今、開いているかどうか、どこで確認できますか。",
+          "synthesis_duration_seconds": 3.19,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 4.03,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:45:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-16-a04-l04.mp3": {
+      "fingerprint": "85e6da24fd72ac755be3f6d1d1dbb8b0c221a5c0f037651f09779c74c9b94653",
+      "output": "audio/irodori/irodori-elementary2-16-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.581,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "市の公式情報で確認できます。先生や家族にも聞いてください。",
+          "take": 1,
+          "tts_text": "市の公式情報で確認できます。先生や家族にも聞いてください。",
+          "synthesis_duration_seconds": 4.62,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 4.581,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:45:46+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
