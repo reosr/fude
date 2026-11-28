@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:26:45+00:00",
+  "updated_at": "2026-11-28T14:27:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -31796,6 +31796,113 @@
         }
       ],
       "generated_at": "2026-11-28T14:26:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u016.mp3": {
+      "fingerprint": "4e4de7127819db93948b2011850eaf016c10e7d1b02ebb632eb107273b47b7c7",
+      "output": "audio/irodori/irodori-preintermediate-09-u016.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 8.081,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "簡単な手続きなら自分でできるようになりました。将来は、勉強したことを活かして、日本で生活する人を手伝えればと思っています。",
+          "take": 1,
+          "tts_text": "簡単な手続きなら自分でできるようになりました。将来は、勉強したことを活かして、日本で生活する人を手伝えればと思っています。",
+          "synthesis_duration_seconds": 8.38,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 9.07,
+            "output_duration_seconds": 8.081,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:27:12+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u001.mp3": {
+      "fingerprint": "b1d39ab746cf3767310320f418623345dcd6aebde85db04d3c56a26c0f339e46",
+      "output": "audio/irodori/irodori-preintermediate-10-u001.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "日本語の勉強には、どんなサイトを使ってる？",
+          "take": 1,
+          "tts_text": "日本語の勉強には、どんなサイトを使ってる？",
+          "synthesis_duration_seconds": 2.61,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:27:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-10-u002.mp3": {
+      "fingerprint": "6e619ba5f2edfdf4ff1aebbba825f6eb51125f386cf6a05893d0cf6e183c8497",
+      "output": "audio/irodori/irodori-preintermediate-10-u002.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 8.35,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "日本語学習のポータルサイトを見てるよ。レベルや目的に合わせて、講座やアプリを選べるんだ。",
+          "take": 1,
+          "tts_text": "日本語学習のポータルサイトを見てるよ。レベルや目的に合わせて、講座やアプリを選べるんだ。",
+          "synthesis_duration_seconds": 6.85,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 8.35,
+            "output_duration_seconds": 8.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:27:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
