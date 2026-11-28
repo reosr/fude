@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:24:34+00:00",
+  "updated_at": "2026-11-28T14:25:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -31443,6 +31443,218 @@
         }
       ],
       "generated_at": "2026-11-28T14:24:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u006.mp3": {
+      "fingerprint": "925d244851cb27c30ebeea20e317d26b6d1a03bb90fd985408bfd8f371883528",
+      "output": "audio/irodori/irodori-preintermediate-09-u006.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.653,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "日本の音楽が好きだったから。歌詞の意味もわかりたくて、勉強し始めたんだ。",
+          "take": 1,
+          "tts_text": "日本の音楽が好きだったから。歌詞の意味もわかりたくて、勉強し始めたんだ。",
+          "synthesis_duration_seconds": 5.15,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 6.35,
+            "output_duration_seconds": 5.653,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:24:52+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u007.mp3": {
+      "fingerprint": "9edf09b63dde6a8cd518c801750a3307febcf41b06a4447d8bdea843d85c68e6",
+      "output": "audio/irodori/irodori-preintermediate-09-u007.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.47,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "へえ。今は、どんな目標があるの？",
+          "take": 1,
+          "tts_text": "へえ。今は、どんな目標があるの？",
+          "synthesis_duration_seconds": 2.85,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.47,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:25:02+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u008.mp3": {
+      "fingerprint": "5d923cd619132df9404552d297ef0461a07c4efd219af7e0f1bb7b5e86e67c5e",
+      "output": "audio/irodori/irodori-preintermediate-09-u008.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.937,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "日本にいる間に、いろいろな人と日本語で話せるようになりたいと思ってる。",
+          "take": 1,
+          "tts_text": "日本にいる間に、いろいろな人と日本語で話せるようになりたいと思ってる。",
+          "synthesis_duration_seconds": 4.64,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.55,
+            "output_duration_seconds": 4.937,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:25:18+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u009.mp3": {
+      "fingerprint": "31c7a3485135e5d844d9e600c2552a9748be8326b0b0e7e42f745400f101bc06",
+      "output": "audio/irodori/irodori-preintermediate-09-u009.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.67,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "この荷物、なおしといてくれる？",
+          "take": 1,
+          "tts_text": "この荷物、なおしといてくれる？",
+          "synthesis_duration_seconds": 1.71,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.67,
+            "output_duration_seconds": 2.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:25:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u010.mp3": {
+      "fingerprint": "17ec69cff52522e1832f66a65a796c2565cfc0d5d7c55f7c075124ac4f099c06",
+      "output": "audio/irodori/irodori-preintermediate-09-u010.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "なおすって、修理するという意味ですか。",
+          "take": 1,
+          "tts_text": "なおすって、修理するという意味ですか。",
+          "synthesis_duration_seconds": 2.54,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:25:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-09-u011.mp3": {
+      "fingerprint": "49b1fa0bbf0789578e63a5aad62250667c095a726ed6bbbb243c70451e78cb58",
+      "output": "audio/irodori/irodori-preintermediate-09-u011.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "この辺では、片付けておくという意味で使うことがあるの。",
+          "take": 1,
+          "tts_text": "この辺では、片付けておくという意味で使うことがあるの。",
+          "synthesis_duration_seconds": 3.42,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:25:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
