@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:51:38+00:00",
+  "updated_at": "2026-11-28T11:52:41+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -1702,7 +1702,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T19:58:43+00:00",
+      "generated_at": "2026-11-28T11:51:49+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a02-l03.mp3": {
@@ -1738,7 +1738,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T19:58:49+00:00",
+      "generated_at": "2026-11-28T11:51:55+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a02-l04.mp3": {
@@ -1774,7 +1774,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T19:59:02+00:00",
+      "generated_at": "2026-11-28T11:52:08+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a03-l01.mp3": {
@@ -1810,7 +1810,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T19:59:13+00:00",
+      "generated_at": "2026-11-28T11:52:20+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a03-l02.mp3": {
@@ -1825,19 +1825,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 4.75,
+          "duration_seconds": 4.83,
           "sample_rate": 24000,
           "voice_id": "adult_male_c",
           "http_status": 200,
           "input_text": "いいえ。夏はとても暑いですが、冬は寒くなります。",
           "take": 1,
           "tts_text": "いいえ。夏はとても暑いですが、冬は寒くなります。",
-          "synthesis_duration_seconds": 3.74,
+          "synthesis_duration_seconds": 3.77,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 4.75,
-            "output_duration_seconds": 4.75,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -1846,7 +1846,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T19:59:26+00:00",
+      "generated_at": "2026-11-28T11:52:33+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a03-l03.mp3": {
@@ -1861,7 +1861,7 @@
       ],
       "segments": [
         {
-          "duration_seconds": 1.42,
+          "duration_seconds": 1.57,
           "sample_rate": 24000,
           "voice_id": "adult_female_b",
           "http_status": 200,
@@ -1872,8 +1872,8 @@
           "audio_processing": {
             "role": "adult_female",
             "speed": 1.0,
-            "input_duration_seconds": 1.42,
-            "output_duration_seconds": 1.42,
+            "input_duration_seconds": 1.57,
+            "output_duration_seconds": 1.57,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -1882,7 +1882,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T19:59:34+00:00",
+      "generated_at": "2026-11-28T11:52:41+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-03-a03-l04.mp3": {
