@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:10:46+00:00",
+  "updated_at": "2026-11-28T14:11:43+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -29363,6 +29363,148 @@
         }
       ],
       "generated_at": "2026-11-28T14:10:46+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u011.mp3": {
+      "fingerprint": "dd51e5790f1fbe76e35bcb2b57644af1cf5f5aca3cd5bec8bbe462a9e70ef573",
+      "output": "audio/irodori/irodori-preintermediate-05-u011.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.008,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "写真をSNSに載せるんですか。",
+          "take": 1,
+          "tts_text": "写真をSNSに載せるんですか。",
+          "synthesis_duration_seconds": 2.22,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.008,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:10:56+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u012.mp3": {
+      "fingerprint": "3a303c8cf3c4206fe0600a5ccc952e2d58cdc58f134570e72494dfc91980fac8",
+      "output": "audio/irodori/irodori-preintermediate-05-u012.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 7.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "はい。「量が多くて、おなかいっぱいになりました。また行きたいです」って書こうと思います。",
+          "take": 1,
+          "tts_text": "はい。「量が多くて、おなかいっぱいになりました。また行きたいです」って書こうと思います。",
+          "synthesis_duration_seconds": 6.53,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 7.39,
+            "output_duration_seconds": 7.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:11:17+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u013.mp3": {
+      "fingerprint": "5f3b5ac28f015e565482caadc8dec2e684898184a879d6d5ae800ed185a2dced",
+      "output": "audio/irodori/irodori-preintermediate-05-u013.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.651,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "きりたんぽって、どんな料理ですか。",
+          "take": 1,
+          "tts_text": "きりたんぽって、どんな料理ですか。",
+          "synthesis_duration_seconds": 2.18,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.99,
+            "output_duration_seconds": 2.651,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:11:25+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u014.mp3": {
+      "fingerprint": "e63813752a0a782414b5f05e124cf2faf72038b7c78a2e34b17ddad2cc993ec8",
+      "output": "audio/irodori/irodori-preintermediate-05-u014.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.19,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "ご飯をつぶして、棒に巻いて焼いた料理です。秋田県の名物なんですよ。",
+          "take": 1,
+          "tts_text": "ご飯をつぶして、棒に巻いて焼いた料理です。秋田県の名物なんですよ。",
+          "synthesis_duration_seconds": 5.3,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.19,
+            "output_duration_seconds": 6.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:11:43+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
