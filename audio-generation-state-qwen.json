@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:03:46+00:00",
+  "updated_at": "2026-11-28T13:04:42+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -17016,6 +17016,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:03:46+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a04-l04.mp3": {
+      "fingerprint": "02eb7e9ae26694dade83427cc940d6e44a0cf5fc6ee5038b20aa562d57807793",
+      "output": "audio/irodori/irodori-elementary2-05-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "天気を調べて、歩きやすい靴を準備したほうがいいですよ。",
+          "take": 1,
+          "tts_text": "天気を調べて、歩きやすい靴を準備したほうがいいですよ。",
+          "synthesis_duration_seconds": 3.72,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:04:00+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a05-l01.mp3": {
+      "fingerprint": "3356b8f9d148813caffed96c78db5de1ff74bf9a90082233508220bf8b7dab2d",
+      "output": "audio/irodori/irodori-elementary2-05-a05-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "旅行サイトの口コミを読みましたか。",
+          "take": 1,
+          "tts_text": "旅行サイトの口コミを読みましたか。",
+          "synthesis_duration_seconds": 2.17,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:04:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a05-l02.mp3": {
+      "fingerprint": "578fcccb1b09d644b9e9cd500ec8047b8a077032ca2d2e34942741e294aadd2c",
+      "output": "audio/irodori/irodori-elementary2-05-a05-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.796,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "はい。駅から近くて、景色がきれいだって聞きました。",
+          "take": 1,
+          "tts_text": "はい。駅から近くて、景色がきれいだって聞きました。",
+          "synthesis_duration_seconds": 3.36,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 3.796,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:04:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a05-l03.mp3": {
+      "fingerprint": "78c9e866436915c01a924b69ee850cc65fe84cb00645982e8d20520326c682ce",
+      "output": "audio/irodori/irodori-elementary2-05-a05-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "ほかには、どんなことが書いてありましたか。",
+          "take": 1,
+          "tts_text": "ほかには、どんなことが書いてありましたか。",
+          "synthesis_duration_seconds": 2.78,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:04:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a05-l04.mp3": {
+      "fingerprint": "147fb8d864f9e122cbe989aa674ca06f5f4902cc0a3de426eca2e53ea07404e6",
+      "output": "audio/irodori/irodori-elementary2-05-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.437,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "静かで、ゆっくりできるところだって書いてありました。",
+          "take": 1,
+          "tts_text": "静かで、ゆっくりできるところだって書いてありました。",
+          "synthesis_duration_seconds": 3.03,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.437,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:04:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
