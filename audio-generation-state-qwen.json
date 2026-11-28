@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:54:43+00:00",
+  "updated_at": "2026-11-28T12:55:49+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -15129,6 +15129,223 @@
         }
       ],
       "generated_at": "2026-11-28T12:54:43+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a01-l04.mp3": {
+      "fingerprint": "6f975f58ad2ff86a43f2f8fce330ab7eec612a46be3f812967cd1ceab912cf78",
+      "output": "audio/irodori/irodori-elementary2-03-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.367,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "はい。エビが入っていないものを選びます。",
+          "take": 1,
+          "tts_text": "はい。エビが入っていないものを選びます。",
+          "synthesis_duration_seconds": 2.82,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.367,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:54:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a02-l01.mp3": {
+      "fingerprint": "d63574312306adaaedd7cb67a45841bbdf206133c7c3f0c7197f5e76dfa58346",
+      "output": "audio/irodori/irodori-elementary2-03-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "すみません。このカレーに卵は入っていますか。",
+          "take": 1,
+          "tts_text": "すみません。このカレーに卵は入っていますか。",
+          "synthesis_duration_seconds": 2.91,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:55:04+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a02-l02.mp3": {
+      "fingerprint": "3f5eeef2a39530cc1c33653e794d3ffb31cfc6df6ca8f5d51ea4efcf13da653e",
+      "output": "audio/irodori/irodori-elementary2-03-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "はい、上に目玉焼きがのっています。",
+          "take": 1,
+          "tts_text": "はい、上に目玉焼きがのっています。",
+          "synthesis_duration_seconds": 2.45,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:55:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a02-l03.mp3": {
+      "fingerprint": "bbed328edd8521065e80022a2d320a28b43bb1d059d0ff9385c0ca6482884b70",
+      "output": "audio/irodori/irodori-elementary2-03-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.39,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "そうですか。卵のアレルギーがあるので、卵抜きにできますか。",
+          "take": 1,
+          "tts_text": "そうですか。卵のアレルギーがあるので、卵抜きにできますか。",
+          "synthesis_duration_seconds": 4.59,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.39,
+            "output_duration_seconds": 5.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:55:29+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a02-l04.mp3": {
+      "fingerprint": "68c211991a5d8d778e96354ebcdf8fe747cb971b4abdd07f9c30f2775705e6d5",
+      "output": "audio/irodori/irodori-elementary2-03-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "確認します。少々お待ちください。",
+          "take": 1,
+          "tts_text": "確認します。少々お待ちください。",
+          "synthesis_duration_seconds": 2.44,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:55:38+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a03-l01.mp3": {
+      "fingerprint": "d93489f494dde72193f87d3cd7ab9cc0f6f279ebc8ff535ad41b0b8b7280c56e",
+      "output": "audio/irodori/irodori-elementary2-03-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "いらっしゃいませ。テーブルとカウンターがございます。",
+          "take": 1,
+          "tts_text": "いらっしゃいませ。テーブルとカウンターがございます。",
+          "synthesis_duration_seconds": 3.03,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:55:49+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
