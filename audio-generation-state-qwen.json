@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:26:46+00:00",
+  "updated_at": "2026-11-28T12:27:46+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -9689,7 +9689,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:32:29+00:00",
+      "generated_at": "2026-11-28T12:26:55+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a05-l03.mp3": {
@@ -9725,7 +9725,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:32:41+00:00",
+      "generated_at": "2026-11-28T12:27:07+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a05-l04.mp3": {
@@ -9762,7 +9762,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:32:51+00:00",
+      "generated_at": "2026-11-28T12:27:17+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a01-l01.mp3": {
@@ -9798,7 +9798,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:33:08+00:00",
+      "generated_at": "2026-11-28T12:27:35+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a01-l02.mp3": {
@@ -9813,19 +9813,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 2.99,
+          "duration_seconds": 3.95,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "わかりました。気をつけて来てください。",
           "take": 1,
           "tts_text": "わかりました。気をつけて来てください。",
-          "synthesis_duration_seconds": 2.22,
+          "synthesis_duration_seconds": 2.65,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 2.99,
-            "output_duration_seconds": 2.99,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -9834,7 +9834,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:33:16+00:00",
+      "generated_at": "2026-11-28T12:27:46+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a01-l03.mp3": {
