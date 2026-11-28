@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:11:45+00:00",
+  "updated_at": "2026-11-28T13:12:40+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -18541,6 +18541,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:11:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a05-l03.mp3": {
+      "fingerprint": "f6144dee621ad4b5e27a7505ed3defc8010b7ec8367562dae09571cd515e5441",
+      "output": "audio/irodori/irodori-elementary2-07-a05-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.83,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "参加する条件はありますか。",
+          "take": 1,
+          "tts_text": "参加する条件はありますか。",
+          "synthesis_duration_seconds": 1.94,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:11:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a05-l04.mp3": {
+      "fingerprint": "c5de21394748cf788c5e81ce7844c5b467aa1ca64baa8dccda1c7267bf29ec08",
+      "output": "audio/irodori/irodori-elementary2-07-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "特にありません。どなたでも参加できます。",
+          "take": 1,
+          "tts_text": "特にありません。どなたでも参加できます。",
+          "synthesis_duration_seconds": 2.69,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:12:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a01-l01.mp3": {
+      "fingerprint": "5644823bc667fc55fbf3c4acc518c4f0ef3467a59f8a2748457416941ca5cd50",
+      "output": "audio/irodori/irodori-elementary2-08-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "このフェスティバルは、いつありますか。",
+          "take": 1,
+          "tts_text": "このフェスティバルは、いつありますか。",
+          "synthesis_duration_seconds": 2.53,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:12:14+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a01-l02.mp3": {
+      "fingerprint": "43b2bec64fece8ec3274e8f82b948ff927564e7a609688cf5a36a05be1ff1e31",
+      "output": "audio/irodori/irodori-elementary2-08-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.224,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "六月二十二日の日曜日です。午前十時から午後四時までです。",
+          "take": 1,
+          "tts_text": "六月二十二日の日曜日です。午前十時から午後四時までです。",
+          "synthesis_duration_seconds": 4.64,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.87,
+            "output_duration_seconds": 5.224,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:12:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a01-l03.mp3": {
+      "fingerprint": "2700b908d6f73104d316184d5042b276c679e42cf644622d4006eacaec27b867",
+      "output": "audio/irodori/irodori-elementary2-08-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "ステージでは、何がありますか。",
+          "take": 1,
+          "tts_text": "ステージでは、何がありますか。",
+          "synthesis_duration_seconds": 2.19,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:12:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
