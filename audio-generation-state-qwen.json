@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:28:45+00:00",
+  "updated_at": "2026-11-28T13:29:42+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -21844,6 +21844,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:28:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a03-l02.mp3": {
+      "fingerprint": "be64211821a5654e3038bacfc696d4540551918f4997f077271ca7273f13c84e",
+      "output": "audio/irodori/irodori-elementary2-12-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.437,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "こちらのほうが軽くて、動かしやすいですよ。",
+          "take": 1,
+          "tts_text": "こちらのほうが軽くて、動かしやすいですよ。",
+          "synthesis_duration_seconds": 2.85,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.437,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:28:56+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a03-l03.mp3": {
+      "fingerprint": "2891261dc82df76e0f9878b0b350daa1cfc621e600f037a2c78387150fc14346",
+      "output": "audio/irodori/irodori-elementary2-12-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "でも、長い時間使いたいです。",
+          "take": 1,
+          "tts_text": "でも、長い時間使いたいです。",
+          "synthesis_duration_seconds": 2.64,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:29:06+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a03-l04.mp3": {
+      "fingerprint": "ae62129b6164ea4242b06728e03f55f4996aff9a6f8574cf4f0f2e655889060c",
+      "output": "audio/irodori/irodori-elementary2-12-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.222,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "それなら、連続使用時間が長いモデルのほうがいいですね。",
+          "take": 1,
+          "tts_text": "それなら、連続使用時間が長いモデルのほうがいいですね。",
+          "synthesis_duration_seconds": 3.85,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.222,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:29:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a04-l01.mp3": {
+      "fingerprint": "57ed0b7a3ce6993b7be222f63c0545dba8df65369f88db1af600dc16f089b2da",
+      "output": "audio/irodori/irodori-elementary2-12-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "この価格は、消費税込みですか。",
+          "take": 1,
+          "tts_text": "この価格は、消費税込みですか。",
+          "synthesis_duration_seconds": 2.71,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:29:30+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a04-l02.mp3": {
+      "fingerprint": "b4810df2e40e62a511bf37ecd436ef16e5745785cc12f6ffab0cb7660d62a323",
+      "output": "audio/irodori/irodori-elementary2-12-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "いいえ、税別です。レジで合計金額を確認してください。",
+          "take": 1,
+          "tts_text": "いいえ、税別です。レジで合計金額を確認してください。",
+          "synthesis_duration_seconds": 3.89,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:29:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
