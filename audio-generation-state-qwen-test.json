@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-27T10:22:35+00:00",
+  "items": {
+    "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
+      "fingerprint": "b14a4d070d998740a6acbccba9f8630885a09bdc10ebc607133922acc6f750b9",
+      "output": "audio/irodori/irodori-elementary1-01-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.112,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "あ、久しぶりです。お元気ですか？",
+          "synthesis_duration_seconds": 3.95,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.112,
+            "filters": [
+              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-27T10:19:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a01-l02.mp3": {
+      "fingerprint": "0074ff0f5249b8ac40789bf3a6b9ac1c57921c6a2493056d99e4ab7234c7c4cd",
+      "output": "audio/irodori/irodori-elementary1-01-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.403,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "はい、元気です。ユイさんもお元気ですか？",
+          "synthesis_duration_seconds": 3.79,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.403,
+            "filters": [
+              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-27T10:19:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a01-l03.mp3": {
+      "fingerprint": "570fb1014bd5649736035961aea75fa40fbe707b85663d90c2ced25e5f72b091",
+      "output": "audio/irodori/irodori-elementary1-01-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.971,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "はい、おかげさまで。",
+          "synthesis_duration_seconds": 2.43,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.43,
+            "output_duration_seconds": 1.971,
+            "filters": [
+              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-27T10:19:41+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a02-l01.mp3": {
+      "fingerprint": "161d1735918c7f8142f7851b43308bc23f5d854719337832ee882c13c185838d",
+      "output": "audio/irodori/irodori-elementary1-01-a02-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.465,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "あ、久しぶり！",
+          "synthesis_duration_seconds": 2.35,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.35,
+            "output_duration_seconds": 1.465,
+            "filters": [
+              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2",
+              "atempo=1.120"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-27T10:22:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a02-l02.mp3": {
+      "fingerprint": "3c92d87b8924b31016c4482ad9f2f51e92831d2d464e69dd19a8e873b22b1d6a",
+      "output": "audio/irodori/irodori-elementary1-01-a02-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.865,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "ああ、久しぶり。元気？",
+          "synthesis_duration_seconds": 3.47,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 2.865,
+            "filters": [
+              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-27T10:22:27+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-01-a02-l03.mp3": {
+      "fingerprint": "4b4ba36c845e4cd20b30f92a672d8d572151c0bec7ea9433e73fec20c426d8e2",
+      "output": "audio/irodori/irodori-elementary1-01-a02-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.048,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "うん、元気だよ。",
+          "synthesis_duration_seconds": 2.35,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.35,
+            "output_duration_seconds": 2.048,
+            "filters": [
+              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2",
+              "atempo=1.120"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-27T10:22:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    }
+  }
+}

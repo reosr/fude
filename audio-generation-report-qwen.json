@@ -1,0 +1,35 @@
+{
+  "started_at": "2026-11-27T19:50:35+00:00",
+  "finished_at": "2026-11-27T20:38:07+00:00",
+  "interrupted": true,
+  "requested_items": 3095,
+  "completed_items": 295,
+  "failed_items": 5,
+  "failures": [
+    {
+      "id": "irodori:audio/irodori/irodori-elementary1-05-a04-l01.mp3",
+      "output": "audio/irodori/irodori-elementary1-05-a04-l01.mp3",
+      "error": "No acceptable take after 3 tries: take 1: too short (cut off?); take 2: too short (cut off?); take 3: too short (cut off?)"
+    },
+    {
+      "id": "irodori:audio/irodori/irodori-elementary1-09-a01-l04.mp3",
+      "output": "audio/irodori/irodori-elementary1-09-a01-l04.mp3",
+      "error": "No acceptable take after 3 tries: take 1: too short (cut off?); take 2: too short (cut off?); take 3: too short (cut off?)"
+    },
+    {
+      "id": "irodori:audio/irodori/irodori-elementary1-11-a04-l04.mp3",
+      "output": "audio/irodori/irodori-elementary1-11-a04-l04.mp3",
+      "error": "No acceptable take after 3 tries: take 1: too short (cut off?); take 2: too short (cut off?); take 3: too short (cut off?)"
+    },
+    {
+      "id": "irodori:audio/irodori/irodori-elementary1-14-a02-l02.mp3",
+      "output": "audio/irodori/irodori-elementary1-14-a02-l02.mp3",
+      "error": "No acceptable take after 3 tries: take 1: pause in the middle; take 2: pause in the middle; take 3: pause in the middle"
+    },
+    {
+      "id": "irodori:audio/irodori/irodori-elementary1-14-a05-l01.mp3",
+      "output": "audio/irodori/irodori-elementary1-14-a05-l01.mp3",
+      "error": "No acceptable take after 3 tries: take 1: pause in the middle; take 2: pause in the middle; take 3: pause in the middle"
+    }
+  ]
+}

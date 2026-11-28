@@ -1,23 +1,56 @@
 {
-  "api_base_url": "http://127.0.0.1:8001",
-  "default_preset": "fude_teen_female",
-  "preset_by_role": {
-    "child_female": "fude_child_female",
-    "child_male": "fude_child_male",
-    "teen_female": "fude_teen_female",
-    "teen_male": "fude_teen_male",
-    "adult_female": "fude_adult_female",
-    "adult_male": "fude_adult_male",
-    "elderly_female": "fude_elderly_female",
-    "elderly_male": "fude_elderly_male"
+  "api_base_url": "http://127.0.0.1:8765",
+  "default_voice_role": "teen_female",
+  "voice_by_role": {
+    "child_female": [
+      "child_female_a",
+      "child_female_b",
+      "child_female_c"
+    ],
+    "child_male": [
+      "child_male_a",
+      "child_male_b",
+      "child_male_c"
+    ],
+    "teen_female": [
+      "teen_female_a",
+      "teen_female_b",
+      "teen_female_c"
+    ],
+    "teen_male": [
+      "teen_male_a",
+      "teen_male_b",
+      "teen_male_c"
+    ],
+    "adult_female": [
+      "adult_female_a",
+      "adult_female_b",
+      "adult_female_c"
+    ],
+    "adult_male": [
+      "adult_male_a",
+      "adult_male_b",
+      "adult_male_c"
+    ],
+    "elderly_female": [
+      "elderly_female_a",
+      "elderly_female_b",
+      "elderly_female_c"
+    ],
+    "elderly_male": [
+      "elderly_male_a",
+      "elderly_male_b",
+      "elderly_male_c"
+    ]
   },
-  "best_of_n": {
-    "enabled": false,
-    "n": 1,
-    "language": "auto"
+  "rotation": {
+    "mode": "random_non_repeating",
+    "scope": "conversation",
+    "assignment_file": "audio-qwen-conversation-voice-assignments.json",
+    "line_suffix_regex": "[-_]l\\d+$"
   },
-  "mp3_bitrate": "192k",
-  "timeout_seconds": 180,
+  "mp3_bitrate": "128k",
+  "timeout_seconds": 600,
   "audio_processing": {
     "silence_cleanup": {
       "enabled": true,

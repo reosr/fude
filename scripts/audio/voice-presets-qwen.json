@@ -1,0 +1,73 @@
+{
+  "api_base_url": "http://127.0.0.1:8765",
+  "default_voice_role": "teen_female",
+
+  "voice_by_role": {
+    "child_female": [
+      "child_female_a",
+      "child_female_b",
+      "child_female_c"
+    ],
+    "child_male": [
+      "child_male_a",
+      "child_male_b",
+      "child_male_c"
+    ],
+    "teen_female": [
+      "teen_female_a",
+      "teen_female_b",
+      "teen_female_c"
+    ],
+    "teen_male": [
+      "teen_male_a",
+      "teen_male_b",
+      "teen_male_c"
+    ],
+    "adult_female": [
+      "adult_female_a",
+      "adult_female_b",
+      "adult_female_c"
+    ],
+    "adult_male": [
+      "adult_male_a",
+      "adult_male_b",
+      "adult_male_c"
+    ],
+    "elderly_female": [
+      "elderly_female_a",
+      "elderly_female_b",
+      "elderly_female_c"
+    ],
+    "elderly_male": [
+      "elderly_male_a",
+      "elderly_male_b",
+      "elderly_male_c"
+    ]
+  },
+
+  "rotation": {
+    "mode": "random_non_repeating",
+    "scope": "manifest_item",
+    "assignment_file": "audio-qwen-voice-assignments.json"
+  },
+
+  "mp3_bitrate": "192k",
+  "timeout_seconds": 600,
+
+  "audio_processing": {
+    "silence_cleanup": {
+      "enabled": true,
+      "start_periods": 1,
+      "start_duration": 0.05,
+      "start_threshold_db": -55,
+      "start_silence": 0.05,
+      "stop_periods": -1,
+      "stop_duration": 0.25,
+      "stop_threshold_db": -40,
+      "stop_silence": 0.2
+    },
+    "speed_by_role": {
+      "teen_male": 1.12
+    }
+  }
+}
