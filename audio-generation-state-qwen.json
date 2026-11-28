@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:58:46+00:00",
+  "updated_at": "2026-11-28T12:59:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -16000,6 +16000,224 @@
         }
       ],
       "generated_at": "2026-11-28T12:58:46+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a02-l04.mp3": {
+      "fingerprint": "d92115ec293d636e2c61a93cdfa15337e68861caa5cf49a9d1cadf1a52b8e5e3",
+      "output": "audio/irodori/irodori-elementary2-04-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "わかりました。こうやって混ぜるんですね。",
+          "take": 1,
+          "tts_text": "わかりました。こうやって混ぜるんですね。",
+          "synthesis_duration_seconds": 2.33,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:58:56+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a03-l01.mp3": {
+      "fingerprint": "6e509d3dd5c3ca964c3677463f0dedf00f83937c56ed6717745f4579113c5193",
+      "output": "audio/irodori/irodori-elementary2-04-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "この野菜の天ぷらは、どうやって食べるんですか。",
+          "take": 1,
+          "tts_text": "この野菜の天ぷらは、どうやって食べるんですか。",
+          "synthesis_duration_seconds": 2.68,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:59:06+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a03-l02.mp3": {
+      "fingerprint": "6d02dcd6f64481500c230d8c4f0fdca5a466c4e2cec966318dcac07d7023b335",
+      "output": "audio/irodori/irodori-elementary2-04-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.75,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "つゆにつけて食べてください。",
+          "take": 1,
+          "tts_text": "つゆにつけて食べてください。",
+          "synthesis_duration_seconds": 1.51,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:59:14+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a03-l03.mp3": {
+      "fingerprint": "2c944a8dd41e45ba2dc4889bb39b4529f458a64dfa2a5af26a28648d8945f991",
+      "output": "audio/irodori/irodori-elementary2-04-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.153,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "全部つけてもいいですか。",
+          "take": 1,
+          "tts_text": "全部つけてもいいですか。",
+          "synthesis_duration_seconds": 1.33,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.43,
+            "output_duration_seconds": 2.153,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:59:20+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a03-l04.mp3": {
+      "fingerprint": "40d24c5a3566e5e9ff32e02b8d1b1d49279faa75fc9821161bdba27c02e39611",
+      "output": "audio/irodori/irodori-elementary2-04-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.59,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "少しずつつけるといいですよ。塩で食べてもいいです。",
+          "take": 1,
+          "tts_text": "少しずつつけるといいですよ。塩で食べてもいいです。",
+          "synthesis_duration_seconds": 3.82,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:59:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a04-l01.mp3": {
+      "fingerprint": "b97032c25cd49ace77f7ae3a69468c089b7ef1f34ff7dadb090fd5ce98987733",
+      "output": "audio/irodori/irodori-elementary2-04-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "インドネシアの料理で、おすすめは何ですか。",
+          "take": 1,
+          "tts_text": "インドネシアの料理で、おすすめは何ですか。",
+          "synthesis_duration_seconds": 2.89,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:59:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
