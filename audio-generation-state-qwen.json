@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:40:43+00:00",
+  "updated_at": "2026-11-28T13:41:45+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -24092,6 +24092,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:40:43+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a03-l04.mp3": {
+      "fingerprint": "e2c5ea8c6949ec289de32af63824e48cdf494f73b383bdcf104f65718b9dc965",
+      "output": "audio/irodori/irodori-elementary2-15-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "はい。できることから続けるようにしています。",
+          "take": 1,
+          "tts_text": "はい。できることから続けるようにしています。",
+          "synthesis_duration_seconds": 2.57,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:40:52+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a04-l01.mp3": {
+      "fingerprint": "d9db84ad626db581f9d3564af43563ed8376b3a0390132ffa64c7e47f6a716ee",
+      "output": "audio/irodori/irodori-elementary2-15-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "この地域では、ごみを何種類に分けていますか。",
+          "take": 1,
+          "tts_text": "この地域では、ごみを何種類に分けていますか。",
+          "synthesis_duration_seconds": 2.99,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:41:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a04-l02.mp3": {
+      "fingerprint": "fb86b31c727a728a0fe88e2a195c63057d4578b4e2420bcffbff5477b793f94b",
+      "output": "audio/irodori/irodori-elementary2-15-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.438,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "四種類です。資源ごみ、燃えるごみ、燃えないごみ、粗大ごみです。",
+          "take": 1,
+          "tts_text": "四種類です。資源ごみ、燃えるごみ、燃えないごみ、粗大ごみです。",
+          "synthesis_duration_seconds": 5.53,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 6.11,
+            "output_duration_seconds": 5.438,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:41:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a04-l03.mp3": {
+      "fingerprint": "a75f17e76854f55c1c1dff62adfb7217382e03830540194158ec5ad97640742d",
+      "output": "audio/irodori/irodori-elementary2-15-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "種類によって、出す曜日が違いますか。",
+          "take": 1,
+          "tts_text": "種類によって、出す曜日が違いますか。",
+          "synthesis_duration_seconds": 2.89,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:41:32+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a04-l04.mp3": {
+      "fingerprint": "6a5f6df01aba04196231ef3c82ca3070b31841a50a60573db5ceeb734813612a",
+      "output": "audio/irodori/irodori-elementary2-15-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.152,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "はい。説明の紙で、曜日と注意点を確認してください。",
+          "take": 1,
+          "tts_text": "はい。説明の紙で、曜日と注意点を確認してください。",
+          "synthesis_duration_seconds": 3.78,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.67,
+            "output_duration_seconds": 4.152,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:41:45+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
