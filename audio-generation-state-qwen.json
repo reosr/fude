@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:06:36+00:00",
+  "updated_at": "2026-11-28T14:07:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -28658,6 +28658,181 @@
         }
       ],
       "generated_at": "2026-11-28T14:06:36+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u007.mp3": {
+      "fingerprint": "43dead6ef51bb9152688c04b72ace5cd9258f4e1400739651d9430bcf338536a",
+      "output": "audio/irodori/irodori-preintermediate-04-u007.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.31,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "今朝からです。蛇口を閉めても、少しずつ水が出てきます。",
+          "take": 1,
+          "tts_text": "今朝からです。蛇口を閉めても、少しずつ水が出てきます。",
+          "synthesis_duration_seconds": 4.36,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.31,
+            "output_duration_seconds": 5.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:06:51+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u008.mp3": {
+      "fingerprint": "0890656466d5e9d37fbda5ef9a92c2efae515d0d66f903a47a922d40d4b96874",
+      "output": "audio/irodori/irodori-preintermediate-04-u008.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "わかりました。床がぬれないように、タオルを置いておいてください。",
+          "take": 1,
+          "tts_text": "わかりました。床がぬれないように、タオルを置いておいてください。",
+          "synthesis_duration_seconds": 3.84,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:07:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u009.mp3": {
+      "fingerprint": "9dea0b4953b56d94ecc71fc7888f69d40c33fd6e78e4c8373b84226edc24b18e",
+      "output": "audio/irodori/irodori-preintermediate-04-u009.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "修理の担当者が、明日の午後に伺いたいそうです。",
+          "take": 1,
+          "tts_text": "修理の担当者が、明日の午後に伺いたいそうです。",
+          "synthesis_duration_seconds": 3.7,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:07:17+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u010.mp3": {
+      "fingerprint": "61a7ae838fa19bfcd740d900759380ad9f0ce710ec1526f3789aa0cfb6b7e44a",
+      "output": "audio/irodori/irodori-preintermediate-04-u010.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "午後なら、三時以降が都合がいいです。",
+          "take": 1,
+          "tts_text": "午後なら、三時以降が都合がいいです。",
+          "synthesis_duration_seconds": 2.46,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:07:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u011.mp3": {
+      "fingerprint": "274cbb42afd00a80f65845b0e88bfe542d44a758efc92cad834d6c42567b61f8",
+      "output": "audio/irodori/irodori-preintermediate-04-u011.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.99,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "では、三時半ごろに伺うように伝えます。お電話番号を確認してもよろしいですか。",
+          "take": 1,
+          "tts_text": "では、三時半ごろに伺うように伝えます。お電話番号を確認してもよろしいですか。",
+          "synthesis_duration_seconds": 6.1,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.99,
+            "output_duration_seconds": 6.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:07:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
