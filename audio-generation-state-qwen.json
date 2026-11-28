@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:08:48+00:00",
+  "updated_at": "2026-11-28T14:09:43+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -29045,6 +29045,148 @@
         }
       ],
       "generated_at": "2026-11-28T14:08:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u002.mp3": {
+      "fingerprint": "79a45704475d83f7a5ca6a9608f33cdeecff0d6a65ecdeb7625114a11ae3ab47",
+      "output": "audio/irodori/irodori-preintermediate-05-u002.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.437,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "ラーメンとハンバーグがありますね。どれにしますか。",
+          "take": 1,
+          "tts_text": "ラーメンとハンバーグがありますね。どれにしますか。",
+          "synthesis_duration_seconds": 2.94,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.437,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:08:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u003.mp3": {
+      "fingerprint": "c2c3be1e328c8b1c9bd1399110f1185963f934944ce3f26db9ba98cffc82d829",
+      "output": "audio/irodori/irodori-preintermediate-05-u003.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "私はラーメンにします。麺は大盛りにできますか。",
+          "take": 1,
+          "tts_text": "私はラーメンにします。麺は大盛りにできますか。",
+          "synthesis_duration_seconds": 4.07,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:09:14+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u004.mp3": {
+      "fingerprint": "7ea6bcefb227cf8977d3640ab89eadfd7ac78afddd6f8630a8835b1876e36490",
+      "output": "audio/irodori/irodori-preintermediate-05-u004.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "できますよ。注文する数を選んで、最後に「送信」を押せばいいんですね。",
+          "take": 1,
+          "tts_text": "できますよ。注文する数を選んで、最後に「送信」を押せばいいんですね。",
+          "synthesis_duration_seconds": 5.56,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.95,
+            "output_duration_seconds": 5.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:09:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-05-u005.mp3": {
+      "fingerprint": "1eac2b58bacbdbc167606813c111365bc26fe366222d9965e3543d5994adcb26",
+      "output": "audio/irodori/irodori-preintermediate-05-u005.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.27,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "日本でインドネシア料理が食べられるお店を知っていますか。",
+          "take": 1,
+          "tts_text": "日本でインドネシア料理が食べられるお店を知っていますか。",
+          "synthesis_duration_seconds": 3.03,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 4.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:09:43+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
