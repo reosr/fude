@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:33:48+00:00",
+  "updated_at": "2026-11-28T13:34:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -22787,6 +22787,189 @@
         }
       ],
       "generated_at": "2026-11-28T13:33:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a04-l04.mp3": {
+      "fingerprint": "db84470992af33fc929a197b7341b203d879f58cbe0a8c4facd940a65f16cb76",
+      "output": "audio/irodori/irodori-elementary2-13-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "いいえ。DVDは、図書館が開いているときに返してください。",
+          "take": 1,
+          "tts_text": "いいえ。DVDは、図書館が開いているときに返してください。",
+          "synthesis_duration_seconds": 3.58,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 3.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:34:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a05-l01.mp3": {
+      "fingerprint": "eaa079c0ad3b56361414efed4b570c559d783615f101b5f15b017a01114e26dc",
+      "output": "audio/irodori/irodori-elementary2-13-a05-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "入口に「撮影禁止」と書いてありますね。",
+          "take": 1,
+          "tts_text": "入口に「撮影禁止」と書いてありますね。",
+          "synthesis_duration_seconds": 2.6,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:34:14+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a05-l02.mp3": {
+      "fingerprint": "cbe8d6cb62d90eb9494a8bb262385f3671a189e827fe7a4effa4392ce4aa3f60",
+      "output": "audio/irodori/irodori-elementary2-13-a05-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "ここでは、写真を撮ってはいけないという意味です。",
+          "take": 1,
+          "tts_text": "ここでは、写真を撮ってはいけないという意味です。",
+          "synthesis_duration_seconds": 2.93,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:34:25+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a05-l03.mp3": {
+      "fingerprint": "596fe9f26456d34f567e2e5b0ffa74ad963ed883eb98b55cd1dbaf5fb8f48ae2",
+      "output": "audio/irodori/irodori-elementary2-13-a05-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "大きなかばんは、どうすればいいですか。",
+          "take": 1,
+          "tts_text": "大きなかばんは、どうすればいいですか。",
+          "synthesis_duration_seconds": 2.63,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:34:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-13-a05-l04.mp3": {
+      "fingerprint": "b61cdbd9ffb0d497440b40313c743a2b28c01a3187e25979014df15ac69989ab",
+      "output": "audio/irodori/irodori-elementary2-13-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.866,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "ロッカーにお預けください、と書いてあります。",
+          "take": 1,
+          "tts_text": "ロッカーにお預けください、と書いてあります。",
+          "synthesis_duration_seconds": 2.3,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 2.866,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:34:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
