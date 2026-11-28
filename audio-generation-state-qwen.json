@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:00:35+00:00",
+  "updated_at": "2026-11-28T12:01:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -3694,7 +3694,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:07:40+00:00",
+      "generated_at": "2026-11-28T12:00:51+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a01-l01.mp3": {
@@ -3730,7 +3730,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:07:49+00:00",
+      "generated_at": "2026-11-28T12:00:59+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a01-l02.mp3": {
@@ -3767,7 +3767,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:07:57+00:00",
+      "generated_at": "2026-11-28T12:01:07+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a01-l03.mp3": {
@@ -3803,7 +3803,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:08:04+00:00",
+      "generated_at": "2026-11-28T12:01:14+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a01-l04.mp3": {
@@ -3840,7 +3840,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:08:10+00:00",
+      "generated_at": "2026-11-28T12:01:21+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a01-l05.mp3": {
@@ -3876,7 +3876,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:08:18+00:00",
+      "generated_at": "2026-11-28T12:01:29+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a02-l01.mp3": {
@@ -3912,7 +3912,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:08:28+00:00",
+      "generated_at": "2026-11-28T12:01:39+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a02-l02.mp3": {
@@ -3927,19 +3927,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.55,
+          "duration_seconds": 3.47,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "はい。今、どちらにいますか。",
           "take": 1,
           "tts_text": "はい。今、どちらにいますか。",
-          "synthesis_duration_seconds": 2.43,
+          "synthesis_duration_seconds": 2.64,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.55,
-            "output_duration_seconds": 3.55,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.47,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -3948,7 +3948,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:08:38+00:00",
+      "generated_at": "2026-11-28T12:01:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-06-a02-l03.mp3": {
