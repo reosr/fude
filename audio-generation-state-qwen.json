@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:53:49+00:00",
+  "updated_at": "2026-11-28T13:54:46+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -26373,6 +26373,151 @@
         }
       ],
       "generated_at": "2026-11-28T13:53:49+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-18-a04-l03.mp3": {
+      "fingerprint": "1536d70071a2bbb4c067ff2114070510013fa826fcf69ee8d04f5585f16c59cb",
+      "output": "audio/irodori/irodori-elementary2-18-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.39,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "一緒に勉強した思い出と、手伝ってもらったことへの感謝を話そうと思います。",
+          "take": 1,
+          "tts_text": "一緒に勉強した思い出と、手伝ってもらったことへの感謝を話そうと思います。",
+          "synthesis_duration_seconds": 4.41,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.39,
+            "output_duration_seconds": 5.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:54:04+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-18-a04-l04.mp3": {
+      "fingerprint": "ed0dc0681f9629e35f3f99e8e3a7fc84ec4e0d6099ed461e9dc6bb1221d8772a",
+      "output": "audio/irodori/irodori-elementary2-18-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.581,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "最後に、これからの目標も話すといいですね。",
+          "take": 1,
+          "tts_text": "最後に、これからの目標も話すといいですね。",
+          "synthesis_duration_seconds": 3.16,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 3.581,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:54:15+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-18-a05-l01.mp3": {
+      "fingerprint": "ec83e7801b4f5161f5892530ddff750ef1332e286498cb17eb167774dd8cb4a3",
+      "output": "audio/irodori/irodori-elementary2-18-a05-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.47,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "この前、ユイさんに発表の練習を手伝ってもらいました。",
+          "take": 1,
+          "tts_text": "この前、ユイさんに発表の練習を手伝ってもらいました。",
+          "synthesis_duration_seconds": 4.56,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.47,
+            "output_duration_seconds": 5.47,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:54:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-18-a05-l02.mp3": {
+      "fingerprint": "b9d99543512c5ee62fde1990bee940716da7e92b3dd1b15d872a238e8110c945",
+      "output": "audio/irodori/irodori-elementary2-18-a05-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "私も、アキコさんに資料を見せてもらいました。",
+          "take": 1,
+          "tts_text": "私も、アキコさんに資料を見せてもらいました。",
+          "synthesis_duration_seconds": 3.49,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:54:46+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
