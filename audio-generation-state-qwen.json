@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:07:48+00:00",
+  "updated_at": "2026-11-28T13:08:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -17814,6 +17814,189 @@
         }
       ],
       "generated_at": "2026-11-28T13:07:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a05-l02.mp3": {
+      "fingerprint": "38d4a64a89533afaa3429cf2d76f2f03e821e6859035b944b724c245350716e3",
+      "output": "audio/irodori/irodori-elementary2-06-a05-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.581,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "はい。先週、友だちと二人で大阪へ行きました。",
+          "take": 1,
+          "tts_text": "はい。先週、友だちと二人で大阪へ行きました。",
+          "synthesis_duration_seconds": 3.32,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 3.581,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:07:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a05-l03.mp3": {
+      "fingerprint": "9a2ccec2530205adab3889e654e06a864ef71ac89c2d8436643cb4478851af3d",
+      "output": "audio/irodori/irodori-elementary2-06-a05-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.99,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "何が一番おもしろかったですか。",
+          "take": 1,
+          "tts_text": "何が一番おもしろかったですか。",
+          "synthesis_duration_seconds": 2.06,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.99,
+            "output_duration_seconds": 2.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:08:07+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a05-l04.mp3": {
+      "fingerprint": "316783cbfa4d644d40a956c841ad8df31eb4b1fdcdcdcae8b524fc495e35e4c0",
+      "output": "audio/irodori/irodori-elementary2-06-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.01,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "大きな公園を歩いたことです。景色がきれいで、気持ちよかったです。",
+          "take": 1,
+          "tts_text": "大きな公園を歩いたことです。景色がきれいで、気持ちよかったです。",
+          "synthesis_duration_seconds": 4.52,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.63,
+            "output_duration_seconds": 5.01,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:08:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a01-l01.mp3": {
+      "fingerprint": "c1bc8671a5499e8487acd9a6912a3046dbffebeb44f5cae65ab1b7f81d6d7ba8",
+      "output": "audio/irodori/irodori-elementary2-07-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "このお知らせは、何についてですか。",
+          "take": 1,
+          "tts_text": "このお知らせは、何についてですか。",
+          "synthesis_duration_seconds": 2.63,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:08:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a01-l02.mp3": {
+      "fingerprint": "909619a87fcf51793f61541c106b8ea69cf30c45fcef353094d2157c5cfff7ec",
+      "output": "audio/irodori/irodori-elementary2-07-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.581,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "公園で行われる、花の展示会についてです。",
+          "take": 1,
+          "tts_text": "公園で行われる、花の展示会についてです。",
+          "synthesis_duration_seconds": 3.15,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 3.581,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:08:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
