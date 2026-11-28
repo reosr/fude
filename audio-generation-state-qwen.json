@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:47:44+00:00",
+  "updated_at": "2026-11-28T13:48:38+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -25324,6 +25324,150 @@
         }
       ],
       "generated_at": "2026-11-28T13:47:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a02-l02.mp3": {
+      "fingerprint": "44ceb8aad9767f68b270917a591c691942b62f5db5611e1e50234bd46adfd039",
+      "output": "audio/irodori/irodori-elementary2-17-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "最初は報告書の書き方が難しかったですが、今は一人でまとめられるようになりました。",
+          "take": 1,
+          "tts_text": "最初は報告書の書き方が難しかったですが、今は一人でまとめられるようになりました。",
+          "synthesis_duration_seconds": 5.03,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.87,
+            "output_duration_seconds": 5.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:48:01+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a02-l03.mp3": {
+      "fingerprint": "1dcaf00867fb544e9effe2189d83a40241ce0ef9a2d58fb2c97d4fa0202957b6",
+      "output": "audio/irodori/irodori-elementary2-17-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "それはすごいですね。何か困ったことはありませんか。",
+          "take": 1,
+          "tts_text": "それはすごいですね。何か困ったことはありませんか。",
+          "synthesis_duration_seconds": 3.87,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:48:15+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a02-l04.mp3": {
+      "fingerprint": "81dc11be7fa04afc21e9e3d43886906e5126abfad3616b3265a76cb608b01fa7",
+      "output": "audio/irodori/irodori-elementary2-17-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.59,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "わからない言葉があったら、同僚に質問するようにしています。",
+          "take": 1,
+          "tts_text": "わからない言葉があったら、同僚に質問するようにしています。",
+          "synthesis_duration_seconds": 3.71,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:48:28+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a03-l01.mp3": {
+      "fingerprint": "f6703664b3ee7fad6b8048acc2e9e5e47e29765752a12f80652493b56c878b7c",
+      "output": "audio/irodori/irodori-elementary2-17-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "日本語の勉強はどうですか。",
+          "take": 1,
+          "tts_text": "日本語の勉強はどうですか。",
+          "synthesis_duration_seconds": 1.85,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:48:38+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
