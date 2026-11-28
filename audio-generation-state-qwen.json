@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:12:40+00:00",
+  "updated_at": "2026-11-28T13:13:37+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -18723,6 +18723,187 @@
         }
       ],
       "generated_at": "2026-11-28T13:12:40+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a01-l04.mp3": {
+      "fingerprint": "679b2bafaebf3853c757e401309cc2602759b2f6682842ef16b5528e4fdbd8d4",
+      "output": "audio/irodori/irodori-elementary2-08-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.796,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "午前はダンス、午後は音楽の発表があります。",
+          "take": 1,
+          "tts_text": "午前はダンス、午後は音楽の発表があります。",
+          "synthesis_duration_seconds": 3.03,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 3.796,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:12:52+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a02-l01.mp3": {
+      "fingerprint": "0426b08ae74331305c6c829d27b2047051edc803d28d2fb11b13e438d5dcb232",
+      "output": "audio/irodori/irodori-elementary2-08-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "すみません。料理の紹介コーナーは、どこですか。",
+          "take": 1,
+          "tts_text": "すみません。料理の紹介コーナーは、どこですか。",
+          "synthesis_duration_seconds": 3.58,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:13:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a02-l02.mp3": {
+      "fingerprint": "ed9fc5563986868dab32e2b3f9c500c7135932f97b663b95916485b167150c3d",
+      "output": "audio/irodori/irodori-elementary2-08-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "あちらのテントのとなりです。",
+          "take": 1,
+          "tts_text": "あちらのテントのとなりです。",
+          "synthesis_duration_seconds": 1.45,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.43,
+            "output_duration_seconds": 2.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:13:11+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a02-l03.mp3": {
+      "fingerprint": "556c2e559817ba50a37cf81b975f6f82d88f04da9071a728cb4bca5801a6d1eb",
+      "output": "audio/irodori/irodori-elementary2-08-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.03,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "子どもの工作は、何時からか、わかりますか。",
+          "take": 1,
+          "tts_text": "子どもの工作は、何時からか、わかりますか。",
+          "synthesis_duration_seconds": 3.01,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 4.03,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:13:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-08-a02-l04.mp3": {
+      "fingerprint": "dc1dfbea60668f5a7a26bcad2f6eb04f04a9945175689b49d0f6381304a1714e",
+      "output": "audio/irodori/irodori-elementary2-08-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.99,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "午後一時からだと思います。案内でも確認できますよ。",
+          "take": 1,
+          "tts_text": "午後一時からだと思います。案内でも確認できますよ。",
+          "synthesis_duration_seconds": 3.89,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.99,
+            "output_duration_seconds": 4.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:13:37+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
