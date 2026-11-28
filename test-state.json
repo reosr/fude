@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-27T18:30:27+00:00",
+  "updated_at": "2026-11-28T11:18:41+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
-      "fingerprint": "63e525c632071f49653cd5928f9c589a5929595f1962f72c8d49288cb4b9fddf",
+      "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
       "output": "audio/irodori/irodori-elementary1-01-a01-l01.mp3",
       "voice_by_role": {
         "teen_female": "teen_female_c",
@@ -14,21 +14,20 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.173,
+          "duration_seconds": 4.35,
           "sample_rate": 24000,
           "voice_id": "teen_female_c",
           "http_status": 200,
           "input_text": "あ、久しぶりです。お元気ですか？",
           "take": 1,
           "tts_text": "あ、久しぶりです。お元気ですか？",
-          "synthesis_duration_seconds": 3.0,
+          "synthesis_duration_seconds": 2.95,
           "audio_processing": {
             "role": "teen_female",
             "speed": 1.0,
-            "input_duration_seconds": 4.03,
-            "output_duration_seconds": 3.173,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 4.35,
             "filters": [
-              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2",
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
             ]
@@ -36,7 +35,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T18:21:44+00:00",
+      "generated_at": "2026-11-28T11:18:29+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a01-l02.mp3": {
@@ -51,19 +50,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 4.03,
+          "duration_seconds": 4.27,
           "sample_rate": 24000,
           "voice_id": "adult_female_c",
           "http_status": 200,
           "input_text": "はい、元気です。ユイさんもお元気ですか？",
           "take": 1,
           "tts_text": "はい、元気です。ユイさんもお元気ですか？",
-          "synthesis_duration_seconds": 3.0,
+          "synthesis_duration_seconds": 3.19,
           "audio_processing": {
             "role": "adult_female",
             "speed": 1.0,
-            "input_duration_seconds": 4.03,
-            "output_duration_seconds": 4.03,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 4.27,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -72,7 +71,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T18:26:53+00:00",
+      "generated_at": "2026-11-28T11:18:41+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a01-l03.mp3": {
