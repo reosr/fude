@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:01:44+00:00",
+  "updated_at": "2026-11-28T13:02:38+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -16618,6 +16618,187 @@
         }
       ],
       "generated_at": "2026-11-28T13:01:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a02-l01.mp3": {
+      "fingerprint": "108a9106b1f302d7ea8a17700e41aeb8c5f7d334fdfd2edff1f297932aa48202",
+      "output": "audio/irodori/irodori-elementary2-05-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "今度の休みに、どこへ行きたいですか。",
+          "take": 1,
+          "tts_text": "今度の休みに、どこへ行きたいですか。",
+          "synthesis_duration_seconds": 2.54,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:01:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a02-l02.mp3": {
+      "fingerprint": "fddbcae93127421d19b63a203731228d738a518bce99f5a6c07fd93d21943f5d",
+      "output": "audio/irodori/irodori-elementary2-05-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "景色がきれいなところがいいです。",
+          "take": 1,
+          "tts_text": "景色がきれいなところがいいです。",
+          "synthesis_duration_seconds": 2.13,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:02:01+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a02-l03.mp3": {
+      "fingerprint": "d3751fa1efbd25dc9a8a9827eac40c45d4a189b22d50ad1310188a120add71ba",
+      "output": "audio/irodori/irodori-elementary2-05-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.03,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "じゃあ、湖が見られる場所はどうですか。",
+          "take": 1,
+          "tts_text": "じゃあ、湖が見られる場所はどうですか。",
+          "synthesis_duration_seconds": 3.15,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 4.03,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:02:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a02-l04.mp3": {
+      "fingerprint": "6eb9fa84bcedf92dbfc6bb54b1369ba2fa959a4d1797f96f859606dabf751ef9",
+      "output": "audio/irodori/irodori-elementary2-05-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "いいですね。電車で行けるところがいいです。",
+          "take": 1,
+          "tts_text": "いいですね。電車で行けるところがいいです。",
+          "synthesis_duration_seconds": 3.39,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:02:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-05-a03-l01.mp3": {
+      "fingerprint": "9cd7011a9ca2357bb1205c09737146d3f89564f515e4947aaa11efc0499050f7",
+      "output": "audio/irodori/irodori-elementary2-05-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.436,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "来月、奈良へ行くんですけど、どこに泊まったらいいですか。",
+          "take": 1,
+          "tts_text": "来月、奈良へ行くんですけど、どこに泊まったらいいですか。",
+          "synthesis_duration_seconds": 4.01,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.99,
+            "output_duration_seconds": 4.436,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:02:38+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
