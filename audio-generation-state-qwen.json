@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:02:34+00:00",
+  "updated_at": "2026-11-28T14:03:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -27951,6 +27951,219 @@
         }
       ],
       "generated_at": "2026-11-28T14:02:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u003.mp3": {
+      "fingerprint": "efbf7a4dd3e5b5cadd60b9601bef7f71247f17ff7c79ada5f407c73200a04fd4",
+      "output": "audio/irodori/irodori-preintermediate-03-u003.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "築五年だし、二階なら、ちょうどいいかもしれません。",
+          "take": 1,
+          "tts_text": "築五年だし、二階なら、ちょうどいいかもしれません。",
+          "synthesis_duration_seconds": 4.12,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.87,
+            "output_duration_seconds": 5.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:02:50+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u004.mp3": {
+      "fingerprint": "ea077247a19e328041440229058d66ff214f3c69653d901b2a55f10e25d37a82",
+      "output": "audio/irodori/irodori-preintermediate-03-u004.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.367,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "そうですね。近くにスーパーもあります。",
+          "take": 1,
+          "tts_text": "そうですね。近くにスーパーもあります。",
+          "synthesis_duration_seconds": 2.86,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.367,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:03:02+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u005.mp3": {
+      "fingerprint": "989bf4c5bf4cb75a6e46627bddb1612cba28799a818017761eb5705cd1637b0e",
+      "output": "audio/irodori/irodori-preintermediate-03-u005.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.651,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "会社の近くに引っ越したいんですが、どのあたりがおすすめですか。",
+          "take": 1,
+          "tts_text": "会社の近くに引っ越したいんですが、どのあたりがおすすめですか。",
+          "synthesis_duration_seconds": 3.37,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.11,
+            "output_duration_seconds": 3.651,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:03:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u006.mp3": {
+      "fingerprint": "051b736a9b2527a348a75635820af80f6e188b6ba1e8d2d47b40e54f8e1f4753",
+      "output": "audio/irodori/irodori-preintermediate-03-u006.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.07,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "静かなところに住みたいなら、北のエリアはどうですか。",
+          "take": 1,
+          "tts_text": "静かなところに住みたいなら、北のエリアはどうですか。",
+          "synthesis_duration_seconds": 3.84,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.07,
+            "output_duration_seconds": 5.07,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:03:27+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u007.mp3": {
+      "fingerprint": "00250bf7b054091148636930ad6e18b37199b7bd6f0d2a5ea0abbe3097b52588",
+      "output": "audio/irodori/irodori-preintermediate-03-u007.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.008,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "駅から遠くないですか。",
+          "take": 1,
+          "tts_text": "駅から遠くないですか。",
+          "synthesis_duration_seconds": 1.34,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.27,
+            "output_duration_seconds": 2.008,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:03:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u008.mp3": {
+      "fingerprint": "576357a8ef7fe84d34c2c18b1aaf542f47704098bdf088d071714f2c7bdb5ec5",
+      "output": "audio/irodori/irodori-preintermediate-03-u008.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "バスなら十分ぐらいですし、公園も多くて住みやすいですよ。",
+          "take": 1,
+          "tts_text": "バスなら十分ぐらいですし、公園も多くて住みやすいですよ。",
+          "synthesis_duration_seconds": 4.07,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:03:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
