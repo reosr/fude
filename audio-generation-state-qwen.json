@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:32:48+00:00",
+  "updated_at": "2026-11-28T12:32:59+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -11067,6 +11067,42 @@
         }
       ],
       "generated_at": "2026-11-28T12:32:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-15-a04-l01.mp3": {
+      "fingerprint": "c3dccf2a9cb861e1b8d37a61bac5e16517225c3db6a9a27305dbcee83fb54a4a",
+      "output": "audio/irodori/irodori-elementary1-15-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "診察の前に、こちらに座ってください。",
+          "take": 1,
+          "tts_text": "診察の前に、こちらに座ってください。",
+          "synthesis_duration_seconds": 2.69,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:32:59+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
