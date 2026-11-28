@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:42:47+00:00",
+  "updated_at": "2026-11-28T12:43:40+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -12919,6 +12919,188 @@
         }
       ],
       "generated_at": "2026-11-28T12:42:47+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a01-l03.mp3": {
+      "fingerprint": "59f7636a27437774521d2924fece3c483fbaa8187d59d060ee85c633e910e09a",
+      "output": "audio/irodori/irodori-elementary1-18-a01-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "毎日勉強していましたね。よかったですね。",
+          "take": 1,
+          "tts_text": "毎日勉強していましたね。よかったですね。",
+          "synthesis_duration_seconds": 2.8,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:42:56+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a01-l04.mp3": {
+      "fingerprint": "8d701f877c69b90e2654d0df40abb46009e80eee99e4af44dc9c9bdbf1ffbc9d",
+      "output": "audio/irodori/irodori-elementary1-18-a01-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.15,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "はい。これからもがんばります。",
+          "take": 1,
+          "tts_text": "はい。これからもがんばります。",
+          "synthesis_duration_seconds": 2.09,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 3.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:43:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a02-l01.mp3": {
+      "fingerprint": "7cdc761296eab3990650491f885df4610f2e5d032d845be1bd38bd4bc620a39f",
+      "output": "audio/irodori/irodori-elementary1-18-a02-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.796,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "来月、アナさんが別の町に引っ越すそうですね。",
+          "take": 1,
+          "tts_text": "来月、アナさんが別の町に引っ越すそうですね。",
+          "synthesis_duration_seconds": 3.08,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 3.796,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:43:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a02-l02.mp3": {
+      "fingerprint": "a348f3915703c534f5bd06059942d90fb39f7e7be2fc88deba6edb1979f0acac",
+      "output": "audio/irodori/irodori-elementary1-18-a02-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "そうですね。みんなで送別会をしませんか。",
+          "take": 1,
+          "tts_text": "そうですね。みんなで送別会をしませんか。",
+          "synthesis_duration_seconds": 2.84,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:43:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-18-a02-l03.mp3": {
+      "fingerprint": "6821529624a22c57409471277d9a032f1fe7f4b4b51c6e0273b68f56055c86f4",
+      "output": "audio/irodori/irodori-elementary1-18-a02-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.436,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "いいですね。アナさん、前に写真が好きだと言っていました。",
+          "take": 1,
+          "tts_text": "いいですね。アナさん、前に写真が好きだと言っていました。",
+          "synthesis_duration_seconds": 4.02,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.99,
+            "output_duration_seconds": 4.436,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:43:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
