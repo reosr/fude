@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:22:45+00:00",
+  "updated_at": "2026-11-28T12:23:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -8798,19 +8798,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 4.11,
+          "duration_seconds": 3.87,
           "sample_rate": 24000,
           "voice_id": "adult_male_b",
           "http_status": 200,
           "input_text": "これは茶碗蒸しです。卵の料理ですよ。",
           "take": 1,
           "tts_text": "これは茶碗蒸しです。卵の料理ですよ。",
-          "synthesis_duration_seconds": 3.03,
+          "synthesis_duration_seconds": 2.73,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 4.11,
-            "output_duration_seconds": 4.11,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -8819,7 +8819,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:28:40+00:00",
+      "generated_at": "2026-11-28T12:22:56+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-12-a05-l02.mp3": {
@@ -8855,7 +8855,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:28:47+00:00",
+      "generated_at": "2026-11-28T12:23:03+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-12-a05-l03.mp3": {
@@ -8870,19 +8870,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 4.43,
+          "duration_seconds": 4.83,
           "sample_rate": 24000,
           "voice_id": "adult_male_b",
           "http_status": 200,
           "input_text": "鶏肉と、きのこが入っています。だしも使います。",
           "take": 1,
           "tts_text": "鶏肉と、きのこが入っています。だしも使います。",
-          "synthesis_duration_seconds": 3.76,
+          "synthesis_duration_seconds": 4.38,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 4.43,
-            "output_duration_seconds": 4.43,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -8891,7 +8891,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:28:59+00:00",
+      "generated_at": "2026-11-28T12:23:18+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-12-a05-l04.mp3": {
@@ -8927,7 +8927,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:29:08+00:00",
+      "generated_at": "2026-11-28T12:23:28+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-12-a05-l05.mp3": {
@@ -8949,7 +8949,7 @@
           "input_text": "味は、うすくないですか。",
           "take": 1,
           "tts_text": "味は、うすくないですか。",
-          "synthesis_duration_seconds": 1.8,
+          "synthesis_duration_seconds": 1.77,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
@@ -8963,7 +8963,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:29:17+00:00",
+      "generated_at": "2026-11-28T12:23:36+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-12-a05-l06.mp3": {
@@ -8999,7 +8999,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:29:28+00:00",
+      "generated_at": "2026-11-28T12:23:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a01-l01.mp3": {
