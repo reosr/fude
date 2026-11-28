@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:53:48+00:00",
+  "updated_at": "2026-11-28T12:54:43+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -14984,6 +14984,151 @@
         }
       ],
       "generated_at": "2026-11-28T12:53:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a05-l04.mp3": {
+      "fingerprint": "a7123bd7aa4a770e4bcbbf40a2e7b829d7f0427bef64fa37b34027f3118c6470",
+      "output": "audio/irodori/irodori-elementary2-02-a05-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "そうです。町の人に絵を教えたり、作品を紹介したりしています。",
+          "take": 1,
+          "tts_text": "そうです。町の人に絵を教えたり、作品を紹介したりしています。",
+          "synthesis_duration_seconds": 4.4,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.31,
+            "output_duration_seconds": 5.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:54:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a01-l01.mp3": {
+      "fingerprint": "ad1bc86ed0b1199f1787b73e5e7fd0cbcafafee9733d32ffa5245b991798b174",
+      "output": "audio/irodori/irodori-elementary2-03-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "このチキン定食、おいしそうですね。食べますか。",
+          "take": 1,
+          "tts_text": "このチキン定食、おいしそうですね。食べますか。",
+          "synthesis_duration_seconds": 3.64,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:54:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a01-l02.mp3": {
+      "fingerprint": "48f804371cece98624e7afaa95140cae383598e22e2c502db76b530b3fa42a29",
+      "output": "audio/irodori/irodori-elementary2-03-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.366,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "すみません。私はエビのアレルギーがあるので、食べられないんです。",
+          "take": 1,
+          "tts_text": "すみません。私はエビのアレルギーがあるので、食べられないんです。",
+          "synthesis_duration_seconds": 4.09,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.91,
+            "output_duration_seconds": 4.366,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:54:30+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-03-a01-l03.mp3": {
+      "fingerprint": "96201d21ba15f1cb83e88208a78d2f190c9be9107fcd13f95b56ad47019faf95",
+      "output": "audio/irodori/irodori-elementary2-03-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "そうなんですね。ほかの料理はだいじょうぶですか。",
+          "take": 1,
+          "tts_text": "そうなんですね。ほかの料理はだいじょうぶですか。",
+          "synthesis_duration_seconds": 3.43,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:54:43+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
