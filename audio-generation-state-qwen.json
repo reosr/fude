@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:09:48+00:00",
+  "updated_at": "2026-11-28T13:10:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -18214,6 +18214,188 @@
         }
       ],
       "generated_at": "2026-11-28T13:09:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a03-l01.mp3": {
+      "fingerprint": "92551e6ae5b4b2496b598ad9a074335ccde2848e7eb08b76d80d68738a0189f3",
+      "output": "audio/irodori/irodori-elementary2-07-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.367,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "今の放送は、何のお知らせでしたか。",
+          "take": 1,
+          "tts_text": "今の放送は、何のお知らせでしたか。",
+          "synthesis_duration_seconds": 2.85,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.367,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:09:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a03-l02.mp3": {
+      "fingerprint": "23cead4f802fe69475ec64b2252df11c19bf69e532a00dd87441cfebe365e0a2",
+      "output": "audio/irodori/irodori-elementary2-07-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "来週の公園の清掃活動についてでした。",
+          "take": 1,
+          "tts_text": "来週の公園の清掃活動についてでした。",
+          "synthesis_duration_seconds": 2.62,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:10:11+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a03-l03.mp3": {
+      "fingerprint": "22381d86385860a69df65f64362ffa8c3dd1265f0163821cdd861ad499c8a2da",
+      "output": "audio/irodori/irodori-elementary2-07-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.793,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "何時から始まりますか。",
+          "take": 1,
+          "tts_text": "何時から始まりますか。",
+          "synthesis_duration_seconds": 1.5,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 2.793,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:10:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a03-l04.mp3": {
+      "fingerprint": "1f5a7ebc486029f2b0aa73597968888752b5c9876754f1868dd005ff4c14fa99",
+      "output": "audio/irodori/irodori-elementary2-07-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "午前九時からです。雨の場合は、次の日に変更されます。",
+          "take": 1,
+          "tts_text": "午前九時からです。雨の場合は、次の日に変更されます。",
+          "synthesis_duration_seconds": 4.47,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.39,
+            "output_duration_seconds": 5.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:10:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-07-a04-l01.mp3": {
+      "fingerprint": "65b246d49589e341ca2d6912dcf58319231c9a016f6a9d1f6db78724ddc5fb19",
+      "output": "audio/irodori/irodori-elementary2-07-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "今度の日曜日、地域の文化イベントに行きませんか。",
+          "take": 1,
+          "tts_text": "今度の日曜日、地域の文化イベントに行きませんか。",
+          "synthesis_duration_seconds": 3.45,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:10:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
