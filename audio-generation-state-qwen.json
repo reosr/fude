@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:46:45+00:00",
+  "updated_at": "2026-11-28T13:47:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -25178,6 +25178,152 @@
         }
       ],
       "generated_at": "2026-11-28T13:46:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a01-l02.mp3": {
+      "fingerprint": "71b08825486cf69f4bb1798e4a294e23c63b364779a6b6bc218db345b9a14eb7",
+      "output": "audio/irodori/irodori-elementary2-17-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 7.438,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "はい。最初は駅の案内がよくわかりませんでしたが、今は簡単な案内なら聞き取れるようになりました。",
+          "take": 1,
+          "tts_text": "はい。最初は駅の案内がよくわかりませんでしたが、今は簡単な案内なら聞き取れるようになりました。",
+          "synthesis_duration_seconds": 7.37,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 8.35,
+            "output_duration_seconds": 7.438,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:47:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a01-l03.mp3": {
+      "fingerprint": "b7c82cef0169cd620f697c8b26dc588f1833c0384c6c4aab7caec0073c553837",
+      "output": "audio/irodori/irodori-elementary2-17-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.19,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "それはよかったですね。休みの日は何をしていますか。",
+          "take": 1,
+          "tts_text": "それはよかったですね。休みの日は何をしていますか。",
+          "synthesis_duration_seconds": 3.63,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:47:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a01-l04.mp3": {
+      "fingerprint": "a5ab7d0b458c2a5e4090ef118fbb4d258f0c975aa9cc091d8544159a9f1f3369",
+      "output": "audio/irodori/irodori-elementary2-17-a01-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.436,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "最近は友達と町を歩いたり、写真を撮ったりしています。",
+          "take": 1,
+          "tts_text": "最近は友達と町を歩いたり、写真を撮ったりしています。",
+          "synthesis_duration_seconds": 4.17,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.99,
+            "output_duration_seconds": 4.436,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:47:35+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a02-l01.mp3": {
+      "fingerprint": "1ef9d92dae069100194a96db801cef984484161ae442818098b36e9d6c3fa12c",
+      "output": "audio/irodori/irodori-elementary2-17-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "最近、仕事はどうですか。",
+          "take": 1,
+          "tts_text": "最近、仕事はどうですか。",
+          "synthesis_duration_seconds": 2.01,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:47:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
