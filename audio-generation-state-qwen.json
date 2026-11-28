@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:32:39+00:00",
+  "updated_at": "2026-11-28T14:33:43+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -32540,6 +32540,182 @@
         }
       ],
       "generated_at": "2026-11-28T14:32:39+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u005.mp3": {
+      "fingerprint": "043837eff80699e197832b9567e08cd4557f078fd8e5d1cc98b831864e92cdb7",
+      "output": "audio/irodori/irodori-preintermediate-11-u005.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.581,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "わかりました。返信もしないで、削除します。",
+          "take": 1,
+          "tts_text": "わかりました。返信もしないで、削除します。",
+          "synthesis_duration_seconds": 3.17,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.03,
+            "output_duration_seconds": 3.581,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:32:50+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u006.mp3": {
+      "fingerprint": "8bdfa8bca6e2957651eb2ef35300c4fe9ef6e49ba0ffc049bac43f522a7e297e",
+      "output": "audio/irodori/irodori-preintermediate-11-u006.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.99,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "ケンジさん、ちょっと教えてほしいんですが、電車に荷物を忘れたときはどうすればいいですか。",
+          "take": 1,
+          "tts_text": "ケンジさん、ちょっと教えてほしいんですが、電車に荷物を忘れたときはどうすればいいですか。",
+          "synthesis_duration_seconds": 5.98,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.99,
+            "output_duration_seconds": 6.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:33:11+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u007.mp3": {
+      "fingerprint": "ac46536d1d423120f2c5f8f930cfa3ce519e3e850d09fe7c16ee45a6c01d7abe",
+      "output": "audio/irodori/irodori-preintermediate-11-u007.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "鉄道会社の忘れ物センターに問い合わせるといいですよ。",
+          "take": 1,
+          "tts_text": "鉄道会社の忘れ物センターに問い合わせるといいですよ。",
+          "synthesis_duration_seconds": 3.14,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:33:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u008.mp3": {
+      "fingerprint": "15ade9acd1bcbc3591ee0819578407e69aaf5c1dd00b134b3bd676e2a084f34c",
+      "output": "audio/irodori/irodori-preintermediate-11-u008.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.51,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "何を伝えればいいですか。",
+          "take": 1,
+          "tts_text": "何を伝えればいいですか。",
+          "synthesis_duration_seconds": 1.53,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.51,
+            "output_duration_seconds": 2.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:33:28+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u009.mp3": {
+      "fingerprint": "cacac70344986d04c6e76f0debb17769f603ea9e1271bb32ce829c8286ea98eb",
+      "output": "audio/irodori/irodori-preintermediate-11-u009.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "乗った電車の時間や、乗っていた車両、荷物の特徴を伝えてください。",
+          "take": 1,
+          "tts_text": "乗った電車の時間や、乗っていた車両、荷物の特徴を伝えてください。",
+          "synthesis_duration_seconds": 4.39,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:33:43+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
