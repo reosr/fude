@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:23:47+00:00",
+  "updated_at": "2026-11-28T12:24:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -9035,7 +9035,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:29:40+00:00",
+      "generated_at": "2026-11-28T12:23:59+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a01-l02.mp3": {
@@ -9050,19 +9050,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.95,
+          "duration_seconds": 4.51,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "そうですか。担当の人に連絡しますね。",
           "take": 1,
           "tts_text": "そうですか。担当の人に連絡しますね。",
-          "synthesis_duration_seconds": 2.94,
+          "synthesis_duration_seconds": 3.11,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.95,
-            "output_duration_seconds": 3.95,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -9071,7 +9071,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:29:50+00:00",
+      "generated_at": "2026-11-28T12:24:12+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a01-l03.mp3": {
@@ -9107,7 +9107,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:30:01+00:00",
+      "generated_at": "2026-11-28T12:24:23+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a01-l04.mp3": {
@@ -9122,19 +9122,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 3.71,
+          "duration_seconds": 3.95,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "わかりました。確認して、また連絡します。",
           "take": 1,
           "tts_text": "わかりました。確認して、また連絡します。",
-          "synthesis_duration_seconds": 3.14,
+          "synthesis_duration_seconds": 3.03,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 3.71,
-            "output_duration_seconds": 3.71,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -9143,7 +9143,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:30:11+00:00",
+      "generated_at": "2026-11-28T12:24:34+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a02-l01.mp3": {
@@ -9180,7 +9180,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:30:19+00:00",
+      "generated_at": "2026-11-28T12:24:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a02-l02.mp3": {
@@ -9216,7 +9216,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:30:24+00:00",
+      "generated_at": "2026-11-28T12:24:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-13-a02-l03.mp3": {
