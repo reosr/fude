@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:21:41+00:00",
+  "updated_at": "2026-11-28T13:22:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -20465,6 +20465,187 @@
         }
       ],
       "generated_at": "2026-11-28T13:21:41+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-10-a03-l04.mp3": {
+      "fingerprint": "b6fc3bfc6116a105a5611674cb93784607d2d360cfe004901b85fff0d9b40652",
+      "output": "audio/irodori/irodori-elementary2-10-a03-l04.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.723,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "次の人がすぐに使えるように、テーブルをきれいにするんです。",
+          "take": 1,
+          "tts_text": "次の人がすぐに使えるように、テーブルをきれいにするんです。",
+          "synthesis_duration_seconds": 3.37,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 3.723,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:21:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-10-a04-l01.mp3": {
+      "fingerprint": "b99793c29fe4ac6e5cd44716725ccce112c7f554a173db87ce34e64bde7b0f2d",
+      "output": "audio/irodori/irodori-elementary2-10-a04-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "日本の家に入るとき、靴を脱がなくちゃいけませんか。",
+          "take": 1,
+          "tts_text": "日本の家に入るとき、靴を脱がなくちゃいけませんか。",
+          "synthesis_duration_seconds": 3.62,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:22:07+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-10-a04-l02.mp3": {
+      "fingerprint": "72c15a91ffc860be2ad87a4b89ce73afa348bcbba81744c08b565e5d198bcdbe",
+      "output": "audio/irodori/irodori-elementary2-10-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "はい。玄関で靴を脱ぎます。靴のまま入っちゃだめですよ。",
+          "take": 1,
+          "tts_text": "はい。玄関で靴を脱ぎます。靴のまま入っちゃだめですよ。",
+          "synthesis_duration_seconds": 3.88,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:22:22+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-10-a04-l03.mp3": {
+      "fingerprint": "5fa2e77335bd4f18fbc6f16e13f5c2091ae87173cf5cbefc0041089a12ff5278",
+      "output": "audio/irodori/irodori-elementary2-10-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.19,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "私の国でも、家によって習慣が違います。",
+          "take": 1,
+          "tts_text": "私の国でも、家によって習慣が違います。",
+          "synthesis_duration_seconds": 3.31,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:22:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-10-a04-l04.mp3": {
+      "fingerprint": "053d4212df96fa7a9da9439f8523538f106708fa0e097d049934434f39ca0be1",
+      "output": "audio/irodori/irodori-elementary2-10-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "そうですね。わからないときは、家の人に聞けばいいですよ。",
+          "take": 1,
+          "tts_text": "そうですね。わからないときは、家の人に聞けばいいですよ。",
+          "synthesis_duration_seconds": 3.81,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:22:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
