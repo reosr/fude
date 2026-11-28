@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:41:45+00:00",
+  "updated_at": "2026-11-28T13:42:45+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -24274,6 +24274,186 @@
         }
       ],
       "generated_at": "2026-11-28T13:41:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a05-l01.mp3": {
+      "fingerprint": "4a110c50b5e4985bb99c64139bc39d8c4e398d2715fa209d979ce9584986f1e2",
+      "output": "audio/irodori/irodori-elementary2-15-a05-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.19,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "このペットボトルは、どうやって捨てればいいですか。",
+          "take": 1,
+          "tts_text": "このペットボトルは、どうやって捨てればいいですか。",
+          "synthesis_duration_seconds": 3.01,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:41:57+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a05-l02.mp3": {
+      "fingerprint": "1a3f6cc7f942062fee9a793c932996dd146b40317b864b9299e8f7e9521ddb81",
+      "output": "audio/irodori/irodori-elementary2-15-a05-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.35,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "この地域の案内では、資源ごみの日に出すことになっています。",
+          "take": 1,
+          "tts_text": "この地域の案内では、資源ごみの日に出すことになっています。",
+          "synthesis_duration_seconds": 3.78,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 4.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:42:09+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a05-l03.mp3": {
+      "fingerprint": "990babb77a353dd40adc9f979e6609c59e35be67fb9cdb3c51b23ef76740b916",
+      "output": "audio/irodori/irodori-elementary2-15-a05-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.23,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "ほかに、気をつけることはありますか。",
+          "take": 1,
+          "tts_text": "ほかに、気をつけることはありますか。",
+          "synthesis_duration_seconds": 2.35,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.23,
+            "output_duration_seconds": 3.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:42:18+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-15-a05-l04.mp3": {
+      "fingerprint": "b01be8a6991204fcfa1dc64e07ad8c33de34544217796467b3df5131f663f1fb",
+      "output": "audio/irodori/irodori-elementary2-15-a05-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.23,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "はい。ラベルなどの扱いも、地域の説明を確認してください。",
+          "take": 1,
+          "tts_text": "はい。ラベルなどの扱いも、地域の説明を確認してください。",
+          "synthesis_duration_seconds": 4.31,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.23,
+            "output_duration_seconds": 5.23,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:42:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-16-a01-l01.mp3": {
+      "fingerprint": "7afeafcc62add8858513e5a0798a15649d8124180ebed17993039a57194bfc19",
+      "output": "audio/irodori/irodori-elementary2-16-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.19,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "ニュースで、台風が近づいていると言っていましたね。",
+          "take": 1,
+          "tts_text": "ニュースで、台風が近づいていると言っていましたね。",
+          "synthesis_duration_seconds": 3.4,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.19,
+            "output_duration_seconds": 4.19,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:42:45+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
