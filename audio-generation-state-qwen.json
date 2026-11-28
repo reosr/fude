@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:16:41+00:00",
+  "updated_at": "2026-11-28T14:17:39+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -30175,6 +30175,147 @@
         }
       ],
       "generated_at": "2026-11-28T14:16:41+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u002.mp3": {
+      "fingerprint": "3873aab7343fdf4b2e2f0ba4e573777f165712f812b79a3e5ee0a4033bd77226",
+      "output": "audio/irodori/irodori-preintermediate-07-u002.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "そうなんですか。それなら、地域の交流会に参加してみたらどうですか。",
+          "take": 1,
+          "tts_text": "そうなんですか。それなら、地域の交流会に参加してみたらどうですか。",
+          "synthesis_duration_seconds": 4.86,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.71,
+            "output_duration_seconds": 5.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:16:57+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u003.mp3": {
+      "fingerprint": "fec8a22964c3def9ce08d8fe277b4f3f1f374961554735305be9197dcf597f75",
+      "output": "audio/irodori/irodori-preintermediate-07-u003.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "交流会では、どんなことをするんですか。",
+          "take": 1,
+          "tts_text": "交流会では、どんなことをするんですか。",
+          "synthesis_duration_seconds": 2.55,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:17:07+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u004.mp3": {
+      "fingerprint": "005aa744018edd92e3e5a4fba5e8c0cf79c1371e144d7e34c4ebcc806b22f0a0",
+      "output": "audio/irodori/irodori-preintermediate-07-u004.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "みんなでお茶を飲んだり、町のイベントについて話したりするそうですよ。",
+          "take": 1,
+          "tts_text": "みんなでお茶を飲んだり、町のイベントについて話したりするそうですよ。",
+          "synthesis_duration_seconds": 4.13,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:17:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-07-u005.mp3": {
+      "fingerprint": "4be055fed9515e02b23cf2edb61f8859e17e62897ff725a6f6781f2bcbd000cb",
+      "output": "audio/irodori/irodori-preintermediate-07-u005.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.366,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "市民センターの写真クラブについて聞きたいんですが、今もメンバーを募集していますか。",
+          "take": 1,
+          "tts_text": "市民センターの写真クラブについて聞きたいんですが、今もメンバーを募集していますか。",
+          "synthesis_duration_seconds": 4.93,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 6.03,
+            "output_duration_seconds": 5.366,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:17:39+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
