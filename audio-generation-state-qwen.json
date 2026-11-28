@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:05:42+00:00",
+  "updated_at": "2026-11-28T13:06:46+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -17380,6 +17380,224 @@
         }
       ],
       "generated_at": "2026-11-28T13:05:42+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a02-l02.mp3": {
+      "fingerprint": "0faa1b80e6a62c1a24c108be8e415df2e1a99203b34fae400b1b0e8531f7084c",
+      "output": "audio/irodori/irodori-elementary2-06-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.95,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "明日は、友だちと二人で京都へ行くつもりです。",
+          "take": 1,
+          "tts_text": "明日は、友だちと二人で京都へ行くつもりです。",
+          "synthesis_duration_seconds": 3.09,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:05:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a02-l03.mp3": {
+      "fingerprint": "33d2fd3b9e8ca228ec2bf7f3f1b1f6b14c9fc6b167dea71d4ab4d1ce50be648e",
+      "output": "audio/irodori/irodori-elementary2-06-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "京都で何をしますか。",
+          "take": 1,
+          "tts_text": "京都で何をしますか。",
+          "synthesis_duration_seconds": 1.4,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:06:01+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a02-l04.mp3": {
+      "fingerprint": "a749f9f6798ecf0b96f5859c4541f06fa37ede49324d71309c42fe09a83e950d",
+      "output": "audio/irodori/irodori-elementary2-06-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b",
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "お寺を見たり、おいしいものを食べたりするつもりです。",
+          "take": 1,
+          "tts_text": "お寺を見たり、おいしいものを食べたりするつもりです。",
+          "synthesis_duration_seconds": 2.73,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:06:11+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a03-l01.mp3": {
+      "fingerprint": "bb1287cbc71809aedceff0c00745f7e1c77b174f4cea806d0ef72f38b47d6298",
+      "output": "audio/irodori/irodori-elementary2-06-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.08,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "まもなく、東京行きの電車が三番線に到着します。",
+          "take": 1,
+          "tts_text": "まもなく、東京行きの電車が三番線に到着します。",
+          "synthesis_duration_seconds": 3.82,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.08,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:06:24+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a03-l02.mp3": {
+      "fingerprint": "121cb7a38525f27929c333407a31dd246e50b098d64b2a04de2a08fae6ab79c0",
+      "output": "audio/irodori/irodori-elementary2-06-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.15,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "この電車は、東京まで行きますか。",
+          "take": 1,
+          "tts_text": "この電車は、東京まで行きますか。",
+          "synthesis_duration_seconds": 2.24,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 3.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:06:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-06-a03-l03.mp3": {
+      "fingerprint": "42cbef9ae2b1aa91474aae6986b1879b778a3ab60f3f258880876b5401a7051e",
+      "output": "audio/irodori/irodori-elementary2-06-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.08,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "はい。東京方面へ行きます。次は上野に止まります。",
+          "take": 1,
+          "tts_text": "はい。東京方面へ行きます。次は上野に止まります。",
+          "synthesis_duration_seconds": 3.85,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.08,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:06:46+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
