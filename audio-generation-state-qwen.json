@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:05:44+00:00",
+  "updated_at": "2026-11-28T14:06:36+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -28482,6 +28482,182 @@
         }
       ],
       "generated_at": "2026-11-28T14:05:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u002.mp3": {
+      "fingerprint": "e760a016f1247d4335ff9a596c09f0660af61260f3adcf9963992cec0ec5cc16",
+      "output": "audio/irodori/irodori-preintermediate-04-u002.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.79,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "そうですか。どんな状態ですか。",
+          "take": 1,
+          "tts_text": "そうですか。どんな状態ですか。",
+          "synthesis_duration_seconds": 2.52,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:05:55+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u003.mp3": {
+      "fingerprint": "f9cd25449b94b8974d66d831cb3cc02e88504f3fa87ccc0e73800acaa331325b",
+      "output": "audio/irodori/irodori-preintermediate-04-u003.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.367,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "電源は入るんですが、冷たい風が出ないんです。",
+          "take": 1,
+          "tts_text": "電源は入るんですが、冷たい風が出ないんです。",
+          "synthesis_duration_seconds": 2.96,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.79,
+            "output_duration_seconds": 3.367,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:06:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u004.mp3": {
+      "fingerprint": "945663929799adb06dbfdc0e75350fc94bc5184c5927126070dcbe463c7ad1ef",
+      "output": "audio/irodori/irodori-preintermediate-04-u004.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "わかりました。修理会社に連絡しますので、少しお待ちください。",
+          "take": 1,
+          "tts_text": "わかりました。修理会社に連絡しますので、少しお待ちください。",
+          "synthesis_duration_seconds": 4.25,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:06:20+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u005.mp3": {
+      "fingerprint": "e4240548bc5ec796a940ffc96c831dfd6a0bd5da1a692073593d350c00f05c9e",
+      "output": "audio/irodori/irodori-preintermediate-04-u005.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "台所の蛇口から水が漏れているみたいなんですが。",
+          "take": 1,
+          "tts_text": "台所の蛇口から水が漏れているみたいなんですが。",
+          "synthesis_duration_seconds": 2.96,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:06:31+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u006.mp3": {
+      "fingerprint": "f14f5ed4ca9b80f8153b269d0cb97d82aa0c8259e6e243460b9777746c00db2a",
+      "output": "audio/irodori/irodori-preintermediate-04-u006.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.1,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "いつからですか。",
+          "take": 1,
+          "tts_text": "いつからですか。",
+          "synthesis_duration_seconds": 0.85,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 1.1,
+            "output_duration_seconds": 1.1,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:06:36+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
