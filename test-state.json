@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T11:18:41+00:00",
+  "updated_at": "2026-11-28T11:18:50+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -75,7 +75,7 @@
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-01-a01-l03.mp3": {
-      "fingerprint": "e7a64756e83bf221cbba285693e165e0302ae300114d21d54852c75803833f0e",
+      "fingerprint": "9f8bd2203bd7a745bbf96f172df564f503f8dd1d8864241ab9443a9910ba582d",
       "output": "audio/irodori/irodori-elementary1-01-a01-l03.mp3",
       "voice_by_role": {
         "teen_female": "teen_female_c",
@@ -86,21 +86,20 @@
       ],
       "segments": [
         {
-          "duration_seconds": 1.924,
+          "duration_seconds": 3.15,
           "sample_rate": 24000,
           "voice_id": "teen_female_c",
           "http_status": 200,
           "input_text": "はい、おかげさまで。",
           "take": 1,
           "tts_text": "はい、おかげさまで。",
-          "synthesis_duration_seconds": 1.72,
+          "synthesis_duration_seconds": 1.79,
           "audio_processing": {
             "role": "teen_female",
             "speed": 1.0,
-            "input_duration_seconds": 3.07,
-            "output_duration_seconds": 1.924,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 3.15,
             "filters": [
-              "silenceremove=start_periods=1:start_duration=0.05:start_threshold=-55.0dB:start_silence=0.05:stop_periods=-1:stop_duration=0.25:stop_threshold=-40.0dB:stop_silence=0.2",
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
             ]
@@ -108,7 +107,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T18:22:04+00:00",
+      "generated_at": "2026-11-28T11:18:50+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-02-a01-l01.mp3": {

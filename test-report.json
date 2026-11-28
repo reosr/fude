@@ -1,9 +1,9 @@
 {
-  "started_at": "2026-11-27T18:28:03+00:00",
-  "finished_at": "2026-11-27T18:30:33+00:00",
-  "interrupted": true,
-  "requested_items": 21,
-  "completed_items": 15,
+  "started_at": "2026-11-28T11:18:16+00:00",
+  "finished_at": "2026-11-28T11:18:50+00:00",
+  "interrupted": false,
+  "requested_items": 3,
+  "completed_items": 3,
   "failed_items": 0,
   "failures": []
 }
