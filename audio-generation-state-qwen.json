@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:54:46+00:00",
+  "updated_at": "2026-11-28T13:55:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -26518,6 +26518,187 @@
         }
       ],
       "generated_at": "2026-11-28T13:54:46+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-18-a05-l03.mp3": {
+      "fingerprint": "a2f64388ba8c389debd3ce45be71d163cd95011646c153f7b996b1e679dd0b93",
+      "output": "audio/irodori/irodori-elementary2-18-a05-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.27,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "ソウタさんが、発表のあとで写真を撮ってくれましたね。",
+          "take": 1,
+          "tts_text": "ソウタさんが、発表のあとで写真を撮ってくれましたね。",
+          "synthesis_duration_seconds": 3.45,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 4.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:54:58+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-18-a05-l04.mp3": {
+      "fingerprint": "ff14e99e97f8c66aada23b20c933d85e6ab807f1734ae30b2bdc9ba5e5b2b408",
+      "output": "audio/irodori/irodori-elementary2-18-a05-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.35,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "はい。みんなが手伝ってくれて、本当にうれしかったです。",
+          "take": 1,
+          "tts_text": "はい。みんなが手伝ってくれて、本当にうれしかったです。",
+          "synthesis_duration_seconds": 3.82,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 4.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:55:10+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a01-l01.mp3": {
+      "fingerprint": "08bca59974ac61ed12b289267965e265bd450eadf01cf356cfdeb679272dc81d",
+      "output": "audio/irodori/irodori-preintermediate-01-a01-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.11,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "休みの日は、何をして過ごしていますか。",
+          "take": 1,
+          "tts_text": "休みの日は、何をして過ごしていますか。",
+          "synthesis_duration_seconds": 3.05,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.11,
+            "output_duration_seconds": 4.11,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:55:22+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a01-l02.mp3": {
+      "fingerprint": "c546d34fc607ebbe004602508b8c160b75d744fea6e08ccb7b5f88ddbb2a5c26",
+      "output": "audio/irodori/irodori-preintermediate-01-a01-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.796,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "最近は、友達とバドミントンの試合を見るのが好きです。",
+          "take": 1,
+          "tts_text": "最近は、友達とバドミントンの試合を見るのが好きです。",
+          "synthesis_duration_seconds": 3.53,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 3.796,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:55:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a01-l03.mp3": {
+      "fingerprint": "9c35b67ead0c508033cb34ac862d60ce8b1da0fc88b2afa1a62776abb0c424d6",
+      "output": "audio/irodori/irodori-preintermediate-01-a01-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.55,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "自分でスポーツをするのも好きですか。",
+          "take": 1,
+          "tts_text": "自分でスポーツをするのも好きですか。",
+          "synthesis_duration_seconds": 2.27,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.55,
+            "output_duration_seconds": 3.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:55:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
