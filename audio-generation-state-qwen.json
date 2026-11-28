@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:27:44+00:00",
+  "updated_at": "2026-11-28T13:28:45+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -21664,6 +21664,186 @@
         }
       ],
       "generated_at": "2026-11-28T13:27:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a02-l01.mp3": {
+      "fingerprint": "0eaffaaf5aab27344f9981fd61cc803ae47a5a2647453e618a1b3801ee31e354",
+      "output": "audio/irodori/irodori-elementary2-12-a02-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.27,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "この炊飯器、中古ですが、説明書がついています。",
+          "take": 1,
+          "tts_text": "この炊飯器、中古ですが、説明書がついています。",
+          "synthesis_duration_seconds": 3.66,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 4.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:27:56+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a02-l02.mp3": {
+      "fingerprint": "b8396eb92eb0bfa4e3fe9d2445fb4dfff5d89dd5ea5ca20780e38f2e437bed28",
+      "output": "audio/irodori/irodori-elementary2-12-a02-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "傷や汚れはありますか。",
+          "take": 1,
+          "tts_text": "傷や汚れはありますか。",
+          "synthesis_duration_seconds": 1.38,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 2.51,
+            "output_duration_seconds": 2.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:28:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a02-l03.mp3": {
+      "fingerprint": "ec95871a009550ff8f4e2211a9a0b27e8574163d2e21ee902d60f7d9aeef154c",
+      "output": "audio/irodori/irodori-elementary2-12-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.55,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "少し傷があります。写真と説明をよく確認したほうがいいですね。",
+          "take": 1,
+          "tts_text": "少し傷があります。写真と説明をよく確認したほうがいいですね。",
+          "synthesis_duration_seconds": 4.4,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.55,
+            "output_duration_seconds": 5.55,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:28:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a02-l04.mp3": {
+      "fingerprint": "31fd6fe12f13a932b684ad42c74cdd9e07e7331df8d18b730676d4a915837074",
+      "output": "audio/irodori/irodori-elementary2-12-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "そうですね。実際に買うときは、家の人と相談しましょう。",
+          "take": 1,
+          "tts_text": "そうですね。実際に買うときは、家の人と相談しましょう。",
+          "synthesis_duration_seconds": 3.92,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:28:33+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-12-a03-l01.mp3": {
+      "fingerprint": "15bd79d92afd1831c58426c232dad5f91bc5923b99bff4932bfecf8f299b7adc",
+      "output": "audio/irodori/irodori-elementary2-12-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "この掃除機とあの掃除機と、どちらが軽いですか。",
+          "take": 1,
+          "tts_text": "この掃除機とあの掃除機と、どちらが軽いですか。",
+          "synthesis_duration_seconds": 3.42,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:28:45+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
