@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:37:45+00:00",
+  "updated_at": "2026-11-28T14:38:37+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -33278,6 +33278,148 @@
         }
       ],
       "generated_at": "2026-11-28T14:37:45+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u027.mp3": {
+      "fingerprint": "92666059e2d04e171f3fdb8e3cae06dffb909f37c35a57c4d7b8f9a5bd1b7cec",
+      "output": "audio/irodori/irodori-preintermediate-11-u027.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.35,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "チケットのQRコードを読み取れませんでした。身分証明書を見せていただけますか。",
+          "take": 1,
+          "tts_text": "チケットのQRコードを読み取れませんでした。身分証明書を見せていただけますか。",
+          "synthesis_duration_seconds": 5.04,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.35,
+            "output_duration_seconds": 6.35,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:38:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u028.mp3": {
+      "fingerprint": "861e63e76e3c241c000128606a35e0a86e5cbeb2a6f1b8ba83b8bd6e1751a138",
+      "output": "audio/irodori/irodori-preintermediate-11-u028.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.724,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "はい。どの書類を見せればいいですか。",
+          "take": 1,
+          "tts_text": "はい。どの書類を見せればいいですか。",
+          "synthesis_duration_seconds": 2.3,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.07,
+            "output_duration_seconds": 2.724,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:38:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u029.mp3": {
+      "fingerprint": "2a5125f8c48f3e45e6aaf65573428154233e5aa66c0e57d1335856f56bc1efbb",
+      "output": "audio/irodori/irodori-preintermediate-11-u029.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.39,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "写真付きで、お名前と生年月日が確認できるものをお願いします。",
+          "take": 1,
+          "tts_text": "写真付きで、お名前と生年月日が確認できるものをお願いします。",
+          "synthesis_duration_seconds": 4.53,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.39,
+            "output_duration_seconds": 5.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:38:29+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u030.mp3": {
+      "fingerprint": "02f0baaf7397d424d7ff6ff1a0f82a027f3ea10698ce44eec26c6b25def56a71",
+      "output": "audio/irodori/irodori-preintermediate-11-u030.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.724,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "わかりました。こちらでよろしいですか。",
+          "take": 1,
+          "tts_text": "わかりました。こちらでよろしいですか。",
+          "synthesis_duration_seconds": 2.22,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.07,
+            "output_duration_seconds": 2.724,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:38:37+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
