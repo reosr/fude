@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:47:48+00:00",
+  "updated_at": "2026-11-28T12:48:40+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -13792,6 +13792,184 @@
         }
       ],
       "generated_at": "2026-11-28T12:47:48+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a02-l03.mp3": {
+      "fingerprint": "d1c1e72da810cedbced1fdafe92de3c9528e4d654598e916da2ee54f722b2c32",
+      "output": "audio/irodori/irodori-elementary2-01-a02-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.31,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "インドネシアのソロから来ました。先週、日本に来たばかりです。",
+          "take": 1,
+          "tts_text": "インドネシアのソロから来ました。先週、日本に来たばかりです。",
+          "synthesis_duration_seconds": 4.45,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.31,
+            "output_duration_seconds": 5.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:48:03+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a02-l04.mp3": {
+      "fingerprint": "f12c5580af0b85559629449730dabf12e020e511f3071f851e63303827aa2f9c",
+      "output": "audio/irodori/irodori-elementary2-01-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.47,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "来る前に、二年間日本語を勉強していました。どうぞよろしくお願いします。",
+          "take": 1,
+          "tts_text": "来る前に、二年間日本語を勉強していました。どうぞよろしくお願いします。",
+          "synthesis_duration_seconds": 4.56,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.47,
+            "output_duration_seconds": 5.47,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:48:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a03-l01.mp3": {
+      "fingerprint": "ea175c7f11f90e1fbd181a9d4dcbcbae740ef86cedf626b098a6e9be1ac58586",
+      "output": "audio/irodori/irodori-elementary2-01-a03-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.75,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "ハナさんの出身はどちらですか。",
+          "take": 1,
+          "tts_text": "ハナさんの出身はどちらですか。",
+          "synthesis_duration_seconds": 1.95,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:48:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a03-l02.mp3": {
+      "fingerprint": "35fb8938263cd2f80778c7a00438bcd9897682023558a8c572c05d7561c416e3",
+      "output": "audio/irodori/irodori-elementary2-01-a03-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "インドネシアのソロという町です。",
+          "take": 1,
+          "tts_text": "インドネシアのソロという町です。",
+          "synthesis_duration_seconds": 1.74,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.83,
+            "output_duration_seconds": 2.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:48:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-01-a03-l03.mp3": {
+      "fingerprint": "3f5ff4e1b815ae3d41240f63d5d13bdc6d1cc47b30b70077cd1a6697d07b3bba",
+      "output": "audio/irodori/irodori-elementary2-01-a03-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.43,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "ソロはどんなところですか。",
+          "take": 1,
+          "tts_text": "ソロはどんなところですか。",
+          "synthesis_duration_seconds": 1.54,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.43,
+            "output_duration_seconds": 2.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:48:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
