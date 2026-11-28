@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:00:44+00:00",
+  "updated_at": "2026-11-28T14:01:43+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -27598,6 +27598,181 @@
         }
       ],
       "generated_at": "2026-11-28T14:00:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u009.mp3": {
+      "fingerprint": "544fbe1bef152faba7ccbed607e80a4d3aaea738f64cf422d05b8dfee2cd6f67",
+      "output": "audio/irodori/irodori-preintermediate-02-u009.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.31,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "最近、何かドラマを見てる？",
+          "take": 1,
+          "tts_text": "最近、何かドラマを見てる？",
+          "synthesis_duration_seconds": 2.3,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 3.31,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:00:53+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u010.mp3": {
+      "fingerprint": "48a531da8b703965c1bd79719d89223f0ba30ee4a1ca161baa775c151ec1cef7",
+      "output": "audio/irodori/irodori-preintermediate-02-u010.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.59,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "うん。小さな町のパン屋さんが主人公のドラマだよ。",
+          "take": 1,
+          "tts_text": "うん。小さな町のパン屋さんが主人公のドラマだよ。",
+          "synthesis_duration_seconds": 3.72,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.59,
+            "output_duration_seconds": 4.59,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:01:06+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u011.mp3": {
+      "fingerprint": "a2944c48bd4594cbca4ac74065f17b988489fbfdaddf3d386c98f594626c7404",
+      "output": "audio/irodori/irodori-preintermediate-02-u011.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.34,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "どんな話なの？",
+          "take": 1,
+          "tts_text": "どんな話なの？",
+          "synthesis_duration_seconds": 1.1,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 1.34,
+            "output_duration_seconds": 1.34,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:01:12+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u012.mp3": {
+      "fingerprint": "4e445a8d5c3394c5b010263830868218d3949212a33de6a39b636c7a8988708d",
+      "output": "audio/irodori/irodori-preintermediate-02-u012.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_b"
+      },
+      "voice_ids": [
+        "adult_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 6.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_b",
+          "http_status": 200,
+          "input_text": "町の人たちと協力して、お店を立て直すって話。見ていると元気が出るよ。",
+          "take": 1,
+          "tts_text": "町の人たちと協力して、お店を立て直すって話。見ていると元気が出るよ。",
+          "synthesis_duration_seconds": 5.55,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 6.43,
+            "output_duration_seconds": 6.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:01:30+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-02-u013.mp3": {
+      "fingerprint": "c4c80f3015d2cddf9d7dcabeb7683fd962f01c555172e24e085a5cf688e8e9f3",
+      "output": "audio/irodori/irodori-preintermediate-02-u013.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "ソウタさんは、どんな音楽がいちばん好きですか。",
+          "take": 1,
+          "tts_text": "ソウタさんは、どんな音楽がいちばん好きですか。",
+          "synthesis_duration_seconds": 3.2,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:01:43+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
