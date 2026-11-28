@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:04:36+00:00",
+  "updated_at": "2026-11-28T14:05:44+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -28304,6 +28304,184 @@
         }
       ],
       "generated_at": "2026-11-28T14:04:36+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u013.mp3": {
+      "fingerprint": "2b6c2785949894dfcdc1eaf928bfde20347b431889a893cc632df4569e06c3f6",
+      "output": "audio/irodori/irodori-preintermediate-03-u013.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.07,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "引っ越しの準備はどうですか。",
+          "take": 2,
+          "tts_text": "引っ越しの準備はどうですか。",
+          "synthesis_duration_seconds": 1.95,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.07,
+            "output_duration_seconds": 3.07,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:04:50+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u014.mp3": {
+      "fingerprint": "088f364dc5ebbff0fa991a0d69e9362cd06337ceedc801d1e61483461a6dd3c4",
+      "output": "audio/irodori/irodori-preintermediate-03-u014.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.294,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "荷物をまとめたり、掃除をしたりして、けっこう大変です。",
+          "take": 1,
+          "tts_text": "荷物をまとめたり、掃除をしたりして、けっこう大変です。",
+          "synthesis_duration_seconds": 3.92,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.294,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:05:04+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u015.mp3": {
+      "fingerprint": "646bef47c279501e8d08e6774898aa121728689c935f628eb583591f736099ed",
+      "output": "audio/irodori/irodori-preintermediate-03-u015.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.795,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "もしよければ、当日、荷物を運ぶのを手伝ってもらえたら、とても助かるんですが。",
+          "take": 1,
+          "tts_text": "もしよければ、当日、荷物を運ぶのを手伝ってもらえたら、とても助かるんですが。",
+          "synthesis_duration_seconds": 5.64,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 6.51,
+            "output_duration_seconds": 5.795,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:05:23+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-03-u016.mp3": {
+      "fingerprint": "9bcc0629be0274f8de2989b7268c54e3d73fafe4f4dc02b09db1bec669861218",
+      "output": "audio/irodori/irodori-preintermediate-03-u016.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_b"
+      },
+      "voice_ids": [
+        "adult_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.47,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_b",
+          "http_status": 200,
+          "input_text": "もちろんです。何時ごろ行けばいいですか。",
+          "take": 1,
+          "tts_text": "もちろんです。何時ごろ行けばいいですか。",
+          "synthesis_duration_seconds": 2.76,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.47,
+            "output_duration_seconds": 3.47,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:05:32+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-04-u001.mp3": {
+      "fingerprint": "659e0ade6c5ab5f9b8dc2e2c209b7f92328dfa4a489da0ad105aec86611ad427",
+      "output": "audio/irodori/irodori-preintermediate-04-u001.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.651,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "すみません。エアコンが壊れたみたいなんですが。",
+          "take": 1,
+          "tts_text": "すみません。エアコンが壊れたみたいなんですが。",
+          "synthesis_duration_seconds": 3.25,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.11,
+            "output_duration_seconds": 3.651,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:05:44+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
