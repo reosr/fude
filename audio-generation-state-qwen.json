@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:08:46+00:00",
+  "updated_at": "2026-11-28T12:09:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -5506,7 +5506,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:15:13+00:00",
+      "generated_at": "2026-11-28T12:08:52+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a02-l04.mp3": {
@@ -5521,19 +5521,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 2.11,
+          "duration_seconds": 2.75,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "いいですね。楽しみです。",
           "take": 1,
           "tts_text": "いいですね。楽しみです。",
-          "synthesis_duration_seconds": 1.31,
+          "synthesis_duration_seconds": 1.86,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 2.11,
-            "output_duration_seconds": 2.11,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -5542,7 +5542,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:15:19+00:00",
+      "generated_at": "2026-11-28T12:09:00+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a03-l01.mp3": {
@@ -5579,7 +5579,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:15:27+00:00",
+      "generated_at": "2026-11-28T12:09:08+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a03-l02.mp3": {
@@ -5615,7 +5615,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:15:37+00:00",
+      "generated_at": "2026-11-28T12:09:19+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a03-l03.mp3": {
@@ -5652,7 +5652,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:15:49+00:00",
+      "generated_at": "2026-11-28T12:09:30+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a03-l04.mp3": {
@@ -5688,7 +5688,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:15:58+00:00",
+      "generated_at": "2026-11-28T12:09:39+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a04-l01.mp3": {
@@ -5710,7 +5710,7 @@
           "input_text": "今日の動物園はどうでしたか。",
           "take": 1,
           "tts_text": "今日の動物園はどうでしたか。",
-          "synthesis_duration_seconds": 2.16,
+          "synthesis_duration_seconds": 2.1,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
@@ -5724,7 +5724,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:16:06+00:00",
+      "generated_at": "2026-11-28T12:09:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-08-a04-l02.mp3": {
