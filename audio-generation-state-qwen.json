@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:49:41+00:00",
+  "updated_at": "2026-11-28T13:50:42+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -25649,6 +25649,187 @@
         }
       ],
       "generated_at": "2026-11-28T13:49:41+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a04-l03.mp3": {
+      "fingerprint": "d8036b45d0041fa77ebe0ec3be82a07414b7ab4bcda6ded8fd278947a4602b9c",
+      "output": "audio/irodori/irodori-elementary2-17-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "日本語で友達と話せるようになったことも伝えたいです。",
+          "take": 1,
+          "tts_text": "日本語で友達と話せるようになったことも伝えたいです。",
+          "synthesis_duration_seconds": 2.96,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:49:52+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a04-l04.mp3": {
+      "fingerprint": "abfedd9ec90e039b9db789fdb7d951ff44dd21680843012ff2cd984d62518ec7",
+      "output": "audio/irodori/irodori-elementary2-17-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.865,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "最後に、教えてくれたことへの感謝も書くといいですよ。",
+          "take": 1,
+          "tts_text": "最後に、教えてくれたことへの感謝も書くといいですよ。",
+          "synthesis_duration_seconds": 3.47,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.35,
+            "output_duration_seconds": 3.865,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:50:04+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a05-l01.mp3": {
+      "fingerprint": "7bba0307cf2bd12f3d46df02eed8e12ee8ded898cb585522e3b15b2f5a213215",
+      "output": "audio/irodori/irodori-elementary2-17-a05-l01.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.43,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "最近、生活で何か変わったことがありますか。",
+          "take": 1,
+          "tts_text": "最近、生活で何か変わったことがありますか。",
+          "synthesis_duration_seconds": 3.2,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 4.43,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:50:16+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a05-l02.mp3": {
+      "fingerprint": "f9407941238527122a088b7c2f1ebb179d8a4b65d8eae84200d82e783343ccdc",
+      "output": "audio/irodori/irodori-elementary2-17-a05-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.95,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "前は家で本を読むだけでしたが、今は友達と出かけるようになりました。",
+          "take": 1,
+          "tts_text": "前は家で本を読むだけでしたが、今は友達と出かけるようになりました。",
+          "synthesis_duration_seconds": 5.1,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.95,
+            "output_duration_seconds": 5.95,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:50:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-17-a05-l03.mp3": {
+      "fingerprint": "fa53127f13dd8552e7b8d1b4952b999ce3078466db5365d90e52f82c8e06b1b0",
+      "output": "audio/irodori/irodori-elementary2-17-a05-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.99,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "生活が楽しくなりましたね。",
+          "take": 1,
+          "tts_text": "生活が楽しくなりましたね。",
+          "synthesis_duration_seconds": 1.9,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.99,
+            "output_duration_seconds": 2.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:50:42+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
