@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:52:34+00:00",
+  "updated_at": "2026-11-28T12:53:48+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -14767,6 +14767,223 @@
         }
       ],
       "generated_at": "2026-11-28T12:52:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a04-l02.mp3": {
+      "fingerprint": "e8b50afa57e8ba0bea1a218307f2c88de3a44c822759bc8ac0ba0f5a4155f244",
+      "output": "audio/irodori/irodori-elementary2-02-a04-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.79,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "私は、リクさんが好きです。演技が上手だし、声もすてきです。",
+          "take": 1,
+          "tts_text": "私は、リクさんが好きです。演技が上手だし、声もすてきです。",
+          "synthesis_duration_seconds": 5.04,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.79,
+            "output_duration_seconds": 5.79,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:52:51+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a04-l03.mp3": {
+      "fingerprint": "7e7eb08ceb8eea39be061a39ce9aa96bf30cff3f4db1c93a823118f37b030aa0",
+      "output": "audio/irodori/irodori-elementary2-02-a04-l03.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.651,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "好きになったきっかけは何ですか。",
+          "take": 2,
+          "tts_text": "好きになったきっかけは何ですか。",
+          "synthesis_duration_seconds": 1.97,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.99,
+            "output_duration_seconds": 2.651,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:53:07+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a04-l04.mp3": {
+      "fingerprint": "8a3fd6ac99febe83ca56f38c5b5efe7506c7b7c931bc835296437daad24fbb84",
+      "output": "audio/irodori/irodori-elementary2-02-a04-l04.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_b",
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.83,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "映画を見て、好きになりました。今でも応援しています。",
+          "take": 1,
+          "tts_text": "映画を見て、好きになりました。今でも応援しています。",
+          "synthesis_duration_seconds": 3.74,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.83,
+            "output_duration_seconds": 4.83,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:53:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a05-l01.mp3": {
+      "fingerprint": "98a8b35c24d5a08c990c67b95584749408c3fa1deff769b815bbb8ba6f54b44d",
+      "output": "audio/irodori/irodori-elementary2-02-a05-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.15,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "コミュニティ誌のインタビューを読みましたか。",
+          "take": 1,
+          "tts_text": "コミュニティ誌のインタビューを読みましたか。",
+          "synthesis_duration_seconds": 2.23,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.15,
+            "output_duration_seconds": 3.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:53:29+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a05-l02.mp3": {
+      "fingerprint": "ffa2c89ecad1e4a38e6bf01f4d6e4304f5953f1efb6f6293e3873cd1c52d8663",
+      "output": "audio/irodori/irodori-elementary2-02-a05-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.11,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "はい。イラさんは、明るくて元気な人ですね。",
+          "take": 1,
+          "tts_text": "はい。イラさんは、明るくて元気な人ですね。",
+          "synthesis_duration_seconds": 3.13,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.11,
+            "output_duration_seconds": 4.11,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:53:41+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-02-a05-l03.mp3": {
+      "fingerprint": "e62e03e971ffccf08293373212a2e9337dd8182bbaf13843444d348d0dab05a9",
+      "output": "audio/irodori/irodori-elementary2-02-a05-l03.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "adult_male": "adult_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.75,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "絵を描くのが好きだそうですね。",
+          "take": 1,
+          "tts_text": "絵を描くのが好きだそうですね。",
+          "synthesis_duration_seconds": 1.96,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.75,
+            "output_duration_seconds": 2.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:53:48+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
