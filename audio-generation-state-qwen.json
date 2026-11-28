@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:27:46+00:00",
+  "updated_at": "2026-11-28T12:28:40+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -9870,7 +9870,7 @@
           "voice_role": "teen_female"
         }
       ],
-      "generated_at": "2026-11-27T20:33:28+00:00",
+      "generated_at": "2026-11-28T12:27:59+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a01-l04.mp3": {
@@ -9885,19 +9885,19 @@
       ],
       "segments": [
         {
-          "duration_seconds": 2.27,
+          "duration_seconds": 2.19,
           "sample_rate": 24000,
           "voice_id": "adult_male_a",
           "http_status": 200,
           "input_text": "はい、伝えておきます。",
           "take": 1,
           "tts_text": "はい、伝えておきます。",
-          "synthesis_duration_seconds": 1.47,
+          "synthesis_duration_seconds": 1.37,
           "audio_processing": {
             "role": "adult_male",
             "speed": 1.0,
-            "input_duration_seconds": 2.27,
-            "output_duration_seconds": 2.27,
+            "input_duration_seconds": 2.19,
+            "output_duration_seconds": 2.19,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -9906,7 +9906,7 @@
           "voice_role": "adult_male"
         }
       ],
-      "generated_at": "2026-11-27T20:33:34+00:00",
+      "generated_at": "2026-11-28T12:28:05+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a02-l01.mp3": {
@@ -9943,7 +9943,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:33:46+00:00",
+      "generated_at": "2026-11-28T12:28:16+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a02-l03.mp3": {
@@ -9980,7 +9980,7 @@
           "voice_role": "teen_male"
         }
       ],
-      "generated_at": "2026-11-27T20:34:16+00:00",
+      "generated_at": "2026-11-28T12:28:36+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a02-l04.mp3": {
@@ -9995,7 +9995,7 @@
       ],
       "segments": [
         {
-          "duration_seconds": 0.77,
+          "duration_seconds": 0.89,
           "sample_rate": 24000,
           "voice_id": "adult_female_a",
           "http_status": 200,
@@ -10006,8 +10006,8 @@
           "audio_processing": {
             "role": "adult_female",
             "speed": 1.0,
-            "input_duration_seconds": 0.77,
-            "output_duration_seconds": 0.77,
+            "input_duration_seconds": 0.89,
+            "output_duration_seconds": 0.89,
             "filters": [
               "loudnorm=I=-16:TP=-1.5:LRA=11",
               "aresample=24000"
@@ -10016,7 +10016,7 @@
           "voice_role": "adult_female"
         }
       ],
-      "generated_at": "2026-11-27T20:34:21+00:00",
+      "generated_at": "2026-11-28T12:28:40+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     },
     "irodori:audio/irodori/irodori-elementary1-14-a03-l01.mp3": {
@@ -10814,6 +10814,42 @@
         }
       ],
       "generated_at": "2026-11-28T12:19:37+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary1-14-a02-l02.mp3": {
+      "fingerprint": "a563a6b38c955c093c4ce61795c0ab1c9709f45d6700abbc878d909eddcf5e12",
+      "output": "audio/irodori/irodori-elementary1-14-a02-l02.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a",
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 0.93,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "はい、どうぞ。",
+          "take": 2,
+          "tts_text": "はい、どうぞ。",
+          "synthesis_duration_seconds": 0.7,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 0.93,
+            "output_duration_seconds": 0.93,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T12:28:27+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
