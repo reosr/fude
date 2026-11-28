@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T12:59:44+00:00",
+  "updated_at": "2026-11-28T13:00:46+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -16218,6 +16218,187 @@
         }
       ],
       "generated_at": "2026-11-28T12:59:44+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a04-l02.mp3": {
+      "fingerprint": "63f9367acc7f92444c06f8a22110c8b358cde97cdac60133e8418c23d44f7caf",
+      "output": "audio/irodori/irodori-elementary2-04-a04-l02.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "ガドガドです。野菜や豆腐、ゆで卵が入っています。",
+          "take": 1,
+          "tts_text": "ガドガドです。野菜や豆腐、ゆで卵が入っています。",
+          "synthesis_duration_seconds": 3.79,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T12:59:59+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a04-l03.mp3": {
+      "fingerprint": "f22f88df491bdcff50f48499a595622062fe8e8204cc5f9c8a2a25ec0b8391f4",
+      "output": "audio/irodori/irodori-elementary2-04-a04-l03.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 1.14,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "どんな味ですか。",
+          "take": 1,
+          "tts_text": "どんな味ですか。",
+          "synthesis_duration_seconds": 0.9,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 1.14,
+            "output_duration_seconds": 1.14,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:00:05+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a04-l04.mp3": {
+      "fingerprint": "055cbb182de5721ac86882580d90bb61f1c081731804c4057174c2f189af132b",
+      "output": "audio/irodori/irodori-elementary2-04-a04-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.99,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "ピーナッツソースをかけて食べます。甘くて、少し辛いです。",
+          "take": 1,
+          "tts_text": "ピーナッツソースをかけて食べます。甘くて、少し辛いです。",
+          "synthesis_duration_seconds": 4.03,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.99,
+            "output_duration_seconds": 4.99,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:00:19+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a05-l01.mp3": {
+      "fingerprint": "f4528def5f34dde005852755191a29d74853e88c0a7acd13edd0bbfc28bd9054",
+      "output": "audio/irodori/irodori-elementary2-04-a05-l01.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "「さくら食堂」の口コミを読みましたか。",
+          "take": 1,
+          "tts_text": "「さくら食堂」の口コミを読みましたか。",
+          "synthesis_duration_seconds": 2.56,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.39,
+            "output_duration_seconds": 3.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:00:29+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-elementary2-04-a05-l02.mp3": {
+      "fingerprint": "f62e6123c03b6d573f8998b1b3f81497c0e4bca4e17b4616d24e133ddb5f7919",
+      "output": "audio/irodori/irodori-elementary2-04-a05-l02.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a",
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.937,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "はい。料理はおいしいですが、お昼は少し混んでいるそうです。",
+          "take": 1,
+          "tts_text": "はい。料理はおいしいですが、お昼は少し混んでいるそうです。",
+          "synthesis_duration_seconds": 4.38,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 5.55,
+            "output_duration_seconds": 4.937,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:00:46+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
