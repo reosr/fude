@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:36:42+00:00",
+  "updated_at": "2026-11-28T14:37:45+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -33103,6 +33103,181 @@
         }
       ],
       "generated_at": "2026-11-28T14:36:42+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u022.mp3": {
+      "fingerprint": "72c051ac53c5d8b018ae5f9dea4be9ffe9edbadd308ca38e5361a219388d41ac",
+      "output": "audio/irodori/irodori-preintermediate-11-u022.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.39,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "そうなんですね。では、この飲み物はどうすればいいですか。",
+          "take": 1,
+          "tts_text": "そうなんですね。では、この飲み物はどうすればいいですか。",
+          "synthesis_duration_seconds": 4.52,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.39,
+            "output_duration_seconds": 5.39,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:36:58+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u023.mp3": {
+      "fingerprint": "3170de05fa56f7b9ec21d14a6ada94247cd6da38043ea8a4f3451f6f4c766110",
+      "output": "audio/irodori/irodori-preintermediate-11-u023.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_a"
+      },
+      "voice_ids": [
+        "adult_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.27,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_a",
+          "http_status": 200,
+          "input_text": "こちらで処分するか、入口の外でお飲みになりますか。",
+          "take": 1,
+          "tts_text": "こちらで処分するか、入口の外でお飲みになりますか。",
+          "synthesis_duration_seconds": 3.6,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.27,
+            "output_duration_seconds": 4.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:37:10+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u024.mp3": {
+      "fingerprint": "926e98ce483525cb2ee96f3db14c521789ff6cb005fbb3cd0e8c6c73ad117dd8",
+      "output": "audio/irodori/irodori-preintermediate-11-u024.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_b"
+      },
+      "voice_ids": [
+        "teen_female_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.87,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_b",
+          "http_status": 200,
+          "input_text": "外で飲んできます。カメラは持ち込めますか。",
+          "take": 1,
+          "tts_text": "外で飲んできます。カメラは持ち込めますか。",
+          "synthesis_duration_seconds": 2.91,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.87,
+            "output_duration_seconds": 3.87,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:37:21+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u025.mp3": {
+      "fingerprint": "cd11e57fced56f029f5440bd89cc4818bfb5f3286dd6a129137c16a762f54e1c",
+      "output": "audio/irodori/irodori-preintermediate-11-u025.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.75,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "カメラも持ち込み禁止になっています。窓口に預けていただけますか。",
+          "take": 1,
+          "tts_text": "カメラも持ち込み禁止になっています。窓口に預けていただけますか。",
+          "synthesis_duration_seconds": 3.84,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 4.75,
+            "output_duration_seconds": 4.75,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:37:34+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-11-u026.mp3": {
+      "fingerprint": "7fa1723d8df450d3c7dd35c23b734bda8d4c6c06cd66caf939ff9211c61f7b2c",
+      "output": "audio/irodori/irodori-preintermediate-11-u026.mp3",
+      "voice_by_role": {
+        "teen_female": "teen_female_a"
+      },
+      "voice_ids": [
+        "teen_female_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.71,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_a",
+          "http_status": 200,
+          "input_text": "わかりました。終わったら、返していただけますか。",
+          "take": 1,
+          "tts_text": "わかりました。終わったら、返していただけますか。",
+          "synthesis_duration_seconds": 3.08,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 3.71,
+            "output_duration_seconds": 3.71,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:37:45+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
