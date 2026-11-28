@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T13:56:40+00:00",
+  "updated_at": "2026-11-28T13:57:47+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -26845,6 +26845,224 @@
         }
       ],
       "generated_at": "2026-11-28T13:56:40+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a02-l04.mp3": {
+      "fingerprint": "421e3dcf66999b40d64ce1042529b4c6b9304e8e6f6f12d07755cbfa62bf6f77",
+      "output": "audio/irodori/irodori-preintermediate-01-a02-l04.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c",
+        "teen_male": "teen_male_b"
+      },
+      "voice_ids": [
+        "teen_male_b"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.509,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_b",
+          "http_status": 200,
+          "input_text": "一緒に見ると、もっと楽しいですよね。",
+          "take": 1,
+          "tts_text": "一緒に見ると、もっと楽しいですよね。",
+          "synthesis_duration_seconds": 2.88,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.95,
+            "output_duration_seconds": 3.509,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:56:51+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a03-l01.mp3": {
+      "fingerprint": "eae0e79934735780fd126d444af11bd39a3993b7960b3e23f00824e23b429008",
+      "output": "audio/irodori/irodori-preintermediate-01-a03-l01.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.51,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "来週の日曜日、町のスポーツイベントに行くことになったんです。",
+          "take": 1,
+          "tts_text": "来週の日曜日、町のスポーツイベントに行くことになったんです。",
+          "synthesis_duration_seconds": 3.63,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.51,
+            "output_duration_seconds": 4.51,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:57:06+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a03-l02.mp3": {
+      "fingerprint": "ee85af17a8c90f9344002865f0f490d8765c66d7093c24b2b89be5a04b0276cd",
+      "output": "audio/irodori/irodori-preintermediate-01-a03-l02.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.27,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "どこでありますか。",
+          "take": 1,
+          "tts_text": "どこでありますか。",
+          "synthesis_duration_seconds": 0.98,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 2.27,
+            "output_duration_seconds": 2.27,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:57:12+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a03-l03.mp3": {
+      "fingerprint": "2c8d0bb4ff3cada6648eaaded25e27b655abb2851db6deae83fa8df7ec44e93c",
+      "output": "audio/irodori/irodori-preintermediate-01-a03-l03.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "adult_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.67,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_a",
+          "http_status": 200,
+          "input_text": "中央公園です。いろいろなスポーツを見られるそうですよ。",
+          "take": 1,
+          "tts_text": "中央公園です。いろいろなスポーツを見られるそうですよ。",
+          "synthesis_duration_seconds": 3.6,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.67,
+            "output_duration_seconds": 4.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:57:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a03-l04.mp3": {
+      "fingerprint": "27bc5437f49b8790edeee8562e7260fb1002e6ba64d975248149d342bf1a7563",
+      "output": "audio/irodori/irodori-preintermediate-01-a03-l04.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_a",
+        "teen_female": "teen_female_c"
+      },
+      "voice_ids": [
+        "teen_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.15,
+          "sample_rate": 24000,
+          "voice_id": "teen_female_c",
+          "http_status": 200,
+          "input_text": "おもしろそうですね。よかったら、いっしょに行ってくれませんか。",
+          "take": 1,
+          "tts_text": "おもしろそうですね。よかったら、いっしょに行ってくれませんか。",
+          "synthesis_duration_seconds": 3.82,
+          "audio_processing": {
+            "role": "teen_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.15,
+            "output_duration_seconds": 5.15,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_female"
+        }
+      ],
+      "generated_at": "2026-11-28T13:57:40+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-01-a04-l01.mp3": {
+      "fingerprint": "c6924f6737119e63b138bc6aed49ae94834920a6c5af28a4051e49962268046f",
+      "output": "audio/irodori/irodori-preintermediate-01-a04-l01.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c",
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.153,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "イベントは何時からでしたっけ。",
+          "take": 1,
+          "tts_text": "イベントは何時からでしたっけ。",
+          "synthesis_duration_seconds": 1.59,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 2.43,
+            "output_duration_seconds": 2.153,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T13:57:47+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
