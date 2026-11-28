@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-28T14:20:49+00:00",
+  "updated_at": "2026-11-28T14:21:38+00:00",
   "items": {
     "irodori:audio/irodori/irodori-elementary1-01-a01-l01.mp3": {
       "fingerprint": "f60693a44b567a22507971d14490601e0f37a87aeca4e2eb33d9d0dd6d1cb547",
@@ -30809,6 +30809,148 @@
         }
       ],
       "generated_at": "2026-11-28T14:20:49+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u004.mp3": {
+      "fingerprint": "28796bab79830d485c3541e15499754e9c18b5103f58f341bc157c7b7f5fa8ae",
+      "output": "audio/irodori/irodori-preintermediate-08-u004.mp3",
+      "voice_by_role": {
+        "adult_female": "adult_female_c"
+      },
+      "voice_ids": [
+        "adult_female_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 5.07,
+          "sample_rate": 24000,
+          "voice_id": "adult_female_c",
+          "http_status": 200,
+          "input_text": "そうなんですね。今日は、いろいろな人が集まるそうですよ。",
+          "take": 1,
+          "tts_text": "そうなんですね。今日は、いろいろな人が集まるそうですよ。",
+          "synthesis_duration_seconds": 3.91,
+          "audio_processing": {
+            "role": "adult_female",
+            "speed": 1.0,
+            "input_duration_seconds": 5.07,
+            "output_duration_seconds": 5.07,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_female"
+        }
+      ],
+      "generated_at": "2026-11-28T14:21:04+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u005.mp3": {
+      "fingerprint": "44601411e0e6c301b3419396c450ae5ab26a1c5ca017f3e62883e732465834b7",
+      "output": "audio/irodori/irodori-preintermediate-08-u005.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_a"
+      },
+      "voice_ids": [
+        "teen_male_a"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 2.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_a",
+          "http_status": 200,
+          "input_text": "この町には長く住んでいるんですか。",
+          "take": 1,
+          "tts_text": "この町には長く住んでいるんですか。",
+          "synthesis_duration_seconds": 2.3,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 3.31,
+            "output_duration_seconds": 2.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:21:13+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u006.mp3": {
+      "fingerprint": "c6b77a933471cd20ac0b27ff219107f1abab2794243731dce62cddc84d83dcd4",
+      "output": "audio/irodori/irodori-preintermediate-08-u006.mp3",
+      "voice_by_role": {
+        "adult_male": "adult_male_c"
+      },
+      "voice_ids": [
+        "adult_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 4.67,
+          "sample_rate": 24000,
+          "voice_id": "adult_male_c",
+          "http_status": 200,
+          "input_text": "はい、もう十年になります。ソウタさんは？",
+          "take": 1,
+          "tts_text": "はい、もう十年になります。ソウタさんは？",
+          "synthesis_duration_seconds": 3.54,
+          "audio_processing": {
+            "role": "adult_male",
+            "speed": 1.0,
+            "input_duration_seconds": 4.67,
+            "output_duration_seconds": 4.67,
+            "filters": [
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "adult_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:21:26+00:00",
+      "generator": "scripts/audio/generate_audio_qwen.py"
+    },
+    "irodori:audio/irodori/irodori-preintermediate-08-u007.mp3": {
+      "fingerprint": "64ea699b03170a44290a774f9e9fb17722f09b5b533a0a75f4e6db6312cf6bcb",
+      "output": "audio/irodori/irodori-preintermediate-08-u007.mp3",
+      "voice_by_role": {
+        "teen_male": "teen_male_c"
+      },
+      "voice_ids": [
+        "teen_male_c"
+      ],
+      "segments": [
+        {
+          "duration_seconds": 3.938,
+          "sample_rate": 24000,
+          "voice_id": "teen_male_c",
+          "http_status": 200,
+          "input_text": "去年引っ越してきたばかりです。まだ知らない場所が多いんです。",
+          "take": 1,
+          "tts_text": "去年引っ越してきたばかりです。まだ知らない場所が多いんです。",
+          "synthesis_duration_seconds": 3.48,
+          "audio_processing": {
+            "role": "teen_male",
+            "speed": 1.12,
+            "input_duration_seconds": 4.43,
+            "output_duration_seconds": 3.938,
+            "filters": [
+              "atempo=1.120",
+              "loudnorm=I=-16:TP=-1.5:LRA=11",
+              "aresample=24000"
+            ]
+          },
+          "voice_role": "teen_male"
+        }
+      ],
+      "generated_at": "2026-11-28T14:21:38+00:00",
       "generator": "scripts/audio/generate_audio_qwen.py"
     }
   }
